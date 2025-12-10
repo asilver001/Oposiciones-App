@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ['main', 'master']
+    branches: ['main', 'master', 'claude/implement-exam-app-015rbZq6Uw7ukGBJMyjveQeZ']
   workflow_dispatch:
 
 permissions:
