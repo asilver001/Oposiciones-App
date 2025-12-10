@@ -591,6 +591,24 @@ export default function OpositaApp() {
           >
             [DEV] Saltar al Home
           </button>
+
+          {/* DEV: Reset all data */}
+          <button
+            onClick={async () => {
+              await window.storage.remove('oposita-onboarding-complete');
+              await window.storage.remove('oposita-user');
+              await window.storage.remove('oposita-stats-v2');
+              await window.storage.remove('oposita-progress-v2');
+              await window.storage.remove('oposita-streak');
+              await window.storage.remove('oposita-daily-tests');
+              await window.storage.remove('oposita-signup-count');
+              await window.storage.remove('oposita-premium');
+              window.location.reload();
+            }}
+            className="mt-2 text-red-300 text-xs underline hover:text-red-100"
+          >
+            [DEV] Resetear TODO y recargar
+          </button>
         </div>
       </div>
     );
@@ -1553,6 +1571,26 @@ export default function OpositaApp() {
           {activeTab === 'temas' && <TemasContent />}
           {activeTab === 'recursos' && <RecursosContent />}
         </div>
+      </div>
+
+      {/* DEV Controls */}
+      <div className="fixed top-2 right-2 z-50 flex gap-2">
+        <button
+          onClick={async () => {
+            await window.storage.remove('oposita-onboarding-complete');
+            await window.storage.remove('oposita-user');
+            await window.storage.remove('oposita-stats-v2');
+            await window.storage.remove('oposita-progress-v2');
+            await window.storage.remove('oposita-streak');
+            await window.storage.remove('oposita-daily-tests');
+            await window.storage.remove('oposita-signup-count');
+            await window.storage.remove('oposita-premium');
+            window.location.reload();
+          }}
+          className="bg-red-500/80 hover:bg-red-600 text-white text-xs px-2 py-1 rounded shadow"
+        >
+          [DEV] Reset
+        </button>
       </div>
 
       <BottomTabBar />
