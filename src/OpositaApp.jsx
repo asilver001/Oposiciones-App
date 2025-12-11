@@ -478,31 +478,67 @@ export default function OpositaApp() {
     </div>
   );
 
-  // Bottom Tab Bar Component
+  // Bottom Tab Bar Component - Fase 1 rediseñada
   const BottomTabBar = () => (
-    <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-2 z-40">
-      <div className="max-w-4xl mx-auto flex justify-around">
-        {[
-          { id: 'inicio', label: 'Inicio', icon: Home },
-          { id: 'actividad', label: 'Actividad', icon: History },
-          { id: 'temas', label: 'Temas', icon: BookOpen },
-          { id: 'recursos', label: 'Recursos', icon: GraduationCap }
-        ].map(tab => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
-            className={`flex flex-col items-center py-2 px-4 rounded-lg transition-all ${
-              activeTab === tab.id
-                ? 'text-purple-600'
-                : 'text-gray-400 hover:text-gray-600'
-            }`}
-          >
-            <tab.icon className={`w-6 h-6 ${activeTab === tab.id ? 'stroke-2' : ''}`} />
-            <span className={`text-xs mt-1 ${activeTab === tab.id ? 'font-semibold' : ''}`}>
-              {tab.label}
-            </span>
-          </button>
-        ))}
+    <div className="fixed bottom-0 left-0 right-0 z-40">
+      {/* Contenedor con sombra difusa y bordes superiores redondeados */}
+      <div className="bg-white rounded-t-2xl shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
+        <div className="max-w-4xl mx-auto px-2">
+          <div className="flex justify-around items-center h-16">
+            {[
+              { id: 'inicio', label: 'Inicio', icon: Home },
+              { id: 'actividad', label: 'Actividad', icon: History },
+              { id: 'temas', label: 'Temas', icon: BookOpen },
+              { id: 'recursos', label: 'Recursos', icon: GraduationCap }
+            ].map(tab => {
+              const isActive = activeTab === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`
+                    flex flex-col items-center justify-center
+                    min-w-[4.5rem] py-1.5 px-3 rounded-xl
+                    transition-all duration-200 ease-out
+                    active:scale-95
+                    ${isActive
+                      ? 'bg-purple-50'
+                      : 'hover:bg-gray-50'
+                    }
+                  `}
+                >
+                  <div className={`
+                    flex items-center justify-center
+                    w-8 h-8 rounded-full mb-0.5
+                    transition-all duration-200
+                    ${isActive ? 'bg-purple-100' : ''}
+                  `}>
+                    <tab.icon
+                      className={`
+                        w-5 h-5 transition-all duration-200
+                        ${isActive
+                          ? 'text-purple-600 stroke-[2.5]'
+                          : 'text-gray-400 stroke-[1.5]'
+                        }
+                      `}
+                    />
+                  </div>
+                  <span className={`
+                    text-[10px] leading-tight transition-all duration-200
+                    ${isActive
+                      ? 'text-purple-600 font-semibold'
+                      : 'text-gray-400 font-medium'
+                    }
+                  `}>
+                    {tab.label}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+        {/* Safe area para dispositivos con notch */}
+        <div className="h-safe-area-inset-bottom bg-white" />
       </div>
     </div>
   );
@@ -1897,51 +1933,51 @@ export default function OpositaApp() {
     </div>
   );
 
-  // Nueva TopBar fija
+  // Nueva TopBar fija - Fase 1
   const TopBar = () => (
-    <div className="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <div className="fixed top-0 left-0 right-0 z-40 bg-white/98 backdrop-blur-lg shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
       <div className="max-w-4xl mx-auto px-4">
         <div className="flex items-center justify-between h-14">
           {/* Izquierda - Botón de progreso diario */}
           <button
             onClick={() => {
-              // Scroll al objetivo diario o mostrar panel
               const objetivoSection = document.getElementById('objetivo-diario');
               if (objetivoSection) {
                 objetivoSection.scrollIntoView({ behavior: 'smooth' });
               }
             }}
-            className="relative w-10 h-10 flex items-center justify-center"
+            className="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-purple-50 active:scale-95 transition-all duration-200"
           >
             {/* Mini anillo de progreso */}
-            <svg className="w-10 h-10 transform -rotate-90">
+            <svg className="w-9 h-9 transform -rotate-90">
               <circle
-                cx="20"
-                cy="20"
-                r="16"
+                cx="18"
+                cy="18"
+                r="14"
                 fill="none"
-                stroke="#E5E7EB"
+                stroke="#F3E8FF"
                 strokeWidth="3"
               />
               <circle
-                cx="20"
-                cy="20"
-                r="16"
+                cx="18"
+                cy="18"
+                r="14"
                 fill="none"
                 stroke="#8B5CF6"
                 strokeWidth="3"
-                strokeDasharray={`${(dailyProgressPercent / 100) * 100.5} 100.5`}
+                strokeDasharray={`${(dailyProgressPercent / 100) * 88} 88`}
                 strokeLinecap="round"
+                className="transition-all duration-500"
               />
             </svg>
-            <span className="absolute text-xs font-bold text-purple-600">
+            <span className="absolute text-[10px] font-bold text-purple-600">
               {dailyProgressPercent}
             </span>
           </button>
 
           {/* Centro - Título */}
-          <h1 className="text-base font-semibold text-gray-800">
-            {activeTab === 'inicio' && 'Inicio'}
+          <h1 className="text-[15px] font-semibold text-gray-800 tracking-tight">
+            {activeTab === 'inicio' && 'Oposita Smart'}
             {activeTab === 'actividad' && 'Actividad'}
             {activeTab === 'temas' && 'Temas'}
             {activeTab === 'recursos' && 'Recursos'}
@@ -1950,9 +1986,9 @@ export default function OpositaApp() {
           {/* Derecha - Botón de ajustes */}
           <button
             onClick={() => setShowSettingsModal(true)}
-            className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 transition"
+            className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 active:scale-95 transition-all duration-200"
           >
-            <Settings className="w-5 h-5 text-gray-600" />
+            <Settings className="w-[18px] h-[18px] text-gray-500" />
           </button>
         </div>
       </div>
@@ -1968,14 +2004,14 @@ export default function OpositaApp() {
         <div className="pt-4 mb-6">
           {/* Área de saludo - Fase 1 rediseñada */}
           {activeTab === 'inicio' && (
-            <div className="mb-6">
-              <p className="text-sm font-medium text-purple-600 mb-1">
+            <div className="mb-5">
+              <p className="text-[13px] font-medium text-purple-500 mb-0.5 capitalize">
                 {new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' })}
               </p>
-              <h2 className="text-2xl font-bold text-gray-900 mb-1">
+              <h2 className="text-[22px] font-bold text-gray-900 leading-tight mb-0.5">
                 Tu progreso de hoy
               </h2>
-              <p className="text-gray-500 text-sm">
+              <p className="text-gray-400 text-sm">
                 {userData.name ? `${userData.name}, continúa` : 'Continúa'} donde lo dejaste
               </p>
             </div>
