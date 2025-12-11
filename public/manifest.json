@@ -1,7 +1,7 @@
 {
-  "name": "OpositaTest - Oposiciones Administrativo",
-  "short_name": "OpositaTest",
-  "description": "Prepara tu oposición de Administrativo del Estado con tests, simulacros y seguimiento de progreso. Más de 15.000 opositores ya estudian con nosotros.",
+  "name": "OpoÁgil - Oposiciones Administrativo",
+  "short_name": "OpoÁgil",
+  "description": "Entrena tu oposición de forma inteligente. Prepara tu oposición de Administrativo del Estado con tests, simulacros y seguimiento de progreso.",
   "start_url": "/Oposiciones-App/",
   "scope": "/Oposiciones-App/",
   "display": "standalone",
@@ -13,75 +13,16 @@
   "dir": "ltr",
   "icons": [
     {
-      "src": "/Oposiciones-App/icons/icon-72x72.png",
-      "sizes": "72x72",
-      "type": "image/png",
-      "purpose": "maskable any"
+      "src": "/Oposiciones-App/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
     },
     {
-      "src": "/Oposiciones-App/icons/icon-96x96.png",
-      "sizes": "96x96",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/Oposiciones-App/icons/icon-128x128.png",
-      "sizes": "128x128",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/Oposiciones-App/icons/icon-144x144.png",
-      "sizes": "144x144",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/Oposiciones-App/icons/icon-152x152.png",
-      "sizes": "152x152",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/Oposiciones-App/icons/icon-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/Oposiciones-App/icons/icon-384x384.png",
-      "sizes": "384x384",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/Oposiciones-App/icons/icon-512x512.png",
+      "src": "/Oposiciones-App/icons/icon.svg",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable any"
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "/Oposiciones-App/screenshots/screenshot-1.png",
-      "sizes": "1080x1920",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Pantalla de inicio con tu progreso diario"
-    },
-    {
-      "src": "/Oposiciones-App/screenshots/screenshot-2.png",
-      "sizes": "1080x1920",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Test de práctica con explicaciones"
-    },
-    {
-      "src": "/Oposiciones-App/screenshots/screenshot-3.png",
-      "sizes": "1080x1920",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Seguimiento de racha y logros"
+      "type": "image/svg+xml",
+      "purpose": "maskable"
     }
   ],
   "shortcuts": [
@@ -90,14 +31,14 @@
       "short_name": "Test",
       "description": "Empieza un test de 5 preguntas",
       "url": "/Oposiciones-App/?action=quick-test",
-      "icons": [{ "src": "/Oposiciones-App/icons/icon-96x96.png", "sizes": "96x96" }]
+      "icons": [{ "src": "/Oposiciones-App/icons/icon.svg", "sizes": "any" }]
     },
     {
       "name": "Ver mi progreso",
       "short_name": "Progreso",
       "description": "Revisa tu actividad y estadísticas",
       "url": "/Oposiciones-App/?tab=actividad",
-      "icons": [{ "src": "/Oposiciones-App/icons/icon-96x96.png", "sizes": "96x96" }]
+      "icons": [{ "src": "/Oposiciones-App/icons/icon.svg", "sizes": "any" }]
     }
   ],
   "related_applications": [],

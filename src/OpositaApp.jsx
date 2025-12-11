@@ -1203,11 +1203,14 @@ export default function OpositaApp() {
             </div>
 
             <h1 className="text-5xl font-bold text-white mb-4 leading-tight drop-shadow-lg">
-              Aprueba tu oposición de Administrativo del Estado
+              OpoÁgil
             </h1>
+            <p className="text-2xl font-semibold text-yellow-300 mb-4">
+              Entrena tu oposición de forma inteligente
+            </p>
 
             <p className="text-purple-100 text-xl font-medium">
-              Más de 15.000 opositores ya estudian con nosotros
+              Prepara tu oposición de Administrativo del Estado
             </p>
           </div>
 
@@ -1762,6 +1765,319 @@ export default function OpositaApp() {
     );
   }
 
+  // PÁGINA DE PRIVACIDAD
+  if (currentPage === 'privacy') {
+    return (
+      <div className="min-h-screen bg-gray-50 p-4">
+        <div className="max-w-2xl mx-auto">
+          <button
+            onClick={() => setCurrentPage('home')}
+            className="flex items-center gap-2 text-purple-600 font-medium mb-6 hover:text-purple-800"
+          >
+            <ArrowLeft className="w-5 h-5" />
+            Volver
+          </button>
+          <div className="bg-white rounded-2xl p-6 shadow-lg">
+            <h1 className="text-2xl font-bold text-gray-900 mb-6">Política de Privacidad</h1>
+            <div className="prose prose-sm text-gray-600 space-y-4">
+              <p><strong>Última actualización:</strong> Diciembre 2024</p>
+
+              <h2 className="text-lg font-semibold text-gray-900 mt-6">1. Responsable del tratamiento</h2>
+              <p>OpoÁgil es una aplicación web educativa. Todos los datos se almacenan localmente en tu dispositivo mediante localStorage.</p>
+
+              <h2 className="text-lg font-semibold text-gray-900 mt-6">2. Datos que recopilamos</h2>
+              <p>Almacenamos localmente en tu navegador:</p>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Progreso de estudio y estadísticas</li>
+                <li>Preferencias de configuración</li>
+                <li>Nombre y email (solo si los proporcionas voluntariamente)</li>
+              </ul>
+
+              <h2 className="text-lg font-semibold text-gray-900 mt-6">3. Uso de los datos</h2>
+              <p>Los datos se utilizan exclusivamente para:</p>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Guardar tu progreso de estudio</li>
+                <li>Personalizar tu experiencia</li>
+                <li>Mostrar estadísticas de rendimiento</li>
+              </ul>
+
+              <h2 className="text-lg font-semibold text-gray-900 mt-6">4. Almacenamiento local</h2>
+              <p>Todos los datos se guardan en el localStorage de tu navegador. No enviamos datos a servidores externos. Puedes eliminar estos datos en cualquier momento borrando los datos de navegación.</p>
+
+              <h2 className="text-lg font-semibold text-gray-900 mt-6">5. Tus derechos</h2>
+              <p>Conforme al RGPD, tienes derecho a acceder, rectificar y eliminar tus datos. Como los datos están en tu dispositivo, tienes control total sobre ellos.</p>
+
+              <h2 className="text-lg font-semibold text-gray-900 mt-6">6. Contacto</h2>
+              <p>Para cualquier consulta sobre privacidad, puedes contactarnos a través de la sección de contacto de la aplicación.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // PÁGINA DE TÉRMINOS Y CONDICIONES
+  if (currentPage === 'terms') {
+    return (
+      <div className="min-h-screen bg-gray-50 p-4">
+        <div className="max-w-2xl mx-auto">
+          <button
+            onClick={() => setCurrentPage('home')}
+            className="flex items-center gap-2 text-purple-600 font-medium mb-6 hover:text-purple-800"
+          >
+            <ArrowLeft className="w-5 h-5" />
+            Volver
+          </button>
+          <div className="bg-white rounded-2xl p-6 shadow-lg">
+            <h1 className="text-2xl font-bold text-gray-900 mb-6">Términos y Condiciones</h1>
+            <div className="prose prose-sm text-gray-600 space-y-4">
+              <p><strong>Última actualización:</strong> Diciembre 2024</p>
+
+              <h2 className="text-lg font-semibold text-gray-900 mt-6">1. Aceptación de los términos</h2>
+              <p>Al utilizar OpoÁgil, aceptas estos términos y condiciones. Si no estás de acuerdo, por favor no utilices la aplicación.</p>
+
+              <h2 className="text-lg font-semibold text-gray-900 mt-6">2. Descripción del servicio</h2>
+              <p>OpoÁgil es una aplicación web gratuita de preparación para oposiciones de Administrativo del Estado. Ofrecemos tests de práctica, seguimiento de progreso y material de estudio.</p>
+
+              <h2 className="text-lg font-semibold text-gray-900 mt-6">3. Uso permitido</h2>
+              <p>Te comprometes a:</p>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Usar la aplicación solo con fines educativos personales</li>
+                <li>No intentar copiar o redistribuir el contenido</li>
+                <li>No realizar ingeniería inversa del software</li>
+              </ul>
+
+              <h2 className="text-lg font-semibold text-gray-900 mt-6">4. Propiedad intelectual</h2>
+              <p>Todo el contenido de OpoÁgil, incluyendo textos, diseños y funcionalidades, está protegido por derechos de autor.</p>
+
+              <h2 className="text-lg font-semibold text-gray-900 mt-6">5. Limitación de responsabilidad</h2>
+              <p>OpoÁgil se proporciona "tal cual". No garantizamos que el uso de la aplicación resulte en la aprobación de oposiciones. El contenido es orientativo y complementario a otros materiales de estudio.</p>
+
+              <h2 className="text-lg font-semibold text-gray-900 mt-6">6. Modificaciones</h2>
+              <p>Nos reservamos el derecho de modificar estos términos. Los cambios serán efectivos desde su publicación en la aplicación.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // PÁGINA DE AVISO LEGAL
+  if (currentPage === 'legal') {
+    return (
+      <div className="min-h-screen bg-gray-50 p-4">
+        <div className="max-w-2xl mx-auto">
+          <button
+            onClick={() => setCurrentPage('home')}
+            className="flex items-center gap-2 text-purple-600 font-medium mb-6 hover:text-purple-800"
+          >
+            <ArrowLeft className="w-5 h-5" />
+            Volver
+          </button>
+          <div className="bg-white rounded-2xl p-6 shadow-lg">
+            <h1 className="text-2xl font-bold text-gray-900 mb-6">Aviso Legal</h1>
+            <div className="prose prose-sm text-gray-600 space-y-4">
+              <h2 className="text-lg font-semibold text-gray-900 mt-6">1. Información general</h2>
+              <p>OpoÁgil es una aplicación web educativa para la preparación de oposiciones.</p>
+
+              <h2 className="text-lg font-semibold text-gray-900 mt-6">2. Objeto</h2>
+              <p>Esta aplicación tiene como finalidad proporcionar herramientas de estudio y práctica para personas que se preparan para oposiciones de Administrativo del Estado.</p>
+
+              <h2 className="text-lg font-semibold text-gray-900 mt-6">3. Condiciones de acceso</h2>
+              <p>El acceso a OpoÁgil es gratuito. Algunas funcionalidades premium pueden requerir suscripción en el futuro.</p>
+
+              <h2 className="text-lg font-semibold text-gray-900 mt-6">4. Propiedad intelectual</h2>
+              <p>Todos los contenidos de esta aplicación (textos, imágenes, código, diseño) son propiedad de OpoÁgil o se utilizan con autorización.</p>
+
+              <h2 className="text-lg font-semibold text-gray-900 mt-6">5. Legislación aplicable</h2>
+              <p>Este aviso legal se rige por la legislación española. Para cualquier controversia, serán competentes los juzgados y tribunales de España.</p>
+
+              <h2 className="text-lg font-semibold text-gray-900 mt-6">6. LSSI-CE</h2>
+              <p>En cumplimiento de la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico, le informamos que esta es una aplicación web de carácter educativo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // PÁGINA ACERCA DE
+  if (currentPage === 'about') {
+    return (
+      <div className="min-h-screen bg-gray-50 p-4">
+        <div className="max-w-2xl mx-auto">
+          <button
+            onClick={() => setCurrentPage('home')}
+            className="flex items-center gap-2 text-purple-600 font-medium mb-6 hover:text-purple-800"
+          >
+            <ArrowLeft className="w-5 h-5" />
+            Volver
+          </button>
+          <div className="bg-white rounded-2xl p-6 shadow-lg">
+            <div className="text-center mb-6">
+              <div className="inline-block bg-purple-100 rounded-full p-4 mb-4">
+                <Trophy className="w-12 h-12 text-purple-600" />
+              </div>
+              <h1 className="text-2xl font-bold text-gray-900">OpoÁgil</h1>
+              <p className="text-purple-600 font-medium">Entrena tu oposición de forma inteligente</p>
+            </div>
+
+            <div className="prose prose-sm text-gray-600 space-y-4">
+              <p>OpoÁgil nace con la misión de hacer la preparación de oposiciones más accesible, efectiva y motivadora.</p>
+
+              <h2 className="text-lg font-semibold text-gray-900 mt-6">Nuestra misión</h2>
+              <p>Creemos que preparar unas oposiciones no tiene por qué ser un proceso solitario y tedioso. Nuestra aplicación está diseñada para ayudarte a estudiar de forma más inteligente, con seguimiento de progreso, rachas de estudio y contenido actualizado.</p>
+
+              <h2 className="text-lg font-semibold text-gray-900 mt-6">Características</h2>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Tests de práctica con explicaciones detalladas</li>
+                <li>Seguimiento de progreso y estadísticas</li>
+                <li>Sistema de rachas para mantener la motivación</li>
+                <li>Contenido actualizado según el temario oficial</li>
+                <li>Funciona offline una vez cargada</li>
+              </ul>
+
+              <h2 className="text-lg font-semibold text-gray-900 mt-6">Tecnología</h2>
+              <p>OpoÁgil es una Progressive Web App (PWA) que puedes instalar en tu dispositivo y usar sin conexión. Tus datos se guardan localmente para máxima privacidad.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // PÁGINA FAQ
+  if (currentPage === 'faq') {
+    const faqs = [
+      {
+        q: "¿Es gratis OpoÁgil?",
+        a: "Sí, OpoÁgil es completamente gratuito. Ofrecemos acceso a tests de práctica, seguimiento de progreso y material de estudio sin coste."
+      },
+      {
+        q: "¿Puedo usar la app sin conexión?",
+        a: "Sí, OpoÁgil es una Progressive Web App (PWA). Una vez cargada, puedes usarla sin conexión a internet. Tu progreso se guarda localmente."
+      },
+      {
+        q: "¿Cómo se guarda mi progreso?",
+        a: "Tu progreso se guarda automáticamente en el almacenamiento local de tu navegador (localStorage). No necesitas crear una cuenta para guardar tu avance."
+      },
+      {
+        q: "¿El contenido está actualizado?",
+        a: "Sí, nuestras preguntas están basadas en el temario oficial de oposiciones de Administrativo del Estado y se actualizan regularmente."
+      },
+      {
+        q: "¿Puedo instalar la app en mi móvil?",
+        a: "Sí, puedes instalar OpoÁgil como una app en tu móvil. En el navegador, busca la opción 'Añadir a pantalla de inicio' o 'Instalar aplicación'."
+      },
+      {
+        q: "¿Qué pasa si borro los datos del navegador?",
+        a: "Si borras los datos de navegación o el localStorage, perderás tu progreso guardado. Recomendamos no limpiar los datos de este sitio si quieres conservar tu avance."
+      },
+      {
+        q: "¿Cómo funciona el sistema de rachas?",
+        a: "El sistema de rachas cuenta los días consecutivos que estudias. Completa al menos un test cada día para mantener tu racha activa y ganar insignias."
+      },
+      {
+        q: "¿Puedo sugerir mejoras o reportar errores?",
+        a: "¡Por supuesto! Usa la sección de contacto para enviarnos tus sugerencias, reportar errores o cualquier otra consulta."
+      }
+    ];
+
+    return (
+      <div className="min-h-screen bg-gray-50 p-4">
+        <div className="max-w-2xl mx-auto">
+          <button
+            onClick={() => setCurrentPage('home')}
+            className="flex items-center gap-2 text-purple-600 font-medium mb-6 hover:text-purple-800"
+          >
+            <ArrowLeft className="w-5 h-5" />
+            Volver
+          </button>
+          <div className="bg-white rounded-2xl p-6 shadow-lg">
+            <h1 className="text-2xl font-bold text-gray-900 mb-6">Preguntas Frecuentes</h1>
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <div key={index} className="border-b border-gray-100 pb-4 last:border-0">
+                  <h3 className="font-semibold text-gray-900 mb-2">{faq.q}</h3>
+                  <p className="text-gray-600 text-sm">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // PÁGINA DE CONTACTO
+  if (currentPage === 'contact') {
+    return (
+      <div className="min-h-screen bg-gray-50 p-4">
+        <div className="max-w-2xl mx-auto">
+          <button
+            onClick={() => setCurrentPage('home')}
+            className="flex items-center gap-2 text-purple-600 font-medium mb-6 hover:text-purple-800"
+          >
+            <ArrowLeft className="w-5 h-5" />
+            Volver
+          </button>
+          <div className="bg-white rounded-2xl p-6 shadow-lg">
+            <h1 className="text-2xl font-bold text-gray-900 mb-6">Contacto</h1>
+            <p className="text-gray-600 mb-6">¿Tienes alguna pregunta, sugerencia o has encontrado un error? Nos encantaría saber de ti.</p>
+
+            <form className="space-y-4" onSubmit={(e) => {
+              e.preventDefault();
+              alert('Gracias por tu mensaje. Te responderemos lo antes posible.');
+            }}>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
+                <input
+                  type="text"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  placeholder="Tu nombre"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                <input
+                  type="email"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  placeholder="tu@email.com"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Asunto</label>
+                <select className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                  <option>Sugerencia</option>
+                  <option>Reportar error</option>
+                  <option>Pregunta general</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
+                <textarea
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  rows="4"
+                  placeholder="Escribe tu mensaje aquí..."
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-xl transition"
+              >
+                Enviar mensaje
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   // HOME
   const daysUntilExam = getDaysUntilExam();
   const totalProgress = calculateTotalProgress();
@@ -2211,6 +2527,38 @@ export default function OpositaApp() {
           {activeTab === 'actividad' && <ActividadContent />}
           {activeTab === 'temas' && <TemasContent />}
           {activeTab === 'recursos' && <RecursosContent />}
+
+          {/* Footer con enlaces legales */}
+          <footer className="mt-12 pt-6 border-t border-gray-300/50">
+            <div className="text-center">
+              <p className="text-gray-700 font-semibold mb-3">OpoÁgil</p>
+              <div className="flex flex-wrap justify-center gap-4 text-sm mb-4">
+                <button onClick={() => setCurrentPage('about')} className="text-gray-600 hover:text-purple-700 transition">
+                  Acerca de
+                </button>
+                <button onClick={() => setCurrentPage('faq')} className="text-gray-600 hover:text-purple-700 transition">
+                  FAQ
+                </button>
+                <button onClick={() => setCurrentPage('contact')} className="text-gray-600 hover:text-purple-700 transition">
+                  Contacto
+                </button>
+              </div>
+              <div className="flex flex-wrap justify-center gap-4 text-xs mb-4">
+                <button onClick={() => setCurrentPage('privacy')} className="text-gray-500 hover:text-purple-700 transition">
+                  Privacidad
+                </button>
+                <button onClick={() => setCurrentPage('terms')} className="text-gray-500 hover:text-purple-700 transition">
+                  Términos
+                </button>
+                <button onClick={() => setCurrentPage('legal')} className="text-gray-500 hover:text-purple-700 transition">
+                  Aviso Legal
+                </button>
+              </div>
+              <p className="text-xs text-gray-500">
+                © {new Date().getFullYear()} OpoÁgil. Todos los derechos reservados.
+              </p>
+            </div>
+          </footer>
         </div>
       </div>
 

@@ -1,13 +1,14 @@
-// OpositaTest Service Worker v1.0.0
-const CACHE_NAME = 'oposita-cache-v1';
-const STATIC_CACHE = 'oposita-static-v1';
-const DYNAMIC_CACHE = 'oposita-dynamic-v1';
+// OpoÁgil Service Worker v2.0.0
+const CACHE_NAME = 'opoagil-cache-v2';
+const STATIC_CACHE = 'opoagil-static-v2';
+const DYNAMIC_CACHE = 'opoagil-dynamic-v2';
 
 // Assets to cache immediately on install
 const STATIC_ASSETS = [
   '/Oposiciones-App/',
   '/Oposiciones-App/index.html',
-  '/Oposiciones-App/manifest.json'
+  '/Oposiciones-App/manifest.json',
+  '/Oposiciones-App/icons/icon.svg'
 ];
 
 // Install event - cache static assets
