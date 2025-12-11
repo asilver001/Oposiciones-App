@@ -1203,10 +1203,10 @@ export default function OpositaApp() {
             </div>
 
             <h1 className="text-5xl font-bold text-white mb-4 leading-tight drop-shadow-lg">
-              OpoÁgil
+              Oposita Smart
             </h1>
             <p className="text-2xl font-semibold text-yellow-300 mb-4">
-              Entrena tu oposición de forma inteligente
+              La forma inteligente de opositar
             </p>
 
             <p className="text-purple-100 text-xl font-medium">
@@ -1783,7 +1783,7 @@ export default function OpositaApp() {
               <p><strong>Última actualización:</strong> Diciembre 2024</p>
 
               <h2 className="text-lg font-semibold text-gray-900 mt-6">1. Responsable del tratamiento</h2>
-              <p>OpoÁgil es una aplicación web educativa. Todos los datos se almacenan localmente en tu dispositivo mediante localStorage.</p>
+              <p>Oposita Smart es una aplicación web educativa. Todos los datos se almacenan localmente en tu dispositivo mediante localStorage.</p>
 
               <h2 className="text-lg font-semibold text-gray-900 mt-6">2. Datos que recopilamos</h2>
               <p>Almacenamos localmente en tu navegador:</p>
@@ -1834,10 +1834,10 @@ export default function OpositaApp() {
               <p><strong>Última actualización:</strong> Diciembre 2024</p>
 
               <h2 className="text-lg font-semibold text-gray-900 mt-6">1. Aceptación de los términos</h2>
-              <p>Al utilizar OpoÁgil, aceptas estos términos y condiciones. Si no estás de acuerdo, por favor no utilices la aplicación.</p>
+              <p>Al utilizar Oposita Smart, aceptas estos términos y condiciones. Si no estás de acuerdo, por favor no utilices la aplicación.</p>
 
               <h2 className="text-lg font-semibold text-gray-900 mt-6">2. Descripción del servicio</h2>
-              <p>OpoÁgil es una aplicación web gratuita de preparación para oposiciones de Administrativo del Estado. Ofrecemos tests de práctica, seguimiento de progreso y material de estudio.</p>
+              <p>Oposita Smart es una aplicación web gratuita de preparación para oposiciones de Administrativo del Estado. Ofrecemos tests de práctica, seguimiento de progreso y material de estudio.</p>
 
               <h2 className="text-lg font-semibold text-gray-900 mt-6">3. Uso permitido</h2>
               <p>Te comprometes a:</p>
@@ -1848,10 +1848,10 @@ export default function OpositaApp() {
               </ul>
 
               <h2 className="text-lg font-semibold text-gray-900 mt-6">4. Propiedad intelectual</h2>
-              <p>Todo el contenido de OpoÁgil, incluyendo textos, diseños y funcionalidades, está protegido por derechos de autor.</p>
+              <p>Todo el contenido de Oposita Smart, incluyendo textos, diseños y funcionalidades, está protegido por derechos de autor.</p>
 
               <h2 className="text-lg font-semibold text-gray-900 mt-6">5. Limitación de responsabilidad</h2>
-              <p>OpoÁgil se proporciona "tal cual". No garantizamos que el uso de la aplicación resulte en la aprobación de oposiciones. El contenido es orientativo y complementario a otros materiales de estudio.</p>
+              <p>Oposita Smart se proporciona "tal cual". No garantizamos que el uso de la aplicación resulte en la aprobación de oposiciones. El contenido es orientativo y complementario a otros materiales de estudio.</p>
 
               <h2 className="text-lg font-semibold text-gray-900 mt-6">6. Modificaciones</h2>
               <p>Nos reservamos el derecho de modificar estos términos. Los cambios serán efectivos desde su publicación en la aplicación.</p>
@@ -1878,16 +1878,16 @@ export default function OpositaApp() {
             <h1 className="text-2xl font-bold text-gray-900 mb-6">Aviso Legal</h1>
             <div className="prose prose-sm text-gray-600 space-y-4">
               <h2 className="text-lg font-semibold text-gray-900 mt-6">1. Información general</h2>
-              <p>OpoÁgil es una aplicación web educativa para la preparación de oposiciones.</p>
+              <p>Oposita Smart es una aplicación web educativa para la preparación de oposiciones.</p>
 
               <h2 className="text-lg font-semibold text-gray-900 mt-6">2. Objeto</h2>
               <p>Esta aplicación tiene como finalidad proporcionar herramientas de estudio y práctica para personas que se preparan para oposiciones de Administrativo del Estado.</p>
 
               <h2 className="text-lg font-semibold text-gray-900 mt-6">3. Condiciones de acceso</h2>
-              <p>El acceso a OpoÁgil es gratuito. Algunas funcionalidades premium pueden requerir suscripción en el futuro.</p>
+              <p>El acceso a Oposita Smart es gratuito. Algunas funcionalidades premium pueden requerir suscripción en el futuro.</p>
 
               <h2 className="text-lg font-semibold text-gray-900 mt-6">4. Propiedad intelectual</h2>
-              <p>Todos los contenidos de esta aplicación (textos, imágenes, código, diseño) son propiedad de OpoÁgil o se utilizan con autorización.</p>
+              <p>Todos los contenidos de esta aplicación (textos, imágenes, código, diseño) son propiedad de Oposita Smart o se utilizan con autorización.</p>
 
               <h2 className="text-lg font-semibold text-gray-900 mt-6">5. Legislación aplicable</h2>
               <p>Este aviso legal se rige por la legislación española. Para cualquier controversia, serán competentes los juzgados y tribunales de España.</p>
@@ -1918,12 +1918,12 @@ export default function OpositaApp() {
               <div className="inline-block bg-purple-100 rounded-full p-4 mb-4">
                 <Trophy className="w-12 h-12 text-purple-600" />
               </div>
-              <h1 className="text-2xl font-bold text-gray-900">OpoÁgil</h1>
-              <p className="text-purple-600 font-medium">Entrena tu oposición de forma inteligente</p>
+              <h1 className="text-2xl font-bold text-gray-900">Oposita Smart</h1>
+              <p className="text-purple-600 font-medium">La forma inteligente de opositar</p>
             </div>
 
             <div className="prose prose-sm text-gray-600 space-y-4">
-              <p>OpoÁgil nace con la misión de hacer la preparación de oposiciones más accesible, efectiva y motivadora.</p>
+              <p>Oposita Smart nace con la misión de hacer la preparación de oposiciones más accesible, efectiva y motivadora.</p>
 
               <h2 className="text-lg font-semibold text-gray-900 mt-6">Nuestra misión</h2>
               <p>Creemos que preparar unas oposiciones no tiene por qué ser un proceso solitario y tedioso. Nuestra aplicación está diseñada para ayudarte a estudiar de forma más inteligente, con seguimiento de progreso, rachas de estudio y contenido actualizado.</p>
@@ -1938,7 +1938,7 @@ export default function OpositaApp() {
               </ul>
 
               <h2 className="text-lg font-semibold text-gray-900 mt-6">Tecnología</h2>
-              <p>OpoÁgil es una Progressive Web App (PWA) que puedes instalar en tu dispositivo y usar sin conexión. Tus datos se guardan localmente para máxima privacidad.</p>
+              <p>Oposita Smart es una Progressive Web App (PWA) que puedes instalar en tu dispositivo y usar sin conexión. Tus datos se guardan localmente para máxima privacidad.</p>
             </div>
           </div>
         </div>
@@ -1950,12 +1950,12 @@ export default function OpositaApp() {
   if (currentPage === 'faq') {
     const faqs = [
       {
-        q: "¿Es gratis OpoÁgil?",
-        a: "Sí, OpoÁgil es completamente gratuito. Ofrecemos acceso a tests de práctica, seguimiento de progreso y material de estudio sin coste."
+        q: "¿Es gratis Oposita Smart?",
+        a: "Sí, Oposita Smart es completamente gratuito. Ofrecemos acceso a tests de práctica, seguimiento de progreso y material de estudio sin coste."
       },
       {
         q: "¿Puedo usar la app sin conexión?",
-        a: "Sí, OpoÁgil es una Progressive Web App (PWA). Una vez cargada, puedes usarla sin conexión a internet. Tu progreso se guarda localmente."
+        a: "Sí, Oposita Smart es una Progressive Web App (PWA). Una vez cargada, puedes usarla sin conexión a internet. Tu progreso se guarda localmente."
       },
       {
         q: "¿Cómo se guarda mi progreso?",
@@ -1967,7 +1967,7 @@ export default function OpositaApp() {
       },
       {
         q: "¿Puedo instalar la app en mi móvil?",
-        a: "Sí, puedes instalar OpoÁgil como una app en tu móvil. En el navegador, busca la opción 'Añadir a pantalla de inicio' o 'Instalar aplicación'."
+        a: "Sí, puedes instalar Oposita Smart como una app en tu móvil. En el navegador, busca la opción 'Añadir a pantalla de inicio' o 'Instalar aplicación'."
       },
       {
         q: "¿Qué pasa si borro los datos del navegador?",
@@ -2531,7 +2531,7 @@ export default function OpositaApp() {
           {/* Footer con enlaces legales */}
           <footer className="mt-12 pt-6 border-t border-gray-300/50">
             <div className="text-center">
-              <p className="text-gray-700 font-semibold mb-3">OpoÁgil</p>
+              <p className="text-gray-700 font-semibold mb-3">Oposita Smart</p>
               <div className="flex flex-wrap justify-center gap-4 text-sm mb-4">
                 <button onClick={() => setCurrentPage('about')} className="text-gray-600 hover:text-purple-700 transition">
                   Acerca de
@@ -2555,7 +2555,7 @@ export default function OpositaApp() {
                 </button>
               </div>
               <p className="text-xs text-gray-500">
-                © {new Date().getFullYear()} OpoÁgil. Todos los derechos reservados.
+                © {new Date().getFullYear()} Oposita Smart. Todos los derechos reservados.
               </p>
             </div>
           </footer>

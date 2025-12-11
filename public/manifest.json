@@ -1,7 +1,7 @@
 {
-  "name": "OpoÁgil - Oposiciones Administrativo",
-  "short_name": "OpoÁgil",
-  "description": "Entrena tu oposición de forma inteligente. Prepara tu oposición de Administrativo del Estado con tests, simulacros y seguimiento de progreso.",
+  "name": "Oposita Smart - La forma inteligente de opositar",
+  "short_name": "Oposita Smart",
+  "description": "La forma inteligente de opositar. Prepara tu oposición de Administrativo del Estado con tests, simulacros y seguimiento de progreso.",
   "start_url": "/Oposiciones-App/",
   "scope": "/Oposiciones-App/",
   "display": "standalone",

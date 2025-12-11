@@ -1,7 +1,7 @@
-// OpoÁgil Service Worker v2.0.0
-const CACHE_NAME = 'opoagil-cache-v2';
-const STATIC_CACHE = 'opoagil-static-v2';
-const DYNAMIC_CACHE = 'opoagil-dynamic-v2';
+// Oposita Smart Service Worker v3.0.0
+const CACHE_NAME = 'opositasmart-cache-v3';
+const STATIC_CACHE = 'opositasmart-static-v3';
+const DYNAMIC_CACHE = 'opositasmart-dynamic-v3';
 
 // Assets to cache immediately on install
 const STATIC_ASSETS = [
