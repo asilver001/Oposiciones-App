@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Home, BookOpen, Trophy, Clock, TrendingUp, ArrowLeft, CheckCircle, XCircle, Target, Flame, Zap, Star, Lock, Crown, BarChart3, Calendar, History, GraduationCap, Lightbulb, Info } from 'lucide-react';
+import { Home, BookOpen, Trophy, Clock, TrendingUp, ArrowLeft, CheckCircle, XCircle, Target, Flame, Zap, Star, Lock, Crown, BarChart3, Calendar, History, GraduationCap, Lightbulb, Info, Settings } from 'lucide-react';
 import { allQuestions, topicsList, getRandomQuestions } from './data/questions';
 
 export default function OpositaApp() {
@@ -21,6 +21,7 @@ export default function OpositaApp() {
   const [timeElapsed, setTimeElapsed] = useState(0);
   const [testResults, setTestResults] = useState(null);
   const [showPremiumModal, setShowPremiumModal] = useState(false);
+  const [showSettingsModal, setShowSettingsModal] = useState(false);
   const [premiumModalTrigger, setPremiumModalTrigger] = useState('general');
   const [dailyTestsCount, setDailyTestsCount] = useState(0);
   const [isPremium, setIsPremium] = useState(false);
@@ -1699,51 +1700,63 @@ export default function OpositaApp() {
         </p>
       </div>
 
-      {/* Racha */}
-      <div className="bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl p-6 shadow-xl mb-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/5"></div>
-        <div className="relative">
-          <div className="flex items-center gap-4 mb-4">
-            <Flame className="w-12 h-12 text-yellow-300 drop-shadow" />
+      {/* Racha - Fase 1 rediseñada */}
+      <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100 mb-6">
+        <div className="flex items-center justify-between mb-3">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-orange-50 rounded-full flex items-center justify-center">
+              <Flame className="w-5 h-5 text-orange-500" />
+            </div>
             <div>
-              <div className="text-white/80 text-sm font-medium">Racha</div>
-              <div className="text-white text-4xl font-bold drop-shadow">{streakData.current} días</div>
+              <p className="text-xs text-gray-500 font-medium uppercase tracking-wide">Racha actual</p>
+              <p className="text-2xl font-bold text-gray-900">{streakData.current} <span className="text-base font-medium text-gray-500">días</span></p>
             </div>
           </div>
+          <div className="text-right">
+            <p className="text-xs text-gray-400">Mejor racha</p>
+            <p className="text-sm font-semibold text-gray-600">{streakData.longest} días</p>
+          </div>
+        </div>
 
-          <div className="bg-white/20 rounded-full h-3 mb-2">
+        {/* Barra de progreso hacia siguiente insignia */}
+        <div className="mb-3">
+          <div className="flex justify-between text-xs text-gray-500 mb-1">
+            <span>Progreso</span>
+            <span>{Math.max(0, badges.find(b => b.days > streakData.current)?.days - streakData.current || 10 - (streakData.current % 10))} días para siguiente insignia</span>
+          </div>
+          <div className="bg-gray-100 rounded-full h-2">
             <div
-              className="bg-white rounded-full h-3 transition-all duration-500"
+              className="bg-gradient-to-r from-orange-400 to-orange-500 rounded-full h-2 transition-all duration-500"
               style={{ width: `${(streakData.current % 10) * 10}%` }}
             ></div>
           </div>
-          <p className="text-white text-sm mb-3 drop-shadow">
-            ¡Solo {Math.max(0, badges.find(b => b.days > streakData.current)?.days - streakData.current || 10 - (streakData.current % 10))} días más para tu próxima insignia!
-          </p>
+        </div>
 
-          <div className="flex items-center gap-2 flex-wrap">
-            {badges.map(badge => {
-              const isUnlocked = streakData.current >= badge.days || streakData.longest >= badge.days;
-              return (
-                <div
-                  key={badge.id}
-                  className={`flex items-center gap-1 px-3 py-1.5 rounded-full text-sm font-bold transition-all ${
-                    isUnlocked
-                      ? 'bg-yellow-400 text-gray-900 shadow-lg'
-                      : 'bg-white/20 text-white/50'
-                  }`}
-                >
-                  <span className="text-lg">{badge.icon}</span>
-                  <span className="text-xs">{badge.name}</span>
-                </div>
-              );
-            })}
-          </div>
+        {/* Insignias como chips compactos */}
+        <div className="flex items-center gap-1.5 flex-wrap">
+          {badges.map(badge => {
+            const isUnlocked = streakData.current >= badge.days || streakData.longest >= badge.days;
+            return (
+              <div
+                key={badge.id}
+                className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs transition-all ${
+                  isUnlocked
+                    ? 'bg-orange-100 text-orange-700 font-medium'
+                    : 'bg-gray-50 text-gray-400'
+                }`}
+                title={`${badge.name} - ${badge.days} días`}
+              >
+                <span className="text-sm">{badge.icon}</span>
+                <span>{badge.days}d</span>
+              </div>
+            );
+          })}
         </div>
       </div>
 
+      {/* TODO Fase 2: Rediseñar Objetivo diario con estilo profesional similar a Racha */}
       {/* Objetivo diario */}
-      <div className="bg-white rounded-2xl p-6 shadow-xl mb-6">
+      <div id="objetivo-diario" className="bg-white rounded-2xl p-6 shadow-xl mb-6">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Tu objetivo de hoy</h2>
         <div className="flex items-center gap-6 mb-4">
           <div className="relative w-28 h-28">
@@ -1793,6 +1806,7 @@ export default function OpositaApp() {
         )}
       </div>
 
+      {/* TODO Fase 2: Rediseñar Stats con estilo más compacto y profesional */}
       {/* Stats */}
       <div className="grid grid-cols-2 gap-4 mb-6">
         <div className="bg-white rounded-2xl p-5 shadow-lg">
@@ -1812,6 +1826,7 @@ export default function OpositaApp() {
         </div>
       </div>
 
+      {/* TODO Fase 2: Considerar mover mensaje motivacional a ubicación más discreta */}
       {/* Mensaje motivacional */}
       <div className="bg-purple-50 border-2 border-purple-200 rounded-xl p-4 mb-6">
         <p className="text-purple-900 font-semibold text-center">
@@ -1819,6 +1834,7 @@ export default function OpositaApp() {
         </p>
       </div>
 
+      {/* TODO Fase 2: Rediseñar Desafío del día con estilo más profesional y menos saturado */}
       {/* Desafío del día */}
       <div className="bg-gradient-to-br from-yellow-400 to-orange-400 rounded-2xl p-6 shadow-xl border-2 border-yellow-500 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/5"></div>
@@ -1850,25 +1866,120 @@ export default function OpositaApp() {
     </>
   );
 
+  // Calcular porcentaje de progreso diario para el mini indicador de la TopBar
+  const dailyProgressPercent = Math.min(Math.round((totalStats.todayQuestions / userData.dailyGoal) * 100), 100);
+
+  // Modal de Ajustes (placeholder)
+  const SettingsModal = () => (
+    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+      <div className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl">
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-lg font-bold text-gray-900">Ajustes</h3>
+          <button
+            onClick={() => setShowSettingsModal(false)}
+            className="text-gray-400 hover:text-gray-600"
+          >
+            <XCircle className="w-6 h-6" />
+          </button>
+        </div>
+        <div className="text-center py-8">
+          <Settings className="w-12 h-12 text-gray-300 mx-auto mb-3" />
+          <p className="text-gray-500">Ajustes en desarrollo</p>
+          <p className="text-gray-400 text-sm mt-1">Próximamente podrás personalizar tu experiencia</p>
+        </div>
+        <button
+          onClick={() => setShowSettingsModal(false)}
+          className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-xl transition"
+        >
+          Entendido
+        </button>
+      </div>
+    </div>
+  );
+
+  // Nueva TopBar fija
+  const TopBar = () => (
+    <div className="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+      <div className="max-w-4xl mx-auto px-4">
+        <div className="flex items-center justify-between h-14">
+          {/* Izquierda - Botón de progreso diario */}
+          <button
+            onClick={() => {
+              // Scroll al objetivo diario o mostrar panel
+              const objetivoSection = document.getElementById('objetivo-diario');
+              if (objetivoSection) {
+                objetivoSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            className="relative w-10 h-10 flex items-center justify-center"
+          >
+            {/* Mini anillo de progreso */}
+            <svg className="w-10 h-10 transform -rotate-90">
+              <circle
+                cx="20"
+                cy="20"
+                r="16"
+                fill="none"
+                stroke="#E5E7EB"
+                strokeWidth="3"
+              />
+              <circle
+                cx="20"
+                cy="20"
+                r="16"
+                fill="none"
+                stroke="#8B5CF6"
+                strokeWidth="3"
+                strokeDasharray={`${(dailyProgressPercent / 100) * 100.5} 100.5`}
+                strokeLinecap="round"
+              />
+            </svg>
+            <span className="absolute text-xs font-bold text-purple-600">
+              {dailyProgressPercent}
+            </span>
+          </button>
+
+          {/* Centro - Título */}
+          <h1 className="text-base font-semibold text-gray-800">
+            {activeTab === 'inicio' && 'Inicio'}
+            {activeTab === 'actividad' && 'Actividad'}
+            {activeTab === 'temas' && 'Temas'}
+            {activeTab === 'recursos' && 'Recursos'}
+          </h1>
+
+          {/* Derecha - Botón de ajustes */}
+          <button
+            onClick={() => setShowSettingsModal(true)}
+            className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 transition"
+          >
+            <Settings className="w-5 h-5 text-gray-600" />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-400 via-orange-300 to-yellow-400 pb-24">
-      <div className="max-w-4xl mx-auto p-4">
-        <div className="pt-6 mb-6">
-          {/* Header */}
-          <div className="flex items-center justify-between mb-4">
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">
-                ¡Hola{userData.name ? `, ${userData.name}` : ''}! 👋
-              </h1>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-indigo-50 pb-24">
+      {/* Nueva TopBar fija */}
+      <TopBar />
+
+      <div className="max-w-4xl mx-auto px-4 pt-16">
+        <div className="pt-4 mb-6">
+          {/* Área de saludo - Fase 1 rediseñada */}
+          {activeTab === 'inicio' && (
+            <div className="mb-6">
+              <p className="text-sm font-medium text-purple-600 mb-1">
+                {new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' })}
+              </p>
+              <h2 className="text-2xl font-bold text-gray-900 mb-1">
+                Tu progreso de hoy
+              </h2>
+              <p className="text-gray-500 text-sm">
+                {userData.name ? `${userData.name}, continúa` : 'Continúa'} donde lo dejaste
+              </p>
             </div>
-            <button
-              onClick={() => setShowPremiumModal(true)}
-              className="bg-gradient-to-r from-yellow-400 to-orange-400 text-purple-900 font-bold px-4 py-2 rounded-full text-sm flex items-center gap-1 shadow-lg hover:shadow-xl transition-all hover:scale-105"
-            >
-              <Crown className="w-4 h-4" />
-              Premium
-            </button>
-          </div>
+          )}
 
           {/* Contenido según tab activo */}
           {activeTab === 'inicio' && <InicioContent />}
@@ -1876,6 +1987,7 @@ export default function OpositaApp() {
           {activeTab === 'temas' && <TemasContent />}
           {activeTab === 'recursos' && <RecursosContent />}
 
+          {/* TODO Fase 2: Rediseñar footer con estilo más minimalista */}
           {/* Footer con enlaces legales */}
           <footer className="mt-12 pt-6 border-t border-gray-300/50">
             <div className="text-center">
@@ -1932,6 +2044,7 @@ export default function OpositaApp() {
 
       <BottomTabBar />
       {showPremiumModal && <PremiumModal />}
+      {showSettingsModal && <SettingsModal />}
     </div>
   );
 }
