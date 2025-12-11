@@ -1046,9 +1046,13 @@ export default function OpositaApp() {
                 />
                 <label htmlFor="privacy" className="text-sm text-gray-600">
                   He leído y acepto la{' '}
-                  <a href="/privacidad" className="text-purple-600 underline hover:text-purple-700">
+                  <button
+                    type="button"
+                    onClick={() => setCurrentPage('privacy')}
+                    className="text-purple-600 underline hover:text-purple-700"
+                  >
                     Política de Privacidad
-                  </a>
+                  </button>
                 </label>
               </div>
 
@@ -1619,15 +1623,34 @@ export default function OpositaApp() {
       <div className="bg-white rounded-2xl p-6 shadow-lg">
         <h3 className="font-bold text-gray-900 mb-4">Enlaces útiles</h3>
         <div className="space-y-3">
-          <a href="#" className="block text-purple-600 hover:text-purple-700 font-medium">
+          <a
+            href="https://www.boe.es/buscar/boe.php"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block text-purple-600 hover:text-purple-700 font-medium"
+          >
             📄 BOE - Convocatorias oficiales
           </a>
-          <a href="#" className="block text-purple-600 hover:text-purple-700 font-medium">
-            📚 Temario oficial actualizado
+          <a
+            href="https://www.hacienda.gob.es/es-ES/Areas%20Tematicas/Funcion%20Publica/Paginas/Cuerpos%20y%20Escalas.aspx"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block text-purple-600 hover:text-purple-700 font-medium"
+          >
+            📚 Información oficial de oposiciones
           </a>
-          <a href="#" className="block text-purple-600 hover:text-purple-700 font-medium">
+          <button
+            onClick={() => setCurrentPage('faq')}
+            className="block text-purple-600 hover:text-purple-700 font-medium text-left"
+          >
             ❓ Preguntas frecuentes
-          </a>
+          </button>
+          <button
+            onClick={() => setCurrentPage('contact')}
+            className="block text-purple-600 hover:text-purple-700 font-medium text-left"
+          >
+            ✉️ Contacto
+          </button>
         </div>
       </div>
     </div>
