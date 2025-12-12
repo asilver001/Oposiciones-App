@@ -478,13 +478,13 @@ export default function OpositaApp() {
     </div>
   );
 
-  // Bottom Tab Bar Component - Fase 1 rediseñada
+  // Bottom Tab Bar Component - Fase 1 floating style
   const BottomTabBar = () => (
-    <div className="fixed bottom-0 left-0 right-0 z-40">
-      {/* Contenedor con sombra difusa y bordes superiores redondeados */}
-      <div className="bg-white rounded-t-2xl shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
-        <div className="max-w-4xl mx-auto px-2">
-          <div className="flex justify-around items-center h-16">
+    <div className="fixed bottom-0 left-0 right-0 z-40 p-3 pb-4">
+      {/* Contenedor floating con márgenes, sombra y bordes redondeados */}
+      <div className="max-w-md mx-auto">
+        <div className="bg-white rounded-2xl shadow-[0_2px_20px_rgba(0,0,0,0.1)] border border-gray-100">
+          <div className="flex justify-around items-center h-[58px] px-1">
             {[
               { id: 'inicio', label: 'Inicio', icon: Home },
               { id: 'actividad', label: 'Actividad', icon: History },
@@ -496,28 +496,17 @@ export default function OpositaApp() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`
-                    flex flex-col items-center justify-center
-                    min-w-[4.5rem] py-1.5 px-3 rounded-xl
-                    transition-all duration-200 ease-out
-                    active:scale-95
-                    ${isActive
-                      ? 'bg-purple-50'
-                      : 'hover:bg-gray-50'
-                    }
-                  `}
+                  className="flex flex-col items-center justify-center min-w-[4rem] py-1 px-2 rounded-xl transition-all duration-200 active:scale-95"
                 >
                   <div className={`
-                    flex items-center justify-center
-                    w-8 h-8 rounded-full mb-0.5
-                    transition-all duration-200
-                    ${isActive ? 'bg-purple-100' : ''}
+                    flex items-center justify-center w-9 h-9 rounded-full mb-0.5 transition-all duration-200
+                    ${isActive ? 'bg-gray-100' : ''}
                   `}>
                     <tab.icon
                       className={`
-                        w-5 h-5 transition-all duration-200
+                        w-[22px] h-[22px] transition-all duration-200
                         ${isActive
-                          ? 'text-purple-600 stroke-[2.5]'
+                          ? 'text-gray-900 stroke-[2]'
                           : 'text-gray-400 stroke-[1.5]'
                         }
                       `}
@@ -526,7 +515,7 @@ export default function OpositaApp() {
                   <span className={`
                     text-[10px] leading-tight transition-all duration-200
                     ${isActive
-                      ? 'text-purple-600 font-semibold'
+                      ? 'text-gray-900 font-semibold'
                       : 'text-gray-400 font-medium'
                     }
                   `}>
@@ -537,8 +526,6 @@ export default function OpositaApp() {
             })}
           </div>
         </div>
-        {/* Safe area para dispositivos con notch */}
-        <div className="h-safe-area-inset-bottom bg-white" />
       </div>
     </div>
   );
@@ -1996,7 +1983,7 @@ export default function OpositaApp() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-indigo-50 pb-24">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-indigo-50 pb-28">
       {/* Nueva TopBar fija */}
       <TopBar />
 
