@@ -270,11 +270,21 @@ export default function OpositaApp() {
     }
   };
 
-  const getMotivationalMessage = () => {
-    if (streakData.current >= 7) return "¡Vas imparable! 🔥 Solo 3 días más para tu siguiente insignia";
-    if (totalStats.accuracyRate >= 80) return "¡Brutal! Estás dominando este tema 💪";
-    if (streakData.current >= 3) return `¡${streakData.current} días seguidos! La constancia es clave ✊`;
-    return "Cada pregunta te acerca a tu objetivo ✅";
+  // Mensaje empático según racha (tono sobrio)
+  const getStreakMessage = () => {
+    const days = streakData.current;
+    if (days === 0) return { main: "Hoy es un buen día para empezar", sub: null };
+    if (days === 1) return { main: "Llevas 1 día", sub: "Un paso cada vez" };
+    if (days <= 3) return { main: `Llevas ${days} días seguidos`, sub: "Vas por buen camino" };
+    if (days <= 6) return { main: `Llevas ${days} días seguidos`, sub: "La constancia suma" };
+    if (days <= 13) return { main: `Llevas ${days} días seguidos`, sub: "Una semana de progreso" };
+    return { main: `Llevas ${days} días seguidos`, sub: "La constancia da resultados" };
+  };
+
+  // Días para próximo logro
+  const getDaysToNextBadge = () => {
+    const nextBadge = badges.find(b => b.days > streakData.current);
+    return nextBadge ? nextBadge.days - streakData.current : null;
   };
 
   const startTest = () => {
@@ -1681,126 +1691,104 @@ export default function OpositaApp() {
     </div>
   );
 
-  // Contenido de Inicio
-  const InicioContent = () => (
-    <>
-      {/* Banner protege tu racha */}
-      {streakData.current >= 3 && !userData.accountCreated && showStreakBanner && (
-        <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-4 mb-6 shadow-lg">
-          <div className="flex items-start justify-between">
-            <div className="flex items-start gap-3">
-              <Flame className="w-6 h-6 text-yellow-300 flex-shrink-0" />
-              <div>
-                <p className="text-white font-bold">Protege tu racha de {streakData.current} días</p>
-                <p className="text-white/80 text-sm">Crea tu cuenta para no perder tu progreso si cambias de móvil.</p>
+  // Contenido de Inicio - Rediseño UX (calma, continuidad, acompañamiento)
+  const InicioContent = () => {
+    const streakMessage = getStreakMessage();
+    const daysToNext = getDaysToNextBadge();
+
+    return (
+      <>
+        {/* Banner protege tu racha */}
+        {streakData.current >= 3 && !userData.accountCreated && showStreakBanner && (
+          <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-4 mb-6 shadow-lg">
+            <div className="flex items-start justify-between">
+              <div className="flex items-start gap-3">
+                <Flame className="w-6 h-6 text-yellow-300 flex-shrink-0" />
+                <div>
+                  <p className="text-white font-bold">Protege tu racha de {streakData.current} días</p>
+                  <p className="text-white/80 text-sm">Crea tu cuenta para no perder tu progreso.</p>
+                </div>
               </div>
+              <button onClick={() => setShowStreakBanner(false)} className="text-white/60 hover:text-white">
+                <XCircle className="w-5 h-5" />
+              </button>
             </div>
-            <button onClick={() => setShowStreakBanner(false)} className="text-white/60 hover:text-white">
-              <XCircle className="w-5 h-5" />
+            <button
+              onClick={() => setCurrentPage('signup')}
+              className="mt-3 w-full bg-white text-orange-600 font-bold py-2 px-4 rounded-xl hover:bg-orange-50 transition"
+            >
+              Crear cuenta gratis
             </button>
           </div>
-          <button
-            onClick={() => setCurrentPage('signup')}
-            className="mt-3 w-full bg-white text-orange-600 font-bold py-2 px-4 rounded-xl hover:bg-orange-50 transition"
-          >
-            Crear cuenta gratis
-          </button>
-        </div>
-      )}
+        )}
 
-      {/* Racha - Fase 1 rediseñada */}
-      <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100 mb-6">
-        <div className="flex items-center justify-between mb-3">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-orange-50 rounded-full flex items-center justify-center">
-              <Flame className="w-5 h-5 text-orange-500" />
+        {/* Bloque principal: Racha + Continuidad */}
+        <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 mb-6">
+          {/* Icono y mensaje principal */}
+          <div className="flex items-start gap-4 mb-4">
+            <div className="w-12 h-12 bg-orange-50 rounded-full flex items-center justify-center flex-shrink-0">
+              <Flame className="w-6 h-6 text-orange-500" />
             </div>
-            <div>
-              <p className="text-xs text-gray-500 font-medium uppercase tracking-wide">Racha actual</p>
-              <p className="text-2xl font-bold text-gray-900">{streakData.current} <span className="text-base font-medium text-gray-500">días</span></p>
-            </div>
-          </div>
-          <div className="text-right">
-            <p className="text-xs text-gray-400">Mejor racha</p>
-            <p className="text-sm font-semibold text-gray-600">{streakData.longest} días</p>
-          </div>
-        </div>
-
-        {/* Barra de progreso hacia siguiente insignia */}
-        <div className="mb-3">
-          <div className="flex justify-between text-xs text-gray-500 mb-1">
-            <span>Progreso</span>
-            <span>{Math.max(0, badges.find(b => b.days > streakData.current)?.days - streakData.current || 10 - (streakData.current % 10))} días para siguiente insignia</span>
-          </div>
-          <div className="bg-gray-100 rounded-full h-2">
-            <div
-              className="bg-gradient-to-r from-orange-400 to-orange-500 rounded-full h-2 transition-all duration-500"
-              style={{ width: `${(streakData.current % 10) * 10}%` }}
-            ></div>
-          </div>
-        </div>
-
-        {/* Insignias como chips compactos */}
-        <div className="flex items-center gap-1.5 flex-wrap">
-          {badges.map(badge => {
-            const isUnlocked = streakData.current >= badge.days || streakData.longest >= badge.days;
-            return (
-              <div
-                key={badge.id}
-                className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs transition-all ${
-                  isUnlocked
-                    ? 'bg-orange-100 text-orange-700 font-medium'
-                    : 'bg-gray-50 text-gray-400'
-                }`}
-                title={`${badge.name} - ${badge.days} días`}
-              >
-                <span className="text-sm">{badge.icon}</span>
-                <span>{badge.days}d</span>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* TODO Fase 2: Considerar mover mensaje motivacional a ubicación más discreta */}
-      {/* Mensaje motivacional */}
-      <div className="bg-purple-50 border-2 border-purple-200 rounded-xl p-4 mb-6">
-        <p className="text-purple-900 font-semibold text-center">
-          {getMotivationalMessage()}
-        </p>
-      </div>
-
-      {/* TODO Fase 2: Rediseñar Desafío del día con estilo más profesional y menos saturado */}
-      {/* Desafío del día */}
-      <div className="bg-gradient-to-br from-yellow-400 to-orange-400 rounded-2xl p-6 shadow-xl border-2 border-yellow-500 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/5"></div>
-        <div className="relative">
-          <div className="flex items-start gap-4">
-            <Zap className="w-10 h-10 text-white flex-shrink-0 drop-shadow" />
             <div className="flex-1">
-              <h3 className="text-xl font-bold text-white mb-2 drop-shadow">⚡ DESAFÍO DEL DÍA</h3>
-              <p className="text-white/90 font-semibold mb-3">
-                Responde 10 preguntas sin fallar
-              </p>
-              <div className="flex items-center justify-between">
-                <div className="text-sm">
-                  <div className="text-white/80">Recompensa:</div>
-                  <div className="text-white font-bold">+50 puntos XP</div>
-                </div>
-                <div className="text-sm text-right">
-                  <div className="text-white/80">Caduca en:</div>
-                  <div className="text-white font-bold">18h 42m</div>
-                </div>
-              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-1">
+                {streakMessage.main}
+              </h3>
+              {streakMessage.sub && (
+                <p className="text-gray-500 text-sm">{streakMessage.sub}</p>
+              )}
             </div>
           </div>
-          <button className="w-full mt-4 bg-white hover:bg-gray-100 text-orange-600 font-bold py-3 px-6 rounded-xl shadow-lg transition-all">
-            Aceptar desafío
+
+          {/* Próximo logro (sutil) */}
+          {daysToNext && streakData.current > 0 && (
+            <div className="mb-5">
+              <div className="flex items-center justify-between text-xs text-gray-400 mb-1.5">
+                <span>Próximo logro</span>
+                <span>{daysToNext} {daysToNext === 1 ? 'día' : 'días'}</span>
+              </div>
+              <div className="bg-gray-100 rounded-full h-1.5">
+                <div
+                  className="bg-orange-400 rounded-full h-1.5 transition-all duration-500"
+                  style={{
+                    width: `${Math.min(((streakData.current % (daysToNext + streakData.current)) / (daysToNext + (streakData.current % (daysToNext + streakData.current)))) * 100, 100)}%`
+                  }}
+                ></div>
+              </div>
+            </div>
+          )}
+
+          {/* CTA principal */}
+          <button
+            onClick={startTest}
+            className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3.5 px-6 rounded-xl transition-all active:scale-[0.98]"
+          >
+            Continuar
           </button>
         </div>
-      </div>
-    </>
-  );
+
+        {/* Reto del día (opcional, discreto) */}
+        <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="w-9 h-9 bg-amber-50 rounded-lg flex items-center justify-center">
+                <Zap className="w-4 h-4 text-amber-500" />
+              </div>
+              <div>
+                <p className="text-sm font-medium text-gray-900">Reto del día</p>
+                <p className="text-xs text-gray-500">10 preguntas seguidas</p>
+              </div>
+            </div>
+            <button
+              onClick={startTest}
+              className="px-4 py-2 text-sm font-medium text-purple-600 hover:bg-purple-50 rounded-lg transition"
+            >
+              Intentar
+            </button>
+          </div>
+        </div>
+      </>
+    );
+  };
 
   // Calcular porcentaje de progreso diario para el mini indicador de la TopBar
   const dailyProgressPercent = Math.min(Math.round((totalStats.todayQuestions / userData.dailyGoal) * 100), 100);
