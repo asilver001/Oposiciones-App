@@ -22,6 +22,7 @@ export default function OpositaApp() {
   const [testResults, setTestResults] = useState(null);
   const [showPremiumModal, setShowPremiumModal] = useState(false);
   const [showSettingsModal, setShowSettingsModal] = useState(false);
+  const [showProgressModal, setShowProgressModal] = useState(false);
   const [premiumModalTrigger, setPremiumModalTrigger] = useState('general');
   const [dailyTestsCount, setDailyTestsCount] = useState(0);
   const [isPremium, setIsPremium] = useState(false);
@@ -480,10 +481,10 @@ export default function OpositaApp() {
 
   // Bottom Tab Bar Component - Fase 1 floating style
   const BottomTabBar = () => (
-    <div className="fixed bottom-0 left-0 right-0 z-40 p-3 pb-4">
+    <div className="fixed bottom-0 left-0 right-0 z-40 px-4 pb-2">
       {/* Contenedor floating con márgenes, sombra y bordes redondeados */}
       <div className="max-w-md mx-auto">
-        <div className="bg-white rounded-2xl shadow-[0_2px_20px_rgba(0,0,0,0.1)] border border-gray-100">
+        <div className="bg-white rounded-[20px] shadow-[0_2px_24px_rgba(0,0,0,0.12)] border border-gray-100/80">
           <div className="flex justify-around items-center h-[58px] px-1">
             {[
               { id: 'inicio', label: 'Inicio', icon: Home },
@@ -1707,22 +1708,6 @@ export default function OpositaApp() {
         </div>
       )}
 
-      {/* Info examen y progreso */}
-      <div className="bg-white/80 backdrop-blur rounded-xl p-4 mb-6 border border-white/50">
-        {daysUntilExam ? (
-          <p className="text-gray-700 font-medium">
-            📅 Te quedan aproximadamente <span className="font-bold text-purple-600">{daysUntilExam} días</span> para tu examen
-          </p>
-        ) : (
-          <p className="text-gray-600">
-            🤔 Aún no tienes fecha de examen. Te ayudamos a construir el hábito igualmente.
-          </p>
-        )}
-        <p className="text-gray-600 text-sm mt-1">
-          📊 Llevas aproximadamente <span className="font-bold">{totalProgress}%</span> del temario
-        </p>
-      </div>
-
       {/* Racha - Fase 1 rediseñada */}
       <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100 mb-6">
         <div className="flex items-center justify-between mb-3">
@@ -1774,78 +1759,6 @@ export default function OpositaApp() {
               </div>
             );
           })}
-        </div>
-      </div>
-
-      {/* TODO Fase 2: Rediseñar Objetivo diario con estilo profesional similar a Racha */}
-      {/* Objetivo diario */}
-      <div id="objetivo-diario" className="bg-white rounded-2xl p-6 shadow-xl mb-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Tu objetivo de hoy</h2>
-        <div className="flex items-center gap-6 mb-4">
-          <div className="relative w-28 h-28">
-            <svg className="w-full h-full transform -rotate-90">
-              <circle cx="56" cy="56" r="50" fill="none" stroke="#E5E7EB" strokeWidth="10"></circle>
-              <circle
-                cx="56"
-                cy="56"
-                r="50"
-                fill="none"
-                stroke="#F59E0B"
-                strokeWidth="10"
-                strokeDasharray={`${Math.min((totalStats.todayQuestions / userData.dailyGoal) * 314, 314)} 314`}
-                strokeLinecap="round"
-              ></circle>
-            </svg>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-3xl font-bold text-gray-900">
-                {Math.min(Math.round((totalStats.todayQuestions / userData.dailyGoal) * 100), 100)}%
-              </span>
-            </div>
-          </div>
-
-          <div className="flex-1">
-            <div className="text-gray-600 mb-2">
-              <span className="text-2xl font-bold text-gray-900">{totalStats.todayQuestions}</span>
-              <span className="text-gray-600">/{userData.dailyGoal} preguntas</span>
-            </div>
-            <p className="text-sm text-gray-500">
-              Te quedan {Math.max(0, userData.dailyGoal - totalStats.todayQuestions)} preguntas · ~{Math.max(0, Math.round(((userData.dailyGoal - totalStats.todayQuestions) / userData.dailyGoal) * userData.dailyGoalMinutes))} minutos
-            </p>
-          </div>
-        </div>
-
-        {totalStats.todayQuestions >= userData.dailyGoal ? (
-          <div className="bg-green-50 border-2 border-green-200 rounded-xl p-4 text-center">
-            <div className="text-3xl mb-2">✅</div>
-            <p className="text-green-800 font-bold">¡Objetivo cumplido! Mañana a por el siguiente</p>
-          </div>
-        ) : (
-          <button
-            onClick={startTest}
-            className="w-full bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white font-bold py-4 px-6 rounded-2xl shadow-lg transition-all hover:scale-105"
-          >
-            Completar mi objetivo →
-          </button>
-        )}
-      </div>
-
-      {/* TODO Fase 2: Rediseñar Stats con estilo más compacto y profesional */}
-      {/* Stats */}
-      <div className="grid grid-cols-2 gap-4 mb-6">
-        <div className="bg-white rounded-2xl p-5 shadow-lg">
-          <div className="flex items-center gap-3 mb-2">
-            <Trophy className="w-6 h-6 text-purple-600" />
-            <span className="text-gray-600 text-sm font-medium">Tests completados</span>
-          </div>
-          <div className="text-3xl font-bold text-gray-900">{totalStats.testsCompleted}</div>
-        </div>
-
-        <div className="bg-white rounded-2xl p-5 shadow-lg">
-          <div className="flex items-center gap-3 mb-2">
-            <Target className="w-6 h-6 text-green-600" />
-            <span className="text-gray-600 text-sm font-medium">Tasa de acierto</span>
-          </div>
-          <div className="text-3xl font-bold text-gray-900">{totalStats.accuracyRate}%</div>
         </div>
       </div>
 
@@ -1920,6 +1833,107 @@ export default function OpositaApp() {
     </div>
   );
 
+  // Modal de Progreso Diario
+  const ProgressModal = () => (
+    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center">
+      <div className="bg-white rounded-t-3xl sm:rounded-2xl w-full sm:max-w-md max-h-[85vh] overflow-y-auto shadow-2xl">
+        {/* Header */}
+        <div className="sticky top-0 bg-white px-5 py-4 border-b border-gray-100 flex items-center justify-between">
+          <h3 className="text-lg font-bold text-gray-900">Tu progreso de hoy</h3>
+          <button
+            onClick={() => setShowProgressModal(false)}
+            className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition"
+          >
+            <XCircle className="w-5 h-5 text-gray-500" />
+          </button>
+        </div>
+
+        <div className="p-5 space-y-5">
+          {/* Anillo de progreso grande */}
+          <div className="flex flex-col items-center py-4">
+            <div className="relative w-32 h-32 mb-4">
+              <svg className="w-full h-full transform -rotate-90">
+                <circle cx="64" cy="64" r="56" fill="none" stroke="#F3E8FF" strokeWidth="12" />
+                <circle
+                  cx="64"
+                  cy="64"
+                  r="56"
+                  fill="none"
+                  stroke="#8B5CF6"
+                  strokeWidth="12"
+                  strokeDasharray={`${Math.min((totalStats.todayQuestions / userData.dailyGoal) * 352, 352)} 352`}
+                  strokeLinecap="round"
+                  className="transition-all duration-500"
+                />
+              </svg>
+              <div className="absolute inset-0 flex flex-col items-center justify-center">
+                <span className="text-3xl font-bold text-gray-900">
+                  {Math.min(Math.round((totalStats.todayQuestions / userData.dailyGoal) * 100), 100)}%
+                </span>
+              </div>
+            </div>
+            <p className="text-gray-600">
+              <span className="text-2xl font-bold text-gray-900">{totalStats.todayQuestions}</span>
+              <span className="text-gray-500">/{userData.dailyGoal} preguntas</span>
+            </p>
+            <p className="text-sm text-gray-400 mt-1">
+              {totalStats.todayQuestions >= userData.dailyGoal
+                ? '¡Objetivo cumplido! 🎉'
+                : `Te quedan ${Math.max(0, userData.dailyGoal - totalStats.todayQuestions)} preguntas`}
+            </p>
+          </div>
+
+          {/* Stats en grid */}
+          <div className="grid grid-cols-2 gap-3">
+            <div className="bg-gray-50 rounded-xl p-4">
+              <div className="flex items-center gap-2 mb-1">
+                <Trophy className="w-4 h-4 text-purple-500" />
+                <span className="text-xs text-gray-500 font-medium">Tests completados</span>
+              </div>
+              <p className="text-2xl font-bold text-gray-900">{totalStats.testsCompleted}</p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-4">
+              <div className="flex items-center gap-2 mb-1">
+                <Target className="w-4 h-4 text-green-500" />
+                <span className="text-xs text-gray-500 font-medium">Tasa de acierto</span>
+              </div>
+              <p className="text-2xl font-bold text-gray-900">{totalStats.accuracyRate}%</p>
+            </div>
+          </div>
+
+          {/* Info examen */}
+          <div className="bg-purple-50 rounded-xl p-4">
+            {daysUntilExam ? (
+              <p className="text-gray-700 text-sm">
+                📅 Te quedan <span className="font-bold text-purple-600">{daysUntilExam} días</span> para tu examen
+              </p>
+            ) : (
+              <p className="text-gray-600 text-sm">
+                🤔 Aún no tienes fecha de examen
+              </p>
+            )}
+            <p className="text-gray-500 text-xs mt-1">
+              📊 Llevas <span className="font-semibold">{totalProgress}%</span> del temario
+            </p>
+          </div>
+
+          {/* Botón de acción */}
+          {totalStats.todayQuestions < userData.dailyGoal && (
+            <button
+              onClick={() => {
+                setShowProgressModal(false);
+                startTest();
+              }}
+              className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 rounded-xl transition-all active:scale-[0.98]"
+            >
+              Continuar estudiando →
+            </button>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+
   // Nueva TopBar fija - Fase 1
   const TopBar = () => (
     <div className="fixed top-0 left-0 right-0 z-40 bg-white/98 backdrop-blur-lg shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
@@ -1927,12 +1941,7 @@ export default function OpositaApp() {
         <div className="flex items-center justify-between h-14">
           {/* Izquierda - Botón de progreso diario */}
           <button
-            onClick={() => {
-              const objetivoSection = document.getElementById('objetivo-diario');
-              if (objetivoSection) {
-                objetivoSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
+            onClick={() => setShowProgressModal(true)}
             className="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-purple-50 active:scale-95 transition-all duration-200"
           >
             {/* Mini anillo de progreso */}
@@ -2068,6 +2077,7 @@ export default function OpositaApp() {
       <BottomTabBar />
       {showPremiumModal && <PremiumModal />}
       {showSettingsModal && <SettingsModal />}
+      {showProgressModal && <ProgressModal />}
     </div>
   );
 }
