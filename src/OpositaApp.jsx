@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Home, BookOpen, Trophy, Clock, TrendingUp, ArrowLeft, CheckCircle, XCircle, Target, Flame, Zap, Star, Lock, Crown, BarChart3, Calendar, History, GraduationCap, Lightbulb, Info, Settings } from 'lucide-react';
+import { Home, BookOpen, Trophy, Clock, TrendingUp, ArrowLeft, CheckCircle, XCircle, Target, Flame, Zap, Star, Lock, Crown, BarChart3, Calendar, History, GraduationCap, Lightbulb, Info, Settings, ChevronRight, Instagram, Mail, Bell, User, LogOut, HelpCircle, FileText, Shield, ExternalLink } from 'lucide-react';
 import { allQuestions, topicsList, getRandomQuestions } from './data/questions';
 
 export default function OpositaApp() {
@@ -1805,33 +1805,102 @@ export default function OpositaApp() {
   // Calcular porcentaje de progreso diario para el mini indicador de la TopBar
   const dailyProgressPercent = Math.min(Math.round((totalStats.todayQuestions / userData.dailyGoal) * 100), 100);
 
-  // Modal de Ajustes (placeholder)
-  const SettingsModal = () => (
-    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl">
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-bold text-gray-900">Ajustes</h3>
-          <button
-            onClick={() => setShowSettingsModal(false)}
-            className="text-gray-400 hover:text-gray-600"
-          >
-            <XCircle className="w-6 h-6" />
-          </button>
+  // Página de Ajustes estilo Tiimo
+  const SettingsModal = () => {
+    const SettingsRow = ({ icon: Icon, label, onClick, rightText, locked, external }) => (
+      <button
+        onClick={onClick}
+        disabled={locked}
+        className={`w-full px-4 py-3.5 flex items-center justify-between hover:bg-gray-50 transition ${locked ? 'opacity-50' : ''}`}
+      >
+        <div className="flex items-center gap-3">
+          <Icon className="w-5 h-5 text-gray-500" />
+          <span className="text-gray-700">{label}</span>
         </div>
-        <div className="text-center py-8">
-          <Settings className="w-12 h-12 text-gray-300 mx-auto mb-3" />
-          <p className="text-gray-500">Ajustes en desarrollo</p>
-          <p className="text-gray-400 text-sm mt-1">Próximamente podrás personalizar tu experiencia</p>
+        <div className="flex items-center gap-2">
+          {rightText && <span className="text-gray-400 text-sm">{rightText}</span>}
+          {locked ? (
+            <Lock className="w-4 h-4 text-gray-400" />
+          ) : external ? (
+            <ExternalLink className="w-4 h-4 text-gray-400" />
+          ) : (
+            <ChevronRight className="w-5 h-5 text-gray-400" />
+          )}
         </div>
-        <button
-          onClick={() => setShowSettingsModal(false)}
-          className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-xl transition"
-        >
-          Entendido
-        </button>
+      </button>
+    );
+
+    const SectionTitle = ({ children }) => (
+      <h3 className="text-sm font-semibold text-gray-900 px-4 pt-6 pb-2">{children}</h3>
+    );
+
+    return (
+      <div className="fixed inset-0 bg-white z-50 overflow-y-auto">
+        {/* Header */}
+        <div className="sticky top-0 bg-white/95 backdrop-blur-lg border-b border-gray-100 z-10">
+          <div className="flex items-center h-14 px-4">
+            <button
+              onClick={() => setShowSettingsModal(false)}
+              className="w-10 h-10 -ml-2 flex items-center justify-center rounded-full hover:bg-gray-100 transition"
+            >
+              <ArrowLeft className="w-5 h-5 text-gray-700" />
+            </button>
+          </div>
+        </div>
+
+        <div className="px-4 pb-8">
+          {/* Título */}
+          <div className="flex items-center gap-3 mb-6">
+            <Settings className="w-7 h-7 text-gray-700" />
+            <h1 className="text-2xl font-bold text-gray-900">Ajustes</h1>
+          </div>
+
+          {/* Sección: Ajustes */}
+          <SectionTitle>Ajustes</SectionTitle>
+          <div className="bg-white rounded-xl border border-gray-100 divide-y divide-gray-100 overflow-hidden">
+            <SettingsRow icon={Bell} label="Notificaciones" onClick={() => {}} rightText="Próximamente" locked />
+            <SettingsRow icon={Calendar} label="Meta diaria" onClick={() => {}} rightText={`${userData.dailyGoal} preguntas`} locked />
+          </div>
+
+          {/* Sección: Perfil */}
+          <SectionTitle>Perfil</SectionTitle>
+          <div className="bg-white rounded-xl border border-gray-100 divide-y divide-gray-100 overflow-hidden">
+            <SettingsRow icon={User} label="Editar perfil" onClick={() => {}} rightText={userData.name || 'Sin nombre'} locked />
+          </div>
+
+          {/* Sección: Cuenta y suscripción */}
+          <SectionTitle>Cuenta y suscripción</SectionTitle>
+          <div className="bg-white rounded-xl border border-gray-100 divide-y divide-gray-100 overflow-hidden">
+            <SettingsRow icon={Crown} label="Plan Premium" onClick={() => setShowPremiumModal(true)} rightText="Próximamente" />
+            <SettingsRow icon={Mail} label="Contacto" onClick={() => { setShowSettingsModal(false); setCurrentPage('contact'); }} />
+            <SettingsRow icon={LogOut} label="Cerrar sesión" onClick={() => {}} locked />
+          </div>
+
+          {/* Sección: Otros */}
+          <SectionTitle>Otros</SectionTitle>
+          <div className="bg-white rounded-xl border border-gray-100 divide-y divide-gray-100 overflow-hidden">
+            <SettingsRow icon={Shield} label="Política de privacidad" onClick={() => { setShowSettingsModal(false); setCurrentPage('privacy'); }} />
+            <SettingsRow icon={FileText} label="Términos de servicio" onClick={() => { setShowSettingsModal(false); setCurrentPage('terms'); }} />
+            <SettingsRow icon={FileText} label="Aviso legal" onClick={() => { setShowSettingsModal(false); setCurrentPage('legal'); }} />
+          </div>
+
+          {/* Info de la app */}
+          <div className="text-center pt-8 pb-4">
+            <p className="text-gray-900 font-medium">Oposita Smart</p>
+            <p className="text-gray-500 text-sm mt-1">La forma inteligente de opositar</p>
+            <p className="text-gray-400 text-xs mt-3">
+              Versión 1.0.0
+            </p>
+            {userData.email && (
+              <p className="text-gray-400 text-xs mt-1">
+                {userData.email}
+              </p>
+            )}
+          </div>
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   // Modal de Progreso Diario
   const ProgressModal = () => (
@@ -2019,35 +2088,55 @@ export default function OpositaApp() {
           {activeTab === 'temas' && <TemasContent />}
           {activeTab === 'recursos' && <RecursosContent />}
 
-          {/* TODO Fase 2: Rediseñar footer con estilo más minimalista */}
-          {/* Footer con enlaces legales */}
-          <footer className="mt-12 pt-6 border-t border-gray-300/50">
-            <div className="text-center">
-              <p className="text-gray-700 font-semibold mb-3">Oposita Smart</p>
-              <div className="flex flex-wrap justify-center gap-4 text-sm mb-4">
-                <button onClick={() => setCurrentPage('about')} className="text-gray-600 hover:text-purple-700 transition">
-                  Acerca de
-                </button>
-                <button onClick={() => setCurrentPage('faq')} className="text-gray-600 hover:text-purple-700 transition">
-                  FAQ
-                </button>
-                <button onClick={() => setCurrentPage('contact')} className="text-gray-600 hover:text-purple-700 transition">
-                  Contacto
-                </button>
+          {/* Footer estilo Tiimo */}
+          <footer className="mt-10 space-y-3">
+            {/* Cards destacadas */}
+            <button
+              onClick={() => setCurrentPage('about')}
+              className="w-full bg-purple-50 hover:bg-purple-100 rounded-xl p-4 flex items-center justify-between transition-all active:scale-[0.98]"
+            >
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-sm">
+                  <Info className="w-5 h-5 text-purple-600" />
+                </div>
+                <span className="font-medium text-gray-900">Acerca de</span>
               </div>
-              <div className="flex flex-wrap justify-center gap-4 text-xs mb-4">
-                <button onClick={() => setCurrentPage('privacy')} className="text-gray-500 hover:text-purple-700 transition">
-                  Privacidad
-                </button>
-                <button onClick={() => setCurrentPage('terms')} className="text-gray-500 hover:text-purple-700 transition">
-                  Términos
-                </button>
-                <button onClick={() => setCurrentPage('legal')} className="text-gray-500 hover:text-purple-700 transition">
-                  Aviso Legal
-                </button>
+              <ChevronRight className="w-5 h-5 text-gray-400" />
+            </button>
+
+            <button
+              onClick={() => setCurrentPage('faq')}
+              className="w-full bg-blue-50 hover:bg-blue-100 rounded-xl p-4 flex items-center justify-between transition-all active:scale-[0.98]"
+            >
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-sm">
+                  <HelpCircle className="w-5 h-5 text-blue-600" />
+                </div>
+                <span className="font-medium text-gray-900">Preguntas frecuentes</span>
               </div>
-              <p className="text-xs text-gray-500">
-                © {new Date().getFullYear()} Oposita Smart. Todos los derechos reservados.
+              <ChevronRight className="w-5 h-5 text-gray-400" />
+            </button>
+
+            {/* Lista de opciones */}
+            <div className="bg-white rounded-xl border border-gray-100 divide-y divide-gray-100 overflow-hidden">
+              <button
+                onClick={() => window.open('https://instagram.com', '_blank')}
+                className="w-full px-4 py-3.5 flex items-center justify-between hover:bg-gray-50 transition"
+              >
+                <div className="flex items-center gap-3">
+                  <Instagram className="w-5 h-5 text-gray-500" />
+                  <span className="text-gray-700">Síguenos en Instagram</span>
+                </div>
+                <ExternalLink className="w-4 h-4 text-gray-400" />
+              </button>
+            </div>
+
+            {/* Tagline y copyright */}
+            <div className="text-center pt-6 pb-2">
+              <p className="text-gray-900 font-medium mb-1">Oposita Smart</p>
+              <p className="text-gray-500 text-sm mb-3">La forma inteligente de opositar</p>
+              <p className="text-xs text-gray-400">
+                © {new Date().getFullYear()} Oposita Smart
               </p>
             </div>
           </footer>
