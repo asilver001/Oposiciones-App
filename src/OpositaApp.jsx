@@ -2088,54 +2088,49 @@ export default function OpositaApp() {
           {activeTab === 'temas' && <TemasContent />}
           {activeTab === 'recursos' && <RecursosContent />}
 
-          {/* Footer estilo Tiimo */}
-          <footer className="mt-10 space-y-3">
-            {/* Cards destacadas */}
-            <button
-              onClick={() => setCurrentPage('about')}
-              className="w-full bg-purple-50 hover:bg-purple-100 rounded-xl p-4 flex items-center justify-between transition-all active:scale-[0.98]"
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-sm">
-                  <Info className="w-5 h-5 text-purple-600" />
-                </div>
-                <span className="font-medium text-gray-900">Acerca de</span>
+          {/* Footer */}
+          <footer className="mt-10">
+            {/* Lista de opciones - solo en inicio */}
+            {activeTab === 'inicio' && (
+              <div className="bg-white rounded-xl border border-gray-100 divide-y divide-gray-100 overflow-hidden mb-8">
+                <button
+                  onClick={() => setCurrentPage('about')}
+                  className="w-full px-4 py-4 flex items-center justify-between hover:bg-gray-50 transition"
+                >
+                  <div className="flex items-center gap-3">
+                    <Info className="w-5 h-5 text-gray-400" />
+                    <span className="text-gray-700">Acerca de</span>
+                  </div>
+                  <ChevronRight className="w-5 h-5 text-gray-300" />
+                </button>
+                <button
+                  onClick={() => setCurrentPage('faq')}
+                  className="w-full px-4 py-4 flex items-center justify-between hover:bg-gray-50 transition"
+                >
+                  <div className="flex items-center gap-3">
+                    <HelpCircle className="w-5 h-5 text-gray-400" />
+                    <span className="text-gray-700">FAQ</span>
+                  </div>
+                  <ChevronRight className="w-5 h-5 text-gray-300" />
+                </button>
+                <button
+                  onClick={() => window.open('https://instagram.com', '_blank')}
+                  className="w-full px-4 py-4 flex items-center justify-between hover:bg-gray-50 transition"
+                >
+                  <div className="flex items-center gap-3">
+                    <Instagram className="w-5 h-5 text-gray-400" />
+                    <span className="text-gray-700">Síguenos en Instagram</span>
+                  </div>
+                  <ChevronRight className="w-5 h-5 text-gray-300" />
+                </button>
               </div>
-              <ChevronRight className="w-5 h-5 text-gray-400" />
-            </button>
+            )}
 
-            <button
-              onClick={() => setCurrentPage('faq')}
-              className="w-full bg-blue-50 hover:bg-blue-100 rounded-xl p-4 flex items-center justify-between transition-all active:scale-[0.98]"
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-sm">
-                  <HelpCircle className="w-5 h-5 text-blue-600" />
-                </div>
-                <span className="font-medium text-gray-900">Preguntas frecuentes</span>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-400" />
-            </button>
-
-            {/* Lista de opciones */}
-            <div className="bg-white rounded-xl border border-gray-100 divide-y divide-gray-100 overflow-hidden">
-              <button
-                onClick={() => window.open('https://instagram.com', '_blank')}
-                className="w-full px-4 py-3.5 flex items-center justify-between hover:bg-gray-50 transition"
-              >
-                <div className="flex items-center gap-3">
-                  <Instagram className="w-5 h-5 text-gray-500" />
-                  <span className="text-gray-700">Síguenos en Instagram</span>
-                </div>
-                <ExternalLink className="w-4 h-4 text-gray-400" />
-              </button>
-            </div>
-
-            {/* Tagline y copyright */}
-            <div className="text-center pt-6 pb-2">
-              <p className="text-gray-900 font-medium mb-1">Oposita Smart</p>
-              <p className="text-gray-500 text-sm mb-3">La forma inteligente de opositar</p>
-              <p className="text-xs text-gray-400">
+            {/* Nombre y slogan - en todas las pestañas */}
+            <div className="text-center py-6">
+              <p className="text-gray-900 font-semibold text-lg mb-1">Oposita Smart</p>
+              <p className="text-gray-500 text-sm">La forma inteligente de opositar</p>
+              <p className="text-xs text-gray-400 mt-4">
                 © {new Date().getFullYear()} Oposita Smart
               </p>
             </div>
