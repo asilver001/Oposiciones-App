@@ -514,7 +514,7 @@ const styles = StyleSheet.create({
   welcomeDesc: { color: '#9CA3AF', textAlign: 'center', marginBottom: 40 },
 
   // Buttons
-  primaryButton: { backgroundColor: '#22C55E', paddingVertical: 16, paddingHorizontal: 32, borderRadius: 12, width: '100%' },
+  primaryButton: { backgroundColor: '#7C3AED', paddingVertical: 16, paddingHorizontal: 32, borderRadius: 12, width: '100%' },
   primaryButtonText: { color: 'white', fontWeight: '600', fontSize: 18, textAlign: 'center' },
   secondaryButton: { paddingVertical: 16, paddingHorizontal: 32 },
   secondaryButtonText: { color: '#6B7280', fontWeight: '500', textAlign: 'center' },
