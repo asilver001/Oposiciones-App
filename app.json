@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "Oposita Smart",
+    "slug": "oposita-smart",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#7C3AED"
+      }
+    },
+    "web": {
+      "output": "static"
+    }
+  }
+}
