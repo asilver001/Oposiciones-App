@@ -439,6 +439,146 @@ function FAQScreen({ onBack }) {
   );
 }
 
+// ============ QUESTION DETAIL SCREEN ============
+function QuestionDetailScreen({ question, questionIndex, userAnswer, onBack, onToggleFavorite, isFavorite }) {
+  const isCorrect = userAnswer === question.correct;
+  const userOption = question.options.find(o => o.id === userAnswer);
+  const correctOption = question.options.find(o => o.id === question.correct);
+
+  return (
+    <View style={styles.questionDetailContainer}>
+      <View style={styles.questionDetailHeader}>
+        <Pressable onPress={onBack} style={styles.questionDetailBackBtn}>
+          <Text style={styles.questionDetailBackText}>← Atrás</Text>
+        </Pressable>
+        <Text style={styles.questionDetailTitle}>Pregunta {questionIndex + 1}</Text>
+        <Pressable onPress={onToggleFavorite} style={styles.favoriteBtn}>
+          <Text style={styles.favoriteBtnText}>{isFavorite ? '❤️' : '🤍'}</Text>
+        </Pressable>
+      </View>
+
+      <ScrollView style={styles.questionDetailScroll}>
+        {/* Status badge */}
+        <View style={[styles.questionStatusBadge, isCorrect ? styles.badgeCorrect : styles.badgeIncorrect]}>
+          <Text style={styles.questionStatusText}>{isCorrect ? '✓ Correcta' : '✕ Incorrecta'}</Text>
+        </View>
+
+        {/* Question text */}
+        <Text style={styles.questionDetailText}>{question.question}</Text>
+
+        {/* All options */}
+        <View style={styles.questionDetailOptions}>
+          {question.options.map((option) => {
+            const isUserAnswer = option.id === userAnswer;
+            const isCorrectAnswer = option.id === question.correct;
+            let optionStyle = styles.detailOptionNormal;
+            if (isCorrectAnswer) optionStyle = styles.detailOptionCorrect;
+            else if (isUserAnswer && !isCorrect) optionStyle = styles.detailOptionWrong;
+
+            return (
+              <View key={option.id} style={optionStyle}>
+                <View style={styles.detailOptionHeader}>
+                  <Text style={styles.detailOptionId}>{option.id.toUpperCase()}.</Text>
+                  {isUserAnswer && <Text style={styles.detailOptionBadge}>Tu respuesta</Text>}
+                  {isCorrectAnswer && <Text style={styles.detailOptionBadgeCorrect}>Correcta</Text>}
+                </View>
+                <Text style={styles.detailOptionText}>{option.text}</Text>
+              </View>
+            );
+          })}
+        </View>
+
+        {/* Explanation */}
+        <View style={styles.questionDetailExplanation}>
+          <Text style={styles.explanationHeader}>💡 Explicación</Text>
+          <Text style={styles.explanationContent}>{question.explanation}</Text>
+          {question.ley && question.articulo && (
+            <Text style={styles.explanationSource}>📖 {question.ley}, Art. {question.articulo}</Text>
+          )}
+        </View>
+      </ScrollView>
+    </View>
+  );
+}
+
+// ============ SIGNUP SCREEN ============
+function SignupScreen({ onSubmit, onSkip, userData }) {
+  const [name, setName] = useState(userData?.name || '');
+  const [email, setEmail] = useState(userData?.email || '');
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
+
+  const canSubmit = email.includes('@') && privacyAccepted;
+
+  return (
+    <View style={styles.signupContainer}>
+      <Pressable onPress={onSkip} style={styles.signupSkipBtn}>
+        <Text style={styles.signupSkipText}>Saltar</Text>
+      </Pressable>
+
+      <ScrollView style={styles.signupScroll}>
+        <View style={styles.signupIconBox}>
+          <Text style={styles.signupIcon}>🔒</Text>
+        </View>
+
+        <Text style={styles.signupTitle}>Protege tu progreso</Text>
+        <Text style={styles.signupSubtitle}>
+          Crea una cuenta para guardar tu racha y estadísticas en la nube.
+        </Text>
+
+        <View style={styles.signupForm}>
+          <View style={styles.signupInputGroup}>
+            <Text style={styles.signupLabel}>Nombre (opcional)</Text>
+            <TextInput
+              style={styles.signupInput}
+              placeholder="Tu nombre"
+              value={name}
+              onChangeText={setName}
+            />
+          </View>
+
+          <View style={styles.signupInputGroup}>
+            <Text style={styles.signupLabel}>Email</Text>
+            <TextInput
+              style={styles.signupInput}
+              placeholder="tu@email.com"
+              value={email}
+              onChangeText={setEmail}
+              keyboardType="email-address"
+              autoCapitalize="none"
+            />
+          </View>
+
+          <Pressable
+            style={styles.signupCheckbox}
+            onPress={() => setPrivacyAccepted(!privacyAccepted)}
+          >
+            <View style={[styles.checkbox, privacyAccepted && styles.checkboxChecked]}>
+              {privacyAccepted && <Text style={styles.checkboxCheck}>✓</Text>}
+            </View>
+            <Text style={styles.signupCheckboxText}>
+              Acepto la política de privacidad
+            </Text>
+          </Pressable>
+
+          <Pressable
+            style={[styles.signupButton, !canSubmit && styles.signupButtonDisabled]}
+            onPress={() => canSubmit && onSubmit({ name, email })}
+            disabled={!canSubmit}
+          >
+            <Text style={styles.signupButtonText}>Crear cuenta</Text>
+          </Pressable>
+        </View>
+
+        {IS_DEV && (
+          <Pressable style={styles.devSkip} onPress={onSkip}>
+            <Text style={styles.devSkipText}>[DEV] Saltar</Text>
+          </Pressable>
+        )}
+      </ScrollView>
+    </View>
+  );
+}
+
 // ============ WELCOME SCREEN ============
 function WelcomeScreen({ onStart, onReset, onDeplete, onTogglePremium, isPremium, freeTestsUsed, onSkip }) {
   const floatAnim = useRef(new Animated.Value(0)).current;
@@ -630,7 +770,7 @@ function OnboardingIntro({ onStart, onBack }) {
 }
 
 // ============ HOME SCREEN (TABS) ============
-function HomeScreen({ streakData, stats, onStartTest, onTabChange, activeTab, onSettings, onShowProgress, canStartTest, onShowPremium, isPremium, freeTestsUsed, userData }) {
+function HomeScreen({ streakData, stats, onStartTest, onTabChange, activeTab, onSettings, onShowProgress, canStartTest, onShowPremium, isPremium, freeTestsUsed, userData, showStreakBanner, onDismissBanner, onSignup }) {
   const today = new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' });
   const fireAnim = useRef(new Animated.Value(1)).current;
   const dailyProgressPercent = Math.min(Math.round((stats.testsToday * 5) / (userData?.dailyGoal || 15) * 100), 100);
@@ -662,6 +802,7 @@ function HomeScreen({ streakData, stats, onStartTest, onTabChange, activeTab, on
 
   const nextBadgeInfo = getDaysToNextBadge();
   const testsRemaining = FREE_TESTS_LIMIT - freeTestsUsed;
+  const shouldShowBanner = showStreakBanner && streakData.current >= 3 && !userData?.accountCreated;
 
   return (
     <View style={styles.homeContainer}>
@@ -679,6 +820,25 @@ function HomeScreen({ streakData, stats, onStartTest, onTabChange, activeTab, on
       </View>
 
       <ScrollView style={styles.homeScroll} showsVerticalScrollIndicator={false}>
+        {/* Banner protege tu racha */}
+        {shouldShowBanner && (
+          <View style={styles.streakBanner}>
+            <View style={styles.streakBannerContent}>
+              <Text style={styles.streakBannerIcon}>🔥</Text>
+              <View style={styles.streakBannerText}>
+                <Text style={styles.streakBannerTitle}>Protege tu racha de {streakData.current} días</Text>
+                <Text style={styles.streakBannerSubtitle}>Crea tu cuenta para no perder tu progreso.</Text>
+              </View>
+              <Pressable onPress={onDismissBanner} style={styles.streakBannerClose}>
+                <Text style={styles.streakBannerCloseText}>✕</Text>
+              </Pressable>
+            </View>
+            <Pressable style={styles.streakBannerBtn} onPress={onSignup}>
+              <Text style={styles.streakBannerBtnText}>Crear cuenta gratis</Text>
+            </Pressable>
+          </View>
+        )}
+
         {/* Contexto oposición */}
         <Text style={styles.oposicionContext}>
           {userData?.oposicionLabel || 'Administrativo del Estado'} · {userData?.turno || 'Turno Libre'}
@@ -984,7 +1144,7 @@ function TestScreen({ questions, onFinish, onClose }) {
 }
 
 // ============ RESULTS SCREEN ============
-function ResultsScreen({ results, onRetry, onHome, canRetry, onShowPremium }) {
+function ResultsScreen({ results, questions, onRetry, onHome, canRetry, onShowPremium, onViewDetail }) {
   const percentage = Math.round((results.correct / results.total) * 100);
   const isGood = percentage >= 70;
   const formatTime = (s) => `${Math.floor(s / 60)}:${(s % 60).toString().padStart(2, '0')}`;
@@ -1016,12 +1176,13 @@ function ResultsScreen({ results, onRetry, onHome, canRetry, onShowPremium }) {
         const userAnswer = results.answers[idx];
         const isCorrect = userAnswer === q.correct;
         return (
-          <View key={idx} style={styles.summaryRow}>
+          <Pressable key={idx} style={styles.summaryRow} onPress={() => onViewDetail(idx)}>
             <View style={[styles.summaryIcon, isCorrect ? styles.iconGreen : styles.iconRed]}>
               <Text style={styles.summaryIconText}>{isCorrect ? '✓' : '✕'}</Text>
             </View>
             <Text style={styles.summaryText} numberOfLines={1}>P{idx + 1}: {q.question.substring(0, 40)}...</Text>
-          </View>
+            <Text style={styles.chevron}>›</Text>
+          </Pressable>
         );
       })}
 
@@ -1075,6 +1236,18 @@ export default function App() {
   // New modals
   const [showSettingsModal, setShowSettingsModal] = useState(false);
   const [showProgressModal, setShowProgressModal] = useState(false);
+
+  // Favorites system
+  const [favorites, setFavorites] = useState([]);
+
+  // Question detail
+  const [selectedQuestionIndex, setSelectedQuestionIndex] = useState(null);
+
+  // Streak banner
+  const [showStreakBanner, setShowStreakBanner] = useState(true);
+
+  // Signup tracking
+  const [signupFormShownCount, setSignupFormShownCount] = useState(0);
 
   // User data (extended)
   const [userData, setUserData] = useState({
@@ -1156,6 +1329,24 @@ export default function App() {
       const waitlistResult = await storage.get('waitlist_email');
       if (waitlistResult.value) {
         setWaitlistEmail(waitlistResult.value);
+      }
+
+      // Load user profile data
+      const userResult = await storage.get('oposita-user');
+      if (userResult.value) {
+        setUserData(JSON.parse(userResult.value));
+      }
+
+      // Load favorites
+      const favoritesResult = await storage.get('oposita-favorites');
+      if (favoritesResult.value) {
+        setFavorites(JSON.parse(favoritesResult.value));
+      }
+
+      // Load signup form shown count
+      const signupCountResult = await storage.get('oposita-signup-count');
+      if (signupCountResult.value) {
+        setSignupFormShownCount(JSON.parse(signupCountResult.value));
       }
     } catch (e) {
       console.log('Error loading user data:', e);
@@ -1284,6 +1475,47 @@ export default function App() {
     setScreen('home');
   };
 
+  // Favorites functions
+  const toggleFavorite = async (questionId) => {
+    const isFavorite = favorites.includes(questionId);
+    if (isFavorite) {
+      const newFavorites = favorites.filter(id => id !== questionId);
+      setFavorites(newFavorites);
+      await storage.set('oposita-favorites', JSON.stringify(newFavorites));
+    } else {
+      if (!isPremium && favorites.length >= FREE_FAVORITES_LIMIT) {
+        setShowPremiumModal(true);
+        return;
+      }
+      const newFavorites = [...favorites, questionId];
+      setFavorites(newFavorites);
+      await storage.set('oposita-favorites', JSON.stringify(newFavorites));
+    }
+  };
+
+  // Signup handler
+  const handleSignup = async ({ name, email }) => {
+    const newUserData = { ...userData, name, email, accountCreated: true };
+    setUserData(newUserData);
+    await storage.set('oposita-user', JSON.stringify(newUserData));
+    setScreen('home');
+  };
+
+  const handleSkipSignup = async () => {
+    setSignupFormShownCount(prev => prev + 1);
+    await storage.set('oposita-signup-count', JSON.stringify(signupFormShownCount + 1));
+    setScreen('home');
+  };
+
+  // Navigate to signup or home after results
+  const goToSignupOrHome = () => {
+    if (!userData.accountCreated && signupFormShownCount < 2) {
+      setScreen('signup');
+    } else {
+      setScreen('home');
+    }
+  };
+
   // Render
   if (screen === 'loading') {
     return (
@@ -1331,6 +1563,27 @@ export default function App() {
       {screen === 'contact' && <ContactScreen onBack={() => setScreen('home')} />}
       {screen === 'faq' && <FAQScreen onBack={() => setScreen('home')} />}
 
+      {/* Signup Screen */}
+      {screen === 'signup' && (
+        <SignupScreen
+          onSubmit={handleSignup}
+          onSkip={handleSkipSignup}
+          userData={userData}
+        />
+      )}
+
+      {/* Question Detail Screen */}
+      {screen === 'question-detail' && selectedQuestionIndex !== null && (
+        <QuestionDetailScreen
+          question={testQuestions[selectedQuestionIndex]}
+          questionIndex={selectedQuestionIndex}
+          userAnswer={testResults?.answers?.[selectedQuestionIndex]}
+          onBack={() => setScreen('results')}
+          onToggleFavorite={() => toggleFavorite(testQuestions[selectedQuestionIndex]?.id)}
+          isFavorite={favorites.includes(testQuestions[selectedQuestionIndex]?.id)}
+        />
+      )}
+
       {/* Screens */}
       {screen === 'welcome' && (
         <WelcomeScreen
@@ -1367,10 +1620,12 @@ export default function App() {
       {screen === 'results' && (
         <ResultsScreen
           results={testResults}
+          questions={testQuestions}
           onRetry={startTest}
-          onHome={() => { setActiveTab('inicio'); setScreen('home'); }}
+          onHome={goToSignupOrHome}
           canRetry={canStartTest}
           onShowPremium={() => setShowPremiumModal(true)}
+          onViewDetail={(idx) => { setSelectedQuestionIndex(idx); setScreen('question-detail'); }}
         />
       )}
 
@@ -1388,6 +1643,9 @@ export default function App() {
           isPremium={isPremium}
           freeTestsUsed={freeTestsUsed}
           userData={userData}
+          showStreakBanner={showStreakBanner}
+          onDismissBanner={() => setShowStreakBanner(false)}
+          onSignup={() => setScreen('signup')}
         />
       )}
 
@@ -1723,4 +1981,66 @@ const styles = StyleSheet.create({
   retoDesc: { fontSize: 12, color: '#6B7280' },
   retoBtn: { paddingVertical: 8, paddingHorizontal: 16 },
   retoBtnText: { fontSize: 14, fontWeight: '600', color: '#F97316' },
+
+  // Streak Banner
+  streakBanner: { backgroundColor: '#FFF7ED', borderRadius: 16, padding: 16, marginBottom: 16, borderWidth: 1, borderColor: '#FFEDD5' },
+  streakBannerContent: { flexDirection: 'row', alignItems: 'flex-start', marginBottom: 12 },
+  streakBannerIcon: { fontSize: 24, marginRight: 12 },
+  streakBannerText: { flex: 1 },
+  streakBannerTitle: { fontSize: 15, fontWeight: '600', color: '#111827', marginBottom: 2 },
+  streakBannerSubtitle: { fontSize: 13, color: '#6B7280' },
+  streakBannerClose: { padding: 4 },
+  streakBannerCloseText: { fontSize: 18, color: '#9CA3AF' },
+  streakBannerBtn: { backgroundColor: '#F97316', paddingVertical: 12, borderRadius: 10, alignItems: 'center' },
+  streakBannerBtnText: { color: 'white', fontWeight: '600', fontSize: 14 },
+
+  // Question Detail Screen
+  questionDetailContainer: { flex: 1, backgroundColor: 'white' },
+  questionDetailHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingTop: 50, paddingHorizontal: 16, paddingBottom: 16, borderBottomWidth: 1, borderBottomColor: '#F3F4F6' },
+  questionDetailBackBtn: { paddingVertical: 8 },
+  questionDetailBackText: { fontSize: 16, color: '#374151' },
+  questionDetailTitle: { fontSize: 17, fontWeight: '600', color: '#111827' },
+  favoriteBtn: { padding: 8 },
+  favoriteBtnText: { fontSize: 24 },
+  questionDetailScroll: { flex: 1, padding: 20 },
+  questionStatusBadge: { alignSelf: 'flex-start', paddingVertical: 6, paddingHorizontal: 12, borderRadius: 20, marginBottom: 20 },
+  badgeCorrect: { backgroundColor: '#DCFCE7' },
+  badgeIncorrect: { backgroundColor: '#FEE2E2' },
+  questionStatusText: { fontSize: 14, fontWeight: '600' },
+  questionDetailText: { fontSize: 18, fontWeight: '600', color: '#111827', lineHeight: 26, marginBottom: 24 },
+  questionDetailOptions: { gap: 12, marginBottom: 24 },
+  detailOptionNormal: { backgroundColor: '#F9FAFB', borderRadius: 12, padding: 16, borderWidth: 1, borderColor: '#E5E7EB' },
+  detailOptionCorrect: { backgroundColor: '#F0FDF4', borderRadius: 12, padding: 16, borderWidth: 2, borderColor: '#86EFAC' },
+  detailOptionWrong: { backgroundColor: '#FEF2F2', borderRadius: 12, padding: 16, borderWidth: 2, borderColor: '#FCA5A5' },
+  detailOptionHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 },
+  detailOptionId: { fontSize: 14, fontWeight: 'bold', color: '#374151' },
+  detailOptionBadge: { backgroundColor: '#FEE2E2', paddingVertical: 2, paddingHorizontal: 8, borderRadius: 10, fontSize: 11, color: '#DC2626', fontWeight: '600', overflow: 'hidden' },
+  detailOptionBadgeCorrect: { backgroundColor: '#DCFCE7', paddingVertical: 2, paddingHorizontal: 8, borderRadius: 10, fontSize: 11, color: '#16A34A', fontWeight: '600', overflow: 'hidden' },
+  detailOptionText: { fontSize: 15, color: '#374151', lineHeight: 22 },
+  questionDetailExplanation: { backgroundColor: '#EFF6FF', borderRadius: 16, padding: 20, borderWidth: 1, borderColor: '#DBEAFE', marginBottom: 40 },
+  explanationHeader: { fontSize: 16, fontWeight: '600', color: '#1E40AF', marginBottom: 12 },
+  explanationContent: { fontSize: 15, color: '#1E3A8A', lineHeight: 24 },
+  explanationSource: { marginTop: 16, fontSize: 13, color: '#3B82F6', fontWeight: '500' },
+
+  // Signup Screen
+  signupContainer: { flex: 1, backgroundColor: '#FAF5FF' },
+  signupSkipBtn: { position: 'absolute', top: 50, right: 16, zIndex: 10, paddingVertical: 8, paddingHorizontal: 12 },
+  signupSkipText: { fontSize: 15, color: '#6B7280' },
+  signupScroll: { flex: 1, paddingHorizontal: 24, paddingTop: 100 },
+  signupIconBox: { width: 80, height: 80, backgroundColor: '#EDE9FE', borderRadius: 40, justifyContent: 'center', alignItems: 'center', alignSelf: 'center', marginBottom: 24 },
+  signupIcon: { fontSize: 36 },
+  signupTitle: { fontSize: 26, fontWeight: 'bold', color: '#111827', textAlign: 'center', marginBottom: 8 },
+  signupSubtitle: { fontSize: 16, color: '#6B7280', textAlign: 'center', marginBottom: 32 },
+  signupForm: { gap: 20 },
+  signupInputGroup: { gap: 6 },
+  signupLabel: { fontSize: 14, fontWeight: '600', color: '#374151', marginLeft: 4 },
+  signupInput: { backgroundColor: 'white', borderWidth: 2, borderColor: '#E5E7EB', borderRadius: 12, padding: 14, fontSize: 16 },
+  signupCheckbox: { flexDirection: 'row', alignItems: 'center', gap: 12, marginTop: 8 },
+  checkbox: { width: 24, height: 24, borderWidth: 2, borderColor: '#D1D5DB', borderRadius: 6, justifyContent: 'center', alignItems: 'center' },
+  checkboxChecked: { backgroundColor: '#7C3AED', borderColor: '#7C3AED' },
+  checkboxCheck: { color: 'white', fontSize: 14, fontWeight: 'bold' },
+  signupCheckboxText: { fontSize: 14, color: '#6B7280', flex: 1 },
+  signupButton: { backgroundColor: '#7C3AED', paddingVertical: 16, borderRadius: 14, alignItems: 'center', marginTop: 12 },
+  signupButtonDisabled: { backgroundColor: '#D1D5DB' },
+  signupButtonText: { color: 'white', fontWeight: '700', fontSize: 16 },
 });
