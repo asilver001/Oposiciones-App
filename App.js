@@ -935,8 +935,6 @@ function HomeScreen({ streakData, stats, onStartTest, onTabChange, activeTab, on
             <Text style={styles.retoBtnText}>Intentar</Text>
           </Pressable>
         </View>
-
-        <View style={{ height: 100 }} />
       </ScrollView>
 
       <TabBar activeTab={activeTab} onTabChange={onTabChange} />
@@ -1044,15 +1042,17 @@ function TabBar({ activeTab, onTabChange }) {
   ];
 
   return (
-    <View style={styles.tabBar}>
-      {tabs.map((tab) => (
-        <Pressable key={tab.id} style={styles.tabItem} onPress={() => onTabChange(tab.id)}>
-          <View style={[styles.tabIconContainer, activeTab === tab.id && styles.tabIconContainerActive]}>
-            <Text style={[styles.tabIcon, activeTab === tab.id && styles.tabIconActive]}>{tab.icon}</Text>
-          </View>
-          <Text style={[styles.tabLabel, activeTab === tab.id && styles.tabLabelActive]}>{tab.label}</Text>
-        </Pressable>
-      ))}
+    <View style={styles.tabBarOuter}>
+      <View style={styles.tabBarInner}>
+        {tabs.map((tab) => (
+          <Pressable key={tab.id} style={styles.tabItem} onPress={() => onTabChange(tab.id)}>
+            <View style={[styles.tabIconContainer, activeTab === tab.id && styles.tabIconContainerActive]}>
+              <Text style={[styles.tabIcon, activeTab === tab.id && styles.tabIconActive]}>{tab.icon}</Text>
+            </View>
+            <Text style={[styles.tabLabel, activeTab === tab.id && styles.tabLabelActive]}>{tab.label}</Text>
+          </Pressable>
+        ))}
+      </View>
     </View>
   );
 }
@@ -1556,6 +1556,17 @@ export default function App() {
         onStartTest={startTest}
       />
 
+      {/* DEV Panel - Fixed position, appears on home screen */}
+      {screen === 'home' && (
+        <DevPanel
+          onReset={handleDevReset}
+          onDeplete={handleDevDeplete}
+          onTogglePremium={handleDevTogglePremium}
+          isPremium={isPremium}
+          freeTestsUsed={freeTestsUsed}
+        />
+      )}
+
       {/* Legal Screens */}
       {screen === 'privacy' && <PrivacyScreen onBack={() => setScreen('home')} />}
       {screen === 'terms' && <TermsScreen onBack={() => setScreen('home')} />}
@@ -1670,13 +1681,13 @@ const styles = StyleSheet.create({
   loadingContainer: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#FAF5FF' },
   loadingText: { marginTop: 16, color: '#6B7280' },
 
-  // DEV Panel
-  devPanel: { flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', gap: 8, paddingTop: 50, paddingHorizontal: 16 },
-  devBtnReset: { backgroundColor: '#FEE2E2', paddingVertical: 6, paddingHorizontal: 12, borderRadius: 8 },
-  devBtnDeplete: { backgroundColor: '#FFEDD5', paddingVertical: 6, paddingHorizontal: 12, borderRadius: 8 },
-  devBtnPremium: { backgroundColor: '#D1FAE5', paddingVertical: 6, paddingHorizontal: 12, borderRadius: 8 },
+  // DEV Panel - Fixed position top right like Vite version
+  devPanel: { position: 'absolute', top: 50, right: 8, zIndex: 1000, flexDirection: 'row', gap: 6 },
+  devBtnReset: { backgroundColor: 'rgba(239,68,68,0.85)', paddingVertical: 4, paddingHorizontal: 8, borderRadius: 6, shadowColor: '#000', shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.2, shadowRadius: 2, elevation: 3 },
+  devBtnDeplete: { backgroundColor: 'rgba(249,115,22,0.85)', paddingVertical: 4, paddingHorizontal: 8, borderRadius: 6, shadowColor: '#000', shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.2, shadowRadius: 2, elevation: 3 },
+  devBtnPremium: { backgroundColor: 'rgba(34,197,94,0.85)', paddingVertical: 4, paddingHorizontal: 8, borderRadius: 6, shadowColor: '#000', shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.2, shadowRadius: 2, elevation: 3 },
   devBtnPremiumActive: { backgroundColor: '#10B981' },
-  devBtnText: { fontSize: 11, fontWeight: '600', color: '#374151' },
+  devBtnText: { fontSize: 10, fontWeight: '600', color: 'white' },
   devSkip: { marginTop: 24 },
   devSkipText: { color: '#9CA3AF', fontSize: 12 },
 
@@ -1726,7 +1737,7 @@ const styles = StyleSheet.create({
 
   // Home
   homeContainer: { flex: 1, backgroundColor: '#F8FAFC' },
-  homeScroll: { flex: 1, paddingHorizontal: 16, paddingTop: 16 },
+  homeScroll: { flex: 1, paddingHorizontal: 16, paddingTop: 16, paddingBottom: 100 },
   homeHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 },
   dateText: { fontSize: 14, color: '#7C3AED', fontWeight: '600', textTransform: 'capitalize' },
   headerTitle: { fontSize: 22, fontWeight: 'bold', color: '#111827' },
@@ -1767,9 +1778,10 @@ const styles = StyleSheet.create({
   totalStatNumber: { fontSize: 24, fontWeight: 'bold', color: '#7C3AED' },
   totalStatLabel: { fontSize: 12, color: '#6B7280' },
 
-  // Tab Bar
-  tabBar: { flexDirection: 'row', backgroundColor: 'white', borderTopWidth: 1, borderTopColor: '#F3F4F6', paddingBottom: 24, paddingTop: 8, shadowColor: '#000', shadowOffset: { width: 0, height: -4 }, shadowOpacity: 0.05, shadowRadius: 8, elevation: 8 },
-  tabItem: { flex: 1, alignItems: 'center', paddingVertical: 8 },
+  // Tab Bar - Floating style like Vite version
+  tabBarOuter: { paddingHorizontal: 12, paddingBottom: 16, paddingTop: 8, backgroundColor: 'transparent' },
+  tabBarInner: { flexDirection: 'row', backgroundColor: 'white', borderRadius: 20, paddingVertical: 8, paddingHorizontal: 4, shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.1, shadowRadius: 20, elevation: 10, borderWidth: 1, borderColor: '#F3F4F6' },
+  tabItem: { flex: 1, alignItems: 'center', paddingVertical: 4 },
   tabIconContainer: { width: 40, height: 40, borderRadius: 20, justifyContent: 'center', alignItems: 'center' },
   tabIconContainerActive: { backgroundColor: '#EDE9FE' },
   tabIcon: { fontSize: 20, color: '#9CA3AF' },
