@@ -17,20 +17,32 @@ const BADGES = [
   { id: 5, name: 'Leyenda', days: 100, icon: '👑', color: '#8B5CF6' }
 ];
 
-// ============ DEV PANEL ============
-function DevPanel({ onReset, onDeplete, onTogglePremium, isPremium, freeTestsUsed }) {
+// ============ DEV PANEL - Collapsible in bottom-left like Vite ============
+function DevPanel({ onReset, onTogglePremium, isPremium, showDevPanel, setShowDevPanel }) {
   if (!IS_DEV) return null;
 
   return (
-    <View style={styles.devPanel}>
-      <Pressable style={styles.devBtnReset} onPress={onReset}>
-        <Text style={styles.devBtnText}>[DEV] Reset</Text>
-      </Pressable>
-      <Pressable style={styles.devBtnDeplete} onPress={onDeplete}>
-        <Text style={styles.devBtnText}>[DEV] Agotar ({freeTestsUsed}/{FREE_TESTS_LIMIT})</Text>
-      </Pressable>
-      <Pressable style={[styles.devBtnPremium, isPremium && styles.devBtnPremiumActive]} onPress={onTogglePremium}>
-        <Text style={styles.devBtnText}>[DEV] Premium {isPremium ? 'ON' : 'OFF'}</Text>
+    <View style={styles.devPanelContainer}>
+      {/* Expanded panel */}
+      {showDevPanel && (
+        <View style={styles.devPanelExpanded}>
+          <Pressable style={styles.devBtnReset} onPress={onReset}>
+            <Text style={styles.devBtnText}>Reset</Text>
+          </Pressable>
+          <Pressable
+            style={[styles.devBtnPremium, isPremium && styles.devBtnPremiumActive]}
+            onPress={onTogglePremium}
+          >
+            <Text style={styles.devBtnText}>{isPremium ? 'Premium ✓' : 'Premium'}</Text>
+          </Pressable>
+        </View>
+      )}
+      {/* Toggle button */}
+      <Pressable
+        style={[styles.devToggleBtn, showDevPanel && styles.devToggleBtnActive]}
+        onPress={() => setShowDevPanel(!showDevPanel)}
+      >
+        <Text style={styles.devToggleText}>{showDevPanel ? '✕' : 'DEV'}</Text>
       </Pressable>
     </View>
   );
@@ -439,6 +451,43 @@ function FAQScreen({ onBack }) {
   );
 }
 
+function AboutScreen({ onBack }) {
+  return (
+    <View style={styles.legalContainer}>
+      <Pressable onPress={onBack} style={styles.legalBackBtn}>
+        <Text style={styles.legalBackText}>← Atrás</Text>
+      </Pressable>
+      <ScrollView style={styles.legalScroll}>
+        <Text style={styles.legalTitle}>Acerca de</Text>
+        <View style={styles.aboutContent}>
+          <Text style={styles.aboutEmoji}>🎓</Text>
+          <Text style={styles.aboutName}>Oposita Smart</Text>
+          <Text style={styles.aboutSlogan}>La forma inteligente de opositar</Text>
+          <Text style={styles.aboutVersion}>Versión 1.0.0</Text>
+
+          <View style={styles.aboutSection}>
+            <Text style={styles.aboutSectionTitle}>Nuestra misión</Text>
+            <Text style={styles.aboutText}>
+              Ayudarte a preparar tus oposiciones de forma efectiva, con práctica diaria y seguimiento de tu progreso. Creemos que la constancia es la clave del éxito.
+            </Text>
+          </View>
+
+          <View style={styles.aboutSection}>
+            <Text style={styles.aboutSectionTitle}>Características</Text>
+            <Text style={styles.aboutText}>• Tests de práctica con preguntas reales</Text>
+            <Text style={styles.aboutText}>• Sistema de racha para motivarte</Text>
+            <Text style={styles.aboutText}>• Estadísticas de tu progreso</Text>
+            <Text style={styles.aboutText}>• Funciona sin conexión</Text>
+            <Text style={styles.aboutText}>• 100% gratuito</Text>
+          </View>
+
+          <Text style={styles.aboutCopyright}>© {new Date().getFullYear()} Oposita Smart</Text>
+        </View>
+      </ScrollView>
+    </View>
+  );
+}
+
 // ============ QUESTION DETAIL SCREEN ============
 function QuestionDetailScreen({ question, questionIndex, userAnswer, onBack, onToggleFavorite, isFavorite }) {
   const isCorrect = userAnswer === question.correct;
@@ -580,7 +629,7 @@ function SignupScreen({ onSubmit, onSkip, userData }) {
 }
 
 // ============ WELCOME SCREEN ============
-function WelcomeScreen({ onStart, onReset, onDeplete, onTogglePremium, isPremium, freeTestsUsed, onSkip }) {
+function WelcomeScreen({ onStart, onReset, onSkip }) {
   const floatAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
@@ -596,15 +645,6 @@ function WelcomeScreen({ onStart, onReset, onDeplete, onTogglePremium, isPremium
 
   return (
     <View style={styles.welcomeContainer}>
-      {/* DEV Panel */}
-      <DevPanel
-        onReset={onReset}
-        onDeplete={onDeplete}
-        onTogglePremium={onTogglePremium}
-        isPremium={isPremium}
-        freeTestsUsed={freeTestsUsed}
-      />
-
       <View style={styles.welcomeContent}>
         {/* Animated Logo */}
         <Animated.View style={[styles.logoBox, { transform: [{ translateY: floatAnim }] }]}>
@@ -622,11 +662,17 @@ function WelcomeScreen({ onStart, onReset, onDeplete, onTogglePremium, isPremium
           <Text style={styles.primaryButtonText}>Empezar</Text>
         </Pressable>
 
-        {/* DEV Skip button */}
+        {/* DEV buttons - subtle at bottom like Vite */}
         {IS_DEV && (
-          <Pressable style={styles.devSkip} onPress={onSkip}>
-            <Text style={styles.devSkipText}>[DEV] Saltar onboarding</Text>
-          </Pressable>
+          <View style={styles.welcomeDevButtons}>
+            <Pressable onPress={onSkip}>
+              <Text style={styles.welcomeDevText}>[DEV] Saltar</Text>
+            </Pressable>
+            <Text style={styles.welcomeDevDot}>·</Text>
+            <Pressable onPress={onReset}>
+              <Text style={styles.welcomeDevTextRed}>[DEV] Reset</Text>
+            </Pressable>
+          </View>
         )}
       </View>
     </View>
@@ -770,7 +816,7 @@ function OnboardingIntro({ onStart, onBack }) {
 }
 
 // ============ HOME SCREEN (TABS) ============
-function HomeScreen({ streakData, stats, onStartTest, onTabChange, activeTab, onSettings, onShowProgress, canStartTest, onShowPremium, isPremium, freeTestsUsed, userData, showStreakBanner, onDismissBanner, onSignup }) {
+function HomeScreen({ streakData, stats, onStartTest, onTabChange, activeTab, onSettings, onShowProgress, canStartTest, onShowPremium, isPremium, freeTestsUsed, userData, showStreakBanner, onDismissBanner, onSignup, onNavigate }) {
   const today = new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' });
   const fireAnim = useRef(new Animated.Value(1)).current;
   const dailyProgressPercent = Math.min(Math.round((stats.testsToday * 5) / (userData?.dailyGoal || 15) * 100), 100);
@@ -786,18 +832,19 @@ function HomeScreen({ streakData, stats, onStartTest, onTabChange, activeTab, on
     return () => animation.stop();
   }, []);
 
+  // Streak message - structured like Vite version
   const getStreakMessage = () => {
     const days = streakData.current;
-    if (days === 0) return "¡Hoy es un buen día para empezar!";
-    if (days === 1) return "¡Primer paso dado!";
-    if (days <= 3) return "Vas por buen camino";
-    if (days <= 6) return "¡Imparable!";
-    return "🔥 Racha legendaria";
+    if (days === 0) return { main: "0", sub: "", motivational: "¡Tu racha empieza hoy!" };
+    if (days === 1) return { main: "1", sub: "día de racha", motivational: "¡Primer paso dado!" };
+    if (days <= 3) return { main: `${days}`, sub: "días de racha", motivational: "Vas por buen camino" };
+    if (days <= 6) return { main: `${days}`, sub: "días de racha", motivational: "¡Imparable!" };
+    return { main: `${days}`, sub: "días de racha", motivational: "🔥 Racha legendaria" };
   };
 
   const getDaysToNextBadge = () => {
     const nextBadge = BADGES.find(b => b.days > streakData.current);
-    return nextBadge ? { badge: nextBadge, days: nextBadge.days - streakData.current } : null;
+    return nextBadge ? nextBadge.days - streakData.current : null;
   };
 
   const nextBadgeInfo = getDaysToNextBadge();
@@ -844,21 +891,37 @@ function HomeScreen({ streakData, stats, onStartTest, onTabChange, activeTab, on
           {userData?.oposicionLabel || 'Administrativo del Estado'} · {userData?.turno || 'Turno Libre'}
         </Text>
 
-        {/* Streak Card */}
+        {/* Streak Hero Card - Vite style */}
         <View style={styles.streakCard}>
-          <View style={styles.streakContent}>
-            <Animated.View style={[styles.fireIcon, { transform: [{ scale: fireAnim }] }]}>
+          <View style={styles.streakHeroContent}>
+            {/* Fire Icon */}
+            <Animated.View style={[styles.fireIconContainer, { transform: [{ scale: fireAnim }] }]}>
               <Text style={styles.fireEmoji}>🔥</Text>
             </Animated.View>
-            <Text style={styles.streakNumber}>{streakData.current}</Text>
-            <Text style={styles.streakLabel}>{streakData.current === 1 ? 'día de racha' : 'días de racha'}</Text>
-            <Text style={styles.streakMessage}>{getStreakMessage()}</Text>
 
-            {nextBadgeInfo && (
-              <View style={styles.nextBadge}>
-                <Text style={styles.nextBadgeText}>
-                  {nextBadgeInfo.badge.icon} {nextBadgeInfo.days} días para "{nextBadgeInfo.badge.name}"
-                </Text>
+            {/* Day count - most prominent */}
+            <View style={styles.streakMainRow}>
+              <Text style={styles.streakMainNumber}>{getStreakMessage().main}</Text>
+              {getStreakMessage().sub !== '' && (
+                <Text style={styles.streakMainSub}>{getStreakMessage().sub}</Text>
+              )}
+            </View>
+
+            {/* Motivational text */}
+            <Text style={[styles.streakMotivational, streakData.current >= 7 && styles.streakMotivationalHot]}>
+              {getStreakMessage().motivational}
+            </Text>
+
+            {/* Progress to next badge */}
+            {nextBadgeInfo && streakData.current > 0 && (
+              <View style={styles.nextBadgeProgress}>
+                <View style={styles.nextBadgeHeader}>
+                  <Text style={styles.nextBadgeLabel}>Próximo logro</Text>
+                  <Text style={styles.nextBadgeDays}>{nextBadgeInfo} {nextBadgeInfo === 1 ? 'día' : 'días'}</Text>
+                </View>
+                <View style={styles.nextBadgeBar}>
+                  <View style={[styles.nextBadgeBarFill, { width: `${Math.min(((streakData.current % 10) / 10) * 100, 100)}%` }]} />
+                </View>
               </View>
             )}
           </View>
@@ -934,6 +997,35 @@ function HomeScreen({ streakData, stats, onStartTest, onTabChange, activeTab, on
           <Pressable style={styles.retoBtn} onPress={onStartTest}>
             <Text style={styles.retoBtnText}>Intentar</Text>
           </Pressable>
+        </View>
+
+        {/* Footer - Vite style with link list */}
+        <View style={styles.footerContainer}>
+          {/* Links list */}
+          <View style={styles.footerLinks}>
+            <Pressable style={styles.footerLinkRow} onPress={() => onNavigate && onNavigate('about')}>
+              <Text style={styles.footerLinkIcon}>ℹ️</Text>
+              <Text style={styles.footerLinkText}>Acerca de</Text>
+              <Text style={styles.footerChevron}>›</Text>
+            </Pressable>
+            <Pressable style={styles.footerLinkRow} onPress={() => onNavigate && onNavigate('faq')}>
+              <Text style={styles.footerLinkIcon}>❓</Text>
+              <Text style={styles.footerLinkText}>FAQ</Text>
+              <Text style={styles.footerChevron}>›</Text>
+            </Pressable>
+            <Pressable style={[styles.footerLinkRow, styles.footerLinkRowLast]}>
+              <Text style={styles.footerLinkIcon}>📷</Text>
+              <Text style={styles.footerLinkText}>Síguenos en Instagram</Text>
+              <Text style={styles.footerChevron}>›</Text>
+            </Pressable>
+          </View>
+
+          {/* Brand */}
+          <View style={styles.footerBrand}>
+            <Text style={styles.footerBrandName}>Oposita Smart</Text>
+            <Text style={styles.footerSlogan}>La forma inteligente de opositar</Text>
+            <Text style={styles.footerCopyright}>© {new Date().getFullYear()} Oposita Smart</Text>
+          </View>
         </View>
       </ScrollView>
 
@@ -1249,6 +1341,9 @@ export default function App() {
   // Signup tracking
   const [signupFormShownCount, setSignupFormShownCount] = useState(0);
 
+  // DEV panel state (collapsible)
+  const [showDevPanel, setShowDevPanel] = useState(false);
+
   // User data (extended)
   const [userData, setUserData] = useState({
     name: '',
@@ -1556,14 +1651,14 @@ export default function App() {
         onStartTest={startTest}
       />
 
-      {/* DEV Panel - Fixed position, appears on home screen */}
+      {/* DEV Panel - Collapsible in bottom-left, appears on home screen */}
       {screen === 'home' && (
         <DevPanel
           onReset={handleDevReset}
-          onDeplete={handleDevDeplete}
           onTogglePremium={handleDevTogglePremium}
           isPremium={isPremium}
-          freeTestsUsed={freeTestsUsed}
+          showDevPanel={showDevPanel}
+          setShowDevPanel={setShowDevPanel}
         />
       )}
 
@@ -1573,6 +1668,7 @@ export default function App() {
       {screen === 'legal' && <LegalScreen onBack={() => setScreen('home')} />}
       {screen === 'contact' && <ContactScreen onBack={() => setScreen('home')} />}
       {screen === 'faq' && <FAQScreen onBack={() => setScreen('home')} />}
+      {screen === 'about' && <AboutScreen onBack={() => setScreen('home')} />}
 
       {/* Signup Screen */}
       {screen === 'signup' && (
@@ -1600,10 +1696,6 @@ export default function App() {
         <WelcomeScreen
           onStart={() => setScreen('onboarding-oposicion')}
           onReset={handleDevReset}
-          onDeplete={handleDevDeplete}
-          onTogglePremium={handleDevTogglePremium}
-          isPremium={isPremium}
-          freeTestsUsed={freeTestsUsed}
           onSkip={handleDevSkip}
         />
       )}
@@ -1657,6 +1749,7 @@ export default function App() {
           showStreakBanner={showStreakBanner}
           onDismissBanner={() => setShowStreakBanner(false)}
           onSignup={() => setScreen('signup')}
+          onNavigate={(s) => setScreen(s)}
         />
       )}
 
@@ -1681,15 +1774,21 @@ const styles = StyleSheet.create({
   loadingContainer: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#FAF5FF' },
   loadingText: { marginTop: 16, color: '#6B7280' },
 
-  // DEV Panel - Fixed position top right like Vite version
-  devPanel: { position: 'absolute', top: 50, right: 8, zIndex: 1000, flexDirection: 'row', gap: 6 },
-  devBtnReset: { backgroundColor: 'rgba(239,68,68,0.85)', paddingVertical: 4, paddingHorizontal: 8, borderRadius: 6, shadowColor: '#000', shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.2, shadowRadius: 2, elevation: 3 },
-  devBtnDeplete: { backgroundColor: 'rgba(249,115,22,0.85)', paddingVertical: 4, paddingHorizontal: 8, borderRadius: 6, shadowColor: '#000', shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.2, shadowRadius: 2, elevation: 3 },
-  devBtnPremium: { backgroundColor: 'rgba(34,197,94,0.85)', paddingVertical: 4, paddingHorizontal: 8, borderRadius: 6, shadowColor: '#000', shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.2, shadowRadius: 2, elevation: 3 },
-  devBtnPremiumActive: { backgroundColor: '#10B981' },
-  devBtnText: { fontSize: 10, fontWeight: '600', color: 'white' },
-  devSkip: { marginTop: 24 },
-  devSkipText: { color: '#9CA3AF', fontSize: 12 },
+  // DEV Panel - Collapsible in bottom-left like Vite version
+  devPanelContainer: { position: 'absolute', bottom: 90, left: 8, zIndex: 1000 },
+  devPanelExpanded: { marginBottom: 8, flexDirection: 'column', gap: 6, backgroundColor: 'rgba(17,24,39,0.9)', padding: 8, borderRadius: 8, shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.25, shadowRadius: 4, elevation: 5 },
+  devBtnReset: { backgroundColor: '#EF4444', paddingVertical: 4, paddingHorizontal: 8, borderRadius: 4 },
+  devBtnPremium: { backgroundColor: '#8B5CF6', paddingVertical: 4, paddingHorizontal: 8, borderRadius: 4 },
+  devBtnPremiumActive: { backgroundColor: '#22C55E' },
+  devBtnText: { fontSize: 11, fontWeight: '600', color: 'white', textAlign: 'center' },
+  devToggleBtn: { backgroundColor: 'rgba(107,114,128,0.7)', paddingVertical: 4, paddingHorizontal: 8, borderRadius: 4, shadowColor: '#000', shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.2, shadowRadius: 2, elevation: 3 },
+  devToggleBtnActive: { backgroundColor: '#374151' },
+  devToggleText: { fontSize: 11, fontWeight: '600', color: 'white' },
+  // Welcome DEV buttons
+  welcomeDevButtons: { flexDirection: 'row', alignItems: 'center', marginTop: 48, paddingTop: 24, borderTopWidth: 1, borderTopColor: '#F3F4F6' },
+  welcomeDevText: { fontSize: 12, color: '#D1D5DB' },
+  welcomeDevTextRed: { fontSize: 12, color: '#FCA5A5' },
+  welcomeDevDot: { fontSize: 12, color: '#E5E7EB', marginHorizontal: 8 },
 
   // Welcome
   welcomeContainer: { flex: 1, backgroundColor: '#FAF5FF' },
@@ -1745,17 +1844,23 @@ const styles = StyleSheet.create({
   settingsIcon: { fontSize: 24 },
   screenTitle: { fontSize: 26, fontWeight: 'bold', color: '#111827', marginBottom: 24 },
 
-  // Streak Card
-  streakCard: { backgroundColor: '#FFF7ED', borderRadius: 20, padding: 24, marginBottom: 24, borderWidth: 1, borderColor: '#FFEDD5', shadowColor: '#F97316', shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.1, shadowRadius: 12, elevation: 4 },
-  streakContent: { alignItems: 'center' },
-  fireIcon: { width: 72, height: 72, backgroundColor: '#FFEDD5', borderRadius: 36, justifyContent: 'center', alignItems: 'center', marginBottom: 12 },
-  fireEmoji: { fontSize: 36 },
-  streakNumber: { fontSize: 48, fontWeight: 'bold', color: '#111827' },
-  streakLabel: { color: '#4B5563', fontSize: 16 },
-  streakMessage: { color: '#F97316', fontWeight: '600', marginTop: 8 },
-  nextBadge: { backgroundColor: '#FED7AA', paddingVertical: 6, paddingHorizontal: 12, borderRadius: 20, marginTop: 12 },
-  nextBadgeText: { color: '#C2410C', fontSize: 12, fontWeight: '600' },
-  ctaButton: { marginTop: 24, backgroundColor: '#F97316', paddingVertical: 14, paddingHorizontal: 24, borderRadius: 14, shadowColor: '#F97316', shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.3, shadowRadius: 8, elevation: 4 },
+  // Streak Hero Card - Vite style with orange-amber gradient bg
+  streakCard: { backgroundColor: '#FFF7ED', borderRadius: 20, padding: 24, marginBottom: 24, borderWidth: 1, borderColor: '#FFEDD5', shadowColor: '#F97316', shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.15, shadowRadius: 12, elevation: 4 },
+  streakHeroContent: { alignItems: 'center', marginBottom: 24 },
+  fireIconContainer: { width: 80, height: 80, backgroundColor: '#FFEDD5', borderRadius: 40, justifyContent: 'center', alignItems: 'center', marginBottom: 16, shadowColor: '#F97316', shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.25, shadowRadius: 10, elevation: 4 },
+  fireEmoji: { fontSize: 48 },
+  streakMainRow: { flexDirection: 'row', alignItems: 'baseline', marginBottom: 8 },
+  streakMainNumber: { fontSize: 32, fontWeight: 'bold', color: '#111827', lineHeight: 36 },
+  streakMainSub: { fontSize: 18, color: '#4B5563', marginLeft: 6 },
+  streakMotivational: { fontSize: 14, fontWeight: '500', color: '#6B7280' },
+  streakMotivationalHot: { color: '#EA580C' },
+  nextBadgeProgress: { width: '100%', marginTop: 20 },
+  nextBadgeHeader: { flexDirection: 'row', justifyContent: 'space-between', marginBottom: 6 },
+  nextBadgeLabel: { fontSize: 12, color: '#6B7280' },
+  nextBadgeDays: { fontSize: 12, fontWeight: '600', color: '#EA580C' },
+  nextBadgeBar: { height: 8, backgroundColor: '#FFEDD5', borderRadius: 4, overflow: 'hidden' },
+  nextBadgeBarFill: { height: '100%', backgroundColor: '#F97316', borderRadius: 4 },
+  ctaButton: { backgroundColor: '#F97316', paddingVertical: 14, paddingHorizontal: 24, borderRadius: 14, shadowColor: '#F97316', shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.3, shadowRadius: 8, elevation: 4 },
   ctaButtonPressed: { backgroundColor: '#EA580C' },
   ctaText: { color: 'white', fontWeight: '700', fontSize: 16, textAlign: 'center' },
   testsDepletedBox: { marginTop: 20, alignItems: 'center' },
@@ -1778,16 +1883,16 @@ const styles = StyleSheet.create({
   totalStatNumber: { fontSize: 24, fontWeight: 'bold', color: '#7C3AED' },
   totalStatLabel: { fontSize: 12, color: '#6B7280' },
 
-  // Tab Bar - Floating style like Vite version
-  tabBarOuter: { paddingHorizontal: 12, paddingBottom: 16, paddingTop: 8, backgroundColor: 'transparent' },
-  tabBarInner: { flexDirection: 'row', backgroundColor: 'white', borderRadius: 20, paddingVertical: 8, paddingHorizontal: 4, shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.1, shadowRadius: 20, elevation: 10, borderWidth: 1, borderColor: '#F3F4F6' },
-  tabItem: { flex: 1, alignItems: 'center', paddingVertical: 4 },
-  tabIconContainer: { width: 40, height: 40, borderRadius: 20, justifyContent: 'center', alignItems: 'center' },
-  tabIconContainerActive: { backgroundColor: '#EDE9FE' },
-  tabIcon: { fontSize: 20, color: '#9CA3AF' },
-  tabIconActive: { color: '#7C3AED' },
-  tabLabel: { fontSize: 10, color: '#9CA3AF', fontWeight: '600', marginTop: 4 },
-  tabLabelActive: { color: '#7C3AED' },
+  // Tab Bar - Exact Vite styles: px-4 pb-2, rounded-[20px], shadow-[0_2px_24px_rgba(0,0,0,0.12)]
+  tabBarOuter: { paddingHorizontal: 16, paddingBottom: 8, backgroundColor: 'transparent' },
+  tabBarInner: { flexDirection: 'row', backgroundColor: 'white', borderRadius: 20, height: 58, alignItems: 'center', paddingHorizontal: 4, shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.12, shadowRadius: 24, elevation: 12, borderWidth: 1, borderColor: 'rgba(243,244,246,0.8)' },
+  tabItem: { flex: 1, alignItems: 'center', justifyContent: 'center', paddingVertical: 4 },
+  tabIconContainer: { width: 36, height: 36, borderRadius: 18, justifyContent: 'center', alignItems: 'center', marginBottom: 2 },
+  tabIconContainerActive: { backgroundColor: '#F3F4F6' },
+  tabIcon: { fontSize: 22, color: '#9CA3AF' },
+  tabIconActive: { color: '#111827' },
+  tabLabel: { fontSize: 10, color: '#9CA3AF', fontWeight: '500' },
+  tabLabelActive: { color: '#111827', fontWeight: '600' },
 
   // Activity
   activityCard: { backgroundColor: 'white', borderRadius: 16, padding: 20, marginBottom: 16, borderWidth: 1, borderColor: '#F3F4F6' },
@@ -1983,6 +2088,17 @@ const styles = StyleSheet.create({
   faqQuestion: { fontSize: 16, fontWeight: '600', color: '#111827', marginBottom: 8 },
   faqAnswer: { fontSize: 14, color: '#6B7280', lineHeight: 20 },
 
+  // About Screen
+  aboutContent: { alignItems: 'center', paddingVertical: 24 },
+  aboutEmoji: { fontSize: 64, marginBottom: 16 },
+  aboutName: { fontSize: 28, fontWeight: 'bold', color: '#111827', marginBottom: 4 },
+  aboutSlogan: { fontSize: 16, color: '#7C3AED', fontWeight: '600', marginBottom: 8 },
+  aboutVersion: { fontSize: 14, color: '#9CA3AF', marginBottom: 32 },
+  aboutSection: { width: '100%', marginBottom: 24 },
+  aboutSectionTitle: { fontSize: 18, fontWeight: '600', color: '#111827', marginBottom: 12 },
+  aboutText: { fontSize: 15, color: '#4B5563', lineHeight: 22, marginBottom: 4 },
+  aboutCopyright: { fontSize: 12, color: '#9CA3AF', marginTop: 24 },
+
   // Reto del día
   retoCard: { backgroundColor: 'white', borderRadius: 12, padding: 16, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', borderWidth: 1, borderColor: '#F3F4F6', marginBottom: 24 },
   retoContent: { flexDirection: 'row', alignItems: 'center', gap: 12 },
@@ -1993,6 +2109,19 @@ const styles = StyleSheet.create({
   retoDesc: { fontSize: 12, color: '#6B7280' },
   retoBtn: { paddingVertical: 8, paddingHorizontal: 16 },
   retoBtnText: { fontSize: 14, fontWeight: '600', color: '#F97316' },
+
+  // Footer - Vite style
+  footerContainer: { marginTop: 24 },
+  footerLinks: { backgroundColor: 'white', borderRadius: 12, overflow: 'hidden', borderWidth: 1, borderColor: '#F3F4F6', marginBottom: 32 },
+  footerLinkRow: { flexDirection: 'row', alignItems: 'center', paddingVertical: 16, paddingHorizontal: 16, borderBottomWidth: 1, borderBottomColor: '#F3F4F6' },
+  footerLinkRowLast: { borderBottomWidth: 0 },
+  footerLinkIcon: { fontSize: 20, marginRight: 12, width: 24 },
+  footerLinkText: { flex: 1, fontSize: 15, color: '#374151' },
+  footerChevron: { fontSize: 20, color: '#D1D5DB' },
+  footerBrand: { alignItems: 'center', paddingVertical: 24 },
+  footerBrandName: { fontSize: 18, fontWeight: '600', color: '#111827', marginBottom: 4 },
+  footerSlogan: { fontSize: 14, color: '#6B7280', marginBottom: 16 },
+  footerCopyright: { fontSize: 12, color: '#9CA3AF' },
 
   // Streak Banner
   streakBanner: { backgroundColor: '#FFF7ED', borderRadius: 16, padding: 16, marginBottom: 16, borderWidth: 1, borderColor: '#FFEDD5' },
