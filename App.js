@@ -145,6 +145,300 @@ function StreakCelebration({ visible, badge, onClose }) {
   );
 }
 
+// ============ SETTINGS MODAL ============
+function SettingsModal({ visible, onClose, userData, onNavigate, onShowPremium }) {
+  if (!visible) return null;
+
+  const SettingsRow = ({ icon, label, rightText, onPress, locked, external }) => (
+    <Pressable
+      onPress={locked ? null : onPress}
+      style={[styles.settingsRow, locked && styles.settingsRowLocked]}
+    >
+      <View style={styles.settingsRowLeft}>
+        <Text style={styles.settingsRowIcon}>{icon}</Text>
+        <Text style={styles.settingsRowLabel}>{label}</Text>
+      </View>
+      <View style={styles.settingsRowRight}>
+        {rightText && <Text style={styles.settingsRowRightText}>{rightText}</Text>}
+        {locked ? <Text style={styles.settingsRowArrow}>🔒</Text> :
+         external ? <Text style={styles.settingsRowArrow}>↗</Text> :
+         <Text style={styles.settingsRowArrow}>›</Text>}
+      </View>
+    </Pressable>
+  );
+
+  const SectionTitle = ({ children }) => (
+    <Text style={styles.settingsSectionTitle}>{children}</Text>
+  );
+
+  return (
+    <View style={styles.settingsContainer}>
+      {/* Header */}
+      <View style={styles.settingsHeader}>
+        <Pressable onPress={onClose} style={styles.settingsBackBtn}>
+          <Text style={styles.settingsBackText}>← Atrás</Text>
+        </Pressable>
+      </View>
+
+      <ScrollView style={styles.settingsScroll}>
+        <View style={styles.settingsTitleRow}>
+          <Text style={styles.settingsTitleIcon}>⚙️</Text>
+          <Text style={styles.settingsTitleText}>Ajustes</Text>
+        </View>
+
+        {/* Sección: Ajustes */}
+        <SectionTitle>Ajustes</SectionTitle>
+        <View style={styles.settingsSection}>
+          <SettingsRow icon="🔔" label="Notificaciones" rightText="Próximamente" locked />
+          <SettingsRow icon="📅" label="Meta diaria" rightText={`${userData.dailyGoal || 15} preguntas`} locked />
+        </View>
+
+        {/* Sección: Perfil */}
+        <SectionTitle>Perfil</SectionTitle>
+        <View style={styles.settingsSection}>
+          <SettingsRow icon="👤" label="Editar perfil" rightText={userData.name || 'Sin nombre'} locked />
+        </View>
+
+        {/* Sección: Cuenta */}
+        <SectionTitle>Cuenta y suscripción</SectionTitle>
+        <View style={styles.settingsSection}>
+          <SettingsRow icon="👑" label="Plan Premium" rightText="Próximamente" onPress={onShowPremium} />
+          <SettingsRow icon="✉️" label="Contacto" onPress={() => { onClose(); onNavigate('contact'); }} />
+          <SettingsRow icon="🚪" label="Cerrar sesión" locked />
+        </View>
+
+        {/* Sección: Otros */}
+        <SectionTitle>Otros</SectionTitle>
+        <View style={styles.settingsSection}>
+          <SettingsRow icon="🛡️" label="Política de privacidad" onPress={() => { onClose(); onNavigate('privacy'); }} />
+          <SettingsRow icon="📄" label="Términos de servicio" onPress={() => { onClose(); onNavigate('terms'); }} />
+          <SettingsRow icon="⚖️" label="Aviso legal" onPress={() => { onClose(); onNavigate('legal'); }} />
+        </View>
+
+        {/* Info de la app */}
+        <View style={styles.settingsAppInfo}>
+          <Text style={styles.settingsAppName}>Oposita Smart</Text>
+          <Text style={styles.settingsAppTagline}>La forma inteligente de opositar</Text>
+          <Text style={styles.settingsAppVersion}>Versión 1.0.0</Text>
+          {userData.email && <Text style={styles.settingsAppEmail}>{userData.email}</Text>}
+        </View>
+      </ScrollView>
+    </View>
+  );
+}
+
+// ============ PROGRESS MODAL ============
+function ProgressModal({ visible, onClose, stats, userData, streakData, onStartTest }) {
+  if (!visible) return null;
+
+  const dailyProgress = Math.min(Math.round((stats.todayQuestions || 0) / (userData.dailyGoal || 15) * 100), 100);
+  const questionsLeft = Math.max(0, (userData.dailyGoal || 15) - (stats.todayQuestions || 0));
+
+  return (
+    <View style={styles.modalOverlay}>
+      <View style={styles.progressModal}>
+        {/* Header */}
+        <View style={styles.progressModalHeader}>
+          <Text style={styles.progressModalTitle}>Tu progreso de hoy</Text>
+          <Pressable onPress={onClose} style={styles.progressModalClose}>
+            <Text style={styles.progressModalCloseText}>✕</Text>
+          </Pressable>
+        </View>
+
+        <ScrollView style={styles.progressModalContent}>
+          {/* Circular Progress */}
+          <View style={styles.progressCircleContainer}>
+            <View style={styles.progressCircleOuter}>
+              <View style={[styles.progressCircleFill, {
+                borderTopColor: dailyProgress > 25 ? '#8B5CF6' : '#F3E8FF',
+                borderRightColor: dailyProgress > 50 ? '#8B5CF6' : '#F3E8FF',
+                borderBottomColor: dailyProgress > 75 ? '#8B5CF6' : '#F3E8FF',
+                borderLeftColor: dailyProgress > 0 ? '#8B5CF6' : '#F3E8FF',
+              }]} />
+              <View style={styles.progressCircleInner}>
+                <Text style={styles.progressCirclePercent}>{dailyProgress}%</Text>
+              </View>
+            </View>
+            <Text style={styles.progressCircleLabel}>
+              <Text style={styles.progressCircleBold}>{stats.todayQuestions || 0}</Text>/{userData.dailyGoal || 15} preguntas
+            </Text>
+            <Text style={styles.progressCircleSub}>
+              {dailyProgress >= 100 ? '¡Objetivo cumplido! 🎉' : `Te quedan ${questionsLeft} preguntas`}
+            </Text>
+          </View>
+
+          {/* Stats Grid */}
+          <View style={styles.progressStatsGrid}>
+            <View style={styles.progressStatBox}>
+              <Text style={styles.progressStatIcon}>🏆</Text>
+              <Text style={styles.progressStatNumber}>{stats.testsCompleted}</Text>
+              <Text style={styles.progressStatLabel}>Tests completados</Text>
+            </View>
+            <View style={styles.progressStatBox}>
+              <Text style={styles.progressStatIcon}>🎯</Text>
+              <Text style={styles.progressStatNumber}>{stats.accuracyRate}%</Text>
+              <Text style={styles.progressStatLabel}>Tasa de acierto</Text>
+            </View>
+          </View>
+
+          {/* Exam Info */}
+          <View style={styles.progressExamInfo}>
+            <Text style={styles.progressExamText}>
+              📊 Llevas <Text style={styles.progressExamBold}>{stats.testsCompleted * 5}</Text> preguntas practicadas
+            </Text>
+          </View>
+
+          {/* CTA Button */}
+          {dailyProgress < 100 && (
+            <Pressable style={styles.progressCTAButton} onPress={() => { onClose(); onStartTest(); }}>
+              <Text style={styles.progressCTAText}>Continuar estudiando →</Text>
+            </Pressable>
+          )}
+        </ScrollView>
+      </View>
+    </View>
+  );
+}
+
+// ============ LEGAL SCREENS ============
+function PrivacyScreen({ onBack }) {
+  return (
+    <View style={styles.legalContainer}>
+      <Pressable onPress={onBack} style={styles.legalBackBtn}>
+        <Text style={styles.legalBackText}>← Atrás</Text>
+      </Pressable>
+      <ScrollView style={styles.legalScroll}>
+        <Text style={styles.legalTitle}>Política de Privacidad</Text>
+        <Text style={styles.legalText}>
+          En Oposita Smart nos tomamos muy en serio tu privacidad.{'\n\n'}
+          <Text style={styles.legalBold}>Datos que recopilamos:</Text>{'\n'}
+          • Email (opcional, para la lista de espera){'\n'}
+          • Progreso de estudio (almacenado localmente){'\n'}
+          • Estadísticas de uso (almacenadas localmente){'\n\n'}
+          <Text style={styles.legalBold}>Cómo usamos tus datos:</Text>{'\n'}
+          • Para personalizar tu experiencia de estudio{'\n'}
+          • Para enviarte actualizaciones sobre el lanzamiento Premium{'\n'}
+          • Nunca vendemos ni compartimos tus datos{'\n\n'}
+          <Text style={styles.legalBold}>Almacenamiento:</Text>{'\n'}
+          Todos tus datos de progreso se almacenan localmente en tu dispositivo.{'\n\n'}
+          Última actualización: Diciembre 2024
+        </Text>
+      </ScrollView>
+    </View>
+  );
+}
+
+function TermsScreen({ onBack }) {
+  return (
+    <View style={styles.legalContainer}>
+      <Pressable onPress={onBack} style={styles.legalBackBtn}>
+        <Text style={styles.legalBackText}>← Atrás</Text>
+      </Pressable>
+      <ScrollView style={styles.legalScroll}>
+        <Text style={styles.legalTitle}>Términos de Servicio</Text>
+        <Text style={styles.legalText}>
+          Al usar Oposita Smart, aceptas estos términos.{'\n\n'}
+          <Text style={styles.legalBold}>Uso de la aplicación:</Text>{'\n'}
+          • La app es para uso personal y educativo{'\n'}
+          • No garantizamos el éxito en oposiciones{'\n'}
+          • El contenido es orientativo y puede contener errores{'\n\n'}
+          <Text style={styles.legalBold}>Propiedad intelectual:</Text>{'\n'}
+          • Todo el contenido es propiedad de Oposita Smart{'\n'}
+          • No está permitida la reproducción sin autorización{'\n\n'}
+          <Text style={styles.legalBold}>Limitación de responsabilidad:</Text>{'\n'}
+          Oposita Smart no se hace responsable de decisiones tomadas basándose en el contenido de la app.{'\n\n'}
+          Última actualización: Diciembre 2024
+        </Text>
+      </ScrollView>
+    </View>
+  );
+}
+
+function LegalScreen({ onBack }) {
+  return (
+    <View style={styles.legalContainer}>
+      <Pressable onPress={onBack} style={styles.legalBackBtn}>
+        <Text style={styles.legalBackText}>← Atrás</Text>
+      </Pressable>
+      <ScrollView style={styles.legalScroll}>
+        <Text style={styles.legalTitle}>Aviso Legal</Text>
+        <Text style={styles.legalText}>
+          <Text style={styles.legalBold}>Información del titular:</Text>{'\n'}
+          Oposita Smart{'\n'}
+          Aplicación de preparación de oposiciones{'\n\n'}
+          <Text style={styles.legalBold}>Objeto:</Text>{'\n'}
+          Esta aplicación ofrece herramientas de estudio y preparación para oposiciones del Estado español.{'\n\n'}
+          <Text style={styles.legalBold}>Condiciones de uso:</Text>{'\n'}
+          El usuario se compromete a hacer un uso adecuado de los contenidos y servicios ofrecidos.{'\n\n'}
+          Última actualización: Diciembre 2024
+        </Text>
+      </ScrollView>
+    </View>
+  );
+}
+
+function ContactScreen({ onBack }) {
+  return (
+    <View style={styles.legalContainer}>
+      <Pressable onPress={onBack} style={styles.legalBackBtn}>
+        <Text style={styles.legalBackText}>← Atrás</Text>
+      </Pressable>
+      <ScrollView style={styles.legalScroll}>
+        <Text style={styles.legalTitle}>Contacto</Text>
+        <View style={styles.contactCard}>
+          <Text style={styles.contactIcon}>✉️</Text>
+          <Text style={styles.contactTitle}>¿Tienes alguna pregunta?</Text>
+          <Text style={styles.contactText}>
+            Estamos aquí para ayudarte. Escríbenos y te responderemos lo antes posible.
+          </Text>
+          <Text style={styles.contactEmail}>hola@opositasmart.com</Text>
+        </View>
+        <View style={styles.contactCard}>
+          <Text style={styles.contactIcon}>🐛</Text>
+          <Text style={styles.contactTitle}>¿Encontraste un error?</Text>
+          <Text style={styles.contactText}>
+            Ayúdanos a mejorar reportando cualquier problema que encuentres.
+          </Text>
+        </View>
+        <View style={styles.contactCard}>
+          <Text style={styles.contactIcon}>💡</Text>
+          <Text style={styles.contactTitle}>¿Tienes una sugerencia?</Text>
+          <Text style={styles.contactText}>
+            Nos encanta escuchar ideas para hacer la app mejor.
+          </Text>
+        </View>
+      </ScrollView>
+    </View>
+  );
+}
+
+function FAQScreen({ onBack }) {
+  const faqs = [
+    { q: '¿Cuántas preguntas tiene la app?', a: 'Actualmente tenemos más de 500 preguntas de diferentes temas de oposiciones.' },
+    { q: '¿Es gratis?', a: 'Sí, la versión básica es gratuita con 3 tests diarios. Pronto lanzaremos Premium con acceso ilimitado.' },
+    { q: '¿Puedo usar la app sin internet?', a: 'Sí, una vez cargada la app funciona completamente offline.' },
+    { q: '¿Se guardan mis datos?', a: 'Tu progreso se guarda localmente en tu dispositivo. No necesitas crear cuenta.' },
+    { q: '¿Cuándo sale Premium?', a: 'Planeamos lanzar Premium en Enero 2026. ¡Únete a la lista de espera!' },
+  ];
+
+  return (
+    <View style={styles.legalContainer}>
+      <Pressable onPress={onBack} style={styles.legalBackBtn}>
+        <Text style={styles.legalBackText}>← Atrás</Text>
+      </Pressable>
+      <ScrollView style={styles.legalScroll}>
+        <Text style={styles.legalTitle}>Preguntas Frecuentes</Text>
+        {faqs.map((faq, idx) => (
+          <View key={idx} style={styles.faqItem}>
+            <Text style={styles.faqQuestion}>{faq.q}</Text>
+            <Text style={styles.faqAnswer}>{faq.a}</Text>
+          </View>
+        ))}
+      </ScrollView>
+    </View>
+  );
+}
+
 // ============ WELCOME SCREEN ============
 function WelcomeScreen({ onStart, onReset, onDeplete, onTogglePremium, isPremium, freeTestsUsed, onSkip }) {
   const floatAnim = useRef(new Animated.Value(0)).current;
@@ -336,9 +630,10 @@ function OnboardingIntro({ onStart, onBack }) {
 }
 
 // ============ HOME SCREEN (TABS) ============
-function HomeScreen({ streakData, stats, onStartTest, onTabChange, activeTab, onSettings, canStartTest, onShowPremium, isPremium, freeTestsUsed }) {
+function HomeScreen({ streakData, stats, onStartTest, onTabChange, activeTab, onSettings, onShowProgress, canStartTest, onShowPremium, isPremium, freeTestsUsed, userData }) {
   const today = new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' });
   const fireAnim = useRef(new Animated.Value(1)).current;
+  const dailyProgressPercent = Math.min(Math.round((stats.testsToday * 5) / (userData?.dailyGoal || 15) * 100), 100);
 
   useEffect(() => {
     const animation = Animated.loop(
@@ -370,16 +665,24 @@ function HomeScreen({ streakData, stats, onStartTest, onTabChange, activeTab, on
 
   return (
     <View style={styles.homeContainer}>
-      <ScrollView style={styles.homeScroll} showsVerticalScrollIndicator={false}>
-        <View style={styles.homeHeader}>
-          <View>
-            <Text style={styles.dateText}>{today}</Text>
-            <Text style={styles.headerTitle}>Tu progreso de hoy</Text>
+      {/* Top Bar */}
+      <View style={styles.topBar}>
+        <Pressable style={styles.progressBtn} onPress={onShowProgress}>
+          <View style={styles.progressRing}>
+            <Text style={styles.progressRingText}>{dailyProgressPercent}</Text>
           </View>
-          <Pressable style={styles.settingsBtn} onPress={onSettings}>
-            <Text style={styles.settingsIcon}>⚙️</Text>
-          </Pressable>
-        </View>
+        </Pressable>
+        <Text style={styles.topBarTitle}>Oposita Smart</Text>
+        <Pressable style={styles.settingsBtnTop} onPress={onSettings}>
+          <Text style={styles.settingsIconTop}>⚙️</Text>
+        </Pressable>
+      </View>
+
+      <ScrollView style={styles.homeScroll} showsVerticalScrollIndicator={false}>
+        {/* Contexto oposición */}
+        <Text style={styles.oposicionContext}>
+          {userData?.oposicionLabel || 'Administrativo del Estado'} · {userData?.turno || 'Turno Libre'}
+        </Text>
 
         {/* Streak Card */}
         <View style={styles.streakCard}>
@@ -455,6 +758,22 @@ function HomeScreen({ streakData, stats, onStartTest, onTabChange, activeTab, on
               <Text style={styles.totalStatLabel}>Respuestas correctas</Text>
             </View>
           </View>
+        </View>
+
+        {/* Reto del día */}
+        <View style={styles.retoCard}>
+          <View style={styles.retoContent}>
+            <View style={styles.retoIconBox}>
+              <Text style={styles.retoIcon}>⚡</Text>
+            </View>
+            <View style={styles.retoTextBox}>
+              <Text style={styles.retoTitle}>Reto del día</Text>
+              <Text style={styles.retoDesc}>10 preguntas seguidas</Text>
+            </View>
+          </View>
+          <Pressable style={styles.retoBtn} onPress={onStartTest}>
+            <Text style={styles.retoBtnText}>Intentar</Text>
+          </Pressable>
         </View>
 
         <View style={{ height: 100 }} />
@@ -753,6 +1072,20 @@ export default function App() {
   const [showCelebration, setShowCelebration] = useState(false);
   const [earnedBadge, setEarnedBadge] = useState(null);
 
+  // New modals
+  const [showSettingsModal, setShowSettingsModal] = useState(false);
+  const [showProgressModal, setShowProgressModal] = useState(false);
+
+  // User data (extended)
+  const [userData, setUserData] = useState({
+    name: '',
+    email: '',
+    dailyGoal: 15,
+    oposicionLabel: 'Administrativo del Estado',
+    turno: 'Turno Libre',
+    accountCreated: false
+  });
+
   const canStartTest = isPremium || freeTestsUsed < FREE_TESTS_LIMIT;
 
   useEffect(() => {
@@ -975,6 +1308,28 @@ export default function App() {
         badge={earnedBadge}
         onClose={() => setShowCelebration(false)}
       />
+      <SettingsModal
+        visible={showSettingsModal}
+        onClose={() => setShowSettingsModal(false)}
+        userData={userData}
+        onNavigate={(s) => setScreen(s)}
+        onShowPremium={() => { setShowSettingsModal(false); setShowPremiumModal(true); }}
+      />
+      <ProgressModal
+        visible={showProgressModal}
+        onClose={() => setShowProgressModal(false)}
+        stats={stats}
+        userData={userData}
+        streakData={streakData}
+        onStartTest={startTest}
+      />
+
+      {/* Legal Screens */}
+      {screen === 'privacy' && <PrivacyScreen onBack={() => setScreen('home')} />}
+      {screen === 'terms' && <TermsScreen onBack={() => setScreen('home')} />}
+      {screen === 'legal' && <LegalScreen onBack={() => setScreen('home')} />}
+      {screen === 'contact' && <ContactScreen onBack={() => setScreen('home')} />}
+      {screen === 'faq' && <FAQScreen onBack={() => setScreen('home')} />}
 
       {/* Screens */}
       {screen === 'welcome' && (
@@ -1026,11 +1381,13 @@ export default function App() {
           onStartTest={startTest}
           onTabChange={handleTabChange}
           activeTab={activeTab}
-          onSettings={() => {}}
+          onSettings={() => setShowSettingsModal(true)}
+          onShowProgress={() => setShowProgressModal(true)}
           canStartTest={canStartTest}
           onShowPremium={() => setShowPremiumModal(true)}
           isPremium={isPremium}
           freeTestsUsed={freeTestsUsed}
+          userData={userData}
         />
       )}
 
@@ -1111,7 +1468,7 @@ const styles = StyleSheet.create({
 
   // Home
   homeContainer: { flex: 1, backgroundColor: '#F8FAFC' },
-  homeScroll: { flex: 1, paddingHorizontal: 16, paddingTop: 56 },
+  homeScroll: { flex: 1, paddingHorizontal: 16, paddingTop: 16 },
   homeHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 },
   dateText: { fontSize: 14, color: '#7C3AED', fontWeight: '600', textTransform: 'capitalize' },
   headerTitle: { fontSize: 22, fontWeight: 'bold', color: '#111827' },
@@ -1273,4 +1630,97 @@ const styles = StyleSheet.create({
   celebrationDays: { color: '#6B7280', marginTop: 4, marginBottom: 24 },
   celebrationButton: { backgroundColor: '#7C3AED', paddingVertical: 14, paddingHorizontal: 32, borderRadius: 12 },
   celebrationButtonText: { color: 'white', fontWeight: 'bold', fontSize: 16 },
+
+  // TopBar
+  topBar: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 16, paddingTop: 50, paddingBottom: 8, backgroundColor: 'white', borderBottomWidth: 1, borderBottomColor: '#F3F4F6' },
+  progressBtn: { width: 40, height: 40, justifyContent: 'center', alignItems: 'center' },
+  progressRing: { width: 36, height: 36, borderRadius: 18, borderWidth: 3, borderColor: '#8B5CF6', justifyContent: 'center', alignItems: 'center', backgroundColor: '#F3E8FF' },
+  progressRingText: { fontSize: 10, fontWeight: 'bold', color: '#7C3AED' },
+  topBarTitle: { fontSize: 15, fontWeight: '600', color: '#1F2937' },
+  settingsBtnTop: { width: 40, height: 40, justifyContent: 'center', alignItems: 'center', borderRadius: 20 },
+  settingsIconTop: { fontSize: 18 },
+  oposicionContext: { fontSize: 12, color: '#9CA3AF', textAlign: 'center', marginBottom: 16 },
+
+  // Settings Modal
+  settingsContainer: { flex: 1, backgroundColor: 'white', position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 200 },
+  settingsHeader: { paddingTop: 50, paddingHorizontal: 16, paddingBottom: 8, backgroundColor: 'white', borderBottomWidth: 1, borderBottomColor: '#F3F4F6' },
+  settingsBackBtn: { paddingVertical: 8 },
+  settingsBackText: { fontSize: 16, color: '#374151' },
+  settingsScroll: { flex: 1, paddingHorizontal: 16 },
+  settingsTitleRow: { flexDirection: 'row', alignItems: 'center', gap: 12, marginTop: 16, marginBottom: 24 },
+  settingsTitleIcon: { fontSize: 28 },
+  settingsTitleText: { fontSize: 24, fontWeight: 'bold', color: '#111827' },
+  settingsSectionTitle: { fontSize: 14, fontWeight: '600', color: '#111827', marginTop: 24, marginBottom: 8, paddingHorizontal: 4 },
+  settingsSection: { backgroundColor: 'white', borderRadius: 12, borderWidth: 1, borderColor: '#F3F4F6', overflow: 'hidden' },
+  settingsRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingVertical: 14, paddingHorizontal: 16, borderBottomWidth: 1, borderBottomColor: '#F3F4F6' },
+  settingsRowLocked: { opacity: 0.5 },
+  settingsRowLeft: { flexDirection: 'row', alignItems: 'center', gap: 12 },
+  settingsRowIcon: { fontSize: 20 },
+  settingsRowLabel: { fontSize: 16, color: '#374151' },
+  settingsRowRight: { flexDirection: 'row', alignItems: 'center', gap: 8 },
+  settingsRowRightText: { fontSize: 14, color: '#9CA3AF' },
+  settingsRowArrow: { fontSize: 16, color: '#9CA3AF' },
+  settingsAppInfo: { alignItems: 'center', paddingVertical: 40 },
+  settingsAppName: { fontSize: 16, fontWeight: '600', color: '#111827' },
+  settingsAppTagline: { fontSize: 14, color: '#6B7280', marginTop: 4 },
+  settingsAppVersion: { fontSize: 12, color: '#9CA3AF', marginTop: 12 },
+  settingsAppEmail: { fontSize: 12, color: '#9CA3AF', marginTop: 4 },
+
+  // Progress Modal
+  progressModal: { backgroundColor: 'white', borderRadius: 24, width: '90%', maxWidth: 400, maxHeight: '85%', overflow: 'hidden' },
+  progressModalHeader: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 20, paddingVertical: 16, borderBottomWidth: 1, borderBottomColor: '#F3F4F6' },
+  progressModalTitle: { fontSize: 18, fontWeight: 'bold', color: '#111827' },
+  progressModalClose: { width: 32, height: 32, borderRadius: 16, backgroundColor: '#F3F4F6', justifyContent: 'center', alignItems: 'center' },
+  progressModalCloseText: { fontSize: 16, color: '#6B7280' },
+  progressModalContent: { padding: 20 },
+  progressCircleContainer: { alignItems: 'center', paddingVertical: 20 },
+  progressCircleOuter: { width: 128, height: 128, borderRadius: 64, justifyContent: 'center', alignItems: 'center', marginBottom: 16 },
+  progressCircleFill: { position: 'absolute', width: 128, height: 128, borderRadius: 64, borderWidth: 12 },
+  progressCircleInner: { width: 104, height: 104, borderRadius: 52, backgroundColor: 'white', justifyContent: 'center', alignItems: 'center' },
+  progressCirclePercent: { fontSize: 28, fontWeight: 'bold', color: '#111827' },
+  progressCircleLabel: { fontSize: 16, color: '#374151' },
+  progressCircleBold: { fontSize: 24, fontWeight: 'bold', color: '#111827' },
+  progressCircleSub: { fontSize: 14, color: '#9CA3AF', marginTop: 4 },
+  progressStatsGrid: { flexDirection: 'row', gap: 12, marginTop: 20 },
+  progressStatBox: { flex: 1, backgroundColor: '#F9FAFB', borderRadius: 16, padding: 16, alignItems: 'center' },
+  progressStatIcon: { fontSize: 20, marginBottom: 8 },
+  progressStatNumber: { fontSize: 24, fontWeight: 'bold', color: '#111827' },
+  progressStatLabel: { fontSize: 12, color: '#6B7280', marginTop: 4 },
+  progressExamInfo: { backgroundColor: '#F3E8FF', borderRadius: 12, padding: 16, marginTop: 20 },
+  progressExamText: { fontSize: 14, color: '#374151' },
+  progressExamBold: { fontWeight: 'bold', color: '#7C3AED' },
+  progressCTAButton: { backgroundColor: '#7C3AED', paddingVertical: 16, borderRadius: 12, marginTop: 20 },
+  progressCTAText: { color: 'white', fontWeight: 'bold', fontSize: 16, textAlign: 'center' },
+
+  // Legal Screens
+  legalContainer: { flex: 1, backgroundColor: 'white' },
+  legalBackBtn: { paddingTop: 50, paddingHorizontal: 16, paddingBottom: 16 },
+  legalBackText: { fontSize: 16, color: '#374151' },
+  legalScroll: { flex: 1, paddingHorizontal: 24 },
+  legalTitle: { fontSize: 24, fontWeight: 'bold', color: '#111827', marginBottom: 24 },
+  legalText: { fontSize: 15, color: '#374151', lineHeight: 24 },
+  legalBold: { fontWeight: 'bold', color: '#111827' },
+
+  // Contact Screen
+  contactCard: { backgroundColor: '#F9FAFB', borderRadius: 16, padding: 20, marginBottom: 16, alignItems: 'center' },
+  contactIcon: { fontSize: 32, marginBottom: 12 },
+  contactTitle: { fontSize: 18, fontWeight: 'bold', color: '#111827', marginBottom: 8 },
+  contactText: { fontSize: 14, color: '#6B7280', textAlign: 'center', marginBottom: 12 },
+  contactEmail: { fontSize: 16, color: '#7C3AED', fontWeight: '600' },
+
+  // FAQ Screen
+  faqItem: { backgroundColor: '#F9FAFB', borderRadius: 12, padding: 16, marginBottom: 12 },
+  faqQuestion: { fontSize: 16, fontWeight: '600', color: '#111827', marginBottom: 8 },
+  faqAnswer: { fontSize: 14, color: '#6B7280', lineHeight: 20 },
+
+  // Reto del día
+  retoCard: { backgroundColor: 'white', borderRadius: 12, padding: 16, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', borderWidth: 1, borderColor: '#F3F4F6', marginBottom: 24 },
+  retoContent: { flexDirection: 'row', alignItems: 'center', gap: 12 },
+  retoIconBox: { width: 36, height: 36, borderRadius: 8, backgroundColor: '#FEF3C7', justifyContent: 'center', alignItems: 'center' },
+  retoIcon: { fontSize: 16 },
+  retoTextBox: { flex: 1 },
+  retoTitle: { fontSize: 14, fontWeight: '600', color: '#111827' },
+  retoDesc: { fontSize: 12, color: '#6B7280' },
+  retoBtn: { paddingVertical: 8, paddingHorizontal: 16 },
+  retoBtnText: { fontSize: 14, fontWeight: '600', color: '#F97316' },
 });
