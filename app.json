@@ -14,7 +14,8 @@
       }
     },
     "web": {
-      "output": "single"
+      "bundler": "metro",
+      "output": "static"
     }
   }
 }
