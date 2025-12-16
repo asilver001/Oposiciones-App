@@ -3,10 +3,11 @@ import {
   ArrowLeft, UserCheck, CheckCircle, XCircle, Clock,
   RefreshCw, Eye, EyeOff, LogOut, AlertTriangle, FileText,
   ChevronLeft, ChevronRight, ChevronDown, ChevronUp,
-  Keyboard, GitCompare
+  Keyboard, GitCompare, LayoutGrid, List, RotateCcw
 } from 'lucide-react';
 import { useAdmin } from '../../contexts/AdminContext';
 import { supabase } from '../../lib/supabase';
+import { ViewModeSelector, QuestionCardCompact, QuestionDetailModal } from '../review';
 
 // Reformulation type labels
 const reformulationLabels = {
@@ -27,6 +28,10 @@ export default function ReviewerPanel({ onBack }) {
   const [actionLoading, setActionLoading] = useState(false);
   const [reviewComment, setReviewComment] = useState('');
   const [stats, setStats] = useState({ pending: 0, approved: 0, rejected: 0 });
+
+  // View mode: 'individual', 'grid', 'list'
+  const [viewMode, setViewMode] = useState('individual');
+  const [selectedQuestion, setSelectedQuestion] = useState(null);
 
   // Collapsible states
   const [showOtherOptions, setShowOtherOptions] = useState(false);
@@ -248,6 +253,82 @@ export default function ReviewerPanel({ onBack }) {
     }
   }, [currentQuestion, actionLoading, reviewComment, questions, currentIndex, markForRefresh, loadStats]);
 
+  // Handlers for grid/list views (accept question ID)
+  const handleApproveById = useCallback(async (questionId, comment = '') => {
+    if (actionLoading) return;
+
+    setActionLoading(true);
+    try {
+      const result = await reviewQuestion(questionId, 'human_approved', comment || null);
+
+      if (result.success) {
+        setQuestions(prev => prev.filter(q => q.id !== questionId));
+        setSelectedQuestion(null);
+        loadStats();
+      } else {
+        alert('Error: ' + result.error);
+      }
+    } finally {
+      setActionLoading(false);
+    }
+  }, [actionLoading, reviewQuestion, loadStats]);
+
+  const handleRejectById = useCallback(async (questionId, comment = '') => {
+    if (actionLoading) return;
+
+    setActionLoading(true);
+    try {
+      const result = await reviewQuestion(questionId, 'rejected', comment || null);
+
+      if (result.success) {
+        setQuestions(prev => prev.filter(q => q.id !== questionId));
+        setSelectedQuestion(null);
+        loadStats();
+      } else {
+        alert('Error: ' + result.error);
+      }
+    } finally {
+      setActionLoading(false);
+    }
+  }, [actionLoading, reviewQuestion, loadStats]);
+
+  const handleMarkRefreshById = useCallback(async (questionId, reason = 'Necesita reformulación') => {
+    if (actionLoading) return;
+
+    setActionLoading(true);
+    try {
+      const result = await markForRefresh(questionId, reason);
+
+      if (result.success) {
+        setQuestions(prev => prev.filter(q => q.id !== questionId));
+        setSelectedQuestion(null);
+        loadStats();
+      } else {
+        alert('Error: ' + result.error);
+      }
+    } finally {
+      setActionLoading(false);
+    }
+  }, [actionLoading, markForRefresh, loadStats]);
+
+  const handleUndo = useCallback(async (questionId) => {
+    if (actionLoading) return;
+
+    setActionLoading(true);
+    try {
+      const result = await reviewQuestion(questionId, 'human_pending', null);
+
+      if (result.success) {
+        loadQuestions();
+        loadStats();
+      } else {
+        alert('Error: ' + result.error);
+      }
+    } finally {
+      setActionLoading(false);
+    }
+  }, [actionLoading, reviewQuestion, loadQuestions, loadStats]);
+
   // Keyboard shortcuts
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -255,17 +336,35 @@ export default function ReviewerPanel({ onBack }) {
       if (e.target.tagName === 'TEXTAREA' || e.target.tagName === 'INPUT') return;
 
       switch (e.key.toLowerCase()) {
-        case 'a':
+        case '1':
           e.preventDefault();
-          handleApprove();
+          setViewMode('individual');
+          break;
+        case '2':
+          e.preventDefault();
+          setViewMode('grid');
+          break;
+        case '3':
+          e.preventDefault();
+          setViewMode('list');
+          break;
+        case 'a':
+          if (viewMode === 'individual') {
+            e.preventDefault();
+            handleApprove();
+          }
           break;
         case 'r':
-          e.preventDefault();
-          handleReject();
+          if (viewMode === 'individual') {
+            e.preventDefault();
+            handleReject();
+          }
           break;
         case 'f':
-          e.preventDefault();
-          handleMarkRefresh();
+          if (viewMode === 'individual') {
+            e.preventDefault();
+            handleMarkRefresh();
+          }
           break;
         case 'o':
           e.preventDefault();
@@ -277,12 +376,22 @@ export default function ReviewerPanel({ onBack }) {
           setShowOriginal(true);
           break;
         case 'arrowright':
-          e.preventDefault();
-          goToNext();
+          if (viewMode === 'individual') {
+            e.preventDefault();
+            goToNext();
+          }
           break;
         case 'arrowleft':
-          e.preventDefault();
-          goToPrev();
+          if (viewMode === 'individual') {
+            e.preventDefault();
+            goToPrev();
+          }
+          break;
+        case 'escape':
+          if (selectedQuestion) {
+            e.preventDefault();
+            setSelectedQuestion(null);
+          }
           break;
         default:
           break;
@@ -291,7 +400,7 @@ export default function ReviewerPanel({ onBack }) {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [handleApprove, handleReject, handleMarkRefresh, goToNext, goToPrev]);
+  }, [handleApprove, handleReject, handleMarkRefresh, goToNext, goToPrev, viewMode, selectedQuestion]);
 
   const handleLogout = () => {
     logoutAdmin();
@@ -363,6 +472,17 @@ export default function ReviewerPanel({ onBack }) {
               </div>
             </div>
           </div>
+
+          {/* View Mode Selector */}
+          <div className="mt-4">
+            <ViewModeSelector
+              viewMode={viewMode}
+              onViewModeChange={setViewMode}
+              totalItems={questions.length}
+              currentPage={1}
+              itemsPerPage={questions.length}
+            />
+          </div>
         </div>
       </div>
 
@@ -387,256 +507,361 @@ export default function ReviewerPanel({ onBack }) {
           </div>
         ) : (
           <>
-            {/* Progress & Navigation */}
-            <div className="flex items-center justify-between mb-4">
-              <span className="text-sm text-gray-600 font-medium">
-                Pregunta <span className="text-purple-600">{currentIndex + 1}</span> de {questions.length}
-              </span>
-              <div className="flex gap-2">
-                <button
-                  onClick={goToPrev}
-                  disabled={currentIndex === 0}
-                  className="p-2 rounded-lg bg-white border border-gray-200 text-gray-600 disabled:opacity-30 hover:bg-gray-50 transition-colors shadow-sm"
-                  title="Anterior [←]"
+            {/* Individual View */}
+            {viewMode === 'individual' && (
+              <>
+                {/* Progress & Navigation */}
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-sm text-gray-600 font-medium">
+                    Pregunta <span className="text-purple-600">{currentIndex + 1}</span> de {questions.length}
+                  </span>
+                  <div className="flex gap-2">
+                    <button
+                      onClick={goToPrev}
+                      disabled={currentIndex === 0}
+                      className="p-2 rounded-lg bg-white border border-gray-200 text-gray-600 disabled:opacity-30 hover:bg-gray-50 transition-colors shadow-sm"
+                      title="Anterior [←]"
+                    >
+                      <ChevronLeft className="w-5 h-5" />
+                    </button>
+                    <button
+                      onClick={goToNext}
+                      disabled={currentIndex === questions.length - 1}
+                      className="p-2 rounded-lg bg-white border border-gray-200 text-gray-600 disabled:opacity-30 hover:bg-gray-50 transition-colors shadow-sm"
+                      title="Siguiente [→]"
+                    >
+                      <ChevronRight className="w-5 h-5" />
+                    </button>
+                  </div>
+                </div>
+
+                {/* Question Card */}
+                <div
+                  className={`bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm transition-all duration-200 ${
+                    isAnimating
+                      ? animationDirection === 'left'
+                        ? 'opacity-0 translate-x-4'
+                        : 'opacity-0 -translate-x-4'
+                      : 'opacity-100 translate-x-0'
+                  }`}
                 >
-                  <ChevronLeft className="w-5 h-5" />
-                </button>
-                <button
-                  onClick={goToNext}
-                  disabled={currentIndex === questions.length - 1}
-                  className="p-2 rounded-lg bg-white border border-gray-200 text-gray-600 disabled:opacity-30 hover:bg-gray-50 transition-colors shadow-sm"
-                  title="Siguiente [→]"
-                >
-                  <ChevronRight className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
-
-            {/* Question Card */}
-            <div
-              className={`bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm transition-all duration-200 ${
-                isAnimating
-                  ? animationDirection === 'left'
-                    ? 'opacity-0 translate-x-4'
-                    : 'opacity-0 -translate-x-4'
-                  : 'opacity-100 translate-x-0'
-              }`}
-            >
-              {/* Meta tags */}
-              <div className="px-4 py-3 bg-gray-50 border-b border-gray-200 flex items-center gap-2 flex-wrap">
-                <span className="px-3 py-1 bg-purple-100 text-purple-700 text-sm font-medium rounded-full">
-                  Tema {currentQuestion?.tema || '?'}
-                </span>
-                {currentQuestion?.materia && (
-                  <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full">
-                    {currentQuestion.materia}
-                  </span>
-                )}
-                {currentQuestion?.difficulty && (
-                  <span className="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
-                    Dificultad: {currentQuestion.difficulty}/5
-                  </span>
-                )}
-              </div>
-
-              {/* Question text */}
-              <div className="p-5">
-                <p className="text-gray-900 text-lg leading-relaxed">
-                  {currentQuestion?.question_text}
-                </p>
-              </div>
-
-              {/* Correct Answer - Always visible and highlighted */}
-              <div className="px-5 pb-4">
-                <div className="text-sm font-semibold text-green-700 mb-2 flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4" />
-                  RESPUESTA CORRECTA:
-                </div>
-                <div className="p-4 rounded-xl bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-400 shadow-sm">
-                  <span className="font-bold text-green-800">
-                    {correctOption?.id?.toUpperCase() || 'A'}.
-                  </span>{' '}
-                  <span className="text-green-900 font-medium">
-                    {correctOption?.text}
-                  </span>
-                </div>
-              </div>
-
-              {/* Other Options - Collapsible */}
-              <div className="px-5 pb-4">
-                <button
-                  onClick={() => setShowOtherOptions(!showOtherOptions)}
-                  className="w-full flex items-center justify-between py-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  <span className="flex items-center gap-2">
-                    {showOtherOptions ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-                    Otras opciones ({incorrectOptions.length})
-                  </span>
-                  {showOtherOptions ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-                </button>
-
-                {!showOtherOptions ? (
-                  // Collapsed preview
-                  <div className="mt-2 space-y-1">
-                    {incorrectOptions.map((opt, idx) => (
-                      <div key={idx} className="text-sm text-gray-400 truncate pl-2">
-                        {opt.id?.toUpperCase() || String.fromCharCode(66 + idx)}. {opt.text}
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  // Expanded view
-                  <div className="mt-3 space-y-2">
-                    {incorrectOptions.map((opt, idx) => (
-                      <div
-                        key={idx}
-                        className="p-3 rounded-lg bg-gray-50 border border-gray-200 text-gray-700"
-                      >
-                        <span className="font-semibold text-gray-500">
-                          {opt.id?.toUpperCase() || String.fromCharCode(66 + idx)}.
-                        </span>{' '}
-                        {opt.text}
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Explanation if available */}
-              {currentQuestion?.explanation && showOtherOptions && (
-                <div className="px-5 pb-4">
-                  <div className="p-4 bg-blue-50 border border-blue-200 rounded-xl">
-                    <p className="text-xs font-semibold text-blue-800 mb-1">📚 Explicación:</p>
-                    <p className="text-sm text-blue-700">{currentQuestion.explanation}</p>
-                  </div>
-                </div>
-              )}
-
-              {/* Legal reference if available */}
-              {currentQuestion?.legal_reference && showOtherOptions && (
-                <div className="px-5 pb-4">
-                  <div className="p-3 bg-amber-50 border border-amber-200 rounded-lg">
-                    <p className="text-xs font-semibold text-amber-800 mb-1">📜 Referencia legal:</p>
-                    <p className="text-sm text-amber-700">{currentQuestion.legal_reference}</p>
-                  </div>
-                </div>
-              )}
-
-              {/* Compare with Original - Collapsible */}
-              {currentQuestion?.original_text && (
-                <div className="px-5 pb-4">
-                  <button
-                    onClick={() => setShowOriginal(!showOriginal)}
-                    className="w-full flex items-center justify-between py-2 text-sm text-gray-600 hover:text-gray-900 transition-colors border-t border-gray-100 pt-4"
-                  >
-                    <span className="flex items-center gap-2">
-                      <GitCompare className="w-4 h-4" />
-                      Comparar con original [O]
+                  {/* Meta tags */}
+                  <div className="px-4 py-3 bg-gray-50 border-b border-gray-200 flex items-center gap-2 flex-wrap">
+                    <span className="px-3 py-1 bg-purple-100 text-purple-700 text-sm font-medium rounded-full">
+                      Tema {currentQuestion?.tema || '?'}
                     </span>
-                    {showOriginal ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-                  </button>
+                    {currentQuestion?.materia && (
+                      <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full">
+                        {currentQuestion.materia}
+                      </span>
+                    )}
+                    {currentQuestion?.difficulty && (
+                      <span className="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                        Dificultad: {currentQuestion.difficulty}/5
+                      </span>
+                    )}
+                  </div>
 
-                  {showOriginal && (
-                    <div className="mt-4 grid md:grid-cols-2 gap-4">
-                      {/* Original */}
-                      <div className="p-4 rounded-xl bg-amber-50 border border-amber-300">
-                        <p className="text-xs font-semibold text-amber-700 mb-2 flex items-center gap-1">
-                          <FileText className="w-3 h-3" />
-                          ORIGINAL (PDF)
-                        </p>
-                        <p className="text-sm text-amber-900 leading-relaxed">
-                          {currentQuestion.original_text}
-                        </p>
+                  {/* Question text */}
+                  <div className="p-5">
+                    <p className="text-gray-900 text-lg leading-relaxed">
+                      {currentQuestion?.question_text}
+                    </p>
+                  </div>
+
+                  {/* Correct Answer - Always visible and highlighted */}
+                  <div className="px-5 pb-4">
+                    <div className="text-sm font-semibold text-green-700 mb-2 flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4" />
+                      RESPUESTA CORRECTA:
+                    </div>
+                    <div className="p-4 rounded-xl bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-400 shadow-sm">
+                      <span className="font-bold text-green-800">
+                        {correctOption?.id?.toUpperCase() || 'A'}.
+                      </span>{' '}
+                      <span className="text-green-900 font-medium">
+                        {correctOption?.text}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Other Options - Collapsible */}
+                  <div className="px-5 pb-4">
+                    <button
+                      onClick={() => setShowOtherOptions(!showOtherOptions)}
+                      className="w-full flex items-center justify-between py-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                    >
+                      <span className="flex items-center gap-2">
+                        {showOtherOptions ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                        Otras opciones ({incorrectOptions.length})
+                      </span>
+                      {showOtherOptions ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                    </button>
+
+                    {!showOtherOptions ? (
+                      // Collapsed preview
+                      <div className="mt-2 space-y-1">
+                        {incorrectOptions.map((opt, idx) => (
+                          <div key={idx} className="text-sm text-gray-400 truncate pl-2">
+                            {opt.id?.toUpperCase() || String.fromCharCode(66 + idx)}. {opt.text}
+                          </div>
+                        ))}
                       </div>
-                      {/* Reformulated */}
-                      <div className="p-4 rounded-xl bg-cyan-50 border border-cyan-300">
-                        <p className="text-xs font-semibold text-cyan-700 mb-2 flex items-center gap-1">
-                          <FileText className="w-3 h-3" />
-                          REFORMULADA
-                        </p>
-                        <p className="text-sm text-cyan-900 leading-relaxed">
-                          {currentQuestion.question_text}
-                        </p>
+                    ) : (
+                      // Expanded view
+                      <div className="mt-3 space-y-2">
+                        {incorrectOptions.map((opt, idx) => (
+                          <div
+                            key={idx}
+                            className="p-3 rounded-lg bg-gray-50 border border-gray-200 text-gray-700"
+                          >
+                            <span className="font-semibold text-gray-500">
+                              {opt.id?.toUpperCase() || String.fromCharCode(66 + idx)}.
+                            </span>{' '}
+                            {opt.text}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Explanation if available */}
+                  {currentQuestion?.explanation && showOtherOptions && (
+                    <div className="px-5 pb-4">
+                      <div className="p-4 bg-blue-50 border border-blue-200 rounded-xl">
+                        <p className="text-xs font-semibold text-blue-800 mb-1">📚 Explicación:</p>
+                        <p className="text-sm text-blue-700">{currentQuestion.explanation}</p>
                       </div>
                     </div>
                   )}
 
-                  {showOriginal && currentQuestion?.reformulation_type && (
-                    <div className="mt-3 p-3 bg-gray-100 rounded-lg">
-                      <p className="text-xs text-gray-600">
-                        💡 <strong>Tipo de cambio:</strong>{' '}
-                        {reformulationLabels[currentQuestion.reformulation_type] || currentQuestion.reformulation_type}
-                      </p>
+                  {/* Legal reference if available */}
+                  {currentQuestion?.legal_reference && showOtherOptions && (
+                    <div className="px-5 pb-4">
+                      <div className="p-3 bg-amber-50 border border-amber-200 rounded-lg">
+                        <p className="text-xs font-semibold text-amber-800 mb-1">📜 Referencia legal:</p>
+                        <p className="text-sm text-amber-700">{currentQuestion.legal_reference}</p>
+                      </div>
                     </div>
                   )}
+
+                  {/* Compare with Original - Collapsible */}
+                  {currentQuestion?.original_text && (
+                    <div className="px-5 pb-4">
+                      <button
+                        onClick={() => setShowOriginal(!showOriginal)}
+                        className="w-full flex items-center justify-between py-2 text-sm text-gray-600 hover:text-gray-900 transition-colors border-t border-gray-100 pt-4"
+                      >
+                        <span className="flex items-center gap-2">
+                          <GitCompare className="w-4 h-4" />
+                          Comparar con original [O]
+                        </span>
+                        {showOriginal ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                      </button>
+
+                      {showOriginal && (
+                        <div className="mt-4 grid md:grid-cols-2 gap-4">
+                          {/* Original */}
+                          <div className="p-4 rounded-xl bg-amber-50 border border-amber-300">
+                            <p className="text-xs font-semibold text-amber-700 mb-2 flex items-center gap-1">
+                              <FileText className="w-3 h-3" />
+                              ORIGINAL (PDF)
+                            </p>
+                            <p className="text-sm text-amber-900 leading-relaxed">
+                              {currentQuestion.original_text}
+                            </p>
+                          </div>
+                          {/* Reformulated */}
+                          <div className="p-4 rounded-xl bg-cyan-50 border border-cyan-300">
+                            <p className="text-xs font-semibold text-cyan-700 mb-2 flex items-center gap-1">
+                              <FileText className="w-3 h-3" />
+                              REFORMULADA
+                            </p>
+                            <p className="text-sm text-cyan-900 leading-relaxed">
+                              {currentQuestion.question_text}
+                            </p>
+                          </div>
+                        </div>
+                      )}
+
+                      {showOriginal && currentQuestion?.reformulation_type && (
+                        <div className="mt-3 p-3 bg-gray-100 rounded-lg">
+                          <p className="text-xs text-gray-600">
+                            💡 <strong>Tipo de cambio:</strong>{' '}
+                            {reformulationLabels[currentQuestion.reformulation_type] || currentQuestion.reformulation_type}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {/* Comment input */}
+                  <div className="px-5 pb-4 border-t border-gray-100 pt-4">
+                    <label className="text-sm font-medium text-gray-700 mb-2 block">
+                      💬 Comentario (opcional):
+                    </label>
+                    <textarea
+                      value={reviewComment}
+                      onChange={(e) => setReviewComment(e.target.value)}
+                      placeholder="Escribe un comentario si lo deseas..."
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl text-sm resize-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-shadow"
+                      rows={2}
+                    />
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="px-5 pb-5">
+                    <div className="flex gap-3">
+                      <button
+                        onClick={handleApprove}
+                        disabled={actionLoading}
+                        className="flex-1 flex items-center justify-center gap-2 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all disabled:opacity-50 font-semibold shadow-lg shadow-green-500/25 active:scale-[0.98]"
+                      >
+                        <CheckCircle className="w-5 h-5" />
+                        Aprobar
+                        <kbd className="ml-1 px-1.5 py-0.5 text-xs bg-white/20 rounded">A</kbd>
+                      </button>
+                      <button
+                        onClick={handleReject}
+                        disabled={actionLoading}
+                        className="flex-1 flex items-center justify-center gap-2 py-4 bg-gradient-to-r from-red-500 to-rose-500 text-white rounded-xl hover:from-red-600 hover:to-rose-600 transition-all disabled:opacity-50 font-semibold shadow-lg shadow-red-500/25 active:scale-[0.98]"
+                      >
+                        <XCircle className="w-5 h-5" />
+                        Rechazar
+                        <kbd className="ml-1 px-1.5 py-0.5 text-xs bg-white/20 rounded">R</kbd>
+                      </button>
+                    </div>
+
+                    <button
+                      onClick={handleMarkRefresh}
+                      disabled={actionLoading}
+                      className="w-full mt-3 flex items-center justify-center gap-2 py-3 text-orange-600 bg-orange-50 border border-orange-200 rounded-xl hover:bg-orange-100 transition-colors text-sm font-medium"
+                    >
+                      <RefreshCw className="w-4 h-4" />
+                      Marcar para reformular
+                      <kbd className="ml-1 px-1.5 py-0.5 text-xs bg-orange-100 rounded">F</kbd>
+                    </button>
+                  </div>
                 </div>
-              )}
 
-              {/* Comment input */}
-              <div className="px-5 pb-4 border-t border-gray-100 pt-4">
-                <label className="text-sm font-medium text-gray-700 mb-2 block">
-                  💬 Comentario (opcional):
-                </label>
-                <textarea
-                  value={reviewComment}
-                  onChange={(e) => setReviewComment(e.target.value)}
-                  placeholder="Escribe un comentario si lo deseas..."
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl text-sm resize-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-shadow"
-                  rows={2}
-                />
-              </div>
-
-              {/* Action Buttons */}
-              <div className="px-5 pb-5">
-                <div className="flex gap-3">
-                  <button
-                    onClick={handleApprove}
-                    disabled={actionLoading}
-                    className="flex-1 flex items-center justify-center gap-2 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all disabled:opacity-50 font-semibold shadow-lg shadow-green-500/25 active:scale-[0.98]"
-                  >
-                    <CheckCircle className="w-5 h-5" />
-                    Aprobar
-                    <kbd className="ml-1 px-1.5 py-0.5 text-xs bg-white/20 rounded">A</kbd>
-                  </button>
-                  <button
-                    onClick={handleReject}
-                    disabled={actionLoading}
-                    className="flex-1 flex items-center justify-center gap-2 py-4 bg-gradient-to-r from-red-500 to-rose-500 text-white rounded-xl hover:from-red-600 hover:to-rose-600 transition-all disabled:opacity-50 font-semibold shadow-lg shadow-red-500/25 active:scale-[0.98]"
-                  >
-                    <XCircle className="w-5 h-5" />
-                    Rechazar
-                    <kbd className="ml-1 px-1.5 py-0.5 text-xs bg-white/20 rounded">R</kbd>
-                  </button>
+                {/* Keyboard Shortcuts Help */}
+                <div className="mt-4 p-3 bg-gray-100 rounded-xl">
+                  <div className="flex items-center gap-2 text-xs text-gray-500 mb-2">
+                    <Keyboard className="w-4 h-4" />
+                    <span className="font-medium">Atajos de teclado:</span>
+                  </div>
+                  <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-600">
+                    <span><kbd className="px-1.5 py-0.5 bg-white rounded border text-gray-700">1</kbd><kbd className="px-1.5 py-0.5 bg-white rounded border text-gray-700 ml-0.5">2</kbd><kbd className="px-1.5 py-0.5 bg-white rounded border text-gray-700 ml-0.5">3</kbd> Cambiar vista</span>
+                    <span><kbd className="px-1.5 py-0.5 bg-white rounded border text-gray-700">A</kbd> Aprobar</span>
+                    <span><kbd className="px-1.5 py-0.5 bg-white rounded border text-gray-700">R</kbd> Rechazar</span>
+                    <span><kbd className="px-1.5 py-0.5 bg-white rounded border text-gray-700">F</kbd> Reformular</span>
+                    <span><kbd className="px-1.5 py-0.5 bg-white rounded border text-gray-700">O</kbd> Ver original</span>
+                    <span><kbd className="px-1.5 py-0.5 bg-white rounded border text-gray-700">←</kbd><kbd className="px-1.5 py-0.5 bg-white rounded border text-gray-700 ml-0.5">→</kbd> Navegar</span>
+                  </div>
                 </div>
+              </>
+            )}
 
-                <button
-                  onClick={handleMarkRefresh}
-                  disabled={actionLoading}
-                  className="w-full mt-3 flex items-center justify-center gap-2 py-3 text-orange-600 bg-orange-50 border border-orange-200 rounded-xl hover:bg-orange-100 transition-colors text-sm font-medium"
-                >
-                  <RefreshCw className="w-4 h-4" />
-                  Marcar para reformular
-                  <kbd className="ml-1 px-1.5 py-0.5 text-xs bg-orange-100 rounded">F</kbd>
-                </button>
+            {/* Grid View */}
+            {viewMode === 'grid' && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {questions.map((question, idx) => (
+                  <QuestionCardCompact
+                    key={question.id}
+                    question={question}
+                    index={idx}
+                    onApprove={handleApproveById}
+                    onReject={handleRejectById}
+                    onView={setSelectedQuestion}
+                    onUndo={handleUndo}
+                    disabled={actionLoading}
+                  />
+                ))}
               </div>
-            </div>
+            )}
 
-            {/* Keyboard Shortcuts Help */}
-            <div className="mt-4 p-3 bg-gray-100 rounded-xl">
-              <div className="flex items-center gap-2 text-xs text-gray-500 mb-2">
-                <Keyboard className="w-4 h-4" />
-                <span className="font-medium">Atajos de teclado:</span>
+            {/* List View */}
+            {viewMode === 'list' && (
+              <div className="bg-white rounded-xl border border-gray-200 overflow-hidden divide-y divide-gray-100">
+                {questions.map((question, idx) => {
+                  const correctOpt = question.options?.find(opt => opt.is_correct);
+                  return (
+                    <div
+                      key={question.id}
+                      className="p-4 hover:bg-gray-50 transition-colors"
+                    >
+                      <div className="flex items-start justify-between gap-4">
+                        <div className="flex-1 min-w-0">
+                          {/* Meta */}
+                          <div className="flex flex-wrap gap-2 mb-2">
+                            <span className="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full font-medium">
+                              T{question.tema || '?'}
+                            </span>
+                            {question.materia && (
+                              <span className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">
+                                {question.materia}
+                              </span>
+                            )}
+                          </div>
+
+                          {/* Question */}
+                          <p className="text-sm text-gray-900 line-clamp-2 mb-2">
+                            {question.question_text}
+                          </p>
+
+                          {/* Correct answer */}
+                          {correctOpt && (
+                            <p className="text-xs text-green-700 bg-green-50 px-2 py-1 rounded inline-block">
+                              <span className="font-bold">{correctOpt.id?.toUpperCase() || 'A'}.</span> {correctOpt.text}
+                            </p>
+                          )}
+                        </div>
+
+                        {/* Actions */}
+                        <div className="flex items-center gap-2 flex-shrink-0">
+                          <button
+                            onClick={() => setSelectedQuestion(question)}
+                            className="p-2 text-gray-400 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+                            title="Ver detalle"
+                          >
+                            <Eye className="w-4 h-4" />
+                          </button>
+                          <button
+                            onClick={() => handleApproveById(question.id)}
+                            disabled={actionLoading}
+                            className="p-2 text-white bg-green-500 hover:bg-green-600 rounded-lg transition-colors disabled:opacity-50"
+                            title="Aprobar"
+                          >
+                            <CheckCircle className="w-4 h-4" />
+                          </button>
+                          <button
+                            onClick={() => handleRejectById(question.id)}
+                            disabled={actionLoading}
+                            className="p-2 text-white bg-red-500 hover:bg-red-600 rounded-lg transition-colors disabled:opacity-50"
+                            title="Rechazar"
+                          >
+                            <XCircle className="w-4 h-4" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
-              <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-600">
-                <span><kbd className="px-1.5 py-0.5 bg-white rounded border text-gray-700">A</kbd> Aprobar</span>
-                <span><kbd className="px-1.5 py-0.5 bg-white rounded border text-gray-700">R</kbd> Rechazar</span>
-                <span><kbd className="px-1.5 py-0.5 bg-white rounded border text-gray-700">F</kbd> Reformular</span>
-                <span><kbd className="px-1.5 py-0.5 bg-white rounded border text-gray-700">O</kbd> Ver original</span>
-                <span><kbd className="px-1.5 py-0.5 bg-white rounded border text-gray-700">E</kbd> Expandir todo</span>
-                <span><kbd className="px-1.5 py-0.5 bg-white rounded border text-gray-700">←</kbd><kbd className="px-1.5 py-0.5 bg-white rounded border text-gray-700 ml-0.5">→</kbd> Navegar</span>
-              </div>
-            </div>
+            )}
           </>
+        )}
+
+        {/* Question Detail Modal */}
+        {selectedQuestion && (
+          <QuestionDetailModal
+            question={selectedQuestion}
+            onClose={() => setSelectedQuestion(null)}
+            onApprove={handleApproveById}
+            onReject={handleRejectById}
+            onMarkRefresh={handleMarkRefreshById}
+            disabled={actionLoading}
+          />
         )}
       </div>
     </div>
