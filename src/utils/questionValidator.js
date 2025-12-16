@@ -6,7 +6,41 @@
 // Valid values for validation
 const VALID_TIERS = ['free', 'premium'];
 const VALID_DIFFICULTIES = [1, 2, 3, 4, 5];
-const VALID_MATERIAS = ['constitucion', 'administrativo', 'laboral', 'penal', 'civil', 'organizacion', 'procedimiento', 'otros'];
+const VALID_MATERIAS = [
+  // Legacy values
+  'constitucion', 'administrativo', 'laboral', 'penal', 'civil', 'organizacion', 'procedimiento', 'otros',
+  // New materias (códigos de la tabla materias)
+  'constitucion_principios', 'constitucion_general',
+  'derechos_deberes', 'derechos_fundamentales',
+  'tribunal_constitucional',
+  'la_corona',
+  'cortes_generales',
+  'gobierno',
+  'poder_judicial',
+  'age_central',
+  'age_periferica',
+  'sector_publico',
+  'comunidades_autonomas',
+  'administracion_local',
+  'union_europea',
+  'ley_39_2015', 'procedimiento_administrativo',
+  'acto_administrativo',
+  'recursos_administrativos',
+  'ley_40_2015', 'regimen_juridico',
+  'contratos_sector_publico',
+  'responsabilidad_patrimonial',
+  'ebep', 'funcion_publica',
+  'adquisicion_perdida',
+  'derechos_funcionarios',
+  'deberes_funcionarios',
+  'igualdad_genero',
+  'prevencion_riesgos',
+  'informatica_basica',
+  'sistemas_operativos',
+  'ofimatica',
+  'admin_electronica',
+  'proteccion_datos'
+];
 
 /**
  * Validate a single question
@@ -18,11 +52,14 @@ export function validateQuestion(question, index = 0) {
   const errors = [];
   const prefix = `Pregunta ${index + 1}`;
 
+  // Get question text: prefer reformulated_text, fallback to question_text
+  const questionText = question.reformulated_text || question.question_text;
+
   // Required fields
-  if (!question.question_text || typeof question.question_text !== 'string') {
-    errors.push(`${prefix}: 'question_text' es obligatorio y debe ser texto`);
-  } else if (question.question_text.trim().length < 10) {
-    errors.push(`${prefix}: 'question_text' es demasiado corto (mínimo 10 caracteres)`);
+  if (!questionText || typeof questionText !== 'string') {
+    errors.push(`${prefix}: 'question_text' o 'reformulated_text' es obligatorio y debe ser texto`);
+  } else if (questionText.trim().length < 10) {
+    errors.push(`${prefix}: El texto de la pregunta es demasiado corto (mínimo 10 caracteres)`);
   }
 
   // Options validation
@@ -200,8 +237,19 @@ export function transformQuestionForSupabase(question) {
   // Find the correct answer index
   const correctIndex = question.options.findIndex(opt => opt.is_correct);
 
+  // Use reformulated_text as main question_text if available, otherwise use question_text
+  const questionText = (question.reformulated_text || question.question_text || '').trim();
+
+  // Save original_text: use provided original_text, or if reformulated_text was used, save question_text as original
+  let originalText = question.original_text || null;
+  if (!originalText && question.reformulated_text && question.question_text) {
+    // If we have both reformulated and question_text, save question_text as original
+    originalText = question.question_text.trim();
+  }
+
   return {
-    question_text: question.question_text.trim(),
+    question_text: questionText,
+    original_text: originalText,
     option_a: question.options[0]?.text || '',
     option_b: question.options[1]?.text || '',
     option_c: question.options[2]?.text || '',
@@ -220,6 +268,10 @@ export function transformQuestionForSupabase(question) {
     is_active: true,
     times_shown: 0,
     times_correct: 0,
+    // Versioning fields
+    version: 1,
+    is_current_version: true,
+    reformulated_by: question.reformulated_text ? 'import' : null,
     created_at: new Date().toISOString()
   };
 }

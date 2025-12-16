@@ -84,15 +84,18 @@ export async function importQuestions(questions, options = {}) {
     const question = questions[i];
 
     try {
+      // Get the main question text (prefer reformulated_text)
+      const mainQuestionText = question.reformulated_text || question.question_text;
+
       // Check for duplicates
       if (skipDuplicates) {
-        const isDuplicate = await checkDuplicate(question.question_text);
+        const isDuplicate = await checkDuplicate(mainQuestionText);
         if (isDuplicate) {
           result.duplicates++;
           result.details.push({
             index: i,
             status: 'duplicate',
-            question: question.question_text.substring(0, 50) + '...'
+            question: mainQuestionText.substring(0, 50) + '...'
           });
           continue;
         }
@@ -114,7 +117,7 @@ export async function importQuestions(questions, options = {}) {
           index: i,
           status: 'error',
           error: error.message,
-          question: question.question_text.substring(0, 50) + '...'
+          question: mainQuestionText.substring(0, 50) + '...'
         });
       } else {
         result.imported++;
@@ -122,7 +125,7 @@ export async function importQuestions(questions, options = {}) {
           index: i,
           status: 'imported',
           id: data.id,
-          question: question.question_text.substring(0, 50) + '...'
+          question: mainQuestionText.substring(0, 50) + '...'
         });
       }
     } catch (err) {
@@ -131,7 +134,7 @@ export async function importQuestions(questions, options = {}) {
         index: i,
         status: 'error',
         error: err.message,
-        question: question.question_text?.substring(0, 50) + '...'
+        question: (question.reformulated_text || question.question_text)?.substring(0, 50) + '...'
       });
     }
   }
