@@ -12,7 +12,7 @@
     const hash = window.location.hash;
 
     // Redirect to main page, preserving the path
-    const redirectUrl = '/Oposiciones-App/' + (search ? search + '&' : '?') + 'p=' + encodeURIComponent(path.replace('/Oposiciones-App/', '')) + hash;
+    const redirectUrl = '/' + (search ? search + '&' : '?') + 'p=' + encodeURIComponent(path.replace('/', '')) + hash;
     window.location.replace(redirectUrl);
   </script>
 </head>

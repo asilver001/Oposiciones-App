@@ -2,8 +2,8 @@
   "name": "Oposita Smart - La forma inteligente de opositar",
   "short_name": "Oposita Smart",
   "description": "La forma inteligente de opositar. Prepara tu oposición de Administrativo del Estado con tests, simulacros y seguimiento de progreso.",
-  "start_url": "/Oposiciones-App/",
-  "scope": "/Oposiciones-App/",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#7C3AED",
@@ -13,13 +13,13 @@
   "dir": "ltr",
   "icons": [
     {
-      "src": "/Oposiciones-App/icons/icon.svg",
+      "src": "/icons/icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
     },
     {
-      "src": "/Oposiciones-App/icons/icon.svg",
+      "src": "/icons/icon.svg",
       "sizes": "512x512",
       "type": "image/svg+xml",
       "purpose": "maskable"
@@ -30,15 +30,15 @@
       "name": "Hacer test rápido",
       "short_name": "Test",
       "description": "Empieza un test de 5 preguntas",
-      "url": "/Oposiciones-App/?action=quick-test",
-      "icons": [{ "src": "/Oposiciones-App/icons/icon.svg", "sizes": "any" }]
+      "url": "/?action=quick-test",
+      "icons": [{ "src": "/icons/icon.svg", "sizes": "any" }]
     },
     {
       "name": "Ver mi progreso",
       "short_name": "Progreso",
       "description": "Revisa tu actividad y estadísticas",
-      "url": "/Oposiciones-App/?tab=actividad",
-      "icons": [{ "src": "/Oposiciones-App/icons/icon.svg", "sizes": "any" }]
+      "url": "/?tab=actividad",
+      "icons": [{ "src": "/icons/icon.svg", "sizes": "any" }]
     }
   ],
   "related_applications": [],

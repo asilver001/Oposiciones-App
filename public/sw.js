@@ -5,10 +5,10 @@ const DYNAMIC_CACHE = 'opositasmart-dynamic-v3';
 
 // Assets to cache immediately on install
 const STATIC_ASSETS = [
-  '/Oposiciones-App/',
-  '/Oposiciones-App/index.html',
-  '/Oposiciones-App/manifest.json',
-  '/Oposiciones-App/icons/icon.svg'
+  '/',
+  '/index.html',
+  '/manifest.json',
+  '/icons/icon.svg'
 ];
 
 // Install event - cache static assets
@@ -89,7 +89,7 @@ async function cacheFirst(request) {
     return networkResponse;
   } catch (error) {
     console.log('[SW] Cache-first failed:', error);
-    return caches.match('/Oposiciones-App/');
+    return caches.match('/');
   }
 }
 
@@ -110,7 +110,7 @@ async function networkFirst(request) {
     }
     // Return offline page for navigation requests
     if (request.mode === 'navigate') {
-      return caches.match('/Oposiciones-App/');
+      return caches.match('/');
     }
     throw error;
   }
@@ -140,7 +140,7 @@ self.addEventListener('message', (event) => {
     caches.open(DYNAMIC_CACHE).then((cache) => {
       const questionsBlob = new Blob([JSON.stringify(event.data.questions)], { type: 'application/json' });
       const questionsResponse = new Response(questionsBlob);
-      cache.put('/Oposiciones-App/api/questions', questionsResponse);
+      cache.put('/api/questions', questionsResponse);
       console.log('[SW] Questions cached for offline use');
     });
   }
