@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Home, BookOpen, Trophy, Clock, TrendingUp, ArrowLeft, CheckCircle, XCircle, Target, Flame, Zap, Star, Lock, Crown, BarChart3, Calendar, History, GraduationCap, Lightbulb, Info, Settings, ChevronRight, Instagram, Mail, Bell, User, LogOut, HelpCircle, FileText, Shield, ExternalLink } from 'lucide-react';
 import { allQuestions, topicsList, getRandomQuestions } from './data/questions';
+import { useAuth } from './contexts/AuthContext';
+import { SignUpForm, LoginForm, ForgotPasswordForm } from './components/auth';
 
 // ============ ONBOARDING COMPONENTS (estilo simple purple-50) ============
 
@@ -214,6 +216,20 @@ function DevPanel({ onReset, onGoToOnboarding, onShowPremium, streakCount, tests
 // ============ MAIN APP COMPONENT ============
 
 export default function OpositaApp() {
+  // Auth hook
+  const {
+    user,
+    loading: authLoading,
+    error: authError,
+    signUp,
+    signIn,
+    signOut,
+    resetPassword,
+    isAuthenticated,
+    isAnonymous,
+    continueAsAnonymous
+  } = useAuth();
+
   const [currentPage, setCurrentPage] = useState('welcome');
   const [activeTab, setActiveTab] = useState('inicio');
   const [userData, setUserData] = useState({
@@ -1044,103 +1060,80 @@ export default function OpositaApp() {
     );
   }
 
-  // PANTALLA SIGNUP
+  // PANTALLA SIGNUP (usando componente SignUpForm)
   if (currentPage === 'signup') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-500 to-indigo-600 flex items-center justify-center p-4">
-        <div className="max-w-md w-full">
-          <div className="bg-white rounded-3xl p-8 shadow-2xl">
-            <div className="text-center mb-6">
-              <div className="inline-block bg-purple-100 rounded-full p-4 mb-4">
-                <CheckCircle className="w-12 h-12 text-purple-600" />
-              </div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">Guarda tu progreso</h2>
-              <p className="text-gray-600">
-                Crea tu cuenta para no perder tu racha, tu progreso y tus resultados.
-              </p>
-            </div>
+      <SignUpForm
+        onSignUp={async (email, password, metadata) => {
+          const result = await signUp(email, password, metadata);
+          if (!result.error) {
+            // Update local userData
+            const newUserData = {
+              ...userData,
+              name: metadata?.display_name || '',
+              email: email,
+              accountCreated: true
+            };
+            setUserData(newUserData);
+            await window.storage.set('oposita-user', JSON.stringify(newUserData));
+          }
+          return result;
+        }}
+        onGoToLogin={() => setCurrentPage('login')}
+        onSkip={() => {
+          continueAsAnonymous();
+          handleSkipSignup();
+        }}
+        onShowPrivacy={(type) => setCurrentPage(type === 'terms' ? 'terms' : 'privacy')}
+        loading={authLoading}
+        error={authError}
+      />
+    );
+  }
 
-            <div className="space-y-4">
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Tu nombre</label>
-                <input
-                  type="text"
-                  value={formName}
-                  onChange={(e) => setFormName(e.target.value)}
-                  placeholder="Ej: María"
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition"
-                />
-              </div>
+  // PANTALLA LOGIN
+  if (currentPage === 'login') {
+    return (
+      <LoginForm
+        onLogin={async (email, password) => {
+          const result = await signIn(email, password);
+          if (!result.error && result.data?.user) {
+            // Update local userData with Supabase user data
+            const newUserData = {
+              ...userData,
+              name: result.data.user.user_metadata?.display_name || email.split('@')[0],
+              email: email,
+              accountCreated: true
+            };
+            setUserData(newUserData);
+            await window.storage.set('oposita-user', JSON.stringify(newUserData));
+            setCurrentPage('home');
+          }
+          return result;
+        }}
+        onGoToSignUp={() => setCurrentPage('signup')}
+        onForgotPassword={() => setCurrentPage('forgot-password')}
+        onSkip={() => {
+          continueAsAnonymous();
+          handleSkipSignup();
+        }}
+        onBack={() => setCurrentPage('signup')}
+        loading={authLoading}
+        error={authError}
+      />
+    );
+  }
 
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Tu correo electrónico</label>
-                <input
-                  type="email"
-                  value={formEmail}
-                  onChange={(e) => setFormEmail(e.target.value)}
-                  placeholder="Ej: maria@email.com"
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition"
-                />
-                <p className="text-xs text-gray-500 mt-2">
-                  Te enviaremos recordatorios útiles y recursos para tu oposición. Nada de spam.
-                </p>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <input
-                  type="checkbox"
-                  id="privacy"
-                  checked={privacyAccepted}
-                  onChange={(e) => setPrivacyAccepted(e.target.checked)}
-                  className="mt-1 w-5 h-5 text-purple-600 border-gray-300 rounded focus:ring-purple-500"
-                />
-                <label htmlFor="privacy" className="text-sm text-gray-600">
-                  He leído y acepto la{' '}
-                  <button
-                    type="button"
-                    onClick={() => setCurrentPage('privacy')}
-                    className="text-purple-600 underline hover:text-purple-700"
-                  >
-                    Política de Privacidad
-                  </button>
-                </label>
-              </div>
-
-              <button
-                onClick={handleCreateAccount}
-                disabled={!privacyAccepted || !formEmail}
-                className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 disabled:from-gray-400 disabled:to-gray-500 text-white font-bold py-4 px-6 rounded-2xl shadow-lg transition-all disabled:cursor-not-allowed"
-              >
-                Crear mi cuenta
-              </button>
-
-              <p className="text-xs text-gray-500 text-center">
-                Al crear tu cuenta aceptas nuestra Política de Privacidad. Nunca compartimos tus datos con terceros.
-              </p>
-
-              <div className="border-t pt-4">
-                <button
-                  onClick={handleSkipSignup}
-                  className="w-full text-gray-500 font-medium py-2 hover:text-gray-700 transition"
-                >
-                  Continuar sin crear cuenta
-                </button>
-                <p className="text-xs text-gray-400 text-center mt-1">
-                  Podrías perder tu progreso si cambias de dispositivo.
-                </p>
-              </div>
-
-              {/* DEV: Skip */}
-              <button
-                onClick={() => setCurrentPage('home')}
-                className="w-full text-gray-300 text-xs underline hover:text-gray-500"
-              >
-                [DEV] Saltar formulario
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+  // PANTALLA RECUPERAR CONTRASEÑA
+  if (currentPage === 'forgot-password') {
+    return (
+      <ForgotPasswordForm
+        onResetPassword={resetPassword}
+        onGoToLogin={() => setCurrentPage('login')}
+        onBack={() => setCurrentPage('login')}
+        loading={authLoading}
+        error={authError}
+      />
     );
   }
 
@@ -1876,7 +1869,26 @@ export default function OpositaApp() {
           <div className="bg-white rounded-xl border border-gray-100 divide-y divide-gray-100 overflow-hidden">
             <SettingsRow icon={Crown} label="Plan Premium" onClick={() => setShowPremiumModal(true)} rightText="Próximamente" />
             <SettingsRow icon={Mail} label="Contacto" onClick={() => { setShowSettingsModal(false); setCurrentPage('contact'); }} />
-            <SettingsRow icon={LogOut} label="Cerrar sesión" onClick={() => {}} locked />
+            {isAuthenticated ? (
+              <SettingsRow
+                icon={LogOut}
+                label="Cerrar sesión"
+                onClick={async () => {
+                  await signOut();
+                  setShowSettingsModal(false);
+                  setCurrentPage('welcome');
+                }}
+              />
+            ) : (
+              <SettingsRow
+                icon={User}
+                label="Iniciar sesión"
+                onClick={() => {
+                  setShowSettingsModal(false);
+                  setCurrentPage('login');
+                }}
+              />
+            )}
           </div>
 
           {/* Sección: Otros */}

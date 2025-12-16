@@ -8,6 +8,7 @@ export function AuthProvider({ children }) {
   const [session, setSession] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isAnonymous, setIsAnonymous] = useState(false); // User using app without account
 
   useEffect(() => {
     // Get initial session
@@ -217,6 +218,35 @@ export function AuthProvider({ children }) {
     }
   };
 
+  // Continue as anonymous (without account)
+  const continueAsAnonymous = () => {
+    setIsAnonymous(true);
+    // Save to localStorage to persist anonymous mode
+    localStorage.setItem('oposita-anonymous-mode', 'true');
+  };
+
+  // Exit anonymous mode (when user decides to create account)
+  const exitAnonymousMode = () => {
+    setIsAnonymous(false);
+    localStorage.removeItem('oposita-anonymous-mode');
+  };
+
+  // Check for anonymous mode on mount
+  useEffect(() => {
+    const anonymousMode = localStorage.getItem('oposita-anonymous-mode');
+    if (anonymousMode === 'true' && !user) {
+      setIsAnonymous(true);
+    }
+  }, [user]);
+
+  // Clear anonymous mode when user signs in
+  useEffect(() => {
+    if (user) {
+      setIsAnonymous(false);
+      localStorage.removeItem('oposita-anonymous-mode');
+    }
+  }, [user]);
+
   const value = {
     user,
     session,
@@ -230,6 +260,9 @@ export function AuthProvider({ children }) {
     getUserProfile,
     updateProfile,
     isAuthenticated: !!user,
+    isAnonymous,
+    continueAsAnonymous,
+    exitAnonymousMode,
   };
 
   return (
