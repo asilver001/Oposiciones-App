@@ -2,6 +2,217 @@ import React, { useState, useEffect } from 'react';
 import { Home, BookOpen, Trophy, Clock, TrendingUp, ArrowLeft, CheckCircle, XCircle, Target, Flame, Zap, Star, Lock, Crown, BarChart3, Calendar, History, GraduationCap, Lightbulb, Info, Settings, ChevronRight, Instagram, Mail, Bell, User, LogOut, HelpCircle, FileText, Shield, ExternalLink } from 'lucide-react';
 import { allQuestions, topicsList, getRandomQuestions } from './data/questions';
 
+// ============ ONBOARDING COMPONENTS (estilo simple purple-50) ============
+
+function WelcomeScreen({ onStart, onSkip, onReset }) {
+  const [float, setFloat] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => setFloat(f => f === 0 ? -10 : 0), 1500);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-purple-50 flex items-center justify-center p-6">
+      <div className="text-center w-full max-w-md">
+        <div
+          className="w-24 h-24 bg-purple-100 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-lg transition-transform duration-1000"
+          style={{ transform: `translateY(${float}px)` }}
+        >
+          <span className="text-5xl">🎓</span>
+        </div>
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">Oposita Smart</h1>
+        <p className="text-xl text-purple-600 font-semibold mb-2">Tu plaza, paso a paso</p>
+        <p className="text-gray-500 mb-12">Unos minutos al día, a tu ritmo. Sin agobios.</p>
+        <button
+          onClick={onStart}
+          className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-5 px-8 rounded-2xl text-lg shadow-lg shadow-purple-600/30 transition-all active:scale-[0.98]"
+        >
+          Empezar
+        </button>
+        <div className="flex items-center justify-center gap-2 mt-12 pt-6 border-t border-gray-200">
+          <button onClick={onSkip} className="text-gray-400 text-xs hover:text-gray-600">[DEV] Saltar</button>
+          <span className="text-gray-300">·</span>
+          <button onClick={onReset} className="text-red-300 text-xs hover:text-red-500">[DEV] Reset</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function OnboardingOposicion({ onSelect }) {
+  const options = [
+    { id: 'admin', label: 'Administrativo del Estado', icon: '🏢' },
+    { id: 'aux', label: 'Auxiliar Administrativo', icon: '📄' },
+    { id: 'gestion', label: 'Gestión del Estado', icon: '💼' },
+    { id: 'otra', label: 'Otra oposición', icon: '📝' }
+  ];
+  return (
+    <div className="min-h-screen bg-purple-50 px-6 pt-16">
+      <div className="flex justify-center gap-2 mb-8">
+        <div className="w-6 h-2 rounded-full bg-purple-600"></div>
+        <div className="w-2 h-2 rounded-full bg-gray-300"></div>
+        <div className="w-2 h-2 rounded-full bg-gray-300"></div>
+        <div className="w-2 h-2 rounded-full bg-gray-300"></div>
+      </div>
+      <h1 className="text-2xl font-bold text-gray-900 mb-2">¿Qué oposición preparas?</h1>
+      <p className="text-gray-500 mb-8">Selecciona para personalizar tu experiencia</p>
+      {options.map((o) => (
+        <button
+          key={o.id}
+          onClick={() => onSelect(o.id)}
+          className="w-full bg-white rounded-2xl p-4 flex items-center mb-3 border-2 border-gray-100 hover:border-purple-600 transition-all"
+        >
+          <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mr-4">
+            <span className="text-2xl">{o.icon}</span>
+          </div>
+          <span className="flex-1 text-left font-medium text-gray-800">{o.label}</span>
+          <span className="text-gray-400 text-2xl">›</span>
+        </button>
+      ))}
+    </div>
+  );
+}
+
+function OnboardingTiempo({ onSelect, onBack }) {
+  const options = [
+    { id: '15', label: '15 minutos', desc: 'Perfecto para empezar', questions: 10 },
+    { id: '30', label: '30 minutos', desc: 'Ritmo constante', questions: 20 },
+    { id: '60', label: '1 hora o más', desc: 'Máximo rendimiento', questions: 40 }
+  ];
+  return (
+    <div className="min-h-screen bg-purple-50 px-6 pt-16">
+      <button onClick={onBack} className="mb-6 text-gray-700 flex items-center gap-2">
+        <ArrowLeft className="w-5 h-5" /> Atrás
+      </button>
+      <div className="flex justify-center gap-2 mb-8">
+        <div className="w-2 h-2 rounded-full bg-purple-600"></div>
+        <div className="w-6 h-2 rounded-full bg-purple-600"></div>
+        <div className="w-2 h-2 rounded-full bg-gray-300"></div>
+        <div className="w-2 h-2 rounded-full bg-gray-300"></div>
+      </div>
+      <h1 className="text-2xl font-bold text-gray-900 mb-2">¿Cuánto tiempo al día?</h1>
+      <p className="text-gray-500 mb-8">Puedes cambiarlo cuando quieras</p>
+      {options.map((t) => (
+        <button
+          key={t.id}
+          onClick={() => onSelect(t)}
+          className="w-full bg-white rounded-2xl p-5 mb-3 border-2 border-gray-100 hover:border-purple-600 text-left transition-all"
+        >
+          <p className="font-semibold text-gray-800 text-lg">{t.label}</p>
+          <p className="text-gray-500 text-sm mt-1">{t.desc}</p>
+        </button>
+      ))}
+    </div>
+  );
+}
+
+function OnboardingFecha({ onSelect, onBack }) {
+  const options = [
+    { id: '3m', label: 'En menos de 3 meses' },
+    { id: '6m', label: 'Entre 3 y 6 meses' },
+    { id: '1y', label: 'Más de 6 meses' },
+    { id: 'ns', label: 'Todavía no lo sé' }
+  ];
+  return (
+    <div className="min-h-screen bg-purple-50 px-6 pt-16">
+      <button onClick={onBack} className="mb-6 text-gray-700 flex items-center gap-2">
+        <ArrowLeft className="w-5 h-5" /> Atrás
+      </button>
+      <div className="flex justify-center gap-2 mb-8">
+        <div className="w-2 h-2 rounded-full bg-purple-600"></div>
+        <div className="w-2 h-2 rounded-full bg-purple-600"></div>
+        <div className="w-6 h-2 rounded-full bg-purple-600"></div>
+        <div className="w-2 h-2 rounded-full bg-gray-300"></div>
+      </div>
+      <h1 className="text-2xl font-bold text-gray-900 mb-2">¿Cuándo es tu examen?</h1>
+      <p className="text-gray-500 mb-8">Así adaptamos el plan a tu ritmo</p>
+      {options.map((f) => (
+        <button
+          key={f.id}
+          onClick={() => onSelect(f.label)}
+          className="w-full bg-white rounded-2xl p-5 mb-3 border-2 border-gray-100 hover:border-purple-600 text-left transition-all"
+        >
+          <p className="font-medium text-gray-800">{f.label}</p>
+        </button>
+      ))}
+    </div>
+  );
+}
+
+function OnboardingIntro({ onStart, onSkip, onBack }) {
+  return (
+    <div className="min-h-screen bg-purple-50 px-6 pt-16">
+      <button onClick={onBack} className="mb-6 text-gray-700 flex items-center gap-2">
+        <ArrowLeft className="w-5 h-5" /> Atrás
+      </button>
+      <div className="flex justify-center gap-2 mb-12">
+        <div className="w-2 h-2 rounded-full bg-purple-600"></div>
+        <div className="w-2 h-2 rounded-full bg-purple-600"></div>
+        <div className="w-2 h-2 rounded-full bg-purple-600"></div>
+        <div className="w-6 h-2 rounded-full bg-purple-600"></div>
+      </div>
+      <div className="text-center">
+        <div className="w-20 h-20 bg-purple-100 rounded-3xl flex items-center justify-center mx-auto mb-8">
+          <span className="text-4xl">🚀</span>
+        </div>
+        <h1 className="text-2xl font-bold text-gray-900 mb-4">¡Vamos a hacer tu primer test!</h1>
+        <p className="text-gray-500 mb-12">5 preguntas para conocer tu nivel. Sin presión, es solo para personalizar tu experiencia.</p>
+        <button
+          onClick={onStart}
+          className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-5 px-8 rounded-2xl text-lg shadow-lg shadow-purple-600/30 transition-all active:scale-[0.98]"
+        >
+          Empezar test
+        </button>
+        <button onClick={onSkip} className="mt-4 text-gray-500 text-sm">
+          Saltar por ahora
+        </button>
+      </div>
+    </div>
+  );
+}
+
+// ============ DEV PANEL COMPONENT ============
+
+function DevPanel({ onReset, onGoToOnboarding, onShowPremium, streakCount, testsCount }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  if (!isOpen) {
+    return (
+      <button
+        onClick={() => setIsOpen(true)}
+        className="fixed bottom-24 left-4 z-50 w-10 h-10 bg-gray-900/80 hover:bg-gray-900 text-white rounded-full shadow-lg flex items-center justify-center text-xs font-bold"
+      >
+        DEV
+      </button>
+    );
+  }
+
+  return (
+    <div className="fixed bottom-24 left-4 z-50 bg-gray-900/95 rounded-2xl p-4 shadow-2xl min-w-[200px]">
+      <div className="flex items-center justify-between mb-3">
+        <span className="text-white font-semibold text-sm">🛠️ Dev Tools</span>
+        <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-white text-lg">×</button>
+      </div>
+      <div className="space-y-2">
+        <button onClick={onReset} className="w-full bg-red-500/90 hover:bg-red-600 text-white text-xs py-2 px-3 rounded-lg text-left">
+          🗑️ Reset TODO
+        </button>
+        <button onClick={onGoToOnboarding} className="w-full bg-purple-500/90 hover:bg-purple-600 text-white text-xs py-2 px-3 rounded-lg text-left">
+          🔄 Ir a Onboarding
+        </button>
+        <button onClick={onShowPremium} className="w-full bg-yellow-500/90 hover:bg-yellow-600 text-white text-xs py-2 px-3 rounded-lg text-left">
+          👑 Ver Premium Modal
+        </button>
+        <div className="pt-2 border-t border-gray-700 text-[10px] text-gray-500">
+          streak: {streakCount} · tests: {testsCount}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ============ MAIN APP COMPONENT ============
+
 export default function OpositaApp() {
   const [currentPage, setCurrentPage] = useState('welcome');
   const [activeTab, setActiveTab] = useState('inicio');
@@ -552,261 +763,65 @@ export default function OpositaApp() {
     );
   }
 
-  // PANTALLA 1: BIENVENIDA
+  // Helper function for dev reset
+  const handleDevReset = async () => {
+    await window.storage.remove('oposita-onboarding-complete');
+    await window.storage.remove('oposita-user');
+    await window.storage.remove('oposita-stats-v2');
+    await window.storage.remove('oposita-progress-v2');
+    await window.storage.remove('oposita-streak');
+    await window.storage.remove('oposita-daily-tests');
+    await window.storage.remove('oposita-signup-count');
+    await window.storage.remove('oposita-premium');
+    window.location.reload();
+  };
+
+  // ONBOARDING SCREENS (using simple purple-50 components)
   if (currentPage === 'welcome') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-500 to-indigo-600 flex items-center justify-center p-4">
-        <div className="max-w-md w-full text-center">
-          <div className="mb-8">
-            <div className="inline-block bg-yellow-400 rounded-full p-8 mb-6 shadow-2xl animate-bounce">
-              <Trophy className="w-20 h-20 text-purple-700" />
-            </div>
-
-            <h1 className="text-5xl font-bold text-white mb-4 leading-tight drop-shadow-lg">
-              Oposita Smart
-            </h1>
-            <p className="text-2xl font-semibold text-yellow-300 mb-4">
-              La forma inteligente de opositar
-            </p>
-
-            <p className="text-purple-100 text-xl font-medium">
-              Prepara tu oposición de Administrativo del Estado
-            </p>
-          </div>
-
-          <button
-            onClick={() => setCurrentPage('onboarding1')}
-            className="w-full bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white font-bold py-5 px-8 rounded-2xl text-xl shadow-2xl transform hover:scale-105 transition-all mb-4"
-          >
-            Comenzar gratis
-          </button>
-
-          <p className="text-purple-200 text-sm">
-            Sin tarjeta. Cancela cuando quieras.
-          </p>
-
-          {/* DEV: Skip button */}
-          <button
-            onClick={() => {
-              completeOnboarding();
-              setCurrentPage('home');
-            }}
-            className="mt-6 text-purple-300 text-xs underline hover:text-white"
-          >
-            [DEV] Saltar al Home
-          </button>
-
-          {/* DEV: Reset all data */}
-          <button
-            onClick={async () => {
-              await window.storage.remove('oposita-onboarding-complete');
-              await window.storage.remove('oposita-user');
-              await window.storage.remove('oposita-stats-v2');
-              await window.storage.remove('oposita-progress-v2');
-              await window.storage.remove('oposita-streak');
-              await window.storage.remove('oposita-daily-tests');
-              await window.storage.remove('oposita-signup-count');
-              await window.storage.remove('oposita-premium');
-              window.location.reload();
-            }}
-            className="mt-2 text-red-300 text-xs underline hover:text-red-100"
-          >
-            [DEV] Resetear TODO y recargar
-          </button>
-        </div>
-      </div>
+      <WelcomeScreen
+        onStart={() => setCurrentPage('onboarding1')}
+        onSkip={() => { completeOnboarding(); setCurrentPage('home'); }}
+        onReset={handleDevReset}
+      />
     );
   }
 
-  // PANTALLA 2: ¿CUÁNDO ES TU EXAMEN?
   if (currentPage === 'onboarding1') {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-500 to-indigo-600 flex items-center justify-center p-4">
-        <div className="max-w-md w-full">
-          <div className="text-center mb-8">
-            <h2 className="text-4xl font-bold text-white mb-6 drop-shadow">
-              ¿Cuándo es tu examen?
-            </h2>
-
-            <div className="flex justify-center gap-2 mt-6">
-              <div className="w-3 h-3 rounded-full bg-white shadow-lg"></div>
-              <div className="w-3 h-3 rounded-full bg-white/40"></div>
-              <div className="w-3 h-3 rounded-full bg-white/40"></div>
-              <div className="w-3 h-3 rounded-full bg-white/40"></div>
-            </div>
-          </div>
-
-          <div className="space-y-4">
-            {[
-              { value: '< 6 meses', label: 'En menos de 6 meses', emoji: '⚡' },
-              { value: '6-12 meses', label: 'Entre 6-12 meses', emoji: '📅' },
-              { value: '> 1 año', label: 'En más de 1 año', emoji: '🎯' },
-              { value: 'sin fecha', label: 'Aún no tengo fecha', emoji: '🤔' }
-            ].map((option) => (
-              <button
-                key={option.value}
-                onClick={() => {
-                  setUserData({ ...userData, examDate: option.value });
-                  setCurrentPage('onboarding2');
-                }}
-                className="w-full bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/30 hover:border-white text-white font-semibold py-5 px-6 rounded-2xl transition-all text-left flex items-center gap-4 shadow-lg hover:shadow-2xl transform hover:scale-105"
-              >
-                <span className="text-3xl">{option.emoji}</span>
-                <span className="text-lg">{option.label}</span>
-              </button>
-            ))}
-          </div>
-
-          <button
-            onClick={() => setCurrentPage('welcome')}
-            className="w-full mt-6 text-white/70 hover:text-white font-medium py-3 transition-all flex items-center justify-center gap-2"
-          >
-            <ArrowLeft className="w-5 h-5" />
-            Volver
-          </button>
-        </div>
-      </div>
-    );
+    return <OnboardingOposicion onSelect={() => setCurrentPage('onboarding2')} />;
   }
 
-  // PANTALLA 3: OBJETIVO DIARIO
   if (currentPage === 'onboarding2') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-500 to-indigo-600 flex items-center justify-center p-4">
-        <div className="max-w-md w-full">
-          <div className="text-center mb-8">
-            <h2 className="text-4xl font-bold text-white mb-4 drop-shadow">
-              ¿Cuánto tiempo tienes cada día?
-            </h2>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 mb-6">
-              <p className="text-white font-semibold text-lg">
-                Solo 15 min/día = 5,475 preguntas al año
-              </p>
-            </div>
-
-            <div className="flex justify-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-white shadow-lg"></div>
-              <div className="w-3 h-3 rounded-full bg-white shadow-lg"></div>
-              <div className="w-3 h-3 rounded-full bg-white/40"></div>
-              <div className="w-3 h-3 rounded-full bg-white/40"></div>
-            </div>
-          </div>
-
-          <div className="space-y-4">
-            {[
-              { minutes: 15, questions: 10, label: '15 minutos', sublabel: '10 preguntas', emoji: '⏱️' },
-              { minutes: 30, questions: 20, label: '30 minutos', sublabel: '20 preguntas', emoji: '📚' },
-              { minutes: 60, questions: 40, label: '1 hora', sublabel: '40 preguntas', emoji: '🎓' },
-              { minutes: 120, questions: 80, label: '2+ horas', sublabel: '80+ preguntas', emoji: '🚀' }
-            ].map((option) => (
-              <button
-                key={option.minutes}
-                onClick={() => {
-                  setUserData({ ...userData, dailyGoal: option.questions, dailyGoalMinutes: option.minutes });
-                  setCurrentPage('onboarding3');
-                }}
-                className="w-full bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/30 hover:border-white text-white font-semibold py-5 px-6 rounded-2xl transition-all text-left shadow-lg hover:shadow-2xl transform hover:scale-105"
-              >
-                <div className="flex items-center gap-4">
-                  <span className="text-3xl">{option.emoji}</span>
-                  <div className="flex-1">
-                    <div className="text-xl font-bold">{option.label}</div>
-                    <div className="text-purple-100 text-sm">{option.sublabel}</div>
-                  </div>
-                </div>
-              </button>
-            ))}
-          </div>
-
-          <button
-            onClick={() => setCurrentPage('onboarding1')}
-            className="w-full mt-6 text-white/70 hover:text-white font-medium py-3 transition-all flex items-center justify-center gap-2"
-          >
-            <ArrowLeft className="w-5 h-5" />
-            Volver
-          </button>
-        </div>
-      </div>
+      <OnboardingTiempo
+        onSelect={(option) => {
+          setUserData({ ...userData, dailyGoal: option.questions, dailyGoalMinutes: parseInt(option.id) });
+          setCurrentPage('onboarding3');
+        }}
+        onBack={() => setCurrentPage('onboarding1')}
+      />
     );
   }
 
-  // PANTALLA 4: PRIMER TEST
   if (currentPage === 'onboarding3') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-500 to-indigo-600 flex items-center justify-center p-4">
-        <div className="max-w-md w-full">
-          <div className="text-center mb-6">
-            {/* Plan confirmado */}
-            <div className="bg-green-500/20 backdrop-blur-sm rounded-xl p-4 mb-6 border border-green-400/30">
-              <p className="text-green-100 font-semibold">
-                ✅ Perfecto, creamos un plan con <span className="text-white font-bold">{userData.dailyGoal} preguntas al día</span> para ti.
-              </p>
-            </div>
+      <OnboardingFecha
+        onSelect={(label) => {
+          setUserData({ ...userData, examDate: label });
+          setCurrentPage('onboarding4');
+        }}
+        onBack={() => setCurrentPage('onboarding2')}
+      />
+    );
+  }
 
-            <h2 className="text-4xl font-bold text-white mb-4 drop-shadow">
-              Vamos a hacer tu primer test ahora
-            </h2>
-
-            <div className="flex justify-center gap-2 mt-6">
-              <div className="w-3 h-3 rounded-full bg-white shadow-lg"></div>
-              <div className="w-3 h-3 rounded-full bg-white shadow-lg"></div>
-              <div className="w-3 h-3 rounded-full bg-white shadow-lg"></div>
-              <div className="w-3 h-3 rounded-full bg-white/40"></div>
-            </div>
-          </div>
-
-          <div className="relative mb-6">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 rounded-3xl blur-xl opacity-50 animate-pulse"></div>
-
-            <div className="relative bg-gradient-to-br from-purple-400 to-purple-500 p-8 rounded-3xl shadow-2xl border-2 border-white/30">
-              <div className="text-6xl mb-6 text-center animate-bounce">📖</div>
-              <h3 className="text-3xl font-bold text-white mb-3 text-center drop-shadow">
-                Constitución Española
-              </h3>
-              <div className="flex items-center justify-center gap-4 text-purple-100">
-                <div className="flex items-center gap-2">
-                  <Clock className="w-5 h-5" />
-                  <span className="font-semibold">2 minutos</span>
-                </div>
-                <div className="w-1 h-1 rounded-full bg-purple-200"></div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5" />
-                  <span className="font-semibold">5 preguntas</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Texto de calibración */}
-          <div className="bg-blue-500/20 backdrop-blur-sm rounded-xl p-4 mb-6 border border-blue-400/30">
-            <div className="flex items-start gap-3">
-              <Info className="w-5 h-5 text-blue-200 flex-shrink-0 mt-0.5" />
-              <p className="text-blue-100 text-sm">
-                Este primer test solo sirve para calibrar tu nivel, no te preocupes por la nota 😉
-              </p>
-            </div>
-          </div>
-
-          <button
-            onClick={() => {
-              startTest();
-              completeOnboarding();
-            }}
-            className="w-full bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white font-bold py-6 px-8 rounded-2xl text-xl shadow-2xl transform hover:scale-105 transition-all mb-4"
-          >
-            Empezar mi primer test
-          </button>
-
-          <button
-            onClick={() => setCurrentPage('onboarding2')}
-            className="w-full text-white/70 hover:text-white font-medium py-3 transition-all flex items-center justify-center gap-2"
-          >
-            <ArrowLeft className="w-5 h-5" />
-            Volver
-          </button>
-        </div>
-      </div>
+  if (currentPage === 'onboarding4') {
+    return (
+      <OnboardingIntro
+        onStart={() => { completeOnboarding(); startTest(); }}
+        onSkip={() => { completeOnboarding(); setCurrentPage('home'); }}
+        onBack={() => setCurrentPage('onboarding3')}
+      />
     );
   }
 
@@ -2126,25 +2141,14 @@ export default function OpositaApp() {
         </div>
       </div>
 
-      {/* DEV Controls */}
-      <div className="fixed top-2 right-2 z-50 flex gap-2">
-        <button
-          onClick={async () => {
-            await window.storage.remove('oposita-onboarding-complete');
-            await window.storage.remove('oposita-user');
-            await window.storage.remove('oposita-stats-v2');
-            await window.storage.remove('oposita-progress-v2');
-            await window.storage.remove('oposita-streak');
-            await window.storage.remove('oposita-daily-tests');
-            await window.storage.remove('oposita-signup-count');
-            await window.storage.remove('oposita-premium');
-            window.location.reload();
-          }}
-          className="bg-red-500/80 hover:bg-red-600 text-white text-xs px-2 py-1 rounded shadow"
-        >
-          [DEV] Reset
-        </button>
-      </div>
+      {/* DEV Panel Colapsable */}
+      <DevPanel
+        onReset={handleDevReset}
+        onGoToOnboarding={() => setCurrentPage('welcome')}
+        onShowPremium={() => setShowPremiumModal(true)}
+        streakCount={streakData.current}
+        testsCount={totalStats.testsCompleted}
+      />
 
       <BottomTabBar />
       {showPremiumModal && <PremiumModal />}
