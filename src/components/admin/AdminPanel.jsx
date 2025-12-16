@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import {
   ArrowLeft, Shield, Users, FileText, Settings,
   CheckCircle, XCircle, Clock, RefreshCw, Download,
@@ -20,11 +20,7 @@ export default function AdminPanel({ onBack }) {
   const [stats, setStats] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    loadStats();
-  }, []);
-
-  const loadStats = async () => {
+  const loadStats = useCallback(async () => {
     setLoading(true);
     try {
       // Get question stats
@@ -94,7 +90,18 @@ export default function AdminPanel({ onBack }) {
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    loadStats();
+  }, [loadStats]);
+
+  // Auto-refresh stats when switching to overview tab
+  useEffect(() => {
+    if (activeTab === 'overview') {
+      loadStats();
+    }
+  }, [activeTab, loadStats]);
 
   const handleLogout = () => {
     logoutAdmin();
@@ -180,7 +187,7 @@ export default function AdminPanel({ onBack }) {
           <TemasTab />
         )}
         {activeTab === 'import' && (
-          <QuestionImporter />
+          <QuestionImporter onImportComplete={loadStats} />
         )}
         {activeTab === 'export' && (
           <QuestionExporter />
