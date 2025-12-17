@@ -277,6 +277,8 @@ export default function OpositaApp() {
   const [formName, setFormName] = useState('');
   const [formEmail, setFormEmail] = useState('');
   const [showStreakBanner, setShowStreakBanner] = useState(true);
+  const [showReview, setShowReview] = useState(false);
+  const [reviewIndex, setReviewIndex] = useState(null);
 
   const badges = [
     { id: 1, name: 'Constancia', days: 3, icon: '🔥', color: 'orange' },
@@ -353,31 +355,85 @@ export default function OpositaApp() {
   const handleAnswerSelect = (answerId) => {
     if (!answers[currentQuestion]) {
       setSelectedAnswer(answerId);
-      setAnswers({ ...answers, [currentQuestion]: answerId });
+      const isCorrect = answerId === questions[currentQuestion].correct;
+      setAnswers({ ...answers, [currentQuestion]: { answer: answerId, isCorrect, skipped: false } });
       setShowExplanation(true);
+
+      // Auto-avance después de 800ms
+      setTimeout(() => {
+        if (currentQuestion < questions.length - 1) {
+          setCurrentQuestion(currentQuestion + 1);
+          const nextAnswer = answers[currentQuestion + 1];
+          setSelectedAnswer(nextAnswer?.answer || null);
+          setShowExplanation(!!nextAnswer);
+        } else {
+          // Última pregunta - finalizar test
+          handleFinishTest();
+        }
+      }, 800);
+    }
+  };
+
+  const handleSkipQuestion = () => {
+    // Guardar como pregunta en blanco (null)
+    setAnswers({ ...answers, [currentQuestion]: { answer: null, isCorrect: null, skipped: true } });
+
+    if (currentQuestion < questions.length - 1) {
+      setCurrentQuestion(currentQuestion + 1);
+      const nextAnswer = answers[currentQuestion + 1];
+      setSelectedAnswer(nextAnswer?.answer || null);
+      setShowExplanation(!!nextAnswer);
+    } else {
+      // Última pregunta - finalizar test
+      handleFinishTest();
     }
   };
 
   const handleNextQuestion = () => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
-      setSelectedAnswer(answers[currentQuestion + 1] || null);
-      setShowExplanation(!!answers[currentQuestion + 1]);
+      const nextAnswer = answers[currentQuestion + 1];
+      setSelectedAnswer(nextAnswer?.answer || null);
+      setShowExplanation(!!nextAnswer);
     }
   };
 
   const handleFinishTest = async () => {
-    const correctAnswers = Object.entries(answers).filter(
-      ([idx, answer]) => answer === questions[idx].correct
-    );
+    // Sistema de puntuación de oposiciones españolas
+    // +1 correcta, -0.33 incorrecta, 0 en blanco
+    let correct = 0;
+    let incorrect = 0;
+    let blank = 0;
+
+    Object.entries(answers).forEach(([idx, answerData]) => {
+      if (answerData.skipped || answerData.answer === null) {
+        blank++;
+      } else if (answerData.isCorrect) {
+        correct++;
+      } else {
+        incorrect++;
+      }
+    });
+
+    // Preguntas no respondidas también cuentan como blanco
+    const unanswered = questions.length - Object.keys(answers).length;
+    blank += unanswered;
+
+    const rawScore = correct - (incorrect * 0.33);
+    const score = Math.max(0, rawScore); // No puede ser negativo
 
     const results = {
       total: questions.length,
       answered: Object.keys(answers).length,
-      correct: correctAnswers.length,
-      incorrect: Object.keys(answers).length - correctAnswers.length,
-      percentage: Math.round((correctAnswers.length / questions.length) * 100),
-      time: timeElapsed
+      correct,
+      incorrect,
+      blank,
+      score: score.toFixed(2),
+      rawScore: rawScore.toFixed(2),
+      percentage: Math.round((correct / questions.length) * 100),
+      time: timeElapsed,
+      answers: { ...answers }, // Guardar respuestas para revisión
+      questions: questions // Guardar preguntas para mostrar explicaciones
     };
 
     const today = new Date().toDateString();
@@ -898,6 +954,14 @@ export default function OpositaApp() {
 
           <div className="bg-white rounded-3xl shadow-2xl overflow-hidden mb-6">
             <div className="p-8">
+              {/* Topic Badge */}
+              <div className="mb-4">
+                <span className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                  📚 {topicsList.find(t => t.id === question.topic)?.title || `Tema ${question.topic}`}
+                  {question.subtopic && <span className="text-purple-200">· {question.subtopic}</span>}
+                </span>
+              </div>
+
               <div className="flex items-start gap-4 mb-6">
                 <div className="bg-purple-100 text-purple-600 font-bold rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 text-lg">
                   {currentQuestion + 1}
@@ -954,42 +1018,48 @@ export default function OpositaApp() {
                 })}
               </div>
 
+              {/* Botón Saltar - Solo visible si no hay feedback */}
+              {!showExplanation && (
+                <button
+                  onClick={handleSkipQuestion}
+                  className="w-full mt-4 py-3 px-4 border-2 border-dashed border-gray-300 rounded-xl text-gray-500 hover:border-gray-400 hover:bg-gray-50 transition-all text-sm font-medium"
+                >
+                  Saltar pregunta (0 pts)
+                </button>
+              )}
+
+              {/* Feedback breve - Solo muestra si es correcto o incorrecto */}
               {showExplanation && (
-                <div className={`mt-6 p-4 rounded-xl ${
-                  selectedAnswer === question.correct ? 'bg-green-50 border-2 border-green-200' : 'bg-blue-50 border-2 border-blue-200'
+                <div className={`mt-4 p-3 rounded-xl text-center font-semibold ${
+                  selectedAnswer === question.correct
+                    ? 'bg-green-100 text-green-700 border border-green-300'
+                    : 'bg-red-100 text-red-700 border border-red-300'
                 }`}>
-                  <div className="flex items-start gap-3">
-                    <div className="text-2xl">💡</div>
-                    <div>
-                      <h3 className="font-bold text-gray-900 mb-2">
-                        {selectedAnswer === question.correct ? '¡Correcto!' : 'Explicación'}
-                      </h3>
-                      <p className="text-gray-700 leading-relaxed">{question.explanation}</p>
-                    </div>
-                  </div>
+                  {selectedAnswer === question.correct ? '✓ ¡Correcto!' : '✗ Incorrecto'}
                 </div>
               )}
             </div>
           </div>
 
-          <div className="flex gap-3">
-            {currentQuestion < questions.length - 1 ? (
-              <button
-                onClick={handleNextQuestion}
-                disabled={!selectedAnswer}
-                className="flex-1 bg-white hover:bg-gray-100 disabled:bg-white/50 disabled:cursor-not-allowed text-purple-600 font-bold py-4 px-6 rounded-2xl transition shadow-lg"
-              >
-                Siguiente →
-              </button>
-            ) : (
-              <button
-                onClick={handleFinishTest}
-                disabled={!selectedAnswer}
-                className="flex-1 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 disabled:from-gray-400 disabled:to-gray-500 disabled:cursor-not-allowed text-white font-bold py-4 px-6 rounded-2xl transition shadow-lg"
-              >
-                Finalizar Test ✓
-              </button>
-            )}
+          {/* Indicador de puntuación */}
+          <div className="bg-white/10 backdrop-blur rounded-2xl p-4">
+            <div className="flex justify-between items-center text-white text-sm">
+              <div className="flex items-center gap-4">
+                <span className="flex items-center gap-1">
+                  <span className="w-3 h-3 bg-green-400 rounded-full"></span>
+                  +1 correcta
+                </span>
+                <span className="flex items-center gap-1">
+                  <span className="w-3 h-3 bg-red-400 rounded-full"></span>
+                  -0.33 incorrecta
+                </span>
+                <span className="flex items-center gap-1">
+                  <span className="w-3 h-3 bg-gray-400 rounded-full"></span>
+                  0 blanco
+                </span>
+              </div>
+              <span className="text-purple-200 text-xs">Auto-avance activado</span>
+            </div>
           </div>
         </div>
       </div>
@@ -1001,77 +1071,169 @@ export default function OpositaApp() {
     const isGoodScore = testResults?.percentage >= 60;
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-500 to-indigo-600 flex items-center justify-center p-4">
-        <div className="max-w-md w-full">
-          {isGoodScore && (
-            <div className="text-center mb-6 animate-bounce">
-              <div className="text-7xl">🎉</div>
-            </div>
-          )}
+      <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-500 to-indigo-600 p-4 pb-8">
+        <div className="max-w-lg mx-auto">
+          {/* Header */}
+          <div className="text-center py-6">
+            <div className="text-6xl mb-4">{isGoodScore ? '🎉' : '💪'}</div>
+            <h1 className="text-3xl font-bold text-white mb-2">🎯 RESULTADOS</h1>
+          </div>
 
-          <div className="bg-white rounded-3xl p-8 shadow-2xl mb-6">
+          {/* Score Hero */}
+          <div className="bg-white rounded-3xl p-6 shadow-2xl mb-4">
             <div className="text-center mb-6">
-              <h2 className="text-3xl font-bold text-purple-600 mb-3">
-                ¡{testResults?.correct} de {testResults?.total} correctas! {isGoodScore ? '🎉' : '💪'}
-              </h2>
-              <div className="text-6xl font-bold text-gray-800 mb-2">
-                {testResults?.percentage}%
+              <div className="text-5xl font-bold text-gray-800 mb-1">
+                {testResults?.correct}/{testResults?.total}
               </div>
-              <p className="text-gray-600 text-lg">de acierto</p>
-            </div>
-
-            <div className="bg-purple-50 rounded-xl p-4 mb-6 border-2 border-purple-100">
-              <div className="flex items-center gap-3 justify-center">
-                <BarChart3 className="w-6 h-6 text-purple-600" />
-                <p className="text-purple-900 font-bold">
-                  Estás en el TOP 45% de nuevos usuarios
-                </p>
+              <div className="text-2xl font-semibold text-purple-600">
+                {testResults?.percentage}% de acierto
               </div>
             </div>
 
-            <div className="border-2 border-purple-200 rounded-xl p-5 bg-gradient-to-br from-purple-50 to-white">
-              <div className="flex items-center gap-2 mb-4">
-                <Crown className="w-6 h-6 text-purple-600" />
-                <span className="font-bold text-purple-900 text-lg">Los usuarios Premium tienen:</span>
+            {/* Desglose de puntuación estilo oposiciones */}
+            <div className="bg-gray-50 rounded-2xl p-4 space-y-3">
+              <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                <span className="flex items-center gap-2 text-gray-700">
+                  <span className="w-3 h-3 bg-green-500 rounded-full"></span>
+                  ✅ Correctas
+                </span>
+                <div className="text-right">
+                  <span className="font-bold text-gray-900">{testResults?.correct}</span>
+                  <span className="text-green-600 text-sm ml-2">+{testResults?.correct}.00 pts</span>
+                </div>
               </div>
-              <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-purple-500"></div>
-                  <span><strong>127% más</strong> preguntas acertadas</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-purple-500"></div>
-                  <span>Acceso a <strong>15.000+ preguntas</strong></span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-purple-500"></div>
-                  <span>Simulacros de <strong>examen real</strong></span>
-                </li>
-              </ul>
+              <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                <span className="flex items-center gap-2 text-gray-700">
+                  <span className="w-3 h-3 bg-red-500 rounded-full"></span>
+                  ❌ Incorrectas
+                </span>
+                <div className="text-right">
+                  <span className="font-bold text-gray-900">{testResults?.incorrect}</span>
+                  <span className="text-red-600 text-sm ml-2">-{(testResults?.incorrect * 0.33).toFixed(2)} pts</span>
+                </div>
+              </div>
+              <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                <span className="flex items-center gap-2 text-gray-700">
+                  <span className="w-3 h-3 bg-gray-400 rounded-full"></span>
+                  ⬜ En blanco
+                </span>
+                <div className="text-right">
+                  <span className="font-bold text-gray-900">{testResults?.blank}</span>
+                  <span className="text-gray-500 text-sm ml-2">0.00 pts</span>
+                </div>
+              </div>
+              <div className="flex justify-between items-center pt-2 border-t-2 border-purple-200">
+                <span className="font-bold text-purple-900 flex items-center gap-2">
+                  📊 Puntuación final
+                </span>
+                <span className="font-bold text-purple-600 text-lg">
+                  {testResults?.score} / {testResults?.total}.00
+                </span>
+              </div>
             </div>
           </div>
 
-          <button
-            onClick={() => setShowPremiumModal(true)}
-            className="w-full bg-white/20 backdrop-blur-sm border-2 border-white text-white font-bold py-4 px-6 rounded-2xl mb-3 hover:bg-white/30 transition-all shadow-lg"
-          >
-            Ver planes Premium
-          </button>
+          {/* Sección de revisión */}
+          <div className="bg-white rounded-3xl p-4 shadow-2xl mb-4">
+            <button
+              onClick={() => setShowReview(!showReview)}
+              className="w-full flex items-center justify-between py-2"
+            >
+              <span className="font-bold text-gray-900 flex items-center gap-2">
+                📚 Revisar respuestas
+              </span>
+              <span className="text-purple-600">{showReview ? '▲' : '▼'}</span>
+            </button>
 
-          <button
-            onClick={goToSignupOrHome}
-            className="w-full bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white font-bold py-4 px-6 rounded-2xl shadow-2xl transition-all"
-          >
-            Continuar con plan gratuito
-          </button>
+            {showReview && testResults?.questions && (
+              <div className="mt-4 space-y-2 max-h-64 overflow-y-auto">
+                {testResults.questions.map((q, idx) => {
+                  const answerData = testResults.answers?.[idx];
+                  let statusIcon = '⬜';
+                  let statusClass = 'bg-gray-100 border-gray-200';
 
-          {/* DEV: Skip to home */}
-          <button
-            onClick={() => setCurrentPage('home')}
-            className="w-full mt-4 text-purple-300 text-xs underline hover:text-white"
-          >
-            [DEV] Saltar al Home directamente
-          </button>
+                  if (answerData && !answerData.skipped && answerData.answer !== null) {
+                    if (answerData.isCorrect) {
+                      statusIcon = '✅';
+                      statusClass = 'bg-green-50 border-green-200';
+                    } else {
+                      statusIcon = '❌';
+                      statusClass = 'bg-red-50 border-red-200';
+                    }
+                  }
+
+                  return (
+                    <div key={idx}>
+                      <button
+                        onClick={() => setReviewIndex(reviewIndex === idx ? null : idx)}
+                        className={`w-full text-left p-3 rounded-xl border ${statusClass} transition-all hover:shadow-md`}
+                      >
+                        <div className="flex items-center gap-2">
+                          <span>{statusIcon}</span>
+                          <span className="font-medium text-gray-700">{idx + 1}.</span>
+                          <span className="text-sm text-gray-600 truncate flex-1">
+                            {q.question.substring(0, 40)}...
+                          </span>
+                          <span className="text-purple-500 text-xs">
+                            {reviewIndex === idx ? '▲' : 'Ver'}
+                          </span>
+                        </div>
+                      </button>
+
+                      {/* Explicación expandida */}
+                      {reviewIndex === idx && (
+                        <div className="mt-2 p-4 bg-blue-50 rounded-xl border border-blue-200">
+                          <p className="text-sm text-gray-800 mb-3 font-medium">{q.question}</p>
+                          <div className="space-y-1 mb-3">
+                            {q.options.map(opt => (
+                              <div key={opt.id} className={`text-sm p-2 rounded ${
+                                opt.id === q.correct
+                                  ? 'bg-green-100 text-green-800 font-medium'
+                                  : answerData?.answer === opt.id
+                                    ? 'bg-red-100 text-red-800'
+                                    : 'text-gray-600'
+                              }`}>
+                                {opt.id.toUpperCase()}. {opt.text}
+                                {opt.id === q.correct && ' ✓'}
+                              </div>
+                            ))}
+                          </div>
+                          <div className="bg-white p-3 rounded-lg border">
+                            <p className="text-xs font-semibold text-blue-800 mb-1">💡 Explicación:</p>
+                            <p className="text-sm text-gray-700">{q.explanation}</p>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+
+          {/* Botones de acción */}
+          <div className="space-y-3">
+            <button
+              onClick={() => setShowPremiumModal(true)}
+              className="w-full bg-white/20 backdrop-blur-sm border-2 border-white text-white font-bold py-4 px-6 rounded-2xl hover:bg-white/30 transition-all"
+            >
+              👑 Ver planes Premium
+            </button>
+
+            <button
+              onClick={goToSignupOrHome}
+              className="w-full bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white font-bold py-4 px-6 rounded-2xl shadow-xl transition-all"
+            >
+              Continuar →
+            </button>
+
+            <button
+              onClick={() => setCurrentPage('home')}
+              className="w-full text-purple-200 text-sm hover:text-white transition-colors"
+            >
+              Ir al inicio
+            </button>
+          </div>
         </div>
 
         {showPremiumModal && <PremiumModal />}
