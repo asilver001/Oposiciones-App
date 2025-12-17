@@ -198,8 +198,8 @@ function DevPanel({ onReset, onGoToOnboarding, onShowPremium, onShowAdminLogin, 
         <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-white text-lg">×</button>
       </div>
       <div className="space-y-2">
-        <button onClick={onShowAdminLogin} className="w-full bg-indigo-500/90 hover:bg-indigo-600 text-white text-xs py-2 px-3 rounded-lg text-left flex items-center gap-2">
-          <Shield className="w-3 h-3" /> Acceso Admin
+        <button onClick={onShowAdminLogin} className="w-full bg-indigo-500/90 hover:bg-indigo-600 text-white text-xs py-2 px-3 rounded-lg text-left">
+          🔐 Acceso Admin
         </button>
         <div className="border-t border-gray-700 my-2"></div>
         <button onClick={onReset} className="w-full bg-red-500/90 hover:bg-red-600 text-white text-xs py-2 px-3 rounded-lg text-left">
