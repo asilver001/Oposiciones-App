@@ -5,6 +5,8 @@ import { useAuth } from './contexts/AuthContext';
 import { useAdmin } from './contexts/AdminContext';
 import { SignUpForm, LoginForm, ForgotPasswordForm } from './components/auth';
 import { AdminLoginModal, AdminPanel, ReviewerPanel } from './components/admin';
+import { FortressCard, EvolutionCard, DailyGoalCard } from './components/home';
+import { calculateDecay, initializeFortressData, generateMockFortressData } from './utils/fortressLogic';
 
 // ============ ONBOARDING COMPONENTS (estilo simple purple-50) ============
 
@@ -305,6 +307,20 @@ export default function OpositaApp() {
     4: { completed: 0, total: 180, streak: 0, locked: true }
   });
 
+  // Estado para la Fortaleza de Conocimiento
+  const [fortressData, setFortressData] = useState(() => generateMockFortressData());
+
+  // Métricas de evolución
+  const [evolutionMetrics, setEvolutionMetrics] = useState({
+    overallRetention: 78,
+    retentionChange: 12,
+    estimatedPassProbability: 73,
+    totalQuestionsAnswered: 847
+  });
+
+  // Historial de retención para el gráfico
+  const [retentionHistory, setRetentionHistory] = useState([]);
+
   // Las preguntas (allQuestions) y lista de temas (topicsList) se importan desde ./data/questions
   // Para añadir más preguntas, edita los archivos en src/data/questions/
 
@@ -558,6 +574,14 @@ export default function OpositaApp() {
     } else {
       setCurrentPage('home');
     }
+  };
+
+  // Saludo según hora del día
+  const getTimeGreeting = () => {
+    const hour = new Date().getHours();
+    if (hour < 12) return '¡Buenos días';
+    if (hour < 19) return '¡Buenas tardes';
+    return '¡Buenas noches';
   };
 
   // Mensaje empático según racha (tono sobrio)
@@ -1923,16 +1947,28 @@ export default function OpositaApp() {
     </div>
   );
 
-  // Contenido de Inicio - Rediseño UX (calma, continuidad, acompañamiento)
+  // Contenido de Inicio - Nuevo diseño con Fortaleza de Conocimiento
   const InicioContent = () => {
-    const streakMessage = getStreakMessage();
-    const daysToNext = getDaysToNextBadge();
+    // Calcular decaimiento de fortaleza
+    useEffect(() => {
+      const updatedFortress = {};
+      Object.entries(fortressData).forEach(([key, topic]) => {
+        updatedFortress[key] = calculateDecay(topic);
+      });
+      // Solo actualizar si hay cambios
+      const hasChanges = Object.keys(updatedFortress).some(
+        key => updatedFortress[key].strengthLevel !== fortressData[key].strengthLevel
+      );
+      if (hasChanges) {
+        setFortressData(updatedFortress);
+      }
+    }, []);
 
     return (
-      <>
+      <div className="space-y-4">
         {/* Banner protege tu racha */}
         {streakData.current >= 3 && !userData.accountCreated && showStreakBanner && (
-          <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-4 mb-6 shadow-lg">
+          <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-4 shadow-lg">
             <div className="flex items-start justify-between">
               <div className="flex items-start gap-3">
                 <Flame className="w-6 h-6 text-yellow-300 flex-shrink-0" />
@@ -1954,49 +1990,25 @@ export default function OpositaApp() {
           </div>
         )}
 
-        {/* Bloque principal: Racha + Continuidad */}
-        <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 mb-6">
-          {/* Icono y mensaje principal */}
-          <div className="flex items-start gap-4 mb-4">
-            <div className="w-12 h-12 bg-orange-50 rounded-full flex items-center justify-center flex-shrink-0">
-              <Flame className="w-6 h-6 text-orange-500" />
-            </div>
-            <div className="flex-1">
-              <h3 className="text-xl font-bold text-gray-900 mb-1">
-                {streakMessage.main}
-              </h3>
-              {streakMessage.sub && (
-                <p className="text-gray-500 text-sm">{streakMessage.sub}</p>
-              )}
-            </div>
-          </div>
+        {/* Fortaleza de Conocimiento */}
+        <FortressCard
+          fortressData={fortressData}
+          onViewMore={() => setActiveTab('temas')}
+        />
 
-          {/* Próximo logro (sutil) */}
-          {daysToNext && streakData.current > 0 && (
-            <div className="mb-5">
-              <div className="flex items-center justify-between text-xs text-gray-400 mb-1.5">
-                <span>Próximo logro</span>
-                <span>{daysToNext} {daysToNext === 1 ? 'día' : 'días'}</span>
-              </div>
-              <div className="bg-gray-100 rounded-full h-1.5">
-                <div
-                  className="bg-orange-400 rounded-full h-1.5 transition-all duration-500"
-                  style={{
-                    width: `${Math.min(((streakData.current % (daysToNext + streakData.current)) / (daysToNext + (streakData.current % (daysToNext + streakData.current)))) * 100, 100)}%`
-                  }}
-                ></div>
-              </div>
-            </div>
-          )}
+        {/* Gráfico de Evolución */}
+        <EvolutionCard
+          retentionHistory={retentionHistory}
+          metrics={evolutionMetrics}
+          onViewMore={() => setActiveTab('actividad')}
+        />
 
-          {/* CTA principal */}
-          <button
-            onClick={startTest}
-            className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3.5 px-6 rounded-xl transition-all active:scale-[0.98]"
-          >
-            Continuar
-          </button>
-        </div>
+        {/* Meta Diaria */}
+        <DailyGoalCard
+          goal={{ target: userData.dailyGoal }}
+          progress={{ completed: totalStats.todayQuestions }}
+          onContinue={startTest}
+        />
 
         {/* Reto del día (opcional, discreto) */}
         <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
@@ -2018,7 +2030,7 @@ export default function OpositaApp() {
             </button>
           </div>
         </div>
-      </>
+      </div>
     );
   };
 
@@ -2247,36 +2259,13 @@ export default function OpositaApp() {
     <div className="fixed top-0 left-0 right-0 z-40 bg-white/98 backdrop-blur-lg shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
       <div className="max-w-4xl mx-auto px-4">
         <div className="flex items-center justify-between h-14">
-          {/* Izquierda - Botón de progreso diario */}
+          {/* Izquierda - Badge de racha */}
           <button
             onClick={() => setShowProgressModal(true)}
-            className="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-purple-50 active:scale-95 transition-all duration-200"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-orange-500 to-red-500 rounded-full hover:from-orange-600 hover:to-red-600 active:scale-95 transition-all duration-200"
           >
-            {/* Mini anillo de progreso */}
-            <svg className="w-9 h-9 transform -rotate-90">
-              <circle
-                cx="18"
-                cy="18"
-                r="14"
-                fill="none"
-                stroke="#F3E8FF"
-                strokeWidth="3"
-              />
-              <circle
-                cx="18"
-                cy="18"
-                r="14"
-                fill="none"
-                stroke="#8B5CF6"
-                strokeWidth="3"
-                strokeDasharray={`${(dailyProgressPercent / 100) * 88} 88`}
-                strokeLinecap="round"
-                className="transition-all duration-500"
-              />
-            </svg>
-            <span className="absolute text-[10px] font-bold text-purple-600">
-              {dailyProgressPercent}
-            </span>
+            <Flame className="w-4 h-4 text-yellow-300" />
+            <span className="text-white font-bold text-sm">{streakData.current || 0}</span>
           </button>
 
           {/* Centro - Título */}
@@ -2306,17 +2295,14 @@ export default function OpositaApp() {
 
       <div className="max-w-4xl mx-auto px-4 pt-16">
         <div className="pt-4 mb-6">
-          {/* Área de saludo - Fase 1 rediseñada */}
+          {/* Área de saludo - Nuevo diseño */}
           {activeTab === 'inicio' && (
             <div className="mb-5">
-              <p className="text-[13px] font-medium text-purple-500 mb-0.5 capitalize">
-                {new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' })}
-              </p>
-              <h2 className="text-[22px] font-bold text-gray-900 leading-tight mb-0.5">
-                Tu progreso de hoy
+              <h2 className="text-2xl font-bold text-gray-900 mb-1">
+                {getTimeGreeting()}, {userData.name || 'opositor'}! 👋
               </h2>
-              <p className="text-gray-400 text-sm">
-                {userData.name ? `${userData.name}, continúa` : 'Continúa'} donde lo dejaste
+              <p className="text-gray-500 text-sm capitalize">
+                {new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' })}
               </p>
             </div>
           )}
