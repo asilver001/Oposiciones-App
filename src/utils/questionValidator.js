@@ -6,7 +6,41 @@
 // Valid values for validation
 const VALID_TIERS = ['free', 'premium'];
 const VALID_DIFFICULTIES = [1, 2, 3, 4, 5];
-const VALID_MATERIAS = ['constitucion', 'administrativo', 'laboral', 'penal', 'civil', 'organizacion', 'procedimiento', 'otros'];
+const VALID_MATERIAS = [
+  // Legacy values
+  'constitucion', 'administrativo', 'laboral', 'penal', 'civil', 'organizacion', 'procedimiento', 'otros',
+  // New materias (códigos de la tabla materias)
+  'constitucion_principios', 'constitucion_general',
+  'derechos_deberes', 'derechos_fundamentales',
+  'tribunal_constitucional',
+  'la_corona',
+  'cortes_generales',
+  'gobierno',
+  'poder_judicial',
+  'age_central',
+  'age_periferica',
+  'sector_publico',
+  'comunidades_autonomas',
+  'administracion_local',
+  'union_europea',
+  'ley_39_2015', 'procedimiento_administrativo',
+  'acto_administrativo',
+  'recursos_administrativos',
+  'ley_40_2015', 'regimen_juridico',
+  'contratos_sector_publico',
+  'responsabilidad_patrimonial',
+  'ebep', 'funcion_publica',
+  'adquisicion_perdida',
+  'derechos_funcionarios',
+  'deberes_funcionarios',
+  'igualdad_genero',
+  'prevencion_riesgos',
+  'informatica_basica',
+  'sistemas_operativos',
+  'ofimatica',
+  'admin_electronica',
+  'proteccion_datos'
+];
 
 /**
  * Validate a single question
@@ -18,11 +52,14 @@ export function validateQuestion(question, index = 0) {
   const errors = [];
   const prefix = `Pregunta ${index + 1}`;
 
+  // Get question text: prefer reformulated_text, fallback to question_text
+  const questionText = question.reformulated_text || question.question_text;
+
   // Required fields
-  if (!question.question_text || typeof question.question_text !== 'string') {
-    errors.push(`${prefix}: 'question_text' es obligatorio y debe ser texto`);
-  } else if (question.question_text.trim().length < 10) {
-    errors.push(`${prefix}: 'question_text' es demasiado corto (mínimo 10 caracteres)`);
+  if (!questionText || typeof questionText !== 'string') {
+    errors.push(`${prefix}: 'question_text' o 'reformulated_text' es obligatorio y debe ser texto`);
+  } else if (questionText.trim().length < 10) {
+    errors.push(`${prefix}: El texto de la pregunta es demasiado corto (mínimo 10 caracteres)`);
   }
 
   // Options validation
@@ -197,22 +234,91 @@ export function parseAndValidateJSON(jsonString) {
  * @returns {Object} Question in Supabase format
  */
 export function transformQuestionForSupabase(question) {
-  // Find the correct answer index
-  const correctIndex = question.options.findIndex(opt => opt.is_correct);
+  // Use reformulated_text as main question_text if available, otherwise use question_text
+  const questionText = (question.reformulated_text || question.question_text || '').trim();
+
+  // Save original_text: use provided original_text, or if reformulated_text was used, save question_text as original
+  let originalText = question.original_text || null;
+  if (!originalText && question.reformulated_text && question.question_text) {
+    // If we have both reformulated and question_text, save question_text as original
+    originalText = question.question_text.trim();
+  }
+
+  // Transform options to Supabase JSONB format
+  // Expected: [{"id": "a", "text": "...", "is_correct": false, "position": 0}, ...]
+  const optionsJsonb = question.options.map((opt, idx) => ({
+    id: ['a', 'b', 'c', 'd'][idx] || String.fromCharCode(97 + idx),
+    text: opt.text || '',
+    is_correct: opt.is_correct === true,
+    position: idx
+  }));
+
+  // Map materia to valid enum values
+  // DB enum: 'constitucion', 'procedimiento', 'ofimatica', 'organizacion', 'otras'
+  const materiaMapping = {
+    // Constitución
+    'constitucion': 'constitucion',
+    'constitucion_principios': 'constitucion',
+    'constitucion_general': 'constitucion',
+    'derechos_deberes': 'constitucion',
+    'derechos_fundamentales': 'constitucion',
+    'tribunal_constitucional': 'constitucion',
+    'la_corona': 'constitucion',
+    'cortes_generales': 'constitucion',
+    'gobierno': 'constitucion',
+    'poder_judicial': 'constitucion',
+    // Organización
+    'organizacion': 'organizacion',
+    'age_central': 'organizacion',
+    'age_periferica': 'organizacion',
+    'sector_publico': 'organizacion',
+    'comunidades_autonomas': 'organizacion',
+    'administracion_local': 'organizacion',
+    'union_europea': 'organizacion',
+    // Procedimiento
+    'procedimiento': 'procedimiento',
+    'administrativo': 'procedimiento',
+    'ley_39_2015': 'procedimiento',
+    'procedimiento_administrativo': 'procedimiento',
+    'acto_administrativo': 'procedimiento',
+    'recursos_administrativos': 'procedimiento',
+    'ley_40_2015': 'procedimiento',
+    'regimen_juridico': 'procedimiento',
+    'contratos_sector_publico': 'procedimiento',
+    'responsabilidad_patrimonial': 'procedimiento',
+    // Función pública (mapeado a organizacion)
+    'ebep': 'organizacion',
+    'funcion_publica': 'organizacion',
+    'adquisicion_perdida': 'organizacion',
+    'derechos_funcionarios': 'organizacion',
+    'deberes_funcionarios': 'organizacion',
+    'igualdad_genero': 'organizacion',
+    'prevencion_riesgos': 'organizacion',
+    // Ofimática
+    'ofimatica': 'ofimatica',
+    'informatica_basica': 'ofimatica',
+    'sistemas_operativos': 'ofimatica',
+    'admin_electronica': 'ofimatica',
+    'proteccion_datos': 'ofimatica',
+    // Otros
+    'otros': 'otras',
+    'laboral': 'otras',
+    'penal': 'otras',
+    'civil': 'otras'
+  };
+
+  const dbMateria = materiaMapping[question.materia] || 'otras';
 
   return {
-    question_text: question.question_text.trim(),
-    option_a: question.options[0]?.text || '',
-    option_b: question.options[1]?.text || '',
-    option_c: question.options[2]?.text || '',
-    option_d: question.options[3]?.text || '',
-    correct_answer: ['a', 'b', 'c', 'd'][correctIndex] || 'a',
+    question_text: questionText,
+    original_text: originalText,
+    options: optionsJsonb,
     explanation: question.explanation || null,
     legal_reference: question.legal_reference || null,
     tema: question.tema,
-    materia: question.materia || 'otros',
+    materia: dbMateria,
     difficulty: question.difficulty || 3,
-    source: question.source || 'manual_import',
+    source: question.source || 'elaboracion_propia',
     source_year: question.source_year || null,
     confidence_score: question.confidence_score || 0.8,
     tier: question.tier || 'free',
@@ -220,6 +326,10 @@ export function transformQuestionForSupabase(question) {
     is_active: true,
     times_shown: 0,
     times_correct: 0,
+    // Versioning fields
+    version: 1,
+    is_current_version: true,
+    reformulated_by: question.reformulated_text ? 'import' : null,
     created_at: new Date().toISOString()
   };
 }

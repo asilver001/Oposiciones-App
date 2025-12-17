@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Home, BookOpen, Trophy, Clock, TrendingUp, ArrowLeft, CheckCircle, XCircle, Target, Flame, Zap, Star, Lock, Crown, BarChart3, Calendar, History, GraduationCap, Lightbulb, Info, Settings, ChevronRight, Instagram, Mail, Bell, User, LogOut, HelpCircle, FileText, Shield, ExternalLink } from 'lucide-react';
 import { allQuestions, topicsList, getRandomQuestions } from './data/questions';
 import { useAuth } from './contexts/AuthContext';
+import { useAdmin } from './contexts/AdminContext';
 import { SignUpForm, LoginForm, ForgotPasswordForm } from './components/auth';
+import { AdminLoginModal, AdminPanel, ReviewerPanel } from './components/admin';
 
 // ============ ONBOARDING COMPONENTS (estilo simple purple-50) ============
 
@@ -175,7 +177,7 @@ function OnboardingIntro({ onStart, onSkip, onBack }) {
 
 // ============ DEV PANEL COMPONENT ============
 
-function DevPanel({ onReset, onGoToOnboarding, onShowPremium, streakCount, testsCount }) {
+function DevPanel({ onReset, onGoToOnboarding, onShowPremium, onShowAdminLogin, streakCount, testsCount }) {
   const [isOpen, setIsOpen] = useState(false);
 
   if (!isOpen) {
@@ -196,6 +198,10 @@ function DevPanel({ onReset, onGoToOnboarding, onShowPremium, streakCount, tests
         <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-white text-lg">×</button>
       </div>
       <div className="space-y-2">
+        <button onClick={onShowAdminLogin} className="w-full bg-indigo-500/90 hover:bg-indigo-600 text-white text-xs py-2 px-3 rounded-lg text-left">
+          🔐 Acceso Admin
+        </button>
+        <div className="border-t border-gray-700 my-2"></div>
         <button onClick={onReset} className="w-full bg-red-500/90 hover:bg-red-600 text-white text-xs py-2 px-3 rounded-lg text-left">
           🗑️ Reset TODO
         </button>
@@ -229,6 +235,10 @@ export default function OpositaApp() {
     isAnonymous,
     continueAsAnonymous
   } = useAuth();
+
+  // Admin context
+  const { adminUser, isAdmin, isReviewer, isLoggedIn: isAdminLoggedIn } = useAdmin();
+  const [showAdminLoginModal, setShowAdminLoginModal] = useState(false);
 
   const [currentPage, setCurrentPage] = useState('welcome');
   const [activeTab, setActiveTab] = useState('inicio');
@@ -791,6 +801,15 @@ export default function OpositaApp() {
     await window.storage.remove('oposita-premium');
     window.location.reload();
   };
+
+  // ADMIN PANELS (render before other pages)
+  if (currentPage === 'admin-panel' && isAdminLoggedIn) {
+    return <AdminPanel onBack={() => setCurrentPage('home')} />;
+  }
+
+  if (currentPage === 'reviewer-panel' && isAdminLoggedIn) {
+    return <ReviewerPanel onBack={() => setCurrentPage('home')} />;
+  }
 
   // ONBOARDING SCREENS (using simple purple-50 components)
   if (currentPage === 'welcome') {
@@ -2158,6 +2177,7 @@ export default function OpositaApp() {
         onReset={handleDevReset}
         onGoToOnboarding={() => setCurrentPage('welcome')}
         onShowPremium={() => setShowPremiumModal(true)}
+        onShowAdminLogin={() => setShowAdminLoginModal(true)}
         streakCount={streakData.current}
         testsCount={totalStats.testsCompleted}
       />
@@ -2166,6 +2186,16 @@ export default function OpositaApp() {
       {showPremiumModal && <PremiumModal />}
       {showSettingsModal && <SettingsModal />}
       {showProgressModal && <ProgressModal />}
+
+      {/* Admin Login Modal */}
+      <AdminLoginModal
+        isOpen={showAdminLoginModal}
+        onClose={() => setShowAdminLoginModal(false)}
+        onSuccess={(role) => {
+          setShowAdminLoginModal(false);
+          setCurrentPage(role === 'admin' ? 'admin-panel' : 'reviewer-panel');
+        }}
+      />
     </div>
   );
 }

@@ -84,15 +84,18 @@ export async function importQuestions(questions, options = {}) {
     const question = questions[i];
 
     try {
+      // Get the main question text (prefer reformulated_text)
+      const mainQuestionText = question.reformulated_text || question.question_text;
+
       // Check for duplicates
       if (skipDuplicates) {
-        const isDuplicate = await checkDuplicate(question.question_text);
+        const isDuplicate = await checkDuplicate(mainQuestionText);
         if (isDuplicate) {
           result.duplicates++;
           result.details.push({
             index: i,
             status: 'duplicate',
-            question: question.question_text.substring(0, 50) + '...'
+            question: mainQuestionText.substring(0, 50) + '...'
           });
           continue;
         }
@@ -101,12 +104,23 @@ export async function importQuestions(questions, options = {}) {
       // Transform to Supabase format
       const supabaseQuestion = transformQuestionForSupabase(question);
 
-      // Insert into Supabase
+      // Insert using RPC function (bypasses RLS)
       const { data, error } = await supabase
-        .from('questions')
-        .insert(supabaseQuestion)
-        .select()
-        .single();
+        .rpc('import_question', {
+          p_question_text: supabaseQuestion.question_text,
+          p_options: supabaseQuestion.options,
+          p_explanation: supabaseQuestion.explanation,
+          p_legal_reference: supabaseQuestion.legal_reference,
+          p_tema: supabaseQuestion.tema,
+          p_materia: supabaseQuestion.materia,
+          p_difficulty: supabaseQuestion.difficulty,
+          p_source: supabaseQuestion.source,
+          p_source_year: supabaseQuestion.source_year,
+          p_confidence_score: supabaseQuestion.confidence_score,
+          p_tier: supabaseQuestion.tier,
+          p_original_text: supabaseQuestion.original_text,
+          p_reformulated_by: supabaseQuestion.reformulated_by
+        });
 
       if (error) {
         result.errors.push(`Pregunta ${i + 1}: ${error.message}`);
@@ -114,15 +128,15 @@ export async function importQuestions(questions, options = {}) {
           index: i,
           status: 'error',
           error: error.message,
-          question: question.question_text.substring(0, 50) + '...'
+          question: mainQuestionText.substring(0, 50) + '...'
         });
       } else {
         result.imported++;
         result.details.push({
           index: i,
           status: 'imported',
-          id: data.id,
-          question: question.question_text.substring(0, 50) + '...'
+          id: data, // RPC returns UUID directly
+          question: mainQuestionText.substring(0, 50) + '...'
         });
       }
     } catch (err) {
@@ -131,7 +145,7 @@ export async function importQuestions(questions, options = {}) {
         index: i,
         status: 'error',
         error: err.message,
-        question: question.question_text?.substring(0, 50) + '...'
+        question: (question.reformulated_text || question.question_text)?.substring(0, 50) + '...'
       });
     }
   }
@@ -185,12 +199,8 @@ export async function exportQuestions(filters = {}) {
   // Transform back to export format
   const exportQuestions = data.map(q => ({
     question_text: q.question_text,
-    options: [
-      { text: q.option_a, is_correct: q.correct_answer === 'a' },
-      { text: q.option_b, is_correct: q.correct_answer === 'b' },
-      { text: q.option_c, is_correct: q.correct_answer === 'c' },
-      { text: q.option_d, is_correct: q.correct_answer === 'd' }
-    ],
+    original_text: q.original_text,
+    options: q.options, // Already in correct JSONB format
     explanation: q.explanation,
     legal_reference: q.legal_reference,
     tema: q.tema,

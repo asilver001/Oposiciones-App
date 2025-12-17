@@ -3,7 +3,7 @@ import { Upload, FileJson, CheckCircle, XCircle, AlertTriangle, Loader2, Eye, Ey
 import { parseAndValidateJSON } from '../../utils/questionValidator';
 import { importQuestions } from '../../services/questionImportService';
 
-export default function QuestionImporter() {
+export default function QuestionImporter({ onImportComplete }) {
   const [jsonInput, setJsonInput] = useState('');
   const [validationResult, setValidationResult] = useState(null);
   const [importResult, setImportResult] = useState(null);
@@ -54,6 +54,11 @@ export default function QuestionImporter() {
         validateBeforeImport: false // Already validated
       });
       setImportResult(result);
+
+      // Auto-refresh stats after successful import
+      if (result.imported > 0 && onImportComplete) {
+        onImportComplete();
+      }
     } catch (error) {
       setImportResult({
         imported: 0,
