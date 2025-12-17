@@ -495,11 +495,11 @@ export default function OpositaApp() {
 
     setTotalStats(prev => ({
       testsCompleted: prev.testsCompleted + 1,
-      questionsCorrect: prev.questionsCorrect + correctAnswers.length,
+      questionsCorrect: prev.questionsCorrect + correct,
       todayQuestions: prev.todayQuestions + questions.length,
       currentStreak: newStreak,
       totalDaysStudied: prev.totalDaysStudied + (prev.todayQuestions === 0 ? 1 : 0),
-      accuracyRate: Math.round(((prev.questionsCorrect + correctAnswers.length) / ((prev.testsCompleted + 1) * questions.length)) * 100),
+      accuracyRate: Math.round(((prev.questionsCorrect + correct) / ((prev.testsCompleted + 1) * questions.length)) * 100),
       weeklyProgress: newWeeklyProgress
     }));
 
