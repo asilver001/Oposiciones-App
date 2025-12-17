@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Home, BookOpen, Trophy, Clock, TrendingUp, ArrowLeft, CheckCircle, XCircle, Target, Flame, Zap, Star, Lock, Crown, BarChart3, Calendar, History, GraduationCap, Lightbulb, Info, Settings, ChevronRight, Instagram, Mail, Bell, User, LogOut, HelpCircle, FileText, Shield, ExternalLink } from 'lucide-react';
+import { Home, BookOpen, Trophy, Clock, TrendingUp, ArrowLeft, CheckCircle, XCircle, Target, Flame, Zap, Star, Lock, Crown, BarChart3, Calendar, History, GraduationCap, Lightbulb, Info, Settings, ChevronRight, Instagram, Mail, Bell, User, LogOut, HelpCircle, FileText, Shield, ExternalLink, X } from 'lucide-react';
 import { allQuestions, topicsList, getRandomQuestions } from './data/questions';
 import { useAuth } from './contexts/AuthContext';
 import { useAdmin } from './contexts/AdminContext';
@@ -277,6 +277,8 @@ export default function OpositaApp() {
   const [formName, setFormName] = useState('');
   const [formEmail, setFormEmail] = useState('');
   const [showStreakBanner, setShowStreakBanner] = useState(true);
+  const [showReview, setShowReview] = useState(false);
+  const [reviewIndex, setReviewIndex] = useState(null);
 
   const badges = [
     { id: 1, name: 'Constancia', days: 3, icon: '🔥', color: 'orange' },
@@ -353,31 +355,82 @@ export default function OpositaApp() {
   const handleAnswerSelect = (answerId) => {
     if (!answers[currentQuestion]) {
       setSelectedAnswer(answerId);
-      setAnswers({ ...answers, [currentQuestion]: answerId });
+      const isCorrect = answerId === questions[currentQuestion].correct;
+      setAnswers({ ...answers, [currentQuestion]: { answer: answerId, isCorrect, skipped: false } });
       setShowExplanation(true);
+
+      // Auto-avance después de 800ms
+      setTimeout(() => {
+        if (currentQuestion < questions.length - 1) {
+          setCurrentQuestion(currentQuestion + 1);
+          const nextAnswer = answers[currentQuestion + 1];
+          setSelectedAnswer(nextAnswer?.answer || null);
+          setShowExplanation(!!nextAnswer);
+        } else {
+          handleFinishTest();
+        }
+      }, 800);
+    }
+  };
+
+  const handleSkipQuestion = () => {
+    setAnswers({ ...answers, [currentQuestion]: { answer: null, isCorrect: null, skipped: true } });
+
+    if (currentQuestion < questions.length - 1) {
+      setCurrentQuestion(currentQuestion + 1);
+      const nextAnswer = answers[currentQuestion + 1];
+      setSelectedAnswer(nextAnswer?.answer || null);
+      setShowExplanation(!!nextAnswer);
+    } else {
+      handleFinishTest();
     }
   };
 
   const handleNextQuestion = () => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
-      setSelectedAnswer(answers[currentQuestion + 1] || null);
-      setShowExplanation(!!answers[currentQuestion + 1]);
+      const nextAnswer = answers[currentQuestion + 1];
+      setSelectedAnswer(nextAnswer?.answer || null);
+      setShowExplanation(!!nextAnswer);
     }
   };
 
   const handleFinishTest = async () => {
-    const correctAnswers = Object.entries(answers).filter(
-      ([idx, answer]) => answer === questions[idx].correct
-    );
+    // Sistema de puntuación de oposiciones españolas
+    // +1 correcta, -0.33 incorrecta, 0 en blanco
+    let correct = 0;
+    let incorrect = 0;
+    let blank = 0;
+
+    Object.entries(answers).forEach(([idx, answerData]) => {
+      if (answerData.skipped || answerData.answer === null) {
+        blank++;
+      } else if (answerData.isCorrect) {
+        correct++;
+      } else {
+        incorrect++;
+      }
+    });
+
+    // Preguntas no respondidas también cuentan como blanco
+    const unanswered = questions.length - Object.keys(answers).length;
+    blank += unanswered;
+
+    const rawScore = correct - (incorrect * 0.33);
+    const score = Math.max(0, rawScore);
 
     const results = {
       total: questions.length,
       answered: Object.keys(answers).length,
-      correct: correctAnswers.length,
-      incorrect: Object.keys(answers).length - correctAnswers.length,
-      percentage: Math.round((correctAnswers.length / questions.length) * 100),
-      time: timeElapsed
+      correct,
+      incorrect,
+      blank,
+      score: score.toFixed(2),
+      rawScore: rawScore.toFixed(2),
+      percentage: Math.round((correct / questions.length) * 100),
+      time: timeElapsed,
+      answers: { ...answers },
+      questions: questions
     };
 
     const today = new Date().toDateString();
@@ -898,6 +951,14 @@ export default function OpositaApp() {
 
           <div className="bg-white rounded-3xl shadow-2xl overflow-hidden mb-6">
             <div className="p-8">
+              {/* Topic Badge */}
+              <div className="mb-4">
+                <span className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                  📚 {topicsList.find(t => t.id === question.topic)?.title || `Tema ${question.topic}`}
+                  {question.subtopic && <span className="text-purple-200">· {question.subtopic}</span>}
+                </span>
+              </div>
+
               <div className="flex items-start gap-4 mb-6">
                 <div className="bg-purple-100 text-purple-600 font-bold rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 text-lg">
                   {currentQuestion + 1}
@@ -954,42 +1015,45 @@ export default function OpositaApp() {
                 })}
               </div>
 
+              {/* Botón Saltar - Solo visible si no hay feedback */}
+              {!showExplanation && (
+                <button
+                  onClick={handleSkipQuestion}
+                  className="w-full mt-4 py-3 px-4 border-2 border-dashed border-gray-300 rounded-xl text-gray-500 hover:border-gray-400 hover:bg-gray-50 transition-all text-sm font-medium"
+                >
+                  Saltar pregunta (0 pts)
+                </button>
+              )}
+
+              {/* Feedback breve */}
               {showExplanation && (
-                <div className={`mt-6 p-4 rounded-xl ${
-                  selectedAnswer === question.correct ? 'bg-green-50 border-2 border-green-200' : 'bg-blue-50 border-2 border-blue-200'
+                <div className={`mt-4 p-3 rounded-xl text-center font-semibold ${
+                  selectedAnswer === question.correct
+                    ? 'bg-green-100 text-green-700 border border-green-300'
+                    : 'bg-red-100 text-red-700 border border-red-300'
                 }`}>
-                  <div className="flex items-start gap-3">
-                    <div className="text-2xl">💡</div>
-                    <div>
-                      <h3 className="font-bold text-gray-900 mb-2">
-                        {selectedAnswer === question.correct ? '¡Correcto!' : 'Explicación'}
-                      </h3>
-                      <p className="text-gray-700 leading-relaxed">{question.explanation}</p>
-                    </div>
-                  </div>
+                  {selectedAnswer === question.correct ? '✓ ¡Correcto!' : '✗ Incorrecto'}
                 </div>
               )}
             </div>
           </div>
 
-          <div className="flex gap-3">
-            {currentQuestion < questions.length - 1 ? (
-              <button
-                onClick={handleNextQuestion}
-                disabled={!selectedAnswer}
-                className="flex-1 bg-white hover:bg-gray-100 disabled:bg-white/50 disabled:cursor-not-allowed text-purple-600 font-bold py-4 px-6 rounded-2xl transition shadow-lg"
-              >
-                Siguiente →
-              </button>
-            ) : (
-              <button
-                onClick={handleFinishTest}
-                disabled={!selectedAnswer}
-                className="flex-1 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 disabled:from-gray-400 disabled:to-gray-500 disabled:cursor-not-allowed text-white font-bold py-4 px-6 rounded-2xl transition shadow-lg"
-              >
-                Finalizar Test ✓
-              </button>
-            )}
+          {/* Indicador de puntuación */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
+            <div className="flex justify-between items-center text-white text-sm">
+              <div className="flex items-center gap-2">
+                <span className="w-3 h-3 rounded-full bg-green-400"></span>
+                <span>+1 correcta</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-3 h-3 rounded-full bg-red-400"></span>
+                <span>-0.33 incorrecta</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-3 h-3 rounded-full bg-gray-400"></span>
+                <span>0 en blanco</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1000,6 +1064,87 @@ export default function OpositaApp() {
   if (currentPage === 'onboarding-results') {
     const isGoodScore = testResults?.percentage >= 60;
 
+    // Review question modal
+    const ReviewQuestionModal = () => {
+      if (reviewIndex === null || !testResults?.questions?.[reviewIndex]) return null;
+      const q = testResults.questions[reviewIndex];
+      const answerData = testResults.answers?.[reviewIndex];
+      const userAnswer = answerData?.answer;
+      const wasSkipped = answerData?.skipped;
+
+      return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+          <div className="bg-white rounded-2xl shadow-xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
+            <div className="p-6">
+              <div className="flex justify-between items-start mb-4">
+                <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
+                  wasSkipped ? 'bg-gray-100 text-gray-600' :
+                  answerData?.isCorrect ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
+                }`}>
+                  {wasSkipped ? 'En blanco' : answerData?.isCorrect ? '✓ Correcta' : '✗ Incorrecta'}
+                </span>
+                <button onClick={() => setReviewIndex(null)} className="text-gray-400 hover:text-gray-600">
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              <div className="mb-4">
+                <span className="inline-flex items-center gap-1 bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold">
+                  📚 {topicsList.find(t => t.id === q.topic)?.title || `Tema ${q.topic}`}
+                </span>
+              </div>
+
+              <h3 className="text-lg font-bold text-gray-900 mb-4">{q.question}</h3>
+
+              <div className="space-y-2 mb-6">
+                {q.options.map((opt) => {
+                  const isCorrectOpt = opt.id === q.correct;
+                  const isUserChoice = opt.id === userAnswer;
+                  let optClass = "p-3 rounded-lg border-2 text-sm ";
+                  if (isCorrectOpt) {
+                    optClass += "border-green-500 bg-green-50 ";
+                  } else if (isUserChoice && !isCorrectOpt) {
+                    optClass += "border-red-500 bg-red-50 ";
+                  } else {
+                    optClass += "border-gray-200 bg-gray-50 ";
+                  }
+                  return (
+                    <div key={opt.id} className={optClass}>
+                      <span className="font-semibold">{opt.id}.</span> {opt.text}
+                      {isCorrectOpt && <span className="ml-2 text-green-600">✓</span>}
+                      {isUserChoice && !isCorrectOpt && <span className="ml-2 text-red-600">✗</span>}
+                    </div>
+                  );
+                })}
+              </div>
+
+              {q.explanation && (
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
+                  <p className="text-sm font-semibold text-blue-800 mb-1">Explicación:</p>
+                  <p className="text-sm text-blue-700">{q.explanation}</p>
+                </div>
+              )}
+
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setReviewIndex(reviewIndex > 0 ? reviewIndex - 1 : testResults.questions.length - 1)}
+                  className="flex-1 py-2 border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-50"
+                >
+                  ← Anterior
+                </button>
+                <button
+                  onClick={() => setReviewIndex(reviewIndex < testResults.questions.length - 1 ? reviewIndex + 1 : 0)}
+                  className="flex-1 py-2 border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-50"
+                >
+                  Siguiente →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    };
+
     return (
       <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-500 to-indigo-600 flex items-center justify-center p-4">
         <div className="max-w-md w-full">
@@ -1009,42 +1154,101 @@ export default function OpositaApp() {
             </div>
           )}
 
-          <div className="bg-white rounded-3xl p-8 shadow-2xl mb-6">
+          <div className="bg-white rounded-3xl p-6 shadow-2xl mb-6">
             <div className="text-center mb-6">
-              <h2 className="text-3xl font-bold text-purple-600 mb-3">
-                ¡{testResults?.correct} de {testResults?.total} correctas! {isGoodScore ? '🎉' : '💪'}
+              <h2 className="text-2xl font-bold text-purple-600 mb-2">
+                ¡Test completado! {isGoodScore ? '🎉' : '💪'}
               </h2>
-              <div className="text-6xl font-bold text-gray-800 mb-2">
-                {testResults?.percentage}%
+              <div className="text-5xl font-bold text-gray-800 mb-1">
+                {testResults?.score} pts
               </div>
-              <p className="text-gray-600 text-lg">de acierto</p>
+              <p className="text-gray-500 text-sm">de {testResults?.total} puntos posibles</p>
             </div>
 
-            <div className="bg-purple-50 rounded-xl p-4 mb-6 border-2 border-purple-100">
+            {/* Score breakdown */}
+            <div className="bg-gray-50 rounded-xl p-4 mb-4 space-y-2">
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-green-500"></span>
+                  <span className="text-gray-700">Correctas</span>
+                </div>
+                <span className="font-bold text-green-600">{testResults?.correct} × +1 = +{testResults?.correct}</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-red-500"></span>
+                  <span className="text-gray-700">Incorrectas</span>
+                </div>
+                <span className="font-bold text-red-600">{testResults?.incorrect} × -0.33 = -{(testResults?.incorrect * 0.33).toFixed(2)}</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-gray-400"></span>
+                  <span className="text-gray-700">En blanco</span>
+                </div>
+                <span className="font-bold text-gray-500">{testResults?.blank} × 0 = 0</span>
+              </div>
+              <div className="border-t pt-2 mt-2 flex justify-between items-center">
+                <span className="font-bold text-gray-800">Total</span>
+                <span className="font-bold text-purple-600 text-lg">{testResults?.score} pts</span>
+              </div>
+            </div>
+
+            {/* Review questions list */}
+            <div className="mb-4">
+              <p className="text-sm font-semibold text-gray-700 mb-2">Revisar preguntas:</p>
+              <div className="flex flex-wrap gap-2">
+                {testResults?.questions?.map((q, idx) => {
+                  const answerData = testResults.answers?.[idx];
+                  const wasSkipped = answerData?.skipped;
+                  let bgClass = 'bg-gray-200 text-gray-600';
+                  if (answerData) {
+                    if (wasSkipped) {
+                      bgClass = 'bg-gray-200 text-gray-600';
+                    } else if (answerData.isCorrect) {
+                      bgClass = 'bg-green-100 text-green-700';
+                    } else {
+                      bgClass = 'bg-red-100 text-red-700';
+                    }
+                  }
+                  return (
+                    <button
+                      key={idx}
+                      onClick={() => setReviewIndex(idx)}
+                      className={`w-9 h-9 rounded-lg font-semibold text-sm hover:opacity-80 transition ${bgClass}`}
+                    >
+                      {idx + 1}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="bg-purple-50 rounded-xl p-4 mb-4 border border-purple-100">
               <div className="flex items-center gap-3 justify-center">
-                <BarChart3 className="w-6 h-6 text-purple-600" />
-                <p className="text-purple-900 font-bold">
+                <BarChart3 className="w-5 h-5 text-purple-600" />
+                <p className="text-purple-900 font-semibold text-sm">
                   Estás en el TOP 45% de nuevos usuarios
                 </p>
               </div>
             </div>
 
-            <div className="border-2 border-purple-200 rounded-xl p-5 bg-gradient-to-br from-purple-50 to-white">
-              <div className="flex items-center gap-2 mb-4">
-                <Crown className="w-6 h-6 text-purple-600" />
-                <span className="font-bold text-purple-900 text-lg">Los usuarios Premium tienen:</span>
+            <div className="border border-purple-200 rounded-xl p-4 bg-gradient-to-br from-purple-50 to-white">
+              <div className="flex items-center gap-2 mb-3">
+                <Crown className="w-5 h-5 text-purple-600" />
+                <span className="font-bold text-purple-900 text-sm">Los usuarios Premium tienen:</span>
               </div>
-              <ul className="space-y-2 text-sm text-gray-700">
+              <ul className="space-y-1 text-xs text-gray-700">
                 <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-purple-500"></div>
                   <span><strong>127% más</strong> preguntas acertadas</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-purple-500"></div>
                   <span>Acceso a <strong>15.000+ preguntas</strong></span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-purple-500"></div>
                   <span>Simulacros de <strong>examen real</strong></span>
                 </li>
               </ul>
@@ -1074,6 +1278,7 @@ export default function OpositaApp() {
           </button>
         </div>
 
+        {reviewIndex !== null && <ReviewQuestionModal />}
         {showPremiumModal && <PremiumModal />}
       </div>
     );
