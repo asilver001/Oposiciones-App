@@ -231,7 +231,7 @@ export function parseAndValidateJSON(jsonString) {
 /**
  * Transform question from import format to Supabase format
  * @param {Object} question - Question in import format
- * @returns {Object} Question in Supabase format
+ * @returns {Object} Question in Supabase format (without id - Supabase auto-generates it)
  */
 export function transformQuestionForSupabase(question) {
   // Use reformulated_text as main question_text if available, otherwise use question_text
@@ -245,7 +245,7 @@ export function transformQuestionForSupabase(question) {
   }
 
   // Transform options to Supabase JSONB format
-  // Expected: [{"id": "a", "text": "...", "is_correct": false, "position": 0}, ...]
+  // Note: 'id' here is the option identifier (a,b,c,d), NOT the question id
   const optionsJsonb = question.options.map((opt, idx) => ({
     id: ['a', 'b', 'c', 'd'][idx] || String.fromCharCode(97 + idx),
     text: opt.text || '',

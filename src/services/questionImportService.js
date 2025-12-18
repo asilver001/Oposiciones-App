@@ -81,7 +81,8 @@ export async function importQuestions(questions, options = {}) {
 
   // Process each question
   for (let i = 0; i < questions.length; i++) {
-    const question = questions[i];
+    // Remove id field if present (Supabase auto-generates it)
+    const { id, ...question } = questions[i];
 
     try {
       // Get the main question text (prefer reformulated_text)
