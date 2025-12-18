@@ -1,6 +1,6 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
-import { getTopicStatus } from '../../utils/fortressLogic';
+import { getTopicStatus, safeParseDate } from '../../utils/fortressLogic';
 
 // Componente para mostrar los bloques de fortaleza de un tema
 const TopicFortress = ({ topic }) => {
@@ -42,22 +42,32 @@ const TopicFortress = ({ topic }) => {
 
 // Componente de alerta para temas que necesitan atención
 const FortressAlert = ({ topics }) => {
-  const decliningTopics = Object.values(topics).filter(t => {
+  const decliningTopics = Object.values(topics || {}).filter(t => {
     if (!t.lastStudiedAt || t.strengthLevel === 0) return false;
-    const hoursSinceStudy = (Date.now() - new Date(t.lastStudiedAt)) / (1000 * 60 * 60);
+    const lastStudied = safeParseDate(t.lastStudiedAt);
+    if (!lastStudied) return false;
+    const hoursSinceStudy = (Date.now() - lastStudied) / (1000 * 60 * 60);
     return hoursSinceStudy > 24;
   });
 
   if (decliningTopics.length === 0) return null;
 
-  const mostUrgent = decliningTopics.sort((a, b) =>
-    new Date(a.nextDecayAt || 0) - new Date(b.nextDecayAt || 0)
-  )[0];
+  const mostUrgent = decliningTopics.sort((a, b) => {
+    const dateA = safeParseDate(a.nextDecayAt);
+    const dateB = safeParseDate(b.nextDecayAt);
+    if (!dateA && !dateB) return 0;
+    if (!dateA) return 1;
+    if (!dateB) return -1;
+    return dateA - dateB;
+  })[0];
 
   if (!mostUrgent?.nextDecayAt) return null;
 
+  const decayDate = safeParseDate(mostUrgent.nextDecayAt);
+  if (!decayDate) return null;
+
   const hoursUntilDecay = Math.max(0,
-    (new Date(mostUrgent.nextDecayAt) - Date.now()) / (1000 * 60 * 60)
+    (decayDate - Date.now()) / (1000 * 60 * 60)
   );
 
   let alertText = '';
@@ -91,7 +101,11 @@ const FortressCard = ({ fortressData, onViewMore }) => {
       }
       // Luego por última sesión de estudio
       if (a.lastStudiedAt && b.lastStudiedAt) {
-        return new Date(b.lastStudiedAt) - new Date(a.lastStudiedAt);
+        const dateA = safeParseDate(a.lastStudiedAt);
+        const dateB = safeParseDate(b.lastStudiedAt);
+        if (dateA && dateB) {
+          return dateB - dateA;
+        }
       }
       return a.topicId - b.topicId;
     })

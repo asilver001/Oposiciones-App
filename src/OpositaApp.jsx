@@ -6,7 +6,7 @@ import { useAdmin } from './contexts/AdminContext';
 import { SignUpForm, LoginForm, ForgotPasswordForm } from './components/auth';
 import { AdminLoginModal, AdminPanel, ReviewerPanel } from './components/admin';
 import { FortressCard, EvolutionCard, DailyGoalCard } from './components/home';
-import { calculateDecay, initializeFortressData, generateMockFortressData } from './utils/fortressLogic';
+import { calculateDecay, initializeFortressData, generateMockFortressData, safeParseDate } from './utils/fortressLogic';
 
 // ============ ONBOARDING COMPONENTS (estilo simple purple-50) ============
 
@@ -456,13 +456,13 @@ export default function OpositaApp() {
 
     try {
       if (streakData.lastCompletedDate !== today) {
-        const lastDate = streakData.lastCompletedDate ? new Date(streakData.lastCompletedDate) : null;
+        const lastDate = safeParseDate(streakData.lastCompletedDate);
         const todayDate = new Date(today);
 
         if (!lastDate) {
           newStreak = 1;
         } else {
-          const diffDays = Math.floor((todayDate - new Date(lastDate)) / (1000 * 60 * 60 * 24));
+          const diffDays = Math.floor((todayDate - lastDate) / (1000 * 60 * 60 * 24));
           if (diffDays === 1) {
             newStreak = streakData.current + 1;
             const unlockedBadge = badges.find(b => b.days === newStreak);
@@ -655,17 +655,19 @@ export default function OpositaApp() {
           setStreakData(savedStreak);
 
           if (savedStreak.lastCompletedDate) {
-            const lastDate = new Date(savedStreak.lastCompletedDate);
-            const today = new Date();
-            const diffDays = Math.floor((today - lastDate) / (1000 * 60 * 60 * 24));
+            const lastDate = safeParseDate(savedStreak.lastCompletedDate);
+            if (lastDate) {
+              const today = new Date();
+              const diffDays = Math.floor((today - lastDate) / (1000 * 60 * 60 * 24));
 
-            if (diffDays > 1) {
-              setStreakData({ current: 0, longest: savedStreak.longest, lastCompletedDate: null });
-              await window.storage.set('oposita-streak', JSON.stringify({
-                current: 0,
-                longest: savedStreak.longest,
-                lastCompletedDate: null
-              }));
+              if (diffDays > 1) {
+                setStreakData({ current: 0, longest: savedStreak.longest, lastCompletedDate: null });
+                await window.storage.set('oposita-streak', JSON.stringify({
+                  current: 0,
+                  longest: savedStreak.longest,
+                  lastCompletedDate: null
+                }));
+              }
             }
           }
         }
@@ -1980,11 +1982,20 @@ export default function OpositaApp() {
     const getDecayAlert = () => {
       const declining = Object.values(fortressData || {}).filter(t => {
         if (!t.lastStudiedAt || t.strengthLevel === 0) return false;
-        const hours = (Date.now() - new Date(t.lastStudiedAt)) / (1000 * 60 * 60);
+        const lastStudied = safeParseDate(t.lastStudiedAt);
+        if (!lastStudied) return false;
+        const hours = (Date.now() - lastStudied) / (1000 * 60 * 60);
         return hours > 24;
       });
       if (declining.length === 0) return null;
-      const urgent = declining.sort((a, b) => new Date(a.nextDecayAt || 0) - new Date(b.nextDecayAt || 0))[0];
+      const urgent = declining.sort((a, b) => {
+        const dateA = safeParseDate(a.nextDecayAt);
+        const dateB = safeParseDate(b.nextDecayAt);
+        if (!dateA && !dateB) return 0;
+        if (!dateA) return 1;
+        if (!dateB) return -1;
+        return dateA - dateB;
+      })[0];
       if (!urgent) return null;
       return `⚠️ ${urgent.topicShortName} necesita repaso`;
     };
@@ -2425,7 +2436,13 @@ export default function OpositaApp() {
                 {getTimeGreeting()}, {userData.name || 'opositor'}! 👋
               </h2>
               <p className="text-gray-400 text-xs capitalize">
-                {new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' })}
+                {(() => {
+                  try {
+                    return new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' });
+                  } catch (e) {
+                    return '';
+                  }
+                })()}
               </p>
             </div>
           )}

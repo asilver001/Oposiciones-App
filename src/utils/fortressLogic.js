@@ -2,6 +2,20 @@
 // Cada tema tiene 6 bloques que decaen con el tiempo
 
 /**
+ * Safely parse a date string, returning null if invalid
+ */
+const safeParseDate = (dateValue) => {
+  if (!dateValue) return null;
+  try {
+    const date = new Date(dateValue);
+    if (isNaN(date.getTime())) return null;
+    return date;
+  } catch (e) {
+    return null;
+  }
+};
+
+/**
  * Calcula el decaimiento de la fortaleza de un tema
  * @param {Object} topic - Datos del progreso del tema
  * @returns {Object} - Tema con fortaleza actualizada
@@ -12,7 +26,13 @@ export const calculateDecay = (topic) => {
   }
 
   const now = new Date();
-  const lastStudied = new Date(topic.lastStudiedAt);
+  const lastStudied = safeParseDate(topic.lastStudiedAt);
+
+  // If date is invalid, return topic unchanged
+  if (!lastStudied) {
+    return topic;
+  }
+
   const hoursSinceStudy = (now - lastStudied) / (1000 * 60 * 60);
 
   // Determinar velocidad de decaimiento según consolidación
@@ -156,10 +176,20 @@ export const getUrgentTopics = (fortressData) => {
   const topics = Object.values(fortressData);
 
   return topics
-    .filter(t => t.strengthLevel > 0 && t.nextDecayAt)
-    .sort((a, b) => new Date(a.nextDecayAt) - new Date(b.nextDecayAt))
+    .filter(t => t.strengthLevel > 0 && t.nextDecayAt && safeParseDate(t.nextDecayAt))
+    .sort((a, b) => {
+      const dateA = safeParseDate(a.nextDecayAt);
+      const dateB = safeParseDate(b.nextDecayAt);
+      if (!dateA && !dateB) return 0;
+      if (!dateA) return 1;
+      if (!dateB) return -1;
+      return dateA - dateB;
+    })
     .slice(0, 3);
 };
+
+// Export safeParseDate for use in other files
+export { safeParseDate };
 
 /**
  * Genera datos mock para testing/demo
