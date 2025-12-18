@@ -1955,7 +1955,6 @@ export default function OpositaApp() {
       Object.entries(fortressData).forEach(([key, topic]) => {
         updatedFortress[key] = calculateDecay(topic);
       });
-      // Solo actualizar si hay cambios
       const hasChanges = Object.keys(updatedFortress).some(
         key => updatedFortress[key].strengthLevel !== fortressData[key].strengthLevel
       );
@@ -1964,72 +1963,196 @@ export default function OpositaApp() {
       }
     }, []);
 
+    // Calcular datos para meta diaria
+    const dailyTarget = userData.dailyGoal || 15;
+    const dailyCompleted = totalStats.todayQuestions || 0;
+    const dailyPercent = Math.min(100, Math.round((dailyCompleted / dailyTarget) * 100));
+    const remaining = Math.max(0, dailyTarget - dailyCompleted);
+    const estimatedMin = Math.ceil(remaining * 0.4);
+    const isGoalComplete = dailyPercent >= 100;
+
+    // Obtener temas para fortaleza (top 3)
+    const fortressTopics = Object.values(fortressData || {})
+      .sort((a, b) => b.strengthLevel - a.strengthLevel || (b.lastStudiedAt ? 1 : -1))
+      .slice(0, 3);
+
+    // Alerta de decaimiento
+    const getDecayAlert = () => {
+      const declining = Object.values(fortressData || {}).filter(t => {
+        if (!t.lastStudiedAt || t.strengthLevel === 0) return false;
+        const hours = (Date.now() - new Date(t.lastStudiedAt)) / (1000 * 60 * 60);
+        return hours > 24;
+      });
+      if (declining.length === 0) return null;
+      const urgent = declining.sort((a, b) => new Date(a.nextDecayAt || 0) - new Date(b.nextDecayAt || 0))[0];
+      if (!urgent) return null;
+      return `⚠️ ${urgent.topicShortName} necesita repaso`;
+    };
+
+    const decayAlert = getDecayAlert();
+
     return (
-      <div className="space-y-4">
-        {/* Banner protege tu racha */}
+      <div className="space-y-3">
+        {/* Banner protege tu racha - solo si aplica */}
         {streakData.current >= 3 && !userData.accountCreated && showStreakBanner && (
-          <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-4 shadow-lg">
-            <div className="flex items-start justify-between">
-              <div className="flex items-start gap-3">
-                <Flame className="w-6 h-6 text-yellow-300 flex-shrink-0" />
-                <div>
-                  <p className="text-white font-bold">Protege tu racha de {streakData.current} días</p>
-                  <p className="text-white/80 text-sm">Crea tu cuenta para no perder tu progreso.</p>
-                </div>
+          <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-xl p-3 shadow-lg">
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center gap-2 flex-1 min-w-0">
+                <Flame className="w-5 h-5 text-yellow-300 flex-shrink-0" />
+                <p className="text-white font-semibold text-sm truncate">
+                  ¡Racha de {streakData.current} días! Protégela
+                </p>
               </div>
-              <button onClick={() => setShowStreakBanner(false)} className="text-white/60 hover:text-white">
-                <XCircle className="w-5 h-5" />
-              </button>
+              <div className="flex items-center gap-2 flex-shrink-0">
+                <button
+                  onClick={() => setCurrentPage('signup')}
+                  className="bg-white text-orange-600 font-bold text-xs py-1.5 px-3 rounded-lg"
+                >
+                  Guardar
+                </button>
+                <button onClick={() => setShowStreakBanner(false)} className="text-white/60">
+                  <XCircle className="w-4 h-4" />
+                </button>
+              </div>
             </div>
-            <button
-              onClick={() => setCurrentPage('signup')}
-              className="mt-3 w-full bg-white text-orange-600 font-bold py-2 px-4 rounded-xl hover:bg-orange-50 transition"
-            >
-              Crear cuenta gratis
-            </button>
           </div>
         )}
 
-        {/* Fortaleza de Conocimiento */}
-        <FortressCard
-          fortressData={fortressData}
-          onViewMore={() => setActiveTab('temas')}
-        />
-
-        {/* Gráfico de Evolución */}
-        <EvolutionCard
-          retentionHistory={retentionHistory}
-          metrics={evolutionMetrics}
-          onViewMore={() => setActiveTab('actividad')}
-        />
-
-        {/* Meta Diaria */}
-        <DailyGoalCard
-          goal={{ target: userData.dailyGoal }}
-          progress={{ completed: totalStats.todayQuestions }}
-          onContinue={startTest}
-        />
-
-        {/* Reto del día (opcional, discreto) */}
+        {/* META DE HOY + CTA - PRIORIDAD MÁXIMA */}
         <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 bg-amber-50 rounded-lg flex items-center justify-center">
-                <Zap className="w-4 h-4 text-amber-500" />
-              </div>
-              <div>
-                <p className="text-sm font-medium text-gray-900">Reto del día</p>
-                <p className="text-xs text-gray-500">10 preguntas seguidas</p>
-              </div>
-            </div>
+          <div className="flex items-center justify-between mb-3">
+            <span className="text-sm font-semibold text-gray-700">🎯 Meta de hoy</span>
+            <span className="text-xs text-gray-500">
+              {dailyCompleted}/{dailyTarget} preguntas
+            </span>
+          </div>
+
+          {/* Barra de progreso compacta */}
+          <div className="h-2 bg-gray-100 rounded-full mb-3 overflow-hidden">
+            <div
+              className={`h-full rounded-full transition-all duration-300 ${
+                isGoalComplete ? 'bg-green-500' : 'bg-gradient-to-r from-purple-500 to-indigo-500'
+              }`}
+              style={{ width: `${dailyPercent}%` }}
+            />
+          </div>
+
+          {/* CTA + Tiempo */}
+          <div className="flex items-center gap-3">
             <button
               onClick={startTest}
-              className="px-4 py-2 text-sm font-medium text-purple-600 hover:bg-purple-50 rounded-lg transition"
+              className={`flex-1 py-3 px-4 rounded-xl font-semibold text-base transition-all active:scale-[0.98] ${
+                isGoalComplete
+                  ? 'bg-gray-100 text-gray-600'
+                  : 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg shadow-purple-200'
+              }`}
             >
-              Intentar
+              {dailyCompleted === 0 ? 'Empezar' : isGoalComplete ? 'Seguir' : 'Continuar'} →
             </button>
+            {remaining > 0 && (
+              <span className="text-gray-400 text-sm whitespace-nowrap">
+                ⏱ ~{estimatedMin}min
+              </span>
+            )}
           </div>
         </div>
+
+        {/* CARD COMBINADO: FORTALEZA + EVOLUCIÓN */}
+        <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+          {/* Fortaleza - Bloques horizontales */}
+          <div className="flex items-center justify-between mb-3">
+            <span className="text-sm font-semibold text-gray-700">🏰 Tu fortaleza</span>
+            <button
+              onClick={() => setActiveTab('temas')}
+              className="text-xs text-purple-600 font-medium"
+            >
+              Ver más →
+            </button>
+          </div>
+
+          {/* Grid de fortalezas compacto */}
+          <div className="flex justify-between gap-2 mb-3">
+            {fortressTopics.map((topic) => {
+              const blocks = Array(6).fill(null);
+              return (
+                <div key={topic.topicId} className="flex-1 text-center">
+                  <div className="flex gap-0.5 justify-center mb-1">
+                    {blocks.map((_, i) => (
+                      <div
+                        key={i}
+                        className={`w-2 h-4 rounded-sm ${
+                          i < topic.strengthLevel
+                            ? 'bg-gradient-to-t from-purple-600 to-indigo-500'
+                            : 'bg-gray-200'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                  <span className="text-[10px] text-gray-600 font-medium">{topic.topicShortName}</span>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Alerta de decay */}
+          {decayAlert && (
+            <div className="bg-amber-50 text-amber-700 text-xs py-1.5 px-2 rounded-lg mb-3 text-center">
+              {decayAlert}
+            </div>
+          )}
+
+          {/* Separador */}
+          <div className="border-t border-gray-100 my-3" />
+
+          {/* Evolución - Versión mini */}
+          <div className="flex items-center justify-between">
+            {/* Mini gráfico */}
+            <div className="flex items-center gap-3">
+              <svg width="80" height="40" viewBox="0 0 80 40" className="flex-shrink-0">
+                <defs>
+                  <linearGradient id="miniGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#8B5CF6" stopOpacity="0.3" />
+                    <stop offset="100%" stopColor="#8B5CF6" stopOpacity="0" />
+                  </linearGradient>
+                </defs>
+                <polygon points="5,35 20,28 35,25 50,18 65,12 75,10 75,35 5,35" fill="url(#miniGrad)" />
+                <polyline
+                  points="5,35 20,28 35,25 50,18 65,12 75,10"
+                  fill="none"
+                  stroke="#8B5CF6"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+                <circle cx="75" cy="10" r="3" fill="white" stroke="#8B5CF6" strokeWidth="2" />
+              </svg>
+              <div className="text-xs text-gray-500">
+                <span className="font-semibold text-gray-900">{evolutionMetrics.overallRetention}%</span> retención
+              </div>
+            </div>
+
+            {/* Métricas compactas */}
+            <div className="text-right text-xs text-gray-500">
+              <div>
+                {evolutionMetrics.retentionChange > 0 && (
+                  <span className="text-green-600 font-medium">+{evolutionMetrics.retentionChange}%</span>
+                )}
+              </div>
+              <div>~{evolutionMetrics.estimatedPassProbability}% corte</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Reto del día - Mini versión */}
+        <button
+          onClick={startTest}
+          className="w-full bg-amber-50 hover:bg-amber-100 rounded-xl p-3 flex items-center justify-between transition"
+        >
+          <div className="flex items-center gap-2">
+            <Zap className="w-4 h-4 text-amber-500" />
+            <span className="text-sm font-medium text-gray-700">Reto: 10 seguidas</span>
+          </div>
+          <span className="text-xs text-amber-600 font-medium">Intentar →</span>
+        </button>
       </div>
     );
   };
@@ -2293,15 +2416,15 @@ export default function OpositaApp() {
       {/* Nueva TopBar fija */}
       <TopBar />
 
-      <div className="max-w-4xl mx-auto px-4 pt-16">
-        <div className="pt-4 mb-6">
-          {/* Área de saludo - Nuevo diseño */}
+      <div className="max-w-4xl mx-auto px-4 pt-14">
+        <div className="pt-2 mb-4">
+          {/* Área de saludo - Compacto */}
           {activeTab === 'inicio' && (
-            <div className="mb-5">
-              <h2 className="text-2xl font-bold text-gray-900 mb-1">
+            <div className="mb-3">
+              <h2 className="text-xl font-bold text-gray-900 mb-0.5">
                 {getTimeGreeting()}, {userData.name || 'opositor'}! 👋
               </h2>
-              <p className="text-gray-500 text-sm capitalize">
+              <p className="text-gray-400 text-xs capitalize">
                 {new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' })}
               </p>
             </div>
