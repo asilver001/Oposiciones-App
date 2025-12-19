@@ -104,24 +104,16 @@ export async function importQuestions(questions, options = {}) {
 
       // Transform to Supabase format
       const supabaseQuestion = transformQuestionForSupabase(question);
+      
+      // IMPORTANT: Remove id field again in case transformQuestionForSupabase added it
+      delete supabaseQuestion.id;
 
-      // Insert using RPC function (bypasses RLS)
+      // Insert directly into the questions table (instead of RPC)
       const { data, error } = await supabase
-        .rpc('import_question', {
-          p_question_text: supabaseQuestion.question_text,
-          p_options: supabaseQuestion.options,
-          p_explanation: supabaseQuestion.explanation,
-          p_legal_reference: supabaseQuestion.legal_reference,
-          p_tema: supabaseQuestion.tema,
-          p_materia: supabaseQuestion.materia,
-          p_difficulty: supabaseQuestion.difficulty,
-          p_source: supabaseQuestion.source,
-          p_source_year: supabaseQuestion.source_year,
-          p_confidence_score: supabaseQuestion.confidence_score,
-          p_tier: supabaseQuestion.tier,
-          p_original_text: supabaseQuestion.original_text,
-          p_reformulated_by: supabaseQuestion.reformulated_by
-        });
+        .from('questions')
+        .insert(supabaseQuestion)
+        .select('id')
+        .single();
 
       if (error) {
         result.errors.push(`Pregunta ${i + 1}: ${error.message}`);
@@ -136,7 +128,7 @@ export async function importQuestions(questions, options = {}) {
         result.details.push({
           index: i,
           status: 'imported',
-          id: data, // RPC returns UUID directly
+          id: data?.id,
           question: mainQuestionText.substring(0, 50) + '...'
         });
       }
