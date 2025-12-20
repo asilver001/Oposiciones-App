@@ -7,6 +7,7 @@ import { SignUpForm, LoginForm, ForgotPasswordForm } from './components/auth';
 import { AdminLoginModal, AdminPanel, ReviewerPanel } from './components/admin';
 import { useUserInsights } from './hooks/useUserInsights';
 import FeedbackPanel from './components/FeedbackPanel';
+import Fortaleza from './components/Fortaleza';
 
 // ============ ONBOARDING COMPONENTS (estilo simple purple-50) ============
 
@@ -1753,6 +1754,14 @@ export default function OpositaApp() {
     const streakMessage = getStreakMessage();
     const daysToNext = getDaysToNextBadge();
 
+    // Mock data for Fortaleza - TODO: Replace with real data from topicsProgress
+    const fortalezaTemas = [
+      { id: 1, nombre: 'Constitucion Espanola', progreso: 4, estado: 'progresando' },
+      { id: 2, nombre: 'Organizacion del Estado', progreso: 2, estado: 'nuevo' },
+      { id: 3, nombre: 'Derecho Administrativo', progreso: 6, estado: 'solido' },
+      { id: 4, nombre: 'Administracion Publica', progreso: 1, estado: 'peligro' },
+    ];
+
     return (
       <>
         {/* Banner protege tu racha */}
@@ -1798,6 +1807,17 @@ export default function OpositaApp() {
                   markInsightAsSeen(insight.id);
                 }
               }}
+            />
+          </div>
+        )}
+
+        {/* Fortaleza - Progreso por tema */}
+        {fortalezaTemas.length > 0 && (
+          <div className="mb-6">
+            <Fortaleza
+              temas={fortalezaTemas}
+              onVerTodo={() => setActiveTab('temas')}
+              maxVisible={3}
             />
           </div>
         )}
