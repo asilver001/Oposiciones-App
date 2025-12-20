@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   Brain,
   ChevronLeft,
@@ -9,9 +9,27 @@ import {
   Trophy,
   Target,
   Flame,
-  BookOpen
+  BookOpen,
+  Lightbulb
 } from 'lucide-react';
 import { useStudySession } from '../../hooks/useSpacedRepetition';
+import { useUserInsights } from '../../hooks/useUserInsights';
+import InsightCard from '../InsightCard';
+
+/**
+ * Map insight type to severity level for styling
+ */
+function getSeverityFromType(tipo) {
+  const severityMap = {
+    'error_comun': 'danger',
+    'concepto_clave': 'warning',
+    'tecnica_memorizacion': 'info',
+    'patron_fallo': 'danger',
+    'refuerzo_positivo': 'success',
+    'consejo': 'info'
+  };
+  return severityMap[tipo] || 'info';
+}
 
 export default function HybridSession({ config = {}, onClose, onComplete }) {
   const {
@@ -27,8 +45,15 @@ export default function HybridSession({ config = {}, onClose, onComplete }) {
     completeSession
   } = useStudySession(config);
 
+  const { saveSessionAndDetectInsights, loading: insightsLoading } = useUserInsights();
+
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [showResult, setShowResult] = useState(false);
+
+  // Track individual answers for insights detection
+  const answersHistoryRef = useRef([]);
+  const [triggeredInsights, setTriggeredInsights] = useState([]);
+  const [insightsProcessed, setInsightsProcessed] = useState(false);
 
   // Load session on mount
   useEffect(() => {
@@ -43,6 +68,15 @@ export default function HybridSession({ config = {}, onClose, onComplete }) {
 
     const isCorrect = answer === currentQuestion.correct_answer;
 
+    // Track this answer for insights
+    answersHistoryRef.current.push({
+      question_id: currentQuestion.id,
+      es_correcta: isCorrect,
+      respuesta_usuario: answer,
+      respuesta_correcta: currentQuestion.correct_answer,
+      tema: currentQuestion.tema
+    });
+
     // Delay before recording and moving on
     setTimeout(() => {
       answerQuestion(isCorrect);
@@ -51,12 +85,46 @@ export default function HybridSession({ config = {}, onClose, onComplete }) {
     }, 1500);
   };
 
-  // Handle session complete
+  // Handle session complete - save stats and detect insights
   useEffect(() => {
-    if (isComplete) {
-      completeSession();
+    if (isComplete && !insightsProcessed) {
+      const processCompletion = async () => {
+        // Mark as processed to prevent duplicate calls
+        setInsightsProcessed(true);
+
+        // Complete the session (records daily study)
+        await completeSession();
+
+        // Detect insights based on answered questions
+        if (answersHistoryRef.current.length > 0) {
+          try {
+            const { triggeredInsights: insights } = await saveSessionAndDetectInsights(
+              answersHistoryRef.current,
+              {
+                modo: 'estudio',
+                tema_id: config.temaId || null
+              }
+            );
+            if (insights && insights.length > 0) {
+              setTriggeredInsights(insights);
+            }
+          } catch (err) {
+            console.error('Error detecting insights:', err);
+          }
+        }
+      };
+
+      processCompletion();
     }
-  }, [isComplete, completeSession]);
+  }, [isComplete, insightsProcessed, completeSession, saveSessionAndDetectInsights, config.temaId]);
+
+  // Reset state when starting new session
+  const handleNewSession = () => {
+    answersHistoryRef.current = [];
+    setTriggeredInsights([]);
+    setInsightsProcessed(false);
+    loadSession(config);
+  };
 
   // Loading state
   if (isLoading) {
@@ -158,14 +226,44 @@ export default function HybridSession({ config = {}, onClose, onComplete }) {
             </div>
           </div>
 
+          {/* Insights Section */}
+          {triggeredInsights.length > 0 && (
+            <div className="mb-6 text-left">
+              <div className="flex items-center gap-2 mb-3">
+                <Lightbulb className="w-5 h-5 text-amber-500" />
+                <h3 className="font-semibold text-gray-700">Analisis de tus errores</h3>
+              </div>
+              <div className="space-y-3">
+                {triggeredInsights.map((insight, index) => (
+                  <InsightCard
+                    key={insight.templateId || index}
+                    emoji={insight.emoji || '💡'}
+                    titulo={insight.titulo}
+                    descripcion={insight.descripcion}
+                    severidad={getSeverityFromType(insight.tipo)}
+                    totalFalladas={insight.totalFailed}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Loading insights indicator */}
+          {insightsLoading && (
+            <div className="mb-6 flex items-center justify-center gap-2 text-gray-500">
+              <Loader2 className="w-4 h-4 animate-spin" />
+              <span className="text-sm">Analizando errores...</span>
+            </div>
+          )}
+
           {/* Buttons */}
           <div className="space-y-3">
             <button
-              onClick={() => loadSession(config)}
+              onClick={handleNewSession}
               className="w-full py-3 bg-purple-600 text-white rounded-xl font-semibold hover:bg-purple-700 flex items-center justify-center gap-2"
             >
               <RotateCcw className="w-5 h-5" />
-              Nueva sesión
+              Nueva sesion
             </button>
             <button
               onClick={() => {
