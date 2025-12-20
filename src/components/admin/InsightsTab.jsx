@@ -2,9 +2,11 @@ import { useState, useEffect, useCallback } from 'react';
 import {
   Lightbulb, Plus, Edit2, Trash2, Link, Unlink, Search,
   CheckCircle, XCircle, AlertTriangle, Info, RefreshCw,
-  ChevronDown, ChevronUp, Save, X, Filter
+  ChevronDown, ChevronUp, Save, X, Filter, FlaskConical
 } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
+import { useAuth } from '../../contexts/AuthContext';
+import { checkInsightsStatus, testInsightSystem, createSampleInsights } from '../../utils/testInsights';
 
 // Tipos de insight
 const INSIGHT_TIPOS = [
@@ -24,6 +26,7 @@ const SEVERIDADES = [
 ];
 
 export default function InsightsTab() {
+  const { user } = useAuth();
   const [insights, setInsights] = useState([]);
   const [questions, setQuestions] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -34,6 +37,9 @@ export default function InsightsTab() {
   // Modal states
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [showLinkModal, setShowLinkModal] = useState(false);
+  const [showTestModal, setShowTestModal] = useState(false);
+  const [testResults, setTestResults] = useState(null);
+  const [testLoading, setTestLoading] = useState(false);
   const [editingInsight, setEditingInsight] = useState(null);
   const [selectedInsight, setSelectedInsight] = useState(null);
   const [expandedInsight, setExpandedInsight] = useState(null);
@@ -156,16 +162,36 @@ export default function InsightsTab() {
             {insights.length} insights configurados
           </p>
         </div>
-        <button
-          onClick={() => {
-            setEditingInsight(null);
-            setShowCreateModal(true);
-          }}
-          className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition"
-        >
-          <Plus className="w-4 h-4" />
-          Nuevo Insight
-        </button>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={async () => {
+              setTestLoading(true);
+              setShowTestModal(true);
+              setTestResults(null);
+              try {
+                const results = await testInsightSystem(user?.id);
+                setTestResults(results);
+              } catch (err) {
+                setTestResults({ errors: [{ step: 'general', error: err }] });
+              }
+              setTestLoading(false);
+            }}
+            className="flex items-center gap-2 px-4 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition"
+          >
+            <FlaskConical className="w-4 h-4" />
+            Test Sistema
+          </button>
+          <button
+            onClick={() => {
+              setEditingInsight(null);
+              setShowCreateModal(true);
+            }}
+            className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition"
+          >
+            <Plus className="w-4 h-4" />
+            Nuevo Insight
+          </button>
+        </div>
       </div>
 
       {/* Filters */}
@@ -365,6 +391,24 @@ export default function InsightsTab() {
             setShowLinkModal(false);
             setSelectedInsight(null);
             loadInsights();
+          }}
+        />
+      )}
+
+      {/* Test Results Modal */}
+      {showTestModal && (
+        <TestResultsModal
+          results={testResults}
+          loading={testLoading}
+          onClose={() => {
+            setShowTestModal(false);
+            setTestResults(null);
+          }}
+          onCreateSamples={async () => {
+            setTestLoading(true);
+            await createSampleInsights();
+            await loadInsights();
+            setTestLoading(false);
           }}
         />
       )}
@@ -789,6 +833,199 @@ function LinkQuestionsModal({ insight, questions, onClose, onSave }) {
           </button>
         </div>
       </div>
+    </div>
+  );
+}
+
+// Modal para mostrar resultados del test
+function TestResultsModal({ results, loading, onClose, onCreateSamples }) {
+  return (
+    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+      <div className="bg-white rounded-2xl w-full max-w-xl max-h-[90vh] flex flex-col">
+        <div className="sticky top-0 bg-white border-b px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <FlaskConical className="w-5 h-5 text-amber-500" />
+            <h3 className="text-lg font-bold text-gray-900">
+              Test del Sistema de Insights
+            </h3>
+          </div>
+          <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded-lg">
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        <div className="flex-1 overflow-y-auto p-6">
+          {loading ? (
+            <div className="flex flex-col items-center justify-center py-12">
+              <RefreshCw className="w-8 h-8 animate-spin text-amber-500 mb-4" />
+              <p className="text-gray-600">Ejecutando test...</p>
+            </div>
+          ) : results ? (
+            <div className="space-y-6">
+              {/* Templates section */}
+              <div>
+                <h4 className="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                  <span className="text-lg">📋</span>
+                  Templates de Insights
+                </h4>
+                {results.templates?.length > 0 ? (
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+                    <p className="text-green-700 text-sm mb-2">
+                      ✓ {results.templates.length} templates activos
+                    </p>
+                    <div className="space-y-1">
+                      {results.templates.map(t => (
+                        <div key={t.id} className="text-xs text-green-600 flex items-center gap-2">
+                          <span>{t.emoji}</span>
+                          <span>{t.titulo}</span>
+                          <span className="text-green-400">
+                            (min fallos: {t.min_fallos_para_activar})
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3">
+                    <p className="text-yellow-700 text-sm">
+                      ⚠️ No hay templates activos
+                    </p>
+                    <button
+                      onClick={onCreateSamples}
+                      className="mt-2 text-xs px-3 py-1.5 bg-amber-500 text-white rounded-lg hover:bg-amber-600"
+                    >
+                      Crear ejemplos
+                    </button>
+                  </div>
+                )}
+              </div>
+
+              {/* Links section */}
+              <div>
+                <h4 className="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                  <span className="text-lg">🔗</span>
+                  Links Pregunta-Insight
+                </h4>
+                {results.links?.length > 0 ? (
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+                    <p className="text-green-700 text-sm">
+                      ✓ {results.links.length} preguntas vinculadas
+                    </p>
+                  </div>
+                ) : (
+                  <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3">
+                    <p className="text-yellow-700 text-sm">
+                      ⚠️ No hay preguntas vinculadas a ningún insight
+                    </p>
+                    <p className="text-xs text-yellow-600 mt-1">
+                      Usa el botón 🔗 en cada insight para vincular preguntas
+                    </p>
+                  </div>
+                )}
+              </div>
+
+              {/* Triggered insights simulation */}
+              <div>
+                <h4 className="font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                  <span className="text-lg">🎯</span>
+                  Simulación de Detección
+                </h4>
+                {results.triggered?.length > 0 ? (
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+                    <p className="text-green-700 text-sm mb-2">
+                      ✓ {results.triggered.length} insights se activarían
+                    </p>
+                    <div className="space-y-1">
+                      {results.triggered.map((i, idx) => (
+                        <div key={idx} className="text-xs text-green-600 flex items-center gap-2">
+                          <span>{i.emoji}</span>
+                          <span>{i.titulo}</span>
+                          <span className="text-green-400">
+                            ({i.totalFailed} falladas)
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ) : results.links?.length > 0 ? (
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
+                    <p className="text-blue-700 text-sm">
+                      ℹ️ Ningún insight alcanzó el mínimo de fallos para activarse
+                    </p>
+                  </div>
+                ) : (
+                  <div className="bg-gray-50 border border-gray-200 rounded-lg p-3">
+                    <p className="text-gray-600 text-sm">
+                      No se pudo simular - vincular preguntas primero
+                    </p>
+                  </div>
+                )}
+              </div>
+
+              {/* Errors */}
+              {results.errors?.length > 0 && (
+                <div>
+                  <h4 className="font-semibold text-red-700 mb-2 flex items-center gap-2">
+                    <span className="text-lg">❌</span>
+                    Errores
+                  </h4>
+                  <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+                    {results.errors.map((err, idx) => (
+                      <p key={idx} className="text-red-700 text-sm">
+                        [{err.step}] {err.error?.message || String(err.error)}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Summary */}
+              <div className="border-t pt-4">
+                <h4 className="font-semibold text-gray-800 mb-2">Resumen</h4>
+                <div className="flex gap-4">
+                  <StatusBadge
+                    ok={results.templates?.length > 0}
+                    label="Templates"
+                  />
+                  <StatusBadge
+                    ok={results.links?.length > 0}
+                    label="Links"
+                  />
+                  <StatusBadge
+                    ok={results.errors?.length === 0}
+                    label="Sin errores"
+                  />
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="text-center py-12 text-gray-500">
+              Esperando resultados...
+            </div>
+          )}
+        </div>
+
+        <div className="border-t px-6 py-4">
+          <button
+            onClick={onClose}
+            className="w-full px-4 py-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition"
+          >
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Small helper component for status badges
+function StatusBadge({ ok, label }) {
+  return (
+    <div className={`flex items-center gap-1 text-sm px-2 py-1 rounded ${
+      ok ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
+    }`}>
+      {ok ? <CheckCircle className="w-3 h-3" /> : <XCircle className="w-3 h-3" />}
+      {label}
     </div>
   );
 }
