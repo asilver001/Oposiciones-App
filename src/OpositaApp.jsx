@@ -5,6 +5,9 @@ import { useAuth } from './contexts/AuthContext';
 import { useAdmin } from './contexts/AdminContext';
 import { SignUpForm, LoginForm, ForgotPasswordForm } from './components/auth';
 import { AdminLoginModal, AdminPanel, ReviewerPanel } from './components/admin';
+import { useUserInsights } from './hooks/useUserInsights';
+import FeedbackPanel from './components/FeedbackPanel';
+import Fortaleza from './components/Fortaleza';
 
 // ============ ONBOARDING COMPONENTS (estilo simple purple-50) ============
 
@@ -277,6 +280,11 @@ export default function OpositaApp() {
   const [formName, setFormName] = useState('');
   const [formEmail, setFormEmail] = useState('');
   const [showStreakBanner, setShowStreakBanner] = useState(true);
+
+  // Insights state
+  const [recentInsights, setRecentInsights] = useState([]);
+  const [lastSessionStats, setLastSessionStats] = useState(null);
+  const [showFeedbackPanel, setShowFeedbackPanel] = useState(false);
 
   const badges = [
     { id: 1, name: 'Constancia', days: 3, icon: '🔥', color: 'orange' },
@@ -648,6 +656,29 @@ export default function OpositaApp() {
       saveProgress();
     }
   }, [topicsProgress, isLoading, currentPage]);
+
+  // Load insights data when on home page
+  const { getRecentInsights, getLastSessionStats, markInsightAsSeen } = useUserInsights();
+
+  useEffect(() => {
+    if (!isLoading && currentPage === 'home' && isAuthenticated) {
+      const loadInsightsData = async () => {
+        try {
+          const [insights, stats] = await Promise.all([
+            getRecentInsights(5, true), // solo no vistos
+            getLastSessionStats()
+          ]);
+
+          setRecentInsights(insights || []);
+          setLastSessionStats(stats);
+          setShowFeedbackPanel((insights || []).length > 0);
+        } catch (error) {
+          console.error('Error loading insights:', error);
+        }
+      };
+      loadInsightsData();
+    }
+  }, [isLoading, currentPage, isAuthenticated]);
 
   // Premium Modal Component - Versión "Próximamente"
   const PremiumModal = () => (
@@ -1723,6 +1754,14 @@ export default function OpositaApp() {
     const streakMessage = getStreakMessage();
     const daysToNext = getDaysToNextBadge();
 
+    // Mock data for Fortaleza - TODO: Replace with real data from topicsProgress
+    const fortalezaTemas = [
+      { id: 1, nombre: 'Constitucion Espanola', progreso: 4, estado: 'progresando' },
+      { id: 2, nombre: 'Organizacion del Estado', progreso: 2, estado: 'nuevo' },
+      { id: 3, nombre: 'Derecho Administrativo', progreso: 6, estado: 'solido' },
+      { id: 4, nombre: 'Administracion Publica', progreso: 1, estado: 'peligro' },
+    ];
+
     return (
       <>
         {/* Banner protege tu racha */}
@@ -1749,49 +1788,93 @@ export default function OpositaApp() {
           </div>
         )}
 
-        {/* Bloque principal: Racha + Continuidad */}
-        <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 mb-6">
-          {/* Icono y mensaje principal */}
-          <div className="flex items-start gap-4 mb-4">
-            <div className="w-12 h-12 bg-orange-50 rounded-full flex items-center justify-center flex-shrink-0">
-              <Flame className="w-6 h-6 text-orange-500" />
+        {/* FeedbackPanel - Insights de la última sesión */}
+        {showFeedbackPanel && lastSessionStats && (
+          <div className="mb-6">
+            <FeedbackPanel
+              insights={recentInsights}
+              sessionStats={{
+                correctas: lastSessionStats.correctas || 0,
+                incorrectas: lastSessionStats.incorrectas || 0,
+                en_blanco: lastSessionStats.en_blanco || 0,
+                porcentaje_acierto: lastSessionStats.porcentaje_acierto || 0
+              }}
+              sessionDate={lastSessionStats.created_at}
+              defaultExpanded={false}
+              onInsightAction={(insight) => {
+                // Mark insight as seen when user interacts
+                if (insight.id) {
+                  markInsightAsSeen(insight.id);
+                }
+              }}
+            />
+          </div>
+        )}
+
+        {/* Fortaleza - Progreso por tema */}
+        {fortalezaTemas.length > 0 && (
+          <div className="mb-6">
+            <Fortaleza
+              temas={fortalezaTemas}
+              onVerTodo={() => setActiveTab('temas')}
+              maxVisible={3}
+            />
+          </div>
+        )}
+
+        {/* Tu Sesión de Hoy */}
+        <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 mb-4">
+          {/* Header */}
+          <div className="flex justify-between items-center mb-4">
+            <span className="font-semibold text-gray-800 flex items-center gap-2">
+              🎯 Tu Sesion de Hoy
+            </span>
+            <span className="text-xs bg-purple-100 text-purple-600 px-2 py-1 rounded-full font-medium">
+              ~20 min
+            </span>
+          </div>
+
+          {/* Session Items */}
+          <div className="space-y-3 mb-4">
+            {/* Tema nuevo */}
+            <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl">
+              <div className="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center text-lg">
+                📗
+              </div>
+              <div>
+                <div className="font-medium text-gray-800">Tema 8 - AGE Central</div>
+                <div className="text-sm text-gray-500">Tema nuevo · 15 preguntas</div>
+              </div>
             </div>
-            <div className="flex-1">
-              <h3 className="text-xl font-bold text-gray-900 mb-1">
-                {streakMessage.main}
-              </h3>
-              {streakMessage.sub && (
-                <p className="text-gray-500 text-sm">{streakMessage.sub}</p>
-              )}
+
+            {/* Repaso */}
+            <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl">
+              <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center text-lg">
+                🔄
+              </div>
+              <div>
+                <div className="font-medium text-gray-800">Tema 4 - La Corona</div>
+                <div className="text-sm text-gray-500">Repaso · Art. 57 debil</div>
+              </div>
             </div>
           </div>
 
-          {/* Próximo logro (sutil) */}
-          {daysToNext && streakData.current > 0 && (
-            <div className="mb-5">
-              <div className="flex items-center justify-between text-xs text-gray-400 mb-1.5">
-                <span>Próximo logro</span>
-                <span>{daysToNext} {daysToNext === 1 ? 'día' : 'días'}</span>
-              </div>
-              <div className="bg-gray-100 rounded-full h-1.5">
-                <div
-                  className="bg-orange-400 rounded-full h-1.5 transition-all duration-500"
-                  style={{
-                    width: `${Math.min(((streakData.current % (daysToNext + streakData.current)) / (daysToNext + (streakData.current % (daysToNext + streakData.current)))) * 100, 100)}%`
-                  }}
-                ></div>
-              </div>
-            </div>
-          )}
-
-          {/* CTA principal */}
+          {/* Botón Empezar */}
           <button
             onClick={startTest}
-            className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3.5 px-6 rounded-xl transition-all active:scale-[0.98]"
+            className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-purple-700 transition-all active:scale-[0.98]"
           >
-            Continuar
+            Empezar sesion →
           </button>
         </div>
+
+        {/* Ver más opciones */}
+        <button
+          onClick={() => console.log('TODO: Abrir modal de opciones')}
+          className="w-full text-center text-purple-600 font-medium hover:text-purple-700 mb-6"
+        >
+          Ver mas opciones →
+        </button>
 
         {/* Reto del día (opcional, discreto) */}
         <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
@@ -1801,7 +1884,7 @@ export default function OpositaApp() {
                 <Zap className="w-4 h-4 text-amber-500" />
               </div>
               <div>
-                <p className="text-sm font-medium text-gray-900">Reto del día</p>
+                <p className="text-sm font-medium text-gray-900">Reto del dia</p>
                 <p className="text-xs text-gray-500">10 preguntas seguidas</p>
               </div>
             </div>
