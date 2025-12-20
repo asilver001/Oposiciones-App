@@ -29,6 +29,7 @@ export default function InsightsTab() {
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [filterTipo, setFilterTipo] = useState('');
+  const [filterActivo, setFilterActivo] = useState('todos'); // 'todos', 'activos', 'inactivos'
 
   // Modal states
   const [showCreateModal, setShowCreateModal] = useState(false);
@@ -89,7 +90,10 @@ export default function InsightsTab() {
       insight.titulo?.toLowerCase().includes(searchTerm.toLowerCase()) ||
       insight.descripcion?.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesTipo = !filterTipo || insight.tipo === filterTipo;
-    return matchesSearch && matchesTipo;
+    const matchesActivo = filterActivo === 'todos' ||
+      (filterActivo === 'activos' && insight.activo) ||
+      (filterActivo === 'inactivos' && !insight.activo);
+    return matchesSearch && matchesTipo && matchesActivo;
   });
 
   // Toggle insight active status
@@ -187,6 +191,15 @@ export default function InsightsTab() {
               {tipo.emoji} {tipo.label}
             </option>
           ))}
+        </select>
+        <select
+          value={filterActivo}
+          onChange={(e) => setFilterActivo(e.target.value)}
+          className="px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500"
+        >
+          <option value="todos">Todos</option>
+          <option value="activos">Solo activos</option>
+          <option value="inactivos">Solo inactivos</option>
         </select>
         <button
           onClick={loadInsights}
