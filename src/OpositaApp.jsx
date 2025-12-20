@@ -5,6 +5,8 @@ import { useAuth } from './contexts/AuthContext';
 import { useAdmin } from './contexts/AdminContext';
 import { SignUpForm, LoginForm, ForgotPasswordForm } from './components/auth';
 import { AdminLoginModal, AdminPanel, ReviewerPanel } from './components/admin';
+import { useUserInsights } from './hooks/useUserInsights';
+import FeedbackPanel from './components/FeedbackPanel';
 
 // ============ ONBOARDING COMPONENTS (estilo simple purple-50) ============
 
@@ -277,6 +279,11 @@ export default function OpositaApp() {
   const [formName, setFormName] = useState('');
   const [formEmail, setFormEmail] = useState('');
   const [showStreakBanner, setShowStreakBanner] = useState(true);
+
+  // Insights state
+  const [recentInsights, setRecentInsights] = useState([]);
+  const [lastSessionStats, setLastSessionStats] = useState(null);
+  const [showFeedbackPanel, setShowFeedbackPanel] = useState(false);
 
   const badges = [
     { id: 1, name: 'Constancia', days: 3, icon: '🔥', color: 'orange' },
@@ -648,6 +655,29 @@ export default function OpositaApp() {
       saveProgress();
     }
   }, [topicsProgress, isLoading, currentPage]);
+
+  // Load insights data when on home page
+  const { getRecentInsights, getLastSessionStats, markInsightAsSeen } = useUserInsights();
+
+  useEffect(() => {
+    if (!isLoading && currentPage === 'home' && isAuthenticated) {
+      const loadInsightsData = async () => {
+        try {
+          const [insights, stats] = await Promise.all([
+            getRecentInsights(5, true), // solo no vistos
+            getLastSessionStats()
+          ]);
+
+          setRecentInsights(insights || []);
+          setLastSessionStats(stats);
+          setShowFeedbackPanel((insights || []).length > 0);
+        } catch (error) {
+          console.error('Error loading insights:', error);
+        }
+      };
+      loadInsightsData();
+    }
+  }, [isLoading, currentPage, isAuthenticated]);
 
   // Premium Modal Component - Versión "Próximamente"
   const PremiumModal = () => (
@@ -1746,6 +1776,29 @@ export default function OpositaApp() {
             >
               Crear cuenta gratis
             </button>
+          </div>
+        )}
+
+        {/* FeedbackPanel - Insights de la última sesión */}
+        {showFeedbackPanel && lastSessionStats && (
+          <div className="mb-6">
+            <FeedbackPanel
+              insights={recentInsights}
+              sessionStats={{
+                correctas: lastSessionStats.correctas || 0,
+                incorrectas: lastSessionStats.incorrectas || 0,
+                en_blanco: lastSessionStats.en_blanco || 0,
+                porcentaje_acierto: lastSessionStats.porcentaje_acierto || 0
+              }}
+              sessionDate={lastSessionStats.created_at}
+              defaultExpanded={false}
+              onInsightAction={(insight) => {
+                // Mark insight as seen when user interacts
+                if (insight.id) {
+                  markInsightAsSeen(insight.id);
+                }
+              }}
+            />
           </div>
         )}
 
