@@ -4,7 +4,7 @@ import {
   CheckCircle, XCircle, Clock, RefreshCw, Download,
   Upload, Eye, Edit, Trash2, BarChart3, LogOut,
   ChevronRight, AlertTriangle, Search, Filter,
-  BookOpen, List, TrendingUp, Plus
+  BookOpen, List, TrendingUp, Plus, Lightbulb
 } from 'lucide-react';
 import { useAdmin } from '../../contexts/AdminContext';
 import { supabase } from '../../lib/supabase';
@@ -13,6 +13,7 @@ import QuestionExporter from './QuestionExporter';
 import QuestionTierManager from './QuestionTierManager';
 import TemasTab from './TemasTab';
 import PreguntasTab from './PreguntasTab';
+import InsightsTab from './InsightsTab';
 import { ReviewContainer } from '../review';
 
 export default function AdminPanel({ onBack }) {
@@ -114,6 +115,7 @@ export default function AdminPanel({ onBack }) {
     { id: 'review', label: 'Revisar', icon: CheckCircle },
     { id: 'questions', label: 'Preguntas', icon: List },
     { id: 'temas', label: 'Temas', icon: BookOpen },
+    { id: 'insights', label: 'Insights', icon: Lightbulb },
     { id: 'import', label: 'Importar', icon: Upload },
     { id: 'export', label: 'Exportar', icon: Download },
     { id: 'tiers', label: 'Tiers', icon: Settings },
@@ -186,6 +188,9 @@ export default function AdminPanel({ onBack }) {
         )}
         {activeTab === 'temas' && (
           <TemasTab />
+        )}
+        {activeTab === 'insights' && (
+          <InsightsTab />
         )}
         {activeTab === 'import' && (
           <QuestionImporter onImportComplete={loadStats} />
