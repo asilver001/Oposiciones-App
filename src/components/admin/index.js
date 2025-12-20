@@ -4,3 +4,4 @@ export { default as QuestionTierManager } from './QuestionTierManager';
 export { default as AdminLoginModal } from './AdminLoginModal';
 export { default as AdminPanel } from './AdminPanel';
 export { default as ReviewerPanel } from './ReviewerPanel';
+export { default as InsightsTab } from './InsightsTab';
