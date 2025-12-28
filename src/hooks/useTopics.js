@@ -12,24 +12,11 @@ export function useTopics() {
 
   useEffect(() => {
     // Wait for auth to resolve before fetching topics
-    if (authLoading) {
-      console.log('useTopics: waiting for auth to resolve...');
-      return;
-    }
+    if (authLoading) return;
 
     async function fetchTopics() {
-      console.log('fetchTopics starting... user:', user?.id);
-
-      // Debug supabase client
-      console.log('Supabase client check:', {
-        exists: !!supabase,
-        hasFrom: typeof supabase?.from === 'function'
-      });
-
       try {
-        console.log('Querying topics table...');
-
-        // Add timeout to detect hanging queries
+        // Timeout wrapper required - queries hang without it
         const timeoutPromise = new Promise((_, reject) =>
           setTimeout(() => reject(new Error('Query timeout after 10s')), 10000)
         );
@@ -47,11 +34,7 @@ export function useTopics() {
 
         const { data, error: fetchError } = await Promise.race([queryPromise, timeoutPromise]);
 
-        console.log('Topics query complete:', { dataLength: data?.length, error: fetchError });
-        if (fetchError) {
-          console.error('Topics fetch ERROR:', fetchError);
-          throw fetchError;
-        }
+        if (fetchError) throw fetchError;
 
         // Fetch question counts
         const { data: questionCounts, error: countError } = await supabase
@@ -59,9 +42,7 @@ export function useTopics() {
           .select('topic_id')
           .eq('is_active', true);
 
-        if (countError) {
-          console.warn('Warning: Could not fetch question counts:', countError);
-        }
+        if (countError) throw countError;
 
         // Count questions per topic
         const countsByTopic = {};
@@ -116,7 +97,6 @@ export function useTopics() {
   }, [authLoading]); // Re-run when auth loading completes
 
   const fetchUserProgress = useCallback(async () => {
-    console.log('fetchUserProgress called, user:', user?.id);
     if (!user?.id) {
       setUserProgress({});
       return;
@@ -133,7 +113,6 @@ export function useTopics() {
         .eq('user_id', user.id);
 
       if (error) throw error;
-      console.log('User progress data fetched:', data?.length, 'records');
 
       // Calculate progress per topic
       const progress = {};
@@ -185,7 +164,6 @@ export function useTopics() {
   }, []);
 
   const getFortalezaData = useCallback(() => {
-    console.log('getFortalezaData - topics:', topics.length, 'available:', topics.filter(t => t.is_available).length, 'withQuestions:', topics.filter(t => t.questionCount > 0).length);
     if (!topics.length) return [];
 
     return topics
