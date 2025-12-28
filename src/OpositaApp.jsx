@@ -1890,14 +1890,14 @@ export default function OpositaApp() {
     }
 
     const handleStartTopicQuiz = async (topicId) => {
-      const questions = await getQuestionsForTopic(topicId, 20);
-      if (questions.length > 0) {
-        setQuestions(questions);
-        setCurrentQuestionIndex(0);
+      const fetchedQuestions = await getQuestionsForTopic(topicId, 20);
+      if (fetchedQuestions.length > 0) {
+        setQuestions(fetchedQuestions);
+        setCurrentQuestion(0);
         setSelectedAnswer(null);
         setShowExplanation(false);
-        setIsTestCompleted(false);
-        setAnswers([]);
+        setAnswers({});
+        setTimeElapsed(0);
         setCurrentPage('test');
       }
     };
