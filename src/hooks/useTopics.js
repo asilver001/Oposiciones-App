@@ -19,9 +19,22 @@ export function useTopics() {
 
     async function fetchTopics() {
       console.log('fetchTopics starting... user:', user?.id);
+
+      // Debug supabase client
+      console.log('Supabase client check:', {
+        exists: !!supabase,
+        hasFrom: typeof supabase?.from === 'function'
+      });
+
       try {
         console.log('Querying topics table...');
-        const { data, error: fetchError } = await supabase
+
+        // Add timeout to detect hanging queries
+        const timeoutPromise = new Promise((_, reject) =>
+          setTimeout(() => reject(new Error('Query timeout after 10s')), 10000)
+        );
+
+        const queryPromise = supabase
           .from('topics')
           .select(`
             id, code, name, number, is_available,
@@ -31,6 +44,8 @@ export function useTopics() {
           `)
           .eq('is_active', true)
           .order('number');
+
+        const { data, error: fetchError } = await Promise.race([queryPromise, timeoutPromise]);
 
         console.log('Topics query complete:', { dataLength: data?.length, error: fetchError });
         if (fetchError) {
