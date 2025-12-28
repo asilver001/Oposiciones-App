@@ -12,8 +12,9 @@ export function useTopics() {
 
   useEffect(() => {
     async function fetchTopics() {
-      console.log('fetchTopics starting...');
+      console.log('fetchTopics starting... user:', user?.id);
       try {
+        console.log('Querying topics table...');
         const { data, error: fetchError } = await supabase
           .from('topics')
           .select(`
@@ -25,8 +26,11 @@ export function useTopics() {
           .eq('is_active', true)
           .order('number');
 
-        console.log('Topics fetched:', data?.length, 'error:', fetchError);
-        if (fetchError) throw fetchError;
+        console.log('Topics query complete:', { dataLength: data?.length, error: fetchError });
+        if (fetchError) {
+          console.error('Topics fetch ERROR:', fetchError);
+          throw fetchError;
+        }
 
         // Fetch question counts
         const { data: questionCounts, error: countError } = await supabase
