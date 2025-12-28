@@ -139,7 +139,67 @@ export function useTopicsSimple() {
     }
   }, [user, fetchUserProgress]);
 
-  return { topics, topicsByBlock, userProgress, loading, error };
+  const getQuestionsForTopic = useCallback(async (topicId, limit = 20) => {
+    try {
+      const { data, error } = await supabase
+        .from('questions')
+        .select('*')
+        .eq('topic_id', topicId)
+        .eq('is_active', true)
+        .limit(limit);
+
+      if (error) throw error;
+
+      // Shuffle questions
+      return (data || []).sort(() => Math.random() - 0.5);
+    } catch (err) {
+      console.error('Error fetching questions for topic:', err);
+      return [];
+    }
+  }, []);
+
+  const getFortalezaData = useCallback(() => {
+    if (!topics.length) return [];
+
+    return topics
+      .filter(t => t.is_available && t.questionCount > 0)
+      .map(topic => {
+        const progress = userProgress[topic.id] || { answered: 0, correct: 0, accuracy: 0 };
+        const completion = topic.questionCount > 0
+          ? progress.answered / topic.questionCount
+          : 0;
+
+        let estado = 'nuevo';
+        if (progress.answered > 0) {
+          if (progress.accuracy >= 80 && completion >= 0.5) estado = 'solido';
+          else if (progress.accuracy >= 60) estado = 'progresando';
+          else if (progress.accuracy >= 40) estado = 'peligro';
+          else estado = 'critico';
+        }
+
+        return {
+          id: topic.id,
+          nombre: topic.short_name || topic.name,
+          progreso: Math.min(6, Math.round(completion * 6)),
+          estado,
+          accuracy: progress.accuracy || 0,
+          answered: progress.answered,
+          total: topic.questionCount
+        };
+      });
+  }, [topics, userProgress]);
+
+  return {
+    topics,
+    topicsByBlock,
+    userProgress,
+    loading,
+    error,
+    getQuestionsForTopic,
+    getFortalezaData,
+    availableTopics: topics.filter(t => t.is_available),
+    topicsWithQuestions: topics.filter(t => t.is_available && t.questionCount > 0)
+  };
 }
 
 export default useTopicsSimple;
