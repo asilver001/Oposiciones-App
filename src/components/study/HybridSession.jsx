@@ -264,7 +264,7 @@ export default function HybridSession({ config = {}, onClose, onComplete }) {
               className="w-full py-3 bg-purple-600 text-white rounded-xl font-semibold hover:bg-purple-700 flex items-center justify-center gap-2"
             >
               <RotateCcw className="w-5 h-5" />
-              Nueva sesion
+              Nueva sesión
             </button>
             <button
               onClick={() => {

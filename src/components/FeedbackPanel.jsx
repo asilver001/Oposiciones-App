@@ -109,7 +109,7 @@ export default function FeedbackPanel({
           </span>
           <div className="text-left">
             <h3 className="font-semibold text-gray-900 text-sm sm:text-base">
-              Tu ultima sesion
+              Tu última sesión
             </h3>
             <p className="text-xs text-gray-500 flex items-center gap-2">
               {sessionDate && (
@@ -228,7 +228,7 @@ export default function FeedbackPanel({
             <div className="text-center py-4 text-gray-500">
               <span className="text-2xl mb-2 block">✨</span>
               <p className="text-sm">
-                No hay insights para esta sesion.
+                No hay insights para esta sesión.
                 {porcentaje >= 80 && ' ¡Buen trabajo!'}
               </p>
             </div>

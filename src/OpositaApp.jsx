@@ -2140,7 +2140,7 @@ export default function OpositaApp() {
             onClick={startTest}
             className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-purple-700 transition-all active:scale-[0.98]"
           >
-            Empezar sesion →
+            Empezar sesión →
           </button>
         </div>
 
@@ -2149,7 +2149,7 @@ export default function OpositaApp() {
           onClick={() => console.log('TODO: Abrir modal de opciones')}
           className="w-full text-center text-purple-600 font-medium hover:text-purple-700 mb-6"
         >
-          Ver mas opciones →
+          Ver más opciones →
         </button>
 
         {/* Reto del día (opcional, discreto) */}
@@ -2160,7 +2160,7 @@ export default function OpositaApp() {
                 <Zap className="w-4 h-4 text-amber-500" />
               </div>
               <div>
-                <p className="text-sm font-medium text-gray-900">Reto del dia</p>
+                <p className="text-sm font-medium text-gray-900">Reto del día</p>
                 <p className="text-xs text-gray-500">10 preguntas seguidas</p>
               </div>
             </div>
