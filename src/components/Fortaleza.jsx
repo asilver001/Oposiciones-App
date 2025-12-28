@@ -18,7 +18,7 @@ const estadoConfig = {
     dotColor: 'bg-purple-500'
   },
   solido: {
-    label: 'Solido',
+    label: 'Sólido',
     textColor: 'text-green-600',
     dotColor: 'bg-green-500',
     icon: '✓'
@@ -64,35 +64,26 @@ function ProgressDots({ progreso, estado, maxDots = 6 }) {
 }
 
 /**
- * Single topic row
+ * Single topic row - vertical layout for full name visibility
  */
 function TemaRow({ tema }) {
   const config = estadoConfig[tema.estado] || estadoConfig.nuevo;
 
-  // Truncate long names
-  const displayName = tema.nombre.length > 20
-    ? tema.nombre.substring(0, 18) + '...'
-    : tema.nombre;
-
   return (
-    <div className="flex items-center justify-between py-2.5 border-b border-gray-100 last:border-b-0">
-      {/* Tema name */}
-      <div className="flex-1 min-w-0 mr-3">
-        <p className="text-sm font-medium text-gray-800 truncate">
+    <div className="py-3 border-b border-gray-100 last:border-b-0">
+      {/* Top row: Topic name and status */}
+      <div className="flex items-start justify-between gap-2 mb-1.5">
+        <p className="text-sm font-medium text-gray-800 leading-tight">
           <span className="text-gray-400 mr-1">T{tema.id}</span>
-          {displayName}
+          {tema.nombre}
         </p>
+        <span className={`text-xs font-medium whitespace-nowrap ${config.textColor}`}>
+          {config.label} {config.icon || ''}
+        </span>
       </div>
 
-      {/* Progress dots */}
-      <div className="flex-shrink-0 mr-3">
-        <ProgressDots progreso={tema.progreso} estado={tema.estado} />
-      </div>
-
-      {/* Estado label */}
-      <div className={`flex-shrink-0 text-xs font-medium ${config.textColor} min-w-[70px] text-right`}>
-        {config.label} {config.icon || ''}
-      </div>
+      {/* Bottom row: Progress dots */}
+      <ProgressDots progreso={tema.progreso} estado={tema.estado} />
     </div>
   );
 }
@@ -153,7 +144,7 @@ export default function Fortaleza({
           onClick={onVerTodo}
           className="w-full px-4 py-2.5 text-sm text-gray-500 hover:text-purple-600 hover:bg-gray-50 transition-colors border-t border-gray-100"
         >
-          +{remainingCount} tema{remainingCount !== 1 ? 's' : ''} mas
+          +{remainingCount} tema{remainingCount !== 1 ? 's' : ''} más
         </button>
       )}
     </div>
