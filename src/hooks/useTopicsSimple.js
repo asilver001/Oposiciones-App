@@ -1,11 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { supabase } from '../lib/supabase';
+import { useAuth } from './useAuth';
 
 export function useTopicsSimple() {
+  const { user } = useAuth();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [topics, setTopics] = useState([]);
   const [topicsByBlock, setTopicsByBlock] = useState({});
+  const [userProgress, setUserProgress] = useState({});
 
   useEffect(() => {
     async function fetchTopics() {
@@ -87,7 +90,56 @@ export function useTopicsSimple() {
     fetchTopics();
   }, []);
 
-  return { topics, topicsByBlock, loading, error };
+  const fetchUserProgress = useCallback(async () => {
+    if (!user?.id) {
+      setUserProgress({});
+      return;
+    }
+
+    try {
+      const { data, error } = await supabase
+        .from('user_question_progress')
+        .select(`
+          question_id,
+          is_correct,
+          questions!inner (topic_id)
+        `)
+        .eq('user_id', user.id);
+
+      if (error) throw error;
+
+      // Calculate progress per topic
+      const progress = {};
+      (data || []).forEach(p => {
+        const topicId = p.questions?.topic_id;
+        if (!topicId) return;
+
+        if (!progress[topicId]) {
+          progress[topicId] = { answered: 0, correct: 0 };
+        }
+        progress[topicId].answered++;
+        if (p.is_correct) progress[topicId].correct++;
+      });
+
+      // Add accuracy
+      Object.values(progress).forEach(p => {
+        p.accuracy = p.answered > 0 ? Math.round((p.correct / p.answered) * 100) : 0;
+      });
+
+      setUserProgress(progress);
+      console.log('✅ User progress loaded for', Object.keys(progress).length, 'topics');
+    } catch (err) {
+      console.error('⚠️ Error fetching user progress:', err);
+    }
+  }, [user?.id]);
+
+  useEffect(() => {
+    if (user) {
+      fetchUserProgress();
+    }
+  }, [user, fetchUserProgress]);
+
+  return { topics, topicsByBlock, userProgress, loading, error };
 }
 
 export default useTopicsSimple;
