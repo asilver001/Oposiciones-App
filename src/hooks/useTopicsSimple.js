@@ -5,6 +5,7 @@ export function useTopicsSimple() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [topics, setTopics] = useState([]);
+  const [topicsByBlock, setTopicsByBlock] = useState({});
 
   useEffect(() => {
     async function fetchTopics() {
@@ -50,8 +51,32 @@ export function useTopicsSimple() {
         }));
 
         setTopics(enrichedTopics);
+
+        // Group topics by block
+        const grouped = {};
+        enrichedTopics.forEach(topic => {
+          const blockKey = topic.blockId || 'other';
+          if (!grouped[blockKey]) {
+            grouped[blockKey] = {
+              id: topic.blockId,
+              name: topic.blockName,
+              number: topic.blockNumber,
+              code: topic.blockCode,
+              topics: []
+            };
+          }
+          grouped[blockKey].topics.push(topic);
+        });
+
+        // Sort blocks by number
+        const sortedGrouped = Object.fromEntries(
+          Object.entries(grouped).sort(([, a], [, b]) => a.number - b.number)
+        );
+
+        setTopicsByBlock(sortedGrouped);
+
         const totalQuestions = Object.values(countsByTopic).reduce((a, b) => a + b, 0);
-        console.log('✅ useTopicsSimple loaded:', enrichedTopics?.length, 'topics,', totalQuestions, 'questions');
+        console.log('✅ useTopicsSimple loaded:', enrichedTopics?.length, 'topics,', Object.keys(sortedGrouped).length, 'blocks,', totalQuestions, 'questions');
       } catch (err) {
         console.error('❌ useTopicsSimple error:', err);
         setError(err.message);
@@ -62,7 +87,7 @@ export function useTopicsSimple() {
     fetchTopics();
   }, []);
 
-  return { topics, loading, error };
+  return { topics, topicsByBlock, loading, error };
 }
 
 export default useTopicsSimple;

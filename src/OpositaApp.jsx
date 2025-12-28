@@ -303,7 +303,7 @@ export default function OpositaApp() {
   } = useActivityData();
 
   // Test hook for topics from new database structure
-  const { topics: testTopics, loading: testLoading, error: testError } = useTopicsSimple();
+  const { topics: testTopics, topicsByBlock: testBlocks, loading: testLoading, error: testError } = useTopicsSimple();
 
   // Use real streak from Supabase when authenticated, fallback to local storage
   const displayStreak = isAuthenticated && activityTotalStats.testsCompleted > 0
