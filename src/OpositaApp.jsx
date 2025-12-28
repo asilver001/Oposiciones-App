@@ -68,7 +68,7 @@ function OnboardingOposicion({ onSelect }) {
         <button
           key={o.id}
           onClick={() => onSelect(o.id)}
-          className="w-full bg-white rounded-2xl p-4 flex items-center mb-3 border-2 border-gray-100 hover:border-purple-600 transition-all"
+          className="w-full bg-white rounded-2xl p-4 flex items-center mb-3 border-2 border-gray-100 hover:border-purple-600 focus:border-gray-100 focus:outline-none active:scale-[0.98] transition-all"
         >
           <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mr-4">
             <span className="text-2xl">{o.icon}</span>
