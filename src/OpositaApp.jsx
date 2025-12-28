@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Home, BookOpen, Trophy, Clock, TrendingUp, ArrowLeft, CheckCircle, XCircle, Target, Flame, Zap, Star, Lock, Crown, BarChart3, Calendar, History, GraduationCap, Lightbulb, Info, Settings, ChevronRight, Instagram, Mail, Bell, User, LogOut, HelpCircle, FileText, Shield, ExternalLink } from 'lucide-react';
+import { Home, BookOpen, Trophy, Clock, TrendingUp, TrendingDown, ArrowLeft, CheckCircle, XCircle, Target, Flame, Zap, Star, Lock, Crown, BarChart3, Calendar, History, GraduationCap, Lightbulb, Info, Settings, ChevronRight, Instagram, Mail, Bell, User, LogOut, HelpCircle, FileText, Shield, ExternalLink, Minus } from 'lucide-react';
 import { allQuestions, topicsList, getRandomQuestions } from './data/questions';
 import { useAuth } from './contexts/AuthContext';
 import { useAdmin } from './contexts/AdminContext';
 import { SignUpForm, LoginForm, ForgotPasswordForm } from './components/auth';
 import { AdminLoginModal, AdminPanel, ReviewerPanel } from './components/admin';
 import { useUserInsights } from './hooks/useUserInsights';
+import { useActivityData } from './hooks/useActivityData';
 import FeedbackPanel from './components/FeedbackPanel';
 import Fortaleza from './components/Fortaleza';
 
@@ -285,6 +286,19 @@ export default function OpositaApp() {
   const [recentInsights, setRecentInsights] = useState([]);
   const [lastSessionStats, setLastSessionStats] = useState(null);
   const [showFeedbackPanel, setShowFeedbackPanel] = useState(false);
+
+  // Activity data hook
+  const {
+    loading: activityLoading,
+    weeklyData: activityWeeklyData,
+    sessionHistory,
+    calendarData,
+    streak: activityStreak,
+    totalStats: activityTotalStats,
+    motivationalMessage,
+    fetchActivityData,
+    formatRelativeDate
+  } = useActivityData();
 
   const badges = [
     { id: 1, name: 'Constancia', days: 3, icon: '🔥', color: 'orange' },
@@ -679,6 +693,13 @@ export default function OpositaApp() {
       loadInsightsData();
     }
   }, [isLoading, currentPage, isAuthenticated]);
+
+  // Load activity data when on activity tab
+  useEffect(() => {
+    if (!isLoading && currentPage === 'home' && activeTab === 'actividad' && isAuthenticated) {
+      fetchActivityData();
+    }
+  }, [isLoading, currentPage, activeTab, isAuthenticated, fetchActivityData]);
 
   // Premium Modal Component - Versión "Próximamente"
   const PremiumModal = () => (
@@ -1505,78 +1526,281 @@ export default function OpositaApp() {
   const totalProgress = calculateTotalProgress();
 
   // Contenido de Actividad
-  const ActividadContent = () => (
-    <div className="space-y-6">
-      <h2 className="text-2xl font-bold text-gray-900">Tu actividad</h2>
+  const ActividadContent = () => {
+    // Use real data from Supabase if available, fallback to local totalStats
+    const hasRealData = activityTotalStats.testsCompleted > 0;
+    const displayStats = hasRealData ? activityTotalStats : totalStats;
+    const displayWeeklyData = hasRealData ? activityWeeklyData : totalStats.weeklyProgress;
+    const maxWeeklyValue = Math.max(...displayWeeklyData, 1); // Avoid division by zero
 
-      {totalStats.testsCompleted === 0 ? (
-        <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
-          <div className="text-6xl mb-4">📊</div>
-          <h3 className="text-xl font-bold text-gray-900 mb-2">Aún no hay actividad</h3>
-          <p className="text-gray-600 mb-4">Completa tu primer test para ver tu progreso aquí</p>
-          <button
-            onClick={startTest}
-            className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition"
-          >
-            Hacer mi primer test
-          </button>
+    // Generate calendar for current month
+    const generateCalendar = () => {
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = now.getMonth();
+      const firstDay = new Date(year, month, 1);
+      const lastDay = new Date(year, month + 1, 0);
+      const daysInMonth = lastDay.getDate();
+
+      // Get the day of week for the first day (0 = Sunday, adjust to Monday = 0)
+      let startDay = firstDay.getDay() - 1;
+      if (startDay === -1) startDay = 6;
+
+      const calendar = [];
+      // Add empty cells for days before the first of the month
+      for (let i = 0; i < startDay; i++) {
+        calendar.push({ day: null, practiced: false });
+      }
+      // Add days of the month
+      for (let day = 1; day <= daysInMonth; day++) {
+        calendar.push({
+          day,
+          practiced: calendarData.includes(day),
+          isToday: day === now.getDate()
+        });
+      }
+      return calendar;
+    };
+
+    const calendar = generateCalendar();
+
+    // Determine trend for session
+    const getTrend = (session, index) => {
+      if (index >= sessionHistory.length - 1) return 'neutral';
+      const prevSession = sessionHistory[index + 1];
+      if (!prevSession) return 'neutral';
+
+      const currentRate = session.porcentaje_acierto || 0;
+      const prevRate = prevSession.porcentaje_acierto || 0;
+
+      if (currentRate > prevRate + 5) return 'up';
+      if (currentRate < prevRate - 5) return 'down';
+      return 'neutral';
+    };
+
+    if (activityLoading) {
+      return (
+        <div className="space-y-6">
+          <h2 className="text-2xl font-bold text-gray-900">Tu actividad</h2>
+          <div className="flex items-center justify-center py-12">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600"></div>
+          </div>
         </div>
-      ) : (
-        <>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-white rounded-2xl p-5 shadow-lg">
-              <div className="flex items-center gap-3 mb-2">
-                <Trophy className="w-6 h-6 text-purple-600" />
-                <span className="text-gray-600 text-sm font-medium">Tests completados</span>
-              </div>
-              <div className="text-3xl font-bold text-gray-900">{totalStats.testsCompleted}</div>
-            </div>
+      );
+    }
 
-            <div className="bg-white rounded-2xl p-5 shadow-lg">
-              <div className="flex items-center gap-3 mb-2">
-                <Target className="w-6 h-6 text-green-600" />
-                <span className="text-gray-600 text-sm font-medium">Tasa de acierto</span>
-              </div>
-              <div className="text-3xl font-bold text-gray-900">{totalStats.accuracyRate}%</div>
-            </div>
+    return (
+      <div className="space-y-6">
+        <h2 className="text-2xl font-bold text-gray-900">Tu actividad</h2>
 
-            <div className="bg-white rounded-2xl p-5 shadow-lg">
-              <div className="flex items-center gap-3 mb-2">
-                <CheckCircle className="w-6 h-6 text-blue-600" />
-                <span className="text-gray-600 text-sm font-medium">Preguntas correctas</span>
-              </div>
-              <div className="text-3xl font-bold text-gray-900">{totalStats.questionsCorrect}</div>
-            </div>
-
-            <div className="bg-white rounded-2xl p-5 shadow-lg">
-              <div className="flex items-center gap-3 mb-2">
-                <Calendar className="w-6 h-6 text-orange-600" />
-                <span className="text-gray-600 text-sm font-medium">Días estudiando</span>
-              </div>
-              <div className="text-3xl font-bold text-gray-900">{totalStats.totalDaysStudied}</div>
-            </div>
+        {displayStats.testsCompleted === 0 ? (
+          <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
+            <div className="text-6xl mb-4">📊</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">Aún no hay actividad</h3>
+            <p className="text-gray-600 mb-4">Completa tu primer test para ver tu progreso aquí</p>
+            <button
+              onClick={startTest}
+              className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition"
+            >
+              Hacer mi primer test
+            </button>
           </div>
-
-          <div className="bg-white rounded-2xl p-6 shadow-lg">
-            <h3 className="font-bold text-gray-900 mb-4">Progreso semanal</h3>
-            <div className="flex items-end justify-between h-32 gap-2">
-              {['L', 'M', 'X', 'J', 'V', 'S', 'D'].map((day, i) => (
-                <div key={day} className="flex-1 flex flex-col items-center gap-2">
-                  <div className="w-full bg-gray-100 rounded-t-lg flex-1 relative">
-                    <div
-                      className="absolute bottom-0 w-full bg-gradient-to-t from-purple-500 to-purple-400 rounded-t-lg transition-all"
-                      style={{ height: `${Math.min((totalStats.weeklyProgress[i] / 20) * 100, 100)}%` }}
-                    ></div>
-                  </div>
-                  <span className="text-xs text-gray-500 font-medium">{day}</span>
+        ) : (
+          <>
+            {/* Stats Cards */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-white rounded-2xl p-5 shadow-lg">
+                <div className="flex items-center gap-3 mb-2">
+                  <Trophy className="w-6 h-6 text-purple-600" />
+                  <span className="text-gray-600 text-sm font-medium">Tests completados</span>
                 </div>
-              ))}
+                <div className="text-3xl font-bold text-gray-900">{displayStats.testsCompleted}</div>
+              </div>
+
+              <div className="bg-white rounded-2xl p-5 shadow-lg">
+                <div className="flex items-center gap-3 mb-2">
+                  <Target className="w-6 h-6 text-green-600" />
+                  <span className="text-gray-600 text-sm font-medium">Tasa de acierto</span>
+                </div>
+                <div className="text-3xl font-bold text-gray-900">{displayStats.accuracyRate}%</div>
+              </div>
+
+              <div className="bg-white rounded-2xl p-5 shadow-lg">
+                <div className="flex items-center gap-3 mb-2">
+                  <CheckCircle className="w-6 h-6 text-blue-600" />
+                  <span className="text-gray-600 text-sm font-medium">Preguntas correctas</span>
+                </div>
+                <div className="text-3xl font-bold text-gray-900">{displayStats.questionsCorrect}</div>
+              </div>
+
+              <div className="bg-white rounded-2xl p-5 shadow-lg">
+                <div className="flex items-center gap-3 mb-2">
+                  <Calendar className="w-6 h-6 text-orange-600" />
+                  <span className="text-gray-600 text-sm font-medium">Días estudiando</span>
+                </div>
+                <div className="text-3xl font-bold text-gray-900">{displayStats.daysStudied || displayStats.totalDaysStudied || 0}</div>
+              </div>
             </div>
-          </div>
-        </>
-      )}
-    </div>
-  );
+
+            {/* Weekly Progress Chart */}
+            <div className="bg-white rounded-2xl p-6 shadow-lg">
+              <h3 className="font-bold text-gray-900 mb-4">Progreso semanal</h3>
+              {displayWeeklyData.every(v => v === 0) ? (
+                <div className="text-center py-8">
+                  <div className="text-4xl mb-2">📈</div>
+                  <p className="text-gray-500 text-sm">Completa tu primer test para ver tu progreso</p>
+                </div>
+              ) : (
+                <div className="flex items-end justify-between h-32 gap-2">
+                  {['L', 'M', 'X', 'J', 'V', 'S', 'D'].map((day, i) => {
+                    const value = displayWeeklyData[i] || 0;
+                    const height = maxWeeklyValue > 0 ? (value / maxWeeklyValue) * 100 : 0;
+                    const isToday = new Date().getDay() === (i === 6 ? 0 : i + 1);
+
+                    return (
+                      <div key={day} className="flex-1 flex flex-col items-center gap-2">
+                        <div className="w-full bg-gray-100 rounded-t-lg flex-1 relative min-h-[80px]">
+                          <div
+                            className={`absolute bottom-0 w-full rounded-t-lg transition-all duration-500 ${
+                              isToday
+                                ? 'bg-gradient-to-t from-orange-500 to-orange-400'
+                                : 'bg-gradient-to-t from-purple-500 to-purple-400'
+                            }`}
+                            style={{ height: `${Math.max(height, value > 0 ? 8 : 0)}%` }}
+                          ></div>
+                          {value > 0 && (
+                            <div className="absolute -top-5 left-1/2 -translate-x-1/2 text-xs font-medium text-gray-600">
+                              {value}
+                            </div>
+                          )}
+                        </div>
+                        <span className={`text-xs font-medium ${isToday ? 'text-orange-600' : 'text-gray-500'}`}>
+                          {day}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+
+            {/* Monthly Calendar */}
+            <div className="bg-white rounded-2xl p-6 shadow-lg">
+              <h3 className="font-bold text-gray-900 mb-4">
+                {new Date().toLocaleDateString('es-ES', { month: 'long', year: 'numeric' })}
+              </h3>
+              <div className="grid grid-cols-7 gap-1">
+                {['L', 'M', 'X', 'J', 'V', 'S', 'D'].map(day => (
+                  <div key={day} className="text-center text-xs font-medium text-gray-400 py-1">
+                    {day}
+                  </div>
+                ))}
+                {calendar.map((cell, idx) => (
+                  <div
+                    key={idx}
+                    className={`aspect-square flex items-center justify-center rounded-lg text-xs relative ${
+                      cell.day === null
+                        ? ''
+                        : cell.isToday
+                        ? 'bg-purple-100 font-bold text-purple-700'
+                        : cell.practiced
+                        ? 'bg-gray-50 text-gray-700'
+                        : 'text-gray-400'
+                    }`}
+                  >
+                    {cell.day}
+                    {cell.practiced && (
+                      <div className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                    )}
+                  </div>
+                ))}
+              </div>
+              <div className="flex items-center gap-4 mt-4 pt-3 border-t text-xs text-gray-500">
+                <div className="flex items-center gap-1">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>Día practicado</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <div className="w-4 h-4 bg-purple-100 rounded"></div>
+                  <span>Hoy</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Session History */}
+            <div className="bg-white rounded-2xl p-6 shadow-lg">
+              <h3 className="font-bold text-gray-900 mb-4">Últimas sesiones</h3>
+              {sessionHistory.length === 0 ? (
+                <div className="text-center py-6">
+                  <p className="text-gray-500 text-sm">Aún no has completado ningún test</p>
+                </div>
+              ) : (
+                <div className="space-y-3">
+                  {sessionHistory.slice(0, 7).map((session, idx) => {
+                    const trend = getTrend(session, idx);
+                    const temaName = session.tema_id ? `Tema ${session.tema_id}` : 'Mixto';
+
+                    return (
+                      <div
+                        key={session.id || idx}
+                        className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl"
+                      >
+                        <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-lg">
+                          {session.tema_id ? '📚' : '🎯'}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2">
+                            <span className="font-medium text-gray-900 truncate">{temaName}</span>
+                            <span className="text-xs text-gray-400">
+                              {formatRelativeDate(session.created_at)}
+                            </span>
+                          </div>
+                          <div className="text-sm text-gray-500">
+                            {session.correctas}/{session.total_preguntas} correctas
+                            <span className="mx-1">·</span>
+                            <span className={
+                              session.porcentaje_acierto >= 70 ? 'text-green-600' :
+                              session.porcentaje_acierto >= 50 ? 'text-orange-600' : 'text-red-500'
+                            }>
+                              {session.porcentaje_acierto}%
+                            </span>
+                          </div>
+                        </div>
+                        <div className={`p-1 rounded-full ${
+                          trend === 'up' ? 'bg-green-100' :
+                          trend === 'down' ? 'bg-red-100' : 'bg-gray-100'
+                        }`}>
+                          {trend === 'up' ? (
+                            <TrendingUp className="w-4 h-4 text-green-600" />
+                          ) : trend === 'down' ? (
+                            <TrendingDown className="w-4 h-4 text-red-500" />
+                          ) : (
+                            <Minus className="w-4 h-4 text-gray-400" />
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+
+            {/* Motivational Message */}
+            {motivationalMessage && (
+              <div className={`rounded-2xl p-4 ${motivationalMessage.bg} border border-opacity-50`}>
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">{motivationalMessage.emoji}</span>
+                  <p className={`font-medium ${motivationalMessage.color}`}>
+                    {motivationalMessage.message}
+                  </p>
+                </div>
+              </div>
+            )}
+          </>
+        )}
+      </div>
+    );
+  };
 
   // Contenido de Temas
   const TemasContent = () => (
