@@ -2454,7 +2454,7 @@ export default function OpositaApp() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-indigo-50 pb-28">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-indigo-50 pb-32">
       {/* Nueva TopBar fija */}
       <TopBar />
 
@@ -2482,7 +2482,7 @@ export default function OpositaApp() {
           {activeTab === 'recursos' && <RecursosContent />}
 
           {/* Footer */}
-          <footer className="mt-10">
+          <footer className="mt-10 mb-4">
             {/* Lista de opciones - solo en inicio */}
             {activeTab === 'inicio' && (
               <div className="bg-white rounded-xl border border-gray-100 divide-y divide-gray-100 overflow-hidden mb-8">
