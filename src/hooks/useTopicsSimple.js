@@ -11,13 +11,27 @@ export function useTopicsSimple() {
       try {
         const { data, error: fetchError } = await supabase
           .from('topics')
-          .select('id, code, name, is_available')
+          .select(`
+            id, code, name, number, is_available,
+            blocks!left (
+              id, code, number, name, short_name
+            )
+          `)
           .eq('is_active', true)
           .order('number');
 
         if (fetchError) throw fetchError;
-        setTopics(data || []);
-        console.log('✅ useTopicsSimple loaded:', data?.length, 'topics');
+
+        const enrichedTopics = (data || []).map(topic => ({
+          ...topic,
+          blockId: topic.blocks?.id || null,
+          blockNumber: topic.blocks?.number || 0,
+          blockName: topic.blocks?.name || 'Sin clasificar',
+          blockCode: topic.blocks?.code || ''
+        }));
+
+        setTopics(enrichedTopics);
+        console.log('✅ useTopicsSimple loaded:', enrichedTopics?.length, 'topics with blocks');
       } catch (err) {
         console.error('❌ useTopicsSimple error:', err);
         setError(err.message);
