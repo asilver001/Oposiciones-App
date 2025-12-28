@@ -396,6 +396,7 @@ export default function OpositaApp() {
 
   const handleAnswerSelect = (answerId) => {
     if (!answers[currentQuestion]) {
+      console.log('Answer selected:', { questionIndex: currentQuestion, answerId, questionId: questions[currentQuestion]?.id });
       setSelectedAnswer(answerId);
       setAnswers({ ...answers, [currentQuestion]: answerId });
       // Don't show explanation during practice - save feedback for results
@@ -421,9 +422,20 @@ export default function OpositaApp() {
   };
 
   const handleFinishTest = async () => {
-    const correctAnswers = Object.entries(answers).filter(
-      ([idx, answer]) => answer === questions[idx].correct
-    );
+    console.log('handleFinishTest called');
+    console.log('answers state:', answers);
+    console.log('questions:', questions.map(q => ({ id: q.id, correct: q.correct, correct_answer: q.correct_answer })));
+
+    const correctAnswers = Object.entries(answers).filter(([idx, answer]) => {
+      const question = questions[parseInt(idx)];
+      // Support both 'correct' and 'correct_answer' fields from database
+      const correctAnswer = question.correct || question.correct_answer;
+      const isCorrect = answer === correctAnswer;
+      console.log(`Q${idx}: answered=${answer}, correct=${correctAnswer}, isCorrect=${isCorrect}`);
+      return isCorrect;
+    });
+
+    console.log('Correct answers count:', correctAnswers.length);
 
     const results = {
       total: questions.length,
@@ -433,6 +445,8 @@ export default function OpositaApp() {
       percentage: Math.round((correctAnswers.length / questions.length) * 100),
       time: timeElapsed
     };
+
+    console.log('Results:', results);
 
     const today = new Date().toDateString();
     let newStreak = streakData.current;
@@ -514,6 +528,7 @@ export default function OpositaApp() {
           const question = questions[parseInt(idx)];
           // Determine correct answer - support both 'correct' and 'correct_answer' fields
           const correctAnswer = question.correct || question.correct_answer;
+          console.log(`DB save Q${idx}: selected=${selectedAnswer}, correct=${correctAnswer}, is_correct=${selectedAnswer === correctAnswer}`);
           return {
             user_id: user.id,
             question_id: question.id,
@@ -522,6 +537,8 @@ export default function OpositaApp() {
             answered_at: new Date().toISOString()
           };
         });
+
+        console.log('Progress records to save:', progressRecords);
 
         if (progressRecords.length > 0) {
           const { error: saveError } = await supabase
