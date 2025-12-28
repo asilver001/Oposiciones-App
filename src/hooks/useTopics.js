@@ -194,6 +194,7 @@ export function useTopics() {
     error,
     getQuestionsForTopic,
     getFortalezaData,
+    refreshUserProgress: fetchUserProgress,
     availableTopics: topics.filter(t => t.is_available),
     topicsWithQuestions: topics.filter(t => t.is_available && t.questionCount > 0)
   };

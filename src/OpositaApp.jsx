@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Home, BookOpen, Trophy, Clock, TrendingUp, TrendingDown, ArrowLeft, CheckCircle, XCircle, Target, Flame, Zap, Star, Lock, Crown, BarChart3, Calendar, History, GraduationCap, Lightbulb, Info, Settings, ChevronRight, Instagram, Mail, Bell, User, LogOut, HelpCircle, FileText, Shield, ExternalLink, Minus } from 'lucide-react';
 import { allQuestions, topicsList, getRandomQuestions } from './data/questions';
+import { supabase } from './lib/supabase';
 import { useAuth } from './contexts/AuthContext';
 import { useAdmin } from './contexts/AdminContext';
 import { SignUpForm, LoginForm, ForgotPasswordForm } from './components/auth';
@@ -311,6 +312,7 @@ export default function OpositaApp() {
     error: topicsError,
     getQuestionsForTopic,
     getFortalezaData,
+    refreshUserProgress,
     topicsWithQuestions
   } = useTopics();
 
@@ -504,6 +506,43 @@ export default function OpositaApp() {
     }
 
     setTestResults(results);
+
+    // Save quiz progress to database for authenticated users
+    if (user?.id) {
+      try {
+        const progressRecords = Object.entries(answers).map(([idx, selectedAnswer]) => {
+          const question = questions[parseInt(idx)];
+          // Determine correct answer - support both 'correct' and 'correct_answer' fields
+          const correctAnswer = question.correct || question.correct_answer;
+          return {
+            user_id: user.id,
+            question_id: question.id,
+            is_correct: selectedAnswer === correctAnswer,
+            selected_answer: selectedAnswer,
+            answered_at: new Date().toISOString()
+          };
+        });
+
+        if (progressRecords.length > 0) {
+          const { error: saveError } = await supabase
+            .from('user_question_progress')
+            .upsert(progressRecords, {
+              onConflict: 'user_id,question_id',
+              ignoreDuplicates: false
+            });
+
+          if (saveError) {
+            console.error('Error saving quiz progress:', saveError);
+          } else {
+            console.log('Quiz progress saved:', progressRecords.length, 'answers');
+            // Refresh user progress to update Fortaleza
+            refreshUserProgress();
+          }
+        }
+      } catch (error) {
+        console.error('Error saving quiz progress:', error);
+      }
+    }
 
     if (shouldCelebrate && newBadge) {
       setEarnedBadge(newBadge);
@@ -1949,22 +1988,32 @@ export default function OpositaApp() {
                       {isAvailable ? (
                         <>
                           <p className="text-sm text-gray-600 mb-2">
-                            {progress.answered} de {topic.questionCount} preguntas respondidas
-                            {progress.answered > 0 && (
-                              <span className={`ml-2 ${progress.accuracy >= 70 ? 'text-green-600' : progress.accuracy >= 50 ? 'text-yellow-600' : 'text-red-600'}`}>
-                                ({progress.accuracy}% acierto)
-                              </span>
+                            {progress.answered > 0 ? (
+                              <>
+                                {progress.correct} de {progress.answered} correctas
+                                <span className={`ml-2 ${progress.accuracy >= 70 ? 'text-green-600' : progress.accuracy >= 50 ? 'text-yellow-600' : 'text-red-600'}`}>
+                                  ({progress.accuracy}% acierto)
+                                </span>
+                              </>
+                            ) : (
+                              <>{topic.questionCount} preguntas disponibles</>
                             )}
                           </p>
-                          <div className="flex items-center gap-3">
-                            <div className="flex-1 bg-gray-200 rounded-full h-2">
-                              <div
-                                className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-full h-2 transition-all duration-500"
-                                style={{ width: `${percentage}%` }}
-                              ></div>
+                          {progress.answered > 0 && (
+                            <div className="flex items-center gap-3">
+                              <div className="flex-1 bg-gray-200 rounded-full h-2">
+                                <div
+                                  className={`rounded-full h-2 transition-all duration-500 ${
+                                    progress.accuracy >= 70 ? 'bg-gradient-to-r from-green-400 to-green-500' :
+                                    progress.accuracy >= 50 ? 'bg-gradient-to-r from-yellow-400 to-yellow-500' :
+                                    'bg-gradient-to-r from-red-400 to-red-500'
+                                  }`}
+                                  style={{ width: `${progress.accuracy}%` }}
+                                ></div>
+                              </div>
+                              <span className="text-sm font-bold text-gray-700">{progress.accuracy}%</span>
                             </div>
-                            <span className="text-sm font-bold text-gray-700">{percentage}%</span>
-                          </div>
+                          )}
                           <button
                             onClick={(e) => {
                               e.stopPropagation();
