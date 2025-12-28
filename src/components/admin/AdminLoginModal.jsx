@@ -55,7 +55,7 @@ export default function AdminLoginModal({ isOpen, onClose, onSuccess }) {
             </div>
             <div>
               <h2 className="text-white font-semibold">Acceso Admin</h2>
-              <p className="text-purple-200 text-xs">Panel de administracion</p>
+              <p className="text-purple-200 text-xs">Panel de administración</p>
             </div>
           </div>
           <button
