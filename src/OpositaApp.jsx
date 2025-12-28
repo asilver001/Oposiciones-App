@@ -2163,9 +2163,9 @@ export default function OpositaApp() {
     const streakMessage = getStreakMessage();
     const daysToNext = getDaysToNextBadge();
 
-    // Get real topic progress data from database
-    const fortalezaTemas = getFortalezaData();
-    console.log('InicioContent - fortalezaTemas:', fortalezaTemas.length, 'topicsLoading:', topicsLoading);
+    // Get real topic progress data from database - only after topics loaded
+    const fortalezaTemas = !topicsLoading && dbTopics.length > 0 ? getFortalezaData() : [];
+    console.log('InicioContent - fortalezaTemas:', fortalezaTemas.length, 'topicsLoading:', topicsLoading, 'dbTopics:', dbTopics.length);
 
     return (
       <>
