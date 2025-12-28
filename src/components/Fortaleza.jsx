@@ -77,11 +77,11 @@ function TemaRow({ tema }) {
 
   return (
     <div className="flex items-center justify-between py-2.5 border-b border-gray-100 last:border-b-0">
-      {/* Tema name with tooltip for truncated names */}
+      {/* Tema name with tooltip for full name on hover */}
       <div className="flex-1 min-w-0 mr-3">
         <p
           className="text-sm font-medium text-gray-800 truncate"
-          title={isTruncated ? tema.nombre : undefined}
+          title={tema.nombre}
         >
           <span className="text-gray-400 mr-1">T{tema.id}</span>
           {displayName}
