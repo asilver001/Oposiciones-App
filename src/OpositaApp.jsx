@@ -1866,94 +1866,127 @@ export default function OpositaApp() {
   };
 
   // Contenido de Temas
-  const TemasContent = () => (
-    <div className="space-y-6">
-      <h2 className="text-2xl font-bold text-gray-900">Tus temas</h2>
+  const TemasContent = () => {
+    if (topicsLoading) {
+      return (
+        <div className="space-y-6">
+          <h2 className="text-2xl font-bold text-gray-900">Tus temas</h2>
+          <div className="flex justify-center py-12">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600"></div>
+          </div>
+        </div>
+      );
+    }
 
-      <div className="space-y-4">
-        {topicsList.map((topic) => {
-          const progress = topicsProgress[topic.id];
-          const percentage = Math.round((progress.completed / progress.total) * 100);
-          const isLocked = progress.locked;
+    if (topicsError) {
+      return (
+        <div className="space-y-6">
+          <h2 className="text-2xl font-bold text-gray-900">Tus temas</h2>
+          <div className="bg-red-50 text-red-600 p-4 rounded-xl">
+            Error al cargar los temas. Por favor, recarga la página.
+          </div>
+        </div>
+      );
+    }
 
-          return (
-            <div
-              key={topic.id}
-              className={`rounded-xl p-4 transition-all ${
-                isLocked
-                  ? 'bg-gray-50 border-2 border-gray-200'
-                  : 'bg-gradient-to-r from-purple-50 to-white border-2 border-purple-200 hover:border-purple-400 cursor-pointer'
-              }`}
-            >
-              <div className="flex items-start gap-4">
-                <div className="text-4xl">{topic.icon}</div>
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-1">
-                    <h4 className="font-bold text-gray-900">{topic.title}</h4>
-                    {isLocked && <Lock className="w-4 h-4 text-gray-400" />}
-                    {progress.streak > 0 && !isLocked && (
-                      <div className="flex items-center gap-1 bg-orange-100 px-2 py-1 rounded-full">
-                        <Flame className="w-3 h-3 text-orange-600" />
-                        <span className="text-xs font-bold text-orange-600">{progress.streak} días</span>
+    const handleStartTopicQuiz = async (topicId) => {
+      const questions = await getQuestionsForTopic(topicId, 20);
+      if (questions.length > 0) {
+        setQuestions(questions);
+        setCurrentQuestionIndex(0);
+        setSelectedAnswer(null);
+        setShowExplanation(false);
+        setIsTestCompleted(false);
+        setAnswers([]);
+        setCurrentPage('test');
+      }
+    };
+
+    return (
+      <div className="space-y-6">
+        <h2 className="text-2xl font-bold text-gray-900">Tus temas</h2>
+
+        {Object.values(topicsByBlock).map(block => (
+          <div key={block.id || 'other'} className="space-y-3">
+            <h3 className="text-lg font-semibold text-gray-700 flex items-center gap-2">
+              <span className="bg-purple-100 text-purple-700 px-2 py-1 rounded-lg text-sm">
+                Bloque {block.number}
+              </span>
+              {block.name}
+            </h3>
+
+            {block.topics.map(topic => {
+              const progress = topicUserProgress[topic.id] || { answered: 0, correct: 0, accuracy: 0 };
+              const percentage = topic.questionCount > 0
+                ? Math.round((progress.answered / topic.questionCount) * 100)
+                : 0;
+              const hasQuestions = topic.questionCount > 0;
+              const isAvailable = topic.is_available && hasQuestions;
+
+              return (
+                <div
+                  key={topic.id}
+                  onClick={() => isAvailable && handleStartTopicQuiz(topic.id)}
+                  className={`rounded-xl p-4 transition-all ${
+                    isAvailable
+                      ? 'bg-gradient-to-r from-purple-50 to-white border-2 border-purple-200 hover:border-purple-400 cursor-pointer'
+                      : 'bg-gray-50 border-2 border-gray-200'
+                  }`}
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className="text-sm text-purple-600 font-medium">{topic.code}</span>
+                        <h4 className="font-bold text-gray-900">{topic.name}</h4>
+                        {!isAvailable && <Lock className="w-4 h-4 text-gray-400" />}
                       </div>
-                    )}
-                  </div>
 
-                  {isLocked ? (
-                    <div>
-                      <p className="text-sm text-gray-500 mb-1">
-                        {progress.total} preguntas · Simulacros incluidos
-                      </p>
-                      <p className="text-xs text-purple-600 font-medium mb-2">Solo disponible en Premium</p>
-                      <button
-                        onClick={() => {
-                          setPremiumModalTrigger('locked-topic');
-                          setShowPremiumModal(true);
-                        }}
-                        className="flex items-center gap-2 bg-purple-100 text-purple-700 font-semibold text-sm px-3 py-1.5 rounded-lg hover:bg-purple-200 transition"
-                      >
-                        <Lock className="w-3 h-3" />
-                        Desbloquear con Premium
-                      </button>
+                      {isAvailable ? (
+                        <>
+                          <p className="text-sm text-gray-600 mb-2">
+                            {progress.answered} de {topic.questionCount} preguntas respondidas
+                            {progress.answered > 0 && (
+                              <span className={`ml-2 ${progress.accuracy >= 70 ? 'text-green-600' : progress.accuracy >= 50 ? 'text-yellow-600' : 'text-red-600'}`}>
+                                ({progress.accuracy}% acierto)
+                              </span>
+                            )}
+                          </p>
+                          <div className="flex items-center gap-3">
+                            <div className="flex-1 bg-gray-200 rounded-full h-2">
+                              <div
+                                className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-full h-2 transition-all duration-500"
+                                style={{ width: `${percentage}%` }}
+                              ></div>
+                            </div>
+                            <span className="text-sm font-bold text-gray-700">{percentage}%</span>
+                          </div>
+                          <button
+                            className="mt-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg text-sm transition-all"
+                          >
+                            {progress.answered > 0 ? 'Continuar' : 'Empezar'}
+                          </button>
+                        </>
+                      ) : (
+                        <p className="text-sm text-gray-500">
+                          {hasQuestions ? 'Próximamente disponible' : 'Sin preguntas disponibles'}
+                        </p>
+                      )}
                     </div>
-                  ) : (
-                    <>
-                      <p className="text-sm text-gray-600 mb-2">
-                        {progress.completed} de {progress.total} preguntas completadas
-                      </p>
-                      <div className="flex items-center gap-3">
-                        <div className="flex-1 bg-gray-200 rounded-full h-2">
-                          <div
-                            className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-full h-2 transition-all duration-500"
-                            style={{ width: `${percentage}%` }}
-                          ></div>
-                        </div>
-                        <span className="text-sm font-bold text-gray-700">{percentage}%</span>
-                      </div>
-                      {topic.id === 1 && (
-                        <button
-                          onClick={startTest}
-                          className="mt-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg text-sm transition-all"
-                        >
-                          Continuar
-                        </button>
-                      )}
-                      {topic.id === 2 && progress.completed === 0 && (
-                        <button className="mt-3 bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded-lg text-sm transition-all flex items-center gap-2">
-                          <Star className="w-4 h-4" />
-                          Empezar tema
-                        </button>
-                      )}
-                    </>
-                  )}
+                  </div>
                 </div>
-              </div>
-            </div>
-          );
-        })}
+              );
+            })}
+          </div>
+        ))}
+
+        {Object.keys(topicsByBlock).length === 0 && (
+          <div className="text-center py-12 text-gray-500">
+            No hay temas disponibles todavía.
+          </div>
+        )}
       </div>
-    </div>
-  );
+    );
+  };
 
   // Contenido de Recursos
   const RecursosContent = () => (
