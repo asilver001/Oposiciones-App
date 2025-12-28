@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { supabase } from '../lib/supabase';
 import { useAuth } from './useAuth';
 
-export function useTopicsSimple() {
+export function useTopics() {
   const { user } = useAuth();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -78,10 +78,8 @@ export function useTopicsSimple() {
 
         setTopicsByBlock(sortedGrouped);
 
-        const totalQuestions = Object.values(countsByTopic).reduce((a, b) => a + b, 0);
-        console.log('✅ useTopicsSimple loaded:', enrichedTopics?.length, 'topics,', Object.keys(sortedGrouped).length, 'blocks,', totalQuestions, 'questions');
       } catch (err) {
-        console.error('❌ useTopicsSimple error:', err);
+        console.error('useTopics error:', err);
         setError(err.message);
       } finally {
         setLoading(false);
@@ -127,9 +125,8 @@ export function useTopicsSimple() {
       });
 
       setUserProgress(progress);
-      console.log('✅ User progress loaded for', Object.keys(progress).length, 'topics');
     } catch (err) {
-      console.error('⚠️ Error fetching user progress:', err);
+      console.error('Error fetching user progress:', err);
     }
   }, [user?.id]);
 
@@ -202,4 +199,4 @@ export function useTopicsSimple() {
   };
 }
 
-export default useTopicsSimple;
+export default useTopics;
