@@ -2165,6 +2165,7 @@ export default function OpositaApp() {
 
     // Get real topic progress data from database
     const fortalezaTemas = getFortalezaData();
+    console.log('InicioContent - fortalezaTemas:', fortalezaTemas.length, 'topicsLoading:', topicsLoading);
 
     return (
       <>
@@ -2216,13 +2217,23 @@ export default function OpositaApp() {
         )}
 
         {/* Fortaleza - Progreso por tema */}
-        {fortalezaTemas.length > 0 && (
+        {topicsLoading ? (
+          <div className="mb-6 bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
+            <p className="text-gray-500 text-center">Cargando temas...</p>
+          </div>
+        ) : fortalezaTemas.length > 0 ? (
           <div className="mb-6">
             <Fortaleza
               temas={fortalezaTemas}
               onVerTodo={() => setActiveTab('temas')}
               maxVisible={3}
             />
+          </div>
+        ) : (
+          <div className="mb-6 bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
+            <p className="text-gray-500 text-center text-sm">
+              No hay temas disponibles con preguntas. Revisa la consola para más detalles.
+            </p>
           </div>
         )}
 

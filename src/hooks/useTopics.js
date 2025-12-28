@@ -12,6 +12,7 @@ export function useTopics() {
 
   useEffect(() => {
     async function fetchTopics() {
+      console.log('fetchTopics starting...');
       try {
         const { data, error: fetchError } = await supabase
           .from('topics')
@@ -24,6 +25,7 @@ export function useTopics() {
           .eq('is_active', true)
           .order('number');
 
+        console.log('Topics fetched:', data?.length, 'error:', fetchError);
         if (fetchError) throw fetchError;
 
         // Fetch question counts
@@ -158,6 +160,7 @@ export function useTopics() {
   }, []);
 
   const getFortalezaData = useCallback(() => {
+    console.log('getFortalezaData - topics:', topics.length, 'available:', topics.filter(t => t.is_available).length, 'withQuestions:', topics.filter(t => t.questionCount > 0).length);
     if (!topics.length) return [];
 
     return topics
