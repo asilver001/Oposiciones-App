@@ -261,6 +261,7 @@ export default function OpositaApp() {
   const [showExplanation, setShowExplanation] = useState(false);
   const [timeElapsed, setTimeElapsed] = useState(0);
   const [testResults, setTestResults] = useState(null);
+  const [showExitConfirm, setShowExitConfirm] = useState(false);
   const [showPremiumModal, setShowPremiumModal] = useState(false);
   const [showSettingsModal, setShowSettingsModal] = useState(false);
   const [showProgressModal, setShowProgressModal] = useState(false);
@@ -300,6 +301,11 @@ export default function OpositaApp() {
     formatRelativeDate
   } = useActivityData();
 
+  // Use real streak from Supabase when authenticated, fallback to local storage
+  const displayStreak = isAuthenticated && activityTotalStats.testsCompleted > 0
+    ? activityStreak
+    : streakData.current;
+
   const badges = [
     { id: 1, name: 'Constancia', days: 3, icon: '🔥', color: 'orange' },
     { id: 2, name: 'Compromiso', days: 7, icon: '💪', color: 'red' },
@@ -315,7 +321,8 @@ export default function OpositaApp() {
     currentStreak: 0,
     totalDaysStudied: 0,
     accuracyRate: 0,
-    weeklyProgress: [0, 0, 0, 0, 0, 0, 0] // Real data comes from useActivityData hook
+    weeklyProgress: [0, 0, 0, 0, 0, 0, 0], // Real data comes from useActivityData hook
+    lastStatsDate: new Date().toDateString() // Track last update date for daily reset
   });
 
   const [topicsProgress, setTopicsProgress] = useState({
@@ -531,7 +538,7 @@ export default function OpositaApp() {
 
   // Mensaje empático según racha (tono sobrio)
   const getStreakMessage = () => {
-    const days = streakData.current;
+    const days = displayStreak;
     if (days === 0) return { main: "Hoy es un buen día para empezar", sub: null };
     if (days === 1) return { main: "Llevas 1 día", sub: "Un paso cada vez" };
     if (days <= 3) return { main: `Llevas ${days} días seguidos`, sub: "Vas por buen camino" };
@@ -542,8 +549,8 @@ export default function OpositaApp() {
 
   // Días para próximo logro
   const getDaysToNextBadge = () => {
-    const nextBadge = badges.find(b => b.days > streakData.current);
-    return nextBadge ? nextBadge.days - streakData.current : null;
+    const nextBadge = badges.find(b => b.days > displayStreak);
+    return nextBadge ? nextBadge.days - displayStreak : null;
   };
 
   const startTest = () => {
@@ -576,7 +583,16 @@ export default function OpositaApp() {
       try {
         const statsResult = await window.storage.get('oposita-stats-v2');
         if (statsResult && statsResult.value) {
-          setTotalStats(JSON.parse(statsResult.value));
+          const savedStats = JSON.parse(statsResult.value);
+          const today = new Date().toDateString();
+          const lastDate = savedStats.lastStatsDate;
+
+          // Reset todayQuestions if it's a new day
+          if (lastDate !== today) {
+            savedStats.todayQuestions = 0;
+            savedStats.lastStatsDate = today;
+          }
+          setTotalStats(savedStats);
         }
 
         const progressResult = await window.storage.get('oposita-progress-v2');
@@ -919,10 +935,37 @@ export default function OpositaApp() {
 
     return (
       <div className="min-h-screen bg-gradient-to-br from-purple-500 to-purple-700 p-4">
+        {/* Exit Confirmation Modal */}
+        {showExitConfirm && (
+          <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+            <div className="bg-white rounded-2xl max-w-sm w-full p-6 shadow-xl">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">¿Salir del test?</h3>
+              <p className="text-gray-600 mb-6">Perderás el progreso de este test</p>
+              <div className="flex gap-3">
+                <button
+                  onClick={() => setShowExitConfirm(false)}
+                  className="flex-1 px-4 py-3 bg-gray-100 text-gray-700 font-semibold rounded-xl hover:bg-gray-200 transition"
+                >
+                  Cancelar
+                </button>
+                <button
+                  onClick={() => {
+                    setShowExitConfirm(false);
+                    setCurrentPage('home');
+                  }}
+                  className="flex-1 px-4 py-3 bg-red-500 text-white font-semibold rounded-xl hover:bg-red-600 transition"
+                >
+                  Salir
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center justify-between mb-6 pt-4">
             <button
-              onClick={() => setCurrentPage('home')}
+              onClick={() => setShowExitConfirm(true)}
               className="flex items-center gap-2 text-white hover:text-purple-200 transition"
             >
               <ArrowLeft className="w-6 h-6" />
@@ -1024,23 +1067,30 @@ export default function OpositaApp() {
             </div>
           </div>
 
-          <div className="flex gap-3">
-            {currentQuestion < questions.length - 1 ? (
-              <button
-                onClick={handleNextQuestion}
-                disabled={!selectedAnswer}
-                className="flex-1 bg-white hover:bg-gray-100 disabled:bg-white/50 disabled:cursor-not-allowed text-purple-600 font-bold py-4 px-6 rounded-2xl transition shadow-lg"
-              >
-                Siguiente →
-              </button>
-            ) : (
-              <button
-                onClick={handleFinishTest}
-                disabled={!selectedAnswer}
-                className="flex-1 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 disabled:from-gray-400 disabled:to-gray-500 disabled:cursor-not-allowed text-white font-bold py-4 px-6 rounded-2xl transition shadow-lg"
-              >
-                Finalizar Test ✓
-              </button>
+          <div className="flex flex-col gap-2">
+            <div className="flex gap-3">
+              {currentQuestion < questions.length - 1 ? (
+                <button
+                  onClick={handleNextQuestion}
+                  disabled={!selectedAnswer}
+                  className="flex-1 bg-white hover:bg-gray-100 disabled:bg-white/50 disabled:cursor-not-allowed text-purple-600 font-bold py-4 px-6 rounded-2xl transition shadow-lg"
+                >
+                  Siguiente →
+                </button>
+              ) : (
+                <button
+                  onClick={handleFinishTest}
+                  disabled={!selectedAnswer}
+                  className="flex-1 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 disabled:from-gray-400 disabled:to-gray-500 disabled:cursor-not-allowed text-white font-bold py-4 px-6 rounded-2xl transition shadow-lg"
+                >
+                  Finalizar Test ✓
+                </button>
+              )}
+            </div>
+            {!selectedAnswer && (
+              <p className="text-center text-white/70 text-sm">
+                Selecciona una respuesta para continuar
+              </p>
             )}
           </div>
         </div>
@@ -1944,17 +1994,19 @@ export default function OpositaApp() {
             href="https://www.boe.es/buscar/boe.php"
             target="_blank"
             rel="noopener noreferrer"
-            className="block text-purple-600 hover:text-purple-700 font-medium"
+            className="flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium"
           >
             📄 BOE - Convocatorias oficiales
+            <ExternalLink className="w-3.5 h-3.5 opacity-60" />
           </a>
           <a
             href="https://www.hacienda.gob.es/es-ES/Areas%20Tematicas/Funcion%20Publica/Paginas/Cuerpos%20y%20Escalas.aspx"
             target="_blank"
             rel="noopener noreferrer"
-            className="block text-purple-600 hover:text-purple-700 font-medium"
+            className="flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium"
           >
             📚 Información oficial de oposiciones
+            <ExternalLink className="w-3.5 h-3.5 opacity-60" />
           </a>
           <button
             onClick={() => setCurrentPage('faq')}
@@ -1980,22 +2032,22 @@ export default function OpositaApp() {
 
     // Mock data for Fortaleza - TODO: Replace with real data from topicsProgress
     const fortalezaTemas = [
-      { id: 1, nombre: 'Constitucion Espanola', progreso: 4, estado: 'progresando' },
-      { id: 2, nombre: 'Organizacion del Estado', progreso: 2, estado: 'nuevo' },
+      { id: 1, nombre: 'Constitución Española', progreso: 4, estado: 'progresando' },
+      { id: 2, nombre: 'Organización del Estado', progreso: 2, estado: 'nuevo' },
       { id: 3, nombre: 'Derecho Administrativo', progreso: 6, estado: 'solido' },
-      { id: 4, nombre: 'Administracion Publica', progreso: 1, estado: 'peligro' },
+      { id: 4, nombre: 'Administración Pública', progreso: 1, estado: 'peligro' },
     ];
 
     return (
       <>
         {/* Banner protege tu racha */}
-        {streakData.current >= 3 && !userData.accountCreated && showStreakBanner && (
+        {displayStreak >= 3 && !userData.accountCreated && showStreakBanner && (
           <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-4 mb-6 shadow-lg">
             <div className="flex items-start justify-between">
               <div className="flex items-start gap-3">
                 <Flame className="w-6 h-6 text-yellow-300 flex-shrink-0" />
                 <div>
-                  <p className="text-white font-bold">Protege tu racha de {streakData.current} días</p>
+                  <p className="text-white font-bold">Protege tu racha de {displayStreak} días</p>
                   <p className="text-white/80 text-sm">Crea tu cuenta para no perder tu progreso.</p>
                 </div>
               </div>
@@ -2051,7 +2103,7 @@ export default function OpositaApp() {
           {/* Header */}
           <div className="flex justify-between items-center mb-4">
             <span className="font-semibold text-gray-800 flex items-center gap-2">
-              🎯 Tu Sesion de Hoy
+              🎯 Tu Sesión de Hoy
             </span>
             <span className="text-xs bg-purple-100 text-purple-600 px-2 py-1 rounded-full font-medium">
               ~20 min
@@ -2485,7 +2537,7 @@ export default function OpositaApp() {
         onGoToOnboarding={() => setCurrentPage('welcome')}
         onShowPremium={() => setShowPremiumModal(true)}
         onShowAdminLogin={() => setShowAdminLoginModal(true)}
-        streakCount={streakData.current}
+        streakCount={displayStreak}
         testsCount={totalStats.testsCompleted}
       />
 

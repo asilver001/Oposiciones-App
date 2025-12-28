@@ -49,6 +49,7 @@ export default function HybridSession({ config = {}, onClose, onComplete }) {
 
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [showResult, setShowResult] = useState(false);
+  const [showExitConfirm, setShowExitConfirm] = useState(false);
 
   // Track individual answers for insights detection
   const answersHistoryRef = useRef([]);
@@ -300,11 +301,38 @@ export default function HybridSession({ config = {}, onClose, onComplete }) {
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
+      {/* Exit Confirmation Modal */}
+      {showExitConfirm && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl max-w-sm w-full p-6 shadow-xl">
+            <h3 className="text-xl font-bold text-gray-900 mb-2">¿Salir del test?</h3>
+            <p className="text-gray-600 mb-6">Perderás el progreso de este test</p>
+            <div className="flex gap-3">
+              <button
+                onClick={() => setShowExitConfirm(false)}
+                className="flex-1 px-4 py-3 bg-gray-100 text-gray-700 font-semibold rounded-xl hover:bg-gray-200 transition"
+              >
+                Cancelar
+              </button>
+              <button
+                onClick={() => {
+                  setShowExitConfirm(false);
+                  onClose?.();
+                }}
+                className="flex-1 px-4 py-3 bg-red-500 text-white font-semibold rounded-xl hover:bg-red-600 transition"
+              >
+                Salir
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Header */}
       <div className="bg-white border-b px-4 py-3 sticky top-0 z-10">
         <div className="flex items-center justify-between">
           <button
-            onClick={onClose}
+            onClick={() => setShowExitConfirm(true)}
             className="p-2 -ml-2 hover:bg-gray-100 rounded-lg"
           >
             <ChevronLeft className="w-6 h-6 text-gray-600" />

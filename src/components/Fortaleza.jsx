@@ -18,7 +18,7 @@ const estadoConfig = {
     dotColor: 'bg-purple-500'
   },
   solido: {
-    label: 'Solido',
+    label: 'Sólido',
     textColor: 'text-green-600',
     dotColor: 'bg-green-500',
     icon: '✓'
@@ -70,15 +70,19 @@ function TemaRow({ tema }) {
   const config = estadoConfig[tema.estado] || estadoConfig.nuevo;
 
   // Truncate long names
-  const displayName = tema.nombre.length > 20
+  const isTruncated = tema.nombre.length > 20;
+  const displayName = isTruncated
     ? tema.nombre.substring(0, 18) + '...'
     : tema.nombre;
 
   return (
     <div className="flex items-center justify-between py-2.5 border-b border-gray-100 last:border-b-0">
-      {/* Tema name */}
+      {/* Tema name with tooltip for truncated names */}
       <div className="flex-1 min-w-0 mr-3">
-        <p className="text-sm font-medium text-gray-800 truncate">
+        <p
+          className="text-sm font-medium text-gray-800 truncate"
+          title={isTruncated ? tema.nombre : undefined}
+        >
           <span className="text-gray-400 mr-1">T{tema.id}</span>
           {displayName}
         </p>
@@ -153,7 +157,7 @@ export default function Fortaleza({
           onClick={onVerTodo}
           className="w-full px-4 py-2.5 text-sm text-gray-500 hover:text-purple-600 hover:bg-gray-50 transition-colors border-t border-gray-100"
         >
-          +{remainingCount} tema{remainingCount !== 1 ? 's' : ''} mas
+          +{remainingCount} tema{remainingCount !== 1 ? 's' : ''} más
         </button>
       )}
     </div>
