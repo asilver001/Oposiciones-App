@@ -3,7 +3,7 @@ import { supabase } from '../lib/supabase';
 import { useAuth } from './useAuth';
 
 export function useTopics() {
-  const { user } = useAuth();
+  const { user, loading: authLoading } = useAuth();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [topics, setTopics] = useState([]);
@@ -11,6 +11,12 @@ export function useTopics() {
   const [userProgress, setUserProgress] = useState({});
 
   useEffect(() => {
+    // Wait for auth to resolve before fetching topics
+    if (authLoading) {
+      console.log('useTopics: waiting for auth to resolve...');
+      return;
+    }
+
     async function fetchTopics() {
       console.log('fetchTopics starting... user:', user?.id);
       try {
@@ -92,7 +98,7 @@ export function useTopics() {
       }
     }
     fetchTopics();
-  }, []);
+  }, [authLoading]); // Re-run when auth loading completes
 
   const fetchUserProgress = useCallback(async () => {
     console.log('fetchUserProgress called, user:', user?.id);
