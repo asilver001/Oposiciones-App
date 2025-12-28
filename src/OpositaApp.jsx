@@ -562,7 +562,9 @@ export default function OpositaApp() {
           } else {
             console.log('Quiz progress saved:', progressRecords.length, 'answers');
             // Refresh user progress to update Fortaleza
-            refreshUserProgress();
+            console.log('Refreshing user progress after quiz...');
+            await refreshUserProgress();
+            console.log('User progress refreshed successfully');
           }
         }
       } catch (error) {

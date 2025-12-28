@@ -89,6 +89,7 @@ export function useTopics() {
   }, []);
 
   const fetchUserProgress = useCallback(async () => {
+    console.log('fetchUserProgress called, user:', user?.id);
     if (!user?.id) {
       setUserProgress({});
       return;
@@ -105,6 +106,7 @@ export function useTopics() {
         .eq('user_id', user.id);
 
       if (error) throw error;
+      console.log('User progress data fetched:', data?.length, 'records');
 
       // Calculate progress per topic
       const progress = {};
@@ -176,7 +178,7 @@ export function useTopics() {
 
         return {
           id: topic.id,
-          nombre: topic.short_name || topic.name,
+          nombre: topic.code || topic.name,  // Use official code (e.g., "I.2")
           progreso: Math.min(6, Math.round(completion * 6)),
           estado,
           accuracy: progress.accuracy || 0,
