@@ -1,6 +1,7 @@
 /**
  * Activity Data Hook
  * Fetches and processes activity data for the Activity tab
+ * Uses quiz_sessions table from Supabase
  */
 
 import { useState, useCallback, useMemo } from 'react';
@@ -38,7 +39,7 @@ export function useActivityData() {
     const now = new Date();
     const day = now.getDay();
     const diff = now.getDate() - day + (day === 0 ? -6 : 1); // Adjust when Sunday
-    const monday = new Date(now.setDate(diff));
+    const monday = new Date(now.getFullYear(), now.getMonth(), diff);
     monday.setHours(0, 0, 0, 0);
     return monday;
   };
@@ -52,7 +53,7 @@ export function useActivityData() {
   };
 
   /**
-   * Fetch all activity data
+   * Fetch all activity data from quiz_sessions table
    */
   const fetchActivityData = useCallback(async () => {
     if (!user?.id) {
@@ -65,17 +66,17 @@ export function useActivityData() {
     try {
       const weekStart = getWeekStart();
       const monthStart = getMonthStart();
-      const now = new Date();
 
-      // Fetch all sessions for this user
+      // Fetch all sessions for this user from quiz_sessions table
+      // Columns: id, user_id, tema_id, correct_count, total_questions, created_at, duration_seconds
       const { data: sessions, error: sessionsError } = await supabase
-        .from('session_stats')
-        .select('*')
+        .from('quiz_sessions')
+        .select('id, user_id, tema_id, correct_count, total_questions, created_at, duration_seconds')
         .eq('user_id', user.id)
         .order('created_at', { ascending: false });
 
       if (sessionsError) {
-        console.error('Error fetching sessions:', sessionsError);
+        console.error('Error fetching quiz_sessions:', sessionsError);
         setError(sessionsError.message);
         setLoading(false);
         return;
@@ -94,13 +95,22 @@ export function useActivityData() {
         const sessionDate = new Date(session.created_at);
         let dayIndex = sessionDate.getDay() - 1; // Monday = 0
         if (dayIndex === -1) dayIndex = 6; // Sunday = 6
-        weeklyCorrect[dayIndex] += session.correctas || 0;
+        weeklyCorrect[dayIndex] += session.correct_count || 0;
       });
 
       setWeeklyData(weeklyCorrect);
 
-      // Session history (last 10)
-      setSessionHistory(allSessions.slice(0, 10));
+      // Session history (last 10) - normalize column names for component compatibility
+      const normalizedSessions = allSessions.slice(0, 10).map(s => ({
+        ...s,
+        // Add normalized names for backward compatibility with ActividadContent
+        correctas: s.correct_count,
+        total_preguntas: s.total_questions,
+        porcentaje_acierto: s.total_questions > 0
+          ? Math.round((s.correct_count / s.total_questions) * 100)
+          : 0
+      }));
+      setSessionHistory(normalizedSessions);
 
       // Calendar data (days practiced this month)
       const monthDays = new Set();
@@ -114,8 +124,8 @@ export function useActivityData() {
 
       // Calculate total stats
       const totalTests = allSessions.length;
-      const totalCorrect = allSessions.reduce((sum, s) => sum + (s.correctas || 0), 0);
-      const totalQuestions = allSessions.reduce((sum, s) => sum + (s.total_preguntas || 0), 0);
+      const totalCorrect = allSessions.reduce((sum, s) => sum + (s.correct_count || 0), 0);
+      const totalQuestions = allSessions.reduce((sum, s) => sum + (s.total_questions || 0), 0);
       const avgAccuracy = totalQuestions > 0
         ? Math.round((totalCorrect / totalQuestions) * 100)
         : 0;
@@ -183,13 +193,15 @@ export function useActivityData() {
         return d >= lastWeekStart && d < weekStart;
       });
 
-      const thisWeekAvg = thisWeekSessions.length > 0
-        ? thisWeekSessions.reduce((sum, s) => sum + (s.porcentaje_acierto || 0), 0) / thisWeekSessions.length
-        : 0;
+      // Calculate accuracy for this week
+      const thisWeekCorrect = thisWeekSessions.reduce((sum, s) => sum + (s.correct_count || 0), 0);
+      const thisWeekTotal = thisWeekSessions.reduce((sum, s) => sum + (s.total_questions || 0), 0);
+      const thisWeekAvg = thisWeekTotal > 0 ? (thisWeekCorrect / thisWeekTotal) * 100 : 0;
 
-      const lastWeekAvg = lastWeekSessions.length > 0
-        ? lastWeekSessions.reduce((sum, s) => sum + (s.porcentaje_acierto || 0), 0) / lastWeekSessions.length
-        : 0;
+      // Calculate accuracy for last week
+      const lastWeekCorrect = lastWeekSessions.reduce((sum, s) => sum + (s.correct_count || 0), 0);
+      const lastWeekTotal = lastWeekSessions.reduce((sum, s) => sum + (s.total_questions || 0), 0);
+      const lastWeekAvg = lastWeekTotal > 0 ? (lastWeekCorrect / lastWeekTotal) * 100 : 0;
 
       const improvement = lastWeekAvg > 0
         ? Math.round(thisWeekAvg - lastWeekAvg)

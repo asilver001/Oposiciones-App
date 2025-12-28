@@ -315,7 +315,7 @@ export default function OpositaApp() {
     currentStreak: 0,
     totalDaysStudied: 0,
     accuracyRate: 0,
-    weeklyProgress: [12, 15, 10, 15, 20, 8, 0]
+    weeklyProgress: [0, 0, 0, 0, 0, 0, 0] // Real data comes from useActivityData hook
   });
 
   const [topicsProgress, setTopicsProgress] = useState({
