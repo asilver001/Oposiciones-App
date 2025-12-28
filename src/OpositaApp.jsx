@@ -424,12 +424,21 @@ export default function OpositaApp() {
   const handleFinishTest = async () => {
     console.log('handleFinishTest called');
     console.log('answers state:', answers);
-    console.log('questions:', questions.map(q => ({ id: q.id, correct: q.correct, correct_answer: q.correct_answer })));
+
+    // Helper to find correct answer from question
+    const getCorrectAnswer = (question) => {
+      // First check if options array has is_correct flag
+      if (question.options) {
+        const correctOption = question.options.find(opt => opt.is_correct === true);
+        if (correctOption) return correctOption.id;
+      }
+      // Fallback to direct correct/correct_answer field
+      return question.correct || question.correct_answer;
+    };
 
     const correctAnswers = Object.entries(answers).filter(([idx, answer]) => {
       const question = questions[parseInt(idx)];
-      // Support both 'correct' and 'correct_answer' fields from database
-      const correctAnswer = question.correct || question.correct_answer;
+      const correctAnswer = getCorrectAnswer(question);
       const isCorrect = answer === correctAnswer;
       console.log(`Q${idx}: answered=${answer}, correct=${correctAnswer}, isCorrect=${isCorrect}`);
       return isCorrect;
@@ -526,13 +535,13 @@ export default function OpositaApp() {
       try {
         const progressRecords = Object.entries(answers).map(([idx, selectedAnswer]) => {
           const question = questions[parseInt(idx)];
-          // Determine correct answer - support both 'correct' and 'correct_answer' fields
-          const correctAnswer = question.correct || question.correct_answer;
-          console.log(`DB save Q${idx}: selected=${selectedAnswer}, correct=${correctAnswer}, is_correct=${selectedAnswer === correctAnswer}`);
+          const correctAnswer = getCorrectAnswer(question);
+          const isCorrect = selectedAnswer === correctAnswer;
+          console.log(`DB save Q${idx}: selected=${selectedAnswer}, correct=${correctAnswer}, is_correct=${isCorrect}`);
           return {
             user_id: user.id,
             question_id: question.id,
-            is_correct: selectedAnswer === correctAnswer,
+            is_correct: isCorrect,
             selected_answer: selectedAnswer,
             answered_at: new Date().toISOString()
           };
