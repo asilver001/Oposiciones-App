@@ -2043,13 +2043,8 @@ export default function OpositaApp() {
     const streakMessage = getStreakMessage();
     const daysToNext = getDaysToNextBadge();
 
-    // Mock data for Fortaleza - TODO: Replace with real data from topicsProgress
-    const fortalezaTemas = [
-      { id: 1, nombre: 'Constitución Española', progreso: 4, estado: 'progresando' },
-      { id: 2, nombre: 'Organización del Estado', progreso: 2, estado: 'nuevo' },
-      { id: 3, nombre: 'Derecho Administrativo', progreso: 6, estado: 'solido' },
-      { id: 4, nombre: 'Administración Pública', progreso: 1, estado: 'peligro' },
-    ];
+    // Get real topic progress data from database
+    const fortalezaTemas = getFortalezaData();
 
     return (
       <>
