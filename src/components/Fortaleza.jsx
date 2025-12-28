@@ -64,39 +64,26 @@ function ProgressDots({ progreso, estado, maxDots = 6 }) {
 }
 
 /**
- * Single topic row
+ * Single topic row - vertical layout for full name visibility
  */
 function TemaRow({ tema }) {
   const config = estadoConfig[tema.estado] || estadoConfig.nuevo;
 
-  // Truncate long names
-  const isTruncated = tema.nombre.length > 20;
-  const displayName = isTruncated
-    ? tema.nombre.substring(0, 18) + '...'
-    : tema.nombre;
-
   return (
-    <div className="flex items-center justify-between py-2.5 border-b border-gray-100 last:border-b-0">
-      {/* Tema name with tooltip for full name on hover */}
-      <div className="flex-1 min-w-0 mr-3">
-        <p
-          className="text-sm font-medium text-gray-800 truncate"
-          title={tema.nombre}
-        >
+    <div className="py-3 border-b border-gray-100 last:border-b-0">
+      {/* Top row: Topic name and status */}
+      <div className="flex items-start justify-between gap-2 mb-1.5">
+        <p className="text-sm font-medium text-gray-800 leading-tight">
           <span className="text-gray-400 mr-1">T{tema.id}</span>
-          {displayName}
+          {tema.nombre}
         </p>
+        <span className={`text-xs font-medium whitespace-nowrap ${config.textColor}`}>
+          {config.label} {config.icon || ''}
+        </span>
       </div>
 
-      {/* Progress dots */}
-      <div className="flex-shrink-0 mr-3">
-        <ProgressDots progreso={tema.progreso} estado={tema.estado} />
-      </div>
-
-      {/* Estado label */}
-      <div className={`flex-shrink-0 text-xs font-medium ${config.textColor} min-w-[70px] text-right`}>
-        {config.label} {config.icon || ''}
-      </div>
+      {/* Bottom row: Progress dots */}
+      <ProgressDots progreso={tema.progreso} estado={tema.estado} />
     </div>
   );
 }
