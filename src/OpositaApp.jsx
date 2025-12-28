@@ -1900,8 +1900,8 @@ export default function OpositaApp() {
         setShowExplanation(false);
         setAnswers({});
         setTimeElapsed(0);
-        setCurrentPage('test');
-        console.log('Quiz started, navigating to test page');
+        setCurrentPage('first-test');
+        console.log('Quiz started, navigating to first-test page');
       } else {
         console.warn('No questions found for topic:', topicId);
       }
