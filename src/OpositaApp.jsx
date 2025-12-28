@@ -7,6 +7,7 @@ import { SignUpForm, LoginForm, ForgotPasswordForm } from './components/auth';
 import { AdminLoginModal, AdminPanel, ReviewerPanel } from './components/admin';
 import { useUserInsights } from './hooks/useUserInsights';
 import { useActivityData } from './hooks/useActivityData';
+import { useTopicsSimple } from './hooks/useTopicsSimple';
 import FeedbackPanel from './components/FeedbackPanel';
 import Fortaleza from './components/Fortaleza';
 
@@ -300,6 +301,9 @@ export default function OpositaApp() {
     fetchActivityData,
     formatRelativeDate
   } = useActivityData();
+
+  // Test hook for topics from new database structure
+  const { topics: testTopics, loading: testLoading, error: testError } = useTopicsSimple();
 
   // Use real streak from Supabase when authenticated, fallback to local storage
   const displayStreak = isAuthenticated && activityTotalStats.testsCompleted > 0
