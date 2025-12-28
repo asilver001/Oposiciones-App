@@ -1890,7 +1890,9 @@ export default function OpositaApp() {
     }
 
     const handleStartTopicQuiz = async (topicId) => {
+      console.log('handleStartTopicQuiz called with topicId:', topicId);
       const fetchedQuestions = await getQuestionsForTopic(topicId, 20);
+      console.log('Fetched questions:', fetchedQuestions.length, fetchedQuestions);
       if (fetchedQuestions.length > 0) {
         setQuestions(fetchedQuestions);
         setCurrentQuestion(0);
@@ -1899,6 +1901,9 @@ export default function OpositaApp() {
         setAnswers({});
         setTimeElapsed(0);
         setCurrentPage('test');
+        console.log('Quiz started, navigating to test page');
+      } else {
+        console.warn('No questions found for topic:', topicId);
       }
     };
 
@@ -1961,6 +1966,11 @@ export default function OpositaApp() {
                             <span className="text-sm font-bold text-gray-700">{percentage}%</span>
                           </div>
                           <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              console.log('Starting quiz for topic:', topic.id, topic.name);
+                              handleStartTopicQuiz(topic.id);
+                            }}
                             className="mt-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg text-sm transition-all"
                           >
                             {progress.answered > 0 ? 'Continuar' : 'Empezar'}
