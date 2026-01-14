@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Home, BookOpen, Trophy, Clock, TrendingUp, TrendingDown, ArrowLeft, CheckCircle, XCircle, Target, Flame, Zap, Star, Lock, Crown, BarChart3, Calendar, History, GraduationCap, Lightbulb, Info, Settings, ChevronRight, Instagram, Mail, Bell, User, LogOut, HelpCircle, FileText, Shield, ExternalLink, Minus } from 'lucide-react';
 import { allQuestions, topicsList, getRandomQuestions } from './data/questions';
+import { supabase } from './lib/supabase';
 import { useAuth } from './contexts/AuthContext';
 import { useAdmin } from './contexts/AdminContext';
 import { SignUpForm, LoginForm, ForgotPasswordForm } from './components/auth';
 import { AdminLoginModal, AdminPanel, ReviewerPanel } from './components/admin';
 import { useUserInsights } from './hooks/useUserInsights';
 import { useActivityData } from './hooks/useActivityData';
+import { useTopics } from './hooks/useTopics';
 import FeedbackPanel from './components/FeedbackPanel';
 import Fortaleza from './components/Fortaleza';
 
@@ -301,6 +303,19 @@ export default function OpositaApp() {
     formatRelativeDate
   } = useActivityData();
 
+  // Topics from database
+  const {
+    topics: dbTopics,
+    topicsByBlock,
+    userProgress: topicUserProgress,
+    loading: topicsLoading,
+    error: topicsError,
+    getQuestionsForTopic,
+    getFortalezaData,
+    refreshUserProgress,
+    topicsWithQuestions
+  } = useTopics();
+
   // Use real streak from Supabase when authenticated, fallback to local storage
   const displayStreak = isAuthenticated && activityTotalStats.testsCompleted > 0
     ? activityStreak
@@ -381,9 +396,20 @@ export default function OpositaApp() {
 
   const handleAnswerSelect = (answerId) => {
     if (!answers[currentQuestion]) {
+      console.log('Answer selected:', { questionIndex: currentQuestion, answerId, questionId: questions[currentQuestion]?.id });
       setSelectedAnswer(answerId);
       setAnswers({ ...answers, [currentQuestion]: answerId });
-      setShowExplanation(true);
+      // Don't show explanation during practice - save feedback for results
+      // Auto-advance to next question after brief delay
+      setTimeout(() => {
+        if (currentQuestion < questions.length - 1) {
+          setCurrentQuestion(prev => prev + 1);
+          setSelectedAnswer(null);
+        } else {
+          // Last question - trigger finish
+          handleFinishTest();
+        }
+      }, 300);
     }
   };
 
@@ -396,9 +422,29 @@ export default function OpositaApp() {
   };
 
   const handleFinishTest = async () => {
-    const correctAnswers = Object.entries(answers).filter(
-      ([idx, answer]) => answer === questions[idx].correct
-    );
+    console.log('handleFinishTest called');
+    console.log('answers state:', answers);
+
+    // Helper to find correct answer from question
+    const getCorrectAnswer = (question) => {
+      // First check if options array has is_correct flag
+      if (question.options) {
+        const correctOption = question.options.find(opt => opt.is_correct === true);
+        if (correctOption) return correctOption.id;
+      }
+      // Fallback to direct correct/correct_answer field
+      return question.correct || question.correct_answer;
+    };
+
+    const correctAnswers = Object.entries(answers).filter(([idx, answer]) => {
+      const question = questions[parseInt(idx)];
+      const correctAnswer = getCorrectAnswer(question);
+      const isCorrect = answer === correctAnswer;
+      console.log(`Q${idx}: answered=${answer}, correct=${correctAnswer}, isCorrect=${isCorrect}`);
+      return isCorrect;
+    });
+
+    console.log('Correct answers count:', correctAnswers.length);
 
     const results = {
       total: questions.length,
@@ -408,6 +454,8 @@ export default function OpositaApp() {
       percentage: Math.round((correctAnswers.length / questions.length) * 100),
       time: timeElapsed
     };
+
+    console.log('Results:', results);
 
     const today = new Date().toDateString();
     let newStreak = streakData.current;
@@ -481,6 +529,48 @@ export default function OpositaApp() {
     }
 
     setTestResults(results);
+
+    // Save quiz progress to database for authenticated users
+    if (user?.id) {
+      try {
+        const progressRecords = Object.entries(answers).map(([idx, selectedAnswer]) => {
+          const question = questions[parseInt(idx)];
+          const correctAnswer = getCorrectAnswer(question);
+          const isCorrect = selectedAnswer === correctAnswer;
+          console.log(`DB save Q${idx}: selected=${selectedAnswer}, correct=${correctAnswer}, is_correct=${isCorrect}`);
+          return {
+            user_id: user.id,
+            question_id: question.id,
+            is_correct: isCorrect,
+            selected_answer: selectedAnswer,
+            answered_at: new Date().toISOString()
+          };
+        });
+
+        console.log('Progress records to save:', progressRecords);
+
+        if (progressRecords.length > 0) {
+          const { error: saveError } = await supabase
+            .from('user_question_progress')
+            .upsert(progressRecords, {
+              onConflict: 'user_id,question_id',
+              ignoreDuplicates: false
+            });
+
+          if (saveError) {
+            console.error('Error saving quiz progress:', saveError);
+          } else {
+            console.log('Quiz progress saved:', progressRecords.length, 'answers');
+            // Refresh user progress to update Fortaleza
+            console.log('Refreshing user progress after quiz...');
+            await refreshUserProgress();
+            console.log('User progress refreshed successfully');
+          }
+        }
+      } catch (error) {
+        console.error('Error saving quiz progress:', error);
+      }
+    }
 
     if (shouldCelebrate && newBadge) {
       setEarnedBadge(newBadge);
@@ -998,27 +1088,24 @@ export default function OpositaApp() {
                   {currentQuestion + 1}
                 </div>
                 <h2 className="text-xl font-bold text-gray-900 leading-relaxed">
-                  {question.question}
+                  {question.question_text || question.question || 'Pregunta no disponible'}
                 </h2>
               </div>
 
               <div className="space-y-3">
-                {question.options.map((option) => {
+                {/* Support both old format (options array) and new format (option_a, option_b, etc.) */}
+                {(question.options || [
+                  { id: 'a', text: question.option_a },
+                  { id: 'b', text: question.option_b },
+                  { id: 'c', text: question.option_c },
+                  { id: 'd', text: question.option_d }
+                ].filter(o => o.text)).map((option) => {
                   const isSelected = selectedAnswer === option.id;
-                  const isCorrect = option.id === question.correct;
-                  const showResult = showExplanation;
+                  const isAnswered = answers[currentQuestion] !== undefined;
 
                   let buttonClass = "w-full text-left p-4 rounded-xl border-2 transition-all ";
 
-                  if (showResult) {
-                    if (isCorrect) {
-                      buttonClass += "border-green-500 bg-green-50 ";
-                    } else if (isSelected && !isCorrect) {
-                      buttonClass += "border-red-500 bg-red-50 ";
-                    } else {
-                      buttonClass += "border-gray-200 bg-gray-50 ";
-                    }
-                  } else if (isSelected) {
+                  if (isSelected) {
                     buttonClass += "border-purple-500 bg-purple-50 ";
                   } else {
                     buttonClass += "border-gray-200 hover:border-purple-300 hover:bg-purple-50 ";
@@ -1028,28 +1115,25 @@ export default function OpositaApp() {
                     <button
                       key={option.id}
                       onClick={() => handleAnswerSelect(option.id)}
-                      disabled={showExplanation}
+                      disabled={isAnswered}
                       className={buttonClass}
                     >
                       <div className="flex items-center gap-3">
                         <div className={`w-10 h-10 rounded-full border-2 flex items-center justify-center font-bold ${
-                          showResult && isCorrect ? 'border-green-500 bg-green-500 text-white' :
-                          showResult && isSelected && !isCorrect ? 'border-red-500 bg-red-500 text-white' :
                           isSelected ? 'border-purple-500 bg-purple-500 text-white' :
                           'border-gray-300 text-gray-600'
                         }`}>
                           {option.id.toUpperCase()}
                         </div>
                         <span className="font-medium text-gray-900 flex-1">{option.text}</span>
-                        {showResult && isCorrect && <CheckCircle className="w-6 h-6 text-green-600" />}
-                        {showResult && isSelected && !isCorrect && <XCircle className="w-6 h-6 text-red-600" />}
                       </div>
                     </button>
                   );
                 })}
               </div>
 
-              {showExplanation && (
+              {/* Explanation hidden during practice - shown in results */}
+              {false && showExplanation && (
                 <div className={`mt-6 p-4 rounded-xl ${
                   selectedAnswer === question.correct ? 'bg-green-50 border-2 border-green-200' : 'bg-blue-50 border-2 border-blue-200'
                 }`}>
@@ -1072,26 +1156,22 @@ export default function OpositaApp() {
               {currentQuestion < questions.length - 1 ? (
                 <button
                   onClick={handleNextQuestion}
-                  disabled={!selectedAnswer}
-                  className="flex-1 bg-white hover:bg-gray-100 disabled:bg-white/50 disabled:cursor-not-allowed text-purple-600 font-bold py-4 px-6 rounded-2xl transition shadow-lg"
+                  className="flex-1 bg-white/90 hover:bg-white text-purple-600 font-bold py-4 px-6 rounded-2xl transition shadow-lg"
                 >
-                  Siguiente →
+                  {selectedAnswer ? 'Siguiente →' : 'Saltar →'}
                 </button>
               ) : (
                 <button
                   onClick={handleFinishTest}
-                  disabled={!selectedAnswer}
-                  className="flex-1 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 disabled:from-gray-400 disabled:to-gray-500 disabled:cursor-not-allowed text-white font-bold py-4 px-6 rounded-2xl transition shadow-lg"
+                  className="flex-1 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-4 px-6 rounded-2xl transition shadow-lg"
                 >
                   Finalizar Test ✓
                 </button>
               )}
             </div>
-            {!selectedAnswer && (
-              <p className="text-center text-white/70 text-sm">
-                Selecciona una respuesta para continuar
-              </p>
-            )}
+            <p className="text-center text-white/70 text-sm">
+              {selectedAnswer ? 'Auto-avance en 0.3s...' : 'Selecciona o salta la pregunta'}
+            </p>
           </div>
         </div>
       </div>
