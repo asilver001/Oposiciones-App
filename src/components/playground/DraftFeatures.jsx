@@ -1492,155 +1492,125 @@ function FocusModeSwipeable({
             </motion.div>
           </motion.div>
 
-          {/* Page 2: Fortaleza - Compact version matching Focus card height */}
+          {/* Page 2: Fortaleza - Compact version using same design as Interactivo */}
           <motion.div
             className="w-full flex-shrink-0 px-1"
             style={{ minWidth: '100%' }}
           >
             <motion.div
-              className="bg-gradient-to-br from-slate-700 via-slate-800 to-slate-900 rounded-3xl p-6 text-white relative overflow-hidden"
-              style={{ minHeight: '320px' }}
+              className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={spring.gentle}
             >
-              {/* Background decoration */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
-
-              <div className="relative">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2">
-                    <span className="text-2xl">🏰</span>
-                    <h2 className="text-xl font-bold">Tu Fortaleza</h2>
-                  </div>
-                  <motion.button
-                    onClick={onVerTodos}
-                    className="text-sm text-slate-300 hover:text-white flex items-center gap-1"
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    Ver todos <ChevronRight className="w-4 h-4" />
-                  </motion.button>
+              {/* Header */}
+              <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100">
+                <div className="flex items-center gap-2">
+                  <span className="text-xl">🏰</span>
+                  <h3 className="font-semibold text-gray-900">Tu Fortaleza</h3>
                 </div>
-
-                {/* Compact tema rows */}
-                <div className="space-y-2">
-                  {temas.slice(0, 4).map((tema, i) => {
-                    const temaConfig = estadoConfig[tema.estado] || estadoConfig.nuevo;
-                    const TemaIcon = temaConfig.icon;
-                    return (
-                      <motion.button
-                        key={tema.id}
-                        onClick={() => onTemaAction?.(tema)}
-                        className="w-full flex items-center gap-3 p-2.5 bg-white/10 hover:bg-white/15 rounded-xl transition-colors text-left"
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: i * 0.05 }}
-                        whileTap={{ scale: 0.98 }}
-                      >
-                        <div className={`w-8 h-8 rounded-lg ${temaConfig.bg} flex items-center justify-center flex-shrink-0`}>
-                          <TemaIcon className={`w-4 h-4 ${temaConfig.text}`} />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <p className="text-sm font-medium text-white truncate">
-                            T{tema.id} {tema.nombre}
-                          </p>
-                          <div className="flex items-center gap-2 mt-0.5">
-                            <div className="flex-1 h-1 bg-white/20 rounded-full overflow-hidden">
-                              <motion.div
-                                className={`h-full bg-gradient-to-r ${temaConfig.gradient}`}
-                                initial={{ width: 0 }}
-                                animate={{ width: `${tema.progreso}%` }}
-                                transition={spring.smooth}
-                              />
-                            </div>
-                            <span className="text-xs text-slate-300">{tema.progreso}%</span>
-                          </div>
-                        </div>
-                        <ChevronRight className="w-4 h-4 text-slate-400" />
-                      </motion.button>
-                    );
-                  })}
-                </div>
-
-                {/* Swipe hint */}
-                <motion.div
-                  className="absolute bottom-0 left-4 text-slate-400/50 text-xs flex items-center gap-1"
-                  animate={{ x: [0, -5, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                >
-                  <ChevronLeft className="w-3 h-3" />
-                  <span>Desliza</span>
-                </motion.div>
               </div>
+
+              {/* Tema rows - only 2 visible */}
+              <div className="p-3 space-y-2">
+                {temas.slice(0, 2).map((tema, i) => {
+                  const temaConfig = estadoConfig[tema.estado] || estadoConfig.nuevo;
+                  const TemaIcon = temaConfig.icon;
+                  return (
+                    <motion.button
+                      key={tema.id}
+                      onClick={() => onTemaAction?.(tema)}
+                      className="w-full bg-white border border-gray-100 rounded-xl p-3 flex items-center gap-3 text-left"
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: i * 0.05 }}
+                      whileHover={{ x: 4 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <motion.div
+                        className={`w-10 h-10 rounded-xl ${temaConfig.bg} flex items-center justify-center flex-shrink-0`}
+                        animate={temaConfig.pulse ? { scale: [1, 1.05, 1] } : {}}
+                        transition={{ duration: 2, repeat: Infinity }}
+                      >
+                        <TemaIcon className={`w-5 h-5 ${temaConfig.text}`} />
+                      </motion.div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-medium text-gray-800 truncate">
+                          <span className="text-gray-400">T{tema.id}</span> {tema.nombre}
+                        </p>
+                        <div className="flex items-center gap-2 mt-1">
+                          <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                            <motion.div
+                              className={`h-full bg-gradient-to-r ${temaConfig.gradient}`}
+                              initial={{ width: 0 }}
+                              animate={{ width: `${tema.progreso}%` }}
+                              transition={spring.smooth}
+                            />
+                          </div>
+                          <span className={`text-xs font-medium ${temaConfig.text}`}>{tema.progreso}%</span>
+                        </div>
+                      </div>
+                      <ChevronRight className="w-4 h-4 text-gray-300" />
+                    </motion.button>
+                  );
+                })}
+              </div>
+
+              {/* Ver todos */}
+              <motion.button
+                onClick={onVerTodos}
+                className="w-full px-4 py-3 text-sm text-purple-600 font-medium hover:bg-purple-50/50 transition-colors border-t border-gray-100 flex items-center justify-center gap-1"
+                whileTap={{ scale: 0.98 }}
+              >
+                Ver todos los temas <ChevronRight className="w-4 h-4" />
+              </motion.button>
             </motion.div>
           </motion.div>
         </motion.div>
       </div>
 
-      {/* Interactive Stats - Always visible */}
+      {/* Interactive Stats - Clean design like original */}
       <div className="grid grid-cols-3 gap-3">
         <motion.button
           onClick={onRachaClick}
-          className="bg-white rounded-2xl p-4 text-center border border-gray-100 relative overflow-hidden"
+          className="bg-white rounded-2xl p-4 text-center border border-gray-100"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          whileHover={{ y: -4, scale: 1.02 }}
+          whileHover={{ y: -2, scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >
-          <motion.div
-            className="absolute top-1 right-1 w-2 h-2 bg-amber-400 rounded-full"
-            animate={{ scale: [1, 1.3, 1] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          />
           <Flame className="w-6 h-6 text-amber-500 mx-auto mb-2" />
           <p className="text-xl font-bold text-gray-900">7</p>
           <p className="text-xs text-gray-500">Racha</p>
-          <p className="text-[10px] text-amber-500 mt-1">Toca para ver</p>
         </motion.button>
 
         <motion.button
           onClick={onPrecisionClick}
-          className="bg-white rounded-2xl p-4 text-center border border-gray-100 relative overflow-hidden"
+          className="bg-white rounded-2xl p-4 text-center border border-gray-100"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15 }}
-          whileHover={{ y: -4, scale: 1.02 }}
+          whileHover={{ y: -2, scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >
-          <motion.div
-            className="absolute top-1 right-1 px-1.5 py-0.5 bg-emerald-100 text-emerald-600 text-[9px] font-medium rounded-full"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.3 }}
-          >
-            +5%
-          </motion.div>
           <Target className="w-6 h-6 text-purple-500 mx-auto mb-2" />
           <p className="text-xl font-bold text-gray-900">87%</p>
           <p className="text-xs text-gray-500">Precisión</p>
-          <p className="text-[10px] text-purple-500 mt-1">Ver análisis</p>
         </motion.button>
 
         <motion.button
           onClick={onLevelClick}
-          className="bg-white rounded-2xl p-4 text-center border border-gray-100 relative overflow-hidden"
+          className="bg-white rounded-2xl p-4 text-center border border-gray-100"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          whileHover={{ y: -4, scale: 1.02 }}
+          whileHover={{ y: -2, scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >
-          <motion.div
-            className="absolute top-1 right-1 px-1.5 py-0.5 bg-pink-100 text-pink-600 text-[9px] font-medium rounded-full"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.35 }}
-          >
-            Top 15%
-          </motion.div>
           <Trophy className="w-6 h-6 text-pink-500 mx-auto mb-2" />
           <p className="text-xl font-bold text-gray-900">12</p>
           <p className="text-xs text-gray-500">Nivel</p>
-          <p className="text-[10px] text-pink-500 mt-1">Comparar</p>
         </motion.button>
       </div>
 
