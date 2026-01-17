@@ -2035,15 +2035,12 @@ function TemaOptionsModal({ isOpen, onClose, tema }) {
 
               {/* Options */}
               <div className="p-5 space-y-3">
-                {options.map((option, i) => {
+                {options.map((option) => {
                   const OptIcon = option.icon;
                   return (
                     <motion.button
                       key={option.id}
                       className="w-full p-4 bg-gray-50 hover:bg-purple-50 rounded-xl flex items-center gap-4 text-left transition-all"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.1 + i * 0.05 }}
                       whileTap={{ scale: 0.98 }}
                       onClick={() => {
                         console.log(`Selected: ${option.id} for tema ${tema.id}`);
@@ -2726,62 +2723,65 @@ function HomeMomentumFortaleza({
 
   return (
     <motion.div
-      className="space-y-3"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
-      {/* TopBar - like webapp */}
-      <div className="flex items-center justify-between h-12">
-        {/* Left - Progress circle button */}
-        <motion.button
-          onClick={onShowProgress}
-          className="relative w-10 h-10 flex items-center justify-center"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <svg className="w-9 h-9 transform -rotate-90">
-            <circle
-              cx="18" cy="18" r="14"
-              fill="none"
-              stroke="#F3E8FF"
-              strokeWidth="3"
-            />
-            <motion.circle
-              cx="18" cy="18" r="14"
-              fill="none"
-              stroke="#8B5CF6"
-              strokeWidth="3"
-              strokeLinecap="round"
-              initial={{ strokeDasharray: "0 88" }}
-              animate={{ strokeDasharray: `${(dailyProgressPercent / 100) * 88} 88` }}
-              transition={spring.smooth}
-            />
-          </svg>
-          <span className="absolute inset-0 flex items-center justify-center text-[10px] font-bold text-purple-600">
-            {dailyProgressPercent}
-          </span>
-        </motion.button>
+      {/* Fixed TopBar - like webapp */}
+      <div className="fixed top-0 left-0 right-0 z-50 bg-white/98 backdrop-blur-lg shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
+        <div className="max-w-lg mx-auto px-4">
+          <div className="flex items-center justify-between h-14">
+            {/* Left - Progress circle button */}
+            <motion.button
+              onClick={onShowProgress}
+              className="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-purple-50 active:scale-95 transition-all duration-200"
+              whileTap={{ scale: 0.95 }}
+            >
+              <svg className="w-9 h-9 transform -rotate-90">
+                <circle
+                  cx="18" cy="18" r="14"
+                  fill="none"
+                  stroke="#F3E8FF"
+                  strokeWidth="3"
+                />
+                <circle
+                  cx="18" cy="18" r="14"
+                  fill="none"
+                  stroke="#8B5CF6"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeDasharray={`${(dailyProgressPercent / 100) * 88} 88`}
+                  className="transition-all duration-500"
+                />
+              </svg>
+              <span className="absolute inset-0 flex items-center justify-center text-[10px] font-bold text-purple-600">
+                {dailyProgressPercent}
+              </span>
+            </motion.button>
 
-        {/* Center - Title */}
-        <h1 className="text-[15px] font-semibold text-gray-800">Oposita Smart</h1>
+            {/* Center - Title */}
+            <h1 className="text-[15px] font-semibold text-gray-800 tracking-tight">Oposita Smart</h1>
 
-        {/* Right - Settings */}
-        <motion.button
-          onClick={onSettingsClick}
-          className="w-10 h-10 flex items-center justify-center"
-          whileTap={{ scale: 0.95 }}
-        >
-          <Settings className="w-[18px] h-[18px] text-gray-500" />
-        </motion.button>
+            {/* Right - Settings */}
+            <motion.button
+              onClick={onSettingsClick}
+              className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 active:scale-95 transition-all duration-200"
+              whileTap={{ scale: 0.95 }}
+            >
+              <Settings className="w-[18px] h-[18px] text-gray-500" />
+            </motion.button>
+          </div>
+        </div>
       </div>
 
-      {/* Greeting section */}
-      <div className="pt-1">
-        <p className="text-xs text-purple-500 font-medium uppercase tracking-wider">
-          {new Date().toLocaleDateString('es-ES', { weekday: 'long' })}
-        </p>
-        <h2 className="text-xl font-bold text-gray-900">Tu Momentum</h2>
-      </div>
+      {/* Content with padding for fixed TopBar */}
+      <div className="pt-16 space-y-3">
+        {/* Greeting section */}
+        <div>
+          <p className="text-xs text-purple-500 font-medium uppercase tracking-wider">
+            {new Date().toLocaleDateString('es-ES', { weekday: 'long' })}
+          </p>
+          <h2 className="text-xl font-bold text-gray-900">Tu Momentum</h2>
+        </div>
 
       {/* Bento Grid */}
       <div className="grid grid-cols-2 gap-3">
@@ -3009,6 +3009,7 @@ function HomeMomentumFortaleza({
           <p className="text-gray-500 text-sm">La forma inteligente de opositar</p>
         </div>
       </motion.footer>
+      </div>{/* End of pt-16 wrapper */}
     </motion.div>
   );
 }
