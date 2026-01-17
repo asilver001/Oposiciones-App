@@ -1132,6 +1132,132 @@ function PrecisionModal({ isOpen, onClose }) {
   );
 }
 
+// Racha (Streak) Modal
+function RachaModal({ isOpen, onClose }) {
+  if (!isOpen) return null;
+
+  const streakHistory = [
+    { day: 'Lun', completed: true },
+    { day: 'Mar', completed: true },
+    { day: 'Mié', completed: true },
+    { day: 'Jue', completed: true },
+    { day: 'Vie', completed: true },
+    { day: 'Sáb', completed: true },
+    { day: 'Dom', completed: true },
+  ];
+
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <>
+          <motion.div
+            className="fixed inset-0 bg-black/40 z-[300]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={onClose}
+          />
+          <motion.div
+            className="fixed inset-x-4 top-1/2 -translate-y-1/2 max-w-md mx-auto bg-white rounded-3xl shadow-2xl z-[301] overflow-hidden"
+            initial={{ opacity: 0, scale: 0.9, y: '-40%' }}
+            animate={{ opacity: 1, scale: 1, y: '-50%' }}
+            exit={{ opacity: 0, scale: 0.9, y: '-40%' }}
+            transition={spring.bouncy}
+          >
+            {/* Header */}
+            <div className="px-5 py-4 border-b border-gray-100 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center">
+                  <Flame className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900">Tu Racha</h3>
+                  <p className="text-xs text-gray-500">Días consecutivos estudiando</p>
+                </div>
+              </div>
+              <motion.button onClick={onClose} className="p-2 rounded-xl hover:bg-gray-100" whileTap={{ scale: 0.95 }}>
+                <X className="w-5 h-5 text-gray-400" />
+              </motion.button>
+            </div>
+
+            {/* Main stat */}
+            <div className="px-5 py-6 bg-gradient-to-br from-amber-50 to-orange-50 text-center">
+              <motion.div
+                className="w-24 h-24 mx-auto bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center mb-3"
+                initial={{ scale: 0, rotate: -180 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={spring.bouncy}
+              >
+                <div className="text-center">
+                  <span className="text-3xl font-bold text-white">7</span>
+                  <Flame className="w-5 h-5 text-white/80 mx-auto -mt-1" />
+                </div>
+              </motion.div>
+              <p className="text-lg font-semibold text-gray-800">¡Racha de fuego!</p>
+              <p className="text-sm text-gray-500">Tu mejor racha: 14 días</p>
+            </div>
+
+            {/* Week view */}
+            <div className="px-5 py-4">
+              <h4 className="text-sm font-semibold text-gray-700 mb-3 flex items-center gap-2">
+                <Calendar className="w-4 h-4" /> Esta semana
+              </h4>
+              <div className="flex justify-between">
+                {streakHistory.map((day, i) => (
+                  <motion.div
+                    key={day.day}
+                    className="flex flex-col items-center gap-2"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.05 }}
+                  >
+                    <motion.div
+                      className={`w-10 h-10 rounded-full flex items-center justify-center ${
+                        day.completed
+                          ? 'bg-gradient-to-br from-amber-500 to-orange-600'
+                          : 'bg-gray-100'
+                      }`}
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ ...spring.bouncy, delay: 0.2 + i * 0.05 }}
+                    >
+                      {day.completed && <Check className="w-5 h-5 text-white" />}
+                    </motion.div>
+                    <span className="text-xs text-gray-500">{day.day}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Rewards */}
+            <div className="px-5 py-4 bg-gray-50 border-t border-gray-100">
+              <div className="flex items-center gap-3 p-3 bg-white rounded-xl mb-3">
+                <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center">
+                  <Star className="w-5 h-5 text-amber-500" />
+                </div>
+                <div className="flex-1">
+                  <p className="text-sm font-medium text-gray-800">Próxima recompensa</p>
+                  <p className="text-xs text-gray-500">3 días más para desbloquear insignia</p>
+                </div>
+                <span className="text-xs font-bold text-amber-600">+50 XP</span>
+              </div>
+
+              <motion.button
+                onClick={onClose}
+                className="w-full py-3 bg-gradient-to-r from-amber-500 to-orange-600 text-white font-semibold rounded-xl"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                ¡Mantén la racha! 🔥
+              </motion.button>
+            </div>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
+  );
+}
+
 // Level Comparison Modal
 function LevelModal({ isOpen, onClose }) {
   if (!isOpen) return null;
@@ -1230,9 +1356,270 @@ function LevelModal({ isOpen, onClose }) {
 }
 
 // ============================================
-// AWARD-WINNING OPTION 1: FOCUS MODE
+// AWARD-WINNING: SWIPEABLE FOCUS MODE
+// Horizontal swipe between Focus card and Fortaleza
 // ============================================
 
+function FocusModeSwipeable({
+  temas,
+  onStartSession,
+  onTemaAction,
+  onVerTodos,
+  onRachaClick,
+  onPrecisionClick,
+  onLevelClick
+}) {
+  const [currentPage, setCurrentPage] = useState(0);
+  const containerRef = useRef(null);
+  const x = useMotionValue(0);
+
+  const nextTema = temas.find(t => t.estado === 'riesgo') || temas.find(t => t.estado === 'progreso') || temas[0];
+  const config = estadoConfig[nextTema?.estado] || estadoConfig.nuevo;
+
+  // Handle drag end to snap to page
+  const handleDragEnd = (event, info) => {
+    const threshold = 50;
+    if (info.offset.x < -threshold && currentPage === 0) {
+      setCurrentPage(1);
+    } else if (info.offset.x > threshold && currentPage === 1) {
+      setCurrentPage(0);
+    }
+  };
+
+  return (
+    <motion.div
+      className="space-y-4"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
+      {/* Page indicators */}
+      <div className="flex justify-center gap-2 mb-2">
+        <motion.button
+          onClick={() => setCurrentPage(0)}
+          className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+            currentPage === 0
+              ? 'bg-purple-600 text-white'
+              : 'bg-gray-100 text-gray-500'
+          }`}
+          whileTap={{ scale: 0.95 }}
+        >
+          Tu Enfoque
+        </motion.button>
+        <motion.button
+          onClick={() => setCurrentPage(1)}
+          className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+            currentPage === 1
+              ? 'bg-purple-600 text-white'
+              : 'bg-gray-100 text-gray-500'
+          }`}
+          whileTap={{ scale: 0.95 }}
+        >
+          Tu Fortaleza
+        </motion.button>
+      </div>
+
+      {/* Swipeable container */}
+      <div className="relative overflow-hidden rounded-3xl" ref={containerRef}>
+        <motion.div
+          className="flex"
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          dragElastic={0.2}
+          onDragEnd={handleDragEnd}
+          animate={{ x: currentPage === 0 ? 0 : '-100%' }}
+          transition={spring.snappy}
+          style={{ x }}
+        >
+          {/* Page 1: Focus Card */}
+          <motion.div
+            className="w-full flex-shrink-0 px-1"
+            style={{ minWidth: '100%' }}
+          >
+            <motion.div
+              className="bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-700 rounded-3xl p-6 text-white relative overflow-hidden"
+            >
+              {/* Background decoration */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+
+              <div className="relative">
+                <p className="text-purple-200 text-sm mb-2">Tu enfoque de hoy</p>
+                <h2 className="text-2xl font-bold mb-1">T{nextTema?.id} {nextTema?.nombre}</h2>
+                <p className="text-purple-200 text-sm mb-4">{config.label} · {nextTema?.progreso}% completado</p>
+
+                {/* Progress ring */}
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="relative w-16 h-16">
+                    <svg className="w-16 h-16 transform -rotate-90">
+                      <circle cx="32" cy="32" r="28" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="6" />
+                      <motion.circle
+                        cx="32" cy="32" r="28" fill="none" stroke="white" strokeWidth="6"
+                        strokeLinecap="round"
+                        strokeDasharray={175.9}
+                        initial={{ strokeDashoffset: 175.9 }}
+                        animate={{ strokeDashoffset: 175.9 - (175.9 * (nextTema?.progreso || 0) / 100) }}
+                        transition={spring.smooth}
+                      />
+                    </svg>
+                    <span className="absolute inset-0 flex items-center justify-center text-lg font-bold">{nextTema?.progreso}%</span>
+                  </div>
+                  <div>
+                    <p className="font-medium">15 preguntas restantes</p>
+                    <p className="text-sm text-purple-200">~10 min estimado</p>
+                  </div>
+                </div>
+
+                <motion.button
+                  onClick={onStartSession}
+                  className="w-full py-4 bg-white text-purple-600 font-bold rounded-2xl flex items-center justify-center gap-2"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <Zap className="w-5 h-5" />
+                  Empezar sesión enfocada
+                </motion.button>
+              </div>
+
+              {/* Swipe hint */}
+              <motion.div
+                className="absolute bottom-2 right-4 text-purple-200/50 text-xs flex items-center gap-1"
+                animate={{ x: [0, 5, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              >
+                <span>Desliza</span>
+                <ChevronRight className="w-3 h-3" />
+              </motion.div>
+            </motion.div>
+          </motion.div>
+
+          {/* Page 2: Fortaleza */}
+          <motion.div
+            className="w-full flex-shrink-0 px-1"
+            style={{ minWidth: '100%' }}
+          >
+            <FortalezaInteractive
+              temas={temas}
+              maxVisible={4}
+              onTemaAction={onTemaAction}
+              onVerTodos={onVerTodos}
+            />
+          </motion.div>
+        </motion.div>
+      </div>
+
+      {/* Interactive Stats - Always visible */}
+      <div className="grid grid-cols-3 gap-3">
+        <motion.button
+          onClick={onRachaClick}
+          className="bg-white rounded-2xl p-4 text-center border border-gray-100 relative overflow-hidden"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          whileHover={{ y: -4, scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+        >
+          <motion.div
+            className="absolute top-1 right-1 w-2 h-2 bg-amber-400 rounded-full"
+            animate={{ scale: [1, 1.3, 1] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          />
+          <Flame className="w-6 h-6 text-amber-500 mx-auto mb-2" />
+          <p className="text-xl font-bold text-gray-900">7</p>
+          <p className="text-xs text-gray-500">Racha</p>
+          <p className="text-[10px] text-amber-500 mt-1">Toca para ver</p>
+        </motion.button>
+
+        <motion.button
+          onClick={onPrecisionClick}
+          className="bg-white rounded-2xl p-4 text-center border border-gray-100 relative overflow-hidden"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15 }}
+          whileHover={{ y: -4, scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+        >
+          <motion.div
+            className="absolute top-1 right-1 px-1.5 py-0.5 bg-emerald-100 text-emerald-600 text-[9px] font-medium rounded-full"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.3 }}
+          >
+            +5%
+          </motion.div>
+          <Target className="w-6 h-6 text-purple-500 mx-auto mb-2" />
+          <p className="text-xl font-bold text-gray-900">87%</p>
+          <p className="text-xs text-gray-500">Precisión</p>
+          <p className="text-[10px] text-purple-500 mt-1">Ver análisis</p>
+        </motion.button>
+
+        <motion.button
+          onClick={onLevelClick}
+          className="bg-white rounded-2xl p-4 text-center border border-gray-100 relative overflow-hidden"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          whileHover={{ y: -4, scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+        >
+          <motion.div
+            className="absolute top-1 right-1 px-1.5 py-0.5 bg-pink-100 text-pink-600 text-[9px] font-medium rounded-full"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.35 }}
+          >
+            Top 15%
+          </motion.div>
+          <Trophy className="w-6 h-6 text-pink-500 mx-auto mb-2" />
+          <p className="text-xl font-bold text-gray-900">12</p>
+          <p className="text-xs text-gray-500">Nivel</p>
+          <p className="text-[10px] text-pink-500 mt-1">Comparar</p>
+        </motion.button>
+      </div>
+
+      {/* Today's goals - condensed */}
+      <motion.div
+        className="bg-white rounded-2xl p-4 border border-gray-100"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.25 }}
+      >
+        <div className="flex items-center justify-between mb-3">
+          <h3 className="font-semibold text-gray-900 flex items-center gap-2">
+            <Star className="w-4 h-4 text-amber-500" />
+            Objetivos de hoy
+          </h3>
+          <span className="text-xs text-emerald-500 bg-emerald-50 px-2 py-0.5 rounded-full">1/3</span>
+        </div>
+        <div className="flex gap-2">
+          {[
+            { label: '15 preguntas', done: false, icon: Target },
+            { label: 'Racha', done: true, icon: Flame },
+            { label: 'Repaso', done: false, icon: BookOpen },
+          ].map((goal, i) => {
+            const GoalIcon = goal.icon;
+            return (
+              <div
+                key={i}
+                className={`flex-1 p-2 rounded-xl text-center ${
+                  goal.done ? 'bg-emerald-50' : 'bg-gray-50'
+                }`}
+              >
+                <GoalIcon className={`w-4 h-4 mx-auto mb-1 ${
+                  goal.done ? 'text-emerald-500' : 'text-gray-400'
+                }`} />
+                <p className={`text-xs ${goal.done ? 'text-emerald-600 font-medium' : 'text-gray-500'}`}>
+                  {goal.done ? '✓' : goal.label}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+}
+
+// Legacy FocusModeView kept for reference (can be removed)
 function FocusModeView({ temas, onStartSession }) {
   const nextTema = temas.find(t => t.estado === 'riesgo') || temas.find(t => t.estado === 'progreso') || temas[0];
   const config = estadoConfig[nextTema?.estado] || estadoConfig.nuevo;
@@ -1652,11 +2039,12 @@ function TemaOptionsModal({ isOpen, onClose, tema }) {
 // ============================================
 
 export default function DraftFeatures({ onClose }) {
-  const [activeTab, setActiveTab] = useState('interactive');
+  const [activeTab, setActiveTab] = useState('focus'); // Default to new Focus Mode
   const [selectedTema, setSelectedTema] = useState(null);
   const [showAllTemas, setShowAllTemas] = useState(false);
   const [showPrecisionModal, setShowPrecisionModal] = useState(false);
   const [showLevelModal, setShowLevelModal] = useState(false);
+  const [showRachaModal, setShowRachaModal] = useState(false);
 
   // Demo data
   const demoTemas = [
@@ -1676,8 +2064,6 @@ export default function DraftFeatures({ onClose }) {
   const tabs = [
     { id: 'interactive', label: '🏰 Interactivo' },
     { id: 'focus', label: '🎯 Focus Mode' },
-    { id: 'dashboard', label: '📊 Dashboard' },
-    { id: 'fortaleza-bars', label: 'Original' },
     { id: 'expandable', label: 'Cards Expandibles' },
   ];
 
@@ -1796,7 +2182,7 @@ export default function DraftFeatures({ onClose }) {
             </motion.div>
           )}
 
-          {/* NEW: Focus Mode - Award winning option 1 */}
+          {/* NEW: Swipeable Focus Mode - Award winning */}
           {activeTab === 'focus' && (
             <motion.div
               key="focus"
@@ -1805,68 +2191,17 @@ export default function DraftFeatures({ onClose }) {
               exit={{ opacity: 0, y: -20 }}
             >
               <div className="bg-violet-50 border border-violet-200 rounded-xl p-3 text-sm text-violet-800 mb-4">
-                <strong>🎯 Focus Mode:</strong> Vista minimalista centrada en tu próximo objetivo + metas diarias
+                <strong>🎯 Focus Mode:</strong> Desliza horizontalmente entre Tu Enfoque y Tu Fortaleza · Stats interactivos
               </div>
-              <FocusModeView
+              <FocusModeSwipeable
                 temas={demoTemas}
                 onStartSession={() => console.log('Start focused session')}
-              />
-            </motion.div>
-          )}
-
-          {/* NEW: Dashboard View - Award winning option 2 */}
-          {activeTab === 'dashboard' && (
-            <motion.div
-              key="dashboard"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-            >
-              <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-3 text-sm text-indigo-800 mb-4">
-                <strong>📊 Dashboard:</strong> Vista tipo bento box con gráficos de progreso semanal
-              </div>
-              <DashboardView
-                temas={demoTemas}
                 onTemaAction={(tema) => setSelectedTema(tema)}
-                onStartSession={() => console.log('Start smart session')}
+                onVerTodos={() => setShowAllTemas(true)}
+                onRachaClick={() => setShowRachaModal(true)}
+                onPrecisionClick={() => setShowPrecisionModal(true)}
+                onLevelClick={() => setShowLevelModal(true)}
               />
-            </motion.div>
-          )}
-
-          {/* Original version for comparison */}
-          {activeTab === 'fortaleza-bars' && (
-            <motion.div
-              key="fortaleza-bars"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="space-y-4"
-            >
-              <div className="bg-gray-50 border border-gray-200 rounded-xl p-3 text-sm text-gray-600">
-                <strong>Original:</strong> Versión anterior para comparación
-              </div>
-
-              <FortalezaWithBars
-                temas={demoTemas}
-                maxVisible={3}
-                onTemaClick={(tema) => setSelectedTema(tema)}
-                onVerTodo={() => setShowAllTemas(true)}
-              />
-
-              <div className="grid grid-cols-2 gap-3">
-                <StatCard icon={Target} label="Precisión" value="87%" color="purple" trend={5} />
-                <StatCard icon={Trophy} label="Nivel" value="12" color="pink" trend={1} />
-              </div>
-
-              <motion.button
-                className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-4 rounded-2xl font-semibold text-lg"
-                whileTap={{ scale: 0.98 }}
-              >
-                <span className="flex items-center justify-center gap-2">
-                  <Zap className="w-5 h-5" />
-                  Empezar sesión
-                </span>
-              </motion.button>
             </motion.div>
           )}
 
@@ -1935,6 +2270,12 @@ export default function DraftFeatures({ onClose }) {
           />
         )}
       </AnimatePresence>
+
+      {/* Racha Modal */}
+      <RachaModal
+        isOpen={showRachaModal}
+        onClose={() => setShowRachaModal(false)}
+      />
 
       {/* Precision Analysis Modal */}
       <PrecisionModal
