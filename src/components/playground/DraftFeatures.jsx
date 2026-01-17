@@ -111,7 +111,7 @@ function AnimatedProgressBar({ value, max = 100, estado = 'progreso', showLabel 
   );
 }
 
-function FortalezaWithBars({ temas, onVerTodo, maxVisible = 5 }) {
+function FortalezaWithBars({ temas, onVerTodo, onTemaClick, maxVisible = 3 }) {
   // Sort by priority (riesgo first, then by progress)
   const sortedTemas = [...temas].sort((a, b) => {
     const configA = estadoConfig[a.estado] || estadoConfig.nuevo;
@@ -121,7 +121,7 @@ function FortalezaWithBars({ temas, onVerTodo, maxVisible = 5 }) {
   });
 
   const visibleTemas = sortedTemas.slice(0, maxVisible);
-  const remainingCount = temas.length - maxVisible;
+  const hasMore = temas.length > maxVisible;
 
   return (
     <motion.div
@@ -136,31 +136,24 @@ function FortalezaWithBars({ temas, onVerTodo, maxVisible = 5 }) {
           <span className="text-xl">🏰</span>
           <h3 className="font-semibold text-gray-900">Tu Fortaleza</h3>
         </div>
-        {onVerTodo && (
-          <motion.button
-            onClick={onVerTodo}
-            className="flex items-center gap-1 text-sm text-purple-600 font-medium"
-            whileHover={{ x: 2 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            Ver todo <ChevronRight className="w-4 h-4" />
-          </motion.button>
-        )}
       </div>
 
-      {/* Temas with animated bars */}
+      {/* Temas with animated bars - CLICKEABLE */}
       <div className="px-4 py-2">
         {visibleTemas.map((tema, index) => {
           const config = estadoConfig[tema.estado] || estadoConfig.nuevo;
           const Icon = config.icon;
 
           return (
-            <motion.div
+            <motion.button
               key={tema.id}
-              className="py-3 border-b border-gray-50 last:border-b-0"
+              onClick={() => onTemaClick?.(tema)}
+              className="w-full py-3 border-b border-gray-50 last:border-b-0 text-left"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ ...spring.gentle, delay: index * 0.05 }}
+              whileHover={{ x: 4, backgroundColor: 'rgba(147, 51, 234, 0.02)' }}
+              whileTap={{ scale: 0.99 }}
             >
               {/* Top row: name and status */}
               <div className="flex items-center justify-between gap-2 mb-2">
@@ -176,31 +169,35 @@ function FortalezaWithBars({ temas, onVerTodo, maxVisible = 5 }) {
                     <span className="text-gray-400">T{tema.id}</span> {tema.nombre}
                   </p>
                 </div>
-                <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${config.bg} ${config.text} whitespace-nowrap`}>
-                  {tema.progreso}%
-                </span>
+                <div className="flex items-center gap-2">
+                  <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${config.bg} ${config.text} whitespace-nowrap`}>
+                    {tema.progreso}%
+                  </span>
+                  <ChevronRight className="w-4 h-4 text-gray-300" />
+                </div>
               </div>
 
               {/* Progress bar */}
               <AnimatedProgressBar value={tema.progreso} estado={tema.estado} size="md" />
-            </motion.div>
+            </motion.button>
           );
         })}
       </div>
 
-      {/* Show more */}
-      {remainingCount > 0 && (
+      {/* Show more - sin número */}
+      {hasMore && (
         <motion.button
           onClick={onVerTodo}
-          className="w-full px-4 py-2.5 text-sm text-gray-500 hover:text-purple-600 hover:bg-gray-50 transition-colors border-t border-gray-100"
+          className="w-full px-4 py-3 text-sm text-purple-600 font-medium hover:bg-purple-50/50 transition-colors border-t border-gray-100 flex items-center justify-center gap-1"
           whileHover={{ backgroundColor: 'rgba(147, 51, 234, 0.05)' }}
+          whileTap={{ scale: 0.98 }}
         >
-          +{remainingCount} tema{remainingCount !== 1 ? 's' : ''} más
+          Ver más temas <ChevronRight className="w-4 h-4" />
         </motion.button>
       )}
 
       {/* Legend */}
-      <div className="px-4 py-3 bg-gray-50/50 border-t border-gray-100 flex flex-wrap gap-3 justify-center">
+      <div className="px-4 py-2.5 bg-gray-50/50 border-t border-gray-100 flex flex-wrap gap-3 justify-center">
         {['dominado', 'avanzando', 'riesgo'].map(estado => {
           const config = estadoConfig[estado];
           return (
@@ -210,6 +207,52 @@ function FortalezaWithBars({ temas, onVerTodo, maxVisible = 5 }) {
             </span>
           );
         })}
+      </div>
+    </motion.div>
+  );
+}
+
+// ============================================
+// STAT CARDS
+// ============================================
+
+function StatCard({ icon: Icon, label, value, color = 'purple', trend }) {
+  const colors = {
+    purple: 'from-purple-500 to-violet-600',
+    emerald: 'from-emerald-500 to-teal-600',
+    amber: 'from-amber-500 to-orange-600',
+    pink: 'from-pink-500 to-rose-600',
+  };
+
+  return (
+    <motion.div
+      className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100"
+      whileHover={{ y: -4 }}
+      transition={spring.snappy}
+    >
+      <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${colors[color]} flex items-center justify-center mb-3`}>
+        <Icon className="w-5 h-5 text-white" />
+      </div>
+      <p className="text-sm text-gray-500">{label}</p>
+      <div className="flex items-end gap-2">
+        <motion.p
+          className="text-2xl font-bold text-gray-900"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+        >
+          {value}
+        </motion.p>
+        {trend && (
+          <motion.span
+            className={`text-xs font-medium ${trend > 0 ? 'text-emerald-500' : 'text-amber-500'}`}
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            {trend > 0 ? '+' : ''}{trend}%
+          </motion.span>
+        )}
       </div>
     </motion.div>
   );
@@ -655,11 +698,134 @@ function ExpandableCardsDemo() {
 }
 
 // ============================================
+// TEMA OPTIONS MODAL - When clicking a topic
+// ============================================
+
+function TemaOptionsModal({ isOpen, onClose, tema }) {
+  if (!isOpen || !tema) return null;
+
+  const config = estadoConfig[tema.estado] || estadoConfig.nuevo;
+  const Icon = config.icon;
+
+  const options = [
+    { id: 'test', icon: Target, label: 'Test rápido', desc: '10 preguntas aleatorias', color: 'purple' },
+    { id: 'exam', icon: Clock, label: 'Simulacro', desc: 'Examen completo cronometrado', color: 'blue' },
+    { id: 'review', icon: BookOpen, label: 'Repasar teoría', desc: 'Material de estudio', color: 'emerald' },
+    { id: 'weak', icon: AlertTriangle, label: 'Puntos débiles', desc: 'Preguntas falladas', color: 'amber' },
+  ];
+
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <>
+          {/* Backdrop */}
+          <motion.div
+            className="fixed inset-0 bg-black/40 z-[300]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={onClose}
+          />
+
+          {/* Modal */}
+          <motion.div
+            className="fixed inset-x-4 top-1/2 -translate-y-1/2 max-w-md mx-auto bg-white rounded-3xl shadow-2xl z-[301] overflow-hidden"
+            initial={{ opacity: 0, scale: 0.9, y: '-40%' }}
+            animate={{ opacity: 1, scale: 1, y: '-50%' }}
+            exit={{ opacity: 0, scale: 0.9, y: '-40%' }}
+            transition={spring.bouncy}
+          >
+            {/* Header */}
+            <div className="px-5 py-4 border-b border-gray-100">
+              <div className="flex items-center gap-3">
+                <div className={`w-12 h-12 ${config.bg} rounded-xl flex items-center justify-center`}>
+                  <Icon className={`w-6 h-6 ${config.text}`} />
+                </div>
+                <div className="flex-1">
+                  <p className="text-xs text-gray-400">Tema {tema.id}</p>
+                  <h3 className="font-bold text-gray-900">{tema.nombre}</h3>
+                  <div className="flex items-center gap-2 mt-1">
+                    <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                      <motion.div
+                        className={`h-full bg-gradient-to-r ${config.gradient}`}
+                        initial={{ width: 0 }}
+                        animate={{ width: `${tema.progreso}%` }}
+                        transition={spring.smooth}
+                      />
+                    </div>
+                    <span className={`text-xs font-medium ${config.text}`}>{tema.progreso}%</span>
+                  </div>
+                </div>
+                <motion.button
+                  onClick={onClose}
+                  className="p-2 rounded-xl hover:bg-gray-100"
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <X className="w-5 h-5 text-gray-400" />
+                </motion.button>
+              </div>
+            </div>
+
+            {/* Options */}
+            <div className="p-4 space-y-2">
+              {options.map((option, i) => {
+                const OptIcon = option.icon;
+                const colorStyles = {
+                  purple: 'bg-purple-50 text-purple-600 hover:bg-purple-100',
+                  blue: 'bg-blue-50 text-blue-600 hover:bg-blue-100',
+                  emerald: 'bg-emerald-50 text-emerald-600 hover:bg-emerald-100',
+                  amber: 'bg-amber-50 text-amber-600 hover:bg-amber-100',
+                };
+
+                return (
+                  <motion.button
+                    key={option.id}
+                    className={`w-full p-4 rounded-xl flex items-center gap-3 text-left transition-colors ${colorStyles[option.color]}`}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ ...spring.gentle, delay: i * 0.05 }}
+                    whileHover={{ x: 4 }}
+                    whileTap={{ scale: 0.98 }}
+                    onClick={() => {
+                      console.log(`Selected: ${option.id} for tema ${tema.id}`);
+                      onClose();
+                    }}
+                  >
+                    <OptIcon className="w-5 h-5" />
+                    <div className="flex-1">
+                      <p className="font-medium">{option.label}</p>
+                      <p className="text-xs opacity-70">{option.desc}</p>
+                    </div>
+                    <ChevronRight className="w-4 h-4 opacity-50" />
+                  </motion.button>
+                );
+              })}
+            </div>
+
+            {/* Cancel */}
+            <div className="px-4 pb-4">
+              <motion.button
+                onClick={onClose}
+                className="w-full py-3 text-gray-500 font-medium text-sm"
+                whileTap={{ scale: 0.98 }}
+              >
+                Cancelar
+              </motion.button>
+            </div>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
+  );
+}
+
+// ============================================
 // MAIN DRAFT FEATURES COMPONENT
 // ============================================
 
 export default function DraftFeatures({ onClose }) {
   const [activeTab, setActiveTab] = useState('fortaleza-bars');
+  const [selectedTema, setSelectedTema] = useState(null);
 
   // Demo data
   const demoTemas = [
@@ -749,10 +915,38 @@ export default function DraftFeatures({ onClose }) {
               className="space-y-4"
             >
               <div className="bg-amber-50 border border-amber-200 rounded-xl p-3 text-sm text-amber-800">
-                <strong>Cambio:</strong> Reemplaza los puntos por barras de progreso animadas.
-                El color indica el estado (ámbar = necesita repaso).
+                <strong>Nueva vista de inicio:</strong> Fortaleza (3 temas clickeables) + Stats + Empezar sesión
               </div>
-              <FortalezaWithBars temas={demoTemas} maxVisible={6} />
+
+              {/* Fortaleza with 3 topics */}
+              <FortalezaWithBars
+                temas={demoTemas}
+                maxVisible={3}
+                onTemaClick={(tema) => setSelectedTema(tema)}
+                onVerTodo={() => console.log('Ver todos los temas')}
+              />
+
+              {/* Stat Cards Grid */}
+              <div className="grid grid-cols-2 gap-3">
+                <StatCard icon={Target} label="Precisión" value="87%" color="purple" trend={5} />
+                <StatCard icon={Flame} label="Racha" value="7 días" color="amber" trend={2} />
+                <StatCard icon={BookOpen} label="Estudiado" value="45 min" color="emerald" />
+                <StatCard icon={Trophy} label="Nivel" value="12" color="pink" trend={1} />
+              </div>
+
+              {/* Start Session Button */}
+              <motion.button
+                className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-4 rounded-2xl font-semibold text-lg shadow-lg shadow-purple-500/25"
+                whileHover={{ scale: 1.02, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                transition={spring.snappy}
+                onClick={() => console.log('Empezar sesión')}
+              >
+                <span className="flex items-center justify-center gap-2">
+                  <Zap className="w-5 h-5" />
+                  Empezar sesión
+                </span>
+              </motion.button>
             </motion.div>
           )}
 
@@ -831,6 +1025,13 @@ export default function DraftFeatures({ onClose }) {
           </motion.button>
         </div>
       </div>
+
+      {/* Tema Options Modal */}
+      <TemaOptionsModal
+        isOpen={!!selectedTema}
+        onClose={() => setSelectedTema(null)}
+        tema={selectedTema}
+      />
     </div>
   );
 }
