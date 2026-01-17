@@ -1,0 +1,1931 @@
+{
+  "metadata": {
+    "source_file": "9 TEST GLOBAL - copia.docx",
+    "source_path": "Segundo repaso\\9 TEST GLOBAL - copia.docx",
+    "tema": 9,
+    "categoria": "repaso",
+    "extraction_date": "2026-01-15T23:40:33.446528",
+    "reformulation_date": "2026-01-15T23:47:35.703648",
+    "total_questions": 39,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.884496",
+    "completed_count": 0,
+    "failed_count": 39
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "De conformidad con el artculo 166 CE tienen iniciativa de reforma los rganos incluidos en los apartados 1 y 2 del artculo 87 CE. Conforme a lo expuesto, queda excluida:",
+        "options": [
+          {
+            "text": "La iniciativa de las Asambleas Legislativas de las CCAA.",
+            "is_correct": false
+          },
+          {
+            "text": "La iniciativa de las Asambleas Legislativas de las CCAA y la iniciativa popular.",
+            "is_correct": false
+          },
+          {
+            "text": "La iniciativa de las Asambleas Legislativas de las CCAA y del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "La iniciativa popular.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De conformidad con el artculo 166 CE tienen iniciativa de reforma los rganos incluidos en los apartados 1 y 2 del artculo 87 CE. Conforme a lo expuesto, queda excluida:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El artculo 3 de la Constitucin Espaola regula:",
+        "options": [
+          {
+            "text": "La lengua.",
+            "is_correct": false
+          },
+          {
+            "text": "La bandera.",
+            "is_correct": false
+          },
+          {
+            "text": "La capitalidad.",
+            "is_correct": false
+          },
+          {
+            "text": "Los partidos polticos.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El artculo 3 de la Constitucin Espaola regula:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Si se propusiere la revisin total de la Constitucin, se proceder a la aprobacin del principio de reforma:",
+        "options": [
+          {
+            "text": "Por mayora de 2/3 y a la disolucin de las Cortes por el Rey.",
+            "is_correct": false
+          },
+          {
+            "text": "Por mayora de 2/3 y a la disolucin de las Cortes por el Presidente del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Por mayora de 3/5 y a la disolucin de las Cortes por el Rey.",
+            "is_correct": false
+          },
+          {
+            "text": "Por mayora de 3/5 y a la disolucin de las Cortes por el Presidente del Gobierno.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Si se propusiere la revisin total de la Constitucin, se proceder a la aprobacin del principio de reforma:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El derecho de los trabajadores y empresarios a adoptar medidas de conflicto colectivo:",
+        "options": [
+          {
+            "text": "Podr ser suspendido en los supuestos de declaracin de los estados de alarma excepcin y sitio.",
+            "is_correct": false
+          },
+          {
+            "text": "Podr ser objeto de recurso de amparo ante el Tribunal Constitucional.",
+            "is_correct": false
+          },
+          {
+            "text": "Informar la legislacin positiva, la prctica judicial y la actuacin de los poderes pblicos.",
+            "is_correct": false
+          },
+          {
+            "text": "Slo por ley podr regularse su ejercicio.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El derecho de los trabajadores y empresarios a adoptar medidas de conflicto colectivo:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cul de los siguientes derechos NO es objeto de proteccin a travs de un procedimiento judicial especial preferente y sumario?:",
+        "options": [
+          {
+            "text": "El derecho de asociacin.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho a la propiedad privada y a la herencia.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho a la libre circulacin por el territorio espaol.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho de huelga.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de los siguientes derechos NO es objeto de proteccin a travs de un procedimiento judicial especial preferente y sumario?:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El Tribunal Constitucional elige de entre sus miembros por votacin secreta a su presidente, requirindose para su eleccin en primera votacin:",
+        "options": [
+          {
+            "text": "Mayora de 3/5.",
+            "is_correct": false
+          },
+          {
+            "text": "Mayora de 2/3.",
+            "is_correct": false
+          },
+          {
+            "text": "Mayora absoluta.",
+            "is_correct": false
+          },
+          {
+            "text": "Mayora de miembros presentes.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Tribunal Constitucional elige de entre sus miembros por votacin secreta a su presidente, requirindose para su eleccin en primera votacin:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El Tribunal Constitucional en Pleno puede adoptar acuerdos, cuando estn presentes, al menos:",
+        "options": [
+          {
+            "text": "Tres quintos de los miembros que en cada momento lo compongan.",
+            "is_correct": false
+          },
+          {
+            "text": "La mayora de los miembros que en cada momento lo compongan.",
+            "is_correct": false
+          },
+          {
+            "text": "Dos tercios de los miembros que en cada momento lo compongan.",
+            "is_correct": false
+          },
+          {
+            "text": "Todos sus miembros",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Tribunal Constitucional en Pleno puede adoptar acuerdos, cuando estn presentes, al menos:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El Presidente del Tribunal Constitucional solicitar a los presidentes de los rganos que han de hacer las propuestas para la designacin de los nuevos magistrados del Tribunal Constitucional que inicien el procedimiento para ello:",
+        "options": [
+          {
+            "text": "Antes de los 3 meses previos a la fecha de expiracin de los nombramientos.",
+            "is_correct": false
+          },
+          {
+            "text": "Antes de los 4 meses previos a la fecha de expiracin de los nombramientos.",
+            "is_correct": false
+          },
+          {
+            "text": "Antes de los 5 meses previos a la fecha de expiracin de los nombramientos.",
+            "is_correct": false
+          },
+          {
+            "text": "Antes de los 6 meses previos a la fecha de expiracin de los nombramientos.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Presidente del Tribunal Constitucional solicitar a los presidentes de los rganos que han de hacer las propuestas para la designacin de los nuevos magistrados del Tribunal Constitucional que inicien el procedimiento para ello:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cuando concurra causa de incompatibilidad en quien fuere propuesto como magistrado del Tribunal Constitucional deber, antes de tomar posesin, cesar en el cargo o actividad incompatible en plazo de:",
+        "options": [
+          {
+            "text": "Los 10 das siguientes a la propuesta.",
+            "is_correct": false
+          },
+          {
+            "text": "Los 15 das siguientes a la propuesta.",
+            "is_correct": false
+          },
+          {
+            "text": "Los 20 das siguientes a la propuesta.",
+            "is_correct": false
+          },
+          {
+            "text": "El mes siguiente a la propuesta.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cuando concurra causa de incompatibilidad en quien fuere propuesto como magistrado del Tribunal Constitucional deber, antes de tomar posesin, cesar en el cargo o actividad incompatible en plazo de:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El Rey (seale la falsa):",
+        "options": [
+          {
+            "text": "Es el Jefe del Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "El es smbolo de la unidad y permanencia del Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "Ostenta la ms alta representacin del Estado espaol en las Relaciones Internacionales.",
+            "is_correct": false
+          },
+          {
+            "text": "Dirige la poltica interior y exterior y la administracin civil y militar.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Rey (seale la falsa):",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Quin es, segn el artculo 57 CE el legtimo heredero de la dinasta histrica?:",
+        "options": [
+          {
+            "text": "El Prncipe de Asturias.",
+            "is_correct": false
+          },
+          {
+            "text": "S.M. D. Juan Carlos I de Borbn.",
+            "is_correct": false
+          },
+          {
+            "text": "D. Juan de Borbn.",
+            "is_correct": false
+          },
+          {
+            "text": "S.M. Alfonso XIII de Borbn.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Quin es, segn el artculo 57 CE el legtimo heredero de la dinasta histrica?:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Si el Rey se inhabilitara para el ejercicio de su autoridad y la imposibilidad fuere reconocida por las CCGG, quin entrara a ejercer la Regencia en primer trmino?:",
+        "options": [
+          {
+            "text": "El Prncipe Heredero si fuera mayor de edad.",
+            "is_correct": false
+          },
+          {
+            "text": "El padre o la madre del Rey.",
+            "is_correct": false
+          },
+          {
+            "text": "La persona que designe el Rey siempre que sea espaol de nacimiento y mayor de edad.",
+            "is_correct": false
+          },
+          {
+            "text": "El pariente mayor de edad ms prximo a suceder en el trono.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Si el Rey se inhabilitara para el ejercicio de su autoridad y la imposibilidad fuere reconocida por las CCGG, quin entrara a ejercer la Regencia en primer trmino?:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cul de los siguientes actos precisa de autorizacin por ley orgnica de las CCGG?:",
+        "options": [
+          {
+            "text": "Declarar la guerra y hacer la paz.",
+            "is_correct": false
+          },
+          {
+            "text": "Convocatoria de referndum consultivo.",
+            "is_correct": false
+          },
+          {
+            "text": "Celebracin de tratados por los que se atribuya a una organizacin o institucin internacional el ejercicio de competencias derivadas de la Constitucin.",
+            "is_correct": false
+          },
+          {
+            "text": "La inhabilitacin del Rey para el ejercicio de su autoridad.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de los siguientes actos precisa de autorizacin por ley orgnica de las CCGG?:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En el Senado se eligen por sufragio universal, libre, igual, directo y secreto:",
+        "options": [
+          {
+            "text": "2 senadores en cada provincia.",
+            "is_correct": false
+          },
+          {
+            "text": "2 senadores en Ceuta.",
+            "is_correct": false
+          },
+          {
+            "text": "2 Senadores en Ibiza-Formentera, Menorca, Fuerteventura, Gomera, Hierro, Lanzarote y La Palma.",
+            "is_correct": false
+          },
+          {
+            "text": "2 senadores en las islas de Gran Canaria, Mallorca y Tenerife.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En el Senado se eligen por sufragio universal, libre, igual, directo y secreto:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cul de los siguientes es el rgano de apoyo del Consejo de Ministros, de las Comisiones Delegadas del Gobierno y de la Comisin General de Secretarios de Estado y Subsecretarios?:",
+        "options": [
+          {
+            "text": "Los Gabinetes.",
+            "is_correct": false
+          },
+          {
+            "text": "Los Secretarios de Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "La Subsecretara de Presidencia.",
+            "is_correct": false
+          },
+          {
+            "text": "El Secretariado de Gobierno.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de los siguientes es el rgano de apoyo del Consejo de Ministros, de las Comisiones Delegadas del Gobierno y de la Comisin General de Secretarios de Estado y Subsecretarios?:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El Subsecretario de la Presidencia:",
+        "options": [
+          {
+            "text": "Ejerce la presidencia de la Comisin General de Secretarios de Estado y Subsecretarios.",
+            "is_correct": false
+          },
+          {
+            "text": "Ejerce la secretara de la Comisin General de Secretarios de Estado y Subsecretarios.",
+            "is_correct": false
+          },
+          {
+            "text": "Es el Director del Secretariado de Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Es el Secretario del Secretariado de Gobierno.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Subsecretario de la Presidencia:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Qu carcter tienen las deliberaciones del Consejo de Ministros?",
+        "options": [
+          {
+            "text": "Secretas.",
+            "is_correct": false
+          },
+          {
+            "text": "Pblicas.",
+            "is_correct": false
+          },
+          {
+            "text": "Reservadas.",
+            "is_correct": false
+          },
+          {
+            "text": "Solemnes y pblicas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu carcter tienen las deliberaciones del Consejo de Ministros?",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Secretas....'",
+        "Distractor muy corto: 'Pblicas....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Los nombramientos de jueces y magistrados efectuados por el CGPJ adoptarn la siguiente forma de conformidad con el artculo 634 LOPJ:",
+        "options": [
+          {
+            "text": "El nombramiento de magistrados adoptar la forma de Real Decreto y el de jueces adoptar la forma de Orden.",
+            "is_correct": false
+          },
+          {
+            "text": "El nombramiento de magistrados adoptar la forma de Orden y el de jueces adoptar la forma de Real Decreto.",
+            "is_correct": false
+          },
+          {
+            "text": "Ambos tipos de nombramiento adoptarn la forma de Orden.",
+            "is_correct": false
+          },
+          {
+            "text": "Ambos tipos de nombramiento adoptarn la forma de Real Decreto.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los nombramientos de jueces y magistrados efectuados por el CGPJ adoptarn la siguiente forma de conformidad con el artculo 634 LOPJ:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cul de los siguientes rganos ejerce jurisdiccin en mbito de provincia?:",
+        "options": [
+          {
+            "text": "El Juez de Paz.",
+            "is_correct": false
+          },
+          {
+            "text": "El Tribunal de instancia",
+            "is_correct": false
+          },
+          {
+            "text": "La Audiencia provincial.",
+            "is_correct": false
+          },
+          {
+            "text": "El Tribunal Central de instancia.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de los siguientes rganos ejerce jurisdiccin en mbito de provincia?:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cules de los siguientes rganos de la AGE no son directivos?:",
+        "options": [
+          {
+            "text": "Subdirectores Generales y asimilados.",
+            "is_correct": false
+          },
+          {
+            "text": "Delegados y Subdelegados del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Directores Insulares.",
+            "is_correct": false
+          },
+          {
+            "text": "Secretarios Generales.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cules de los siguientes rganos de la AGE no son directivos?:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta:",
+        "options": [
+          {
+            "text": "Los ministros son nombrados por el presidente del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Los secretarios de Estado son nombrados por el presidente del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Los subdirectores generales son nombrados por el ministro, secretario de Estado o secretario general del que dependan.",
+            "is_correct": false
+          },
+          {
+            "text": "Los directores generales son nombrados por el Consejo de Ministros.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En los Ministerios pueden existir:",
+        "options": [
+          {
+            "text": "Secretaras de Estado, y Subsecretarios, para la gestin de un sector de actividad administrativa.",
+            "is_correct": false
+          },
+          {
+            "text": "Secretaras de Estado, y Secretarias Generales Tcnicas, para la gestin de un sector de actividad administrativa.",
+            "is_correct": false
+          },
+          {
+            "text": "Secretaras Generales y Secretarias de Estado, para la gestin de un sector de actividad administrativa.",
+            "is_correct": false
+          },
+          {
+            "text": "Secretaras Generales, y Subsecretaras, para la gestin de un sector de actividad administrativa.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En los Ministerios pueden existir:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "De conformidad con el artculo 103 de la Constitucin, son principios de actuacin de la Administracin Pblica:",
+        "options": [
+          {
+            "text": "Jerarqua y autonoma.",
+            "is_correct": false
+          },
+          {
+            "text": "Eficacia y eficiencia.",
+            "is_correct": false
+          },
+          {
+            "text": "Eficiencia y jerarqua.",
+            "is_correct": false
+          },
+          {
+            "text": "Eficacia y jerarqua.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De conformidad con el artculo 103 de la Constitucin, son principios de actuacin de la Administracin Pblica:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "De conformidad con el RD 617/1997, en cul de las siguientes islas existir un Director Insular de la AGE?:",
+        "options": [
+          {
+            "text": "En Mallorca.",
+            "is_correct": false
+          },
+          {
+            "text": "En Lanzarote.",
+            "is_correct": false
+          },
+          {
+            "text": "En Tenerife.",
+            "is_correct": false
+          },
+          {
+            "text": "En Gran Canaria.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De conformidad con el RD 617/1997, en cul de las siguientes islas existir un Director Insular de la AGE?:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta en relacin con lo dispuesto en la LRJSP:",
+        "options": [
+          {
+            "text": "Los delegados del Gobierno representan al Gobierno de la nacin en el territorio de la respectiva comunidad autnoma.",
+            "is_correct": false
+          },
+          {
+            "text": "Los delegados del Gobierno representan al Estado en el territorio de la respectiva comunidad autnoma.",
+            "is_correct": false
+          },
+          {
+            "text": "Los delegados del Gobierno representan al presidente del Gobierno en el territorio de la respectiva comunidad autnoma.",
+            "is_correct": false
+          },
+          {
+            "text": "Los delegados del Gobierno representan a la Administracin del Estado en el territorio de la respectiva comunidad autnoma.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta en relacin con lo dispuesto en la LRJSP:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "De conformidad con la LRJSP, los Delegados del Gobierno dependen orgnicamente:",
+        "options": [
+          {
+            "text": "Del Presidente del Gobierno, sin perjuicio de la adscripcin orgnica de la Delegacin del Gobierno al Ministerio de Hacienda y AAPP (actualmente Poltica Territorial y Memoria Democrtica).",
+            "is_correct": false
+          },
+          {
+            "text": "Del Ministerio de Hacienda y AAPP (actualmente Poltica Territorial) sin perjuicio de la adscripcin orgnica de la Delegacin del Gobierno a la Presidencia del Gobierno",
+            "is_correct": false
+          },
+          {
+            "text": "Del Presidente del Gobierno, sin perjuicio de la adscripcin orgnica de la Delegacin del Gobierno a la Presidencia del Gobierno",
+            "is_correct": false
+          },
+          {
+            "text": "Del Ministerio de Hacienda y AAPP (actualmente Poltica Territorial y Memoria Democrtica)sin perjuicio de la adscripcin orgnica de la Delegacin del Gobierno al Ministerio del interior",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De conformidad con la LRJSP, los Delegados del Gobierno dependen orgnicamente:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta en lo relativo a la definicin de Organismo Autnomo, prevista en la LRJSP:",
+        "options": [
+          {
+            "text": "son entidades de derecho privado, con personalidad jurdica propia, tesorera y patrimonio propios y autonoma en su gestin, que desarrollan actividades propias de la Administracin Pblica, tanto actividades de fomento, prestacionales, de gestin de servicios pblicos o de produccin de bienes de inters pblico, susceptibles de contraprestacin, en calidad de organizaciones instrumentales diferenciadas y dependientes de sta.",
+            "is_correct": false
+          },
+          {
+            "text": "son entidades de derecho pblico, con personalidad jurdica propia, tesorera y patrimonio propios y autonoma en su gestin, que desarrollan actividades propias de la Administracin Pblica, tanto actividades de fomento, prestacionales, de gestin de servicios pblicos o de produccin de bienes de inters pblico, susceptibles de contraprestacin, en calidad de organizaciones instrumentales diferenciadas y dependientes de sta.",
+            "is_correct": false
+          },
+          {
+            "text": "son entidades de derecho privado, con personalidad jurdica propia, tesorera y patrimonio propios y autonoma en su gestin, que desarrollan actividades propias de la Administracin Pblica, tanto actividades de fomento, prestacionales, de gestin de servicios pblicos o de produccin de bienes de inters pblico, susceptibles de contraprestacin, en calidad de organizaciones instrumentales diferenciadas e independientes de sta.",
+            "is_correct": false
+          },
+          {
+            "text": "son entidades de derecho pblico, con personalidad jurdica propia, tesorera y patrimonio propios y autonoma en su gestin, que desarrollan actividades propias de la Administracin Pblica, tanto actividades de fomento, prestacionales, de gestin de servicios pblicos o de produccin de bienes de inters pblico, susceptibles de contraprestacin, en calidad de organizaciones instrumentales diferenciadas e independientes de sta.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta en lo relativo a la definicin de Organismo Autnomo, prevista en la LRJSP:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Del convenio de un consorcio en que participe la AGE formarn parte:",
+        "options": [
+          {
+            "text": "Los estatutos, un plan de actuacin, una proyeccin presupuestaria trienal y el informe preceptivo favorable del Ministerio de Hacienda.",
+            "is_correct": false
+          },
+          {
+            "text": "Los estatutos, un plan de actuacin, un plan de redimensionamiento y el informe preceptivo favorable del Ministerio de Hacienda.",
+            "is_correct": false
+          },
+          {
+            "text": "Los estatutos, un plan de actuacin, una proyeccin presupuestaria trienal y el informe preceptivo favorable del Ministerio de Hacienda o de la IGAE segn se determine reglamentariamente.",
+            "is_correct": false
+          },
+          {
+            "text": "Los estatutos, un plan de actuacin, un plan de redimensionamiento y el informe preceptivo favorable del Ministerio de Hacienda o de la IGAE segn se determine reglamentariamente.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Del convenio de un consorcio en que participe la AGE formarn parte:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La creacin de las fundaciones del sector pblico estatal se realizar:",
+        "options": [
+          {
+            "text": "Ley que establecer los fines de la fundacin y, en su caso, los recursos econmicos con los que se le dota.",
+            "is_correct": false
+          },
+          {
+            "text": "Real Decreto que establecer los fines de la fundacin y, en su caso, los recursos econmicos con los que se le dota.",
+            "is_correct": false
+          },
+          {
+            "text": "Acuerdo del Consejo de Ministros que establecer los fines de la fundacin y, en su caso, los recursos econmicos con los que se le dota.",
+            "is_correct": false
+          },
+          {
+            "text": "Orden conjunta del Ministro de Hacienda y Administraciones Pblicas y del Ministro que ejerza el protectorado, que establecer los fines de la fundacin y, en su caso, los recursos econmicos con los que se le dota.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La creacin de las fundaciones del sector pblico estatal se realizar:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La Ley 2/2014, de 25 de marzo, de la Accin y del Servicio Exterior del Estado, contiene la siguiente definicin: Los rganos, las unidades administrativas y los medios humanos y materiales que, bajo la direccin y la coordinacin del Gobierno, ejecutan y desarrollan la Poltica Exterior y la Accin Exterior de este, sin perjuicio de las competencias de los distintos departamentos ministeriales. Dicha definicin corresponde a:",
+        "options": [
+          {
+            "text": "La Poltica Exterior.",
+            "is_correct": false
+          },
+          {
+            "text": "El Servicio Exterior del Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "La Accin exterior del Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "La definicin incluye los tres conceptos anteriores.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La Ley 2/2014, de 25 de marzo, de la Accin y del Servicio Exterior del Estado, contiene la siguiente definicin: Los rganos, las unidades administrativas y los medios humanos y materiales que, bajo la direccin y la coordinacin del Gobierno, ejecutan y desarrollan la Poltica Exterior y la Accin Exterior de este, sin perjuicio de las competencias de los distintos departamentos ministeriales. Dicha definicin corresponde a:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El Fiscal General del Estado, es en relacin al Consejo de Estado:",
+        "options": [
+          {
+            "text": "Consejero nato.",
+            "is_correct": false
+          },
+          {
+            "text": "Consejero electivo.",
+            "is_correct": false
+          },
+          {
+            "text": "Consejero vitalicio.",
+            "is_correct": false
+          },
+          {
+            "text": "No ocupa ningn cargo en el Consejo de Estado.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Fiscal General del Estado, es en relacin al Consejo de Estado:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta en relacin con las facultades que el artculo 149 de la Constitucin Espaola atribuye al Estado en cada una de las siguientes materias:",
+        "options": [
+          {
+            "text": "Legislacin bsica sobre propiedad intelectual e industrial.",
+            "is_correct": false
+          },
+          {
+            "text": "Legislacin bsica sobre pesas y medidas.",
+            "is_correct": false
+          },
+          {
+            "text": "Legislacin y rgimen econmico de la Seguridad Social.",
+            "is_correct": false
+          },
+          {
+            "text": "Normas bsicas del rgimen de presa, radio y televisin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta en relacin con las facultades que el artculo 149 de la Constitucin Espaola atribuye al Estado en cada una de las siguientes materias:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En materia de contratos y concesiones administrativas corresponde al Estado la/s siguiente/s facultad/es:",
+        "options": [
+          {
+            "text": "Legislacin bsica.",
+            "is_correct": false
+          },
+          {
+            "text": "Legislacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Legislacin y ejecucin.",
+            "is_correct": false
+          },
+          {
+            "text": "Contratos y concesiones administrativas es una competencia atribuda a las CCAA en virtud del artculo 148 CE.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En materia de contratos y concesiones administrativas corresponde al Estado la/s siguiente/s facultad/es:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "A qu rgano corresponde transferir o delegar en las CCAA facultades correspondientes a materias de titularidad estatal que por su propia naturaleza sean susceptibles de transferencia o delegacin?:",
+        "options": [
+          {
+            "text": "Al Gobierno mediante Real Decreto.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Gobierno previa autorizacin del Congreso.",
+            "is_correct": false
+          },
+          {
+            "text": "A las CCGG mediante ley orgnica.",
+            "is_correct": false
+          },
+          {
+            "text": "A las CCGG mediante ley de bases.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "A qu rgano corresponde transferir o delegar en las CCAA facultades correspondientes a materias de titularidad estatal que por su propia naturaleza sean susceptibles de transferencia o delegacin?:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cul de las siguientes competencias corresponde a la Comunidad Autnoma de conformidad con el artculo 148 de la Constitucin Espaola?:",
+        "options": [
+          {
+            "text": "Marisqueo.",
+            "is_correct": false
+          },
+          {
+            "text": "Iluminacin de costas.",
+            "is_correct": false
+          },
+          {
+            "text": "Abanderamiento de buques.",
+            "is_correct": false
+          },
+          {
+            "text": "Marina mercante.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de las siguientes competencias corresponde a la Comunidad Autnoma de conformidad con el artculo 148 de la Constitucin Espaola?:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta:",
+        "options": [
+          {
+            "text": "Corresponde al Estado la competencia exclusiva sobre administracin de justicia.",
+            "is_correct": false
+          },
+          {
+            "text": "Corresponde al Estado la competencia para dictar las bases en materia de artesana.",
+            "is_correct": false
+          },
+          {
+            "text": "Las CCAA podrn asumir el desarrollo legislativo y la ejecucin en materia de propiedad intelectual e industrial.",
+            "is_correct": false
+          },
+          {
+            "text": "Corresponde a las CCAA la competencia sobre el rgimen econmico de la Seguridad Social.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Corresponde en todo caso al pleno municipal, de conformidad con el artculo 22 LBRL:",
+        "options": [
+          {
+            "text": "La jefatura de la polica municipal.",
+            "is_correct": false
+          },
+          {
+            "text": "Aprobar la oferta de empleo pblico.",
+            "is_correct": false
+          },
+          {
+            "text": "La declaracin de lesividad de los actos del ayuntamiento.",
+            "is_correct": false
+          },
+          {
+            "text": "Dirigir, inspeccionar e impulsar servicios y obras municipales.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Corresponde en todo caso al pleno municipal, de conformidad con el artculo 22 LBRL:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "De conformidad con la LBRL 7/85, los caseros, parroquias, aldeas, barrios, anteiglesias, concejos, pedanas, lugares anejos y otros anlogos:",
+        "options": [
+          {
+            "text": "Tienen personalidad jurdica.",
+            "is_correct": false
+          },
+          {
+            "text": "Son entidades locales territoriales.",
+            "is_correct": false
+          },
+          {
+            "text": "Son entidades locales.",
+            "is_correct": false
+          },
+          {
+            "text": "Son entes de mbito territorial inferior al municipio",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De conformidad con la LBRL 7/85, los caseros, parroquias, aldeas, barrios, anteiglesias, concejos, pedanas, lugares anejos y otros anlogos:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Quin elige al Presidente de la Diputacin provincial?:",
+        "options": [
+          {
+            "text": "Los miembros del Pleno siendo necesario que obtenga mayora absoluta en primera votacin, y de no alcanzarse, mayora simple en segunda votacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Los habitantes de la provincia por sufragio universal siendo necesario que obtenga mayora absoluta en primera votacin, y de no alcanzarse, mayora simple en segunda votacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Los miembros del Pleno siendo necesario que obtenga mayora de 2/3 en primera votacin, y de no alcanzarse, mayora absoluta en segunda votacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Los miembros del Pleno siendo necesario que obtenga mayora de 2/3 en primera votacin, y de no alcanzarse, mayora simple en segunda votacin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Quin elige al Presidente de la Diputacin provincial?:",
+        "source": "9 TEST GLOBAL - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:22.312537"
+}

@@ -1,0 +1,677 @@
+{
+  "metadata": {
+    "source_file": "6. Test efectos y extinción parte general.pdf",
+    "source_path": "Test contratos\\6. Test efectos y extinción parte general.pdf",
+    "tema": 0,
+    "categoria": "contratos",
+    "extraction_date": "2026-01-15T23:41:09.178280",
+    "reformulation_date": "2026-01-15T23:47:35.637744",
+    "total_questions": 20,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.669582",
+    "completed_count": 0,
+    "failed_count": 20
+  },
+  "questions": [
+    {
+      "question_text": "Dentro de los lmites y con sujecin a los requisitos y efectos sealados",
+      "options": [
+        {
+          "text": "Interpretar los contratos administrativos.",
+          "is_correct": false
+        },
+        {
+          "text": "Modificar los contratos por razones de inters pblico.",
+          "is_correct": false
+        },
+        {
+          "text": "Suspender la ejecucin de los contratos.",
+          "is_correct": false
+        },
+        {
+          "text": "Todas son correctas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Dentro de los lmites y con sujecin a los requisitos y efectos sealados",
+      "source": "6. Test efectos y extinción parte general.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En relacin con las prerrogativas del rgano de contratacin en cuanto a",
+      "options": [
+        {
+          "text": "Estas facultades debern implicar un derecho general del rgano de",
+          "is_correct": false
+        },
+        {
+          "text": "ontratacin a",
+          "is_correct": false
+        },
+        {
+          "text": "En ningn caso dichas facultades de inspeccin podrn implicar un",
+          "is_correct": false
+        },
+        {
+          "text": "erecho general del rgano de contratacin a inspeccionar las",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En relacin con las prerrogativas del rgano de contratacin en cuanto a",
+      "source": "6. Test efectos y extinción parte general.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con la LCSP, en los procedimientos que se instruyan",
+      "options": [
+        {
+          "text": "Todas las entidades del Sector pblico estatal, debern adoptar estos",
+          "is_correct": false
+        },
+        {
+          "text": "cuerdos previo informe del Servicio Jurdico correspondiente.",
+          "is_correct": false
+        },
+        {
+          "text": "Ser preceptivo el dictamen del Consejo de Estado u rgano consultivo",
+          "is_correct": false
+        },
+        {
+          "text": "Los acuerdos que adopte el rgano de contratacin pondrn fin a la va",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con la LCSP, en los procedimientos que se instruyan",
+      "source": "6. Test efectos y extinción parte general.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En relacin con el incumplimiento parcial o cumplimiento defectuoso de",
+      "options": [
+        {
+          "text": "En el caso de incumplimiento de las condiciones especiales de",
+          "is_correct": false
+        },
+        {
+          "text": "Cuando el contratista hubiere incumplido parcialmente la ejecucin, la",
+          "is_correct": false
+        },
+        {
+          "text": "dministracin podr optar, atendidas las circunstancias del caso, por",
+          "is_correct": false
+        },
+        {
+          "text": "Las penalidades podrn ser proporcionales a",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En relacin con el incumplimiento parcial o cumplimiento defectuoso de",
+      "source": "6. Test efectos y extinción parte general.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En relacin con las penalidades, para el caso de cumplimiento defectuoso",
+      "options": [
+        {
+          "text": "ompromisos o de las condiciones especiales de ejecucin del contrato:",
+          "is_correct": false
+        },
+        {
+          "text": "Las cuantas de cada una de ellas no podrn ser superiores al 10 por",
+          "is_correct": false
+        },
+        {
+          "text": "iento del precio del contrato, IVA excluido.",
+          "is_correct": false
+        },
+        {
+          "text": "Las cuantas de cada una de ellas no podrn ser superiores al 50 por",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En relacin con las penalidades, para el caso de cumplimiento defectuoso",
+      "source": "6. Test efectos y extinción parte general.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta incorrecta:",
+      "options": [
+        {
+          "text": "La constitucin en mora del contratista no precisar intimacin previa",
+          "is_correct": false
+        },
+        {
+          "text": "Cuando el contratista, por causas imputables al mismo, hubiere",
+          "is_correct": false
+        },
+        {
+          "text": "dministracin podr optar, atendidas las circunstancias del caso, por",
+          "is_correct": false
+        },
+        {
+          "text": "ontrato, IVA excluido.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta incorrecta:",
+      "source": "6. Test efectos y extinción parte general.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En cuanto a la imposicin de penalidades:",
+      "options": [
+        {
+          "text": "Se impondrn por acuerdo del rgano de contratacin, previo informe",
+          "is_correct": false
+        },
+        {
+          "text": "el servicio jurdico y en caso de oposicin por parte del contratista, se",
+          "is_correct": false
+        },
+        {
+          "text": "Se harn efectivas sobre la garanta que se hubiese constituido.",
+          "is_correct": false
+        },
+        {
+          "text": "Se impondrn por acuerdo del rgano de contratacin, adoptado a",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En cuanto a la imposicin de penalidades:",
+      "source": "6. Test efectos y extinción parte general.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta correcta:",
+      "options": [
+        {
+          "text": "Ser obligacin de la Administracin indemnizar todos los daos y",
+          "is_correct": false
+        },
+        {
+          "text": "En todo caso, ser obligacin del contratista indemnizar todos los",
+          "is_correct": false
+        },
+        {
+          "text": "aos y perjuicios que se causen a terceros como consecuencia de las",
+          "is_correct": false
+        },
+        {
+          "text": "Los terceros podrn requerir previamente, dentro del ao siguiente a la",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta correcta:",
+      "source": "6. Test efectos y extinción parte general.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En cuanto a la demora en el pago por parte de la Administracin:",
+      "options": [
+        {
+          "text": "Si la demora en el pago fuese superior a cuatro meses, el contratista",
+          "is_correct": false
+        },
+        {
+          "text": "ontrato, debiendo comunicar a la Administracin, con un mes de",
+          "is_correct": false
+        },
+        {
+          "text": "ntelacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Si la demora en el pago fuese superior a cinco meses, el contratista",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En cuanto a la demora en el pago por parte de la Administracin:",
+      "source": "6. Test efectos y extinción parte general.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En cuanto al procedimiento para hacer efectivas las deudas de las",
+      "options": [
+        {
+          "text": "dministraciones Pblicas:",
+          "is_correct": false
+        },
+        {
+          "text": "Se deber interponer recurso contencioso administrativo.",
+          "is_correct": false
+        },
+        {
+          "text": "Los contratistas podrn reclamar por escrito a la Administracin",
+          "is_correct": false
+        },
+        {
+          "text": "ontratante el cumplimiento de la obligacin de pago y, en su caso, de",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En cuanto al procedimiento para hacer efectivas las deudas de las",
+      "source": "6. Test efectos y extinción parte general.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta incorrecta:",
+      "options": [
+        {
+          "text": "Los rganos de contratacin podrn establecer condiciones especiales",
+          "is_correct": false
+        },
+        {
+          "text": "l objeto del contrato.",
+          "is_correct": false
+        },
+        {
+          "text": "En todo caso, ser obligatorio el establecimiento en el pliego de",
+          "is_correct": false
+        },
+        {
+          "text": "lusulas administrativas particulares de al menos una de",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta incorrecta:",
+      "source": "6. Test efectos y extinción parte general.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta correcta en relacin con las modificaciones de los",
+      "options": [
+        {
+          "text": "ontratos:",
+          "is_correct": false
+        },
+        {
+          "text": "Todas las modificaciones se publicarn en el DOUE si los contratos",
+          "is_correct": false
+        },
+        {
+          "text": "Si fuese necesario que un contrato en vigor se ejecutase en forma",
+          "is_correct": false
+        },
+        {
+          "text": "istinta a la pactada, deber procederse a su resolucin y a la",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta correcta en relacin con las modificaciones de los",
+      "source": "6. Test efectos y extinción parte general.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta incorrecta:",
+      "options": [
+        {
+          "text": "Los rganos de contratacin que hubieren modificado un contrato",
+          "is_correct": false
+        },
+        {
+          "text": "urante su vigencia, debern publicar en todo caso un anuncio de",
+          "is_correct": false
+        },
+        {
+          "text": "Acordada la suspensin del contrato, en su caso, la Administracin",
+          "is_correct": false
+        },
+        {
+          "text": "bonar los gastos por mantenimiento de la garanta definitiva.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta incorrecta:",
+      "source": "6. Test efectos y extinción parte general.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En relacin con el cumplimiento de los contratos, seale la respuesta",
+      "options": [
+        {
+          "text": "En todo caso, su constatacin exigir por parte de la Administracin un",
+          "is_correct": false
+        },
+        {
+          "text": "cto formal y positivo de recepcin o conformidad.",
+          "is_correct": false
+        },
+        {
+          "text": "El acto formal y positivo de recepcin o conformidad, deber efectuarse",
+          "is_correct": false
+        },
+        {
+          "text": "En los contratos, como regla general, se fijar un plazo de garanta a",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En relacin con el cumplimiento de los contratos, seale la respuesta",
+      "source": "6. Test efectos y extinción parte general.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En cuanto a las modificaciones no previstas, sern obligatorias para el",
+      "options": [
+        {
+          "text": "ontratista:",
+          "is_correct": false
+        },
+        {
+          "text": "Cuando impliquen, aislada o conjuntamente, una alteracin en su",
+          "is_correct": false
+        },
+        {
+          "text": "uanta que no exceda del 20 por ciento del precio inicial del contrato,",
+          "is_correct": false
+        },
+        {
+          "text": "Cuando impliquen, aislada o conjuntamente, una alteracin en su",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En cuanto a las modificaciones no previstas, sern obligatorias para el",
+      "source": "6. Test efectos y extinción parte general.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Son causas de resolucin del contrato:",
+      "options": [
+        {
+          "text": "El mutuo acuerdo entre la Administracin y el contratista.",
+          "is_correct": false
+        },
+        {
+          "text": "La imposibilidad de ejecutar la prestacin en los trminos inicialmente",
+          "is_correct": false
+        },
+        {
+          "text": "rtculos 204 y 205.",
+          "is_correct": false
+        },
+        {
+          "text": "La no reposicin en plazo de la garanta definitiva.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Son causas de resolucin del contrato:",
+      "source": "6. Test efectos y extinción parte general.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Son requisitos para la cesin de los contratos:",
+      "options": [
+        {
+          "text": "Que el rgano de contratacin autorice, de forma previa y expresa, la",
+          "is_correct": false
+        },
+        {
+          "text": "esin.",
+          "is_correct": false
+        },
+        {
+          "text": "El plazo para la notificacin de la resolucin sobre la solicitud de",
+          "is_correct": false
+        },
+        {
+          "text": "utorizacin ser de dos meses, trascurrido el cual deber entenderse",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Son requisitos para la cesin de los contratos:",
+      "source": "6. Test efectos y extinción parte general.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta incorrecta en relacin con la subcontratacin:",
+      "options": [
+        {
+          "text": "El contratista podr concertar con terceros la realizacin parcial de la",
+          "is_correct": false
+        },
+        {
+          "text": "En el caso que el subcontratista tuviera la clasificacin adecuada para",
+          "is_correct": false
+        },
+        {
+          "text": "omunicacin de esta circunstancia ser suficiente para acreditar la",
+          "is_correct": false
+        },
+        {
+          "text": "ptitud del mismo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta incorrecta en relacin con la subcontratacin:",
+      "source": "6. Test efectos y extinción parte general.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu consecuencias puede generar la infraccin de las condiciones",
+      "options": [
+        {
+          "text": "La imposicin al subcontratista de una penalidad de hasta un 50 por",
+          "is_correct": false
+        },
+        {
+          "text": "La resolucin del contrato sin posibilidad de imponer penalidad alguna.",
+          "is_correct": false
+        },
+        {
+          "text": "La resolucin del contrato y la imposicin de penalidades de hasta el",
+          "is_correct": false
+        },
+        {
+          "text": "La imposicin al contratista de una penalidad de hasta un 50 por 100",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu consecuencias puede generar la infraccin de las condiciones",
+      "source": "6. Test efectos y extinción parte general.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En cuanto al pago a los subcontratistas y suministradores:",
+      "options": [
+        {
+          "text": "El contratista est obligado a abonar a",
+          "is_correct": false
+        },
+        {
+          "text": "Las Administraciones Pblicas y dems entes pblicos contratantes",
+          "is_correct": false
+        },
+        {
+          "text": "ontratistas adjudicatarios de los contratos pblicos, han de hacer a",
+          "is_correct": false
+        },
+        {
+          "text": "Los subcontratistas no tendrn accin directa frente a la Administracin",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En cuanto al pago a los subcontratistas y suministradores:",
+      "source": "6. Test efectos y extinción parte general.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

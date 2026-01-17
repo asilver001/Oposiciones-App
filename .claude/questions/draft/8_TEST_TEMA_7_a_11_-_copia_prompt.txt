@@ -1,0 +1,510 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 8 TEST TEMA 7 a 11 - copia.docx
+**Total preguntas:** 40
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** De conformidad con el art�culo 26 LOPJ, no se considera �rgano jurisdiccional integrante del poder judicial el siguiente:
+
+**Opciones:**
+  0. El Tribunal Supremo.
+  1. El Tribunal Superior de Justicia.
+  2. El Juez de Paz.
+  3. El Tribunal Constitucional.
+
+---
+
+### Pregunta 2
+
+**Texto:** Se�ale la correcta en relaci�n con el nombramiento del Fiscal General del Estado:
+
+**Opciones:**
+  0. La propuesta de nombramiento corresponde al CGPJ.
+  1. Ser� necesario informe previo del Gobierno.
+  2. El nombramiento corresponde al Rey.
+  3. Tendr� un mandato de 5 a�os.
+
+---
+
+### Pregunta 3
+
+**Texto:** El Juez de Paz:
+
+**Opciones:**
+  0. Es elegido por el Pleno del Ayuntamiento.
+  1. Es nombrado por el Rey.
+  2. Tendr� un mandato de cinco a�os prorrogable por otro plazo igual.
+  3. Ser�n nombrado entre juristas de reconocido prestigio
+
+---
+
+### Pregunta 4
+
+**Texto:** El principio de unidad jurisdiccional es la base de la organizaci�n y funcionamiento de los Tribunales. La ley regular�, de conformidad con la Constituci�n:
+
+**Opciones:**
+  0. El ejercicio de la jurisdicci�n militar en el �mbito estrictamente castrense y en los supuestos de estado de sitio.
+  1. El ejercicio de la jurisdicci�n militar en el �mbito estrictamente castrense y en los supuestos de estados de excepci�n y sitio.
+  2. El ejercicio de la jurisdicci�n de los tribunales de excepci�n en el �mbito estrictamente castrense y en los supuestos de estado de sitio
+  3. El ejercicio de la jurisdicci�n de los tribunales de excepci�n en el �mbito estrictamente castrense y en los supuestos de estados de excepci�n y sitio
+
+---
+
+### Pregunta 5
+
+**Texto:** La LRJSP, establece que los Secretarios Generales:
+
+**Opciones:**
+  0. Son �rganos superiores.
+  1. Son miembros del Gobierno.
+  2. Tienen rango de subsecretario.
+  3. Habr�n de designarse entre funcionarios de carrera.
+
+---
+
+### Pregunta 6
+
+**Texto:** Se�ale la falsa:
+
+**Opciones:**
+  0. La Secretar�a de Estado se crea por RD del Presidente del Gobierno.
+  1. La Secretar�a General se crea por RD del Consejo de Ministros.
+  2. Las �reas, servicios y secciones se crean por Orden del Ministro respectivo.
+  3. La subdirecci�n General se crea por RD del Consejo de Ministros.
+
+---
+
+### Pregunta 7
+
+**Texto:** La Administraci�n General del Estado, seg�n el art. 57 de la Ley 40/2015, de 1 de octubre, se organiza en:
+
+**Opciones:**
+  0. Ministerios y Gabinetes.
+  1. Ministerios.
+  2. Secretar�as de Estado.
+  3. Presidencia del Gobierno y en Ministerios.
+
+---
+
+### Pregunta 8
+
+**Texto:** El nombramiento de los Secretarios de Estado se lleva a cabo por:
+
+**Opciones:**
+  0. Real Decreto del Presidente del Gobierno a propuesta del miembro del Gobierno a cuyo Departamento pertenezcan.
+  1. Real Decreto del Consejo de Ministros a propuesta del Presidente del Gobierno o del miembro del Gobierno a cuyo Departamento pertenezcan.
+  2. Orden del Ministro a cuyo Departamento pertenezcan.
+  3. Acuerdo del Consejo de Ministros a propuesta del miembro del Gobierno a cuyo Departamento pertenezcan.
+
+---
+
+### Pregunta 9
+
+**Texto:** Respecto de los Subdirectores Generales:
+
+**Opciones:**
+  0. Son nombrados y cesados por el Ministro del que dependan.
+  1. Son nombrados y cesados por el Ministro, Secretario de Estado o Subsecretario del que dependan.
+  2. Son nombrados y cesados por el Secretario de Estado o Subsecretario del
+  3. Son nombrados y cesados por el Ministro o Secretario de Estado del que dependan.
+
+---
+
+### Pregunta 10
+
+**Texto:** Ser�n nombrados por Real Decreto del Consejo de Ministros a propuesta del titular del Ministerio respectivo entre funcionarios de carrera pertenecientes al Subgrupo A1, o que haya perdido tal condici�n por haberse jubilado y que adem�s que re�nan los requisitos de idoneidad establecidos en la Ley 3/2015 los siguientes:
+
+**Opciones:**
+  0. Subsecretario, Secretario General y Director General.
+  1. Secretario General, Secretario General T�cnico y Director General.
+  2. Secretario General T�cnico, Director General y Subdirector General.
+  3. Subsecretario y Secretario General T�cnico.
+
+---
+
+### Pregunta 11
+
+**Texto:** Tienen rango de subsecretario:
+
+**Opciones:**
+  0. El Secretario General y el Secretario General T�cnico.
+  1. El Secretario General y el Delegado del Gobierno.
+  2. El Secretario General T�cnico y el Delegado del Gobierno.
+  3. El Secretario General T�cnico y el subdelegado del Gobierno.
+
+---
+
+### Pregunta 12
+
+**Texto:** Seg�n la LRJSP, en caso de vacante, ausencia o enfermedad del Delegado del Gobierno, �ste ser� suplido por:
+
+**Opciones:**
+  0. Cualquier funcionario designado a tal efecto por el Delegado del Gobierno.
+  1. En primer t�rmino, por el Subdelegado del Gobierno de la provincia en que tenga sede la Delegaci�n, salvo que se trate de una Comunidad Aut�noma uniprovincial en que no exista Subdelegado, en cuyo caso corresponder� al Secretario General.
+  2. El Subdelegado del Gobierno que el Delegado designe y, en su defecto, el de la provincia en que tenga su sede, salvo que se trate de una Comunidad Aut�noma uniprovincial en que no exista Subdelegado, en cuyo caso corresponder� al Secretario General.
+  3. Por el Secretario General de la Delegaci�n del Gobierno correspondiente, tanto en Comunidades Aut�nomas uniprovinciales o pluriprovinciales, por ser de sus funciones reglamentariamente establecidas la de sustituir al Delegado y al Subdelegado.
+
+---
+
+### Pregunta 13
+
+**Texto:** Los servicios territoriales integrados depender�n:
+
+**Opciones:**
+  0. De la Presidencia del Gobierno.
+  1. Del Delegado del Gobierno, o en su caso Subdelegado del Gobierno, a trav�s de la Presidencia del Gobierno.
+  2. De la Presidencia del Gobierno, a trav�s del Ministerio de Pol�tica Territorial y Memoria Democr�tica.
+  3. Del Delegado del Gobierno, o en su caso Subdelegado del Gobierno, a trav�s de la Secretar�a General.
+
+---
+
+### Pregunta 14
+
+**Texto:** En cada Delegaci�n del Gobierno existir� un �rgano para la gesti�n de los servicios comunes llamado:
+
+**Opciones:**
+  0. Gabinete.
+  1. Subsecretar�a.
+  2. �rea funcional.
+  3. Secretar�a General.
+
+---
+
+### Pregunta 15
+
+**Texto:** De conformidad con el art�culo 55 LRJSP, la AGE comprende:
+
+**Opciones:**
+  0. La organizaci�n central que integra los Ministerios y servicios comunes, y la organizaci�n territorial.
+  1. La organizaci�n central que integra los Ministerios y servicios comunes, la organizaci�n territorial y la AGE en el exterior.
+  2. La organizaci�n central que integra los Ministerios y gabinetes, y la organizaci�n territorial.
+  3. La organizaci�n central que integra los Ministerios y gabinetes, la organizaci�n territorial y la AGE en el exterior.
+
+---
+
+### Pregunta 16
+
+**Texto:** El Encargado de Negocios con Cartas de Gabinete es nombrado por:
+
+**Opciones:**
+  0. El Consejo de Ministros.
+  1. El Presidente del Gobierno.
+  2. El Ministro de Asuntos Exteriores.
+  3. El Congreso de los Diputados.
+
+---
+
+### Pregunta 17
+
+**Texto:** Las delegaciones estar�n presididas, salvo autorizaci�n en contrario, por:
+
+**Opciones:**
+  0. El Rey.
+  1. El Rey o el Presidente del Gobierno.
+  2. El Rey, el Presidente del Gobierno o el Ministro de Asuntos Exteriores.
+  3. El Presidente del Gobierno o el Ministro de Asuntos Exteriores.
+
+---
+
+### Pregunta 18
+
+**Texto:** Se consideran Fundaciones del Sector P�blico Estatal:
+
+**Opciones:**
+  0. Aquellas que se constituyan con una aportaci�n del 50% de la AGE, sus OOPP o dem�s entes del sector p�blico
+  1. Aquellas que se constituyan de forma inicial, con una aportaci�n mayoritaria, directa o indirecta, de la Administraci�n General del Estado o cualquiera de los sujetos integrantes del sector p�blico institucional estatal, pero no cuando reciban dicha aportaci�n con posterioridad a su constituci�n.
+  2. Aquellas en que el patrimonio de la fundaci�n est� integrado en m�s de un 50 por ciento por bienes o derechos aportados o cedidos por sujetos integrantes del sector p�blico institucional estatal con car�cter permanente.
+  3. Aquellas en que la mayor�a de derechos de voto en su patronato corresponda a representantes del sector p�blico institucional estatal.
+
+---
+
+### Pregunta 19
+
+**Texto:** Los estatutos de los organismos p�blicos se aprobar�n por:
+
+**Opciones:**
+  0. Ley.
+  1. Real Decreto del Consejo de Ministros.
+  2. Orden Ministerial.
+  3. El Consejo rector del organismo.
+
+---
+
+### Pregunta 20
+
+**Texto:** La creaci�n de una sociedad mercantil estatal o la adquisici�n de este car�cter de forma sobrevenida se produce:
+
+**Opciones:**
+  0. Por Ley
+  1. Por Real Decreto del Consejo de Ministros.
+  2. Por Autorizaci�n mediante acuerdo del Consejo de Ministros.
+  3. Orden Ministerial.
+
+---
+
+### Pregunta 21
+
+**Texto:** En control de eficacia de los OOAA corresponde (art. 85 LRJSP):
+
+**Opciones:**
+  0. Al propio organismo aut�nomo a trav�s del m�ximo �rgano de gobierno.
+  1. Al Ministerio de Hacienda y Administraciones P�blicas (en la actualidad Transformaci�n Digital y Funci�n P�blica) a trav�s de la IGAE
+  2. Al Departamento al que est�n adscritos.
+  3. A la IGAE
+
+---
+
+### Pregunta 22
+
+**Texto:** Todas las entidades integrantes del sector p�blico institucional estatal est�n sujetas desde su creaci�n hasta su extinci�n a la supervisi�n continua:
+
+**Opciones:**
+  0. Del Consejo de Ministros, a trav�s de la Intervenci�n General de la Administraci�n del Estado.
+  1. Del Consejo de Ministros, a trav�s del Tribunal de Cuentas.
+  2. Del Ministerio de Hacienda, a trav�s de la Intervenci�n General de la Administraci�n del Estado.
+  3. Del Ministerio de Hacienda, a trav�s del Tribunal de Cuentas.
+
+---
+
+### Pregunta 23
+
+**Texto:** Si en el procedimiento previsto en el art�culo 151 de la Constituci�n, una o varias provincias no aprueban el proyecto de Estatuto de Autonom�a:
+
+**Opciones:**
+  0. No ser� posible la constituci�n de esa Comunidad Aut�noma.
+  1. Ello no impedir� la constituci�n de las dem�s provincias en comunidad aut�noma.
+  2. Ser� posible que las dem�s se constituyan en Comunidad aut�noma si as� lo autoriza el Congreso.
+  3. Ser� necesario iniciar de nuevo el procedimiento desde el principio.
+
+---
+
+### Pregunta 24
+
+**Texto:** De acuerdo con el T�tulo VIII de la Constituci�n, el Estado se organiza territorialmente en:
+
+**Opciones:**
+  0. Municipios, provincias y diputaciones provinciales
+  1. Municipios, provincias y las Comunidades Aut�nomas que se constituyan, gozando de autonom�a �nicamente las Comunidades Aut�nomas.
+  2. Municipios, provincias y las Comunidades Aut�nomas que se constituyan, gozando de autonom�a todas ellas para la gesti�n de sus respectivos intereses.
+  3. Municipios y Comunidades Aut�nomas que se constituyan, gozando de autonom�a ambas para la gesti�n de sus respectivos intereses.
+
+---
+
+### Pregunta 25
+
+**Texto:** La reforma de los Estatutos de Autonom�a de las CCAA requerir� en todo caso:
+
+**Opciones:**
+  0. Autorizaci�n del Consejo de Ministros.
+  1. Aprobaci�n del Senado.
+  2. Aprobaci�n de las CCGG mediante Ley Org�nica.
+  3. Refer�ndum de los electores inscritos en los censos correspondientes y aprobaci�n por ley org�nica de las CCGG.
+
+---
+
+### Pregunta 26
+
+**Texto:** De conformidad con el art�culo 149.2, sin perjuicio de las competencias que podr�n asumir las Comunidades Aut�nomas, el Estado considerar�:
+
+**Opciones:**
+  0. El servicio a la cultura como deber y atribuci�n esencial y facilitar� la comunicaci�n cultural entre las Comunidades Aut�nomas, de acuerdo con ellas.
+  1. El servicio a la cultura y a la investigaci�n cient�fica y t�cnica como deber y atribuci�n esencial y facilitar� la comunicaci�n cultural entre las Comunidades Aut�nomas, de acuerdo con ellas.
+  2. El servicio a la cultura como deber y atribuci�n esencial y facilitar� la comunicaci�n cultural entre las Comunidades Aut�nomas y entidades locales, de acuerdo con ellas..
+  3. El servicio a la cultura y a la investigaci�n cient�fica y t�cnica como deber y atribuci�n esencial y facilitar� la comunicaci�n cultural entre las Comunidades Aut�nomas y entidades locales, de acuerdo con ellas.
+
+---
+
+### Pregunta 27
+
+**Texto:** La competencia sobre el control del espacio a�reo, tr�nsito y transporte a�reo:
+
+**Opciones:**
+  0. Es exclusiva del Estado
+  1. Corresponde al estado la legislaci�n y a las CCAA la ejecuci�n
+  2. Corresponde al Estado la legislaci�n b�sica y a las CCAA la legislaci�n de desarrollo y la ejecuci�n
+  3. Es exclusiva de las CCAA
+
+---
+
+### Pregunta 28
+
+**Texto:** Una vez sancionados y promulgados los respectivos Estatutos de las CCAA de v�a especial, podr�n ser modificados:
+
+**Opciones:**
+  0. Mediante los procedimientos establecidos en la ley del proceso auton�mico y con refer�ndum entre los electores inscritos en los censos correspondientes.
+  1. Mediante los procedimientos en ellos establecidos y con refer�ndum entre los electores inscritos en los censos correspondientes.
+  2. Mediante los procedimientos establecidos por el Congreso y con refer�ndum entre los electores inscritos en los censos correspondientes.
+  3. Mediante los procedimientos en ellos establecidos y con refer�ndum nacional convocado en los t�rminos del art�culo 92 de la CE.
+
+---
+
+### Pregunta 29
+
+**Texto:** En el caso de Comunidades Aut�nomas que accedan por la V�a especial del art�culo 151, una vez aprobado el proyecto de Estatuto:
+
+**Opciones:**
+  0. Se remitir� a la Comisi�n Constitucional del Senado, la cual dentro del plazo de dos meses lo examinar�, con el concurso y asistencia de una delegaci�n de la Asamblea proponente.
+  1. Se remitir� a la Comisi�n Constitucional del Congreso, la cual dentro del plazo de dos meses lo examinar� con el concurso y asistencia de una delegaci�n de la Asamblea proponente.
+  2. Se remitir� a la Comisi�n Constitucional del Senado, la cual dentro del plazo de un mes lo examinar�, con el concurso y asistencia de una delegaci�n de la Asamblea proponente.
+  3. Se remitir� a la Comisi�n Constitucional del Congreso, la cual dentro del plazo de un mes lo examinar� el concurso y asistencia de una delegaci�n de la Asamblea proponente.
+
+---
+
+### Pregunta 30
+
+**Texto:** La competencia en materia de caza:
+
+**Opciones:**
+  0. Es exclusiva del Estado.
+  1. Podr� ser asumida por la Comunidad aut�noma.
+  2. El Estado se reserva la legislaci�n b�sica pudiendo asumir la comunidad aut�noma la legislaci�n de desarrollo y ejecuci�n en la materia.
+  3. El Estado se reserva la legislaci�n pudiendo asumir la comunidad aut�noma la ejecuci�n en la materia.
+
+---
+
+### Pregunta 31
+
+**Texto:** Seg�n la Constituci�n de 1978 las Comunidades Aut�nomas podr�n asumir competencias en las siguientes materias (se�ale la falsa):
+
+**Opciones:**
+  0. La pesca en aguas interiores, el marisqueo y la acuicultura, la caza y la pesca fluvial.
+  1. La gesti�n en materia de protecci�n del medio ambiente.
+  2. Ferias interiores.
+  3. Legislaci�n laboral.
+
+---
+
+### Pregunta 32
+
+**Texto:** El Estado no tiene competencia exclusiva sobre las siguientes materias, seg�n la Constituci�n de 1978:
+
+**Opciones:**
+  0. Sistema monetario: divisas, cambio y convertibilidad
+  1. Bases de la ordenaci�n de cr�dito, banca y seguros.
+  2. Promoci�n del deporte y de la adecuada utilizaci�n del ocio.
+  3. Sanidad exterior
+
+---
+
+### Pregunta 33
+
+**Texto:** El control de la actividad de los �rganos de las Comunidades Aut�nomas que se ejercer� por el Gobierno seg�n el art�culo 153 de la Constituci�n de 1978 es:
+
+**Opciones:**
+  0. El de las normas reglamentarias que emanen de la administraci�n aut�noma.
+  1. El del ejercicio de funciones delegadas a que se refiere el apartado 2 del art�culo 150, previo dictamen del Consejo de Estado.
+  2. El de las leyes de las Asambleas Legislativas.
+  3. El econ�mico y presupuestario.
+
+---
+
+### Pregunta 34
+
+**Texto:** Son considerados municipios de gran poblaci�n de conformidad con el T�tulo X de la LBRL:
+
+**Opciones:**
+  0. Aquellos que tengan poblaci�n superior a 150.000 habitantes
+  1. Las capitales de provincia con poblaci�n superior a 100.000 habitantes
+  2. A los municipios que sean capitales de provincia, capitales auton�micas o sedes de las instituciones auton�micas cuando as� lo decidan las Asambleas Legislativas correspondientes a iniciativa de los respectivos ayuntamientos.
+  3. Los municipios cuya poblaci�n supere los 75.000 habitantes, que presenten circunstancias econ�micas, sociales, hist�ricas o culturales especiales cuando as� lo decidan las Asambleas Legislativas correspondientes previo informe favorable de la Administraci�n General del Estado.
+
+---
+
+### Pregunta 35
+
+**Texto:** �Cu�l es el n�mero de Diputados Provinciales que componen el Pleno de una Diputaci�n Provincial?:
+
+**Opciones:**
+  0. El n�mero de Diputados Provinciales var�a en funci�n del n�mero de residentes en la provincia y oscila entre 25 y 51.
+  1. El n�mero de Diputados Provinciales var�a en funci�n del n�mero de residentes en la provincia y oscila entre 20 y 40.
+  2. El n�mero de Diputados Provinciales no es proporcional al n�mero de residentes en la provincia, sino que se fija por el Presidente de la Diputaci�n.
+  3. Son siempre 25 Diputados Provinciales.
+
+---
+
+### Pregunta 36
+
+**Texto:** Se�ale la respuesta correcta:
+
+**Opciones:**
+  0. Las Comarcas ostentan la consideraci�n de entidad local territorial de conformidad con el art�culo 3 de la LBRL.
+  1. Los entes de �mbito territorial inferior al Municipio tienen la consideraci�n de entidad local de conformidad con el art�culo 3 de la LBRL.
+  2. Son entidades locales territoriales de conformidad con el art�culo 3 de la LBRL el municipio, la provincia, la isla, las comarcas, las �reas metropolitanas y las mancomunidades de municipios.
+  3. Son entidades locales no territoriales de conformidad con el art�culo 3 de la LBRL las comarcas, las �reas metropolitanas y las mancomunidades de municipios.
+
+---
+
+### Pregunta 37
+
+**Texto:** La Junta de Gobierno Local existe en todos los municipios con poblaci�n superior a:
+
+**Opciones:**
+  0. 5.000 habitantes
+  1. 10.000 habitantes.
+  2. 25.000 habitantes.
+  3. 50.000 habitantes.
+
+---
+
+### Pregunta 38
+
+**Texto:** El art�culo 3 LBRL no incluye como entidad local:
+
+**Opciones:**
+  0. A la provincia.
+  1. A la isla.
+  2. A los entes de �mbito territorial inferior al municipio.
+  3. A la Comarca.
+
+---
+
+### Pregunta 39
+
+**Texto:** De conformidad con la LBRL, se�ale la respuesta correcta en relaci�n con los reg�menes provinciales especiales:
+
+**Opciones:**
+  0. Las Comunidades Aut�nomas uniprovinciales y la Foral de Navarra asumen las competencias, medios y recursos que corresponden en el r�gimen ordinario a los Ayuntamientos.
+  1. Los Cabildos Insulares son los �rganos de gobierno, administraci�n y representaci�n de cada isla en el archipi�lago balear.
+  2. Los �rganos forales de �lava, Guip�zcoa y Vizcaya conservan su r�gimen peculiar en el marco del Estatuto de Autonom�a de la Comunidad Aut�noma del Pa�s Vasco.
+  3. Todas son correctas
+
+---
+
+### Pregunta 40
+
+**Texto:** La prestaci�n del servicio de medio ambiente urbano se exige en los municipios:
+
+**Opciones:**
+  0. con poblaci�n superior a 20.000 habitantes
+  1. con poblaci�n superior a 50.000 habitantes
+  2. con poblaci�n superior a 5.000 habitantes
+  3. con poblaci�n superior a 10.000 habitantes
+
+---

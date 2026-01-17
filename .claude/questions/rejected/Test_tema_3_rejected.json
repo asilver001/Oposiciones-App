@@ -1,0 +1,1956 @@
+{
+  "metadata": {
+    "source_file": "Test tema 3.pdf",
+    "source_path": "Test Iniciales UE\\Test tema 3.pdf",
+    "tema": 3,
+    "categoria": "union-europea",
+    "extraction_date": "2026-01-15T23:42:05.842288",
+    "reformulation_date": "2026-01-15T23:47:35.754194",
+    "total_questions": 39,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:56.034566",
+    "completed_count": 0,
+    "failed_count": 39
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "Cul es el nmero mnimo de diputados en el Parlamento Europeo para un Estado",
+        "options": [
+          {
+            "text": "6, 751",
+            "is_correct": false
+          },
+          {
+            "text": "9, 705",
+            "is_correct": false
+          },
+          {
+            "text": "9, 721",
+            "is_correct": false
+          },
+          {
+            "text": "6, 720",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul es el nmero mnimo de diputados en el Parlamento Europeo para un Estado",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: '6, 751...'",
+        "Distractor muy corto: '9, 705...'",
+        "Distractor muy corto: '9, 721...'",
+        "Distractor muy corto: '6, 720...'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.443
+    },
+    {
+      "question": {
+        "question_text": "Cul de los siguientes no es un tipo de formacin prevista en relacin al trabajo en",
+        "options": [
+          {
+            "text": "Pleno",
+            "is_correct": false
+          },
+          {
+            "text": "Comisin de investigacin",
+            "is_correct": false
+          },
+          {
+            "text": "Comisin permanente",
+            "is_correct": false
+          },
+          {
+            "text": "Comisin de inspeccin",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de los siguientes no es un tipo de formacin prevista en relacin al trabajo en",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Pleno...'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta FALSA en relacin con el Tribunal General:",
+        "options": [
+          {
+            "text": "Est compuesto en la actualidad por 54 jueces y 11 abogados generales",
+            "is_correct": false
+          },
+          {
+            "text": "El Tratado de Lisboa le cambi el nombre, pues inicialmente se llamaba Tribunal de Pri-",
+            "is_correct": false
+          },
+          {
+            "text": "Resolver en primera instancia los recursos entre la Unin y sus agentes.",
+            "is_correct": false
+          },
+          {
+            "text": "De las resoluciones judiciales del Tribunal General conocer en casacin el Tribunal de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta FALSA en relacin con el Tribunal General:",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La duracin del mandato del Defensor del Pueblo Europeo es de, y actualmente",
+        "options": [
+          {
+            "text": "4 aos, Roberta Metsola",
+            "is_correct": false
+          },
+          {
+            "text": "5 aos, Teresa Anjinho",
+            "is_correct": false
+          },
+          {
+            "text": "4 aos, Emily OReilly",
+            "is_correct": false
+          },
+          {
+            "text": "5 aos, Roberta Metsola",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La duracin del mandato del Defensor del Pueblo Europeo es de, y actualmente",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Parlamento Europeo celebra sus sesiones del mes de junio en:",
+        "options": [
+          {
+            "text": "Bruselas",
+            "is_correct": false
+          },
+          {
+            "text": "Estrasburgo",
+            "is_correct": false
+          },
+          {
+            "text": "Luxemburgo",
+            "is_correct": false
+          },
+          {
+            "text": "Ninguna es correcta",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Parlamento Europeo celebra sus sesiones del mes de junio en:",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Bruselas...'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los miembros del Tribunal de Cuentas:",
+        "options": [
+          {
+            "text": "Son uno por Estado miembro, ms su Presidente.",
+            "is_correct": false
+          },
+          {
+            "text": "Son nombrados por el Consejo, por mayora cualificada, previa aprobacin del Parla-",
+            "is_correct": false
+          },
+          {
+            "text": "Tienen un mandato es de 6 aos, como el de los miembros del TJUE.",
+            "is_correct": false
+          },
+          {
+            "text": "No pueden haber pertenecido en sus respectivos Estados a las instituciones de control",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los miembros del Tribunal de Cuentas:",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cul de las siguientes instituciones NO fue unificada por el Tratado de Fusin de",
+        "options": [
+          {
+            "text": "El Parlamento Europeo",
+            "is_correct": false
+          },
+          {
+            "text": "El Tribunal de Justicia de la UE",
+            "is_correct": false
+          },
+          {
+            "text": "El Tribunal de Cuentas",
+            "is_correct": false
+          },
+          {
+            "text": "La Comisin Europea",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de las siguientes instituciones NO fue unificada por el Tratado de Fusin de",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Cul de los siguientes recursos NO es competencia del TJUE?",
+        "options": [
+          {
+            "text": "Los recursos entre la Unin y sus agentes",
+            "is_correct": false
+          },
+          {
+            "text": "Los recursos por violacin del Convenio Europeo de Derechos Humanos",
+            "is_correct": false
+          },
+          {
+            "text": "Las cuestiones prejudiciales",
+            "is_correct": false
+          },
+          {
+            "text": "Los recursos por incumplimiento o infraccin",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de los siguientes recursos NO es competencia del TJUE?",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La Gran Sala del Tribunal de Justicia:",
+        "options": [
+          {
+            "text": "Est compuesta por 15 jueces",
+            "is_correct": false
+          },
+          {
+            "text": "El Tribunal General carece de Gran Sala",
+            "is_correct": false
+          },
+          {
+            "text": "Conocer de asuntos de carcter excepcional, cuando as lo decida el TJ, odo el Abogado",
+            "is_correct": false
+          },
+          {
+            "text": "Fue establecida por el Tratado de Lisboa",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La Gran Sala del Tribunal de Justicia:",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Respecto a los grupos polticos del Parlamento Europeo, NO es cierto que:",
+        "options": [
+          {
+            "text": "Estn formados por diputados de la misma nacionalidad",
+            "is_correct": false
+          },
+          {
+            "text": "Es preciso que cuente al menos con 25 diputados",
+            "is_correct": false
+          },
+          {
+            "text": "Deben estar formados por diputados de 1/10 de los EEMM",
+            "is_correct": false
+          },
+          {
+            "text": "Ninguna es correcta",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Respecto a los grupos polticos del Parlamento Europeo, NO es cierto que:",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Salvo disposicin en contrario de los Tratados, el Parlamento Europeo decidir:",
+        "options": [
+          {
+            "text": "Por mayora de los votos emitidos",
+            "is_correct": false
+          },
+          {
+            "text": "Por mayora de miembros",
+            "is_correct": false
+          },
+          {
+            "text": "Por mayora absoluta de los votos emitidos",
+            "is_correct": false
+          },
+          {
+            "text": "Por mayora de asistentes",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Salvo disposicin en contrario de los Tratados, el Parlamento Europeo decidir:",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En qu se diferencian principalmente el Comit Econmico y Social y el Comit de",
+        "options": [
+          {
+            "text": "En las instituciones a las que asisten a travs de sus dictmenes.",
+            "is_correct": false
+          },
+          {
+            "text": "En el nmero mximo de miembros (sin contar suplentes)",
+            "is_correct": false
+          },
+          {
+            "text": "En los intereses que representan",
+            "is_correct": false
+          },
+          {
+            "text": "En su naturaleza jurdica",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En qu se diferencian principalmente el Comit Econmico y Social y el Comit de",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Tribunal de Cuentas adopta sus informes especiales, anual y sus dictmenes por:",
+        "options": [
+          {
+            "text": "Mayora cualificada",
+            "is_correct": false
+          },
+          {
+            "text": "Mayora de sus miembros",
+            "is_correct": false
+          },
+          {
+            "text": "Mayora de votos emitidos",
+            "is_correct": false
+          },
+          {
+            "text": "Unanimidad",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Tribunal de Cuentas adopta sus informes especiales, anual y sus dictmenes por:",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Indique cul de las siguientes personalidades ostenta en la actualidad la Presidencia",
+        "options": [
+          {
+            "text": "el Banco Central Europeo:",
+            "is_correct": false
+          },
+          {
+            "text": "Charles Michel",
+            "is_correct": false
+          },
+          {
+            "text": "Christine Lagarde",
+            "is_correct": false
+          },
+          {
+            "text": "Roberta Metsola",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Indique cul de las siguientes personalidades ostenta en la actualidad la Presidencia",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la cierta en relacin con los abogados generales del Tribunal de Justicia:",
+        "options": [
+          {
+            "text": "Fueron creados por el Tratado de Lisboa",
+            "is_correct": false
+          },
+          {
+            "text": "En la actualidad son 11, y nicamente asisten al Tribunal de Justicia, no al Tribunal Ge-",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo Europeo, por unanimidad, podr aumentar su nmero",
+            "is_correct": false
+          },
+          {
+            "text": "Ofrecen asistencia jurdica gratuita a cualquier de las partes del proceso",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la cierta en relacin con los abogados generales del Tribunal de Justicia:",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Las primeras elecciones al Parlamento Europeo tuvieron lugar en:",
+        "options": [
+          {
+            "text": "1958",
+            "is_correct": false
+          },
+          {
+            "text": "1974",
+            "is_correct": false
+          },
+          {
+            "text": "1979",
+            "is_correct": false
+          },
+          {
+            "text": "1994",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las primeras elecciones al Parlamento Europeo tuvieron lugar en:",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: '1958...'",
+        "Distractor muy corto: '1974...'",
+        "Distractor muy corto: '1979...'",
+        "Distractor muy corto: '1994...'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.48
+    },
+    {
+      "question": {
+        "question_text": "Componen la Mesa del Parlamento Europeo:",
+        "options": [
+          {
+            "text": "El Presidente, el Vicepresidente y, a ttulo consultivo, los 5 cuestores",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente y los 14 Vicepresidentes",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente, los 14 Vicepresidentes y, a ttulo consultivo, los 5 cuestores",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente, los 14 Vicepresidentes, a ttulo consultivo, los 5 cuestores, y el Secretario",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Componen la Mesa del Parlamento Europeo:",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La sede del Tribunal de Cuentas se encuentra:",
+        "options": [
+          {
+            "text": "En Frncfort",
+            "is_correct": false
+          },
+          {
+            "text": "En Bruselas",
+            "is_correct": false
+          },
+          {
+            "text": "En Estrasburgo",
+            "is_correct": false
+          },
+          {
+            "text": "En Luxemburgo",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La sede del Tribunal de Cuentas se encuentra:",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El Presidente del Parlamento Europeo es elegido:",
+        "options": [
+          {
+            "text": "Por el Consejo Europeo, por mayora cualificada",
+            "is_correct": false
+          },
+          {
+            "text": "Por el Parlamento Europeo, por mayora absoluta de los votos emitidos",
+            "is_correct": false
+          },
+          {
+            "text": "Por la Comisin Europea",
+            "is_correct": false
+          },
+          {
+            "text": "Por la Mesa del Parlamento Europeo",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Presidente del Parlamento Europeo es elegido:",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El BCE, ms los 20 gobernadores de los bancos centrales nacionales de los Estados",
+        "options": [
+          {
+            "text": "El Eurosistema",
+            "is_correct": false
+          },
+          {
+            "text": "El Eurogrupo",
+            "is_correct": false
+          },
+          {
+            "text": "La Eurozona",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo General del BCE",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El BCE, ms los 20 gobernadores de los bancos centrales nacionales de los Estados",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El BCE pas a formar parte del marco institucional de la Unin con el:",
+        "options": [
+          {
+            "text": "Tratado de Maastricht",
+            "is_correct": false
+          },
+          {
+            "text": "Tratado de msterdam",
+            "is_correct": false
+          },
+          {
+            "text": "Tratado de Niza",
+            "is_correct": false
+          },
+          {
+            "text": "Tratado de Lisboa",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El BCE pas a formar parte del marco institucional de la Unin con el:",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Los jueces del Tribunal General debern cumplir el siguiente requisito:",
+        "options": [
+          {
+            "text": "Reunir las condiciones necesarias para ejercer, en sus respectivos pases, las ms altas",
+            "is_correct": false
+          },
+          {
+            "text": "Ser juristas de reconocida competencia",
+            "is_correct": false
+          },
+          {
+            "text": "Reunir las condiciones necesarias para ejercer, en sus respectivos pases, altas funciones",
+            "is_correct": false
+          },
+          {
+            "text": "Reunir las condiciones necesarias para ejercer, en sus respectivos pases, funciones juris-",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los jueces del Tribunal General debern cumplir el siguiente requisito:",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "NO es una competencia o potestad del Parlamento Europeo:",
+        "options": [
+          {
+            "text": "La aprobacin del presupuesto de la Unin, conjuntamente con el Consejo",
+            "is_correct": false
+          },
+          {
+            "text": "La eleccin y cese del Defensor del Pueblo",
+            "is_correct": false
+          },
+          {
+            "text": "Ejercer la funcin legislativa, conjuntamente con el Consejo",
+            "is_correct": false
+          },
+          {
+            "text": "Presentacin de la mocin de censura contra la Comisin",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "NO es una competencia o potestad del Parlamento Europeo:",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En la actualidad tiene/n 329 miembros y 329 suplentes:",
+        "options": [
+          {
+            "text": "El Parlamento Europeo",
+            "is_correct": false
+          },
+          {
+            "text": "El Comit de las Regiones",
+            "is_correct": false
+          },
+          {
+            "text": "El Comit Econmico y Social",
+            "is_correct": false
+          },
+          {
+            "text": "La b) y la c) son correctas",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En la actualidad tiene/n 329 miembros y 329 suplentes:",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Le corresponde en exclusiva autorizar la emisin de euros, segn el TFUE:",
+        "options": [
+          {
+            "text": "El BCE",
+            "is_correct": false
+          },
+          {
+            "text": "El SEBC",
+            "is_correct": false
+          },
+          {
+            "text": "El Eurosistema",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo Europeo",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Le corresponde en exclusiva autorizar la emisin de euros, segn el TFUE:",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'El BCE...'",
+        "Distractor muy corto: 'El SEBC...'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Se constituyen a solicitud de  de los miembros del PE para examinar alegaciones",
+        "options": [
+          {
+            "text": "e infraccin o mala administracin en la aplicacin del Derecho de la Unin:",
+            "is_correct": false
+          },
+          {
+            "text": "Las comisiones especiales",
+            "is_correct": false
+          },
+          {
+            "text": "Las comisiones permanentes",
+            "is_correct": false
+          },
+          {
+            "text": "Las comisiones rogatorias",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Se constituyen a solicitud de  de los miembros del PE para examinar alegaciones",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El quorum en las Salas de 3 o 5 miembros en el Tribunal de Justicia es de:",
+        "options": [
+          {
+            "text": "2 miembros y 3 miembros, respectivamente",
+            "is_correct": false
+          },
+          {
+            "text": "3 miembros en ambos casos",
+            "is_correct": false
+          },
+          {
+            "text": "1 miembro y 3 miembros, respectivamente",
+            "is_correct": false
+          },
+          {
+            "text": "3 miembros y 5 miembros, respectivamente",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El quorum en las Salas de 3 o 5 miembros en el Tribunal de Justicia es de:",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En la legislatura del Parlamento Europeo 2024-2029, a Espaa le corresponden:",
+        "options": [
+          {
+            "text": "51 diputados",
+            "is_correct": false
+          },
+          {
+            "text": "59 diputados",
+            "is_correct": false
+          },
+          {
+            "text": "61 diputados",
+            "is_correct": false
+          },
+          {
+            "text": "69 diputados",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En la legislatura del Parlamento Europeo 2024-2029, a Espaa le corresponden:",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Quin elige al Presidente del Banco Central Europeo?",
+        "options": [
+          {
+            "text": "El propio BCE.",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo Europeo, por mayora cualificada.",
+            "is_correct": false
+          },
+          {
+            "text": "La a) es correcta, y su mandato no es renovable.",
+            "is_correct": false
+          },
+          {
+            "text": "La b) es correcta, y su mandato no es renovable",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Quin elige al Presidente del Banco Central Europeo?",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "dificil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "A travs de qu norma se pueden crear tribunales especializados?",
+        "options": [
+          {
+            "text": "Una decisin legislativa",
+            "is_correct": false
+          },
+          {
+            "text": "Un reglamento legislativo",
+            "is_correct": false
+          },
+          {
+            "text": "Una decisin no legislativa",
+            "is_correct": false
+          },
+          {
+            "text": "Un reglamento no legislativo",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "A travs de qu norma se pueden crear tribunales especializados?",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la FALSA respecto la composicin de los rganos de gobierno del BCE:",
+        "options": [
+          {
+            "text": "El Presidente del BCE participa en los cuatro rganos de gobierno del BCE",
+            "is_correct": false
+          },
+          {
+            "text": "El Comit Ejecutivo est compuesto por 6 miembros",
+            "is_correct": false
+          },
+          {
+            "text": "En el Consejo de Gobierno del BCE no participan los EEMM cuya moneda no es el euro.",
+            "is_correct": false
+          },
+          {
+            "text": "Los miembros del Comit Ejecutivo forman parte del Consejo de Gobierno del BCE",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la FALSA respecto la composicin de los rganos de gobierno del BCE:",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "dificil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la FALSA respecto del BCE:",
+        "options": [
+          {
+            "text": "Tiene su sede en Frncfort",
+            "is_correct": false
+          },
+          {
+            "text": "Se regula en el TUE, en el TFUE, y en su propio Estatuto",
+            "is_correct": false
+          },
+          {
+            "text": "Fue creado en 1998",
+            "is_correct": false
+          },
+          {
+            "text": "En la actualidad no todos los Estados miembros tienen como moneda oficial el euro",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la FALSA respecto del BCE:",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El mandato de los miembros del Tribunal de Cuentas Europeo, del Parlamento Eu-",
+        "options": [
+          {
+            "text": "6 aos, 5 aos y 4 aos, respectivamente",
+            "is_correct": false
+          },
+          {
+            "text": "6 aos, 5 aos y 5 aos, respectivamente",
+            "is_correct": false
+          },
+          {
+            "text": "6 aos, 4 aos y 4 aos, respectivamente",
+            "is_correct": false
+          },
+          {
+            "text": "6 aos, 4 aos y 5 aos, respectivamente",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El mandato de los miembros del Tribunal de Cuentas Europeo, del Parlamento Eu-",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con lo establecido en el artculo 234 del TFUE, el plazo mnimo que ha",
+        "options": [
+          {
+            "text": "e transcurrir entre la presentacin de una mocin de censura ante el Presidente del",
+            "is_correct": false
+          },
+          {
+            "text": "3 das",
+            "is_correct": false
+          },
+          {
+            "text": "5 das",
+            "is_correct": false
+          },
+          {
+            "text": "24 horas",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con lo establecido en el artculo 234 del TFUE, el plazo mnimo que ha",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: '3 das...'",
+        "Distractor muy corto: '5 das...'",
+        "Distractor muy corto: '24 horas...'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.25,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.48
+    },
+    {
+      "question": {
+        "question_text": "La sede del Comit de las Regiones se encuentra en:",
+        "options": [
+          {
+            "text": "Es rotatoria, entra las distintas regiones que conforman la UE.",
+            "is_correct": false
+          },
+          {
+            "text": "Bruselas",
+            "is_correct": false
+          },
+          {
+            "text": "Estrasburgo",
+            "is_correct": false
+          },
+          {
+            "text": "Luxemburgo",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La sede del Comit de las Regiones se encuentra en:",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Bruselas...'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Qu recursos son competencia del Tribunal de Justicia, en nica instancia?",
+        "options": [
+          {
+            "text": "Recurso por incumplimiento o infraccin de un Estado miembro",
+            "is_correct": false
+          },
+          {
+            "text": "Recurso en anulacin",
+            "is_correct": false
+          },
+          {
+            "text": "Recurso entre la Unin y sus agentes",
+            "is_correct": false
+          },
+          {
+            "text": "Recurso de responsabilidad contractual",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu recursos son competencia del Tribunal de Justicia, en nica instancia?",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La legislatura 2024-2029 del Parlamento Europeo ser la:",
+        "options": [
+          {
+            "text": "Sptima legislatura",
+            "is_correct": false
+          },
+          {
+            "text": "Octava legislatura",
+            "is_correct": false
+          },
+          {
+            "text": "Novena legislatura",
+            "is_correct": false
+          },
+          {
+            "text": "Dcima legislatura",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La legislatura 2024-2029 del Parlamento Europeo ser la:",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El Comit Econmico y Social y el Comit de las Regiones fueron creados por:",
+        "options": [
+          {
+            "text": "El Tratado de Roma y el de Maastricht, respectivamente",
+            "is_correct": false
+          },
+          {
+            "text": "El Tratado de Maastricht y el de Lisboa, respectivamente",
+            "is_correct": false
+          },
+          {
+            "text": "El Tratado de Maastricht y el de Roma, respectivamente",
+            "is_correct": false
+          },
+          {
+            "text": "El Tratado de Maastricht y el de Niza, respectivamente",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Comit Econmico y Social y el Comit de las Regiones fueron creados por:",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Segn el TFUE, cuntos periodos de sesiones celebra el Parlamento Europeo en",
+        "options": [
+          {
+            "text": "ada legislatura?",
+            "is_correct": false
+          },
+          {
+            "text": "5, uno al ao",
+            "is_correct": false
+          },
+          {
+            "text": "4, uno al ao",
+            "is_correct": false
+          },
+          {
+            "text": "60, 12 al ao",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el TFUE, cuntos periodos de sesiones celebra el Parlamento Europeo en",
+        "source": "Test tema 3.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:22.439080"
+}

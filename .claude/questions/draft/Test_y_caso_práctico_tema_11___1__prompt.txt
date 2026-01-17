@@ -1,0 +1,390 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** Test y caso práctico tema 11. (1).pdf
+**Total preguntas:** 30
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** De conformidad con el art�culo 5 de la LPACAP, se�ale la respuesta
+
+**Opciones:**
+  0. orrecta en relaci�n con la representaci�n:
+  1. La representaci�n habr� de acreditarse en todo caso.
+  2. Para formular solicitudes, presentar declaraciones responsables o
+  3. omunicaciones, interponer recursos, desistir de acciones y renunciar
+
+---
+
+### Pregunta 2
+
+**Texto:** Una de estas afirmaciones es FALSA, seg�n el art�culo 30 de la
+
+**Opciones:**
+  0. Cuando el c�mputo de los plazos haya de hacerse por d�as h�biles, si
+  1. La declaraci�n de un d�a como h�bil o inh�bil a efectos del c�mputo
+  2. el plazo, no determina por s� sola el funcionamiento de los centros de
+  3. Si el c�mputo del plazo ha de hacerse por meses o a�os y en el d�a
+
+---
+
+### Pregunta 3
+
+**Texto:** De conformidad con el art�culo 76 de la LPACAP, y en relaci�n con
+
+**Opciones:**
+  0. Los interesados podr�n, en cualquier momento del procedimiento,
+  1. ducir alegaciones y aportar documentos u otros elementos de juicio.
+  2. Los interesados podr�n, en cualquier momento del procedimiento
+  3. nterior al
+
+---
+
+### Pregunta 4
+
+**Texto:** De conformidad con el art�culo 33 de la LPACAP, y en relaci�n con la
+
+**Opciones:**
+  0. �nicamente podr� acordarse de oficio.
+  1. Contra el acuerdo de
+  2. ontencioso administrativo.
+  3. Se reducir�n a la mitad los plazos establecidos para el procedimiento
+
+---
+
+### Pregunta 5
+
+**Texto:** Seg�n el art�culo 54 de la LPACAP, los procedimientos podr�n
+
+**Opciones:**
+  0. De oficio o a solicitud del interesado
+  1. Los procedimientos se iniciar�n de oficio a trav�s de las siguientes
+  2. dministrativo
+  3. Por denuncia, que implica que se presente una solicitud o que se
+
+---
+
+### Pregunta 6
+
+**Texto:** De conformidad con el art�culo 55 de la LPACAP, las actuaciones
+
+**Opciones:**
+  0. Obligatoriamente antes de iniciar un procedimiento.
+  1. Con el fin de conocer las circunstancias del caso concreto y la
+  2. onveniencia o no de iniciar el procedimiento.
+  3. Con el fin de adoptar medidas provisionales.
+
+---
+
+### Pregunta 7
+
+**Texto:** Conforme al art�culo 56 de la LPACAP, relativo a la adopci�n
+
+**Opciones:**
+  0. el procedimiento administrativo:
+  1. Se podr� adoptar de forma motivada las medidas provisionales
+  2. Las medidas provisionales deber�n ser confirmadas, modificadas
+  3. eber� efectuarse dentro de los quince d�as siguientes a su
+
+---
+
+### Pregunta 8
+
+**Texto:** Respecto a las actuaciones complementarias, reguladas en el
+
+**Opciones:**
+  0. rt�culo 87 de la LPACAP, se�ale la falsa:
+  1. Antes de dictar resoluci�n, el �rgano competente para resolver
+  2. ctuaciones complementarias indispensables para resolver el
+  3. No tendr�n la consideraci�n de actuaciones complementarias los
+
+---
+
+### Pregunta 9
+
+**Texto:** Seg�n el art�culo 57 de la LPACAP y en relaci�n con la
+
+**Opciones:**
+  0. cumulaci�n:
+  1. Se puede llevar a cabo en procedimientos iniciados �nicamente
+  2. e oficio
+  3. Se puede disponer de oficio o a solicitud de interesado
+
+---
+
+### Pregunta 10
+
+**Texto:** Seg�n el art�culo 66 de la LPACAP, las oficinas de asistencia en
+
+**Opciones:**
+  0. Podr�n facilitar a los interesados el c�digo de identificaci�n si el
+  1. Estar�n obligadas a facilitar a los interesados el c�digo de
+  2. Las Administraciones P�blicas podr�n hacer p�blica y mantener
+  3. ctualizada una relaci�n de las oficinas en las que se prestar�
+
+---
+
+### Pregunta 11
+
+**Texto:** Las Administraciones P�blicas deber�n establecer modelos y
+
+**Opciones:**
+  0. Son de uso obligatorio, y estar�n a disposici�n de los interesados
+  1. sistencia en materia de registros de las Administraciones
+  2. Son de uso voluntario, y estar�n a disposici�n de los interesados
+  3. sistencia en materia de registros de las Administraciones
+
+---
+
+### Pregunta 12
+
+**Texto:** En relaci�n con la ampliaci�n de los plazos establecidos, seg�n el
+
+**Opciones:**
+  0. rt�culo 32 de la LPACAP:
+  1. La Administraci�n podr� concederlos, a petici�n del interesado,
+  2. legaciones.
+  3. S�lo podr� concederse en
+
+---
+
+### Pregunta 13
+
+**Texto:** De conformidad con el art�culo 68 de la LPACAP, en relaci�n con la
+
+**Opciones:**
+  0. Cuando se trate de procedimientos selectivos o de concurrencia
+  1. ompetitiva, este plazo podr� ser ampliado prudencialmente,
+  2. Siempre que no se trate de procedimientos selectivos o de
+  3. oncurrencia competitiva, este plazo podr� ser ampliado
+
+---
+
+### Pregunta 14
+
+**Texto:** En relaci�n con el tr�mite de audiencia del procedimiento
+
+**Opciones:**
+  0. dministrativo, indique la respuesta FALSA de acuerdo con el
+  1. rt�culo 82 LPACAP:
+  2. La audiencia a los interesados ser� posterior a la solicitud del informe
+  3. el �rgano competente para el asesoramiento jur�dico o a la solicitud
+
+---
+
+### Pregunta 15
+
+**Texto:** Se entiende por expediente administrativo, seg�n el art�culo 70 de
+
+**Opciones:**
+  0. El conjunto ordenado de documentos y actuaciones que sirven de
+  1. ntecedente y fundamento a la resoluci�n administrativa, as�
+  2. omo
+  3. orradores,
+
+---
+
+### Pregunta 16
+
+**Texto:** Se�ale la respuesta correcta, seg�n el art�culo 71 de la LPACAP
+
+**Opciones:**
+  0. El procedimiento, sometido al principio de transparencia, se
+  1. El procedimiento, sometido al principio de celeridad, se impulsar�
+  2. e oficio en todos sus tr�mites y a trav�s de medios electr�nicos,
+  3. El procedimiento, sometido al principio de publicidad, se
+
+---
+
+### Pregunta 17
+
+**Texto:** Seg�n el art�culo 75 de la LPACAP, los actos de instrucci�n
+
+**Opciones:**
+  0. Por el �rgano que resuelva el procedimiento, sin perjuicio del
+  1. erecho de los interesados a proponer aquellas actuaciones que
+  2. Por el �rgano que inicie el procedimiento.
+  3. Por el �rgano que decida el interesado.
+
+---
+
+### Pregunta 18
+
+**Texto:** Seg�n el art�culo 76 de la LPACAP, en todo momento podr�n los
+
+**Opciones:**
+  0. Alegar defectos de tramitaci�n.
+  1. Hacer alegaciones y aportar documentos u otros elementos de
+  2. Proponer la pr�ctica de prueba
+  3. Todas las anteriores son correctas.
+
+---
+
+### Pregunta 19
+
+**Texto:** Cuando la Administraci�n no tenga por ciertos los hechos
+
+**Opciones:**
+  0. legados por los interesados o la naturaleza del procedimiento lo
+  1. El �rgano competente para resolver acordar� la apertura de un
+  2. El instructor del mismo acordar� la apertura de un per�odo de
+  3. El �rgano competente para resolver acordar� la apertura de un
+
+---
+
+### Pregunta 20
+
+**Texto:** Seg�n el art�culo 78 de la LPACAP, la Administraci�n comunicar� a
+
+**Opciones:**
+  0. Con 15 d�as de antelaci�n.
+  1. Con 10 d�as de antelaci�n.
+  2. Con antelaci�n suficiente.
+  3. Ninguna es correcta.
+
+---
+
+### Pregunta 21
+
+**Texto:** Seg�n el art�culo 83 de la LPACAP, en relaci�n con el tr�mite de
+
+**Opciones:**
+  0. Es siempre preceptivo.
+  1. La incomparecencia en este tr�mite no impedir� a los interesados
+  2. el procedimiento.
+  3. La incomparecencia en este tr�mite impedir� a los interesados
+
+---
+
+### Pregunta 22
+
+**Texto:** En relaci�n con el art�culo 86 de la LPACAP relativo a la
+
+**Opciones:**
+  0. Los citados instrumentos deber�n establecer como contenido
+  1. Requerir�n en todo caso la aprobaci�n expresa del Consejo de
+  2. irecta de dicho �rgano.
+  3. Los acuerdos que se suscriban supondr�n alteraci�n de las
+
+---
+
+### Pregunta 23
+
+**Texto:** Se�ale la respuesta correcta teniendo en cuenta el art�culo 93 y el 5
+
+**Opciones:**
+  0. e la LPACAP:
+  1. El desistimiento podr� hacerse por cualquier medio que permita
+  2. orrespondan de acuerdo con lo previsto en la normativa
+  3. plicable, pero nunca a trav�s de un representante.
+
+---
+
+### Pregunta 24
+
+**Texto:** De conformidad con el art�culo 95 de la LPACAP, en los
+
+**Opciones:**
+  0. Cuando se produzca su paralizaci�n por causa imputable al
+  1. No podr� acordarse la caducidad por la simple inactividad del
+  2. La caducidad no producir� por s� sola la prescripci�n de las
+  3. cciones del particular o de
+
+---
+
+### Pregunta 25
+
+**Texto:** De conformidad con el art�culo 29 de la LPACAP, los t�rminos y
+
+**Opciones:**
+  0. A las autoridades y personal al servicio de las Administraciones
+  1. A los interesados en los mismos.
+  2. A las autoridades y personal al servicio de las Administraciones
+  3. omo a los interesados en los mismos.
+
+---
+
+### Pregunta 26
+
+**Texto:** De conformidad con el art�culo 30 de la LPACAP, son h�biles:
+
+**Opciones:**
+  0. Todas las horas de cualquier d�a.
+  1. Todas las horas del d�a que formen parte de un d�a hasta las
+  2. oce de la noche.
+  3. Todas las horas del d�a que formen parte de un d�a h�bil, salvo
+
+---
+
+### Pregunta 27
+
+**Texto:** Los plazos expresados en d�as se contar�n, seg�n el art�culo 30 de
+
+**Opciones:**
+  0. A partir del d�a en que tenga lugar la notificaci�n o publicaci�n del
+  1. cto de que se trate, o desde el siguiente a aquel en que se
+  2. dministrativo
+  3. A partir del d�a siguiente a aquel en que tenga lugar la notificaci�n
+
+---
+
+### Pregunta 28
+
+**Texto:** Respecto de los plazos y a tenor de la LPACAP:
+
+**Opciones:**
+  0. Siempre que por Ley o en el Derecho de la Uni�n Europea no se
+  1. omingos y los declarados festivos.
+  2. Los plazos expresados en d�as se contar�n desde el d�a siguiente a
+  3. quel en que se produzca la estimaci�n o desestimaci�n por silencio
+
+---
+
+### Pregunta 29
+
+**Texto:** De acuerdo con el art�culo 96 de la LPACAP, se�ale el plazo en el
+
+**Opciones:**
+  0. Salvo que reste menos para su tramitaci�n ordinaria, en sesenta d�as
+  1. contar desde el siguiente al que se notifique al interesado el
+  2. cuerdo de tramitaci�n simplificada del procedimiento.
+  3. En sesenta d�as a contar desde el siguiente al que se notifique al
+
+---
+
+### Pregunta 30
+
+**Texto:** Don Jes�s presenta una solicitud en el Ayuntamiento de A Coru�a
+
+**Opciones:**
+  0. orresponde al Ministerio del Interior. En el registro electr�nico de la
+  1. GE, la solicitud entra, el jueves 8 de junio. Determine cu�l es el
+  2. dministraci�n, toda vez que la normativa del procedimiento no
+  3. 9 de septiembre (domingo)
+
+---

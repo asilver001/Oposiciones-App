@@ -1,0 +1,165 @@
+{
+  "metadata": {
+    "source_file": "8 TEST TEMA 8 (1ªPARTE). INICIALESdocx (1).docx",
+    "source_path": "8 TEST TEMA 8 (1ªPARTE). INICIALESdocx (1).docx",
+    "tema": 8,
+    "categoria": "general",
+    "extraction_date": "2026-01-15T23:40:04.874364",
+    "reformulation_date": "2026-01-15T23:47:35.693351",
+    "total_questions": 3,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.847832",
+    "completed_count": 0,
+    "failed_count": 3
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "La Ley de Rgimen Jurdico del Sector Pblico seala en su art. 54 que la Administracin General del Estado acta y se organiza de acuerdo con los principios establecidos en el artculo 3, as como los de:",
+        "options": [
+          {
+            "text": "Descentralizacin funcional y desconcentracin funcional y territorial.",
+            "is_correct": false
+          },
+          {
+            "text": "Austeridad e integridad.",
+            "is_correct": false
+          },
+          {
+            "text": "Jerarqua y eficacia.",
+            "is_correct": false
+          },
+          {
+            "text": "Objetividad y responsabilidad.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La Ley de Rgimen Jurdico del Sector Pblico seala en su art. 54 que la Administracin General del Estado acta y se organiza de acuerdo con los principios establecidos en el artculo 3, as como los de:",
+        "source": "8 TEST TEMA 8 (1ªPARTE). INICIALESdocx (1).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Qu rgano tiene la competencia para imponer la sancin de separacin del servicio por falta muy grave?:",
+        "options": [
+          {
+            "text": "El Subsecretario.",
+            "is_correct": false
+          },
+          {
+            "text": "La Comisin Superior de Personal.",
+            "is_correct": false
+          },
+          {
+            "text": "Un Director General.",
+            "is_correct": false
+          },
+          {
+            "text": "El Ministro del Departamento.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu rgano tiene la competencia para imponer la sancin de separacin del servicio por falta muy grave?:",
+        "source": "8 TEST TEMA 8 (1ªPARTE). INICIALESdocx (1).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con el artculo 68 de la LRJSP es posible que los ministerios compartan la gestin de servicios comunes?:",
+        "options": [
+          {
+            "text": "No, al tratarse de servicios comunes dependientes de cada subsecretara.",
+            "is_correct": false
+          },
+          {
+            "text": "S, por orden ministerial conjunta de los ministerios afectados.",
+            "is_correct": false
+          },
+          {
+            "text": "S, mediante Real Decreto.",
+            "is_correct": false
+          },
+          {
+            "text": "S, previo informe preceptivo favorable del Ministerio de Hacienda y Funcin Pblica.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con el artculo 68 de la LRJSP es posible que los ministerios compartan la gestin de servicios comunes?:",
+        "source": "8 TEST TEMA 8 (1ªPARTE). INICIALESdocx (1).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:22.287783"
+}

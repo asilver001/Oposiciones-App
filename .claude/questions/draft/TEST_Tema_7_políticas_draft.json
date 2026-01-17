@@ -1,0 +1,215 @@
+{
+  "metadata": {
+    "source_file": "TEST Tema 7 políticas.pdf",
+    "source_path": "TEST Iniciales políticas\\TEST Tema 7 políticas.pdf",
+    "tema": 7,
+    "categoria": "general",
+    "extraction_date": "2026-01-15T23:41:54.485008",
+    "reformulation_date": "2026-01-15T23:47:35.796324",
+    "total_questions": 6,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:56.175463",
+    "completed_count": 0,
+    "failed_count": 6
+  },
+  "questions": [
+    {
+      "question_text": "Seale la afirmacin correcta en relacin con el Gobierno Abierto:",
+      "options": [
+        {
+          "text": "Es un trmino completamente nuevo que aparece asociado al movimiento de software",
+          "is_correct": false
+        },
+        {
+          "text": "Es mencionado por primera vez en el Informe de la OCDE Un gobierno abierto:",
+          "is_correct": false
+        },
+        {
+          "text": "Ha sido en el mbito de la Unin Europea donde se ha acuado este concepto.",
+          "is_correct": false
+        },
+        {
+          "text": "Todas las respuestas son incorrectas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la afirmacin correcta en relacin con el Gobierno Abierto:",
+      "source": "TEST Tema 7 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El trmino Gobierno Abierto cobr protagonismo a raz del:",
+      "options": [
+        {
+          "text": "Memorando sobre Transparencia y Gobierno Abierto presentado por Barack Obama en",
+          "is_correct": false
+        },
+        {
+          "text": "Memorando sobre Transparencia y Gobierno Abierto presentado por Barack Obama en",
+          "is_correct": false
+        },
+        {
+          "text": "Memorando sobre Transparencia y Gobierno Abierto presentado por Bill Clinton en el",
+          "is_correct": false
+        },
+        {
+          "text": "o 2000.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El trmino Gobierno Abierto cobr protagonismo a raz del:",
+      "source": "TEST Tema 7 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No es un principio informador del Gobierno Abierto:",
+      "options": [
+        {
+          "text": "Participacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Transparencia.",
+          "is_correct": false
+        },
+        {
+          "text": "Rendicin de cuentas.",
+          "is_correct": false
+        },
+        {
+          "text": "Eficiencia.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No es un principio informador del Gobierno Abierto:",
+      "source": "TEST Tema 7 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En qu ao se puso en marcha la Alianza para un Gobierno Abierto (OGP, en sus siglas en",
+      "options": [
+        {
+          "text": "En 2005",
+          "is_correct": false
+        },
+        {
+          "text": "En 2009",
+          "is_correct": false
+        },
+        {
+          "text": "En 2011",
+          "is_correct": false
+        },
+        {
+          "text": "En 2015",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En qu ao se puso en marcha la Alianza para un Gobierno Abierto (OGP, en sus siglas en",
+      "source": "TEST Tema 7 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Con el fin de conocer el avance y grado de cumplimiento de los planes de accin de Gobierno",
+      "options": [
+        {
+          "text": "bierto:",
+          "is_correct": false
+        },
+        {
+          "text": "Los Gobiernos deben presentar informes de autoevaluacin.",
+          "is_correct": false
+        },
+        {
+          "text": "El grado de avance y cumplimiento ser evaluado por el Mecanismo de Revisin",
+          "is_correct": false
+        },
+        {
+          "text": "El grado de avance y cumplimiento ser evaluado por el Comit Directivo de la Alianza",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Con el fin de conocer el avance y grado de cumplimiento de los planes de accin de Gobierno",
+      "source": "TEST Tema 7 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cundo se sum Espaa a la Alianza para un Gobierno Abierto:",
+      "options": [
+        {
+          "text": "En 2005",
+          "is_correct": false
+        },
+        {
+          "text": "En 2009",
+          "is_correct": false
+        },
+        {
+          "text": "En 2011",
+          "is_correct": false
+        },
+        {
+          "text": "En 2015",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cundo se sum Espaa a la Alianza para un Gobierno Abierto:",
+      "source": "TEST Tema 7 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

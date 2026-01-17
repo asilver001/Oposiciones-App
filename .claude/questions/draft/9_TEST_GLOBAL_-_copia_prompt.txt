@@ -1,0 +1,498 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 9 TEST GLOBAL - copia.docx
+**Total preguntas:** 39
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** De conformidad con el art�culo 166 CE tienen iniciativa de reforma los �rganos incluidos en los apartados 1 y 2 del art�culo 87 CE. Conforme a lo expuesto, queda excluida:
+
+**Opciones:**
+  0. La iniciativa de las Asambleas Legislativas de las CCAA.
+  1. La iniciativa de las Asambleas Legislativas de las CCAA y la iniciativa popular.
+  2. La iniciativa de las Asambleas Legislativas de las CCAA y del Gobierno.
+  3. La iniciativa popular.
+
+---
+
+### Pregunta 2
+
+**Texto:** El art�culo 3 de la Constituci�n Espa�ola regula:
+
+**Opciones:**
+  0. La lengua.
+  1. La bandera.
+  2. La capitalidad.
+  3. Los partidos pol�ticos.
+
+---
+
+### Pregunta 3
+
+**Texto:** Si se propusiere la revisi�n total de la Constituci�n, se proceder� a la aprobaci�n del principio de reforma:
+
+**Opciones:**
+  0. Por mayor�a de 2/3 y a la disoluci�n de las Cortes por el Rey.
+  1. Por mayor�a de 2/3 y a la disoluci�n de las Cortes por el Presidente del Gobierno.
+  2. Por mayor�a de 3/5 y a la disoluci�n de las Cortes por el Rey.
+  3. Por mayor�a de 3/5 y a la disoluci�n de las Cortes por el Presidente del Gobierno.
+
+---
+
+### Pregunta 4
+
+**Texto:** El derecho de los trabajadores y empresarios a adoptar medidas de conflicto colectivo:
+
+**Opciones:**
+  0. Podr� ser suspendido en los supuestos de declaraci�n de los estados de alarma excepci�n y sitio.
+  1. Podr� ser objeto de recurso de amparo ante el Tribunal Constitucional.
+  2. Informar� la legislaci�n positiva, la pr�ctica judicial y la actuaci�n de los poderes p�blicos.
+  3. S�lo por ley podr� regularse su ejercicio.
+
+---
+
+### Pregunta 5
+
+**Texto:** �Cu�l de los siguientes derechos NO es objeto de protecci�n a trav�s de un procedimiento judicial especial preferente y sumario?:
+
+**Opciones:**
+  0. El derecho de asociaci�n.
+  1. El derecho a la propiedad privada y a la herencia.
+  2. El derecho a la libre circulaci�n por el territorio espa�ol.
+  3. El derecho de huelga.
+
+---
+
+### Pregunta 6
+
+**Texto:** El Tribunal Constitucional elige de entre sus miembros por votaci�n secreta a su presidente, requiri�ndose para su elecci�n en primera votaci�n:
+
+**Opciones:**
+  0. Mayor�a de 3/5.
+  1. Mayor�a de 2/3.
+  2. Mayor�a absoluta.
+  3. Mayor�a de miembros presentes.
+
+---
+
+### Pregunta 7
+
+**Texto:** El Tribunal Constitucional en Pleno puede adoptar acuerdos, cuando est�n presentes, al menos:
+
+**Opciones:**
+  0. Tres quintos de los miembros que en cada momento lo compongan.
+  1. La mayor�a de los miembros que en cada momento lo compongan.
+  2. Dos tercios de los miembros que en cada momento lo compongan.
+  3. Todos sus miembros
+
+---
+
+### Pregunta 8
+
+**Texto:** El Presidente del Tribunal Constitucional solicitar� a los presidentes de los �rganos que han de hacer las propuestas para la designaci�n de los nuevos magistrados del Tribunal Constitucional que inicien el procedimiento para ello:
+
+**Opciones:**
+  0. Antes de los 3 meses previos a la fecha de expiraci�n de los nombramientos.
+  1. Antes de los 4 meses previos a la fecha de expiraci�n de los nombramientos.
+  2. Antes de los 5 meses previos a la fecha de expiraci�n de los nombramientos.
+  3. Antes de los 6 meses previos a la fecha de expiraci�n de los nombramientos.
+
+---
+
+### Pregunta 9
+
+**Texto:** Cuando concurra causa de incompatibilidad en quien fuere propuesto como magistrado del Tribunal Constitucional deber�, antes de tomar posesi�n, cesar en el cargo o actividad incompatible en plazo de:
+
+**Opciones:**
+  0. Los 10 d�as siguientes a la propuesta.
+  1. Los 15 d�as siguientes a la propuesta.
+  2. Los 20 d�as siguientes a la propuesta.
+  3. El mes siguiente a la propuesta.
+
+---
+
+### Pregunta 10
+
+**Texto:** El Rey (se�ale la falsa):
+
+**Opciones:**
+  0. Es el Jefe del Estado.
+  1. El es s�mbolo de la unidad y permanencia del Estado.
+  2. Ostenta la m�s alta representaci�n del Estado espa�ol en las Relaciones Internacionales.
+  3. Dirige la pol�tica interior y exterior y la administraci�n civil y militar.
+
+---
+
+### Pregunta 11
+
+**Texto:** �Qui�n es, seg�n el art�culo 57 CE el leg�timo heredero de la dinast�a hist�rica?:
+
+**Opciones:**
+  0. El Pr�ncipe de Asturias.
+  1. S.M. D. Juan Carlos I de Borb�n.
+  2. D. Juan de Borb�n.
+  3. S.M. Alfonso XIII de Borb�n.
+
+---
+
+### Pregunta 12
+
+**Texto:** Si el Rey se inhabilitara para el ejercicio de su autoridad y la imposibilidad fuere reconocida por las CCGG, �qui�n entrar�a a ejercer la Regencia en primer t�rmino?:
+
+**Opciones:**
+  0. El Pr�ncipe Heredero si fuera mayor de edad.
+  1. El padre o la madre del Rey.
+  2. La persona que designe el Rey siempre que sea espa�ol de nacimiento y mayor de edad.
+  3. El pariente mayor de edad m�s pr�ximo a suceder en el trono.
+
+---
+
+### Pregunta 13
+
+**Texto:** �Cu�l de los siguientes actos precisa de autorizaci�n por ley org�nica de las CCGG?:
+
+**Opciones:**
+  0. Declarar la guerra y hacer la paz.
+  1. Convocatoria de refer�ndum consultivo.
+  2. Celebraci�n de tratados por los que se atribuya a una organizaci�n o instituci�n internacional el ejercicio de competencias derivadas de la Constituci�n.
+  3. La inhabilitaci�n del Rey para el ejercicio de su autoridad.
+
+---
+
+### Pregunta 14
+
+**Texto:** En el Senado se eligen por sufragio universal, libre, igual, directo y secreto:
+
+**Opciones:**
+  0. 2 senadores en cada provincia.
+  1. 2 senadores en Ceuta.
+  2. 2 Senadores en Ibiza-Formentera, Menorca, Fuerteventura, Gomera, Hierro, Lanzarote y La Palma.
+  3. 2 senadores en las islas de Gran Canaria, Mallorca y Tenerife.
+
+---
+
+### Pregunta 15
+
+**Texto:** �Cu�l de los siguientes es el �rgano de apoyo del Consejo de Ministros, de las Comisiones Delegadas del Gobierno y de la Comisi�n General de Secretarios de Estado y Subsecretarios?:
+
+**Opciones:**
+  0. Los Gabinetes.
+  1. Los Secretarios de Estado.
+  2. La Subsecretar�a de Presidencia.
+  3. El Secretariado de Gobierno.
+
+---
+
+### Pregunta 16
+
+**Texto:** El Subsecretario de la Presidencia:
+
+**Opciones:**
+  0. Ejerce la presidencia de la Comisi�n General de Secretarios de Estado y Subsecretarios.
+  1. Ejerce la secretar�a de la Comisi�n General de Secretarios de Estado y Subsecretarios.
+  2. Es el Director del Secretariado de Gobierno.
+  3. Es el Secretario del Secretariado de Gobierno.
+
+---
+
+### Pregunta 17
+
+**Texto:** �Qu� car�cter tienen las deliberaciones del Consejo de Ministros?
+
+**Opciones:**
+  0. Secretas.
+  1. P�blicas.
+  2. Reservadas.
+  3. Solemnes y p�blicas.
+
+---
+
+### Pregunta 18
+
+**Texto:** Los nombramientos de jueces y magistrados efectuados por el CGPJ adoptar�n la siguiente forma de conformidad con el art�culo 634 LOPJ:
+
+**Opciones:**
+  0. El nombramiento de magistrados adoptar� la forma de Real Decreto y el de jueces adoptar� la forma de Orden.
+  1. El nombramiento de magistrados adoptar� la forma de Orden y el de jueces adoptar� la forma de Real Decreto.
+  2. Ambos tipos de nombramiento adoptar�n la forma de Orden.
+  3. Ambos tipos de nombramiento adoptar�n la forma de Real Decreto.
+
+---
+
+### Pregunta 19
+
+**Texto:** �Cu�l de los siguientes �rganos ejerce jurisdicci�n en �mbito de provincia?:
+
+**Opciones:**
+  0. El Juez de Paz.
+  1. El Tribunal de instancia
+  2. La Audiencia provincial.
+  3. El Tribunal Central de instancia.
+
+---
+
+### Pregunta 20
+
+**Texto:** �Cu�les de los siguientes �rganos de la AGE no son directivos?:
+
+**Opciones:**
+  0. Subdirectores Generales y asimilados.
+  1. Delegados y Subdelegados del Gobierno.
+  2. Directores Insulares.
+  3. Secretarios Generales.
+
+---
+
+### Pregunta 21
+
+**Texto:** Se�ale la respuesta correcta:
+
+**Opciones:**
+  0. Los ministros son nombrados por el presidente del Gobierno.
+  1. Los secretarios de Estado son nombrados por el presidente del Gobierno.
+  2. Los subdirectores generales son nombrados por el ministro, secretario de Estado o secretario general del que dependan.
+  3. Los directores generales son nombrados por el Consejo de Ministros.
+
+---
+
+### Pregunta 22
+
+**Texto:** En los Ministerios pueden existir:
+
+**Opciones:**
+  0. Secretar�as de Estado, y Subsecretarios, para la gesti�n de un sector de actividad administrativa.
+  1. Secretar�as de Estado, y Secretarias Generales T�cnicas, para la gesti�n de un sector de actividad administrativa.
+  2. Secretar�as Generales y Secretarias de Estado, para la gesti�n de un sector de actividad administrativa.
+  3. Secretar�as Generales, y Subsecretar�as, para la gesti�n de un sector de actividad administrativa.
+
+---
+
+### Pregunta 23
+
+**Texto:** De conformidad con el art�culo 103 de la Constituci�n, son principios de actuaci�n de la Administraci�n P�blica:
+
+**Opciones:**
+  0. Jerarqu�a y autonom�a.
+  1. Eficacia y eficiencia.
+  2. Eficiencia y jerarqu�a.
+  3. Eficacia y jerarqu�a.
+
+---
+
+### Pregunta 24
+
+**Texto:** De conformidad con el RD 617/1997, en cu�l de las siguientes islas existir� un Director Insular de la AGE?:
+
+**Opciones:**
+  0. En Mallorca.
+  1. En Lanzarote.
+  2. En Tenerife.
+  3. En Gran Canaria.
+
+---
+
+### Pregunta 25
+
+**Texto:** Se�ale la respuesta correcta en relaci�n con lo dispuesto en la LRJSP:
+
+**Opciones:**
+  0. Los delegados del Gobierno representan al Gobierno de la naci�n en el territorio de la respectiva comunidad aut�noma.
+  1. Los delegados del Gobierno representan al Estado en el territorio de la respectiva comunidad aut�noma.
+  2. Los delegados del Gobierno representan al presidente del Gobierno en el territorio de la respectiva comunidad aut�noma.
+  3. Los delegados del Gobierno representan a la Administraci�n del Estado en el territorio de la respectiva comunidad aut�noma.
+
+---
+
+### Pregunta 26
+
+**Texto:** De conformidad con la LRJSP, los Delegados del Gobierno dependen org�nicamente:
+
+**Opciones:**
+  0. Del Presidente del Gobierno, sin perjuicio de la adscripci�n org�nica de la Delegaci�n del Gobierno al Ministerio de Hacienda y AAPP (actualmente Pol�tica Territorial y Memoria Democr�tica).
+  1. Del Ministerio de Hacienda y AAPP (actualmente Pol�tica Territorial) sin perjuicio de la adscripci�n org�nica de la Delegaci�n del Gobierno a la Presidencia del Gobierno
+  2. Del Presidente del Gobierno, sin perjuicio de la adscripci�n org�nica de la Delegaci�n del Gobierno a la Presidencia del Gobierno
+  3. Del Ministerio de Hacienda y AAPP (actualmente Pol�tica Territorial y Memoria Democr�tica)sin perjuicio de la adscripci�n org�nica de la Delegaci�n del Gobierno al Ministerio del interior
+
+---
+
+### Pregunta 27
+
+**Texto:** Se�ale la respuesta correcta en lo relativo a la definici�n de Organismo Aut�nomo, prevista en la LRJSP:
+
+**Opciones:**
+  0. son entidades de derecho privado, con personalidad jur�dica propia, tesorer�a y patrimonio propios y autonom�a en su gesti�n, que desarrollan actividades propias de la Administraci�n P�blica, tanto actividades de fomento, prestacionales, de gesti�n de servicios p�blicos o de producci�n de bienes de inter�s p�blico, susceptibles de contraprestaci�n, en calidad de organizaciones instrumentales diferenciadas y dependientes de �sta.
+  1. son entidades de derecho p�blico, con personalidad jur�dica propia, tesorer�a y patrimonio propios y autonom�a en su gesti�n, que desarrollan actividades propias de la Administraci�n P�blica, tanto actividades de fomento, prestacionales, de gesti�n de servicios p�blicos o de producci�n de bienes de inter�s p�blico, susceptibles de contraprestaci�n, en calidad de organizaciones instrumentales diferenciadas y dependientes de �sta.
+  2. son entidades de derecho privado, con personalidad jur�dica propia, tesorer�a y patrimonio propios y autonom�a en su gesti�n, que desarrollan actividades propias de la Administraci�n P�blica, tanto actividades de fomento, prestacionales, de gesti�n de servicios p�blicos o de producci�n de bienes de inter�s p�blico, susceptibles de contraprestaci�n, en calidad de organizaciones instrumentales diferenciadas e independientes de �sta.
+  3. son entidades de derecho p�blico, con personalidad jur�dica propia, tesorer�a y patrimonio propios y autonom�a en su gesti�n, que desarrollan actividades propias de la Administraci�n P�blica, tanto actividades de fomento, prestacionales, de gesti�n de servicios p�blicos o de producci�n de bienes de inter�s p�blico, susceptibles de contraprestaci�n, en calidad de organizaciones instrumentales diferenciadas e independientes de �sta.
+
+---
+
+### Pregunta 28
+
+**Texto:** Del convenio de un consorcio en que participe la AGE formar�n parte:
+
+**Opciones:**
+  0. Los estatutos, un plan de actuaci�n, una proyecci�n presupuestaria trienal y el informe preceptivo favorable del Ministerio de Hacienda.
+  1. Los estatutos, un plan de actuaci�n, un plan de redimensionamiento y el informe preceptivo favorable del Ministerio de Hacienda.
+  2. Los estatutos, un plan de actuaci�n, una proyecci�n presupuestaria trienal y el informe preceptivo favorable del Ministerio de Hacienda o de la IGAE seg�n se determine reglamentariamente.
+  3. Los estatutos, un plan de actuaci�n, un plan de redimensionamiento y el informe preceptivo favorable del Ministerio de Hacienda o de la IGAE seg�n se determine reglamentariamente.
+
+---
+
+### Pregunta 29
+
+**Texto:** La creaci�n de las fundaciones del sector p�blico estatal se realizar�:
+
+**Opciones:**
+  0. Ley que establecer� los fines de la fundaci�n y, en su caso, los recursos econ�micos con los que se le dota.
+  1. Real Decreto que establecer� los fines de la fundaci�n y, en su caso, los recursos econ�micos con los que se le dota.
+  2. Acuerdo del Consejo de Ministros que establecer� los fines de la fundaci�n y, en su caso, los recursos econ�micos con los que se le dota.
+  3. Orden conjunta del Ministro de Hacienda y Administraciones P�blicas y del Ministro que ejerza el protectorado, que establecer� los fines de la fundaci�n y, en su caso, los recursos econ�micos con los que se le dota.
+
+---
+
+### Pregunta 30
+
+**Texto:** La Ley 2/2014, de 25 de marzo, de la Acci�n y del Servicio Exterior del Estado, contiene la siguiente definici�n: �Los �rganos, las unidades administrativas y los medios humanos y materiales que, bajo la direcci�n y la coordinaci�n del Gobierno, ejecutan y desarrollan la Pol�tica Exterior y la Acci�n Exterior de este, sin perjuicio de las competencias de los distintos departamentos ministeriales�. Dicha definici�n corresponde a:
+
+**Opciones:**
+  0. La Pol�tica Exterior.
+  1. El Servicio Exterior del Estado.
+  2. La Acci�n exterior del Estado.
+  3. La definici�n incluye los tres conceptos anteriores.
+
+---
+
+### Pregunta 31
+
+**Texto:** El Fiscal General del Estado, es en relaci�n al Consejo de Estado:
+
+**Opciones:**
+  0. Consejero nato.
+  1. Consejero electivo.
+  2. Consejero vitalicio.
+  3. No ocupa ning�n cargo en el Consejo de Estado.
+
+---
+
+### Pregunta 32
+
+**Texto:** Se�ale la respuesta correcta en relaci�n con las facultades que el art�culo 149 de la Constituci�n Espa�ola atribuye al Estado en cada una de las siguientes materias:
+
+**Opciones:**
+  0. Legislaci�n b�sica sobre propiedad intelectual e industrial.
+  1. Legislaci�n b�sica sobre pesas y medidas.
+  2. Legislaci�n y r�gimen econ�mico de la Seguridad Social.
+  3. Normas b�sicas del r�gimen de presa, radio y televisi�n.
+
+---
+
+### Pregunta 33
+
+**Texto:** En materia de contratos y concesiones administrativas corresponde al Estado la/s siguiente/s facultad/es:
+
+**Opciones:**
+  0. Legislaci�n b�sica.
+  1. Legislaci�n.
+  2. Legislaci�n y ejecuci�n.
+  3. Contratos y concesiones administrativas es una competencia atribu�da a las CCAA en virtud del art�culo 148 CE.
+
+---
+
+### Pregunta 34
+
+**Texto:** �A qu� �rgano corresponde transferir o delegar en las CCAA facultades correspondientes a materias de titularidad estatal que por su propia naturaleza sean susceptibles de transferencia o delegaci�n?:
+
+**Opciones:**
+  0. Al Gobierno mediante Real Decreto.
+  1. Al Gobierno previa autorizaci�n del Congreso.
+  2. A las CCGG mediante ley org�nica.
+  3. A las CCGG mediante ley de bases.
+
+---
+
+### Pregunta 35
+
+**Texto:** �Cu�l de las siguientes competencias corresponde a la Comunidad Aut�noma de conformidad con el art�culo 148 de la Constituci�n Espa�ola?:
+
+**Opciones:**
+  0. Marisqueo.
+  1. Iluminaci�n de costas.
+  2. Abanderamiento de buques.
+  3. Marina mercante.
+
+---
+
+### Pregunta 36
+
+**Texto:** Se�ale la respuesta correcta:
+
+**Opciones:**
+  0. Corresponde al Estado la competencia exclusiva sobre administraci�n de justicia.
+  1. Corresponde al Estado la competencia para dictar las bases en materia de artesan�a.
+  2. Las CCAA podr�n asumir el desarrollo legislativo y la ejecuci�n en materia de propiedad intelectual e industrial.
+  3. Corresponde a las CCAA la competencia sobre el r�gimen econ�mico de la Seguridad Social.
+
+---
+
+### Pregunta 37
+
+**Texto:** Corresponde en todo caso al pleno municipal, de conformidad con el art�culo 22 LBRL:
+
+**Opciones:**
+  0. La jefatura de la polic�a municipal.
+  1. Aprobar la oferta de empleo p�blico.
+  2. La declaraci�n de lesividad de los actos del ayuntamiento.
+  3. Dirigir, inspeccionar e impulsar servicios y obras municipales.
+
+---
+
+### Pregunta 38
+
+**Texto:** De conformidad con la LBRL 7/85, los caser�os, parroquias, aldeas, barrios, anteiglesias, concejos, pedan�as, lugares anejos y otros an�logos:
+
+**Opciones:**
+  0. Tienen personalidad jur�dica.
+  1. Son entidades locales territoriales.
+  2. Son entidades locales.
+  3. Son entes de �mbito territorial inferior al municipio
+
+---
+
+### Pregunta 39
+
+**Texto:** �Qui�n elige al Presidente de la Diputaci�n provincial?:
+
+**Opciones:**
+  0. Los miembros del Pleno siendo necesario que obtenga mayor�a absoluta en primera votaci�n, y de no alcanzarse, mayor�a simple en segunda votaci�n.
+  1. Los habitantes de la provincia por sufragio universal siendo necesario que obtenga mayor�a absoluta en primera votaci�n, y de no alcanzarse, mayor�a simple en segunda votaci�n.
+  2. Los miembros del Pleno siendo necesario que obtenga mayor�a de 2/3 en primera votaci�n, y de no alcanzarse, mayor�a absoluta en segunda votaci�n.
+  3. Los miembros del Pleno siendo necesario que obtenga mayor�a de 2/3 en primera votaci�n, y de no alcanzarse, mayor�a simple en segunda votaci�n.
+
+---

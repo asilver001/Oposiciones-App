@@ -1,0 +1,270 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 7. Test efectos y extincionparte especial.pdf
+**Total preguntas:** 20
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** De conformidad con la ley 9/2017, de 8 de noviembre, de Contratos
+
+**Opciones:**
+  0. el Sector P�blico, en los contratos de obras, la certificaci�n final
+  1. En el plazo m�ximo de 3 meses desde la recepci�n.
+  2. Una vez liquidado el contrato.
+  3. 15 d�as antes de que finalice el plazo de garant�a.
+
+---
+
+### Pregunta 2
+
+**Texto:** Son prerrogativas o derechos de la Administraci�n en los contratos
+
+**Opciones:**
+  0. e concesi�n de obras:
+  1. Establecer, en su caso, las tarifas m�ximas por utilizaci�n de las
+  2. Imponer con car�cter temporal condiciones de utilizaci�n de las
+  3. Modificar unilateralmente los contratos por razones de inter�s
+
+---
+
+### Pregunta 3
+
+**Texto:** Respecto al pago del precio en el contrato de suministros:
+
+**Opciones:**
+  0. Puede ser en bienes de la misma o distinta clase hasta un 50% de
+  1. Puede ser en bienes de la misma clase hasta un 40% del total
+  2. Puede ser en bienes de misma clase hasta un 50% del total.
+  3. No cabe el pago en especie.
+
+---
+
+### Pregunta 4
+
+**Texto:** �Durante cu�nto tiempo puede estar secuestrada una concesi�n?
+
+**Opciones:**
+  0. Durante un m�ximo de 3 a�os pr�rrogas incluidas.
+  1. Durante un m�ximo de 3 a�os si es concesi�n de obras y de 1
+  2. �o si es concesi�n de servicios.
+  3. Durante 3 a�os con posibilidad de pr�rroga.
+
+---
+
+### Pregunta 5
+
+**Texto:** �Qu� indemnizaci�n corresponde al contratista en caso de demora
+
+**Opciones:**
+  0. 3% del precio de adjudicaci�n, IVA excluido
+  1. 2% del precio de adjudicaci�n IVA excluido
+  2. 3% del precio de licitaci�n, IVA excluido
+  3. 2% del precio de licitaci�n, IVA excluido
+
+---
+
+### Pregunta 6
+
+**Texto:** Son causas de resoluci�n del contrato de obras
+
+**Opciones:**
+  0. El rescate
+  1. El secuestro
+  2. La demora en la comprobaci�n del replanteo
+  3. Todas las anteriores
+
+---
+
+### Pregunta 7
+
+**Texto:** �Qu� plazo tiene la responsabilidad por vicios ocultos en los
+
+**Opciones:**
+  0. ontratos de obras?
+  1. 15 a�os desde la recepci�n
+  2. 15 a�os desde la liquidaci�n
+  3. El tiempo establecido en el PCAP, pero como m�nimo 1 a�o
+
+---
+
+### Pregunta 8
+
+**Texto:** Se�ale la correcta:
+
+**Opciones:**
+  0. Las concesiones de obras ser�n hipotecables conforme a lo
+  1. ispuesto en
+  2. utorizaci�n del �rgano de contrataci�n
+  3. Las concesiones de obras ser�n hipotecables conforme a lo
+
+---
+
+### Pregunta 9
+
+**Texto:** Se�ale la correcta:
+
+**Opciones:**
+  0. En los contratos que tengan por objeto actividades docentes en
+  1. entros del sector p�blico en forma de cursos de formaci�n,
+  2. En los contratos que tengan por objeto actividades docentes en
+  3. entros del sector p�blico en forma de cursos de formaci�n,
+
+---
+
+### Pregunta 10
+
+**Texto:** En el caso de resoluci�n del contrato de servicios complementarios
+
+**Opciones:**
+  0. �nicamente, por todos los conceptos, una indemnizaci�n del 3%
+  1. el precio de adjudicaci�n, IVA excluido
+  2. �nicamente, por todos los conceptos, una indemnizaci�n del 5%
+  3. el precio de adjudicaci�n, IVA excluido
+
+---
+
+### Pregunta 11
+
+**Texto:** En los contratos de suministros, son de cuenta del contratista:
+
+**Opciones:**
+  0. Los gastos den entrega, pero no los de transporte
+  1. Los gastos de entrega y de transporte
+  2. La a es correcta, salvo pacto en contrario
+  3. La b es correcta, salvo pacto en contrario
+
+---
+
+### Pregunta 12
+
+**Texto:** Se�ale la correcta:
+
+**Opciones:**
+  0. No cabe subcontrataci�n en los contratos de concesi�n de
+  1. Los contratos de concesi�n de servicios admiten subcontrataci�n
+  2. No cabe subcontrataci�n en los contratos de servicios sobre
+  3. La subcontrataci�n s�lo est� reconocida en contratos de obras.
+
+---
+
+### Pregunta 13
+
+**Texto:** Se�ale la respuesta correcta:
+
+**Opciones:**
+  0. En el momento de extinci�n de la concesi�n, el concesionario
+  1. decuado estado de uso y conservaci�n.
+  2. Los bienes que vayan a revertir a la Administraci�n pueden ser
+  3. No hace falta realizar acta de recepci�n de los bienes que se
+
+---
+
+### Pregunta 14
+
+**Texto:** En las concesiones de obras:
+
+**Opciones:**
+  0. Puede haber financiaci�n p�blica y privada
+  1. Puede haber �nicamente financiaci�n p�blica
+  2. Puede haber �nicamente financiaci�n privada
+  3. Ninguna es correcta
+
+---
+
+### Pregunta 15
+
+**Texto:** Respecto a las penalidades en las concesiones de obras:
+
+**Opciones:**
+  0. No podr�n exceder del 10% del presupuesto total de la obra
+  1. urante la fase de ejecuci�n.
+  2. No podr� exceder del 20% de los ingresos obtenidos por la
+  3. A y b son correctas
+
+---
+
+### Pregunta 16
+
+**Texto:** En las concesiones de obras, al finalizar la fase de construcci�n:
+
+**Opciones:**
+  0. Se levanta acta de recepci�n
+  1. Se levanta acta de comprobaci�n
+  2. A es correcta y conlleva impl�cita la autorizaci�n de apertura para
+  3. B es correcta y conlleva impl�cita la autorizaci�n de apertura para
+
+---
+
+### Pregunta 17
+
+**Texto:** Es causa de resoluci�n del contrato de obras:
+
+**Opciones:**
+  0. La demora injustificada en la comprobaci�n del replanteo en m�s
+  1. e 15 d�as
+  2. La suspensi�n del inicio de la obra m�s de 3 meses
+  3. La suspensi�n de la obra m�s de 8 meses
+
+---
+
+### Pregunta 18
+
+**Texto:** Se�ale la incorrecta en relaci�n con el plazo de garant�a:
+
+**Opciones:**
+  0. Es obligatorio en todos los contratos de obras, sin excepci�n
+  1. Se computa desde la recepci�n
+  2. En obras ser� de m�nimo un a�o
+  3. Durante este
+
+---
+
+### Pregunta 19
+
+**Texto:** No tendr�n la consideraci�n de modificaciones del contrato de
+
+**Opciones:**
+  0. El exceso de mediciones siempre que no suponga un incremento
+  1. el gasto superior al 10% del precio del contrato inicial.
+  2. El exceso de mediciones siempre que no suponga un incremento
+  3. el gasto superior al 20% del precio del contrato inicial.
+
+---
+
+### Pregunta 20
+
+**Texto:** Tendr�n la consideraci�n de supuestos de fuerza mayor:
+
+**Opciones:**
+  0. Los incendios causados por electricidad atmosf�rica.
+  1. Maremotos
+  2. Terremotos
+  3. Todas son correctas
+
+---

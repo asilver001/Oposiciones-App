@@ -1,0 +1,78 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** Test tema 7. Enunciado.pdf
+**Total preguntas:** 4
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** Desde la perspectiva administrativa, las subvenciones son una t�cnica de:
+
+**Opciones:**
+  0. Limitaci�n.
+  1. Arbitral.
+  2. De servicio p�blico.
+  3. Fomento.
+
+---
+
+### Pregunta 2
+
+**Texto:** La potestad sancionadora de las Administraciones P�blicas se ejercer�:
+
+**Opciones:**
+  0. Cuando haya sido expresamente reconocida por una norma con rango de Ley.
+  1. Cuando haya sido expresamente reconocida por una norma con rango de Ley o
+  2. Cuando haya sido expresamente reconocida por un acto administrativo.
+  3. Siempre y en todo caso.
+
+---
+
+### Pregunta 3
+
+**Texto:** Ser�n de aplicaci�n las disposiciones sancionadoras vigentes:
+
+**Opciones:**
+  0. En el momento de producirse los hechos que constituyan infracci�n administrativa, sin
+  1. En el momento de dictar resoluci�n administrativa.
+  2. En el momento de dictar el acuerdo de iniciaci�n del procedimiento sancionador.
+  3. En el momento de producirse los hechos que constituyan infracci�n administrativa.
+
+---
+
+### Pregunta 4
+
+**Texto:** En relaci�n con la potestad sancionadora, indique cu�l de las siguientes
+
+**Opciones:**
+  0. firmaciones es correcta:
+  1. La resoluci�n que ponga fin al procedimiento ser� ejecutiva cuando no quepa contra
+  2. La resoluci�n que ponga fin al procedimiento ser� ejecutiva cuando ponga fin a la v�a
+  3. dministrativa.
+
+---

@@ -1,0 +1,498 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 10 TEST TEMA9 INICIALES.pdf
+**Total preguntas:** 39
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** �Cu�l de los siguientes actos jur�dicos relativos a los entes del sector p�blico institucional
+
+**Opciones:**
+  0. La transformaci�n de un Organismo Aut�nomo en una Fundaci�n.
+  1. La creaci�n de un Organismo Aut�nomo.
+  2. La disoluci�n de una Entidad P�blica Empresarial.
+  3. La creaci�n de una fundaci�n.
+
+---
+
+### Pregunta 2
+
+**Texto:** El plan anual de actuaci�n de un organismo p�blico deber� ser aprobado:
+
+**Opciones:**
+  0. En el �ltimo trimestre del a�o natural por el departamento del que dependa o al
+  1. En el �ltimo semestre del a�o natural por el departamento del que dependa o al
+  2. En el �ltimo trimestre del a�o natural por el Consejo rector del organismo.
+  3. En el �ltimo semestre del a�o natural por el Consejo rector del organismo.
+
+---
+
+### Pregunta 3
+
+**Texto:** De conformidad con lo dispuesto en el art�culo 128 Ley 40/2015, de 1 de octubre, de R�gimen
+
+**Opciones:**
+  0. Real Decreto.
+  1. Acuerdo.
+  2. Ley.
+  3. Norma con rango de ley.
+
+---
+
+### Pregunta 4
+
+**Texto:** �Cu�l de los siguientes entes no forma parte integrante del sector p�blico estatal seg�n el
+
+**Opciones:**
+  0. rt�culo 84 LRJSP?:
+  1. Las sociedades mercantiles estatales.
+  2. Las fundaciones del sector p�blico estatal.
+  3. Las universidades p�blicas transferidas.
+
+---
+
+### Pregunta 5
+
+**Texto:** La fusi�n de dos fundaciones del sector p�blico estatal, se llevar� a cabo por:
+
+**Opciones:**
+  0. Norma con rango de ley.
+  1. Norma reglamentaria.
+  2. Ley.
+  3. Acuerdo.
+
+---
+
+### Pregunta 6
+
+**Texto:** Tiene la consideraci�n de ente p�blico de r�gimen espec�fico de conformidad con lo
+
+**Opciones:**
+  0. ispuesto en la LRJSP:
+  1. La Agencia Espa�ola de Protecci�n de Datos.
+  2. El Centro Nacional de Inteligencia.
+  3. El BOE.
+
+---
+
+### Pregunta 7
+
+**Texto:** Cuando un organismo p�blico incurra en disoluci�n por el transcurso del tiempo de
+
+**Opciones:**
+  0. Cinco d�as desde que concurra la causa de disoluci�n.
+  1. Treinta d�as h�biles desde que concurra la causa de disoluci�n.
+  2. Un mes desde que concurra la causa de disoluci�n.
+  3. Dos meses desde que concurra la causa de disoluci�n.
+
+---
+
+### Pregunta 8
+
+**Texto:** El titular del m�ximo �rgano de direcci�n de la entidad, a trav�s de la Intervenci�n General
+
+**Opciones:**
+  0. e la Administraci�n correspondiente, notificar�, electr�nicamente a efectos de su inscripci�n,
+  1. l Inventario de Entidades del Sector P�blico Estatal, Auton�mico y Local, la norma o el acto
+  2. En el plazo de 15 d�as h�biles desde la entrada en vigor de la norma o del acto,
+  3. En el plazo de 1 mes desde la entrada en vigor de la norma o del acto, seg�n
+
+---
+
+### Pregunta 9
+
+**Texto:** Los m�ximos �rganos de gobierno de una Entidad P�blica Empresarial son:
+
+**Opciones:**
+  0. El Presidente, el Director y el Consejo Rector.
+  1. El Presidente, el Director, el Consejo Rector y la Comisi�n de Control.
+  2. El Director y el Consejo Rector.
+  3. El Presidente y el Consejo Rector.
+
+---
+
+### Pregunta 10
+
+**Texto:** Se�ale la respuesta correcta en relaci�n con las Fundaciones del Sector Publico Estatal:
+
+**Opciones:**
+  0. Son actividades propias de las fundaciones las realizadas, sin �nimo de lucro,
+  1. Son actividades propias de las fundaciones las realizadas, sin �nimo de lucro,
+  2. Son actividades propias de las fundaciones las realizadas, con o sin �nimo de
+  3. Son actividades propias de las fundaciones las realizadas, con o sin �nimo de
+
+---
+
+### Pregunta 11
+
+**Texto:** El personal al servicio de los Organismos Aut�nomos:
+
+**Opciones:**
+  0. Ser� preferentemente laboral
+  1. Ser� preferentemente funcionario
+  2. Ser� funcionario o laboral en los mismos t�rminos previstos para la AGE.
+  3. Ser� en todo caso laboral, salvo lo dispuesto en relaci�n con los �rganos
+
+---
+
+### Pregunta 12
+
+**Texto:** Conforme al art�culo 87 de la LRJSP, la transformaci�n de una Entidad P�blica
+
+**Opciones:**
+  0. Real Decreto.
+  1. Ley.
+  2. Norma reglamentaria.
+  3. Orden ministerial.
+
+---
+
+### Pregunta 13
+
+**Texto:** En control de eficacia de los OOAA, seg�n el art�culo 85 de l LRJSP, corresponde:
+
+**Opciones:**
+  0. Al propio organismo aut�nomo a trav�s del m�ximo �rgano de gobierno.
+  1. A la IGAE.
+  2. Al Departamento al que est�n adscritos.
+  3. Al Consejo de Ministros.
+
+---
+
+### Pregunta 14
+
+**Texto:** Las entidades de derecho p�blico que, vinculadas a la Administraci�n General del
+
+**Opciones:**
+  0. Los consorcios.
+  1. Las autoridades administrativas independientes.
+  2. Los fondos carentes de personalidad jur�dica.
+  3. Las fundaciones del sector p�blico estatal.
+
+---
+
+### Pregunta 15
+
+**Texto:** La transformaci�n de un Organismo Aut�nomo en Entidad P�blica Empresarial
+
+**Opciones:**
+  0. eber� llevarse a acabo mediante:
+  1. Ley.
+  2. Real Decreto.
+  3. Orden Ministerial.
+
+---
+
+### Pregunta 16
+
+**Texto:** La creaci�n de las fundaciones del sector p�blico estatal se llevar� a efecto mediante:
+
+**Opciones:**
+  0. Ley que establecer� los fines de la fundaci�n y, en su caso, los recursos
+  1. Real Decreto que establecer� los fines de la fundaci�n y, en su caso, los
+  2. Acuerdo del Consejo de Ministros que establecer� los fines de la fundaci�n y,
+  3. Orden conjunta del Ministro de Hacienda y Funci�n P�blica y del Ministro que
+
+---
+
+### Pregunta 17
+
+**Texto:** Cuando un organismo aut�nomo, entidad p�blica empresarial o Agencias Estatales se
+
+**Opciones:**
+  0. Una memoria y un informe preceptivo del Consejo de Ministros.
+  1. Un plan de correcci�n y un informe preceptivo del Consejo de Ministros.
+  2. Una memoria y un informe preceptivo de la IGAE.
+  3. Un plan de correcci�n y un informe preceptivo de la IGAE.
+
+---
+
+### Pregunta 18
+
+**Texto:** Una entidad de derecho p�blico con personalidad jur�dica propia, patrimonio propio y
+
+**Opciones:**
+  0. utonom�a en su gesti�n, que se financie mayoritariamente con ingresos de mercado y
+  1. Un consorcio.
+  2. Un Organismo Aut�nomo.
+  3. Una Entidad P�blica Empresarial.
+
+---
+
+### Pregunta 19
+
+**Texto:** Los estatutos de los Organismos P�blicos se aprobar�n:
+
+**Opciones:**
+  0. Por Real Decreto del Consejo de Ministros.
+  1. Por Orden del titular del Ministerio al que el organismo est� vinculado o sea
+  2. ependiente.
+  3. Por ley de las CCGG.
+
+---
+
+### Pregunta 20
+
+**Texto:** En el caso de que los fines y objetivos de una Entidad P�blica Empresarial sean
+
+**Opciones:**
+  0. sumidos por los servicios de la AGE, la disoluci�n de la mencionada entidad se producir�
+  1. Real Decreto de disoluci�n del Consejo de Ministros.
+  2. Ley.
+  3. Orden de disoluci�n del Ministro de adscripci�n.
+
+---
+
+### Pregunta 21
+
+**Texto:** Las sociedades mercantiles estatales se regir�n por lo previsto en la Ley 40/2015, por
+
+**Opciones:**
+  0. Presupuestaria, contable, de control econ�mico-financiero y de contrataci�n.
+  1. Presupuestaria, contable, de personal, de control econ�mico-financiero y de
+  2. ontrataci�n.
+  3. Contable, de personal, de control econ�mico-financiero y de contrataci�n.
+
+---
+
+### Pregunta 22
+
+**Texto:** Seg�n lo establecido en el art�culo 95.2 de
+
+**Opciones:**
+  0. Contrataci�n p�blica.
+  1. Gesti�n de bienes muebles.
+  2. Organizaci�n y recursos humanos.
+  3. Planificaci�n, programaci�n y presupuestaci�n.
+
+---
+
+### Pregunta 23
+
+**Texto:** Las Fundaciones del Sector Publico Estatal:
+
+**Opciones:**
+  0. Podr�n ejercer potestades p�blicas
+  1. No podr�n ejercer potestades p�blicas.
+  2. Pueden ejercer potestades p�blicas excepto la potestad expropiatoria.
+  3. Pueden ejercer potestades p�blicas excepto la potestad sancionadora y la
+
+---
+
+### Pregunta 24
+
+**Texto:** Los Consorcios se crear�n mediante:
+
+**Opciones:**
+  0. Convenio suscrito por las Administraciones, organismos p�blicos o entidades
+  1. Contrato de fusi�n suscrito por las Administraciones, organismos p�blicos o
+  2. Acuerdo entre
+  3. RD del Consejo de Ministros.
+
+---
+
+### Pregunta 25
+
+**Texto:** Seg�n lo previsto en el art�culo 108 ter de la LRJSP, la propuesta de contrato inicial de
+
+**Opciones:**
+  0. El Consejo de Ministros.
+  1. El Ministro de Hacienda y Administraciones P�blicas
+  2. El Consejo Rector de la Agencia.
+  3. El Director de la Agencia.
+
+---
+
+### Pregunta 26
+
+**Texto:** �Las agencias estatales pueden recurrir a la contrataci�n de p�lizas de cr�dito o
+
+**Opciones:**
+  0. Si, siempre que el saldo vivo no supere el 5 % de su presupuesto.
+  1. No, en ning�n caso.
+  2. No, salvo que lo autorice una Ley.
+  3. S�, dentro del l�mite que se�ale el Consejo de Ministros.
+
+---
+
+### Pregunta 27
+
+**Texto:** Seg�n la LRJSP los fondos carentes de personalidad jur�dica se crean mediante:
+
+**Opciones:**
+  0. Ley.
+  1. Real Decreto.
+  2. Orden Ministerial.
+  3. Convenio.
+
+---
+
+### Pregunta 28
+
+**Texto:** La LRJSP en su art�culo 89 regula la personalidad jur�dica y potestades de los OOPP
+
+**Opciones:**
+  0. Dentro de su esfera de competencia, las potestades administrativas precisas para
+  1. Dentro de su esfera de competencia, las potestades administrativas precisas para
+  2. Dentro de su esfera de competencia, las potestades administrativas precisas para
+  3. Dentro de su esfera de competencia, las potestades administrativas precisas para
+
+---
+
+### Pregunta 29
+
+**Texto:** Cualquier entidad integrante del sector p�blico institucional, con independencia de su
+
+**Opciones:**
+  0. La creaci�n, transformaci�n y extinci�n.
+  1. La creaci�n, fusi�n y extinci�n.
+  2. La creaci�n, transformaci�n, liquidaci�n y extinci�n.
+  3. La creaci�n, transformaci�n, fusi�n y extinci�n.
+
+---
+
+### Pregunta 30
+
+**Texto:** �Qu� es un consorcio conforme a la LRJSP?:
+
+**Opciones:**
+  0. Son entidades de derecho privado, con personalidad jur�dica propia y
+  1. iferenciada, creadas por varias administraciones p�blicas o entidades
+  2. Son entidades de derecho p�blico, sin personalidad jur�dica propia y
+  3. iferenciada, creadas por varias administraciones p�blicas o entidades
+
+---
+
+### Pregunta 31
+
+**Texto:** En relaci�n con el r�gimen de control de eficacia y supervisi�n continua del sector
+
+**Opciones:**
+  0. Todas las entidades integrantes del sector p�blico institucional estatal est�n
+  1. dministraci�n del Estado, que vigilar� la concurrencia de los requisitos
+  2. Todas las entidades integrantes del sector p�blico institucional estatal contar�n,
+  3. El control de eficacia ser� ejercido por el Ministerio de Hacienda, a trav�s de la
+
+---
+
+### Pregunta 32
+
+**Texto:** �Cada cuantos a�os se revisar� el Plan de Actuaci�n que debe acompa�ar la creaci�n
+
+**Opciones:**
+  0. e los entes del Sector p�blico institucional
+  1. Cada a�o.
+  2. Cada dos a�os.
+  3. Cada tres a�os.
+
+---
+
+### Pregunta 33
+
+**Texto:** Cu�l de los siguientes entes no tiene la consideraci�n de organismos aut�nomo:
+
+**Opciones:**
+  0. El Instituto Nacional de Administraci�n P�blica.
+  1. La Direcci�n General de Tr�fico.
+  2. El Servicio P�blico de Empleo Estatal.
+  3. El Banco de Espa�a.
+
+---
+
+### Pregunta 34
+
+**Texto:** En los Consorcios en que participe la AGE, el convenio:
+
+**Opciones:**
+  0. Precisar� de autorizaci�n previa del Consejo de Ministros y la competencia para
+  1. Precisar� de autorizaci�n previa de la IGAE y la competencia para su
+  2. Precisar� de autorizaci�n previa del Consejo de Ministros y la competencia para
+  3. Precisar� de autorizaci�n previa de la IGAE y la competencia para su
+
+---
+
+### Pregunta 35
+
+**Texto:** �Puede una Sociedad Mercantil Estatal transformarse en Fundaci�n del Sector
+
+**Opciones:**
+  0. No, la LRJSP no prev� esta posibilidad por tratarse de entes sometidos al
+  1. S�, mediante ley.
+  2. S�, mediante Real Decreto.
+  3. S�, mediante Acuerdo.
+
+---
+
+### Pregunta 36
+
+**Texto:** En el supuesto de fusi�n de OOPP, el plan de redimensionamiento deber� ser
+
+**Opciones:**
+  0. probado:
+  1. Previo informe preceptivo de la IGAE, por cada uno de los OOPP fusionados si
+  2. Previo informe preceptivo del Ministerio de Hacienda, por cada uno de los
+  3. Previo informe preceptivo del Ministerio de Hacienda o de la IGAE, por cada
+
+---
+
+### Pregunta 37
+
+**Texto:** Los Estatutos de las Fundaciones se aprobar�n:
+
+**Opciones:**
+  0. Por ley.
+  1. Por convenio.
+  2. Por RD del Consejo de Ministros.
+  3. Por Acuerdo del Consejo de Ministros.
+
+---
+
+### Pregunta 38
+
+**Texto:** Los Organismos Aut�nomos se regir�n:
+
+**Opciones:**
+  0. Por lo dispuesto en la Ley 40/2015, en su ley de creaci�n, sus estatutos, la Ley
+  1. e Procedimiento Administrativo Com�n de las Administraciones P�blicas, el
+  2. Por lo dispuesto en la Ley 40/2015, por lo previsto en la Ley 33/2003, de 3 de
+  3. ontrol econ�mico-financiero y de contrataci�n.
+
+---
+
+### Pregunta 39
+
+**Texto:** Los fondos carentes de personalidad jur�dica del sector p�blico estatal:
+
+**Opciones:**
+  0. Se crean y extinguen mediante Ley.
+  1. Se rigen por el derecho privado.
+  2. Est�n sujetos al r�gimen de presupuestaci�n, contabilidad y control previsto en
+  3. No forman parte del sector p�blico institucional estatal por carecer de
+
+---

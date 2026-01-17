@@ -1,0 +1,510 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 7 TEST TEMA 1 a 6 - copia.docx
+**Total preguntas:** 40
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** �Cu�ntos preceptos integran el T�tulo Preliminar de la Constituci�n Espa�ola de 1978?:
+
+**Opciones:**
+  0. 9 art�culos entre los que se encuentra la regulaci�n del Defensor del Pueblo.
+  1. 10 art�culos entre los que se encuentra la regulaci�n de la lengua oficial del estado.
+  2. 9 art�culos entre los que se encuentra la enumeraci�n de los valores superiores del ordenamiento jur�dico.
+  3. 10 art�culos entre los que se indica que la interpretaci�n de los derechos y libertades de la Constituci�n se realizar� conforme a la Declaraci�n Universal de Derechos Humanos.
+
+---
+
+### Pregunta 2
+
+**Texto:** Se�ale cu�l de los siguientes preceptos constitucionales requerir� la celebraci�n de un refer�ndum preceptivo y vinculante en caso de que se pretenda la modificaci�n de su contenido:
+
+**Opciones:**
+  0. El art�culo 60 relativo a la tutela del Rey menor.
+  1. El art�culo 14 relativo a la igualdad.
+  2. El art�culo 37.2 relativo a la adopci�n de medidas de conflicto colectivo.
+  3. El art�culo 107 regulador del Consejo de Estado.
+
+---
+
+### Pregunta 3
+
+**Texto:** De conformidad con el art�culo 167 de la Constituci�n Espa�ola, aprobada la reforma por las Cortes Generales, ser� sometida a refer�ndum para su ratificaci�n cuando as� lo soliciten una d�cima parte de los miembros de cualquiera de las C�maras:
+
+**Opciones:**
+  0. Dentro de los quince d�as siguientes a la comunicaci�n de la aprobaci�n de la reforma por parte del Presidente del Congreso al Presidente del Gobierno.
+  1. Dentro de los quince d�as siguientes a su aprobaci�n.
+  2. Dentro de los diez d�as siguientes a la comunicaci�n de la aprobaci�n de la reforma por parte del Presidente del Congreso al Presidente del Gobierno.
+  3. Dentro de los diez d�as siguientes a su aprobaci�n.
+
+---
+
+### Pregunta 4
+
+**Texto:** La iniciativa de reforma constitucional corresponder� a los siguientes �rganos de conformidad con los art�culos 87.1 y 2 de la Constituci�n Espa�ola:
+
+**Opciones:**
+  0. Al Gobierno mediante la aprobaci�n de un proyecto de ley, al Congreso a trav�s de una quinta parte de los diputados o dos grupos parlamentarios, al Senado a trav�s de 50 senadores no pertenecientes al mismo grupo parlamentario, a las Asambleas de las Comunidades Aut�nomas o al pueblo a trav�s de la iniciativa legislativa popular.
+  1. Al Gobierno mediante la aprobaci�n de un proyecto de ley, al Congreso a trav�s de una quinta parte de los diputados o dos grupos parlamentarios, al Senado a trav�s de 2 grupos parlamentarios o 50 senadores no pertenecientes al mismo grupo parlamentario, a las Asambleas de las Comunidades Aut�nomas o al pueblo a trav�s de la iniciativa legislativa popular.
+  2. Al Gobierno mediante la aprobaci�n de un proyecto de ley, al Congreso a trav�s de una quinta parte de los diputados o dos grupos parlamentarios, al Senado a trav�s de 50 senadores no pertenecientes al mismo grupo parlamentario o a las Asambleas Legislativas de las Comunidades Aut�nomas.
+  3. Al Gobierno mediante la aprobaci�n de un proyecto de ley, al Congreso a trav�s de una quinta parte de los diputados o dos grupos parlamentarios, al Senado a trav�s de 2 grupos parlamentarios o 50 senadores no pertenecientes al mismo grupo parlamentario, o a las Asambleas Legislativas de las Comunidades Aut�nomas.
+
+---
+
+### Pregunta 5
+
+**Texto:** Se�ale la respuesta correcta respecto a la reforma del art�culo 13.2 de la CE:
+
+**Opciones:**
+  0. Se tramit� y aprob� en el a�o 1991
+  1. Se tramit� por el procedimiento del art 168.
+  2. Se public� en el Bolet�n Oficial del Estado el 28 de agosto de 1992.
+  3. Fortaleci� el compromiso de Espa�a con la estabilidad presupuestaria.
+
+---
+
+### Pregunta 6
+
+**Texto:** En caso de reforma constitucional, el refer�ndum (se�ale la falsa):
+
+**Opciones:**
+  0. Ser� convocado por el Rey.
+  1. Deber� celebrarse en el plazo de 60 d�as desde su convocatoria.
+  2. El resultado es vinculante.
+  3. Precisar� de autorizaci�n por mayor�a absoluta del Congreso.
+
+---
+
+### Pregunta 7
+
+**Texto:** Se�ale la respuesta correcta en relaci�n con el estado de excepci�n:
+
+**Opciones:**
+  0. El Gobierno, obtenida la autorizaci�n de la C�mara, proceder� a declarar el estado de excepci�n, acordando para ello en Consejo de Ministros un decreto con el contenido autorizado por el Congreso de los Diputados.
+  1. El Gobierno, obtenida la autorizaci�n de la C�mara, proceder� a declarar el estado de excepci�n, acordando para ello en Consejo de Ministros un decreto con el contenido autorizado por el Senado.
+  2. El Gobierno, obtenida la autorizaci�n de las C�maras, proceder� a declarar el estado de excepci�n, acordando para ello en Consejo de Ministros un decreto con el contenido autorizado por las CCGG.
+  3. El Gobierno, recabado el dictamen del Consejo de Estado, proceder� a declarar el estado de excepci�n, acordando para ello en Consejo de Ministros un decreto con el contenido autorizado por el Congreso de los Diputados.
+
+---
+
+### Pregunta 8
+
+**Texto:** Durante la vigencia del estado de excepci�n, la Autoridad gubernativa podr� detener a cualquier persona si lo considera necesario para la conservaci�n del orden, siempre que, cuando menos, existan fundadas sospechas de que dicha persona vaya a provocar alteraciones del orden p�blico. La detenci�n no podr� exceder de:
+
+**Opciones:**
+  0. 72 horas y los detenidos disfrutar�n de los derechos que les reconoce el art�culo diecisiete, tres, de la Constituci�n.
+  1. 48 horas y los detenidos no disfrutar�n de los derechos que les reconoce el art�culo diecisiete, tres, de la Constituci�n.
+  2. Diez d�as y los detenidos disfrutar�n de los derechos que les reconoce el art�culo diecisiete, tres, de la Constituci�n.
+  3. Cinco d�as y los detenidos no disfrutar�n de los derechos que les reconoce el art�culo diecisiete, tres, de la Constituci�n.
+
+---
+
+### Pregunta 9
+
+**Texto:** La declaraci�n del estado de excepci�n entrar� en vigor:
+
+**Opciones:**
+  0. Al d�a siguiente de su publicaci�n en el BOE.
+  1. En la fecha que indique la norma que disponga su declaraci�n.
+  2. A los dos d�as de su publicaci�n en el BOE.
+  3. En el mismo instante en que se publique en el BOE.
+
+---
+
+### Pregunta 10
+
+**Texto:** De conformidad con el art�culo 53 CE, est�n protegidos por un procedimiento judicial especial, preferente y sumario:
+
+**Opciones:**
+  0. Los derechos de la Secci�n 1� Cap�tulo II del T�tulo I.
+  1. Los derechos de la Secci�n 1� Cap�tulo II del T�tulo I y el art�culo 14.
+  2. Los derechos de la Secci�n 1� Cap�tulo II del T�tulo I y los art�culos 14 y 30.2.
+  3. Los derechos de la Secci�n 2� Cap�tulo II del T�tulo I.
+
+---
+
+### Pregunta 11
+
+**Texto:** De conformidad con el art�culo 53 CE, los principios rectores de la pol�tica social y econ�mica del Cap�tulo III del T�tulo I CE (se�ale la falsa):
+
+**Opciones:**
+  0. Ser�n objeto de desarrollo por ley ordinaria.
+  1. Informan la legislaci�n positiva.
+  2. Vinculan a todos los poderes p�blicos.
+  3. Informan la pr�ctica judicial.
+
+---
+
+### Pregunta 12
+
+**Texto:** De acuerdo con el art�culo 54 de la Constituci�n:
+
+**Opciones:**
+  0. Una ley org�nica regular� la instituci�n del Defensor del Pueblo, como alto comisionado de las Cortes Generales, designado por el Congreso para la defensa de los derechos comprendidos en el T�tulo I, a cuyo efecto podr� supervisar la actividad de la Administraci�n, dando cuenta a las Cortes Generales.
+  1. Una ley org�nica regular� la instituci�n del Defensor del Pueblo, como alto comisionado de las Cortes Generales, designado por �stas para la defensa de los derechos comprendidos en el T�tulo I, a cuyo efecto podr� supervisar la actividad de la Administraci�n, dando cuenta a las Cortes Generales.
+  2. Una ley ordinaria regular� la instituci�n del Defensor del Pueblo, como alto comisionado de las Cortes Generales, designado por el Congreso para la defensa de los derechos comprendidos en el T�tulo I, a cuyo efecto podr� supervisar la actividad de la Administraci�n, dando cuenta a las Cortes Generales.
+  3. d) Una ley ordinaria regular� la instituci�n del Defensor del Pueblo, como alto comisionado de las Cortes Generales, designado por �stas para la defensa de los derechos comprendidos en el T�tulo, a cuyo efecto podr� supervisar la actividad de la Administraci�n, dando cuenta a las Cortes Generales.
+
+---
+
+### Pregunta 13
+
+**Texto:** Ning�n Magistrado del Tribunal Constitucional podr� ser propuesto al Rey para otro per�odo inmediato, salvo que hubiera ocupado el cargo por un plazo no superior a:
+
+**Opciones:**
+  0. Seis a�os
+  1. Dos a�os
+  2. Tres a�os.
+  3. Cinco a�os
+
+---
+
+### Pregunta 14
+
+**Texto:** Cu�l es el �rgano competente para resolver el Recurso Previo de Inconstitucionalidad:
+
+**Opciones:**
+  0. El pleno, salvo los de mera aplicaci�n de doctrina que podr� atribuirse a las salas.
+  1. Las salas.
+  2. Las Secciones
+  3. El pleno.
+
+---
+
+### Pregunta 15
+
+**Texto:** De acuerdo con el art�culo 27 de la LOTC; no son susceptibles de declaraci�n de inconstitucionalidad:
+
+**Opciones:**
+  0. Los decretos legislativos.
+  1. El Reglamento de las Cortes Generales.
+  2. Los reglamentos de las Comunidades Aut�nomas.
+  3. Los actos el Estado con fuerza de Ley.
+
+---
+
+### Pregunta 16
+
+**Texto:** El cese o vacante en el cargo de Magistrado del Tribunal Constitucional se decidir� por el Pleno por mayor�a simple en los siguientes casos:
+
+**Opciones:**
+  0. Por incurrir en alguna causa de incapacidad de las previstas para los miembros del Poder Judicial y por incompatibilidad sobrevenida.
+  1. Por incompatibilidad sobrevenida y por violar la reserva propia de su funci�n.
+  2. Por expiraci�n del plazo de su nombramiento, por incurrir en alguna causa de incapacidad de las previstas para los miembros del Poder Judicial y por incompatibilidad sobrevenida.
+  3. Por incompatibilidad sobrevenida, por dejar de atender con diligencia los deberes de su cargo y por violar la reserva propia de su funci�n.
+
+---
+
+### Pregunta 17
+
+**Texto:** La suspensi�n de un Magistrado del Tribunal Constitucional requiere:
+
+**Opciones:**
+  0. El voto favorable de 2/3 partes de los miembros del Tribunal reunido en Pleno.
+  1. El voto favorable de la mayor�a absoluta de los miembros del Tribunal reunido en Pleno.
+  2. El voto favorable de 3/4 partes de los miembros del Tribunal reunido en Pleno.
+  3. El voto favorable de la mayor�a simple de los miembros del Tribunal reunido en Pleno.
+
+---
+
+### Pregunta 18
+
+**Texto:** La solicitud del dictamen del Consejo de Estado u �rgano consultivo de la correspondiente Comunidad Aut�noma, previo al planteamiento de un Conflicto en Defensa de la Autonom�a Local deber� formalizarse:
+
+**Opciones:**
+  0. Dentro del mes siguiente al d�a de la publicaci�n de la ley que se entienda lesiona la autonom�a local.
+  1. Dentro de los seis meses siguientes al d�a de la publicaci�n de la ley que se entienda lesiona la autonom�a local.
+  2. Dentro de los cinco meses siguientes al d�a de la publicaci�n de la ley que se entienda lesiona la autonom�a local.
+  3. Dentro de los tres meses siguientes al d�a de la publicaci�n de la ley que se entienda lesiona la autonom�a local.
+
+---
+
+### Pregunta 19
+
+**Texto:** Ser� tutor del Rey menor, cuando el Rey difunto no hubiera nombrado tutor testamentario:
+
+**Opciones:**
+  0. El padre o la madre, siempre que sean espa�oles de nacimiento y mayores de edad.
+  1. El padre o la madre, mientras permanezcan viudos.
+  2. El padre, la madre o ascendientes directos del Rey,
+  3. La persona que designen para tal fin las Cortes Generales.
+
+---
+
+### Pregunta 20
+
+**Texto:** Prestar�n juramento ante las Cortes Generales, de conformidad con el art�culo 61 CE:
+
+**Opciones:**
+  0. El Rey, el Pr�ncipe heredero al alcanzar la mayor�a de edad, el Regente o Regentes y el tutor al hacerse cargo de sus funciones.
+  1. El Rey, el Pr�ncipe heredero, cuando se produzca el hecho que origine su llamamiento y el Regente o Regentes al hacerse cargo de sus funciones.
+  2. El Rey, el Regente o Regentes y el tutor al hacerse cargo de sus funciones.
+  3. El Rey, el Pr�ncipe heredero al alcanzar la mayor�a de edad y el Regente o Regentes al hacerse cargo de sus funciones.
+
+---
+
+### Pregunta 21
+
+**Texto:** Seg�n dispone el art�culo 64 CE:
+
+**Opciones:**
+  0. Los actos del Rey ser�n refrendados por el Presidente del Gobierno y, en su caso, por los Ministros competentes. El nombramiento y cese del Presidente del Gobierno, y la disoluci�n prevista en el art�culo 99 CE, ser�n refrendados por el Presidente del Congreso
+  1. Los actos del Rey ser�n refrendados por el Presidente del Gobierno y, en su caso, por los Ministros competentes. El nombramiento y cese del Presidente del Gobierno, y la disoluci�n prevista en los art�culos 99 y 115 CE, ser�n refrendados por el Presidente del Congreso.
+  2. Los actos del Rey ser�n refrendados por el Presidente del Gobierno y, en su caso, por los Ministros competentes. La propuesta y el nombramiento del Presidente del Gobierno, y la disoluci�n prevista en el art�culo 99 CE, ser�n refrendados por el Presidente del Congreso.
+  3. Los actos del Rey ser�n refrendados por el Presidente del Gobierno y, en su caso, por los Ministros competentes. La propuesta y el nombramiento del Presidente del Gobierno, y la disoluci�n prevista en los art�culos 99 y 113 CE, ser�n refrendados por el Presidente del Congreso.
+
+---
+
+### Pregunta 22
+
+**Texto:** No est� sujeto a refrendo el siguiente acto del Rey:
+
+**Opciones:**
+  0. Conferir empleos civiles y militares y conceder honores y distinciones.
+  1. Manifestar el consentimiento del estado para obligarse internacionalmente por medio de tratados.
+  2. Nombramiento y relevo de los miembros civiles y militares de su Casa.
+  3. Mando supremo de las Fuerzas Armadas.
+
+---
+
+### Pregunta 23
+
+**Texto:** De conformidad con el art�culo 69 CE, cada Comunidad Aut�noma elige un senador y otro m�s por cada mill�n de habitantes. La designaci�n corresponde a:
+
+**Opciones:**
+  0. Al �rgano colegiado superior de la Comunidad Aut�noma o, en su defecto, a la Asamblea legislativa, de acuerdo con lo que establezcan los Estatutos, que asegurar�n, en todo caso, la adecuada representaci�n proporcional.
+  1. A la Asamblea legislativa o, en su defecto, al �rgano colegiado superior de la Comunidad Aut�noma, de acuerdo con lo que establezcan los Estatutos, que asegurar�n, en todo caso, la adecuada representaci�n proporcional.
+  2. Al Presidente de la Comunidad Aut�noma o, en su defecto, a la Asamblea legislativa, de acuerdo con lo que establezcan los Estatutos, que asegurar�n, en todo caso, la adecuada representaci�n proporcional.
+  3. A la Asamblea legislativa o, en su defecto, al Presidente de la Comunidad Aut�noma, de acuerdo con lo que establezcan los Estatutos, que asegurar�n, en todo caso, la adecuada representaci�n proporcional.
+
+---
+
+### Pregunta 24
+
+**Texto:** El art�culo 71 CE dispone (se�ale la falsa):
+
+**Opciones:**
+  0. Los Diputados y Senadores gozar�n de inviolabilidad por las opiniones manifestadas en el ejercicio de sus funciones.
+  1. Durante el per�odo de su mandato los Diputados y Senadores gozar�n asimismo de inmunidad y s�lo podr�n ser detenidos en caso de flagrante delito.
+  2. No podr�n ser inculpados ni procesados sin la previa autorizaci�n de la Sala de lo Penal del Tribunal Supremo.
+  3. Percibir�n una asignaci�n que ser� fijada por las respectivas C�maras.
+
+---
+
+### Pregunta 25
+
+**Texto:** Los Diputados y Senadores gozar�n de:
+
+**Opciones:**
+  0. Inmunidad por las opiniones manifestadas en el ejercicio de sus funciones.
+  1. Inviolabilidad e inmunidad s�lo durante el periodo de su mandato.
+  2. Las prerrogativas que se determine por el Consejo de Ministros mediante Real Decreto.
+  3. Inmunidad durante el periodo de su mandato, no pudiendo ser detenidos salvo en caso de flagrante delito.
+
+---
+
+### Pregunta 26
+
+**Texto:** De acuerdo con el art�culo 69 de la Constituci�n:
+
+**Opciones:**
+  0. Las poblaciones de Ceuta y Melilla elegir�n un Senador cada una de ellas.
+  1. Se elige un Senador en cada una de las siguientes islas: Ibiza, Formentera, Menorca, Lanzarote, Fuerteventura, Gomera, Hierro y La Palma.
+  2. Las Comunidades Aut�nomas designar�n un Senador y otro m�s por cada mill�n de electores de su respectivo territorio.
+  3. Las islas mayores -Gran Canaria, Mallorca y Tenerife- eligen tres Senadores.
+
+---
+
+### Pregunta 27
+
+**Texto:** Las C�maras podr�n reunirse en sesiones extraordinarias (art. 73 CE):
+
+**Opciones:**
+  0. A petici�n del Gobierno, de la Diputaci�n Permanente, o de la mayor�a absoluta de los miembros de cualquiera de las C�maras. Las sesiones extraordinarias deber�n convocarse sobre un orden del d�a determinado y ser�n clausuradas una vez que �ste haya sido agotado.
+  1. A petici�n del Gobierno, de la Diputaci�n Permanente, del Rey o de la mayor�a absoluta de los miembros de cualquiera de las C�maras. Las sesiones extraordinarias deber�n convocarse sobre un orden del d�a determinado y ser�n clausuradas una vez que �ste haya sido agotado.
+  2. A petici�n del Presidente del Gobierno, de la Diputaci�n Permanente o de la mayor�a absoluta de los miembros de cualquiera de las C�maras. Las sesiones extraordinarias deber�n convocarse sobre un orden del d�a determinado y ser�n clausuradas una vez que �ste haya sido agotado.
+  3. A petici�n del Presidente del Gobierno, de la Diputaci�n Permanente, del Rey o de la mayor�a absoluta de los miembros de cualquiera de las C�maras. Las sesiones extraordinarias deber�n convocarse sobre un orden del d�a determinado y ser�n clausuradas una vez que �ste haya sido agotado.
+
+---
+
+### Pregunta 28
+
+**Texto:** Una ley org�nica regular�:
+
+**Opciones:**
+  0. el estatuto e incompatibilidades de los miembros del Gobierno.
+  1. el procedimiento a trav�s del cual deben producirse los actos administrativos, garantizando, cuando proceda, la audiencia del interesado.
+  2. las funciones, principios b�sicos de actuaci�n y estatutos de las Fuerzas y Cuerpos de seguridad.
+  3. Todas son correctas
+
+---
+
+### Pregunta 29
+
+**Texto:** El Gobierno cesa (art. 101 CE):
+
+**Opciones:**
+  0. tras la celebraci�n de elecciones generales, en los casos de p�rdida de la confianza parlamentaria previstos en la Constituci�n, o por fallecimiento de su Presidente.
+  1. tras la convocatoria de elecciones generales, en los casos de p�rdida de la confianza parlamentaria previstos en la Constituci�n, o por dimisi�n o fallecimiento de su Presidente.
+  2. tras la celebraci�n de elecciones generales, en los casos de p�rdida de la confianza parlamentaria previstos en la Constituci�n, o por dimisi�n o fallecimiento de su Presidente.
+  3. tras la convocatoria de elecciones generales, en los casos de p�rdida de la confianza parlamentaria previstos en la Constituci�n, o por fallecimiento de su Presidente.
+
+---
+
+### Pregunta 30
+
+**Texto:** Se�ale la falsa de acuerdo con lo dispuesto en el T�tulo V de la Constituci�n Espa�ola:
+
+**Opciones:**
+  0. El Gobierno y cada uno de sus miembros est�n sometidos a las interpelaciones y preguntas que se le formulen en las C�maras. Para esta clase de debate los Reglamentos establecer�n un tiempo m�nimo mensual.
+  1. Toda interpelaci�n podr� dar lugar a una moci�n en la que la C�mara manifieste su posici�n.
+  2. Las C�maras y sus Comisiones pueden reclamar la presencia de los miembros del Gobierno.
+  3. Los miembros del Gobierno tienen acceso a las sesiones de las C�maras y a sus Comisiones y la facultad de hacerse o�r en ellas, y podr�n solicitar que informen ante las mismas funcionarios de sus Departamentos.
+
+---
+
+### Pregunta 31
+
+**Texto:** De conformidad con el art�culo 114 CE, se�ale la respuesta correcta en caso de prosperar una moci�n de censura:
+
+**Opciones:**
+  0. Si las C�maras adoptan una moci�n de censura, el Gobierno presentar� su dimisi�n al Rey y el candidato incluido en aqu�lla se entender� investido de la confianza de la C�mara a los efectos previstos en el art�culo 99. El Rey le nombrar� Presidente del Gobierno.
+  1. Si el Congreso adopta una moci�n de censura, el Gobierno presentar� su dimisi�n al Rey, procedi�ndose a continuaci�n a la designaci�n de Presidente del Gobierno, seg�n lo dispuesto en el art�culo 99.
+  2. Si las C�maras adoptan una moci�n de censura, el Gobierno presentar� su dimisi�n al Rey, procedi�ndose a continuaci�n a la designaci�n de Presidente del Gobierno, seg�n lo dispuesto en el art�culo 99.
+  3. Si el Congreso adopta una moci�n de censura, el Gobierno presentar� su dimisi�n al Rey y el candidato incluido en aqu�lla se entender� investido de la confianza de la C�mara a los efectos previstos en el art�culo 99. El Rey le nombrar� Presidente del Gobierno.
+
+---
+
+### Pregunta 32
+
+**Texto:** De conformidad con la Ley 50/1997 de Gobierno, a las reuniones del Consejo de Ministros podr�n asistir:
+
+**Opciones:**
+  0. los Secretarios de Estado y excepcionalmente otros altos cargos, cuando sean convocados para ello.
+  1. los Secretarios de Estado, cuando sean convocados para ello.
+  2. los Secretarios de Estado y excepcionalmente los subsecretarios, cuando sean convocados para ello.
+  3. los Secretarios de Estado y subsecretarios, cuando sean convocados para ello.
+
+---
+
+### Pregunta 33
+
+**Texto:** Los Secretarios de Estado:
+
+**Opciones:**
+  0. Act�an bajo la direcci�n del titular del Departamento al que pertenezcan. Cuando est�n adscritos a la Presidencia del Gobierno, act�an bajo la direcci�n del Ministro de la Presidencia.
+  1. Act�an bajo la direcci�n del titular del Departamento al que pertenezcan. Cuando est�n adscritos a la Presidencia del Gobierno, act�an bajo la direcci�n del Presidente.
+  2. Act�an bajo la direcci�n del titular del Departamento al que pertenezcan. Cuando est�n adscritos a la Presidencia del Gobierno, act�an bajo la direcci�n del Consejo de Ministros.
+  3. Act�an bajo la direcci�n del titular del Departamento al que pertenezcan. Cuando est�n adscritos a la Presidencia del Gobierno, act�an bajo la direcci�n de la Comisi�n General de Secretarios de Estado y Subsecretarios.
+
+---
+
+### Pregunta 34
+
+**Texto:** El Secretariado del Gobierno:
+
+**Opciones:**
+  0. como �rgano de apoyo del Consejo de Ministros, de las Comisiones Delegadas del Gobierno y de la Comisi�n General de Secretarios de Estado y Subsecretarios se integra en la estructura org�nica del Ministerio de la Presidencia.
+  1. como �rgano de apoyo del Consejo de Ministros, de las Comisiones Delegadas del Gobierno y de la Comisi�n General de Secretarios de Estado y Subsecretarios se integra en la estructura org�nica del Ministerio de Hacienda.
+  2. como �rgano de apoyo del Presidente del Gobierno, de los Vicepresidentes, de los Ministros y de los Secretarios de Estado se integra en la estructura org�nica del Ministerio de la Presidencia.
+  3. como �rgano de apoyo del Presidente del Gobierno, de los Vicepresidentes, de los Ministros y de los Secretarios de Estado se integra en la estructura org�nica del Ministerio de Hacienda.
+
+---
+
+### Pregunta 35
+
+**Texto:** De conformidad con lo dispuesto en el art�culo 13 LG que regula la suplencia de los ministros:
+
+**Opciones:**
+  0. No se entender� por ausencia la interrupci�n transitoria de la asistencia a la reuni�n de un �rgano colegiado. En tales casos, las funciones que pudieran corresponder al miembro del gobierno durante esa situaci�n ser�n ejercidas por el Secretario del �rgano colegiado respectivo.
+  1. No se entender� por ausencia la interrupci�n transitoria de la asistencia a la reuni�n de un �rgano colegiado. En tales casos, las funciones que pudieran corresponder al miembro del gobierno durante esa situaci�n ser�n ejercidas por el Subsecretario de la Presidencia.
+  2. No se entender� por ausencia la interrupci�n transitoria de la asistencia a la reuni�n de un �rgano colegiado. En tales casos, las funciones que pudieran corresponder al miembro del gobierno durante esa situaci�n ser�n ejercidas por la siguiente autoridad en rango presente.
+  3. No se entender� por ausencia la interrupci�n transitoria de la asistencia a la reuni�n de un �rgano de colaboraci�n y apoyo. En tales casos, las funciones que pudieran corresponder al miembro del gobierno durante esa situaci�n ser�n ejercidas por el Subsecretario de la Presidencia y en su defecto por la siguiente autoridad en rango presente.
+
+---
+
+### Pregunta 36
+
+**Texto:** Conforme al art�culo 99 de la Constituci�n, tras cada renovaci�n del Congreso de los Diputado, y en los dem�s supuestos constitucionales en que as� proceda:
+
+**Opciones:**
+  0. El Rey, previa consulta con los portavoces de los Grupos parlamentarios, y a trav�s del Presidente del Congreso, propondr� un candidato a la Presidencia del Gobierno.
+  1. El Presidente del Congreso de los Diputados, previa consulta con los representantes designados por los Grupos pol�ticos con representaci�n parlamentaria, propondr� un candidato a la Presidencia del Gobierno..
+  2. El Rey, previa consulta con los representantes designados por los Grupos pol�ticos con representaci�n parlamentaria, y a trav�s del Presidente del Congreso, propondr� un candidato a la Presidencia del Gobierno.
+  3. El Rey, previa consulta con los Grupos parlamentarios constituidos en el Congreso de los Diputados y el Senado propondr� un candidato a la Presidencia del Gobierno.
+
+---
+
+### Pregunta 37
+
+**Texto:** Se�ale la respuesta falsa sobre los �rganos legitimados para la iniciativa de reforma constitucional :
+
+**Opciones:**
+  0. El Congreso de los Diputados si lo suscribe 1/5 parte de los Diputados.
+  1. El Gobierno mediante la aprobaci�n y posterior remisi�n de una proposici�n de Ley a la Mesa del Congreso.
+  2. 50 senadores que no pertenezcan al mismo grupo Parlamentario.
+  3. No cabe la iniciativa legislativa popular.
+
+---
+
+### Pregunta 38
+
+**Texto:** De acuerdo con el art�culo 116 de la CE:
+
+**Opciones:**
+  0. La autorizaci�n y proclamaci�n del estado de excepci�n deber� determinar expresamente los efectos del mismo, el �mbito territorial a que se extiende y su duraci�n, que no podr� exceder de treinta d�as improrrogables.
+  1. La autorizaci�n y proclamaci�n del estado de excepci�n deber� determinar expresamente los efectos del mismo, el �mbito territorial a que se extiende y su duraci�n, que no podr� exceder de veinte d�as improrrogables.
+  2. La autorizaci�n y proclamaci�n del estado de excepci�n deber� determinar expresamente los efectos del mismo, el �mbito territorial a que se extiende y su duraci�n, que no podr� exceder de veinte d�as, prorrogable por otro plazo igual, con los mismos requisitos.
+  3. La autorizaci�n y proclamaci�n del estado de excepci�n deber� determinar expresamente los efectos del mismo, el �mbito territorial a que se extiende y su duraci�n, que no podr� exceder de treinta d�as, prorrogables por otro plazo igual, con los mismos requisitos.
+
+---
+
+### Pregunta 39
+
+**Texto:** El T�tulo IV de la Constituci�n regula los mecanismos de relaci�n entre el Gobierno y las Cortes Generales. Sobre la regulaci�n contenida en el mismo se�ale la afirmaci�n correcta:
+
+**Opciones:**
+  0. La moci�n de censura no podr� ser votada hasta que transcurran dos d�as desde su presentaci�n.
+  1. Toda pregunta dar� lugar a una moci�n en la que la C�mara manifieste su posici�n
+  2. El Presidente del Gobierno, previa deliberaci�n del Consejo de Ministros, y bajo su exclusiva responsabilidad podr� proponer la disoluci�n del Congreso, del Senado, o de las Cortes Generales.
+  3. El Gobierno puede plantear ante el Congreso de los Diputados la cuesti�n de confianza sobre su programa o sobre una declaraci�n de pol�tica general.
+
+---
+
+### Pregunta 40
+
+**Texto:** Con respecto a la composici�n de la Comisi�n General de Secretarios de Estado y Subsecretarios se�ale la respuesta incorrecta:
+
+**Opciones:**
+  0. La Secretar�a ser� ejercida por el Subsecretario de la Presidencia.
+  1. La Presidencia corresponde a un Vicepresidente del Gobierno o, en su defecto, al Ministro de la Presidencia.
+  2. En caso de ausencia del Presidente de la Comisi�n, la presidencia recaer� en el Ministro de Presidencia.
+  3. El Director del Secretariado del Gobierno ejercer� la secretar�a adjunta.
+
+---

@@ -1,0 +1,1007 @@
+{
+  "metadata": {
+    "source_file": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+    "source_path": "Test financiero\\2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+    "tema": 1,
+    "categoria": "financiero",
+    "extraction_date": "2026-01-15T23:41:18.167025",
+    "reformulation_date": "2026-01-15T23:47:35.545277",
+    "total_questions": 30,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.408548",
+    "completed_count": 0,
+    "failed_count": 30
+  },
+  "questions": [
+    {
+      "question_text": "El ejercicio presupuestario coincidir con el ao natural y a l se imputarn:",
+      "options": [
+        {
+          "text": "Las obligaciones reconocidas hasta el fin del mes de enero siguiente.",
+          "is_correct": false
+        },
+        {
+          "text": "Las obligaciones reconocidas hasta el fin del ejercicio.",
+          "is_correct": false
+        },
+        {
+          "text": "Los derechos liquidados durante el mismo cualquiera que sea el periodo de que se",
+          "is_correct": false
+        },
+        {
+          "text": "eriven.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El ejercicio presupuestario coincidir con el ao natural y a l se imputarn:",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con la Ley 47/2003, de 26 de noviembre, General Presupuestaria, el",
+      "options": [
+        {
+          "text": "ontrol externo del sector pblico estatal, corresponder:",
+          "is_correct": false
+        },
+        {
+          "text": "Al Ministro de Hacienda.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Tribunal de Cuentas.",
+          "is_correct": false
+        },
+        {
+          "text": "A la Intervencin General de la Administracin General del Estado.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con la Ley 47/2003, de 26 de noviembre, General Presupuestaria, el",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los crditos presupuestarios de la Administracin General del Estado, sus organismos",
+      "options": [
+        {
+          "text": "utnomos y de las entidades integrantes del sector pblico estatal con presupuesto",
+          "is_correct": false
+        },
+        {
+          "text": "utorizados por:",
+          "is_correct": false
+        },
+        {
+          "text": "La Ley de Presupuestos.",
+          "is_correct": false
+        },
+        {
+          "text": "Las modificaciones presupuestarias aprobadas conforme a esta Ley.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los crditos presupuestarios de la Administracin General del Estado, sus organismos",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Es funcin del Tesoro Pblico:",
+      "options": [
+        {
+          "text": "Servir el principio de unidad patrimonial mediante la centralizacin de todos los fondos",
+          "is_correct": false
+        },
+        {
+          "text": "Servir el principio de unidad presupuestaria mediante la centralizacin de todos los",
+          "is_correct": false
+        },
+        {
+          "text": "Servir el principio de unidad de caja mediante la centralizacin de todos los fondos y",
+          "is_correct": false
+        },
+        {
+          "text": "Servir el principio de unidad de caja mediante la centralizacin de todos los fondos y",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Es funcin del Tesoro Pblico:",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La Ley Orgnica 2/2012, de 27 de abril, de Estabilidad Presupuestaria y Sostenibilidad",
+      "options": [
+        {
+          "text": "Determina los lmites de dficit y deuda sin que en ningn caso se puedan sobrepasar.",
+          "is_correct": false
+        },
+        {
+          "text": "Fija los procedimientos necesarios para la aplicacin efectiva de los principios de",
+          "is_correct": false
+        },
+        {
+          "text": "Establece unos principios, sin carcter vinculante, que orientan la actuacin de las",
+          "is_correct": false
+        },
+        {
+          "text": "dministraciones Pblicas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La Ley Orgnica 2/2012, de 27 de abril, de Estabilidad Presupuestaria y Sostenibilidad",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de los siguientes principios NO es un principio recogido en la Ley Orgnica 2/2012,",
+      "options": [
+        {
+          "text": "e Estabilidad Presupuestaria y Sostenibilidad Financiera?",
+          "is_correct": false
+        },
+        {
+          "text": "Anualidad.",
+          "is_correct": false
+        },
+        {
+          "text": "Transparencia.",
+          "is_correct": false
+        },
+        {
+          "text": "Responsabilidad.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de los siguientes principios NO es un principio recogido en la Ley Orgnica 2/2012,",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Estado y CC.AA. podrn incurrir en dficit estructural:",
+      "options": [
+        {
+          "text": "En ningn caso.",
+          "is_correct": false
+        },
+        {
+          "text": "En caso de catstrofe natural.",
+          "is_correct": false
+        },
+        {
+          "text": "En pocas de crisis.",
+          "is_correct": false
+        },
+        {
+          "text": "Pueden sobrepasarse en caso de situacin de urgencia.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Estado y CC.AA. podrn incurrir en dficit estructural:",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El volumen de deuda pblica no podr superar el 60 % del PIB nacional con la siguiente",
+      "options": [
+        {
+          "text": "istribucin:",
+          "is_correct": false
+        },
+        {
+          "text": "La Administracin Central (44%), las Comunidades Autnomas (13%) y las",
+          "is_correct": false
+        },
+        {
+          "text": "orporaciones Locales (3%).",
+          "is_correct": false
+        },
+        {
+          "text": "La Administracin Central (25%), las Comunidades Autnomas (25%) y las",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El volumen de deuda pblica no podr superar el 60 % del PIB nacional con la siguiente",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La Ley Orgnica 2/212, de Estabilidad Presupuestaria y Sostenibilidad Financiera",
+      "options": [
+        {
+          "text": "El lmite de deuda pblica de cada una de las Comunidades Autnomas no podr",
+          "is_correct": false
+        },
+        {
+          "text": "El Estado responder y asumir los compromisos de las Comunidades Autnomas.",
+          "is_correct": false
+        },
+        {
+          "text": "En el primer semestre de cada ao el Gobierno fijar el objetivo de estabilidad",
+          "is_correct": false
+        },
+        {
+          "text": "La variacin del gasto computable no podr superar la tasa de referencia de crecimiento",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La Ley Orgnica 2/212, de Estabilidad Presupuestaria y Sostenibilidad Financiera",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No podrn adquirirse compromisos de gasto ni adquirirse obligaciones por cuanta",
+      "options": [
+        {
+          "text": "Las normas con rango de ley que incumplan esta limitacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Los actos administrativos y las disposiciones generales que incumplan esta limitacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Los actos administrativos y las disposiciones generales con rango inferior a ley que",
+          "is_correct": false
+        },
+        {
+          "text": "Los actos administrativos y disposiciones generales con rango de ley que incumplan",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No podrn adquirirse compromisos de gasto ni adquirirse obligaciones por cuanta",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con la Ley Orgnica 2/2012, de 27 de abril, de Estabilidad Presupuestaria",
+      "options": [
+        {
+          "text": "isposiciones de dicha Ley o de las normas y acuerdos que se adopten en su desarrollo, y",
+          "is_correct": false
+        },
+        {
+          "text": "e los sistemas de recopilacin y tratamiento de datos?",
+          "is_correct": false
+        },
+        {
+          "text": "Eficiencia en la asignacin y utilizacin de los recursos pblicos.",
+          "is_correct": false
+        },
+        {
+          "text": "Transparencia.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con la Ley Orgnica 2/2012, de 27 de abril, de Estabilidad Presupuestaria",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La aplicacin de la dotacin del Fondo de Contingencia de los Presupuestos Generales del",
+      "options": [
+        {
+          "text": "Aprobacin del Consejo de Ministros a propuesta del titular del departamento.",
+          "is_correct": false
+        },
+        {
+          "text": "Aprobacin del Congreso de los Diputados.",
+          "is_correct": false
+        },
+        {
+          "text": "Aprobacin del Consejo de Ministros a propuesta del Ministro de Hacienda.",
+          "is_correct": false
+        },
+        {
+          "text": "No precisa aprobacin, ya que aparece establecida en la Ley Orgnica de Estabilidad",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La aplicacin de la dotacin del Fondo de Contingencia de los Presupuestos Generales del",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El lmite de deuda pblica de cada comunidad autnoma no podr superar:",
+      "options": [
+        {
+          "text": "El 3 % de su PIB regional.",
+          "is_correct": false
+        },
+        {
+          "text": "El 13 % del PIB nacional.",
+          "is_correct": false
+        },
+        {
+          "text": "El 3 % del PIB nacional",
+          "is_correct": false
+        },
+        {
+          "text": "El 13 % de su PIB regional.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El lmite de deuda pblica de cada comunidad autnoma no podr superar:",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn el artculo 5 de la Ley 47/2003, de 26 de noviembre, General Presupuestaria, por el",
+      "options": [
+        {
+          "text": "onstituida por:",
+          "is_correct": false
+        },
+        {
+          "text": "El conjunto de derechos y obligaciones de contenido econmico cuya titularidad",
+          "is_correct": false
+        },
+        {
+          "text": "orresponde al Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Los ingresos tanto de derecho pblico como de derecho privado percibidos por el",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el artculo 5 de la Ley 47/2003, de 26 de noviembre, General Presupuestaria, por el",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La dotacin del Fondo de Contingencia en los Presupuestos Generales del Estado:",
+      "options": [
+        {
+          "text": "Est incluido en la seccin 35 del presupuesto de gastos del Estado, cuya cuanta es del",
+          "is_correct": false
+        },
+        {
+          "text": "Est incluido en la seccin 35 del presupuesto de gastos del Estado, cuya cuanta es del",
+          "is_correct": false
+        },
+        {
+          "text": "las comunidades autnomas y entidades locales en aplicacin de sus respectivos",
+          "is_correct": false
+        },
+        {
+          "text": "Est incluido en la seccin 35 del presupuesto de gastos del Estado, cuya cuanta es del",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La dotacin del Fondo de Contingencia en los Presupuestos Generales del Estado:",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El pago de los intereses y el capital de la deuda de las Administraciones pblicas gozar de",
+      "options": [
+        {
+          "text": "Solo cuando se establezca en el Marco Financiero Plurianual",
+          "is_correct": false
+        },
+        {
+          "text": "Frente a cualquier otro gasto, excluidos los gastos financieros.",
+          "is_correct": false
+        },
+        {
+          "text": "Frente a cualquier otro gasto.",
+          "is_correct": false
+        },
+        {
+          "text": "Pero esta prioridad est supeditada a la satisfaccin de otros gastos ms prioritarios,",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El pago de los intereses y el capital de la deuda de las Administraciones pblicas gozar de",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El volumen de deuda pblica, definida de acuerdo con el Protocolo sobre Procedimiento",
+      "options": [
+        {
+          "text": "e dficit excesivo, del conjunto de Administraciones Pblicas no podr superar:",
+          "is_correct": false
+        },
+        {
+          "text": "El 60 por ciento del Producto Interior Bruto nacional expresado en trminos nominales.",
+          "is_correct": false
+        },
+        {
+          "text": "El 50 por ciento del Producto Interior Bruto nacional expresado en trminos nominales,",
+          "is_correct": false
+        },
+        {
+          "text": "El 60 por ciento del Producto Interior Bruto nacional expresado en trminos nominales,",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El volumen de deuda pblica, definida de acuerdo con el Protocolo sobre Procedimiento",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El sector Administraciones Pblicas, segn establece la LOEPySF, est formado por:",
+      "options": [
+        {
+          "text": "Administracin central, Administraciones de Seguridad Social, Sector pblico",
+          "is_correct": false
+        },
+        {
+          "text": "Sector pblico empresarial estatal.",
+          "is_correct": false
+        },
+        {
+          "text": "b) y por el Sector pblico Administrativo estatal y Fundacional.",
+          "is_correct": false
+        },
+        {
+          "text": "Administracin central, las CCAA, las Corporaciones Locales y Administraciones de",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El sector Administraciones Pblicas, segn establece la LOEPySF, est formado por:",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Respecto de las Corporaciones Locales, la LOEPySF dispone que:",
+      "options": [
+        {
+          "text": "Excepcionalmente, podrn incurrir en dficit estructural.",
+          "is_correct": false
+        },
+        {
+          "text": "Debern mantener una posicin de equilibrio o supervit presupuestario.",
+          "is_correct": false
+        },
+        {
+          "text": "Debern mantener una posicin de supervit presupuestario.",
+          "is_correct": false
+        },
+        {
+          "text": "Excepcionalmente, podrn incurrir en dficit estructural cuando incurran en l el Estado",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Respecto de las Corporaciones Locales, la LOEPySF dispone que:",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "A quin corresponde calcular la tasa de referencia de crecimiento del Producto Interior",
+      "options": [
+        {
+          "text": "ruto de medio plazo de la economa espaola?",
+          "is_correct": false
+        },
+        {
+          "text": "Al Ministro de Economa, Comercio y Empresa conjuntamente con el Ministro de",
+          "is_correct": false
+        },
+        {
+          "text": "Al Ministro de Economa, Comercio y Empresa.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Ministro de Hacienda.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "A quin corresponde calcular la tasa de referencia de crecimiento del Producto Interior",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con la LOEPySF, las administraciones que incurran en dficit estructural",
+      "options": [
+        {
+          "text": "ebido a catstrofes naturales, recesin econmica grave o situaciones de emergencia",
+          "is_correct": false
+        },
+        {
+          "text": "Plan de reequilibrio.",
+          "is_correct": false
+        },
+        {
+          "text": "Plan econmico-financiero.",
+          "is_correct": false
+        },
+        {
+          "text": "Plan de equilibrio presupuestario.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con la LOEPySF, las administraciones que incurran en dficit estructural",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Respecto del artculo 135 de la Constitucin Espaola, seale la respuesta correcta:",
+      "options": [
+        {
+          "text": "El volumen de la deuda pblica del conjunto de las Administraciones Pblicas en",
+          "is_correct": false
+        },
+        {
+          "text": "Todas las Administraciones Pblicas adecuarn sus actuaciones al principio de",
+          "is_correct": false
+        },
+        {
+          "text": "Las entidades locales debern presentar supervit presupuestario.",
+          "is_correct": false
+        },
+        {
+          "text": "Una ley orgnica fijar el dficit estructural mnimo permitido al Estado y a las",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Respecto del artculo 135 de la Constitucin Espaola, seale la respuesta correcta:",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En el supuesto de que la liquidacin presupuestaria se site en supervit, este se destinar:",
+      "options": [
+        {
+          "text": "En el Estado y Comunidades Autnomas a reducir su volumen de deuda, mientras que",
+          "is_correct": false
+        },
+        {
+          "text": "En el Estado, Comunidades Autnomas y Corporaciones Locales a reducir su",
+          "is_correct": false
+        },
+        {
+          "text": "En el Estado y Comunidades Autnomas a incrementar el fondo de reserva.",
+          "is_correct": false
+        },
+        {
+          "text": "En el Estado y comunidades autnomas a reducir su dficit.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En el supuesto de que la liquidacin presupuestaria se site en supervit, este se destinar:",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn establece Ley 47/2003, de 26 de noviembre, General Presupuestaria, los recursos del",
+      "options": [
+        {
+          "text": "No, en ningn caso.",
+          "is_correct": false
+        },
+        {
+          "text": "S, cuando as establezca una ley.",
+          "is_correct": false
+        },
+        {
+          "text": "Si, cuando as lo decida el Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "No, salvo excepciones.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn establece Ley 47/2003, de 26 de noviembre, General Presupuestaria, los recursos del",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Por cul de los siguientes principios NO se rige la programacin presupuestaria segn el",
+      "options": [
+        {
+          "text": "rtculo 26 de la Ley 47/2003, de 26 de noviembre, General Presupuestaria?",
+          "is_correct": false
+        },
+        {
+          "text": "Estabilidad presupuestaria.",
+          "is_correct": false
+        },
+        {
+          "text": "Coordinacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Transparencia.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Por cul de los siguientes principios NO se rige la programacin presupuestaria segn el",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No integran los PGE, los presupuestos de:",
+      "options": [
+        {
+          "text": "Organismos autnomos estatales.",
+          "is_correct": false
+        },
+        {
+          "text": "Fundaciones del Sector Pblico Estatal",
+          "is_correct": false
+        },
+        {
+          "text": "Administracin General del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Comunidades Autnomas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No integran los PGE, los presupuestos de:",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con la Ley Orgnica 2/2012, de 27 de abril, de Estabilidad Presupuestaria y",
+      "options": [
+        {
+          "text": "estinarn a:",
+          "is_correct": false
+        },
+        {
+          "text": "ntegramente a reducir el nivel de deuda pblica.",
+          "is_correct": false
+        },
+        {
+          "text": "Incrementar el Fondo de contingencia.",
+          "is_correct": false
+        },
+        {
+          "text": "A financiar inversiones.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con la Ley Orgnica 2/2012, de 27 de abril, de Estabilidad Presupuestaria y",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "A quin corresponde la competencia para formular las propuestas de objetivos de",
+      "options": [
+        {
+          "text": "Al Ministerio de Hacienda.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Ministerio de Hacienda, previo informe de la Autoridad Independiente de",
+          "is_correct": false
+        },
+        {
+          "text": "Al Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "A la Autoridad Independiente de Responsabilidad Fiscal.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "A quin corresponde la competencia para formular las propuestas de objetivos de",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn establece Ley 47/2003, de 26 de noviembre, General Presupuestaria, la gestin del",
+      "options": [
+        {
+          "text": "El Congreso de los Diputados.",
+          "is_correct": false
+        },
+        {
+          "text": "Las Cortes Generales.",
+          "is_correct": false
+        },
+        {
+          "text": "El Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "El Ministro de Hacienda.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn establece Ley 47/2003, de 26 de noviembre, General Presupuestaria, la gestin del",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los derechos liquidados y las obligaciones reconocidas se aplicarn a los presupuestos:",
+      "options": [
+        {
+          "text": "Por su importe ntegro.",
+          "is_correct": false
+        },
+        {
+          "text": "Por su importe bruto.",
+          "is_correct": false
+        },
+        {
+          "text": "Por su importe liquidado.",
+          "is_correct": false
+        },
+        {
+          "text": "Por su importe exacto.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los derechos liquidados y las obligaciones reconocidas se aplicarn a los presupuestos:",
+      "source": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

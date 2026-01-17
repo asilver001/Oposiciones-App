@@ -1,0 +1,907 @@
+{
+  "metadata": {
+    "source_file": "8. Test Regimen invalidez.pdf",
+    "source_path": "Test contratos\\8. Test Regimen invalidez.pdf",
+    "tema": 0,
+    "categoria": "contratos",
+    "extraction_date": "2026-01-15T23:41:12.731240",
+    "reformulation_date": "2026-01-15T23:47:35.684250",
+    "total_questions": 18,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.805602",
+    "completed_count": 0,
+    "failed_count": 18
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "Con carcter general durante la preparacin de los contratos se emitir:",
+        "options": [
+          {
+            "text": "Un RC por el precio de licitacin IVA excluido",
+            "is_correct": false
+          },
+          {
+            "text": "Un documento contable A por el precio de adjudicacin, IVA excluido",
+            "is_correct": false
+          },
+          {
+            "text": "Un documento contable OK por el precio de licitacin, IVA incluido",
+            "is_correct": false
+          },
+          {
+            "text": "Un documento contable RC por el precio de licitacin, IVA incluido",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Con carcter general durante la preparacin de los contratos se emitir:",
+        "source": "8. Test Regimen invalidez.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Sern susceptibles de recurso especial:",
+        "options": [
+          {
+            "text": "Los contratos de obras con valor estimado igual o superior a 3 millones",
+            "is_correct": false
+          },
+          {
+            "text": "e euros, cuando se cumplan los dems requisitos del art. 44.",
+            "is_correct": false
+          },
+          {
+            "text": "Los contratos de obras con valor estimado superior a 3 millones de euros,",
+            "is_correct": false
+          },
+          {
+            "text": "uando se cumplan los dems requisitos del art. 44.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Sern susceptibles de recurso especial:",
+        "source": "8. Test Regimen invalidez.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Podrn ser objeto de recurso especial:",
+        "options": [
+          {
+            "text": "La adjudicacin",
+            "is_correct": false
+          },
+          {
+            "text": "Los actos de trmite cualificados",
+            "is_correct": false
+          },
+          {
+            "text": "Los pliegos de clusulas administrativas particulares.",
+            "is_correct": false
+          },
+          {
+            "text": "Todos los anteriores",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Podrn ser objeto de recurso especial:",
+        "source": "8. Test Regimen invalidez.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cul es el plazo general de interposicin del recurso especial?",
+        "options": [
+          {
+            "text": "15 das hbiles",
+            "is_correct": false
+          },
+          {
+            "text": "15 das naturales",
+            "is_correct": false
+          },
+          {
+            "text": "2 meses",
+            "is_correct": false
+          },
+          {
+            "text": "3 meses",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul es el plazo general de interposicin del recurso especial?",
+        "source": "8. Test Regimen invalidez.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: '2 meses...'",
+        "Distractor muy corto: '3 meses...'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta:",
+        "options": [
+          {
+            "text": "Frente a la resolucin de un recurso especial, cabe recurso de alzada",
+            "is_correct": false
+          },
+          {
+            "text": "Frente a la resolucin de un recurso especial, cabe recurso potestativo",
+            "is_correct": false
+          },
+          {
+            "text": "e reposicin",
+            "is_correct": false
+          },
+          {
+            "text": "Frente a la resolucin de un recurso especial, no cabe ningn otro",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta:",
+        "source": "8. Test Regimen invalidez.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cmo afecta la cesin de un contrato a los documentos contables?",
+        "options": [
+          {
+            "text": "De ninguna manera, ya que el gasto sigue siendo el mismo.",
+            "is_correct": false
+          },
+          {
+            "text": "Ser necesario un documento contable D/ a nombre del cesionario por el",
+            "is_correct": false
+          },
+          {
+            "text": "Ser necesario un documento D/ a nombre del cedente por el importe",
+            "is_correct": false
+          },
+          {
+            "text": "Ser necesario un documento contable D/ a nombre del cesionario por el",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cmo afecta la cesin de un contrato a los documentos contables?",
+        "source": "8. Test Regimen invalidez.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Son causas de nulidad, de acuerdo con el art. 39:",
+        "options": [
+          {
+            "text": "La falta de capacidad de obrar del contratista.",
+            "is_correct": false
+          },
+          {
+            "text": "La insuficiencia de crdito",
+            "is_correct": false
+          },
+          {
+            "text": "La falta de publicidad del anuncio en el perfil y en los medios de",
+            "is_correct": false
+          },
+          {
+            "text": "Todas son correctas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Son causas de nulidad, de acuerdo con el art. 39:",
+        "source": "8. Test Regimen invalidez.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Son causas de anulabilidad, de acuerdo con el art. 40 (seale la incorrecta):",
+        "options": [
+          {
+            "text": "La falta de mencin de los pliegos a cuestiones relativas a la proteccin",
+            "is_correct": false
+          },
+          {
+            "text": "e datos de carcter personal a que se refiere el art. 122.2",
+            "is_correct": false
+          },
+          {
+            "text": "El incumplimiento de los requisitos exigidos para la modificacin",
+            "is_correct": false
+          },
+          {
+            "text": "Todas las disposiciones, resoluciones, clusulas o actos emanados de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Son causas de anulabilidad, de acuerdo con el art. 40 (seale la incorrecta):",
+        "source": "8. Test Regimen invalidez.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Un contrato ser invlido:",
+        "options": [
+          {
+            "text": "Cuando lo sea alguno de sus actos de ejecucin",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando su contenido sea ilegal",
+            "is_correct": false
+          },
+          {
+            "text": "Un contrato adjudicado nunca puede considerarse invlido.",
+            "is_correct": false
+          },
+          {
+            "text": "Siempre que no se d alguna de las causas que lo invalidan en el derecho",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Un contrato ser invlido:",
+        "source": "8. Test Regimen invalidez.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la correcta en relacin con los documentos contables:",
+        "options": [
+          {
+            "text": "Nunca deben reflejar IVA",
+            "is_correct": false
+          },
+          {
+            "text": "Pueden incluir IVA o no, segn decida el rgano de contratacin",
+            "is_correct": false
+          },
+          {
+            "text": "Slo incluyen IVA los OK",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la correcta en relacin con los documentos contables:",
+        "source": "8. Test Regimen invalidez.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En caso de que el rgano de contratacin aprecie temeridad o mala fe en",
+        "options": [
+          {
+            "text": "Entre 1.000 y 30.000 euros",
+            "is_correct": false
+          },
+          {
+            "text": "Entre 10.000 y 30.000 euros",
+            "is_correct": false
+          },
+          {
+            "text": "Entre 5.000 y 30.000 euros",
+            "is_correct": false
+          },
+          {
+            "text": "No est prevista multa.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En caso de que el rgano de contratacin aprecie temeridad o mala fe en",
+        "source": "8. Test Regimen invalidez.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Qu efectos tiene la interposicin de un recurso especial?",
+        "options": [
+          {
+            "text": "La paralizacin del procedimiento en todo caso",
+            "is_correct": false
+          },
+          {
+            "text": "La paralizacin del procedimiento si se recurre la adjudicacin",
+            "is_correct": false
+          },
+          {
+            "text": "La paralizacin del procedimiento si se recurren los pliegos",
+            "is_correct": false
+          },
+          {
+            "text": "Nunca paraliza el procedimiento salvo que se solicite como medida",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu efectos tiene la interposicin de un recurso especial?",
+        "source": "8. Test Regimen invalidez.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Qu plazo hay para presentar el escrito de interposicin del recurso",
+        "options": [
+          {
+            "text": "15 das hbiles",
+            "is_correct": false
+          },
+          {
+            "text": "15 das naturales",
+            "is_correct": false
+          },
+          {
+            "text": "1 mes",
+            "is_correct": false
+          },
+          {
+            "text": "2 meses",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu plazo hay para presentar el escrito de interposicin del recurso",
+        "source": "8. Test Regimen invalidez.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: '1 mes...'",
+        "Distractor muy corto: '2 meses...'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "Cunto dura el nombramiento de",
+        "options": [
+          {
+            "text": "dministrativo Central de Recursos Contractuales?",
+            "is_correct": false
+          },
+          {
+            "text": "6 aos improrrogables",
+            "is_correct": false
+          },
+          {
+            "text": "6 aos con posibilidad de prrroga",
+            "is_correct": false
+          },
+          {
+            "text": "4 aos improrrogables",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cunto dura el nombramiento de",
+        "source": "8. Test Regimen invalidez.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Son causa de inadmisin del recurso especial:",
+        "options": [
+          {
+            "text": "La incompetencia del rgano para conocer el recurso",
+            "is_correct": false
+          },
+          {
+            "text": "La falta de legitimacin del recurrente",
+            "is_correct": false
+          },
+          {
+            "text": "La interposicin del recurso de manera extempornea",
+            "is_correct": false
+          },
+          {
+            "text": "Todos las anteriores son causa de inadmisin",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Son causa de inadmisin del recurso especial:",
+        "source": "8. Test Regimen invalidez.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Si un contrato tiene un precio de licitacin de 100.000 euros, se adjudica",
+        "options": [
+          {
+            "text": "100.000 euros",
+            "is_correct": false
+          },
+          {
+            "text": "80.000 euros",
+            "is_correct": false
+          },
+          {
+            "text": "100.000 euros, pero habr que detraer el IVA que corresponda",
+            "is_correct": false
+          },
+          {
+            "text": "80.000 euros, pero habr que detraer el IVA que corresponda",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Si un contrato tiene un precio de licitacin de 100.000 euros, se adjudica",
+        "source": "8. Test Regimen invalidez.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la correcta de acuerdo con el art. 49 LCSP:",
+        "options": [
+          {
+            "text": "El rgano competente para resolver deber adoptar decisin motivada",
+            "is_correct": false
+          },
+          {
+            "text": "El rgano competente para resolver deber adoptar decisin motivada",
+            "is_correct": false
+          },
+          {
+            "text": "el escrito en que se soliciten",
+            "is_correct": false
+          },
+          {
+            "text": "El rgano competente para resolver deber adoptar decisin motivada",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la correcta de acuerdo con el art. 49 LCSP:",
+        "source": "8. Test Regimen invalidez.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Los miembros del Tribunal Administrativo Central de Recursos",
+        "options": [
+          {
+            "text": "ontractuales podrn ser removidos de sus puestos por:",
+            "is_correct": false
+          },
+          {
+            "text": "Expiracin del mandato",
+            "is_correct": false
+          },
+          {
+            "text": "Renuncia aceptada por el Gobierno",
+            "is_correct": false
+          },
+          {
+            "text": "Prdida de la nacionalidad espaola",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los miembros del Tribunal Administrativo Central de Recursos",
+        "source": "8. Test Regimen invalidez.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:22.263613"
+}

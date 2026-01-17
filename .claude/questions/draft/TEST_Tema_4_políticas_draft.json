@@ -1,0 +1,3247 @@
+{
+  "metadata": {
+    "source_file": "TEST Tema 4 políticas.pdf",
+    "source_path": "TEST Iniciales políticas\\TEST Tema 4 políticas.pdf",
+    "tema": 4,
+    "categoria": "general",
+    "extraction_date": "2026-01-15T23:41:46.542664",
+    "reformulation_date": "2026-01-15T23:47:35.765247",
+    "total_questions": 98,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:56.103667",
+    "completed_count": 0,
+    "failed_count": 98
+  },
+  "questions": [
+    {
+      "question_text": "Quin puede disponer la compatibilidad de dos pensiones del Rgimen General?:",
+      "options": [
+        {
+          "text": "De forma expresa una Ley o un Reglamento.",
+          "is_correct": false
+        },
+        {
+          "text": "De forma tcita una ley y de forma expresa un Reglamento.",
+          "is_correct": false
+        },
+        {
+          "text": "Una ley expresamente.",
+          "is_correct": false
+        },
+        {
+          "text": "Una norma con rango de Ley, de forma tcita o expresa.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Quin puede disponer la compatibilidad de dos pensiones del Rgimen General?:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Es correcto que el SMI:",
+      "options": [
+        {
+          "text": "Se fija para la agricultura, la industria y los servicios, sin distincin de sexo y dependiendo",
+          "is_correct": false
+        },
+        {
+          "text": "e la edad de los trabajadores.",
+          "is_correct": false
+        },
+        {
+          "text": "Lo fija anualmente la Ley de Presupuestos Generales del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Se fija anualmente por Real Decreto del Consejo de Ministros",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Es correcto que el SMI:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El tope mnimo de cotizacin:",
+      "options": [
+        {
+          "text": "Est constituido por el SMI mensual incrementado en un sexto.",
+          "is_correct": false
+        },
+        {
+          "text": "Lo fija anualmente la Ley de Presupuestos Generales del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Coincide con el SMI mensual.",
+          "is_correct": false
+        },
+        {
+          "text": "Se incrementa por la Ley de Presupuestos Generales del Estado en el mismo porcentaje que",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El tope mnimo de cotizacin:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las prestaciones contributivas y los gastos derivados de su gestin (sealar la incorrecta)",
+      "options": [
+        {
+          "text": "Se financian, exclusivamente, con las cuotas de las personas obligadas.",
+          "is_correct": false
+        },
+        {
+          "text": "Se financian con las cantidades recaudadas en concepto de recargos, sanciones u otras de",
+          "is_correct": false
+        },
+        {
+          "text": "Se financian con los frutos, rentas o intereses y cualquier otro producto de sus recursos",
+          "is_correct": false
+        },
+        {
+          "text": "Se financian con las aportaciones del Estado que se acuerden para atenciones especficas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las prestaciones contributivas y los gastos derivados de su gestin (sealar la incorrecta)",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn el artculo 7.1 de la LGSS, estarn comprendidos en el Sistema de la Seguridad",
+      "options": [
+        {
+          "text": "Los trabajadores por cuenta propia o autnomos, mayores de 18 aos.",
+          "is_correct": false
+        },
+        {
+          "text": "Los trabajadores por cuenta propia o autnomos, mayores de 16 aos.",
+          "is_correct": false
+        },
+        {
+          "text": "La b) es correcta a partir de la Ley 20/2007, de 11 de julio, del Estatuto del Trabajador",
+          "is_correct": false
+        },
+        {
+          "text": "utnomo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el artculo 7.1 de la LGSS, estarn comprendidos en el Sistema de la Seguridad",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los funcionarios del Estado transferidos a las comunidades autnomas:",
+      "options": [
+        {
+          "text": "Se incluyen obligatoriamente en el Rgimen General de la Seguridad Social.",
+          "is_correct": false
+        },
+        {
+          "text": "Se incluyen en el Rgimen General siempre que hayan ingresado o ingresen",
+          "is_correct": false
+        },
+        {
+          "text": "Pueden optar entre el Rgimen Especial de Funcionarios y el Rgimen General.",
+          "is_correct": false
+        },
+        {
+          "text": "Se incluyen obligatoriamente en el Rgimen Especial de Funcionarios y sin posibilidad de",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los funcionarios del Estado transferidos a las comunidades autnomas:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los subsidios de riesgo durante el embarazo y riesgo durante la lactancia natural tendrn la",
+      "options": [
+        {
+          "text": "Derivadas de contingencias comunes.",
+          "is_correct": false
+        },
+        {
+          "text": "Derivadas de contingencias profesionales.",
+          "is_correct": false
+        },
+        {
+          "text": "Derivadas de contingencias comunes o profesionales, dependiendo del riesgo que las origine.",
+          "is_correct": false
+        },
+        {
+          "text": "La a) es correcta para el riesgo durante la lactancia natural y la b) es correcta para el riesgo",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los subsidios de riesgo durante el embarazo y riesgo durante la lactancia natural tendrn la",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las prestaciones econmicas no contributivas por invalidez y jubilacin y las prestaciones",
+      "options": [
+        {
+          "text": "En el Ttulo III de la LGSS 8/2015.",
+          "is_correct": false
+        },
+        {
+          "text": "En el Ttulo I de la LGSS 8/2015.",
+          "is_correct": false
+        },
+        {
+          "text": "En Ttulo V de la LGSS 8/2015.",
+          "is_correct": false
+        },
+        {
+          "text": "En el Ttulo VI de la LGSS 8/2015.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las prestaciones econmicas no contributivas por invalidez y jubilacin y las prestaciones",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn el artculo 136 de la LGSS 8/2015, se declaran expresamente comprendidos en el",
+      "options": [
+        {
+          "text": "Los miembros de las Corporaciones Locales y los miembros de las Juntas Generales de los",
+          "is_correct": false
+        },
+        {
+          "text": "esempeen sus cargos con dedicacin exclusiva o parcial.",
+          "is_correct": false
+        },
+        {
+          "text": "Los cargos representativos de los sindicatos constituidos al amparo de la Ley Orgnica",
+          "is_correct": false
+        },
+        {
+          "text": "on dedicacin exclusiva o parcial y percibiendo una retribucin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el artculo 136 de la LGSS 8/2015, se declaran expresamente comprendidos en el",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los riesgos que protege la prestacin de asistencia sanitaria son (sealar la incorrecta):",
+      "options": [
+        {
+          "text": "La enfermedad comn o profesional.",
+          "is_correct": false
+        },
+        {
+          "text": "El accidente, sea o no de trabajo.",
+          "is_correct": false
+        },
+        {
+          "text": "El riesgo durante el embarazo.",
+          "is_correct": false
+        },
+        {
+          "text": "El nacimiento.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los riesgos que protege la prestacin de asistencia sanitaria son (sealar la incorrecta):",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn el artculo 42.2 de la LGSS, referente a la accin protectora del Sistema de la",
+      "options": [
+        {
+          "text": "De servicios sociales.",
+          "is_correct": false
+        },
+        {
+          "text": "De asistencia social.",
+          "is_correct": false
+        },
+        {
+          "text": "No contributivos establecidos, en su caso, para cada prestacin.",
+          "is_correct": false
+        },
+        {
+          "text": "De asistencia sanitaria en materia de formacin y rehabilitacin de personas con",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el artculo 42.2 de la LGSS, referente a la accin protectora del Sistema de la",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las pensiones de la Seguridad Social, en su modalidad no contributiva, se actualizan en la",
+      "options": [
+        {
+          "text": "orrespondiente Ley de Presupuestos Generales del Estado, de acuerdo con lo previsto en la",
+          "is_correct": false
+        },
+        {
+          "text": "No. El porcentaje exacto de su actualizacin no tiene por qu recogerse en la Ley de",
+          "is_correct": false
+        },
+        {
+          "text": "No. Se actualizan en la correspondiente Ley de Medidas Fiscales, Administrativas y del Orden",
+          "is_correct": false
+        },
+        {
+          "text": "S, y se actualizan, al menos, en el mismo porcentaje que dicha Ley establezca como",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las pensiones de la Seguridad Social, en su modalidad no contributiva, se actualizan en la",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Una de las siguientes prestaciones no est comprendida en la accin protectora del Sistema",
+      "options": [
+        {
+          "text": "e la Seguridad social:",
+          "is_correct": false
+        },
+        {
+          "text": "La prestacin econmica por invalidez, en su modalidad no contributiva.",
+          "is_correct": false
+        },
+        {
+          "text": "El subsidio para cuidado de menores afectados por cncer u otra enfermedad grave.",
+          "is_correct": false
+        },
+        {
+          "text": "Las prestaciones econmicas por muerte y supervivencia, en su modalidad no contributiva.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Una de las siguientes prestaciones no est comprendida en la accin protectora del Sistema",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las personas comprendidas en el campo de aplicacin del Sistema de la Seguridad Social:",
+      "options": [
+        {
+          "text": "Podrn estar incluidas por el mismo trabajo en otros regmenes de previsin distintos de",
+          "is_correct": false
+        },
+        {
+          "text": "No podrn estar incluidas por el mismo trabajo en otros regmenes de previsin distintos de",
+          "is_correct": false
+        },
+        {
+          "text": "Debern estar incluidas por el mismo trabajo, con carcter obligatorio, en otros regmenes de",
+          "is_correct": false
+        },
+        {
+          "text": "Todas son falsas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las personas comprendidas en el campo de aplicacin del Sistema de la Seguridad Social:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu prestaciones no estn exentas de IRPF?:",
+      "options": [
+        {
+          "text": "Las pensiones de incapacidad permanente absoluta y de gran invalidez.",
+          "is_correct": false
+        },
+        {
+          "text": "Las pensiones de orfandad y las prestaciones familiares por hijo a cargo, nacimiento y parto",
+          "is_correct": false
+        },
+        {
+          "text": "Las prestaciones percibidas por entierro o sepelio, con el lmite del importe total de los",
+          "is_correct": false
+        },
+        {
+          "text": "Los subsidios por nacimiento y cuidado de menor otorgados por la Seguridad Social.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu prestaciones no estn exentas de IRPF?:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La accin protectora del Sistema de la Seguridad Social se fundamenta en los principios de:",
+      "options": [
+        {
+          "text": "Universalidad, unidad, solidaridad e igualdad.",
+          "is_correct": false
+        },
+        {
+          "text": "La a) es correcta, tanto para la accin protectora en su modalidad contributiva como no",
+          "is_correct": false
+        },
+        {
+          "text": "ontributiva.",
+          "is_correct": false
+        },
+        {
+          "text": "La a) es correcta, pero nicamente para las prestaciones en su modalidad no contributiva.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La accin protectora del Sistema de la Seguridad Social se fundamenta en los principios de:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El artculo 42 de la LGSS 8/2015:",
+      "options": [
+        {
+          "text": "Establece y limita el mbito de extensin posible del Rgimen General.",
+          "is_correct": false
+        },
+        {
+          "text": "Establece y limita el mbito de extensin posible de los Regmenes Especiales.",
+          "is_correct": false
+        },
+        {
+          "text": "Establece y limita el mbito de extensin posible de la modalidad no contributiva de las",
+          "is_correct": false
+        },
+        {
+          "text": "Todas son correctas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El artculo 42 de la LGSS 8/2015:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Conforme dispone el artculo 163 de la LGSS las pensiones del Rgimen General:",
+      "options": [
+        {
+          "text": "Sern compatibles entre s aunque coincidan en un mismo beneficiario.",
+          "is_correct": false
+        },
+        {
+          "text": "Sern compatibles entre s aunque coincidan en un mismo beneficiario, a no ser que",
+          "is_correct": false
+        },
+        {
+          "text": "Sern incompatibles entre s y en todo caso, cuando coincidan en un mismo beneficiario.",
+          "is_correct": false
+        },
+        {
+          "text": "Sern incompatibles entre s cuando coincidan en un mismo beneficiario, a no ser que se",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Conforme dispone el artculo 163 de la LGSS las pensiones del Rgimen General:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En caso de incompatibilidad, segn la pregunta anterior:",
+      "options": [
+        {
+          "text": "Quien pudiera tener derecho a dos o ms pensiones optar por una de ellas.",
+          "is_correct": false
+        },
+        {
+          "text": "La entidad gestora iniciar el pago o, en su caso, continuar con el abono de la pensin de",
+          "is_correct": false
+        },
+        {
+          "text": "orresponda.",
+          "is_correct": false
+        },
+        {
+          "text": "La b) es correcta, no obstante, el interesado podr solicitar que se revoque dicho acuerdo y",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En caso de incompatibilidad, segn la pregunta anterior:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de las siguientes prestaciones figura regulada en el Ttulo II de la LGSS de 2015?:",
+      "options": [
+        {
+          "text": "El nacimiento y cuidad o de menor .",
+          "is_correct": false
+        },
+        {
+          "text": "La proteccin por cese de actividad.",
+          "is_correct": false
+        },
+        {
+          "text": "Invalidez en la modalidad no contributiva.",
+          "is_correct": false
+        },
+        {
+          "text": "Desempleo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de las siguientes prestaciones figura regulada en el Ttulo II de la LGSS de 2015?:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Hace referencia el artculo 41 de la Constitucin Espaola a alguna causa concreta de la",
+      "options": [
+        {
+          "text": "No menciona ninguna en concreto.",
+          "is_correct": false
+        },
+        {
+          "text": "Alude a la asistencia sanitaria.",
+          "is_correct": false
+        },
+        {
+          "text": "Alude al desempleo.",
+          "is_correct": false
+        },
+        {
+          "text": "Alude a la enfermedad y al desempleo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Hace referencia el artculo 41 de la Constitucin Espaola a alguna causa concreta de la",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Son imprescriptibles:",
+      "options": [
+        {
+          "text": "Que debe ser pblico.",
+          "is_correct": false
+        },
+        {
+          "text": "Que debe ser obligatorio y pblico.",
+          "is_correct": false
+        },
+        {
+          "text": "La pensin de jubilacin, las prestaciones de muerte y supervivencia, salvo el auxilio por",
+          "is_correct": false
+        },
+        {
+          "text": "efuncin, y las prestaciones familiares en su modalidad contributiva.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Son imprescriptibles:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El derecho al percibo de las prestaciones de la Seguridad Social:",
+      "options": [
+        {
+          "text": "Caduca al ao, sin excepciones.",
+          "is_correct": false
+        },
+        {
+          "text": "Caduca solo cuando se trate de prestaciones a tanto alzado.",
+          "is_correct": false
+        },
+        {
+          "text": "Caduca a los cuatro aos.",
+          "is_correct": false
+        },
+        {
+          "text": "No caduca, prescribe.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El derecho al percibo de las prestaciones de la Seguridad Social:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu contingencia de las enumeradas a continuacin originar situacin de necesidad",
+      "options": [
+        {
+          "text": "No tener trabajo.",
+          "is_correct": false
+        },
+        {
+          "text": "La separacin de los cnyuges.",
+          "is_correct": false
+        },
+        {
+          "text": "La muerte de un trabajador.",
+          "is_correct": false
+        },
+        {
+          "text": "El cierre de una empresa.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu contingencia de las enumeradas a continuacin originar situacin de necesidad",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cuando hablamos de prestaciones peridicas de la Seguridad Social, nos estamos refiriendo",
+      "options": [
+        {
+          "text": "Cantidades a tanto alzado.",
+          "is_correct": false
+        },
+        {
+          "text": "Visitas peridicas al facultativo de la Seguridad Social.",
+          "is_correct": false
+        },
+        {
+          "text": "Subsidios, solamente.",
+          "is_correct": false
+        },
+        {
+          "text": "Pensiones y subsidios.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cuando hablamos de prestaciones peridicas de la Seguridad Social, nos estamos refiriendo",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las prestaciones de la Seguridad Social son:",
+      "options": [
+        {
+          "text": "Embargables, cualquiera que sea su cuanta.",
+          "is_correct": false
+        },
+        {
+          "text": "Inembargables en las cantidades que excedan del SMI.",
+          "is_correct": false
+        },
+        {
+          "text": "Compensables y compatibles.",
+          "is_correct": false
+        },
+        {
+          "text": "Inembargables en la cuanta que no exceda del SMI vigente en cada momento.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las prestaciones de la Seguridad Social son:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn la LGSS podr ser mejorada voluntariamente:",
+      "options": [
+        {
+          "text": "La modalidad contributiva de la accin protectora de la Seguridad Social.",
+          "is_correct": false
+        },
+        {
+          "text": "La modalidad no contributiva.",
+          "is_correct": false
+        },
+        {
+          "text": "Ninguna puede ser objeto de mejora voluntaria.",
+          "is_correct": false
+        },
+        {
+          "text": "Las dos modalidades pueden ser objeto de mejoras voluntarias.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn la LGSS podr ser mejorada voluntariamente:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El derecho al reconocimiento de las prestaciones:",
+      "options": [
+        {
+          "text": "Es imprescriptible.",
+          "is_correct": false
+        },
+        {
+          "text": "Caducar al ao, a contar desde el da siguiente al de la notificacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Prescribe a los 5 aos contados desde el da siguiente a aquel en que tenga lugar el hecho",
+          "is_correct": false
+        },
+        {
+          "text": "ausante de la prestacin de que se trate, salvo excepciones.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El derecho al reconocimiento de las prestaciones:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La obligacin de reintegro del importe de las prestaciones indebidamente percibidas",
+      "options": [
+        {
+          "text": "A los 4 aos, contados a partir de la fecha de su cobro.",
+          "is_correct": false
+        },
+        {
+          "text": "A los 4 aos, contados desde que fue posible ejercitar la accin para exigir su devolucin.",
+          "is_correct": false
+        },
+        {
+          "text": "A los 4 aos, con independencia de la causa que origin la percepcin indebida.",
+          "is_correct": false
+        },
+        {
+          "text": "A los 4 aos, a excepcin hecha de los supuestos de revisin de las prestaciones por error",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La obligacin de reintegro del importe de las prestaciones indebidamente percibidas",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El accidente in itnere aparece definido en la LGSS como:",
+      "options": [
+        {
+          "text": "El sucedido en actos de salvamento u otros de naturaleza anloga, cuando unos y otros tengan",
+          "is_correct": false
+        },
+        {
+          "text": "onexin con el trabajo.",
+          "is_correct": false
+        },
+        {
+          "text": "El sufrido por el trabajador durante el tiempo y en el lugar de trabajo.",
+          "is_correct": false
+        },
+        {
+          "text": "El que sufra el trabajador como consecuencia del desempeo de cargos electivos de carcter",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El accidente in itnere aparece definido en la LGSS como:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La LGSS en el artculo 156 seala que se entiende por accidente de trabajo:",
+      "options": [
+        {
+          "text": "Toda lesin que el trabajador sufra por mquinas, artefactos o herramientas de trabajo.",
+          "is_correct": false
+        },
+        {
+          "text": "Toda lesin que el trabajador sufra durante el tiempo y en el lugar de trabajo.",
+          "is_correct": false
+        },
+        {
+          "text": "Toda lesin corporal que el trabajador sufra con ocasin o por consecuencia del trabajo que",
+          "is_correct": false
+        },
+        {
+          "text": "El contrado a consecuencia del trabajo ejecutado por cuenta ajena en las actividades que se",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La LGSS en el artculo 156 seala que se entiende por accidente de trabajo:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Uno de los siguientes apartados no se relaciona en el artculo 7 de la LGSS a efectos de la",
+      "options": [
+        {
+          "text": "Los trabajadores por cuenta propia.",
+          "is_correct": false
+        },
+        {
+          "text": "Los funcionarios pblicos militares.",
+          "is_correct": false
+        },
+        {
+          "text": "Los estudiantes.",
+          "is_correct": false
+        },
+        {
+          "text": "Los empleados de hogar.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Uno de los siguientes apartados no se relaciona en el artculo 7 de la LGSS a efectos de la",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La estructura del Sistema de la Seguridad Social en Espaa viene integrada por:",
+      "options": [
+        {
+          "text": "El Rgimen General y los Regmenes Especiales a que se refiere la Ley de Presupuestos",
+          "is_correct": false
+        },
+        {
+          "text": "El Rgimen General regulado en la LGSS, texto refundido del ao 2015.",
+          "is_correct": false
+        },
+        {
+          "text": "El Rgimen General y los Regmenes Especiales a que se refiere la LGSS, texto refundido del ao",
+          "is_correct": false
+        },
+        {
+          "text": "El Rgimen General, los Regmenes Especiales y los Sistemas Especiales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La estructura del Sistema de la Seguridad Social en Espaa viene integrada por:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Estn excluidos del mbito de aplicacin del Rgimen General (Sealar la incorrecta):",
+      "options": [
+        {
+          "text": "Las personas que realicen trabajos ejecutados mediante servicios amistosos y ocasionales .",
+          "is_correct": false
+        },
+        {
+          "text": "Las personas que se integran en algn Rgimen Especial.",
+          "is_correct": false
+        },
+        {
+          "text": "Los profesores universitarios emritos y el personal licenciado sanitario emrito",
+          "is_correct": false
+        },
+        {
+          "text": "Las relaciones laborales especiales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Estn excluidos del mbito de aplicacin del Rgimen General (Sealar la incorrecta):",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Se regula necesariamente por Ley:",
+      "options": [
+        {
+          "text": "Ninguno de los Regmenes Especiales.",
+          "is_correct": false
+        },
+        {
+          "text": "El Rgimen Especial de Trabajadores del Mar y el de Funcionarios Pblicos Civiles o Militares.",
+          "is_correct": false
+        },
+        {
+          "text": "El Rgimen Especial de Funcionarios Pblicos, Civiles y Militares y el de la Minera del",
+          "is_correct": false
+        },
+        {
+          "text": "arbn.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Se regula necesariamente por Ley:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En cul de los siguientes Regmenes Especiales existen trabajadores por cuenta propia y",
+      "options": [
+        {
+          "text": "jena?",
+          "is_correct": false
+        },
+        {
+          "text": "En el Rgimen Especial de Trabajadores Autnomos.",
+          "is_correct": false
+        },
+        {
+          "text": "En el Rgimen Especial de estudiantes y en el de funcionarios.",
+          "is_correct": false
+        },
+        {
+          "text": "Rgimen Especial de la Minera del Carbn.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En cul de los siguientes Regmenes Especiales existen trabajadores por cuenta propia y",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Estarn incluidos en el campo de aplicacin, a efectos de la modalidad contributiva,",
+      "options": [
+        {
+          "text": "ualquiera que sea su sexo, estado civil y profesin:",
+          "is_correct": false
+        },
+        {
+          "text": "Todos los espaoles.",
+          "is_correct": false
+        },
+        {
+          "text": "Todos los espaoles y los extranjeros que residan legalmente en Espaa.",
+          "is_correct": false
+        },
+        {
+          "text": "Los espaoles que residan en Espaa y los extranjeros que residan o se encuentren legalmente en",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Estarn incluidos en el campo de aplicacin, a efectos de la modalidad contributiva,",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Podrn establecerse Sistemas Especiales de la Seguridad Social:",
+      "options": [
+        {
+          "text": "En aquellos Regmenes de la Seguridad Social en que as resulte necesario.",
+          "is_correct": false
+        },
+        {
+          "text": "Slo dentro del mbito del Rgimen General de la Seguridad Social.",
+          "is_correct": false
+        },
+        {
+          "text": "nicamente, dentro del mbito del Rgimen Especial de Trabajadores Autnomos.",
+          "is_correct": false
+        },
+        {
+          "text": "Slo dentro del mbito de los Regmenes Especiales cuyo desarrollo deba establecerse por",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Podrn establecerse Sistemas Especiales de la Seguridad Social:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No constituye un Sistema Especial de la Seguridad Social el relativo a:",
+      "options": [
+        {
+          "text": "Empleados de hogar.",
+          "is_correct": false
+        },
+        {
+          "text": "Trabajadores por cuenta ajena de la agricultura.",
+          "is_correct": false
+        },
+        {
+          "text": "Realizacin de actividades de pesca martima.",
+          "is_correct": false
+        },
+        {
+          "text": "Trabajadores por cuenta propia de la agricultura.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No constituye un Sistema Especial de la Seguridad Social el relativo a:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La integracin que en el Rgimen General o en alguno de los Regmenes Especiales puede",
+      "options": [
+        {
+          "text": "e cualquier rgimen especial ya existente no podr afectar:",
+          "is_correct": false
+        },
+        {
+          "text": "Al Rgimen Especial de Trabajadores Autnomos.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Rgimen Especial de Estudiantes.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Rgimen Especial de Minera del Carbn.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La integracin que en el Rgimen General o en alguno de los Regmenes Especiales puede",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los Sistemas Especiales regulados actualmente:",
+      "options": [
+        {
+          "text": "Estn todos ellos incluidos en el Rgimen General.",
+          "is_correct": false
+        },
+        {
+          "text": "Estn incluidos en el Rgimen General y en Autnomos.",
+          "is_correct": false
+        },
+        {
+          "text": "Se diferencian del Rgimen General en que tienen distinta accin protectora.",
+          "is_correct": false
+        },
+        {
+          "text": "Estn todos ellos incluidos en el Rgimen Especial de Autnomos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los Sistemas Especiales regulados actualmente:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Rgimen Especial de la Minera del Carbn:",
+      "options": [
+        {
+          "text": "Lo crea la LGSS en su artculo 10.",
+          "is_correct": false
+        },
+        {
+          "text": "Lo cre el Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Lo cre el Gobierno y ha de ser regulado por ley.",
+          "is_correct": false
+        },
+        {
+          "text": "Desapareci como tal y hoy se denomina Rgimen Especial de la Minera, englobando a",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Rgimen Especial de la Minera del Carbn:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de los siguientes es un Rgimen Especial de la Seguridad Social?:",
+      "options": [
+        {
+          "text": "El Rgimen Especial Agrario.",
+          "is_correct": false
+        },
+        {
+          "text": "El Rgimen Especial de Empleados de Hogar.",
+          "is_correct": false
+        },
+        {
+          "text": "El de los servicios extraordinarios de hostelera.",
+          "is_correct": false
+        },
+        {
+          "text": "Ninguno de ellos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de los siguientes es un Rgimen Especial de la Seguridad Social?:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "A efectos del artculo 136 de la LGSS, se declaran expresamente comprendidos en el Rgimen",
+      "options": [
+        {
+          "text": "Los trabajadores por cuenta ajena y los socios trabajadores de sociedades mercantiles",
+          "is_correct": false
+        },
+        {
+          "text": "apitalistas, siempre que no sean miembros de su rgano de administracin ni posean el",
+          "is_correct": false
+        },
+        {
+          "text": "ontrol de la sociedad.",
+          "is_correct": false
+        },
+        {
+          "text": "Los trabajadores por cuenta ajena y los socios trabajadores de sociedades mercantiles",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "A efectos del artculo 136 de la LGSS, se declaran expresamente comprendidos en el Rgimen",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La proteccin de los consejeros y administradores de las sociedades de capital, que no",
+      "options": [
+        {
+          "text": "e direccin y gerencia de la sociedad, siendo retribuidos por ello o por su condicin de",
+          "is_correct": false
+        },
+        {
+          "text": "Es por todas las contingencias.",
+          "is_correct": false
+        },
+        {
+          "text": "Se les excluye de la proteccin por desempleo, FOGASA y formacin profesional.",
+          "is_correct": false
+        },
+        {
+          "text": "Es la establecida para el Rgimen General de la Seguridad Social.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La proteccin de los consejeros y administradores de las sociedades de capital, que no",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Real Decreto 2621/1986, de 24 de diciembre, procedi a la integracin en el Rgimen General",
+      "options": [
+        {
+          "text": "Los escritores de libros.",
+          "is_correct": false
+        },
+        {
+          "text": "Los estudiantes.",
+          "is_correct": false
+        },
+        {
+          "text": "Los socios trabajadores de cooperativas de trabajo asociado.",
+          "is_correct": false
+        },
+        {
+          "text": "Los trabajadores ferroviarios.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Real Decreto 2621/1986, de 24 de diciembre, procedi a la integracin en el Rgimen General",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Entre los siguientes trabajadores no se encuentran comprendidos expresamente en el",
+      "options": [
+        {
+          "text": "Los conductores de vehculos de turismo al servicio de particulares.",
+          "is_correct": false
+        },
+        {
+          "text": "Los escritores de libros.",
+          "is_correct": false
+        },
+        {
+          "text": "El personal contratado al servicio de Notaras y Registros de la Propiedad.",
+          "is_correct": false
+        },
+        {
+          "text": "Los laicos o seglares que presten servicios retribuidos en los establecimientos de las",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Entre los siguientes trabajadores no se encuentran comprendidos expresamente en el",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Bsicamente, estarn comprendidos en el Rgimen General:",
+      "options": [
+        {
+          "text": "Los trabajadores por cuenta ajena, mayores de 16 aos, de la industria, de los servicios y de",
+          "is_correct": false
+        },
+        {
+          "text": "Los trabajadores por cuenta ajena y por cuenta propia, mayores de 18 aos, de la industria,",
+          "is_correct": false
+        },
+        {
+          "text": "e los servicios y de la agricultura..",
+          "is_correct": false
+        },
+        {
+          "text": "Los trabajadores por cuenta ajena de la industria, los servicios y del mar.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Bsicamente, estarn comprendidos en el Rgimen General:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Respecto de la Seguridad Social aplicable a los emigrantes espaoles que residan y trabajen",
+      "options": [
+        {
+          "text": "La del pas de prestacin de servicios, generalmente, salvo excepciones.",
+          "is_correct": false
+        },
+        {
+          "text": "La Seguridad Social espaola, salvo excepciones.",
+          "is_correct": false
+        },
+        {
+          "text": "La Seguridad Social que elija el propio trabajador.",
+          "is_correct": false
+        },
+        {
+          "text": "La Seguridad Social que se haya determinado anualmente por el INSS.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Respecto de la Seguridad Social aplicable a los emigrantes espaoles que residan y trabajen",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn establece la LGSS en su artculo 7.1, son criterios que determinan la inclusin en el",
+      "options": [
+        {
+          "text": "ampo de aplicacin de la Seguridad Social, en la modalidad contributiva:",
+          "is_correct": false
+        },
+        {
+          "text": "La nacionalidad y el ejercicio de una determinada actividad profesional en territorio nacional .",
+          "is_correct": false
+        },
+        {
+          "text": "La residencia y el ejercicio de una determinada actividad profesional en territorio nacional.",
+          "is_correct": false
+        },
+        {
+          "text": "La nacionalidad, la residencia, el sexo y el estado civil.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn establece la LGSS en su artculo 7.1, son criterios que determinan la inclusin en el",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el Texto",
+      "options": [
+        {
+          "text": "De 373 artculos.",
+          "is_correct": false
+        },
+        {
+          "text": "De un artculo, una disposicin adicional, una derogatoria y una final.",
+          "is_correct": false
+        },
+        {
+          "text": "De 373 artculos, 59 disposiciones adicionales y 44 transitorias.",
+          "is_correct": false
+        },
+        {
+          "text": "La c) es correcta, adems de 8 finales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el Texto",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn la Constitucin no es correcto:",
+      "options": [
+        {
+          "text": "Que las CCAA podrn asumir competencias en sanidad y salud.",
+          "is_correct": false
+        },
+        {
+          "text": "Que las CCAA podrn asumir competencias en materia de legislacin sobre productos",
+          "is_correct": false
+        },
+        {
+          "text": "Que el Estado tiene competencia exclusiva en materia de sanidad exterior.",
+          "is_correct": false
+        },
+        {
+          "text": "Que el Estado tiene competencia exclusiva en materia de bases y coordinacin general de la",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn la Constitucin no es correcto:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu artculo de la Constitucin Espaola encarga a los poderes pblicos asegurar la",
+      "options": [
+        {
+          "text": "El 129.",
+          "is_correct": false
+        },
+        {
+          "text": "El 39.",
+          "is_correct": false
+        },
+        {
+          "text": "El 49.",
+          "is_correct": false
+        },
+        {
+          "text": "El 50.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu artculo de la Constitucin Espaola encarga a los poderes pblicos asegurar la",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu artculo de la Constitucin Espaola reconoce el derecho a la proteccin de la salud y a",
+      "options": [
+        {
+          "text": "El 39.",
+          "is_correct": false
+        },
+        {
+          "text": "El 41.",
+          "is_correct": false
+        },
+        {
+          "text": "El 43.",
+          "is_correct": false
+        },
+        {
+          "text": "El 50.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu artculo de la Constitucin Espaola reconoce el derecho a la proteccin de la salud y a",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Se encuentran comprendidos en el campo de aplicacin del Rgimen General, los miembros",
+      "options": [
+        {
+          "text": "e las Corporaciones Locales y los miembros de las Juntas Generales de los territorios",
+          "is_correct": false
+        },
+        {
+          "text": "Que desempeen sus cargos con dedicacin exclusiva.",
+          "is_correct": false
+        },
+        {
+          "text": "Que desempeen sus cargos con dedicacin parcial.",
+          "is_correct": false
+        },
+        {
+          "text": "Que desempeen sus cargos con dedicacin exclusiva o parcial.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Se encuentran comprendidos en el campo de aplicacin del Rgimen General, los miembros",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Forma parte del Sistema de la Seguridad Social y est sujeta a los principios recogidos en el",
+      "options": [
+        {
+          "text": "rt. 2 de la LGSS:",
+          "is_correct": false
+        },
+        {
+          "text": "Cualquier prestacin de carcter pblico o privado que tenga por finalidad complementar,",
+          "is_correct": false
+        },
+        {
+          "text": "mpliar o modificar las prestaciones econmicas de la Seguridad Social.",
+          "is_correct": false
+        },
+        {
+          "text": "Cualquier prestacin de carcter pblico que tenga por finalidad complementar, ampliar o",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Forma parte del Sistema de la Seguridad Social y est sujeta a los principios recogidos en el",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El punto de partida del Sistema espaol de Seguridad Social fue:",
+      "options": [
+        {
+          "text": "El Real Decreto-Ley de 11 de marzo de 1919 por el que se crea el Retiro Obrero.",
+          "is_correct": false
+        },
+        {
+          "text": "El Decreto de 18-4-1947 de creacin del SOVI.",
+          "is_correct": false
+        },
+        {
+          "text": "La Ley de Bases de la Seguridad Social de 28-12-1963.",
+          "is_correct": false
+        },
+        {
+          "text": "La Ley de Financiacin y Perfeccionamiento de la accin protectora del Rgimen General",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El punto de partida del Sistema espaol de Seguridad Social fue:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Texto Refundido de la LGSS de 30 de octubre de 2015 fue aprobado:",
+      "options": [
+        {
+          "text": "Por ley.",
+          "is_correct": false
+        },
+        {
+          "text": "Por Real Decreto legislativo.",
+          "is_correct": false
+        },
+        {
+          "text": "Por Real Decreto-ley.",
+          "is_correct": false
+        },
+        {
+          "text": "Por Decreto legislativo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Texto Refundido de la LGSS de 30 de octubre de 2015 fue aprobado:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La cuanta de las prestaciones por incumplimiento empresarial de las normas de seguridad y",
+      "options": [
+        {
+          "text": "Con un recargo de un 10 a un 20%, segn la gravedad de la falta.",
+          "is_correct": false
+        },
+        {
+          "text": "Con un recargo del 20 al 50%, segn la gravedad de la falta.",
+          "is_correct": false
+        },
+        {
+          "text": "Con un recargo del 30 al 50%, segn la gravedad de la falta.",
+          "is_correct": false
+        },
+        {
+          "text": "Con un recargo del 10 al 30%, segn la gravedad de la falta.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La cuanta de las prestaciones por incumplimiento empresarial de las normas de seguridad y",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La responsabilidad del pago del recargo en",
+      "options": [
+        {
+          "text": "Podr ser objeto de seguro con una Mutua Colaboradora con la Seguridad Social.",
+          "is_correct": false
+        },
+        {
+          "text": "Podr ser objeto de seguro y reaseguro con las entidades aseguradoras privadas.",
+          "is_correct": false
+        },
+        {
+          "text": "No podr ser objeto de seguro alguno.",
+          "is_correct": false
+        },
+        {
+          "text": "No podr ser objeto de seguro, salvo en los supuestos excepcionales legalmente",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La responsabilidad del pago del recargo en",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Se entiende por accin protectora de un Sistema de Seguridad Social:",
+      "options": [
+        {
+          "text": "El conjunto de situaciones de necesidad protegidas.",
+          "is_correct": false
+        },
+        {
+          "text": "El conjunto de prestaciones que se otorgan a los colectivos protegidos.",
+          "is_correct": false
+        },
+        {
+          "text": "El conjunto de recursos econmicos y financieros del Sistema de Seguridad Social.",
+          "is_correct": false
+        },
+        {
+          "text": "Los sujetos incluidos en el mbito de aplicacin del Sistema de la Seguridad Social.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Se entiende por accin protectora de un Sistema de Seguridad Social:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las pensiones contributivas derivadas de riesgos comunes, de cualquiera de los Regmenes",
+      "options": [
+        {
+          "text": "e la Seguridad Social se abonarn en:",
+          "is_correct": false
+        },
+        {
+          "text": "14 pagas.",
+          "is_correct": false
+        },
+        {
+          "text": "12 pagas.",
+          "is_correct": false
+        },
+        {
+          "text": "16 pagas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las pensiones contributivas derivadas de riesgos comunes, de cualquiera de los Regmenes",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El pago de las pensiones en su modalidad no contributiva se abonar:",
+      "options": [
+        {
+          "text": "En 14 pagas.",
+          "is_correct": false
+        },
+        {
+          "text": "En 12 pagas, todas las prestaciones no contributivas.",
+          "is_correct": false
+        },
+        {
+          "text": "En 14 pagas, nicamente la pensin de jubilacin.",
+          "is_correct": false
+        },
+        {
+          "text": "En 10 pagas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El pago de las pensiones en su modalidad no contributiva se abonar:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de estas prestaciones se abona de una sola vez?:",
+      "options": [
+        {
+          "text": "La prestacin por incapacidad permanente parcial.",
+          "is_correct": false
+        },
+        {
+          "text": "La prestacin econmica para cuidado de menores afectados por cncer u otra enfermedad",
+          "is_correct": false
+        },
+        {
+          "text": "La prestacin por corresponsabilidad en el cuidado del lactante.",
+          "is_correct": false
+        },
+        {
+          "text": "La prestacin por gran invalidez.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de estas prestaciones se abona de una sola vez?:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las prestaciones a que tiene derecho el beneficiario son de carcter mnimo, es decir:",
+      "options": [
+        {
+          "text": "Que la cuanta de las mismas puede ser inferior a la determinada legalmente.",
+          "is_correct": false
+        },
+        {
+          "text": "Que la cuanta de las mismas no puede ser inferior a la determinada legalmente.",
+          "is_correct": false
+        },
+        {
+          "text": "Que la cuanta de las mismas no puede ser inferior al salario mnimo interprofesional .",
+          "is_correct": false
+        },
+        {
+          "text": "Que la cuanta de las mismas no puede ser inferior a la base mnima de cotizacin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las prestaciones a que tiene derecho el beneficiario son de carcter mnimo, es decir:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De los supuestos que se exponen a continuacin, en cul de ellos se exige tener cubierto un",
+      "options": [
+        {
+          "text": "Para causar derecho a las prestaciones derivadas de accidente de trabajo.",
+          "is_correct": false
+        },
+        {
+          "text": "Para causar derecho a las prestaciones derivadas de accidente no laboral.",
+          "is_correct": false
+        },
+        {
+          "text": "Para causar derecho a las prestaciones derivadas de enfermedad comn, en todo caso .",
+          "is_correct": false
+        },
+        {
+          "text": "Para causar derecho a las prestaciones derivadas de enfermedad profesional.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De los supuestos que se exponen a continuacin, en cul de ellos se exige tener cubierto un",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No consiste en una cantidad a tanto alzado la siguiente prestacin:",
+      "options": [
+        {
+          "text": "El auxilio por defuncin.",
+          "is_correct": false
+        },
+        {
+          "text": "La incapacidad permanente parcial.",
+          "is_correct": false
+        },
+        {
+          "text": "La correspondiente a una lesin permanente no invalidante.",
+          "is_correct": false
+        },
+        {
+          "text": "La ejecucin corresponsable del cuidado del lactante.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No consiste en una cantidad a tanto alzado la siguiente prestacin:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El personal civil interino al Servicio de la Administracin del Estado:",
+      "options": [
+        {
+          "text": "Est excluido del Sistema de la Seguridad Social.",
+          "is_correct": false
+        },
+        {
+          "text": "Est incluido en el Rgimen General de la Seguridad Social.",
+          "is_correct": false
+        },
+        {
+          "text": "Est incluido en el Rgimen Especial de funcionarios de la Seguridad Social.",
+          "is_correct": false
+        },
+        {
+          "text": "Todas son falsas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El personal civil interino al Servicio de la Administracin del Estado:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Estado, por medio de la Seguridad Social, garantiza la proteccin adecuada frente a las",
+      "options": [
+        {
+          "text": "ontingencias y en las situaciones que se contemplan en la LGSS 8/2015:",
+          "is_correct": false
+        },
+        {
+          "text": "A las personas comprendidas en el campo de aplicacin de la Seguridad Social.",
+          "is_correct": false
+        },
+        {
+          "text": "A las personas que cumplan los requisitos exigidos en las modalidades contributivas o no",
+          "is_correct": false
+        },
+        {
+          "text": "ontributivas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Estado, por medio de la Seguridad Social, garantiza la proteccin adecuada frente a las",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La diferencia entre los Regmenes Especiales y los Sistemas Especiales de la Seguridad Social",
+      "options": [
+        {
+          "text": "Los Sistemas Especiales",
+          "is_correct": false
+        },
+        {
+          "text": "Los Regmenes Especiales tienen una regulacin propia y distinta de la accin protectora y",
+          "is_correct": false
+        },
+        {
+          "text": "Los Sistemas Especiales tienen peculiaridades en lo referente a afiliacin y cotizacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Todas las anteriores son correctas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La diferencia entre los Regmenes Especiales y los Sistemas Especiales de la Seguridad Social",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los Regmenes Especiales enumerados por el artculo 10 de la LGSS:",
+      "options": [
+        {
+          "text": "Constituyen una lista cerrada que no puede ser modificada.",
+          "is_correct": false
+        },
+        {
+          "text": "Pueden ser ampliados por voluntad de los colectivos interesados.",
+          "is_correct": false
+        },
+        {
+          "text": "Pueden ser ampliados por decisin de las Entidades Gestoras y Servicios Comunes de la",
+          "is_correct": false
+        },
+        {
+          "text": "Pueden ser ampliados por el Gobierno a propuesta del Ministerio de Inclusin, Seguridad",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los Regmenes Especiales enumerados por el artculo 10 de la LGSS:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los altos cargos de las Administraciones Pblicas que no sean funcionarios pblicos:",
+      "options": [
+        {
+          "text": "Constituyen un Rgimen Especial de la Seguridad Social.",
+          "is_correct": false
+        },
+        {
+          "text": "Se incluyen en el Rgimen General.",
+          "is_correct": false
+        },
+        {
+          "text": "Se incluyen en el Rgimen Especial de los Funcionarios Civiles del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Se incluyen en el Rgimen Especial de la Administracin de Justicia.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los altos cargos de las Administraciones Pblicas que no sean funcionarios pblicos:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Respecto a los socios trabajadores de las cooperativas de trabajo asociado, se incorporarn",
+      "options": [
+        {
+          "text": "l Sistema de la Seguridad Social:",
+          "is_correct": false
+        },
+        {
+          "text": "A opcin de la cooperativa, bien como asimilados a trabajadores por cuenta ajena o bien",
+          "is_correct": false
+        },
+        {
+          "text": "omo trabajadores autnomos.",
+          "is_correct": false
+        },
+        {
+          "text": "En todo caso en el Rgimen General de la Seguridad Social.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Respecto a los socios trabajadores de las cooperativas de trabajo asociado, se incorporarn",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Se entiende que se posee el control efectivo de la sociedad:",
+      "options": [
+        {
+          "text": "En todo caso, cuando las acciones o participaciones del trabajador supongan, al menos, la",
+          "is_correct": false
+        },
+        {
+          "text": "Salvo prueba en contrario, cuando las acciones o participaciones del trabajador supongan, al",
+          "is_correct": false
+        },
+        {
+          "text": "En todo caso, cuando su participacin en el capital social sea igual o superior a la tercera parte del",
+          "is_correct": false
+        },
+        {
+          "text": "En todo caso, cuando al menos la mitad del capital social est distribuido entre socios, con los que",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Se entiende que se posee el control efectivo de la sociedad:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn el artculo 7.2 de la LGSS de 2015, estarn comprendidos en el campo de",
+      "options": [
+        {
+          "text": "plicacin del Sistema de la Seguridad Social, a efectos de las prestaciones no contributivas:",
+          "is_correct": false
+        },
+        {
+          "text": "Todos los espaoles residentes en territorio nacional, y los extranjeros que residan",
+          "is_correct": false
+        },
+        {
+          "text": "Todas son falsas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el artculo 7.2 de la LGSS de 2015, estarn comprendidos en el campo de",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El grupo profesional del trabajador por cuenta ajena y la remuneracin que el mismo",
+      "options": [
+        {
+          "text": "Su exclusin del campo de aplicacin del sistema cuando El grupo profesional exige",
+          "is_correct": false
+        },
+        {
+          "text": "Su exclusin del campo de aplicacin del sistema cuando su retribucin supera la cantidad",
+          "is_correct": false
+        },
+        {
+          "text": "Su exclusin del campo de aplicacin cuando, como consecuencia de ambos conceptos,",
+          "is_correct": false
+        },
+        {
+          "text": "esempea un puesto de alta direccin en la empresa.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El grupo profesional del trabajador por cuenta ajena y la remuneracin que el mismo",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Para el ao 2025, hasta que se apruebe la LPGE para el citado ao y fije su nueva cuanta, el",
+      "options": [
+        {
+          "text": "3.175,04 euros/mes, entendiendo que esta cantidad",
+          "is_correct": false
+        },
+        {
+          "text": "3.175,04 euros/mes, entendiendo esta cantidad referida a una mensualidad ordinaria, sin",
+          "is_correct": false
+        },
+        {
+          "text": "3.058,81 euros/mes, sin perjuicio de las pagas extras que pudieran corresponder.",
+          "is_correct": false
+        },
+        {
+          "text": "42.823,34 euros/ao.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Para el ao 2025, hasta que se apruebe la LPGE para el citado ao y fije su nueva cuanta, el",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Llevar a efecto la gestin liquidatoria y recaudatoria de los recursos de la Seguridad Social",
+      "options": [
+        {
+          "text": "s como de los conceptos de recaudacin conjunta con las cuotas de la Seguridad Social:",
+          "is_correct": false
+        },
+        {
+          "text": "La TGSS, como caja nica del Sistema de Seguridad Social.",
+          "is_correct": false
+        },
+        {
+          "text": "El INSS cmo Entidad Gestora principal de la Seguridad Social.",
+          "is_correct": false
+        },
+        {
+          "text": "El Ministerio de Trabajo y Economa social",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Llevar a efecto la gestin liquidatoria y recaudatoria de los recursos de la Seguridad Social",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "A partir de 1 de enero de 2015 los miembros del cuerpo de registradores de la propiedad",
+      "options": [
+        {
+          "text": "En el Rgimen Especial de Funcionarios.",
+          "is_correct": false
+        },
+        {
+          "text": "En el Rgimen Especial de Trabajadores por cuenta propia o Autnomos, como los notarios.",
+          "is_correct": false
+        },
+        {
+          "text": "En el Rgimen General.",
+          "is_correct": false
+        },
+        {
+          "text": "En cualquiera de los tres anteriores a eleccin del propio registrador.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "A partir de 1 de enero de 2015 los miembros del cuerpo de registradores de la propiedad",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Se entender por enfermedad profesional la contrada:",
+      "options": [
+        {
+          "text": "A consecuencia del trabajo ejecutado por cuenta ajena en las actividades que se",
+          "is_correct": false
+        },
+        {
+          "text": "Con ocasin del trabajo ejecutado por cuenta ajena en las actividades que se especifiquen en",
+          "is_correct": false
+        },
+        {
+          "text": "A consecuencia o con ocasin del trabajo ejecutado por cuenta ajena en las actividades que",
+          "is_correct": false
+        },
+        {
+          "text": "Las enfermedades que contraiga el trabajador con motivo de la realizacin de su trabajo,",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Se entender por enfermedad profesional la contrada:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "A partir de su puesta en funcionamiento quedar integrado en la Tarjeta Social Digital:",
+      "options": [
+        {
+          "text": "El Registro de prestaciones sociales pblicas.",
+          "is_correct": false
+        },
+        {
+          "text": "El Banco de datos de pensiones pblicas.",
+          "is_correct": false
+        },
+        {
+          "text": "El registro de las Mutuas Colaboradoras con la Seguridad Social.",
+          "is_correct": false
+        },
+        {
+          "text": "El registro de empresarios y trabajadores incluidos en el Sistema de la Seguridad Social.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "A partir de su puesta en funcionamiento quedar integrado en la Tarjeta Social Digital:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El reconocimiento y control del derecho a la proteccin de la salud y a la atencin",
+      "options": [
+        {
+          "text": "Al INSS.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Ministerio de Sanidad en la forma en que se determine reglamentariamente.",
+          "is_correct": false
+        },
+        {
+          "text": "Al INGESA.",
+          "is_correct": false
+        },
+        {
+          "text": "A la Tesorera General de la Seguridad Social.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El reconocimiento y control del derecho a la proteccin de la salud y a la atencin",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La accin protectora comprendida en el Rgimen General de la Seguridad Social es:",
+      "options": [
+        {
+          "text": "La relacionada en el artculo 42 de la LGSS 8/2015.",
+          "is_correct": false
+        },
+        {
+          "text": "La relacionada en el artculo 42 de la LGSS 8/2015, con la exclusin de la proteccin por",
+          "is_correct": false
+        },
+        {
+          "text": "ese de actividad y de las prestaciones no contributivas.",
+          "is_correct": false
+        },
+        {
+          "text": "La relacionada en el artculo 42 de la LGSS 8/2015, con la exclusin de la proteccin por",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La accin protectora comprendida en el Rgimen General de la Seguridad Social es:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El ingreso mnimo vital:",
+      "options": [
+        {
+          "text": "Es una prestacin econmica contributiva que forma parte del Sistema de la Seguridad",
+          "is_correct": false
+        },
+        {
+          "text": "Es una prestacin econmica no contributiva que forma parte del Sistema de la Seguridad",
+          "is_correct": false
+        },
+        {
+          "text": "Es una prestacin en especie contributiva que forma parte del Sistema de la Seguridad",
+          "is_correct": false
+        },
+        {
+          "text": "Es una prestacin en especie no contributiva que forma parte del Sistema de la Seguridad",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El ingreso mnimo vital:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El ingreso mnimo vital se encuentra regulado:",
+      "options": [
+        {
+          "text": "En el ttulo VI de la LGSS 8/2015.",
+          "is_correct": false
+        },
+        {
+          "text": "En el ttulo II de la LGSS 8/2015",
+          "is_correct": false
+        },
+        {
+          "text": "En el Ttulo V de la LGSS 8/2015.",
+          "is_correct": false
+        },
+        {
+          "text": "Todas son falsas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El ingreso mnimo vital se encuentra regulado:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los socios trabajadores de las cooperativas de explotacin comunitaria de la tierra:",
+      "options": [
+        {
+          "text": "Sern asimilados a trabajadores por cuenta ajena a efectos de Seguridad Social.",
+          "is_correct": false
+        },
+        {
+          "text": "Sern Autnomos.",
+          "is_correct": false
+        },
+        {
+          "text": "Sern asimilados a trabajadores por cuenta ajena o trabajadores autnomos, a opcin de la",
+          "is_correct": false
+        },
+        {
+          "text": "ooperativa.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los socios trabajadores de las cooperativas de explotacin comunitaria de la tierra:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Se presumir, salvo prueba en contrario, que son constitutivas de accidente de trabajo:",
+      "options": [
+        {
+          "text": "Las lesiones que sufra el trabajador durante el tiempo y en el lugar del trabajo.",
+          "is_correct": false
+        },
+        {
+          "text": "Las lesiones por imprudencia profesional que sea consecuencia del ejercicio habitual de un",
+          "is_correct": false
+        },
+        {
+          "text": "Los acaecidos en actos de salvamento y en otros de naturaleza anloga, cuando unos y otros",
+          "is_correct": false
+        },
+        {
+          "text": "Los que sufra el trabajador al ir o al volver del lugar de trabajo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Se presumir, salvo prueba en contrario, que son constitutivas de accidente de trabajo:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los Regmenes de la Seguridad Social existentes en la actualidad, son:",
+      "options": [
+        {
+          "text": "Cinco.",
+          "is_correct": false
+        },
+        {
+          "text": "Siete.",
+          "is_correct": false
+        },
+        {
+          "text": "Seis.",
+          "is_correct": false
+        },
+        {
+          "text": "Depende de si hablamos de la parte contributiva o de la no contributiva.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los Regmenes de la Seguridad Social existentes en la actualidad, son:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las pensiones de la Seguridad se revalorizarn al comienzo de cada ao:",
+      "options": [
+        {
+          "text": "Las contributivas, en el porcentaje equivalente al valor medio del IPC de los 12 meses",
+          "is_correct": false
+        },
+        {
+          "text": "Las no contributivas, en el porcentaje equivalente al valor medio del IPC de los 12",
+          "is_correct": false
+        },
+        {
+          "text": "Las contributivas y las no contributivas, en el porcentaje equivalente al valor medio del",
+          "is_correct": false
+        },
+        {
+          "text": "Las contributivas, en funcin del ndice de revalorizacin previsto en la correspondiente",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las pensiones de la Seguridad se revalorizarn al comienzo de cada ao:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No es correcto que:",
+      "options": [
+        {
+          "text": "Las personas que realizasen prcticas formativas en empresas, instituciones o entidades",
+          "is_correct": false
+        },
+        {
+          "text": "La a) es correcta con independencia de que las prcticas sean remuneradas o no.",
+          "is_correct": false
+        },
+        {
+          "text": "La accin protectora ser la correspondiente al rgimen General con la exclusin de",
+          "is_correct": false
+        },
+        {
+          "text": "esempleo, FOGASA y formacin profesional. En el supuesto de las prcticas no",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No es correcto que:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No es correcto que:",
+      "options": [
+        {
+          "text": "El ejercicio corresponsable del cuidado del lactante consiste en un subsidio.",
+          "is_correct": false
+        },
+        {
+          "text": "El nacimiento y cuidado de menor consiste en un subsidio.",
+          "is_correct": false
+        },
+        {
+          "text": "La prestacin de orfandad consiste en un subsidio.",
+          "is_correct": false
+        },
+        {
+          "text": "La pensin de orfandad consiste en un subsidio.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No es correcto que:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn el artculo 109 de la LGSS 8/2015, el primer recurso para la financiacin de la",
+      "options": [
+        {
+          "text": "Las cuotas de las personas obligadas.",
+          "is_correct": false
+        },
+        {
+          "text": "Las aportaciones progresivas del Estado, que se consignarn con carcter permanente en sus",
+          "is_correct": false
+        },
+        {
+          "text": "Las cantidades recaudadas en concepto de recargos, sanciones u otras de naturaleza anloga.",
+          "is_correct": false
+        },
+        {
+          "text": "Los frutos, rentas o intereses y cualquier otro producto de sus recursos patrimoniales en los",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el artculo 109 de la LGSS 8/2015, el primer recurso para la financiacin de la",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Quienes por accin u omisin hayan contribuido a hacer posible la percepcin indebida de",
+      "options": [
+        {
+          "text": "Respondern subsidiariamente con los perceptores, salvo buena fe probada, de la obligacin",
+          "is_correct": false
+        },
+        {
+          "text": "e reintegrar.",
+          "is_correct": false
+        },
+        {
+          "text": "Respondern solidariamente con los perceptores, salvo buena fe probada, de la obligacin",
+          "is_correct": false
+        },
+        {
+          "text": "e reintegrar.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Quienes por accin u omisin hayan contribuido a hacer posible la percepcin indebida de",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No es correcto con respecto al complemento de pensiones contributivas para la reduccin",
+      "options": [
+        {
+          "text": "e la brecha de gnero: :",
+          "is_correct": false
+        },
+        {
+          "text": "Que su importe por hijo o hija se fijar en la LPGE. La cuanta a percibir estar limitada a",
+          "is_correct": false
+        },
+        {
+          "text": "uatro veces el importe mensual fijado por hijo o hija y ser incrementada al comienzo de",
+          "is_correct": false
+        },
+        {
+          "text": "ada ao en el mismo porcentaje previsto en la correspondiente LPGE para las pensiones",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No es correcto con respecto al complemento de pensiones contributivas para la reduccin",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Fondo de Reserva de la Seguridad Social tiene por finalidad:",
+      "options": [
+        {
+          "text": "Atender las necesidades financieras en materia de prestaciones contributivas del sistema de",
+          "is_correct": false
+        },
+        {
+          "text": "Atender las necesidades originadas por desviaciones entre ingresos y gastos.",
+          "is_correct": false
+        },
+        {
+          "text": "Atender las necesidades financieras en materia de prestaciones contributivas y no",
+          "is_correct": false
+        },
+        {
+          "text": "ontributivas del sistema de la Seguridad Social.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Fondo de Reserva de la Seguridad Social tiene por finalidad:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Se revalorizarn al comienzo de cada ao en el porcentaje equivalente al valor medio de las",
+      "options": [
+        {
+          "text": "onsumo de los doce meses previos a diciembre del ao anterior:",
+          "is_correct": false
+        },
+        {
+          "text": "Todas las pensiones de Seguridad Social en su modalidad contributiva.",
+          "is_correct": false
+        },
+        {
+          "text": "El complemento de brecha de gnero.",
+          "is_correct": false
+        },
+        {
+          "text": "La cuanta mxima y mnima de las pensiones contributivas,",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Se revalorizarn al comienzo de cada ao en el porcentaje equivalente al valor medio de las",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Se declaran expresamente comprendidos en el RETA:",
+      "options": [
+        {
+          "text": "Los trabajadores incluidos en el Sistema Especial para Trabajadores por Cuenta Propia",
+          "is_correct": false
+        },
+        {
+          "text": "grarios.",
+          "is_correct": false
+        },
+        {
+          "text": "Quienes ejerzan las funciones de direccin y gerencia que conlleva el desempeo del",
+          "is_correct": false
+        },
+        {
+          "text": "argo de consejero o administrador.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Se declaran expresamente comprendidos en el RETA:",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El tope mximo de cotizacin (sealar la incorrecta):",
+      "options": [
+        {
+          "text": "Lo fija anualmente la LPGE.",
+          "is_correct": false
+        },
+        {
+          "text": "Se incrementa en el mismo porcentaje en que se incrementen las pensiones",
+          "is_correct": false
+        },
+        {
+          "text": "ontributivas.",
+          "is_correct": false
+        },
+        {
+          "text": "Desaparece desde el 1 de enero de 2025.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El tope mximo de cotizacin (sealar la incorrecta):",
+      "source": "TEST Tema 4 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

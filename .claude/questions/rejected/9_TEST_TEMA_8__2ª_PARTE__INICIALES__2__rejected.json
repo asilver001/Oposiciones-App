@@ -1,0 +1,2020 @@
+{
+  "metadata": {
+    "source_file": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+    "source_path": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+    "tema": 8,
+    "categoria": "general",
+    "extraction_date": "2026-01-15T23:40:06.946355",
+    "reformulation_date": "2026-01-15T23:47:35.710123",
+    "total_questions": 40,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.907549",
+    "completed_count": 0,
+    "failed_count": 40
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "Segn la Constitucin Espaola de 1978, un Delegado dirigir la Administracin del Estado en el territorio de la Comunidad Autnoma y la coordinar, cuando proceda, con la Administracin propia de la Comunidad. Ese Delegado ser nombrado",
+        "options": [
+          {
+            "text": "Por el Rey.",
+            "is_correct": false
+          },
+          {
+            "text": "Por el Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Por el Presidente del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Por las Cortes Generales.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn la Constitucin Espaola de 1978, un Delegado dirigir la Administracin del Estado en el territorio de la Comunidad Autnoma y la coordinar, cuando proceda, con la Administracin propia de la Comunidad. Ese Delegado ser nombrado",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Quin propone el nombramiento de los Delegados del Gobierno en las Comunidades Autnomas?",
+        "options": [
+          {
+            "text": "El Consejo de Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Congreso",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "El Rey.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Quin propone el nombramiento de los Delegados del Gobierno en las Comunidades Autnomas?",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'El Rey....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Indicar la afirmacin falsa en cuanto a la figura del Delegado del Gobierno",
+        "options": [
+          {
+            "text": "Dependen orgnicamente del Presidente del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Ostentan la representacin ordinaria del Estado en el territorio de la Comunidad Autnoma.",
+            "is_correct": false
+          },
+          {
+            "text": "Dependen funcionalmente del Ministerio competente por razn de materia.",
+            "is_correct": false
+          },
+          {
+            "text": "Debern reunir los requisitos de idoneidad establecidos en la Ley 3/2015, de 30 de marzo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Indicar la afirmacin falsa en cuanto a la figura del Delegado del Gobierno",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En caso de ausencia, vacante o enfermedad del titular de la Delegacin del Gobierno ser suplido por",
+        "options": [
+          {
+            "text": "El Subdelegado del Gobierno de la provincia en que tenga su sede.",
+            "is_correct": false
+          },
+          {
+            "text": "El Secretario General.",
+            "is_correct": false
+          },
+          {
+            "text": "El Subdelegado del Gobierno que el Delegado designe.",
+            "is_correct": false
+          },
+          {
+            "text": "La persona que determine el Presidente del Gobierno.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En caso de ausencia, vacante o enfermedad del titular de la Delegacin del Gobierno ser suplido por",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los Delegados del Gobierno son rganos directivos de la Administracin General del Estado y tienen rango de",
+        "options": [
+          {
+            "text": "Director General.",
+            "is_correct": false
+          },
+          {
+            "text": "Subdirector General.",
+            "is_correct": false
+          },
+          {
+            "text": "Secretario General Tcnico",
+            "is_correct": false
+          },
+          {
+            "text": "Subsecretario.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los Delegados del Gobierno son rganos directivos de la Administracin General del Estado y tienen rango de",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De conformidad con el artculo 70 de la Ley 40/2015, de 1 de octubre",
+        "options": [
+          {
+            "text": "Por Ley se determinarn las islas en las que existir un Director Insular de la AGE.",
+            "is_correct": false
+          },
+          {
+            "text": "Por Ley Orgnica se determinarn las islas en las que existir un Director Insular de la AGE.",
+            "is_correct": false
+          },
+          {
+            "text": "Reglamentariamente se determinarn las islas en las que existir un Director Insular de la AGE.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Gobierno determinar las islas en las que existir un Director Insular de la AGE.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De conformidad con el artculo 70 de la Ley 40/2015, de 1 de octubre",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En las Comunidades Autnomas Uniprovinciales",
+        "options": [
+          {
+            "text": "No existirn en ningn caso Subdelegaciones del Gobierno",
+            "is_correct": false
+          },
+          {
+            "text": "Podrn crearse por Ley Subdelegaciones del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Podrn crearse por Resolucin del Delegado del Gobierno subdelegaciones del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Podrn crearse por Real Decreto Subdelegaciones del Gobierno",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En las Comunidades Autnomas Uniprovinciales",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "A los Subdelegados del Gobierno les corresponde",
+        "options": [
+          {
+            "text": "Resolver los recursos en va administrativa interpuestos contra las resoluciones y actos dictados por los rganos de la Delegacin, previo informe, en todo caso, del Ministerio competente por razn de la materia.",
+            "is_correct": false
+          },
+          {
+            "text": "Ejercer la potestad sancionadora, expropiatoria y cualesquiera otras que les confieran las normas o que les sean desconcentradas o delegadas.",
+            "is_correct": false
+          },
+          {
+            "text": "Informar las medidas de optimizacin de recursos humanos y materiales en su mbito territorial, especialmente las que afecten a ms de un Departamento.",
+            "is_correct": false
+          },
+          {
+            "text": "Mantener las necesarias relaciones de cooperacin y coordinacin de la Administracin General del Estado y sus Organismos pblicos con la de la Comunidad Autnoma y con las correspondientes Entidades locales en el mbito de la provincia.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "A los Subdelegados del Gobierno les corresponde",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 71 LRJSP, los servicios territoriales de la Administracin General del Estado en la Comunidad Autnoma se organizarn atendiendo al mejor cumplimiento de sus fines, en",
+        "options": [
+          {
+            "text": "servicios integrados y no integrados en las Delegaciones del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "servicios centralizados y descentralizados en las Delegaciones del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "servicios centrales y perifricos en las Delegaciones del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "servicios propios y delegados en las Delegaciones del Gobierno.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 71 LRJSP, los servicios territoriales de la Administracin General del Estado en la Comunidad Autnoma se organizarn atendiendo al mejor cumplimiento de sus fines, en",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los Directores insulares",
+        "options": [
+          {
+            "text": "Dependen jerrquicamente del Delegado del Gobierno, o del Subdelegado en la provincia cuando este cargo exista.",
+            "is_correct": false
+          },
+          {
+            "text": "Dependen jerrquicamente del Delegado del Gobierno, o del Subdelegado cuando as lo determine el Delegado.",
+            "is_correct": false
+          },
+          {
+            "text": "Ejercen, en su mbito territorial, las competencias atribuidas por la Ley a los Delegados del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Son nombrados entre funcionarios del Subgrupo A1 por el Subdelegado del Gobierno por el procedimiento de libre designacin, y en su defecto, por el Delegado del Gobierno en la Comunidad Autnoma.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los Directores insulares",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los Directores insulares sern nombrados entre",
+        "options": [
+          {
+            "text": "Personas con acreditada experiencia en la gestin pblica o privada",
+            "is_correct": false
+          },
+          {
+            "text": "Funcionarios de carrera del Subgrupo A1 o A2.",
+            "is_correct": false
+          },
+          {
+            "text": "Funcionarios de carrera del Subgrupo A1",
+            "is_correct": false
+          },
+          {
+            "text": "Funcionarios de carrera de la Administracin del Estado y slo si la normativa de aplicacin lo prev podrn ser funcionarios procedentes de otras Administraciones Pblicas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los Directores insulares sern nombrados entre",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los Subdelegados del Gobierno son rganos directivos de la Administracin General del Estado y tienen rango de",
+        "options": [
+          {
+            "text": "Director General.",
+            "is_correct": false
+          },
+          {
+            "text": "Subdirector General.",
+            "is_correct": false
+          },
+          {
+            "text": "Secretario General Tcnico",
+            "is_correct": false
+          },
+          {
+            "text": "Subsecretario.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los Subdelegados del Gobierno son rganos directivos de la Administracin General del Estado y tienen rango de",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Las Delegaciones del Gobierno",
+        "options": [
+          {
+            "text": "Estn adscritas orgnicamente al Consejo de Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "Estn adscritas orgnicamente a la Presidencia del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Estn adscritas orgnicamente al Ministerio del Interior.",
+            "is_correct": false
+          },
+          {
+            "text": "Estn adscritas orgnicamente al Ministerio de Poltica Territorial y Memoria Democrtica",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las Delegaciones del Gobierno",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los Delegados del Gobierno dependen orgnicamente",
+        "options": [
+          {
+            "text": "Del Ministerio de Poltica Territorial y Memoria Democrtica",
+            "is_correct": false
+          },
+          {
+            "text": "Del Presidente del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Del Consejo de Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "Del Congreso.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los Delegados del Gobierno dependen orgnicamente",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los Delegados del Gobierno dependen funcionalmente",
+        "options": [
+          {
+            "text": "Del Presidente del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Del Ministro competente por razn de la materia.",
+            "is_correct": false
+          },
+          {
+            "text": "Del Presidente de la Comunidad Autnoma.",
+            "is_correct": false
+          },
+          {
+            "text": "Del Consejo de Ministros.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los Delegados del Gobierno dependen funcionalmente",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En la organizacin perifrica de la AGE son rganos directivos",
+        "options": [
+          {
+            "text": "Los delegados del gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Los delegados del gobierno y subdelegados del gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Los delegados del gobierno, subdelegados del gobierno y directores insulares.",
+            "is_correct": false
+          },
+          {
+            "text": "Los subdelegados del gobierno y directores insulares.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En la organizacin perifrica de la AGE son rganos directivos",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los servicios no integrados en las Delegaciones del Gobierno dependen",
+        "options": [
+          {
+            "text": "Del Ministerio de Poltica Territorial y Memoria Democrtica",
+            "is_correct": false
+          },
+          {
+            "text": "Del rgano central competente sobre el sector de actividad en el que aqullos operen.",
+            "is_correct": false
+          },
+          {
+            "text": "De la Delegacin o Subdelegacin del Gobierno correspondiente.",
+            "is_correct": false
+          },
+          {
+            "text": "De la Presidencia del Gobierno.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los servicios no integrados en las Delegaciones del Gobierno dependen",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los servicios territoriales integrados dependern",
+        "options": [
+          {
+            "text": "De la Presidencia del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Del Delegado del Gobierno, o en su caso Subdelegado del Gobierno, a travs de la Presidencia del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "De la Presidencia del Gobierno, a travs del Ministerio de Poltica Territorial y Memoria Democrtica",
+            "is_correct": false
+          },
+          {
+            "text": "Del Delegado del Gobierno, o en su caso Subdelegado del Gobierno, a travs de la Secretara General.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los servicios territoriales integrados dependern",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Existir un Director insular de la Administracin General del Estado, con el nivel que se determine en cada caso en la relacin de puestos de trabajo, en las islas de",
+        "options": [
+          {
+            "text": "Menorca, Ibiza-Formentera, Lanzarote, Fuerteventura, La Palma, El Hierro y La Gomera.",
+            "is_correct": false
+          },
+          {
+            "text": "Mallorca, Ibiza-Formentera, Lanzarote, Fuerteventura, La Palma, El Hierro y La Gomera.",
+            "is_correct": false
+          },
+          {
+            "text": "Menorca, Ibiza-Formentera, Tenerife, Fuerteventura, La Palma, El Hierro y La Gomera.",
+            "is_correct": false
+          },
+          {
+            "text": "Menorca, Ibiza-Formentera, Lanzarote, Fuerteventura, La Palma, El Hierro y Gran Canaria.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Existir un Director insular de la Administracin General del Estado, con el nivel que se determine en cada caso en la relacin de puestos de trabajo, en las islas de",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la correcta en relacin con el Delegado del Gobierno",
+        "options": [
+          {
+            "text": "Es un rgano superior.",
+            "is_correct": false
+          },
+          {
+            "text": "Ser nombrado por Real Decreto del Presidente del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "El nombramiento se llevar a cabo entre funcionarios pertenecientes a Cuerpos o Escalas para cuyo ingreso se exija ttulo superior.",
+            "is_correct": false
+          },
+          {
+            "text": "Ostenta la condicin de alto cargo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la correcta en relacin con el Delegado del Gobierno",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En cada Delegacin del Gobierno existir un rgano para la gestin de los servicios comunes llamado",
+        "options": [
+          {
+            "text": "Gabinete.",
+            "is_correct": false
+          },
+          {
+            "text": "Direccin General.",
+            "is_correct": false
+          },
+          {
+            "text": "rea funcional.",
+            "is_correct": false
+          },
+          {
+            "text": "Secretara General.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En cada Delegacin del Gobierno existir un rgano para la gestin de los servicios comunes llamado",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Gabinete....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Los Directores Insulares",
+        "options": [
+          {
+            "text": "Son nombrados por Real Decreto publicado en el BOE.",
+            "is_correct": false
+          },
+          {
+            "text": "Su nombramiento corresponde al Delegado del Gobierno por el procedimiento de libre designacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Son nombrados entre funcionarios de carrera del Estado, de las Comunidades Autnomas o de las Entidades Locales, pertenecientes a Cuerpos o Escalas clasificados como Subgrupo A1 o A2.",
+            "is_correct": false
+          },
+          {
+            "text": "Son rganos directivos de la Administracin Territorial del Estado.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los Directores Insulares",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Las Delegaciones del Gobierno tendrn su sede",
+        "options": [
+          {
+            "text": "En la localidad donde radique el Consejo de Gobierno de la Comunidad Autnoma, salvo que el Estatuto de Autonoma disponga expresamente otra cosa y sin perjuicio de lo que establezca el Consejo de Ministros",
+            "is_correct": false
+          },
+          {
+            "text": "En la localidad donde radique el Consejo de Gobierno de la Comunidad Autnoma, salvo que el Consejo de Ministros acuerde ubicarla en otra distinta y sin perjuicio de lo que disponga expresamente el Estatuto de Autonoma.",
+            "is_correct": false
+          },
+          {
+            "text": "En todo caso en la localidad donde radique la sede del Consejo de Gobierno de la",
+            "is_correct": false
+          },
+          {
+            "text": "En todo caso donde disponga expresamente el Estatuto de Autonoma de la Comunidad Autnoma",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las Delegaciones del Gobierno tendrn su sede",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los Directores Insulares",
+        "options": [
+          {
+            "text": "Tienen la consideracin de rganos directivos.",
+            "is_correct": false
+          },
+          {
+            "text": "Tienen rango de Subdirector General.",
+            "is_correct": false
+          },
+          {
+            "text": "Son nombrados por Resolucin del Subdelegado del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "No son altos cargos.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los Directores Insulares",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Podrn crearse por Real Decreto Subdelegaciones del Gobierno en las Comunidades Autnomas uniprovinciales, y para ello habrn de tenerse en cuenta circunstancias tales como",
+        "options": [
+          {
+            "text": "La poblacin del territorio, el volumen de gestin o sus singularidades geogrficas, sociales o econmicas.",
+            "is_correct": false
+          },
+          {
+            "text": "La poblacin del territorio, el carcter de capital autonmica, el volumen de gestin o sus singularidades geogrficas, sociales o econmicas.",
+            "is_correct": false
+          },
+          {
+            "text": "La amplitud del territorio, el volumen de gestin o sus singularidades geogrficas, sociales o econmicas.",
+            "is_correct": false
+          },
+          {
+            "text": "La poblacin del territorio, el volumen de servicios y prestaciones asumidos por la Comunidad Autnoma, o sus singularidades geogrficas, sociales o econmicas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Podrn crearse por Real Decreto Subdelegaciones del Gobierno en las Comunidades Autnomas uniprovinciales, y para ello habrn de tenerse en cuenta circunstancias tales como",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La Comisin interministerial de coordinacin de la Administracin perifrica del Estado es un rgano colegiado, adscrito",
+        "options": [
+          {
+            "text": "A la Presidencia del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Consejo de Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Ministerio de la Presidencia.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Ministerio de Poltica Territorial.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La Comisin interministerial de coordinacin de la Administracin perifrica del Estado es un rgano colegiado, adscrito",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta",
+        "options": [
+          {
+            "text": "El Director insular tendr el nivel que se determine en la relacin de puestos de trabajo y ostentar la consideracin de alto cargo.",
+            "is_correct": false
+          },
+          {
+            "text": "El Subdelegado del Gobierno tiene rango de subdirector General y no ostenta la consideracin de alto cargo.",
+            "is_correct": false
+          },
+          {
+            "text": "El Delegado del Gobierno tiene rango de Subsecretario y ser nombrado entre funcionarios pertenecientes a Cuerpos o Escalas clasificados como Subgrupo A1.",
+            "is_correct": false
+          },
+          {
+            "text": "El Delegado del Gobierno y el Subdelegado del Gobierno son rganos directivos que ostentan la consideracin de alto cargo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La estructura de las Delegaciones y Subdelegaciones del Gobierno se fijar por",
+        "options": [
+          {
+            "text": "Real Decreto del Consejo de Ministros a propuesta del Presidente del Gobierno, en razn de la dependencia orgnica de las Delegaciones del Gobierno, y contarn, en todo caso, con una Secretara General Tcnica.",
+            "is_correct": false
+          },
+          {
+            "text": "Real Decreto del Consejo de Ministros a propuesta del Ministerio de Poltica Territorial, en razn de la dependencia orgnica de las Delegaciones del Gobierno, y contarn, en todo caso, con una Secretara General Tcnica.",
+            "is_correct": false
+          },
+          {
+            "text": "Real Decreto del Consejo de Ministros a propuesta del Presidente del Gobierno, en razn de la dependencia orgnica de las Delegaciones del Gobierno, y contarn, en todo caso, con una Secretara General.",
+            "is_correct": false
+          },
+          {
+            "text": "Real Decreto del Consejo de Ministros a propuesta del Ministerio de Poltica Territorial, en razn de la dependencia orgnica de las Delegaciones del Gobierno, y contarn, en todo caso, con una Secretara General.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La estructura de las Delegaciones y Subdelegaciones del Gobierno se fijar por",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El nombramiento de los Delegados del Gobierno",
+        "options": [
+          {
+            "text": "Es propuesto por el Ministro de Poltica Territorial y Memoria Democrtica",
+            "is_correct": false
+          },
+          {
+            "text": "Se realizar respetando los principios de igualdad, mrito y capacidad.",
+            "is_correct": false
+          },
+          {
+            "text": "Atender a criterios de competencia profesional y experiencia.",
+            "is_correct": false
+          },
+          {
+            "text": "En ningn caso, deber reunir los requisitos de idoneidad establecidos en la Ley 3/2015, de 30 de marzo, reguladora del ejercicio del alto cargo de la Administracin General del Estado.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El nombramiento de los Delegados del Gobierno",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la falsa en relacin al nombramiento de los Subdelegados del Gobierno",
+        "options": [
+          {
+            "text": "Son nombrados por el procedimiento de libre designacin.",
+            "is_correct": false
+          },
+          {
+            "text": "El nombramiento se efectuar por Real Decreto del Consejo de Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "El nombramiento ser publicado en el BOE.",
+            "is_correct": false
+          },
+          {
+            "text": "El nombramiento se producir entre funcionarios de carrera pertenecientes a Cuerpos o Escalas clasificados como Subgrupo A1.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la falsa en relacin al nombramiento de los Subdelegados del Gobierno",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La integracin de nuevos servicios territoriales o la desintegracin de servicios territoriales ya integrados en las Delegaciones del Gobierno, se llevar a cabo mediante",
+        "options": [
+          {
+            "text": "Real Decreto de Consejo de Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "Orden Ministerial.",
+            "is_correct": false
+          },
+          {
+            "text": "Real Decreto cuando contemple unidades con nivel de Subdireccin General o equivalentes o por Orden conjunta cuando afecte a rganos inferiores.",
+            "is_correct": false
+          },
+          {
+            "text": "Acuerdo del Consejo de Ministros.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La integracin de nuevos servicios territoriales o la desintegracin de servicios territoriales ya integrados en las Delegaciones del Gobierno, se llevar a cabo mediante",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Es competencia del Delegado del Gobierno",
+        "options": [
+          {
+            "text": "Proteger el libre ejercicio de los derechos y libertades, garantizando la seguridad ciudadana, todo ello dentro de las competencias estatales en la materia. A estos efectos, dirigir las Fuerzas y Cuerpos de Seguridad del Estado en la provincia.",
+            "is_correct": false
+          },
+          {
+            "text": "Formular a los Ministerios competentes, en cada caso, las propuestas que estime convenientes sobre los objetivos contenidos en los planes y programas que hayan de ejecutar los servicios territoriales y los de los Organismos pblicos, e informar, regular y peridicamente, a los Ministerios competentes sobre la gestin de sus servicios territoriales.",
+            "is_correct": false
+          },
+          {
+            "text": "Dirigir y coordinar la proteccin civil en el mbito de la provincia.",
+            "is_correct": false
+          },
+          {
+            "text": "Dirigir, en su caso, los servicios integrados de la Administracin General del Estado, de acuerdo con las instrucciones del Delegado del Gobierno y de los Ministerios correspondientes; e impulsar, supervisar e inspeccionar los servicios no integrados.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Es competencia del Delegado del Gobierno",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Las Misiones Diplomticas son, segn la ley 2/2014, de dos tipos",
+        "options": [
+          {
+            "text": "Permanentes o Especiales.",
+            "is_correct": false
+          },
+          {
+            "text": "Permanentes o Singulares.",
+            "is_correct": false
+          },
+          {
+            "text": "Temporales o Especiales.",
+            "is_correct": false
+          },
+          {
+            "text": "Permanentes, Temporales o Especiales.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las Misiones Diplomticas son, segn la ley 2/2014, de dos tipos",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con lo establecido por la ley 2/2014, las Misiones Diplomticas Permanentes, representan con carcter permanente, al Reino de Espaa ante",
+        "options": [
+          {
+            "text": "Los Estados con los que tiene establecidas relaciones diplomticas.",
+            "is_correct": false
+          },
+          {
+            "text": "Las Organizaciones Internacionales.",
+            "is_correct": false
+          },
+          {
+            "text": "Los rganos de las organizaciones internacionales.",
+            "is_correct": false
+          },
+          {
+            "text": "Los Estados con los que tiene establecidas relaciones diplomticas temporales, para un cometido determinado.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con lo establecido por la ley 2/2014, las Misiones Diplomticas Permanentes, representan con carcter permanente, al Reino de Espaa ante",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La creacin y supresin de Representaciones Permanentes se realizar mediante",
+        "options": [
+          {
+            "text": "Orden del Ministro de Asuntos Exteriores Unin Europea y Cooperacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Real Decreto del Consejo de Ministros previo informe del Consejo Ejecutivo de Poltica Exterior.",
+            "is_correct": false
+          },
+          {
+            "text": "Ley.",
+            "is_correct": false
+          },
+          {
+            "text": "Real Decreto del Presidente del Gobierno previo informe del Consejo Ejecutivo de Poltica Exterior.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La creacin y supresin de Representaciones Permanentes se realizar mediante",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Ley....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta",
+        "options": [
+          {
+            "text": "La creacin de las Oficinas Consulares Honorarias se realizar mediante Real Decreto del Consejo de Ministros, previo informe del Consejo Ejecutivo de Poltica Exterior.",
+            "is_correct": false
+          },
+          {
+            "text": "Las Oficinas Consulares de Carrera se crearn por Orden del Ministro de Asuntos Exteriores Unin Europea y Cooperacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Las Oficinas Consulares podrn ser de Carrera y Honorarias.",
+            "is_correct": false
+          },
+          {
+            "text": "Las Oficinas Consulares representan al Reino de Espaa en un rgano de una organizacin internacional, en una Conferencia de Estados convocada por una organizacin internacional o bajo sus auspicios.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los Embajadores sern designados y cesarn por",
+        "options": [
+          {
+            "text": "Real decreto acordado en Consejo de Ministros a propuesta del Ministro de Asuntos Exteriores Unin Europea y Cooperacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Orden del Ministro de Asuntos Exteriores Unin Europea y Cooperacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Real decreto acordado en Consejo de Ministros a propuesta del Presidente del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Real decreto del Presidente del Gobierno a propuesta del Ministro de Asuntos Exteriores Unin Europea y Cooperacin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los Embajadores sern designados y cesarn por",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La creacin y supresin de las Misiones Diplomticas Permanentes se realizar mediante",
+        "options": [
+          {
+            "text": "Real decreto del Presidente del Gobierno, a iniciativa del Ministerio de Asuntos Exteriores Unin Europea y Cooperacin, y a propuesta del Ministerio de Hacienda y Administraciones Pblicas previo informe del Consejo Ejecutivo de Poltica Exterior.",
+            "is_correct": false
+          },
+          {
+            "text": "Real decreto del Consejo de Ministros, a iniciativa del Ministerio de Asuntos Exteriores Unin Europea y Cooperacin, y a propuesta del Ministerio de Hacienda y Administraciones Pblicas, previo informe del Consejo Ejecutivo de Poltica Exterior.",
+            "is_correct": false
+          },
+          {
+            "text": "Real decreto del Presidente del Gobierno, a iniciativa del Ministerio de Asuntos Exteriores Unin Europea y Cooperacin, y a propuesta del Ministerio de Hacienda y Administraciones Pblicas, previo dictamen del Consejo de Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "Real decreto del Consejo de Ministros, a iniciativa del Ministerio de Asuntos Exteriores Unin Europea y Cooperacin, y a propuesta del Ministerio de Hacienda y Administraciones Pblicas, previo dictamen del Consejo de Estado.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La creacin y supresin de las Misiones Diplomticas Permanentes se realizar mediante",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Representan con carcter permanente a Espaa ante la Unin Europea o una Organizacin Internacional",
+        "options": [
+          {
+            "text": "Las Representaciones Permanentes.",
+            "is_correct": false
+          },
+          {
+            "text": "Las Misiones Diplomticas Permanentes.",
+            "is_correct": false
+          },
+          {
+            "text": "Las Delegaciones.",
+            "is_correct": false
+          },
+          {
+            "text": "Las Oficinas Consulares.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Representan con carcter permanente a Espaa ante la Unin Europea o una Organizacin Internacional",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Las delegaciones estarn presididas por",
+        "options": [
+          {
+            "text": "un Embajador Extraordinario y Plenipotenciario.",
+            "is_correct": false
+          },
+          {
+            "text": "un Encargado de Negocios con cartas de gabinete.",
+            "is_correct": false
+          },
+          {
+            "text": "los rganos que ostentan la representacin del Estado en el exterior: el Jefe de Estado, Presidente del Gobierno o Ministro de Asuntos Exteriores Unin Europea y Cooperacin.",
+            "is_correct": false
+          },
+          {
+            "text": "un Embajador Representante Permanente.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las delegaciones estarn presididas por",
+        "source": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 8,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:22.326261"
+}

@@ -1,0 +1,522 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** TEST TEMA 10 Políticas.pdf
+**Total preguntas:** 41
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** El derecho a la protecci�n de la salud:
+
+**Opciones:**
+  0. Es un derecho fundamental.
+  1. Cabe recabar su tutela ante el Tribunal Constitucional mediante el recurso de amparo.
+  2. Se encuentra regulado en el Cap�tulo III del T�tulo I de la Constituci�n Espa�ola.
+  3. Todas las respuestas son correctas.
+
+---
+
+### Pregunta 2
+
+**Texto:** De acuerdo con lo establecido en el art�culo 149.1.16� de la Constituci�n, es una
+
+**Opciones:**
+  0. ompetencia atribuida al Estado en materia sanitaria:
+  1. Todas las competencias legislativas.
+  2. Las funciones de inspecci�n sanitaria.
+  3. Las competencias sobre la sanidad interior.
+
+---
+
+### Pregunta 3
+
+**Texto:** En relaci�n con las �reas de Salud, la Ley General de Sanidad (Ley 14/1986, de 25
+
+**Opciones:**
+  0. e abril), indica que:
+  1. En todo caso cubrir�n una poblaci�n no superior a 250.000 habitantes.
+  2. Existir� al menos una por Comunidad Aut�noma.
+  3. Tendr�n como m�nimo un hospital adscrito.
+
+---
+
+### Pregunta 4
+
+**Texto:** Qu� prestaciones de la cartera com�n del Sistema Nacional de Salud tendr�n
+
+**Opciones:**
+  0. ar�cter gratuito:
+  1. Todas las incluidas en la cartera com�n.
+  2. Las incluidas en la cartera com�n b�sica de servicios asistenciales.
+  3. Las incluidas en la cartera com�n m�nima de servicios asistenciales.
+
+---
+
+### Pregunta 5
+
+**Texto:** El �rgano permanente de coordinaci�n, cooperaci�n, comunicaci�n e informaci�n de
+
+**Opciones:**
+  0. El Consejo Interterritorial del Sistema Nacional de Salud.
+  1. El Comit� territorial del Sistema Nacional de Salud.
+  2. El Consejo General de la Salud.
+  3. La Conferencia Sectorial de Sanidad.
+
+---
+
+### Pregunta 6
+
+**Texto:** De acuerdo con lo establecido en la Ley 16/2003, de 28 de mayo, de cohesi�n y
+
+**Opciones:**
+  0. alidad del Sistema Nacional de Salud para hacer efectivo el derecho a la protecci�n
+  1. e la salud y a la atenci�n sanitaria con cargo a los fondos p�blicos de las
+  2. dministraciones competentes, las personas titulares de los citados derechos deber�n
+  3. Tener nacionalidad espa�ola.
+
+---
+
+### Pregunta 7
+
+**Texto:** De acuerdo con lo establecido en el art�culo 79 de la Ley 14/1986 (Ley General de
+
+**Opciones:**
+  0. Las tasas por la prestaci�n de determinados servicios.
+  1. Las cotizaciones sociales.
+  2. Las transferencias del Estado.
+  3. Los rendimientos de capital.
+
+---
+
+### Pregunta 8
+
+**Texto:** De acuerdo con lo establecido en el art�culo 149.1.3� de la Constituci�n, el Estado
+
+**Opciones:**
+  0. La competencia legislativa exclusiva en materia de relaciones internaciones,
+  1. orrespondiendo a las CCAA su ejecuci�n.
+  2. Las bases y la coordinaci�n general de la pol�tica exterior.
+  3. La competencia exclusiva en materia de relaciones internacionales.
+
+---
+
+### Pregunta 9
+
+**Texto:** El conjunto de decisiones y acciones del Gobierno en sus relaciones con otros actores
+
+**Opciones:**
+  0. e la escena internacional con objeto de definir, promover y defender los valores e
+  1. Acci�n Exterior del Estado.
+  2. Servicio Exterior del Estado.
+  3. Pol�tica Exterior.
+
+---
+
+### Pregunta 10
+
+**Texto:** De acuerdo con lo establecido en la Ley de Acci�n y Servicio Exterior, no es un
+
+**Opciones:**
+  0. La defensa del medio ambiente y la protecci�n de la biodiversidad.
+  1. El fortalecimiento de la Comunidad Iberoamericana de Naciones.
+  2. El fomento de instituciones multiculturales fuertes y leg�timas.
+  3. La seguridad y bienestar de Espa�a y sus ciudadanos.
+
+---
+
+### Pregunta 11
+
+**Texto:** �Qui�n dirige la Pol�tica Exterior?:
+
+**Opciones:**
+  0. El Gobierno.
+  1. El Ministro de Defensa junto con el de Exteriores y Cooperaci�n (en la actualidad,
+  2. suntos Exteriores, Uni�n Europea y Cooperaci�n).
+  3. El Secretario de Estado de Asuntos Exteriores, con car�cter general.
+
+---
+
+### Pregunta 12
+
+**Texto:** No tiene la consideraci�n de sujeto de la Acci�n Exterior del Estado:
+
+**Opciones:**
+  0. La Corona.
+  1. Las Fuerzas y Cuerpos de Seguridad del Estado.
+  2. Las Organizaciones no Gubernamentales de Desarrollo (ONGD).
+  3. Las Cortes Generales.
+
+---
+
+### Pregunta 13
+
+**Texto:** �A qui�n le corresponde la iniciativa para la elaboraci�n de los instrumentos de
+
+**Opciones:**
+  0. Al Gobierno.
+  1. Al Ministerio de Asuntos Exteriores y de Cooperaci�n (en la actualidad, Ministerio
+  2. e Asuntos Exteriores, Uni�n Europa y Cooperaci�n).
+  3. A cada Departamento ministerial.
+
+---
+
+### Pregunta 14
+
+**Texto:** �Qu� �rgano colegiado se encarga del apoyo y asesoramiento al Presidente del
+
+**Opciones:**
+  0. El Ministerio de Asuntos Exteriores y de Cooperaci�n (Ministerio de Asuntos
+  1. EL Secretario de Estado de Asuntos Exteriores.
+  2. El Consejo de Pol�tica Exterior.
+  3. El Consejo Ejecutivo de Pol�tica Exterior.
+
+---
+
+### Pregunta 15
+
+**Texto:** La pol�tica de cooperaci�n para el desarrollo sostenible:
+
+**Opciones:**
+  0. Es un elemento integral, pero no definitorio de la Acci�n Exterior del Estado.
+  1. Est� sujeta al cumplimiento de los objetivos, fines y directrices de Pol�tica de
+  2. Es un elemento integral, pero no definitorio de la Pol�tica de Internacionalizaci�n de
+  3. Est� sujeta al cumplimiento de los objetivos, fines y directrices de Pol�tica de la
+
+---
+
+### Pregunta 16
+
+**Texto:** De acuerdo con lo establecido en la Ley 1/2023, de 20 de febrero, de cooperaci�n para
+
+**Opciones:**
+  0. ruta habr� que destinar a la Ayuda Oficial al Desarrollo (AOD) en el horizontes de
+  1. El 0,5%.
+  2. El 0,7%.
+  3. El 5%.
+
+---
+
+### Pregunta 17
+
+**Texto:** No es un principio b�sico de la cooperaci�n espa�ola para el desarrollo sostenible:
+
+**Opciones:**
+  0. Los derechos de las personas mayores como elemento transversal de la cooperaci�n
+  1. La defensa y el respeto a la diversidad en todas sus manifestaciones.
+  2. La solidaridad con las personas m�s desfavorecidas y con las generaciones futuras
+  3. El reconocimiento del ser humano, en su dimensi�n individual y colectiva, como
+
+---
+
+### Pregunta 18
+
+**Texto:** Es un instrumento de planificaci�n estrat�gica de la pol�tica de cooperaci�n espa�ola
+
+**Opciones:**
+  0. Los Marcos de Asociaci�n Humanitaria.
+  1. Las Comisiones Mixtas de Desarrollo.
+  2. La Asociaci�n Estrat�gica Bilateral.
+  3. La Comunicaci�n Anual.
+
+---
+
+### Pregunta 19
+
+**Texto:** �A qui�n le corresponde aprobar el Plan Director?:
+
+**Opciones:**
+  0. Al Gobierno.
+  1. Al Congreso de los Diputados.
+  2. A las Cortes Generales.
+  3. A la Agencia Espa�ola de Cooperaci�n Internacional para el Desarrollo (AECID).
+
+---
+
+### Pregunta 20
+
+**Texto:** Los acuerdos internacionales, de naturaleza administrativa, que establecen el marco
+
+**Opciones:**
+  0. Los Marcos de Asociaci�n y las Asociaciones Estrat�gica Pa�s.
+  1. Las Alianzas Pa�s y las Asociaciones Estrat�gicas Pa�s.
+  2. Los Marcos de Asociaci�n y las Alianzas Pa�s.
+  3. Los Marcos de Asociaci�n.
+
+---
+
+### Pregunta 21
+
+**Texto:** De acuerdo con lo establecido en la Ley 1/2023, de 20 de febrero, �qui�n es responsable
+
+**Opciones:**
+  0. e la evaluaci�n de la pol�tica de cooperaci�n para el desarrollo sostenible de la
+  1. dministraci�n General del Estado y organismos dependientes?:
+  2. El Consejo Superior de Cooperaci�n para el Desarrollo Sostenible y la Solidaridad
+  3. La Secretar�a de Estado de Cooperaci�n Internacional (SECI), a trav�s de la
+
+---
+
+### Pregunta 22
+
+**Texto:** A qui�n le corresponde establecer las l�neas generales y directrices b�sicas de la pol�tica
+
+**Opciones:**
+  0. Al Congreso a propuesta e iniciativa del Gobierno.
+  1. Al Gobierno, a propuesta e iniciativa del Ministro de Asuntos Exteriores, Uni�n
+  2. Al Consejo Superior de Cooperaci�n para el Desarrollo Sostenible y la Solidaridad
+  3. A las Cortes Generales a propuesta e iniciativa del Gobierno.
+
+---
+
+### Pregunta 23
+
+**Texto:** No es un �rgano de coordinaci�n y consulta de la cooperaci�n espa�ola para el
+
+**Opciones:**
+  0. esarrollo sostenible:
+  1. El Consejo Superior de Cooperaci�n para el Desarrollo Sostenible y la Solidaridad
+  2. La Comisi�n Interministerial de Cooperaci�n para el Desarrollo Sostenible y la
+  3. El Consejo Territorial de Cooperaci�n para el Desarrollo Sostenible y la Solidaridad
+
+---
+
+### Pregunta 24
+
+**Texto:** �En qu� �rgano de coordinaci�n y consulta participan, entre otros, los agentes sociales,
+
+**Opciones:**
+  0. El Consejo Superior de Cooperaci�n para el Desarrollo Sostenible y la Solidaridad
+  1. La Comisi�n Interministerial de Cooperaci�n para el Desarrollo Sostenible y la
+  2. El Consejo Territorial de Cooperaci�n para el Desarrollo Sostenible y la Solidaridad
+  3. La Conferencia Sectorial de Cooperaci�n para el Desarrollo Sostenible y la
+
+---
+
+### Pregunta 25
+
+**Texto:** En el �mbito de la AGE �cu�l de los siguientes no tiene la consideraci�n de �rgano
+
+**Opciones:**
+  0. ompetente en la ejecuci�n de la pol�tica espa�ola de cooperaci�n para el desarrollo
+  1. Las OCE (Oficinas de la Cooperaci�n Espa�ola).
+  2. La Fundaci�n Internacional y para Iberoam�rica de Administraci�n y Pol�ticas
+  3. La AECID
+
+---
+
+### Pregunta 26
+
+**Texto:** No es un instrumento o modalidad de la cooperaci�n espa�ola para el desarrollo
+
+**Opciones:**
+  0. Acci�n descentralizada.
+  1. Cooperaci�n t�cnica.
+  2. Alivio de deuda.
+  3. Cooperaci�n triangular
+
+---
+
+### Pregunta 27
+
+**Texto:** Las actividades dirigidas al fortalecimiento de capacidades institucionales y de recursos
+
+**Opciones:**
+  0. Cooperaci�n t�cnica.
+  1. Cooperaci�n triangular.
+  2. Cooperaci�n bilateral.
+  3. Cooperaci�n multilateral.
+
+---
+
+### Pregunta 28
+
+**Texto:** En relaci�n con la cooperaci�n financiera para el desarrollo sostenible, �qu� fondo crea
+
+**Opciones:**
+  0. El Fondo para la Promoci�n del Desarrollo (FONPRODE).
+  1. El Fondo de Ayuda al Desarrollo (FAD).
+  2. El Fondo Espa�ol de Desarrollo Sostenible (FEDES)
+  3. El Fondo para la Solidaridad Global (FONSO)
+
+---
+
+### Pregunta 29
+
+**Texto:** De acuerdo con lo establecido en la Ley 1/2023, de 20 de febrero, �qu� porcentaje de la
+
+**Opciones:**
+  0. yuda Oficial al Desarrollo (AOD) habr� que destinar a la acci�n humanitaria?:
+  1. El 0,5%.
+  2. El 0,7%
+  3. El 10%
+
+---
+
+### Pregunta 30
+
+**Texto:** La Agenda 2030:
+
+**Opciones:**
+  0. Establece 17 objetivos, los conocidos como Objetivos de Desarrollo Sostenible, a
+  1. lcanzar en 2030.
+  2. Los Objetivos de Desarrollo Sostenible se concretan en 179 metas.
+  3. Los ODS est�n dirigidos �nicamente a los pa�ses en v�as de desarrollo.
+
+---
+
+### Pregunta 31
+
+**Texto:** �Se centra alguno de los ODS en lograr la igualdad entre los g�neros y empoderar a
+
+**Opciones:**
+  0. S�, el ODS 5.
+  1. S�, el ODS 16.
+  2. S�, el ODS 24.
+  3. No.
+
+---
+
+### Pregunta 32
+
+**Texto:** No es uno de los Objetivos de Desarrollo Sostenible:
+
+**Opciones:**
+  0. Garantizar una vida sana y promover el bienestar en todas las edades.
+  1. Garantizar modalidades de consumo y producci�n sostenibles.
+  2. Combatir el VIH/SIDA, el paludismo y otras enfermedades.
+  3. Conservar y utilizar en forma sostenible los oc�anos, los mares y los recursos
+
+---
+
+### Pregunta 33
+
+**Texto:** En relaci�n con la gobernanza de la Agenda, indique cu�l de los siguientes no es un
+
+**Opciones:**
+  0. El Ministerio de Derechos Sociales, Consumo y Agenda 2030.
+  1. El Alto Comisionado para la Agenda 2030.
+  2. La Comisi�n Delegada del Gobierno para la Agenda 2030.
+  3. Comisi�n mixta (Congreso � Senado) para la coordinaci�n y seguimiento de la
+
+---
+
+### Pregunta 34
+
+**Texto:** El Consejo de Desarrollo Sostenible es:
+
+**Opciones:**
+  0. El �rgano integrado por representantes de los diferentes Ministerios le corresponde,
+  1. genda 2030 e impulsar la integraci�n de los ODS y sus metas en los respectivos
+  2. El �rgano integrado por representantes de la AGE, CCAA y EELL encargado de
+  3. El �rgano a trav�s del cual se canaliza la participaci�n de la sociedad civil en la
+
+---
+
+### Pregunta 35
+
+**Texto:** La Estrategia de Desarrollo Sostenible 2030:
+
+**Opciones:**
+  0. Identifica 17 retos pa�s.
+  1. Para dar respuesta a los retos pa�s, identifica las denominadas pol�ticas palanca, en
+  2. Uno de los retos pa�s es garantizar la paz y la estabilidad.
+  3. Poner fin a la precariedad laboral es uno de los retos pa�s identificado en la
+
+---
+
+### Pregunta 36
+
+**Texto:** De acuerdo con lo establecido en la Ley General de Telecomunicaciones, los servicios
+
+**Opciones:**
+  0. e telecomunicaciones tienen la consideraci�n de:
+  1. Servicio p�blico.
+  2. Servicio de inter�s general.
+  3. a) es correcta, salvo los servicios de telecomunicaciones para la seguridad nacional,
+
+---
+
+### Pregunta 37
+
+**Texto:** En relaci�n con el servicio universal de telecomunicaciones, se�ale la respuesta
+
+**Opciones:**
+  0. orrecta:
+  1. Es el conjunto de obligaciones de servicio p�blico que el Gobierno, por necesidades
+  2. e la seguridad nacional, de la defensa nacional, de la seguridad p�blica, de la
+  3. Es el conjunto de derechos reconocidos a los operadores de telecomunicaciones.
+
+---
+
+### Pregunta 38
+
+**Texto:** En el marco del servicio universal se ha de garantizar un servicio de acceso adecuado
+
+**Opciones:**
+  0. GPS.
+  1. B�squeda de empleo y herramientas para la b�squeda de empleo;
+  2. Correo electr�nico;
+  3. Prensa o noticias en l�nea.
+
+---
+
+### Pregunta 39
+
+**Texto:** El espectro radioel�ctrico, tiene la consideraci�n de:
+
+**Opciones:**
+  0. Bien p�blico esencial.
+  1. Bien de dominio p�blico.
+  2. Bien privativo.
+  3. Bien patrimonial.
+
+---
+
+### Pregunta 40
+
+**Texto:** En relaci�n con la celebraci�n de contratos por v�a electr�nica, se�ale la respuesta
+
+**Opciones:**
+  0. Para que sea v�lida su celebraci�n no se requiere el previo acuerdo de las partes
+  1. Establece la equivalencia entre los documentos en soporte papel y los documentos
+  2. La prueba de la celebraci�n del contrato por v�a electr�nica se sujetar� a las reglas
+  3. omercio Electr�nico.
+
+---
+
+### Pregunta 41
+
+**Texto:** Seg�n el Reglamento eIDAS, la firma electr�nica avanzada debe cumplir los
+
+**Opciones:**
+  0. Estar vinculada al firmante de manera �nica.
+  1. Permitir la identificaci�n del firmante.
+  2. Haber sido creada mediante un dispositivo cualificado de creaci�n de firmas
+  3. Estar vinculada con los datos firmados por la misma de tal modo que cualquier
+
+---

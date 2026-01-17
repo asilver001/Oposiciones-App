@@ -1,0 +1,270 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 5. Test Libro II Adjudicación.pdf
+**Total preguntas:** 20
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** De acuerdo con lo dispuesto en la Disposici�n adicional 15� de la
+
+**Opciones:**
+  0. Los plazos a contar desde la notificaci�n se computar�n desde la
+  1. La a) pero siempre que el acto objeto de notificaci�n se haya
+  2. ontrataci�n.
+  3. Los plazos se computar�n desde la recepci�n de la notificaci�n
+
+---
+
+### Pregunta 2
+
+**Texto:** El procedimiento abierto simplificado est� previsto para:
+
+**Opciones:**
+  0. Contratos de obra cuyo valor estimado sea igual o superior a 2
+  1. Contratos de suministro cuyo valor estimado sea igual o inferior a
+  2. Contratos de servicios cuyo valor estimado sea inferior a
+  3. Ninguna es correcta.
+
+---
+
+### Pregunta 3
+
+**Texto:** Al licitar los contratos que se vayan a financiar con fondos
+
+**Opciones:**
+  0. breviado (art. 159.6) en:
+  1. Contratos de obras de valor estimado inferior a 200.000 euros.
+  2. Contratos de suministros de valor estimado inferior a 100.000
+  3. Contratos de servicios (excepto los que tengan por objeto
+
+---
+
+### Pregunta 4
+
+**Texto:** El procedimiento abierto simplificado sumario se caracteriza por:
+
+**Opciones:**
+  0. Se eximir� de acreditar de solvencia pero no de acreditar
+  1. lasificaci�n.
+  2. No se exige garant�a provisional pero si definitiva.
+  3. No se exige garant�a definitiva pero si provisional.
+
+---
+
+### Pregunta 5
+
+**Texto:** El procedimiento restringido:
+
+**Opciones:**
+  0. Tiene car�cter ordinario, al igual que el abierto.
+  1. Es obligatoria su utilizaci�n en servicios intelectuales de especial
+  2. omplejidad.
+  3. Es especialmente adecuado en concesiones de servicios
+
+---
+
+### Pregunta 6
+
+**Texto:** La Documentaci�n Acreditativa del cumplimiento de los requisitos
+
+**Opciones:**
+  0. Junto con la solicitud en el caso de los procedimientos abiertos.
+  1. Junto con la proposici�n en el caso de los procedimientos
+  2. Junto con la solicitud en el caso de los procedimientos de di�logo
+  3. ompetitivo.
+
+---
+
+### Pregunta 7
+
+**Texto:** Se�ale la correcta en relaci�n a los plazos de presentaci�n de las
+
+**Opciones:**
+  0. Si no se da acceso electr�nico a
+  1. ocumentaci�n complementaria a trav�s del perfil de contratante,
+  2. La a), salvo en el supuesto de tramitaci�n de emergencia.
+  3. Los establece la mesa de contrataci�n, respetando, en todo caso,
+
+---
+
+### Pregunta 8
+
+**Texto:** Se�ale la correcta en relaci�n a los criterios de adjudicaci�n:
+
+**Opciones:**
+  0. Se podr�n tener en cuenta varios criterios, siendo posible que
+  1. En los contratos que tengan por objeto prestaciones de car�cter
+  2. Es obligatorio incluir el precio como criterio de adjudicaci�n.
+  3. En los servicios relacionados en el Anexo IV no se podr� tener en
+
+---
+
+### Pregunta 9
+
+**Texto:** Se�ale la incorrecta en relaci�n a los criterios de adjudicaci�n:
+
+**Opciones:**
+  0. En los contratos de concesi�n de obra se podr� utilizar un �nico
+  1. riterio de adjudicaci�n.
+  2. En los contratos de servicios que tengan por objeto prestaciones
+  3. e car�cter intelectual deber�n tenerse en cuenta varios criterios
+
+---
+
+### Pregunta 10
+
+**Texto:** La aplicaci�n de los criterios de adjudicaci�n se efectuar� por los
+
+**Opciones:**
+  0. En los procedimientos abierto o restringido, la valoraci�n de los
+  1. riterios cuya cuantificaci�n dependa de un juicio de valor
+  2. orresponder�, en los casos en que proceda por tener atribuida
+  3. La a), y en los restantes supuestos, solo la valoraci�n de los
+
+---
+
+### Pregunta 11
+
+**Texto:** En los casos en que el �rgano de contrataci�n presuma que una
+
+**Opciones:**
+  0. La mesa de contrataci�n, o en su defecto, el �rgano de
+  1. ontrataci�n deber� identificar las ofertas que se encuentran
+  2. Deber� requerirse al licitador o licitadores que las hubieren
+  3. esglosen razonada y detalladamente el bajo nivel de los precios,
+
+---
+
+### Pregunta 12
+
+**Texto:** Una vez aceptada la propuesta de la mesa por el �rgano de
+
+**Opciones:**
+  0. ontrataci�n, los servicios correspondientes requerir�n al licitador
+  1. Documentaci�n justificativa de disponer efectivamente de los
+  2. Documentaci�n justificativa de haber constituido la garant�a
+  3. La a), y se le otorgar� con car�cter general un plazo de 10 d�as
+
+---
+
+### Pregunta 13
+
+**Texto:** Se�ale la respuesta correcta:
+
+**Opciones:**
+  0. La mesa de contrataci�n adjudicar� el contrato dentro de los cinco
+  1. �as h�biles siguientes a la recepci�n de la documentaci�n.
+  2. No podr� declararse desierta una licitaci�n cuando exista alguna
+  3. riterios que figuren en el pliego.
+
+---
+
+### Pregunta 14
+
+**Texto:** La resoluci�n de adjudicaci�n:
+
+**Opciones:**
+  0. Deber� ser motivada y se notificar� a los candidatos y licitadores,
+  1. ebiendo ser publicada en el perfil de contratante en el plazo de
+  2. La a), pero adem�s, con car�cter general debe publicarse en el
+  3. OE.
+
+---
+
+### Pregunta 15
+
+**Texto:** Se�ale la correcta en relaci�n a la decisi�n de no adjudicar o
+
+**Opciones:**
+  0. elebrar el contrato y desistimiento del procedimiento de
+  1. djudicaci�n por la Administraci�n:
+  2. Solo podr� adoptarse la decisi�n de no adjudicar o celebrar el
+  3. ontrato fundada en una infracci�n no subsanable de las normas
+
+---
+
+### Pregunta 16
+
+**Texto:** Se�ale la correcta en relaci�n a la formalizaci�n de los contratos:
+
+**Opciones:**
+  0. Los contratos que celebren las Administraciones P�blicas deber�n
+  1. ocumento t�tulo suficiente para acceder a cualquier registro
+  2. El contratista no podr� solicitar que el contrato se eleve a escritura
+  3. En los contratos basados en un acuerdo marco o en los contratos
+
+---
+
+### Pregunta 17
+
+**Texto:** Se�ale la correcta en relaci�n a la formalizaci�n de los contratos:
+
+**Opciones:**
+  0. Si el contrato es susceptible de recurso especial en materia de
+  1. ontrataci�n conforme al art�culo 44, la formalizaci�n no podr�
+  2. andidatos.
+  3. La a), y los servicios dependientes del �rgano de contrataci�n
+
+---
+
+### Pregunta 18
+
+**Texto:** El procedimiento abierto simplificado se caracteriza por:
+
+**Opciones:**
+  0. Todos los licitadores que se presenten a licitaciones realizadas a
+  1. No proceder� la constituci�n de garant�a definitiva por parte de los
+  2. En los supuestos en que en el procedimiento se contemplen
+  3. riterios de adjudicaci�n cuya cuantificaci�n dependa de un juicio
+
+---
+
+### Pregunta 19
+
+**Texto:** Se�ale la correcta en relaci�n a los acuerdos marco:
+
+**Opciones:**
+  0. Los celebra un �nico �rgano de contrataci�n con una o varias
+  1. justarse los contratos que pretendan adjudicar durante un
+  2. La duraci�n de un acuerdo marco no podr� exceder de cinco
+  3. �os, salvo en casos excepcionales, debidamente justificados.
+
+---
+
+### Pregunta 20
+
+**Texto:** Se�ale la correcta en relaci�n a la contrataci�n centralizada:
+
+**Opciones:**
+  0. Las entidades del sector p�blico podr�n centralizar la contrataci�n
+  1. e obras, servicios, suministros y concesiones de obra y servicios
+  2. tribuy�ndola a servicios especializados.
+  3. Corresponde, seg�n la LCSP, al Ministro de Hacienda y Funci�n
+
+---

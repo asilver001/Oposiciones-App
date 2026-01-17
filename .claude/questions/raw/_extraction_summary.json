@@ -1,0 +1,456 @@
+{
+  "extraction_date": "2026-01-15T23:42:12.426379",
+  "total_files_scanned": 80,
+  "files_with_questions": 61,
+  "total_questions": 1895,
+  "by_categoria": {
+    "general": 688,
+    "repaso": 381,
+    "administrativo": 183,
+    "contratos": 178,
+    "financiero": 228,
+    "union-europea": 237
+  },
+  "by_tema": {
+    "1": 170,
+    "9": 188,
+    "10": 81,
+    "11": 70,
+    "2": 160,
+    "3": 150,
+    "4": 225,
+    "5": 120,
+    "6": 119,
+    "7": 90,
+    "8": 72
+  },
+  "files": [
+    {
+      "file": "1 TEST TEMA 1.pdf",
+      "path": "1 TEST TEMA 1.pdf",
+      "tema": 1,
+      "categoria": "general",
+      "questions": 40
+    },
+    {
+      "file": "10 TEST TEMA9 INICIALES.pdf",
+      "path": "10 TEST TEMA9 INICIALES.pdf",
+      "tema": 9,
+      "categoria": "general",
+      "questions": 39
+    },
+    {
+      "file": "11 TEST TEMA 10 INICIALES.docx",
+      "path": "11 TEST TEMA 10 INICIALES.docx",
+      "tema": 10,
+      "categoria": "general",
+      "questions": 40
+    },
+    {
+      "file": "12 TEST TEMA 11 INICIALES.docx",
+      "path": "12 TEST TEMA 11 INICIALES.docx",
+      "tema": 11,
+      "categoria": "general",
+      "questions": 40
+    },
+    {
+      "file": "2 TEST TEMA 2 INICIALES.pdf",
+      "path": "2 TEST TEMA 2 INICIALES.pdf",
+      "tema": 2,
+      "categoria": "general",
+      "questions": 40
+    },
+    {
+      "file": "3 TEST TEMA 3 INICIALES.docx",
+      "path": "3 TEST TEMA 3 INICIALES.docx",
+      "tema": 3,
+      "categoria": "general",
+      "questions": 40
+    },
+    {
+      "file": "4 TEST TEMA 4 INICIALES.docx",
+      "path": "4 TEST TEMA 4 INICIALES.docx",
+      "tema": 4,
+      "categoria": "general",
+      "questions": 20
+    },
+    {
+      "file": "5 TEST TEMA 5 INICIALES.pdf",
+      "path": "5 TEST TEMA 5 INICIALES.pdf",
+      "tema": 5,
+      "categoria": "general",
+      "questions": 40
+    },
+    {
+      "file": "6 TEST TEMA 6 INICIALES.docx",
+      "path": "6 TEST TEMA 6 INICIALES.docx",
+      "tema": 6,
+      "categoria": "general",
+      "questions": 40
+    },
+    {
+      "file": "7 TEST TEMA 7 INICIALES.docx",
+      "path": "7 TEST TEMA 7 INICIALES.docx",
+      "tema": 7,
+      "categoria": "general",
+      "questions": 40
+    },
+    {
+      "file": "8 TEST TEMA 8 (1ªPARTE). INICIALESdocx (1).docx",
+      "path": "8 TEST TEMA 8 (1ªPARTE). INICIALESdocx (1).docx",
+      "tema": 8,
+      "categoria": "general",
+      "questions": 3
+    },
+    {
+      "file": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+      "path": "9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx",
+      "tema": 8,
+      "categoria": "general",
+      "questions": 40
+    },
+    {
+      "file": "1TEST TEMAS 1 Y 2 con respuestas - copia.pdf",
+      "path": "Segundo repaso\\1TEST TEMAS 1 Y 2 con respuestas - copia.pdf",
+      "tema": 0,
+      "categoria": "repaso",
+      "questions": 38
+    },
+    {
+      "file": "2 TEST TEMAS 3 Y 4 - copia.docx",
+      "path": "Segundo repaso\\2 TEST TEMAS 3 Y 4 - copia.docx",
+      "tema": 2,
+      "categoria": "repaso",
+      "questions": 40
+    },
+    {
+      "file": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "path": "Segundo repaso\\3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "tema": 3,
+      "categoria": "repaso",
+      "questions": 40
+    },
+    {
+      "file": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+      "path": "Segundo repaso\\4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+      "tema": 4,
+      "categoria": "repaso",
+      "questions": 37
+    },
+    {
+      "file": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "path": "Segundo repaso\\5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "tema": 9,
+      "categoria": "repaso",
+      "questions": 40
+    },
+    {
+      "file": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "path": "Segundo repaso\\6 TEST TEMAS   10 y 11 - copia.pdf",
+      "tema": 6,
+      "categoria": "repaso",
+      "questions": 39
+    },
+    {
+      "file": "7 TEST TEMA 1 a 6 - copia.docx",
+      "path": "Segundo repaso\\7 TEST TEMA 1 a 6 - copia.docx",
+      "tema": 1,
+      "categoria": "repaso",
+      "questions": 40
+    },
+    {
+      "file": "8 TEST TEMA 7 a 11 - copia.docx",
+      "path": "Segundo repaso\\8 TEST TEMA 7 a 11 - copia.docx",
+      "tema": 7,
+      "categoria": "repaso",
+      "questions": 40
+    },
+    {
+      "file": "9 TEST GLOBAL - copia.docx",
+      "path": "Segundo repaso\\9 TEST GLOBAL - copia.docx",
+      "tema": 9,
+      "categoria": "repaso",
+      "questions": 39
+    },
+    {
+      "file": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 1 AL 4.pdf",
+      "path": "Segundo repaso\\PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 1 AL 4.pdf",
+      "tema": 0,
+      "categoria": "repaso",
+      "questions": 5
+    },
+    {
+      "file": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 5 AL 8.pdf",
+      "path": "Segundo repaso\\PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 5 AL 8.pdf",
+      "tema": 0,
+      "categoria": "repaso",
+      "questions": 13
+    },
+    {
+      "file": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 9 AL 11.pdf",
+      "path": "Segundo repaso\\PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 9 AL 11.pdf",
+      "tema": 0,
+      "categoria": "repaso",
+      "questions": 10
+    },
+    {
+      "file": "Test tema 7. Enunciado.pdf",
+      "path": "TEMA Iniciales Administrativo\\Test tema 7. Enunciado.pdf",
+      "tema": 7,
+      "categoria": "administrativo",
+      "questions": 4
+    },
+    {
+      "file": "Test tema 8. Enunciado.pdf",
+      "path": "TEMA Iniciales Administrativo\\Test tema 8. Enunciado.pdf",
+      "tema": 8,
+      "categoria": "administrativo",
+      "questions": 29
+    },
+    {
+      "file": "Test tema 9. Enunciado.pdf",
+      "path": "TEMA Iniciales Administrativo\\Test tema 9. Enunciado.pdf",
+      "tema": 9,
+      "categoria": "administrativo",
+      "questions": 30
+    },
+    {
+      "file": "Test y caso práctico tema 11. (1).pdf",
+      "path": "TEMA Iniciales Administrativo\\Test y caso práctico tema 11. (1).pdf",
+      "tema": 11,
+      "categoria": "administrativo",
+      "questions": 30
+    },
+    {
+      "file": "Test y caso práctico tema 3. (1).pdf",
+      "path": "TEMA Iniciales Administrativo\\Test y caso práctico tema 3. (1).pdf",
+      "tema": 3,
+      "categoria": "administrativo",
+      "questions": 30
+    },
+    {
+      "file": "Test y caso práctico tema 4..pdf",
+      "path": "TEMA Iniciales Administrativo\\Test y caso práctico tema 4..pdf",
+      "tema": 4,
+      "categoria": "administrativo",
+      "questions": 30
+    },
+    {
+      "file": "Test y caso práctico temas 1 y 2..pdf",
+      "path": "TEMA Iniciales Administrativo\\Test y caso práctico temas 1 y 2..pdf",
+      "tema": 0,
+      "categoria": "administrativo",
+      "questions": 30
+    },
+    {
+      "file": "1. Test Título preliminar.pdf",
+      "path": "Test contratos\\1. Test Título preliminar.pdf",
+      "tema": 0,
+      "categoria": "contratos",
+      "questions": 20
+    },
+    {
+      "file": "2. Test Libro I y IV.pdf",
+      "path": "Test contratos\\2. Test Libro I y IV.pdf",
+      "tema": 0,
+      "categoria": "contratos",
+      "questions": 20
+    },
+    {
+      "file": "3. Test preparación parte general..pdf",
+      "path": "Test contratos\\3. Test preparación parte general..pdf",
+      "tema": 0,
+      "categoria": "contratos",
+      "questions": 20
+    },
+    {
+      "file": "4. Test preparación parte especial..pdf",
+      "path": "Test contratos\\4. Test preparación parte especial..pdf",
+      "tema": 0,
+      "categoria": "contratos",
+      "questions": 20
+    },
+    {
+      "file": "5. Test Libro II Adjudicación.pdf",
+      "path": "Test contratos\\5. Test Libro II Adjudicación.pdf",
+      "tema": 0,
+      "categoria": "contratos",
+      "questions": 20
+    },
+    {
+      "file": "6. Test efectos y extinción parte general.pdf",
+      "path": "Test contratos\\6. Test efectos y extinción parte general.pdf",
+      "tema": 0,
+      "categoria": "contratos",
+      "questions": 20
+    },
+    {
+      "file": "7. Test efectos y extincionparte especial.pdf",
+      "path": "Test contratos\\7. Test efectos y extincionparte especial.pdf",
+      "tema": 0,
+      "categoria": "contratos",
+      "questions": 20
+    },
+    {
+      "file": "8. Test Regimen invalidez.pdf",
+      "path": "Test contratos\\8. Test Regimen invalidez.pdf",
+      "tema": 0,
+      "categoria": "contratos",
+      "questions": 18
+    },
+    {
+      "file": "Test subvenciones.pdf",
+      "path": "Test contratos\\Test subvenciones.pdf",
+      "tema": 0,
+      "categoria": "contratos",
+      "questions": 20
+    },
+    {
+      "file": "1.- Test GF Tema 1.1. 2024-2025.pdf",
+      "path": "Test financiero\\1.- Test GF Tema 1.1. 2024-2025.pdf",
+      "tema": 1,
+      "categoria": "financiero",
+      "questions": 22
+    },
+    {
+      "file": "2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "path": "Test financiero\\2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf",
+      "tema": 1,
+      "categoria": "financiero",
+      "questions": 30
+    },
+    {
+      "file": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "path": "Test financiero\\3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "tema": 0,
+      "categoria": "financiero",
+      "questions": 30
+    },
+    {
+      "file": "4- TEST  24-25 modificaciones.pdf",
+      "path": "Test financiero\\4- TEST  24-25 modificaciones.pdf",
+      "tema": 0,
+      "categoria": "financiero",
+      "questions": 30
+    },
+    {
+      "file": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "path": "Test financiero\\6.- TEST 2024-25 ACF y PAJ.pdf",
+      "tema": 0,
+      "categoria": "financiero",
+      "questions": 30
+    },
+    {
+      "file": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+      "path": "Test financiero\\7.- TEST GF 24-25 Gastos capítulos.pdf",
+      "tema": 0,
+      "categoria": "financiero",
+      "questions": 30
+    },
+    {
+      "file": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+      "path": "Test financiero\\8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+      "tema": 0,
+      "categoria": "financiero",
+      "questions": 26
+    },
+    {
+      "file": "9.- TEST GF 24-25 Control.pdf",
+      "path": "Test financiero\\9.- TEST GF 24-25 Control.pdf",
+      "tema": 0,
+      "categoria": "financiero",
+      "questions": 30
+    },
+    {
+      "file": "TEST TEMA 10 Políticas.pdf",
+      "path": "TEST Iniciales políticas\\TEST TEMA 10 Políticas.pdf",
+      "tema": 10,
+      "categoria": "general",
+      "questions": 41
+    },
+    {
+      "file": "TEST Tema 2 politicas.docx",
+      "path": "TEST Iniciales políticas\\TEST Tema 2 politicas.docx",
+      "tema": 2,
+      "categoria": "general",
+      "questions": 40
+    },
+    {
+      "file": "TEST Tema 3 políticas.pdf",
+      "path": "TEST Iniciales políticas\\TEST Tema 3 políticas.pdf",
+      "tema": 3,
+      "categoria": "general",
+      "questions": 1
+    },
+    {
+      "file": "TEST Tema 4 políticas.pdf",
+      "path": "TEST Iniciales políticas\\TEST Tema 4 políticas.pdf",
+      "tema": 4,
+      "categoria": "general",
+      "questions": 98
+    },
+    {
+      "file": "TEST Tema 5 políticas.pdf",
+      "path": "TEST Iniciales políticas\\TEST Tema 5 políticas.pdf",
+      "tema": 5,
+      "categoria": "general",
+      "questions": 40
+    },
+    {
+      "file": "TEST Tema 7 políticas.pdf",
+      "path": "TEST Iniciales políticas\\TEST Tema 7 políticas.pdf",
+      "tema": 7,
+      "categoria": "general",
+      "questions": 6
+    },
+    {
+      "file": "TEST TEMA 9 políticas.pdf",
+      "path": "TEST Iniciales políticas\\TEST TEMA 9 políticas.pdf",
+      "tema": 9,
+      "categoria": "general",
+      "questions": 40
+    },
+    {
+      "file": "Test tema 1.pdf",
+      "path": "Test Iniciales UE\\Test tema 1.pdf",
+      "tema": 1,
+      "categoria": "union-europea",
+      "questions": 38
+    },
+    {
+      "file": "Test tema 2.pdf",
+      "path": "Test Iniciales UE\\Test tema 2.pdf",
+      "tema": 2,
+      "categoria": "union-europea",
+      "questions": 40
+    },
+    {
+      "file": "Test tema 3.pdf",
+      "path": "Test Iniciales UE\\Test tema 3.pdf",
+      "tema": 3,
+      "categoria": "union-europea",
+      "questions": 39
+    },
+    {
+      "file": "Test tema 4.pdf",
+      "path": "Test Iniciales UE\\Test tema 4.pdf",
+      "tema": 4,
+      "categoria": "union-europea",
+      "questions": 40
+    },
+    {
+      "file": "Test tema 5.pdf",
+      "path": "Test Iniciales UE\\Test tema 5.pdf",
+      "tema": 5,
+      "categoria": "union-europea",
+      "questions": 40
+    },
+    {
+      "file": "Test tema 6.pdf",
+      "path": "Test Iniciales UE\\Test tema 6.pdf",
+      "tema": 6,
+      "categoria": "union-europea",
+      "questions": 40
+    }
+  ]
+}

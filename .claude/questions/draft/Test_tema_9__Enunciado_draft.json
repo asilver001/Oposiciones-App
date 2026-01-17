@@ -1,0 +1,1007 @@
+{
+  "metadata": {
+    "source_file": "Test tema 9. Enunciado.pdf",
+    "source_path": "TEMA Iniciales Administrativo\\Test tema 9. Enunciado.pdf",
+    "tema": 9,
+    "categoria": "administrativo",
+    "extraction_date": "2026-01-15T23:40:47.450570",
+    "reformulation_date": "2026-01-15T23:47:35.805396",
+    "total_questions": 30,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:56.204168",
+    "completed_count": 0,
+    "failed_count": 30
+  },
+  "questions": [
+    {
+      "question_text": "La Ley 33/2003, de 3 de noviembre, del Patrimonio de las Administraciones",
+      "options": [
+        {
+          "text": "Es una ley estatal dictada al amparo del art. 149.1.18 que se aplica en",
+          "is_correct": false
+        },
+        {
+          "text": "Es una ley bsica estatal dictada al amparo del art. 149.1.18 principalmente,",
+          "is_correct": false
+        },
+        {
+          "text": "Es una ley bsica estatal dictada al amparo del art. 149.1.18 principalmente,",
+          "is_correct": false
+        },
+        {
+          "text": "utnomas y Entidades Locales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La Ley 33/2003, de 3 de noviembre, del Patrimonio de las Administraciones",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Se entiende por patrimonio de las Administraciones Pblicas:",
+      "options": [
+        {
+          "text": "Los bienes y derechos de titularidad de las administraciones pblicas",
+          "is_correct": false
+        },
+        {
+          "text": "ualquiera que sea su naturaleza y el ttulo de su adquisicin o aquel en",
+          "is_correct": false
+        },
+        {
+          "text": "Los bienes y derechos de titularidad de las administraciones pblicas que",
+          "is_correct": false
+        },
+        {
+          "text": "El conjunto de sus bienes y derechos, cualquiera que sea su naturaleza y",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Se entiende por patrimonio de las Administraciones Pblicas:",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Son bienes demaniales:",
+      "options": [
+        {
+          "text": "Las costas.",
+          "is_correct": false
+        },
+        {
+          "text": "El derecho de arrendamiento.",
+          "is_correct": false
+        },
+        {
+          "text": "El edificio adquirido a travs de una donacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Los saldos abandonados.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Son bienes demaniales:",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Es un principio de gestin de los bienes demaniales:",
+      "options": [
+        {
+          "text": "Su uso privativo preferente por los ciudadanos.",
+          "is_correct": false
+        },
+        {
+          "text": "Eficacia y rentabilidad en la explotacin de estos bienes y derechos.",
+          "is_correct": false
+        },
+        {
+          "text": "Eficiencia y economa en su gestin.",
+          "is_correct": false
+        },
+        {
+          "text": "Adecuacin y suficiencia de los bienes para servir al uso general o al servicio",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Es un principio de gestin de los bienes demaniales:",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No es un principio de gestin de bienes patrimoniales:",
+      "options": [
+        {
+          "text": "Eficiencia y economa en su gestin.",
+          "is_correct": false
+        },
+        {
+          "text": "Eficacia y rentabilidad en la explotacin de estos bienes y derechos.",
+          "is_correct": false
+        },
+        {
+          "text": "Adecuacin y suficiencia de los bienes para servir al uso general o al servicio",
+          "is_correct": false
+        },
+        {
+          "text": "Identificacin y control a travs de inventarios o registros adecuados.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No es un principio de gestin de bienes patrimoniales:",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La inalienabilidad es aplicable a:",
+      "options": [
+        {
+          "text": "Exclusivamente a los bienes comunales.",
+          "is_correct": false
+        },
+        {
+          "text": "Los bienes del Patrimonio Nacional.",
+          "is_correct": false
+        },
+        {
+          "text": "Los bienes demaniales nicamente titularidad de la Administracin General",
+          "is_correct": false
+        },
+        {
+          "text": "el Estado.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La inalienabilidad es aplicable a:",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En qu consiste la mutacin demanial?",
+      "options": [
+        {
+          "text": "Es el acto en virtud del cual se efecta la desafectacin de un bien o derecho",
+          "is_correct": false
+        },
+        {
+          "text": "el Patrimonio del Estado, con simultnea afectacin a otro uso general, fin",
+          "is_correct": false
+        },
+        {
+          "text": "La vinculacin de los bienes y derechos a un uso general o a un servicio",
+          "is_correct": false
+        },
+        {
+          "text": "Es el acto en virtud del cual se deja de destinar un bien a una finalidad",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En qu consiste la mutacin demanial?",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Indique la respuesta correcta en relacin con el acto de afectacin:",
+      "options": [
+        {
+          "text": "Siempre ha de ser expreso y dictarse por el rgano competente, indicndose",
+          "is_correct": false
+        },
+        {
+          "text": "e quedar aqul integrado en el dominio pblico y el rgano al que",
+          "is_correct": false
+        },
+        {
+          "text": "orresponda el ejercicio de las competencias demaniales, incluidas las",
+          "is_correct": false
+        },
+        {
+          "text": "Ha de ser expreso, salvo que la afectacin derive de una norma con rango",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Indique la respuesta correcta en relacin con el acto de afectacin:",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Conforme el art. 32 de la Ley sobre la obligacin de formar inventario, el",
+      "options": [
+        {
+          "text": "Los bienes demaniales.",
+          "is_correct": false
+        },
+        {
+          "text": "Los bienes patrimoniales.",
+          "is_correct": false
+        },
+        {
+          "text": "Los bienes y derechos que integran su patrimonio, sin excepcin.",
+          "is_correct": false
+        },
+        {
+          "text": "Los bienes y derechos que integran su patrimonio.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Conforme el art. 32 de la Ley sobre la obligacin de formar inventario, el",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las Administraciones pblicas podrn adquirir bienes y derechos:",
+      "options": [
+        {
+          "text": "Por cualquiera de los modos previstos en el ordenamiento jurdico y, en",
+          "is_correct": false
+        },
+        {
+          "text": "nicamente por atribucin expresa por ley o por herencia, legado o donacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Por los modos citados expresamente en la LPAP.",
+          "is_correct": false
+        },
+        {
+          "text": "Solo cabe a travs de negocios jurdicos mediante la correspondiente",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las Administraciones pblicas podrn adquirir bienes y derechos:",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En qu consiste la potestad de recuperacin posesoria?",
+      "options": [
+        {
+          "text": "Es una potestad de las administraciones pblicas para ejercitar una accin",
+          "is_correct": false
+        },
+        {
+          "text": "Es una potestad de las administraciones pblicas para recuperar la posesin",
+          "is_correct": false
+        },
+        {
+          "text": "Es una potestad de las administraciones pblicas que pueden ejercer frente",
+          "is_correct": false
+        },
+        {
+          "text": "terceros para recuperar en va administrativa la posesin de sus bienes",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En qu consiste la potestad de recuperacin posesoria?",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Indique cual no es una facultad y prerrogativa de la administraciones",
+      "options": [
+        {
+          "text": "Deslindar en va administrativa los inmuebles de su titularidad.",
+          "is_correct": false
+        },
+        {
+          "text": "Recuperar de oficio la posesin indebidamente perdida sobre sus bienes y",
+          "is_correct": false
+        },
+        {
+          "text": "erechos.",
+          "is_correct": false
+        },
+        {
+          "text": "Desahuciar, a travs de la correspondiente accin en va judicial, a los",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Indique cual no es una facultad y prerrogativa de la administraciones",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "dificil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Indique la opcin incorrecta en relacin con la facultad de recuperacin",
+      "options": [
+        {
+          "text": "Se puede ejercer en cualquier momento, con independencia del tipo de bien,",
+          "is_correct": false
+        },
+        {
+          "text": "emanial o patrimonial, que se intente recuperar.",
+          "is_correct": false
+        },
+        {
+          "text": "Respecto de los bienes y derechos de la Administracin General del Estado,",
+          "is_correct": false
+        },
+        {
+          "text": "Reglamentariamente se regular el procedimiento para el ejercicio de",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Indique la opcin incorrecta en relacin con la facultad de recuperacin",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Indique la opcin correcta respecto la afectacin de bienes y derechos:",
+      "options": [
+        {
+          "text": "La afectacin de los bienes y derechos del Patrimonio del Estado a los",
+          "is_correct": false
+        },
+        {
+          "text": "epartamentos ministeriales compete al Director General de Patrimonio del",
+          "is_correct": false
+        },
+        {
+          "text": "La afectacin se adopta por Real Decreto.",
+          "is_correct": false
+        },
+        {
+          "text": "Salvo que la afectacin derive de una norma reglamentaria, sta deber",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Indique la opcin correcta respecto la afectacin de bienes y derechos:",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En qu consiste la adscripcin y quin es el rgano competente para su",
+      "options": [
+        {
+          "text": "probacin?",
+          "is_correct": false
+        },
+        {
+          "text": "Los bienes y derechos patrimoniales y demaniales de las Administraciones",
+          "is_correct": false
+        },
+        {
+          "text": "quellas para su vinculacin directa a un servicio de su competencia, o para",
+          "is_correct": false
+        },
+        {
+          "text": "Los bienes y derechos patrimoniales de la Administracin General del Estado",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En qu consiste la adscripcin y quin es el rgano competente para su",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Indique la opcin corecta en relacin con los tipos de uso de los bienes de",
+      "options": [
+        {
+          "text": "ominio pblico, conforme el art. 85 de la Ley 33/2003:",
+          "is_correct": false
+        },
+        {
+          "text": "Se considera uso comn de los bienes de dominio pblico el que",
+          "is_correct": false
+        },
+        {
+          "text": "orresponde por igual y de forma indistinta a todas las administraciones",
+          "is_correct": false
+        },
+        {
+          "text": "Es uso que implica un aprovechamiento especial del dominio pblico el que,",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Indique la opcin corecta en relacin con los tipos de uso de los bienes de",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cundo ser necesario obtener una autorizacin para el uso de un bien",
+      "options": [
+        {
+          "text": "emanial?",
+          "is_correct": false
+        },
+        {
+          "text": "Es necesario tanto para el uso comn como para el uso privativo.",
+          "is_correct": false
+        },
+        {
+          "text": "En el caso de uso que suponga un aprovechamiento especial a travs de",
+          "is_correct": false
+        },
+        {
+          "text": "Es nececesario para el uso privativo de los bienes de dominio pblico que",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cundo ser necesario obtener una autorizacin para el uso de un bien",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La Seguridad Social cuenta con un edificio que viene siendo utilizado para",
+      "options": [
+        {
+          "text": "lojar oficinas en el trmino de Toledo. No obstante, ya no lo necesita. El",
+          "is_correct": false
+        },
+        {
+          "text": "yuntamiento de Toledo lo aprecia conveniente para destinarlo como",
+          "is_correct": false
+        },
+        {
+          "text": "iblioteca municipal Indique la figura jurdica aplicable para el cambio entre",
+          "is_correct": false
+        },
+        {
+          "text": "mbas entidades:",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La Seguridad Social cuenta con un edificio que viene siendo utilizado para",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En que consiste el procedimiento de deslinde?",
+      "options": [
+        {
+          "text": "Es un procedimiento administrativo iniciado de oficio o a solicitud de",
+          "is_correct": false
+        },
+        {
+          "text": "dminsitraciones pblicas cuando sean imprecisos o existan indicios de",
+          "is_correct": false
+        },
+        {
+          "text": "Es un procedimiento administrativo que se inicia de oficio, por iniciativa",
+          "is_correct": false
+        },
+        {
+          "text": "e propiedad de las Administraciones publicas sean imprecisos o existan",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En que consiste el procedimiento de deslinde?",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Indique la opcin correcta en relacin con la figura de la desafectacin:",
+      "options": [
+        {
+          "text": "Los bienes y derechos patrimoniales perdern su condicin en los casos en",
+          "is_correct": false
+        },
+        {
+          "text": "La desafectacin de los bienes y derechos integrados en el patrimonio de la",
+          "is_correct": false
+        },
+        {
+          "text": "GE requerir, para su efectividad, de su recepcin formal por el Ministerio",
+          "is_correct": false
+        },
+        {
+          "text": "e Hacienda, bien mediante acta de entrega suscrita por un representante",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Indique la opcin correcta en relacin con la figura de la desafectacin:",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Indique la opcin incorrecta en relacin con las reservas demaniales:",
+      "options": [
+        {
+          "text": "La AGE podr reservarse el uso exclusivo de bienes de su titularidad",
+          "is_correct": false
+        },
+        {
+          "text": "estinados al uso general para la realizacin de fines de su competencia,",
+          "is_correct": false
+        },
+        {
+          "text": "uando existan razones de utilidad pblica o inters general que lo",
+          "is_correct": false
+        },
+        {
+          "text": "La duracin de la reserva se limitar al tiempo necesario para el cumplimiento",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Indique la opcin incorrecta en relacin con las reservas demaniales:",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los bienes del patrimonio nacional:",
+      "options": [
+        {
+          "text": "Son de titularidad de la Administracin General del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Se regulan exclusivamente por la Ley 33/2003, del Patrimonio de las",
+          "is_correct": false
+        },
+        {
+          "text": "dministraciones Pblicas.",
+          "is_correct": false
+        },
+        {
+          "text": "Son bienes demaniales o patrimoniales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los bienes del patrimonio nacional:",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los inmuebles vacantes, conforme la Ley 33/2003:",
+      "options": [
+        {
+          "text": "Pertenecen a la Administracin General del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Pertenecen a la Administracin Pblica en cuyo trmino radiquen.",
+          "is_correct": false
+        },
+        {
+          "text": "La adquisicin de estos bienes se producir por ministerio de la ley, aunque",
+          "is_correct": false
+        },
+        {
+          "text": "dministracin General del Estado.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los inmuebles vacantes, conforme la Ley 33/2003:",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta incorrecta respecto la potestad de desahucio:",
+      "options": [
+        {
+          "text": "La administracin puede iniciar el procedimiento administrativo de desahucio",
+          "is_correct": false
+        },
+        {
+          "text": "La administracin puede recuperar a travs de este procedimiento sus bienes",
+          "is_correct": false
+        },
+        {
+          "text": "emaniales cuando decaigan o desaparezcan el ttulo, las condiciones o las",
+          "is_correct": false
+        },
+        {
+          "text": "ircunstancias que legitimaban su ocupacin por terceros.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta incorrecta respecto la potestad de desahucio:",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Indique de las siguientes, la competencia que le corresponde al Consejo",
+      "options": [
+        {
+          "text": "e Ministros en el mbito patrimonial.",
+          "is_correct": false
+        },
+        {
+          "text": "Definir la poltica aplicable a los bienes y derechos del Patrimonio del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "La afectacin de bienes patrimoniales de la AGE.",
+          "is_correct": false
+        },
+        {
+          "text": "La declaracin de reserva patrimonial.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Indique de las siguientes, la competencia que le corresponde al Consejo",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Puede la AGE enajenar un bien inmueble demanial?",
+      "options": [
+        {
+          "text": "S, siempre que se realice mediante concurso o adjudicacin directa y se",
+          "is_correct": false
+        },
+        {
+          "text": "cuerde por rgano competente.",
+          "is_correct": false
+        },
+        {
+          "text": "No.",
+          "is_correct": false
+        },
+        {
+          "text": "No, no puede vender bienes inmuebles en ningun caso. nicamente la ley",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Puede la AGE enajenar un bien inmueble demanial?",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cmo ha de proceder la AGE para vender un bien mueble?",
+      "options": [
+        {
+          "text": "La enajenacin",
+          "is_correct": false
+        },
+        {
+          "text": "En caso de bienes obsoletos, perecederos o deteriorados por el uso o en el",
+          "is_correct": false
+        },
+        {
+          "text": "La enajenacin tendr lugar nicamente por subasta.",
+          "is_correct": false
+        },
+        {
+          "text": "Ninguna es correcta.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cmo ha de proceder la AGE para vender un bien mueble?",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Podra ser cedido gratuitamente un bien inmueble de AGE a una",
+      "options": [
+        {
+          "text": "S, siempre que se sigan las reglas sobre competencia y procedimiento",
+          "is_correct": false
+        },
+        {
+          "text": "No. La cesin gratuita de bienes y derechos est prevista para",
+          "is_correct": false
+        },
+        {
+          "text": "omunidades autnomas, entidades locales, fundaciones pblicas o",
+          "is_correct": false
+        },
+        {
+          "text": "sociaciones declaradas de utilidad pblica, as como Estados",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Podra ser cedido gratuitamente un bien inmueble de AGE a una",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cabe la permuta de bienes y derechos?",
+      "options": [
+        {
+          "text": "La permuta puede acordarse cuando por razones debidamente",
+          "is_correct": false
+        },
+        {
+          "text": "Podrn ser permutados cuando por razones debidamente justificadas en",
+          "is_correct": false
+        },
+        {
+          "text": "e valor entre los bienes o derechos que se trate de permutar, segn",
+          "is_correct": false
+        },
+        {
+          "text": "S. Sern de aplicacin a la permuta las normas previstas para la",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cabe la permuta de bienes y derechos?",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Indique la opcin correcta respecto la concesin demanial:",
+      "options": [
+        {
+          "text": "El otorgamiento de concesiones sobre bienes de dominio pblico se",
+          "is_correct": false
+        },
+        {
+          "text": "Cualquiera que haya sido el procedimiento seguido para la adjudicacin, una",
+          "is_correct": false
+        },
+        {
+          "text": "Las concesiones se puede otorgar por tiempo indeterminado.",
+          "is_correct": false
+        },
+        {
+          "text": "Las concesiones tendrn una duracin de 75 aos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Indique la opcin correcta respecto la concesin demanial:",
+      "source": "Test tema 9. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

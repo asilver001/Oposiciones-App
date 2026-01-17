@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git worktree:*)",
+      "mcp__supabase__list_projects",
+      "mcp__supabase__execute_sql",
+      "Bash(find:*)",
+      "mcp__supabase__apply_migration",
+      "Bash(pip show:*)",
+      "Bash(pip install:*)",
+      "Bash(claude mcp add:*)",
+      "Bash(claude mcp list:*)",
+      "Bash(claude mcp remove:*)",
+      "Bash(markitdown:*)",
+      "Bash(python -m markitdown:*)",
+      "Bash(chcp 65001)",
+      "Bash(dir \"C:\\\\Users\\\\alber\\\\.claude-worktrees\\\\OpositaSmart\\\\epic-kirch\\\\.claude\\\\references\\\\examenes\" /b)",
+      "Bash(python:*)",
+      "Bash(dir /s \"C:\\\\Users\\\\alber\\\\.claude-worktrees\\\\OpositaSmart\\\\epic-kirch\\\\.claude\\\\references\\\\examenes\")",
+      "Bash(npm install:*)",
+      "Bash(npm run dev:*)",
+      "Bash(timeout 15 npm run build:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(gh pr create:*)",
+      "Bash(npm run build:*)"
+    ]
+  }
+}

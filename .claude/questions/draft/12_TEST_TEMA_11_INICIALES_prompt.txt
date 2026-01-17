@@ -1,0 +1,509 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 12 TEST TEMA 11 INICIALES.docx
+**Total preguntas:** 40
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** No forman parte de la Administraci�n Local:
+
+**Opciones:**
+  0. Las comarcas
+  1. Las provincias.
+  2. Las �reas metropolitanas.
+  3. Las mancomunidades de provincias.
+
+---
+
+### Pregunta 2
+
+**Texto:** Seg�n la Constituci�n, articulo 140, el gobierno y la administraci�n de los municipios corresponde:
+
+**Opciones:**
+  0. A sus respectivos Ayuntamientos.
+  1. Al Gobierno de la Naci�n.
+  2. A los Diputados Provinciales.
+  3. A las personas que designen los respectivos Alcaldes.
+
+---
+
+### Pregunta 3
+
+**Texto:** En los archipi�lagos, las islas tendr�n adem�s su administraci�n propia en forma de:
+
+**Opciones:**
+  0. Comisiones Permanentes.
+  1. Delegaciones del Gobierno.
+  2. Juntas Administrativas.
+  3. Cabildos o Consejos.
+
+---
+
+### Pregunta 4
+
+**Texto:** Seg�n la Constituci�n, la provincia es:
+
+**Opciones:**
+  0. Una Entidad institucional publica territorial carente de personalidad.
+  1. Una Entidad Local con personalidad jur�dica propia.
+  2. Una Entidad Local con personalidad jur�dica plena.
+  3. Una Entidad Local con personalidad jur�dica derivada.
+
+---
+
+### Pregunta 5
+
+**Texto:** Seg�n la actual Constituci�n espa�ola, la provincia viene determinada por:
+
+**Opciones:**
+  0. La agrupaci�n de comarcas y divisi�n territorial para el cumplimiento de las actividades del Estado.
+  1. La agrupaci�n de Entidades Locales no territoriales.
+  2. La agrupaci�n de municipios y divisi�n territorial para el cumplimiento de las actividades del Estado.
+  3. La agrupaci�n de municipios y divisi�n territorial para el cumplimiento de las actividades de las Comunidades Aut�nomas.
+
+---
+
+### Pregunta 6
+
+**Texto:** Los Alcaldes, seg�n el art�culo 140 de la Constituci�n, ser�n elegidos por:
+
+**Opciones:**
+  0. Los Concejales o los vecinos.
+  1. Las Cortes Generales.
+  2. Los Concejales.
+  3. El Presidente del Gobierno.
+
+---
+
+### Pregunta 7
+
+**Texto:** Cualquier alteraci�n de los l�mites provinciales, habr� de ser aprobada:
+
+**Opciones:**
+  0. Por el Gobierno mediante Decreto.
+  1. Por las Cortes Generales mediante Ley org�nica.
+  2. Por las Diputaciones provinciales mediante acuerdo.
+  3. Por las Asambleas de las Comunidades Aut�nomas mediante ley.
+
+---
+
+### Pregunta 8
+
+**Texto:** La creaci�n, supresi�n o alteraci�n de los t�rminos municipales, exige como requisito:
+
+**Opciones:**
+  0. Audiencia de los municipios interesados y dictamen del Consejo de Estado o del �rgano consultivo equivalente de las CCAA, si lo hubiera.
+  1. Informe de la Administraci�n que ejerza la tutela pol�tico - administrativa.
+  2. Puesta en conocimiento de la Administraci�n de la Comunidad Aut�noma.
+  3. Aprobaci�n de las Cortes Generales mediante Ley Org�nica.
+
+---
+
+### Pregunta 9
+
+**Texto:** En los municipios con poblaci�n igual o inferior a 5.000 habitantes:
+
+**Opciones:**
+  0. Existir�n en todo caso una Junta de Gobierno Local.
+  1. Existir� una Junta de Gobierno Local cuando as� se determine por Ley Org�nica.
+  2. Existir� una Junta de Gobierno Local si as� lo establece el Reglamento Org�nico o se decide por acuerdo del respectivo Pleno del Ayuntamiento.
+  3. En ning�n caso existir� Junta de Gobierno local.
+
+---
+
+### Pregunta 10
+
+**Texto:** La junta de Gobierno Local est� formada por:
+
+**Opciones:**
+  0. El Alcalde y los concejales elegidos por el Pleno en n�mero no superior a un tercio del n�mero total de concejales.
+  1. El Alcalde y los concejales elegidos por el propio alcalde en n�mero no superior a un tercio del n�mero total de concejales.
+  2. Por los concejales elegidos por el Pleno en n�mero no superior a un tercio del n�mero total de Concejales.
+  3. Por los concejales elegidos por el alcalde en n�mero no superior a un tercio del n�mero total de concejales.
+
+---
+
+### Pregunta 11
+
+**Texto:** Son competencias del Alcalde (se�ale la falsa):
+
+**Opciones:**
+  0. Dirigir e inspeccionar los servicios y obras del Ayuntamiento
+  1. Disponer gastos y ordenar pagos.
+  2. Actuar la potestad sancionadora.
+  3. La aprobaci�n del Reglamento Org�nico del Ayuntamiento.
+
+---
+
+### Pregunta 12
+
+**Texto:** �Cu�l de los siguientes no es un elemento constitutivo del municipio?:
+
+**Opciones:**
+  0. Organizaci�n.
+  1. Soberan�a.
+  2. Territorio.
+  3. Poblaci�n.
+
+---
+
+### Pregunta 13
+
+**Texto:** La creaci�n de �reas Metropolitanas ha de hacerse:
+
+**Opciones:**
+  0. Por la entidad local interesada, dando cuenta a la Comunidad Aut�noma.
+  1. Por la entidad local interesada, o�da la Administraci�n del Estado.
+  2. Por ley de la Comunidad Aut�noma previo informe de la Administraci�n del Estado.
+  3. Por ley de la Comunidad Aut�noma, o�da la Administraci�n del Estado y las Diputaciones y ayuntamientos afectados.
+
+---
+
+### Pregunta 14
+
+**Texto:** En primera votaci�n, el Presidente de la Diputaci�n provincial es elegido por el Pleno:
+
+**Opciones:**
+  0. Por mayor�a de 2/3.
+  1. Por mayor�a absoluta.
+  2. Por mayor�a simple.
+  3. Por mayor�a de 3/5.
+
+---
+
+### Pregunta 15
+
+**Texto:** Si ninguno de los candidatos a Alcalde obtiene la mayor�a necesaria para ser proclamado Alcalde, �qu� ocurre?:
+
+**Opciones:**
+  0. Es proclamado Alcalde el que obtuviere la mayor�a simple en segunda votaci�n.
+  1. Es proclamado Alcalde el que obtuviere un tercio de los votos en segunda votaci�n.
+  2. Es proclamado Alcalde el Concejal que encabece la lista que haya obtenido mayor n�mero de votos populares en el correspondiente municipio.
+  3. Es proclamado Alcalde el Concejal que elija el Presidente del Gobierno.
+
+---
+
+### Pregunta 16
+
+**Texto:** La disoluci�n de los �rganos de las entidades locales:
+
+**Opciones:**
+  0. S�lo podr� llevarse a cabo por el Gobierno mediante Real Decreto.
+  1. S�lo puede llevarse a cabo por las Cortes Generales mediante Ley org�nica.
+  2. No puede llevarse a cabo en ning�n caso.
+  3. Es una competencia que corresponde en exclusiva al Consejo de Gobierno de la Comunidad Aut�noma respectiva.
+
+---
+
+### Pregunta 17
+
+**Texto:** En relaci�n con la moci�n de censura al alcalde:
+
+**Opciones:**
+  0. Deber� ser propuesta al menos por la mayor�a de dos tercios de los miembros de la corporaci�n
+  1. Habr� de incluir un candidato a la alcald�a.
+  2. Deber� ser aprobada por mayor�a de dos tercios.
+  3. No es necesario que incluya un candidato a la alcald�a.
+
+---
+
+### Pregunta 18
+
+**Texto:** No podr� crearse una comarca si a ello se oponen:
+
+**Opciones:**
+  0. Las 3/4 partes de los municipios que hubieran de agruparse en ella que representen al menos la mitad del censo electoral.
+  1. Las 2/5 partes de los municipios que hubieran de agruparse en ella que representen al menos la mitad del censo electoral.
+  2. Las 2/3 partes de los municipios que hubieran de agruparse en ella que representen al menos la mitad del censo electoral.
+  3. Las 3/5 partes de los municipios que hubieran de agruparse en ella que representen al menos la mitad del censo electoral.
+
+---
+
+### Pregunta 19
+
+**Texto:** Los municipios con poblaci�n superior a 5.000 habitantes e inferior a 20.000 habitantes, no est�n obligados a prestar el servicio o los servicios de:
+
+**Opciones:**
+  0. Tratamiento de residuos.
+  1. Prevenci�n y extinci�n de incendios.
+  2. Parque p�blico.
+
+---
+
+### Pregunta 20
+
+**Texto:** Son �rganos necesarios en todos los ayuntamientos:
+
+**Opciones:**
+  0. El alcalde y los tenientes de alcalde.
+  1. El alcalde, los tenientes de alcalde y la Junta de Gobierno.
+  2. El alcalde, los tenientes de alcalde y el Pleno.
+  3. El alcalde, el Pleno y la Junta de Gobierno
+
+---
+
+### Pregunta 21
+
+**Texto:** La definici�n de Entidades Locales integradas por los municipios de grandes aglomeraciones urbanas entre cuyos n�cleos de poblaci�n existen vinculaciones econ�micas y sociales se corresponde con:
+
+**Opciones:**
+  0. Las comarcas.
+  1. Las �reas metropolitanas.
+  2. Las mancomunidades de municipios.
+  3. Ninguna de las anteriores es correcta.
+
+---
+
+### Pregunta 22
+
+**Texto:** El r�gimen de concejo abierto:
+
+**Opciones:**
+  0. No est� previsto en la Constituci�n espa�ola.
+  1. Su organizaci�n se basa en dos �rganos: el Alcalde y el Consejo Vecinal.
+  2. Podr�n existir en aquellos municipios en los que su localizaci�n geogr�fica, la mejor gesti�n de los intereses municipales u otras circunstancias lo hagan aconsejable.
+  3. Se aplica a todos los municipios de menos de 100 habitantes.
+
+---
+
+### Pregunta 23
+
+**Texto:** Son Entidades Locales Territoriales:
+
+**Opciones:**
+  0. El Municipio y la provincia.
+  1. El municipio, la provincia y las islas en los archipi�lagos Balear y Canario.
+  2. El Municipio, la provincia y la comarca.
+  3. El municipio y la Comarca.
+
+---
+
+### Pregunta 24
+
+**Texto:** Los Vicepresidentes de la Diputaci�n Provincial son nombrados por:
+
+**Opciones:**
+  0. Los Diputados, por mayor�a absoluta.
+  1. El Presidente de la Corporaci�n.
+  2. El Pleno.
+  3. La Junta de Gobierno.
+
+---
+
+### Pregunta 25
+
+**Texto:** Seg�n la Constituci�n de 1978, el municipio tiene personalidad jur�dica:
+
+**Opciones:**
+  0. Plena.
+  1. Propia.
+  2. Derivada.
+  3. Originaria.
+
+---
+
+### Pregunta 26
+
+**Texto:** La Comisi�n Especial de Sugerencias y Reclamaciones existe:
+
+**Opciones:**
+  0. En los municipios de gran poblaci�n, y en aquellos otros en que el Pleno as� lo acuerde, por mayor�a simple, o as� lo disponga su Reglamento org�nico.
+  1. En los municipios de m�s de 5000 habitantes, y en aquellos otros en que el Pleno as� lo acuerde, por el voto favorable de la mayor�a absoluta del n�mero legal de sus miembros, o as� lo disponga su Reglamento org�nico.
+  2. En los municipios de gran poblaci�n, y en aquellos otros en que el Pleno as� lo acuerde, por el voto favorable de la mayor�a absoluta del n�mero legal de sus miembros, o as� lo disponga su Reglamento org�nico.
+  3. En los municipios de m�s de 5000 habitantes, y en aquellos otros en que el Pleno as� lo acuerde, por mayor�a simple, o as� lo disponga su Reglamento org�nico.
+
+---
+
+### Pregunta 27
+
+**Texto:** La Junta de Gobierno Local se integra por el Alcalde y un n�mero de Concejales no superior a:
+
+**Opciones:**
+  0. La mitad del n�mero legal de los mismos.
+  1. Dos tercios del n�mero legal de los mismos.
+  2. Tres quintas partes del n�mero legal de los mismos.
+  3. Un tercio del n�mero legal de los mismos.
+
+---
+
+### Pregunta 28
+
+**Texto:** La Comisi�n Especial de Cuentas existe en:
+
+**Opciones:**
+  0. Los municipios de gran poblaci�n, y en los dem�s cuando as� lo acuerde el Pleno o lo establezca el Reglamento Org�nico.
+  1. Todos los municipios.
+  2. Los municipios con poblaci�n superior a 5000 habitantes, y en los dem�s cuando as� lo acuerde el Pleno o lo establezca el Reglamento Org�nico.
+  3. Los municipios con poblaci�n igual o inferior a 5000 habitantes.
+
+---
+
+### Pregunta 29
+
+**Texto:** Son considerados municipios de gran poblaci�n:
+
+**Opciones:**
+  0. Aquellos que tengan poblaci�n superior a 150.000 habitantes.
+  1. Las capitales de provincia con poblaci�n superior a 100.000 habitantes.
+  2. A los municipios que sean capitales de provincia, capitales auton�micas o sedes de las instituciones auton�micas cuando as� lo decidan las Asambleas Legislativas correspondientes a iniciativa de los respectivos ayuntamientos.
+  3. Los municipios capital de Comunidad Aut�noma con m�s de 70.000 habitantes.
+
+---
+
+### Pregunta 30
+
+**Texto:** No es un r�gimen provincial especial:
+
+**Opciones:**
+  0. Los Cabildos Insulares Canarios.
+  1. Los Consejos Insulares de las Islas Baleares.
+  2. El R�gimen de Concejo Abierto.
+  3. Las Comunidades Aut�nomas uniprovinciales.
+
+---
+
+### Pregunta 31
+
+**Texto:** En los municipios de m�s de 5.000 habitantes, los Tenientes de Alcalde:
+
+**Opciones:**
+  0. Son nombrados por el Alcalde libremente entre los concejales.
+  1. No ser� necesaria la existencia de la figura de los tenientes de alcalde en estos municipios.
+  2. Son nombrados por el Alcalde entre los Concejales miembros de la Junta de Gobierno Local.
+  3. Son nombrados por el Pleno entre los Concejales miembros de la Junta de Gobierno Local.
+
+---
+
+### Pregunta 32
+
+**Texto:** El Estado se organiza territorialmente en:
+
+**Opciones:**
+  0. Municipios.
+  1. Municipios, provincias y comarcas.
+  2. Comunidades Aut�nomas.
+  3. Municipios, provincias y en las Comunidades Aut�nomas que se constituyan.
+
+---
+
+### Pregunta 33
+
+**Texto:** El servicio municipal de transporte colectivo urbano de viajeros se prestar� en los municipios:
+
+**Opciones:**
+  0. En todos los municipios.
+  1. En los de poblaci�n superior a 5.000 habitantes.
+  2. En los de poblaci�n superior a 20.000 habitantes.
+  3. En los de poblaci�n superior a 50.000 habitantes.
+
+---
+
+### Pregunta 34
+
+**Texto:** De conformidad con la LBRL 7/85, los caser�os, parroquias, aldeas, barrios, anteiglesias, concejos, pedan�as, lugares anejos y otros an�logos:
+
+**Opciones:**
+  0. Tienen personalidad jur�dica.
+  1. Son entidades locales territoriales.
+  2. Son entidades locales.
+  3. Son entes de �mbito territorial inferior al municipio.
+
+---
+
+### Pregunta 35
+
+**Texto:** Corresponde en todo caso al pleno municipal, de conformidad con el art�culo 22 LBRL:
+
+**Opciones:**
+  0. La jefatura de la polic�a municipal.
+  1. Aprobar la oferta de empleo p�blico.
+  2. La declaraci�n de lesividad de los actos del ayuntamiento.
+  3. Dirigir, inspeccionar e impulsar servicios y obras municipales.
+
+---
+
+### Pregunta 36
+
+**Texto:** Si una Entidad local adoptara actos o acuerdos que atenten gravemente al inter�s general de Espa�a, el Delegado del Gobierno, previo requerimiento para su anulaci�n al Presidente de la Corporaci�n, podr� suspenderlos y adoptar las medidas pertinentes para la protecci�n de dicho inter�s. El plazo concedido al Presidente de la Corporaci�n en el requerimiento de anulaci�n no podr� ser:
+
+**Opciones:**
+  0. Superior a cinco d�as.
+  1. Inferior a cinco d�as.
+  2. Superior a diez d�as.
+  3. Inferior a diez d�as.
+
+---
+
+### Pregunta 37
+
+**Texto:** Los municipios se regir�n por lo dispuesto en el t�tulo X de la LBRL relativo a municipios de gran poblaci�n en todo caso cuando su poblaci�n sea superior a:
+
+**Opciones:**
+  0. 250.000 habitantes.
+  1. 200.000 habitantes.
+  2. 175.000 habitantes.
+  3. 150.000 habitantes.
+
+---
+
+### Pregunta 38
+
+**Texto:** De acuerdo con lo previsto en la Constituci�n, la alteraci�n de l�mites provinciales corresponde a:
+
+**Opciones:**
+  0. Las Comunidades Aut�nomas.
+  1. El Gobierno.
+  2. Las Cortes Generales.
+  3. Las Diputaciones Provinciales.
+
+---
+
+### Pregunta 39
+
+**Texto:** La creaci�n de un nuevo municipio requiere de n�cleo de poblaci�n territorialmente diferenciado de:
+
+**Opciones:**
+  0. M�s de 10.000 habitantes.
+  1. Al menos 10.000 habitantes.
+  2. M�s de 4.000 habitantes.
+  3. Al menos 4.000 habitantes.
+
+---
+
+### Pregunta 40
+
+**Texto:** En caso de fusi�n de dos municipios, la LBRL no permite su segregaci�n hasta que hayan transcurrido:
+
+**Opciones:**
+  0. cinco a�os desde la adopci�n del convenio de fusi�n.
+  1. nueve a�os desde la adopci�n del convenio de fusi�n.
+  2. quince a�os desde la adopci�n del convenio de fusi�n.
+  3. diez a�os desde la adopci�n del convenio de fusi�n.
+
+---

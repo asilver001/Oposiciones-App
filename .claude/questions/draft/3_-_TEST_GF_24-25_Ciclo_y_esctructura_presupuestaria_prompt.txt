@@ -1,0 +1,390 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf
+**Total preguntas:** 30
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** Seg�n el art�culo 32 de la LGP, los Presupuestos Generales del Estado:
+
+**Opciones:**
+  0. Tienen car�cter anual e incluyen la totalidad de los gastos e ingresos del sector p�blico
+  1. Constituyen la programaci�n de la actividad del sector p�blico estatal.
+  2. Constituyen la expresi�n cifrada, conjunta y sistem�tica de los derechos y obligaciones a
+  3. Se componen de los ingresos que prev�n realizar los �rganos y entidades que forman
+
+---
+
+### Pregunta 2
+
+**Texto:** El procedimiento por el cual se regir� la elaboraci�n de los Presupuestos Generales del
+
+**Opciones:**
+  0. Orden ministerial.
+  1. Ley org�nica.
+  2. Ley ordinaria.
+  3. Real decreto-ley.
+
+---
+
+### Pregunta 3
+
+**Texto:** La Ley General Presupuestaria establece que la estructura de los Presupuestos
+
+**Opciones:**
+  0. Se determinar� por el Gobierno teniendo en cuenta la organizaci�n del sector p�blico
+  1. Se determinar� por el Ministerio de Hacienda teniendo en cuenta la organizaci�n del
+  2. Se determinar� por la Cortes teniendo en cuenta la organizaci�n del sector p�blico, la
+  3. Se determinar� por el Ministerio de Hacienda teniendo en cuenta la organizaci�n del
+
+---
+
+### Pregunta 4
+
+**Texto:** Los PGE no incluir�n el presupuesto de:
+
+**Opciones:**
+  0. Las Universidades P�blicas transferidas.
+  1. Los Fondos sin personalidad jur�dica.
+  2. Las sociedades mercantiles estatales.
+  3. Todos los anteriores se incluyen en los PGE.
+
+---
+
+### Pregunta 5
+
+**Texto:** Los ingresos tienen una estructura:
+
+**Opciones:**
+  0. Org�nica y por programas.
+  1. Org�nica y econ�mica.
+  2. Org�nica, por programas, econ�mica y territorial.
+  3. Org�nica, por programas y econ�mica.
+
+---
+
+### Pregunta 6
+
+**Texto:** Las enmiendas al Proyecto de la Ley de PGE que supongan aumento de gastos o
+
+**Opciones:**
+  0. isminuci�n de los ingresos est�n sujetas a:
+  1. Conformidad del Ministro de Hacienda para su tramitaci�n.
+  2. Conformidad de las Cortes Generales para su tramitaci�n.
+  3. Conformidad del Gobierno para su tramitaci�n.
+
+---
+
+### Pregunta 7
+
+**Texto:** Si en la estructura por programas, el cuarto car�cter es la letra �N�, el programa ser�:
+
+**Opciones:**
+  0. Finalista.
+  1. Instrumental y finalista.
+  2. Instrumental y de gesti�n.
+  3. Finalista y de gesti�n.
+
+---
+
+### Pregunta 8
+
+**Texto:** Dada la aplicaci�n presupuestaria 21.101 412M 202, se puede afirmar que:
+
+**Opciones:**
+  0. El cr�dito asignado es vinculante a nivel de cap�tulo.
+  1. Corresponde a una Agencia Estatal.
+  2. El programa es instrumental y de gesti�n.
+  3. Todas son correctas.
+
+---
+
+### Pregunta 9
+
+**Texto:** Los escenarios presupuestarios plurianuales:
+
+**Opciones:**
+  0. Ser�n confeccionados por el Consejo de Ministros, que dar� cuenta de los mismos al
+  1. Se desarrollar�n en programas anuales referidos a los tres ejercicios siguientes.
+  2. Constituyen la programaci�n de la actividad del sector p�blico estatal con presupuesto
+  3. Estar�n integrados por un escenario de ingresos y un escenario de gastos.
+
+---
+
+### Pregunta 10
+
+**Texto:** Los Presupuestos Generales del Estado determinar�n:
+
+**Opciones:**
+  0. Las obligaciones econ�micas que, como m�nimo, pueden reconocer los sujetos del sector
+  1. Las operaciones no financieras y financieras a realizar por las entidades de los sectores
+  2. La estimaci�n de los beneficios fiscales que afecten a los tributos del Sector P�blico.
+  3. Los derechos a reconocer por las entidades del sector p�blico empresarial y fundacional.
+
+---
+
+### Pregunta 11
+
+**Texto:** Si en el debate de los PGE se produce el veto del Senado:
+
+**Opciones:**
+  0. Se devuelve el texto al Gobierno quien deber� presentar un nuevo proyecto de Ley de
+  1. Se devuelve el texto al Congreso que deber� levantarlo, en todo caso, por mayor�a
+  2. bsoluta.
+  3. Se devuelve el texto al Congreso y deber� levantarlo por mayor�a absoluta, o transcurrido
+
+---
+
+### Pregunta 12
+
+**Texto:** Seg�n el art�culo 134 de la Constituci�n Espa�ola:
+
+**Opciones:**
+  0. Los Presupuestos Generales del Estado tendr�n car�cter anual, incluir�n la totalidad de
+  1. La Ley de Presupuestos no puede crear tributos. Podr� modificarlos cuando una ley
+  2. El Gobierno deber� presentar ante el Congreso de los Diputados los Presupuestos
+  3. Todas son correctas.
+
+---
+
+### Pregunta 13
+
+**Texto:** Con car�cter general, los Presupuestos Generales del Estado de cada a�o entran en
+
+**Opciones:**
+  0. El primer d�a h�bil de enero.
+  1. Al d�a siguiente de su publicaci�n en el BOE.
+  2. El d�a 1 de enero.
+  3. A los 10 d�as a contar desde el d�a siguiente al de su publicaci�n en el BOE.
+
+---
+
+### Pregunta 14
+
+**Texto:** La Ley de PGE es:
+
+**Opciones:**
+  0. Una Ley ordinaria, de tramitaci�n preferente y no es una ley de Pleno.
+  1. Una Ley ordinaria, de tramitaci�n preferente y es una Ley de Pleno.
+  2. Una Ley ordinaria, de tramitaci�n urgente y es una ley de Pleno.
+  3. Una Ley org�nica, de tramitaci�n preferente y es una Ley de Pleno.
+
+---
+
+### Pregunta 15
+
+**Texto:** En la aplicaci�n presupuestaria 13.101 111Q 126.01, los d�gitos 101, representan:
+
+**Opciones:**
+  0. Un organismo aut�nomo.
+  1. El concepto.
+  2. El grupo de programas.
+  3. La clasificaci�n org�nica.
+
+---
+
+### Pregunta 16
+
+**Texto:** Seg�n la estructura de programas vigente, �stos se agregar�n en:
+
+**Opciones:**
+  0. �reas de Gasto, Pol�ticas de Gasto, Grupos de Programas y Programas.
+  1. Cap�tulos, art�culos, conceptos y subconceptos.
+  2. �reas de Gasto, Pol�ticas de Gasto, Conceptos y Programas.
+  3. Pol�ticas de Gasto, �reas de gasto, Grupos de Programas y Programas.
+
+---
+
+### Pregunta 17
+
+**Texto:** Cada una de las asignaciones individuales de gasto que figuran en los presupuestos,
+
+**Opciones:**
+  0. cuerdo con la agrupaci�n org�nica, por programas y econ�mica a nivel de vinculaci�n
+  1. Aplicaci�n presupuestaria.
+  2. Cr�dito presupuesto.
+  3. Programa presupuestario.
+
+---
+
+### Pregunta 18
+
+**Texto:** El proyecto de Ley de Presupuestos Generales del Estado, integrado por el articulado
+
+**Opciones:**
+  0. on sus anexos y los estados de ingresos y gastos:
+  1. Se acompa�ar� de un informe de impacto de g�nero, informe de impacto en la infancia,
+  2. dolescencia y la familia, y de un informe de alineamiento de los PGE con los Objetivos
+  3. e Desarrollo Sostenible de la Agenda 2030.
+
+---
+
+### Pregunta 19
+
+**Texto:** Seg�n lo establecido en la LGP:
+
+**Opciones:**
+  0. La estructura econ�mica del presupuesto prorrogado se adaptar� sin alteraci�n de la
+  1. uant�a total, a la organizaci�n administrativa en vigor en el ejercicio en que el
+  2. La pr�rroga afectar� a los cr�ditos por gastos correspondientes a programas que terminen
+  3. Si la LPGE no se aprobara antes del primer d�a del ejercicio econ�mico correspondiente
+
+---
+
+### Pregunta 20
+
+**Texto:** De acuerdo con la LGP, se especificar�n conforme a su concreta clasificaci�n econ�mica:
+
+**Opciones:**
+  0. Los cr�ditos que no establezcan asignaciones identificando perceptor o beneficiario.
+  1. Los cr�ditos extraordinarios que se concedan durante el ejercicio.
+  2. Los cr�ditos suplementados durante el ejercicio.
+  3. b) y c) son correctas.
+
+---
+
+### Pregunta 21
+
+**Texto:** Durante el ejercicio actual, �cu�l de los siguientes cr�ditos se especificar�n conforme a
+
+**Opciones:**
+  0. 221.09, Labores de la F�brica Nacional de Moneda y Timbre.
+  1. 221.00, Energ�a el�ctrica.
+  2. 225.00, Tributos Estatales.
+  3. 200, Arrendamientos de terrenos.
+
+---
+
+### Pregunta 22
+
+**Texto:** �Con cu�ntos d�gitos se identifica la clasificaci�n org�nica en un OA?:
+
+**Opciones:**
+  0. Con 2 d�gitos.
+  1. Con 3 d�gitos.
+  2. Con 4 d�gitos.
+  3. Con 5 d�gitos.
+
+---
+
+### Pregunta 23
+
+**Texto:** �Cu�l de los siguientes, es un gasto por operaciones corrientes?
+
+**Opciones:**
+  0. La adquisici�n de acciones.
+  1. La compra de mobiliario.
+  2. Los intereses de deuda emitida.
+  3. La adquisici�n de libros para formar parte del fondo de biblioteca.
+
+---
+
+### Pregunta 24
+
+**Texto:** El cap�tulo de �Gastos financieros� se incluye en:
+
+**Opciones:**
+  0. Las operaciones financieras.
+  1. Las operaciones de capital.
+  2. Las operaciones corrientes.
+  3. El cap�tulo 8 o en el cap�tulo 9 por ser una operaci�n financiera.
+
+---
+
+### Pregunta 25
+
+**Texto:** Seg�n el art�culo 43 de la Ley General Presupuestaria, �a qu� nivel vincular�n los
+
+**Opciones:**
+  0. r�ditos suplementados?:
+  1. Al nivel que corresponda conforme a su concreta clasificaci�n econ�mica.
+  2. A nivel de subconcepto.
+  3. A nivel de concepto, como regla general.
+
+---
+
+### Pregunta 26
+
+**Texto:** La adquisici�n de deuda del sector p�blico se imputa al:
+
+**Opciones:**
+  0. Cap�tulo 8 del estado de ingresos.
+  1. Cap�tulo 3 del estado de gastos.
+  2. Cap�tulo 9 del estado de gastos.
+  3. Cap�tulo 8 del estado de gastos.
+
+---
+
+### Pregunta 27
+
+**Texto:** �Cu�l de los siguientes cr�ditos se especificar�n a nivel de art�culo en el Estado?
+
+**Opciones:**
+  0. El subconcepto 226.01.
+  1. El subconcepto 610.01.
+  2. El subconcepto 120.03.
+  3. El subconcepto 202.00.
+
+---
+
+### Pregunta 28
+
+**Texto:** En los cr�ditos para operaciones corrientes se distinguir�n:
+
+**Opciones:**
+  0. Las inversiones reales y las transferencias corrientes.
+  1. Las inversiones reales y las transferencias de capital.
+  2. Los gastos de personal, los gastos corrientes en bienes y servicios, los gastos financieros
+  3. Los gastos de personal, los gastos corrientes en bienes y servicios, los gastos financieros,
+
+---
+
+### Pregunta 29
+
+**Texto:** Se�ale la afirmaci�n correcta:
+
+**Opciones:**
+  0. La amortizaci�n de deuda p�blica por parte del Estado se clasifica dentro del cap�tulo 9,
+  1. Las ayudas de acci�n social de tipo educativo, cultural o de transporte que recibe el
+  2. Los gastos derivados de la realizaci�n de pruebas selectivas son vinculantes a nivel de
+  3. rt�culo, tanto en el Estado como en Organismo Aut�nomos, dado que pertenecen al
+
+---
+
+### Pregunta 30
+
+**Texto:** En la clasificaci�n econ�mica del presupuesto:
+
+**Opciones:**
+  0. Los intereses de los activos financieros se reflejan en el Cap�tulo 5 del presupuesto de
+  1. Los intereses de la Deuda P�blica se registran en el Cap�tulo 9 del presupuesto de gastos.
+  2. Los pr�stamos concedidos por el Estado se reflejan en el Cap�tulo 9 del presupuesto de
+  3. Los pr�stamos recibidos por el Estado se anotan en el Cap�tulo 8 del presupuesto de
+
+---

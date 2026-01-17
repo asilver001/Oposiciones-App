@@ -1,0 +1,1321 @@
+{
+  "metadata": {
+    "source_file": "Test tema 6.pdf",
+    "source_path": "Test Iniciales UE\\Test tema 6.pdf",
+    "tema": 6,
+    "categoria": "union-europea",
+    "extraction_date": "2026-01-15T23:42:12.424559",
+    "reformulation_date": "2026-01-15T23:47:35.791662",
+    "total_questions": 40,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:56.166337",
+    "completed_count": 0,
+    "failed_count": 40
+  },
+  "questions": [
+    {
+      "question_text": "La poltica agrcola comn y la de redes transeuropeas fueron introducidas respec-",
+      "options": [
+        {
+          "text": "El Tratado de Maastricht y el Tratado de Lisboa.",
+          "is_correct": false
+        },
+        {
+          "text": "El Tratado de la Comunidad Econmica Europea y el Tratado de Maastricht.",
+          "is_correct": false
+        },
+        {
+          "text": "El Acta nica Europea y el Tratado de Niza.",
+          "is_correct": false
+        },
+        {
+          "text": "El Tratado de msterdam y el Tratado de Lisboa.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La poltica agrcola comn y la de redes transeuropeas fueron introducidas respec-",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de las siguientes es una competencia exclusiva de la Unin?",
+      "options": [
+        {
+          "text": "El mercado interior.",
+          "is_correct": false
+        },
+        {
+          "text": "La poltica social.",
+          "is_correct": false
+        },
+        {
+          "text": "La cohesin econmica, social y territorial.",
+          "is_correct": false
+        },
+        {
+          "text": "La conservacin de recursos biolgicos marinos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de las siguientes es una competencia exclusiva de la Unin?",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La delimitacin de las competencias de la Unin se rige por el principio de:",
+      "options": [
+        {
+          "text": "Atribucin.",
+          "is_correct": false
+        },
+        {
+          "text": "Subsidiariedad.",
+          "is_correct": false
+        },
+        {
+          "text": "Proporcionalidad.",
+          "is_correct": false
+        },
+        {
+          "text": "Cooperacin leal.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La delimitacin de las competencias de la Unin se rige por el principio de:",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con el TFUE:",
+      "options": [
+        {
+          "text": "Los Estados miembros considerarn sus polticas econmicas como una cuestin de in-",
+          "is_correct": false
+        },
+        {
+          "text": "La Unin desarrollar una poltica que tendr como objetivo garantizar la ausencia total",
+          "is_correct": false
+        },
+        {
+          "text": "e controles de las personas, sea cual sea su nacionalidad cuando crucen las fronteras",
+          "is_correct": false
+        },
+        {
+          "text": "El mercado interior abarcar la agricultura, la pesca y el comercio de los productos agr-",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con el TFUE:",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de los siguientes pases NO forma parte del Espacio Econmico Europeo?",
+      "options": [
+        {
+          "text": "Noruega.",
+          "is_correct": false
+        },
+        {
+          "text": "Suiza.",
+          "is_correct": false
+        },
+        {
+          "text": "Croacia.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de los siguientes pases NO forma parte del Espacio Econmico Europeo?",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La libre circulacin de mercancas implica:",
+      "options": [
+        {
+          "text": "La supresin de derechos de aduana de importacin entre los Estados miembros y terce-",
+          "is_correct": false
+        },
+        {
+          "text": "La adopcin de un arancel aduanero comn adoptado por la Comisin, a propuesta del",
+          "is_correct": false
+        },
+        {
+          "text": "onsejo.",
+          "is_correct": false
+        },
+        {
+          "text": "La supresin de restricciones cuantitativas a la importacin y exportacin, as como to-",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La libre circulacin de mercancas implica:",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Tribunal de Justicia en la Sentencia Casis de Dijon de 1979:",
+      "options": [
+        {
+          "text": "Redefini el concepto de medida de efecto equivalente, al no entender por la misma las",
+          "is_correct": false
+        },
+        {
+          "text": "Estableci que toda reglamentacin comercial de los Estados miembros susceptible de",
+          "is_correct": false
+        },
+        {
+          "text": "Estableci el principio de garanta mutua que permite armonizar las legislaciones de los",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Tribunal de Justicia en la Sentencia Casis de Dijon de 1979:",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de los siguientes NO es uno de los derechos que implica la libre circulacin de",
+      "options": [
+        {
+          "text": "Responder a ofertas efectivas de trabajo.",
+          "is_correct": false
+        },
+        {
+          "text": "Al reconocimiento automtico de sus titulaciones acadmicas.",
+          "is_correct": false
+        },
+        {
+          "text": "Residir en uno de los Estados miembros con la finalidad de ejercer en l un empleo.",
+          "is_correct": false
+        },
+        {
+          "text": "Permanecer en el territorio de un Estado miembro despus de haber ejercido en l un",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de los siguientes NO es uno de los derechos que implica la libre circulacin de",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de los siguientes es uno de los criterios de convergencia que deben reunir los",
+      "options": [
+        {
+          "text": "La inflacin no podr exceder de 2 puntos sobre el promedio de los 3 pases con menor",
+          "is_correct": false
+        },
+        {
+          "text": "El tipo de inters no podr exceder de 4 puntos sobre la media del tipo de inters a largo",
+          "is_correct": false
+        },
+        {
+          "text": "La deuda pblica no podr exceder del 60% del PIB o al menos registrar una tendencia",
+          "is_correct": false
+        },
+        {
+          "text": "ecreciente hacia dicho porcentaje.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de los siguientes es uno de los criterios de convergencia que deben reunir los",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con el artculo 40 del TFUE, para alcanzar los objetivos de la PAC se",
+      "options": [
+        {
+          "text": "rea una organizacin comn de los mercados agrcolas que, segn los productos,",
+          "is_correct": false
+        },
+        {
+          "text": "doptar una de las siguientes formas:",
+          "is_correct": false
+        },
+        {
+          "text": "Normas comunes sobre competencia.",
+          "is_correct": false
+        },
+        {
+          "text": "Una organizacin europea del mercado.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con el artculo 40 del TFUE, para alcanzar los objetivos de la PAC se",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cmo se denomina el momento o proceso en el que se lleva a cabo la supervisin",
+      "options": [
+        {
+          "text": "Evaluacin del plan fiscal-estructural a medio plazo.",
+          "is_correct": false
+        },
+        {
+          "text": "Semestre Europeo.",
+          "is_correct": false
+        },
+        {
+          "text": "Mecanismo de Estabilidad.",
+          "is_correct": false
+        },
+        {
+          "text": "Consejo ECOFIN.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cmo se denomina el momento o proceso en el que se lleva a cabo la supervisin",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul es la duracin de los planes fiscales-estructurales a medio plazo?",
+      "options": [
+        {
+          "text": "Un ao.",
+          "is_correct": false
+        },
+        {
+          "text": "Tres aos.",
+          "is_correct": false
+        },
+        {
+          "text": "Un perodo de cuatro o de cinco aos, en funcin de la duracin habitual de la legislatura",
+          "is_correct": false
+        },
+        {
+          "text": "e ese Estado miembro.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul es la duracin de los planes fiscales-estructurales a medio plazo?",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Quin decidir qu Estados miembros acogidos a una excepcin cumplen los crite-",
+      "options": [
+        {
+          "text": "El Consejo.",
+          "is_correct": false
+        },
+        {
+          "text": "El Parlamento Europeo.",
+          "is_correct": false
+        },
+        {
+          "text": "La a) es correcta, y lo har a propuesta de la Comisin, tras consultar al Parlamento",
+          "is_correct": false
+        },
+        {
+          "text": "La b) es correcta y lo har a propuesta de la Comisin, debatida la cuestin en el Consejo",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Quin decidir qu Estados miembros acogidos a una excepcin cumplen los crite-",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de los siguientes instrumentos supuso la reforma del artculo 135 de la Cons-",
+      "options": [
+        {
+          "text": "Mecanismo Europeo de Estabilidad.",
+          "is_correct": false
+        },
+        {
+          "text": "Pacto por el Euro Plus.",
+          "is_correct": false
+        },
+        {
+          "text": "Tratado de Estabilidad, Coordinacin y Gobernanza.",
+          "is_correct": false
+        },
+        {
+          "text": "Pacto de Estabilidad y Crecimiento.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de los siguientes instrumentos supuso la reforma del artculo 135 de la Cons-",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Quin examina los regmenes de ayuda existentes en los Estados miembros?",
+      "options": [
+        {
+          "text": "El Consejo.",
+          "is_correct": false
+        },
+        {
+          "text": "El Parlamento Europeo.",
+          "is_correct": false
+        },
+        {
+          "text": "Los propios Estados miembros.",
+          "is_correct": false
+        },
+        {
+          "text": "La Comisin Europea.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Quin examina los regmenes de ayuda existentes en los Estados miembros?",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de los siguientes fondos financia programas para el desarrollo rural dentro",
+      "options": [
+        {
+          "text": "e la PAC?",
+          "is_correct": false
+        },
+        {
+          "text": "El FEMPA.",
+          "is_correct": false
+        },
+        {
+          "text": "El FEADER.",
+          "is_correct": false
+        },
+        {
+          "text": "El FEAGA.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de los siguientes fondos financia programas para el desarrollo rural dentro",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cundo se iniciar el procedimiento de dficit excesivo?",
+      "options": [
+        {
+          "text": "Si un Estado miembro incumple el criterio de dficit pblico mximo fijado en el 3%",
+          "is_correct": false
+        },
+        {
+          "text": "el PIB.",
+          "is_correct": false
+        },
+        {
+          "text": "Si un Estado miembro incumple el criterio de deuda pblica mxima fijado en el 50%",
+          "is_correct": false
+        },
+        {
+          "text": "el PIB.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cundo se iniciar el procedimiento de dficit excesivo?",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Se entiende por establecimiento:",
+      "options": [
+        {
+          "text": "El ejercicio de actividades econmicas no asalariadas a partir de un establecimiento si-",
+          "is_correct": false
+        },
+        {
+          "text": "Aquella instalacin material, estable y permanente de una persona fsica o jurdica na-",
+          "is_correct": false
+        },
+        {
+          "text": "ional de un Estado europeo en el territorio de otro Estado europeo, con el fin de ejercer",
+          "is_correct": false
+        },
+        {
+          "text": "El desplazamiento y residencia de un nacional de un Estado miembro a otro Estado",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Se entiende por establecimiento:",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "A quin corresponde aprobar una cooperacin estructurada permanente dentro",
+      "options": [
+        {
+          "text": "e la Poltica Comn de Seguridad y Defensa?",
+          "is_correct": false
+        },
+        {
+          "text": "Al Consejo, por unanimidad.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Parlamento Europeo, por mayora de sus miembros.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Consejo, por mayora cualificada.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "A quin corresponde aprobar una cooperacin estructurada permanente dentro",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con el artculo 39 del TFUE, NO ser uno de los objetivos de la PAC:",
+      "options": [
+        {
+          "text": "Estabilizar los precios de los productos agrcolas.",
+          "is_correct": false
+        },
+        {
+          "text": "Garantizar la seguridad de los abastecimientos.",
+          "is_correct": false
+        },
+        {
+          "text": "Garantizar un nivel de vida equitativo a la poblacin agrcola.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con el artculo 39 del TFUE, NO ser uno de los objetivos de la PAC:",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de las siguientes prcticas se considera incompatible con el mercado interior?",
+      "options": [
+        {
+          "text": "Limitar la produccin.",
+          "is_correct": false
+        },
+        {
+          "text": "Repartirse los mercados.",
+          "is_correct": false
+        },
+        {
+          "text": "Todas las anteriores son incompatibles.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de las siguientes prcticas se considera incompatible con el mercado interior?",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Uno de los instrumentos de la Poltica Exterior y de Seguridad Comn es:",
+      "options": [
+        {
+          "text": "Las misiones reforzadas.",
+          "is_correct": false
+        },
+        {
+          "text": "La definicin de orientaciones generales e intereses estratgicos de la Unin.",
+          "is_correct": false
+        },
+        {
+          "text": "Adopcin de reglamentos por lo que se establecen acciones o posiciones que va a adoptar",
+          "is_correct": false
+        },
+        {
+          "text": "Fortalecer la cooperacin sistemtica entre las instituciones de la Unin Europea.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Uno de los instrumentos de la Poltica Exterior y de Seguridad Comn es:",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul es el principal objetivo del Sistema Europeo de Bancos Centrales?",
+      "options": [
+        {
+          "text": "Gestionar la poltica monetaria.",
+          "is_correct": false
+        },
+        {
+          "text": "Mantener la estabilidad de los precios.",
+          "is_correct": false
+        },
+        {
+          "text": "Lograr que todos los Estados miembros adopten el euro como moneda nica.",
+          "is_correct": false
+        },
+        {
+          "text": "Autorizar la emisin de billetes de banco en euros.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul es el principal objetivo del Sistema Europeo de Bancos Centrales?",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul es la Agencia Europea de Cooperacin Judicial?",
+      "options": [
+        {
+          "text": "Europol.",
+          "is_correct": false
+        },
+        {
+          "text": "Eurojust.",
+          "is_correct": false
+        },
+        {
+          "text": "Fiscala Europea.",
+          "is_correct": false
+        },
+        {
+          "text": "FRONTEX.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul es la Agencia Europea de Cooperacin Judicial?",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Uno de los siguientes tratados permiti incluir dos excepciones por las que Dina-",
+      "options": [
+        {
+          "text": "Acta nica Europea.",
+          "is_correct": false
+        },
+        {
+          "text": "Tratado de Maastricht.",
+          "is_correct": false
+        },
+        {
+          "text": "Tratado de msterdam.",
+          "is_correct": false
+        },
+        {
+          "text": "Tratado de Niza.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Uno de los siguientes tratados permiti incluir dos excepciones por las que Dina-",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul es el fondo con el que se financian los gastos operativos de la PESC derivados",
+      "options": [
+        {
+          "text": "e operaciones militares o defensivas?",
+          "is_correct": false
+        },
+        {
+          "text": "Fondo Athena.",
+          "is_correct": false
+        },
+        {
+          "text": "Fondo Europeo de Defensa.",
+          "is_correct": false
+        },
+        {
+          "text": "Fondo Europeo de Apoyo a la Paz.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul es el fondo con el que se financian los gastos operativos de la PESC derivados",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Constituye la regla general para la adopcin de decisiones en materia PESC:",
+      "options": [
+        {
+          "text": "Unanimidad.",
+          "is_correct": false
+        },
+        {
+          "text": "Mayora cualificada.",
+          "is_correct": false
+        },
+        {
+          "text": "Consenso.",
+          "is_correct": false
+        },
+        {
+          "text": "Mayora de miembros.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Constituye la regla general para la adopcin de decisiones en materia PESC:",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Espacio de Libertad, Seguridad y Justicia se conoce con esta denominacin desde:",
+      "options": [
+        {
+          "text": "El Tratado de Roma.",
+          "is_correct": false
+        },
+        {
+          "text": "El Tratado de msterdam.",
+          "is_correct": false
+        },
+        {
+          "text": "El Tratado de Niza.",
+          "is_correct": false
+        },
+        {
+          "text": "El Tratado de Lisboa.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Espacio de Libertad, Seguridad y Justicia se conoce con esta denominacin desde:",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul es una competencia de apoyo, coordinacin o complemento?",
+      "options": [
+        {
+          "text": "La defensa de la competencia.",
+          "is_correct": false
+        },
+        {
+          "text": "El turismo.",
+          "is_correct": false
+        },
+        {
+          "text": "La poltica social.",
+          "is_correct": false
+        },
+        {
+          "text": "El medio ambiente.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul es una competencia de apoyo, coordinacin o complemento?",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con el artculo 57 del TFUE, los servicios NO comprendern:",
+      "options": [
+        {
+          "text": "Actividades de carcter industrial.",
+          "is_correct": false
+        },
+        {
+          "text": "Actividades sociales.",
+          "is_correct": false
+        },
+        {
+          "text": "Actividades artesanales.",
+          "is_correct": false
+        },
+        {
+          "text": "Actividades propias de profesiones liberales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con el artculo 57 del TFUE, los servicios NO comprendern:",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de las siguientes ayudas podr ser valorada como compatible con el mercado",
+      "options": [
+        {
+          "text": "Ayudas de carcter social concedidas a los consumidores individuales siempre y cuando",
+          "is_correct": false
+        },
+        {
+          "text": "Ayudas destinadas a reparar los perjuicios causados por desastres naturales o por otros",
+          "is_correct": false
+        },
+        {
+          "text": "contecimientos de carcter excepcional.",
+          "is_correct": false
+        },
+        {
+          "text": "Ayudas destinadas a promover la cultura y la conservacin del patrimonio, cuando no",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de las siguientes ayudas podr ser valorada como compatible con el mercado",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La abstencin constructiva o positiva:",
+      "options": [
+        {
+          "text": "Se introdujo por el Tratado de Lisboa.",
+          "is_correct": false
+        },
+        {
+          "text": "Es un mecanismo segn el cual uno o varios Estados pueden en el momento de la abs-",
+          "is_correct": false
+        },
+        {
+          "text": "Flexibiliz la toma de decisiones por mayora cualificada en la poltica de cohesin.",
+          "is_correct": false
+        },
+        {
+          "text": "Ninguna de las anteriores es correcta.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La abstencin constructiva o positiva:",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la cierta respecto a las competencias de la UE:",
+      "options": [
+        {
+          "text": "El ejercicio de las competencias se rige por los principios de proporcionalidad y coope-",
+          "is_correct": false
+        },
+        {
+          "text": "Cuando los Tratados atribuyan a la Unin una competencia compartida con los Estados",
+          "is_correct": false
+        },
+        {
+          "text": "icamente vinculantes.",
+          "is_correct": false
+        },
+        {
+          "text": "Cuando los tratados atribuyan a la Unin una competencia exclusiva en un mbito de-",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la cierta respecto a las competencias de la UE:",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cuando en circunstancias excepcionales los movimientos de capitales con destinos a",
+      "options": [
+        {
+          "text": "La Comisin.",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo.",
+          "is_correct": false
+        },
+        {
+          "text": "Los Estados miembros.",
+          "is_correct": false
+        },
+        {
+          "text": "La b) es correcta, a propuesta de la Comisin, previa consulta al BCE.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cuando en circunstancias excepcionales los movimientos de capitales con destinos a",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En virtud del artculo 36 del TFUE, NO es uno de los motivos para establecer limi-",
+      "options": [
+        {
+          "text": "Moralidad.",
+          "is_correct": false
+        },
+        {
+          "text": "Orden pblico.",
+          "is_correct": false
+        },
+        {
+          "text": "Proteccin de la salud.",
+          "is_correct": false
+        },
+        {
+          "text": "Todos son motivos en base a los cuales los Estados miembros pueden justificar prohibi-",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En virtud del artculo 36 del TFUE, NO es uno de los motivos para establecer limi-",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de los siguientes pases NO pertenece a la Eurozona?",
+      "options": [
+        {
+          "text": "Croacia.",
+          "is_correct": false
+        },
+        {
+          "text": "Estonia.",
+          "is_correct": false
+        },
+        {
+          "text": "Hungra.",
+          "is_correct": false
+        },
+        {
+          "text": "Finlandia.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de los siguientes pases NO pertenece a la Eurozona?",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Europol y Eurojust tienen su sede en:",
+      "options": [
+        {
+          "text": "La Haya.",
+          "is_correct": false
+        },
+        {
+          "text": "Estrasburgo.",
+          "is_correct": false
+        },
+        {
+          "text": "Luxemburgo.",
+          "is_correct": false
+        },
+        {
+          "text": "Bruselas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Europol y Eurojust tienen su sede en:",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu institucin adoptar una recomendacin por la que se establezcan las orienta-",
+      "options": [
+        {
+          "text": "iones generales de poltica econmica?",
+          "is_correct": false
+        },
+        {
+          "text": "La Comisin.",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo Europeo.",
+          "is_correct": false
+        },
+        {
+          "text": "El Parlamento Europeo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu institucin adoptar una recomendacin por la que se establezcan las orienta-",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta correcta:",
+      "options": [
+        {
+          "text": "Con el Tratado de Niza la CAJI pas a denominarse Cooperacin Policial y Judicial en",
+          "is_correct": false
+        },
+        {
+          "text": "El Tratado de msterdam introdujo la poltica de empleo.",
+          "is_correct": false
+        },
+        {
+          "text": "El Tratado de la Comunidad Econmica Europea pas a denominarse TFUE con el Tra-",
+          "is_correct": false
+        },
+        {
+          "text": "El Tratado de Lisboa introdujo la poltica medioambiental.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta correcta:",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con el artculo 4 del TUE:",
+      "options": [
+        {
+          "text": "Toda competencia no atribuida a los Estados miembros en los Tratados corresponde a",
+          "is_correct": false
+        },
+        {
+          "text": "Los Estados miembros actan dentro de los lmites de las competencias que les atribuye",
+          "is_correct": false
+        },
+        {
+          "text": "El contenido y la forma de la accin de los Estados no excedern de lo necesario para",
+          "is_correct": false
+        },
+        {
+          "text": "lcanzar los objetivos de los Tratados.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con el artculo 4 del TUE:",
+      "source": "Test tema 6.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

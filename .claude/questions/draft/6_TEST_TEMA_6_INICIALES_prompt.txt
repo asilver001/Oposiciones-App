@@ -1,0 +1,510 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 6 TEST TEMA 6 INICIALES.docx
+**Total preguntas:** 40
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** �Qu� nombre reciben las disposiciones legislativas provisionales emanadas del Gobierno?
+
+**Opciones:**
+  0. Decreto Ley
+  1. Decreto
+  2. Decreto Legislativo
+  3. Reglamento
+
+---
+
+### Pregunta 2
+
+**Texto:** �Qu� medio utilizan las Cortes Generales para delegar en el Gobierno la potestad de refundir varios textos legales en uno solo?
+
+**Opciones:**
+  0. Ley de Bases.
+  1. Ley ordinaria.
+  2. Decreto Ley.
+  3. Decreto Legislativo.
+
+---
+
+### Pregunta 3
+
+**Texto:** El esquema b�sico de la composici�n del Gobierno ser�, seg�n la Constituci�n
+
+**Opciones:**
+  0. El Presidente, el Vicepresidente, los Ministros y los dem�s miembros que establezca la ley.
+  1. El Presidente, los Vicepresidentes en su caso, los Ministros y los dem�s miembros que establezca la ley.
+  2. El Presidente, los Vicepresidentes, los Ministros, en su caso, y los dem�s miembros que establezca la ley.
+  3. El Presidente, los Ministros, y los dem�s miembros que establezca la ley.
+
+---
+
+### Pregunta 4
+
+**Texto:** En caso de que existan Ministros sin cartera
+
+**Opciones:**
+  0. Por Real Decreto se determinar� el �mbito de sus competencias, la estructura administrativa, as� como los medios materiales y personales que queden adscritos al mismo.
+  1. Por Orden del Ministro de Presidencia, Relaciones con las Cortes y memoria democr�tica se determinar� el �mbito de sus competencias, la estructura administrativa, as� como los medios materiales y personales que queden adscritos al mismo.
+  2. Por Ley de las CCGG se determinar� el �mbito de sus competencias, la estructura administrativa, as� como los medios materiales y personales que queden adscritos al mismo.
+  3. Por Resoluci�n del Secretario de Estado del Ministerio de Presidencia, Relaciones con las Cortes y memoria democr�tica se determinar� el �mbito de sus competencias, la estructura administrativa, as� como los medios materiales y personales que queden adscritos al mismo.
+
+---
+
+### Pregunta 5
+
+**Texto:** La acusaci�n a miembros del Gobierno por delitos de traici�n o contra la seguridad del Estado s�lo podr� ser planteada por iniciativa de
+
+**Opciones:**
+  0. La tercera parte de los miembros del Congreso, y con aprobaci�n de la
+  1. La cuarta parte de los miembros del Congreso, y con aprobaci�n de la mayor�a absoluta del mismo.
+  2. La tercera parte de los miembros del Congreso, y con aprobaci�n de la mayor�a absoluta del Senado
+  3. La cuarta parte de los miembros del Congreso, y con aprobaci�n de la mayor�a absoluta del Senado
+
+---
+
+### Pregunta 6
+
+**Texto:** La disoluci�n de las C�maras, por transcurso de dos meses desde la primera votaci�n de investidura, sin obtenci�n de la confianza por los candidatos, se refrenda por
+
+**Opciones:**
+  0. Presidente del Gobierno.
+  1. El Rey.
+  2. El Presidente del Congreso.
+  3. No necesita refrendo.
+
+---
+
+### Pregunta 7
+
+**Texto:** �Cu�l de las siguientes competencias puede desempe�ar un Presidente del Gobierno en funciones?
+
+**Opciones:**
+  0. Resolver los conflictos de atribuciones entre los ministerios.
+  1. Proponer al Rey la disoluci�n de las C�maras.
+  2. Proponer al Rey la convocatoria de refer�ndum consultivo.
+  3. Plantear la cuesti�n de confianza.
+
+---
+
+### Pregunta 8
+
+**Texto:** Seg�n la Ley 50/1997, de 27 de noviembre, �a qui�n corresponde la secretar�a del Consejo de Ministros?
+
+**Opciones:**
+  0. Al Presidente del Gobierno, en todo caso.
+  1. Al Ministro del Interior.
+  2. Al Ministro de la Presidencia, Justicia y Relaciones con las Cortes.
+  3. A un Vicepresidente, y en su defecto, al Ministro de la Presidencia, Justicia y Relaciones con las Cortes.
+
+---
+
+### Pregunta 9
+
+**Texto:** Se�ale la respuesta falsa en relaci�n con la Comisi�n General de Secretarios de Estado y Subsecretarios
+
+**Opciones:**
+  0. La Presidencia de la Comisi�n General de Secretarios de Estado y Subsecretarios corresponde a un Vicepresidente del Gobierno o, en su defecto, al Ministro de la Presidencia, Justicia y Relaciones con las Cortes.
+  1. La Secretar�a de la Comisi�n General de Secretarios de Estado y Subsecretarios ser� ejercida por el Subsecretario de la Presidencia, justicia y Relaciones con las Cortes.
+  2. Las deliberaciones de la Comisi�n General de Secretarios de Estado y Subsecretarios ser�n reservadas
+  3. La Comisi�n podr� adoptar decisiones o acuerdos por delegaci�n del Gobierno.
+
+---
+
+### Pregunta 10
+
+**Texto:** La cuesti�n de confianza prevista en el art�culo 112 CE
+
+**Opciones:**
+  0. Se presenta por el Presidente del Gobierno, previa deliberaci�n del Consejo de Ministros, ante las Cortes Generales.
+  1. Se presentar� por el Presidente del Gobierno sobre su programa o sobre una declaraci�n de pol�tica general.
+  2. La confianza se entender� otorgada cuando vote a favor de la misma la mayor�a absoluta de los Diputados.
+  3. Podr� ser planteada por el Presidente del Gobierno en funciones.
+
+---
+
+### Pregunta 11
+
+**Texto:** Los Secretarios de Estado
+
+**Opciones:**
+  0. Son miembros del Gobierno.
+  1. Son �rganos de colaboraci�n y apoyo al Gobierno.
+  2. Son �rganos directivos de la Administraci�n.
+  3. Son miembros del gobierno y �rganos superiores de la AGE.
+
+---
+
+### Pregunta 12
+
+**Texto:** El Secretariado de Gobierno
+
+**Opciones:**
+  0. Se integra en la estructura org�nica del Ministerio de Hacienda.
+  1. Se integra en la estructura org�nica del Ministerio de la Presidencia, Justicia y Relaciones con las Cortes.
+  2. Se integra en la estructura org�nica de la Presidencia del Gobierno
+  3. Se integra en la estructura org�nica del Ministerio Hacienda.
+
+---
+
+### Pregunta 13
+
+**Texto:** De acuerdo con la Ley 50/1997, de 27 de noviembre, del Gobierno, se�ale qu� competencia corresponde al Consejo de Ministros
+
+**Opciones:**
+  0. Resolver los conflictos de atribuciones que puedan surgir entre los Ministerios
+  1. Establecer el programa pol�tico del Gobierno y determinar las directrices de pol�tica interior y exterior y velar por su cumplimiento
+  2. Adoptar programas, planes, y directrices vinculantes para todos los �rganos de la AGE.
+  3. Crear, modificar y suprimir los Departamentos Ministeriales y las Secretar�as de Estado.
+
+---
+
+### Pregunta 14
+
+**Texto:** �Cu�l de las siguientes funciones no le corresponde ejercer al Presidente del Gobierno?
+
+**Opciones:**
+  0. Interponer el recurso de inconstitucionalidad.
+  1. Proponer al Rey la celebraci�n de refer�ndum consultivo.
+  2. Proponer la disoluci�n de las Cortes Generales.
+  3. Aprobar proyectos de ley.
+
+---
+
+### Pregunta 15
+
+**Texto:** �Qui�n propone el candidato a la Presidencia del Gobierno
+
+**Opciones:**
+  0. El pueblo espa�ol.
+  1. El Congreso de los Diputados.
+  2. El Rey.
+  3. Las Cortes Generales.
+
+---
+
+### Pregunta 16
+
+**Texto:** �Cu�ntos d�as deben transcurrir al menos desde que se presente una moci�n de censura hasta que pueda ser votada?
+
+**Opciones:**
+  0. Dos d�as.
+  1. Tres d�as.
+  2. Cuatro d�as.
+  3. Cinco d�as.
+
+---
+
+### Pregunta 17
+
+**Texto:** �A qui�n debe presentar el Gobierno su dimisi�n en el supuesto de que no obtenga la mayor�a necesaria en una votaci�n de cuesti�n de confianza?
+
+**Opciones:**
+  0. Ante el Congreso de los Diputados.
+  1. Ante el Rey.
+  2. Ante las Cortes Generales.
+  3. Ante el Consejo de Ministros.
+
+---
+
+### Pregunta 18
+
+**Texto:** Para ser nombrado Ministro es necesario ostentar los siguientes requisitos
+
+**Opciones:**
+  0. Se requiere ser espa�ol, mayor de edad, disfrutar de los derechos de sufragio activo y pasivo, as� como no estar inhabilitado para ejercer empleo o cargo p�blico por sentencia judicial firme y reunir el resto de requisitos de idoneidad previstos en la Ley 3/2015, de 30 de marzo, reguladora del ejercicio del alto cargo de la Administraci�n General del Estado.
+  1. Mayor de edad, disfrutar de los derechos de sufragio activo y pasivo, as� como no estar inhabilitado para ejercer empleo o cargo p�blico por sentencia judicial firme y reunir el resto de requisitos de idoneidad previstos en la Ley 3/2015, de
+  2. Espa�ol, mayor de edad y disfrutar de los derechos de sufragio activo y pasivo
+  3. Espa�ol, mayor de edad, as� como no estar inhabilitado para ejercer empleo o cargo p�blico por sentencia judicial firme.
+
+---
+
+### Pregunta 19
+
+**Texto:** En los casos de vacante, ausencia o enfermedad, las funciones del Presidente del Gobierno ser�n asumidas por
+
+**Opciones:**
+  0. Los Vicepresidentes, de acuerdo con el correspondiente orden de prelaci�n, y, en defecto de ellos, por los Ministros, seg�n el orden de precedencia de los Departamentos.
+  1. Los Ministros, seg�n el orden de precedencia de los Departamentos y, en defecto de ellos, por los Vicepresidentes, de acuerdo con el correspondiente orden de prelaci�n
+  2. Los Vicepresidentes, de acuerdo con el correspondiente orden de prelaci�n, y, en defecto de ellos, por los Secretarios de Estado, seg�n el orden de precedencia de los Departamentos.
+  3. Los Ministros, seg�n el orden de precedencia de los Departamentos y, en defecto de ellos, por los Secretarios de Estado, seg�n el orden de precedencia de los Departamentos.
+
+---
+
+### Pregunta 20
+
+**Texto:** La suplencia de los Ministros, para el despacho ordinario de los asuntos de su competencia, ser� determinada por
+
+**Opciones:**
+  0. Real Decreto del Consejo de Ministros.
+  1. Orden del propio ministro.
+  2. Real Decreto del Presidente del Gobierno.
+  3. Acuerdo del Consejo de Ministros.
+
+---
+
+### Pregunta 21
+
+**Texto:** Se�ale la falsa en relaci�n con los �rganos de colaboraci�n y apoyo al Gobierno
+
+**Opciones:**
+  0. Tienen esta consideraci�n los secretarios de Estado, la Comisi�n General de Secretarios de Estado y Subsecretarios, el Secretariado del Gobierno y los Gabinetes.
+  1. El Secretariado del Gobierno se integra en la estructura org�nica del Ministerio de la Presidencia, Justicia y Relaciones con las Cortes.
+  2. Los Gabinetes son �rganos de apoyo pol�tico y t�cnico del Presidente del Gobierno, de los Vicepresidentes, de los Ministros, de los Secretarios de Estado y de los subsecretarios.
+  3. La Presidencia de la Comisi�n General de Secretarios de Estado y Subsecretarios corresponde a un Vicepresidente del Gobierno o, en su defecto, al Ministro de la Presidencia, Justicia y Relaciones con las Cortes.
+
+---
+
+### Pregunta 22
+
+**Texto:** Los Vicepresidentes son nombrados por
+
+**Opciones:**
+  0. El presidente del Gobierno.
+  1. El Rey.
+  2. El Congreso.
+  3. El Senado.
+
+---
+
+### Pregunta 23
+
+**Texto:** Se�ale la respuesta correcta en relaci�n con las reuniones del Consejo de Ministros
+
+**Opciones:**
+  0. A las reuniones del Consejo de Ministros podr�n asistir los Secretarios de Estado y excepcionalmente otros altos cargos, cuando sean convocados para ello.
+  1. Act�a como Secretario el Ministro de Hacienda.
+  2. El orden del d�a de las reuniones del Consejo de Ministros se fijar� por el Secretario.
+  3. Las reuniones del Consejo de Ministros podr�n tener car�cter decisorio o consultivo.
+
+---
+
+### Pregunta 24
+
+**Texto:** Al Consejo de Ministros, como �rgano colegiado del Gobierno, le corresponde
+
+**Opciones:**
+  0. Declarar los estados de alarma, excepci�n y sitio
+  1. Crear, modificar y suprimir los �rganos directivos de los Departamentos Ministeriales.
+  2. Aprobar los Reales Decretos-Leyes y las leyes org�nicas
+  3. Aprobar la Ley de Presupuestos Generales del Estado.
+
+---
+
+### Pregunta 25
+
+**Texto:** Se�ale la afirmaci�n correcta sobre el Gobierno
+
+**Opciones:**
+  0. Dirige la pol�tica interior y exterior, la Administraci�n civil y militar y la defensa del Estado.
+  1. Se compone del Presidente, los ministros, en su caso, y de los Vicepresidentes.
+  2. Sus miembros se re�nen en Consejo de Ministros y en Comisi�n General de Secretarios de Estado y Subsecretarios.
+  3. Responde solidariamente de su gesti�n pol�tica ante las CCGG.
+
+---
+
+### Pregunta 26
+
+**Texto:** De acuerdo con el art�culo 103.1 de la Constituci�n de 1978, La Administraci�n P�blica sirve con objetividad los intereses generales y act�a de acuerdo con los principios de
+
+**Opciones:**
+  0. Eficacia, eficiencia, descentralizaci�n, desconcentraci�n y cooperaci�n, con sometimiento pleno a la Ley y al Derecho.
+  1. Eficacia, jerarqu�a, descentralizaci�n, desconcentraci�n y coordinaci�n, con sometimiento pleno a la Ley y al Derecho.
+  2. Eficiencia, jerarqu�a, descentralizaci�n, desconcentraci�n y coordinaci�n, con sometimiento pleno a la Ley y al Derecho.
+  3. Eficacia, objetividad, jerarqu�a, descentralizaci�n, desconcentraci�n y coordinaci�n, con sometimiento pleno al ordenamiento jur�dico.
+
+---
+
+### Pregunta 27
+
+**Texto:** El Presidente del Gobierno en funciones no puede
+
+**Opciones:**
+  0. Plantear la cuesti�n de confianza.
+  1. Resolver los conflictos de atribuciones que puedan surgir entre distintos Ministerios.
+  2. Plantear un recurso de inconstitucionalidad.
+  3. Convocar al Consejo de Ministros.
+
+---
+
+### Pregunta 28
+
+**Texto:** En la elecci�n del Presidente del Gobierno, ser� necesario que el Congreso de los Diputados otorgue su confianza
+
+**Opciones:**
+  0. Por mayor�a absoluta de sus miembros, y de no alcanzarse dicha mayor�a, por las 2/3 partes 48 horas despu�s.
+  1. Por mayor�a absoluta de sus miembros, y de no alcanzarse dicha mayor�a, por las 2/3 partes 72 horas despu�s.
+  2. Por mayor�a absoluta de sus miembros, y de no alcanzarse dicha mayor�a, por mayor�a simple 48 horas despu�s.
+  3. Por mayor�a absoluta de sus miembros, y de no alcanzarse dicha mayor�a, por mayor�a simple 72 horas despu�s.
+
+---
+
+### Pregunta 29
+
+**Texto:** �En cu�l de estos supuestos no se produce el cese del gobierno?
+
+**Opciones:**
+  0. Por dimisi�n de su Presidente.
+  1. Por p�rdida de la cuesti�n de confianza.
+  2. Por fallecimiento de su Presidente.
+  3. Por la convocatoria de elecciones generales.
+
+---
+
+### Pregunta 30
+
+**Texto:** Seg�n la Constituci�n, el Gobierno responder� solidariamente de su gesti�n
+
+**Opciones:**
+  0. Ante el Senado.
+  1. Ante el Congreso de los Diputados.
+  2. Ante el Senado y el Congreso de los Diputados.
+  3. Ante el Rey y el Congreso de los Diputados.
+
+---
+
+### Pregunta 31
+
+**Texto:** Seg�n el art�culo 101.2 de la Constituci�n, el Gobierno cesante continuar� en funciones hasta
+
+**Opciones:**
+  0. El nombramiento del nuevo Presidente del Gobierno.
+  1. La elecci�n del nuevo Gobierno.
+  2. El nombramiento de los Ministros.
+  3. La toma de posesi�n del nuevo Gobierno.
+
+---
+
+### Pregunta 32
+
+**Texto:** El Director de Gabinete de un Secretario de Estado ser� nombrado por
+
+**Opciones:**
+  0. RD del Consejo de Ministros.
+  1. Orden Ministerial, previo conocimiento del Consejo de Ministros.
+  2. Orden Ministerial, previa aprobaci�n del Consejo de Ministros.
+  3. RD del Consejo de Ministros, a propuesta del Presidente del Gobierno.
+
+---
+
+### Pregunta 33
+
+**Texto:** El Gabinete de la Presidencia del Gobierno se regular� por
+
+**Opciones:**
+  0. Real Decreto del Presidente del Gobierno.
+  1. Real Decreto del Consejo de Ministros.
+  2. Ley.
+  3. Acuerdo del Consejo de Ministros.
+
+---
+
+### Pregunta 34
+
+**Texto:** El Subsecretario de la Presidencia
+
+**Opciones:**
+  0. Ejerce la presidencia de la Comisi�n General de Secretarios de Estado y Subsecretarios.
+  1. Ejerce la secretar�a de la Comisi�n General de Secretarios de Estado y Subsecretarios.
+  2. Es el Director del Secretariado de Gobierno.
+  3. Es el Secretario del Secretariado de Gobierno.
+
+---
+
+### Pregunta 35
+
+**Texto:** �Qu� car�cter tienen las deliberaciones del Consejo de Ministros?
+
+**Opciones:**
+  0. Secretas.
+  1. P�blicas.
+  2. Reservadas.
+  3. Solemnes y privadas.
+
+---
+
+### Pregunta 36
+
+**Texto:** De acuerdo con el art�culo 8 de la Ley Org�nica 3/1980, de 22 de abril, del Consejo de Estado, no tiene la condici�n de Consejero nato no vitalicio
+
+**Opciones:**
+  0. El Fiscal General del Estado.
+  1. El Gobernador del Banco de Espa�a.
+  2. El Defensor del Pueblo.
+  3. El Presidente del Consejo Econ�mico y Social.
+
+---
+
+### Pregunta 37
+
+**Texto:** Las Secciones del Consejo de Estado ser�n
+
+**Opciones:**
+  0. Ocho, como m�nimo.
+  1. Diez, en todo caso.
+  2. Ocho, como m�ximo.
+  3. Doce, como m�nimo.
+
+---
+
+### Pregunta 38
+
+**Texto:** El Consejo de Estado en Pleno deber� ser consultado en el siguiente asunto
+
+**Opciones:**
+  0. Proyectos de Decretos legislativos.
+  1. Anteproyectos de Ley Org�nica de transferencias o delegaci�n de competencias estatales a las Comunidades Aut�nomas.
+  2. Reglamentos o disposiciones de car�cter general que se dicten en ejecuci�n de las Leyes, as� como sus modificaciones.
+  3. Impugnaci�n de las disposiciones y resoluciones adoptadas por los �rganos de las Comunidades Aut�nomas ante el Tribunal Constitucional, con car�cter previo a la interposici�n del recurso.
+
+---
+
+### Pregunta 39
+
+**Texto:** A la vista de lo establecido en el art�culo 9 de la Ley Org�nica 3/1980, de 22 de abril, del Consejo de Estado, responda cu�l es la afirmaci�n correcta sobre los Consejeros electivos del Consejo de Estado
+
+**Opciones:**
+  0. Ser�n nombrados por el Pleno del Consejo de Estado, a propuesta de su Presidente.
+  1. Son un total de 8.
+  2. De entre ellos, dos deber�n haber desempe�ado el cargo de Presidente del Consejo Ejecutivo de Comunidad Aut�noma por un per�odo m�nimo de ocho a�os.
+  3. Su mandato es de 9 a�os.
+
+---
+
+### Pregunta 40
+
+**Texto:** La Comisi�n de Estudios estar� presidida por el Presidente del Consejo de Estado e integrada por
+
+**Opciones:**
+  0. Dos Consejeros permanentes, dos natos y dos electivos, designados por el Pleno a propuesta del Presidente, as� como por el Secretario General.
+  1. Los Consejeros permanentes y el Secretario general.
+  2. Los Consejeros permanentes, los Consejeros natos y el Secretario general.
+  3. Un Consejero permanente, un Letrado Mayor y los Letrados que sean necesarios seg�n la importancia de los asuntos o el n�mero de las consultas.
+
+---

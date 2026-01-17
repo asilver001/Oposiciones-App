@@ -1,0 +1,677 @@
+{
+  "metadata": {
+    "source_file": "7. Test efectos y extincionparte especial.pdf",
+    "source_path": "Test contratos\\7. Test efectos y extincionparte especial.pdf",
+    "tema": 0,
+    "categoria": "contratos",
+    "extraction_date": "2026-01-15T23:41:10.940115",
+    "reformulation_date": "2026-01-15T23:47:35.657913",
+    "total_questions": 20,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.735852",
+    "completed_count": 0,
+    "failed_count": 20
+  },
+  "questions": [
+    {
+      "question_text": "De conformidad con la ley 9/2017, de 8 de noviembre, de Contratos",
+      "options": [
+        {
+          "text": "el Sector Pblico, en los contratos de obras, la certificacin final",
+          "is_correct": false
+        },
+        {
+          "text": "En el plazo mximo de 3 meses desde la recepcin.",
+          "is_correct": false
+        },
+        {
+          "text": "Una vez liquidado el contrato.",
+          "is_correct": false
+        },
+        {
+          "text": "15 das antes de que finalice el plazo de garanta.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con la ley 9/2017, de 8 de noviembre, de Contratos",
+      "source": "7. Test efectos y extincionparte especial.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Son prerrogativas o derechos de la Administracin en los contratos",
+      "options": [
+        {
+          "text": "e concesin de obras:",
+          "is_correct": false
+        },
+        {
+          "text": "Establecer, en su caso, las tarifas mximas por utilizacin de las",
+          "is_correct": false
+        },
+        {
+          "text": "Imponer con carcter temporal condiciones de utilizacin de las",
+          "is_correct": false
+        },
+        {
+          "text": "Modificar unilateralmente los contratos por razones de inters",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Son prerrogativas o derechos de la Administracin en los contratos",
+      "source": "7. Test efectos y extincionparte especial.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Respecto al pago del precio en el contrato de suministros:",
+      "options": [
+        {
+          "text": "Puede ser en bienes de la misma o distinta clase hasta un 50% de",
+          "is_correct": false
+        },
+        {
+          "text": "Puede ser en bienes de la misma clase hasta un 40% del total",
+          "is_correct": false
+        },
+        {
+          "text": "Puede ser en bienes de misma clase hasta un 50% del total.",
+          "is_correct": false
+        },
+        {
+          "text": "No cabe el pago en especie.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Respecto al pago del precio en el contrato de suministros:",
+      "source": "7. Test efectos y extincionparte especial.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Durante cunto tiempo puede estar secuestrada una concesin?",
+      "options": [
+        {
+          "text": "Durante un mximo de 3 aos prrrogas incluidas.",
+          "is_correct": false
+        },
+        {
+          "text": "Durante un mximo de 3 aos si es concesin de obras y de 1",
+          "is_correct": false
+        },
+        {
+          "text": "o si es concesin de servicios.",
+          "is_correct": false
+        },
+        {
+          "text": "Durante 3 aos con posibilidad de prrroga.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Durante cunto tiempo puede estar secuestrada una concesin?",
+      "source": "7. Test efectos y extincionparte especial.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu indemnizacin corresponde al contratista en caso de demora",
+      "options": [
+        {
+          "text": "3% del precio de adjudicacin, IVA excluido",
+          "is_correct": false
+        },
+        {
+          "text": "2% del precio de adjudicacin IVA excluido",
+          "is_correct": false
+        },
+        {
+          "text": "3% del precio de licitacin, IVA excluido",
+          "is_correct": false
+        },
+        {
+          "text": "2% del precio de licitacin, IVA excluido",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu indemnizacin corresponde al contratista en caso de demora",
+      "source": "7. Test efectos y extincionparte especial.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Son causas de resolucin del contrato de obras",
+      "options": [
+        {
+          "text": "El rescate",
+          "is_correct": false
+        },
+        {
+          "text": "El secuestro",
+          "is_correct": false
+        },
+        {
+          "text": "La demora en la comprobacin del replanteo",
+          "is_correct": false
+        },
+        {
+          "text": "Todas las anteriores",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Son causas de resolucin del contrato de obras",
+      "source": "7. Test efectos y extincionparte especial.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu plazo tiene la responsabilidad por vicios ocultos en los",
+      "options": [
+        {
+          "text": "ontratos de obras?",
+          "is_correct": false
+        },
+        {
+          "text": "15 aos desde la recepcin",
+          "is_correct": false
+        },
+        {
+          "text": "15 aos desde la liquidacin",
+          "is_correct": false
+        },
+        {
+          "text": "El tiempo establecido en el PCAP, pero como mnimo 1 ao",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu plazo tiene la responsabilidad por vicios ocultos en los",
+      "source": "7. Test efectos y extincionparte especial.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la correcta:",
+      "options": [
+        {
+          "text": "Las concesiones de obras sern hipotecables conforme a lo",
+          "is_correct": false
+        },
+        {
+          "text": "ispuesto en",
+          "is_correct": false
+        },
+        {
+          "text": "utorizacin del rgano de contratacin",
+          "is_correct": false
+        },
+        {
+          "text": "Las concesiones de obras sern hipotecables conforme a lo",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la correcta:",
+      "source": "7. Test efectos y extincionparte especial.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la correcta:",
+      "options": [
+        {
+          "text": "En los contratos que tengan por objeto actividades docentes en",
+          "is_correct": false
+        },
+        {
+          "text": "entros del sector pblico en forma de cursos de formacin,",
+          "is_correct": false
+        },
+        {
+          "text": "En los contratos que tengan por objeto actividades docentes en",
+          "is_correct": false
+        },
+        {
+          "text": "entros del sector pblico en forma de cursos de formacin,",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la correcta:",
+      "source": "7. Test efectos y extincionparte especial.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En el caso de resolucin del contrato de servicios complementarios",
+      "options": [
+        {
+          "text": "nicamente, por todos los conceptos, una indemnizacin del 3%",
+          "is_correct": false
+        },
+        {
+          "text": "el precio de adjudicacin, IVA excluido",
+          "is_correct": false
+        },
+        {
+          "text": "nicamente, por todos los conceptos, una indemnizacin del 5%",
+          "is_correct": false
+        },
+        {
+          "text": "el precio de adjudicacin, IVA excluido",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En el caso de resolucin del contrato de servicios complementarios",
+      "source": "7. Test efectos y extincionparte especial.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En los contratos de suministros, son de cuenta del contratista:",
+      "options": [
+        {
+          "text": "Los gastos den entrega, pero no los de transporte",
+          "is_correct": false
+        },
+        {
+          "text": "Los gastos de entrega y de transporte",
+          "is_correct": false
+        },
+        {
+          "text": "La a es correcta, salvo pacto en contrario",
+          "is_correct": false
+        },
+        {
+          "text": "La b es correcta, salvo pacto en contrario",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En los contratos de suministros, son de cuenta del contratista:",
+      "source": "7. Test efectos y extincionparte especial.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la correcta:",
+      "options": [
+        {
+          "text": "No cabe subcontratacin en los contratos de concesin de",
+          "is_correct": false
+        },
+        {
+          "text": "Los contratos de concesin de servicios admiten subcontratacin",
+          "is_correct": false
+        },
+        {
+          "text": "No cabe subcontratacin en los contratos de servicios sobre",
+          "is_correct": false
+        },
+        {
+          "text": "La subcontratacin slo est reconocida en contratos de obras.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la correcta:",
+      "source": "7. Test efectos y extincionparte especial.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta correcta:",
+      "options": [
+        {
+          "text": "En el momento de extincin de la concesin, el concesionario",
+          "is_correct": false
+        },
+        {
+          "text": "decuado estado de uso y conservacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Los bienes que vayan a revertir a la Administracin pueden ser",
+          "is_correct": false
+        },
+        {
+          "text": "No hace falta realizar acta de recepcin de los bienes que se",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta correcta:",
+      "source": "7. Test efectos y extincionparte especial.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En las concesiones de obras:",
+      "options": [
+        {
+          "text": "Puede haber financiacin pblica y privada",
+          "is_correct": false
+        },
+        {
+          "text": "Puede haber nicamente financiacin pblica",
+          "is_correct": false
+        },
+        {
+          "text": "Puede haber nicamente financiacin privada",
+          "is_correct": false
+        },
+        {
+          "text": "Ninguna es correcta",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En las concesiones de obras:",
+      "source": "7. Test efectos y extincionparte especial.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Respecto a las penalidades en las concesiones de obras:",
+      "options": [
+        {
+          "text": "No podrn exceder del 10% del presupuesto total de la obra",
+          "is_correct": false
+        },
+        {
+          "text": "urante la fase de ejecucin.",
+          "is_correct": false
+        },
+        {
+          "text": "No podr exceder del 20% de los ingresos obtenidos por la",
+          "is_correct": false
+        },
+        {
+          "text": "A y b son correctas",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Respecto a las penalidades en las concesiones de obras:",
+      "source": "7. Test efectos y extincionparte especial.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En las concesiones de obras, al finalizar la fase de construccin:",
+      "options": [
+        {
+          "text": "Se levanta acta de recepcin",
+          "is_correct": false
+        },
+        {
+          "text": "Se levanta acta de comprobacin",
+          "is_correct": false
+        },
+        {
+          "text": "A es correcta y conlleva implcita la autorizacin de apertura para",
+          "is_correct": false
+        },
+        {
+          "text": "B es correcta y conlleva implcita la autorizacin de apertura para",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En las concesiones de obras, al finalizar la fase de construccin:",
+      "source": "7. Test efectos y extincionparte especial.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Es causa de resolucin del contrato de obras:",
+      "options": [
+        {
+          "text": "La demora injustificada en la comprobacin del replanteo en ms",
+          "is_correct": false
+        },
+        {
+          "text": "e 15 das",
+          "is_correct": false
+        },
+        {
+          "text": "La suspensin del inicio de la obra ms de 3 meses",
+          "is_correct": false
+        },
+        {
+          "text": "La suspensin de la obra ms de 8 meses",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Es causa de resolucin del contrato de obras:",
+      "source": "7. Test efectos y extincionparte especial.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la incorrecta en relacin con el plazo de garanta:",
+      "options": [
+        {
+          "text": "Es obligatorio en todos los contratos de obras, sin excepcin",
+          "is_correct": false
+        },
+        {
+          "text": "Se computa desde la recepcin",
+          "is_correct": false
+        },
+        {
+          "text": "En obras ser de mnimo un ao",
+          "is_correct": false
+        },
+        {
+          "text": "Durante este",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la incorrecta en relacin con el plazo de garanta:",
+      "source": "7. Test efectos y extincionparte especial.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No tendrn la consideracin de modificaciones del contrato de",
+      "options": [
+        {
+          "text": "El exceso de mediciones siempre que no suponga un incremento",
+          "is_correct": false
+        },
+        {
+          "text": "el gasto superior al 10% del precio del contrato inicial.",
+          "is_correct": false
+        },
+        {
+          "text": "El exceso de mediciones siempre que no suponga un incremento",
+          "is_correct": false
+        },
+        {
+          "text": "el gasto superior al 20% del precio del contrato inicial.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No tendrn la consideracin de modificaciones del contrato de",
+      "source": "7. Test efectos y extincionparte especial.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Tendrn la consideracin de supuestos de fuerza mayor:",
+      "options": [
+        {
+          "text": "Los incendios causados por electricidad atmosfrica.",
+          "is_correct": false
+        },
+        {
+          "text": "Maremotos",
+          "is_correct": false
+        },
+        {
+          "text": "Terremotos",
+          "is_correct": false
+        },
+        {
+          "text": "Todas son correctas",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Tendrn la consideracin de supuestos de fuerza mayor:",
+      "source": "7. Test efectos y extincionparte especial.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "source_file": "TEST Tema 3 políticas.pdf",
+    "source_path": "TEST Iniciales políticas\\TEST Tema 3 políticas.pdf",
+    "extraction_date": "2026-01-15T23:41:43.498316",
+    "tema": 3,
+    "categoria": "general",
+    "total_questions": 1
+  },
+  "questions": [
+    {
+      "raw_text": "Qu� compromiso de reducci�n de emisiones de Gases de Efecto Invernadero ha asumido",
+      "raw_options": [
+        "Al menos, un 75% respecto a 1990.",
+        "Al menos un 55% respecto a 2005.",
+        "Al menos un 55% respecto a 1990.",
+        "Al menos un 75% respecto a 2005."
+      ],
+      "correct_index": null
+    }
+  ]
+}

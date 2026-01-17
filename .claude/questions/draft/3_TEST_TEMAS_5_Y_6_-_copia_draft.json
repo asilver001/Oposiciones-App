@@ -1,0 +1,1337 @@
+{
+  "metadata": {
+    "source_file": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+    "source_path": "Segundo repaso\\3 TEST TEMAS 5 Y 6 - copia.pdf",
+    "tema": 3,
+    "categoria": "repaso",
+    "extraction_date": "2026-01-15T23:40:16.523331",
+    "reformulation_date": "2026-01-15T23:47:35.586001",
+    "total_questions": 40,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.534970",
+    "completed_count": 0,
+    "failed_count": 40
+  },
+  "questions": [
+    {
+      "question_text": "El Congreso y el Senado, y, en su caso, ambas Cmaras conjuntamente, podrn",
+      "options": [
+        {
+          "text": "Sern vinculantes para los Tribunales y afectarn a las resoluciones judiciales,",
+          "is_correct": false
+        },
+        {
+          "text": "Sern vinculantes para los Tribunales, pero no afectarn a las resoluciones",
+          "is_correct": false
+        },
+        {
+          "text": "l Ministerio Fiscal para su conocimiento.",
+          "is_correct": false
+        },
+        {
+          "text": "No sern vinculantes para los Tribunales, ni afectarn a las resoluciones",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Congreso y el Senado, y, en su caso, ambas Cmaras conjuntamente, podrn",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con el Ttulo III de la CE, seale la respuesta correcta:",
+      "options": [
+        {
+          "text": "La Sala de lo Penal de la Audiencia Nacional, ser la competente para conocer",
+          "is_correct": false
+        },
+        {
+          "text": "e las causas contra Diputados y Senadores.",
+          "is_correct": false
+        },
+        {
+          "text": "El voto de los diputados y senadores es personal y delegable.",
+          "is_correct": false
+        },
+        {
+          "text": "Los Diputados y Senadores gozarn de inviolabilidad por las opiniones",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con el Ttulo III de la CE, seale la respuesta correcta:",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn el artculo 134 CE, a quin corresponde aprobar los presupuestos",
+      "options": [
+        {
+          "text": "Al Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Congreso.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Senado.",
+          "is_correct": false
+        },
+        {
+          "text": "A las Cortes Generales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el artculo 134 CE, a quin corresponde aprobar los presupuestos",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn lo previsto en el artculo 69 CE, las CCAA elegirn:",
+      "options": [
+        {
+          "text": "Dos senadores, y otro ms por cada milln de habitantes de su respectivo",
+          "is_correct": false
+        },
+        {
+          "text": "Dos senadores.",
+          "is_correct": false
+        },
+        {
+          "text": "Un senador, y otro ms por cada milln de habitantes de su respectivo territorio.",
+          "is_correct": false
+        },
+        {
+          "text": "Un senador, y dos ms por cada milln de habitantes de su respectivo territorio.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn lo previsto en el artculo 69 CE, las CCAA elegirn:",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con el artculo 68 CE, el Congreso:",
+      "options": [
+        {
+          "text": "Est formado por 350 diputados.",
+          "is_correct": false
+        },
+        {
+          "text": "La eleccin de sus miembros se verificar en cada circunscripcin, atendiendo a",
+          "is_correct": false
+        },
+        {
+          "text": "riterios de representacin mayoritaria.",
+          "is_correct": false
+        },
+        {
+          "text": "Sern electores y elegibles, los espaoles y extranjeros mayores de edad, segn",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con el artculo 68 CE, el Congreso:",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con lo dispuesto en el artculo 66 de la Constitucin Espaola:",
+      "options": [
+        {
+          "text": "La potestad legislativa del Estado la ejerce exclusivamente el Congreso de los",
+          "is_correct": false
+        },
+        {
+          "text": "iputados.",
+          "is_correct": false
+        },
+        {
+          "text": "La potestad legislativa del Estado la ejercen las Cortes Generales.",
+          "is_correct": false
+        },
+        {
+          "text": "La potestad legislativa del Estado la ejercen la Cortes Generales y las",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con lo dispuesto en el artculo 66 de la Constitucin Espaola:",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No es una competencia de las CCGG:",
+      "options": [
+        {
+          "text": "La potestad legislativa.",
+          "is_correct": false
+        },
+        {
+          "text": "El control de la accin del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "La convocatoria de referndum consultivo a propuesta del Presidente del",
+          "is_correct": false
+        },
+        {
+          "text": "La aprobacin de los Prepuestos Generales del Estado.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No es una competencia de las CCGG:",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La prestacin del consentimiento del Estado para obligarse por medio de tratados",
+      "options": [
+        {
+          "text": "Que afecten a la integridad territorial del Estado o a los derechos y deberes",
+          "is_correct": false
+        },
+        {
+          "text": "Que afecten a la integridad territorial del Estado o a los derechos y deberes",
+          "is_correct": false
+        },
+        {
+          "text": "Que afecten a la integridad territorial del Estado o a los derechos y deberes",
+          "is_correct": false
+        },
+        {
+          "text": "Que afecten a la integridad territorial del Estado o a los derechos y deberes",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La prestacin del consentimiento del Estado para obligarse por medio de tratados",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu materia no se encuentra reservada a ley orgnica?:",
+      "options": [
+        {
+          "text": "Las formas de ejercicio de la iniciativa popular para la presentacin de",
+          "is_correct": false
+        },
+        {
+          "text": "El estado de alarma.",
+          "is_correct": false
+        },
+        {
+          "text": "La composicin, organizacin y funciones del Ministerio Fiscal.",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo de Estado.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu materia no se encuentra reservada a ley orgnica?:",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No proceder la iniciativa popular para la presentacin de proposiciones de ley de",
+      "options": [
+        {
+          "text": "onformidad con el artculo 87.3:",
+          "is_correct": false
+        },
+        {
+          "text": "En materias propias de ley orgnica, tributarias o de carcter internacional, ni en",
+          "is_correct": false
+        },
+        {
+          "text": "En materias propias de ley orgnica, leyes de bases, tributarias o de carcter",
+          "is_correct": false
+        },
+        {
+          "text": "En materias propias de ley orgnica, de carcter internacional, derechos y",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No proceder la iniciativa popular para la presentacin de proposiciones de ley de",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con el artculo 74 CE, las Cmaras se reunirn en sesin",
+      "options": [
+        {
+          "text": "onjunta:",
+          "is_correct": false
+        },
+        {
+          "text": "Para ejercer las competencias legislativas que el Ttulo II atribuye expresamente",
+          "is_correct": false
+        },
+        {
+          "text": "las Cortes Generales.",
+          "is_correct": false
+        },
+        {
+          "text": "Para ejercer las competencias legislativas que el Ttulo V atribuye expresamente",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con el artculo 74 CE, las Cmaras se reunirn en sesin",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con el artculo 72.2 CE:",
+      "options": [
+        {
+          "text": "Las sesiones conjuntas sern presididas por el Presidente del Congreso y se",
+          "is_correct": false
+        },
+        {
+          "text": "bsoluta de cada Cmara.",
+          "is_correct": false
+        },
+        {
+          "text": "Las sesiones conjuntas de las CCGG, sern presididas por el Presidente del",
+          "is_correct": false
+        },
+        {
+          "text": "ongreso y se regirn por un Reglamento de las Cortes Generales aprobado por",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con el artculo 72.2 CE:",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las competencias relativas al nombramiento y separacin de altos cargos",
+      "options": [
+        {
+          "text": "tribuidas al Consejo de Ministros:",
+          "is_correct": false
+        },
+        {
+          "text": "Son delegables, a propuesta del Presidente del Gobierno, en las Comisiones",
+          "is_correct": false
+        },
+        {
+          "text": "elegadas del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Son delegables en el Ministro correspondiente.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las competencias relativas al nombramiento y separacin de altos cargos",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn lo establecido en la Ley del Gobierno, el Real Decreto de creacin de una",
+      "options": [
+        {
+          "text": "omisin Delegada del Gobierno, deber especificar en todo caso:",
+          "is_correct": false
+        },
+        {
+          "text": "El miembro del Gobierno o subsecretario que asume la presidencia de la",
+          "is_correct": false
+        },
+        {
+          "text": "omisin.",
+          "is_correct": false
+        },
+        {
+          "text": "Los miembros del Gobierno y en su caso subsecretarios que la integran.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn lo establecido en la Ley del Gobierno, el Real Decreto de creacin de una",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En los casos de vacante, ausencia o enfermedad, las funciones del Presidente del",
+      "options": [
+        {
+          "text": "Por los Vicepresidentes, de acuerdo con su orden de prelacin, y en defecto de",
+          "is_correct": false
+        },
+        {
+          "text": "Por quien l mismo designe, siempre que sea miembro del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Por quien l mismo designe, siempre que sea miembro del Gobierno y previo",
+          "is_correct": false
+        },
+        {
+          "text": "e los Diputados.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En los casos de vacante, ausencia o enfermedad, las funciones del Presidente del",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En atencin a lo establecido en el artculo 113 CE, el Congreso de los Diputados",
+      "options": [
+        {
+          "text": "La mocin de censura por mayora simple propuesta al menos por una dcima",
+          "is_correct": false
+        },
+        {
+          "text": "La mocin de censura propuesta al menos por la mayora absoluta de los",
+          "is_correct": false
+        },
+        {
+          "text": "iputados, y habr de incluir un candidato a la Presidencia del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "La mocin de censura por mayora absoluta propuesta al menos por una dcima",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En atencin a lo establecido en el artculo 113 CE, el Congreso de los Diputados",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Corresponde al Congreso (seale la falsa):",
+      "options": [
+        {
+          "text": "Adoptar una mocin de censura que ser aprobada por mayora absoluta.",
+          "is_correct": false
+        },
+        {
+          "text": "Aprobar la cuestin de confianza planteada por el Presidente del Gobierno",
+          "is_correct": false
+        },
+        {
+          "text": "Otorgar la confianza al candidato a Presidente del Gobierno por mayora",
+          "is_correct": false
+        },
+        {
+          "text": "bsoluta en primera votacin y mayora simple en segunda votacin, 48 horas",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Corresponde al Congreso (seale la falsa):",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Todos los asuntos que vayan a someterse a aprobacin del Consejo de Ministros,",
+      "options": [
+        {
+          "text": "eben ser examinados por el siguiente rgano de colaboracin y apoyo al",
+          "is_correct": false
+        },
+        {
+          "text": "Comisin General de Secretarios de Estado y Subsecretarios.",
+          "is_correct": false
+        },
+        {
+          "text": "Secretariado de Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Gabinete de la Presidencia del Gobierno.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Todos los asuntos que vayan a someterse a aprobacin del Consejo de Ministros,",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta correcta en relacin con los Gabinetes:",
+      "options": [
+        {
+          "text": "Prestan su apoyo a los miembros del Gobierno y Secretarios de Estado en el",
+          "is_correct": false
+        },
+        {
+          "text": "esarrollo de su labor poltica, en el cumplimiento de las tareas de carcter",
+          "is_correct": false
+        },
+        {
+          "text": "dministrativa.",
+          "is_correct": false
+        },
+        {
+          "text": "El Gabinete de la Presidencia del Gobierno se regular por Real Decreto del",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta correcta en relacin con los Gabinetes:",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn el artculo 108 de la Constitucin Espaola, el Gobierno responde:",
+      "options": [
+        {
+          "text": "Solidariamente en su gestin poltica ante el Congreso de los Diputados.",
+          "is_correct": false
+        },
+        {
+          "text": "Solidariamente en su gestin poltica ante las Cortes Generales.",
+          "is_correct": false
+        },
+        {
+          "text": "Mancomunadamente en su gestin poltica ante el Congreso de los Diputados.",
+          "is_correct": false
+        },
+        {
+          "text": "Mancomunadamente en su gestin poltica ante las Cortes Generales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el artculo 108 de la Constitucin Espaola, el Gobierno responde:",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu meses abarca el segundo periodo de sesiones del Senado?",
+      "options": [
+        {
+          "text": "De febrero a junio.",
+          "is_correct": false
+        },
+        {
+          "text": "De septiembre a diciembre.",
+          "is_correct": false
+        },
+        {
+          "text": "De enero a julio.",
+          "is_correct": false
+        },
+        {
+          "text": "De enero a mayo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu meses abarca el segundo periodo de sesiones del Senado?",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu mayora se necesita en el Senado para oponer un veto a una proposicin de",
+      "options": [
+        {
+          "text": "Mayora absoluta.",
+          "is_correct": false
+        },
+        {
+          "text": "Mayora de 2/3.",
+          "is_correct": false
+        },
+        {
+          "text": "El Senado no puede vetar materias aprobadas por el Congreso.",
+          "is_correct": false
+        },
+        {
+          "text": "Mayora de 2/3",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu mayora se necesita en el Senado para oponer un veto a una proposicin de",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cuntos componentes puede tener como mximo la delegacin autonmica",
+      "options": [
+        {
+          "text": "Dos.",
+          "is_correct": false
+        },
+        {
+          "text": "Tres.",
+          "is_correct": false
+        },
+        {
+          "text": "Cuatro.",
+          "is_correct": false
+        },
+        {
+          "text": "No hay un nmero mximo previsto",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cuntos componentes puede tener como mximo la delegacin autonmica",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta correcta en relacin con los requisitos para el nombramiento",
+      "options": [
+        {
+          "text": "e los Ministros y Secretarios de Estado:",
+          "is_correct": false
+        },
+        {
+          "text": "En ambos supuestos se exige ser espaol, mayor de edad, disfrutar de los",
+          "is_correct": false
+        },
+        {
+          "text": "erechos de sufragio activo y pasivo, as como no estar inhabilitado para ejercer",
+          "is_correct": false
+        },
+        {
+          "text": "el ejercicio del alto cargo de la Administracin General del Estado.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta correcta en relacin con los requisitos para el nombramiento",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las delegaciones legislativas otorgadas por las Cortes Generales quedarn en",
+      "options": [
+        {
+          "text": "onsecuencia de:",
+          "is_correct": false
+        },
+        {
+          "text": "La celebracin de elecciones generales.",
+          "is_correct": false
+        },
+        {
+          "text": "La prdida de confianza parlamentaria por aprobacin de la mocin de censura",
+          "is_correct": false
+        },
+        {
+          "text": "La dimisin o fallecimiento del presidente.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las delegaciones legislativas otorgadas por las Cortes Generales quedarn en",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn el artculo 24 de la Ley 50/1997, de 27 de noviembre, del Gobierno, los",
+      "options": [
+        {
+          "text": "1 Disposiciones aprobadas por Real Decreto del Presidente del Gobierno o",
+          "is_correct": false
+        },
+        {
+          "text": "cordado en el Consejo de Ministros. 2 Disposiciones aprobadas por Orden",
+          "is_correct": false
+        },
+        {
+          "text": "1 Disposiciones aprobadas por Real Decreto del Presidente del Gobierno. 2",
+          "is_correct": false
+        },
+        {
+          "text": "isposiciones acordadas en el Consejo de Ministros.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el artculo 24 de la Ley 50/1997, de 27 de noviembre, del Gobierno, los",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con los artculos 101 y 102 de la Constitucin Espaola, cul de las",
+      "options": [
+        {
+          "text": "El Gobierno cesa tras la celebracin de elecciones generales, en los casos de",
+          "is_correct": false
+        },
+        {
+          "text": "imisin o fallecimiento de su Presidente.",
+          "is_correct": false
+        },
+        {
+          "text": "La responsabilidad criminal del Presidente del Gobierno ser exigible, en su",
+          "is_correct": false
+        },
+        {
+          "text": "aso, ante la Sala de lo Penal del Tribunal Supremo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con los artculos 101 y 102 de la Constitucin Espaola, cul de las",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn lo dispuesto en el artculo 8.3 de la Ley 50/1997, de 27 de noviembre, del",
+      "options": [
+        {
+          "text": "Un Vicepresidente del Gobierno o, en su defecto, por el Ministro que",
+          "is_correct": false
+        },
+        {
+          "text": "orresponda segn el orden de precedencia de los Departamentos Ministeriales.",
+          "is_correct": false
+        },
+        {
+          "text": "El Ministro de la Presidencia.",
+          "is_correct": false
+        },
+        {
+          "text": "Un Secretario de Estado del Ministerio de Hacienda.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn lo dispuesto en el artculo 8.3 de la Ley 50/1997, de 27 de noviembre, del",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con la Constitucin espaola de 1978, en cul de las siguientes",
+      "options": [
+        {
+          "text": "Estatutos de autonoma.",
+          "is_correct": false
+        },
+        {
+          "text": "Regulacin de la tauromaquia como patrimonio cultural.",
+          "is_correct": false
+        },
+        {
+          "text": "Reforma constitucional.",
+          "is_correct": false
+        },
+        {
+          "text": "Lo relativo a la prerrogativa de gracia.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con la Constitucin espaola de 1978, en cul de las siguientes",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn lo dispuesto por el artculo 13 de la Ley 50/1997, de 27 de noviembre, del",
+      "options": [
+        {
+          "text": "La suplencia de los Ministros para el despacho ordinario de los asuntos de su",
+          "is_correct": false
+        },
+        {
+          "text": "ompetencia se determina por Real Decreto del Consejo de Ministros, debiendo",
+          "is_correct": false
+        },
+        {
+          "text": "En los casos de vacante, ausencia o enfermedad, las funciones del Presidente",
+          "is_correct": false
+        },
+        {
+          "text": "En caso de que la asistencia de un Ministro a la reunin de un rgano colegiado",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn lo dispuesto por el artculo 13 de la Ley 50/1997, de 27 de noviembre, del",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Quin representa al Consejo de Ministros?",
+      "options": [
+        {
+          "text": "El Ministro de la Presidencia.",
+          "is_correct": false
+        },
+        {
+          "text": "El Ministro portavoz del Gobierno",
+          "is_correct": false
+        },
+        {
+          "text": "Los ministros respectivos en el mbito de su competencia",
+          "is_correct": false
+        },
+        {
+          "text": "El Presidente del Gobierno.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Quin representa al Consejo de Ministros?",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Al Consejo de Ministros, le corresponde el ejercicio de las siguientes funciones:",
+      "options": [
+        {
+          "text": "Aprobar los anteproyectos de ley y su remisin al Congreso de los Diputados o,",
+          "is_correct": false
+        },
+        {
+          "text": "Aprobar la Ley de Presupuestos Generales del Estado",
+          "is_correct": false
+        },
+        {
+          "text": "Aprobar los Reales Decretos-leyes y los Reales Decretos legislativos.",
+          "is_correct": false
+        },
+        {
+          "text": "Manifestar el consentimiento a los tratados internacionales de los que Espaa",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Al Consejo de Ministros, le corresponde el ejercicio de las siguientes funciones:",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu artculo de la constitucin est dedicado a establecer la composicin del",
+      "options": [
+        {
+          "text": "El 105",
+          "is_correct": false
+        },
+        {
+          "text": "El 98",
+          "is_correct": false
+        },
+        {
+          "text": "El 102",
+          "is_correct": false
+        },
+        {
+          "text": "El 101",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu artculo de la constitucin est dedicado a establecer la composicin del",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El presidente del Gobierno en funciones no puede:",
+      "options": [
+        {
+          "text": "Proponer al Rey la disolucin de las Cortes",
+          "is_correct": false
+        },
+        {
+          "text": "Platear la cuestin de confianza",
+          "is_correct": false
+        },
+        {
+          "text": "Proponer al Rey la convocatoria de un referndum consultivo",
+          "is_correct": false
+        },
+        {
+          "text": "Todas son funciones que no puede realizar.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El presidente del Gobierno en funciones no puede:",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los miembros de las Cortes Generales:",
+      "options": [
+        {
+          "text": "Estn ligados por mandato imperativo mientras dure la legislatura.",
+          "is_correct": false
+        },
+        {
+          "text": "Estn ligados por mandato imperativo.",
+          "is_correct": false
+        },
+        {
+          "text": "No estn ligados por mandatos imperativo.",
+          "is_correct": false
+        },
+        {
+          "text": "No estn ligados por mandato imperativo, salvo en caso de alguno de los",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los miembros de las Cortes Generales:",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Por cuntos diputados estn representadas Ceuta y Melilla?:",
+      "options": [
+        {
+          "text": "Por uno",
+          "is_correct": false
+        },
+        {
+          "text": "Por dos",
+          "is_correct": false
+        },
+        {
+          "text": "Por tres",
+          "is_correct": false
+        },
+        {
+          "text": "Por cuatro",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Por cuntos diputados estn representadas Ceuta y Melilla?:",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Quines son electores y elegibles al Congreso de los Diputados?",
+      "options": [
+        {
+          "text": "Todas las personas que estn en pleno uso de sus derechos polticos.",
+          "is_correct": false
+        },
+        {
+          "text": "Todos los espaoles que estn en pleno uso de sus derechos polticos.",
+          "is_correct": false
+        },
+        {
+          "text": "Todas las personas mayores de edad no incapacitadas legalmente.",
+          "is_correct": false
+        },
+        {
+          "text": "Los espaoles en pleno uso de sus derechos administrativos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Quines son electores y elegibles al Congreso de los Diputados?",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de las siguientes islas o agrupaciones de islas elegirn tres Senadores?",
+      "options": [
+        {
+          "text": "Tenerife y la Palma",
+          "is_correct": false
+        },
+        {
+          "text": "Tenerife, Hierro y Lanzarote",
+          "is_correct": false
+        },
+        {
+          "text": "Gran Canaria y Mallorca.",
+          "is_correct": false
+        },
+        {
+          "text": "Gran Canaria, Menorca y Tenerife",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de las siguientes islas o agrupaciones de islas elegirn tres Senadores?",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de las siguientes no es causa de inelegibilidad e incompatibilidad de los",
+      "options": [
+        {
+          "text": "iputados y Senadores?",
+          "is_correct": false
+        },
+        {
+          "text": "Miembros de las Juntas electorales.",
+          "is_correct": false
+        },
+        {
+          "text": "Magistrados, jueces y Fiscales en activo.",
+          "is_correct": false
+        },
+        {
+          "text": "Militares profesionales y miembros de las Fuerzas y cuerpos de Seguridad y",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de las siguientes no es causa de inelegibilidad e incompatibilidad de los",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los Diputados y Senadores percibirn una asignacin:",
+      "options": [
+        {
+          "text": "Que ser fijada por el Presidente de la respectiva Cmara",
+          "is_correct": false
+        },
+        {
+          "text": "Que ser fijada por las Cmaras en sesin conjunta.",
+          "is_correct": false
+        },
+        {
+          "text": "Que ser fijada por la respectiva Cmara.",
+          "is_correct": false
+        },
+        {
+          "text": "Que ser fijada por el Gobierno.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los Diputados y Senadores percibirn una asignacin:",
+      "source": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

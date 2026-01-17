@@ -1,0 +1,1337 @@
+{
+  "metadata": {
+    "source_file": "7 TEST TEMA 1 a 6 - copia.docx",
+    "source_path": "Segundo repaso\\7 TEST TEMA 1 a 6 - copia.docx",
+    "tema": 1,
+    "categoria": "repaso",
+    "extraction_date": "2026-01-15T23:40:29.833625",
+    "reformulation_date": "2026-01-15T23:47:35.667285",
+    "total_questions": 40,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.761898",
+    "completed_count": 0,
+    "failed_count": 40
+  },
+  "questions": [
+    {
+      "question_text": "Cuntos preceptos integran el Ttulo Preliminar de la Constitucin Espaola de 1978?:",
+      "options": [
+        {
+          "text": "9 artculos entre los que se encuentra la regulacin del Defensor del Pueblo.",
+          "is_correct": false
+        },
+        {
+          "text": "10 artculos entre los que se encuentra la regulacin de la lengua oficial del estado.",
+          "is_correct": false
+        },
+        {
+          "text": "9 artculos entre los que se encuentra la enumeracin de los valores superiores del ordenamiento jurdico.",
+          "is_correct": false
+        },
+        {
+          "text": "10 artculos entre los que se indica que la interpretacin de los derechos y libertades de la Constitucin se realizar conforme a la Declaracin Universal de Derechos Humanos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cuntos preceptos integran el Ttulo Preliminar de la Constitucin Espaola de 1978?:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale cul de los siguientes preceptos constitucionales requerir la celebracin de un referndum preceptivo y vinculante en caso de que se pretenda la modificacin de su contenido:",
+      "options": [
+        {
+          "text": "El artculo 60 relativo a la tutela del Rey menor.",
+          "is_correct": false
+        },
+        {
+          "text": "El artculo 14 relativo a la igualdad.",
+          "is_correct": false
+        },
+        {
+          "text": "El artculo 37.2 relativo a la adopcin de medidas de conflicto colectivo.",
+          "is_correct": false
+        },
+        {
+          "text": "El artculo 107 regulador del Consejo de Estado.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale cul de los siguientes preceptos constitucionales requerir la celebracin de un referndum preceptivo y vinculante en caso de que se pretenda la modificacin de su contenido:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con el artculo 167 de la Constitucin Espaola, aprobada la reforma por las Cortes Generales, ser sometida a referndum para su ratificacin cuando as lo soliciten una dcima parte de los miembros de cualquiera de las Cmaras:",
+      "options": [
+        {
+          "text": "Dentro de los quince das siguientes a la comunicacin de la aprobacin de la reforma por parte del Presidente del Congreso al Presidente del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Dentro de los quince das siguientes a su aprobacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Dentro de los diez das siguientes a la comunicacin de la aprobacin de la reforma por parte del Presidente del Congreso al Presidente del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Dentro de los diez das siguientes a su aprobacin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con el artculo 167 de la Constitucin Espaola, aprobada la reforma por las Cortes Generales, ser sometida a referndum para su ratificacin cuando as lo soliciten una dcima parte de los miembros de cualquiera de las Cmaras:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La iniciativa de reforma constitucional corresponder a los siguientes rganos de conformidad con los artculos 87.1 y 2 de la Constitucin Espaola:",
+      "options": [
+        {
+          "text": "Al Gobierno mediante la aprobacin de un proyecto de ley, al Congreso a travs de una quinta parte de los diputados o dos grupos parlamentarios, al Senado a travs de 50 senadores no pertenecientes al mismo grupo parlamentario, a las Asambleas de las Comunidades Autnomas o al pueblo a travs de la iniciativa legislativa popular.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Gobierno mediante la aprobacin de un proyecto de ley, al Congreso a travs de una quinta parte de los diputados o dos grupos parlamentarios, al Senado a travs de 2 grupos parlamentarios o 50 senadores no pertenecientes al mismo grupo parlamentario, a las Asambleas de las Comunidades Autnomas o al pueblo a travs de la iniciativa legislativa popular.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Gobierno mediante la aprobacin de un proyecto de ley, al Congreso a travs de una quinta parte de los diputados o dos grupos parlamentarios, al Senado a travs de 50 senadores no pertenecientes al mismo grupo parlamentario o a las Asambleas Legislativas de las Comunidades Autnomas.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Gobierno mediante la aprobacin de un proyecto de ley, al Congreso a travs de una quinta parte de los diputados o dos grupos parlamentarios, al Senado a travs de 2 grupos parlamentarios o 50 senadores no pertenecientes al mismo grupo parlamentario, o a las Asambleas Legislativas de las Comunidades Autnomas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La iniciativa de reforma constitucional corresponder a los siguientes rganos de conformidad con los artculos 87.1 y 2 de la Constitucin Espaola:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta correcta respecto a la reforma del artculo 13.2 de la CE:",
+      "options": [
+        {
+          "text": "Se tramit y aprob en el ao 1991",
+          "is_correct": false
+        },
+        {
+          "text": "Se tramit por el procedimiento del art 168.",
+          "is_correct": false
+        },
+        {
+          "text": "Se public en el Boletn Oficial del Estado el 28 de agosto de 1992.",
+          "is_correct": false
+        },
+        {
+          "text": "Fortaleci el compromiso de Espaa con la estabilidad presupuestaria.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta correcta respecto a la reforma del artculo 13.2 de la CE:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En caso de reforma constitucional, el referndum (seale la falsa):",
+      "options": [
+        {
+          "text": "Ser convocado por el Rey.",
+          "is_correct": false
+        },
+        {
+          "text": "Deber celebrarse en el plazo de 60 das desde su convocatoria.",
+          "is_correct": false
+        },
+        {
+          "text": "El resultado es vinculante.",
+          "is_correct": false
+        },
+        {
+          "text": "Precisar de autorizacin por mayora absoluta del Congreso.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En caso de reforma constitucional, el referndum (seale la falsa):",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta correcta en relacin con el estado de excepcin:",
+      "options": [
+        {
+          "text": "El Gobierno, obtenida la autorizacin de la Cmara, proceder a declarar el estado de excepcin, acordando para ello en Consejo de Ministros un decreto con el contenido autorizado por el Congreso de los Diputados.",
+          "is_correct": false
+        },
+        {
+          "text": "El Gobierno, obtenida la autorizacin de la Cmara, proceder a declarar el estado de excepcin, acordando para ello en Consejo de Ministros un decreto con el contenido autorizado por el Senado.",
+          "is_correct": false
+        },
+        {
+          "text": "El Gobierno, obtenida la autorizacin de las Cmaras, proceder a declarar el estado de excepcin, acordando para ello en Consejo de Ministros un decreto con el contenido autorizado por las CCGG.",
+          "is_correct": false
+        },
+        {
+          "text": "El Gobierno, recabado el dictamen del Consejo de Estado, proceder a declarar el estado de excepcin, acordando para ello en Consejo de Ministros un decreto con el contenido autorizado por el Congreso de los Diputados.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta correcta en relacin con el estado de excepcin:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Durante la vigencia del estado de excepcin, la Autoridad gubernativa podr detener a cualquier persona si lo considera necesario para la conservacin del orden, siempre que, cuando menos, existan fundadas sospechas de que dicha persona vaya a provocar alteraciones del orden pblico. La detencin no podr exceder de:",
+      "options": [
+        {
+          "text": "72 horas y los detenidos disfrutarn de los derechos que les reconoce el artculo diecisiete, tres, de la Constitucin.",
+          "is_correct": false
+        },
+        {
+          "text": "48 horas y los detenidos no disfrutarn de los derechos que les reconoce el artculo diecisiete, tres, de la Constitucin.",
+          "is_correct": false
+        },
+        {
+          "text": "Diez das y los detenidos disfrutarn de los derechos que les reconoce el artculo diecisiete, tres, de la Constitucin.",
+          "is_correct": false
+        },
+        {
+          "text": "Cinco das y los detenidos no disfrutarn de los derechos que les reconoce el artculo diecisiete, tres, de la Constitucin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Durante la vigencia del estado de excepcin, la Autoridad gubernativa podr detener a cualquier persona si lo considera necesario para la conservacin del orden, siempre que, cuando menos, existan fundadas sospechas de que dicha persona vaya a provocar alteraciones del orden pblico. La detencin no podr exceder de:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La declaracin del estado de excepcin entrar en vigor:",
+      "options": [
+        {
+          "text": "Al da siguiente de su publicacin en el BOE.",
+          "is_correct": false
+        },
+        {
+          "text": "En la fecha que indique la norma que disponga su declaracin.",
+          "is_correct": false
+        },
+        {
+          "text": "A los dos das de su publicacin en el BOE.",
+          "is_correct": false
+        },
+        {
+          "text": "En el mismo instante en que se publique en el BOE.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La declaracin del estado de excepcin entrar en vigor:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con el artculo 53 CE, estn protegidos por un procedimiento judicial especial, preferente y sumario:",
+      "options": [
+        {
+          "text": "Los derechos de la Seccin 1 Captulo II del Ttulo I.",
+          "is_correct": false
+        },
+        {
+          "text": "Los derechos de la Seccin 1 Captulo II del Ttulo I y el artculo 14.",
+          "is_correct": false
+        },
+        {
+          "text": "Los derechos de la Seccin 1 Captulo II del Ttulo I y los artculos 14 y 30.2.",
+          "is_correct": false
+        },
+        {
+          "text": "Los derechos de la Seccin 2 Captulo II del Ttulo I.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con el artculo 53 CE, estn protegidos por un procedimiento judicial especial, preferente y sumario:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con el artculo 53 CE, los principios rectores de la poltica social y econmica del Captulo III del Ttulo I CE (seale la falsa):",
+      "options": [
+        {
+          "text": "Sern objeto de desarrollo por ley ordinaria.",
+          "is_correct": false
+        },
+        {
+          "text": "Informan la legislacin positiva.",
+          "is_correct": false
+        },
+        {
+          "text": "Vinculan a todos los poderes pblicos.",
+          "is_correct": false
+        },
+        {
+          "text": "Informan la prctica judicial.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con el artculo 53 CE, los principios rectores de la poltica social y econmica del Captulo III del Ttulo I CE (seale la falsa):",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con el artculo 54 de la Constitucin:",
+      "options": [
+        {
+          "text": "Una ley orgnica regular la institucin del Defensor del Pueblo, como alto comisionado de las Cortes Generales, designado por el Congreso para la defensa de los derechos comprendidos en el Ttulo I, a cuyo efecto podr supervisar la actividad de la Administracin, dando cuenta a las Cortes Generales.",
+          "is_correct": false
+        },
+        {
+          "text": "Una ley orgnica regular la institucin del Defensor del Pueblo, como alto comisionado de las Cortes Generales, designado por stas para la defensa de los derechos comprendidos en el Ttulo I, a cuyo efecto podr supervisar la actividad de la Administracin, dando cuenta a las Cortes Generales.",
+          "is_correct": false
+        },
+        {
+          "text": "Una ley ordinaria regular la institucin del Defensor del Pueblo, como alto comisionado de las Cortes Generales, designado por el Congreso para la defensa de los derechos comprendidos en el Ttulo I, a cuyo efecto podr supervisar la actividad de la Administracin, dando cuenta a las Cortes Generales.",
+          "is_correct": false
+        },
+        {
+          "text": "d) Una ley ordinaria regular la institucin del Defensor del Pueblo, como alto comisionado de las Cortes Generales, designado por stas para la defensa de los derechos comprendidos en el Ttulo, a cuyo efecto podr supervisar la actividad de la Administracin, dando cuenta a las Cortes Generales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con el artculo 54 de la Constitucin:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Ningn Magistrado del Tribunal Constitucional podr ser propuesto al Rey para otro perodo inmediato, salvo que hubiera ocupado el cargo por un plazo no superior a:",
+      "options": [
+        {
+          "text": "Seis aos",
+          "is_correct": false
+        },
+        {
+          "text": "Dos aos",
+          "is_correct": false
+        },
+        {
+          "text": "Tres aos.",
+          "is_correct": false
+        },
+        {
+          "text": "Cinco aos",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Ningn Magistrado del Tribunal Constitucional podr ser propuesto al Rey para otro perodo inmediato, salvo que hubiera ocupado el cargo por un plazo no superior a:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul es el rgano competente para resolver el Recurso Previo de Inconstitucionalidad:",
+      "options": [
+        {
+          "text": "El pleno, salvo los de mera aplicacin de doctrina que podr atribuirse a las salas.",
+          "is_correct": false
+        },
+        {
+          "text": "Las salas.",
+          "is_correct": false
+        },
+        {
+          "text": "Las Secciones",
+          "is_correct": false
+        },
+        {
+          "text": "El pleno.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul es el rgano competente para resolver el Recurso Previo de Inconstitucionalidad:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con el artculo 27 de la LOTC; no son susceptibles de declaracin de inconstitucionalidad:",
+      "options": [
+        {
+          "text": "Los decretos legislativos.",
+          "is_correct": false
+        },
+        {
+          "text": "El Reglamento de las Cortes Generales.",
+          "is_correct": false
+        },
+        {
+          "text": "Los reglamentos de las Comunidades Autnomas.",
+          "is_correct": false
+        },
+        {
+          "text": "Los actos el Estado con fuerza de Ley.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con el artculo 27 de la LOTC; no son susceptibles de declaracin de inconstitucionalidad:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El cese o vacante en el cargo de Magistrado del Tribunal Constitucional se decidir por el Pleno por mayora simple en los siguientes casos:",
+      "options": [
+        {
+          "text": "Por incurrir en alguna causa de incapacidad de las previstas para los miembros del Poder Judicial y por incompatibilidad sobrevenida.",
+          "is_correct": false
+        },
+        {
+          "text": "Por incompatibilidad sobrevenida y por violar la reserva propia de su funcin.",
+          "is_correct": false
+        },
+        {
+          "text": "Por expiracin del plazo de su nombramiento, por incurrir en alguna causa de incapacidad de las previstas para los miembros del Poder Judicial y por incompatibilidad sobrevenida.",
+          "is_correct": false
+        },
+        {
+          "text": "Por incompatibilidad sobrevenida, por dejar de atender con diligencia los deberes de su cargo y por violar la reserva propia de su funcin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El cese o vacante en el cargo de Magistrado del Tribunal Constitucional se decidir por el Pleno por mayora simple en los siguientes casos:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La suspensin de un Magistrado del Tribunal Constitucional requiere:",
+      "options": [
+        {
+          "text": "El voto favorable de 2/3 partes de los miembros del Tribunal reunido en Pleno.",
+          "is_correct": false
+        },
+        {
+          "text": "El voto favorable de la mayora absoluta de los miembros del Tribunal reunido en Pleno.",
+          "is_correct": false
+        },
+        {
+          "text": "El voto favorable de 3/4 partes de los miembros del Tribunal reunido en Pleno.",
+          "is_correct": false
+        },
+        {
+          "text": "El voto favorable de la mayora simple de los miembros del Tribunal reunido en Pleno.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La suspensin de un Magistrado del Tribunal Constitucional requiere:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La solicitud del dictamen del Consejo de Estado u rgano consultivo de la correspondiente Comunidad Autnoma, previo al planteamiento de un Conflicto en Defensa de la Autonoma Local deber formalizarse:",
+      "options": [
+        {
+          "text": "Dentro del mes siguiente al da de la publicacin de la ley que se entienda lesiona la autonoma local.",
+          "is_correct": false
+        },
+        {
+          "text": "Dentro de los seis meses siguientes al da de la publicacin de la ley que se entienda lesiona la autonoma local.",
+          "is_correct": false
+        },
+        {
+          "text": "Dentro de los cinco meses siguientes al da de la publicacin de la ley que se entienda lesiona la autonoma local.",
+          "is_correct": false
+        },
+        {
+          "text": "Dentro de los tres meses siguientes al da de la publicacin de la ley que se entienda lesiona la autonoma local.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La solicitud del dictamen del Consejo de Estado u rgano consultivo de la correspondiente Comunidad Autnoma, previo al planteamiento de un Conflicto en Defensa de la Autonoma Local deber formalizarse:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Ser tutor del Rey menor, cuando el Rey difunto no hubiera nombrado tutor testamentario:",
+      "options": [
+        {
+          "text": "El padre o la madre, siempre que sean espaoles de nacimiento y mayores de edad.",
+          "is_correct": false
+        },
+        {
+          "text": "El padre o la madre, mientras permanezcan viudos.",
+          "is_correct": false
+        },
+        {
+          "text": "El padre, la madre o ascendientes directos del Rey,",
+          "is_correct": false
+        },
+        {
+          "text": "La persona que designen para tal fin las Cortes Generales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Ser tutor del Rey menor, cuando el Rey difunto no hubiera nombrado tutor testamentario:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Prestarn juramento ante las Cortes Generales, de conformidad con el artculo 61 CE:",
+      "options": [
+        {
+          "text": "El Rey, el Prncipe heredero al alcanzar la mayora de edad, el Regente o Regentes y el tutor al hacerse cargo de sus funciones.",
+          "is_correct": false
+        },
+        {
+          "text": "El Rey, el Prncipe heredero, cuando se produzca el hecho que origine su llamamiento y el Regente o Regentes al hacerse cargo de sus funciones.",
+          "is_correct": false
+        },
+        {
+          "text": "El Rey, el Regente o Regentes y el tutor al hacerse cargo de sus funciones.",
+          "is_correct": false
+        },
+        {
+          "text": "El Rey, el Prncipe heredero al alcanzar la mayora de edad y el Regente o Regentes al hacerse cargo de sus funciones.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Prestarn juramento ante las Cortes Generales, de conformidad con el artculo 61 CE:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn dispone el artculo 64 CE:",
+      "options": [
+        {
+          "text": "Los actos del Rey sern refrendados por el Presidente del Gobierno y, en su caso, por los Ministros competentes. El nombramiento y cese del Presidente del Gobierno, y la disolucin prevista en el artculo 99 CE, sern refrendados por el Presidente del Congreso",
+          "is_correct": false
+        },
+        {
+          "text": "Los actos del Rey sern refrendados por el Presidente del Gobierno y, en su caso, por los Ministros competentes. El nombramiento y cese del Presidente del Gobierno, y la disolucin prevista en los artculos 99 y 115 CE, sern refrendados por el Presidente del Congreso.",
+          "is_correct": false
+        },
+        {
+          "text": "Los actos del Rey sern refrendados por el Presidente del Gobierno y, en su caso, por los Ministros competentes. La propuesta y el nombramiento del Presidente del Gobierno, y la disolucin prevista en el artculo 99 CE, sern refrendados por el Presidente del Congreso.",
+          "is_correct": false
+        },
+        {
+          "text": "Los actos del Rey sern refrendados por el Presidente del Gobierno y, en su caso, por los Ministros competentes. La propuesta y el nombramiento del Presidente del Gobierno, y la disolucin prevista en los artculos 99 y 113 CE, sern refrendados por el Presidente del Congreso.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn dispone el artculo 64 CE:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No est sujeto a refrendo el siguiente acto del Rey:",
+      "options": [
+        {
+          "text": "Conferir empleos civiles y militares y conceder honores y distinciones.",
+          "is_correct": false
+        },
+        {
+          "text": "Manifestar el consentimiento del estado para obligarse internacionalmente por medio de tratados.",
+          "is_correct": false
+        },
+        {
+          "text": "Nombramiento y relevo de los miembros civiles y militares de su Casa.",
+          "is_correct": false
+        },
+        {
+          "text": "Mando supremo de las Fuerzas Armadas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No est sujeto a refrendo el siguiente acto del Rey:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con el artculo 69 CE, cada Comunidad Autnoma elige un senador y otro ms por cada milln de habitantes. La designacin corresponde a:",
+      "options": [
+        {
+          "text": "Al rgano colegiado superior de la Comunidad Autnoma o, en su defecto, a la Asamblea legislativa, de acuerdo con lo que establezcan los Estatutos, que asegurarn, en todo caso, la adecuada representacin proporcional.",
+          "is_correct": false
+        },
+        {
+          "text": "A la Asamblea legislativa o, en su defecto, al rgano colegiado superior de la Comunidad Autnoma, de acuerdo con lo que establezcan los Estatutos, que asegurarn, en todo caso, la adecuada representacin proporcional.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Presidente de la Comunidad Autnoma o, en su defecto, a la Asamblea legislativa, de acuerdo con lo que establezcan los Estatutos, que asegurarn, en todo caso, la adecuada representacin proporcional.",
+          "is_correct": false
+        },
+        {
+          "text": "A la Asamblea legislativa o, en su defecto, al Presidente de la Comunidad Autnoma, de acuerdo con lo que establezcan los Estatutos, que asegurarn, en todo caso, la adecuada representacin proporcional.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con el artculo 69 CE, cada Comunidad Autnoma elige un senador y otro ms por cada milln de habitantes. La designacin corresponde a:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El artculo 71 CE dispone (seale la falsa):",
+      "options": [
+        {
+          "text": "Los Diputados y Senadores gozarn de inviolabilidad por las opiniones manifestadas en el ejercicio de sus funciones.",
+          "is_correct": false
+        },
+        {
+          "text": "Durante el perodo de su mandato los Diputados y Senadores gozarn asimismo de inmunidad y slo podrn ser detenidos en caso de flagrante delito.",
+          "is_correct": false
+        },
+        {
+          "text": "No podrn ser inculpados ni procesados sin la previa autorizacin de la Sala de lo Penal del Tribunal Supremo.",
+          "is_correct": false
+        },
+        {
+          "text": "Percibirn una asignacin que ser fijada por las respectivas Cmaras.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El artculo 71 CE dispone (seale la falsa):",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los Diputados y Senadores gozarn de:",
+      "options": [
+        {
+          "text": "Inmunidad por las opiniones manifestadas en el ejercicio de sus funciones.",
+          "is_correct": false
+        },
+        {
+          "text": "Inviolabilidad e inmunidad slo durante el periodo de su mandato.",
+          "is_correct": false
+        },
+        {
+          "text": "Las prerrogativas que se determine por el Consejo de Ministros mediante Real Decreto.",
+          "is_correct": false
+        },
+        {
+          "text": "Inmunidad durante el periodo de su mandato, no pudiendo ser detenidos salvo en caso de flagrante delito.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los Diputados y Senadores gozarn de:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con el artculo 69 de la Constitucin:",
+      "options": [
+        {
+          "text": "Las poblaciones de Ceuta y Melilla elegirn un Senador cada una de ellas.",
+          "is_correct": false
+        },
+        {
+          "text": "Se elige un Senador en cada una de las siguientes islas: Ibiza, Formentera, Menorca, Lanzarote, Fuerteventura, Gomera, Hierro y La Palma.",
+          "is_correct": false
+        },
+        {
+          "text": "Las Comunidades Autnomas designarn un Senador y otro ms por cada milln de electores de su respectivo territorio.",
+          "is_correct": false
+        },
+        {
+          "text": "Las islas mayores -Gran Canaria, Mallorca y Tenerife- eligen tres Senadores.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con el artculo 69 de la Constitucin:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las Cmaras podrn reunirse en sesiones extraordinarias (art. 73 CE):",
+      "options": [
+        {
+          "text": "A peticin del Gobierno, de la Diputacin Permanente, o de la mayora absoluta de los miembros de cualquiera de las Cmaras. Las sesiones extraordinarias debern convocarse sobre un orden del da determinado y sern clausuradas una vez que ste haya sido agotado.",
+          "is_correct": false
+        },
+        {
+          "text": "A peticin del Gobierno, de la Diputacin Permanente, del Rey o de la mayora absoluta de los miembros de cualquiera de las Cmaras. Las sesiones extraordinarias debern convocarse sobre un orden del da determinado y sern clausuradas una vez que ste haya sido agotado.",
+          "is_correct": false
+        },
+        {
+          "text": "A peticin del Presidente del Gobierno, de la Diputacin Permanente o de la mayora absoluta de los miembros de cualquiera de las Cmaras. Las sesiones extraordinarias debern convocarse sobre un orden del da determinado y sern clausuradas una vez que ste haya sido agotado.",
+          "is_correct": false
+        },
+        {
+          "text": "A peticin del Presidente del Gobierno, de la Diputacin Permanente, del Rey o de la mayora absoluta de los miembros de cualquiera de las Cmaras. Las sesiones extraordinarias debern convocarse sobre un orden del da determinado y sern clausuradas una vez que ste haya sido agotado.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las Cmaras podrn reunirse en sesiones extraordinarias (art. 73 CE):",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Una ley orgnica regular:",
+      "options": [
+        {
+          "text": "el estatuto e incompatibilidades de los miembros del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "el procedimiento a travs del cual deben producirse los actos administrativos, garantizando, cuando proceda, la audiencia del interesado.",
+          "is_correct": false
+        },
+        {
+          "text": "las funciones, principios bsicos de actuacin y estatutos de las Fuerzas y Cuerpos de seguridad.",
+          "is_correct": false
+        },
+        {
+          "text": "Todas son correctas",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Una ley orgnica regular:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Gobierno cesa (art. 101 CE):",
+      "options": [
+        {
+          "text": "tras la celebracin de elecciones generales, en los casos de prdida de la confianza parlamentaria previstos en la Constitucin, o por fallecimiento de su Presidente.",
+          "is_correct": false
+        },
+        {
+          "text": "tras la convocatoria de elecciones generales, en los casos de prdida de la confianza parlamentaria previstos en la Constitucin, o por dimisin o fallecimiento de su Presidente.",
+          "is_correct": false
+        },
+        {
+          "text": "tras la celebracin de elecciones generales, en los casos de prdida de la confianza parlamentaria previstos en la Constitucin, o por dimisin o fallecimiento de su Presidente.",
+          "is_correct": false
+        },
+        {
+          "text": "tras la convocatoria de elecciones generales, en los casos de prdida de la confianza parlamentaria previstos en la Constitucin, o por fallecimiento de su Presidente.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Gobierno cesa (art. 101 CE):",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la falsa de acuerdo con lo dispuesto en el Ttulo V de la Constitucin Espaola:",
+      "options": [
+        {
+          "text": "El Gobierno y cada uno de sus miembros estn sometidos a las interpelaciones y preguntas que se le formulen en las Cmaras. Para esta clase de debate los Reglamentos establecern un tiempo mnimo mensual.",
+          "is_correct": false
+        },
+        {
+          "text": "Toda interpelacin podr dar lugar a una mocin en la que la Cmara manifieste su posicin.",
+          "is_correct": false
+        },
+        {
+          "text": "Las Cmaras y sus Comisiones pueden reclamar la presencia de los miembros del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Los miembros del Gobierno tienen acceso a las sesiones de las Cmaras y a sus Comisiones y la facultad de hacerse or en ellas, y podrn solicitar que informen ante las mismas funcionarios de sus Departamentos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la falsa de acuerdo con lo dispuesto en el Ttulo V de la Constitucin Espaola:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con el artculo 114 CE, seale la respuesta correcta en caso de prosperar una mocin de censura:",
+      "options": [
+        {
+          "text": "Si las Cmaras adoptan una mocin de censura, el Gobierno presentar su dimisin al Rey y el candidato incluido en aqulla se entender investido de la confianza de la Cmara a los efectos previstos en el artculo 99. El Rey le nombrar Presidente del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Si el Congreso adopta una mocin de censura, el Gobierno presentar su dimisin al Rey, procedindose a continuacin a la designacin de Presidente del Gobierno, segn lo dispuesto en el artculo 99.",
+          "is_correct": false
+        },
+        {
+          "text": "Si las Cmaras adoptan una mocin de censura, el Gobierno presentar su dimisin al Rey, procedindose a continuacin a la designacin de Presidente del Gobierno, segn lo dispuesto en el artculo 99.",
+          "is_correct": false
+        },
+        {
+          "text": "Si el Congreso adopta una mocin de censura, el Gobierno presentar su dimisin al Rey y el candidato incluido en aqulla se entender investido de la confianza de la Cmara a los efectos previstos en el artculo 99. El Rey le nombrar Presidente del Gobierno.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con el artculo 114 CE, seale la respuesta correcta en caso de prosperar una mocin de censura:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con la Ley 50/1997 de Gobierno, a las reuniones del Consejo de Ministros podrn asistir:",
+      "options": [
+        {
+          "text": "los Secretarios de Estado y excepcionalmente otros altos cargos, cuando sean convocados para ello.",
+          "is_correct": false
+        },
+        {
+          "text": "los Secretarios de Estado, cuando sean convocados para ello.",
+          "is_correct": false
+        },
+        {
+          "text": "los Secretarios de Estado y excepcionalmente los subsecretarios, cuando sean convocados para ello.",
+          "is_correct": false
+        },
+        {
+          "text": "los Secretarios de Estado y subsecretarios, cuando sean convocados para ello.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con la Ley 50/1997 de Gobierno, a las reuniones del Consejo de Ministros podrn asistir:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los Secretarios de Estado:",
+      "options": [
+        {
+          "text": "Actan bajo la direccin del titular del Departamento al que pertenezcan. Cuando estn adscritos a la Presidencia del Gobierno, actan bajo la direccin del Ministro de la Presidencia.",
+          "is_correct": false
+        },
+        {
+          "text": "Actan bajo la direccin del titular del Departamento al que pertenezcan. Cuando estn adscritos a la Presidencia del Gobierno, actan bajo la direccin del Presidente.",
+          "is_correct": false
+        },
+        {
+          "text": "Actan bajo la direccin del titular del Departamento al que pertenezcan. Cuando estn adscritos a la Presidencia del Gobierno, actan bajo la direccin del Consejo de Ministros.",
+          "is_correct": false
+        },
+        {
+          "text": "Actan bajo la direccin del titular del Departamento al que pertenezcan. Cuando estn adscritos a la Presidencia del Gobierno, actan bajo la direccin de la Comisin General de Secretarios de Estado y Subsecretarios.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los Secretarios de Estado:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Secretariado del Gobierno:",
+      "options": [
+        {
+          "text": "como rgano de apoyo del Consejo de Ministros, de las Comisiones Delegadas del Gobierno y de la Comisin General de Secretarios de Estado y Subsecretarios se integra en la estructura orgnica del Ministerio de la Presidencia.",
+          "is_correct": false
+        },
+        {
+          "text": "como rgano de apoyo del Consejo de Ministros, de las Comisiones Delegadas del Gobierno y de la Comisin General de Secretarios de Estado y Subsecretarios se integra en la estructura orgnica del Ministerio de Hacienda.",
+          "is_correct": false
+        },
+        {
+          "text": "como rgano de apoyo del Presidente del Gobierno, de los Vicepresidentes, de los Ministros y de los Secretarios de Estado se integra en la estructura orgnica del Ministerio de la Presidencia.",
+          "is_correct": false
+        },
+        {
+          "text": "como rgano de apoyo del Presidente del Gobierno, de los Vicepresidentes, de los Ministros y de los Secretarios de Estado se integra en la estructura orgnica del Ministerio de Hacienda.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Secretariado del Gobierno:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con lo dispuesto en el artculo 13 LG que regula la suplencia de los ministros:",
+      "options": [
+        {
+          "text": "No se entender por ausencia la interrupcin transitoria de la asistencia a la reunin de un rgano colegiado. En tales casos, las funciones que pudieran corresponder al miembro del gobierno durante esa situacin sern ejercidas por el Secretario del rgano colegiado respectivo.",
+          "is_correct": false
+        },
+        {
+          "text": "No se entender por ausencia la interrupcin transitoria de la asistencia a la reunin de un rgano colegiado. En tales casos, las funciones que pudieran corresponder al miembro del gobierno durante esa situacin sern ejercidas por el Subsecretario de la Presidencia.",
+          "is_correct": false
+        },
+        {
+          "text": "No se entender por ausencia la interrupcin transitoria de la asistencia a la reunin de un rgano colegiado. En tales casos, las funciones que pudieran corresponder al miembro del gobierno durante esa situacin sern ejercidas por la siguiente autoridad en rango presente.",
+          "is_correct": false
+        },
+        {
+          "text": "No se entender por ausencia la interrupcin transitoria de la asistencia a la reunin de un rgano de colaboracin y apoyo. En tales casos, las funciones que pudieran corresponder al miembro del gobierno durante esa situacin sern ejercidas por el Subsecretario de la Presidencia y en su defecto por la siguiente autoridad en rango presente.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con lo dispuesto en el artculo 13 LG que regula la suplencia de los ministros:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Conforme al artculo 99 de la Constitucin, tras cada renovacin del Congreso de los Diputado, y en los dems supuestos constitucionales en que as proceda:",
+      "options": [
+        {
+          "text": "El Rey, previa consulta con los portavoces de los Grupos parlamentarios, y a travs del Presidente del Congreso, propondr un candidato a la Presidencia del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "El Presidente del Congreso de los Diputados, previa consulta con los representantes designados por los Grupos polticos con representacin parlamentaria, propondr un candidato a la Presidencia del Gobierno..",
+          "is_correct": false
+        },
+        {
+          "text": "El Rey, previa consulta con los representantes designados por los Grupos polticos con representacin parlamentaria, y a travs del Presidente del Congreso, propondr un candidato a la Presidencia del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "El Rey, previa consulta con los Grupos parlamentarios constituidos en el Congreso de los Diputados y el Senado propondr un candidato a la Presidencia del Gobierno.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Conforme al artculo 99 de la Constitucin, tras cada renovacin del Congreso de los Diputado, y en los dems supuestos constitucionales en que as proceda:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta falsa sobre los rganos legitimados para la iniciativa de reforma constitucional :",
+      "options": [
+        {
+          "text": "El Congreso de los Diputados si lo suscribe 1/5 parte de los Diputados.",
+          "is_correct": false
+        },
+        {
+          "text": "El Gobierno mediante la aprobacin y posterior remisin de una proposicin de Ley a la Mesa del Congreso.",
+          "is_correct": false
+        },
+        {
+          "text": "50 senadores que no pertenezcan al mismo grupo Parlamentario.",
+          "is_correct": false
+        },
+        {
+          "text": "No cabe la iniciativa legislativa popular.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta falsa sobre los rganos legitimados para la iniciativa de reforma constitucional :",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con el artculo 116 de la CE:",
+      "options": [
+        {
+          "text": "La autorizacin y proclamacin del estado de excepcin deber determinar expresamente los efectos del mismo, el mbito territorial a que se extiende y su duracin, que no podr exceder de treinta das improrrogables.",
+          "is_correct": false
+        },
+        {
+          "text": "La autorizacin y proclamacin del estado de excepcin deber determinar expresamente los efectos del mismo, el mbito territorial a que se extiende y su duracin, que no podr exceder de veinte das improrrogables.",
+          "is_correct": false
+        },
+        {
+          "text": "La autorizacin y proclamacin del estado de excepcin deber determinar expresamente los efectos del mismo, el mbito territorial a que se extiende y su duracin, que no podr exceder de veinte das, prorrogable por otro plazo igual, con los mismos requisitos.",
+          "is_correct": false
+        },
+        {
+          "text": "La autorizacin y proclamacin del estado de excepcin deber determinar expresamente los efectos del mismo, el mbito territorial a que se extiende y su duracin, que no podr exceder de treinta das, prorrogables por otro plazo igual, con los mismos requisitos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con el artculo 116 de la CE:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Ttulo IV de la Constitucin regula los mecanismos de relacin entre el Gobierno y las Cortes Generales. Sobre la regulacin contenida en el mismo seale la afirmacin correcta:",
+      "options": [
+        {
+          "text": "La mocin de censura no podr ser votada hasta que transcurran dos das desde su presentacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Toda pregunta dar lugar a una mocin en la que la Cmara manifieste su posicin",
+          "is_correct": false
+        },
+        {
+          "text": "El Presidente del Gobierno, previa deliberacin del Consejo de Ministros, y bajo su exclusiva responsabilidad podr proponer la disolucin del Congreso, del Senado, o de las Cortes Generales.",
+          "is_correct": false
+        },
+        {
+          "text": "El Gobierno puede plantear ante el Congreso de los Diputados la cuestin de confianza sobre su programa o sobre una declaracin de poltica general.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Ttulo IV de la Constitucin regula los mecanismos de relacin entre el Gobierno y las Cortes Generales. Sobre la regulacin contenida en el mismo seale la afirmacin correcta:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Con respecto a la composicin de la Comisin General de Secretarios de Estado y Subsecretarios seale la respuesta incorrecta:",
+      "options": [
+        {
+          "text": "La Secretara ser ejercida por el Subsecretario de la Presidencia.",
+          "is_correct": false
+        },
+        {
+          "text": "La Presidencia corresponde a un Vicepresidente del Gobierno o, en su defecto, al Ministro de la Presidencia.",
+          "is_correct": false
+        },
+        {
+          "text": "En caso de ausencia del Presidente de la Comisin, la presidencia recaer en el Ministro de Presidencia.",
+          "is_correct": false
+        },
+        {
+          "text": "El Director del Secretariado del Gobierno ejercer la secretara adjunta.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Con respecto a la composicin de la Comisin General de Secretarios de Estado y Subsecretarios seale la respuesta incorrecta:",
+      "source": "7 TEST TEMA 1 a 6 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

@@ -1,0 +1,270 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 2. Test Libro I y IV.pdf
+**Total preguntas:** 20
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** Los �rganos de contrataci�n, de conformidad con lo establecido en
+
+**Opciones:**
+  0. S�lo pueden ser unipersonales.
+  1. Lo son cuando as� se disponga en norma legal o reglamentaria o
+  2. isposici�n estatutaria.
+  3. Pueden serlo
+
+---
+
+### Pregunta 2
+
+**Texto:** Las Juntas de contrataci�n:
+
+**Opciones:**
+  0. Podr�n actuar como �rganos de asistencia del �rgano de
+  1. ontrataci�n.
+  2. Podr�n actuar como �rganos de contrataci�n en contratos de
+  3. Podr�n actuar como �rganos de contrataci�n en contratos de
+
+---
+
+### Pregunta 3
+
+**Texto:** Los �rganos de contrataci�n de las entidades del sector p�blico
+
+**Opciones:**
+  0. elebrar contratos en los siguientes supuestos:
+  1. Cuando el presupuesto base de licitaci�n del contrato sea igual o
+  2. Cuando el pago de los contratos se concierte mediante el sistema
+  3. e arrendamiento
+
+---
+
+### Pregunta 4
+
+**Texto:** Los Secretarios de Estado, o en su defecto, los titulares de
+
+**Opciones:**
+  0. Podr�n fijar el importe del valor estimado a partir del cual ser�
+  1. Solo podr� establecerlo el Ministro, con independencia de la
+  2. dscripci�n de la entidad.
+  3. La a), y hasta el momento en que los Secretarios de Estado, o en
+
+---
+
+### Pregunta 5
+
+**Texto:** Las competencias en materia de contrataci�n podr�n ser:
+
+**Opciones:**
+  0. Objeto de delegaci�n, pero no de desconcentraci�n.
+  1. Desconcentradas por Orden Ministerial.
+  2. Desconcentradas en cualesquier �rgano, sea o no dependiente
+  3. el �rgano de contrataci�n.
+
+---
+
+### Pregunta 6
+
+**Texto:** La mesa de contrataci�n:
+
+**Opciones:**
+  0. Siempre es obligatoria su existencia.
+  1. Solo es obligatoria cuando el �rgano de contrataci�n sea una
+  2. Es potestativa en el procedimiento abierto simplificado abreviado
+  3. el art. 159.6 siempre que no sea �rgano de contrataci�n la Junta
+
+---
+
+### Pregunta 7
+
+**Texto:** La Estrategia Nacional de Contrataci�n p�blica:
+
+**Opciones:**
+  0. Es instrumento jur�dico vinculante.
+  1. Es aprobado por la Junta Consultiva de Contrataci�n P�blica del
+  2. Tendr� un horizonte temporal de seis a�os
+  3. La propuesta de
+
+---
+
+### Pregunta 8
+
+**Texto:** Indique la respuesta correcta en relaci�n a la remisi�n de los
+
+**Opciones:**
+  0. ontratos al Tribunal de Cuentas:
+  1. Dentro de los tres meses siguientes a la formalizaci�n de todos
+  2. eber� remitirse al Tribunal de Cuentas u �rgano externo de
+  3. ocumento en el que se hubiere formalizado aquel.
+
+---
+
+### Pregunta 9
+
+**Texto:** Se�ale la respuesta correcta en relaci�n con el requisito de
+
+**Opciones:**
+  0. apacidad:
+  1. Las personas jur�dicas solo podr�n ser adjudicatarias de contratos
+  2. uyas prestaciones est�n comprendidas dentro de los fines,
+  3. La capacidad de obrar de los empresarios que fueren personas
+
+---
+
+### Pregunta 10
+
+**Texto:** En un contrato de servicios de valor estimado de 80.000 euros:
+
+**Opciones:**
+  0. Se exigir� clasificaci�n como requisitos a los licitadores
+  1. Se exigir� solvencia como requisito a los licitadores.
+  2. El �rgano de contrataci�n, en virtud de lo dispuesto en el art. 11.5
+  3. el RD 1098/2001 podr� eximir a los licitadores de acreditar
+
+---
+
+### Pregunta 11
+
+**Texto:** En el �mbito estatal, los acuerdos relativos a la clasificaci�n de las
+
+**Opciones:**
+  0. Pueden ser adoptados por las Comisiones Clasificadoras de la
+  1. Se inscribir�n de oficio en el Registro Oficial de Licitadores y
+  2. La clasificaci�n de las empresas tendr� una vigencia de tres a�os.
+  3. La a) y la b) son correctas.
+
+---
+
+### Pregunta 12
+
+**Texto:** En los contratos de obras, se incluyen en la LCSP como medios de
+
+**Opciones:**
+  0. creditar solvencia t�cnica:
+  1. Relaci�n de las obras ejecutadas en el curso de los cinco �ltimos
+  2. �os o, cuando sea necesario para garantizar un nivel adecuado
+  3. e competencia, los poderes adjudicadores podr�n indicar que se
+
+---
+
+### Pregunta 13
+
+**Texto:** Se�ale la correcta en relaci�n con la revisi�n de precios:
+
+**Opciones:**
+  0. rmamento
+  1. Previa justificaci�n en el expediente, podr� admitirse la revisi�n de
+  2. dministraciones P�blicas o de suministro de energ�a, aunque su
+  3. iento de dicho presupuesto.
+
+---
+
+### Pregunta 14
+
+**Texto:** Se�ale la respuesta correcta en relaci�n a la garant�a provisional
+
+**Opciones:**
+  0. Su exigencia es obligatoria.
+  1. El importe de la misma, que no podr� ser superior a un 3 por 100
+  2. el presupuesto base de licitaci�n del contrato, excluido el
+  3. Se extinguir� autom�ticamente y ser� devuelta a los licitadores al
+
+---
+
+### Pregunta 15
+
+**Texto:** Se�ale la correcta en relaci�n a la garant�a definitiva:
+
+**Opciones:**
+  0. Su exigencia es excepcional.
+  1. La presentar�n todos los licitadores que quieran participar en el
+  2. En casos especiales, podr� exigirse adem�s una garant�a
+  3. omplementaria de hasta un 5 por 100 del precio final
+
+---
+
+### Pregunta 16
+
+**Texto:** En caso de que se hagan efectivas sobre la garant�a definitiva las
+
+**Opciones:**
+  0. Este deber� reajustar aquella, en la cuant�a que corresponda.
+  1. La a), y en el plazo de quince d�as desde la ejecuci�n.
+  2. Lo que deber� hacer el contratista es reponer o ampliar la
+  3. La a), e incurriendo en caso contrario en causa de resoluci�n.
+
+---
+
+### Pregunta 17
+
+**Texto:** La garant�a definitiva responder� de los siguientes conceptos:
+
+**Opciones:**
+  0. De la obligaci�n de formalizar el contrato en plazo
+  1. Del mantenimiento de las ofertas hasta la perfecci�n del contrato.
+  2. De las penalidades impuestas al contratista
+  3. La a) y la c) son correctas.
+
+---
+
+### Pregunta 18
+
+**Texto:** El acuerdo de devoluci�n de la garant�a definitiva deber� adoptarse
+
+**Opciones:**
+  0. En el plazo de dos meses desde la finalizaci�n del plazo de
+  1. En el plazo de dos meses desde la finalizaci�n del contrato.
+  2. En el plazo de un mes desde la finalizaci�n del plazo de garant�a.
+  3. En el plazo de un mes desde la finalizaci�n del contrato.
+
+---
+
+### Pregunta 19
+
+**Texto:** Transcurrido un a�o desde la fecha de terminaci�n del contrato, y
+
+**Opciones:**
+  0. ontratista:
+  1. Se proceder�, sin m�s demora, a la devoluci�n o cancelaci�n de
+  2. Cuando el valor estimado del contrato sea inferior a 5.538.000 de
+  3. aso de otros contratos, o cuando las empresas licitadoras
+
+---
+
+### Pregunta 20
+
+**Texto:** Se�ale la respuesta correcta:
+
+**Opciones:**
+  0. La formalizaci�n de los encargos a medios propios cuyo importe
+  1. El sistema inform�tico que soporte el perfil de contratante deber�
+  2. ontar con un dispositivo que permita acreditar fehacientemente
+  3. El acceso a la informaci�n del perfil de contratante ser� libre, no
+
+---

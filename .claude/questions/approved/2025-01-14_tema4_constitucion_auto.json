@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "created_at": "2025-01-14T22:45:00Z",
+    "reviewed_at": "2025-01-14T23:00:00Z",
+    "created_by": "question-creator-agent",
+    "reviewed_by": "question-reviewer-agent",
+    "tema": 4,
+    "materia": "constitucion",
+    "total_questions": 5,
+    "approval_breakdown": {
+      "auto_approved": 3,
+      "auto_corrected": 2
+    },
+    "average_confidence": 0.95
+  },
+  "questions": [
+    {
+      "question_text": "Según el artículo 98 de la Constitución Española, ¿quiénes componen el Gobierno?",
+      "original_text": null,
+      "origin_type": "ai_generated",
+      "approval_type": "auto_approved",
+      "options": [
+        { "text": "El Presidente, los Vicepresidentes, los Ministros y los Secretarios de Estado", "is_correct": false },
+        { "text": "El Presidente, los Vicepresidentes en su caso, los Ministros y los demás miembros que establezca la ley", "is_correct": true },
+        { "text": "El Presidente, los Ministros y los Subsecretarios", "is_correct": false },
+        { "text": "El Presidente, el Vicepresidente, los Ministros y el Consejo de Estado", "is_correct": false }
+      ],
+      "explanation": "El artículo 98.1 CE establece que 'El Gobierno se compone del Presidente, de los Vicepresidentes, en su caso, de los Ministros y de los demás miembros que establezca la ley'. Es importante notar que dice 'Vicepresidentes, en su caso', lo que indica que no es obligatorio que existan. Los Secretarios de Estado NO forman parte del Gobierno según la CE.",
+      "legal_reference": "Art. 98.1 CE",
+      "tema": 4,
+      "materia": "constitucion",
+      "difficulty": 2,
+      "source": "elaboracion_propia",
+      "confidence_score": 0.96,
+      "tier": "free"
+    },
+    {
+      "question_text": "Según el artículo 99.3 de la Constitución Española, ¿cuánto tiempo debe transcurrir entre la primera y la segunda votación de investidura si el candidato no obtiene mayoría absoluta?",
+      "original_text": null,
+      "origin_type": "ai_generated",
+      "approval_type": "auto_corrected",
+      "correction_applied": "Enunciado reformulado para mayor precisión. Original preguntaba por 'plazo máximo' que era ambiguo.",
+      "options": [
+        { "text": "24 horas", "is_correct": false },
+        { "text": "48 horas", "is_correct": true },
+        { "text": "72 horas", "is_correct": false },
+        { "text": "Una semana", "is_correct": false }
+      ],
+      "explanation": "El artículo 99.3 CE establece que si el candidato no obtiene mayoría absoluta en la primera votación, 'se someterá la misma propuesta a nueva votación cuarenta y ocho horas después de la anterior'. En esta segunda votación basta la mayoría simple.",
+      "legal_reference": "Art. 99.3 CE",
+      "tema": 4,
+      "materia": "constitucion",
+      "difficulty": 3,
+      "source": "elaboracion_propia",
+      "confidence_score": 0.94,
+      "tier": "free"
+    },
+    {
+      "question_text": "Según la Constitución Española, ¿quién nombra al Presidente del Tribunal Supremo?",
+      "original_text": null,
+      "origin_type": "ai_generated",
+      "approval_type": "auto_corrected",
+      "correction_applied": "Cambiado 'Magistrados del TS' por 'Presidente del TS'. El Art. 123.2 CE solo menciona al Presidente.",
+      "options": [
+        { "text": "El Presidente del Gobierno", "is_correct": false },
+        { "text": "El Consejo General del Poder Judicial", "is_correct": false },
+        { "text": "El Rey, a propuesta del Consejo General del Poder Judicial", "is_correct": true },
+        { "text": "Las Cortes Generales por mayoría de tres quintos", "is_correct": false }
+      ],
+      "explanation": "El artículo 123.2 CE establece textualmente que 'El Presidente del Tribunal Supremo será nombrado por el Rey, a propuesta del Consejo General del Poder Judicial, en la forma que determine la ley'.",
+      "legal_reference": "Art. 123.2 CE",
+      "tema": 4,
+      "materia": "constitucion",
+      "difficulty": 3,
+      "source": "elaboracion_propia",
+      "confidence_score": 0.97,
+      "tier": "free"
+    },
+    {
+      "question_text": "¿Cuántos miembros componen el Consejo General del Poder Judicial según la Constitución Española?",
+      "original_text": null,
+      "origin_type": "ai_generated",
+      "approval_type": "auto_approved",
+      "options": [
+        { "text": "Doce miembros", "is_correct": false },
+        { "text": "Veinte miembros", "is_correct": true },
+        { "text": "Veintiuno miembros", "is_correct": false },
+        { "text": "Quince miembros", "is_correct": false }
+      ],
+      "explanation": "El artículo 122.3 CE establece que el CGPJ estará integrado por 'veinte miembros nombrados por el Rey por un período de cinco años'. De estos veinte: doce entre Jueces y Magistrados, cuatro a propuesta del Congreso y cuatro a propuesta del Senado. El Presidente del TS preside el CGPJ pero no se cuenta como miembro adicional.",
+      "legal_reference": "Art. 122.3 CE",
+      "tema": 4,
+      "materia": "constitucion",
+      "difficulty": 2,
+      "source": "elaboracion_propia",
+      "confidence_score": 0.97,
+      "tier": "free"
+    },
+    {
+      "question_text": "Según el artículo 101 de la Constitución Española, ¿en qué supuestos cesa el Gobierno?",
+      "original_text": null,
+      "origin_type": "ai_generated",
+      "approval_type": "auto_approved",
+      "options": [
+        { "text": "Tras la celebración de elecciones generales, por dimisión o fallecimiento del Presidente, y por pérdida de la confianza parlamentaria", "is_correct": true },
+        { "text": "Únicamente tras la celebración de elecciones generales o por moción de censura", "is_correct": false },
+        { "text": "Por disolución de las Cortes Generales o por sentencia judicial firme", "is_correct": false },
+        { "text": "Tras la celebración de elecciones, por dimisión del Presidente, o por decisión del Rey", "is_correct": false }
+      ],
+      "explanation": "El artículo 101.1 CE enumera taxativamente los supuestos de cese del Gobierno: 1) Celebración de elecciones generales, 2) Pérdida de la confianza parlamentaria (cuestión de confianza o moción de censura), 3) Dimisión del Presidente, y 4) Fallecimiento del Presidente. El Rey no puede cesar al Gobierno por decisión propia.",
+      "legal_reference": "Art. 101.1 CE",
+      "tema": 4,
+      "materia": "constitucion",
+      "difficulty": 3,
+      "source": "elaboracion_propia",
+      "confidence_score": 0.95,
+      "tier": "free"
+    }
+  ]
+}

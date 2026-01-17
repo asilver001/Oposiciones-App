@@ -1,0 +1,510 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 9 TEST TEMA 8 (2ª PARTE) INICIALES (2).docx
+**Total preguntas:** 40
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** Seg�n la Constituci�n Espa�ola de 1978, un Delegado dirigir� la Administraci�n del Estado en el territorio de la Comunidad Aut�noma y la coordinar�, cuando proceda, con la Administraci�n propia de la Comunidad. Ese Delegado ser� nombrado
+
+**Opciones:**
+  0. Por el Rey.
+  1. Por el Gobierno.
+  2. Por el Presidente del Gobierno.
+  3. Por las Cortes Generales.
+
+---
+
+### Pregunta 2
+
+**Texto:** �Qui�n propone el nombramiento de los Delegados del Gobierno en las Comunidades Aut�nomas?
+
+**Opciones:**
+  0. El Consejo de Ministros.
+  1. El Presidente del Congreso
+  2. El Presidente del Gobierno.
+  3. El Rey.
+
+---
+
+### Pregunta 3
+
+**Texto:** Indicar la afirmaci�n falsa en cuanto a la figura del Delegado del Gobierno
+
+**Opciones:**
+  0. Dependen org�nicamente del Presidente del Gobierno.
+  1. Ostentan la representaci�n ordinaria del Estado en el territorio de la Comunidad Aut�noma.
+  2. Dependen funcionalmente del Ministerio competente por raz�n de materia.
+  3. Deber�n reunir los requisitos de idoneidad establecidos en la Ley 3/2015, de 30 de marzo.
+
+---
+
+### Pregunta 4
+
+**Texto:** En caso de ausencia, vacante o enfermedad del titular de la Delegaci�n del Gobierno ser� suplido por
+
+**Opciones:**
+  0. El Subdelegado del Gobierno de la provincia en que tenga su sede.
+  1. El Secretario General.
+  2. El Subdelegado del Gobierno que el Delegado designe.
+  3. La persona que determine el Presidente del Gobierno.
+
+---
+
+### Pregunta 5
+
+**Texto:** Los Delegados del Gobierno son �rganos directivos de la Administraci�n General del Estado y tienen rango de
+
+**Opciones:**
+  0. Director General.
+  1. Subdirector General.
+  2. Secretario General T�cnico
+  3. Subsecretario.
+
+---
+
+### Pregunta 6
+
+**Texto:** De conformidad con el art�culo 70 de la Ley 40/2015, de 1 de octubre
+
+**Opciones:**
+  0. Por Ley se determinar�n las islas en las que existir� un Director Insular de la AGE.
+  1. Por Ley Org�nica se determinar�n las islas en las que existir� un Director Insular de la AGE.
+  2. Reglamentariamente se determinar�n las islas en las que existir� un Director Insular de la AGE.
+  3. El Presidente del Gobierno determinar� las islas en las que existir� un Director Insular de la AGE.
+
+---
+
+### Pregunta 7
+
+**Texto:** En las Comunidades Aut�nomas Uniprovinciales
+
+**Opciones:**
+  0. No existir�n en ning�n caso Subdelegaciones del Gobierno
+  1. Podr�n crearse por Ley Subdelegaciones del Gobierno.
+  2. Podr�n crearse por Resoluci�n del Delegado del Gobierno subdelegaciones del Gobierno.
+  3. Podr�n crearse por Real Decreto Subdelegaciones del Gobierno
+
+---
+
+### Pregunta 8
+
+**Texto:** A los Subdelegados del Gobierno les corresponde
+
+**Opciones:**
+  0. Resolver los recursos en v�a administrativa interpuestos contra las resoluciones y actos dictados por los �rganos de la Delegaci�n, previo informe, en todo caso, del Ministerio competente por raz�n de la materia.
+  1. Ejercer la potestad sancionadora, expropiatoria y cualesquiera otras que les confieran las normas o que les sean desconcentradas o delegadas.
+  2. Informar las medidas de optimizaci�n de recursos humanos y materiales en su �mbito territorial, especialmente las que afecten a m�s de un Departamento.
+  3. Mantener las necesarias relaciones de cooperaci�n y coordinaci�n de la Administraci�n General del Estado y sus Organismos p�blicos con la de la Comunidad Aut�noma y con las correspondientes Entidades locales en el �mbito de la provincia.
+
+---
+
+### Pregunta 9
+
+**Texto:** Seg�n el art�culo 71 LRJSP, los servicios territoriales de la Administraci�n General del Estado en la Comunidad Aut�noma se organizar�n atendiendo al mejor cumplimiento de sus fines, en
+
+**Opciones:**
+  0. servicios integrados y no integrados en las Delegaciones del Gobierno.
+  1. servicios centralizados y descentralizados en las Delegaciones del Gobierno.
+  2. servicios centrales y perif�ricos en las Delegaciones del Gobierno.
+  3. servicios propios y delegados en las Delegaciones del Gobierno.
+
+---
+
+### Pregunta 10
+
+**Texto:** Los Directores insulares
+
+**Opciones:**
+  0. Dependen jer�rquicamente del Delegado del Gobierno, o del Subdelegado en la provincia cuando este cargo exista.
+  1. Dependen jer�rquicamente del Delegado del Gobierno, o del Subdelegado cuando as� lo determine el Delegado.
+  2. Ejercen, en su �mbito territorial, las competencias atribuidas por la Ley a los Delegados del Gobierno.
+  3. Son nombrados entre funcionarios del Subgrupo A1 por el Subdelegado del Gobierno por el procedimiento de libre designaci�n, y en su defecto, por el Delegado del Gobierno en la Comunidad Aut�noma.
+
+---
+
+### Pregunta 11
+
+**Texto:** Los Directores insulares ser�n nombrados entre
+
+**Opciones:**
+  0. Personas con acreditada experiencia en la gesti�n p�blica o privada
+  1. Funcionarios de carrera del Subgrupo A1 o A2.
+  2. Funcionarios de carrera del Subgrupo A1
+  3. Funcionarios de carrera de la Administraci�n del Estado y s�lo si la normativa de aplicaci�n lo prev� podr�n ser funcionarios procedentes de otras Administraciones P�blicas.
+
+---
+
+### Pregunta 12
+
+**Texto:** Los Subdelegados del Gobierno son �rganos directivos de la Administraci�n General del Estado y tienen rango de
+
+**Opciones:**
+  0. Director General.
+  1. Subdirector General.
+  2. Secretario General T�cnico
+  3. Subsecretario.
+
+---
+
+### Pregunta 13
+
+**Texto:** Las Delegaciones del Gobierno
+
+**Opciones:**
+  0. Est�n adscritas org�nicamente al Consejo de Ministros.
+  1. Est�n adscritas org�nicamente a la Presidencia del Gobierno.
+  2. Est�n adscritas org�nicamente al Ministerio del Interior.
+  3. Est�n adscritas org�nicamente al Ministerio de Pol�tica Territorial y Memoria Democr�tica
+
+---
+
+### Pregunta 14
+
+**Texto:** Los Delegados del Gobierno dependen org�nicamente
+
+**Opciones:**
+  0. Del Ministerio de Pol�tica Territorial y Memoria Democr�tica
+  1. Del Presidente del Gobierno.
+  2. Del Consejo de Ministros.
+  3. Del Congreso.
+
+---
+
+### Pregunta 15
+
+**Texto:** Los Delegados del Gobierno dependen funcionalmente
+
+**Opciones:**
+  0. Del Presidente del Gobierno.
+  1. Del Ministro competente por raz�n de la materia.
+  2. Del Presidente de la Comunidad Aut�noma.
+  3. Del Consejo de Ministros.
+
+---
+
+### Pregunta 16
+
+**Texto:** En la organizaci�n perif�rica de la AGE son �rganos directivos
+
+**Opciones:**
+  0. Los delegados del gobierno.
+  1. Los delegados del gobierno y subdelegados del gobierno.
+  2. Los delegados del gobierno, subdelegados del gobierno y directores insulares.
+  3. Los subdelegados del gobierno y directores insulares.
+
+---
+
+### Pregunta 17
+
+**Texto:** Los servicios no integrados en las Delegaciones del Gobierno dependen
+
+**Opciones:**
+  0. Del Ministerio de Pol�tica Territorial y Memoria Democr�tica
+  1. Del �rgano central competente sobre el sector de actividad en el que aqu�llos operen.
+  2. De la Delegaci�n o Subdelegaci�n del Gobierno correspondiente.
+  3. De la Presidencia del Gobierno.
+
+---
+
+### Pregunta 18
+
+**Texto:** Los servicios territoriales integrados depender�n
+
+**Opciones:**
+  0. De la Presidencia del Gobierno.
+  1. Del Delegado del Gobierno, o en su caso Subdelegado del Gobierno, a trav�s de la Presidencia del Gobierno.
+  2. De la Presidencia del Gobierno, a trav�s del Ministerio de Pol�tica Territorial y Memoria Democr�tica
+  3. Del Delegado del Gobierno, o en su caso Subdelegado del Gobierno, a trav�s de la Secretar�a General.
+
+---
+
+### Pregunta 19
+
+**Texto:** Existir� un Director insular de la Administraci�n General del Estado, con el nivel que se determine en cada caso en la relaci�n de puestos de trabajo, en las islas de
+
+**Opciones:**
+  0. Menorca, Ibiza-Formentera, Lanzarote, Fuerteventura, La Palma, El Hierro y La Gomera.
+  1. Mallorca, Ibiza-Formentera, Lanzarote, Fuerteventura, La Palma, El Hierro y La Gomera.
+  2. Menorca, Ibiza-Formentera, Tenerife, Fuerteventura, La Palma, El Hierro y La Gomera.
+  3. Menorca, Ibiza-Formentera, Lanzarote, Fuerteventura, La Palma, El Hierro y Gran Canaria.
+
+---
+
+### Pregunta 20
+
+**Texto:** Se�ale la correcta en relaci�n con el Delegado del Gobierno
+
+**Opciones:**
+  0. Es un �rgano superior.
+  1. Ser� nombrado por Real Decreto del Presidente del Gobierno.
+  2. El nombramiento se llevar� a cabo entre funcionarios pertenecientes a Cuerpos o Escalas para cuyo ingreso se exija t�tulo superior.
+  3. Ostenta la condici�n de alto cargo.
+
+---
+
+### Pregunta 21
+
+**Texto:** En cada Delegaci�n del Gobierno existir� un �rgano para la gesti�n de los servicios comunes llamado
+
+**Opciones:**
+  0. Gabinete.
+  1. Direcci�n General.
+  2. �rea funcional.
+  3. Secretar�a General.
+
+---
+
+### Pregunta 22
+
+**Texto:** Los Directores Insulares
+
+**Opciones:**
+  0. Son nombrados por Real Decreto publicado en el BOE.
+  1. Su nombramiento corresponde al Delegado del Gobierno por el procedimiento de libre designaci�n.
+  2. Son nombrados entre funcionarios de carrera del Estado, de las Comunidades Aut�nomas o de las Entidades Locales, pertenecientes a Cuerpos o Escalas clasificados como Subgrupo A1 o A2.
+  3. Son �rganos directivos de la Administraci�n Territorial del Estado.
+
+---
+
+### Pregunta 23
+
+**Texto:** Las Delegaciones del Gobierno tendr�n su sede
+
+**Opciones:**
+  0. En la localidad donde radique el Consejo de Gobierno de la Comunidad Aut�noma, salvo que el Estatuto de Autonom�a disponga expresamente otra cosa y sin perjuicio de lo que establezca el Consejo de Ministros
+  1. En la localidad donde radique el Consejo de Gobierno de la Comunidad Aut�noma, salvo que el Consejo de Ministros acuerde ubicarla en otra distinta y sin perjuicio de lo que disponga expresamente el Estatuto de Autonom�a.
+  2. En todo caso en la localidad donde radique la sede del Consejo de Gobierno de la
+  3. En todo caso donde disponga expresamente el Estatuto de Autonom�a de la Comunidad Aut�noma
+
+---
+
+### Pregunta 24
+
+**Texto:** Los Directores Insulares
+
+**Opciones:**
+  0. Tienen la consideraci�n de �rganos directivos.
+  1. Tienen rango de Subdirector General.
+  2. Son nombrados por Resoluci�n del Subdelegado del Gobierno.
+  3. No son altos cargos.
+
+---
+
+### Pregunta 25
+
+**Texto:** Podr�n crearse por Real Decreto Subdelegaciones del Gobierno en las Comunidades Aut�nomas uniprovinciales, y para ello habr�n de tenerse en cuenta circunstancias tales como
+
+**Opciones:**
+  0. La poblaci�n del territorio, el volumen de gesti�n o sus singularidades geogr�ficas, sociales o econ�micas.
+  1. La poblaci�n del territorio, el car�cter de capital auton�mica, el volumen de gesti�n o sus singularidades geogr�ficas, sociales o econ�micas.
+  2. La amplitud del territorio, el volumen de gesti�n o sus singularidades geogr�ficas, sociales o econ�micas.
+  3. La poblaci�n del territorio, el volumen de servicios y prestaciones asumidos por la Comunidad Aut�noma, o sus singularidades geogr�ficas, sociales o econ�micas.
+
+---
+
+### Pregunta 26
+
+**Texto:** La Comisi�n interministerial de coordinaci�n de la Administraci�n perif�rica del Estado es un �rgano colegiado, adscrito
+
+**Opciones:**
+  0. A la Presidencia del Gobierno.
+  1. Al Consejo de Ministros.
+  2. Al Ministerio de la Presidencia.
+  3. Al Ministerio de Pol�tica Territorial.
+
+---
+
+### Pregunta 27
+
+**Texto:** Se�ale la respuesta correcta
+
+**Opciones:**
+  0. El Director insular tendr� el nivel que se determine en la relaci�n de puestos de trabajo y ostentar� la consideraci�n de alto cargo.
+  1. El Subdelegado del Gobierno tiene rango de subdirector General y no ostenta la consideraci�n de alto cargo.
+  2. El Delegado del Gobierno tiene rango de Subsecretario y ser� nombrado entre funcionarios pertenecientes a Cuerpos o Escalas clasificados como Subgrupo A1.
+  3. El Delegado del Gobierno y el Subdelegado del Gobierno son �rganos directivos que ostentan la consideraci�n de alto cargo.
+
+---
+
+### Pregunta 28
+
+**Texto:** La estructura de las Delegaciones y Subdelegaciones del Gobierno se fijar� por
+
+**Opciones:**
+  0. Real Decreto del Consejo de Ministros a propuesta del Presidente del Gobierno, en raz�n de la dependencia org�nica de las Delegaciones del Gobierno, y contar�n, en todo caso, con una Secretar�a General T�cnica.
+  1. Real Decreto del Consejo de Ministros a propuesta del Ministerio de Pol�tica Territorial, en raz�n de la dependencia org�nica de las Delegaciones del Gobierno, y contar�n, en todo caso, con una Secretar�a General T�cnica.
+  2. Real Decreto del Consejo de Ministros a propuesta del Presidente del Gobierno, en raz�n de la dependencia org�nica de las Delegaciones del Gobierno, y contar�n, en todo caso, con una Secretar�a General.
+  3. Real Decreto del Consejo de Ministros a propuesta del Ministerio de Pol�tica Territorial, en raz�n de la dependencia org�nica de las Delegaciones del Gobierno, y contar�n, en todo caso, con una Secretar�a General.
+
+---
+
+### Pregunta 29
+
+**Texto:** El nombramiento de los Delegados del Gobierno
+
+**Opciones:**
+  0. Es propuesto por el Ministro de Pol�tica Territorial y Memoria Democr�tica
+  1. Se realizar� respetando los principios de igualdad, m�rito y capacidad.
+  2. Atender� a criterios de competencia profesional y experiencia.
+  3. En ning�n caso, deber� reunir los requisitos de idoneidad establecidos en la Ley 3/2015, de 30 de marzo, reguladora del ejercicio del alto cargo de la Administraci�n General del Estado.
+
+---
+
+### Pregunta 30
+
+**Texto:** Se�ale la falsa en relaci�n al nombramiento de los Subdelegados del Gobierno
+
+**Opciones:**
+  0. Son nombrados por el procedimiento de libre designaci�n.
+  1. El nombramiento se efectuar� por Real Decreto del Consejo de Ministros.
+  2. El nombramiento ser� publicado en el BOE.
+  3. El nombramiento se producir� entre funcionarios de carrera pertenecientes a Cuerpos o Escalas clasificados como Subgrupo A1.
+
+---
+
+### Pregunta 31
+
+**Texto:** La integraci�n de nuevos servicios territoriales o la desintegraci�n de servicios territoriales ya integrados en las Delegaciones del Gobierno, se llevar� a cabo mediante
+
+**Opciones:**
+  0. Real Decreto de Consejo de Ministros.
+  1. Orden Ministerial.
+  2. Real Decreto cuando contemple unidades con nivel de Subdirecci�n General o equivalentes o por Orden conjunta cuando afecte a �rganos inferiores.
+  3. Acuerdo del Consejo de Ministros.
+
+---
+
+### Pregunta 32
+
+**Texto:** Es competencia del Delegado del Gobierno
+
+**Opciones:**
+  0. Proteger el libre ejercicio de los derechos y libertades, garantizando la seguridad ciudadana, todo ello dentro de las competencias estatales en la materia. A estos efectos, dirigir� las Fuerzas y Cuerpos de Seguridad del Estado en la provincia.
+  1. Formular a los Ministerios competentes, en cada caso, las propuestas que estime convenientes sobre los objetivos contenidos en los planes y programas que hayan de ejecutar los servicios territoriales y los de los Organismos p�blicos, e informar, regular y peri�dicamente, a los Ministerios competentes sobre la gesti�n de sus servicios territoriales.
+  2. Dirigir y coordinar la protecci�n civil en el �mbito de la provincia.
+  3. Dirigir, en su caso, los servicios integrados de la Administraci�n General del Estado, de acuerdo con las instrucciones del Delegado del Gobierno y de los Ministerios correspondientes; e impulsar, supervisar e inspeccionar los servicios no integrados.
+
+---
+
+### Pregunta 33
+
+**Texto:** Las Misiones Diplom�ticas son, seg�n la ley 2/2014, de dos tipos
+
+**Opciones:**
+  0. Permanentes o Especiales.
+  1. Permanentes o Singulares.
+  2. Temporales o Especiales.
+  3. Permanentes, Temporales o Especiales.
+
+---
+
+### Pregunta 34
+
+**Texto:** De acuerdo con lo establecido por la ley 2/2014, las Misiones Diplom�ticas Permanentes, representan con car�cter permanente, al Reino de Espa�a ante
+
+**Opciones:**
+  0. Los Estados con los que tiene establecidas relaciones diplom�ticas.
+  1. Las Organizaciones Internacionales.
+  2. Los �rganos de las organizaciones internacionales.
+  3. Los Estados con los que tiene establecidas relaciones diplom�ticas temporales, para un cometido determinado.
+
+---
+
+### Pregunta 35
+
+**Texto:** La creaci�n y supresi�n de Representaciones Permanentes se realizar� mediante
+
+**Opciones:**
+  0. Orden del Ministro de Asuntos Exteriores Uni�n Europea y Cooperaci�n.
+  1. Real Decreto del Consejo de Ministros previo informe del Consejo Ejecutivo de Pol�tica Exterior.
+  2. Ley.
+  3. Real Decreto del Presidente del Gobierno previo informe del Consejo Ejecutivo de Pol�tica Exterior.
+
+---
+
+### Pregunta 36
+
+**Texto:** Se�ale la respuesta correcta
+
+**Opciones:**
+  0. La creaci�n de las Oficinas Consulares Honorarias se realizar� mediante Real Decreto del Consejo de Ministros, previo informe del Consejo Ejecutivo de Pol�tica Exterior.
+  1. Las Oficinas Consulares de Carrera se crear�n por Orden del Ministro de Asuntos Exteriores Uni�n Europea y Cooperaci�n.
+  2. Las Oficinas Consulares podr�n ser de Carrera y Honorarias.
+  3. Las Oficinas Consulares representan al Reino de Espa�a en un �rgano de una organizaci�n internacional, en una Conferencia de Estados convocada por una organizaci�n internacional o bajo sus auspicios.
+
+---
+
+### Pregunta 37
+
+**Texto:** Los Embajadores ser�n designados y cesar�n por
+
+**Opciones:**
+  0. Real decreto acordado en Consejo de Ministros a propuesta del Ministro de Asuntos Exteriores Uni�n Europea y Cooperaci�n.
+  1. Orden del Ministro de Asuntos Exteriores Uni�n Europea y Cooperaci�n.
+  2. Real decreto acordado en Consejo de Ministros a propuesta del Presidente del Gobierno.
+  3. Real decreto del Presidente del Gobierno a propuesta del Ministro de Asuntos Exteriores Uni�n Europea y Cooperaci�n.
+
+---
+
+### Pregunta 38
+
+**Texto:** La creaci�n y supresi�n de las Misiones Diplom�ticas Permanentes se realizar� mediante
+
+**Opciones:**
+  0. Real decreto del Presidente del Gobierno, a iniciativa del Ministerio de Asuntos Exteriores Uni�n Europea y Cooperaci�n, y a propuesta del Ministerio de Hacienda y Administraciones P�blicas previo informe del Consejo Ejecutivo de Pol�tica Exterior.
+  1. Real decreto del Consejo de Ministros, a iniciativa del Ministerio de Asuntos Exteriores Uni�n Europea y Cooperaci�n, y a propuesta del Ministerio de Hacienda y Administraciones P�blicas, previo informe del Consejo Ejecutivo de Pol�tica Exterior.
+  2. Real decreto del Presidente del Gobierno, a iniciativa del Ministerio de Asuntos Exteriores Uni�n Europea y Cooperaci�n, y a propuesta del Ministerio de Hacienda y Administraciones P�blicas, previo dictamen del Consejo de Estado.
+  3. Real decreto del Consejo de Ministros, a iniciativa del Ministerio de Asuntos Exteriores Uni�n Europea y Cooperaci�n, y a propuesta del Ministerio de Hacienda y Administraciones P�blicas, previo dictamen del Consejo de Estado.
+
+---
+
+### Pregunta 39
+
+**Texto:** Representan con car�cter permanente a Espa�a ante la Uni�n Europea o una Organizaci�n Internacional
+
+**Opciones:**
+  0. Las Representaciones Permanentes.
+  1. Las Misiones Diplom�ticas Permanentes.
+  2. Las Delegaciones.
+  3. Las Oficinas Consulares.
+
+---
+
+### Pregunta 40
+
+**Texto:** Las delegaciones estar�n presididas por
+
+**Opciones:**
+  0. un Embajador Extraordinario y Plenipotenciario.
+  1. un Encargado de Negocios con cartas de gabinete.
+  2. los �rganos que ostentan la representaci�n del Estado en el exterior: el Jefe de Estado, Presidente del Gobierno o Ministro de Asuntos Exteriores Uni�n Europea y Cooperaci�n.
+  3. un Embajador Representante Permanente.
+
+---

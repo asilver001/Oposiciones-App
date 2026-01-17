@@ -1,0 +1,1507 @@
+{
+  "metadata": {
+    "source_file": "Test y caso práctico temas 1 y 2..pdf",
+    "source_path": "TEMA Iniciales Administrativo\\Test y caso práctico temas 1 y 2..pdf",
+    "tema": 0,
+    "categoria": "administrativo",
+    "extraction_date": "2026-01-15T23:40:57.548115",
+    "reformulation_date": "2026-01-15T23:47:35.829757",
+    "total_questions": 30,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:56.283973",
+    "completed_count": 0,
+    "failed_count": 30
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "En relacin con las fuentes del Derecho previstas en el artculo 1 del",
+        "options": [
+          {
+            "text": "digo Civil, seale la respuesta correcta:",
+            "is_correct": false
+          },
+          {
+            "text": "Los principios generales del derecho solo se aplicarn en defecto de",
+            "is_correct": false
+          },
+          {
+            "text": "ostumbre siempre que no sean contrarios a la moral o al orden pblico.",
+            "is_correct": false
+          },
+          {
+            "text": "La jurisprudencia es fuente del ordenamiento jurdico espaol junto con",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En relacin con las fuentes del Derecho previstas en el artculo 1 del",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale cul no es una fuente del Derecho Administrativo:",
+        "options": [
+          {
+            "text": "La Ley de Expropiacin Forzosa.",
+            "is_correct": false
+          },
+          {
+            "text": "Los recursos administrativos.",
+            "is_correct": false
+          },
+          {
+            "text": "Los principios generales del Derecho.",
+            "is_correct": false
+          },
+          {
+            "text": "Los usos jurdicos que no sean meramente interpretativos de una",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale cul no es una fuente del Derecho Administrativo:",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En virtud del artculo 2 del Cdigo Civil, las leyes entrarn en vigor:",
+        "options": [
+          {
+            "text": "En todo caso, desde el mismo da de su completa publicacin en el BOE.",
+            "is_correct": false
+          },
+          {
+            "text": "A los treinta das naturales desde su completa publicacin en el BOE si",
+            "is_correct": false
+          },
+          {
+            "text": "A los veinte das naturales desde su completa publicacin en el BOE si",
+            "is_correct": false
+          },
+          {
+            "text": "A los veinte das hbiles desde su aprobacin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En virtud del artculo 2 del Cdigo Civil, las leyes entrarn en vigor:",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta:",
+        "options": [
+          {
+            "text": "Las leyes no se pueden derogar una vez que forman parte del",
+            "is_correct": false
+          },
+          {
+            "text": "Por la simple derogacin de una ley recobran vigencia las leyes",
+            "is_correct": false
+          },
+          {
+            "text": "nteriores que esta hubiera derogado.",
+            "is_correct": false
+          },
+          {
+            "text": "Las leyes tendrn siempre efecto retractivo mientras no dispongan lo contrario.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta:",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale cual de las siguientes materias se ha de regular por ley orgnica:",
+        "options": [
+          {
+            "text": "Derecho de educacin, reconocido en el artculo 27 de la CE.",
+            "is_correct": false
+          },
+          {
+            "text": "Derecho a la negociacin colectiva laboral, regulado en el artculo 37 de",
+            "is_correct": false
+          },
+          {
+            "text": "Las organizaciones profesionales, recogidas en el artculo 52 de la CE.",
+            "is_correct": false
+          },
+          {
+            "text": "La planificacin de la actividad econmica general conforme al art. 131 de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale cual de las siguientes materias se ha de regular por ley orgnica:",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Segn lo previsto en el artculo 149.1.8 de la Constitucin, seale la",
+        "options": [
+          {
+            "text": "El Estado tiene competencia exclusiva sobre la determinacin de las",
+            "is_correct": false
+          },
+          {
+            "text": "El Estado no tiene competencias en materia de fuentes del derecho.",
+            "is_correct": false
+          },
+          {
+            "text": "Las Comunidades Autnomas tienen competencia exclusiva sobre la",
+            "is_correct": false
+          },
+          {
+            "text": "eterminacin de las fuentes del Derecho.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn lo previsto en el artculo 149.1.8 de la Constitucin, seale la",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Se quiere reformar el artculo de la Constitucin en el que se dispone:",
+        "options": [
+          {
+            "text": "decuada. Seale la respuesta correcta:",
+            "is_correct": false
+          },
+          {
+            "text": "Se acudir al procedimiento de reforma agravada previsto en el artculo",
+            "is_correct": false
+          },
+          {
+            "text": "La reforma constitucional podr ser promovida a travs de una iniciativa",
+            "is_correct": false
+          },
+          {
+            "text": "creditadas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Se quiere reformar el artculo de la Constitucin en el que se dispone:",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Tienen iniciativa para la reforma constitucional (seale la falsa):",
+        "options": [
+          {
+            "text": "El Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "El Congreso y el Senado.",
+            "is_correct": false
+          },
+          {
+            "text": "Las Asambleas Legislativas de las Comunidades Autnomas.",
+            "is_correct": false
+          },
+          {
+            "text": "El Tribunal Constitucional.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Tienen iniciativa para la reforma constitucional (seale la falsa):",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Las leyes orgnicas (seale la falsa):",
+        "options": [
+          {
+            "text": "Desarrollan los deberes, derechos y libertades previstos en el",
+            "is_correct": false
+          },
+          {
+            "text": "Aprueban los Estatutos de Autonoma.",
+            "is_correct": false
+          },
+          {
+            "text": "Regulan el rgimen electoral general.",
+            "is_correct": false
+          },
+          {
+            "text": "Requieren mayora absoluta en el Congreso.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las leyes orgnicas (seale la falsa):",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "No se podr delegar en las Comisiones Legislativas Permanentes, entre",
+        "options": [
+          {
+            "text": "La reforma constitucional y las leyes ordinarias.",
+            "is_correct": false
+          },
+          {
+            "text": "Las cuestiones internacionales y las leyes de bases.",
+            "is_correct": false
+          },
+          {
+            "text": "Los Presupuestos Generales del Estado y las proposiciones de ley.",
+            "is_correct": false
+          },
+          {
+            "text": "Las leyes orgnicas y las leyes tributarias.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "No se podr delegar en las Comisiones Legislativas Permanentes, entre",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 87 de la Constitucin, la iniciativa legislativa",
+        "options": [
+          {
+            "text": "orresponde:",
+            "is_correct": false
+          },
+          {
+            "text": "Congreso, Senado y Gobiernos de las Comunidades Autnomas.",
+            "is_correct": false
+          },
+          {
+            "text": "Congreso, Ministerio Fiscal y el Rey.",
+            "is_correct": false
+          },
+          {
+            "text": "Gobierno, Consejo General del Poder Judicial y Defensor del Pueblo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 87 de la Constitucin, la iniciativa legislativa",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La Constitucin establece que las Asambleas de las Comunidades",
+        "options": [
+          {
+            "text": "utnomas:",
+            "is_correct": false
+          },
+          {
+            "text": "Podrn nicamente remitir a la Mesa del Senado una proposicin de ley",
+            "is_correct": false
+          },
+          {
+            "text": "Podrn solicitar del Gobierno la adopcin de un proyecto de ley o remitir",
+            "is_correct": false
+          },
+          {
+            "text": "la Mesa del Congreso una proposicin de ley.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La Constitucin establece que las Asambleas de las Comunidades",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'utnomas:...'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "En virtud del artculo 90.2 de la Constitucin, con qu plazo cuenta el",
+        "options": [
+          {
+            "text": "ongreso?",
+            "is_correct": false
+          },
+          {
+            "text": "Un mes desde el da de la remisin del texto.",
+            "is_correct": false
+          },
+          {
+            "text": "Dos meses desde el da de la recepcin del texto.",
+            "is_correct": false
+          },
+          {
+            "text": "Tres meses desde el da de la recepcin del texto.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En virtud del artculo 90.2 de la Constitucin, con qu plazo cuenta el",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'ongreso?...'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "El veto introducido por el Senado deber ser aprobado por:",
+        "options": [
+          {
+            "text": "Mayora de 2/3.",
+            "is_correct": false
+          },
+          {
+            "text": "Mayora absoluta.",
+            "is_correct": false
+          },
+          {
+            "text": "Mayora de 3/5.",
+            "is_correct": false
+          },
+          {
+            "text": "Mayora simple.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El veto introducido por el Senado deber ser aprobado por:",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 91 de la Constitucin, el Rey sancionar las leyes",
+        "options": [
+          {
+            "text": "probadas por las Cortes Generales en el plazo de:",
+            "is_correct": false
+          },
+          {
+            "text": "Diez das.",
+            "is_correct": false
+          },
+          {
+            "text": "Quince das.",
+            "is_correct": false
+          },
+          {
+            "text": "Veinte das.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 91 de la Constitucin, el Rey sancionar las leyes",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Diez das....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Las leyes marco:",
+        "options": [
+          {
+            "text": "Permiten al Estado transferir o delegar facultades sobre materias de",
+            "is_correct": false
+          },
+          {
+            "text": "ompetencia estatal a las Comunidades Autnomas.",
+            "is_correct": false
+          },
+          {
+            "text": "Requieren mayora absoluta en el Congreso.",
+            "is_correct": false
+          },
+          {
+            "text": "No pueden prever ms medidas de control que la ejercida por los",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las leyes marco:",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta muy corta",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Las leyes de transferencia o delegacin:",
+        "options": [
+          {
+            "text": "Son leyes ordinarias.",
+            "is_correct": false
+          },
+          {
+            "text": "Son leyes autonmicas.",
+            "is_correct": false
+          },
+          {
+            "text": "Son leyes orgnicas.",
+            "is_correct": false
+          },
+          {
+            "text": "Son decretos-leyes.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las leyes de transferencia o delegacin:",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Se podrn dictar leyes de armonizacin cuando as lo exija:",
+        "options": [
+          {
+            "text": "El inters regional.",
+            "is_correct": false
+          },
+          {
+            "text": "El inters institucional.",
+            "is_correct": false
+          },
+          {
+            "text": "El inters general.",
+            "is_correct": false
+          },
+          {
+            "text": "El inters econmico y social.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Se podrn dictar leyes de armonizacin cuando as lo exija:",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 150.3 de la Constitucin, la apreciacin de la",
+        "options": [
+          {
+            "text": "El Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Congreso por mayora de 3/5.",
+            "is_correct": false
+          },
+          {
+            "text": "A las Cortes Generales, por mayora absoluta de cada Cmara.",
+            "is_correct": false
+          },
+          {
+            "text": "A las Cortes Generales por mayora de 2/3 de cada Cmara.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 150.3 de la Constitucin, la apreciacin de la",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Las disposiciones del Gobierno que contengan legislacin delegada",
+        "options": [
+          {
+            "text": "Decretos legislativos.",
+            "is_correct": false
+          },
+          {
+            "text": "Decretos-leyes.",
+            "is_correct": false
+          },
+          {
+            "text": "Leyes orgnicas.",
+            "is_correct": false
+          },
+          {
+            "text": "Leyes de bases.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las disposiciones del Gobierno que contengan legislacin delegada",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 84 de la Constitucin, cuando una proposicin de ley",
+        "options": [
+          {
+            "text": "El Gobierno est facultado para oponerse a su tramitacin.",
+            "is_correct": false
+          },
+          {
+            "text": "El Gobierno debe suspender la delegacin legislativa hasta que se",
+            "is_correct": false
+          },
+          {
+            "text": "Queda en suspenso la delegacin hasta que se tramite esa proposicin",
+            "is_correct": false
+          },
+          {
+            "text": "El Gobierno puede dictar la correspondiente norma antes de que se",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 84 de la Constitucin, cuando una proposicin de ley",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Cuando se pretenda refundir varios textos legales en uno, la",
+        "options": [
+          {
+            "text": "elegacin legislativa se otorgar por:",
+            "is_correct": false
+          },
+          {
+            "text": "Una ley de bases.",
+            "is_correct": false
+          },
+          {
+            "text": "Una ley ordinaria.",
+            "is_correct": false
+          },
+          {
+            "text": "Una ley orgnica.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cuando se pretenda refundir varios textos legales en uno, la",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn la Constitucin, las disposiciones legislativas provisionales",
+        "options": [
+          {
+            "text": "ictadas por el Gobierno se denominan:",
+            "is_correct": false
+          },
+          {
+            "text": "Reglamentos",
+            "is_correct": false
+          },
+          {
+            "text": "Leyes orgnicas.",
+            "is_correct": false
+          },
+          {
+            "text": "Decretos-leyes.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn la Constitucin, las disposiciones legislativas provisionales",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn la Constitucin, el plazo mximo para que el Congreso se",
+        "options": [
+          {
+            "text": "ecreto-ley aprobado por",
+            "is_correct": false
+          },
+          {
+            "text": "Dos meses desde su publicacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Tres meses desde su aprobacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Veinte das siguientes a su publicacin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn la Constitucin, el plazo mximo para que el Congreso se",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Por decreto-ley no podr regularse:",
+        "options": [
+          {
+            "text": "El Derecho electoral general.",
+            "is_correct": false
+          },
+          {
+            "text": "Asuntos de carcter laboral.",
+            "is_correct": false
+          },
+          {
+            "text": "Las cuestiones ya reguladas por una ley ordinaria.",
+            "is_correct": false
+          },
+          {
+            "text": "Materias de carcter econmico.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Por decreto-ley no podr regularse:",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El procedimiento por el que el Congreso convalidar o derogar un",
+        "options": [
+          {
+            "text": "ecreto-ley, segn prev el artculo 86 de la Constitucin, ser:",
+            "is_correct": false
+          },
+          {
+            "text": "Preferente y sumario.",
+            "is_correct": false
+          },
+          {
+            "text": "Especial y sumario.",
+            "is_correct": false
+          },
+          {
+            "text": "Urgente.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El procedimiento por el que el Congreso convalidar o derogar un",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Urgente....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "La iniciativa legislativa le corresponde a:",
+        "options": [
+          {
+            "text": "Presidente del Gobierno y presidentes de las Comunidades Autnomas.",
+            "is_correct": false
+          },
+          {
+            "text": "A los ciudadanos espaoles mayores de edad en los trminos indicados",
+            "is_correct": false
+          },
+          {
+            "text": "Al presidente del Senado y del Congreso de los Diputados.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Defensor del Pueblo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La iniciativa legislativa le corresponde a:",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Podrn ser sometidas a referndum consultivo:",
+        "options": [
+          {
+            "text": "Las leyes de especial trascendencia",
+            "is_correct": false
+          },
+          {
+            "text": "Las decisiones polticas de especial trascendencia",
+            "is_correct": false
+          },
+          {
+            "text": "Todas aquellas cuestiones que se aprueben por las Cortes Generales.",
+            "is_correct": false
+          },
+          {
+            "text": "No se puede someter a referndum ninguna cuestin, excepto la",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Podrn ser sometidas a referndum consultivo:",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Se requerir informe del Consejo de Estado:",
+        "options": [
+          {
+            "text": "En todos los anteproyectos de ley.",
+            "is_correct": false
+          },
+          {
+            "text": "Solo cuando as lo determine el Congreso.",
+            "is_correct": false
+          },
+          {
+            "text": "En los proyectos de decretos legislativos.",
+            "is_correct": false
+          },
+          {
+            "text": "En los proyectos de decretos-leyes.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Se requerir informe del Consejo de Estado:",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El referndum consultivo al que se refiere el art. 92 de la CE:",
+        "options": [
+          {
+            "text": "Ser convocado por el presidente del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Ser convocado por el Rey, a propuesta del Congreso de los Diputados.",
+            "is_correct": false
+          },
+          {
+            "text": "Ser convocado por el `presidente del Gobierno, a propuesta del",
+            "is_correct": false
+          },
+          {
+            "text": "ongreso de los Diputados.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El referndum consultivo al que se refiere el art. 92 de la CE:",
+        "source": "Test y caso práctico temas 1 y 2..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:22.643001"
+}

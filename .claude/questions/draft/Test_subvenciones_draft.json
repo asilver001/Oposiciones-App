@@ -1,0 +1,677 @@
+{
+  "metadata": {
+    "source_file": "Test subvenciones.pdf",
+    "source_path": "Test contratos\\Test subvenciones.pdf",
+    "tema": 0,
+    "categoria": "contratos",
+    "extraction_date": "2026-01-15T23:41:14.462995",
+    "reformulation_date": "2026-01-15T23:47:35.722712",
+    "total_questions": 20,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.933271",
+    "completed_count": 0,
+    "failed_count": 20
+  },
+  "questions": [
+    {
+      "question_text": "Seale cul de los siguientes no es un sujeto al que se refiere la LGS:",
+      "options": [
+        {
+          "text": "El rgano de contratacin",
+          "is_correct": false
+        },
+        {
+          "text": "Las entidades colaboradoras",
+          "is_correct": false
+        },
+        {
+          "text": "El beneficiario",
+          "is_correct": false
+        },
+        {
+          "text": "El rgano concedente",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale cul de los siguientes no es un sujeto al que se refiere la LGS:",
+      "source": "Test subvenciones.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale cul de los siguientes es requisito para entender que estamos ante una",
+      "options": [
+        {
+          "text": "Debe tratarse de una disposicin dineraria",
+          "is_correct": false
+        },
+        {
+          "text": "No implica contraprestacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Va destinada a favorecer actividades, comportamientos o conductas",
+          "is_correct": false
+        },
+        {
+          "text": "onsideradas de utilidad pblica o inters social.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale cul de los siguientes es requisito para entender que estamos ante una",
+      "source": "Test subvenciones.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En qu plazo debe resolverse y notificarse el procedimiento de otorgamiento de",
+      "options": [
+        {
+          "text": "En 6 meses",
+          "is_correct": false
+        },
+        {
+          "text": "En 12 meses",
+          "is_correct": false
+        },
+        {
+          "text": "En 3 meses",
+          "is_correct": false
+        },
+        {
+          "text": "La ley no prev ningn plazo especfico.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En qu plazo debe resolverse y notificarse el procedimiento de otorgamiento de",
+      "source": "Test subvenciones.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En qu plazo debe resolverse y notificarse el procedimiento de reintegro de",
+      "options": [
+        {
+          "text": "En 6 meses",
+          "is_correct": false
+        },
+        {
+          "text": "En 12 meses",
+          "is_correct": false
+        },
+        {
+          "text": "En 3 meses",
+          "is_correct": false
+        },
+        {
+          "text": "La ley no prev ningn plazo especfico.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En qu plazo debe resolverse y notificarse el procedimiento de reintegro de",
+      "source": "Test subvenciones.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Quin puede ser beneficiario de una subvencin?",
+      "options": [
+        {
+          "text": "Cualquier entidad privada",
+          "is_correct": false
+        },
+        {
+          "text": "Cualquier entidad pblica",
+          "is_correct": false
+        },
+        {
+          "text": "Cualquier entidad pblica o privada",
+          "is_correct": false
+        },
+        {
+          "text": "Cualquier entidad pblica o privada siempre que sean personas jurdicas",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Quin puede ser beneficiario de una subvencin?",
+      "source": "Test subvenciones.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cunto puede durar cmo mximo un convenio de colaboracin entre entidad",
+      "options": [
+        {
+          "text": "oncedente y entidad colaboradora?",
+          "is_correct": false
+        },
+        {
+          "text": "4 aos",
+          "is_correct": false
+        },
+        {
+          "text": "Hasta 6 si incluye prrrogas",
+          "is_correct": false
+        },
+        {
+          "text": "No se puede prorrogar por un tiempo superior al inicialmente fijado",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cunto puede durar cmo mximo un convenio de colaboracin entre entidad",
+      "source": "Test subvenciones.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu plazo general hay para rendir cuentas justificativas del importe recibido en",
+      "options": [
+        {
+          "text": "oncepto de subvencin?",
+          "is_correct": false
+        },
+        {
+          "text": "1 mes",
+          "is_correct": false
+        },
+        {
+          "text": "3 meses",
+          "is_correct": false
+        },
+        {
+          "text": "6 meses",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu plazo general hay para rendir cuentas justificativas del importe recibido en",
+      "source": "Test subvenciones.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No podrn obtener la condicin de beneficiarios quienes:",
+      "options": [
+        {
+          "text": "Hayan dado lugar a resolucin firme y culpable de cualquier contrato.",
+          "is_correct": false
+        },
+        {
+          "text": "Tengan su residencia fiscal en un paraso fiscal.",
+          "is_correct": false
+        },
+        {
+          "text": "No estn al corriente de sus obligaciones tributarias",
+          "is_correct": false
+        },
+        {
+          "text": "Todas son correctas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No podrn obtener la condicin de beneficiarios quienes:",
+      "source": "Test subvenciones.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "dificil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la correcta:",
+      "options": [
+        {
+          "text": "La convocatoria tiene carcter reglamentario y se publica en el BOE",
+          "is_correct": false
+        },
+        {
+          "text": "La convocatoria tiene carcter reglamentario y su aprobacin se puede delegar",
+          "is_correct": false
+        },
+        {
+          "text": "La convocatoria tiene carcter de acto administrativo y se publica en la Base",
+          "is_correct": false
+        },
+        {
+          "text": "e Datos Nacional de Subvenciones y un extracto en el BOE",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la correcta:",
+      "source": "Test subvenciones.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Pueden ser beneficiarios de una subvencin:",
+      "options": [
+        {
+          "text": "Personas fsicas o jurdicas privadas",
+          "is_correct": false
+        },
+        {
+          "text": "Personas fsicas o jurdicas pblicas o privadas",
+          "is_correct": false
+        },
+        {
+          "text": "Personas fsicas o jurdicas pblicas",
+          "is_correct": false
+        },
+        {
+          "text": "Personas fsicas o jurdicas pblicas o privadas e incluso, si las bases lo prevn,",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Pueden ser beneficiarios de una subvencin:",
+      "source": "Test subvenciones.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la correcta:",
+      "options": [
+        {
+          "text": "Las bases reguladoras son acto administrativo",
+          "is_correct": false
+        },
+        {
+          "text": "Las bases reguladoras se publican en el BOE",
+          "is_correct": false
+        },
+        {
+          "text": "La aprobacin de las bases reguladoras es delegable.",
+          "is_correct": false
+        },
+        {
+          "text": "Las aprueba el Presidente o Director del organismo autnomo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la correcta:",
+      "source": "Test subvenciones.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la correcta:",
+      "options": [
+        {
+          "text": "El procedimiento de otorgamiento de subvenciones se inicia de oficio",
+          "is_correct": false
+        },
+        {
+          "text": "El plazo para subsanacin de las solicitudes es de 10 das",
+          "is_correct": false
+        },
+        {
+          "text": "El instructor puede solicitar informes.",
+          "is_correct": false
+        },
+        {
+          "text": "Todas son correctas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la correcta:",
+      "source": "Test subvenciones.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Se admite la concesin directa de subvenciones (seale la incorrecta):",
+      "options": [
+        {
+          "text": "Cuando as venga impuesto por una norma de rango reglamentario",
+          "is_correct": false
+        },
+        {
+          "text": "Cuando estn previstas nominativamente en los Presupuestos Generales del",
+          "is_correct": false
+        },
+        {
+          "text": "Cuando se acrediten razones de inters humanitario debidamente justificadas",
+          "is_correct": false
+        },
+        {
+          "text": "Cuando se acrediten razones de inters pblico, social o econmico",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Se admite la concesin directa de subvenciones (seale la incorrecta):",
+      "source": "Test subvenciones.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul es el plazo de prescripcin del derecho de la Administracin a reconocer el",
+      "options": [
+        {
+          "text": "4 aos",
+          "is_correct": false
+        },
+        {
+          "text": "2 aos",
+          "is_correct": false
+        },
+        {
+          "text": "3 aos",
+          "is_correct": false
+        },
+        {
+          "text": "1 ao",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul es el plazo de prescripcin del derecho de la Administracin a reconocer el",
+      "source": "Test subvenciones.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Son sanciones por infracciones leves:",
+      "options": [
+        {
+          "text": "La multa de 75 a 6.000 euros",
+          "is_correct": false
+        },
+        {
+          "text": "La prdida hasta 1 ao de la posibilidad de obtener subvenciones",
+          "is_correct": false
+        },
+        {
+          "text": "La prohibicin de contratar durante 1 ao",
+          "is_correct": false
+        },
+        {
+          "text": "La prdida de la posibilidad de ser entidad colaboradora durante 1 ao",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Son sanciones por infracciones leves:",
+      "source": "Test subvenciones.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las infracciones y sanciones prescriben:",
+      "options": [
+        {
+          "text": "Al ao",
+          "is_correct": false
+        },
+        {
+          "text": "A los 4 aos",
+          "is_correct": false
+        },
+        {
+          "text": "A los 3 aos",
+          "is_correct": false
+        },
+        {
+          "text": "A los 2 aos",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las infracciones y sanciones prescriben:",
+      "source": "Test subvenciones.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cuando la sancin consista en multa, la impone, con carcter general:",
+      "options": [
+        {
+          "text": "El Ministro de Hacienda",
+          "is_correct": false
+        },
+        {
+          "text": "El ministro o secretario de Estado del departamento concedente.",
+          "is_correct": false
+        },
+        {
+          "text": "A o b indistintamente",
+          "is_correct": false
+        },
+        {
+          "text": "El Presidente o Director del organismo autnomo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cuando la sancin consista en multa, la impone, con carcter general:",
+      "source": "Test subvenciones.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la correcta:",
+      "options": [
+        {
+          "text": "Las cantidades a reintegrar tendrn la consideracin de ingresos de derecho",
+          "is_correct": false
+        },
+        {
+          "text": "El inters de demora aplicable ser el inters legal del dinero incrementado en",
+          "is_correct": false
+        },
+        {
+          "text": "Los procedimientos para la exigencia de reintegro tendrn siempre carcter",
+          "is_correct": false
+        },
+        {
+          "text": "B y c es correcto.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la correcta:",
+      "source": "Test subvenciones.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu duracin tienen con carcter general los planes estratgicos en materia de",
+      "options": [
+        {
+          "text": "3 aos",
+          "is_correct": false
+        },
+        {
+          "text": "1 ao",
+          "is_correct": false
+        },
+        {
+          "text": "4 aos",
+          "is_correct": false
+        },
+        {
+          "text": "No tiene una duracin concreta",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu duracin tienen con carcter general los planes estratgicos en materia de",
+      "source": "Test subvenciones.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Son obligaciones de los beneficiarios:",
+      "options": [
+        {
+          "text": "Comunicar la obtencin de otras subvenciones",
+          "is_correct": false
+        },
+        {
+          "text": "Adoptar medidas de difusin",
+          "is_correct": false
+        },
+        {
+          "text": "Cumplir el objetivo",
+          "is_correct": false
+        },
+        {
+          "text": "Todas son correctas",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Son obligaciones de los beneficiarios:",
+      "source": "Test subvenciones.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

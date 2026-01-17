@@ -1,0 +1,412 @@
+{
+  "metadata": {
+    "source_file": "7 TEST TEMA 7 INICIALES.docx",
+    "source_path": "7 TEST TEMA 7 INICIALES.docx",
+    "extraction_date": "2026-01-15T23:40:03.112799",
+    "tema": 7,
+    "categoria": "general",
+    "total_questions": 40
+  },
+  "questions": [
+    {
+      "raw_text": "De conformidad con el art�culo 117.1 de la Constituci�n Espa�ola, �en nombre de qui�n se administra la Justicia?",
+      "raw_options": [
+        "En nombre del pueblo espa�ol.",
+        "En nombre de la Constituci�n y las leyes.",
+        "En nombre del Rey.",
+        "En nombre de Espa�a."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�nto tiempo dura el mandato de los vocales del Consejo General del Poder Judicial?",
+      "raw_options": [
+        "Tres a�os.",
+        "Cuatro a�os.",
+        "Cinco a�os.",
+        "Seis a�os."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�ntos miembros del Consejo General del Poder Judicial son propuestos de entre Jueces y Magistrados de todas las categor�as judiciales?",
+      "raw_options": [
+        "Seis.",
+        "Diez.",
+        "Todos.",
+        "Doce."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qui�n nombra al Presidente del Consejo General del Poder Judicial?:",
+      "raw_options": [
+        "El Jefe del Estado.",
+        "El Jefe de Gobierno.",
+        "El Gobierno.",
+        "Las Cortes Generales."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qui�n debe refrendar el nombramiento del Presidente del Consejo General del Poder Judicial?:",
+      "raw_options": [
+        "No es un acto Real, por tanto, no conlleva refrendo.",
+        "El Presidente del Gobierno.",
+        "El Presidente de las Cortes Generales.",
+        "El Presidente del Senado."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n el art�culo 64.1 de la Ley Org�nica 6/1985, de 1 de julio, del Poder Judicial, la Audiencia Nacional estar� integrada por las siguientes salas:",
+      "raw_options": [
+        "Sala de lo Civil, de lo Contencioso Administrativo y de lo Social.",
+        "Sala de Apelaci�n, de lo Penal, de lo Contencioso Administrativo y de lo Social.",
+        "Sala de lo Penal, de lo Contencioso Administrativo, de lo Social y de lo Militar.",
+        "Sala de Apelaci�n, de lo Penal, de lo Contencioso Administrativo, de lo Social y de lo Militar."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n el art�culo 124.4 de la Constituci�n Espa�ola, el Fiscal General del Estado:",
+      "raw_options": [
+        "Ser� nombrado por el Rey, a propuesta del Tribunal Constitucional, o�do el Consejo General del Poder Judicial.",
+        "Ser� nombrado por el Rey, a propuesta del Presidente del Gobierno, de acuerdo con el Consejo General del Poder Judicial.",
+        "Ser� nombrado por el Rey, a propuesta conjunta del Gobierno y el Congreso de los Diputados, o�do el Consejo General del Poder Judicial.",
+        "Ser� nombrado por el Rey, a propuesta del Gobierno, o�do el Consejo General del Poder Judicial."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Los Juzgados de Paz existen:",
+      "raw_options": [
+        "En todos los Municipios",
+        "En todos los Municipios que sean cabeza de partido judicial.",
+        "En todos los Municipios donde no exista Juzgado de Primera Instancia e Instrucci�n.",
+        "En todos los Municipios donde no exista Juzgado de Distrito."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Los Jueces de Paz son elegidos por:",
+      "raw_options": [
+        "El Consejo General del Poder Judicial.",
+        "El Alcalde, o�do el Pleno del Ayuntamiento.",
+        "El Pleno del Ayuntamiento, por mayor�a simple.",
+        "El Pleno del Ayuntamiento, por mayor�a absoluta."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "No es un �rgano unipersonal del poder judicial:",
+      "raw_options": [
+        "La Audiencia Provincial.",
+        "El Juzgado de lo Contencioso administrativo.",
+        "El Juzgado de lo Mercantil.",
+        "El Juzgado de lo Social."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De conformidad con el art�culo 26 LOPJ, ejercen la potestad jurisdiccional en nuestro Estado, los siguientes juzgados y tribunales integrantes del poder judicial:",
+      "raw_options": [
+        "El Tribunal de Cuentas.",
+        "El Tribunal Constitucional.",
+        "El Tribunal Supremo.",
+        "El Tribunal de las Aguas de la Vega de Valencia."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El Tribunal Supremo (se�ale la falsa):",
+      "raw_options": [
+        "Tiene su sede en la Villa de Madrid.",
+        "Tiene jurisdicci�n en toda Espa�a.",
+        "Su Presidente lo es tambi�n de la Audiencia Nacional.",
+        "Tiene 5 Salas: Civil, Penal, Contencioso administrativo, Social y Militar."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Para ser elegido Presidente del Tribunal Supremo, la LOPJ establece como requisitos que:",
+      "raw_options": [
+        "Ser� necesario ser miembro de la carrera judicial con la categor�a de Magistrado del Tribunal Supremo y reunir las condiciones exigidas para ser Presidente de Sala del mismo, o bien ser un jurista de reconocida competencia con m�s de 20 a�os de antig�edad en el ejercicio de su profesi�n.",
+        "Ser� necesario ser Magistrado o Fiscal, Profesor de Universidad, funcionario p�blico o Abogado, todos ellos juristas de reconocida competencia con m�s de 25 a�os de ejercicio profesional.",
+        "Ser� necesario ser miembro de la carrera judicial con la categor�a de Magistrado del Tribunal Supremo y reunir las condiciones exigidas para ser Presidente de Sala del mismo, o bien ser un jurista de reconocida competencia con m�s de 25 a�os de antig�edad en el ejercicio de su profesi�n.",
+        "Ser� necesario ser Magistrado o Fiscal, Profesor de Universidad, funcionario p�blico o Abogado, todos ellos juristas de reconocida competencia con m�s de 20 a�os de ejercicio profesional."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El mandato del Fiscal General del Estado, de conformidad con el art�culo 31 del Estatuto Org�nico del Ministerio Fiscal, tendr� una duraci�n de:",
+      "raw_options": [
+        "4 a�os y no podr� ser renovado excepto en los supuestos en que el titular hubiera ostentado el cargo durante un per�odo inferior a 2 a�os.",
+        "4 a�os y no podr� ser renovado excepto en los supuestos en que el titular hubiera ostentado el cargo durante un per�odo inferior a 1 a�o.",
+        "5 a�os y no podr� ser renovado excepto en los supuestos en que el titular hubiera ostentado el cargo durante un per�odo inferior a 2 a�os.",
+        "5 a�os y no podr� ser renovado excepto en los supuestos en que el titular hubiera ostentado el cargo durante un per�odo inferior a 3 a�os."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De acuerdo con la Constituci�n Espa�ola:",
+      "raw_options": [
+        "El procedimiento ser� predominantemente oral, sobre todo en materia criminal.",
+        "La justicia emana del Rey y se administra en nombre del pueblo",
+        "El ejercicio de la jurisdicci�n militar se limitar� �mbito estrictamente castrense y a los supuestos de estados de excepci�n y de sitio",
+        "Se proh�ben los Tribunales de excepci�n en el �mbito de la Administraci�n Civil y de las organizaciones profesionales"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Los Jueces y Magistrados, conforme a la que dispone la Constituci�n, son:",
+      "raw_options": [
+        "Independientes, inviolables, responsables y sometidos �nicamente al imperio de la Ley.",
+        "Independientes, inamovibles, invulnerables y sometidos �nicamente al imperio de la Ley.",
+        "Independientes, neutrales, inamovibles, responsables y sometidos �nicamente al imperio de la Ley.",
+        "Independientes, inamovibles, responsables y sometidos �nicamente al imperio de la Ley."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n el art�culo 122 de la Constituci�n Espa�ola, el Consejo General del Poder Judicial se configura como el �rgano:",
+      "raw_options": [
+        "Consultivo del Poder Judicial.",
+        "De gobierno del Poder Judicial.",
+        "Representativo del Poder Judicial.",
+        "Jurisdiccional superior en todos los �rdenes."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El Consejo General del Poder Judicial:",
+      "raw_options": [
+        "Estar� integrado por el Presidente del Tribunal Supremo, que lo presidir�, y por 20 miembros.",
+        "Estar� integrado por el Presidente del Tribunal Supremo, que lo presidir�, y por 21 miembros.",
+        "Estar� integrado por un total de 20 miembros.",
+        "Estar� integrado por el Presidente de la Audiencia Nacional, que lo presidir�, y por 20 miembros."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La responsabilidad de los jueces por los da�os que puedan cometer en el ejercicio de su funci�n jurisdiccional, puede ser:",
+      "raw_options": [
+        "Civil o Penal.",
+        "Civil exclusivamente.",
+        "Civil, Penal o Disciplinaria.",
+        "Penal o Disciplinaria."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�les son los principios que rigen el ejercicio de las funciones del Ministerio Fiscal de acuerdo con el art�culo 124.2 de la Constituci�n Espa�ola?:",
+      "raw_options": [
+        "Independencia, inamovilidad, legalidad e imparcialidad",
+        "Oportunidad, autonom�a, unidad jurisdiccional y legalidad.",
+        "Autonom�a, unidad jurisdiccional, legalidad y oportunidad",
+        "Unidad de actuaci�n, dependencia jer�rquica, legalidad e imparcialidad."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La justicia ser� gratuita cuando as� lo disponga una ley, y:",
+      "raw_options": [
+        "Seg�n los casos, respecto de quienes acrediten insuficiencia de recursos para litigar.",
+        "Seg�n los casos, respecto de quienes parezcan manifestar insuficiencia de recursos para litigar.",
+        "En todo caso, respecto de quienes parezcan manifestar insuficiencia de recursos para litigar.",
+        "En todo caso, respecto de quienes acrediten insuficiencia de recursos para litigar."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Las actuaciones judiciales ser�n p�blicas:",
+      "raw_options": [
+        "Siempre.",
+        "Siempre que lo prevea una norma con rango de ley.",
+        "En ning�n caso.",
+        "Con las excepciones que prevean las leyes de procedimiento."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "A efectos judiciales, el Estado se organiza territorialmente en:",
+      "raw_options": [
+        "Municipios, Provincias, Comarcas y Comunidades Aut�nomas.",
+        "Municipios, Provincias y Comunidades Aut�nomas.",
+        "Municipios, Partidos, Provincias y Comunidades Aut�nomas.",
+        "Municipios, Partidos y Comunidades Aut�nomas."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n la Constituci�n, la justicia:",
+      "raw_options": [
+        "Se administra en nombre del pueblo por Jueces y Magistrados.",
+        "Emana del pueblo",
+        "Emana del Rey",
+        "Emana de los Jueces y Magistrados integrantes del poder judicial."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La competencia sobre la Administraci�n de Justicia, de acuerdo con el art�culo 149.1.5 de la Constituci�n:",
+      "raw_options": [
+        "Se atribuye en exclusiva al Estado",
+        "Podr� ser asumida como exclusiva por las Comunidades aut�nomas en sus respectivos estatutos",
+        "Le corresponde la legislaci�n al Estado y la ejecuci�n puede corresponder a las Comunidades aut�nomas seg�n sus respectivos estatutos",
+        "No aparece regulada esta cuesti�n en el texto constitucional."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La competencia de la jurisdicci�n militar:",
+      "raw_options": [
+        "No tiene l�mites",
+        "Quedar� limitada al �mbito estrictamente castrense y a los supuestos de estado de alarma",
+        "Quedar� limitada al �mbito estrictamente castrense y a los supuestos de estado de excepci�n",
+        "Quedar� limitada al �mbito estrictamente castrense y a los supuestos de estado de sitio"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De conformidad con la LOPJ:",
+      "raw_options": [
+        "La demarcaci�n judicial, que determinar� la circunscripci�n territorial de los �rganos judiciales, se establecer� por ley.",
+        "La demarcaci�n judicial, que determinar� la circunscripci�n territorial de los �rganos judiciales, se establecer� por ley o, en los casos expresamente contemplados en esta norma, por real decreto.",
+        "La demarcaci�n judicial, que determinar� la circunscripci�n territorial de los �rganos judiciales, se establecer� por ley org�nica.",
+        "La demarcaci�n judicial, que determinar� la circunscripci�n territorial de los �rganos judiciales, se establecer� por ley org�nica o, en los casos expresamente contemplados en esta norma, por ley ordinaria."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale la falsa en relaci�n con el mandato y renovaci�n de los miembros del CGPJ:",
+      "raw_options": [
+        "El CGPJ se renovar� en su totalidad cada 5 a�os, contados desde la fecha de su constituci�n.",
+        "Las C�maras deber�n comenzar el proceso de renovaci�n 4 meses antes de que expire el mandato.",
+        "La toma de posesi�n y la sesi�n constitutiva tendr�n lugar dentro de los 15 d�as posteriores a la expiraci�n del anterior Consejo.",
+        "En ning�n caso podr� recaer la designaci�n de Vocales del Consejo General del Poder Judicial en Vocales del Consejo saliente."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Ser� nombrado Presidente del Tribunal Supremo y del CGPJ la persona que alcance las siguientes mayor�as en el Pleno:",
+      "raw_options": [
+        "Mayor�a absoluta.",
+        "Mayor�a de 2/3.",
+        "Mayor�a de 3/5.",
+        "Mayor�a de votos."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale la composici�n de la Comisi�n Permanente del CGPJ:",
+      "raw_options": [
+        "Presidente, que la preside, y 4 vocales, 2 del turno judicial y dos juristas.",
+        "Presidente, que la preside, y 7 vocales, 4 del turno judicial y tres juristas.",
+        "Presidente, que la preside, y 6 vocales, 3 del turno judicial y tres juristas.",
+        "Presidente, que la preside, y 5 vocales, 2 del turno judicial y tres juristas."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El Promotor de la Acci�n Disciplinaria (se�ale la falsa):",
+      "raw_options": [
+        "Tiene un mandato de 5 a�os.",
+        "Ser� elegido por mayor�a absoluta del Pleno.",
+        "Ser� elegido entre magistrados del Tribunal Supremo y magistrados con m�s de 25 a�os de antig�edad en la carrera judicial.",
+        "Mientras desempe�e el cargo tendr� la consideraci�n honor�fica de Magistrado de la Audiencia Nacional."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�l de los siguientes no es un �rgano del CGPJ? :",
+      "raw_options": [
+        "Comisi�n de Asuntos Econ�micos.",
+        "Promotor de la Acci�n Disciplinaria.",
+        "Comisi�n Disciplinaria.",
+        "Comisi�n de personal judicial."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El Presidente del Tribunal Superior de Justicia ser� nombrado por:",
+      "raw_options": [
+        "El Consejo General del Poder Judicial.",
+        "El Presidente de Tribunal Supremo.",
+        "El Rey.",
+        "El Presidente de la Comunidad Aut�noma."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El Presidente del Tribunal Superior de Justicia tiene adem�s la condici�n de:",
+      "raw_options": [
+        "Presidente de la Sala de lo Contencioso Administrativo del propio Tribunal Superior de Justicia.",
+        "Presidente de la Sala de lo Civil y lo Penal del propio Tribunal Superior de Justicia.",
+        "Miembro del Consejo General del Poder Judicial.",
+        "Magistrado de la Audiencia Nacional."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La Sala Especial del Tribunal Supremo regulada en el art�culo 61 de la LOPJ est� compuesta por:",
+      "raw_options": [
+        "El Presidente del Tribunal Supremo y el Magistrado m�s antiguo y m�s moderno de cada una de las Salas.",
+        "El Presidente del Tribunal Constitucional y el Magistrado m�s antiguo y m�s moderno de cada una de las Salas.",
+        "El Presidente del Tribunal Supremo, los Presidentes de Sala y el Magistrado m�s antiguo y m�s moderno de cada una de ellas.",
+        "El Presidente del Tribunal Constitucional, los Presidentes de Sala y el Magistrado m�s antiguo y m�s moderno de cada una de ellas."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n la Constituci�n el Jurado popular se limita a los procesos:",
+      "raw_options": [
+        "Civiles.",
+        "Penales.",
+        "Civiles y penales.",
+        "Penales y sociales."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qu� Comisiones del CGPJ est�n integradas por tres vocales?:",
+      "raw_options": [
+        "La Comisi�n Disciplinaria y la Comisi�n de Asuntos Econ�micos.",
+        "La Comisi�n Disciplinaria y la Comisi�n de Igualdad.",
+        "La Comisi�n de Asuntos Econ�micos y la Comisi�n de Igualdad.",
+        "La Comisi�n Disciplinaria, la Comisi�n de Igualdad y la Comisi�n de Asuntos Econ�micos."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La elecci�n del Presidente de la Audiencia Nacional corresponde:",
+      "raw_options": [
+        "Al Pleno del CGPJ por mayor�a absoluta de miembros presentes.",
+        "Al Pleno del CGPJ por mayor�a de 3/5 de miembros presentes.",
+        "A la Comisi�n Permanente del CGPJ por mayor�a absoluta de miembros presentes.",
+        "A la Comisi�n Permanente del CGPJ por mayor�a de 3/5 de miembros presentes."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El mandato de la Comisi�n Permanente ser�:",
+      "raw_options": [
+        "Rotaci�n bianual.",
+        "Rotaci�n anual.",
+        "De 5 a�os.",
+        "De 3 a�os."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "En cada provincia existir�n:",
+      "raw_options": [
+        "Uno o varios juzgados de primera instancia e instrucci�n.",
+        "Uno o varios juzgados de Violencia sobre la mujer.",
+        "Uno o varios Juzgados de lo Mercantil.",
+        "Un juzgado de Paz."
+      ],
+      "correct_index": null
+    }
+  ]
+}

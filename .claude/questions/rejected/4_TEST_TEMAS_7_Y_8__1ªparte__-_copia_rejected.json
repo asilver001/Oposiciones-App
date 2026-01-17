@@ -1,0 +1,1863 @@
+{
+  "metadata": {
+    "source_file": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+    "source_path": "Segundo repaso\\4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+    "tema": 4,
+    "categoria": "repaso",
+    "extraction_date": "2026-01-15T23:40:20.691818",
+    "reformulation_date": "2026-01-15T23:47:35.606297",
+    "total_questions": 37,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.592658",
+    "completed_count": 0,
+    "failed_count": 37
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "Seale cules son las Comisiones que integran la organizacin del CGPJ:",
+        "options": [
+          {
+            "text": "La Comisin Permanente, la Comisin Disciplinaria y la Comisin de Igualdad.",
+            "is_correct": false
+          },
+          {
+            "text": "La Comisin Permanente, la Comisin Disciplinaria, la Comisin de Asuntos",
+            "is_correct": false
+          },
+          {
+            "text": "La Comisin Permanente,",
+            "is_correct": false
+          },
+          {
+            "text": "alificacin, la Comisin de Asuntos Econmicos y la Comisin de Igualdad ,",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale cules son las Comisiones que integran la organizacin del CGPJ:",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con el artculo 122 de la CE 1978, el Consejo General del Poder",
+        "options": [
+          {
+            "text": "El presidente del Tribunal Supremo, que lo presidir, y por 20 miembros",
+            "is_correct": false
+          },
+          {
+            "text": "bogados y otros juristas, todos ellos de reconocida competencia y con ms de",
+            "is_correct": false
+          },
+          {
+            "text": "El presidente del Tribunal Supremo, que lo presidir, y por 20 miembros",
+            "is_correct": false
+          },
+          {
+            "text": "bogados y otros juristas, todos ellos de reconocida competencia y con ms de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con el artculo 122 de la CE 1978, el Consejo General del Poder",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "La Comisin Permanente del CGPJ estar compuesta por:",
+        "options": [
+          {
+            "text": "El Presidente del Tribunal Supremo y del Consejo General del Poder Judicial,",
+            "is_correct": false
+          },
+          {
+            "text": "e los designados por el turno de juristas de reconocida competencia",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Tribunal Superior de Justicia y del Consejo General del Poder",
+            "is_correct": false
+          },
+          {
+            "text": "ompetencia",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La Comisin Permanente del CGPJ estar compuesta por:",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La Sala de lo Penal de la Audiencia Nacional conocer (marque la incorrecta):",
+        "options": [
+          {
+            "text": "Delitos contra el titular de la Corona.",
+            "is_correct": false
+          },
+          {
+            "text": "Falsificacin de moneda y fabricacin de tarjetas de crdito y dbito falsas y",
+            "is_correct": false
+          },
+          {
+            "text": "heques de viajero falsos, siempre que sean cometidos por organizaciones o",
+            "is_correct": false
+          },
+          {
+            "text": "De las demandas de responsabilidad civil por hechos realizados en el ejercicio",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La Sala de lo Penal de la Audiencia Nacional conocer (marque la incorrecta):",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "dificil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta:",
+        "options": [
+          {
+            "text": "Las actuaciones judiciales sern privadas, con las excepciones que prevean las",
+            "is_correct": false
+          },
+          {
+            "text": "El procedimiento ser predominantemente escrito, sobre todo en materia",
+            "is_correct": false
+          },
+          {
+            "text": "riminal.",
+            "is_correct": false
+          },
+          {
+            "text": "Las sentencias sern siempre motivadas y se pronunciarn en audiencia privada.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta:",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'riminal....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Vicepresidente del Tribunal Supremo:",
+        "options": [
+          {
+            "text": "Ser nombrado, por mayora absoluta del Pleno del Consejo General del Poder",
+            "is_correct": false
+          },
+          {
+            "text": "Ejercer, en funciones, el cargo de Presidente del Tribunal Supremo y del",
+            "is_correct": false
+          },
+          {
+            "text": "onsejo General del Poder Judicial en los casos legalmente previstos de cese",
+            "is_correct": false
+          },
+          {
+            "text": "nticipado del Presidente y hasta el nombramiento de un nuevo Presidente.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Vicepresidente del Tribunal Supremo:",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Qu Tribunal de Instancia tiene una seccin de lo mercantil que ejerce las",
+        "options": [
+          {
+            "text": "ompetencias en Marca Comunitaria, y conoce en primera instancia y de forma",
+            "is_correct": false
+          },
+          {
+            "text": "e 1993, sobre la marca comunitaria, y 6/2002, del Consejo de la Unin Europea,",
+            "is_correct": false
+          },
+          {
+            "text": "e 12 de diciembre de 2001, sobre los dibujos y modelos comunitarios:",
+            "is_correct": false
+          },
+          {
+            "text": "El Tribunal de Instancia de Barcelona.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu Tribunal de Instancia tiene una seccin de lo mercantil que ejerce las",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El mandato del Fiscal General del Estado, de conformidad con el artculo 31 del",
+        "options": [
+          {
+            "text": "4 aos y no podr ser renovado excepto en los supuestos en que el titular",
+            "is_correct": false
+          },
+          {
+            "text": "4 aos y no podr ser renovado excepto en los supuestos en que el titular",
+            "is_correct": false
+          },
+          {
+            "text": "5 aos y no podr ser renovado excepto en los supuestos en que el titular",
+            "is_correct": false
+          },
+          {
+            "text": "5 aos y no podr ser renovado excepto en los supuestos en que el titular",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El mandato del Fiscal General del Estado, de conformidad con el artculo 31 del",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "En el mbito del poder judicial y de conformidad con el artculo 26 LOPJ 6/1985,",
+        "options": [
+          {
+            "text": "El Tribunal Constitucional.",
+            "is_correct": false
+          },
+          {
+            "text": "El Tribunal de Cuentas.",
+            "is_correct": false
+          },
+          {
+            "text": "El Tribunal Supremo.",
+            "is_correct": false
+          },
+          {
+            "text": "Todas son correctas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En el mbito del poder judicial y de conformidad con el artculo 26 LOPJ 6/1985,",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El artculo 122 de la Constitucin Espaola seala que:",
+        "options": [
+          {
+            "text": "El Consejo General del Poder Judicial estar integrado por el Presidente del",
+            "is_correct": false
+          },
+          {
+            "text": "CGG.",
+            "is_correct": false
+          },
+          {
+            "text": "Sus miembros son nombrados por un perodo de 4 aos.",
+            "is_correct": false
+          },
+          {
+            "text": "De sus miembros 12 son nombrados entre abogados y otros juristas, todos ellos",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El artculo 122 de la Constitucin Espaola seala que:",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'CGG....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Culminar la organizacin judicial en el mbito territorial de la Comunidad",
+        "options": [
+          {
+            "text": "utnoma:",
+            "is_correct": false
+          },
+          {
+            "text": "Un Tribunal Superior de Justicia, sin perjuicio de la jurisdiccin que",
+            "is_correct": false
+          },
+          {
+            "text": "orresponda al Tribunal Constitucional.",
+            "is_correct": false
+          },
+          {
+            "text": "Un Tribunal Superior de Justicia, sin perjuicio de la jurisdiccin que",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Culminar la organizacin judicial en el mbito territorial de la Comunidad",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'utnoma:...'",
+        "Hay opciones duplicadas",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "Una de las siguientes afirmaciones no se ajusta a la realidad. El Ministerio Fiscal,",
+        "options": [
+          {
+            "text": "Promover la accin de la justicia en defensa de la equidad.",
+            "is_correct": false
+          },
+          {
+            "text": "Promover la accin de la justicia en defensa de la legalidad.",
+            "is_correct": false
+          },
+          {
+            "text": "Promover la accin de la justicia en defensa de los derechos de los ciudadanos.",
+            "is_correct": false
+          },
+          {
+            "text": "Promover la accin de la justicia en defensa del inters pblico tutelado por ley.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Una de las siguientes afirmaciones no se ajusta a la realidad. El Ministerio Fiscal,",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Juez o Magistrado que desee presentar su candidatura podr elegir entre",
+        "options": [
+          {
+            "text": "portar el aval de:",
+            "is_correct": false
+          },
+          {
+            "text": "Veinticinco miembros de la carrera judicial en servicio activo o el aval de un",
+            "is_correct": false
+          },
+          {
+            "text": "pertura del plazo de presentacin de candidaturas.",
+            "is_correct": false
+          },
+          {
+            "text": "Cincuenta miembros de la carrera judicial en servicio activo o el aval de un",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Juez o Magistrado que desee presentar su candidatura podr elegir entre",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La Sala de lo Penal del Tribunal Supremo conocer (seale la falsa):",
+        "options": [
+          {
+            "text": "De la instruccin y enjuiciamiento de las causas contra el Presidente del",
+            "is_correct": false
+          },
+          {
+            "text": "De la instruccin y enjuiciamiento de las causas contra Diputados y Senadores.",
+            "is_correct": false
+          },
+          {
+            "text": "De la instruccin y enjuiciamiento de las causas contra el Presidente del",
+            "is_correct": false
+          },
+          {
+            "text": "De la instruccin y enjuiciamiento de las causas contra la Reina consorte o el",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La Sala de lo Penal del Tribunal Supremo conocer (seale la falsa):",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Seale la afirmacin correcta de acuerdo con la Constitucin:",
+        "options": [
+          {
+            "text": "El Ministerio Fiscal ejerce sus funciones conforme a los principios de unidad de",
+            "is_correct": false
+          },
+          {
+            "text": "ctuacin e independencia jerrquica y con sujecin, en todo caso a los de",
+            "is_correct": false
+          },
+          {
+            "text": "El Fiscal General del Estado ser nombrado por el Rey a propuesta del CGPJ.",
+            "is_correct": false
+          },
+          {
+            "text": "El Ministerio Fiscal ejerce sus funciones conforme a los principios de unidad de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la afirmacin correcta de acuerdo con la Constitucin:",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Los conflictos de jurisdiccin entre los Juzgados o Tribunales y la Administracin",
+        "options": [
+          {
+            "text": "Un rgano colegiado constituido por el Presidente del Tribunal Supremo, que lo",
+            "is_correct": false
+          },
+          {
+            "text": "ontencioso-Administrativo del Tribunal Supremo, y los otros tres Consejeros",
+            "is_correct": false
+          },
+          {
+            "text": "Un rgano colegiado constituido por el Presidente del Tribunal Supremo, que lo",
+            "is_correct": false
+          },
+          {
+            "text": "ontencioso-Administrativo del Tribunal Supremo, y los otros tres Consejeros",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los conflictos de jurisdiccin entre los Juzgados o Tribunales y la Administracin",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "Los conflictos de jurisdiccin entre los Juzgados o Tribunales de cualquier orden",
+        "options": [
+          {
+            "text": "El Presidente del Tribunal Supremo, que la presidir, tres Magistrados de la",
+            "is_correct": false
+          },
+          {
+            "text": "onsejo General del Poder Judicial. Actuar como Secretario de esta Sala el de",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Tribunal Supremo, que la presidir, cuatro Magistrados de la",
+            "is_correct": false
+          },
+          {
+            "text": "onsejo General del Poder Judicial. Actuar como Secretario de esta Sala el de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los conflictos de jurisdiccin entre los Juzgados o Tribunales de cualquier orden",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "Los conflictos de competencia entre Juzgados o Tribunales de distinto orden",
+        "options": [
+          {
+            "text": "el Tribunal Supremo:",
+            "is_correct": false
+          },
+          {
+            "text": "Presidida por el Presidente y compuesta por dos Magistrados, uno por cada",
+            "is_correct": false
+          },
+          {
+            "text": "e Gobierno. Actuar como Secretario de esta Sala especial el de Gobierno del",
+            "is_correct": false
+          },
+          {
+            "text": "Presidida por el Presidente y compuesta por cuatro Magistrados, dos por cada",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los conflictos de competencia entre Juzgados o Tribunales de distinto orden",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los jueces y magistrados, asi como los Fiscales:",
+        "options": [
+          {
+            "text": "Podrn sindicarse pero no constituir asociaciones profesionales",
+            "is_correct": false
+          },
+          {
+            "text": "No podrn sindicarse ni constituir asociaciones profesionales.",
+            "is_correct": false
+          },
+          {
+            "text": "Podrn sindicarse y constituir asociaciones profesionales",
+            "is_correct": false
+          },
+          {
+            "text": "No podrn sindicarse, pero si constituir asociaciones profesionales.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los jueces y magistrados, asi como los Fiscales:",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El ejercicio de la potestad jurisdiccional en todo tipo de procesos, juzgando y",
+        "options": [
+          {
+            "text": "Principio de independencia judicial",
+            "is_correct": false
+          },
+          {
+            "text": "Principio de origen popular de la justicia.",
+            "is_correct": false
+          },
+          {
+            "text": "Principio de inamovilidad de jueces y magistrados",
+            "is_correct": false
+          },
+          {
+            "text": "Principio de unidad jurisdiccional.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El ejercicio de la potestad jurisdiccional en todo tipo de procesos, juzgando y",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Darn derecho a una indemnizacin a cargo del Estado:",
+        "options": [
+          {
+            "text": "Los daos que sean consecuencia de funcionamiento defectuoso de la",
+            "is_correct": false
+          },
+          {
+            "text": "dministracin de Justicia",
+            "is_correct": false
+          },
+          {
+            "text": "Los daos que sean consecuencia de funcionamiento anormal de",
+            "is_correct": false
+          },
+          {
+            "text": "dministracin de Justicia",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Darn derecho a una indemnizacin a cargo del Estado:",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "La base de la organizacin y funcionamiento de los tribunales es:",
+        "options": [
+          {
+            "text": "La independencia judicial.",
+            "is_correct": false
+          },
+          {
+            "text": "La divisin de poderes.",
+            "is_correct": false
+          },
+          {
+            "text": "La unidad jurisdiccional.",
+            "is_correct": false
+          },
+          {
+            "text": "El origen popular de la justicia.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La base de la organizacin y funcionamiento de los tribunales es:",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Las sentencias judiciales:",
+        "options": [
+          {
+            "text": "Ser gratuitas cuando as lo disponga la ley y, en todo caso, respecto de quienes",
+            "is_correct": false
+          },
+          {
+            "text": "crediten insuficiencia de recursos para litigar.",
+            "is_correct": false
+          },
+          {
+            "text": "Sern gratuitas en todo caso.",
+            "is_correct": false
+          },
+          {
+            "text": "Es obligado cumplirlas, siempre que una ley lo establezca previamente.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las sentencias judiciales:",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Es un rgano directivo de la Administracin General del Estado:",
+        "options": [
+          {
+            "text": "Los Secretarios de Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "Los Directores Generales",
+            "is_correct": false
+          },
+          {
+            "text": "Los Directores Insulares.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Gobierno.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Es un rgano directivo de la Administracin General del Estado:",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El Secretario General Tcnico de un Departamento Ministerial depender:",
+        "options": [
+          {
+            "text": "Siempre del Subsecretario.",
+            "is_correct": false
+          },
+          {
+            "text": "Del Ministro o del Subsecretario.",
+            "is_correct": false
+          },
+          {
+            "text": "Del Secretario de Estado o del Subsecretario.",
+            "is_correct": false
+          },
+          {
+            "text": "Siempre directamente del titular del Departamento Ministerial.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Secretario General Tcnico de un Departamento Ministerial depender:",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La determinacin del nmero, la denominacin y el mbito de competencia",
+        "options": [
+          {
+            "text": "Real Decreto del Consejo de Ministros a propuesta del Presidente del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Real Decreto del Presidente del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Real Decreto del Consejo de Ministros a propuesta del Ministerio de la",
+            "is_correct": false
+          },
+          {
+            "text": "Real Decreto del Consejo de Ministros a propuesta del Ministerio competente",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La determinacin del nmero, la denominacin y el mbito de competencia",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los rganos de nivel inferior a Subdireccin General se crean, modifican y",
+        "options": [
+          {
+            "text": "Orden del Ministerio de Transformacin Digital y Funcin Pblica.",
+            "is_correct": false
+          },
+          {
+            "text": "Real Decreto del Consejo de Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "Orden del Ministro respectivo.",
+            "is_correct": false
+          },
+          {
+            "text": "Las relaciones de puestos de trabajo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los rganos de nivel inferior a Subdireccin General se crean, modifican y",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Conforme al artculo 61 de la Ley 40/2015, de 1 de octubre, de Rgimen Jurdico",
+        "options": [
+          {
+            "text": "el Sector Pblico, no es una funcin propia de los Ministros:",
+            "is_correct": false
+          },
+          {
+            "text": "Ejercer la potestad reglamentaria en las materias propias de su Departamento.",
+            "is_correct": false
+          },
+          {
+            "text": "Imponer la sancin de separacin del servicio por faltas muy graves.",
+            "is_correct": false
+          },
+          {
+            "text": "Nombrar y separar a los titulares de los rganos directivos del Ministerio y de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Conforme al artculo 61 de la Ley 40/2015, de 1 de octubre, de Rgimen Jurdico",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los Secretarios Generales de la Organizacin Central de la AGE:",
+        "options": [
+          {
+            "text": "Sern nombrados mediante Real Decreto del Presidente del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Tienen rango de Director General.",
+            "is_correct": false
+          },
+          {
+            "text": "El Real Decreto de estructura puede permitir que, en atencin a las",
+            "is_correct": false
+          },
+          {
+            "text": "aractersticas especficas de sus funciones, no renan la condicin de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los Secretarios Generales de la Organizacin Central de la AGE:",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En qu cargos de la administracin general del estado podr ser nombrado",
+        "options": [
+          {
+            "text": "lguien que haya perdido la condicin de funcionario como consecuencia de su",
+            "is_correct": false
+          },
+          {
+            "text": "En los cargos de Secretario general tcnico y Director general.",
+            "is_correct": false
+          },
+          {
+            "text": "En los cargos de Secretario general y Director general.",
+            "is_correct": false
+          },
+          {
+            "text": "En los cargos de Secretario general y Secretario general tcnico.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En qu cargos de la administracin general del estado podr ser nombrado",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los Subsecretarios:",
+        "options": [
+          {
+            "text": "Sern nombrados y separados por Real Decreto del Consejo de Ministros,",
+            "is_correct": false
+          },
+          {
+            "text": "Su superior jerrquico directo ser el Ministro o un Secretario de Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "Convocan y resuelven los concursos de personal funcionario.",
+            "is_correct": false
+          },
+          {
+            "text": "Son los titulares de los rganos directivos encargados de la gestin de una o",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los Subsecretarios:",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta muy corta",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta:",
+        "options": [
+          {
+            "text": "Los ministros son nombrados por el Presidente del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Los Secretarios de Estado son nombrados por el Presidente del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Los Subdirectores Generales son nombrados por el Ministro, Secretario de",
+            "is_correct": false
+          },
+          {
+            "text": "Los Directores Generales son nombrados por el Consejo de Ministros.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta:",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Segn lo dispuesto en el artculo 55 de la Ley 40/2015, de 1 de octubre, de",
+        "options": [
+          {
+            "text": "Son rganos superiores los embajadores y representantes permanentes ante",
+            "is_correct": false
+          },
+          {
+            "text": "Son rganos directivos los embajadores y cnsules.",
+            "is_correct": false
+          },
+          {
+            "text": "Son rganos directivos los embajadores y representantes permanentes ante",
+            "is_correct": false
+          },
+          {
+            "text": "Son rganos superiores los embajadores y cnsules.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn lo dispuesto en el artculo 55 de la Ley 40/2015, de 1 de octubre, de",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Indique cual de los siguientes rganos directivos debern reunir la condicin de",
+        "options": [
+          {
+            "text": "Subsecretario, Secretario General Tcnico y Subdirector General.",
+            "is_correct": false
+          },
+          {
+            "text": "Director General y Subdirector General",
+            "is_correct": false
+          },
+          {
+            "text": "Director General",
+            "is_correct": false
+          },
+          {
+            "text": "Subdirector General",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Indique cual de los siguientes rganos directivos debern reunir la condicin de",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Las unidades administrativas son los elementos organizativos bsicos de las",
+        "options": [
+          {
+            "text": "Real Decreto del Consejo de Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "Orden del Ministro de Transformacin Digital y Funcin Pblica.",
+            "is_correct": false
+          },
+          {
+            "text": "Relacin de Puestos de Trabajo.",
+            "is_correct": false
+          },
+          {
+            "text": "Real Decreto del Presidente del Gobierno.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las unidades administrativas son los elementos organizativos bsicos de las",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De los siguientes, sern nombrados por Real Decreto del Consejo de Ministros",
+        "options": [
+          {
+            "text": "Subsecretario, Secretario General y Director General y subdirector general.",
+            "is_correct": false
+          },
+          {
+            "text": "Subsecretario, Secretario General, Secretario General Tcnico, Director General",
+            "is_correct": false
+          },
+          {
+            "text": "Secretario General Tcnico, Director General y Subdirector General.",
+            "is_correct": false
+          },
+          {
+            "text": "Subsecretario y Secretario General Tcnico.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De los siguientes, sern nombrados por Real Decreto del Consejo de Ministros",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Secretario de Estado ser nombrado entre aquellos que cumplan los",
+        "options": [
+          {
+            "text": "Funcionario de carrera perteneciente al Subgrupo A1.",
+            "is_correct": false
+          },
+          {
+            "text": "Persona idnea, siendo idneo quin rene honorabilidad y la debida formacin",
+            "is_correct": false
+          },
+          {
+            "text": "Persona con cualificacin y experiencia en el desempeo de puestos de",
+            "is_correct": false
+          },
+          {
+            "text": "Espaol, mayor de edad, disfrutar de los derechos de sufragio activo y pasivo,",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Secretario de Estado ser nombrado entre aquellos que cumplan los",
+        "source": "4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:22.088651"
+}

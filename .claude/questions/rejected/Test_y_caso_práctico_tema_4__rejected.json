@@ -1,0 +1,1524 @@
+{
+  "metadata": {
+    "source_file": "Test y caso práctico tema 4..pdf",
+    "source_path": "TEMA Iniciales Administrativo\\Test y caso práctico tema 4..pdf",
+    "tema": 4,
+    "categoria": "administrativo",
+    "extraction_date": "2026-01-15T23:40:55.672084",
+    "reformulation_date": "2026-01-15T23:47:35.825582",
+    "total_questions": 30,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:56.270132",
+    "completed_count": 0,
+    "failed_count": 30
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "Es un acto administrativo:",
+        "options": [
+          {
+            "text": "La demolicin por la Administracin de un edificio declarado ruinoso.",
+            "is_correct": false
+          },
+          {
+            "text": "El escrito de un ciudadano solicitando la autorizacin para el ejercicio de",
+            "is_correct": false
+          },
+          {
+            "text": "Un Real Decreto del Consejo de Ministros por el que se aprueba un",
+            "is_correct": false
+          },
+          {
+            "text": "La resolucin de un Ayuntamiento por la que se acuerda la",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Es un acto administrativo:",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Teniendo en cuenta lo previsto en el artculo 114 de la Ley 39/2015, cul",
+        "options": [
+          {
+            "text": "e los siguientes NO es un acto que agote la va administrativa?:",
+            "is_correct": false
+          },
+          {
+            "text": "Las resoluciones de los rganos administrativos que carezcan de",
+            "is_correct": false
+          },
+          {
+            "text": "La resolucin de los procedimientos complementarios en materia de",
+            "is_correct": false
+          },
+          {
+            "text": "Las resoluciones de los recursos de alzada.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Teniendo en cuenta lo previsto en el artculo 114 de la Ley 39/2015, cul",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 38",
+        "options": [
+          {
+            "text": "e la Ley 39/2015, los actos de las",
+            "is_correct": false
+          },
+          {
+            "text": "dministraciones Pblicas sujetos al Derecho Administrativo sern:",
+            "is_correct": false
+          },
+          {
+            "text": "Firmes.",
+            "is_correct": false
+          },
+          {
+            "text": "Suspendidos.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 38",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Firmes....'",
+        "Pregunta muy corta",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.5,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta en relacin con la forma de los actos",
+        "options": [
+          {
+            "text": "dministrativos regulada en el artculo 36 de la Ley 39/2015:",
+            "is_correct": false
+          },
+          {
+            "text": "Los actos administrativos se producirn solo por escrito.",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando deba dictarse una serie de actos administrativos de la misma",
+            "is_correct": false
+          },
+          {
+            "text": "En los casos en que un rgano administrativo ejerza su competencia de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta en relacin con la forma de los actos",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con el artculo 35 de la Ley 39/2015, qu actos debern ser",
+        "options": [
+          {
+            "text": "erecho?:",
+            "is_correct": false
+          },
+          {
+            "text": "Los actos que se dicten de acuerdo con el criterio seguido en",
+            "is_correct": false
+          },
+          {
+            "text": "ctuaciones precedentes o con el dictamen de rganos consultivos.",
+            "is_correct": false
+          },
+          {
+            "text": "Los actos que acepten pruebas propuestas por los interesados.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con el artculo 35 de la Ley 39/2015, qu actos debern ser",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'erecho?:...'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "El plazo mximo en el que debe notificarse la resolucin expresa en un",
+        "options": [
+          {
+            "text": "No podr exceder tres meses salvo que una norma con rango de Ley",
+            "is_correct": false
+          },
+          {
+            "text": "Ser el fijado por la Ley 40/2015, de 1 de octubre, del Procedimiento",
+            "is_correct": false
+          },
+          {
+            "text": "dministrativo Comn de las Administraciones Pblicas.",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando las normas reguladoras de los procedimientos no fijen el plazo",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El plazo mximo en el que debe notificarse la resolucin expresa en un",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn",
+        "options": [
+          {
+            "text": "dministracin est obligada a dictar resolucin expresa y a",
+            "is_correct": false
+          },
+          {
+            "text": "Los procedimientos iniciados a solicitud del interesado.",
+            "is_correct": false
+          },
+          {
+            "text": "En los casos de caducidad del procedimiento.",
+            "is_correct": false
+          },
+          {
+            "text": "En los supuestos de terminacin del procedimiento por pacto o",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta muy corta",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.5,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta. Segn lo dispuesto en el artculo 22 de la",
+        "options": [
+          {
+            "text": "uando se soliciten informes a un rgano de la misma o distinta",
+            "is_correct": false
+          },
+          {
+            "text": "dministracin:",
+            "is_correct": false
+          },
+          {
+            "text": "Si se trata de informes preceptivos se suspender el procedimiento y si",
+            "is_correct": false
+          },
+          {
+            "text": "La suspensin automtica se producir durante el tiempo necesario",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta. Segn lo dispuesto en el artculo 22 de la",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la opcin correcta en relacin con la ampliacin del plazo",
+        "options": [
+          {
+            "text": "En cualquier momento y sin necesidad de motivarlo, el rgano",
+            "is_correct": false
+          },
+          {
+            "text": "ompetente para tramitar el procedimiento podr acordar la ampliacin",
+            "is_correct": false
+          },
+          {
+            "text": "el plazo mximo de resolucin y notificacin.",
+            "is_correct": false
+          },
+          {
+            "text": "La propuesta puede corresponder al rgano instructor o al superior",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la opcin correcta en relacin con la ampliacin del plazo",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la opcin incorrecta en relacin con el silencio administrativo:",
+        "options": [
+          {
+            "text": "En los procedimientos iniciados a solicitud del interesado, el vencimiento",
+            "is_correct": false
+          },
+          {
+            "text": "el plazo mximo sin haberse notificado resolucin expresa, legitima a",
+            "is_correct": false
+          },
+          {
+            "text": "El sentido del silencio ser desestimatorio en los procedimientos de",
+            "is_correct": false
+          },
+          {
+            "text": "El silencio tendr efecto desestimatorio en los procedimientos relativos al",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la opcin incorrecta en relacin con el silencio administrativo:",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Segn lo dispuesto en el artculo 24 de la Ley 39/2015, en los casos de",
+        "options": [
+          {
+            "text": "La resolucin expresa posterior al vencimiento del plazo se adoptar por",
+            "is_correct": false
+          },
+          {
+            "text": "La estimacin por silencio administrativo tiene los solos efectos de",
+            "is_correct": false
+          },
+          {
+            "text": "ontencioso-administrativo que resulte procedente.",
+            "is_correct": false
+          },
+          {
+            "text": "Los efectos del silencio se producen desde el vencimiento del plazo",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn lo dispuesto en el artculo 24 de la Ley 39/2015, en los casos de",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 39 de la Ley 39/2015, podr otorgarse eficacia",
+        "options": [
+          {
+            "text": "Produzcan efectos favorables al interesado, siempre que los supuestos",
+            "is_correct": false
+          },
+          {
+            "text": "e hecho necesarios existieran ya en la fecha a que se retrotraiga la",
+            "is_correct": false
+          },
+          {
+            "text": "lboraya, 23",
+            "is_correct": false
+          },
+          {
+            "text": "As lo exija el contenido del acto.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 39 de la Ley 39/2015, podr otorgarse eficacia",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Respecto de la ejecucin de los actos administrativos, indique la",
+        "options": [
+          {
+            "text": "El rgano que ordene un acto de ejecucin material de resoluciones",
+            "is_correct": false
+          },
+          {
+            "text": "utorice la actuacin administrativa.",
+            "is_correct": false
+          },
+          {
+            "text": "Los actos de",
+            "is_correct": false
+          },
+          {
+            "text": "dministrativo sern inmediatamente ejecutivos, salvo que se produzca",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Respecto de la ejecucin de los actos administrativos, indique la",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale qu consideracin",
+        "options": [
+          {
+            "text": "dministrativo:",
+            "is_correct": false
+          },
+          {
+            "text": "El efecto de permitir a los interesados la interposicin del recurso",
+            "is_correct": false
+          },
+          {
+            "text": "dministrativo",
+            "is_correct": false
+          },
+          {
+            "text": "El efecto de permitir a los interesados la interposicin del recurso",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale qu consideracin",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "Si una Direccin General quisiera delegar una competencia propia en",
+        "options": [
+          {
+            "text": "rtculo 9 de la LRJSP?",
+            "is_correct": false
+          },
+          {
+            "text": "Al Ministro.",
+            "is_correct": false
+          },
+          {
+            "text": "Al superior comn de ambos rganos.",
+            "is_correct": false
+          },
+          {
+            "text": "Al rgano ministerial de quien dependa el rgano delegante.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Si una Direccin General quisiera delegar una competencia propia en",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En relacin con la competencia de los rganos administrativos, segn",
+        "options": [
+          {
+            "text": "La delegacin.",
+            "is_correct": false
+          },
+          {
+            "text": "La suplencia.",
+            "is_correct": false
+          },
+          {
+            "text": "La desconcentracin.",
+            "is_correct": false
+          },
+          {
+            "text": "La encomienda de gestin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En relacin con la competencia de los rganos administrativos, segn",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Constituir motivo de abstencin en el procedimiento administrativo,",
+        "options": [
+          {
+            "text": "Tener vnculo matrimonial pero no situacin de hecho asimilable.",
+            "is_correct": false
+          },
+          {
+            "text": "Tener parentesco de afinidad dentro del cuarto grado con cualquiera de",
+            "is_correct": false
+          },
+          {
+            "text": "Tener parentesco de consanguinidad dentro del cuarto grado con",
+            "is_correct": false
+          },
+          {
+            "text": "ualquiera de los interesados",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Constituir motivo de abstencin en el procedimiento administrativo,",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta en relacin con el rgimen de abstencin",
+        "options": [
+          {
+            "text": "dministraciones:",
+            "is_correct": false
+          },
+          {
+            "text": "Es un motivo de abstencin haber prestado en los cuatro ltimos aos",
+            "is_correct": false
+          },
+          {
+            "text": "Las autoridades y el personal al servicio de las Administraciones en",
+            "is_correct": false
+          },
+          {
+            "text": "La actuacin de las autoridades y personal en los que concurra un",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta en relacin con el rgimen de abstencin",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 24 de la LRJSP, Qu recurso cabe contra la",
+        "options": [
+          {
+            "text": "utoridad o personal al servicio de las Administraciones?:",
+            "is_correct": false
+          },
+          {
+            "text": "Recurso de alzada.",
+            "is_correct": false
+          },
+          {
+            "text": "Recurso extraordinario de revisin.",
+            "is_correct": false
+          },
+          {
+            "text": "Recurso de revisin en el plazo de un mes.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 24 de la LRJSP, Qu recurso cabe contra la",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La figura jurdica conforme a la cual los actos nulos o anulables que",
+        "options": [
+          {
+            "text": "ontengan los elementos constitutivos de otro distinto producirn los",
+            "is_correct": false
+          },
+          {
+            "text": "Convalidacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Conversin.",
+            "is_correct": false
+          },
+          {
+            "text": "Conservacin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La figura jurdica conforme a la cual los actos nulos o anulables que",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta en relacin con los defectos formales en",
+        "options": [
+          {
+            "text": "Los defectos de forma son siempre irregularidades no invalidantes.",
+            "is_correct": false
+          },
+          {
+            "text": "lboraya, 23",
+            "is_correct": false
+          },
+          {
+            "text": "El defecto de forma provocar la anulabilidad del acto cuando se dicte",
+            "is_correct": false
+          },
+          {
+            "text": "En todo caso, la actuacin administrativa realizada fuera del tiempo",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta en relacin con los defectos formales en",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La Ley 39/2015 establece que sern nulos de pleno derecho los actos",
+        "options": [
+          {
+            "text": "dministrativos que:",
+            "is_correct": false
+          },
+          {
+            "text": "Lesionen los derechos y libertades fundamentales.",
+            "is_correct": false
+          },
+          {
+            "text": "Sean dictados por rgano manifiestamente incompetente.",
+            "is_correct": false
+          },
+          {
+            "text": "Sean constitutivos de infraccin penal o se dicten como consecuencia de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La Ley 39/2015 establece que sern nulos de pleno derecho los actos",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Indique la respuesta correcta en relacin con los lmites a la extensin",
+        "options": [
+          {
+            "text": "e la nulidad o anulabilidad de los actos previstos en el artculo 49 de",
+            "is_correct": false
+          },
+          {
+            "text": "La nulidad o anulabilidad en parte del acto administrativo no implicar la",
+            "is_correct": false
+          },
+          {
+            "text": "e las partes del mismo independientes de aqulla, salvo que la parte",
+            "is_correct": false
+          },
+          {
+            "text": "La nulidad o anulabilidad de un acto implicar la de los sucesivos en el",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Indique la respuesta correcta en relacin con los lmites a la extensin",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En relacin con la convalidacin de los actos administrativos, el",
+        "options": [
+          {
+            "text": "rtculo 52 de la Ley 39/2015 dispone que:",
+            "is_correct": false
+          },
+          {
+            "text": "La Administracin podr convalidar los actos nulos de pleno derecho y",
+            "is_correct": false
+          },
+          {
+            "text": "El acto de convalidacin producir efecto desde la fecha de notificacin",
+            "is_correct": false
+          },
+          {
+            "text": "l interesado.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En relacin con la convalidacin de los actos administrativos, el",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn lo dispuesto en el artculo 42 de la Ley 39/2015, seale la",
+        "options": [
+          {
+            "text": "Cuando la notificacin se practique en el domicilio del interesado, de no",
+            "is_correct": false
+          },
+          {
+            "text": "Si nadie se hiciera cargo de la notificacin, el intento de notificacin que",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando la notificacin resulte infructuosa, se entender rechazada,",
+            "is_correct": false
+          },
+          {
+            "text": "Todas las notificaciones que se practiquen en papel debern ser puestas",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn lo dispuesto en el artculo 42 de la Ley 39/2015, seale la",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale",
+        "options": [
+          {
+            "text": "Las notificaciones por medios electrnicos se practicarn mediante",
+            "is_correct": false
+          },
+          {
+            "text": "omparecencia en la sede electrnica, a travs de la direccin",
+            "is_correct": false
+          },
+          {
+            "text": "Las notificaciones por medios electrnicos se entendern practicadas",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Cuando...'",
+        "Pregunta muy corta",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.5,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "En aquellos casos en los que el segundo intento de notificacin de acto",
+        "options": [
+          {
+            "text": "dministrativo resulta infructuoso, qu ocurre?",
+            "is_correct": false
+          },
+          {
+            "text": "Se publicar del acto administrativo en el diario oficial que corresponda",
+            "is_correct": false
+          },
+          {
+            "text": "Se publicar el anuncio de notificacin en el BOE.",
+            "is_correct": false
+          },
+          {
+            "text": "Se proceder a un tercer y ltimo intento de notificacin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En aquellos casos en los que el segundo intento de notificacin de acto",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Doa. Mara recibe la notificacin de una resolucin que incluye el",
+        "options": [
+          {
+            "text": "En el momento en el que la resolucin fue dictada por rgano",
+            "is_correct": false
+          },
+          {
+            "text": "dministrativo.",
+            "is_correct": false
+          },
+          {
+            "text": "En el momento en el que",
+            "is_correct": false
+          },
+          {
+            "text": "dministrativo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Doa. Mara recibe la notificacin de una resolucin que incluye el",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "Seale cuales son los medios de ejecucin forzosa de que disponen las",
+        "options": [
+          {
+            "text": "dministraciones Pblicas, segn el artculo 100 de la Ley 39/2015:",
+            "is_correct": false
+          },
+          {
+            "text": "Apremio sobre el patrimonio, ejecucin coercitiva, multa subsidiaria y la",
+            "is_correct": false
+          },
+          {
+            "text": "ompulsin sobre las personas.",
+            "is_correct": false
+          },
+          {
+            "text": "Apremio sobre el patrimonio, multa coercitiva y ejecucin subsidiaria.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale cuales son los medios de ejecucin forzosa de que disponen las",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La ejecucin forzosa por las Administraciones Pblicas se efectuar",
+        "options": [
+          {
+            "text": "Presuncin de inocencia.",
+            "is_correct": false
+          },
+          {
+            "text": "Proporcionalidad.",
+            "is_correct": false
+          },
+          {
+            "text": "Obtencin del mximo beneficio.",
+            "is_correct": false
+          },
+          {
+            "text": "Capacidad econmica e igualdad ante la ley.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La ejecucin forzosa por las Administraciones Pblicas se efectuar",
+        "source": "Test y caso práctico tema 4..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:22.630431"
+}

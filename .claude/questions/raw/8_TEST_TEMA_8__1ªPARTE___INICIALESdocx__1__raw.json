@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "source_file": "8 TEST TEMA 8 (1ªPARTE). INICIALESdocx (1).docx",
+    "source_path": "8 TEST TEMA 8 (1ªPARTE). INICIALESdocx (1).docx",
+    "extraction_date": "2026-01-15T23:40:04.874364",
+    "tema": 8,
+    "categoria": "general",
+    "total_questions": 3
+  },
+  "questions": [
+    {
+      "raw_text": "La Ley de R�gimen Jur�dico del Sector P�blico se�ala en su art. 54 que la Administraci�n General del Estado act�a y se organiza de acuerdo con los principios establecidos en el art�culo 3, as� como los de:",
+      "raw_options": [
+        "Descentralizaci�n funcional y desconcentraci�n funcional y territorial.",
+        "Austeridad e integridad.",
+        "Jerarqu�a y eficacia.",
+        "Objetividad y responsabilidad."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qu� �rgano tiene la competencia para imponer la sanci�n de separaci�n del servicio por falta muy grave?:",
+      "raw_options": [
+        "El Subsecretario.",
+        "La Comisi�n Superior de Personal.",
+        "Un Director General.",
+        "El Ministro del Departamento."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De acuerdo con el art�culo 68 de la LRJSP �es posible que los ministerios compartan la gesti�n de servicios comunes?:",
+      "raw_options": [
+        "No, al tratarse de servicios comunes dependientes de cada subsecretar�a.",
+        "S�, por orden ministerial conjunta de los ministerios afectados.",
+        "S�, mediante Real Decreto.",
+        "S�, previo informe preceptivo favorable del Ministerio de Hacienda y Funci�n P�blica."
+      ],
+      "correct_index": null
+    }
+  ]
+}

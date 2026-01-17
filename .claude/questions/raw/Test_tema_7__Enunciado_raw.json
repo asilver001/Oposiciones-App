@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "source_file": "Test tema 7. Enunciado.pdf",
+    "source_path": "TEMA Iniciales Administrativo\\Test tema 7. Enunciado.pdf",
+    "extraction_date": "2026-01-15T23:40:43.265896",
+    "tema": 7,
+    "categoria": "administrativo",
+    "total_questions": 4
+  },
+  "questions": [
+    {
+      "raw_text": "Desde la perspectiva administrativa, las subvenciones son una t�cnica de:",
+      "raw_options": [
+        "Limitaci�n.",
+        "Arbitral.",
+        "De servicio p�blico.",
+        "Fomento."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La potestad sancionadora de las Administraciones P�blicas se ejercer�:",
+      "raw_options": [
+        "Cuando haya sido expresamente reconocida por una norma con rango de Ley.",
+        "Cuando  haya  sido  expresamente  reconocida  por  una  norma  con  rango  de  Ley  o",
+        "Cuando haya sido expresamente reconocida por un acto administrativo.",
+        "Siempre y en todo caso."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Ser�n de aplicaci�n las disposiciones sancionadoras vigentes:",
+      "raw_options": [
+        "En el momento de producirse los hechos que constituyan infracci�n administrativa, sin",
+        "En el momento de dictar resoluci�n administrativa.",
+        "En el momento de dictar el acuerdo de iniciaci�n del procedimiento sancionador.",
+        "En el momento de producirse los hechos que constituyan infracci�n administrativa."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "En  relaci�n  con  la  potestad  sancionadora,  indique  cu�l  de  las  siguientes",
+      "raw_options": [
+        "firmaciones es correcta:",
+        "La resoluci�n que ponga fin al procedimiento ser� ejecutiva cuando no quepa contra",
+        "La resoluci�n que ponga fin al procedimiento ser� ejecutiva cuando ponga fin a la v�a",
+        "dministrativa."
+      ],
+      "correct_index": null
+    }
+  ]
+}

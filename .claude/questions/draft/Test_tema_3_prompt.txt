@@ -1,0 +1,498 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** Test tema 3.pdf
+**Total preguntas:** 39
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** �Cu�l es el n�mero m�nimo de diputados en el Parlamento Europeo para un Estado
+
+**Opciones:**
+  0. 6, 751
+  1. 9, 705
+  2. 9, 721
+  3. 6, 720
+
+---
+
+### Pregunta 2
+
+**Texto:** �Cu�l de los siguientes no es un tipo de formaci�n prevista en relaci�n al trabajo en
+
+**Opciones:**
+  0. Pleno
+  1. Comisi�n de investigaci�n
+  2. Comisi�n permanente
+  3. Comisi�n de inspecci�n
+
+---
+
+### Pregunta 3
+
+**Texto:** Se�ale la respuesta FALSA en relaci�n con el Tribunal General:
+
+**Opciones:**
+  0. Est� compuesto en la actualidad por 54 jueces y 11 abogados generales
+  1. El Tratado de Lisboa le cambi� el nombre, pues inicialmente se llamaba Tribunal de Pri-
+  2. Resolver� en primera instancia los recursos entre la Uni�n y sus agentes.
+  3. De las resoluciones judiciales del Tribunal General conocer� en casaci�n el Tribunal de
+
+---
+
+### Pregunta 4
+
+**Texto:** La duraci�n del mandato del Defensor del Pueblo Europeo es de, y actualmente
+
+**Opciones:**
+  0. 4 a�os, Roberta Metsola
+  1. 5 a�os, Teresa Anjinho
+  2. 4 a�os, Emily O�Reilly
+  3. 5 a�os, Roberta Metsola
+
+---
+
+### Pregunta 5
+
+**Texto:** El Parlamento Europeo celebra sus sesiones del mes de junio en:
+
+**Opciones:**
+  0. Bruselas
+  1. Estrasburgo
+  2. Luxemburgo
+  3. Ninguna es correcta
+
+---
+
+### Pregunta 6
+
+**Texto:** Los miembros del Tribunal de Cuentas:
+
+**Opciones:**
+  0. Son uno por Estado miembro, m�s su Presidente.
+  1. Son nombrados por el Consejo, por mayor�a cualificada, previa aprobaci�n del Parla-
+  2. Tienen un mandato es de 6 a�os, como el de los miembros del TJUE.
+  3. No pueden haber pertenecido en sus respectivos Estados a las instituciones de control
+
+---
+
+### Pregunta 7
+
+**Texto:** �Cu�l de las siguientes instituciones NO fue unificada por el Tratado de Fusi�n de
+
+**Opciones:**
+  0. El Parlamento Europeo
+  1. El Tribunal de Justicia de la UE
+  2. El Tribunal de Cuentas
+  3. La Comisi�n Europea
+
+---
+
+### Pregunta 8
+
+**Texto:** �Cu�l de los siguientes recursos NO es competencia del TJUE?
+
+**Opciones:**
+  0. Los recursos entre la Uni�n y sus agentes
+  1. Los recursos por violaci�n del Convenio Europeo de Derechos Humanos
+  2. Las cuestiones prejudiciales
+  3. Los recursos por incumplimiento o infracci�n
+
+---
+
+### Pregunta 9
+
+**Texto:** La Gran Sala del Tribunal de Justicia:
+
+**Opciones:**
+  0. Est� compuesta por 15 jueces
+  1. El Tribunal General carece de Gran Sala
+  2. Conocer� de asuntos de car�cter excepcional, cuando as� lo decida el TJ, o�do el Abogado
+  3. Fue establecida por el Tratado de Lisboa
+
+---
+
+### Pregunta 10
+
+**Texto:** Respecto a los grupos pol�ticos del Parlamento Europeo, NO es cierto que:
+
+**Opciones:**
+  0. Est�n formados por diputados de la misma nacionalidad
+  1. Es preciso que cuente al menos con 25 diputados
+  2. Deben estar formados por diputados de 1/10 de los EEMM
+  3. Ninguna es correcta
+
+---
+
+### Pregunta 11
+
+**Texto:** Salvo disposici�n en contrario de los Tratados, el Parlamento Europeo decidir�:
+
+**Opciones:**
+  0. Por mayor�a de los votos emitidos
+  1. Por mayor�a de miembros
+  2. Por mayor�a absoluta de los votos emitidos
+  3. Por mayor�a de asistentes
+
+---
+
+### Pregunta 12
+
+**Texto:** �En qu� se diferencian principalmente el Comit� Econ�mico y Social y el Comit� de
+
+**Opciones:**
+  0. En las instituciones a las que asisten a trav�s de sus dict�menes.
+  1. En el n�mero m�ximo de miembros (sin contar suplentes)
+  2. En los intereses que representan
+  3. En su naturaleza jur�dica
+
+---
+
+### Pregunta 13
+
+**Texto:** El Tribunal de Cuentas adopta sus informes especiales, anual y sus dict�menes por:
+
+**Opciones:**
+  0. Mayor�a cualificada
+  1. Mayor�a de sus miembros
+  2. Mayor�a de votos emitidos
+  3. Unanimidad
+
+---
+
+### Pregunta 14
+
+**Texto:** Indique cu�l de las siguientes personalidades ostenta en la actualidad la Presidencia
+
+**Opciones:**
+  0. el Banco Central Europeo:
+  1. Charles Michel
+  2. Christine Lagarde
+  3. Roberta Metsola
+
+---
+
+### Pregunta 15
+
+**Texto:** Se�ale la cierta en relaci�n con los abogados generales del Tribunal de Justicia:
+
+**Opciones:**
+  0. Fueron creados por el Tratado de Lisboa
+  1. En la actualidad son 11, y �nicamente asisten al Tribunal de Justicia, no al Tribunal Ge-
+  2. El Consejo Europeo, por unanimidad, podr� aumentar su n�mero
+  3. Ofrecen asistencia jur�dica gratuita a cualquier de las partes del proceso
+
+---
+
+### Pregunta 16
+
+**Texto:** Las primeras elecciones al Parlamento Europeo tuvieron lugar en:
+
+**Opciones:**
+  0. 1958
+  1. 1974
+  2. 1979
+  3. 1994
+
+---
+
+### Pregunta 17
+
+**Texto:** Componen la Mesa del Parlamento Europeo:
+
+**Opciones:**
+  0. El Presidente, el Vicepresidente y, a t�tulo consultivo, los 5 cuestores
+  1. El Presidente y los 14 Vicepresidentes
+  2. El Presidente, los 14 Vicepresidentes y, a t�tulo consultivo, los 5 cuestores
+  3. El Presidente, los 14 Vicepresidentes, a t�tulo consultivo, los 5 cuestores, y el Secretario
+
+---
+
+### Pregunta 18
+
+**Texto:** La sede del Tribunal de Cuentas se encuentra:
+
+**Opciones:**
+  0. En Fr�ncfort
+  1. En Bruselas
+  2. En Estrasburgo
+  3. En Luxemburgo
+
+---
+
+### Pregunta 19
+
+**Texto:** El Presidente del Parlamento Europeo es elegido:
+
+**Opciones:**
+  0. Por el Consejo Europeo, por mayor�a cualificada
+  1. Por el Parlamento Europeo, por mayor�a absoluta de los votos emitidos
+  2. Por la Comisi�n Europea
+  3. Por la Mesa del Parlamento Europeo
+
+---
+
+### Pregunta 20
+
+**Texto:** El BCE, m�s los 20 gobernadores de los bancos centrales nacionales de los Estados
+
+**Opciones:**
+  0. El Eurosistema
+  1. El Eurogrupo
+  2. La Eurozona
+  3. El Consejo General del BCE
+
+---
+
+### Pregunta 21
+
+**Texto:** El BCE pas� a formar parte del marco institucional de la Uni�n con el:
+
+**Opciones:**
+  0. Tratado de Maastricht
+  1. Tratado de �msterdam
+  2. Tratado de Niza
+  3. Tratado de Lisboa
+
+---
+
+### Pregunta 22
+
+**Texto:** Los jueces del Tribunal General deber�n cumplir el siguiente requisito:
+
+**Opciones:**
+  0. Reunir las condiciones necesarias para ejercer, en sus respectivos pa�ses, las m�s altas
+  1. Ser juristas de reconocida competencia
+  2. Reunir las condiciones necesarias para ejercer, en sus respectivos pa�ses, altas funciones
+  3. Reunir las condiciones necesarias para ejercer, en sus respectivos pa�ses, funciones juris-
+
+---
+
+### Pregunta 23
+
+**Texto:** NO es una competencia o potestad del Parlamento Europeo:
+
+**Opciones:**
+  0. La aprobaci�n del presupuesto de la Uni�n, conjuntamente con el Consejo
+  1. La elecci�n y cese del Defensor del Pueblo
+  2. Ejercer la funci�n legislativa, conjuntamente con el Consejo
+  3. Presentaci�n de la moci�n de censura contra la Comisi�n
+
+---
+
+### Pregunta 24
+
+**Texto:** En la actualidad tiene/n 329 miembros y 329 suplentes:
+
+**Opciones:**
+  0. El Parlamento Europeo
+  1. El Comit� de las Regiones
+  2. El Comit� Econ�mico y Social
+  3. La b) y la c) son correctas
+
+---
+
+### Pregunta 25
+
+**Texto:** Le corresponde en exclusiva autorizar la emisi�n de euros, seg�n el TFUE:
+
+**Opciones:**
+  0. El BCE
+  1. El SEBC
+  2. El Eurosistema
+  3. El Consejo Europeo
+
+---
+
+### Pregunta 26
+
+**Texto:** Se constituyen a solicitud de � de los miembros del PE para examinar alegaciones
+
+**Opciones:**
+  0. e infracci�n o mala administraci�n en la aplicaci�n del Derecho de la Uni�n:
+  1. Las comisiones especiales
+  2. Las comisiones permanentes
+  3. Las comisiones rogatorias
+
+---
+
+### Pregunta 27
+
+**Texto:** El quorum en las Salas de 3 o 5 miembros en el Tribunal de Justicia es de:
+
+**Opciones:**
+  0. 2 miembros y 3 miembros, respectivamente
+  1. 3 miembros en ambos casos
+  2. 1 miembro y 3 miembros, respectivamente
+  3. 3 miembros y 5 miembros, respectivamente
+
+---
+
+### Pregunta 28
+
+**Texto:** En la legislatura del Parlamento Europeo 2024-2029, a Espa�a le corresponden:
+
+**Opciones:**
+  0. 51 diputados
+  1. 59 diputados
+  2. 61 diputados
+  3. 69 diputados
+
+---
+
+### Pregunta 29
+
+**Texto:** �Qui�n elige al Presidente del Banco Central Europeo?
+
+**Opciones:**
+  0. El propio BCE.
+  1. El Consejo Europeo, por mayor�a cualificada.
+  2. La a) es correcta, y su mandato no es renovable.
+  3. La b) es correcta, y su mandato no es renovable
+
+---
+
+### Pregunta 30
+
+**Texto:** �A trav�s de qu� norma se pueden crear tribunales especializados?
+
+**Opciones:**
+  0. Una decisi�n legislativa
+  1. Un reglamento legislativo
+  2. Una decisi�n no legislativa
+  3. Un reglamento no legislativo
+
+---
+
+### Pregunta 31
+
+**Texto:** Se�ale la FALSA respecto la composici�n de los �rganos de gobierno del BCE:
+
+**Opciones:**
+  0. El Presidente del BCE participa en los cuatro �rganos de gobierno del BCE
+  1. El Comit� Ejecutivo est� compuesto por 6 miembros
+  2. En el Consejo de Gobierno del BCE no participan los EEMM cuya moneda no es el euro.
+  3. Los miembros del Comit� Ejecutivo forman parte del Consejo de Gobierno del BCE
+
+---
+
+### Pregunta 32
+
+**Texto:** Se�ale la FALSA respecto del BCE:
+
+**Opciones:**
+  0. Tiene su sede en Fr�ncfort
+  1. Se regula en el TUE, en el TFUE, y en su propio Estatuto
+  2. Fue creado en 1998
+  3. En la actualidad no todos los Estados miembros tienen como moneda oficial el euro
+
+---
+
+### Pregunta 33
+
+**Texto:** El mandato de los miembros del Tribunal de Cuentas Europeo, del Parlamento Eu-
+
+**Opciones:**
+  0. 6 a�os, 5 a�os y 4 a�os, respectivamente
+  1. 6 a�os, 5 a�os y 5 a�os, respectivamente
+  2. 6 a�os, 4 a�os y 4 a�os, respectivamente
+  3. 6 a�os, 4 a�os y 5 a�os, respectivamente
+
+---
+
+### Pregunta 34
+
+**Texto:** De acuerdo con lo establecido en el art�culo 234 del TFUE, el plazo m�nimo que ha
+
+**Opciones:**
+  0. e transcurrir entre la presentaci�n de una moci�n de censura ante el Presidente del
+  1. 3 d�as
+  2. 5 d�as
+  3. 24 horas
+
+---
+
+### Pregunta 35
+
+**Texto:** La sede del Comit� de las Regiones se encuentra en:
+
+**Opciones:**
+  0. Es rotatoria, entra las distintas regiones que conforman la UE.
+  1. Bruselas
+  2. Estrasburgo
+  3. Luxemburgo
+
+---
+
+### Pregunta 36
+
+**Texto:** �Qu� recursos son competencia del Tribunal de Justicia, en �nica instancia?
+
+**Opciones:**
+  0. Recurso por incumplimiento o infracci�n de un Estado miembro
+  1. Recurso en anulaci�n
+  2. Recurso entre la Uni�n y sus agentes
+  3. Recurso de responsabilidad contractual
+
+---
+
+### Pregunta 37
+
+**Texto:** La legislatura 2024-2029 del Parlamento Europeo ser� la:
+
+**Opciones:**
+  0. S�ptima legislatura
+  1. Octava legislatura
+  2. Novena legislatura
+  3. D�cima legislatura
+
+---
+
+### Pregunta 38
+
+**Texto:** El Comit� Econ�mico y Social y el Comit� de las Regiones fueron creados por:
+
+**Opciones:**
+  0. El Tratado de Roma y el de Maastricht, respectivamente
+  1. El Tratado de Maastricht y el de Lisboa, respectivamente
+  2. El Tratado de Maastricht y el de Roma, respectivamente
+  3. El Tratado de Maastricht y el de Niza, respectivamente
+
+---
+
+### Pregunta 39
+
+**Texto:** Seg�n el TFUE, �cu�ntos periodos de sesiones celebra el Parlamento Europeo en
+
+**Opciones:**
+  0. ada legislatura?
+  1. 5, uno al a�o
+  2. 4, uno al a�o
+  3. 60, 12 al a�o
+
+---

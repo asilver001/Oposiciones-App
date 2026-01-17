@@ -3,6 +3,11 @@
 .env.local
 .env.*.local
 
+# Referencias con copyright (exámenes, tests originales)
+.claude/references/examenes/
+.claude/references/leyes/
+.claude/references/temario/
+
 # Logs
 logs
 *.log

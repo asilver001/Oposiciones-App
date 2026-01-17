@@ -1,0 +1,1007 @@
+{
+  "metadata": {
+    "source_file": "9.- TEST GF 24-25 Control.pdf",
+    "source_path": "Test financiero\\9.- TEST GF 24-25 Control.pdf",
+    "tema": 0,
+    "categoria": "financiero",
+    "extraction_date": "2026-01-15T23:41:32.630577",
+    "reformulation_date": "2026-01-15T23:47:35.697069",
+    "total_questions": 30,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.862009",
+    "completed_count": 0,
+    "failed_count": 30
+  },
+  "questions": [
+    {
+      "question_text": "Indique cul de los siguientes NO es rgano del Tribunal de Cuentas:",
+      "options": [
+        {
+          "text": "La Comisin de Enjuiciamiento.",
+          "is_correct": false
+        },
+        {
+          "text": "La Seccin de Fiscalizacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Los Consejeros de Cuentas.",
+          "is_correct": false
+        },
+        {
+          "text": "La Comisin de Gobierno.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Indique cul de los siguientes NO es rgano del Tribunal de Cuentas:",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "A qu rgano corresponde la fiscalizacin de las subvenciones, crditos, avales u otras",
+      "options": [
+        {
+          "text": "yudas del sector pblico percibidas por personas fsicas o jurdicas?",
+          "is_correct": false
+        },
+        {
+          "text": "A la Intervencin General de la Administracin del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "A las Cortes Generales.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Tribunal de Cuentas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "A qu rgano corresponde la fiscalizacin de las subvenciones, crditos, avales u otras",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cundo proceder la formulacin de un reparo si se est aplicando el rgimen general",
+      "options": [
+        {
+          "text": "e fiscalizacin e intervencin previa?",
+          "is_correct": false
+        },
+        {
+          "text": "Cuando se base en la suficiencia de crdito o el propuesto no se considere adecuado.",
+          "is_correct": false
+        },
+        {
+          "text": "Cuando la continuacin de la gestin administrativa pudiera causar quebrantos",
+          "is_correct": false
+        },
+        {
+          "text": "Cuando se hayan omitido requisitos o trmites que pudieran dar lugar a la anulabilidad",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cundo proceder la formulacin de un reparo si se est aplicando el rgimen general",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Con respecto de la jurisdiccin contable ejercida por el Tribunal de Cuentas, se puede",
+      "options": [
+        {
+          "text": "firmar que:",
+          "is_correct": false
+        },
+        {
+          "text": "Su objeto se concreta en juicios de cuentas, procedimientos de reintegro por malversacin",
+          "is_correct": false
+        },
+        {
+          "text": "e fondos y expedientes de cancelacin de garantas.",
+          "is_correct": false
+        },
+        {
+          "text": "La decisin que se pronuncie tendr efectos fuera del mbito contable.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Con respecto de la jurisdiccin contable ejercida por el Tribunal de Cuentas, se puede",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con el artculo 9 de la Ley Orgnica 2/1982, de 12 de mayo, del Tribunal de",
+      "options": [
+        {
+          "text": "uentas, la funcin fiscalizadora del Tribunal de Cuentas se referir al sometimiento de",
+          "is_correct": false
+        },
+        {
+          "text": "Los principios de legalidad, eficiencia, economa, transparencia, as como a la",
+          "is_correct": false
+        },
+        {
+          "text": "Los principios de legalidad, eficacia, eficiencia, transparencia, as como a la",
+          "is_correct": false
+        },
+        {
+          "text": "Los principios de legalidad, eficacia, suficiencia, transparencia, as como a la",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con el artculo 9 de la Ley Orgnica 2/1982, de 12 de mayo, del Tribunal de",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu rgano del Tribunal de Cuentas tiene atribuida la funcin de fiscalizacin?",
+      "options": [
+        {
+          "text": "El Presidente.",
+          "is_correct": false
+        },
+        {
+          "text": "El Pleno.",
+          "is_correct": false
+        },
+        {
+          "text": "El Fiscal.",
+          "is_correct": false
+        },
+        {
+          "text": "La Seccin de Fiscalizacin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu rgano del Tribunal de Cuentas tiene atribuida la funcin de fiscalizacin?",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn el artculo 1 de la Ley Orgnica 2/1982, de 12 de mayo, del Tribunal de Cuentas,",
+      "options": [
+        {
+          "text": "Exclusivamente al territorio de aquellas Comunidades Autnomas que no cuenten con",
+          "is_correct": false
+        },
+        {
+          "text": "A todo el territorio nacional, sin perjuicio de los rganos fiscalizadores de cuentas que",
+          "is_correct": false
+        },
+        {
+          "text": "Exclusivamente a la actividad desarrollada por el Sector Pblico Estatal.",
+          "is_correct": false
+        },
+        {
+          "text": "A todo el territorio nacional, no pudiendo prever los Estatutos de las Comunidad",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el artculo 1 de la Ley Orgnica 2/1982, de 12 de mayo, del Tribunal de Cuentas,",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La reparacin del dao o menoscabo en los caudales pblicos:",
+      "options": [
+        {
+          "text": "Se exige en primer lugar a los responsables directos y, si no se hace efectiva por estos, a",
+          "is_correct": false
+        },
+        {
+          "text": "Se exige en primer lugar a los responsables subsidiarios y, si no se hace efectiva por estos,",
+          "is_correct": false
+        },
+        {
+          "text": "los responsables solidarios.",
+          "is_correct": false
+        },
+        {
+          "text": "Puede exigirse indistintamente a los responsables directos y a los subsidiarios.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La reparacin del dao o menoscabo en los caudales pblicos:",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "A los efectos de la Ley 7/1988, de 5 de abril, de Funcionamiento del Tribunal de Cuentas,",
+      "options": [
+        {
+          "text": "La justificacin que han de llevar aquellos que deben rendir cuentas al Tribunal, por tener",
+          "is_correct": false
+        },
+        {
+          "text": "su cargo el manejo de caudales o efectos pblicos.",
+          "is_correct": false
+        },
+        {
+          "text": "La malversacin de caudales o efectos pblicos por parte de quienes ostenten la condicin",
+          "is_correct": false
+        },
+        {
+          "text": "e cuentadantes ante el Tribunal.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "A los efectos de la Ley 7/1988, de 5 de abril, de Funcionamiento del Tribunal de Cuentas,",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El ejercicio de la funcin interventora comprender:",
+      "options": [
+        {
+          "text": "La fiscalizacin posterior de los actos que reconozcan derechos de contenido econmico,",
+          "is_correct": false
+        },
+        {
+          "text": "prueben gastos, adquieran compromisos de gasto, o acuerden movimientos de fondos y",
+          "is_correct": false
+        },
+        {
+          "text": "La intervencin del reconocimiento de las obligaciones y de la comprobacin de la",
+          "is_correct": false
+        },
+        {
+          "text": "La intervencin material de la ordenacin del pago.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El ejercicio de la funcin interventora comprender:",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El presupuesto del Tribunal de Cuentas ser aprobado por:",
+      "options": [
+        {
+          "text": "El Pleno del Tribunal.",
+          "is_correct": false
+        },
+        {
+          "text": "El Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Las Cortes Generales.",
+          "is_correct": false
+        },
+        {
+          "text": "La Comisin de Gobierno del Tribunal.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El presupuesto del Tribunal de Cuentas ser aprobado por:",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En relacin con el Tribunal de Cuentas seale la afirmacin INCORRECTA segn lo",
+      "options": [
+        {
+          "text": "La jurisdiccin contable es compatible respecto de unos mismos hechos con el ejercicio",
+          "is_correct": false
+        },
+        {
+          "text": "e la potestad disciplinaria y con la actuacin de la jurisdiccin penal.",
+          "is_correct": false
+        },
+        {
+          "text": "El Tribunal de Cuentas fiscalizar la situacin y variaciones del patrimonio del Estado y",
+          "is_correct": false
+        },
+        {
+          "text": "ems entidades del sector pblico.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En relacin con el Tribunal de Cuentas seale la afirmacin INCORRECTA segn lo",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las Fundaciones Estatales estn sujetas a las siguientes modalidades de control interno:",
+      "options": [
+        {
+          "text": "Funcin interventora, control financiero permanente y auditora pblica.",
+          "is_correct": false
+        },
+        {
+          "text": "Funcin interventora y control financiero permanente.",
+          "is_correct": false
+        },
+        {
+          "text": "Auditora pblica.",
+          "is_correct": false
+        },
+        {
+          "text": "Control financiero permanente y auditora pblica.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las Fundaciones Estatales estn sujetas a las siguientes modalidades de control interno:",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con la LGP, la IGAE seguir los siguientes principios de actuacin:",
+      "options": [
+        {
+          "text": "Autonoma, ejercicio concentrado y jerarqua interna.",
+          "is_correct": false
+        },
+        {
+          "text": "Autonoma, ejercicio desconcentrado, independencia interna.",
+          "is_correct": false
+        },
+        {
+          "text": "Independencia, ejercicio delegado y jerarqua interna.",
+          "is_correct": false
+        },
+        {
+          "text": "Autonoma, ejercicio desconcentrado, jerarqua interna.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con la LGP, la IGAE seguir los siguientes principios de actuacin:",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con el artculo 3 del Real Decreto 2188/1995, de 28 de diciembre, por el que",
+      "options": [
+        {
+          "text": "dministracin del Estado, la IGAE, en sus funciones de control interno, estar sometida",
+          "is_correct": false
+        },
+        {
+          "text": "los principios de:",
+          "is_correct": false
+        },
+        {
+          "text": "Autonoma funcional, jerarqua interna y procedimiento administrativo.",
+          "is_correct": false
+        },
+        {
+          "text": "Independencia funcional, jerarqua interna y ejercicio delegado.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con el artculo 3 del Real Decreto 2188/1995, de 28 de diciembre, por el que",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "NO es una modalidad de control a posteriori:",
+      "options": [
+        {
+          "text": "La funcin interventora ejercida por la IGAE.",
+          "is_correct": false
+        },
+        {
+          "text": "La funcin fiscalizadora ejercida por el Tribunal de Cuentas.",
+          "is_correct": false
+        },
+        {
+          "text": "La auditora pblica ejercida por la IGAE.",
+          "is_correct": false
+        },
+        {
+          "text": "La funcin jurisdiccional ejercida por el Tribunal de Cuentas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "NO es una modalidad de control a posteriori:",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "A quin corresponde acordar, de forma motivada, la aplicacin del control financiero",
+      "options": [
+        {
+          "text": "Al Consejo de Ministros.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Ministro de Hacienda.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Interventor General de la Administracin del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Presidente del Gobierno.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "A quin corresponde acordar, de forma motivada, la aplicacin del control financiero",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Se sometern a fiscalizacin previa:",
+      "options": [
+        {
+          "text": "Los contratos menores, as como los asimilados a ellos en virtud de la legislacin",
+          "is_correct": false
+        },
+        {
+          "text": "ontractual.",
+          "is_correct": false
+        },
+        {
+          "text": "Las subvenciones con asignacin nominativa.",
+          "is_correct": false
+        },
+        {
+          "text": "Los gastos correspondientes a las actuaciones objeto del rgimen excepcional de",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Se sometern a fiscalizacin previa:",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Con qu antelacin a la fecha prevista para la terminacin de la prestacin objeto del",
+      "options": [
+        {
+          "text": "ontrato o encargo debern los rganos gestores solicitar a la IGAE la designacin de",
+          "is_correct": false
+        },
+        {
+          "text": "30 das naturales.",
+          "is_correct": false
+        },
+        {
+          "text": "30 das hbiles.",
+          "is_correct": false
+        },
+        {
+          "text": "b) salvo que las recepciones sean en el extranjero, en cuyo caso sern 45 das hbiles.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Con qu antelacin a la fecha prevista para la terminacin de la prestacin objeto del",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con el artculo 164.1 b) de la LGP, la auditora de cumplimiento se define",
+      "options": [
+        {
+          "text": "omo aquella cuyo objeto consiste en:",
+          "is_correct": false
+        },
+        {
+          "text": "El examen sistemtico y objetivo de las operaciones y procedimientos de una actividad o",
+          "is_correct": false
+        },
+        {
+          "text": "El seguimiento de la ejecucin presupuestaria y verificacin del cumplimiento de los",
+          "is_correct": false
+        },
+        {
+          "text": "alance de resultados.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con el artculo 164.1 b) de la LGP, la auditora de cumplimiento se define",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con el artculo 148 de la LGP, la fiscalizacin previa e intervencin de los",
+      "options": [
+        {
+          "text": "erechos e ingresos del Tesoro Pblico se podr sustituir reglamentariamente, salvo en",
+          "is_correct": false
+        },
+        {
+          "text": "evoluciones de ingresos indebidos, por las comprobaciones efectuadas en el ejercicio de:",
+          "is_correct": false
+        },
+        {
+          "text": "Control financiero permanente.",
+          "is_correct": false
+        },
+        {
+          "text": "Control financiero permanente y auditora pblica.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con el artculo 148 de la LGP, la fiscalizacin previa e intervencin de los",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El control posterior de los derechos e ingresos del Tesoro Pblico se efectuar, conforme",
+      "options": [
+        {
+          "text": "l artculo 12 del Real Decreto 2188/1995, mediante el ejercicio de:",
+          "is_correct": false
+        },
+        {
+          "text": "La funcin interventora.",
+          "is_correct": false
+        },
+        {
+          "text": "La auditora pblica.",
+          "is_correct": false
+        },
+        {
+          "text": "El control financiero permanente.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El control posterior de los derechos e ingresos del Tesoro Pblico se efectuar, conforme",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Interventor General de la Administracin del Estado ejercer la fiscalizacin previa",
+      "options": [
+        {
+          "text": "e la aprobacin del gasto:",
+          "is_correct": false
+        },
+        {
+          "text": "En gastos en los que se requiera la previa autorizacin del Consejo de Ministros, como el",
+          "is_correct": false
+        },
+        {
+          "text": "orrespondiente a una subvencin de cuanta superior a 12.000.000 .",
+          "is_correct": false
+        },
+        {
+          "text": "En modificaciones de otros gastos fiscalizados por la Intervencin Delegada",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Interventor General de la Administracin del Estado ejercer la fiscalizacin previa",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Si se planteara una discrepancia entre el rgano gestor del gasto y el Interventor",
+      "options": [
+        {
+          "text": "elegado del ministerio, en el marco de una actuacin de funcin interventora, quin",
+          "is_correct": false
+        },
+        {
+          "text": "El Interventor General de la Administracin del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo de Ministros.",
+          "is_correct": false
+        },
+        {
+          "text": "El Ministro de Hacienda.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Si se planteara una discrepancia entre el rgano gestor del gasto y el Interventor",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El resultado del control financiero permanente se pondr de manifiesto mediante:",
+      "options": [
+        {
+          "text": "Informes.",
+          "is_correct": false
+        },
+        {
+          "text": "Memorias.",
+          "is_correct": false
+        },
+        {
+          "text": "Mociones.",
+          "is_correct": false
+        },
+        {
+          "text": "Notas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El resultado del control financiero permanente se pondr de manifiesto mediante:",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La intervencin de la comprobacin material de la inversin se realizar:",
+      "options": [
+        {
+          "text": "En todo caso, concurriendo el representante de la Intervencin General y, en su caso, el",
+          "is_correct": false
+        },
+        {
+          "text": "sesor designado, al acto de comprobacin de la inversin.",
+          "is_correct": false
+        },
+        {
+          "text": "En todo caso, concurriendo el representante de la Intervencin Delegada y, en su caso, el",
+          "is_correct": false
+        },
+        {
+          "text": "sesor designado, al acto de comprobacin de la inversin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La intervencin de la comprobacin material de la inversin se realizar:",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con el artculo 156 de la LGP, si en un organismo autnomo se ha omitido la",
+      "options": [
+        {
+          "text": "l Consejo de Ministros para su convalidacin?",
+          "is_correct": false
+        },
+        {
+          "text": "El Presidente o Director del organismo, pudiendo delegar la competencia.",
+          "is_correct": false
+        },
+        {
+          "text": "El Presidente o Director del organismo, sin que pueda delegar la competencia.",
+          "is_correct": false
+        },
+        {
+          "text": "El Titular del ministerio de adscripcin, pudiendo delegar la competencia.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con el artculo 156 de la LGP, si en un organismo autnomo se ha omitido la",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn la LGP, la distribucin de competencias entre el Interventor General de la",
+      "options": [
+        {
+          "text": "dministracin del Estado y los interventores delegados se determinar:",
+          "is_correct": false
+        },
+        {
+          "text": "Mediante ley.",
+          "is_correct": false
+        },
+        {
+          "text": "Mediante ley orgnica.",
+          "is_correct": false
+        },
+        {
+          "text": "Reglamentariamente.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn la LGP, la distribucin de competencias entre el Interventor General de la",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn el artculo 7 del Real Decreto 2188/1995, de 28 de diciembre, por el que se",
+      "options": [
+        {
+          "text": "esarrolla el rgimen del control interno ejercido por la Intervencin General de la",
+          "is_correct": false
+        },
+        {
+          "text": "dministracin del Estado, la funcin interventora se ejercer en sus modalidades de",
+          "is_correct": false
+        },
+        {
+          "text": "La verificacin, efectuada de forma sistemtica, de la actividad econmico-financiera del",
+          "is_correct": false
+        },
+        {
+          "text": "La comprobacin de la planificacin, gestin y situacin de la tesorera.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el artculo 7 del Real Decreto 2188/1995, de 28 de diciembre, por el que se",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "A quin compete la intervencin formal de la ordenacin del pago en el Estado?",
+      "options": [
+        {
+          "text": "Al Interventor Delegado en el Ministerio de Hacienda.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Interventor General de la Administracin del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Interventor Delegado en la Secretara General del Tesoro y Financiacin Internacional.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Interventor Delegado en el Ministerio de Economa, Comercio y Empresa.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "A quin compete la intervencin formal de la ordenacin del pago en el Estado?",
+      "source": "9.- TEST GF 24-25 Control.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

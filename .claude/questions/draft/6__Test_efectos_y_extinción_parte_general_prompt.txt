@@ -1,0 +1,270 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 6. Test efectos y extinción parte general.pdf
+**Total preguntas:** 20
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** Dentro de los l�mites y con sujeci�n a los requisitos y efectos se�alados
+
+**Opciones:**
+  0. Interpretar los contratos administrativos.
+  1. Modificar los contratos por razones de inter�s p�blico.
+  2. Suspender la ejecuci�n de los contratos.
+  3. Todas son correctas.
+
+---
+
+### Pregunta 2
+
+**Texto:** En relaci�n con las prerrogativas del �rgano de contrataci�n en cuanto a
+
+**Opciones:**
+  0. Estas facultades deber�n implicar un derecho general del �rgano de
+  1. ontrataci�n a
+  2. En ning�n caso dichas facultades de inspecci�n podr�n implicar un
+  3. erecho general del �rgano de contrataci�n a inspeccionar las
+
+---
+
+### Pregunta 3
+
+**Texto:** De conformidad con la LCSP, en los procedimientos que se instruyan
+
+**Opciones:**
+  0. Todas las entidades del Sector p�blico estatal, deber�n adoptar estos
+  1. cuerdos previo informe del Servicio Jur�dico correspondiente.
+  2. Ser� preceptivo el dictamen del Consejo de Estado u �rgano consultivo
+  3. Los acuerdos que adopte el �rgano de contrataci�n pondr�n fin a la v�a
+
+---
+
+### Pregunta 4
+
+**Texto:** En relaci�n con el incumplimiento parcial o cumplimiento defectuoso de
+
+**Opciones:**
+  0. En el caso de incumplimiento de las condiciones especiales de
+  1. Cuando el contratista hubiere incumplido parcialmente la ejecuci�n, la
+  2. dministraci�n podr� optar, atendidas las circunstancias del caso, por
+  3. Las penalidades podr�n ser proporcionales a
+
+---
+
+### Pregunta 5
+
+**Texto:** En relaci�n con las penalidades, para el caso de cumplimiento defectuoso
+
+**Opciones:**
+  0. ompromisos o de las condiciones especiales de ejecuci�n del contrato:
+  1. Las cuant�as de cada una de ellas no podr�n ser superiores al 10 por
+  2. iento del precio del contrato, IVA excluido.
+  3. Las cuant�as de cada una de ellas no podr�n ser superiores al 50 por
+
+---
+
+### Pregunta 6
+
+**Texto:** Se�ale la respuesta incorrecta:
+
+**Opciones:**
+  0. La constituci�n en mora del contratista no precisar� intimaci�n previa
+  1. Cuando el contratista, por causas imputables al mismo, hubiere
+  2. dministraci�n podr� optar, atendidas las circunstancias del caso, por
+  3. ontrato, IVA excluido.
+
+---
+
+### Pregunta 7
+
+**Texto:** En cuanto a la imposici�n de penalidades:
+
+**Opciones:**
+  0. Se impondr�n por acuerdo del �rgano de contrataci�n, previo informe
+  1. el servicio jur�dico y en caso de oposici�n por parte del contratista, se
+  2. Se har�n efectivas sobre la garant�a que se hubiese constituido.
+  3. Se impondr�n por acuerdo del �rgano de contrataci�n, adoptado a
+
+---
+
+### Pregunta 8
+
+**Texto:** Se�ale la respuesta correcta:
+
+**Opciones:**
+  0. Ser� obligaci�n de la Administraci�n indemnizar todos los da�os y
+  1. En todo caso, ser� obligaci�n del contratista indemnizar todos los
+  2. a�os y perjuicios que se causen a terceros como consecuencia de las
+  3. Los terceros podr�n requerir previamente, dentro del a�o siguiente a la
+
+---
+
+### Pregunta 9
+
+**Texto:** En cuanto a la demora en el pago por parte de la Administraci�n:
+
+**Opciones:**
+  0. Si la demora en el pago fuese superior a cuatro meses, el contratista
+  1. ontrato, debiendo comunicar a la Administraci�n, con un mes de
+  2. ntelaci�n.
+  3. Si la demora en el pago fuese superior a cinco meses, el contratista
+
+---
+
+### Pregunta 10
+
+**Texto:** En cuanto al procedimiento para hacer efectivas las deudas de las
+
+**Opciones:**
+  0. dministraciones P�blicas:
+  1. Se deber� interponer recurso contencioso administrativo.
+  2. Los contratistas podr�n reclamar por escrito a la Administraci�n
+  3. ontratante el cumplimiento de la obligaci�n de pago y, en su caso, de
+
+---
+
+### Pregunta 11
+
+**Texto:** Se�ale la respuesta incorrecta:
+
+**Opciones:**
+  0. Los �rganos de contrataci�n podr�n establecer condiciones especiales
+  1. l objeto del contrato.
+  2. En todo caso, ser� obligatorio el establecimiento en el pliego de
+  3. l�usulas administrativas particulares de al menos una de
+
+---
+
+### Pregunta 12
+
+**Texto:** Se�ale la respuesta correcta en relaci�n con las modificaciones de los
+
+**Opciones:**
+  0. ontratos:
+  1. Todas las modificaciones se publicar�n en el DOUE si los contratos
+  2. Si fuese necesario que un contrato en vigor se ejecutase en forma
+  3. istinta a la pactada, deber� procederse a su resoluci�n y a la
+
+---
+
+### Pregunta 13
+
+**Texto:** Se�ale la respuesta incorrecta:
+
+**Opciones:**
+  0. Los �rganos de contrataci�n que hubieren modificado un contrato
+  1. urante su vigencia, deber�n publicar en todo caso un anuncio de
+  2. Acordada la suspensi�n del contrato, en su caso, la Administraci�n
+  3. bonar� los gastos por mantenimiento de la garant�a definitiva.
+
+---
+
+### Pregunta 14
+
+**Texto:** En relaci�n con el cumplimiento de los contratos, se�ale la respuesta
+
+**Opciones:**
+  0. En todo caso, su constataci�n exigir� por parte de la Administraci�n un
+  1. cto formal y positivo de recepci�n o conformidad.
+  2. El acto formal y positivo de recepci�n o conformidad, deber� efectuarse
+  3. En los contratos, como regla general, se fijar� un plazo de garant�a a
+
+---
+
+### Pregunta 15
+
+**Texto:** En cuanto a las modificaciones no previstas, ser�n obligatorias para el
+
+**Opciones:**
+  0. ontratista:
+  1. Cuando impliquen, aislada o conjuntamente, una alteraci�n en su
+  2. uant�a que no exceda del 20 por ciento del precio inicial del contrato,
+  3. Cuando impliquen, aislada o conjuntamente, una alteraci�n en su
+
+---
+
+### Pregunta 16
+
+**Texto:** Son causas de resoluci�n del contrato:
+
+**Opciones:**
+  0. El mutuo acuerdo entre la Administraci�n y el contratista.
+  1. La imposibilidad de ejecutar la prestaci�n en los t�rminos inicialmente
+  2. rt�culos 204 y 205.
+  3. La no reposici�n en plazo de la garant�a definitiva.
+
+---
+
+### Pregunta 17
+
+**Texto:** Son requisitos para la cesi�n de los contratos:
+
+**Opciones:**
+  0. Que el �rgano de contrataci�n autorice, de forma previa y expresa, la
+  1. esi�n.
+  2. El plazo para la notificaci�n de la resoluci�n sobre la solicitud de
+  3. utorizaci�n ser� de dos meses, trascurrido el cual deber� entenderse
+
+---
+
+### Pregunta 18
+
+**Texto:** Se�ale la respuesta incorrecta en relaci�n con la subcontrataci�n:
+
+**Opciones:**
+  0. El contratista podr� concertar con terceros la realizaci�n parcial de la
+  1. En el caso que el subcontratista tuviera la clasificaci�n adecuada para
+  2. omunicaci�n de esta circunstancia ser� suficiente para acreditar la
+  3. ptitud del mismo.
+
+---
+
+### Pregunta 19
+
+**Texto:** �Qu� consecuencias puede generar la infracci�n de las condiciones
+
+**Opciones:**
+  0. La imposici�n al subcontratista de una penalidad de hasta un 50 por
+  1. La resoluci�n del contrato sin posibilidad de imponer penalidad alguna.
+  2. La resoluci�n del contrato y la imposici�n de penalidades de hasta el
+  3. La imposici�n al contratista de una penalidad de hasta un 50 por 100
+
+---
+
+### Pregunta 20
+
+**Texto:** En cuanto al pago a los subcontratistas y suministradores:
+
+**Opciones:**
+  0. El contratista est� obligado a abonar a
+  1. Las Administraciones P�blicas y dem�s entes p�blicos contratantes
+  2. ontratistas adjudicatarios de los contratos p�blicos, han de hacer a
+  3. Los subcontratistas no tendr�n acci�n directa frente a la Administraci�n
+
+---

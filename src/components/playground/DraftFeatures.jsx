@@ -1953,7 +1953,7 @@ function DashboardView({ temas, onTemaAction, onStartSession }) {
 
 // ============================================
 // TEMA OPTIONS MODAL - When clicking a topic
-// Redesigned to match DailyProgressModal style
+// Slides from bottom like the webapp's ProgressModal
 // ============================================
 
 function TemaOptionsModal({ isOpen, onClose, tema }) {
@@ -1975,107 +1975,104 @@ function TemaOptionsModal({ isOpen, onClose, tema }) {
         <>
           {/* Backdrop */}
           <motion.div
-            className="fixed inset-0 bg-black/40 z-[300]"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[300]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
           />
 
-          {/* Modal */}
+          {/* Modal - Slides from bottom */}
           <motion.div
-            className="fixed inset-x-4 top-1/2 -translate-y-1/2 max-w-md mx-auto bg-white rounded-3xl shadow-2xl z-[301] overflow-hidden"
-            initial={{ opacity: 0, scale: 0.9, y: '-40%' }}
-            animate={{ opacity: 1, scale: 1, y: '-50%' }}
-            exit={{ opacity: 0, scale: 0.9, y: '-40%' }}
-            transition={spring.bouncy}
+            className="fixed inset-x-0 bottom-0 z-[301] flex justify-center"
+            initial={{ y: '100%' }}
+            animate={{ y: 0 }}
+            exit={{ y: '100%' }}
+            transition={{ type: 'spring', damping: 30, stiffness: 300 }}
           >
-            {/* Header - Like DailyProgressModal */}
-            <div className="px-5 py-4 border-b border-gray-100 flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className={`w-12 h-12 bg-gradient-to-br ${config.gradient} rounded-xl flex items-center justify-center`}>
-                  <Icon className="w-6 h-6 text-white" />
+            <div className="bg-white rounded-t-3xl w-full max-w-md max-h-[85vh] overflow-y-auto shadow-2xl">
+              {/* Header */}
+              <div className="sticky top-0 bg-white px-5 py-4 border-b border-gray-100 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className={`w-12 h-12 bg-gradient-to-br ${config.gradient} rounded-xl flex items-center justify-center`}>
+                    <Icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900">Tema {tema.id}</h3>
+                    <p className="text-xs text-gray-500">{tema.nombre}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-bold text-gray-900">Tema {tema.id}</h3>
-                  <p className="text-xs text-gray-500">{tema.nombre}</p>
+                <motion.button
+                  onClick={onClose}
+                  className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200"
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <X className="w-5 h-5 text-gray-500" />
+                </motion.button>
+              </div>
+
+              {/* Progress section */}
+              <div className="px-5 py-5 bg-gradient-to-br from-purple-50 to-violet-50">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-sm font-medium text-gray-700">Tu progreso</span>
+                  <span className={`text-sm font-bold ${config.text}`}>{tema.progreso}%</span>
+                </div>
+                <div className="h-3 bg-white/80 rounded-full overflow-hidden shadow-inner">
+                  <motion.div
+                    className={`h-full bg-gradient-to-r ${config.gradient} rounded-full`}
+                    initial={{ width: 0 }}
+                    animate={{ width: `${tema.progreso}%` }}
+                    transition={spring.smooth}
+                  />
+                </div>
+                <div className="flex items-center justify-between mt-2">
+                  <span className="text-xs text-gray-500">45 preguntas disponibles</span>
+                  <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${config.bg} ${config.text}`}>
+                    {config.label}
+                  </span>
                 </div>
               </div>
-              <motion.button
-                onClick={onClose}
-                className="p-2 rounded-xl hover:bg-gray-100"
-                whileTap={{ scale: 0.95 }}
-              >
-                <X className="w-5 h-5 text-gray-400" />
-              </motion.button>
-            </div>
 
-            {/* Progress section - Like DailyProgressModal */}
-            <div className="px-5 py-5 bg-gradient-to-br from-purple-50 to-violet-50">
-              <div className="flex items-center justify-between mb-3">
-                <span className="text-sm font-medium text-gray-700">Tu progreso</span>
-                <span className={`text-sm font-bold ${config.text}`}>{tema.progreso}%</span>
-              </div>
-              <div className="h-3 bg-white/80 rounded-full overflow-hidden shadow-inner">
-                <motion.div
-                  className={`h-full bg-gradient-to-r ${config.gradient} rounded-full`}
-                  initial={{ width: 0 }}
-                  animate={{ width: `${tema.progreso}%` }}
-                  transition={spring.smooth}
-                />
-              </div>
-              <div className="flex items-center justify-between mt-2">
-                <span className="text-xs text-gray-500">45 preguntas disponibles</span>
-                <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${config.bg} ${config.text}`}>
-                  {config.label}
-                </span>
-              </div>
-            </div>
-
-            {/* Options - Consistent purple/violet/amber palette */}
-            <div className="p-4">
-              <p className="text-xs font-semibold text-gray-400 uppercase mb-3 px-1">¿Qué quieres hacer?</p>
-              <div className="space-y-2">
+              {/* Options */}
+              <div className="p-5 space-y-3">
                 {options.map((option, i) => {
                   const OptIcon = option.icon;
                   return (
                     <motion.button
                       key={option.id}
-                      className="w-full p-4 bg-white border border-gray-100 rounded-xl flex items-center gap-4 text-left hover:border-purple-200 hover:bg-purple-50/30 transition-all"
-                      initial={{ opacity: 0, y: 10 }}
+                      className="w-full p-4 bg-gray-50 hover:bg-purple-50 rounded-xl flex items-center gap-4 text-left transition-all"
+                      initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ ...spring.gentle, delay: 0.1 + i * 0.05 }}
-                      whileHover={{ scale: 1.01, x: 4 }}
+                      transition={{ delay: 0.1 + i * 0.05 }}
                       whileTap={{ scale: 0.98 }}
                       onClick={() => {
                         console.log(`Selected: ${option.id} for tema ${tema.id}`);
                         onClose();
                       }}
                     >
-                      <div className={`w-10 h-10 bg-gradient-to-br ${option.gradient} rounded-xl flex items-center justify-center flex-shrink-0`}>
-                        <OptIcon className="w-5 h-5 text-white" />
+                      <div className={`w-12 h-12 bg-gradient-to-br ${option.gradient} rounded-xl flex items-center justify-center flex-shrink-0`}>
+                        <OptIcon className="w-6 h-6 text-white" />
                       </div>
                       <div className="flex-1">
                         <p className="font-semibold text-gray-800">{option.label}</p>
-                        <p className="text-xs text-gray-500">{option.desc}</p>
+                        <p className="text-sm text-gray-500">{option.desc}</p>
                       </div>
-                      <ChevronRight className="w-5 h-5 text-gray-300" />
+                      <ChevronRight className="w-5 h-5 text-gray-400" />
                     </motion.button>
                   );
                 })}
               </div>
-            </div>
 
-            {/* Footer - Like DailyProgressModal */}
-            <div className="px-5 py-4 bg-gray-50 border-t border-gray-100">
-              <motion.button
-                onClick={onClose}
-                className="w-full py-3 bg-purple-600 text-white font-semibold rounded-xl"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                Empezar sesión completa
-              </motion.button>
+              {/* Footer CTA */}
+              <div className="px-5 pb-8 pt-2">
+                <motion.button
+                  onClick={onClose}
+                  className="w-full py-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-all"
+                  whileTap={{ scale: 0.98 }}
+                >
+                  Empezar sesión completa
+                </motion.button>
+              </div>
             </div>
           </motion.div>
         </>
@@ -2707,7 +2704,8 @@ function HomeMomentumFortaleza({
   onPrecisionClick,
   onLevelClick,
   onSettingsClick,
-  onShowProgress
+  onShowProgress,
+  onNavigate
 }) {
   const nextTema = temas.find(t => t.estado === 'riesgo') || temas.find(t => t.estado === 'progreso') || temas[0];
   const config = estadoConfig[nextTema?.estado] || estadoConfig.nuevo;
@@ -2732,31 +2730,57 @@ function HomeMomentumFortaleza({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
-      {/* Compact header */}
-      <div className="flex items-center justify-between">
-        <div>
-          <p className="text-xs text-purple-500 font-medium uppercase tracking-wider">
-            {new Date().toLocaleDateString('es-ES', { weekday: 'long' })}
-          </p>
-          <h1 className="text-xl font-bold text-gray-900">Tu Momentum</h1>
-        </div>
-        <div className="flex items-center gap-2">
-          <motion.button
-            onClick={onShowProgress}
-            className="relative w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <span className="text-sm font-bold text-purple-600">{dailyProgressPercent}%</span>
-          </motion.button>
-          <motion.button
-            onClick={onSettingsClick}
-            className="w-10 h-10 bg-gray-50 rounded-xl flex items-center justify-center"
-            whileTap={{ scale: 0.95 }}
-          >
-            <Settings className="w-4 h-4 text-gray-400" />
-          </motion.button>
-        </div>
+      {/* TopBar - like webapp */}
+      <div className="flex items-center justify-between h-12">
+        {/* Left - Progress circle button */}
+        <motion.button
+          onClick={onShowProgress}
+          className="relative w-10 h-10 flex items-center justify-center"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <svg className="w-9 h-9 transform -rotate-90">
+            <circle
+              cx="18" cy="18" r="14"
+              fill="none"
+              stroke="#F3E8FF"
+              strokeWidth="3"
+            />
+            <motion.circle
+              cx="18" cy="18" r="14"
+              fill="none"
+              stroke="#8B5CF6"
+              strokeWidth="3"
+              strokeLinecap="round"
+              initial={{ strokeDasharray: "0 88" }}
+              animate={{ strokeDasharray: `${(dailyProgressPercent / 100) * 88} 88` }}
+              transition={spring.smooth}
+            />
+          </svg>
+          <span className="absolute inset-0 flex items-center justify-center text-[10px] font-bold text-purple-600">
+            {dailyProgressPercent}
+          </span>
+        </motion.button>
+
+        {/* Center - Title */}
+        <h1 className="text-[15px] font-semibold text-gray-800">Oposita Smart</h1>
+
+        {/* Right - Settings */}
+        <motion.button
+          onClick={onSettingsClick}
+          className="w-10 h-10 flex items-center justify-center"
+          whileTap={{ scale: 0.95 }}
+        >
+          <Settings className="w-[18px] h-[18px] text-gray-500" />
+        </motion.button>
+      </div>
+
+      {/* Greeting section */}
+      <div className="pt-1">
+        <p className="text-xs text-purple-500 font-medium uppercase tracking-wider">
+          {new Date().toLocaleDateString('es-ES', { weekday: 'long' })}
+        </p>
+        <h2 className="text-xl font-bold text-gray-900">Tu Momentum</h2>
       </div>
 
       {/* Bento Grid */}
@@ -2930,6 +2954,61 @@ function HomeMomentumFortaleza({
           </div>
         </motion.button>
       </div>
+
+      {/* Footer - like webapp */}
+      <motion.footer
+        className="mt-6 mb-4"
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.4 }}
+      >
+        <div className="bg-white rounded-xl border border-gray-100 divide-y divide-gray-100 overflow-hidden mb-8">
+          {/* Acerca de */}
+          <motion.button
+            onClick={() => onNavigate?.('about')}
+            className="w-full px-4 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
+            whileTap={{ scale: 0.98 }}
+          >
+            <div className="flex items-center gap-3">
+              <Info className="w-5 h-5 text-gray-400" />
+              <span className="text-gray-700">Acerca de</span>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-300" />
+          </motion.button>
+
+          {/* FAQ */}
+          <motion.button
+            onClick={() => onNavigate?.('faq')}
+            className="w-full px-4 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
+            whileTap={{ scale: 0.98 }}
+          >
+            <div className="flex items-center gap-3">
+              <HelpCircle className="w-5 h-5 text-gray-400" />
+              <span className="text-gray-700">Preguntas Frecuentes</span>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-300" />
+          </motion.button>
+
+          {/* Instagram */}
+          <motion.button
+            onClick={() => window.open('https://instagram.com/opositasmart', '_blank')}
+            className="w-full px-4 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
+            whileTap={{ scale: 0.98 }}
+          >
+            <div className="flex items-center gap-3">
+              <Instagram className="w-5 h-5 text-gray-400" />
+              <span className="text-gray-700">Instagram</span>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-300" />
+          </motion.button>
+        </div>
+
+        {/* Branding */}
+        <div className="text-center py-6">
+          <p className="text-gray-900 font-semibold text-lg mb-1">Oposita Smart</p>
+          <p className="text-gray-500 text-sm">La forma inteligente de opositar</p>
+        </div>
+      </motion.footer>
     </motion.div>
   );
 }

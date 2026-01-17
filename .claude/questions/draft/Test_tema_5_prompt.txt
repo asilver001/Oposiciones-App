@@ -1,0 +1,510 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** Test tema 5.pdf
+**Total preguntas:** 40
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** Se�ale la FALSA de acuerdo con el art�culo 310 del TFUE:
+
+**Opciones:**
+  0. Todos los ingresos y gastos de la Uni�n deber�n estar comprendidos en las previsiones
+  1. orrespondientes a cada ejercicio presupuestario y consignados en el presupuesto
+  2. El Parlamento Europeo y el Consejo establecer�n el presupuesto anual de la Uni�n con
+  3. rreglo al procedimiento legislativo ordinario
+
+---
+
+### Pregunta 2
+
+**Texto:** El presupuesto anual comprender�:
+
+**Opciones:**
+  0. Los ingresos y gastos de la Uni�n, exclusivamente.
+  1. Los ingresos y gastos de la Comunidad Econ�mica Europea.
+  2. Los ingresos y gastos de la Uni�n y los de la Comunidad Europea de Energ�a At�mica
+  3. Los ingresos y gastos de los Estados miembros.
+
+---
+
+### Pregunta 3
+
+**Texto:** �C�mo se adopta el presupuesto de la Uni�n?:
+
+**Opciones:**
+  0. Lo adopta el Consejo Europeo, por unanimidad.
+  1. Lo adoptan los Estados miembros, de com�n acuerdo.
+  2. Lo adopta el Banco Central Europeo.
+  3. Lo adoptan el Consejo y el Parlamento, sobre un proyecto de la Comisi�n.
+
+---
+
+### Pregunta 4
+
+**Texto:** Se�ale la FALSA, de conformidad con el art�culo 311 del TFUE:
+
+**Opciones:**
+  0. La Uni�n se dotar� de los medios necesarios para alcanzar sus objetivos y para llevar a
+  1. abo sus pol�ticas.
+  2. Sin perjuicio del concurso de otros ingresos, el presupuesto ser� financiado �ntegramente
+  3. on cargo a los recursos propios.
+
+---
+
+### Pregunta 5
+
+**Texto:** Respecto al Marco Financiero Plurianual, se�ale la correcta:
+
+**Opciones:**
+  0. El marco financiero plurianual tendr� por objeto garantizar la evoluci�n ordenada de los
+  1. Se establecer� para un per�odo m�nimo de siete a�os.
+  2. El presupuesto anual de la Uni�n respetar� el marco financiero plurianual.
+  3. El Consejo adoptar� con arreglo a un procedimiento legislativo ordinario un reglamento
+
+---
+
+### Pregunta 6
+
+**Texto:** Respecto al presupuesto de la Uni�n:
+
+**Opciones:**
+  0. El ejercicio presupuestario comenzar� el 1 de enero y finalizar� el 1 de diciembre.
+  1. El Parlamento Europeo y el Consejo Europeo establecer�n el presupuesto anual de la
+  2. Cada instituci�n, excepto el Banco Central Europeo, elaborar�, antes del 1 de octubre,
+  3. La Comisi�n presentar� el proyecto de presupuesto, a m�s tardar el 1 de septiembre del
+
+---
+
+### Pregunta 7
+
+**Texto:** Cuando en la Uni�n Europea es preciso realizar acciones plurianuales, se recurre
+
+**Opciones:**
+  0. los cr�ditos disociados, se�ale la correcta:
+  1. Se dividen en cr�ditos iniciales y cr�ditos definitivos.
+  2. Se dividen en cr�ditos de compromiso y cr�ditos de pago.
+  3. Los cr�ditos de compromiso financiar�n los gastos resultantes de la ejecuci�n de los
+
+---
+
+### Pregunta 8
+
+**Texto:** �Cu�l de las siguientes instituciones u �rganos NO cuenta con una secci�n en el
+
+**Opciones:**
+  0. El Supervisor Europeo de Protecci�n de Datos.
+  1. El Defensor del Pueblo.
+  2. El Alto Representante.
+  3. El Servicio Europeo de Acci�n Exterior.
+
+---
+
+### Pregunta 9
+
+**Texto:** �Cu�l de los siguientes es un recurso propio previsto en la Decisi�n 2020/2053, del
+
+**Opciones:**
+  0. onsejo?:
+  1. El 0,80 % del IVA recaudado en los Estados miembros.
+  2. Un porcentaje del PIB de los Estados miembros.
+  3. Las cotizaciones sobre el tabaco.
+
+---
+
+### Pregunta 10
+
+**Texto:** Se�ale la FALSA en relaci�n con los recursos propios de la Uni�n:
+
+**Opciones:**
+  0. Sin perjuicio del concurso de otros ingresos, financiar�n �ntegramente el presupuesto de
+  1. Aparecen regulados en una decisi�n que se adopta por procedimiento legislativo
+  2. El que m�s recaudaci�n aporta en la actualidad a las arcas comunitarias es el procedente
+  3. e la Renta Nacional Bruta.
+
+---
+
+### Pregunta 11
+
+**Texto:** De acuerdo con la Decisi�n 2020/2053:
+
+**Opciones:**
+  0. El importe total de los recursos propios asignados a la Uni�n para financiar los cr�ditos
+  1. e compromiso anuales no rebasar� el 1,46 % de la suma de la RNB de los 27.
+  2. El importe total de los recursos propios asignados a la Uni�n para financiar los cr�ditos
+  3. e compromiso anuales no rebasar� el 1,40 % de la suma de la RNB de los 27.
+
+---
+
+### Pregunta 12
+
+**Texto:** Sobre el Marco Financiero Plurianual (MFP) es FALSO lo siguiente:
+
+**Opciones:**
+  0. Se regula en el art�culo 312 del TFUE.
+  1. Deber� cubrir un periodo m�nimo de cinco a�os.
+  2. Se establece mediante una decisi�n legislativa.
+  3. Tiene por objeto garantizar la evoluci�n ordenada de los gastos de la Uni�n dentro del
+
+---
+
+### Pregunta 13
+
+**Texto:** El proyecto de presupuesto anual de la Uni�n:
+
+**Opciones:**
+  0. Comprende una previsi�n de ingresos y una previsi�n de gastos de todas las instituciones
+  1. e la Uni�n.
+  2. Se presenta antes de 1 de septiembre al Consejo, y antes del 1 de octubre al Parlamento
+  3. Comprende una previsi�n de ingresos y gastos de las instituciones de la Uni�n, salvo del
+
+---
+
+### Pregunta 14
+
+**Texto:** En cuanto a la elaboraci�n del presupuesto de la Uni�n:
+
+**Opciones:**
+  0. El Consejo tiene un plazo de 42 d�as para adoptar su posici�n sobre el proyecto de
+  1. El Comit� de Conciliaci�n dispone de un plazo de 14 d�as para adoptar un texto conjunto
+  2. El Parlamento Europeo dispone de 21 d�as para aprobar la posici�n del Consejo o
+  3. El Consejo y el Parlamento cuentan con 14 d�as para aprobar el texto conjunto adoptado
+
+---
+
+### Pregunta 15
+
+**Texto:** �Qu� ocurrir� cuando el Parlamento Europeo rechace el texto conjunto del Comit�
+
+**Opciones:**
+  0. e Conciliaci�n, y el Consejo lo apruebe?:
+  1. El Parlamento podr�, en un plazo de 14 d�as desde dicho rechazo, decidir por mayor�a
+  2. e los miembros que lo componen y tres quintas partes de los votos emitidos que
+  3. onfirma la totalidad o parte de las enmiendas que introdujo en el proyecto y el
+
+---
+
+### Pregunta 16
+
+**Texto:** El presupuesto de la Uni�n se ejecutar�
+
+**Opciones:**
+  0. El Alto Representante y la Comisi�n.
+  1. El Tribunal de Cuentas y la Comisi�n.
+  2. El Parlamento Europeo y el Consejo.
+  3. La Comisi�n y los Estados Miembros.
+
+---
+
+### Pregunta 17
+
+**Texto:** Cuando haya concluido el procedimiento presupuestario, �qui�n declara que ha
+
+**Opciones:**
+  0. El presidente del Consejo Europeo
+  1. El presidente del Consejo
+  2. El presidente del Parlamento Europeo
+  3. El presidente del Parlamento Europeo junto con el presidente del Consejo
+
+---
+
+### Pregunta 18
+
+**Texto:** Si al iniciarse un ejercicio presupuestario a�n no se ha adoptado definitivamente el
+
+**Opciones:**
+  0. Los gastos podr�n efectuarse mensualmente por partidas dentro del l�mite de la doceava
+  1. Los gastos podr�n efectuarse mensualmente por cap�tulos dentro del l�mite de la doceava
+  2. Los gastos podr�n efectuarse anualmente por cap�tulos dentro del l�mite de la doceava
+  3. Los gastos podr�n efectuarse mensualmente por cap�tulos dentro del l�mite de la doceava
+
+---
+
+### Pregunta 19
+
+**Texto:** De acuerdo con el art�culo 174 del TFUE, la Uni�n prestar� especial atenci�n a las
+
+**Opciones:**
+  0. Las regiones de la Rep�blica Federal de Alemania afectadas por la divisi�n de Alemania.
+  1. Las regiones ultraperif�ricas y transnacionales.
+  2. Las zonas afectadas por una transici�n pol�tica
+  3. Las zonas rurales y a las regiones que padecen desventajas naturales o demogr�ficas
+
+---
+
+### Pregunta 20
+
+**Texto:** �Qu� fondo estar� destinado a contribuir a la correcci�n de los principales
+
+**Opciones:**
+  0. esequilibrios regionales dentro de la Uni�n mediante una participaci�n en el
+  1. esarrollo y en el ajuste estructural de las regiones menos desarrolladas y en la
+  2. El Fondo Social Europeo +.
+  3. El Fondo de Cohesi�n.
+
+---
+
+### Pregunta 21
+
+**Texto:** Se�ale la correcta respecto a los
+
+**Opciones:**
+  0. El objetivo de inversi�n en empleo y crecimiento en los Estados miembros y las
+  1. El objetivo cooperaci�n territorial europea o Interreg, ser� financiado por el FSE+ y el
+  2. La inversi�n en empleo y crecimiento en los Estados miembros y las regiones, se
+  3. La cooperaci�n territorial europea (Interreg), se financia con el FEDER pero tambi�n
+
+---
+
+### Pregunta 22
+
+**Texto:** Dentro del objetivo de inversi�n en empleo y crecimiento, el FEDER prestar�
+
+**Opciones:**
+  0. yuda a:
+  1. Las regiones menos desarrolladas, en transici�n o las m�s desarrolladas.
+  2. Las regiones en transici�n cuyo PIB sea inferior al 70% de la media de la UE-27.
+  3. Los Estados miembros cuya RNB sea inferior al 90% de la RNB media de la UE-27.
+
+---
+
+### Pregunta 23
+
+**Texto:** �Cu�l de los siguientes NO es uno de los cinco objetivos pol�ticos de la pol�tica de
+
+**Opciones:**
+  0. ohesi�n para el periodo 2021-2027?
+  1. Una Europa m�s competitiva e inteligente.
+  2. Una Europa m�s verde, baja en carbono y resiliente.
+  3. Una Europa m�s conectada, mejorando la movilidad.
+
+---
+
+### Pregunta 24
+
+**Texto:** �Qu� fondo proporciona una contribuci�n financiera a proyectos en los sectores
+
+**Opciones:**
+  0. el medioambiente y de las redes transeuropeas en materia de infraestructuras del
+  1. El FEDER.
+  2. El Fondo de Cohesi�n.
+  3. El Fondo de Transici�n Justa.
+
+---
+
+### Pregunta 25
+
+**Texto:** Se�ale la respuesta FALSA en relaci�n con el Fondo de Transici�n Justa:
+
+**Opciones:**
+  0. Fue creado en 2021, mediante un reglamento aprobado por el procedimiento legislativo
+  1. Apoya el objetivo de inversi�n en empleo y crecimiento, pero no los cinco objetivos
+  2. Respaldar� el objetivo espec�fico de hacer posible que las regiones y las personas afronten
+  3. lim�ticamente neutra de la Uni�n de aqu� a 2050.
+
+---
+
+### Pregunta 26
+
+**Texto:** Las regiones cuyo PIB es equivalente al 82 % del PIB medio de la UE-27:
+
+**Opciones:**
+  0. Se denominan regiones menos desarrolladas y pueden recibir financiaci�n del FEDER
+  1. Se denominan regiones m�s desarrolladas y pueden recibir financiaci�n del FEDER y
+  2. el FSE+ dentro del objetivo de inversi�n en empleo y crecimiento.
+  3. Se denominan regiones en transici�n y pueden recibir financiaci�n del FEDER y FSE+
+
+---
+
+### Pregunta 27
+
+**Texto:** De acuerdo con el Reglamento 2021/1056, el Fondo de Transici�n Justa dar� ayuda
+
+**Opciones:**
+  0. La recuperaci�n tras los da�os ocasionados por una cat�strofe natural grave.
+  1. Los despidos masivos a causa de cambios ocasionados por la globalizaci�n.
+  2. Las inversiones en medio ambiente, redes transeuropeas, asistencia t�cnica e
+  3. La poblaci�n,
+
+---
+
+### Pregunta 28
+
+**Texto:** �Qu� organismo concede de pr�stamos y garant�as sin perseguir fines lucrativos?
+
+**Opciones:**
+  0. El Banco Central Europeo.
+  1. El Banco Europeo de Inversiones.
+  2. El Mecanismo de Desarrollo Europeo.
+  3. El Tribunal de Cuentas.
+
+---
+
+### Pregunta 29
+
+**Texto:** �Cada cu�ntos a�os y qu� instituci�n presentar� un informe al Parlamento
+
+**Opciones:**
+  0. Cada dos a�os y el Consejo Europeo
+  1. Cada cinco a�os y la Comisi�n
+  2. Cada tres a�os y la Comisi�n
+  3. Cada seis a�os y el Consejo Europeo
+
+---
+
+### Pregunta 30
+
+**Texto:** �Cu�l de los siguientes es un componente del objetivo de cooperaci�n territorial
+
+**Opciones:**
+  0. La cooperaci�n mar�tima.
+  1. La cooperaci�n transnacional.
+  2. La cooperaci�n continental.
+  3. La cooperaci�n de las regiones rurales
+
+---
+
+### Pregunta 31
+
+**Texto:** �Qu� es el Next Generation EU?
+
+**Opciones:**
+  0. Un fondo presupuestario con finalidad estructural creado en 2021.
+  1. Un programa de apoyo exclusivo a las empresas del sector sanitario.
+  2. Un instrumento europeo para apoyar la recuperaci�n tras la crisis de la COVID-19.
+  3. Un instrumento europeo para apoyar la recuperaci�n de las regiones m�s dependientes
+
+---
+
+### Pregunta 32
+
+**Texto:** �Cu�l de las siguientes medidas NO apoya el Next Generation EU?
+
+**Opciones:**
+  0. Medidas para restablecer el empleo y la creaci�n de puestos de trabajo.
+  1. Medidas de apoyo a empresas no comunitarias.
+  2. Medidas para la investigaci�n y la innovaci�n.
+  3. Medidas para garantizar una transici�n justa hacia una econom�a neutra desde el punto
+
+---
+
+### Pregunta 33
+
+**Texto:** �C�mo se distribuyen las ayudas del instrumento Next Generation EU?
+
+**Opciones:**
+  0. Todas las ayudas se conceden a trav�s de pr�stamos reembolsables.
+  1. Todas las ayudas se conceden a trav�s de subvenciones no reembolsables
+  2. La Comisi�n y el Consejo decidir�n qu� parte de las ayudas que reciban es reembolsable
+  3. En torno a 360.000 millones de euros son reembolsables y los restantes 390.000 millones
+
+---
+
+### Pregunta 34
+
+**Texto:** Ordene de mayor a menor cantidad econ�mica los mecanismos o instrumentos que
+
+**Opciones:**
+  0. analizan las ayudas del Next Generation EU:
+  1. RescEU, REACT-EU y Mecanismo de Recuperaci�n y Resiliencia.
+  2. El Mecanismo de Recuperaci�n y Resiliencia, RescEU y REACT-EU.
+  3. El Mecanismo de Recuperaci�n y Resiliencia, REACT-EU y RescEU.
+
+---
+
+### Pregunta 35
+
+**Texto:** �C�mo se conoce al Reglamento (UE, Euratom) 2020/2092 del Parlamento Europeo
+
+**Opciones:**
+  0. Reglamento del Next Generation.
+  1. Reglamento IPA III.
+  2. Reglamento de condicionalidad.
+  3. Reglamento financiero.
+
+---
+
+### Pregunta 36
+
+**Texto:** Respecto de los principios que rigen el presupuesto de la Uni�n, se�ale la correcta:
+
+**Opciones:**
+  0. El principio de transparencia se manifiesta mediante la publicaci�n del presupuesto en
+  1. El principio de especialidad especifica que los cr�ditos se especializar�n por t�tulos y
+  2. ap�tulos y los cap�tulos estar�n subdivididos en art�culos y partidas.
+  3. El principio de unidad de cuenta implica que la totalidad de los ingresos cubrir� la
+
+---
+
+### Pregunta 37
+
+**Texto:** Se�ale la correcta en relaci�n a los recursos propios:
+
+**Opciones:**
+  0. En el recurso procedente del pl�stico se aplica un tipo uniforme de 0,30 euros/kg con
+  1. El recurso del IVA consiste en la aplicaci�n de un tipo uniforme de referencia del 1,30%
+  2. todos los Estados miembros.
+  3. En el recurso RNB se aplica un tipo uniforme del 0,3%, a la suma de las RNB de todos
+
+---
+
+### Pregunta 38
+
+**Texto:** Indique la correcta respecto del MFP:
+
+**Opciones:**
+  0. Se establecer� para un periodo m�nimo de 5 a�os.
+  1. En la actualidad cubre el periodo 2023-2030.
+  2. Se regula en el TFUE desde el Tratado de Maastricht.
+  3. Se aprueba por Reglamento del Consejo por mayor�a cualificada, previa aprobaci�n del
+
+---
+
+### Pregunta 39
+
+**Texto:** Indique qu� suceder� a m�s tardar el 1 de octubre:
+
+**Opciones:**
+  0. La Comisi�n elabora el proyecto de presupuesto y lo remite al Consejo y al Parlamento
+  1. Cada instituci�n, salvo el BCE, elabora las previsiones de sus gastos y las remite a la
+  2. omisi�n
+  3. El Consejo adopta su posici�n y la transmite al Parlamento Europeo.
+
+---
+
+### Pregunta 40
+
+**Texto:** El Reglamento 2020/2093 fija el l�mite m�ximo anual del total del gasto de la Uni�n
+
+**Opciones:**
+  0. orrecto seg�n la mayor cantidad asignada:
+  1. Mercado �nico, innovaci�n y econom�a digital, Migraci�n y gesti�n de fronteras,
+  2. Cohesi�n, resiliencia y valores, Recursos naturales y medio ambiente, Mercado �nico,
+  3. Seguridad y defensa, Administraci�n p�blica europea, Migraci�n y gesti�n de fronteras
+
+---

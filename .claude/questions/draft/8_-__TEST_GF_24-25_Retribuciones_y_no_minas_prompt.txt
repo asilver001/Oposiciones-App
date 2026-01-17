@@ -1,0 +1,342 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 8.-  TEST GF 24-25 Retribuciones y nóminas.pdf
+**Total preguntas:** 26
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** De conformidad con la Ley 30/1984, de 2 de agosto, de medidas para la reforma de la
+
+**Opciones:**
+  0. El sueldo y los trienios.
+  1. El sueldo, los trienios y las pagas extraordinarias.
+  2. El sueldo, los trienios y el complemento de destino.
+  3. El sueldo, los trienios y la indemnizaci�n por raz�n del servicio.
+
+---
+
+### Pregunta 2
+
+**Texto:** Las gratificaciones por servicios extraordinarios:
+
+**Opciones:**
+  0. Se imputan al concepto 121, al tratarse de retribuciones complementarias.
+  1. Podr�n ser fijas en su cuant�a, pero no peri�dicas en su devengo.
+  2. Tendr�n car�cter excepcional y solamente podr�n ser reconocidas por servicios
+  3. Son retribuciones b�sicas.
+
+---
+
+### Pregunta 3
+
+**Texto:** Se�ale la respuesta correcta en relaci�n con las pagas extraordinarias:
+
+**Opciones:**
+  0. Ser�n dos al a�o, una en el mes de junio y otra en el mes de diciembre.
+  1. Se devengar�n el d�a 1 de los meses de junio y diciembre y con referencia a la situaci�n y
+  2. erechos del funcionario en dichas fechas.
+  3. En el ejercicio actual, la cuant�a de cada paga extraordinaria ser� de una mensualidad de
+
+---
+
+### Pregunta 4
+
+**Texto:** La cuant�a del complemento de destino asignado a cada puesto de trabajo deber�
+
+**Opciones:**
+  0. Las relaciones de puestos de trabajo.
+  1. La Ley 30/1984, de medidas para la reforma de la Funci�n P�blica.
+  2. La Ley de Presupuestos Generales del Estado.
+  3. La Ley 47/2003, General Presupuestaria.
+
+---
+
+### Pregunta 5
+
+**Texto:** Respecto a los trienios, indique la respuesta INCORRECTA:
+
+**Opciones:**
+  0. Consisten en una cantidad igual para cada grupo o subgrupo, por cada 3 meses de servicio
+  1. En el caso de que un funcionario preste sus servicios sucesivamente en diferentes Cuerpos
+  2. Cuando un funcionario cambie de adscripci�n a grupo antes de completar un trienio, la
+  3. Se trata de una retribuci�n b�sica.
+
+---
+
+### Pregunta 6
+
+**Texto:** Los funcionarios de carrera que, en situaci�n de activo o de servicios especiales, ocupen
+
+**Opciones:**
+  0. Las retribuciones b�sicas correspondientes al grupo o subgrupo de clasificaci�n al que el
+  1. omplementarias que correspondan al puesto de trabajo que desempe�en.
+  2. Las retribuciones b�sicas correspondientes a su grupo o subgrupo de clasificaci�n,
+  3. Las retribuciones b�sicas correspondientes al grupo o subgrupo de clasificaci�n al que el
+
+---
+
+### Pregunta 7
+
+**Texto:** �Cu�l de las siguientes retribuciones no tiene el car�cter de retribuci�n b�sica?
+
+**Opciones:**
+  0. El sueldo.
+  1. Las pagas extraordinarias, ya que incluyen una mensualidad de complemento de destino.
+  2. El complemento de productividad.
+  3. Las respuestas b) y c) son correctas.
+
+---
+
+### Pregunta 8
+
+**Texto:** La indemnizaci�n que viene a compensar de un modo especial a los funcionarios que
+
+**Opciones:**
+  0. Indemnizaci�n por destino en el extranjero que se imputa al concepto 123
+  1. Indemnizaci�n por residencia que se imputa al concepto 121 �Retribuciones
+  2. omplementarias�.
+  3. Indemnizaci�n por residencia y se percibe por aquellos funcionarios que residen en Islas
+
+---
+
+### Pregunta 9
+
+**Texto:** El complemento espec�fico:
+
+**Opciones:**
+  0. Retribuir� el especial rendimiento, la actividad y dedicaci�n extraordinarias y el inter�s o
+  1. Se percibir� en catorce pagas iguales de las que doce ser�n de percepci�n mensual y dos
+  2. dicionales, del mismo importe que una mensual, en los meses de julio y diciembre.
+  3. Se fija en las relaciones de puestos de trabajo y se incrementar� anualmente en el
+
+---
+
+### Pregunta 10
+
+**Texto:** Las retribuciones b�sicas y complementarias que se devenguen con car�cter fijo y
+
+**Opciones:**
+  0. la situaci�n y derechos del funcionario referidos al primer d�a h�bil del mes a que
+  1. orrespondan, salvo en los siguientes casos, en que se liquidar�n por d�as:
+  2. En el mes de iniciaci�n de una licencia con derecho a retribuci�n.
+  3. En el mes en que se produzca un cambio de puesto de trabajo dentro de la Administraci�n
+
+---
+
+### Pregunta 11
+
+**Texto:** Cuando el tiempo de servicios prestados hasta el d�a en que se devengue la paga
+
+**Opciones:**
+  0. Computando cada d�a de servicios prestados en el importe resultante de dividir la cuant�a
+  1. e la paga extraordinaria entre 182 d�as o 183 d�as en a�os bisiestos.
+  2. Computando cada d�a de servicios prestados en el importe resultante de dividir la cuant�a
+  3. e la paga extraordinaria entre 183 d�as.
+
+---
+
+### Pregunta 12
+
+**Texto:** Si el d�a 28 del mes de junio se produce un cambio de puesto de trabajo de un funcionario
+
+**Opciones:**
+  0. el Ministerio de Econom�a, Comercio y Empresa al Ministerio de Hacienda, el pago de
+  1. Al Ministerio de Econom�a, Comercio y Empresa.
+  2. Al Ministerio de Hacienda.
+  3. A ambos Ministerios, liquidando cada uno de ellos el n�mero de d�as correspondientes a
+
+---
+
+### Pregunta 13
+
+**Texto:** El importe l�quido:
+
+**Opciones:**
+  0. Es la cantidad resultante de sumar los importes de todas las retribuciones.
+  1. Es la cantidad resultante de restar al importe �ntegro la suma de los importes de todas las
+  2. educciones formalizables.
+  3. Es la cantidad resultante de restar al importe l�quido la suma de los importes de todas las
+
+---
+
+### Pregunta 14
+
+**Texto:** La hoja resumen de n�mina deber� ir firmada por:
+
+**Opciones:**
+  0. El Habilitado y funcionario que designe el Jefe de la Unidad Administrativa a la que est�
+  1. dscrita la Habilitaci�n.
+  2. El Habilitado.
+  3. El Jefe del Centro o dependencia correspondiente.
+
+---
+
+### Pregunta 15
+
+**Texto:** Las n�minas ordinarias:
+
+**Opciones:**
+  0. Comprender�n para cada perceptor, al menos, las remuneraciones fijas en su cuant�a y
+  1. orrespondiente las pagas extraordinarias de junio y diciembre.
+  2. Se cerrar�n antes del d�a 5 del mes al que corresponden los haberes.
+  3. Se cerrar�n el d�a 7 del mes al que correspondan los haberes.
+
+---
+
+### Pregunta 16
+
+**Texto:** Se considera una modificaci�n en n�mina transitoria:
+
+**Opciones:**
+  0. El reconocimiento de un trienio.
+  1. Las pagas extraordinarias.
+  2. Una reducci�n de jornada de trabajo.
+  3. Una reincorporaci�n al puesto de trabajo de personal con licencia, si �sta implic� la baja
+
+---
+
+### Pregunta 17
+
+**Texto:** �Cu�l de las siguientes deducciones que pueden aparecer en la n�mina se considera no
+
+**Opciones:**
+  0. IRPF.
+  1. Derechos pasivos.
+  2. MUFACE.
+  3. Cuota obrera del R�gimen General de la Seguridad Social.
+
+---
+
+### Pregunta 18
+
+**Texto:** La n�mina se divide en las siguientes partes:
+
+**Opciones:**
+  0. Cuerpo de la n�mina, res�menes de n�mina y estados justificativos de la n�mina.
+  1. Datos de cabecera, res�menes de n�mina y estados justificativos de la n�mina.
+  2. Cuerpo de la n�mina, informaci�n de cabecera y estados justificativos de la n�mina.
+  3. Res�menes de n�mina y estados justificativos de la n�mina.
+
+---
+
+### Pregunta 19
+
+**Texto:** �Qui�n ordena el pago de la n�mina en un ministerio?
+
+**Opciones:**
+  0. El Director General del Tesoro y Pol�tica Financiera.
+  1. El Director General de Presupuestos.
+  2. El Titular del Departamento Ministerial.
+  3. El Habilitado.
+
+---
+
+### Pregunta 20
+
+**Texto:** La devoluci�n, por parte de un funcionario, de un anticipo reintegrable:
+
+**Opciones:**
+  0. Es una deducci�n no formalizable que se imputa al cap�tulo 1 de gastos.
+  1. Es una deducci�n formalizable que se imputa al cap�tulo 1 de ingresos.
+  2. Es una deducci�n no formalizable que se imputa al cap�tulo 8 de gastos.
+  3. Es una deducci�n formalizable que se imputa al cap�tulo 8 de ingresos.
+
+---
+
+### Pregunta 21
+
+**Texto:** Con car�cter general, la tramitaci�n contable de las retribuciones de car�cter fijo y
+
+**Opciones:**
+  0. Documento RC y AD al inicio del ejercicio, por el importe que se prevea gastar durante
+  1. icho ejercicio y documentos OK por cada n�mina.
+  2. Documento AD al inicio del ejercicio, por el importe que se prevea gastar durante dicho
+  3. Documento ADOK por cada n�mina.
+
+---
+
+### Pregunta 22
+
+**Texto:** El pago de las retribuciones del personal se har�, a opci�n de los interesados, mediante:
+
+**Opciones:**
+  0. Transferencia bancaria o cheque nominativo.
+  1. Transferencia bancaria, cheque nominativo o efectivo.
+  2. Transferencia bancaria o cheque al portador.
+  3. Transferencia bancaria.
+
+---
+
+### Pregunta 23
+
+**Texto:** Los libramientos para atender el pago de las retribuciones:
+
+**Opciones:**
+  0. Se expedir�n, en todo caso, a favor de cuentas corrientes abiertas a nombre de las
+  1. Se transferir�n con antelaci�n suficiente para que las Habilitaciones puedan cumplir con
+  2. eba hacerse efectivo el pago.
+  3. Se expedir�n a favor de las correspondientes Habilitaciones por el importe neto.
+
+---
+
+### Pregunta 24
+
+**Texto:** Seg�n el Decreto 680/1974, de 28 de febrero, por el que se dispone el pago de haberes y
+
+**Opciones:**
+  0. El �rgano que aprob� el gasto.
+  1. El �rgano que reconoci� la obligaci�n.
+  2. El �rgano que orden� el pago.
+  3. El �rgano que realiz� el pago material.
+
+---
+
+### Pregunta 25
+
+**Texto:** Las habilitaciones remitir�n las cuentas justificativas al �rgano que reconoci� la
+
+**Opciones:**
+  0. Dentro del mes siguiente a aquel en que se produjo el pago de las retribuciones.
+  1. Dentro de los dos meses siguientes a aquel en que se produjo el pago de las retribuciones.
+  2. Dentro de los tres meses siguientes a aquel en que se produjo el pago de las retribuciones.
+  3. Dentro de los seis meses siguientes a aquel en que se produjo el pago de las retribuciones.
+
+---
+
+### Pregunta 26
+
+**Texto:** Un alta en n�mina de un funcionario de carrera de nuevo ingreso se justifica con:
+
+**Opciones:**
+  0. Copia del t�tulo administrativo, acuerdo de nombramiento o disposici�n en el BOE en la
+  1. Acuerdo de licencia y certificaci�n expedida por el �rgano competente acreditativa de la
+  2. Acuerdo de nombramiento o disposici�n en el BOE en la que figure el nombramiento y
+  3. La respuesta a) es correcta, y adem�s se unir� la liquidaci�n de trienios extendida por el
+
+---

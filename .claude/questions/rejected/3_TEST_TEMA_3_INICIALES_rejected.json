@@ -1,0 +1,1988 @@
+{
+  "metadata": {
+    "source_file": "3 TEST TEMA 3 INICIALES.docx",
+    "source_path": "3 TEST TEMA 3 INICIALES.docx",
+    "tema": 3,
+    "categoria": "general",
+    "extraction_date": "2026-01-15T23:39:53.713440",
+    "reformulation_date": "2026-01-15T23:47:35.579112",
+    "total_questions": 40,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.515371",
+    "completed_count": 0,
+    "failed_count": 40
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "Estn legitimados para interponer el recurso de inconstitucionalidad, segn el Art. 162 de la Constitucin:",
+        "options": [
+          {
+            "text": "El Presidente del Gobierno, el Defensor del Pueblo, 50 diputados, 50 senadores, los rganos colegiados ejecutivos de las Comunidades Autnomas y, en su caso, las Asambleas de las mismas.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Gobierno, 50 diputados, 50 senadores, los rganos colegiados ejecutivos de las Comunidades Autnomas y, en su caso, las Asambleas de las mismas.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Gobierno, el Defensor del Pueblo, 50 diputados y 50 senadores.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Gobierno, el Defensor del Pueblo, 50 diputados, 50 senadores, los rganos colegiados ejecutivos de las Comunidades Autnomas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Estn legitimados para interponer el recurso de inconstitucionalidad, segn el Art. 162 de la Constitucin:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Estn legitimados para interponer el recurso de amparo constitucional, segn el Art. 162 de la Constitucin:",
+        "options": [
+          {
+            "text": "Toda persona natural o jurdica que invoque un inters legtimo, as como el Presidente del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Toda persona natural o jurdica que invoque un inters legtimo, as como el Presidente del Tribunal Constitucional.",
+            "is_correct": false
+          },
+          {
+            "text": "Los mismos que para interponer el recurso de inconstitucionalidad.",
+            "is_correct": false
+          },
+          {
+            "text": "Toda persona natural o jurdica que invoque un inters legtimo, as como el Defensor del Pueblo y el Ministerio Fiscal.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Estn legitimados para interponer el recurso de amparo constitucional, segn el Art. 162 de la Constitucin:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Las sentencias del Tribunal Constitucional, segn el Art. 164 de la Constitucin:",
+        "options": [
+          {
+            "text": "Se publicarn en el BOE y los Boletines Oficiales de las CCAA afectadas.",
+            "is_correct": false
+          },
+          {
+            "text": "Se publicarn en el Diario Oficial de las Comunidades Europeas.",
+            "is_correct": false
+          },
+          {
+            "text": "Se publicarn en el BOE, con los votos particulares si los hubiere.",
+            "is_correct": false
+          },
+          {
+            "text": "Se publicarn en Diario del Tribunal, con los votos particulares si los hubiere.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las sentencias del Tribunal Constitucional, segn el Art. 164 de la Constitucin:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El Tribunal Constitucional, como intrprete supremo de la Constitucin:",
+        "options": [
+          {
+            "text": "Es independiente de los dems rganos constitucionales y est sometido slo a la Constitucin y a su propia Ley Orgnica.",
+            "is_correct": false
+          },
+          {
+            "text": "Es independiente de los dems rganos del Estado y est sometido slo a la Constitucin y a la ley que lo regula.",
+            "is_correct": false
+          },
+          {
+            "text": "Es independiente de los dems rganos del Estado y est sometido a la Constitucin y a las leyes.",
+            "is_correct": false
+          },
+          {
+            "text": "Es independiente de los dems rganos del Estado y est sometido a la Constitucin y al imperio de la ley.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Tribunal Constitucional, como intrprete supremo de la Constitucin:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El Tribunal en Pleno, elige de entre sus miembros:",
+        "options": [
+          {
+            "text": "Por votacin pblica a su Presidente, y propone al Presidente del Gobierno su nombramiento.",
+            "is_correct": false
+          },
+          {
+            "text": "Por votacin secreta a su Presidente, y propone al Presidente del Gobierno su nombramiento.",
+            "is_correct": false
+          },
+          {
+            "text": "Por votacin secreta a su Presidente, y propone al Rey su nombramiento.",
+            "is_correct": false
+          },
+          {
+            "text": "Por votacin pblica a su Presidente, y propone al Rey del Gobierno su nombramiento.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Tribunal en Pleno, elige de entre sus miembros:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La sentencia del Tribunal Constitucional, en el caso del recurso de inconstitucionalidad:",
+        "options": [
+          {
+            "text": "Se dictar en el plazo de 10 das, salvo ampliacin de plazo por un mximo de 30 das.",
+            "is_correct": false
+          },
+          {
+            "text": "Se dictar en el plazo de 15 das, salvo ampliacin de plazo por un mximo de 30 das.",
+            "is_correct": false
+          },
+          {
+            "text": "Se dictar en el plazo de 5 das, salvo ampliacin de plazo por un mximo de 30 das.",
+            "is_correct": false
+          },
+          {
+            "text": "Se dictar en el plazo de 2 meses, salvo ampliacin a 3 meses.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La sentencia del Tribunal Constitucional, en el caso del recurso de inconstitucionalidad:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La cuestin de inconstitucionalidad slo podr plantearse:",
+        "options": [
+          {
+            "text": "Siempre que el proceso no est concluso y antes de dictar sentencia.",
+            "is_correct": false
+          },
+          {
+            "text": "Una vez concluso el procedimiento y dentro del plazo para dictar sentencia.",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando las partes lo soliciten en perodo de prueba.",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando la sentencia judicial sea firma.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La cuestin de inconstitucionalidad slo podr plantearse:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La condicin de miembro del Tribunal Constitucional es incompatible:",
+        "options": [
+          {
+            "text": "Con todo mandato imperativo y con los cargos poltico y administrativos.",
+            "is_correct": false
+          },
+          {
+            "text": "Con el desempeo de funciones en un partido poltico o en un sindicato y con el empleo al servicio de los mismos.",
+            "is_correct": false
+          },
+          {
+            "text": "Con el ejercicio de las carrera Judicial y Fiscal y con cualquier actividad profesional o mercantil.",
+            "is_correct": false
+          },
+          {
+            "text": "Las tres afirmaciones anteriores son correctas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La condicin de miembro del Tribunal Constitucional es incompatible:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Los conflictos en defensa de la Autonoma Local:",
+        "options": [
+          {
+            "text": "Figuraban en la redaccin originaria de la LOTC 2/1979, de 3 de octubre.",
+            "is_correct": false
+          },
+          {
+            "text": "Fueron introducidos en la LOTC, mediante la LO 7/ 1989, de 21 de abril.",
+            "is_correct": false
+          },
+          {
+            "text": "Fueron introducidos en la LOTC, mediante LO 7/1999, de 21 de abril.",
+            "is_correct": false
+          },
+          {
+            "text": "Fueron introducidos en la LOTC, mediante LO 7/2000, de 21 de abril.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los conflictos en defensa de la Autonoma Local:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Podrn dar lugar al planteamiento de los conflictos en defensa de la Autonoma Local:",
+        "options": [
+          {
+            "text": "Las normas del Estado con rango reglamentario o las disposiciones del mismo rango de las CCAA que lesionen la autonoma local constitucionalmente garantizada.",
+            "is_correct": false
+          },
+          {
+            "text": "Las normas del Estado con rango de ley o las disposiciones con rango de ley de las CCAA que lesionen la autonoma local constitucionalmente garantizada.",
+            "is_correct": false
+          },
+          {
+            "text": "Las normas del Estado con rango reglamentario que lesionen la autonoma local constitucionalmente garantizada, pero no las de las CCAA.",
+            "is_correct": false
+          },
+          {
+            "text": "Las normas del Estado con rango de ley que lesionen la autonoma local constitucionalmente garantizada, pero no las de las CCAA.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Podrn dar lugar al planteamiento de los conflictos en defensa de la Autonoma Local:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La sentencia del recurso de amparo constitucional contendr alguno de los siguientes pronunciamientos:",
+        "options": [
+          {
+            "text": "Otorgamiento del amparo o desestimacin del amparo.",
+            "is_correct": false
+          },
+          {
+            "text": "Estimacin del amparo o desestimacin del amparo.",
+            "is_correct": false
+          },
+          {
+            "text": "Otorgamiento del amparo o denegacin del amparo.",
+            "is_correct": false
+          },
+          {
+            "text": "Afirmacin del amparo o negacin del amparo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La sentencia del recurso de amparo constitucional contendr alguno de los siguientes pronunciamientos:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Preside la Sala Primera del TC:",
+        "options": [
+          {
+            "text": "El Presidente, y en su defecto el magistrado de mayor edad.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente, y en su defecto el vicepresidente.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente, y en su defecto el magistrado de mayor antigedad.",
+            "is_correct": false
+          },
+          {
+            "text": "El Vicepresidente, y en su defecto el magistrado de mayor antigedad.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Preside la Sala Primera del TC:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La eleccin del Presidente del TC requiere, en primera votacin, mayora:",
+        "options": [
+          {
+            "text": "Absoluta.",
+            "is_correct": false
+          },
+          {
+            "text": "De 2/3.",
+            "is_correct": false
+          },
+          {
+            "text": "De 3/5.",
+            "is_correct": false
+          },
+          {
+            "text": "Simple.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La eleccin del Presidente del TC requiere, en primera votacin, mayora:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Absoluta....'",
+        "Distractor muy corto: 'De 2/3....'",
+        "Distractor muy corto: 'De 3/5....'",
+        "Distractor muy corto: 'Simple....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.48
+    },
+    {
+      "question": {
+        "question_text": "El Presidente del TC puede ser reelegido:",
+        "options": [
+          {
+            "text": "Una vez",
+            "is_correct": false
+          },
+          {
+            "text": "Dos veces",
+            "is_correct": false
+          },
+          {
+            "text": "Tres veces",
+            "is_correct": false
+          },
+          {
+            "text": "La LOTC nada indica al respecto",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Presidente del TC puede ser reelegido:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Una vez...'",
+        "Distractor muy corto: 'Dos veces...'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Cul de estas afirmaciones en relacin con el Tribunal Constitucional es falsa?:",
+        "options": [
+          {
+            "text": "En el plazo de 3 das desde la notificacin de la sentencia, las partes podrn solicitar la aclaracin de la misma.",
+            "is_correct": false
+          },
+          {
+            "text": "El qurum para la adopcin de acuerdos es de 2/3 de los miembros que lo componen.",
+            "is_correct": false
+          },
+          {
+            "text": "Apreciar de oficio o a instancia de parte su falta de jurisdiccin o competencia.",
+            "is_correct": false
+          },
+          {
+            "text": "El procedimiento ante este Tribunal es gratuito, salvo que se aprecie temeridad o mala fe, en cuyo caso podr condenarse en costas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de estas afirmaciones en relacin con el Tribunal Constitucional es falsa?:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El recurso de inconstitucionalidad es conocido por:",
+        "options": [
+          {
+            "text": "Las Salas.",
+            "is_correct": false
+          },
+          {
+            "text": "El Pleno.",
+            "is_correct": false
+          },
+          {
+            "text": "Las Salas, excepto en los de mera aplicacin de doctrina, que sern competencia del Pleno.",
+            "is_correct": false
+          },
+          {
+            "text": "El Pleno, excepto en los de mera aplicacin de doctrina, que podrn atribuirse a las Salas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El recurso de inconstitucionalidad es conocido por:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'El Pleno....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De los doce Magistrados del TC, el Senado debe proponer:",
+        "options": [
+          {
+            "text": "2 entre los candidatos propuestos por la Comisin General de Comunidades Autnomas del Senado.",
+            "is_correct": false
+          },
+          {
+            "text": "4 entre los candidatos propuestos por la Comisin General de Comunidades Autnomas del Senado.",
+            "is_correct": false
+          },
+          {
+            "text": "2 entre los candidatos propuestos por las Asambleas Legislativas de las Comunidades Autnomas.",
+            "is_correct": false
+          },
+          {
+            "text": "4 entre los candidatos propuestos por las Asambleas Legislativas de las Comunidades Autnomas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De los doce Magistrados del TC, el Senado debe proponer:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En el supuesto de conflictos de competencias, el previo requerimiento es:",
+        "options": [
+          {
+            "text": "Obligatorio en todo caso.",
+            "is_correct": false
+          },
+          {
+            "text": "Obligatorio para las CCAA y potestativo para el Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "Obligatorio para el Estado y potestativo para las CCAA.",
+            "is_correct": false
+          },
+          {
+            "text": "Potestativo en todo caso.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En el supuesto de conflictos de competencias, el previo requerimiento es:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El plazo para efectuar el previo requerimiento al que se refiere la pregunta anterior es de:",
+        "options": [
+          {
+            "text": "1 mes.",
+            "is_correct": false
+          },
+          {
+            "text": "2 meses.",
+            "is_correct": false
+          },
+          {
+            "text": "20 das hbiles.",
+            "is_correct": false
+          },
+          {
+            "text": "15 das hbiles.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El plazo para efectuar el previo requerimiento al que se refiere la pregunta anterior es de:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: '1 mes....'",
+        "Distractor muy corto: '2 meses....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Qu plazo prev la Ley Orgnica 2/1979, de 3 de octubre del Tribunal Constitucional para el planteamiento del recurso de amparo cuando la vulneracin de los derechos objeto del mismo procede de decisiones o actos sin valor de ley de las Cortes Generales o cualquiera de sus rganos o de las Asambleas Legislativas de la Comunidades Autnomas o sus rganos?:",
+        "options": [
+          {
+            "text": "3 meses desde que con arreglo a sus normas internas sean firmes.",
+            "is_correct": false
+          },
+          {
+            "text": "30 das desde que con arreglo a sus normas internas sean firmes.",
+            "is_correct": false
+          },
+          {
+            "text": "1 mes desde la notificacin del acto o decisin.",
+            "is_correct": false
+          },
+          {
+            "text": "20 das desde la notificacin del acto o decisin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu plazo prev la Ley Orgnica 2/1979, de 3 de octubre del Tribunal Constitucional para el planteamiento del recurso de amparo cuando la vulneracin de los derechos objeto del mismo procede de decisiones o actos sin valor de ley de las Cortes Generales o cualquiera de sus rganos o de las Asambleas Legislativas de la Comunidades Autnomas o sus rganos?:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Los miembros del Tribunal Constitucional elegidos a propuesta del Congreso y del Senado son:",
+        "options": [
+          {
+            "text": "8 elegidos por mayora de 2/3.",
+            "is_correct": false
+          },
+          {
+            "text": "8 elegidos por mayora de 3/5.",
+            "is_correct": false
+          },
+          {
+            "text": "10 elegidos por mayora de 2/3.",
+            "is_correct": false
+          },
+          {
+            "text": "10 elegidos por mayora de 3/5.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los miembros del Tribunal Constitucional elegidos a propuesta del Congreso y del Senado son:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "De las siguientes competencias del Tribunal Constitucional, cul de ellas corresponde a las Salas?:",
+        "options": [
+          {
+            "text": "Recurso de inconstitucionalidad.",
+            "is_correct": false
+          },
+          {
+            "text": "Recurso de amparo.",
+            "is_correct": false
+          },
+          {
+            "text": "Conflictos entre rganos constitucionales del estado.",
+            "is_correct": false
+          },
+          {
+            "text": "Recurso previo de inconstitucionalidad.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De las siguientes competencias del Tribunal Constitucional, cul de ellas corresponde a las Salas?:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El requerimiento ante el Tribunal Constitucional para que se pronuncie sobre la existencia o inexistencia de contradiccin entre la Constitucin y las estipulaciones de un Tratado internacional, podr hacerla:",
+        "options": [
+          {
+            "text": "El gobierno exclusivamente.",
+            "is_correct": false
+          },
+          {
+            "text": "El Gobierno o el Congreso, exclusivamente.",
+            "is_correct": false
+          },
+          {
+            "text": "El Congreso o el Senado, exclusivamente.",
+            "is_correct": false
+          },
+          {
+            "text": "El Gobierno o cualquiera de las Cmaras.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El requerimiento ante el Tribunal Constitucional para que se pronuncie sobre la existencia o inexistencia de contradiccin entre la Constitucin y las estipulaciones de un Tratado internacional, podr hacerla:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Entre los legitimados para interponer el recurso previo de inconstitucionalidad se encuentra:",
+        "options": [
+          {
+            "text": "El Presidente del Gobierno",
+            "is_correct": false
+          },
+          {
+            "text": "El Ministerio Fiscal",
+            "is_correct": false
+          },
+          {
+            "text": "La persona directamente afectada",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo General del Poder Judicial.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Entre los legitimados para interponer el recurso previo de inconstitucionalidad se encuentra:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El Tribunal Constitucional consta de dos Salas. Seale la respuesta correcta:",
+        "options": [
+          {
+            "text": "El Presidente del Tribunal lo es tambin de la Sala Primera, que presidir en su defecto, el Magistrado ms antiguo y, en caso de igual antigedad, el de mayor edad.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Tribunal lo es tambin de la Sala Primera, que presidir en su defecto, el Magistrado de mayor edad y, en caso de igual edad, el ms antiguo.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Tribunal lo es tambin de la Sala Segunda, que presidir en su defecto, el Magistrado ms antiguo y, en caso de igual antigedad, el de mayor edad.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Tribunal lo es tambin de la Sala Segunda, que presidir en su defecto, el Magistrado de mayor edad y, en caso de igual edad, el ms antiguo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Tribunal Constitucional consta de dos Salas. Seale la respuesta correcta:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta:",
+        "options": [
+          {
+            "text": "La admisin de un recurso o de una cuestin de inconstitucionalidad no suspender la vigencia ni la aplicacin de la Ley, de la disposicin normativa o del acto con fuerza de Ley, excepto en el caso en que el Gobierno se ampare en lo dispuesto por el artculo ciento sesenta y uno, dos, de la Constitucin para impugnar, por medio de su Presidente, Leyes, disposiciones normativas o actos con fuerza de Ley de las Comunidades Autnomas.",
+            "is_correct": false
+          },
+          {
+            "text": "La admisin de un recurso o de una cuestin de inconstitucionalidad no suspender la vigencia ni la aplicacin de la Ley, de la disposicin normativa o del acto con fuerza de Ley, excepto en el caso en que el Congreso se ampare en lo dispuesto por el artculo ciento sesenta y uno, dos, de la Constitucin para impugnar, por medio de su Presidente, Leyes, disposiciones normativas o actos con fuerza de Ley de las Comunidades Autnomas.",
+            "is_correct": false
+          },
+          {
+            "text": "La admisin de un recurso o de una cuestin de inconstitucionalidad suspender la vigencia y la aplicacin de la Ley, de la disposicin normativa o del acto con fuerza de Ley, excepto en el caso en que el Gobierno se ampare en lo dispuesto por el artculo ciento sesenta y uno, dos, de la Constitucin para impugnar, por medio de su Presidente, Leyes, disposiciones normativas o actos con fuerza de Ley de las Comunidades Autnomas.",
+            "is_correct": false
+          },
+          {
+            "text": "La admisin de un recurso o de una cuestin de inconstitucionalidad suspender la vigencia y la aplicacin de la Ley, de la disposicin normativa o del acto con fuerza de Ley, excepto en el caso en que el Congreso se ampare en lo dispuesto por el artculo ciento sesenta y uno, dos, de la Constitucin para impugnar, por medio de su Presidente, Leyes, disposiciones normativas o actos con fuerza de Ley de las Comunidades Autnomas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Los Magistrados del Tribunal Constitucional sern nombrados por el Rey, a propuesta de:",
+        "options": [
+          {
+            "text": "las Cmaras y del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "las Cmaras y del Consejo General del Poder Judicial.",
+            "is_correct": false
+          },
+          {
+            "text": "las Cmaras, del Gobierno y del Tribunal Supremo.",
+            "is_correct": false
+          },
+          {
+            "text": "las Cmaras, del Gobierno y del Consejo General del Poder Judicial.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los Magistrados del Tribunal Constitucional sern nombrados por el Rey, a propuesta de:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El Ministerio Fiscal est legitimado para plantear ante el Tribunal Constitucional:",
+        "options": [
+          {
+            "text": "El recurso de amparo.",
+            "is_correct": false
+          },
+          {
+            "text": "El recurso de inconstitucionalidad y el recurso previo de inconstitucionalidad.",
+            "is_correct": false
+          },
+          {
+            "text": "El recurso de amparo, el recurso de inconstitucionalidad y el recurso previo de inconstitucionalidad.",
+            "is_correct": false
+          },
+          {
+            "text": "El recurso de inconstitucionalidad y el recurso de amparo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Ministerio Fiscal est legitimado para plantear ante el Tribunal Constitucional:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta en relacin con lo dispuesto en el artculo 163 CE:",
+        "options": [
+          {
+            "text": "Cuando un rgano judicial considere, en algn proceso, que una norma con rango de ley, aplicable al caso, de cuya validez dependa el fallo, pueda ser contraria a la Constitucin, plantear la cuestin ante el Tribunal Constitucional en los supuestos, en la forma y con los efectos que establezca la ley, que en todo caso sern suspensivos.",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando un rgano judicial considere, en algn proceso, que una norma con rango de ley, aplicable al caso, de cuya validez dependa el fallo, pueda ser contraria a la Constitucin, plantear la cuestin ante el Tribunal Constitucional en los supuestos, en la forma y con los efectos que establezca la ley, que en ningn caso sern suspensivos.",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando un rgano judicial considere, en algn proceso, que una norma sin rango de ley, aplicable al caso, de cuya validez dependa el fallo, pueda ser contraria a la Constitucin, plantear la cuestin ante el Tribunal Constitucional en los supuestos, en la forma y con los efectos que establezca la ley, que en todo caso sern suspensivos.",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando un rgano judicial considere, en algn proceso, que una norma sin rango de ley, aplicable al caso, de cuya validez dependa el fallo, pueda ser contraria a la Constitucin, plantear la cuestin ante el Tribunal Constitucional en los supuestos, en la forma y con los efectos que establezca la ley, que en ningn caso sern suspensivos.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta en relacin con lo dispuesto en el artculo 163 CE:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Las Sentencias del Tribunal Constitucional, de conformidad con el artculo 164 CE:",
+        "options": [
+          {
+            "text": "Tienen el valor de cosa juzgada a partir del da siguiente de su publicacin y contra las mismas no cabe recurso alguno.",
+            "is_correct": false
+          },
+          {
+            "text": "Tienen el valor de cosa juzgada a partir del da siguiente de su publicacin y contra las mismas cabe recurso de splica.",
+            "is_correct": false
+          },
+          {
+            "text": "Tienen el valor de cosa juzgada desde el mismo da de su publicacin y contra las mismas cabe recurso de splica.",
+            "is_correct": false
+          },
+          {
+            "text": "Tienen el valor de cosa juzgada desde el mismo da de su publicacin y contra las mismas no cabe recurso alguno.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las Sentencias del Tribunal Constitucional, de conformidad con el artculo 164 CE:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El Tribunal Constitucional se compone de 12 miembros nombrados por el Rey; de ellos:",
+        "options": [
+          {
+            "text": "cuatro a propuesta del Congreso por mayora de dos tercios de sus miembros; cuatro a propuesta del Senado, con idntica mayora; dos a propuesta del Gobierno, y dos a propuesta del Consejo General del Poder Judicial.",
+            "is_correct": false
+          },
+          {
+            "text": "cuatro a propuesta del Congreso por mayora de dos tercios de sus miembros; cuatro a propuesta del Senado, con idntica mayora; dos a propuesta del Gobierno, y dos a propuesta del Tribunal Supremo.",
+            "is_correct": false
+          },
+          {
+            "text": "cuatro a propuesta del Congreso por mayora de tres quintos de sus miembros; cuatro a propuesta del Senado, con idntica mayora; dos a propuesta del Gobierno, y dos a propuesta del Consejo General del Poder Judicial.",
+            "is_correct": false
+          },
+          {
+            "text": "cuatro a propuesta del Congreso por mayora de tres quintos de sus miembros; cuatro a propuesta del Senado, con idntica mayora; dos a propuesta del Gobierno, y dos a propuesta del Tribunal Supremo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Tribunal Constitucional se compone de 12 miembros nombrados por el Rey; de ellos:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El Tribunal Constitucional consta de dos Salas. Cada Sala est compuesta por:",
+        "options": [
+          {
+            "text": "seis Magistrados nombrados por el Tribunal en Pleno.",
+            "is_correct": false
+          },
+          {
+            "text": "seis Magistrados nombrados por el Presidente del Tribunal.",
+            "is_correct": false
+          },
+          {
+            "text": "ocho Magistrados nombrados por el Tribunal en Pleno.",
+            "is_correct": false
+          },
+          {
+            "text": "ocho Magistrados nombrados por el Presidente del Tribunal",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Tribunal Constitucional consta de dos Salas. Cada Sala est compuesta por:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El Tribunal Constitucional entender de los conflictos en defensa de la autonoma local que planteen:",
+        "options": [
+          {
+            "text": "los municipios y provincias frente al Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "los municipios y provincias frente al Estado o a una Comunidad Autnoma.",
+            "is_correct": false
+          },
+          {
+            "text": "los municipios, provincias y entes de mbito territorial inferior al municipio frente al Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "los municipios, provincias y entes de mbito territorial inferior al municipio frente al Estado o a una Comunidad Autnoma.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Tribunal Constitucional entender de los conflictos en defensa de la autonoma local que planteen:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Los conflictos de competencia que opongan al Estado con una Comunidad Autnoma o a stas entre s, podrn ser suscitados por:",
+        "options": [
+          {
+            "text": "el Gobierno o por los rganos colegiados ejecutivos de las Comunidades Autnomas.",
+            "is_correct": false
+          },
+          {
+            "text": "el Congreso o por las asambleas legislativas de las Comunidades Autnomas.",
+            "is_correct": false
+          },
+          {
+            "text": "el Presidente del Gobierno o por los rganos colegiados ejecutivos de las Comunidades Autnomas.",
+            "is_correct": false
+          },
+          {
+            "text": "las Cortes Generales o por las asambleas legislativas de las Comunidades Autnomas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los conflictos de competencia que opongan al Estado con una Comunidad Autnoma o a stas entre s, podrn ser suscitados por:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta en relacin con el control previo de constitucionalidad de los Tratados Internacionales:",
+        "options": [
+          {
+            "text": "El Gobierno o cualquiera de ambas Cmaras podrn requerir al Tribunal Constitucional para que se pronuncie sobre la existencia o inexistencia de contradiccin entre la Constitucin y las estipulaciones de un tratado internacional cuyo texto estuviera ya definitivamente fijado, una vez prestado el consentimiento del Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "El Gobierno o cualquiera de ambas Cmaras podrn requerir al Tribunal Constitucional para que se pronuncie sobre la existencia o inexistencia de contradiccin entre la Constitucin y las estipulaciones de un tratado internacional cuyo texto estuviera ya definitivamente fijado, pero al que no se hubiere prestado an el consentimiento del Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "El Gobierno o el Congreso de los Diputados podrn requerir al Tribunal Constitucional para que se pronuncie sobre la existencia o inexistencia de contradiccin entre la Constitucin y las estipulaciones de un tratado internacional cuyo texto estuviera ya definitivamente fijado, una vez prestado el consentimiento del Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "El Gobierno o el Congreso de los Diputados podrn requerir al Tribunal Constitucional para que se pronuncie sobre la existencia o inexistencia de contradiccin entre la Constitucin y las estipulaciones de un tratado internacional cuyo texto estuviera ya definitivamente fijado, pero al que no se hubiere prestado an el consentimiento del Estado.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta en relacin con el control previo de constitucionalidad de los Tratados Internacionales:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Para iniciar la tramitacin de los conflictos en defensa de la autonoma local ser necesario el acuerdo del rgano plenario de las Corporaciones Locales con el voto favorable de:",
+        "options": [
+          {
+            "text": "La mayora absoluta del nmero legal de miembros de las mismas",
+            "is_correct": false
+          },
+          {
+            "text": "La mayora simple de los miembros presentes",
+            "is_correct": false
+          },
+          {
+            "text": "La mayora de dos tercios de sus miembros",
+            "is_correct": false
+          },
+          {
+            "text": "La mayora de tres quintos de sus miembros",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Para iniciar la tramitacin de los conflictos en defensa de la autonoma local ser necesario el acuerdo del rgano plenario de las Corporaciones Locales con el voto favorable de:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta acerca del recurso de amparo:",
+        "options": [
+          {
+            "text": "Su conocimiento se atribuye al Pleno, salvo los de mera aplicacin de doctrina cuyo conocimiento podr atribuirse a las Salas en el trmite de admisin",
+            "is_correct": false
+          },
+          {
+            "text": "Protege a los ciudadanos frente a las violaciones de los derechos previstos en los artculo 14 a 30 de la Constitucin",
+            "is_correct": false
+          },
+          {
+            "text": "El plazo para su interposicin ser de seis meses desde la publicacin de la norma o desde que se tenga conocimiento de ella",
+            "is_correct": false
+          },
+          {
+            "text": "Entre los legitimados para su interposicin se encuentra el Defensor del Pueblo",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta acerca del recurso de amparo:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La admisin del recurso de inconstitucionalidad contra una Ley:",
+        "options": [
+          {
+            "text": "Suspende, en todo caso, su aplicacin y vigencia",
+            "is_correct": false
+          },
+          {
+            "text": "En ningn caso suspende su aplicacin y vigencia",
+            "is_correct": false
+          },
+          {
+            "text": "Suspender su aplicacin y vigencia si el Gobierno de la nacin y los rganos colegiados ejecutivos de las Comunidades Autnomas se amparan en lo dispuesto en el artculo 161.2 de la Constitucin",
+            "is_correct": false
+          },
+          {
+            "text": "Suspender su aplicacin y vigencia si el Gobierno de la nacin se ampara en lo dispuesto en el artculo 161.2 de la Constitucin",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La admisin del recurso de inconstitucionalidad contra una Ley:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El recurso previo de inconstitucionalidad deber ser resuelto por el Tribunal Constitucional en el plazo improrrogable de:",
+        "options": [
+          {
+            "text": "Seis meses desde su interposicin",
+            "is_correct": false
+          },
+          {
+            "text": "Tres meses desde su interposicin",
+            "is_correct": false
+          },
+          {
+            "text": "Seis meses desde la publicacin del texto en el Boletn de las CCGG",
+            "is_correct": false
+          },
+          {
+            "text": "Tres meses desde la publicacin del texto en el Boletn de las CCGG",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El recurso previo de inconstitucionalidad deber ser resuelto por el Tribunal Constitucional en el plazo improrrogable de:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Las decisiones de inadmisin inicial, desistimiento y caducidad, salvo que la LOTC disponga expresamente otra forma, adoptarn la forma de:",
+        "options": [
+          {
+            "text": "Providencias",
+            "is_correct": false
+          },
+          {
+            "text": "Autos",
+            "is_correct": false
+          },
+          {
+            "text": "Declaraciones",
+            "is_correct": false
+          },
+          {
+            "text": "Sentencias",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las decisiones de inadmisin inicial, desistimiento y caducidad, salvo que la LOTC disponga expresamente otra forma, adoptarn la forma de:",
+        "source": "3 TEST TEMA 3 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 3,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Autos...'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:22.022270"
+}

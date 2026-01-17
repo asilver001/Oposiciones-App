@@ -1,0 +1,2008 @@
+{
+  "metadata": {
+    "source_file": "Test tema 2.pdf",
+    "source_path": "Test Iniciales UE\\Test tema 2.pdf",
+    "tema": 2,
+    "categoria": "union-europea",
+    "extraction_date": "2026-01-15T23:42:03.865631",
+    "reformulation_date": "2026-01-15T23:47:35.747156",
+    "total_questions": 40,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.991286",
+    "completed_count": 0,
+    "failed_count": 40
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "Cul de las siguientes instituciones fue reconocida como tal ms tarde en los Tra-",
+        "options": [
+          {
+            "text": "El Consejo Europeo",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo",
+            "is_correct": false
+          },
+          {
+            "text": "La Comisin Europea",
+            "is_correct": false
+          },
+          {
+            "text": "El Parlamento Europeo",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de las siguientes instituciones fue reconocida como tal ms tarde en los Tra-",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Consejo Europeo estar compuesto por",
+        "options": [
+          {
+            "text": "Los jefes de Estado o de Gobierno de los Estados miembros, as como por su presidente",
+            "is_correct": false
+          },
+          {
+            "text": "El presidente de la Comisin, el presidente del Consejo Europeo, el presidente del Parla-",
+            "is_correct": false
+          },
+          {
+            "text": "Un ministro y el presidente del Gobierno de cada Estado miembro",
+            "is_correct": false
+          },
+          {
+            "text": "Los jefes de Estado de cada Estado miembro, as como por su presidente y por el presi-",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Consejo Europeo estar compuesto por",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la afirmacin correcta sobre el Consejo Europeo:",
+        "options": [
+          {
+            "text": "Dar a la Unin los impulsos necesarios para su desarrollo",
+            "is_correct": false
+          },
+          {
+            "text": "Definir las orientaciones y prioridades polticas generales de la Unin",
+            "is_correct": false
+          },
+          {
+            "text": "No ejercer funcin legislativa alguna",
+            "is_correct": false
+          },
+          {
+            "text": "Todas son correctas",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la afirmacin correcta sobre el Consejo Europeo:",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cul de las siguientes competencias NO le corresponde al Consejo Europeo?:",
+        "options": [
+          {
+            "text": "Elegir al presidente del Consejo Europeo",
+            "is_correct": false
+          },
+          {
+            "text": "Elegir al presidente del Parlamento Europeo",
+            "is_correct": false
+          },
+          {
+            "text": "Nombrar a la Comisin",
+            "is_correct": false
+          },
+          {
+            "text": "Nombrar al presidente, al vicepresidente y a los dems miembros del Comit Ejecutivo",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de las siguientes competencias NO le corresponde al Consejo Europeo?:",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La eleccin del presidente del Consejo Europeo se realiza:",
+        "options": [
+          {
+            "text": "Por mayora cualificada del Consejo",
+            "is_correct": false
+          },
+          {
+            "text": "Por mayora cualificada del Consejo Europeo",
+            "is_correct": false
+          },
+          {
+            "text": "Por consenso del Consejo Europeo",
+            "is_correct": false
+          },
+          {
+            "text": "Por mayora de miembros de la Comisin",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La eleccin del presidente del Consejo Europeo se realiza:",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El mandato del presidente del Consejo Europeo es de:",
+        "options": [
+          {
+            "text": "Cinco aos",
+            "is_correct": false
+          },
+          {
+            "text": "Dos aos y medio. Y podr renovarse una sola vez",
+            "is_correct": false
+          },
+          {
+            "text": "Tres aos. Y podr renovarse una sola vez",
+            "is_correct": false
+          },
+          {
+            "text": "Dos aos y medio. Y puede renovarse indefinidamente",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El mandato del presidente del Consejo Europeo es de:",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Cinco aos...'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 15 del TUE, el Consejo Europeo se reunir:",
+        "options": [
+          {
+            "text": "Dos veces por trimestre",
+            "is_correct": false
+          },
+          {
+            "text": "Dos veces por semestre",
+            "is_correct": false
+          },
+          {
+            "text": "Una vez al mes",
+            "is_correct": false
+          },
+          {
+            "text": "La b) es cierta y cuando la situacin lo exija el presidente convocar una reunin extra-",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 15 del TUE, el Consejo Europeo se reunir:",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la FALSA sobre el presidente del Consejo Europeo:",
+        "options": [
+          {
+            "text": "Al trmino de cada reunin del Consejo Europeo, presentar un informe al Parlamento",
+            "is_correct": false
+          },
+          {
+            "text": "No podr ejercer mandato nacional alguno",
+            "is_correct": false
+          },
+          {
+            "text": "Asumir, en su rango y condicin, la representacin exterior de la Unin en los asuntos",
+            "is_correct": false
+          },
+          {
+            "text": "e poltica exterior y de seguridad comn, sin perjuicio de las atribuciones del alto repre-",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la FALSA sobre el presidente del Consejo Europeo:",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En relacin con la toma de decisiones del Consejo Europeo es cierto que:",
+        "options": [
+          {
+            "text": "Se pronunciar por mayora simple en las cuestiones de procedimiento y para la aproba-",
+            "is_correct": false
+          },
+          {
+            "text": "in de su reglamento interno",
+            "is_correct": false
+          },
+          {
+            "text": "La abstencin de los miembros presentes o representados impedir la adopcin de los",
+            "is_correct": false
+          },
+          {
+            "text": "cuerdos del Consejo Europeo que requieran unanimidad",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En relacin con la toma de decisiones del Consejo Europeo es cierto que:",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cul de las siguientes decisiones NO la ha de adoptar el Consejo Europeo?:",
+        "options": [
+          {
+            "text": "Una decisin sobre la composicin del Parlamento Europeo",
+            "is_correct": false
+          },
+          {
+            "text": "Una decisin relativa a las formaciones del Consejo distintas a la de Asuntos Generales",
+            "is_correct": false
+          },
+          {
+            "text": "Una decisin relativa a las formaciones del propio Consejo Europeo",
+            "is_correct": false
+          },
+          {
+            "text": "Una decisin relativa a la rotacin de las presidencias del Consejo",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de las siguientes decisiones NO la ha de adoptar el Consejo Europeo?:",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Quin presidir el Consejo de Asuntos Exteriores?:",
+        "options": [
+          {
+            "text": "El alto representante de la Unin para Asuntos Exteriores y Poltica de Seguridad",
+            "is_correct": false
+          },
+          {
+            "text": "El ministro de Asuntos Exteriores del Estado miembro al que le corresponda la presiden-",
+            "is_correct": false
+          },
+          {
+            "text": "ia de turno del Consejo",
+            "is_correct": false
+          },
+          {
+            "text": "El presidente del Consejo Europeo, en su rango y condicin",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Quin presidir el Consejo de Asuntos Exteriores?:",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Quin nombrar al alto representante de la Unin para Asuntos Exteriores y Pol-",
+        "options": [
+          {
+            "text": "La Comisin, por mayora de miembros, con la aprobacin del presidente del Consejo",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo Europeo, por mayora cualificada, con la aprobacin del presidente de la Co-",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo Europeo, por unanimidad, con la aprobacin del presidente de la Comisin",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo, por mayora cualificada, con la aprobacin del presidente de la Comisin",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Quin nombrar al alto representante de la Unin para Asuntos Exteriores y Pol-",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la FALSA sobre el alto representante de la Unin para Asuntos Exteriores y",
+        "options": [
+          {
+            "text": "Ser uno de los vicepresidentes del Consejo",
+            "is_correct": false
+          },
+          {
+            "text": "Se encargar, dentro de la Comisin, de las responsabilidades que incumben a la misma",
+            "is_correct": false
+          },
+          {
+            "text": "ccin exterior de la Unin",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo Europeo podr poner fin a su mandato",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la FALSA sobre el alto representante de la Unin para Asuntos Exteriores y",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Indique cul de las siguientes personalidades ostenta en la actualidad la Presidencia",
+        "options": [
+          {
+            "text": "el Consejo Europeo:",
+            "is_correct": false
+          },
+          {
+            "text": "Charles Michel",
+            "is_correct": false
+          },
+          {
+            "text": "Antonio Costa",
+            "is_correct": false
+          },
+          {
+            "text": "rsula von der Leyen",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Indique cul de las siguientes personalidades ostenta en la actualidad la Presidencia",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Cul de las siguientes funciones NO figuran entre las que el artculo 16 del TUE",
+        "options": [
+          {
+            "text": "tribuye al Consejo?:",
+            "is_correct": false
+          },
+          {
+            "text": "La funcin presupuestaria. que ejercer conjuntamente con el Parlamento Europeo",
+            "is_correct": false
+          },
+          {
+            "text": "Supervisar la aplicacin del Derecho de la Unin bajo el control del Tribunal de Justicia",
+            "is_correct": false
+          },
+          {
+            "text": "e la Unin Europea",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de las siguientes funciones NO figuran entre las que el artculo 16 del TUE",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Consejo estar compuesto:",
+        "options": [
+          {
+            "text": "Por al menos un representante de cada Estado miembro",
+            "is_correct": false
+          },
+          {
+            "text": "Por personas con competencia general y compromiso europeo",
+            "is_correct": false
+          },
+          {
+            "text": "Por personas con rango ministerial, facultadas para comprometer al Gobierno del Estado",
+            "is_correct": false
+          },
+          {
+            "text": "Por personas que ofrezcan absolutas garantas de independencia en inters general de la",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Consejo estar compuesto:",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Qu formacin del Consejo velar por la coherencia de los trabajos de las diferen-",
+        "options": [
+          {
+            "text": "El Consejo de Asuntos Exteriores",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo de Justicia y Asuntos de Interior",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo de Asuntos Generales",
+            "is_correct": false
+          },
+          {
+            "text": "El ECOFIN.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu formacin del Consejo velar por la coherencia de los trabajos de las diferen-",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Sobre la toma de decisiones del Consejo, es FALSO que:",
+        "options": [
+          {
+            "text": "Se pronunciar por mayora cualificada, excepto cuando los Tratados dispongan otra cosa",
+            "is_correct": false
+          },
+          {
+            "text": "No adopta ninguna decisin por unanimidad",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando deba adoptar un acuerdo por mayora simple, se pronunciar por mayora de los",
+            "is_correct": false
+          },
+          {
+            "text": "En caso de votacin, cada miembro del Consejo podr votar en representacin de uno",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Sobre la toma de decisiones del Consejo, es FALSO que:",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "dificil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 16 del TUE, la mayora cualificada del Consejo se define:",
+        "options": [
+          {
+            "text": "Como un mnimo del 55 por 100 de los miembros del Consejo que incluya al menos a",
+            "is_correct": false
+          },
+          {
+            "text": "e la poblacin de la Unin, cuando el Consejo acta a propuesta de la Comisin o del",
+            "is_correct": false
+          },
+          {
+            "text": "lto representante de la Unin para Asuntos Exteriores y Poltica de Seguridad",
+            "is_correct": false
+          },
+          {
+            "text": "Como un mnimo del 55 por 100 de los miembros del Consejo que incluya al menos a",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 16 del TUE, la mayora cualificada del Consejo se define:",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Cuntos miembros del Consejo como mnimo han de formar la minora de bloqueo",
+        "options": [
+          {
+            "text": "Cuatro",
+            "is_correct": false
+          },
+          {
+            "text": "Cinco",
+            "is_correct": false
+          },
+          {
+            "text": "Catorce",
+            "is_correct": false
+          },
+          {
+            "text": "Tres",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cuntos miembros del Consejo como mnimo han de formar la minora de bloqueo",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Cuatro...'",
+        "Distractor muy corto: 'Cinco...'",
+        "Distractor muy corto: 'Catorce...'",
+        "Distractor muy corto: 'Tres...'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.443
+    },
+    {
+      "question": {
+        "question_text": "A qu pas le corresponde la presidencia semestral del Consejo en el segundo se-",
+        "options": [
+          {
+            "text": "Dinamarca",
+            "is_correct": false
+          },
+          {
+            "text": "Chipre",
+            "is_correct": false
+          },
+          {
+            "text": "Hungra",
+            "is_correct": false
+          },
+          {
+            "text": "Polonia",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "A qu pas le corresponde la presidencia semestral del Consejo en el segundo se-",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Dinamarca...'",
+        "Distractor muy corto: 'Chipre...'",
+        "Distractor muy corto: 'Hungra...'",
+        "Distractor muy corto: 'Polonia...'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.443
+    },
+    {
+      "question": {
+        "question_text": "Seale la cierta sobre el ECOFIN:",
+        "options": [
+          {
+            "text": "Est formado por los ministros de Economa y Hacienda de los Estados miembros de la",
+            "is_correct": false
+          },
+          {
+            "text": "Es el nombre con el que se conoce el Consejo de Asuntos Exteriores",
+            "is_correct": false
+          },
+          {
+            "text": "Es el nombre actual del COREPER",
+            "is_correct": false
+          },
+          {
+            "text": "Es el nombre del Consejo de Asuntos Econmicos y Financieros",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la cierta sobre el ECOFIN:",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la FALSA sobre el COREPER:",
+        "options": [
+          {
+            "text": "Se trata del Comit de Representantes Permanentes de los Gobiernos de los Estados",
+            "is_correct": false
+          },
+          {
+            "text": "Se encarga de preparar los trabajos de la Comisin",
+            "is_correct": false
+          },
+          {
+            "text": "El COREPER II se compone de los representantes permanentes",
+            "is_correct": false
+          },
+          {
+            "text": "El COREPER I se compone de los representantes permanentes adjuntos",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la FALSA sobre el COREPER:",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 16.8 del TUE, cundo se reunir en pblico el Consejo?:",
+        "options": [
+          {
+            "text": "Cuando delibere y vote sobre un proyecto de acto legislativo",
+            "is_correct": false
+          },
+          {
+            "text": "Para las actividades no legislativas",
+            "is_correct": false
+          },
+          {
+            "text": "Siempre se rene en pblico",
+            "is_correct": false
+          },
+          {
+            "text": "Nunca se rene en pblico",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 16.8 del TUE, cundo se reunir en pblico el Consejo?:",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El Consejo se reunir por convocatoria de su presidente, pero por iniciativa de",
+        "options": [
+          {
+            "text": "Por iniciativa del propio presidente del Consejo",
+            "is_correct": false
+          },
+          {
+            "text": "Por iniciativa de uno de los miembros del Consejo",
+            "is_correct": false
+          },
+          {
+            "text": "Por iniciativa de la Comisin",
+            "is_correct": false
+          },
+          {
+            "text": "Todas son correctas",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Consejo se reunir por convocatoria de su presidente, pero por iniciativa de",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El artculo 243 del TFUE indica los sueldos, dietas y pensiones que ha de fijar el",
+        "options": [
+          {
+            "text": "onsejo. Seale de cul de los siguientes cargos no fija las citadas retribuciones:",
+            "is_correct": false
+          },
+          {
+            "text": "De los miembros de la Comisin Europea",
+            "is_correct": false
+          },
+          {
+            "text": "Del presidente del Consejo Europeo",
+            "is_correct": false
+          },
+          {
+            "text": "De los miembros del propio Consejo",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El artculo 243 del TFUE indica los sueldos, dietas y pensiones que ha de fijar el",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La Comisin que funciona de 2024 a 2029 est formada por:",
+        "options": [
+          {
+            "text": "Un nacional por Estado miembro, ms el presidente de la Comisin y el alto representante",
+            "is_correct": false
+          },
+          {
+            "text": "e la Unin para Asuntos Exteriores y Poltica de Seguridad",
+            "is_correct": false
+          },
+          {
+            "text": "Un nacional por Estado miembro, incluidos el presidente de la Comisin y el alto repre-",
+            "is_correct": false
+          },
+          {
+            "text": "18 miembros, ya que el TUE establece que la Comisin tendr un nmero de miembros",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La Comisin que funciona de 2024 a 2029 est formada por:",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cul de las siguientes NO es una competencia de la Comisin?:",
+        "options": [
+          {
+            "text": "Promover el inters general de la Unin y tomar las iniciativas adecuadas para este fin",
+            "is_correct": false
+          },
+          {
+            "text": "Velar por que se apliquen los Tratados y las medidas adoptadas por las instituciones en",
+            "is_correct": false
+          },
+          {
+            "text": "Asumir la representacin exterior de la Unin en el mbito de la poltica exterior y de",
+            "is_correct": false
+          },
+          {
+            "text": "Ejecutar el presupuesto y gestionar los programas",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de las siguientes NO es una competencia de la Comisin?:",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la FALSA:",
+        "options": [
+          {
+            "text": "Todos los actos jurdicos de la Unin se adoptan a propuesta de la Comisin",
+            "is_correct": false
+          },
+          {
+            "text": "El mandato de la Comisin ser de cinco aos",
+            "is_correct": false
+          },
+          {
+            "text": "Los miembros de la Comisin sern elegidos en razn de su competencia general y de su",
+            "is_correct": false
+          },
+          {
+            "text": "ompromiso europeo",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la FALSA:",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta muy corta",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la afirmacin correcta:",
+        "options": [
+          {
+            "text": "Un miembro de la Comisin presentar su dimisin si lo solicitan dos tercios de los miem-",
+            "is_correct": false
+          },
+          {
+            "text": "ros de la propia Comisin",
+            "is_correct": false
+          },
+          {
+            "text": "El presidente de la Comisin podr decidir excepcionalmente que haya dos miembros de",
+            "is_correct": false
+          },
+          {
+            "text": "El presidente de la Comisin nombrar vicepresidentes de la Comisin distintos del alto",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la afirmacin correcta:",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Quin nombrar a la Comisin?",
+        "options": [
+          {
+            "text": "El Consejo Europeo, por mayora cualificada.",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo Europeo, por unanimidad",
+            "is_correct": false
+          },
+          {
+            "text": "El Parlamento Europeo, por mayora de miembros que lo componen",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo Europeo, por consenso",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Quin nombrar a la Comisin?",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la FALSA respecto al proceso de eleccin y nombramiento de los comisarios:",
+        "options": [
+          {
+            "text": "Teniendo en cuenta el resultado de las elecciones al Parlamento Europeo, el Consejo, por",
+            "is_correct": false
+          },
+          {
+            "text": "ente de la Comisin",
+            "is_correct": false
+          },
+          {
+            "text": "El Parlamento Europeo elegir al candidato a presidente de la Comisin por mayora de",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo, de comn acuerdo con el presidente electo, adoptar la lista de las dems",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la FALSA respecto al proceso de eleccin y nombramiento de los comisarios:",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Quin puede votar una mocin de censura sobre la gestin de la Comisin?:",
+        "options": [
+          {
+            "text": "El Consejo Europeo",
+            "is_correct": false
+          },
+          {
+            "text": "El Parlamento Europeo",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo y el Parlamento Europeo, conjuntamente",
+            "is_correct": false
+          },
+          {
+            "text": "El Tribunal de Justicia de la Unin Europea",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Quin puede votar una mocin de censura sobre la gestin de la Comisin?:",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 246 del TFUE, qu ocurre si dimite, cesa o fallece un miembro de",
+        "options": [
+          {
+            "text": "Ser sustituido por el resto de su mandato por un nuevo miembro de la misma nacionali-",
+            "is_correct": false
+          },
+          {
+            "text": "ad.",
+            "is_correct": false
+          },
+          {
+            "text": "El sustituto ser nombrado por el Consejo, de comn acuerdo con el presidente de la",
+            "is_correct": false
+          },
+          {
+            "text": "omisin y previa consulta al Parlamento Europeo",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 246 del TFUE, qu ocurre si dimite, cesa o fallece un miembro de",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'ad....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 247 del TFUE, en relacin con los ceses de miembros de la Comi-",
+        "options": [
+          {
+            "text": "Dicho cese puede llevarse a cabo a instancia del Consejo, por mayora simple.",
+            "is_correct": false
+          },
+          {
+            "text": "Dicho cese puede llevarse a cabo a instancia del Parlamento Europeo",
+            "is_correct": false
+          },
+          {
+            "text": "Dicho cese puede llevarse a cabo a instancia de la Comisin",
+            "is_correct": false
+          },
+          {
+            "text": "El cese se producir si el miembro de la Comisin deja de reunir las condiciones necesa-",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 247 del TFUE, en relacin con los ceses de miembros de la Comi-",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Tras la entrada en vigor del Tratado de Lisboa, las instituciones de la Unin son:",
+        "options": [
+          {
+            "text": "El Parlamento Europeo, el Consejo Europeo, el Consejo, la Comisin y el BCE.",
+            "is_correct": false
+          },
+          {
+            "text": "El Parlamento Europeo, el Consejo Europeo, el Consejo, la Comisin, el TJUE, el BCE y",
+            "is_correct": false
+          },
+          {
+            "text": "El Parlamento Europeo, el Consejo de Europa, el Consejo, la Comisin, el TJUE, el BCE",
+            "is_correct": false
+          },
+          {
+            "text": "El Parlamento Europeo, el Consejo, la Comisin, el TJUE, el Tribunal de Cuentas y el",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Tras la entrada en vigor del Tratado de Lisboa, las instituciones de la Unin son:",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 250 del TFUE, los acuerdos de la Comisin se adoptarn:",
+        "options": [
+          {
+            "text": "Por mayora cualificada",
+            "is_correct": false
+          },
+          {
+            "text": "Por mayora de sus miembros",
+            "is_correct": false
+          },
+          {
+            "text": "Por mayora de votos emitidos",
+            "is_correct": false
+          },
+          {
+            "text": "Con al menos la tercera parte de sus miembros a favor",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 250 del TFUE, los acuerdos de la Comisin se adoptarn:",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "De qu plazo disponen los parlamentos nacionales para analizar los proyectos de",
+        "options": [
+          {
+            "text": "ctos legislativos que les remite la Comisin y ver si respetan el principio de subsi-",
+            "is_correct": false
+          },
+          {
+            "text": "iariedad?",
+            "is_correct": false
+          },
+          {
+            "text": "Seis semanas",
+            "is_correct": false
+          },
+          {
+            "text": "Un mes",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De qu plazo disponen los parlamentos nacionales para analizar los proyectos de",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'iariedad?...'",
+        "Distractor muy corto: 'Un mes...'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "En qu procedimiento decisorio creado por el Tratado de Maastricht se basa el",
+        "options": [
+          {
+            "text": "ctual procedimiento legislativo ordinario?",
+            "is_correct": false
+          },
+          {
+            "text": "Procedimiento de cooperacin",
+            "is_correct": false
+          },
+          {
+            "text": "Dictamen conforme",
+            "is_correct": false
+          },
+          {
+            "text": "Procedimiento de codecisin",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En qu procedimiento decisorio creado por el Tratado de Maastricht se basa el",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Qu actos jurdicos se pueden adoptar por el procedimiento legislativo especial y",
+        "options": [
+          {
+            "text": "Reglamento, directiva o decisin adoptados por la Comisin",
+            "is_correct": false
+          },
+          {
+            "text": "Reglamento, directiva o decisin adoptados conjuntamente por el Consejo y el Parla-",
+            "is_correct": false
+          },
+          {
+            "text": "Reglamento, directiva o decisin adoptados por el Consejo con la participacin del Par-",
+            "is_correct": false
+          },
+          {
+            "text": "Cualquier acto jurdico se puede adoptar por el procedimiento legislativo especial",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu actos jurdicos se pueden adoptar por el procedimiento legislativo especial y",
+        "source": "Test tema 2.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:22.411622"
+}

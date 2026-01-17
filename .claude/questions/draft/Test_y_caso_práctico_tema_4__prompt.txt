@@ -1,0 +1,390 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** Test y caso práctico tema 4..pdf
+**Total preguntas:** 30
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** Es un acto administrativo:
+
+**Opciones:**
+  0. La demolici�n por la Administraci�n de un edificio declarado ruinoso.
+  1. El escrito de un ciudadano solicitando la autorizaci�n para el ejercicio de
+  2. Un Real Decreto del Consejo de Ministros por el que se aprueba un
+  3. La resoluci�n de un Ayuntamiento por la que se acuerda la
+
+---
+
+### Pregunta 2
+
+**Texto:** Teniendo en cuenta lo previsto en el art�culo 114 de la Ley 39/2015, �cu�l
+
+**Opciones:**
+  0. e los siguientes NO es un acto que agote la v�a administrativa?:
+  1. Las resoluciones de los �rganos administrativos que carezcan de
+  2. La resoluci�n de los procedimientos complementarios en materia de
+  3. Las resoluciones de los recursos de alzada.
+
+---
+
+### Pregunta 3
+
+**Texto:** Seg�n el art�culo 38
+
+**Opciones:**
+  0. e la Ley 39/2015, los actos de las
+  1. dministraciones P�blicas sujetos al Derecho Administrativo ser�n:
+  2. Firmes.
+  3. Suspendidos.
+
+---
+
+### Pregunta 4
+
+**Texto:** Se�ale la respuesta correcta en relaci�n con la forma de los actos
+
+**Opciones:**
+  0. dministrativos regulada en el art�culo 36 de la Ley 39/2015:
+  1. Los actos administrativos se producir�n solo por escrito.
+  2. Cuando deba dictarse una serie de actos administrativos de la misma
+  3. En los casos en que un �rgano administrativo ejerza su competencia de
+
+---
+
+### Pregunta 5
+
+**Texto:** De acuerdo con el art�culo 35 de la Ley 39/2015, �qu� actos deber�n ser
+
+**Opciones:**
+  0. erecho?:
+  1. Los actos que se dicten de acuerdo con el criterio seguido en
+  2. ctuaciones precedentes o con el dictamen de �rganos consultivos.
+  3. Los actos que acepten pruebas propuestas por los interesados.
+
+---
+
+### Pregunta 6
+
+**Texto:** El plazo m�ximo en el que debe notificarse la resoluci�n expresa en un
+
+**Opciones:**
+  0. No podr� exceder tres meses salvo que una norma con rango de Ley
+  1. Ser� el fijado por la Ley 40/2015, de 1 de octubre, del Procedimiento
+  2. dministrativo Com�n de las Administraciones P�blicas.
+  3. Cuando las normas reguladoras de los procedimientos no fijen el plazo
+
+---
+
+### Pregunta 7
+
+**Texto:** Seg�n
+
+**Opciones:**
+  0. dministraci�n est� obligada a dictar resoluci�n expresa y a
+  1. Los procedimientos iniciados a solicitud del interesado.
+  2. En los casos de caducidad del procedimiento.
+  3. En los supuestos de terminaci�n del procedimiento por pacto o
+
+---
+
+### Pregunta 8
+
+**Texto:** Se�ale la respuesta correcta. Seg�n lo dispuesto en el art�culo 22 de la
+
+**Opciones:**
+  0. uando se soliciten informes a un �rgano de la misma o distinta
+  1. dministraci�n:
+  2. Si se trata de informes preceptivos se suspender� el procedimiento y si
+  3. La suspensi�n autom�tica se producir� durante el tiempo necesario
+
+---
+
+### Pregunta 9
+
+**Texto:** Se�ale la opci�n correcta en relaci�n con la ampliaci�n del plazo
+
+**Opciones:**
+  0. En cualquier momento y sin necesidad de motivarlo, el �rgano
+  1. ompetente para tramitar el procedimiento podr� acordar la ampliaci�n
+  2. el plazo m�ximo de resoluci�n y notificaci�n.
+  3. La propuesta puede corresponder al �rgano instructor o al superior
+
+---
+
+### Pregunta 10
+
+**Texto:** Se�ale la opci�n incorrecta en relaci�n con el silencio administrativo:
+
+**Opciones:**
+  0. En los procedimientos iniciados a solicitud del interesado, el vencimiento
+  1. el plazo m�ximo sin haberse notificado resoluci�n expresa, legitima a
+  2. El sentido del silencio ser� desestimatorio en los procedimientos de
+  3. El silencio tendr� efecto desestimatorio en los procedimientos relativos al
+
+---
+
+### Pregunta 11
+
+**Texto:** Seg�n lo dispuesto en el art�culo 24 de la Ley 39/2015, en los casos de
+
+**Opciones:**
+  0. La resoluci�n expresa posterior al vencimiento del plazo se adoptar� por
+  1. La estimaci�n por silencio administrativo tiene los solos efectos de
+  2. ontencioso-administrativo que resulte procedente.
+  3. Los efectos del silencio se producen desde el vencimiento del plazo
+
+---
+
+### Pregunta 12
+
+**Texto:** Seg�n el art�culo 39 de la Ley 39/2015, podr� otorgarse eficacia
+
+**Opciones:**
+  0. Produzcan efectos favorables al interesado, siempre que los supuestos
+  1. e hecho necesarios existieran ya en la fecha a que se retrotraiga la
+  2. lboraya, 23
+  3. As� lo exija el contenido del acto.
+
+---
+
+### Pregunta 13
+
+**Texto:** Respecto de la ejecuci�n de los actos administrativos, indique la
+
+**Opciones:**
+  0. El �rgano que ordene un acto de ejecuci�n material de resoluciones
+  1. utorice la actuaci�n administrativa.
+  2. Los actos de
+  3. dministrativo ser�n inmediatamente ejecutivos, salvo que se produzca
+
+---
+
+### Pregunta 14
+
+**Texto:** Se�ale qu� consideraci�n
+
+**Opciones:**
+  0. dministrativo:
+  1. El efecto de permitir a los interesados la interposici�n del recurso
+  2. dministrativo
+  3. El efecto de permitir a los interesados la interposici�n del recurso
+
+---
+
+### Pregunta 15
+
+**Texto:** Si una Direcci�n General quisiera delegar una competencia propia en
+
+**Opciones:**
+  0. rt�culo 9 de la LRJSP?
+  1. Al Ministro.
+  2. Al superior com�n de ambos �rganos.
+  3. Al �rgano ministerial de quien dependa el �rgano delegante.
+
+---
+
+### Pregunta 16
+
+**Texto:** En relaci�n con la competencia de los �rganos administrativos, seg�n
+
+**Opciones:**
+  0. La delegaci�n.
+  1. La suplencia.
+  2. La desconcentraci�n.
+  3. La encomienda de gesti�n.
+
+---
+
+### Pregunta 17
+
+**Texto:** Constituir� motivo de abstenci�n en el procedimiento administrativo,
+
+**Opciones:**
+  0. Tener v�nculo matrimonial pero no situaci�n de hecho asimilable.
+  1. Tener parentesco de afinidad dentro del cuarto grado con cualquiera de
+  2. Tener parentesco de consanguinidad dentro del cuarto grado con
+  3. ualquiera de los interesados
+
+---
+
+### Pregunta 18
+
+**Texto:** Se�ale la respuesta correcta en relaci�n con el r�gimen de abstenci�n
+
+**Opciones:**
+  0. dministraciones:
+  1. Es un motivo de abstenci�n haber prestado en los cuatro �ltimos a�os
+  2. Las autoridades y el personal al servicio de las Administraciones en
+  3. La actuaci�n de las autoridades y personal en los que concurra un
+
+---
+
+### Pregunta 19
+
+**Texto:** Seg�n el art�culo 24 de la LRJSP, �Qu� recurso cabe contra la
+
+**Opciones:**
+  0. utoridad o personal al servicio de las Administraciones?:
+  1. Recurso de alzada.
+  2. Recurso extraordinario de revisi�n.
+  3. Recurso de revisi�n en el plazo de un mes.
+
+---
+
+### Pregunta 20
+
+**Texto:** La figura jur�dica conforme a la cual los actos nulos o anulables que
+
+**Opciones:**
+  0. ontengan los elementos constitutivos de otro distinto producir�n los
+  1. Convalidaci�n.
+  2. Conversi�n.
+  3. Conservaci�n.
+
+---
+
+### Pregunta 21
+
+**Texto:** Se�ale la respuesta correcta en relaci�n con los defectos formales en
+
+**Opciones:**
+  0. Los defectos de forma son siempre irregularidades no invalidantes.
+  1. lboraya, 23
+  2. El defecto de forma provocar� la anulabilidad del acto cuando se dicte
+  3. En todo caso, la actuaci�n administrativa realizada fuera del tiempo
+
+---
+
+### Pregunta 22
+
+**Texto:** La Ley 39/2015 establece que ser�n nulos de pleno derecho los actos
+
+**Opciones:**
+  0. dministrativos que:
+  1. Lesionen los derechos y libertades fundamentales.
+  2. Sean dictados por �rgano manifiestamente incompetente.
+  3. Sean constitutivos de infracci�n penal o se dicten como consecuencia de
+
+---
+
+### Pregunta 23
+
+**Texto:** Indique la respuesta correcta en relaci�n con los l�mites a la extensi�n
+
+**Opciones:**
+  0. e la nulidad o anulabilidad de los actos previstos en el art�culo 49 de
+  1. La nulidad o anulabilidad en parte del acto administrativo no implicar� la
+  2. e las partes del mismo independientes de aqu�lla, salvo que la parte
+  3. La nulidad o anulabilidad de un acto implicar� la de los sucesivos en el
+
+---
+
+### Pregunta 24
+
+**Texto:** En relaci�n con la convalidaci�n de los actos administrativos, el
+
+**Opciones:**
+  0. rt�culo 52 de la Ley 39/2015 dispone que:
+  1. La Administraci�n podr� convalidar los actos nulos de pleno derecho y
+  2. El acto de convalidaci�n producir� efecto desde la fecha de notificaci�n
+  3. l interesado.
+
+---
+
+### Pregunta 25
+
+**Texto:** Seg�n lo dispuesto en el art�culo 42 de la Ley 39/2015, se�ale la
+
+**Opciones:**
+  0. Cuando la notificaci�n se practique en el domicilio del interesado, de no
+  1. Si nadie se hiciera cargo de la notificaci�n, el intento de notificaci�n que
+  2. Cuando la notificaci�n resulte infructuosa, se entender� rechazada,
+  3. Todas las notificaciones que se practiquen en papel deber�n ser puestas
+
+---
+
+### Pregunta 26
+
+**Texto:** Se�ale
+
+**Opciones:**
+  0. Las notificaciones por medios electr�nicos se practicar�n mediante
+  1. omparecencia en la sede electr�nica, a trav�s de la direcci�n
+  2. Las notificaciones por medios electr�nicos se entender�n practicadas
+  3. Cuando
+
+---
+
+### Pregunta 27
+
+**Texto:** En aquellos casos en los que el segundo intento de notificaci�n de acto
+
+**Opciones:**
+  0. dministrativo resulta infructuoso, �qu� ocurre?
+  1. Se publicar� del acto administrativo en el diario oficial que corresponda
+  2. Se publicar� el anuncio de notificaci�n en el BOE.
+  3. Se proceder� a un tercer y �ltimo intento de notificaci�n.
+
+---
+
+### Pregunta 28
+
+**Texto:** Do�a. Mar�a recibe la notificaci�n de una resoluci�n que incluye el
+
+**Opciones:**
+  0. En el momento en el que la resoluci�n fue dictada por �rgano
+  1. dministrativo.
+  2. En el momento en el que
+  3. dministrativo.
+
+---
+
+### Pregunta 29
+
+**Texto:** Se�ale cuales son los medios de ejecuci�n forzosa de que disponen las
+
+**Opciones:**
+  0. dministraciones P�blicas, seg�n el art�culo 100 de la Ley 39/2015:
+  1. Apremio sobre el patrimonio, ejecuci�n coercitiva, multa subsidiaria y la
+  2. ompulsi�n sobre las personas.
+  3. Apremio sobre el patrimonio, multa coercitiva y ejecuci�n subsidiaria.
+
+---
+
+### Pregunta 30
+
+**Texto:** La ejecuci�n forzosa por las Administraciones P�blicas se efectuar�
+
+**Opciones:**
+  0. Presunci�n de inocencia.
+  1. Proporcionalidad.
+  2. Obtenci�n del m�ximo beneficio.
+  3. Capacidad econ�mica e igualdad ante la ley.
+
+---

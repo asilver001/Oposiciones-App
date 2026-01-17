@@ -1,0 +1,769 @@
+{
+  "generated_at": "2026-01-15T23:55:54.340777",
+  "total_questions": 40,
+  "to_insert_count": 40,
+  "duplicates_count": 0,
+  "to_insert": [
+    {
+      "pregunta": "¿Qué día entró en vigor la Constitución Española de 1978?",
+      "opciones": [
+        "El 6 de diciembre de 1978.",
+        "El 27 de diciembre de 1978.",
+        "El 31 de octubre de 1978.",
+        "El 29 de diciembre de 1978."
+      ],
+      "respuesta_correcta": 3,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "facil",
+      "explicacion": "La Constitución Española entró en vigor el 29 de diciembre de 1978, día de su publicación en el BOE. El 6 de diciembre fue el referéndum, el 27 la sanción real.",
+      "articulo_referencia": "Disposición Final CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "Según la Constitución de 1978, la forma política del Estado español es:",
+      "opciones": [
+        "La Monarquía.",
+        "La Monarquía Limitada.",
+        "La Monarquía Constitucional.",
+        "La Monarquía Parlamentaria."
+      ],
+      "respuesta_correcta": 3,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "facil",
+      "explicacion": "El artículo 1.3 CE establece expresamente que 'La forma política del Estado español es la Monarquía parlamentaria'.",
+      "articulo_referencia": "Art. 1.3 CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "Las primeras elecciones democráticas celebradas en España tras la muerte de Franco tuvieron lugar en:",
+      "opciones": [
+        "1977",
+        "1975",
+        "1976",
+        "1978"
+      ],
+      "respuesta_correcta": 0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "facil",
+      "explicacion": "Las primeras elecciones democráticas tras el franquismo se celebraron el 15 de junio de 1977, dando lugar a las Cortes Constituyentes.",
+      "articulo_referencia": "Historia constitucional",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "El referéndum en el que se aprobó popularmente la Constitución se llevó a efecto el:",
+      "opciones": [
+        "27 de diciembre de 1978",
+        "6 de diciembre de 1978",
+        "31 de octubre de 1978",
+        "29 de diciembre de 1979"
+      ],
+      "respuesta_correcta": 1,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "facil",
+      "explicacion": "El referéndum de ratificación de la CE se celebró el 6 de diciembre de 1978, con un 87,78% de votos afirmativos. El 31 de octubre fue aprobada por las Cortes.",
+      "articulo_referencia": "Historia constitucional",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "La Constitución de 1978 consta de:",
+      "opciones": [
+        "Un preámbulo, 169 artículos, 4 disposiciones adicionales, 9 disposiciones transitorias, 1 disposición derogatoria y 1 disposición final.",
+        "Un preámbulo, 169 artículos, 4 disposiciones adicionales, 8 disposiciones transitorias, 1 disposición derogatoria y 1 disposición final.",
+        "Un preámbulo, 169 artículos, 4 disposiciones adicionales, 8 disposiciones derogatorias y 1 disposición final.",
+        "169 artículos, 4 disposiciones adicionales, 9 disposiciones transitorias."
+      ],
+      "respuesta_correcta": 0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "media",
+      "explicacion": "La CE consta de: Preámbulo + 169 artículos + 4 Disposiciones Adicionales + 9 Disposiciones Transitorias + 1 Disposición Derogatoria + 1 Disposición Final.",
+      "articulo_referencia": "Estructura CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "El Título II de la Constitución de 1978 está dedicado a:",
+      "opciones": [
+        "Las Cortes Generales.",
+        "La Corona.",
+        "Los Derechos y Deberes Fundamentales.",
+        "El Gobierno."
+      ],
+      "respuesta_correcta": 1,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "facil",
+      "explicacion": "El Título II CE (Arts. 56-65) está dedicado a 'De la Corona'. El Título I es derechos y deberes, el III las Cortes Generales, y el IV el Gobierno.",
+      "articulo_referencia": "Título II CE (Arts. 56-65)",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "La Constitución de 1978 se fundamenta:",
+      "opciones": [
+        "En la indisoluble unidad de la Nación Española.",
+        "En la solidaridad de todos los españoles.",
+        "En la pluralidad de pueblos integrantes de la Nación Española.",
+        "En el compromiso de unidad de todos los pueblos y nacionalidades."
+      ],
+      "respuesta_correcta": 0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "facil",
+      "explicacion": "El Art. 2 CE establece que 'La Constitución se fundamenta en la indisoluble unidad de la Nación española, patria común e indivisible de todos los españoles'.",
+      "articulo_referencia": "Art. 2 CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "El Título VII de la Constitución Española se denomina:",
+      "opciones": [
+        "Economía y Hacienda.",
+        "Organización Territorial del Estado.",
+        "Del Poder Judicial.",
+        "Del Gobierno y de la Administración."
+      ],
+      "respuesta_correcta": 0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "facil",
+      "explicacion": "El Título VII CE se denomina 'Economía y Hacienda' (Arts. 128-136). El VIII es Organización Territorial, el VI Poder Judicial, y el IV Gobierno y Administración.",
+      "articulo_referencia": "Título VII CE (Arts. 128-136)",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "Son valores superiores del ordenamiento, según la Constitución Española de 1978:",
+      "opciones": [
+        "Libertad, justicia, solidaridad, pluralismo político.",
+        "Pluralismo político, solidaridad, igualdad y seguridad jurídica.",
+        "Legalidad, libertad, igualdad y justicia.",
+        "Pluralismo político, justicia, libertad e igualdad."
+      ],
+      "respuesta_correcta": 3,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "facil",
+      "explicacion": "El Art. 1.1 CE establece los valores superiores del ordenamiento: libertad, justicia, igualdad y pluralismo político. Solidaridad y legalidad no son valores superiores.",
+      "articulo_referencia": "Art. 1.1 CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "¿Qué denominación recibe el Capítulo III del Título I de la Constitución Española?",
+      "opciones": [
+        "De los principios rectores de la política social y económica.",
+        "De los derechos fundamentales y de las libertades públicas.",
+        "De los derechos y deberes de los ciudadanos.",
+        "Derechos y libertades."
+      ],
+      "respuesta_correcta": 0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "media",
+      "explicacion": "El Capítulo III del Título I se denomina 'De los principios rectores de la política social y económica' (Arts. 39-52). El Cap. II Sec. 1ª es derechos fundamentales, la Sec. 2ª derechos y deberes ciudadanos.",
+      "articulo_referencia": "Capítulo III, Título I CE (Arts. 39-52)",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "¿Qué artículos de la Constitución Española han sido objeto de reforma?",
+      "opciones": [
+        "El 35.",
+        "El 48.",
+        "El 13.1, el 137 y el 50.",
+        "El 13.2, el 135 y el 49."
+      ],
+      "respuesta_correcta": 3,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "media",
+      "explicacion": "La CE ha sido reformada 3 veces: Art. 13.2 (1992, sufragio pasivo municipal), Art. 135 (2011, estabilidad presupuestaria) y Art. 49 (2024, discapacidad).",
+      "articulo_referencia": "Reformas constitucionales 1992, 2011 y 2024",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "Conforme a lo establecido en el artículo 116 de la Constitución, la declaración del estado de excepción corresponde:",
+      "opciones": [
+        "Al Presidente del Gobierno mediante Real Decreto, previa autorización de las Cortes Generales.",
+        "Al Congreso de los Diputados, a propuesta del Gobierno.",
+        "Al Gobierno mediante Real Decreto, previa autorización del Congreso.",
+        "Al Rey a propuesta del Presidente del Gobierno."
+      ],
+      "respuesta_correcta": 2,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "media",
+      "explicacion": "El estado de excepción será declarado por el Gobierno mediante decreto acordado en Consejo de Ministros, previa autorización del Congreso de los Diputados (Art. 116.3 CE).",
+      "articulo_referencia": "Art. 116.3 CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "Según el artículo 1.2 de la Constitución, la Soberanía Nacional reside:",
+      "opciones": [
+        "En los poderes del Estado.",
+        "En el Rey como Monarca.",
+        "En el pueblo español.",
+        "En las Cortes Generales."
+      ],
+      "respuesta_correcta": 2,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "facil",
+      "explicacion": "El Art. 1.2 CE establece que 'La soberanía nacional reside en el pueblo español, del que emanan los poderes del Estado'.",
+      "articulo_referencia": "Art. 1.2 CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "El Título de la Constitución más extenso es:",
+      "opciones": [
+        "El Título VIII De la organización territorial del Estado.",
+        "El Título I De los derechos y deberes fundamentales.",
+        "El Título X De la reforma constitucional.",
+        "El Título IX del Tribunal Constitucional."
+      ],
+      "respuesta_correcta": 0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "media",
+      "explicacion": "El Título VIII (Organización Territorial del Estado, Arts. 137-158) es el más extenso con 22 artículos. Le sigue el Título I con 46 artículos pero se considera menos extenso por su estructura.",
+      "articulo_referencia": "Título VIII CE (Arts. 137-158)",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "¿Qué día fue aprobada por las Cortes Generales la Constitución Española de 1978?",
+      "opciones": [
+        "El 6 de diciembre de 1978",
+        "El 31 de octubre de 1978.",
+        "El 27 de diciembre de 1978.",
+        "El 29 de diciembre de 1978."
+      ],
+      "respuesta_correcta": 1,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "facil",
+      "explicacion": "Las Cortes Generales aprobaron la CE el 31 de octubre de 1978. El 6/12 fue el referéndum, el 27/12 la sanción real, y el 29/12 la entrada en vigor.",
+      "articulo_referencia": "Historia constitucional",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "El artículo 4 de la Constitución establece que:",
+      "opciones": [
+        "El castellano es la lengua española oficial del Estado.",
+        "La capital del Estado es la villa de Madrid.",
+        "La bandera de España está formada por tres franjas horizontales, roja, amarilla y roja, siendo la amarilla de doble anchura que cada una de las rojas.",
+        "España se constituye en un Estado social y democrático de Derecho."
+      ],
+      "respuesta_correcta": 2,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "facil",
+      "explicacion": "El Art. 4 CE regula la bandera de España. El castellano está en el Art. 3, la capital en el Art. 5, y el Estado social en el Art. 1.1.",
+      "articulo_referencia": "Art. 4 CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "En relación con el Título Preliminar de la Constitución Española, indique cuál de las siguientes afirmaciones es correcta:",
+      "opciones": [
+        "Se compone de diez artículos.",
+        "Su reforma se realiza por la vía del artículo 167.",
+        "Reconoce que los Estatutos podrán reconocer banderas y enseñas propias de las Comunidades Autónomas.",
+        "Contiene once artículos."
+      ],
+      "respuesta_correcta": 2,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "media",
+      "explicacion": "El Título Preliminar tiene 9 artículos (1-9). El Art. 4.2 reconoce que los Estatutos podrán reconocer banderas y enseñas propias de las CCAA. Su reforma es por Art. 168 (agravada).",
+      "articulo_referencia": "Art. 4.2 CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "La reforma constitucional del derecho a sindicarse libremente (artículo 28.1 CE), requiere:",
+      "opciones": [
+        "Aprobación por mayoría de tres quintos de cada una de las Cámaras.",
+        "Aprobación por mayoría de dos tercios de cada una de las Cámaras.",
+        "Aprobación por mayoría de tres quintos de cada una de las Cámaras, y si no hay acuerdo, aprobación por Comisión paritaria.",
+        "Procedimiento agravado del Art. 168 CE."
+      ],
+      "respuesta_correcta": 0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "dificil",
+      "explicacion": "El Art. 28.1 (sindicación) está en la Sección 1ª del Capítulo II del Título I, pero NO en los artículos 15-29 protegidos por Art. 168. Se reforma por Art. 167 (3/5).",
+      "articulo_referencia": "Art. 167 CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "Señale a quién corresponde la iniciativa para la reforma constitucional:",
+      "opciones": [
+        "Al Presidente del Gobierno y al Congreso.",
+        "Al Gobierno y al Defensor del Pueblo.",
+        "Al Gobierno, al Congreso y al Senado y al pueblo.",
+        "Al Gobierno, al Congreso, al Senado y a las Asambleas Legislativas de las Comunidades Autónomas."
+      ],
+      "respuesta_correcta": 3,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "media",
+      "explicacion": "El Art. 166 CE remite al Art. 87.1 y 2: Gobierno, Congreso, Senado y Asambleas de CCAA. La iniciativa popular queda excluida para reforma constitucional (Art. 87.3).",
+      "articulo_referencia": "Arts. 166 y 87.1 y 2 CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "Señale la respuesta correcta en relación con la reforma operada en el artículo 13.2 de la Constitución:",
+      "opciones": [
+        "Supuso la ampliación del sufragio pasivo a los extranjeros en las elecciones autonómicas.",
+        "Supuso la ampliación del sufragio pasivo a los extranjeros en las elecciones municipales.",
+        "La citada reforma exigió la celebración de referéndum preceptivo y vinculante.",
+        "Se tramitó por el procedimiento ordinario de reforma previsto en el artículo 167 CE."
+      ],
+      "respuesta_correcta": 3,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "dificil",
+      "explicacion": "La reforma del Art. 13.2 (1992) añadió el sufragio pasivo municipal para extranjeros. Se tramitó por Art. 167 (ordinario), sin referéndum, pues nadie lo solicitó en plazo.",
+      "articulo_referencia": "Reforma constitucional 1992",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "Se pretende reformar el artículo de la Constitución referido a la propiedad privada y a la herencia. Para ello:",
+      "opciones": [
+        "La reforma por iniciativa popular exigirá no menos de 500.000 firmas acreditadas.",
+        "Se procederá a la aprobación del principio de reforma por mayoría de dos tercios.",
+        "Se procederá conforme al Art. 167 (reforma ordinaria).",
+        "Una vez disueltas las Cortes, las Cámaras elegidas deberán ratificar la decisión."
+      ],
+      "respuesta_correcta": 2,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "media",
+      "explicacion": "El derecho a la propiedad privada (Art. 33) está en la Sección 2ª del Capítulo II del Título I. No está protegido por Art. 168, por lo que se reforma por Art. 167.",
+      "articulo_referencia": "Arts. 33 y 167 CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "De acuerdo con su Disposición Final, la Constitución entró en vigor:",
+      "opciones": [
+        "En el momento de la sanción real.",
+        "Tras su aprobación por referéndum.",
+        "Una vez aprobada por las Cortes Generales.",
+        "El día de su publicación en el BOE."
+      ],
+      "respuesta_correcta": 3,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "facil",
+      "explicacion": "La Disposición Final CE establece: 'Esta Constitución entrará en vigor el mismo día de la publicación de su texto oficial en el Boletín Oficial del Estado' (29 de diciembre de 1978).",
+      "articulo_referencia": "Disposición Final CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "El castellano es la lengua oficial del Estado y, de acuerdo con el Título Preliminar, todos los españoles tienen:",
+      "opciones": [
+        "El derecho a conocerla.",
+        "El deber de usarla.",
+        "El deber de conocerla y el derecho a usarla.",
+        "El deber de usarla y el derecho a conocerla."
+      ],
+      "respuesta_correcta": 2,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "facil",
+      "explicacion": "El Art. 3.1 CE establece que todos los españoles tienen el DEBER de conocer el castellano y el DERECHO a usarlo. Es la única lengua con deber constitucional de conocimiento.",
+      "articulo_referencia": "Art. 3.1 CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "El artículo 7 del Título Preliminar de la Constitución Española regula:",
+      "opciones": [
+        "Los sindicatos de trabajadores y asociaciones empresariales.",
+        "Los partidos políticos.",
+        "Las Fuerzas Armadas.",
+        "La capitalidad del Estado."
+      ],
+      "respuesta_correcta": 0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "facil",
+      "explicacion": "El Art. 7 CE regula los sindicatos de trabajadores y las asociaciones empresariales. Los partidos políticos están en el Art. 6, las Fuerzas Armadas en el Art. 8, y la capital en el Art. 5.",
+      "articulo_referencia": "Art. 7 CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "Cuando se propusiere la reforma constitucional del derecho de reunión reconocido en el artículo 21, se requerirá:",
+      "opciones": [
+        "Mayoría de tres quintos del Congreso y mayoría absoluta del Senado.",
+        "Mayoría absoluta de cada Cámara.",
+        "Mayoría de tres quintos de ambas Cámaras.",
+        "Mayoría de dos tercios de ambas Cámaras."
+      ],
+      "respuesta_correcta": 2,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "dificil",
+      "explicacion": "El Art. 21 (derecho de reunión) está en la Sección 1ª del Capítulo II del Título I, pero fuera de los Arts. 15-29 protegidos por Art. 168. Se reforma por Art. 167 (3/5 de cada Cámara).",
+      "articulo_referencia": "Art. 167 CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "El artículo 166 CE remite el ejercicio de la iniciativa de reforma a los órganos previstos en:",
+      "opciones": [
+        "El artículo 87 apartado 1 de la Constitución Española.",
+        "El artículo 87 apartados 1 y 2 de la Constitución Española.",
+        "El artículo 87 apartados 1, 2 y 3 de la Constitución Española.",
+        "Los artículos 86 y 87 de la Constitución Española."
+      ],
+      "respuesta_correcta": 1,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "media",
+      "explicacion": "El Art. 166 CE remite a los apartados 1 y 2 del Art. 87, excluyendo el apartado 3 (iniciativa legislativa popular). La ILP no puede ejercer la iniciativa de reforma.",
+      "articulo_referencia": "Arts. 166 y 87.1 y 2 CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "En el procedimiento de reforma ordinaria de la Constitución de 1978, contemplado en el Art. 167, los proyectos de reforma deberán ser aprobados:",
+      "opciones": [
+        "Por 3/5 de cada una de las Cámaras y, si no hubiera acuerdo entre ambas, se intentará obtenerlo mediante una Comisión paritaria.",
+        "Por 2/3 de cada una de las Cámaras y, si no hubiera acuerdo entre ambas, se intentará obtenerlo mediante una Comisión paritaria.",
+        "Por mayoría absoluta de cada una de las Cámaras.",
+        "Por acuerdo favorable del Congreso y mayoría absoluta del Senado."
+      ],
+      "respuesta_correcta": 0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "media",
+      "explicacion": "El Art. 167.1 CE requiere 3/5 de cada Cámara. Si no hay acuerdo, se crea una Comisión paritaria que presentará un texto para votación en ambas Cámaras.",
+      "articulo_referencia": "Art. 167.1 CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "En caso de procederse a la reforma del artículo 18 de la CE que regula el derecho al honor, a la intimidad, será necesario:",
+      "opciones": [
+        "Aprobación del principio de reforma por mayoría de 3/5 de cada Cámara.",
+        "Referéndum facultativo y vinculante.",
+        "Aprobación del principio de reforma por mayoría de 2/3 de cada Cámara y disolución inmediata de Cortes.",
+        "Aprobación por mayoría absoluta de cada Cámara."
+      ],
+      "respuesta_correcta": 2,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "dificil",
+      "explicacion": "El Art. 18 está en la Sección 1ª del Capítulo II del Título I (Arts. 15-29), protegida por Art. 168 (reforma agravada): 2/3 cada Cámara, disolución, nuevas elecciones, 2/3, referéndum preceptivo.",
+      "articulo_referencia": "Art. 168 CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "El referéndum en caso de reforma agravada de la Constitución de 1978:",
+      "opciones": [
+        "Es facultativo y no vinculante.",
+        "Es facultativo y vinculante.",
+        "Es preceptivo y no vinculante.",
+        "Es preceptivo y vinculante."
+      ],
+      "respuesta_correcta": 3,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "media",
+      "explicacion": "En la reforma agravada (Art. 168) el referéndum es PRECEPTIVO (obligatorio) y VINCULANTE (su resultado obliga). En la ordinaria (Art. 167) es facultativo.",
+      "articulo_referencia": "Art. 168.3 CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "¿Quién debe solicitar la celebración de referéndum en caso de reforma ordinaria de la Constitución de 1978?",
+      "opciones": [
+        "El Gobierno.",
+        "La mayoría absoluta de miembros del Congreso y del Senado.",
+        "1/10 parte de los miembros de cualquiera de las Cámaras.",
+        "1/5 parte de los miembros de cada una de las Cámaras."
+      ],
+      "respuesta_correcta": 2,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "media",
+      "explicacion": "El Art. 167.3 CE establece que, aprobada la reforma, será sometida a referéndum cuando así lo soliciten, dentro de los 15 días siguientes, 1/10 de los miembros de cualquiera de las Cámaras.",
+      "articulo_referencia": "Art. 167.3 CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "¿Qué plazo establece la Constitución de 1978 para solicitar la celebración de referéndum en caso de aprobación de una reforma constitucional del Art. 167?",
+      "opciones": [
+        "Habrá de solicitarse dentro de los 5 días siguientes a su aprobación.",
+        "Habrá de solicitarse dentro de los 10 días siguientes a su aprobación.",
+        "Habrá de solicitarse dentro de los 15 días siguientes a su aprobación.",
+        "Habrá de solicitarse dentro de los 20 días siguientes a su aprobación."
+      ],
+      "respuesta_correcta": 2,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "facil",
+      "explicacion": "El Art. 167.3 CE establece el plazo de 15 días siguientes a la aprobación de la reforma para que 1/10 de cualquiera de las Cámaras solicite el referéndum.",
+      "articulo_referencia": "Art. 167.3 CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "La iniciativa para la reforma constitucional debe ir suscrita, al menos, en el Congreso por:",
+      "opciones": [
+        "Mayoría absoluta de los Diputados.",
+        "50 diputados que pertenezcan a 2 grupos parlamentarios.",
+        "2 grupos parlamentarios o 1/5 de los diputados.",
+        "1 grupo parlamentario o 15 Diputados."
+      ],
+      "respuesta_correcta": 2,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "dificil",
+      "explicacion": "Según el Reglamento del Congreso, las proposiciones de reforma constitucional deben ir suscritas por 2 Grupos Parlamentarios o 1/5 de los Diputados (70 diputados).",
+      "articulo_referencia": "Art. 146 Reglamento del Congreso",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "¿Cuáles de los siguientes estados de anomalía política regulados en el artículo 116 CE será declarado por el Congreso?",
+      "opciones": [
+        "Los estados de alarma y excepción.",
+        "El estado de alarma.",
+        "El estado de excepción.",
+        "El estado de sitio."
+      ],
+      "respuesta_correcta": 3,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "media",
+      "explicacion": "El estado de sitio es el único declarado por el Congreso (mayoría absoluta, a propuesta del Gobierno). El de alarma lo declara el Gobierno, y el de excepción el Gobierno con autorización previa del Congreso.",
+      "articulo_referencia": "Art. 116.4 CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "En caso de declaración del estado de alarma, el Gobierno podrá prorrogar el mismo:",
+      "opciones": [
+        "Previa autorización de las Cortes Generales.",
+        "Previa autorización del Congreso.",
+        "Dando cuenta a las Cortes Generales.",
+        "Dando cuenta al Congreso."
+      ],
+      "respuesta_correcta": 1,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "media",
+      "explicacion": "El estado de alarma se declara por el Gobierno (decreto en Consejo de Ministros) dando cuenta al Congreso, pero su prórroga requiere autorización del Congreso (Art. 116.2 CE).",
+      "articulo_referencia": "Art. 116.2 CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "El artículo 169 de la Constitución Española dispone que:",
+      "opciones": [
+        "No podrá iniciarse la reforma constitucional en tiempo de guerra o de vigencia de algunos de los estados del Art. 116.",
+        "No podrá iniciarse la reforma constitucional en tiempo de guerra o de vigencia de alguno de los estados del Art. 116.",
+        "No podrá aprobarse la reforma constitucional en tiempo de guerra.",
+        "No podrá aprobarse la reforma constitucional en tiempo de guerra o de vigencia de estados excepcionales."
+      ],
+      "respuesta_correcta": 1,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "media",
+      "explicacion": "El Art. 169 CE: 'No podrá iniciarse la reforma constitucional en tiempo de guerra o de vigencia de alguno de los estados previstos en el artículo 116'. Habla de 'iniciarse', no 'aprobarse'.",
+      "articulo_referencia": "Art. 169 CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "¿Quién aprobó la Constitución Española de 1978?",
+      "opciones": [
+        "El Rey.",
+        "El pueblo español.",
+        "Las Cortes Generales.",
+        "El Congreso de los Diputados."
+      ],
+      "respuesta_correcta": 1,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "media",
+      "explicacion": "Aunque las Cortes la aprobaron el 31/10/1978, la CE la aprobó el pueblo español mediante referéndum el 6/12/1978. El Preámbulo dice 'Las Cortes han aprobado y el pueblo español ha ratificado'.",
+      "articulo_referencia": "Preámbulo CE y referéndum 6/12/1978",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "¿Cuáles son los tres Títulos de la Constitución Española que se subdividen en Capítulos?",
+      "opciones": [
+        "Preliminar, I y VIII",
+        "I, III y VIII.",
+        "I, V y VII.",
+        "II, IV y VIII."
+      ],
+      "respuesta_correcta": 1,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "media",
+      "explicacion": "Los Títulos que se subdividen en Capítulos son: Título I (5 capítulos), Título III (3 capítulos) y Título VIII (3 capítulos). El Título Preliminar no tiene capítulos.",
+      "articulo_referencia": "Estructura CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "'De las garantías de las libertades y derechos fundamentales' es el nombre de un Capítulo del Título:",
+      "opciones": [
+        "Primero.",
+        "Segundo.",
+        "Tercero.",
+        "Cuarto."
+      ],
+      "respuesta_correcta": 0,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "facil",
+      "explicacion": "El Capítulo IV del Título I se denomina 'De las garantías de las libertades y derechos fundamentales' (Arts. 53-54).",
+      "articulo_referencia": "Capítulo IV, Título I CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "El derecho a una vivienda digna (artículo 47 CE), para la Constitución española:",
+      "opciones": [
+        "Es un valor superior de nuestro ordenamiento.",
+        "Es un derecho fundamental.",
+        "Es un principio rector de la política social y económica.",
+        "No está regulado de manera expresa."
+      ],
+      "respuesta_correcta": 2,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "facil",
+      "explicacion": "El Art. 47 CE (vivienda digna) está en el Capítulo III del Título I, que contiene los 'Principios rectores de la política social y económica', no derechos fundamentales.",
+      "articulo_referencia": "Art. 47 CE (Capítulo III, Título I)",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    },
+    {
+      "pregunta": "El artículo 2 de la Constitución Española establece que:",
+      "opciones": [
+        "La capital del Estado es la villa de Madrid.",
+        "La bandera de España está formada por tres franjas horizontales.",
+        "El castellano es la lengua oficial del Estado.",
+        "La Constitución se fundamenta en la indisoluble unidad de la Nación española, patria común e indivisible de todos los españoles."
+      ],
+      "respuesta_correcta": 3,
+      "tema": 1,
+      "materia": "ce-constitucion",
+      "dificultad": "facil",
+      "explicacion": "El Art. 2 CE establece la unidad de la Nación española y reconoce el derecho a la autonomía de nacionalidades y regiones. La capital está en el Art. 5, la bandera en el Art. 4, y la lengua en el Art. 3.",
+      "articulo_referencia": "Art. 2 CE",
+      "is_active": true,
+      "validation_status": "auto_validated",
+      "source": "1 TEST TEMA 1.pdf",
+      "origin_type": "reformulated"
+    }
+  ],
+  "duplicates": []
+}

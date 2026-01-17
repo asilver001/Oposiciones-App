@@ -1,0 +1,294 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 1.- Test GF Tema 1.1. 2024-2025.pdf
+**Total preguntas:** 22
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** En el presupuesto por programas, la determinaci�n del conjunto de los objetivos a
+
+**Opciones:**
+  0. lcanzar se encuadrar�a dentro de la etapa de:
+  1. Planificaci�n.
+  2. Programaci�n.
+  3. Control.
+
+---
+
+### Pregunta 2
+
+**Texto:** �En qu� se fundamenta el presupuesto cl�sico?
+
+**Opciones:**
+  0. En la intervenci�n econ�mica.
+  1. En la econom�a social y de mercado.
+  2. En la liberalizaci�n econ�mica y la ideolog�a liberal.
+  3. En la expansi�n del gastos p�blico.
+
+---
+
+### Pregunta 3
+
+**Texto:** El presupuesto est� formalmente equilibrado, consecuencia de:
+
+**Opciones:**
+  0. Un equilibrio contable.
+  1. Un equilibrio econ�mico.
+  2. Un equilibrio econ�mico-financiero.
+  3. Un equilibrio financiero.
+
+---
+
+### Pregunta 4
+
+**Texto:** El abandono del presupuesto cl�sico se debe a:
+
+**Opciones:**
+  0. A la no intervenci�n econ�mica.
+  1. La limitaci�n de la demanda.
+  2. La crisis de las teor�as de liberalizaci�n econ�mica y la ideolog�a liberal.
+  3. La contracci�n del gasto p�blico.
+
+---
+
+### Pregunta 5
+
+**Texto:** �Cu�l es una fase del presupuesto por programas?
+
+**Opciones:**
+  0. An�lisis de los paquetes de decisi�n.
+  1. Identificaci�n de las unidades de decisi�n.
+  2. Programaci�n.
+  3. Ordenaci�n de paquetes de decisi�n.
+
+---
+
+### Pregunta 6
+
+**Texto:** No es una f�rmula presupuestaria de estabilizaci�n econ�mica:
+
+**Opciones:**
+  0. El presupuesto c�clico.
+  1. El presupuesto de estabilizaci�n autom�tica.
+  2. El presupuesto compensatorio
+  3. El presupuesto de las cuentas de renta nacional.
+
+---
+
+### Pregunta 7
+
+**Texto:** �Cu�l es el presupuesto que no admite como v�lido el nivel de gasto de a�os anteriores?
+
+**Opciones:**
+  0. Presupuesto de ejecuci�n o por tareas.
+  1. Presupuesto por programas.
+  2. Presupuesto en base cero.
+  3. Presupuesto c�clico.
+
+---
+
+### Pregunta 8
+
+**Texto:** El presupuesto que expone los programas de acci�n de cada unidad administrativa,
+
+**Opciones:**
+  0. ada una precisa, as� como los indicadores de los medios f�sicos sobre los que act�a y los
+  1. Presupuesto de ejecuci�n o por tareas.
+  2. Presupuesto por programas.
+  3. Presupuesto en base cero.
+
+---
+
+### Pregunta 9
+
+**Texto:** En el presupuesto cl�sico NO es un principio econ�mico:
+
+**Opciones:**
+  0. Deuda p�blica autoliquidable.
+  1. Neutralidad impositiva.
+  2. Equilibrio presupuestario.
+  3. Principio de presupuesto bruto.
+
+---
+
+### Pregunta 10
+
+**Texto:** El principio del presupuesto cl�sico por que se establece que el presupuesto debe recoger
+
+**Opciones:**
+  0. Universalidad.
+  1. No afectaci�n.
+  2. Especialidad.
+  3. Unidad.
+
+---
+
+### Pregunta 11
+
+**Texto:** Seg�n el principio de Deuda p�blica autoliquidable para los seguidores de la teor�a
+
+**Opciones:**
+  0. Solo se justifica la emisi�n de deuda p�blica cuando con el producto obtenido por la
+  1. Solo se justifica la emisi�n de deuda p�blica cuando con el producto obtenido por la
+  2. Los ingresos ordinarios deben ser suficientes para financiar los gastos ordinarios,
+  3. No se justifica la emisi�n de deuda p�blica.
+
+---
+
+### Pregunta 12
+
+**Texto:** Son fases del presupuesto por programas:
+
+**Opciones:**
+  0. Planificaci�n, programaci�n, presupuestaci�n y control.
+  1. Elaboraci�n, aprobaci�n, ejecuci�n y control.
+  2. Programaci�n, presupuestaci�n, ejecuci�n y control.
+  3. Planificaci�n, presupuestaci�n, ejecuci�n y control.
+
+---
+
+### Pregunta 13
+
+**Texto:** La fase del Presupuesto por programas por la que se traduce en t�rminos f�sicos y
+
+**Opciones:**
+  0. Presupuestaci�n.
+  1. Programaci�n.
+  2. Planificaci�n.
+  3. Control.
+
+---
+
+### Pregunta 14
+
+**Texto:** Respecto a los ingresos, el presupuesto es un/una:
+
+**Opciones:**
+  0. C�lculo aproximado.
+  1. Autorizaci�n.
+  2. L�mite cuantitativo.
+  3. L�mite cualitativo.
+
+---
+
+### Pregunta 15
+
+**Texto:** Cuando se dice que solo se pueden contraer gastos hasta el importe que figura en el
+
+**Opciones:**
+  0. Principio de especialidad cualitativa.
+  1. Principio de especialidad cuantitativa.
+  2. Principio de especialidad temporal.
+  3. Principio de exactitud.
+
+---
+
+### Pregunta 16
+
+**Texto:** La regla de oro del presupuesto cl�sico es:
+
+**Opciones:**
+  0. El equilibrio presupuestario anual.
+  1. El equilibrio contable anual.
+  2. El desequilibrio econ�mico anual.
+  3. El desequilibrio contable autofinanciable.
+
+---
+
+### Pregunta 17
+
+**Texto:** Cuando en el presupuesto cl�sico se hace referencia a la necesidad de que los gastos y los
+
+**Opciones:**
+  0. Presupuesto bruto.
+  1. Especialidad.
+  2. Universalidad.
+  3. Presupuesto cerrado.
+
+---
+
+### Pregunta 18
+
+**Texto:** Dentro del presupuesto en base cero, el nivel que permite realizar las actividades del a�o
+
+**Opciones:**
+  0. nterior sin cambios importantes, se denomina:
+  1. Nivel m�nimo
+  2. Nivel corriente.
+  3. Nivel de mejora.
+
+---
+
+### Pregunta 19
+
+**Texto:** Como la expresi�n contable del plan econ�mico de la Hacienda P�blica para un periodo
+
+**Opciones:**
+  0. e tiempo determinado se conoce al:
+  1. Presupuesto base cero.
+  2. Ciclo presupuestario.
+  3. Presupuesto.
+
+---
+
+### Pregunta 20
+
+**Texto:** �Qui�nes propugnan que el gasto p�blico debe ser m�nimo y solo atender aquellos gastos
+
+**Opciones:**
+  0. Los economistas cl�sicos.
+  1. Los economistas keynesianos.
+  2. Los economistas de presupuesto compensatorio.
+  3. Los economistas del presupuesto funcional.
+
+---
+
+### Pregunta 21
+
+**Texto:** �Cu�l de los siguientes principios no se aplica actualmente al presupuesto?
+
+**Opciones:**
+  0. Universalidad.
+  1. Especialidad.
+  2. Unidad.
+  3. Deuda p�blica autoliquidable.
+
+---
+
+### Pregunta 22
+
+**Texto:** La norma jur�dica que reviste la aprobaci�n del presupuesto ser� la de:
+
+**Opciones:**
+  0. Ley
+  1. Ley org�nica.
+  2. Real Decreto.
+  3. Decreto Ley.
+
+---

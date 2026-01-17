@@ -1,0 +1,270 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** Test subvenciones.pdf
+**Total preguntas:** 20
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** Se�ale cu�l de los siguientes no es un sujeto al que se refiere la LGS:
+
+**Opciones:**
+  0. El �rgano de contrataci�n
+  1. Las entidades colaboradoras
+  2. El beneficiario
+  3. El �rgano concedente
+
+---
+
+### Pregunta 2
+
+**Texto:** Se�ale cu�l de los siguientes es requisito para entender que estamos ante una
+
+**Opciones:**
+  0. Debe tratarse de una disposici�n dineraria
+  1. No implica contraprestaci�n.
+  2. Va destinada a favorecer actividades, comportamientos o conductas
+  3. onsideradas de utilidad p�blica o inter�s social.
+
+---
+
+### Pregunta 3
+
+**Texto:** �En qu� plazo debe resolverse y notificarse el procedimiento de otorgamiento de
+
+**Opciones:**
+  0. En 6 meses
+  1. En 12 meses
+  2. En 3 meses
+  3. La ley no prev� ning�n plazo espec�fico.
+
+---
+
+### Pregunta 4
+
+**Texto:** �En qu� plazo debe resolverse y notificarse el procedimiento de reintegro de
+
+**Opciones:**
+  0. En 6 meses
+  1. En 12 meses
+  2. En 3 meses
+  3. La ley no prev� ning�n plazo espec�fico.
+
+---
+
+### Pregunta 5
+
+**Texto:** �Qui�n puede ser beneficiario de una subvenci�n?
+
+**Opciones:**
+  0. Cualquier entidad privada
+  1. Cualquier entidad p�blica
+  2. Cualquier entidad p�blica o privada
+  3. Cualquier entidad p�blica o privada siempre que sean personas jur�dicas
+
+---
+
+### Pregunta 6
+
+**Texto:** �Cu�nto puede durar c�mo m�ximo un convenio de colaboraci�n entre entidad
+
+**Opciones:**
+  0. oncedente y entidad colaboradora?
+  1. 4 a�os
+  2. Hasta 6 si incluye pr�rrogas
+  3. No se puede prorrogar por un tiempo superior al inicialmente fijado
+
+---
+
+### Pregunta 7
+
+**Texto:** �Qu� plazo general hay para rendir cuentas justificativas del importe recibido en
+
+**Opciones:**
+  0. oncepto de subvenci�n?
+  1. 1 mes
+  2. 3 meses
+  3. 6 meses
+
+---
+
+### Pregunta 8
+
+**Texto:** No podr�n obtener la condici�n de beneficiarios quienes:
+
+**Opciones:**
+  0. Hayan dado lugar a resoluci�n firme y culpable de cualquier contrato.
+  1. Tengan su residencia fiscal en un para�so fiscal.
+  2. No est�n al corriente de sus obligaciones tributarias
+  3. Todas son correctas.
+
+---
+
+### Pregunta 9
+
+**Texto:** Se�ale la correcta:
+
+**Opciones:**
+  0. La convocatoria tiene car�cter reglamentario y se publica en el BOE
+  1. La convocatoria tiene car�cter reglamentario y su aprobaci�n se puede delegar
+  2. La convocatoria tiene car�cter de acto administrativo y se publica en la Base
+  3. e Datos Nacional de Subvenciones y un extracto en el BOE
+
+---
+
+### Pregunta 10
+
+**Texto:** Pueden ser beneficiarios de una subvenci�n:
+
+**Opciones:**
+  0. Personas f�sicas o jur�dicas privadas
+  1. Personas f�sicas o jur�dicas p�blicas o privadas
+  2. Personas f�sicas o jur�dicas p�blicas
+  3. Personas f�sicas o jur�dicas p�blicas o privadas e incluso, si las bases lo prev�n,
+
+---
+
+### Pregunta 11
+
+**Texto:** Se�ale la correcta:
+
+**Opciones:**
+  0. Las bases reguladoras son acto administrativo
+  1. Las bases reguladoras se publican en el BOE
+  2. La aprobaci�n de las bases reguladoras es delegable.
+  3. Las aprueba el Presidente o Director del organismo aut�nomo.
+
+---
+
+### Pregunta 12
+
+**Texto:** Se�ale la correcta:
+
+**Opciones:**
+  0. El procedimiento de otorgamiento de subvenciones se inicia de oficio
+  1. El plazo para subsanaci�n de las solicitudes es de 10 d�as
+  2. El instructor puede solicitar informes.
+  3. Todas son correctas.
+
+---
+
+### Pregunta 13
+
+**Texto:** Se admite la concesi�n directa de subvenciones (se�ale la incorrecta):
+
+**Opciones:**
+  0. Cuando as� venga impuesto por una norma de rango reglamentario
+  1. Cuando est�n previstas nominativamente en los Presupuestos Generales del
+  2. Cuando se acrediten razones de inter�s humanitario debidamente justificadas
+  3. Cuando se acrediten razones de inter�s p�blico, social o econ�mico
+
+---
+
+### Pregunta 14
+
+**Texto:** �Cu�l es el plazo de prescripci�n del derecho de la Administraci�n a reconocer el
+
+**Opciones:**
+  0. 4 a�os
+  1. 2 a�os
+  2. 3 a�os
+  3. 1 a�o
+
+---
+
+### Pregunta 15
+
+**Texto:** Son sanciones por infracciones leves:
+
+**Opciones:**
+  0. La multa de 75 a 6.000 euros
+  1. La p�rdida hasta 1 a�o de la posibilidad de obtener subvenciones
+  2. La prohibici�n de contratar durante 1 a�o
+  3. La p�rdida de la posibilidad de ser entidad colaboradora durante 1 a�o
+
+---
+
+### Pregunta 16
+
+**Texto:** Las infracciones y sanciones prescriben:
+
+**Opciones:**
+  0. Al a�o
+  1. A los 4 a�os
+  2. A los 3 a�os
+  3. A los 2 a�os
+
+---
+
+### Pregunta 17
+
+**Texto:** Cuando la sanci�n consista en multa, la impone, con car�cter general:
+
+**Opciones:**
+  0. El Ministro de Hacienda
+  1. El ministro o secretario de Estado del departamento concedente.
+  2. A o b indistintamente
+  3. El Presidente o Director del organismo aut�nomo.
+
+---
+
+### Pregunta 18
+
+**Texto:** Se�ale la correcta:
+
+**Opciones:**
+  0. Las cantidades a reintegrar tendr�n la consideraci�n de ingresos de derecho
+  1. El inter�s de demora aplicable ser� el inter�s legal del dinero incrementado en
+  2. Los procedimientos para la exigencia de reintegro tendr�n siempre car�cter
+  3. B y c es correcto.
+
+---
+
+### Pregunta 19
+
+**Texto:** �Qu� duraci�n tienen con car�cter general los planes estrat�gicos en materia de
+
+**Opciones:**
+  0. 3 a�os
+  1. 1 a�o
+  2. 4 a�os
+  3. No tiene una duraci�n concreta
+
+---
+
+### Pregunta 20
+
+**Texto:** Son obligaciones de los beneficiarios:
+
+**Opciones:**
+  0. Comunicar la obtenci�n de otras subvenciones
+  1. Adoptar medidas de difusi�n
+  2. Cumplir el objetivo
+  3. Todas son correctas
+
+---

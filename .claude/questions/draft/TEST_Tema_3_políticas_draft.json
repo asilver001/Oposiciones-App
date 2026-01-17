@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "source_file": "TEST Tema 3 políticas.pdf",
+    "source_path": "TEST Iniciales políticas\\TEST Tema 3 políticas.pdf",
+    "tema": 3,
+    "categoria": "general",
+    "extraction_date": "2026-01-15T23:41:43.498316",
+    "reformulation_date": "2026-01-15T23:47:35.750744",
+    "total_questions": 1,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:56.037252",
+    "completed_count": 0,
+    "failed_count": 1
+  },
+  "questions": [
+    {
+      "question_text": "Qu compromiso de reduccin de emisiones de Gases de Efecto Invernadero ha asumido",
+      "options": [
+        {
+          "text": "Al menos, un 75% respecto a 1990.",
+          "is_correct": false
+        },
+        {
+          "text": "Al menos un 55% respecto a 2005.",
+          "is_correct": false
+        },
+        {
+          "text": "Al menos un 55% respecto a 1990.",
+          "is_correct": false
+        },
+        {
+          "text": "Al menos un 75% respecto a 2005.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu compromiso de reduccin de emisiones de Gases de Efecto Invernadero ha asumido",
+      "source": "TEST Tema 3 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

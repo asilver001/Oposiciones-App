@@ -1,0 +1,102 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** TEST Tema 7 políticas.pdf
+**Total preguntas:** 6
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** Se�ale la afirmaci�n correcta en relaci�n con el Gobierno Abierto:
+
+**Opciones:**
+  0. Es un t�rmino completamente nuevo que aparece asociado al movimiento de software
+  1. Es mencionado por primera vez en el Informe de la OCDE �Un gobierno abierto:
+  2. Ha sido en el �mbito de la Uni�n Europea donde se ha acu�ado este concepto.
+  3. Todas las respuestas son incorrectas.
+
+---
+
+### Pregunta 2
+
+**Texto:** El t�rmino Gobierno Abierto cobr� protagonismo a ra�z del:
+
+**Opciones:**
+  0. Memorando sobre Transparencia y Gobierno Abierto presentado por Barack Obama en
+  1. Memorando sobre Transparencia y Gobierno Abierto presentado por Barack Obama en
+  2. Memorando sobre Transparencia y Gobierno Abierto presentado por Bill Clinton en el
+  3. �o 2000.
+
+---
+
+### Pregunta 3
+
+**Texto:** No es un principio informador del Gobierno Abierto:
+
+**Opciones:**
+  0. Participaci�n.
+  1. Transparencia.
+  2. Rendici�n de cuentas.
+  3. Eficiencia.
+
+---
+
+### Pregunta 4
+
+**Texto:** En qu� a�o se puso en marcha la Alianza para un Gobierno Abierto (OGP, en sus siglas en
+
+**Opciones:**
+  0. En 2005
+  1. En 2009
+  2. En 2011
+  3. En 2015
+
+---
+
+### Pregunta 5
+
+**Texto:** Con el fin de conocer el avance y grado de cumplimiento de los planes de acci�n de Gobierno
+
+**Opciones:**
+  0. bierto:
+  1. Los Gobiernos deben presentar informes de autoevaluaci�n.
+  2. El grado de avance y cumplimiento ser� evaluado por el Mecanismo de Revisi�n
+  3. El grado de avance y cumplimiento ser� evaluado por el Comit� Directivo de la Alianza
+
+---
+
+### Pregunta 6
+
+**Texto:** Cu�ndo se sum� Espa�a a la Alianza para un Gobierno Abierto:
+
+**Opciones:**
+  0. En 2005
+  1. En 2009
+  2. En 2011
+  3. En 2015
+
+---

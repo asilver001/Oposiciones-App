@@ -1,0 +1,510 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** TEST Tema 5 políticas.pdf
+**Total preguntas:** 40
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** La poblaci�n activa:
+
+**Opciones:**
+  0. Es la suma de la poblaci�n ocupada y la poblaci�n desempleada.
+  1. Es la poblaci�n que tiene edad para trabajar.
+  2. Es la poblaci�n total de un pa�s, menos las personas jubiladas.
+  3. Poblaci�n activa y poblaci�n ocupada son expresiones sin�nimas.
+
+---
+
+### Pregunta 2
+
+**Texto:** El desempleo friccional fluct�a entre:
+
+**Opciones:**
+  0. El 0,1 y 0,3%.
+  1. El 1 y 3%.
+  2. El 3 y 5%.
+  3. El 2 y 3%.
+
+---
+
+### Pregunta 3
+
+**Texto:** Seg�n los datos de la Encuesta de Poblaci�n Activa (EPA) elaborada por el Instituto
+
+**Opciones:**
+  0. En torno al 9%.
+  1. En torno al 11%.
+  2. En torno al 14%
+  3. En torno al 17%.
+
+---
+
+### Pregunta 4
+
+**Texto:** En el mismo per�odo, la poblaci�n ocupada ascend�a a:
+
+**Opciones:**
+  0. En torno a 21 millones de personas.
+  1. En torno a 23 millones de personas.
+  2. En torno a 25 millones de personas.
+  3. En torno a 27 millones de personas.
+
+---
+
+### Pregunta 5
+
+**Texto:** El n�mero de empleados p�blicos asciende a:
+
+**Opciones:**
+  0. Alrededor de 2.300.000 trabajadores.
+  1. Alrededor de 2.900.000 trabajadores.
+  2. Alrededor de 3.500.000 trabajadores.
+  3. Alrededor de 4.000.000 trabajadores.
+
+---
+
+### Pregunta 6
+
+**Texto:** De acuerdo con lo establecido en la Ley 3/2023, de 28 de febrero, de Empleo (Ley de
+
+**Opciones:**
+  0. Las pol�ticas activas de empleo y las pol�ticas de protecci�n frente al desempleo.
+  1. Las pol�ticas activas y las pol�ticas pasivas de empleo.
+  2. Las pol�ticas activas de empleo,
+  3. omplementarias de empleo.
+
+---
+
+### Pregunta 7
+
+**Texto:** De acuerdo con lo establecido en la Ley de Empleo (Ley 3/2023, de 28 de febrero), no
+
+**Opciones:**
+  0. onforman las pol�ticas activas de empleo:
+  1. El conjunto de decisiones, medidas, servicios y programas orientados a la mejora de la
+  2. El conjunto de decisiones, medidas, servicios y programas orientados a la reducci�n del
+  3. esempleo
+
+---
+
+### Pregunta 8
+
+**Texto:** De acuerdo con lo establecido en la Ley de Empleo, no es un objetivo de la pol�tica de
+
+**Opciones:**
+  0. Mantener la unidad del mercado de trabajo en todo el territorio estatal.
+  1. El impulso a la creaci�n de empleos de calidad y estables que faciliten la transici�n
+  2. ienestar econ�mico para las personas trabajadoras.
+  3. El mantenimiento del empleo y la progresi�n profesional de las personas ocupadas,
+
+---
+
+### Pregunta 9
+
+**Texto:** No es un principio rector de la pol�tica de empleo:
+
+**Opciones:**
+  0. Los principios de adaptaci�n, acompa�amiento y activaci�n.
+  1. El principio de transparencia en el funcionamiento del mercado de trabajo.
+  2. El principio de inclusividad en el dise�o de los instrumentos de planificaci�n de la
+  3. El principio de adecuaci�n a las caracter�sticas del territorio.
+
+---
+
+### Pregunta 10
+
+**Texto:** De acuerdo con lo establecido en la Ley 3/2023, de 28 de octubre, de Empleo, no
+
+**Opciones:**
+  0. orresponde al Gobierno, a trav�s o a propuesta del Ministerio de Trabajo y
+  1. La coordinaci�n de la pol�tica de empleo.
+  2. Aprobar los proyectos de normas con rango de Ley y las disposiciones reglamentarias
+  3. e trabajo, fomento de empleo, protecci�n por desempleo y formaci�n en el trabajo.
+
+---
+
+### Pregunta 11
+
+**Texto:** El Sistema Nacional de Empleo est� conformado por:
+
+**Opciones:**
+  0. La Agencia Espa�ola de Empleo y los Servicios P�blicos de Empleo de las
+  1. omunidades Aut�nomas.
+  2. La Agencia Espa�ola de Empleo, los Servicios P�blicos de Empleo de las Comunidades
+  3. ut�nomas y las Entidades Locales que colaboren con los servicios p�blicos de empleo.
+
+---
+
+### Pregunta 12
+
+**Texto:** Es un �rgano de gobernanza del Sistema Nacional de Empleo (SNE):
+
+**Opciones:**
+  0. La Agencia Espa�ola de Empleo.
+  1. El Consejo General del Servicio P�blico de Empleo Estatal.
+  2. La Secretar�a de Estado de Empleo.
+  3. La Conferencia Sectorial de Empleo y Asuntos Laborales.
+
+---
+
+### Pregunta 13
+
+**Texto:** De acuerdo con lo establecido en la Ley de Empleo, �cu�l es el �rgano consultivo y de
+
+**Opciones:**
+  0. El Consejo Rector de los Servicios P�blicos de Empleo.
+  1. La Secretar�a de Estado de Empleo.
+  2. La Conferencia Sectorial de Empleo y Asuntos Laborales.
+  3. El Consejo General del Sistema Nacional de Empleo.
+
+---
+
+### Pregunta 14
+
+**Texto:** Es un instrumento de planificaci�n y coordinaci�n de la pol�tica de empleo:
+
+**Opciones:**
+  0. La Estrategia Europea de Empleo
+  1. El Plan Anual de Pol�tica de Empleo.
+  2. Las Directrices Integradas para el Empleo.
+  3. El Sistema P�blico Integrado de Informaci�n de los Servicios de Empleo
+
+---
+
+### Pregunta 15
+
+**Texto:** La Estrategia Espa�ola de Apoyo Activo al Empleo se aprobar�:
+
+**Opciones:**
+  0. Por Acuerdo del Consejo de Ministros.
+  1. Por el Gobierno mediante Real Decreto.
+  2. Por Orden del titular del Ministerio de Trabajo y Econom�a Social.
+  3. Por las Cortes Generales.
+
+---
+
+### Pregunta 16
+
+**Texto:** �Cu�l de los siguientes es uno de los ejes de pol�ticas de activaci�n para el empleo en
+
+**Opciones:**
+  0. Oportunidades de empleo para personas con discapacidad.
+  1. Oportunidades de empleo para personas j�venes.
+  2. Oportunidades de empleo para mujeres, colectivos LGTBI y personas trans.
+  3. Oportunidades de empleo para mayores de 45 a�os.
+
+---
+
+### Pregunta 17
+
+**Texto:** La Estrategia Espa�ola de Apoyo Activo al Empleo:
+
+**Opciones:**
+  0. Tendr� una duraci�n cuatrienal.
+  1. Tendr� una duraci�n plurianual.
+  2. Podr� ser objeto de revisi�n a partir de los resultados de las evaluaciones que se hagan
+  3. nualmente.
+
+---
+
+### Pregunta 18
+
+**Texto:** �Qu� instrumento de planificaci�n del Sistema Nacional de Empleo (SNE)
+
+**Opciones:**
+  0. oncretar�, con car�cter anual, las directrices necesarias para alcanzar en el
+  1. onjunto del Estado y en cada una de las Comunidades Aut�nomas, los objetivos de
+  2. El Plan Anual para el Impulso del Empleo Decente.
+  3. El Plan Anual para el Fomento del Empleo Digno.
+
+---
+
+### Pregunta 19
+
+**Texto:** A qui�n le corresponde informar la Estrategia Espa�ola de Apoyo Activo al Empleo y
+
+**Opciones:**
+  0. A la Secretar�a de Estado de Empleo y Econom�a Social.
+  1. A la Secretar�a de Estado de Empleo y Econom�a Social y a la Conferencia Sectorial de
+  2. A la Conferencia Sectorial de Empleo y Asuntos Laborales.
+  3. A la Conferencia Sectorial de Empleo y Asuntos Laborales y al Consejo General del
+
+---
+
+### Pregunta 20
+
+**Texto:** De acuerdo con lo establecido en la Ley 3/2023, de 28 de febrero, de Empleo, tienen
+
+**Opciones:**
+  0. La Agencia Espa�ola de Empleo y los Servicios P�blicos de Empleo de las
+  1. omunidades Aut�nomas.
+  2. La Agencia Espa�ola de Empleo, los Servicios P�blicos de Empleo de las Comunidades
+  3. ut�nomas y las Entidades Locales que colaboren con los servicios p�blicos de empleo.
+
+---
+
+### Pregunta 21
+
+**Texto:** La Agencia Espa�ola de Empleo es:
+
+**Opciones:**
+  0. Un Organismo Aut�nomo.
+  1. Una Agencia Estatal.
+  2. Una Entidad Gestora.
+  3. Un Organismo rector.
+
+---
+
+### Pregunta 22
+
+**Texto:** No es una competencia de la Agencia Espa�ola de Empleo:
+
+**Opciones:**
+  0. Gestionar el Observatorio de las Ocupaciones.
+  1. La gesti�n y el control de las prestaciones por desempleo, sin perjuicio del cometido de
+  2. tribuye a los funcionarios del Cuerpo Superior de Inspectores de Trabajo y Seguridad
+  3. Elaborar y elevar al Ministerio de Trabajo y Econom�a Social las propuestas normativas
+
+---
+
+### Pregunta 23
+
+**Texto:** La prestaci�n de servicios de empleo tiene naturaleza de:
+
+**Opciones:**
+  0. Servicio p�blico, si dicha prestaci�n se realiza a trav�s de los Servicios P�blicos de
+  1. Servicio p�blico, con independencia de la entidad que la realice.
+  2. Servicio de inter�s general, si dicha prestaci�n se realiza a trav�s de los Servicios
+  3. Servicio de inter�s general, con independencia de la entidad que la realice.
+
+---
+
+### Pregunta 24
+
+**Texto:** Podr�n ser usuarios de los servicios p�blicos de empleo:
+
+**Opciones:**
+  0. S�lo las personas desempleadas demandantes de servicios de empleo.
+  1. Las personas demandantes de servicios de empleo siempre y cuando est�n
+  2. esempleadas o, en el caso de estar ocupadas, si tienen baja cualificaci�n.
+  3. Las entidades empleadoras siempre y cuando sean personas jur�dicas.
+
+---
+
+### Pregunta 25
+
+**Texto:** No es uno de los servicios incluido en el cat�logo de servicios garantizados a las
+
+**Opciones:**
+  0. La elaboraci�n de un curriculum vitae digital.
+  1. La elaboraci�n de un perfil individualizado.
+  2. el establecimiento de un canal de recepci�n de los servicios presencial o digital
+  3. lternativo.
+
+---
+
+### Pregunta 26
+
+**Texto:** No es un compromiso de todas las personas demandantes de servicios de empleo:
+
+**Opciones:**
+  0. cumplir, salvo causa justificada, con las acciones de formaci�n
+  1. aceptar ofertas de empleo adecuadas.
+  2. colaborar activamente en la elaboraci�n del perfil individualizado.
+  3. comunicar los cambios de domicilio.
+
+---
+
+### Pregunta 27
+
+**Texto:** No es una de las categor�as en las que se agrupar�n los servicios incluidos en la
+
+**Opciones:**
+  0. artera com�n de servicios del Sistema Nacional de Empleo:
+  1. Servicios de orientaci�n para el empleo personalizada, integral e inclusiva.
+  2. Servicios de intermediaci�n, colocaci�n y asesoramiento a empresas.
+  3. Servicios de asesoramiento para el autoempleo, el emprendimiento viable y la
+
+---
+
+### Pregunta 28
+
+**Texto:** A efectos del Sistema Nacional de Empleo, la intermediaci�n en el mercado de
+
+**Opciones:**
+  0. Los servicios p�blicos de empleo.
+  1. Las agencias de intermediaci�n sean agencias de intermediaci�n propiamente dichas o
+  2. gencias especializadas en la recolocaci�n o en la selecci�n de personal.
+  3. Aquellos otros servicios que reglamentariamente se determinen para las personas
+
+---
+
+### Pregunta 29
+
+**Texto:** De acuerdo con la Ley de Empleo se entiende por intermediaci�n laboral:
+
+**Opciones:**
+  0. El acuerdo documentado mediante el que se establecen derechos y obligaciones entre la
+  1. aso, a las necesidades de los colectivos prioritarios.
+  2. La colocaci�n en la profesi�n demandada por la persona trabajadora, de acuerdo con su
+  3. juste a sus aptitudes f�sicas y formativas.
+
+---
+
+### Pregunta 30
+
+**Texto:** En relaci�n con la empleabilidad, se�ale la respuesta correcta:
+
+**Opciones:**
+  0. Es un derecho y un deber de las personas demandantes de los servicios de empleo,
+  1. omo desarrollo del art�culo 37 de la Constituci�n Espa�ola.
+  2. Corresponde al Sistema Nacional de Empleo velar por el mantenimiento y mejora de la
+  3. La empleabilidad debe producir un ajuste din�mico entre las competencias propias y las
+
+---
+
+### Pregunta 31
+
+**Texto:** De acuerdo con lo establecido en el art�culo 50 no se considera colectivo vulnerable
+
+**Opciones:**
+  0. e atenci�n prioritaria a los efectos de la Ley de Empleo:
+  1. Personas gitanas.
+  2. Mujeres del entorno rural.
+  3. Personas afectadas por drogodependencias y otras adicciones.
+
+---
+
+### Pregunta 32
+
+**Texto:** En qu� art�culo de la Constituci�n se indica que los poderes p�blicos mantendr�n un
+
+**Opciones:**
+  0. sistencia y prestaciones sociales suficientes ante situaciones de necesidad,
+  1. Art�culo 40.
+  2. Art�culo 41.
+  3. Art�culo 42.
+
+---
+
+### Pregunta 33
+
+**Texto:** Para tener derecho a la prestaci�n por desempleo, en la modalidad contributiva, ser�
+
+**Opciones:**
+  0. De 360 d�as en los �ltimos 6 a�os.
+  1. De 180 d�as en los �ltimos 6 a�os.
+  2. De 360 d�as en los �ltimos 3 a�os.
+  3. De 180 d�as en los �ltimos 3 a�os.
+
+---
+
+### Pregunta 34
+
+**Texto:** La cuant�a de la prestaci�n por desempleo a partir del d�a 181 ser� igual al:
+
+**Opciones:**
+  0. 80% de las bases reguladoras.
+  1. 70% de las bases reguladoras.
+  2. 60% de las bases reguladoras.
+  3. 50% de las bases reguladoras.
+
+---
+
+### Pregunta 35
+
+**Texto:** De acuerdo con lo establecido en el art�culo 274.1 de la Ley General de la Seguridad
+
+**Opciones:**
+  0. e las siguientes situaciones:
+  1. Haber agotado la prestaci�n por desempleo. En caso de ser menor de 55 a�os sin
+  2. gotada haya tenido una duraci�n igual o superior a trescientos sesenta d�as.
+  3. Haber agotado la prestaci�n por desempleo. En caso de ser menor de 45 a�os sin
+
+---
+
+### Pregunta 36
+
+**Texto:** Entre otros requisitos, se les exigir� adem�s carecer de rentas propias. Se entiende
+
+**Opciones:**
+  0. umplido el requisito de carencia de rentas propias en la fecha de la solicitud del alta
+  1. ichas fechas no superen:
+  2. El 75% del del salario m�nimo interprofesional (SMI), excluida la parte proporcional de
+  3. os pagas extraordinarias.
+
+---
+
+### Pregunta 37
+
+**Texto:** Durante los primeros 180 d�as, la cuant�a del subsidio por desempleo ser� equivalente
+
+**Opciones:**
+  0. 95% del IPREM.
+  1. 90% del IPREM.
+  2. 80% del IPREM.
+  3. 75% del IPREM.
+
+---
+
+### Pregunta 38
+
+**Texto:** En cumplimiento de la Ley de Empleo, en la actualidad, cu�l es la Estrategia en
+
+**Opciones:**
+  0. La Estrategia Espa�ola de Activaci�n para el Empleo (2018 - 2022)
+  1. La Estrategia Espa�ola de Apoyo Activo al Empleo (2020 - 2030)
+  2. La Estrategia Espa�ola de Apoyo Activo al Empleo (2021 - 2024)
+  3. La Estrategia Espa�ola de Activaci�n para el Empleo (2021 � 2030).
+
+---
+
+### Pregunta 39
+
+**Texto:** No es uno de los objetivos estrat�gicos:
+
+**Opciones:**
+  0. Reducir el desempleo.
+  1. Gobernanza y cohesi�n del SNE.
+  2. Orientaci�n a resultados.
+  3. Coherencia con la transformaci�n productiva.
+
+---
+
+### Pregunta 40
+
+**Texto:** Es uno de los objetivos espec�ficos que recoge el objetivo estrat�gico relativo a
+
+**Opciones:**
+  0. Mejorar la coordinaci�n operativa de los distintos niveles administrativos que
+  1. Consolidar un modelo integrado de evaluaci�n de las pol�ticas activas de empleo.
+  2. Impulsar la transformaci�n digital y la modernizaci�n de los servicios p�blicos de
+  3. Acompa�ar, con el conjunto de pol�ticas activas de empleo, las estrategias p�blicas
+
+---

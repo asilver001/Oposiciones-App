@@ -1,0 +1,510 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 3 TEST TEMAS 5 Y 6 - copia.pdf
+**Total preguntas:** 40
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** El Congreso y el Senado, y, en su caso, ambas C�maras conjuntamente, podr�n
+
+**Opciones:**
+  0. Ser�n vinculantes para los Tribunales y afectar�n a las resoluciones judiciales,
+  1. Ser�n vinculantes para los Tribunales, pero no afectar�n a las resoluciones
+  2. l Ministerio Fiscal para su conocimiento.
+  3. No ser�n vinculantes para los Tribunales, ni afectar�n a las resoluciones
+
+---
+
+### Pregunta 2
+
+**Texto:** De conformidad con el T�tulo III de la CE, se�ale la respuesta correcta:
+
+**Opciones:**
+  0. La Sala de lo Penal de la Audiencia Nacional, ser� la competente para conocer
+  1. e las causas contra Diputados y Senadores.
+  2. El voto de los diputados y senadores es personal y delegable.
+  3. Los Diputados y Senadores gozar�n de inviolabilidad por las opiniones
+
+---
+
+### Pregunta 3
+
+**Texto:** Seg�n el art�culo 134 CE, �a qui�n corresponde aprobar los presupuestos
+
+**Opciones:**
+  0. Al Gobierno.
+  1. Al Congreso.
+  2. Al Senado.
+  3. A las Cortes Generales.
+
+---
+
+### Pregunta 4
+
+**Texto:** Seg�n lo previsto en el art�culo 69 CE, las CCAA elegir�n:
+
+**Opciones:**
+  0. Dos senadores, y otro m�s por cada mill�n de habitantes de su respectivo
+  1. Dos senadores.
+  2. Un senador, y otro m�s por cada mill�n de habitantes de su respectivo territorio.
+  3. Un senador, y dos m�s por cada mill�n de habitantes de su respectivo territorio.
+
+---
+
+### Pregunta 5
+
+**Texto:** De acuerdo con el art�culo 68 CE, el Congreso:
+
+**Opciones:**
+  0. Est� formado por 350 diputados.
+  1. La elecci�n de sus miembros se verificar� en cada circunscripci�n, atendiendo a
+  2. riterios de representaci�n mayoritaria.
+  3. Ser�n electores y elegibles, los espa�oles y extranjeros mayores de edad, seg�n
+
+---
+
+### Pregunta 6
+
+**Texto:** De acuerdo con lo dispuesto en el art�culo 66 de la Constituci�n Espa�ola:
+
+**Opciones:**
+  0. La potestad legislativa del Estado la ejerce exclusivamente el Congreso de los
+  1. iputados.
+  2. La potestad legislativa del Estado la ejercen las Cortes Generales.
+  3. La potestad legislativa del Estado la ejercen la Cortes Generales y las
+
+---
+
+### Pregunta 7
+
+**Texto:** No es una competencia de las CCGG:
+
+**Opciones:**
+  0. La potestad legislativa.
+  1. El control de la acci�n del Gobierno.
+  2. La convocatoria de refer�ndum consultivo a propuesta del Presidente del
+  3. La aprobaci�n de los Prepuestos Generales del Estado.
+
+---
+
+### Pregunta 8
+
+**Texto:** La prestaci�n del consentimiento del Estado para obligarse por medio de tratados
+
+**Opciones:**
+  0. Que afecten a la integridad territorial del Estado o a los derechos y deberes
+  1. Que afecten a la integridad territorial del Estado o a los derechos y deberes
+  2. Que afecten a la integridad territorial del Estado o a los derechos y deberes
+  3. Que afecten a la integridad territorial del Estado o a los derechos y deberes
+
+---
+
+### Pregunta 9
+
+**Texto:** �Qu� materia no se encuentra reservada a ley org�nica?:
+
+**Opciones:**
+  0. Las formas de ejercicio de la iniciativa popular para la presentaci�n de
+  1. El estado de alarma.
+  2. La composici�n, organizaci�n y funciones del Ministerio Fiscal.
+  3. El Consejo de Estado.
+
+---
+
+### Pregunta 10
+
+**Texto:** No proceder� la iniciativa popular para la presentaci�n de proposiciones de ley de
+
+**Opciones:**
+  0. onformidad con el art�culo 87.3:
+  1. En materias propias de ley org�nica, tributarias o de car�cter internacional, ni en
+  2. En materias propias de ley org�nica, leyes de bases, tributarias o de car�cter
+  3. En materias propias de ley org�nica, de car�cter internacional, derechos y
+
+---
+
+### Pregunta 11
+
+**Texto:** De conformidad con el art�culo 74 CE, las C�maras se reunir�n en sesi�n
+
+**Opciones:**
+  0. onjunta:
+  1. Para ejercer las competencias legislativas que el T�tulo II atribuye expresamente
+  2. las Cortes Generales.
+  3. Para ejercer las competencias legislativas que el T�tulo V atribuye expresamente
+
+---
+
+### Pregunta 12
+
+**Texto:** De conformidad con el art�culo 72.2 CE:
+
+**Opciones:**
+  0. Las sesiones conjuntas ser�n presididas por el Presidente del Congreso y se
+  1. bsoluta de cada C�mara.
+  2. Las sesiones conjuntas de las CCGG, ser�n presididas por el Presidente del
+  3. ongreso y se regir�n por un Reglamento de las Cortes Generales aprobado por
+
+---
+
+### Pregunta 13
+
+**Texto:** Las competencias relativas al nombramiento y separaci�n de altos cargos
+
+**Opciones:**
+  0. tribuidas al Consejo de Ministros:
+  1. Son delegables, a propuesta del Presidente del Gobierno, en las Comisiones
+  2. elegadas del Gobierno.
+  3. Son delegables en el Ministro correspondiente.
+
+---
+
+### Pregunta 14
+
+**Texto:** Seg�n lo establecido en la Ley del Gobierno, el Real Decreto de creaci�n de una
+
+**Opciones:**
+  0. omisi�n Delegada del Gobierno, deber� especificar en todo caso:
+  1. El miembro del Gobierno o subsecretario que asume la presidencia de la
+  2. omisi�n.
+  3. Los miembros del Gobierno y en su caso subsecretarios que la integran.
+
+---
+
+### Pregunta 15
+
+**Texto:** En los casos de vacante, ausencia o enfermedad, las funciones del Presidente del
+
+**Opciones:**
+  0. Por los Vicepresidentes, de acuerdo con su orden de prelaci�n, y en defecto de
+  1. Por quien �l mismo designe, siempre que sea miembro del Gobierno.
+  2. Por quien �l mismo designe, siempre que sea miembro del Gobierno y previo
+  3. e los Diputados.
+
+---
+
+### Pregunta 16
+
+**Texto:** En atenci�n a lo establecido en el art�culo 113 CE, el Congreso de los Diputados
+
+**Opciones:**
+  0. La moci�n de censura por mayor�a simple propuesta al menos por una d�cima
+  1. La moci�n de censura propuesta al menos por la mayor�a absoluta de los
+  2. iputados, y habr� de incluir un candidato a la Presidencia del Gobierno.
+  3. La moci�n de censura por mayor�a absoluta propuesta al menos por una d�cima
+
+---
+
+### Pregunta 17
+
+**Texto:** Corresponde al Congreso (se�ale la falsa):
+
+**Opciones:**
+  0. Adoptar una moci�n de censura que ser� aprobada por mayor�a absoluta.
+  1. Aprobar la cuesti�n de confianza planteada por el Presidente del Gobierno
+  2. Otorgar la confianza al candidato a Presidente del Gobierno por mayor�a
+  3. bsoluta en primera votaci�n y mayor�a simple en segunda votaci�n, 48 horas
+
+---
+
+### Pregunta 18
+
+**Texto:** Todos los asuntos que vayan a someterse a aprobaci�n del Consejo de Ministros,
+
+**Opciones:**
+  0. eben ser examinados por el siguiente �rgano de colaboraci�n y apoyo al
+  1. Comisi�n General de Secretarios de Estado y Subsecretarios.
+  2. Secretariado de Gobierno.
+  3. Gabinete de la Presidencia del Gobierno.
+
+---
+
+### Pregunta 19
+
+**Texto:** Se�ale la respuesta correcta en relaci�n con los Gabinetes:
+
+**Opciones:**
+  0. Prestan su apoyo a los miembros del Gobierno y Secretarios de Estado en el
+  1. esarrollo de su labor pol�tica, en el cumplimiento de las tareas de car�cter
+  2. dministrativa.
+  3. El Gabinete de la Presidencia del Gobierno se regular� por Real Decreto del
+
+---
+
+### Pregunta 20
+
+**Texto:** Seg�n el art�culo 108 de la Constituci�n Espa�ola, el Gobierno responde:
+
+**Opciones:**
+  0. Solidariamente en su gesti�n pol�tica ante el Congreso de los Diputados.
+  1. Solidariamente en su gesti�n pol�tica ante las Cortes Generales.
+  2. Mancomunadamente en su gesti�n pol�tica ante el Congreso de los Diputados.
+  3. Mancomunadamente en su gesti�n pol�tica ante las Cortes Generales.
+
+---
+
+### Pregunta 21
+
+**Texto:** �Qu� meses abarca el segundo periodo de sesiones del Senado?
+
+**Opciones:**
+  0. De febrero a junio.
+  1. De septiembre a diciembre.
+  2. De enero a julio.
+  3. De enero a mayo.
+
+---
+
+### Pregunta 22
+
+**Texto:** �Qu� mayor�a se necesita en el Senado para oponer un veto a una proposici�n de
+
+**Opciones:**
+  0. Mayor�a absoluta.
+  1. Mayor�a de 2/3.
+  2. El Senado no puede vetar materias aprobadas por el Congreso.
+  3. Mayor�a de 2/3
+
+---
+
+### Pregunta 23
+
+**Texto:** �Cu�ntos componentes puede tener como m�ximo la delegaci�n auton�mica
+
+**Opciones:**
+  0. Dos.
+  1. Tres.
+  2. Cuatro.
+  3. No hay un n�mero m�ximo previsto
+
+---
+
+### Pregunta 24
+
+**Texto:** Se�ale la respuesta correcta en relaci�n con los requisitos para el nombramiento
+
+**Opciones:**
+  0. e los Ministros y Secretarios de Estado:
+  1. En ambos supuestos se exige ser espa�ol, mayor de edad, disfrutar de los
+  2. erechos de sufragio activo y pasivo, as� como no estar inhabilitado para ejercer
+  3. el ejercicio del alto cargo de la Administraci�n General del Estado.
+
+---
+
+### Pregunta 25
+
+**Texto:** Las delegaciones legislativas otorgadas por las Cortes Generales quedar�n en
+
+**Opciones:**
+  0. onsecuencia de:
+  1. La celebraci�n de elecciones generales.
+  2. La p�rdida de confianza parlamentaria por aprobaci�n de la moci�n de censura
+  3. La dimisi�n o fallecimiento del presidente.
+
+---
+
+### Pregunta 26
+
+**Texto:** Seg�n el art�culo 24 de la Ley 50/1997, de 27 de noviembre, del Gobierno, los
+
+**Opciones:**
+  0. 1� Disposiciones aprobadas por Real Decreto del Presidente del Gobierno o
+  1. cordado en el Consejo de Ministros. 2� Disposiciones aprobadas por Orden
+  2. 1� Disposiciones aprobadas por Real Decreto del Presidente del Gobierno. 2�
+  3. isposiciones acordadas en el Consejo de Ministros.
+
+---
+
+### Pregunta 27
+
+**Texto:** De acuerdo con los art�culos 101 y 102 de la Constituci�n Espa�ola, �cu�l de las
+
+**Opciones:**
+  0. El Gobierno cesa tras la celebraci�n de elecciones generales, en los casos de
+  1. imisi�n o fallecimiento de su Presidente.
+  2. La responsabilidad criminal del Presidente del Gobierno ser� exigible, en su
+  3. aso, ante la Sala de lo Penal del Tribunal Supremo.
+
+---
+
+### Pregunta 28
+
+**Texto:** Seg�n lo dispuesto en el art�culo 8.3 de la Ley 50/1997, de 27 de noviembre, del
+
+**Opciones:**
+  0. Un Vicepresidente del Gobierno o, en su defecto, por el Ministro que
+  1. orresponda seg�n el orden de precedencia de los Departamentos Ministeriales.
+  2. El Ministro de la Presidencia.
+  3. Un Secretario de Estado del Ministerio de Hacienda.
+
+---
+
+### Pregunta 29
+
+**Texto:** De acuerdo con la Constituci�n espa�ola de 1978, �en cu�l de las siguientes
+
+**Opciones:**
+  0. Estatutos de autonom�a.
+  1. Regulaci�n de la tauromaquia como patrimonio cultural.
+  2. Reforma constitucional.
+  3. Lo relativo a la prerrogativa de gracia.
+
+---
+
+### Pregunta 30
+
+**Texto:** Seg�n lo dispuesto por el art�culo 13 de la Ley 50/1997, de 27 de noviembre, del
+
+**Opciones:**
+  0. La suplencia de los Ministros para el despacho ordinario de los asuntos de su
+  1. ompetencia se determina por Real Decreto del Consejo de Ministros, debiendo
+  2. En los casos de vacante, ausencia o enfermedad, las funciones del Presidente
+  3. En caso de que la asistencia de un Ministro a la reuni�n de un �rgano colegiado
+
+---
+
+### Pregunta 31
+
+**Texto:** �Qui�n representa al Consejo de Ministros?
+
+**Opciones:**
+  0. El Ministro de la Presidencia.
+  1. El Ministro portavoz del Gobierno
+  2. Los ministros respectivos en el �mbito de su competencia
+  3. El Presidente del Gobierno.
+
+---
+
+### Pregunta 32
+
+**Texto:** Al Consejo de Ministros, le corresponde el ejercicio de las siguientes funciones:
+
+**Opciones:**
+  0. Aprobar los anteproyectos de ley y su remisi�n al Congreso de los Diputados o,
+  1. Aprobar la Ley de Presupuestos Generales del Estado
+  2. Aprobar los Reales Decretos-leyes y los Reales Decretos legislativos.
+  3. Manifestar el consentimiento a los tratados internacionales de los que Espa�a
+
+---
+
+### Pregunta 33
+
+**Texto:** �Qu� art�culo de la constituci�n est� dedicado a establecer la composici�n del
+
+**Opciones:**
+  0. El 105
+  1. El 98
+  2. El 102
+  3. El 101
+
+---
+
+### Pregunta 34
+
+**Texto:** El presidente del Gobierno en funciones no puede:
+
+**Opciones:**
+  0. Proponer al Rey la disoluci�n de las Cortes
+  1. Platear la cuesti�n de confianza
+  2. Proponer al Rey la convocatoria de un refer�ndum consultivo
+  3. Todas son funciones que no puede realizar.
+
+---
+
+### Pregunta 35
+
+**Texto:** Los miembros de las Cortes Generales:
+
+**Opciones:**
+  0. Est�n ligados por mandato imperativo mientras dure la legislatura.
+  1. Est�n ligados por mandato imperativo.
+  2. No est�n ligados por mandatos imperativo.
+  3. No est�n ligados por mandato imperativo, salvo en caso de alguno de los
+
+---
+
+### Pregunta 36
+
+**Texto:** �Por cu�ntos diputados est�n representadas Ceuta y Melilla?:
+
+**Opciones:**
+  0. Por uno
+  1. Por dos
+  2. Por tres
+  3. Por cuatro
+
+---
+
+### Pregunta 37
+
+**Texto:** �Qui�nes son electores y elegibles al Congreso de los Diputados?
+
+**Opciones:**
+  0. Todas las personas que est�n en pleno uso de sus derechos pol�ticos.
+  1. Todos los espa�oles que est�n en pleno uso de sus derechos pol�ticos.
+  2. Todas las personas mayores de edad no incapacitadas legalmente.
+  3. Los espa�oles en pleno uso de sus derechos administrativos.
+
+---
+
+### Pregunta 38
+
+**Texto:** �Cu�l de las siguientes islas o agrupaciones de islas elegir�n tres Senadores?
+
+**Opciones:**
+  0. Tenerife y la Palma
+  1. Tenerife, Hierro y Lanzarote
+  2. Gran Canaria y Mallorca.
+  3. Gran Canaria, Menorca y Tenerife
+
+---
+
+### Pregunta 39
+
+**Texto:** �Cu�l de las siguientes no es causa de inelegibilidad e incompatibilidad de los
+
+**Opciones:**
+  0. iputados y Senadores?
+  1. Miembros de las Juntas electorales.
+  2. Magistrados, jueces y Fiscales en activo.
+  3. Militares profesionales y miembros de las Fuerzas y cuerpos de Seguridad y
+
+---
+
+### Pregunta 40
+
+**Texto:** Los Diputados y Senadores percibir�n una asignaci�n:
+
+**Opciones:**
+  0. Que ser� fijada por el Presidente de la respectiva C�mara
+  1. Que ser� fijada por las C�maras en sesi�n conjunta.
+  2. Que ser� fijada por la respectiva C�mara.
+  3. Que ser� fijada por el Gobierno.
+
+---

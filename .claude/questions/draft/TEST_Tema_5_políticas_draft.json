@@ -1,0 +1,1337 @@
+{
+  "metadata": {
+    "source_file": "TEST Tema 5 políticas.pdf",
+    "source_path": "TEST Iniciales políticas\\TEST Tema 5 políticas.pdf",
+    "tema": 5,
+    "categoria": "general",
+    "extraction_date": "2026-01-15T23:41:50.566208",
+    "reformulation_date": "2026-01-15T23:47:35.779357",
+    "total_questions": 40,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:56.146454",
+    "completed_count": 0,
+    "failed_count": 40
+  },
+  "questions": [
+    {
+      "question_text": "La poblacin activa:",
+      "options": [
+        {
+          "text": "Es la suma de la poblacin ocupada y la poblacin desempleada.",
+          "is_correct": false
+        },
+        {
+          "text": "Es la poblacin que tiene edad para trabajar.",
+          "is_correct": false
+        },
+        {
+          "text": "Es la poblacin total de un pas, menos las personas jubiladas.",
+          "is_correct": false
+        },
+        {
+          "text": "Poblacin activa y poblacin ocupada son expresiones sinnimas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La poblacin activa:",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El desempleo friccional flucta entre:",
+      "options": [
+        {
+          "text": "El 0,1 y 0,3%.",
+          "is_correct": false
+        },
+        {
+          "text": "El 1 y 3%.",
+          "is_correct": false
+        },
+        {
+          "text": "El 3 y 5%.",
+          "is_correct": false
+        },
+        {
+          "text": "El 2 y 3%.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El desempleo friccional flucta entre:",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn los datos de la Encuesta de Poblacin Activa (EPA) elaborada por el Instituto",
+      "options": [
+        {
+          "text": "En torno al 9%.",
+          "is_correct": false
+        },
+        {
+          "text": "En torno al 11%.",
+          "is_correct": false
+        },
+        {
+          "text": "En torno al 14%",
+          "is_correct": false
+        },
+        {
+          "text": "En torno al 17%.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn los datos de la Encuesta de Poblacin Activa (EPA) elaborada por el Instituto",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En el mismo perodo, la poblacin ocupada ascenda a:",
+      "options": [
+        {
+          "text": "En torno a 21 millones de personas.",
+          "is_correct": false
+        },
+        {
+          "text": "En torno a 23 millones de personas.",
+          "is_correct": false
+        },
+        {
+          "text": "En torno a 25 millones de personas.",
+          "is_correct": false
+        },
+        {
+          "text": "En torno a 27 millones de personas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En el mismo perodo, la poblacin ocupada ascenda a:",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El nmero de empleados pblicos asciende a:",
+      "options": [
+        {
+          "text": "Alrededor de 2.300.000 trabajadores.",
+          "is_correct": false
+        },
+        {
+          "text": "Alrededor de 2.900.000 trabajadores.",
+          "is_correct": false
+        },
+        {
+          "text": "Alrededor de 3.500.000 trabajadores.",
+          "is_correct": false
+        },
+        {
+          "text": "Alrededor de 4.000.000 trabajadores.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El nmero de empleados pblicos asciende a:",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con lo establecido en la Ley 3/2023, de 28 de febrero, de Empleo (Ley de",
+      "options": [
+        {
+          "text": "Las polticas activas de empleo y las polticas de proteccin frente al desempleo.",
+          "is_correct": false
+        },
+        {
+          "text": "Las polticas activas y las polticas pasivas de empleo.",
+          "is_correct": false
+        },
+        {
+          "text": "Las polticas activas de empleo,",
+          "is_correct": false
+        },
+        {
+          "text": "omplementarias de empleo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con lo establecido en la Ley 3/2023, de 28 de febrero, de Empleo (Ley de",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con lo establecido en la Ley de Empleo (Ley 3/2023, de 28 de febrero), no",
+      "options": [
+        {
+          "text": "onforman las polticas activas de empleo:",
+          "is_correct": false
+        },
+        {
+          "text": "El conjunto de decisiones, medidas, servicios y programas orientados a la mejora de la",
+          "is_correct": false
+        },
+        {
+          "text": "El conjunto de decisiones, medidas, servicios y programas orientados a la reduccin del",
+          "is_correct": false
+        },
+        {
+          "text": "esempleo",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con lo establecido en la Ley de Empleo (Ley 3/2023, de 28 de febrero), no",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con lo establecido en la Ley de Empleo, no es un objetivo de la poltica de",
+      "options": [
+        {
+          "text": "Mantener la unidad del mercado de trabajo en todo el territorio estatal.",
+          "is_correct": false
+        },
+        {
+          "text": "El impulso a la creacin de empleos de calidad y estables que faciliten la transicin",
+          "is_correct": false
+        },
+        {
+          "text": "ienestar econmico para las personas trabajadoras.",
+          "is_correct": false
+        },
+        {
+          "text": "El mantenimiento del empleo y la progresin profesional de las personas ocupadas,",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con lo establecido en la Ley de Empleo, no es un objetivo de la poltica de",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No es un principio rector de la poltica de empleo:",
+      "options": [
+        {
+          "text": "Los principios de adaptacin, acompaamiento y activacin.",
+          "is_correct": false
+        },
+        {
+          "text": "El principio de transparencia en el funcionamiento del mercado de trabajo.",
+          "is_correct": false
+        },
+        {
+          "text": "El principio de inclusividad en el diseo de los instrumentos de planificacin de la",
+          "is_correct": false
+        },
+        {
+          "text": "El principio de adecuacin a las caractersticas del territorio.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No es un principio rector de la poltica de empleo:",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con lo establecido en la Ley 3/2023, de 28 de octubre, de Empleo, no",
+      "options": [
+        {
+          "text": "orresponde al Gobierno, a travs o a propuesta del Ministerio de Trabajo y",
+          "is_correct": false
+        },
+        {
+          "text": "La coordinacin de la poltica de empleo.",
+          "is_correct": false
+        },
+        {
+          "text": "Aprobar los proyectos de normas con rango de Ley y las disposiciones reglamentarias",
+          "is_correct": false
+        },
+        {
+          "text": "e trabajo, fomento de empleo, proteccin por desempleo y formacin en el trabajo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con lo establecido en la Ley 3/2023, de 28 de octubre, de Empleo, no",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Sistema Nacional de Empleo est conformado por:",
+      "options": [
+        {
+          "text": "La Agencia Espaola de Empleo y los Servicios Pblicos de Empleo de las",
+          "is_correct": false
+        },
+        {
+          "text": "omunidades Autnomas.",
+          "is_correct": false
+        },
+        {
+          "text": "La Agencia Espaola de Empleo, los Servicios Pblicos de Empleo de las Comunidades",
+          "is_correct": false
+        },
+        {
+          "text": "utnomas y las Entidades Locales que colaboren con los servicios pblicos de empleo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Sistema Nacional de Empleo est conformado por:",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Es un rgano de gobernanza del Sistema Nacional de Empleo (SNE):",
+      "options": [
+        {
+          "text": "La Agencia Espaola de Empleo.",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo General del Servicio Pblico de Empleo Estatal.",
+          "is_correct": false
+        },
+        {
+          "text": "La Secretara de Estado de Empleo.",
+          "is_correct": false
+        },
+        {
+          "text": "La Conferencia Sectorial de Empleo y Asuntos Laborales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Es un rgano de gobernanza del Sistema Nacional de Empleo (SNE):",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con lo establecido en la Ley de Empleo, cul es el rgano consultivo y de",
+      "options": [
+        {
+          "text": "El Consejo Rector de los Servicios Pblicos de Empleo.",
+          "is_correct": false
+        },
+        {
+          "text": "La Secretara de Estado de Empleo.",
+          "is_correct": false
+        },
+        {
+          "text": "La Conferencia Sectorial de Empleo y Asuntos Laborales.",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo General del Sistema Nacional de Empleo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con lo establecido en la Ley de Empleo, cul es el rgano consultivo y de",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Es un instrumento de planificacin y coordinacin de la poltica de empleo:",
+      "options": [
+        {
+          "text": "La Estrategia Europea de Empleo",
+          "is_correct": false
+        },
+        {
+          "text": "El Plan Anual de Poltica de Empleo.",
+          "is_correct": false
+        },
+        {
+          "text": "Las Directrices Integradas para el Empleo.",
+          "is_correct": false
+        },
+        {
+          "text": "El Sistema Pblico Integrado de Informacin de los Servicios de Empleo",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Es un instrumento de planificacin y coordinacin de la poltica de empleo:",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La Estrategia Espaola de Apoyo Activo al Empleo se aprobar:",
+      "options": [
+        {
+          "text": "Por Acuerdo del Consejo de Ministros.",
+          "is_correct": false
+        },
+        {
+          "text": "Por el Gobierno mediante Real Decreto.",
+          "is_correct": false
+        },
+        {
+          "text": "Por Orden del titular del Ministerio de Trabajo y Economa Social.",
+          "is_correct": false
+        },
+        {
+          "text": "Por las Cortes Generales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La Estrategia Espaola de Apoyo Activo al Empleo se aprobar:",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de los siguientes es uno de los ejes de polticas de activacin para el empleo en",
+      "options": [
+        {
+          "text": "Oportunidades de empleo para personas con discapacidad.",
+          "is_correct": false
+        },
+        {
+          "text": "Oportunidades de empleo para personas jvenes.",
+          "is_correct": false
+        },
+        {
+          "text": "Oportunidades de empleo para mujeres, colectivos LGTBI y personas trans.",
+          "is_correct": false
+        },
+        {
+          "text": "Oportunidades de empleo para mayores de 45 aos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de los siguientes es uno de los ejes de polticas de activacin para el empleo en",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La Estrategia Espaola de Apoyo Activo al Empleo:",
+      "options": [
+        {
+          "text": "Tendr una duracin cuatrienal.",
+          "is_correct": false
+        },
+        {
+          "text": "Tendr una duracin plurianual.",
+          "is_correct": false
+        },
+        {
+          "text": "Podr ser objeto de revisin a partir de los resultados de las evaluaciones que se hagan",
+          "is_correct": false
+        },
+        {
+          "text": "nualmente.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La Estrategia Espaola de Apoyo Activo al Empleo:",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu instrumento de planificacin del Sistema Nacional de Empleo (SNE)",
+      "options": [
+        {
+          "text": "oncretar, con carcter anual, las directrices necesarias para alcanzar en el",
+          "is_correct": false
+        },
+        {
+          "text": "onjunto del Estado y en cada una de las Comunidades Autnomas, los objetivos de",
+          "is_correct": false
+        },
+        {
+          "text": "El Plan Anual para el Impulso del Empleo Decente.",
+          "is_correct": false
+        },
+        {
+          "text": "El Plan Anual para el Fomento del Empleo Digno.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu instrumento de planificacin del Sistema Nacional de Empleo (SNE)",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "A quin le corresponde informar la Estrategia Espaola de Apoyo Activo al Empleo y",
+      "options": [
+        {
+          "text": "A la Secretara de Estado de Empleo y Economa Social.",
+          "is_correct": false
+        },
+        {
+          "text": "A la Secretara de Estado de Empleo y Economa Social y a la Conferencia Sectorial de",
+          "is_correct": false
+        },
+        {
+          "text": "A la Conferencia Sectorial de Empleo y Asuntos Laborales.",
+          "is_correct": false
+        },
+        {
+          "text": "A la Conferencia Sectorial de Empleo y Asuntos Laborales y al Consejo General del",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "A quin le corresponde informar la Estrategia Espaola de Apoyo Activo al Empleo y",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con lo establecido en la Ley 3/2023, de 28 de febrero, de Empleo, tienen",
+      "options": [
+        {
+          "text": "La Agencia Espaola de Empleo y los Servicios Pblicos de Empleo de las",
+          "is_correct": false
+        },
+        {
+          "text": "omunidades Autnomas.",
+          "is_correct": false
+        },
+        {
+          "text": "La Agencia Espaola de Empleo, los Servicios Pblicos de Empleo de las Comunidades",
+          "is_correct": false
+        },
+        {
+          "text": "utnomas y las Entidades Locales que colaboren con los servicios pblicos de empleo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con lo establecido en la Ley 3/2023, de 28 de febrero, de Empleo, tienen",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La Agencia Espaola de Empleo es:",
+      "options": [
+        {
+          "text": "Un Organismo Autnomo.",
+          "is_correct": false
+        },
+        {
+          "text": "Una Agencia Estatal.",
+          "is_correct": false
+        },
+        {
+          "text": "Una Entidad Gestora.",
+          "is_correct": false
+        },
+        {
+          "text": "Un Organismo rector.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La Agencia Espaola de Empleo es:",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No es una competencia de la Agencia Espaola de Empleo:",
+      "options": [
+        {
+          "text": "Gestionar el Observatorio de las Ocupaciones.",
+          "is_correct": false
+        },
+        {
+          "text": "La gestin y el control de las prestaciones por desempleo, sin perjuicio del cometido de",
+          "is_correct": false
+        },
+        {
+          "text": "tribuye a los funcionarios del Cuerpo Superior de Inspectores de Trabajo y Seguridad",
+          "is_correct": false
+        },
+        {
+          "text": "Elaborar y elevar al Ministerio de Trabajo y Economa Social las propuestas normativas",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No es una competencia de la Agencia Espaola de Empleo:",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La prestacin de servicios de empleo tiene naturaleza de:",
+      "options": [
+        {
+          "text": "Servicio pblico, si dicha prestacin se realiza a travs de los Servicios Pblicos de",
+          "is_correct": false
+        },
+        {
+          "text": "Servicio pblico, con independencia de la entidad que la realice.",
+          "is_correct": false
+        },
+        {
+          "text": "Servicio de inters general, si dicha prestacin se realiza a travs de los Servicios",
+          "is_correct": false
+        },
+        {
+          "text": "Servicio de inters general, con independencia de la entidad que la realice.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La prestacin de servicios de empleo tiene naturaleza de:",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Podrn ser usuarios de los servicios pblicos de empleo:",
+      "options": [
+        {
+          "text": "Slo las personas desempleadas demandantes de servicios de empleo.",
+          "is_correct": false
+        },
+        {
+          "text": "Las personas demandantes de servicios de empleo siempre y cuando estn",
+          "is_correct": false
+        },
+        {
+          "text": "esempleadas o, en el caso de estar ocupadas, si tienen baja cualificacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Las entidades empleadoras siempre y cuando sean personas jurdicas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Podrn ser usuarios de los servicios pblicos de empleo:",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No es uno de los servicios incluido en el catlogo de servicios garantizados a las",
+      "options": [
+        {
+          "text": "La elaboracin de un curriculum vitae digital.",
+          "is_correct": false
+        },
+        {
+          "text": "La elaboracin de un perfil individualizado.",
+          "is_correct": false
+        },
+        {
+          "text": "el establecimiento de un canal de recepcin de los servicios presencial o digital",
+          "is_correct": false
+        },
+        {
+          "text": "lternativo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No es uno de los servicios incluido en el catlogo de servicios garantizados a las",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No es un compromiso de todas las personas demandantes de servicios de empleo:",
+      "options": [
+        {
+          "text": "cumplir, salvo causa justificada, con las acciones de formacin",
+          "is_correct": false
+        },
+        {
+          "text": "aceptar ofertas de empleo adecuadas.",
+          "is_correct": false
+        },
+        {
+          "text": "colaborar activamente en la elaboracin del perfil individualizado.",
+          "is_correct": false
+        },
+        {
+          "text": "comunicar los cambios de domicilio.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No es un compromiso de todas las personas demandantes de servicios de empleo:",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No es una de las categoras en las que se agruparn los servicios incluidos en la",
+      "options": [
+        {
+          "text": "artera comn de servicios del Sistema Nacional de Empleo:",
+          "is_correct": false
+        },
+        {
+          "text": "Servicios de orientacin para el empleo personalizada, integral e inclusiva.",
+          "is_correct": false
+        },
+        {
+          "text": "Servicios de intermediacin, colocacin y asesoramiento a empresas.",
+          "is_correct": false
+        },
+        {
+          "text": "Servicios de asesoramiento para el autoempleo, el emprendimiento viable y la",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No es una de las categoras en las que se agruparn los servicios incluidos en la",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "A efectos del Sistema Nacional de Empleo, la intermediacin en el mercado de",
+      "options": [
+        {
+          "text": "Los servicios pblicos de empleo.",
+          "is_correct": false
+        },
+        {
+          "text": "Las agencias de intermediacin sean agencias de intermediacin propiamente dichas o",
+          "is_correct": false
+        },
+        {
+          "text": "gencias especializadas en la recolocacin o en la seleccin de personal.",
+          "is_correct": false
+        },
+        {
+          "text": "Aquellos otros servicios que reglamentariamente se determinen para las personas",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "A efectos del Sistema Nacional de Empleo, la intermediacin en el mercado de",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con la Ley de Empleo se entiende por intermediacin laboral:",
+      "options": [
+        {
+          "text": "El acuerdo documentado mediante el que se establecen derechos y obligaciones entre la",
+          "is_correct": false
+        },
+        {
+          "text": "aso, a las necesidades de los colectivos prioritarios.",
+          "is_correct": false
+        },
+        {
+          "text": "La colocacin en la profesin demandada por la persona trabajadora, de acuerdo con su",
+          "is_correct": false
+        },
+        {
+          "text": "juste a sus aptitudes fsicas y formativas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con la Ley de Empleo se entiende por intermediacin laboral:",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En relacin con la empleabilidad, seale la respuesta correcta:",
+      "options": [
+        {
+          "text": "Es un derecho y un deber de las personas demandantes de los servicios de empleo,",
+          "is_correct": false
+        },
+        {
+          "text": "omo desarrollo del artculo 37 de la Constitucin Espaola.",
+          "is_correct": false
+        },
+        {
+          "text": "Corresponde al Sistema Nacional de Empleo velar por el mantenimiento y mejora de la",
+          "is_correct": false
+        },
+        {
+          "text": "La empleabilidad debe producir un ajuste dinmico entre las competencias propias y las",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En relacin con la empleabilidad, seale la respuesta correcta:",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con lo establecido en el artculo 50 no se considera colectivo vulnerable",
+      "options": [
+        {
+          "text": "e atencin prioritaria a los efectos de la Ley de Empleo:",
+          "is_correct": false
+        },
+        {
+          "text": "Personas gitanas.",
+          "is_correct": false
+        },
+        {
+          "text": "Mujeres del entorno rural.",
+          "is_correct": false
+        },
+        {
+          "text": "Personas afectadas por drogodependencias y otras adicciones.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con lo establecido en el artculo 50 no se considera colectivo vulnerable",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En qu artculo de la Constitucin se indica que los poderes pblicos mantendrn un",
+      "options": [
+        {
+          "text": "sistencia y prestaciones sociales suficientes ante situaciones de necesidad,",
+          "is_correct": false
+        },
+        {
+          "text": "Artculo 40.",
+          "is_correct": false
+        },
+        {
+          "text": "Artculo 41.",
+          "is_correct": false
+        },
+        {
+          "text": "Artculo 42.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En qu artculo de la Constitucin se indica que los poderes pblicos mantendrn un",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Para tener derecho a la prestacin por desempleo, en la modalidad contributiva, ser",
+      "options": [
+        {
+          "text": "De 360 das en los ltimos 6 aos.",
+          "is_correct": false
+        },
+        {
+          "text": "De 180 das en los ltimos 6 aos.",
+          "is_correct": false
+        },
+        {
+          "text": "De 360 das en los ltimos 3 aos.",
+          "is_correct": false
+        },
+        {
+          "text": "De 180 das en los ltimos 3 aos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Para tener derecho a la prestacin por desempleo, en la modalidad contributiva, ser",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La cuanta de la prestacin por desempleo a partir del da 181 ser igual al:",
+      "options": [
+        {
+          "text": "80% de las bases reguladoras.",
+          "is_correct": false
+        },
+        {
+          "text": "70% de las bases reguladoras.",
+          "is_correct": false
+        },
+        {
+          "text": "60% de las bases reguladoras.",
+          "is_correct": false
+        },
+        {
+          "text": "50% de las bases reguladoras.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La cuanta de la prestacin por desempleo a partir del da 181 ser igual al:",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con lo establecido en el artculo 274.1 de la Ley General de la Seguridad",
+      "options": [
+        {
+          "text": "e las siguientes situaciones:",
+          "is_correct": false
+        },
+        {
+          "text": "Haber agotado la prestacin por desempleo. En caso de ser menor de 55 aos sin",
+          "is_correct": false
+        },
+        {
+          "text": "gotada haya tenido una duracin igual o superior a trescientos sesenta das.",
+          "is_correct": false
+        },
+        {
+          "text": "Haber agotado la prestacin por desempleo. En caso de ser menor de 45 aos sin",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con lo establecido en el artculo 274.1 de la Ley General de la Seguridad",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Entre otros requisitos, se les exigir adems carecer de rentas propias. Se entiende",
+      "options": [
+        {
+          "text": "umplido el requisito de carencia de rentas propias en la fecha de la solicitud del alta",
+          "is_correct": false
+        },
+        {
+          "text": "ichas fechas no superen:",
+          "is_correct": false
+        },
+        {
+          "text": "El 75% del del salario mnimo interprofesional (SMI), excluida la parte proporcional de",
+          "is_correct": false
+        },
+        {
+          "text": "os pagas extraordinarias.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Entre otros requisitos, se les exigir adems carecer de rentas propias. Se entiende",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Durante los primeros 180 das, la cuanta del subsidio por desempleo ser equivalente",
+      "options": [
+        {
+          "text": "95% del IPREM.",
+          "is_correct": false
+        },
+        {
+          "text": "90% del IPREM.",
+          "is_correct": false
+        },
+        {
+          "text": "80% del IPREM.",
+          "is_correct": false
+        },
+        {
+          "text": "75% del IPREM.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Durante los primeros 180 das, la cuanta del subsidio por desempleo ser equivalente",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En cumplimiento de la Ley de Empleo, en la actualidad, cul es la Estrategia en",
+      "options": [
+        {
+          "text": "La Estrategia Espaola de Activacin para el Empleo (2018 - 2022)",
+          "is_correct": false
+        },
+        {
+          "text": "La Estrategia Espaola de Apoyo Activo al Empleo (2020 - 2030)",
+          "is_correct": false
+        },
+        {
+          "text": "La Estrategia Espaola de Apoyo Activo al Empleo (2021 - 2024)",
+          "is_correct": false
+        },
+        {
+          "text": "La Estrategia Espaola de Activacin para el Empleo (2021  2030).",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En cumplimiento de la Ley de Empleo, en la actualidad, cul es la Estrategia en",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No es uno de los objetivos estratgicos:",
+      "options": [
+        {
+          "text": "Reducir el desempleo.",
+          "is_correct": false
+        },
+        {
+          "text": "Gobernanza y cohesin del SNE.",
+          "is_correct": false
+        },
+        {
+          "text": "Orientacin a resultados.",
+          "is_correct": false
+        },
+        {
+          "text": "Coherencia con la transformacin productiva.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No es uno de los objetivos estratgicos:",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Es uno de los objetivos especficos que recoge el objetivo estratgico relativo a",
+      "options": [
+        {
+          "text": "Mejorar la coordinacin operativa de los distintos niveles administrativos que",
+          "is_correct": false
+        },
+        {
+          "text": "Consolidar un modelo integrado de evaluacin de las polticas activas de empleo.",
+          "is_correct": false
+        },
+        {
+          "text": "Impulsar la transformacin digital y la modernizacin de los servicios pblicos de",
+          "is_correct": false
+        },
+        {
+          "text": "Acompaar, con el conjunto de polticas activas de empleo, las estrategias pblicas",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Es uno de los objetivos especficos que recoge el objetivo estratgico relativo a",
+      "source": "TEST Tema 5 políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

@@ -1,0 +1,390 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** Test y caso práctico tema 3. (1).pdf
+**Total preguntas:** 30
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** La potestad reglamentaria est� atribuida por la CE al:
+
+**Opciones:**
+  0. Congreso de los Diputados, como depositarios de la soberan�a popular.
+  1. Al Presidente del Gobierno.
+  2. Al Gobierno, seg�n el art�culo 97 de la Constituci�n.
+  3. Al Jefe del Estado.
+
+---
+
+### Pregunta 2
+
+**Texto:** Las disposiciones del ejecutivo con rango inferior a la ley, se denominan:
+
+**Opciones:**
+  0. Reglamentos.
+  1. Legislaci�n delegada.
+  2. Decretos legislativos.
+  3. Decretos - Leyes.
+
+---
+
+### Pregunta 3
+
+**Texto:** El reglamento es jer�rquicamente:
+
+**Opciones:**
+  0. Superior a un Decreto Legislativo.
+  1. Inferior a un Decreto legislativo
+  2. De igual rango que un Decreto-Ley.
+  3. De igual rango que una ley ordinaria.
+
+---
+
+### Pregunta 4
+
+**Texto:** Las disposiciones del ejecutivo que desarrollan una ley, deben aprobarse,
+
+**Opciones:**
+  0. Por el Consejo de Ministros.
+  1. Por el Presidente del Gobierno.
+  2. Por el Ministro de la Presidencia, Relaciones con las Cortes y memoria
+  3. emocr�tica.
+
+---
+
+### Pregunta 5
+
+**Texto:** Los reglamentos no podr�n regular materias:
+
+**Opciones:**
+  0. Objeto de reserva de ley, ni infringir normas con dicho rango.
+  1. Objeto de reserva de ley org�nica, pero si pueden entrar a regular materias
+  2. Objeto de reserva de ley, ni infringir normas con dicho rango salvo que el
+  3. Materias de reserva reglamentaria.
+
+---
+
+### Pregunta 6
+
+**Texto:** Seg�n el art�culo 26.5 de la Ley del Gobierno, cuando la propuesta normativa
+
+**Opciones:**
+  0. fecte a materias de organizaci�n administrativa, r�gimen de personal,
+  1. Informe previo del Ministerio de Hacienda y Funci�n P�blica.
+  2. Informe favorable del Consejo de Estado.
+  3. No requieren ning�n requisito especial.
+
+---
+
+### Pregunta 7
+
+**Texto:** La costumbre se aplica:
+
+**Opciones:**
+  0. Al ser una fuente indirecta, siempre que resulte probada.
+  1. Siempre que los Jueces y Tribunales lo consideren conveniente.
+  2. En defecto de ley aplicable, cuando resulte probada y siempre que no sea
+  3. ontraria a la moral o al orden p�blico.
+
+---
+
+### Pregunta 8
+
+**Texto:** Si un reglamento establece la retroactividad de disposiciones sancionadoras
+
+**Opciones:**
+  0. Nulo de pleno derecho, seg�n establece el art�culo 47.2 de la LPACAP.
+  1. Anulable.
+  2. Convalidable por el superior jer�rquico de qui�n dict� el reglamento.
+  3. Irregular, pero v�lido.
+
+---
+
+### Pregunta 9
+
+**Texto:** Si existe contradicci�n entre la CE y un Tratado Internacional:
+
+**Opciones:**
+  0. Ser� resulta por el Tribunal de Justicia de la Uni�n Europea.
+  1. Ser� resulto por el Tribunal de la Haya, dependiente de Naciones Unidas.
+  2. Ser� apreciada por los Tribunales ordinarios espa�oles.
+  3. Deber� ser apreciada por el Tribunal Constitucional.
+
+---
+
+### Pregunta 10
+
+**Texto:** Los reglamentos para el desarrollo y ejecuci�n de las leyes:
+
+**Opciones:**
+  0. Necesitan dictamen del Consejo de Estado.
+  1. Necesitan informe vinculante del Ministerio de Presidencia.
+  2. Necesitan aprobaci�n previa de la Secretar�a General T�cnica
+  3. Todas son correctas.
+
+---
+
+### Pregunta 11
+
+**Texto:** Es fuente del Derecho Administrativo espa�ol:
+
+**Opciones:**
+  0. Solamente las leyes y reglamentos.
+  1. El principio de publicidad de normas.
+  2. La Constituci�n de los diferentes Estados miembros de la Uni�n Europea.
+  3. Las sentencias dictadas por la Sala Tercera del Tribunal Supremo.
+
+---
+
+### Pregunta 12
+
+**Texto:** Seg�n el art�culo 37 de la LPACAP, el principio de inderogabilidad singular
+
+**Opciones:**
+  0. e las disposiciones administrativas de car�cter general se formula de la
+  1. Ninguna disposici�n administrativa podr� vulnerar los preceptos de otra de
+  2. Las disposiciones administrativas se ajustar�n al orden de jerarqu�a que
+  3. Las disposiciones administrativas no podr�n vulnerar la Constituci�n ni las
+
+---
+
+### Pregunta 13
+
+**Texto:** Los Reales Decretos del Consejo de Ministros, seg�n el art�culo 24 de la Ley
+
+**Opciones:**
+  0. el Gobierno:
+  1. Pueden establecer tributos.
+  2. Tienen el mismo rango jer�rquico que los Reales Decretos del Presidente del
+  3. Regulan, entre otras, las materias reservadas por la Constituci�n a las
+
+---
+
+### Pregunta 14
+
+**Texto:** Se�ale cu�l de los siguientes documentos no deben estar incluido en la
+
+**Opciones:**
+  0. Oportunidad de la propuesta y alternativas de regulaci�n estudiadas, lo que
+  1. eber� incluir una justificaci�n de la necesidad de la nueva norma frente a la
+  2. lternativa de no aprobar ninguna regulaci�n.
+  3. An�lisis sobre la adecuaci�n de la norma propuesta al orden de distribuci�n
+
+---
+
+### Pregunta 15
+
+**Texto:** De conformidad con el art�culo 94 de la Constituci�n, para la conclusi�n por
+
+**Opciones:**
+  0. Tramitar la autorizaci�n correspondiente ante el Consejo de Estado.
+  1. Autorizaci�n del Congreso de los Diputados.
+  2. Autorizaci�n del Senado.
+  3. Autorizaci�n previa de las Cortes Generales.
+
+---
+
+### Pregunta 16
+
+**Texto:** Los principios Generales del Derecho se
+
+**Opciones:**
+  0. plicar�n: a) Con preferencia a la ley.
+  1. S�lo en el caso de que se encuentren reconocidos en una ley.
+  2. En defecto de ley o costumbre.
+  3. S�lo los que se encuentran reconocidos en la Constituci�n.
+
+---
+
+### Pregunta 17
+
+**Texto:** Contra los actos de aplicaci�n de los reglamentos ilegales:
+
+**Opciones:**
+  0. Podr� interponerse recurso administrativo �per saltum� directamente ante el
+  1. Podr� interponerse recurso administrativo �per saltum� directamente ante el
+  2. Podr� impugnarse directamente en v�a jurisdiccional dicho acto de aplicaci�n.
+  3. Podr� impugnarse indirectamente en v�a jurisdiccional dicha disposici�n, en
+
+---
+
+### Pregunta 18
+
+**Texto:** De acuerdo con el art�culo 93 de la CE, �en cu�l de los siguientes casos
+
+**Opciones:**
+  0. Tratados en materia de iniciativa legislativa popular.
+  1. Tratados en materia de r�gimen electoral.
+  2. Tratados por los que se atribuya a una organizaci�n o instituci�n
+  3. Tratados que afecten a la integridad territorial del Estado
+
+---
+
+### Pregunta 19
+
+**Texto:** Seg�n el art�culo 24 de la Ley del Gobierno, las disposiciones y
+
+**Opciones:**
+  0. uando la disposici�n o resoluci�n afecte a varios Departamentos revestir�
+  1. Orden del Ministro de la Presidencia, dictada a propuesta de los Ministros
+  2. Orden del Ministro de la Presidencia, dictada a propuesta del Ministro de la
+  3. Real Decreto, dictado a propuesta de los Ministros interesados.
+
+---
+
+### Pregunta 20
+
+**Texto:** Conforme a lo establecido en la CE, para la denuncia de un Tratado
+
+**Opciones:**
+  0. Se utilizar� el procedimiento previsto en el propio Tratado, siendo necesaria
+  1. Se utilizar� el mismo procedimiento previsto para su aprobaci�n, siendo
+  2. Se utilizar� el mismo procedimiento previsto para su aprobaci�n, dando
+  3. uenta a las CCGG.
+
+---
+
+### Pregunta 21
+
+**Texto:** Seg�n lo dispuesto en el art�culo 24 de la Ley del Gobierno, los reglamentos
+
+**Opciones:**
+  0. 1�Disposiciones aprobadas por Reales Decretos Legislativos y Reales
+  1. ecretos Leyes. 2�Disposiciones aprobadas por RD del Presidente del
+  2. 1�Disposiciones aprobadas por RD del Presidente del Gobierno o del CM.
+  3. 1�Disposiciones aprobada por Reales Decretos Legislativos y Reales
+
+---
+
+### Pregunta 22
+
+**Texto:** �Cu�l de los siguientes mecanismos de control es aplicable a los
+
+**Opciones:**
+  0. Recurso de inconstitucionalidad.
+  1. Revisi�n de oficio.
+  2. Recurso de alzada.
+  3. Recurso de reposici�n.
+
+---
+
+### Pregunta 23
+
+**Texto:** Se�ale en qu� supuesto en materia de Tratados Internacionales, seg�n el
+
+**Opciones:**
+  0. Los que exigen la previa revisi�n de la CE.
+  1. Aquellos cuya constitucionalidad ha sido sometida al TC por el Gobierno.
+  2. Los que han sido sometidos a revisi�n de constitucionalidad por el
+  3. ongreso.
+
+---
+
+### Pregunta 24
+
+**Texto:** Se�ale la afirmaci�n correcta. De conformidad con la Ley del Gobierno:
+
+**Opciones:**
+  0. Las Comisiones Delegadas del Gobierno pueden aprobar Reales Decretos
+  1. Los Reales Decretos son siempre aprobados por el Consejo de Ministros.
+  2. El tr�mite de audiencia p�blica previsto en la elaboraci�n de reglamentos no
+  3. utoridades del Gobierno.
+
+---
+
+### Pregunta 25
+
+**Texto:** Se�ale la correcta: La jerarqu�a entre Reglamentos:
+
+**Opciones:**
+  0. No existe. La jerarqu�a se plantea entre leyes y reglamentos, pero no entre
+  1. Existe, en este sentido los Reales Decretos-Leyes y los Reales Decretos
+  2. Existe. As� las disposiciones aprobadas por RD del Presidente del Gobierno
+  3. Existe. Por ello, las disposiciones aprobadas por Real Decreto son
+
+---
+
+### Pregunta 26
+
+**Texto:** Las resoluciones administrativas que vulneren lo establecido en un
+
+**Opciones:**
+  0. Son nulas s�lo si han sido dictadas si han sido dictadas por �rganos de igual o
+  1. Son nulas siempre que hayan sido dictadas por �rganos de menor jerarqu�a y
+  2. nulables si han sido emitidas por �rganos de igual jerarqu�a que el que ha
+  3. ictado el reglamento en cuesti�n.
+
+---
+
+### Pregunta 27
+
+**Texto:** Seg�n el art�culo 95 de la CE, la celebraci�n de un Tratado Internacional que
+
+**Opciones:**
+  0. ontenga estipulaciones contrarias a la CE conllevar�:
+  1. La anulaci�n autom�tica del Tratado Internacional.
+  2. Que el Gobierno o cualquiera de las C�maras puedan requerir al TC para que
+  3. eclare si existe o no esa contradicci�n.
+
+---
+
+### Pregunta 28
+
+**Texto:** Una Orden Ministerial es la forma que adopta:
+
+**Opciones:**
+  0. Un acto o reglamento del Presidente del Gobierno.
+  1. Un acuerdo del Consejo de Ministros.
+  2. Un reglamento del Presidente del Gobierno.
+  3. Un acto o reglamento de un Ministro.
+
+---
+
+### Pregunta 29
+
+**Texto:** La Memoria del An�lisis de Impacto Normativo NO deber� contener el
+
+**Opciones:**
+  0. Oportunidad de la propuesta y alternativas de regulaci�n estudiadas.
+  1. Contenido y an�lisis jur�dico, con referencia al Derecho nacional y de la
+  2. Resumen de las regulaciones que, sobre la materia en concreto, las
+  3. C.AA. han aprobado en sus territorios.
+
+---
+
+### Pregunta 30
+
+**Texto:** La revisi�n de oficio:
+
+**Opciones:**
+  0. Es un medio para anular los Reglamentos, de oficio por la Administraci�n o a
+  1. Es un medio que sirve para anular actos, pero no Reglamentos
+  2. Es un medio de anular los Reglamentos nulos y anulables
+  3. Es un medio para anular los Reglamentos, �nicamente de oficio por la propia
+
+---

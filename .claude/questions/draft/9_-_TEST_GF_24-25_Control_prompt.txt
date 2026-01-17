@@ -1,0 +1,390 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 9.- TEST GF 24-25 Control.pdf
+**Total preguntas:** 30
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** Indique cu�l de los siguientes NO es �rgano del Tribunal de Cuentas:
+
+**Opciones:**
+  0. La Comisi�n de Enjuiciamiento.
+  1. La Secci�n de Fiscalizaci�n.
+  2. Los Consejeros de Cuentas.
+  3. La Comisi�n de Gobierno.
+
+---
+
+### Pregunta 2
+
+**Texto:** �A qu� �rgano corresponde la fiscalizaci�n de las subvenciones, cr�ditos, avales u otras
+
+**Opciones:**
+  0. yudas del sector p�blico percibidas por personas f�sicas o jur�dicas?
+  1. A la Intervenci�n General de la Administraci�n del Estado.
+  2. A las Cortes Generales.
+  3. Al Tribunal de Cuentas.
+
+---
+
+### Pregunta 3
+
+**Texto:** �Cu�ndo proceder� la formulaci�n de un reparo si se est� aplicando el r�gimen general
+
+**Opciones:**
+  0. e fiscalizaci�n e intervenci�n previa?
+  1. Cuando se base en la suficiencia de cr�dito o el propuesto no se considere adecuado.
+  2. Cuando la continuaci�n de la gesti�n administrativa pudiera causar quebrantos
+  3. Cuando se hayan omitido requisitos o tr�mites que pudieran dar lugar a la anulabilidad
+
+---
+
+### Pregunta 4
+
+**Texto:** Con respecto de la jurisdicci�n contable ejercida por el Tribunal de Cuentas, se puede
+
+**Opciones:**
+  0. firmar que:
+  1. Su objeto se concreta en juicios de cuentas, procedimientos de reintegro por malversaci�n
+  2. e fondos y expedientes de cancelaci�n de garant�as.
+  3. La decisi�n que se pronuncie tendr� efectos fuera del �mbito contable.
+
+---
+
+### Pregunta 5
+
+**Texto:** De acuerdo con el art�culo 9 de la Ley Org�nica 2/1982, de 12 de mayo, del Tribunal de
+
+**Opciones:**
+  0. uentas, la funci�n fiscalizadora del Tribunal de Cuentas se referir� al sometimiento de
+  1. Los principios de legalidad, eficiencia, econom�a, transparencia, as� como a la
+  2. Los principios de legalidad, eficacia, eficiencia, transparencia, as� como a la
+  3. Los principios de legalidad, eficacia, suficiencia, transparencia, as� como a la
+
+---
+
+### Pregunta 6
+
+**Texto:** �Qu� �rgano del Tribunal de Cuentas tiene atribuida la funci�n de fiscalizaci�n?
+
+**Opciones:**
+  0. El Presidente.
+  1. El Pleno.
+  2. El Fiscal.
+  3. La Secci�n de Fiscalizaci�n.
+
+---
+
+### Pregunta 7
+
+**Texto:** Seg�n el art�culo 1 de la Ley Org�nica 2/1982, de 12 de mayo, del Tribunal de Cuentas,
+
+**Opciones:**
+  0. Exclusivamente al territorio de aquellas Comunidades Aut�nomas que no cuenten con
+  1. A todo el territorio nacional, sin perjuicio de los �rganos fiscalizadores de cuentas que
+  2. Exclusivamente a la actividad desarrollada por el Sector P�blico Estatal.
+  3. A todo el territorio nacional, no pudiendo prever los Estatutos de las Comunidad
+
+---
+
+### Pregunta 8
+
+**Texto:** La reparaci�n del da�o o menoscabo en los caudales p�blicos:
+
+**Opciones:**
+  0. Se exige en primer lugar a los responsables directos y, si no se hace efectiva por estos, a
+  1. Se exige en primer lugar a los responsables subsidiarios y, si no se hace efectiva por estos,
+  2. los responsables solidarios.
+  3. Puede exigirse indistintamente a los responsables directos y a los subsidiarios.
+
+---
+
+### Pregunta 9
+
+**Texto:** A los efectos de la Ley 7/1988, de 5 de abril, de Funcionamiento del Tribunal de Cuentas,
+
+**Opciones:**
+  0. La justificaci�n que han de llevar aquellos que deben rendir cuentas al Tribunal, por tener
+  1. su cargo el manejo de caudales o efectos p�blicos.
+  2. La malversaci�n de caudales o efectos p�blicos por parte de quienes ostenten la condici�n
+  3. e cuentadantes ante el Tribunal.
+
+---
+
+### Pregunta 10
+
+**Texto:** El ejercicio de la funci�n interventora comprender�:
+
+**Opciones:**
+  0. La fiscalizaci�n posterior de los actos que reconozcan derechos de contenido econ�mico,
+  1. prueben gastos, adquieran compromisos de gasto, o acuerden movimientos de fondos y
+  2. La intervenci�n del reconocimiento de las obligaciones y de la comprobaci�n de la
+  3. La intervenci�n material de la ordenaci�n del pago.
+
+---
+
+### Pregunta 11
+
+**Texto:** El presupuesto del Tribunal de Cuentas ser� aprobado por:
+
+**Opciones:**
+  0. El Pleno del Tribunal.
+  1. El Gobierno.
+  2. Las Cortes Generales.
+  3. La Comisi�n de Gobierno del Tribunal.
+
+---
+
+### Pregunta 12
+
+**Texto:** En relaci�n con el Tribunal de Cuentas se�ale la afirmaci�n INCORRECTA seg�n lo
+
+**Opciones:**
+  0. La jurisdicci�n contable es compatible respecto de unos mismos hechos con el ejercicio
+  1. e la potestad disciplinaria y con la actuaci�n de la jurisdicci�n penal.
+  2. El Tribunal de Cuentas fiscalizar� la situaci�n y variaciones del patrimonio del Estado y
+  3. em�s entidades del sector p�blico.
+
+---
+
+### Pregunta 13
+
+**Texto:** Las Fundaciones Estatales est�n sujetas a las siguientes modalidades de control interno:
+
+**Opciones:**
+  0. Funci�n interventora, control financiero permanente y auditor�a p�blica.
+  1. Funci�n interventora y control financiero permanente.
+  2. Auditor�a p�blica.
+  3. Control financiero permanente y auditor�a p�blica.
+
+---
+
+### Pregunta 14
+
+**Texto:** De acuerdo con la LGP, la IGAE seguir� los siguientes principios de actuaci�n:
+
+**Opciones:**
+  0. Autonom�a, ejercicio concentrado y jerarqu�a interna.
+  1. Autonom�a, ejercicio desconcentrado, independencia interna.
+  2. Independencia, ejercicio delegado y jerarqu�a interna.
+  3. Autonom�a, ejercicio desconcentrado, jerarqu�a interna.
+
+---
+
+### Pregunta 15
+
+**Texto:** De acuerdo con el art�culo 3 del Real Decreto 2188/1995, de 28 de diciembre, por el que
+
+**Opciones:**
+  0. dministraci�n del Estado, la IGAE, en sus funciones de control interno, estar� sometida
+  1. los principios de:
+  2. Autonom�a funcional, jerarqu�a interna y procedimiento administrativo.
+  3. Independencia funcional, jerarqu�a interna y ejercicio delegado.
+
+---
+
+### Pregunta 16
+
+**Texto:** NO es una modalidad de control �a posteriori�:
+
+**Opciones:**
+  0. La funci�n interventora ejercida por la IGAE.
+  1. La funci�n fiscalizadora ejercida por el Tribunal de Cuentas.
+  2. La auditor�a p�blica ejercida por la IGAE.
+  3. La funci�n jurisdiccional ejercida por el Tribunal de Cuentas.
+
+---
+
+### Pregunta 17
+
+**Texto:** �A qui�n corresponde acordar, de forma motivada, la aplicaci�n del control financiero
+
+**Opciones:**
+  0. Al Consejo de Ministros.
+  1. Al Ministro de Hacienda.
+  2. Al Interventor General de la Administraci�n del Estado.
+  3. Al Presidente del Gobierno.
+
+---
+
+### Pregunta 18
+
+**Texto:** Se someter�n a fiscalizaci�n previa:
+
+**Opciones:**
+  0. Los contratos menores, as� como los asimilados a ellos en virtud de la legislaci�n
+  1. ontractual.
+  2. Las subvenciones con asignaci�n nominativa.
+  3. Los gastos correspondientes a las actuaciones objeto del r�gimen excepcional de
+
+---
+
+### Pregunta 19
+
+**Texto:** �Con qu� antelaci�n a la fecha prevista para la terminaci�n de la prestaci�n objeto del
+
+**Opciones:**
+  0. ontrato o encargo deber�n los �rganos gestores solicitar a la IGAE la designaci�n de
+  1. 30 d�as naturales.
+  2. 30 d�as h�biles.
+  3. b) salvo que las recepciones sean en el extranjero, en cuyo caso ser�n 45 d�as h�biles.
+
+---
+
+### Pregunta 20
+
+**Texto:** De acuerdo con el art�culo 164.1 b) de la LGP, la auditor�a de cumplimiento se define
+
+**Opciones:**
+  0. omo aquella cuyo objeto consiste en:
+  1. El examen sistem�tico y objetivo de las operaciones y procedimientos de una actividad o
+  2. El seguimiento de la ejecuci�n presupuestaria y verificaci�n del cumplimiento de los
+  3. alance de resultados.
+
+---
+
+### Pregunta 21
+
+**Texto:** De acuerdo con el art�culo 148 de la LGP, la fiscalizaci�n previa e intervenci�n de los
+
+**Opciones:**
+  0. erechos e ingresos del Tesoro P�blico se podr� sustituir reglamentariamente, salvo en
+  1. evoluciones de ingresos indebidos, por las comprobaciones efectuadas en el ejercicio de:
+  2. Control financiero permanente.
+  3. Control financiero permanente y auditor�a p�blica.
+
+---
+
+### Pregunta 22
+
+**Texto:** El control posterior de los derechos e ingresos del Tesoro P�blico se efectuar�, conforme
+
+**Opciones:**
+  0. l art�culo 12 del Real Decreto 2188/1995, mediante el ejercicio de:
+  1. La funci�n interventora.
+  2. La auditor�a p�blica.
+  3. El control financiero permanente.
+
+---
+
+### Pregunta 23
+
+**Texto:** El Interventor General de la Administraci�n del Estado ejercer� la fiscalizaci�n previa
+
+**Opciones:**
+  0. e la aprobaci�n del gasto:
+  1. En gastos en los que se requiera la previa autorizaci�n del Consejo de Ministros, como el
+  2. orrespondiente a una subvenci�n de cuant�a superior a 12.000.000 �.
+  3. En modificaciones de otros gastos fiscalizados por la Intervenci�n Delegada
+
+---
+
+### Pregunta 24
+
+**Texto:** Si se planteara una discrepancia entre el �rgano gestor del gasto y el Interventor
+
+**Opciones:**
+  0. elegado del ministerio, en el marco de una actuaci�n de funci�n interventora, �qui�n
+  1. El Interventor General de la Administraci�n del Estado.
+  2. El Consejo de Ministros.
+  3. El Ministro de Hacienda.
+
+---
+
+### Pregunta 25
+
+**Texto:** El resultado del control financiero permanente se pondr� de manifiesto mediante:
+
+**Opciones:**
+  0. Informes.
+  1. Memorias.
+  2. Mociones.
+  3. Notas.
+
+---
+
+### Pregunta 26
+
+**Texto:** La intervenci�n de la comprobaci�n material de la inversi�n se realizar�:
+
+**Opciones:**
+  0. En todo caso, concurriendo el representante de la Intervenci�n General y, en su caso, el
+  1. sesor designado, al acto de comprobaci�n de la inversi�n.
+  2. En todo caso, concurriendo el representante de la Intervenci�n Delegada y, en su caso, el
+  3. sesor designado, al acto de comprobaci�n de la inversi�n.
+
+---
+
+### Pregunta 27
+
+**Texto:** De acuerdo con el art�culo 156 de la LGP, si en un organismo aut�nomo se ha omitido la
+
+**Opciones:**
+  0. l Consejo de Ministros para su convalidaci�n?
+  1. El Presidente o Director del organismo, pudiendo delegar la competencia.
+  2. El Presidente o Director del organismo, sin que pueda delegar la competencia.
+  3. El Titular del ministerio de adscripci�n, pudiendo delegar la competencia.
+
+---
+
+### Pregunta 28
+
+**Texto:** Seg�n la LGP, la distribuci�n de competencias entre el Interventor General de la
+
+**Opciones:**
+  0. dministraci�n del Estado y los interventores delegados se determinar�:
+  1. Mediante ley.
+  2. Mediante ley org�nica.
+  3. Reglamentariamente.
+
+---
+
+### Pregunta 29
+
+**Texto:** Seg�n el art�culo 7 del Real Decreto 2188/1995, de 28 de diciembre, por el que se
+
+**Opciones:**
+  0. esarrolla el r�gimen del control interno ejercido por la Intervenci�n General de la
+  1. dministraci�n del Estado, la funci�n interventora se ejercer� en sus modalidades de
+  2. La verificaci�n, efectuada de forma sistem�tica, de la actividad econ�mico-financiera del
+  3. La comprobaci�n de la planificaci�n, gesti�n y situaci�n de la tesorer�a.
+
+---
+
+### Pregunta 30
+
+**Texto:** �A qui�n compete la intervenci�n formal de la ordenaci�n del pago en el Estado?
+
+**Opciones:**
+  0. Al Interventor Delegado en el Ministerio de Hacienda.
+  1. Al Interventor General de la Administraci�n del Estado.
+  2. Al Interventor Delegado en la Secretar�a General del Tesoro y Financiaci�n Internacional.
+  3. Al Interventor Delegado en el Ministerio de Econom�a, Comercio y Empresa.
+
+---

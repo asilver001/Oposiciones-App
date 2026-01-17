@@ -1,0 +1,1337 @@
+{
+  "metadata": {
+    "source_file": "8 TEST TEMA 7 a 11 - copia.docx",
+    "source_path": "Segundo repaso\\8 TEST TEMA 7 a 11 - copia.docx",
+    "tema": 7,
+    "categoria": "repaso",
+    "extraction_date": "2026-01-15T23:40:31.757323",
+    "reformulation_date": "2026-01-15T23:47:35.690115",
+    "total_questions": 40,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.843918",
+    "completed_count": 0,
+    "failed_count": 40
+  },
+  "questions": [
+    {
+      "question_text": "De conformidad con el artculo 26 LOPJ, no se considera rgano jurisdiccional integrante del poder judicial el siguiente:",
+      "options": [
+        {
+          "text": "El Tribunal Supremo.",
+          "is_correct": false
+        },
+        {
+          "text": "El Tribunal Superior de Justicia.",
+          "is_correct": false
+        },
+        {
+          "text": "El Juez de Paz.",
+          "is_correct": false
+        },
+        {
+          "text": "El Tribunal Constitucional.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con el artculo 26 LOPJ, no se considera rgano jurisdiccional integrante del poder judicial el siguiente:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la correcta en relacin con el nombramiento del Fiscal General del Estado:",
+      "options": [
+        {
+          "text": "La propuesta de nombramiento corresponde al CGPJ.",
+          "is_correct": false
+        },
+        {
+          "text": "Ser necesario informe previo del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "El nombramiento corresponde al Rey.",
+          "is_correct": false
+        },
+        {
+          "text": "Tendr un mandato de 5 aos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la correcta en relacin con el nombramiento del Fiscal General del Estado:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Juez de Paz:",
+      "options": [
+        {
+          "text": "Es elegido por el Pleno del Ayuntamiento.",
+          "is_correct": false
+        },
+        {
+          "text": "Es nombrado por el Rey.",
+          "is_correct": false
+        },
+        {
+          "text": "Tendr un mandato de cinco aos prorrogable por otro plazo igual.",
+          "is_correct": false
+        },
+        {
+          "text": "Sern nombrado entre juristas de reconocido prestigio",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Juez de Paz:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El principio de unidad jurisdiccional es la base de la organizacin y funcionamiento de los Tribunales. La ley regular, de conformidad con la Constitucin:",
+      "options": [
+        {
+          "text": "El ejercicio de la jurisdiccin militar en el mbito estrictamente castrense y en los supuestos de estado de sitio.",
+          "is_correct": false
+        },
+        {
+          "text": "El ejercicio de la jurisdiccin militar en el mbito estrictamente castrense y en los supuestos de estados de excepcin y sitio.",
+          "is_correct": false
+        },
+        {
+          "text": "El ejercicio de la jurisdiccin de los tribunales de excepcin en el mbito estrictamente castrense y en los supuestos de estado de sitio",
+          "is_correct": false
+        },
+        {
+          "text": "El ejercicio de la jurisdiccin de los tribunales de excepcin en el mbito estrictamente castrense y en los supuestos de estados de excepcin y sitio",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El principio de unidad jurisdiccional es la base de la organizacin y funcionamiento de los Tribunales. La ley regular, de conformidad con la Constitucin:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La LRJSP, establece que los Secretarios Generales:",
+      "options": [
+        {
+          "text": "Son rganos superiores.",
+          "is_correct": false
+        },
+        {
+          "text": "Son miembros del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Tienen rango de subsecretario.",
+          "is_correct": false
+        },
+        {
+          "text": "Habrn de designarse entre funcionarios de carrera.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La LRJSP, establece que los Secretarios Generales:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la falsa:",
+      "options": [
+        {
+          "text": "La Secretara de Estado se crea por RD del Presidente del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "La Secretara General se crea por RD del Consejo de Ministros.",
+          "is_correct": false
+        },
+        {
+          "text": "Las reas, servicios y secciones se crean por Orden del Ministro respectivo.",
+          "is_correct": false
+        },
+        {
+          "text": "La subdireccin General se crea por RD del Consejo de Ministros.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la falsa:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La Administracin General del Estado, segn el art. 57 de la Ley 40/2015, de 1 de octubre, se organiza en:",
+      "options": [
+        {
+          "text": "Ministerios y Gabinetes.",
+          "is_correct": false
+        },
+        {
+          "text": "Ministerios.",
+          "is_correct": false
+        },
+        {
+          "text": "Secretaras de Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Presidencia del Gobierno y en Ministerios.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La Administracin General del Estado, segn el art. 57 de la Ley 40/2015, de 1 de octubre, se organiza en:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El nombramiento de los Secretarios de Estado se lleva a cabo por:",
+      "options": [
+        {
+          "text": "Real Decreto del Presidente del Gobierno a propuesta del miembro del Gobierno a cuyo Departamento pertenezcan.",
+          "is_correct": false
+        },
+        {
+          "text": "Real Decreto del Consejo de Ministros a propuesta del Presidente del Gobierno o del miembro del Gobierno a cuyo Departamento pertenezcan.",
+          "is_correct": false
+        },
+        {
+          "text": "Orden del Ministro a cuyo Departamento pertenezcan.",
+          "is_correct": false
+        },
+        {
+          "text": "Acuerdo del Consejo de Ministros a propuesta del miembro del Gobierno a cuyo Departamento pertenezcan.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El nombramiento de los Secretarios de Estado se lleva a cabo por:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Respecto de los Subdirectores Generales:",
+      "options": [
+        {
+          "text": "Son nombrados y cesados por el Ministro del que dependan.",
+          "is_correct": false
+        },
+        {
+          "text": "Son nombrados y cesados por el Ministro, Secretario de Estado o Subsecretario del que dependan.",
+          "is_correct": false
+        },
+        {
+          "text": "Son nombrados y cesados por el Secretario de Estado o Subsecretario del",
+          "is_correct": false
+        },
+        {
+          "text": "Son nombrados y cesados por el Ministro o Secretario de Estado del que dependan.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Respecto de los Subdirectores Generales:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Sern nombrados por Real Decreto del Consejo de Ministros a propuesta del titular del Ministerio respectivo entre funcionarios de carrera pertenecientes al Subgrupo A1, o que haya perdido tal condicin por haberse jubilado y que adems que renan los requisitos de idoneidad establecidos en la Ley 3/2015 los siguientes:",
+      "options": [
+        {
+          "text": "Subsecretario, Secretario General y Director General.",
+          "is_correct": false
+        },
+        {
+          "text": "Secretario General, Secretario General Tcnico y Director General.",
+          "is_correct": false
+        },
+        {
+          "text": "Secretario General Tcnico, Director General y Subdirector General.",
+          "is_correct": false
+        },
+        {
+          "text": "Subsecretario y Secretario General Tcnico.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Sern nombrados por Real Decreto del Consejo de Ministros a propuesta del titular del Ministerio respectivo entre funcionarios de carrera pertenecientes al Subgrupo A1, o que haya perdido tal condicin por haberse jubilado y que adems que renan los requisitos de idoneidad establecidos en la Ley 3/2015 los siguientes:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Tienen rango de subsecretario:",
+      "options": [
+        {
+          "text": "El Secretario General y el Secretario General Tcnico.",
+          "is_correct": false
+        },
+        {
+          "text": "El Secretario General y el Delegado del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "El Secretario General Tcnico y el Delegado del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "El Secretario General Tcnico y el subdelegado del Gobierno.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Tienen rango de subsecretario:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn la LRJSP, en caso de vacante, ausencia o enfermedad del Delegado del Gobierno, ste ser suplido por:",
+      "options": [
+        {
+          "text": "Cualquier funcionario designado a tal efecto por el Delegado del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "En primer trmino, por el Subdelegado del Gobierno de la provincia en que tenga sede la Delegacin, salvo que se trate de una Comunidad Autnoma uniprovincial en que no exista Subdelegado, en cuyo caso corresponder al Secretario General.",
+          "is_correct": false
+        },
+        {
+          "text": "El Subdelegado del Gobierno que el Delegado designe y, en su defecto, el de la provincia en que tenga su sede, salvo que se trate de una Comunidad Autnoma uniprovincial en que no exista Subdelegado, en cuyo caso corresponder al Secretario General.",
+          "is_correct": false
+        },
+        {
+          "text": "Por el Secretario General de la Delegacin del Gobierno correspondiente, tanto en Comunidades Autnomas uniprovinciales o pluriprovinciales, por ser de sus funciones reglamentariamente establecidas la de sustituir al Delegado y al Subdelegado.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn la LRJSP, en caso de vacante, ausencia o enfermedad del Delegado del Gobierno, ste ser suplido por:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los servicios territoriales integrados dependern:",
+      "options": [
+        {
+          "text": "De la Presidencia del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Del Delegado del Gobierno, o en su caso Subdelegado del Gobierno, a travs de la Presidencia del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "De la Presidencia del Gobierno, a travs del Ministerio de Poltica Territorial y Memoria Democrtica.",
+          "is_correct": false
+        },
+        {
+          "text": "Del Delegado del Gobierno, o en su caso Subdelegado del Gobierno, a travs de la Secretara General.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los servicios territoriales integrados dependern:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En cada Delegacin del Gobierno existir un rgano para la gestin de los servicios comunes llamado:",
+      "options": [
+        {
+          "text": "Gabinete.",
+          "is_correct": false
+        },
+        {
+          "text": "Subsecretara.",
+          "is_correct": false
+        },
+        {
+          "text": "rea funcional.",
+          "is_correct": false
+        },
+        {
+          "text": "Secretara General.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En cada Delegacin del Gobierno existir un rgano para la gestin de los servicios comunes llamado:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con el artculo 55 LRJSP, la AGE comprende:",
+      "options": [
+        {
+          "text": "La organizacin central que integra los Ministerios y servicios comunes, y la organizacin territorial.",
+          "is_correct": false
+        },
+        {
+          "text": "La organizacin central que integra los Ministerios y servicios comunes, la organizacin territorial y la AGE en el exterior.",
+          "is_correct": false
+        },
+        {
+          "text": "La organizacin central que integra los Ministerios y gabinetes, y la organizacin territorial.",
+          "is_correct": false
+        },
+        {
+          "text": "La organizacin central que integra los Ministerios y gabinetes, la organizacin territorial y la AGE en el exterior.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con el artculo 55 LRJSP, la AGE comprende:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Encargado de Negocios con Cartas de Gabinete es nombrado por:",
+      "options": [
+        {
+          "text": "El Consejo de Ministros.",
+          "is_correct": false
+        },
+        {
+          "text": "El Presidente del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "El Ministro de Asuntos Exteriores.",
+          "is_correct": false
+        },
+        {
+          "text": "El Congreso de los Diputados.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Encargado de Negocios con Cartas de Gabinete es nombrado por:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las delegaciones estarn presididas, salvo autorizacin en contrario, por:",
+      "options": [
+        {
+          "text": "El Rey.",
+          "is_correct": false
+        },
+        {
+          "text": "El Rey o el Presidente del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "El Rey, el Presidente del Gobierno o el Ministro de Asuntos Exteriores.",
+          "is_correct": false
+        },
+        {
+          "text": "El Presidente del Gobierno o el Ministro de Asuntos Exteriores.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las delegaciones estarn presididas, salvo autorizacin en contrario, por:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Se consideran Fundaciones del Sector Pblico Estatal:",
+      "options": [
+        {
+          "text": "Aquellas que se constituyan con una aportacin del 50% de la AGE, sus OOPP o dems entes del sector pblico",
+          "is_correct": false
+        },
+        {
+          "text": "Aquellas que se constituyan de forma inicial, con una aportacin mayoritaria, directa o indirecta, de la Administracin General del Estado o cualquiera de los sujetos integrantes del sector pblico institucional estatal, pero no cuando reciban dicha aportacin con posterioridad a su constitucin.",
+          "is_correct": false
+        },
+        {
+          "text": "Aquellas en que el patrimonio de la fundacin est integrado en ms de un 50 por ciento por bienes o derechos aportados o cedidos por sujetos integrantes del sector pblico institucional estatal con carcter permanente.",
+          "is_correct": false
+        },
+        {
+          "text": "Aquellas en que la mayora de derechos de voto en su patronato corresponda a representantes del sector pblico institucional estatal.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Se consideran Fundaciones del Sector Pblico Estatal:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los estatutos de los organismos pblicos se aprobarn por:",
+      "options": [
+        {
+          "text": "Ley.",
+          "is_correct": false
+        },
+        {
+          "text": "Real Decreto del Consejo de Ministros.",
+          "is_correct": false
+        },
+        {
+          "text": "Orden Ministerial.",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo rector del organismo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los estatutos de los organismos pblicos se aprobarn por:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La creacin de una sociedad mercantil estatal o la adquisicin de este carcter de forma sobrevenida se produce:",
+      "options": [
+        {
+          "text": "Por Ley",
+          "is_correct": false
+        },
+        {
+          "text": "Por Real Decreto del Consejo de Ministros.",
+          "is_correct": false
+        },
+        {
+          "text": "Por Autorizacin mediante acuerdo del Consejo de Ministros.",
+          "is_correct": false
+        },
+        {
+          "text": "Orden Ministerial.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La creacin de una sociedad mercantil estatal o la adquisicin de este carcter de forma sobrevenida se produce:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En control de eficacia de los OOAA corresponde (art. 85 LRJSP):",
+      "options": [
+        {
+          "text": "Al propio organismo autnomo a travs del mximo rgano de gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Ministerio de Hacienda y Administraciones Pblicas (en la actualidad Transformacin Digital y Funcin Pblica) a travs de la IGAE",
+          "is_correct": false
+        },
+        {
+          "text": "Al Departamento al que estn adscritos.",
+          "is_correct": false
+        },
+        {
+          "text": "A la IGAE",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En control de eficacia de los OOAA corresponde (art. 85 LRJSP):",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Todas las entidades integrantes del sector pblico institucional estatal estn sujetas desde su creacin hasta su extincin a la supervisin continua:",
+      "options": [
+        {
+          "text": "Del Consejo de Ministros, a travs de la Intervencin General de la Administracin del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Del Consejo de Ministros, a travs del Tribunal de Cuentas.",
+          "is_correct": false
+        },
+        {
+          "text": "Del Ministerio de Hacienda, a travs de la Intervencin General de la Administracin del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Del Ministerio de Hacienda, a travs del Tribunal de Cuentas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Todas las entidades integrantes del sector pblico institucional estatal estn sujetas desde su creacin hasta su extincin a la supervisin continua:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Si en el procedimiento previsto en el artculo 151 de la Constitucin, una o varias provincias no aprueban el proyecto de Estatuto de Autonoma:",
+      "options": [
+        {
+          "text": "No ser posible la constitucin de esa Comunidad Autnoma.",
+          "is_correct": false
+        },
+        {
+          "text": "Ello no impedir la constitucin de las dems provincias en comunidad autnoma.",
+          "is_correct": false
+        },
+        {
+          "text": "Ser posible que las dems se constituyan en Comunidad autnoma si as lo autoriza el Congreso.",
+          "is_correct": false
+        },
+        {
+          "text": "Ser necesario iniciar de nuevo el procedimiento desde el principio.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Si en el procedimiento previsto en el artculo 151 de la Constitucin, una o varias provincias no aprueban el proyecto de Estatuto de Autonoma:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con el Ttulo VIII de la Constitucin, el Estado se organiza territorialmente en:",
+      "options": [
+        {
+          "text": "Municipios, provincias y diputaciones provinciales",
+          "is_correct": false
+        },
+        {
+          "text": "Municipios, provincias y las Comunidades Autnomas que se constituyan, gozando de autonoma nicamente las Comunidades Autnomas.",
+          "is_correct": false
+        },
+        {
+          "text": "Municipios, provincias y las Comunidades Autnomas que se constituyan, gozando de autonoma todas ellas para la gestin de sus respectivos intereses.",
+          "is_correct": false
+        },
+        {
+          "text": "Municipios y Comunidades Autnomas que se constituyan, gozando de autonoma ambas para la gestin de sus respectivos intereses.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con el Ttulo VIII de la Constitucin, el Estado se organiza territorialmente en:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La reforma de los Estatutos de Autonoma de las CCAA requerir en todo caso:",
+      "options": [
+        {
+          "text": "Autorizacin del Consejo de Ministros.",
+          "is_correct": false
+        },
+        {
+          "text": "Aprobacin del Senado.",
+          "is_correct": false
+        },
+        {
+          "text": "Aprobacin de las CCGG mediante Ley Orgnica.",
+          "is_correct": false
+        },
+        {
+          "text": "Referndum de los electores inscritos en los censos correspondientes y aprobacin por ley orgnica de las CCGG.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La reforma de los Estatutos de Autonoma de las CCAA requerir en todo caso:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con el artculo 149.2, sin perjuicio de las competencias que podrn asumir las Comunidades Autnomas, el Estado considerar:",
+      "options": [
+        {
+          "text": "El servicio a la cultura como deber y atribucin esencial y facilitar la comunicacin cultural entre las Comunidades Autnomas, de acuerdo con ellas.",
+          "is_correct": false
+        },
+        {
+          "text": "El servicio a la cultura y a la investigacin cientfica y tcnica como deber y atribucin esencial y facilitar la comunicacin cultural entre las Comunidades Autnomas, de acuerdo con ellas.",
+          "is_correct": false
+        },
+        {
+          "text": "El servicio a la cultura como deber y atribucin esencial y facilitar la comunicacin cultural entre las Comunidades Autnomas y entidades locales, de acuerdo con ellas..",
+          "is_correct": false
+        },
+        {
+          "text": "El servicio a la cultura y a la investigacin cientfica y tcnica como deber y atribucin esencial y facilitar la comunicacin cultural entre las Comunidades Autnomas y entidades locales, de acuerdo con ellas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con el artculo 149.2, sin perjuicio de las competencias que podrn asumir las Comunidades Autnomas, el Estado considerar:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La competencia sobre el control del espacio areo, trnsito y transporte areo:",
+      "options": [
+        {
+          "text": "Es exclusiva del Estado",
+          "is_correct": false
+        },
+        {
+          "text": "Corresponde al estado la legislacin y a las CCAA la ejecucin",
+          "is_correct": false
+        },
+        {
+          "text": "Corresponde al Estado la legislacin bsica y a las CCAA la legislacin de desarrollo y la ejecucin",
+          "is_correct": false
+        },
+        {
+          "text": "Es exclusiva de las CCAA",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La competencia sobre el control del espacio areo, trnsito y transporte areo:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Una vez sancionados y promulgados los respectivos Estatutos de las CCAA de va especial, podrn ser modificados:",
+      "options": [
+        {
+          "text": "Mediante los procedimientos establecidos en la ley del proceso autonmico y con referndum entre los electores inscritos en los censos correspondientes.",
+          "is_correct": false
+        },
+        {
+          "text": "Mediante los procedimientos en ellos establecidos y con referndum entre los electores inscritos en los censos correspondientes.",
+          "is_correct": false
+        },
+        {
+          "text": "Mediante los procedimientos establecidos por el Congreso y con referndum entre los electores inscritos en los censos correspondientes.",
+          "is_correct": false
+        },
+        {
+          "text": "Mediante los procedimientos en ellos establecidos y con referndum nacional convocado en los trminos del artculo 92 de la CE.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Una vez sancionados y promulgados los respectivos Estatutos de las CCAA de va especial, podrn ser modificados:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En el caso de Comunidades Autnomas que accedan por la Va especial del artculo 151, una vez aprobado el proyecto de Estatuto:",
+      "options": [
+        {
+          "text": "Se remitir a la Comisin Constitucional del Senado, la cual dentro del plazo de dos meses lo examinar, con el concurso y asistencia de una delegacin de la Asamblea proponente.",
+          "is_correct": false
+        },
+        {
+          "text": "Se remitir a la Comisin Constitucional del Congreso, la cual dentro del plazo de dos meses lo examinar con el concurso y asistencia de una delegacin de la Asamblea proponente.",
+          "is_correct": false
+        },
+        {
+          "text": "Se remitir a la Comisin Constitucional del Senado, la cual dentro del plazo de un mes lo examinar, con el concurso y asistencia de una delegacin de la Asamblea proponente.",
+          "is_correct": false
+        },
+        {
+          "text": "Se remitir a la Comisin Constitucional del Congreso, la cual dentro del plazo de un mes lo examinar el concurso y asistencia de una delegacin de la Asamblea proponente.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En el caso de Comunidades Autnomas que accedan por la Va especial del artculo 151, una vez aprobado el proyecto de Estatuto:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La competencia en materia de caza:",
+      "options": [
+        {
+          "text": "Es exclusiva del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Podr ser asumida por la Comunidad autnoma.",
+          "is_correct": false
+        },
+        {
+          "text": "El Estado se reserva la legislacin bsica pudiendo asumir la comunidad autnoma la legislacin de desarrollo y ejecucin en la materia.",
+          "is_correct": false
+        },
+        {
+          "text": "El Estado se reserva la legislacin pudiendo asumir la comunidad autnoma la ejecucin en la materia.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La competencia en materia de caza:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn la Constitucin de 1978 las Comunidades Autnomas podrn asumir competencias en las siguientes materias (seale la falsa):",
+      "options": [
+        {
+          "text": "La pesca en aguas interiores, el marisqueo y la acuicultura, la caza y la pesca fluvial.",
+          "is_correct": false
+        },
+        {
+          "text": "La gestin en materia de proteccin del medio ambiente.",
+          "is_correct": false
+        },
+        {
+          "text": "Ferias interiores.",
+          "is_correct": false
+        },
+        {
+          "text": "Legislacin laboral.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn la Constitucin de 1978 las Comunidades Autnomas podrn asumir competencias en las siguientes materias (seale la falsa):",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Estado no tiene competencia exclusiva sobre las siguientes materias, segn la Constitucin de 1978:",
+      "options": [
+        {
+          "text": "Sistema monetario: divisas, cambio y convertibilidad",
+          "is_correct": false
+        },
+        {
+          "text": "Bases de la ordenacin de crdito, banca y seguros.",
+          "is_correct": false
+        },
+        {
+          "text": "Promocin del deporte y de la adecuada utilizacin del ocio.",
+          "is_correct": false
+        },
+        {
+          "text": "Sanidad exterior",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Estado no tiene competencia exclusiva sobre las siguientes materias, segn la Constitucin de 1978:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El control de la actividad de los rganos de las Comunidades Autnomas que se ejercer por el Gobierno segn el artculo 153 de la Constitucin de 1978 es:",
+      "options": [
+        {
+          "text": "El de las normas reglamentarias que emanen de la administracin autnoma.",
+          "is_correct": false
+        },
+        {
+          "text": "El del ejercicio de funciones delegadas a que se refiere el apartado 2 del artculo 150, previo dictamen del Consejo de Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "El de las leyes de las Asambleas Legislativas.",
+          "is_correct": false
+        },
+        {
+          "text": "El econmico y presupuestario.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El control de la actividad de los rganos de las Comunidades Autnomas que se ejercer por el Gobierno segn el artculo 153 de la Constitucin de 1978 es:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Son considerados municipios de gran poblacin de conformidad con el Ttulo X de la LBRL:",
+      "options": [
+        {
+          "text": "Aquellos que tengan poblacin superior a 150.000 habitantes",
+          "is_correct": false
+        },
+        {
+          "text": "Las capitales de provincia con poblacin superior a 100.000 habitantes",
+          "is_correct": false
+        },
+        {
+          "text": "A los municipios que sean capitales de provincia, capitales autonmicas o sedes de las instituciones autonmicas cuando as lo decidan las Asambleas Legislativas correspondientes a iniciativa de los respectivos ayuntamientos.",
+          "is_correct": false
+        },
+        {
+          "text": "Los municipios cuya poblacin supere los 75.000 habitantes, que presenten circunstancias econmicas, sociales, histricas o culturales especiales cuando as lo decidan las Asambleas Legislativas correspondientes previo informe favorable de la Administracin General del Estado.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Son considerados municipios de gran poblacin de conformidad con el Ttulo X de la LBRL:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul es el nmero de Diputados Provinciales que componen el Pleno de una Diputacin Provincial?:",
+      "options": [
+        {
+          "text": "El nmero de Diputados Provinciales vara en funcin del nmero de residentes en la provincia y oscila entre 25 y 51.",
+          "is_correct": false
+        },
+        {
+          "text": "El nmero de Diputados Provinciales vara en funcin del nmero de residentes en la provincia y oscila entre 20 y 40.",
+          "is_correct": false
+        },
+        {
+          "text": "El nmero de Diputados Provinciales no es proporcional al nmero de residentes en la provincia, sino que se fija por el Presidente de la Diputacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Son siempre 25 Diputados Provinciales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul es el nmero de Diputados Provinciales que componen el Pleno de una Diputacin Provincial?:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta correcta:",
+      "options": [
+        {
+          "text": "Las Comarcas ostentan la consideracin de entidad local territorial de conformidad con el artculo 3 de la LBRL.",
+          "is_correct": false
+        },
+        {
+          "text": "Los entes de mbito territorial inferior al Municipio tienen la consideracin de entidad local de conformidad con el artculo 3 de la LBRL.",
+          "is_correct": false
+        },
+        {
+          "text": "Son entidades locales territoriales de conformidad con el artculo 3 de la LBRL el municipio, la provincia, la isla, las comarcas, las reas metropolitanas y las mancomunidades de municipios.",
+          "is_correct": false
+        },
+        {
+          "text": "Son entidades locales no territoriales de conformidad con el artculo 3 de la LBRL las comarcas, las reas metropolitanas y las mancomunidades de municipios.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta correcta:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La Junta de Gobierno Local existe en todos los municipios con poblacin superior a:",
+      "options": [
+        {
+          "text": "5.000 habitantes",
+          "is_correct": false
+        },
+        {
+          "text": "10.000 habitantes.",
+          "is_correct": false
+        },
+        {
+          "text": "25.000 habitantes.",
+          "is_correct": false
+        },
+        {
+          "text": "50.000 habitantes.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La Junta de Gobierno Local existe en todos los municipios con poblacin superior a:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El artculo 3 LBRL no incluye como entidad local:",
+      "options": [
+        {
+          "text": "A la provincia.",
+          "is_correct": false
+        },
+        {
+          "text": "A la isla.",
+          "is_correct": false
+        },
+        {
+          "text": "A los entes de mbito territorial inferior al municipio.",
+          "is_correct": false
+        },
+        {
+          "text": "A la Comarca.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El artculo 3 LBRL no incluye como entidad local:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con la LBRL, seale la respuesta correcta en relacin con los regmenes provinciales especiales:",
+      "options": [
+        {
+          "text": "Las Comunidades Autnomas uniprovinciales y la Foral de Navarra asumen las competencias, medios y recursos que corresponden en el rgimen ordinario a los Ayuntamientos.",
+          "is_correct": false
+        },
+        {
+          "text": "Los Cabildos Insulares son los rganos de gobierno, administracin y representacin de cada isla en el archipilago balear.",
+          "is_correct": false
+        },
+        {
+          "text": "Los rganos forales de lava, Guipzcoa y Vizcaya conservan su rgimen peculiar en el marco del Estatuto de Autonoma de la Comunidad Autnoma del Pas Vasco.",
+          "is_correct": false
+        },
+        {
+          "text": "Todas son correctas",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con la LBRL, seale la respuesta correcta en relacin con los regmenes provinciales especiales:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La prestacin del servicio de medio ambiente urbano se exige en los municipios:",
+      "options": [
+        {
+          "text": "con poblacin superior a 20.000 habitantes",
+          "is_correct": false
+        },
+        {
+          "text": "con poblacin superior a 50.000 habitantes",
+          "is_correct": false
+        },
+        {
+          "text": "con poblacin superior a 5.000 habitantes",
+          "is_correct": false
+        },
+        {
+          "text": "con poblacin superior a 10.000 habitantes",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La prestacin del servicio de medio ambiente urbano se exige en los municipios:",
+      "source": "8 TEST TEMA 7 a 11 - copia.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 7,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

@@ -1,0 +1,1968 @@
+{
+  "metadata": {
+    "source_file": "10 TEST TEMA9 INICIALES.pdf",
+    "source_path": "10 TEST TEMA9 INICIALES.pdf",
+    "tema": 9,
+    "categoria": "general",
+    "extraction_date": "2026-01-15T23:39:43.941680",
+    "reformulation_date": "2026-01-15T23:47:35.509438",
+    "total_questions": 39,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.287988",
+    "completed_count": 0,
+    "failed_count": 39
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "Cul de los siguientes actos jurdicos relativos a los entes del sector pblico institucional",
+        "options": [
+          {
+            "text": "La transformacin de un Organismo Autnomo en una Fundacin.",
+            "is_correct": false
+          },
+          {
+            "text": "La creacin de un Organismo Autnomo.",
+            "is_correct": false
+          },
+          {
+            "text": "La disolucin de una Entidad Pblica Empresarial.",
+            "is_correct": false
+          },
+          {
+            "text": "La creacin de una fundacin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de los siguientes actos jurdicos relativos a los entes del sector pblico institucional",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El plan anual de actuacin de un organismo pblico deber ser aprobado:",
+        "options": [
+          {
+            "text": "En el ltimo trimestre del ao natural por el departamento del que dependa o al",
+            "is_correct": false
+          },
+          {
+            "text": "En el ltimo semestre del ao natural por el departamento del que dependa o al",
+            "is_correct": false
+          },
+          {
+            "text": "En el ltimo trimestre del ao natural por el Consejo rector del organismo.",
+            "is_correct": false
+          },
+          {
+            "text": "En el ltimo semestre del ao natural por el Consejo rector del organismo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El plan anual de actuacin de un organismo pblico deber ser aprobado:",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "De conformidad con lo dispuesto en el artculo 128 Ley 40/2015, de 1 de octubre, de Rgimen",
+        "options": [
+          {
+            "text": "Real Decreto.",
+            "is_correct": false
+          },
+          {
+            "text": "Acuerdo.",
+            "is_correct": false
+          },
+          {
+            "text": "Ley.",
+            "is_correct": false
+          },
+          {
+            "text": "Norma con rango de ley.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De conformidad con lo dispuesto en el artculo 128 Ley 40/2015, de 1 de octubre, de Rgimen",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Acuerdo....'",
+        "Distractor muy corto: 'Ley....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "Cul de los siguientes entes no forma parte integrante del sector pblico estatal segn el",
+        "options": [
+          {
+            "text": "rtculo 84 LRJSP?:",
+            "is_correct": false
+          },
+          {
+            "text": "Las sociedades mercantiles estatales.",
+            "is_correct": false
+          },
+          {
+            "text": "Las fundaciones del sector pblico estatal.",
+            "is_correct": false
+          },
+          {
+            "text": "Las universidades pblicas transferidas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de los siguientes entes no forma parte integrante del sector pblico estatal segn el",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La fusin de dos fundaciones del sector pblico estatal, se llevar a cabo por:",
+        "options": [
+          {
+            "text": "Norma con rango de ley.",
+            "is_correct": false
+          },
+          {
+            "text": "Norma reglamentaria.",
+            "is_correct": false
+          },
+          {
+            "text": "Ley.",
+            "is_correct": false
+          },
+          {
+            "text": "Acuerdo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La fusin de dos fundaciones del sector pblico estatal, se llevar a cabo por:",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Ley....'",
+        "Distractor muy corto: 'Acuerdo....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Tiene la consideracin de ente pblico de rgimen especfico de conformidad con lo",
+        "options": [
+          {
+            "text": "ispuesto en la LRJSP:",
+            "is_correct": false
+          },
+          {
+            "text": "La Agencia Espaola de Proteccin de Datos.",
+            "is_correct": false
+          },
+          {
+            "text": "El Centro Nacional de Inteligencia.",
+            "is_correct": false
+          },
+          {
+            "text": "El BOE.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Tiene la consideracin de ente pblico de rgimen especfico de conformidad con lo",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'El BOE....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Cuando un organismo pblico incurra en disolucin por el transcurso del tiempo de",
+        "options": [
+          {
+            "text": "Cinco das desde que concurra la causa de disolucin.",
+            "is_correct": false
+          },
+          {
+            "text": "Treinta das hbiles desde que concurra la causa de disolucin.",
+            "is_correct": false
+          },
+          {
+            "text": "Un mes desde que concurra la causa de disolucin.",
+            "is_correct": false
+          },
+          {
+            "text": "Dos meses desde que concurra la causa de disolucin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cuando un organismo pblico incurra en disolucin por el transcurso del tiempo de",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El titular del mximo rgano de direccin de la entidad, a travs de la Intervencin General",
+        "options": [
+          {
+            "text": "e la Administracin correspondiente, notificar, electrnicamente a efectos de su inscripcin,",
+            "is_correct": false
+          },
+          {
+            "text": "l Inventario de Entidades del Sector Pblico Estatal, Autonmico y Local, la norma o el acto",
+            "is_correct": false
+          },
+          {
+            "text": "En el plazo de 15 das hbiles desde la entrada en vigor de la norma o del acto,",
+            "is_correct": false
+          },
+          {
+            "text": "En el plazo de 1 mes desde la entrada en vigor de la norma o del acto, segn",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El titular del mximo rgano de direccin de la entidad, a travs de la Intervencin General",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los mximos rganos de gobierno de una Entidad Pblica Empresarial son:",
+        "options": [
+          {
+            "text": "El Presidente, el Director y el Consejo Rector.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente, el Director, el Consejo Rector y la Comisin de Control.",
+            "is_correct": false
+          },
+          {
+            "text": "El Director y el Consejo Rector.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente y el Consejo Rector.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los mximos rganos de gobierno de una Entidad Pblica Empresarial son:",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta en relacin con las Fundaciones del Sector Publico Estatal:",
+        "options": [
+          {
+            "text": "Son actividades propias de las fundaciones las realizadas, sin nimo de lucro,",
+            "is_correct": false
+          },
+          {
+            "text": "Son actividades propias de las fundaciones las realizadas, sin nimo de lucro,",
+            "is_correct": false
+          },
+          {
+            "text": "Son actividades propias de las fundaciones las realizadas, con o sin nimo de",
+            "is_correct": false
+          },
+          {
+            "text": "Son actividades propias de las fundaciones las realizadas, con o sin nimo de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta en relacin con las Fundaciones del Sector Publico Estatal:",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "El personal al servicio de los Organismos Autnomos:",
+        "options": [
+          {
+            "text": "Ser preferentemente laboral",
+            "is_correct": false
+          },
+          {
+            "text": "Ser preferentemente funcionario",
+            "is_correct": false
+          },
+          {
+            "text": "Ser funcionario o laboral en los mismos trminos previstos para la AGE.",
+            "is_correct": false
+          },
+          {
+            "text": "Ser en todo caso laboral, salvo lo dispuesto en relacin con los rganos",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El personal al servicio de los Organismos Autnomos:",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Conforme al artculo 87 de la LRJSP, la transformacin de una Entidad Pblica",
+        "options": [
+          {
+            "text": "Real Decreto.",
+            "is_correct": false
+          },
+          {
+            "text": "Ley.",
+            "is_correct": false
+          },
+          {
+            "text": "Norma reglamentaria.",
+            "is_correct": false
+          },
+          {
+            "text": "Orden ministerial.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Conforme al artculo 87 de la LRJSP, la transformacin de una Entidad Pblica",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Ley....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "En control de eficacia de los OOAA, segn el artculo 85 de l LRJSP, corresponde:",
+        "options": [
+          {
+            "text": "Al propio organismo autnomo a travs del mximo rgano de gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "A la IGAE.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Departamento al que estn adscritos.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Consejo de Ministros.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En control de eficacia de los OOAA, segn el artculo 85 de l LRJSP, corresponde:",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Las entidades de derecho pblico que, vinculadas a la Administracin General del",
+        "options": [
+          {
+            "text": "Los consorcios.",
+            "is_correct": false
+          },
+          {
+            "text": "Las autoridades administrativas independientes.",
+            "is_correct": false
+          },
+          {
+            "text": "Los fondos carentes de personalidad jurdica.",
+            "is_correct": false
+          },
+          {
+            "text": "Las fundaciones del sector pblico estatal.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las entidades de derecho pblico que, vinculadas a la Administracin General del",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La transformacin de un Organismo Autnomo en Entidad Pblica Empresarial",
+        "options": [
+          {
+            "text": "eber llevarse a acabo mediante:",
+            "is_correct": false
+          },
+          {
+            "text": "Ley.",
+            "is_correct": false
+          },
+          {
+            "text": "Real Decreto.",
+            "is_correct": false
+          },
+          {
+            "text": "Orden Ministerial.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La transformacin de un Organismo Autnomo en Entidad Pblica Empresarial",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Ley....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "La creacin de las fundaciones del sector pblico estatal se llevar a efecto mediante:",
+        "options": [
+          {
+            "text": "Ley que establecer los fines de la fundacin y, en su caso, los recursos",
+            "is_correct": false
+          },
+          {
+            "text": "Real Decreto que establecer los fines de la fundacin y, en su caso, los",
+            "is_correct": false
+          },
+          {
+            "text": "Acuerdo del Consejo de Ministros que establecer los fines de la fundacin y,",
+            "is_correct": false
+          },
+          {
+            "text": "Orden conjunta del Ministro de Hacienda y Funcin Pblica y del Ministro que",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La creacin de las fundaciones del sector pblico estatal se llevar a efecto mediante:",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cuando un organismo autnomo, entidad pblica empresarial o Agencias Estatales se",
+        "options": [
+          {
+            "text": "Una memoria y un informe preceptivo del Consejo de Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "Un plan de correccin y un informe preceptivo del Consejo de Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "Una memoria y un informe preceptivo de la IGAE.",
+            "is_correct": false
+          },
+          {
+            "text": "Un plan de correccin y un informe preceptivo de la IGAE.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cuando un organismo autnomo, entidad pblica empresarial o Agencias Estatales se",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Una entidad de derecho pblico con personalidad jurdica propia, patrimonio propio y",
+        "options": [
+          {
+            "text": "utonoma en su gestin, que se financie mayoritariamente con ingresos de mercado y",
+            "is_correct": false
+          },
+          {
+            "text": "Un consorcio.",
+            "is_correct": false
+          },
+          {
+            "text": "Un Organismo Autnomo.",
+            "is_correct": false
+          },
+          {
+            "text": "Una Entidad Pblica Empresarial.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Una entidad de derecho pblico con personalidad jurdica propia, patrimonio propio y",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los estatutos de los Organismos Pblicos se aprobarn:",
+        "options": [
+          {
+            "text": "Por Real Decreto del Consejo de Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "Por Orden del titular del Ministerio al que el organismo est vinculado o sea",
+            "is_correct": false
+          },
+          {
+            "text": "ependiente.",
+            "is_correct": false
+          },
+          {
+            "text": "Por ley de las CCGG.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los estatutos de los Organismos Pblicos se aprobarn:",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En el caso de que los fines y objetivos de una Entidad Pblica Empresarial sean",
+        "options": [
+          {
+            "text": "sumidos por los servicios de la AGE, la disolucin de la mencionada entidad se producir",
+            "is_correct": false
+          },
+          {
+            "text": "Real Decreto de disolucin del Consejo de Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "Ley.",
+            "is_correct": false
+          },
+          {
+            "text": "Orden de disolucin del Ministro de adscripcin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En el caso de que los fines y objetivos de una Entidad Pblica Empresarial sean",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Ley....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Las sociedades mercantiles estatales se regirn por lo previsto en la Ley 40/2015, por",
+        "options": [
+          {
+            "text": "Presupuestaria, contable, de control econmico-financiero y de contratacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Presupuestaria, contable, de personal, de control econmico-financiero y de",
+            "is_correct": false
+          },
+          {
+            "text": "ontratacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Contable, de personal, de control econmico-financiero y de contratacin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las sociedades mercantiles estatales se regirn por lo previsto en la Ley 40/2015, por",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn lo establecido en el artculo 95.2 de",
+        "options": [
+          {
+            "text": "Contratacin pblica.",
+            "is_correct": false
+          },
+          {
+            "text": "Gestin de bienes muebles.",
+            "is_correct": false
+          },
+          {
+            "text": "Organizacin y recursos humanos.",
+            "is_correct": false
+          },
+          {
+            "text": "Planificacin, programacin y presupuestacin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn lo establecido en el artculo 95.2 de",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Las Fundaciones del Sector Publico Estatal:",
+        "options": [
+          {
+            "text": "Podrn ejercer potestades pblicas",
+            "is_correct": false
+          },
+          {
+            "text": "No podrn ejercer potestades pblicas.",
+            "is_correct": false
+          },
+          {
+            "text": "Pueden ejercer potestades pblicas excepto la potestad expropiatoria.",
+            "is_correct": false
+          },
+          {
+            "text": "Pueden ejercer potestades pblicas excepto la potestad sancionadora y la",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las Fundaciones del Sector Publico Estatal:",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Los Consorcios se crearn mediante:",
+        "options": [
+          {
+            "text": "Convenio suscrito por las Administraciones, organismos pblicos o entidades",
+            "is_correct": false
+          },
+          {
+            "text": "Contrato de fusin suscrito por las Administraciones, organismos pblicos o",
+            "is_correct": false
+          },
+          {
+            "text": "Acuerdo entre",
+            "is_correct": false
+          },
+          {
+            "text": "RD del Consejo de Ministros.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los Consorcios se crearn mediante:",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Segn lo previsto en el artculo 108 ter de la LRJSP, la propuesta de contrato inicial de",
+        "options": [
+          {
+            "text": "El Consejo de Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "El Ministro de Hacienda y Administraciones Pblicas",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo Rector de la Agencia.",
+            "is_correct": false
+          },
+          {
+            "text": "El Director de la Agencia.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn lo previsto en el artculo 108 ter de la LRJSP, la propuesta de contrato inicial de",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Las agencias estatales pueden recurrir a la contratacin de plizas de crdito o",
+        "options": [
+          {
+            "text": "Si, siempre que el saldo vivo no supere el 5 % de su presupuesto.",
+            "is_correct": false
+          },
+          {
+            "text": "No, en ningn caso.",
+            "is_correct": false
+          },
+          {
+            "text": "No, salvo que lo autorice una Ley.",
+            "is_correct": false
+          },
+          {
+            "text": "S, dentro del lmite que seale el Consejo de Ministros.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las agencias estatales pueden recurrir a la contratacin de plizas de crdito o",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn la LRJSP los fondos carentes de personalidad jurdica se crean mediante:",
+        "options": [
+          {
+            "text": "Ley.",
+            "is_correct": false
+          },
+          {
+            "text": "Real Decreto.",
+            "is_correct": false
+          },
+          {
+            "text": "Orden Ministerial.",
+            "is_correct": false
+          },
+          {
+            "text": "Convenio.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn la LRJSP los fondos carentes de personalidad jurdica se crean mediante:",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Ley....'",
+        "Distractor muy corto: 'Convenio....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "La LRJSP en su artculo 89 regula la personalidad jurdica y potestades de los OOPP",
+        "options": [
+          {
+            "text": "Dentro de su esfera de competencia, las potestades administrativas precisas para",
+            "is_correct": false
+          },
+          {
+            "text": "Dentro de su esfera de competencia, las potestades administrativas precisas para",
+            "is_correct": false
+          },
+          {
+            "text": "Dentro de su esfera de competencia, las potestades administrativas precisas para",
+            "is_correct": false
+          },
+          {
+            "text": "Dentro de su esfera de competencia, las potestades administrativas precisas para",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La LRJSP en su artculo 89 regula la personalidad jurdica y potestades de los OOPP",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "Cualquier entidad integrante del sector pblico institucional, con independencia de su",
+        "options": [
+          {
+            "text": "La creacin, transformacin y extincin.",
+            "is_correct": false
+          },
+          {
+            "text": "La creacin, fusin y extincin.",
+            "is_correct": false
+          },
+          {
+            "text": "La creacin, transformacin, liquidacin y extincin.",
+            "is_correct": false
+          },
+          {
+            "text": "La creacin, transformacin, fusin y extincin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cualquier entidad integrante del sector pblico institucional, con independencia de su",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Qu es un consorcio conforme a la LRJSP?:",
+        "options": [
+          {
+            "text": "Son entidades de derecho privado, con personalidad jurdica propia y",
+            "is_correct": false
+          },
+          {
+            "text": "iferenciada, creadas por varias administraciones pblicas o entidades",
+            "is_correct": false
+          },
+          {
+            "text": "Son entidades de derecho pblico, sin personalidad jurdica propia y",
+            "is_correct": false
+          },
+          {
+            "text": "iferenciada, creadas por varias administraciones pblicas o entidades",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu es un consorcio conforme a la LRJSP?:",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "En relacin con el rgimen de control de eficacia y supervisin continua del sector",
+        "options": [
+          {
+            "text": "Todas las entidades integrantes del sector pblico institucional estatal estn",
+            "is_correct": false
+          },
+          {
+            "text": "dministracin del Estado, que vigilar la concurrencia de los requisitos",
+            "is_correct": false
+          },
+          {
+            "text": "Todas las entidades integrantes del sector pblico institucional estatal contarn,",
+            "is_correct": false
+          },
+          {
+            "text": "El control de eficacia ser ejercido por el Ministerio de Hacienda, a travs de la",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En relacin con el rgimen de control de eficacia y supervisin continua del sector",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Cada cuantos aos se revisar el Plan de Actuacin que debe acompaar la creacin",
+        "options": [
+          {
+            "text": "e los entes del Sector pblico institucional",
+            "is_correct": false
+          },
+          {
+            "text": "Cada ao.",
+            "is_correct": false
+          },
+          {
+            "text": "Cada dos aos.",
+            "is_correct": false
+          },
+          {
+            "text": "Cada tres aos.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cada cuantos aos se revisar el Plan de Actuacin que debe acompaar la creacin",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Cada ao....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Cul de los siguientes entes no tiene la consideracin de organismos autnomo:",
+        "options": [
+          {
+            "text": "El Instituto Nacional de Administracin Pblica.",
+            "is_correct": false
+          },
+          {
+            "text": "La Direccin General de Trfico.",
+            "is_correct": false
+          },
+          {
+            "text": "El Servicio Pblico de Empleo Estatal.",
+            "is_correct": false
+          },
+          {
+            "text": "El Banco de Espaa.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de los siguientes entes no tiene la consideracin de organismos autnomo:",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En los Consorcios en que participe la AGE, el convenio:",
+        "options": [
+          {
+            "text": "Precisar de autorizacin previa del Consejo de Ministros y la competencia para",
+            "is_correct": false
+          },
+          {
+            "text": "Precisar de autorizacin previa de la IGAE y la competencia para su",
+            "is_correct": false
+          },
+          {
+            "text": "Precisar de autorizacin previa del Consejo de Ministros y la competencia para",
+            "is_correct": false
+          },
+          {
+            "text": "Precisar de autorizacin previa de la IGAE y la competencia para su",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En los Consorcios en que participe la AGE, el convenio:",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Puede una Sociedad Mercantil Estatal transformarse en Fundacin del Sector",
+        "options": [
+          {
+            "text": "No, la LRJSP no prev esta posibilidad por tratarse de entes sometidos al",
+            "is_correct": false
+          },
+          {
+            "text": "S, mediante ley.",
+            "is_correct": false
+          },
+          {
+            "text": "S, mediante Real Decreto.",
+            "is_correct": false
+          },
+          {
+            "text": "S, mediante Acuerdo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Puede una Sociedad Mercantil Estatal transformarse en Fundacin del Sector",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En el supuesto de fusin de OOPP, el plan de redimensionamiento deber ser",
+        "options": [
+          {
+            "text": "probado:",
+            "is_correct": false
+          },
+          {
+            "text": "Previo informe preceptivo de la IGAE, por cada uno de los OOPP fusionados si",
+            "is_correct": false
+          },
+          {
+            "text": "Previo informe preceptivo del Ministerio de Hacienda, por cada uno de los",
+            "is_correct": false
+          },
+          {
+            "text": "Previo informe preceptivo del Ministerio de Hacienda o de la IGAE, por cada",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En el supuesto de fusin de OOPP, el plan de redimensionamiento deber ser",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'probado:...'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Los Estatutos de las Fundaciones se aprobarn:",
+        "options": [
+          {
+            "text": "Por ley.",
+            "is_correct": false
+          },
+          {
+            "text": "Por convenio.",
+            "is_correct": false
+          },
+          {
+            "text": "Por RD del Consejo de Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "Por Acuerdo del Consejo de Ministros.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los Estatutos de las Fundaciones se aprobarn:",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Por ley....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los Organismos Autnomos se regirn:",
+        "options": [
+          {
+            "text": "Por lo dispuesto en la Ley 40/2015, en su ley de creacin, sus estatutos, la Ley",
+            "is_correct": false
+          },
+          {
+            "text": "e Procedimiento Administrativo Comn de las Administraciones Pblicas, el",
+            "is_correct": false
+          },
+          {
+            "text": "Por lo dispuesto en la Ley 40/2015, por lo previsto en la Ley 33/2003, de 3 de",
+            "is_correct": false
+          },
+          {
+            "text": "ontrol econmico-financiero y de contratacin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los Organismos Autnomos se regirn:",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Los fondos carentes de personalidad jurdica del sector pblico estatal:",
+        "options": [
+          {
+            "text": "Se crean y extinguen mediante Ley.",
+            "is_correct": false
+          },
+          {
+            "text": "Se rigen por el derecho privado.",
+            "is_correct": false
+          },
+          {
+            "text": "Estn sujetos al rgimen de presupuestacin, contabilidad y control previsto en",
+            "is_correct": false
+          },
+          {
+            "text": "No forman parte del sector pblico institucional estatal por carecer de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los fondos carentes de personalidad jurdica del sector pblico estatal:",
+        "source": "10 TEST TEMA9 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:21.851535"
+}

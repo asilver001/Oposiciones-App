@@ -1,0 +1,510 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 2 TEST TEMAS 3 Y 4 - copia.docx
+**Total preguntas:** 40
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** Entre los legitimados para interponer el recurso previo de inconstitucionalidad se encuentra
+
+**Opciones:**
+  0. El Presidente del Gobierno
+  1. El Ministerio Fiscal
+  2. La persona directamente afectada
+  3. El Consejo General del Poder Judicial.
+
+---
+
+### Pregunta 2
+
+**Texto:** El Tribunal Constitucional consta de dos Salas. Se�ale la respuesta correcta
+
+**Opciones:**
+  0. El Presidente del Tribunal lo es tambi�n de la Sala Primera, que presidir� en su defecto, el Magistrado m�s antiguo y, en caso de igual antig�edad, el de mayor edad.
+  1. El Presidente del Tribunal lo es tambi�n de la Sala Primera, que presidir� en su defecto, el Magistrado de mayor edad y, en caso de igual edad, el m�s antiguo.
+  2. El Presidente del Tribunal lo es tambi�n de la Sala Segunda, que presidir� en su defecto, el Magistrado m�s antiguo y, en caso de igual antig�edad, el de mayor edad.
+  3. El Presidente del Tribunal lo es tambi�n de la Sala Segunda, que presidir� en su defecto, el Magistrado de mayor edad y, en caso de igual edad, el m�s antiguo.
+
+---
+
+### Pregunta 3
+
+**Texto:** Se�ale la respuesta correcta
+
+**Opciones:**
+  0. La admisi�n de un recurso o de una cuesti�n de inconstitucionalidad no suspender� la vigencia ni la aplicaci�n de la Ley, de la disposici�n normativa o del acto con fuerza de Ley, excepto en el caso en que el Gobierno se ampare en lo dispuesto por el art�culo ciento sesenta y uno, dos, de la Constituci�n para impugnar, por medio de su Presidente, Leyes, disposiciones normativas o actos con fuerza de Ley de las Comunidades Aut�nomas.
+  1. La admisi�n de un recurso o de una cuesti�n de inconstitucionalidad no suspender� la vigencia ni la aplicaci�n de la Ley, de la disposici�n normativa o del acto con fuerza de Ley, excepto en el caso en que el Congreso se ampare en lo dispuesto por el art�culo ciento sesenta y uno, dos, de la Constituci�n para impugnar, por medio de su Presidente, Leyes, disposiciones normativas o actos con fuerza de Ley de las Comunidades Aut�nomas.
+  2. La admisi�n de un recurso o de una cuesti�n de inconstitucionalidad suspender� la vigencia y la aplicaci�n de la Ley, de la disposici�n normativa o del acto con fuerza de Ley, excepto en el caso en que el Gobierno se ampare en lo dispuesto
+  3. La admisi�n de un recurso o de una cuesti�n de inconstitucionalidad suspender� la vigencia y la aplicaci�n de la Ley, de la disposici�n normativa o del acto con fuerza de Ley, excepto en el caso en que el Congreso se ampare en lo dispuesto por el art�culo ciento sesenta y uno, dos, de la Constituci�n para impugnar, por medio de su Presidente, Leyes, disposiciones normativas o actos con fuerza de Ley de las Comunidades Aut�nomas.
+
+---
+
+### Pregunta 4
+
+**Texto:** Los Magistrados del Tribunal Constitucional ser�n nombrados por el Rey, a propuesta de
+
+**Opciones:**
+  0. Las C�maras y del Gobierno.
+  1. Las C�maras y del Consejo General del Poder Judicial.
+  2. Las C�maras, del Gobierno y del Tribunal Supremo.
+  3. Las C�maras, del Gobierno y del Consejo General del Poder Judicial
+
+---
+
+### Pregunta 5
+
+**Texto:** El Ministerio Fiscal est� legitimado para plantear ante el Tribunal Constitucional
+
+**Opciones:**
+  0. El recurso de amparo.
+  1. El recurso de inconstitucionalidad y el recurso previo de inconstitucionalidad.
+  2. El recurso de amparo, el recurso de inconstitucionalidad y el recurso previo de inconstitucionalidad.
+  3. El recurso de inconstitucionalidad y el recurso de amparo.
+
+---
+
+### Pregunta 6
+
+**Texto:** Ser�n refrendados por el Presidente del Congreso los siguientes actos del Rey
+
+**Opciones:**
+  0. La propuesta y el nombramiento del Presidente del Gobierno, Vicepresidentes, en su caso y Ministros, y la disoluci�n prevista en el art�culo 99.
+  1. La propuesta y el nombramiento del Presidente del Gobierno, Vicepresidentes, en su caso y Ministros, y la disoluci�n prevista en el art�culo 115.
+  2. La propuesta y el nombramiento del Presidente del Gobierno, y la disoluci�n prevista en el art�culo 99 CE.
+  3. La propuesta y el nombramiento del Presidente del Gobierno, y la disoluci�n prevista en el art�culo 115 CE.
+
+---
+
+### Pregunta 7
+
+**Texto:** Se�ale la respuesta correcta en relaci�n con lo dispuesto en el art�culo 163 CE
+
+**Opciones:**
+  0. Cuando un �rgano judicial considere, en alg�n proceso, que una norma con rango de ley, aplicable al caso, de cuya validez dependa el fallo, pueda ser contraria a la Constituci�n, plantear� la cuesti�n ante el Tribunal Constitucional en los supuestos, en la forma y con los efectos que establezca la ley, que en todo caso ser�n suspensivos.
+  1. Cuando un �rgano judicial considere, en alg�n proceso, que una norma con rango de ley, aplicable al caso, de cuya validez dependa el fallo, pueda ser contraria a la Constituci�n, plantear� la cuesti�n ante el Tribunal Constitucional en los supuestos, en la forma y con los efectos que establezca la ley, que en ning�n caso ser�n suspensivos.
+  2. Cuando un �rgano judicial considere, en alg�n proceso, que una norma sin rango de ley, aplicable al caso, de cuya validez dependa el fallo, pueda ser contraria a la Constituci�n, plantear� la cuesti�n ante el Tribunal Constitucional en los supuestos, en la forma y con los efectos que establezca la ley, que en todo caso ser�n suspensivos.
+  3. Cuando un �rgano judicial considere, en alg�n proceso, que una norma sin rango de ley, aplicable al caso, de cuya validez dependa el fallo, pueda ser contraria a la Constituci�n, plantear� la cuesti�n ante el Tribunal Constitucional en los supuestos, en la forma y con los efectos que establezca la ley, que en ning�n caso ser�n suspensivos.
+
+---
+
+### Pregunta 8
+
+**Texto:** Las Sentencias del Tribunal Constitucional, de conformidad con el art�culo 164 CE
+
+**Opciones:**
+  0. Tienen el valor de cosa juzgada a partir del d�a siguiente de su publicaci�n y contra las mismas no cabe recurso alguno.
+  1. Tienen el valor de cosa juzgada a partir del d�a siguiente de su publicaci�n y contra las mismas cabe recurso de s�plica.
+  2. Tienen el valor de cosa juzgada desde el mismo d�a de su publicaci�n y contra las mismas cabe recurso de s�plica.
+  3. Tienen el valor de cosa juzgada desde el mismo d�a de su publicaci�n y contra las mismas no cabe recurso alguno.
+
+---
+
+### Pregunta 9
+
+**Texto:** El Tribunal Constitucional se compone de 12 miembros nombrados por el Rey; de ellos
+
+**Opciones:**
+  0. Cuatro a propuesta del Congreso por mayor�a de dos tercios de sus miembros; cuatro a propuesta del Senado, con id�ntica mayor�a; dos a propuesta del Gobierno, y dos a propuesta del Consejo General del Poder Judicial.
+  1. Cuatro a propuesta del Congreso por mayor�a de dos tercios de sus miembros; cuatro a propuesta del Senado, con id�ntica mayor�a; dos a propuesta del Gobierno, y dos a propuesta del Tribunal Supremo.
+  2. Cuatro a propuesta del Congreso por mayor�a de tres quintos de sus miembros; cuatro a propuesta del Senado, con id�ntica mayor�a; dos a propuesta del Gobierno, y dos a propuesta del Consejo General del Poder Judicial.
+  3. Cuatro a propuesta del Congreso por mayor�a de tres quintos de sus miembros; cuatro a propuesta del Senado, con id�ntica mayor�a; dos a propuesta del Gobierno, y dos a propuesta del Tribunal Supremo.
+
+---
+
+### Pregunta 10
+
+**Texto:** El Tribunal Constitucional consta de dos Salas. Cada Sala est� compuesta por
+
+**Opciones:**
+  0. Seis Magistrados nombrados por el Tribunal en Pleno.
+  1. Seis Magistrados nombrados por el Presidente del Tribunal.
+  2. Ocho Magistrados nombrados por el Tribunal en Pleno.
+  3. Ocho Magistrados nombrados por el Presidente del Tribunal
+
+---
+
+### Pregunta 11
+
+**Texto:** El Tribunal Constitucional entender� de los conflictos en defensa de la autonom�a local que planteen
+
+**Opciones:**
+  0. Los municipios y provincias frente al Estado.
+  1. Los municipios y provincias frente al Estado o a una Comunidad Aut�noma.
+  2. Los municipios, provincias y entes de �mbito territorial inferior al municipio frente al Estado.
+  3. Los municipios, provincias y entes de �mbito territorial inferior al municipio frente al Estado o a una Comunidad Aut�noma.
+
+---
+
+### Pregunta 12
+
+**Texto:** Los conflictos de competencia que opongan al Estado con una Comunidad Aut�noma o a �stas entre s�, podr�n ser suscitados por
+
+**Opciones:**
+  0. El Gobierno o por los �rganos colegiados ejecutivos de las Comunidades Aut�nomas.
+  1. El Congreso o por las asambleas legislativas de las Comunidades Aut�nomas.
+  2. El Presidente del Gobierno o por los �rganos colegiados ejecutivos de las Comunidades Aut�nomas.
+  3. Las Cortes Generales o por las asambleas legislativas de las Comunidades Aut�nomas.
+
+---
+
+### Pregunta 13
+
+**Texto:** Se�ale la respuesta correcta en relaci�n con el control previo de constitucionalidad de los Tratados Internacionales
+
+**Opciones:**
+  0. El Gobierno o cualquiera de ambas C�maras podr�n requerir al Tribunal Constitucional para que se pronuncie sobre la existencia o inexistencia de contradicci�n entre la Constituci�n y las estipulaciones de un tratado internacional cuyo texto estuviera ya definitivamente fijado, una vez prestado el consentimiento del Estado.
+  1. El Gobierno o cualquiera de ambas C�maras podr�n requerir al Tribunal Constitucional para que se pronuncie sobre la existencia o inexistencia de contradicci�n entre la Constituci�n y las estipulaciones de un tratado internacional cuyo texto estuviera ya definitivamente fijado, pero al que no se hubiere prestado a�n el consentimiento del Estado.
+  2. El Gobierno o el Congreso de los Diputados podr�n requerir al Tribunal Constitucional para que se pronuncie sobre la existencia o inexistencia de contradicci�n entre la Constituci�n y las estipulaciones de un tratado
+  3. El Gobierno o el Congreso de los Diputados podr�n requerir al Tribunal Constitucional para que se pronuncie sobre la existencia o inexistencia de contradicci�n entre la Constituci�n y las estipulaciones de un tratado internacional cuyo texto estuviera ya definitivamente fijado, pero al que no se hubiere prestado a�n el consentimiento del Estado.
+
+---
+
+### Pregunta 14
+
+**Texto:** Para iniciar la tramitaci�n de los conflictos en defensa de la autonom�a local ser� necesario
+
+**Opciones:**
+  0. El acuerdo del �rgano plenario de las Corporaciones locales con el voto favorable de la mayor�a de dos tercios del n�mero legal de miembros de las mismas y el dictamen, con car�cter preceptivo pero no vinculante, del Consejo de Estado u �rgano consultivo de la correspondiente Comunidad Aut�noma.
+  1. El acuerdo del �rgano plenario de las Corporaciones locales con el voto favorable de la mayor�a de dos tercios del n�mero legal de miembros de las mismas y el dictamen, con car�cter preceptivo y vinculante, del Consejo de Estado u �rgano consultivo de la correspondiente Comunidad Aut�noma.
+  2. El acuerdo del �rgano plenario de las Corporaciones locales con el voto favorable de la mayor�a absoluta del n�mero legal de miembros de las mismas y el dictamen, con car�cter preceptivo pero no vinculante, del Consejo de Estado u �rgano consultivo de la correspondiente Comunidad Aut�noma.
+  3. El acuerdo del �rgano plenario de las Corporaciones locales con el voto favorable de la mayor�a absoluta del n�mero legal de miembros de las mismas y el dictamen, con car�cter preceptivo y vinculante, del Consejo de Estado u �rgano consultivo de la correspondiente Comunidad Aut�noma.
+
+---
+
+### Pregunta 15
+
+**Texto:** La renovaci�n por terceras partes de los miembros del Tribunal Constitucional se realizada cada
+
+**Opciones:**
+  0. 6 a�os.
+  1. 3 a�os.
+  2. 9 a�os
+  3. 5 a�os
+
+---
+
+### Pregunta 16
+
+**Texto:** La distribuci�n de asuntos entre las salas se realiza por
+
+**Opciones:**
+  0. El Pleno
+  1. El Presidente del Tribunal Constitucional.
+  2. La secci�n de que se trate.
+  3. La comisi�n Permanente
+
+---
+
+### Pregunta 17
+
+**Texto:** Se�ale la correcta en relaci�n al mandato del Presidente del Tribunal Constitucional
+
+**Opciones:**
+  0. Es de 9 a�os, no renovable.
+  1. Es de 3 a�os, no renovable.
+  2. Es de 9 a�os, renovable una sola vez.
+  3. Es de 3 a�os, renovable una sola vez.
+
+---
+
+### Pregunta 18
+
+**Texto:** A qui�n le corresponde la defensa del ordenamiento constitucional de conformidad con el art�culo 8 de la Constituci�n Espa�ola
+
+**Opciones:**
+  0. A las Fuerzas Armadas
+  1. A las Cortes Generales.
+  2. Al Tribunal Constitucional
+  3. Al Gobierno.
+
+---
+
+### Pregunta 19
+
+**Texto:** Seg�n la constituci�n espa�ola, el Rey arbitra y modera
+
+**Opciones:**
+  0. El funcionamiento del Estado.
+  1. El funcionamiento regular de las instituciones.
+  2. Los poderes del Estado
+  3. La Justicia.
+
+---
+
+### Pregunta 20
+
+**Texto:** �Qui�n debe reconocer la imposibilidad del Rey para el ejercicio de sus funciones?
+
+**Opciones:**
+  0. El Gobierno
+  1. Las Cortes Generales
+  2. El Consejo General del Poder Judicial.
+  3. El Tribunal Constitucional.
+
+---
+
+### Pregunta 21
+
+**Texto:** Se�ale la afirmaci�n correcta en relaci�n a la instituci�n del refrendo
+
+**Opciones:**
+  0. La propuesta y nombramiento del Presidente del Gobierno son actos exentos de refrendo.
+  1. La sanci�n de las leyes, es refrendada por el Presidente del Congreso.
+  2. Los Ministros refrendan actos del Rey en materias de su competencia.
+  3. Todos los actos del Rey son refrendados por el Presidente del Gobierno o por el Consejo de Ministros.
+
+---
+
+### Pregunta 22
+
+**Texto:** Ser� tutor del Rey menor
+
+**Opciones:**
+  0. El padre o la madre del Rey y, en su defecto, el pariente mayor de edad m�s pr�ximo a suceder en la Corona. Si no hubiere ninguna persona a quien corresponda la Tutela, �sta ser� nombrada por las Cortes Generales
+  1. El padre o la madre del Rey mientras permanezcan viudos, y, en su defecto, el pariente mayor de edad m�s pr�ximo a suceder en la Corona. Si no hubiere ninguna persona a quien corresponda la Tutela, �sta ser� nombrada por las Cortes Generales
+  2. La persona que en su testamento hubiese nombrado el Rey difunto, siempre que sea mayor de edad y espa�ol de nacimiento; si no lo hubiese nombrado, ser� tutor el padre o la madre. En su defecto, lo nombrar�n las Cortes Generales.
+  3. La persona que en su testamento hubiese nombrado el Rey difunto, siempre que sea mayor de edad y espa�ol de nacimiento; si no lo hubiese nombrado, ser� tutor el padre o la madre mientras permanezcan viudos. En su defecto, lo nombrar�n las Cortes Generales.
+
+---
+
+### Pregunta 23
+
+**Texto:** La Reina consorte o el consorte de la Reina
+
+**Opciones:**
+  0. Podr�n asumir funciones constitucionales, salvo lo dispuesto para la Regencia.
+  1. Podr�n asumir funciones constitucionales, salvo lo dispuesto para la Tutela.
+  2. No podr�n asumir funciones constitucionales, salvo lo dispuesto para la Regencia.
+  3. No podr�n asumir funciones constitucionales, salvo lo dispuesto para la Tutela.
+
+---
+
+### Pregunta 24
+
+**Texto:** De acuerdo con la Constituci�n, al Rey le corresponde
+
+**Opciones:**
+  0. Previa autorizaci�n del presidente del Gobierno, declarar la guerra y hacer la paz.
+  1. Previo refer�ndum consultivo, declarar la guerra y hacer la paz.
+  2. Previa autorizaci�n del Consejo de Ministros, declarar la guerra y hacer la paz.
+  3. Previa autorizaci�n de las Cortes Generales, declarar la guerra y hacer la paz.
+
+---
+
+### Pregunta 25
+
+**Texto:** El Rey, al ser proclamado ante las Cortes Generales, prestar� juramento. Se�ale cu�l de las siguientes afirmaciones se recoge en el art�culo 61 CE como parte de ese juramento regio
+
+**Opciones:**
+  0. Respetar los derechos de las Comunidades Aut�nomas.
+  1. Ejercer fielmente su autoridad.
+  2. Respetar los derechos de los partidos pol�ticos.
+  3. Guardar y hacer guardar la Constituci�n y los tratados y convenios que Espa�a suscriba, especialmente con las naciones de su comunidad hist�rica.
+
+---
+
+### Pregunta 26
+
+**Texto:** Corresponde al Rey
+
+**Opciones:**
+  0. Sancionar y promulgar las leyes aprobadas por las CCGG y los decretos acordados en Consejo de Ministros.
+  1. Sancionar y promulgar los decretos acordados en el Consejo de Ministros.
+  2. Expedir los decretos acordados en el Consejo de Ministros.
+  3. Sancionar y expedir las leyes.
+
+---
+
+### Pregunta 27
+
+**Texto:** Si no hubiere ninguna persona a quien corresponda la Regencia
+
+**Opciones:**
+  0. �sta ser� nombrada por las Cortes Generales, y se compondr� de una, tres o cinco personas.
+  1. �sta ser� nombrada por las Cortes Generales, y se compondr� de tres o cinco personas.
+  2. �sta ser� nombrada por el Gobierno, y se compondr� de una, tres o cinco personas.
+  3. �sta ser� nombrada por el Gobierno, y se compondr� de tres o cinco personas.
+
+---
+
+### Pregunta 28
+
+**Texto:** No podr�n acumularse los cargos de Regente y de tutor sino en
+
+**Opciones:**
+  0. El padre, madre o descendientes directos del Rey.
+  1. La madre o descendientes directos del Rey.
+  2. El padre, madre o ascendientes directos del Rey.
+  3. La madre o ascendientes directos del Rey.
+
+---
+
+### Pregunta 29
+
+**Texto:** �En qu� supuestos procede el ejercicio de la Regencia?
+
+**Opciones:**
+  0. Cuando el Rey fuere menor de edad y si el Rey se inhabilitare para el ejercicio de su autoridad y la imposibilidad fuere reconocida por el Gobierno.
+  1. Cuando el Rey fuere menor de edad y si el Rey se inhabilitare para el ejercicio de su autoridad y la imposibilidad fuere reconocida por las Cortes Generales.
+  2. En caso de fallecimiento del Rey, cuando el Rey fuere menor de edad y si el Rey se inhabilitare para el ejercicio de su autoridad y la imposibilidad fuere reconocida por el Gobierno.
+  3. En caso de fallecimiento del Rey, cuando el Rey fuere menor de edad y si el Rey se inhabilitare para el ejercicio de su autoridad y la imposibilidad fuere reconocida por las Cortes Generales.
+
+---
+
+### Pregunta 30
+
+**Texto:** La sucesi�n en el trono
+
+**Opciones:**
+  0. Seguir� el orden regular de primogenitura y representaci�n, siendo preferida siempre la l�nea anterior a las posteriores; en la misma l�nea, el grado m�s pr�ximo al m�s remoto; en el mismo grado, la persona de m�s edad a la de menos y en el mismo sexo, el var�n a la mujer.
+  1. Seguir� el orden regular de primogenitura y prelaci�n, siendo preferida siempre la l�nea anterior a las posteriores; en la misma l�nea, el grado m�s pr�ximo al
+  2. Seguir� el orden regular de primogenitura y representaci�n, siendo preferida siempre la l�nea anterior a las posteriores; en la misma l�nea, el grado m�s pr�ximo al m�s remoto; en el mismo grado, el var�n a la mujer, y en el mismo sexo, la persona de m�s edad a la de menos.
+  3. Seguir� el orden regular de primogenitura y prelaci�n, siendo preferida siempre la l�nea anterior a las posteriores; en la misma l�nea, el grado m�s pr�ximo al m�s remoto; en el mismo grado, el var�n a la mujer, y en el mismo sexo, la persona de m�s edad a la de menos.
+
+---
+
+### Pregunta 31
+
+**Texto:** Aquellas personas que teniendo derecho a la sucesi�n en el trono contrajeren matrimonio contra la expresa prohibici�n del Rey y de las Cortes Generales, quedar�n excluidas en la sucesi�n a la Corona
+
+**Opciones:**
+  0. Por s� y por sus descendientes.
+  1. Por s� y por sus ascendientes.
+  2. Por s� y por sus ascendientes y descendientes.
+  3. Por s�, pero no por sus ascendientes y descendientes.
+
+---
+
+### Pregunta 32
+
+**Texto:** El Rey asume la m�s alta representaci�n del Estado en las relaciones internacionales, pero la Constituci�n matiza que dicha representaci�n ser� especialmente con
+
+**Opciones:**
+  0. Con las naciones integrantes de la Uni�n Europea.
+  1. Con las naciones Iberoamericanas.
+  2. Con las naciones de su comunidad hist�rica.
+  3. Con las naciones de su entorno cultural y geogr�fico.
+
+---
+
+### Pregunta 33
+
+**Texto:** De conformidad con lo establecido en la Constituci�n Espa�ola, en relaci�n a la Corona, indicar cu�l de las siguientes afirmaciones es correcta
+
+**Opciones:**
+  0. Extinguidas todas las l�neas sucesorias llamadas en derecho, el Senado proveer� a la sucesi�n en la Corona en la forma que m�s convenga a los intereses de Espa�a.
+  1. Si no hubiere ninguna persona a quien corresponda la Regencia, �sta ser� nombrada por las Cortes Generales, y se compondr� de una, tres o cinco personas.
+  2. Para ejercer la regencia no es preciso ser espa�ol.
+  3. Los actos del Rey ser�n refrendados por el Presidente del Senado
+
+---
+
+### Pregunta 34
+
+**Texto:** Seg�n el art�culo 56.1 de la CE, el Rey es el Jefe de Estado, y es el s�mbolo de
+
+**Opciones:**
+  0. Su unidad e integridad
+  1. Su independencia y soberan�a
+  2. Su unidad y permanencia
+  3. Su integridad y soberan�a
+
+---
+
+### Pregunta 35
+
+**Texto:** Seg�n el art�culo 59 de la Constituci�n Espa�ola, si el Rey se inhabilitare para el ejercicio de su autoridad y la imposibilidad fuere reconocida por las Cortes Generales, entrar� a ejercer inmediatamente la Regencia
+
+**Opciones:**
+  0. El Presidente del Gobierno.
+  1. El Presidente de las Cortes Generales.
+  2. La Princesa heredera de la Corona, si fuese mayor de edad.
+  3. La Princesa heredera de la Corona, aunque fuese menor de edad.
+
+---
+
+### Pregunta 36
+
+**Texto:** La Constituci�n Espa�ola establece que extinguidas todas las l�neas llamadas en Derecho a la sucesi�n a la Corona
+
+**Opciones:**
+  0. Las Cortes Generales proveer�n a la sucesi�n en la Corona en la forma en que m�s convenga a los intereses de Espa�a.
+  1. Ejercer� las funciones la Reina consorte o el consorte de la Reina.
+  2. El Presidente del Gobierno proveer� a la sucesi�n en la Corona en la forma que m�s convenga a los intereses de Espa�a.
+  3. Ejercer� sus funciones el tutor que hubiera nombrado el Rey difunto.
+
+---
+
+### Pregunta 37
+
+**Texto:** �Qu� car�cter tiene la Corona de Espa�a, monarqu�a espa�ola, seg�n el art�culo 57 de la misma
+
+**Opciones:**
+  0. Hereditaria
+  1. constitucional
+  2. Electiva.
+  3. Limitada.
+
+---
+
+### Pregunta 38
+
+**Texto:** El refrendo de los actos del rey, est� �ntimamente relacionado con
+
+**Opciones:**
+  0. La divisi�n de poderes.
+  1. La soberan�a popular.
+  2. La irresponsabilidad del Rey.
+  3. La Regencia.
+
+---
+
+### Pregunta 39
+
+**Texto:** Seg�n la Constituci�n, las abdicaciones y renuncias a la Corona, �C�mo se resolver�n?
+
+**Opciones:**
+  0. Por ley org�nica, si plantea dudas de hecho o de derecho.
+  1. Por ley org�nica.
+  2. Procedimiento que incluye refer�ndum popular.
+  3. Por la Cortes Generales en sesi�n conjunta de ambas c�maras.
+
+---
+
+### Pregunta 40
+
+**Texto:** El pr�ncipe heredero tendr� la dignidad
+
+**Opciones:**
+  0. De Pr�ncipe de Asturias, y los dem�s vinculados tradicionalmente al sucesor de la Corona.
+  1. De Pr�ncipe de Asturias, y los dem�s vinculados tradicionalmente al Rey de Espa�a.
+  2. De Pr�ncipe de Asturias, y los dem�s atribuidos por la Constituci�n espa�ola.
+  3. De Pr�ncipe de Asturias.
+
+---
