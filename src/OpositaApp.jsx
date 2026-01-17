@@ -14,10 +14,11 @@ import Fortaleza from './components/Fortaleza';
 import { WelcomeScreen, GoalStep, DateStep, IntroStep } from './components/onboarding';
 import { useAppNavigation } from './hooks/useAppNavigation';
 import { Button, Card, Modal, ProgressBar } from './components/ui';
+import AnimationPlayground from './components/playground/AnimationPlayground';
 
 // ============ DEV PANEL COMPONENT ============
 
-function DevPanel({ onReset, onGoToOnboarding, onShowPremium, onShowAdminLogin, streakCount, testsCount }) {
+function DevPanel({ onReset, onGoToOnboarding, onShowPremium, onShowAdminLogin, onShowPlayground, streakCount, testsCount }) {
   const [isOpen, setIsOpen] = useState(false);
 
   if (!isOpen) {
@@ -38,6 +39,9 @@ function DevPanel({ onReset, onGoToOnboarding, onShowPremium, onShowAdminLogin, 
         <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-white text-lg">×</button>
       </div>
       <div className="space-y-2">
+        <button onClick={onShowPlayground} className="w-full bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white text-xs py-2 px-3 rounded-lg text-left font-medium">
+          ✨ Animation Playground
+        </button>
         <button onClick={onShowAdminLogin} className="w-full bg-indigo-500/90 hover:bg-indigo-600 text-white text-xs py-2 px-3 rounded-lg text-left">
           🔐 Acceso Admin
         </button>
@@ -79,6 +83,7 @@ export default function OpositaApp() {
   // Admin context
   const { adminUser, isAdmin, isReviewer, isLoggedIn: isAdminLoggedIn } = useAdmin();
   const [showAdminLoginModal, setShowAdminLoginModal] = useState(false);
+  const [showAnimationPlayground, setShowAnimationPlayground] = useState(false);
 
   const [currentPage, setCurrentPage] = useState('welcome');
   const [activeTab, setActiveTab] = useState('inicio');
@@ -2451,6 +2456,7 @@ export default function OpositaApp() {
         onGoToOnboarding={() => setCurrentPage('welcome')}
         onShowPremium={() => setShowPremiumModal(true)}
         onShowAdminLogin={() => setShowAdminLoginModal(true)}
+        onShowPlayground={() => setShowAnimationPlayground(true)}
         streakCount={displayStreak}
         testsCount={totalStats.testsCompleted}
       />
@@ -2459,6 +2465,13 @@ export default function OpositaApp() {
       {showPremiumModal && <PremiumModal />}
       {showSettingsModal && <SettingsModal />}
       {showProgressModal && <ProgressModal />}
+
+      {/* Animation Playground */}
+      {showAnimationPlayground && (
+        <div className="fixed inset-0 z-[100]">
+          <AnimationPlayground onClose={() => setShowAnimationPlayground(false)} />
+        </div>
+      )}
 
       {/* Admin Login Modal */}
       <AdminLoginModal
