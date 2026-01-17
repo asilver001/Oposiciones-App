@@ -2176,7 +2176,18 @@ function FullHomePage({
       {/* Swipeable content */}
       <div className="relative overflow-hidden rounded-3xl">
         <motion.div
-          className="flex"
+          className="flex cursor-grab active:cursor-grabbing"
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          dragElastic={0.2}
+          onDragEnd={(event, info) => {
+            const threshold = 50;
+            if (info.offset.x < -threshold && currentPage === 0) {
+              setCurrentPage(1);
+            } else if (info.offset.x > threshold && currentPage === 1) {
+              setCurrentPage(0);
+            }
+          }}
           animate={{ x: currentPage === 0 ? 0 : '-100%' }}
           transition={spring.snappy}
         >
@@ -2386,6 +2397,405 @@ function FullHomePage({
           <button className="hover:text-purple-600 transition">Legal</button>
         </div>
         <p className="text-xs text-gray-300">Oposita Smart v1.0 · Hecho con 💜</p>
+      </div>
+    </motion.div>
+  );
+}
+
+// ============================================
+// HOME ALTERNATIVE 1: ZEN MODE
+// Inspirado en Headspace/Calm - Minimalista, un solo foco
+// ============================================
+
+function HomeZenMode({
+  temas,
+  onStartSession,
+  onTemaAction,
+  onVerTodos,
+  onRachaClick,
+  onPrecisionClick,
+  onLevelClick,
+  onSettingsClick,
+  onShowProgress
+}) {
+  const nextTema = temas.find(t => t.estado === 'riesgo') || temas.find(t => t.estado === 'progreso') || temas[0];
+  const config = estadoConfig[nextTema?.estado] || estadoConfig.nuevo;
+  const dailyProgressPercent = 40;
+
+  // Greeting based on time
+  const hour = new Date().getHours();
+  const greeting = hour < 12 ? 'Buenos días' : hour < 19 ? 'Buenas tardes' : 'Buenas noches';
+
+  return (
+    <motion.div
+      className="min-h-[600px] flex flex-col"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
+      {/* Minimal TopBar - just essentials */}
+      <div className="flex items-center justify-between py-2">
+        <motion.button
+          onClick={onShowProgress}
+          className="relative w-11 h-11"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <svg className="w-11 h-11 transform -rotate-90">
+            <circle cx="22" cy="22" r="18" fill="none" stroke="#F3E8FF" strokeWidth="3" />
+            <motion.circle
+              cx="22" cy="22" r="18" fill="none" stroke="#8B5CF6" strokeWidth="3"
+              strokeLinecap="round"
+              initial={{ strokeDasharray: "0 113" }}
+              animate={{ strokeDasharray: `${(dailyProgressPercent / 100) * 113} 113` }}
+              transition={spring.smooth}
+            />
+          </svg>
+          <span className="absolute inset-0 flex items-center justify-center text-xs font-bold text-purple-600">{dailyProgressPercent}%</span>
+        </motion.button>
+        <motion.button
+          onClick={onSettingsClick}
+          className="w-11 h-11 flex items-center justify-center rounded-full hover:bg-gray-100"
+          whileTap={{ scale: 0.95 }}
+        >
+          <Settings className="w-5 h-5 text-gray-400" />
+        </motion.button>
+      </div>
+
+      {/* Breathing space + Greeting */}
+      <div className="flex-1 flex flex-col justify-center py-8">
+        <motion.div
+          className="text-center mb-8"
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.1 }}
+        >
+          <p className="text-purple-500 text-sm font-medium mb-1">{greeting}</p>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">¿Listo para estudiar?</h1>
+          <p className="text-gray-400">Unos minutos al día, sin agobios</p>
+        </motion.div>
+
+        {/* Central Focus Card - The ONLY thing that matters */}
+        <motion.div
+          className="bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-700 rounded-[32px] p-8 text-white relative overflow-hidden mx-2"
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2, ...spring.gentle }}
+        >
+          {/* Subtle decorations */}
+          <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl" />
+          <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-xl" />
+
+          <div className="relative text-center">
+            {/* Large progress ring */}
+            <motion.div
+              className="relative w-28 h-28 mx-auto mb-6"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.4, ...spring.bouncy }}
+            >
+              <svg className="w-28 h-28 transform -rotate-90">
+                <circle cx="56" cy="56" r="48" fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="8" />
+                <motion.circle
+                  cx="56" cy="56" r="48" fill="none" stroke="white" strokeWidth="8"
+                  strokeLinecap="round"
+                  initial={{ strokeDasharray: "0 302" }}
+                  animate={{ strokeDasharray: `${(nextTema?.progreso / 100) * 302} 302` }}
+                  transition={{ delay: 0.6, ...spring.smooth }}
+                />
+              </svg>
+              <div className="absolute inset-0 flex flex-col items-center justify-center">
+                <span className="text-3xl font-bold">{nextTema?.progreso}%</span>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.5 }}
+            >
+              <p className="text-purple-200 text-sm mb-1">Tu siguiente tema</p>
+              <h2 className="text-xl font-bold mb-1">T{nextTema?.id}. {nextTema?.nombre}</h2>
+              <p className="text-purple-200/80 text-sm mb-6">~10 min · 15 preguntas</p>
+            </motion.div>
+
+            <motion.button
+              onClick={onStartSession}
+              className="w-full py-4 bg-white text-purple-600 font-bold rounded-2xl text-lg shadow-lg shadow-purple-900/30"
+              whileHover={{ scale: 1.02, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.6 }}
+            >
+              Comenzar
+            </motion.button>
+          </div>
+        </motion.div>
+
+        {/* Minimal stats - subtle, not competing */}
+        <motion.div
+          className="flex justify-center gap-8 mt-8"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.7 }}
+        >
+          <motion.button onClick={onRachaClick} className="text-center" whileTap={{ scale: 0.95 }}>
+            <div className="flex items-center justify-center gap-1.5 mb-1">
+              <Flame className="w-4 h-4 text-amber-500" />
+              <span className="text-lg font-bold text-gray-800">7</span>
+            </div>
+            <p className="text-xs text-gray-400">días</p>
+          </motion.button>
+          <motion.button onClick={onPrecisionClick} className="text-center" whileTap={{ scale: 0.95 }}>
+            <div className="flex items-center justify-center gap-1.5 mb-1">
+              <Target className="w-4 h-4 text-purple-500" />
+              <span className="text-lg font-bold text-gray-800">87%</span>
+            </div>
+            <p className="text-xs text-gray-400">precisión</p>
+          </motion.button>
+          <motion.button onClick={onLevelClick} className="text-center" whileTap={{ scale: 0.95 }}>
+            <div className="flex items-center justify-center gap-1.5 mb-1">
+              <Trophy className="w-4 h-4 text-pink-500" />
+              <span className="text-lg font-bold text-gray-800">12</span>
+            </div>
+            <p className="text-xs text-gray-400">nivel</p>
+          </motion.button>
+        </motion.div>
+      </div>
+
+      {/* Bottom action - See all topics */}
+      <motion.button
+        onClick={onVerTodos}
+        className="mx-2 mb-4 py-4 bg-gray-50 rounded-2xl text-gray-600 font-medium flex items-center justify-center gap-2"
+        whileHover={{ backgroundColor: '#F3E8FF' }}
+        whileTap={{ scale: 0.98 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.8 }}
+      >
+        <BookOpen className="w-5 h-5" />
+        Ver todos los temas
+      </motion.button>
+    </motion.div>
+  );
+}
+
+// ============================================
+// HOME ALTERNATIVE 2: MOMENTUM
+// Inspirado en Notion/Linear - Bento grid, datos claros
+// ============================================
+
+function HomeMomentum({
+  temas,
+  onStartSession,
+  onTemaAction,
+  onVerTodos,
+  onRachaClick,
+  onPrecisionClick,
+  onLevelClick,
+  onSettingsClick,
+  onShowProgress
+}) {
+  const nextTema = temas.find(t => t.estado === 'riesgo') || temas.find(t => t.estado === 'progreso') || temas[0];
+  const config = estadoConfig[nextTema?.estado] || estadoConfig.nuevo;
+  const TemaIcon = config.icon;
+  const dailyProgressPercent = 40;
+  const weekProgress = [65, 80, 45, 90, 60, 0, 0]; // Mon-Sun
+
+  return (
+    <motion.div
+      className="space-y-3"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
+      {/* Compact header */}
+      <div className="flex items-center justify-between">
+        <div>
+          <p className="text-xs text-purple-500 font-medium uppercase tracking-wider">
+            {new Date().toLocaleDateString('es-ES', { weekday: 'long' })}
+          </p>
+          <h1 className="text-xl font-bold text-gray-900">Tu Momentum</h1>
+        </div>
+        <div className="flex items-center gap-2">
+          <motion.button
+            onClick={onShowProgress}
+            className="relative w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span className="text-sm font-bold text-purple-600">{dailyProgressPercent}%</span>
+          </motion.button>
+          <motion.button
+            onClick={onSettingsClick}
+            className="w-10 h-10 bg-gray-50 rounded-xl flex items-center justify-center"
+            whileTap={{ scale: 0.95 }}
+          >
+            <Settings className="w-4 h-4 text-gray-400" />
+          </motion.button>
+        </div>
+      </div>
+
+      {/* Bento Grid */}
+      <div className="grid grid-cols-2 gap-3">
+        {/* Large CTA card - spans 2 columns */}
+        <motion.div
+          className="col-span-2 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl p-5 text-white relative overflow-hidden"
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.1 }}
+          whileHover={{ scale: 1.01 }}
+        >
+          <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl" />
+
+          <div className="flex items-start justify-between relative">
+            <div className="flex-1">
+              <div className="flex items-center gap-2 mb-3">
+                <div className={`w-8 h-8 rounded-lg ${config.bg} flex items-center justify-center`}>
+                  <TemaIcon className={`w-4 h-4 ${config.text}`} />
+                </div>
+                <span className="text-xs text-gray-400 bg-white/10 px-2 py-0.5 rounded-full">{config.label}</span>
+              </div>
+              <h2 className="text-lg font-bold mb-1">T{nextTema?.id}. {nextTema?.nombre}</h2>
+              <p className="text-sm text-gray-400 mb-4">15 preguntas · ~10 min</p>
+              <motion.button
+                onClick={onStartSession}
+                className="px-5 py-2.5 bg-white text-gray-900 font-semibold rounded-xl text-sm flex items-center gap-2"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                <Zap className="w-4 h-4" /> Empezar ahora
+              </motion.button>
+            </div>
+            <div className="relative w-20 h-20">
+              <svg className="w-20 h-20 transform -rotate-90">
+                <circle cx="40" cy="40" r="34" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="6" />
+                <motion.circle
+                  cx="40" cy="40" r="34" fill="none" stroke="#8B5CF6" strokeWidth="6"
+                  strokeLinecap="round"
+                  initial={{ strokeDasharray: "0 214" }}
+                  animate={{ strokeDasharray: `${(nextTema?.progreso / 100) * 214} 214` }}
+                  transition={spring.smooth}
+                />
+              </svg>
+              <span className="absolute inset-0 flex items-center justify-center text-lg font-bold">{nextTema?.progreso}%</span>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Streak card */}
+        <motion.button
+          onClick={onRachaClick}
+          className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-4 text-left border border-amber-100"
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.15 }}
+          whileHover={{ scale: 1.02, y: -2 }}
+          whileTap={{ scale: 0.98 }}
+        >
+          <div className="flex items-center justify-between mb-3">
+            <Flame className="w-6 h-6 text-amber-500" />
+            <span className="text-xs text-amber-600 bg-amber-100 px-2 py-0.5 rounded-full">🔥 En racha</span>
+          </div>
+          <p className="text-3xl font-bold text-gray-900 mb-0.5">7</p>
+          <p className="text-xs text-gray-500">días consecutivos</p>
+        </motion.button>
+
+        {/* Precision card */}
+        <motion.button
+          onClick={onPrecisionClick}
+          className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-4 text-left border border-purple-100"
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          whileHover={{ scale: 1.02, y: -2 }}
+          whileTap={{ scale: 0.98 }}
+        >
+          <div className="flex items-center justify-between mb-3">
+            <Target className="w-6 h-6 text-purple-500" />
+            <span className="text-xs text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">↑ +5%</span>
+          </div>
+          <p className="text-3xl font-bold text-gray-900 mb-0.5">87%</p>
+          <p className="text-xs text-gray-500">precisión media</p>
+        </motion.button>
+
+        {/* Weekly progress - spans 2 columns */}
+        <motion.div
+          className="col-span-2 bg-white rounded-2xl p-4 border border-gray-100"
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.25 }}
+        >
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="font-semibold text-gray-900 text-sm">Esta semana</h3>
+            <span className="text-xs text-gray-400">45 preguntas</span>
+          </div>
+          <div className="flex items-end justify-between gap-1 h-16">
+            {['L', 'M', 'X', 'J', 'V', 'S', 'D'].map((day, i) => (
+              <div key={day} className="flex-1 flex flex-col items-center gap-1">
+                <motion.div
+                  className="w-full bg-gray-100 rounded-t-sm overflow-hidden"
+                  style={{ height: '48px' }}
+                >
+                  <motion.div
+                    className={`w-full ${weekProgress[i] > 0 ? 'bg-purple-500' : 'bg-gray-200'} rounded-t-sm`}
+                    initial={{ height: 0 }}
+                    animate={{ height: `${weekProgress[i]}%` }}
+                    transition={{ delay: 0.3 + i * 0.05, ...spring.bouncy }}
+                    style={{ marginTop: 'auto' }}
+                  />
+                </motion.div>
+                <span className={`text-[10px] ${i < 5 ? 'text-gray-600' : 'text-gray-300'}`}>{day}</span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Topics quick access */}
+        <motion.button
+          onClick={onVerTodos}
+          className="col-span-2 bg-gray-50 rounded-2xl p-4 flex items-center justify-between"
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.3 }}
+          whileHover={{ backgroundColor: '#F3E8FF' }}
+          whileTap={{ scale: 0.98 }}
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-sm">
+              <BookOpen className="w-5 h-5 text-purple-500" />
+            </div>
+            <div className="text-left">
+              <p className="font-medium text-gray-900">Todos los temas</p>
+              <p className="text-xs text-gray-500">11 temas · 4 en progreso</p>
+            </div>
+          </div>
+          <ChevronRight className="w-5 h-5 text-gray-400" />
+        </motion.button>
+
+        {/* Level/Ranking */}
+        <motion.button
+          onClick={onLevelClick}
+          className="col-span-2 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-2xl p-4 text-white flex items-center justify-between"
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.35 }}
+          whileHover={{ scale: 1.01 }}
+          whileTap={{ scale: 0.99 }}
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+              <Trophy className="w-6 h-6 text-white" />
+            </div>
+            <div>
+              <p className="font-bold text-lg">Nivel 12</p>
+              <p className="text-sm text-white/80">Top 15% de opositores</p>
+            </div>
+          </div>
+          <div className="text-right">
+            <p className="text-2xl font-bold">850</p>
+            <p className="text-xs text-white/70">XP totales</p>
+          </div>
+        </motion.button>
       </div>
     </motion.div>
   );
@@ -2730,14 +3140,15 @@ export default function DraftFeatures({ onClose }) {
   ];
 
   const tabs = [
-    { id: 'full-home', label: '🏠 Home Completo' },
-    { id: 'focus', label: '🎯 Focus Mode' },
+    { id: 'full-home', label: '🏠 Home' },
+    { id: 'zen', label: '🧘 Zen' },
+    { id: 'momentum', label: '📊 Momentum' },
+    { id: 'focus', label: '🎯 Focus' },
     { id: 'focus-original', label: '📋 Original' },
-    { id: 'interactive', label: '🏰 Interactivo' },
   ];
 
   return (
-    <div className="fixed inset-0 z-[200] bg-gradient-to-br from-slate-50 via-purple-50/30 to-indigo-50/50 overflow-y-auto">
+    <div className="fixed inset-0 z-[200] bg-white overflow-y-auto">
       {/* Header */}
       <motion.header
         className="sticky top-0 bg-white/90 backdrop-blur-lg border-b border-gray-100 z-50"
@@ -2874,7 +3285,57 @@ export default function DraftFeatures({ onClose }) {
             </motion.div>
           )}
 
-          {/* NEW: Full Home Page with all elements */}
+          {/* ZEN MODE - Minimalist, Headspace-inspired */}
+          {activeTab === 'zen' && (
+            <motion.div
+              key="zen"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-3 text-sm text-indigo-800 mb-4">
+                <strong>🧘 Zen Mode:</strong> Minimalista · Un solo foco · Inspirado en Headspace/Calm
+              </div>
+              <HomeZenMode
+                temas={demoTemas}
+                onStartSession={() => console.log('Start session')}
+                onTemaAction={(tema) => setSelectedTema(tema)}
+                onVerTodos={() => setShowAllTemas(true)}
+                onRachaClick={() => setShowRachaModal(true)}
+                onPrecisionClick={() => setShowPrecisionModal(true)}
+                onLevelClick={() => setShowLevelModal(true)}
+                onSettingsClick={() => setShowSettingsModal(true)}
+                onShowProgress={() => setShowProgressModal(true)}
+              />
+            </motion.div>
+          )}
+
+          {/* MOMENTUM - Bento grid, data-driven */}
+          {activeTab === 'momentum' && (
+            <motion.div
+              key="momentum"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <div className="bg-slate-100 border border-slate-200 rounded-xl p-3 text-sm text-slate-700 mb-4">
+                <strong>📊 Momentum:</strong> Bento grid · Weekly progress · Inspirado en Notion/Linear
+              </div>
+              <HomeMomentum
+                temas={demoTemas}
+                onStartSession={() => console.log('Start session')}
+                onTemaAction={(tema) => setSelectedTema(tema)}
+                onVerTodos={() => setShowAllTemas(true)}
+                onRachaClick={() => setShowRachaModal(true)}
+                onPrecisionClick={() => setShowPrecisionModal(true)}
+                onLevelClick={() => setShowLevelModal(true)}
+                onSettingsClick={() => setShowSettingsModal(true)}
+                onShowProgress={() => setShowProgressModal(true)}
+              />
+            </motion.div>
+          )}
+
+          {/* Full Home Page with all elements */}
           {activeTab === 'full-home' && (
             <motion.div
               key="full-home"
@@ -2883,7 +3344,7 @@ export default function DraftFeatures({ onClose }) {
               exit={{ opacity: 0, y: -20 }}
             >
               <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-3 text-sm text-emerald-800 mb-4">
-                <strong>🏠 Home Completo:</strong> TopBar con progreso + Settings + FAQ + About + Footer
+                <strong>🏠 Home:</strong> Swipeable Focus/Fortaleza + Stats + Goals + FAQ + Footer
               </div>
               <FullHomePage
                 temas={demoTemas}
