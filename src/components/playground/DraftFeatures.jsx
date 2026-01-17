@@ -11,7 +11,7 @@
 import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence, Reorder, useMotionValue, useTransform } from 'framer-motion';
 import {
-  ArrowLeft, Check, X, ChevronRight, ChevronDown, ChevronUp,
+  ArrowLeft, Check, X, ChevronRight, ChevronDown, ChevronUp, ChevronLeft,
   BookOpen, Target, Flame, Trophy, Clock, TrendingUp,
   Zap, Star, AlertTriangle, Plus, Eye, Calendar,
   BarChart3, Award, Brain, Sparkles, GripVertical,
@@ -1492,17 +1492,85 @@ function FocusModeSwipeable({
             </motion.div>
           </motion.div>
 
-          {/* Page 2: Fortaleza */}
+          {/* Page 2: Fortaleza - Compact version matching Focus card height */}
           <motion.div
             className="w-full flex-shrink-0 px-1"
             style={{ minWidth: '100%' }}
           >
-            <FortalezaInteractive
-              temas={temas}
-              maxVisible={4}
-              onTemaAction={onTemaAction}
-              onVerTodos={onVerTodos}
-            />
+            <motion.div
+              className="bg-gradient-to-br from-slate-700 via-slate-800 to-slate-900 rounded-3xl p-6 text-white relative overflow-hidden"
+              style={{ minHeight: '320px' }}
+            >
+              {/* Background decoration */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+
+              <div className="relative">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-2">
+                    <span className="text-2xl">🏰</span>
+                    <h2 className="text-xl font-bold">Tu Fortaleza</h2>
+                  </div>
+                  <motion.button
+                    onClick={onVerTodos}
+                    className="text-sm text-slate-300 hover:text-white flex items-center gap-1"
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Ver todos <ChevronRight className="w-4 h-4" />
+                  </motion.button>
+                </div>
+
+                {/* Compact tema rows */}
+                <div className="space-y-2">
+                  {temas.slice(0, 4).map((tema, i) => {
+                    const temaConfig = estadoConfig[tema.estado] || estadoConfig.nuevo;
+                    const TemaIcon = temaConfig.icon;
+                    return (
+                      <motion.button
+                        key={tema.id}
+                        onClick={() => onTemaAction?.(tema)}
+                        className="w-full flex items-center gap-3 p-2.5 bg-white/10 hover:bg-white/15 rounded-xl transition-colors text-left"
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: i * 0.05 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        <div className={`w-8 h-8 rounded-lg ${temaConfig.bg} flex items-center justify-center flex-shrink-0`}>
+                          <TemaIcon className={`w-4 h-4 ${temaConfig.text}`} />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm font-medium text-white truncate">
+                            T{tema.id} {tema.nombre}
+                          </p>
+                          <div className="flex items-center gap-2 mt-0.5">
+                            <div className="flex-1 h-1 bg-white/20 rounded-full overflow-hidden">
+                              <motion.div
+                                className={`h-full bg-gradient-to-r ${temaConfig.gradient}`}
+                                initial={{ width: 0 }}
+                                animate={{ width: `${tema.progreso}%` }}
+                                transition={spring.smooth}
+                              />
+                            </div>
+                            <span className="text-xs text-slate-300">{tema.progreso}%</span>
+                          </div>
+                        </div>
+                        <ChevronRight className="w-4 h-4 text-slate-400" />
+                      </motion.button>
+                    );
+                  })}
+                </div>
+
+                {/* Swipe hint */}
+                <motion.div
+                  className="absolute bottom-0 left-4 text-slate-400/50 text-xs flex items-center gap-1"
+                  animate={{ x: [0, -5, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                >
+                  <ChevronLeft className="w-3 h-3" />
+                  <span>Desliza</span>
+                </motion.div>
+              </div>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>
