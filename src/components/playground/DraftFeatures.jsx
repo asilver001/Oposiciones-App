@@ -1953,6 +1953,7 @@ function DashboardView({ temas, onTemaAction, onStartSession }) {
 
 // ============================================
 // TEMA OPTIONS MODAL - When clicking a topic
+// Redesigned to match DailyProgressModal style
 // ============================================
 
 function TemaOptionsModal({ isOpen, onClose, tema }) {
@@ -1962,10 +1963,10 @@ function TemaOptionsModal({ isOpen, onClose, tema }) {
   const Icon = config.icon;
 
   const options = [
-    { id: 'test', icon: Target, label: 'Test rápido', desc: '10 preguntas aleatorias', color: 'purple' },
-    { id: 'exam', icon: Clock, label: 'Simulacro', desc: 'Examen completo cronometrado', color: 'blue' },
-    { id: 'review', icon: BookOpen, label: 'Repasar teoría', desc: 'Material de estudio', color: 'emerald' },
-    { id: 'weak', icon: AlertTriangle, label: 'Puntos débiles', desc: 'Preguntas falladas', color: 'amber' },
+    { id: 'test', icon: Zap, label: 'Test rápido', desc: '10 preguntas aleatorias', gradient: 'from-purple-500 to-violet-600' },
+    { id: 'exam', icon: Clock, label: 'Simulacro', desc: 'Examen completo cronometrado', gradient: 'from-violet-500 to-purple-600' },
+    { id: 'review', icon: BookOpen, label: 'Repasar teoría', desc: 'Material de estudio', gradient: 'from-purple-400 to-violet-500' },
+    { id: 'weak', icon: AlertTriangle, label: 'Puntos débiles', desc: 'Preguntas falladas', gradient: 'from-amber-400 to-orange-500' },
   ];
 
   return (
@@ -1989,81 +1990,91 @@ function TemaOptionsModal({ isOpen, onClose, tema }) {
             exit={{ opacity: 0, scale: 0.9, y: '-40%' }}
             transition={spring.bouncy}
           >
-            {/* Header */}
-            <div className="px-5 py-4 border-b border-gray-100">
+            {/* Header - Like DailyProgressModal */}
+            <div className="px-5 py-4 border-b border-gray-100 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className={`w-12 h-12 ${config.bg} rounded-xl flex items-center justify-center`}>
-                  <Icon className={`w-6 h-6 ${config.text}`} />
+                <div className={`w-12 h-12 bg-gradient-to-br ${config.gradient} rounded-xl flex items-center justify-center`}>
+                  <Icon className="w-6 h-6 text-white" />
                 </div>
-                <div className="flex-1">
-                  <p className="text-xs text-gray-400">Tema {tema.id}</p>
-                  <h3 className="font-bold text-gray-900">{tema.nombre}</h3>
-                  <div className="flex items-center gap-2 mt-1">
-                    <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
-                      <motion.div
-                        className={`h-full bg-gradient-to-r ${config.gradient}`}
-                        initial={{ width: 0 }}
-                        animate={{ width: `${tema.progreso}%` }}
-                        transition={spring.smooth}
-                      />
-                    </div>
-                    <span className={`text-xs font-medium ${config.text}`}>{tema.progreso}%</span>
-                  </div>
+                <div>
+                  <h3 className="font-bold text-gray-900">Tema {tema.id}</h3>
+                  <p className="text-xs text-gray-500">{tema.nombre}</p>
                 </div>
-                <motion.button
-                  onClick={onClose}
-                  className="p-2 rounded-xl hover:bg-gray-100"
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <X className="w-5 h-5 text-gray-400" />
-                </motion.button>
+              </div>
+              <motion.button
+                onClick={onClose}
+                className="p-2 rounded-xl hover:bg-gray-100"
+                whileTap={{ scale: 0.95 }}
+              >
+                <X className="w-5 h-5 text-gray-400" />
+              </motion.button>
+            </div>
+
+            {/* Progress section - Like DailyProgressModal */}
+            <div className="px-5 py-5 bg-gradient-to-br from-purple-50 to-violet-50">
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-sm font-medium text-gray-700">Tu progreso</span>
+                <span className={`text-sm font-bold ${config.text}`}>{tema.progreso}%</span>
+              </div>
+              <div className="h-3 bg-white/80 rounded-full overflow-hidden shadow-inner">
+                <motion.div
+                  className={`h-full bg-gradient-to-r ${config.gradient} rounded-full`}
+                  initial={{ width: 0 }}
+                  animate={{ width: `${tema.progreso}%` }}
+                  transition={spring.smooth}
+                />
+              </div>
+              <div className="flex items-center justify-between mt-2">
+                <span className="text-xs text-gray-500">45 preguntas disponibles</span>
+                <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${config.bg} ${config.text}`}>
+                  {config.label}
+                </span>
               </div>
             </div>
 
-            {/* Options */}
-            <div className="p-4 space-y-2">
-              {options.map((option, i) => {
-                const OptIcon = option.icon;
-                const colorStyles = {
-                  purple: 'bg-purple-50 text-purple-600 hover:bg-purple-100',
-                  blue: 'bg-blue-50 text-blue-600 hover:bg-blue-100',
-                  emerald: 'bg-emerald-50 text-emerald-600 hover:bg-emerald-100',
-                  amber: 'bg-amber-50 text-amber-600 hover:bg-amber-100',
-                };
-
-                return (
-                  <motion.button
-                    key={option.id}
-                    className={`w-full p-4 rounded-xl flex items-center gap-3 text-left transition-colors ${colorStyles[option.color]}`}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ ...spring.gentle, delay: i * 0.05 }}
-                    whileHover={{ x: 4 }}
-                    whileTap={{ scale: 0.98 }}
-                    onClick={() => {
-                      console.log(`Selected: ${option.id} for tema ${tema.id}`);
-                      onClose();
-                    }}
-                  >
-                    <OptIcon className="w-5 h-5" />
-                    <div className="flex-1">
-                      <p className="font-medium">{option.label}</p>
-                      <p className="text-xs opacity-70">{option.desc}</p>
-                    </div>
-                    <ChevronRight className="w-4 h-4 opacity-50" />
-                  </motion.button>
-                );
-              })}
+            {/* Options - Consistent purple/violet/amber palette */}
+            <div className="p-4">
+              <p className="text-xs font-semibold text-gray-400 uppercase mb-3 px-1">¿Qué quieres hacer?</p>
+              <div className="space-y-2">
+                {options.map((option, i) => {
+                  const OptIcon = option.icon;
+                  return (
+                    <motion.button
+                      key={option.id}
+                      className="w-full p-4 bg-white border border-gray-100 rounded-xl flex items-center gap-4 text-left hover:border-purple-200 hover:bg-purple-50/30 transition-all"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ ...spring.gentle, delay: 0.1 + i * 0.05 }}
+                      whileHover={{ scale: 1.01, x: 4 }}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={() => {
+                        console.log(`Selected: ${option.id} for tema ${tema.id}`);
+                        onClose();
+                      }}
+                    >
+                      <div className={`w-10 h-10 bg-gradient-to-br ${option.gradient} rounded-xl flex items-center justify-center flex-shrink-0`}>
+                        <OptIcon className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="font-semibold text-gray-800">{option.label}</p>
+                        <p className="text-xs text-gray-500">{option.desc}</p>
+                      </div>
+                      <ChevronRight className="w-5 h-5 text-gray-300" />
+                    </motion.button>
+                  );
+                })}
+              </div>
             </div>
 
-            {/* Cancel */}
-            <div className="px-4 pb-4">
+            {/* Footer - Like DailyProgressModal */}
+            <div className="px-5 py-4 bg-gray-50 border-t border-gray-100">
               <motion.button
                 onClick={onClose}
-                className="w-full py-3 text-gray-500 font-medium text-sm"
+                className="w-full py-3 bg-purple-600 text-white font-semibold rounded-xl"
+                whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Cancelar
+                Empezar sesión completa
               </motion.button>
             </div>
           </motion.div>
