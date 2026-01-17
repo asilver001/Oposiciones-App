@@ -2428,15 +2428,14 @@ const momentumThemes = {
     decorationClass: 'bg-white/10',
   },
   soft: {
-    // Neutral soft - lavender/slate tones, less feminine
-    heroClass: 'bg-gradient-to-br from-slate-100 via-purple-50 to-indigo-100',
+    heroClass: 'bg-gradient-to-br from-rose-100 via-purple-100 to-violet-100',
     textClass: 'text-gray-800',
     subtextClass: 'text-gray-500',
-    badgeClass: 'bg-indigo-100 text-indigo-700',
-    buttonClass: 'bg-indigo-600 text-white',
-    progressStroke: '#6366F1',
-    progressBg: 'rgba(99,102,241,0.15)',
-    decorationClass: 'bg-indigo-200/40',
+    badgeClass: 'bg-purple-200/50 text-purple-700',
+    buttonClass: 'bg-purple-600 text-white',
+    progressStroke: '#8B5CF6',
+    progressBg: 'rgba(139,92,246,0.15)',
+    decorationClass: 'bg-purple-300/30',
   },
   white: {
     heroClass: 'bg-white border-2 border-gray-100',
@@ -3025,7 +3024,7 @@ export default function DraftFeatures({ onClose }) {
     { id: 'full-home', label: '🏠 Home' },
     { id: 'momentum', label: '📊 Dark' },
     { id: 'momentum-purple', label: '💜 Purple' },
-    { id: 'momentum-soft', label: '🌿 Soft' },
+    { id: 'momentum-soft', label: '🌸 Soft' },
     { id: 'momentum-white', label: '⚪ White' },
     { id: 'momentum-gradient', label: '🌈 Gradient' },
     { id: 'focus', label: '🎯 Focus' },
@@ -3230,8 +3229,8 @@ export default function DraftFeatures({ onClose }) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
             >
-              <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-3 text-sm text-indigo-800 mb-4">
-                <strong>🌿 Soft:</strong> Tonos neutros suaves · Lavanda y slate
+              <div className="bg-rose-50 border border-rose-200 rounded-xl p-3 text-sm text-rose-800 mb-4">
+                <strong>🌸 Soft:</strong> Tonos pastel suaves · Femenino y relajado
               </div>
               <HomeMomentum
                 temas={demoTemas}
