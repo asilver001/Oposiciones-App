@@ -8,13 +8,14 @@
  * 4. Expandable cards demo
  */
 
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useRef } from 'react';
+import { motion, AnimatePresence, Reorder, useMotionValue, useTransform } from 'framer-motion';
 import {
-  ArrowLeft, Check, X, ChevronRight, ChevronDown,
+  ArrowLeft, Check, X, ChevronRight, ChevronDown, ChevronUp,
   BookOpen, Target, Flame, Trophy, Clock, TrendingUp,
   Zap, Star, AlertTriangle, Plus, Eye, Calendar,
-  BarChart3, Award, Brain, Sparkles
+  BarChart3, Award, Brain, Sparkles, GripVertical,
+  Users, Medal, Percent, Activity, PieChart, ArrowUpRight
 } from 'lucide-react';
 
 // ============================================
@@ -698,6 +699,833 @@ function ExpandableCardsDemo() {
 }
 
 // ============================================
+// SWIPEABLE TEMA ITEM - Swipe to reveal actions
+// ============================================
+
+function SwipeableTemaItem({ tema, onAction, onDragEnd }) {
+  const x = useMotionValue(0);
+  const config = estadoConfig[tema.estado] || estadoConfig.nuevo;
+  const Icon = config.icon;
+
+  // Transform for background reveal
+  const actionOpacity = useTransform(x, [-100, -50, 0], [1, 0.5, 0]);
+  const actionScale = useTransform(x, [-100, -50, 0], [1, 0.8, 0.5]);
+
+  const handleDragEnd = (event, info) => {
+    if (info.offset.x < -80) {
+      onAction?.(tema);
+    }
+  };
+
+  return (
+    <div className="relative overflow-hidden rounded-xl mb-2">
+      {/* Action revealed on swipe */}
+      <motion.div
+        className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-purple-500 to-purple-600 flex items-center justify-end pr-4"
+        style={{ opacity: actionOpacity }}
+      >
+        <motion.div style={{ scale: actionScale }}>
+          <Target className="w-6 h-6 text-white" />
+        </motion.div>
+      </motion.div>
+
+      {/* Draggable item */}
+      <motion.div
+        className="bg-white border border-gray-100 rounded-xl p-3 flex items-center gap-3 cursor-grab active:cursor-grabbing relative"
+        drag="x"
+        dragConstraints={{ left: -100, right: 0 }}
+        dragElastic={0.1}
+        style={{ x }}
+        onDragEnd={handleDragEnd}
+        whileTap={{ scale: 0.98 }}
+      >
+        {/* Drag handle */}
+        <div className="text-gray-300 touch-none">
+          <GripVertical className="w-5 h-5" />
+        </div>
+
+        {/* Icon */}
+        <motion.div
+          className={`w-10 h-10 rounded-xl ${config.bg} flex items-center justify-center flex-shrink-0`}
+          animate={config.pulse ? { scale: [1, 1.05, 1] } : {}}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <Icon className={`w-5 h-5 ${config.text}`} />
+        </motion.div>
+
+        {/* Content */}
+        <div className="flex-1 min-w-0">
+          <p className="text-sm font-medium text-gray-800 truncate">
+            <span className="text-gray-400">T{tema.id}</span> {tema.nombre}
+          </p>
+          <div className="flex items-center gap-2 mt-1">
+            <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+              <motion.div
+                className={`h-full bg-gradient-to-r ${config.gradient}`}
+                initial={{ width: 0 }}
+                animate={{ width: `${tema.progreso}%` }}
+                transition={spring.smooth}
+              />
+            </div>
+            <span className={`text-xs font-medium ${config.text}`}>{tema.progreso}%</span>
+          </div>
+        </div>
+
+        {/* Swipe hint */}
+        <ChevronRight className="w-4 h-4 text-gray-300" />
+      </motion.div>
+    </div>
+  );
+}
+
+// ============================================
+// FORTALEZA WITH REORDER + SWIPE
+// ============================================
+
+function FortalezaInteractive({ temas: initialTemas, onVerTodos, onTemaAction, maxVisible = 3 }) {
+  const [temas, setTemas] = useState(initialTemas.slice(0, maxVisible));
+  const hasMore = initialTemas.length > maxVisible;
+
+  return (
+    <motion.div
+      className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={spring.gentle}
+    >
+      {/* Header */}
+      <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100">
+        <div className="flex items-center gap-2">
+          <span className="text-xl">🏰</span>
+          <h3 className="font-semibold text-gray-900">Tu Fortaleza</h3>
+        </div>
+        <span className="text-xs text-gray-400">Arrastra para reordenar</span>
+      </div>
+
+      {/* Reorderable list */}
+      <div className="p-3">
+        <Reorder.Group axis="y" values={temas} onReorder={setTemas} className="space-y-0">
+          {temas.map((tema) => (
+            <Reorder.Item key={tema.id} value={tema}>
+              <SwipeableTemaItem
+                tema={tema}
+                onAction={onTemaAction}
+              />
+            </Reorder.Item>
+          ))}
+        </Reorder.Group>
+      </div>
+
+      {/* Ver más */}
+      {hasMore && (
+        <motion.button
+          onClick={onVerTodos}
+          className="w-full px-4 py-3 text-sm text-purple-600 font-medium hover:bg-purple-50/50 transition-colors border-t border-gray-100 flex items-center justify-center gap-1"
+          whileTap={{ scale: 0.98 }}
+        >
+          Ver todos los temas <ChevronRight className="w-4 h-4" />
+        </motion.button>
+      )}
+
+      {/* Legend + hint */}
+      <div className="px-4 py-2.5 bg-gray-50/50 border-t border-gray-100">
+        <div className="flex flex-wrap gap-3 justify-center mb-2">
+          {['dominado', 'avanzando', 'riesgo'].map(estado => {
+            const config = estadoConfig[estado];
+            return (
+              <span key={estado} className="flex items-center gap-1.5 text-xs text-gray-500">
+                <span className={`w-2.5 h-2.5 rounded-full bg-gradient-to-r ${config.gradient}`} />
+                {config.label}
+              </span>
+            );
+          })}
+        </div>
+        <p className="text-[10px] text-gray-400 text-center">← Desliza para practicar</p>
+      </div>
+    </motion.div>
+  );
+}
+
+// ============================================
+// ALL TEMAS VIEW - Full screen modal
+// ============================================
+
+function AllTemasModal({ isOpen, onClose, temas, onTemaAction }) {
+  if (!isOpen) return null;
+
+  // Group by estado
+  const grouped = {
+    riesgo: temas.filter(t => t.estado === 'riesgo'),
+    progreso: temas.filter(t => t.estado === 'progreso' || t.estado === 'avanzando'),
+    dominado: temas.filter(t => t.estado === 'dominado'),
+    nuevo: temas.filter(t => t.estado === 'nuevo'),
+  };
+
+  return (
+    <motion.div
+      className="fixed inset-0 z-[250] bg-white overflow-y-auto"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 50 }}
+    >
+      {/* Header */}
+      <div className="sticky top-0 bg-white/90 backdrop-blur-lg border-b border-gray-100 z-10">
+        <div className="max-w-lg mx-auto px-4 py-4 flex items-center gap-3">
+          <motion.button
+            onClick={onClose}
+            className="p-2 rounded-xl hover:bg-gray-100"
+            whileTap={{ scale: 0.95 }}
+          >
+            <ArrowLeft className="w-5 h-5 text-gray-600" />
+          </motion.button>
+          <div>
+            <h1 className="text-lg font-bold text-gray-900">Todos los Temas</h1>
+            <p className="text-xs text-gray-500">{temas.length} temas · Toca para practicar</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="max-w-lg mx-auto px-4 py-4 pb-24 space-y-6">
+        {/* Necesitan repaso */}
+        {grouped.riesgo.length > 0 && (
+          <div>
+            <h3 className="text-sm font-semibold text-amber-600 mb-2 flex items-center gap-2">
+              <AlertTriangle className="w-4 h-4" /> Necesitan repaso
+            </h3>
+            <div className="space-y-2">
+              {grouped.riesgo.map(tema => (
+                <TemaListItem key={tema.id} tema={tema} onAction={onTemaAction} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* En progreso */}
+        {grouped.progreso.length > 0 && (
+          <div>
+            <h3 className="text-sm font-semibold text-purple-600 mb-2 flex items-center gap-2">
+              <TrendingUp className="w-4 h-4" /> En progreso
+            </h3>
+            <div className="space-y-2">
+              {grouped.progreso.map(tema => (
+                <TemaListItem key={tema.id} tema={tema} onAction={onTemaAction} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Dominados */}
+        {grouped.dominado.length > 0 && (
+          <div>
+            <h3 className="text-sm font-semibold text-emerald-600 mb-2 flex items-center gap-2">
+              <Check className="w-4 h-4" /> Dominados
+            </h3>
+            <div className="space-y-2">
+              {grouped.dominado.map(tema => (
+                <TemaListItem key={tema.id} tema={tema} onAction={onTemaAction} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Nuevos */}
+        {grouped.nuevo.length > 0 && (
+          <div>
+            <h3 className="text-sm font-semibold text-gray-500 mb-2 flex items-center gap-2">
+              <Plus className="w-4 h-4" /> Sin empezar
+            </h3>
+            <div className="space-y-2">
+              {grouped.nuevo.map(tema => (
+                <TemaListItem key={tema.id} tema={tema} onAction={onTemaAction} />
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </motion.div>
+  );
+}
+
+function TemaListItem({ tema, onAction }) {
+  const config = estadoConfig[tema.estado] || estadoConfig.nuevo;
+  const Icon = config.icon;
+
+  return (
+    <motion.button
+      onClick={() => onAction?.(tema)}
+      className="w-full bg-white border border-gray-100 rounded-xl p-3 flex items-center gap-3 text-left"
+      whileHover={{ x: 4 }}
+      whileTap={{ scale: 0.98 }}
+    >
+      <div className={`w-10 h-10 rounded-xl ${config.bg} flex items-center justify-center`}>
+        <Icon className={`w-5 h-5 ${config.text}`} />
+      </div>
+      <div className="flex-1 min-w-0">
+        <p className="text-sm font-medium text-gray-800">
+          <span className="text-gray-400">T{tema.id}</span> {tema.nombre}
+        </p>
+        <div className="flex items-center gap-2 mt-1">
+          <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden max-w-[120px]">
+            <div className={`h-full bg-gradient-to-r ${config.gradient}`} style={{ width: `${tema.progreso}%` }} />
+          </div>
+          <span className="text-xs text-gray-500">{tema.progreso}%</span>
+        </div>
+      </div>
+      <ChevronRight className="w-4 h-4 text-gray-300" />
+    </motion.button>
+  );
+}
+
+// ============================================
+// INTERACTIVE STAT CARDS WITH MODALS
+// ============================================
+
+function InteractiveStatCard({ icon: Icon, label, value, color = 'purple', trend, onClick, badge }) {
+  const colors = {
+    purple: 'from-purple-500 to-violet-600',
+    emerald: 'from-emerald-500 to-teal-600',
+    amber: 'from-amber-500 to-orange-600',
+    pink: 'from-pink-500 to-rose-600',
+  };
+
+  return (
+    <motion.button
+      onClick={onClick}
+      className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 text-left relative overflow-hidden"
+      whileHover={{ y: -4, scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      transition={spring.snappy}
+    >
+      {badge && (
+        <span className="absolute top-2 right-2 px-2 py-0.5 bg-purple-100 text-purple-600 text-[10px] font-medium rounded-full">
+          {badge}
+        </span>
+      )}
+      <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${colors[color]} flex items-center justify-center mb-3`}>
+        <Icon className="w-5 h-5 text-white" />
+      </div>
+      <p className="text-sm text-gray-500">{label}</p>
+      <div className="flex items-end gap-2">
+        <p className="text-2xl font-bold text-gray-900">{value}</p>
+        {trend && (
+          <span className={`text-xs font-medium ${trend > 0 ? 'text-emerald-500' : 'text-amber-500'} flex items-center`}>
+            <ArrowUpRight className="w-3 h-3" />
+            {trend}%
+          </span>
+        )}
+      </div>
+      <div className="mt-2 flex items-center gap-1 text-xs text-purple-500">
+        <span>Ver detalles</span>
+        <ChevronRight className="w-3 h-3" />
+      </div>
+    </motion.button>
+  );
+}
+
+// Precision Analysis Modal
+function PrecisionModal({ isOpen, onClose }) {
+  if (!isOpen) return null;
+
+  const data = [
+    { tema: 'Constitución', precision: 92, total: 45 },
+    { tema: 'Derechos Fund.', precision: 85, total: 32 },
+    { tema: 'Cortes Gen.', precision: 78, total: 28 },
+    { tema: 'La Corona', precision: 62, total: 18 },
+    { tema: 'Gobierno', precision: 55, total: 12 },
+  ];
+
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <>
+          <motion.div
+            className="fixed inset-0 bg-black/40 z-[300]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={onClose}
+          />
+          <motion.div
+            className="fixed inset-x-4 top-1/2 -translate-y-1/2 max-w-md mx-auto bg-white rounded-3xl shadow-2xl z-[301] overflow-hidden"
+            initial={{ opacity: 0, scale: 0.9, y: '-40%' }}
+            animate={{ opacity: 1, scale: 1, y: '-50%' }}
+            exit={{ opacity: 0, scale: 0.9, y: '-40%' }}
+            transition={spring.bouncy}
+          >
+            {/* Header */}
+            <div className="px-5 py-4 border-b border-gray-100 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl flex items-center justify-center">
+                  <Target className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900">Tu Precisión</h3>
+                  <p className="text-xs text-gray-500">Análisis por tema</p>
+                </div>
+              </div>
+              <motion.button onClick={onClose} className="p-2 rounded-xl hover:bg-gray-100" whileTap={{ scale: 0.95 }}>
+                <X className="w-5 h-5 text-gray-400" />
+              </motion.button>
+            </div>
+
+            {/* Main stat */}
+            <div className="px-5 py-4 bg-gradient-to-br from-purple-50 to-violet-50">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-4xl font-bold text-purple-600">87%</p>
+                  <p className="text-sm text-purple-500">Precisión global</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-lg font-semibold text-gray-700">135</p>
+                  <p className="text-xs text-gray-500">preguntas respondidas</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Per tema breakdown */}
+            <div className="px-5 py-4 space-y-3 max-h-[200px] overflow-y-auto">
+              {data.map((item, i) => (
+                <motion.div
+                  key={item.tema}
+                  className="flex items-center gap-3"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.05 }}
+                >
+                  <div className="flex-1">
+                    <div className="flex justify-between text-sm mb-1">
+                      <span className="text-gray-700">{item.tema}</span>
+                      <span className={`font-medium ${item.precision >= 80 ? 'text-emerald-600' : item.precision >= 60 ? 'text-amber-600' : 'text-red-500'}`}>
+                        {item.precision}%
+                      </span>
+                    </div>
+                    <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+                      <motion.div
+                        className={`h-full rounded-full ${item.precision >= 80 ? 'bg-emerald-500' : item.precision >= 60 ? 'bg-amber-500' : 'bg-red-500'}`}
+                        initial={{ width: 0 }}
+                        animate={{ width: `${item.precision}%` }}
+                        transition={{ ...spring.smooth, delay: 0.2 + i * 0.05 }}
+                      />
+                    </div>
+                  </div>
+                  <span className="text-xs text-gray-400 w-12 text-right">{item.total} preg.</span>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Footer */}
+            <div className="px-5 py-4 bg-gray-50 border-t border-gray-100">
+              <motion.button
+                onClick={onClose}
+                className="w-full py-3 bg-purple-600 text-white font-semibold rounded-xl"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Mejorar puntos débiles
+              </motion.button>
+            </div>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
+  );
+}
+
+// Level Comparison Modal
+function LevelModal({ isOpen, onClose }) {
+  if (!isOpen) return null;
+
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <>
+          <motion.div
+            className="fixed inset-0 bg-black/40 z-[300]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={onClose}
+          />
+          <motion.div
+            className="fixed inset-x-4 top-1/2 -translate-y-1/2 max-w-md mx-auto bg-white rounded-3xl shadow-2xl z-[301] overflow-hidden"
+            initial={{ opacity: 0, scale: 0.9, y: '-40%' }}
+            animate={{ opacity: 1, scale: 1, y: '-50%' }}
+            exit={{ opacity: 0, scale: 0.9, y: '-40%' }}
+            transition={spring.bouncy}
+          >
+            {/* Header */}
+            <div className="px-5 py-4 border-b border-gray-100 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-600 rounded-xl flex items-center justify-center">
+                  <Trophy className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900">Tu Nivel</h3>
+                  <p className="text-xs text-gray-500">Comparación con otros</p>
+                </div>
+              </div>
+              <motion.button onClick={onClose} className="p-2 rounded-xl hover:bg-gray-100" whileTap={{ scale: 0.95 }}>
+                <X className="w-5 h-5 text-gray-400" />
+              </motion.button>
+            </div>
+
+            {/* Level display */}
+            <div className="px-5 py-6 bg-gradient-to-br from-pink-50 to-rose-50 text-center">
+              <motion.div
+                className="w-24 h-24 mx-auto bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center mb-3"
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={spring.bouncy}
+              >
+                <span className="text-3xl font-bold text-white">12</span>
+              </motion.div>
+              <p className="text-lg font-semibold text-gray-800">Nivel Avanzado</p>
+              <p className="text-sm text-gray-500">1,250 XP para nivel 13</p>
+            </div>
+
+            {/* Comparison */}
+            <div className="px-5 py-4 space-y-4">
+              <h4 className="text-sm font-semibold text-gray-700 flex items-center gap-2">
+                <Users className="w-4 h-4" /> Comparación con la comunidad
+              </h4>
+
+              {/* Position */}
+              <div className="bg-purple-50 rounded-xl p-4 text-center">
+                <p className="text-3xl font-bold text-purple-600">Top 15%</p>
+                <p className="text-sm text-purple-500">Estás por encima del 85% de usuarios</p>
+              </div>
+
+              {/* Stats comparison */}
+              <div className="grid grid-cols-2 gap-3">
+                <div className="bg-gray-50 rounded-xl p-3 text-center">
+                  <p className="text-xs text-gray-500 mb-1">Tu precisión</p>
+                  <p className="text-xl font-bold text-emerald-600">87%</p>
+                  <p className="text-xs text-emerald-500">+12% vs media</p>
+                </div>
+                <div className="bg-gray-50 rounded-xl p-3 text-center">
+                  <p className="text-xs text-gray-500 mb-1">Tu racha</p>
+                  <p className="text-xl font-bold text-amber-600">7 días</p>
+                  <p className="text-xs text-amber-500">+4 vs media</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Footer */}
+            <div className="px-5 py-4 bg-gray-50 border-t border-gray-100">
+              <motion.button
+                onClick={onClose}
+                className="w-full py-3 bg-gradient-to-r from-pink-500 to-rose-600 text-white font-semibold rounded-xl"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                ¡Sigue así! 🎉
+              </motion.button>
+            </div>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
+  );
+}
+
+// ============================================
+// AWARD-WINNING OPTION 1: FOCUS MODE
+// ============================================
+
+function FocusModeView({ temas, onStartSession }) {
+  const nextTema = temas.find(t => t.estado === 'riesgo') || temas.find(t => t.estado === 'progreso') || temas[0];
+  const config = estadoConfig[nextTema?.estado] || estadoConfig.nuevo;
+
+  return (
+    <motion.div
+      className="space-y-4"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
+      {/* Hero card - What to focus on */}
+      <motion.div
+        className="bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-700 rounded-3xl p-6 text-white relative overflow-hidden"
+        initial={{ y: 20 }}
+        animate={{ y: 0 }}
+      >
+        {/* Background decoration */}
+        <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+
+        <div className="relative">
+          <p className="text-purple-200 text-sm mb-2">Tu enfoque de hoy</p>
+          <h2 className="text-2xl font-bold mb-1">T{nextTema?.id} {nextTema?.nombre}</h2>
+          <p className="text-purple-200 text-sm mb-4">{config.label} · {nextTema?.progreso}% completado</p>
+
+          {/* Progress ring */}
+          <div className="flex items-center gap-4 mb-4">
+            <div className="relative w-16 h-16">
+              <svg className="w-16 h-16 transform -rotate-90">
+                <circle cx="32" cy="32" r="28" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="6" />
+                <motion.circle
+                  cx="32" cy="32" r="28" fill="none" stroke="white" strokeWidth="6"
+                  strokeLinecap="round"
+                  strokeDasharray={175.9}
+                  initial={{ strokeDashoffset: 175.9 }}
+                  animate={{ strokeDashoffset: 175.9 - (175.9 * (nextTema?.progreso || 0) / 100) }}
+                  transition={spring.smooth}
+                />
+              </svg>
+              <span className="absolute inset-0 flex items-center justify-center text-lg font-bold">{nextTema?.progreso}%</span>
+            </div>
+            <div>
+              <p className="font-medium">15 preguntas restantes</p>
+              <p className="text-sm text-purple-200">~10 min estimado</p>
+            </div>
+          </div>
+
+          <motion.button
+            onClick={onStartSession}
+            className="w-full py-4 bg-white text-purple-600 font-bold rounded-2xl flex items-center justify-center gap-2"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <Zap className="w-5 h-5" />
+            Empezar sesión enfocada
+          </motion.button>
+        </div>
+      </motion.div>
+
+      {/* Quick stats */}
+      <div className="grid grid-cols-3 gap-3">
+        <motion.div
+          className="bg-white rounded-2xl p-4 text-center border border-gray-100"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+        >
+          <Flame className="w-6 h-6 text-amber-500 mx-auto mb-2" />
+          <p className="text-xl font-bold text-gray-900">7</p>
+          <p className="text-xs text-gray-500">Racha</p>
+        </motion.div>
+        <motion.div
+          className="bg-white rounded-2xl p-4 text-center border border-gray-100"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15 }}
+        >
+          <Target className="w-6 h-6 text-purple-500 mx-auto mb-2" />
+          <p className="text-xl font-bold text-gray-900">87%</p>
+          <p className="text-xs text-gray-500">Precisión</p>
+        </motion.div>
+        <motion.div
+          className="bg-white rounded-2xl p-4 text-center border border-gray-100"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+        >
+          <Trophy className="w-6 h-6 text-pink-500 mx-auto mb-2" />
+          <p className="text-xl font-bold text-gray-900">12</p>
+          <p className="text-xs text-gray-500">Nivel</p>
+        </motion.div>
+      </div>
+
+      {/* Today's goals */}
+      <motion.div
+        className="bg-white rounded-2xl p-4 border border-gray-100"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.25 }}
+      >
+        <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+          <Star className="w-4 h-4 text-amber-500" />
+          Objetivos de hoy
+        </h3>
+        <div className="space-y-3">
+          {[
+            { label: 'Completar 15 preguntas', done: false, progress: 40 },
+            { label: 'Mantener racha', done: true, progress: 100 },
+            { label: 'Repasar tema débil', done: false, progress: 0 },
+          ].map((goal, i) => (
+            <div key={i} className="flex items-center gap-3">
+              <div className={`w-6 h-6 rounded-full flex items-center justify-center ${goal.done ? 'bg-emerald-100' : 'bg-gray-100'}`}>
+                {goal.done ? <Check className="w-4 h-4 text-emerald-600" /> : <span className="w-2 h-2 rounded-full bg-gray-300" />}
+              </div>
+              <div className="flex-1">
+                <p className={`text-sm ${goal.done ? 'text-gray-400 line-through' : 'text-gray-700'}`}>{goal.label}</p>
+                {!goal.done && goal.progress > 0 && (
+                  <div className="h-1 bg-gray-100 rounded-full mt-1 overflow-hidden">
+                    <div className="h-full bg-purple-500 rounded-full" style={{ width: `${goal.progress}%` }} />
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+}
+
+// ============================================
+// AWARD-WINNING OPTION 2: DASHBOARD CARDS
+// ============================================
+
+function DashboardView({ temas, onTemaAction, onStartSession }) {
+  const urgentTemas = temas.filter(t => t.estado === 'riesgo');
+
+  return (
+    <motion.div
+      className="space-y-4"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
+      {/* Greeting + Quick action */}
+      <motion.div
+        className="bg-white rounded-2xl p-5 border border-gray-100"
+        initial={{ y: 20 }}
+        animate={{ y: 0 }}
+      >
+        <div className="flex items-start justify-between mb-4">
+          <div>
+            <p className="text-gray-500 text-sm">Buenos días 👋</p>
+            <h2 className="text-xl font-bold text-gray-900">¿Listo para estudiar?</h2>
+          </div>
+          <div className="flex items-center gap-1 bg-amber-100 px-3 py-1.5 rounded-full">
+            <Flame className="w-4 h-4 text-amber-500" />
+            <span className="text-sm font-semibold text-amber-600">7</span>
+          </div>
+        </div>
+
+        <motion.button
+          onClick={onStartSession}
+          className="w-full py-4 bg-gradient-to-r from-purple-500 to-violet-600 text-white font-semibold rounded-xl flex items-center justify-center gap-2"
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+        >
+          <Zap className="w-5 h-5" />
+          Sesión inteligente · 15 min
+        </motion.button>
+      </motion.div>
+
+      {/* Urgent attention card */}
+      {urgentTemas.length > 0 && (
+        <motion.div
+          className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-4 border border-amber-200"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+        >
+          <div className="flex items-center gap-2 mb-3">
+            <AlertTriangle className="w-5 h-5 text-amber-500" />
+            <h3 className="font-semibold text-amber-800">Necesitan atención</h3>
+          </div>
+          <div className="space-y-2">
+            {urgentTemas.slice(0, 2).map(tema => (
+              <motion.button
+                key={tema.id}
+                onClick={() => onTemaAction?.(tema)}
+                className="w-full bg-white/80 backdrop-blur rounded-xl p-3 flex items-center gap-3 text-left"
+                whileHover={{ x: 4 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center">
+                  <span className="font-bold text-amber-600">T{tema.id}</span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-medium text-gray-800 truncate">{tema.nombre}</p>
+                  <p className="text-xs text-amber-600">{tema.progreso}% · Repasar hoy</p>
+                </div>
+                <ChevronRight className="w-4 h-4 text-amber-400" />
+              </motion.button>
+            ))}
+          </div>
+        </motion.div>
+      )}
+
+      {/* Stats bento grid */}
+      <div className="grid grid-cols-2 gap-3">
+        <motion.div
+          className="bg-white rounded-2xl p-4 border border-gray-100 col-span-2"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+        >
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="font-semibold text-gray-900">Progreso semanal</h3>
+            <span className="text-xs text-emerald-500 bg-emerald-50 px-2 py-1 rounded-full">+12%</span>
+          </div>
+          <div className="flex items-end gap-1 h-16">
+            {[40, 65, 45, 80, 55, 90, 70].map((h, i) => (
+              <motion.div
+                key={i}
+                className={`flex-1 rounded-t ${i === 6 ? 'bg-purple-500' : 'bg-purple-200'}`}
+                initial={{ height: 0 }}
+                animate={{ height: `${h}%` }}
+                transition={{ delay: 0.3 + i * 0.05 }}
+              />
+            ))}
+          </div>
+          <div className="flex justify-between mt-2 text-xs text-gray-400">
+            <span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span className="text-purple-600 font-medium">D</span>
+          </div>
+        </motion.div>
+
+        <motion.button
+          className="bg-gradient-to-br from-purple-500 to-violet-600 rounded-2xl p-4 text-white text-left"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.3 }}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+        >
+          <Target className="w-6 h-6 mb-2" />
+          <p className="text-2xl font-bold">87%</p>
+          <p className="text-sm text-purple-200">Precisión</p>
+        </motion.button>
+
+        <motion.button
+          className="bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl p-4 text-white text-left"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.35 }}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+        >
+          <Trophy className="w-6 h-6 mb-2" />
+          <p className="text-2xl font-bold">Nivel 12</p>
+          <p className="text-sm text-pink-200">Top 15%</p>
+        </motion.button>
+      </div>
+
+      {/* Quick topics */}
+      <motion.div
+        className="bg-white rounded-2xl p-4 border border-gray-100"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}
+      >
+        <h3 className="font-semibold text-gray-900 mb-3">Continúa estudiando</h3>
+        <div className="flex gap-2 overflow-x-auto pb-2">
+          {temas.filter(t => t.estado !== 'nuevo').slice(0, 4).map(tema => {
+            const config = estadoConfig[tema.estado];
+            return (
+              <motion.button
+                key={tema.id}
+                onClick={() => onTemaAction?.(tema)}
+                className={`flex-shrink-0 ${config.bg} rounded-xl p-3 min-w-[120px]`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <p className="text-xs text-gray-500 mb-1">Tema {tema.id}</p>
+                <p className={`text-sm font-medium ${config.text} truncate`}>{tema.nombre.split(' ')[0]}</p>
+                <p className="text-lg font-bold text-gray-800 mt-1">{tema.progreso}%</p>
+              </motion.button>
+            );
+          })}
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+}
+
+// ============================================
 // TEMA OPTIONS MODAL - When clicking a topic
 // ============================================
 
@@ -824,8 +1652,11 @@ function TemaOptionsModal({ isOpen, onClose, tema }) {
 // ============================================
 
 export default function DraftFeatures({ onClose }) {
-  const [activeTab, setActiveTab] = useState('fortaleza-bars');
+  const [activeTab, setActiveTab] = useState('interactive');
   const [selectedTema, setSelectedTema] = useState(null);
+  const [showAllTemas, setShowAllTemas] = useState(false);
+  const [showPrecisionModal, setShowPrecisionModal] = useState(false);
+  const [showLevelModal, setShowLevelModal] = useState(false);
 
   // Demo data
   const demoTemas = [
@@ -843,9 +1674,10 @@ export default function DraftFeatures({ onClose }) {
   ];
 
   const tabs = [
-    { id: 'fortaleza-bars', label: 'Fortaleza + Barras' },
-    { id: 'session-progress', label: 'Sesión + Circular' },
-    { id: 'fortaleza-grid', label: 'Fortaleza Grid' },
+    { id: 'interactive', label: '🏰 Interactivo' },
+    { id: 'focus', label: '🎯 Focus Mode' },
+    { id: 'dashboard', label: '📊 Dashboard' },
+    { id: 'fortaleza-bars', label: 'Original' },
     { id: 'expandable', label: 'Cards Expandibles' },
   ];
 
@@ -906,32 +1738,47 @@ export default function DraftFeatures({ onClose }) {
       {/* Content */}
       <main className="max-w-lg mx-auto px-4 py-6 pb-24">
         <AnimatePresence mode="wait">
-          {activeTab === 'fortaleza-bars' && (
+          {/* NEW: Interactive Fortaleza with drag & swipe */}
+          {activeTab === 'interactive' && (
             <motion.div
-              key="fortaleza-bars"
+              key="interactive"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               className="space-y-4"
             >
-              <div className="bg-amber-50 border border-amber-200 rounded-xl p-3 text-sm text-amber-800">
-                <strong>Nueva vista de inicio:</strong> Fortaleza (3 temas clickeables) + Stats + Empezar sesión
+              <div className="bg-purple-50 border border-purple-200 rounded-xl p-3 text-sm text-purple-800">
+                <strong>🆕 Fortaleza Interactiva:</strong> Arrastra para reordenar · Desliza ← para practicar
               </div>
 
-              {/* Fortaleza with 3 topics */}
-              <FortalezaWithBars
+              {/* Interactive Fortaleza */}
+              <FortalezaInteractive
                 temas={demoTemas}
                 maxVisible={3}
-                onTemaClick={(tema) => setSelectedTema(tema)}
-                onVerTodo={() => console.log('Ver todos los temas')}
+                onTemaAction={(tema) => setSelectedTema(tema)}
+                onVerTodos={() => setShowAllTemas(true)}
               />
 
-              {/* Stat Cards Grid */}
+              {/* Interactive Stats */}
               <div className="grid grid-cols-2 gap-3">
-                <StatCard icon={Target} label="Precisión" value="87%" color="purple" trend={5} />
-                <StatCard icon={Flame} label="Racha" value="7 días" color="amber" trend={2} />
-                <StatCard icon={BookOpen} label="Estudiado" value="45 min" color="emerald" />
-                <StatCard icon={Trophy} label="Nivel" value="12" color="pink" trend={1} />
+                <InteractiveStatCard
+                  icon={Target}
+                  label="Precisión"
+                  value="87%"
+                  color="purple"
+                  trend={5}
+                  onClick={() => setShowPrecisionModal(true)}
+                  badge="Ver análisis"
+                />
+                <InteractiveStatCard
+                  icon={Trophy}
+                  label="Nivel"
+                  value="12"
+                  color="pink"
+                  trend={1}
+                  onClick={() => setShowLevelModal(true)}
+                  badge="Top 15%"
+                />
               </div>
 
               {/* Start Session Button */}
@@ -940,7 +1787,6 @@ export default function DraftFeatures({ onClose }) {
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 transition={spring.snappy}
-                onClick={() => console.log('Empezar sesión')}
               >
                 <span className="flex items-center justify-center gap-2">
                   <Zap className="w-5 h-5" />
@@ -950,35 +1796,77 @@ export default function DraftFeatures({ onClose }) {
             </motion.div>
           )}
 
-          {activeTab === 'session-progress' && (
+          {/* NEW: Focus Mode - Award winning option 1 */}
+          {activeTab === 'focus' && (
             <motion.div
-              key="session-progress"
+              key="focus"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="space-y-4"
             >
-              <div className="bg-purple-50 border border-purple-200 rounded-xl p-3 text-sm text-purple-800">
-                <strong>Nuevo:</strong> Icono de progreso circular clickeable que abre
-                modal con detalles de todas las áreas.
+              <div className="bg-violet-50 border border-violet-200 rounded-xl p-3 text-sm text-violet-800 mb-4">
+                <strong>🎯 Focus Mode:</strong> Vista minimalista centrada en tu próximo objetivo + metas diarias
               </div>
-              <SessionCardWithProgress onStartSession={() => console.log('Start session')} />
+              <FocusModeView
+                temas={demoTemas}
+                onStartSession={() => console.log('Start focused session')}
+              />
             </motion.div>
           )}
 
-          {activeTab === 'fortaleza-grid' && (
+          {/* NEW: Dashboard View - Award winning option 2 */}
+          {activeTab === 'dashboard' && (
             <motion.div
-              key="fortaleza-grid"
+              key="dashboard"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-3 text-sm text-indigo-800 mb-4">
+                <strong>📊 Dashboard:</strong> Vista tipo bento box con gráficos de progreso semanal
+              </div>
+              <DashboardView
+                temas={demoTemas}
+                onTemaAction={(tema) => setSelectedTema(tema)}
+                onStartSession={() => console.log('Start smart session')}
+              />
+            </motion.div>
+          )}
+
+          {/* Original version for comparison */}
+          {activeTab === 'fortaleza-bars' && (
+            <motion.div
+              key="fortaleza-bars"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               className="space-y-4"
             >
-              <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-3 text-sm text-emerald-800">
-                <strong>Alternativa:</strong> Vista compacta en grid con iconos.
-                Ideal para ver todos los temas de un vistazo.
+              <div className="bg-gray-50 border border-gray-200 rounded-xl p-3 text-sm text-gray-600">
+                <strong>Original:</strong> Versión anterior para comparación
               </div>
-              <FortalezaGrid temas={demoTemas} />
+
+              <FortalezaWithBars
+                temas={demoTemas}
+                maxVisible={3}
+                onTemaClick={(tema) => setSelectedTema(tema)}
+                onVerTodo={() => setShowAllTemas(true)}
+              />
+
+              <div className="grid grid-cols-2 gap-3">
+                <StatCard icon={Target} label="Precisión" value="87%" color="purple" trend={5} />
+                <StatCard icon={Trophy} label="Nivel" value="12" color="pink" trend={1} />
+              </div>
+
+              <motion.button
+                className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-4 rounded-2xl font-semibold text-lg"
+                whileTap={{ scale: 0.98 }}
+              >
+                <span className="flex items-center justify-center gap-2">
+                  <Zap className="w-5 h-5" />
+                  Empezar sesión
+                </span>
+              </motion.button>
             </motion.div>
           )}
 
@@ -1031,6 +1919,33 @@ export default function DraftFeatures({ onClose }) {
         isOpen={!!selectedTema}
         onClose={() => setSelectedTema(null)}
         tema={selectedTema}
+      />
+
+      {/* All Temas Modal */}
+      <AnimatePresence>
+        {showAllTemas && (
+          <AllTemasModal
+            isOpen={showAllTemas}
+            onClose={() => setShowAllTemas(false)}
+            temas={demoTemas}
+            onTemaAction={(tema) => {
+              setShowAllTemas(false);
+              setSelectedTema(tema);
+            }}
+          />
+        )}
+      </AnimatePresence>
+
+      {/* Precision Analysis Modal */}
+      <PrecisionModal
+        isOpen={showPrecisionModal}
+        onClose={() => setShowPrecisionModal(false)}
+      />
+
+      {/* Level Comparison Modal */}
+      <LevelModal
+        isOpen={showLevelModal}
+        onClose={() => setShowLevelModal(false)}
       />
     </div>
   );
