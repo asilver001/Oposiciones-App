@@ -15,7 +15,8 @@ import {
   BookOpen, Target, Flame, Trophy, Clock, TrendingUp,
   Zap, Star, AlertTriangle, Plus, Eye, Calendar,
   BarChart3, Award, Brain, Sparkles, GripVertical,
-  Users, Medal, Percent, Activity, PieChart, ArrowUpRight
+  Users, Medal, Percent, Activity, PieChart, ArrowUpRight,
+  Settings, HelpCircle, Info, Instagram, Mail, Bell, Shield, FileText
 } from 'lucide-react';
 
 // ============================================
@@ -2073,16 +2074,645 @@ function TemaOptionsModal({ isOpen, onClose, tema }) {
 }
 
 // ============================================
+// FULL HOME PAGE - Complete home with all elements
+// ============================================
+
+function FullHomePage({
+  temas,
+  onStartSession,
+  onTemaAction,
+  onVerTodos,
+  onRachaClick,
+  onPrecisionClick,
+  onLevelClick,
+  onSettingsClick,
+  onShowProgress
+}) {
+  const nextTema = temas.find(t => t.estado === 'riesgo') || temas.find(t => t.estado === 'progreso') || temas[0];
+  const config = estadoConfig[nextTema?.estado] || estadoConfig.nuevo;
+  const [currentPage, setCurrentPage] = useState(0);
+
+  // Demo data
+  const dailyProgressPercent = 40;
+  const todayQuestions = 6;
+  const dailyGoal = 15;
+
+  return (
+    <motion.div
+      className="space-y-4"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
+      {/* TopBar simulation */}
+      <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-3">
+        <div className="flex items-center justify-between">
+          {/* Left - Progress circle */}
+          <motion.button
+            onClick={onShowProgress}
+            className="relative w-10 h-10 flex items-center justify-center"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <svg className="w-9 h-9 transform -rotate-90">
+              <circle cx="18" cy="18" r="14" fill="none" stroke="#F3E8FF" strokeWidth="3" />
+              <motion.circle
+                cx="18" cy="18" r="14" fill="none" stroke="#8B5CF6" strokeWidth="3"
+                strokeLinecap="round"
+                initial={{ strokeDasharray: "0 88" }}
+                animate={{ strokeDasharray: `${(dailyProgressPercent / 100) * 88} 88` }}
+                transition={spring.smooth}
+              />
+            </svg>
+            <span className="absolute text-[10px] font-bold text-purple-600">{dailyProgressPercent}</span>
+          </motion.button>
+
+          {/* Center - Title */}
+          <h1 className="text-[15px] font-semibold text-gray-800 tracking-tight">Oposita Smart</h1>
+
+          {/* Right - Settings */}
+          <motion.button
+            onClick={onSettingsClick}
+            className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100"
+            whileTap={{ scale: 0.95 }}
+          >
+            <Settings className="w-[18px] h-[18px] text-gray-500" />
+          </motion.button>
+        </div>
+      </div>
+
+      {/* Greeting area */}
+      <div className="px-1">
+        <p className="text-[13px] font-medium text-purple-500 mb-0.5 capitalize">
+          {new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' })}
+        </p>
+        <h2 className="text-[22px] font-bold text-gray-900 leading-tight mb-0.5">
+          Tu progreso de hoy
+        </h2>
+        <p className="text-gray-400 text-sm">Continúa donde lo dejaste</p>
+      </div>
+
+      {/* Page indicators for swipe */}
+      <div className="flex justify-center gap-2">
+        <motion.button
+          onClick={() => setCurrentPage(0)}
+          className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+            currentPage === 0 ? 'bg-purple-600 text-white' : 'bg-gray-100 text-gray-500'
+          }`}
+          whileTap={{ scale: 0.95 }}
+        >
+          Tu Enfoque
+        </motion.button>
+        <motion.button
+          onClick={() => setCurrentPage(1)}
+          className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+            currentPage === 1 ? 'bg-purple-600 text-white' : 'bg-gray-100 text-gray-500'
+          }`}
+          whileTap={{ scale: 0.95 }}
+        >
+          Tu Fortaleza
+        </motion.button>
+      </div>
+
+      {/* Swipeable content */}
+      <div className="relative overflow-hidden rounded-3xl">
+        <motion.div
+          className="flex"
+          animate={{ x: currentPage === 0 ? 0 : '-100%' }}
+          transition={spring.snappy}
+        >
+          {/* Page 1: Focus */}
+          <div className="w-full flex-shrink-0 px-1" style={{ minWidth: '100%' }}>
+            <motion.div className="bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-700 rounded-3xl p-6 text-white relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+
+              <div className="relative">
+                <p className="text-purple-200 text-sm mb-2">Tu enfoque de hoy</p>
+                <h2 className="text-2xl font-bold mb-1">T{nextTema?.id} {nextTema?.nombre}</h2>
+                <p className="text-purple-200 text-sm mb-4">{config.label} · {nextTema?.progreso}% completado</p>
+
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="relative w-16 h-16">
+                    <svg className="w-16 h-16 transform -rotate-90">
+                      <circle cx="32" cy="32" r="28" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="6" />
+                      <motion.circle
+                        cx="32" cy="32" r="28" fill="none" stroke="white" strokeWidth="6"
+                        strokeLinecap="round" strokeDasharray={175.9}
+                        initial={{ strokeDashoffset: 175.9 }}
+                        animate={{ strokeDashoffset: 175.9 - (175.9 * (nextTema?.progreso || 0) / 100) }}
+                        transition={spring.smooth}
+                      />
+                    </svg>
+                    <span className="absolute inset-0 flex items-center justify-center text-lg font-bold">{nextTema?.progreso}%</span>
+                  </div>
+                  <div>
+                    <p className="font-medium">15 preguntas restantes</p>
+                    <p className="text-sm text-purple-200">~10 min estimado</p>
+                  </div>
+                </div>
+
+                <motion.button
+                  onClick={onStartSession}
+                  className="w-full py-4 bg-white text-purple-600 font-bold rounded-2xl flex items-center justify-center gap-2"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <Zap className="w-5 h-5" />
+                  Empezar sesión enfocada
+                </motion.button>
+              </div>
+
+              <motion.div
+                className="absolute bottom-2 right-4 text-purple-200/50 text-xs flex items-center gap-1"
+                animate={{ x: [0, 5, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              >
+                <span>Desliza</span>
+                <ChevronRight className="w-3 h-3" />
+              </motion.div>
+            </motion.div>
+          </div>
+
+          {/* Page 2: Fortaleza compact */}
+          <div className="w-full flex-shrink-0 px-1" style={{ minWidth: '100%' }}>
+            <motion.div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+              <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100">
+                <div className="flex items-center gap-2">
+                  <span className="text-xl">🏰</span>
+                  <h3 className="font-semibold text-gray-900">Tu Fortaleza</h3>
+                </div>
+              </div>
+              <div className="p-3 space-y-2">
+                {temas.slice(0, 2).map((tema, i) => {
+                  const temaConfig = estadoConfig[tema.estado] || estadoConfig.nuevo;
+                  const TemaIcon = temaConfig.icon;
+                  return (
+                    <motion.button
+                      key={tema.id}
+                      onClick={() => onTemaAction?.(tema)}
+                      className="w-full bg-white border border-gray-100 rounded-xl p-3 flex items-center gap-3 text-left"
+                      whileHover={{ x: 4 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <div className={`w-10 h-10 rounded-xl ${temaConfig.bg} flex items-center justify-center`}>
+                        <TemaIcon className={`w-5 h-5 ${temaConfig.text}`} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-medium text-gray-800 truncate">
+                          <span className="text-gray-400">T{tema.id}</span> {tema.nombre}
+                        </p>
+                        <div className="flex items-center gap-2 mt-1">
+                          <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                            <div className={`h-full bg-gradient-to-r ${temaConfig.gradient}`} style={{ width: `${tema.progreso}%` }} />
+                          </div>
+                          <span className={`text-xs font-medium ${temaConfig.text}`}>{tema.progreso}%</span>
+                        </div>
+                      </div>
+                      <ChevronRight className="w-4 h-4 text-gray-300" />
+                    </motion.button>
+                  );
+                })}
+              </div>
+              <motion.button
+                onClick={onVerTodos}
+                className="w-full px-4 py-3 text-sm text-purple-600 font-medium hover:bg-purple-50/50 transition-colors border-t border-gray-100 flex items-center justify-center gap-1"
+                whileTap={{ scale: 0.98 }}
+              >
+                Ver todos los temas <ChevronRight className="w-4 h-4" />
+              </motion.button>
+            </motion.div>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Stats */}
+      <div className="grid grid-cols-3 gap-3">
+        <motion.button onClick={onRachaClick} className="bg-white rounded-2xl p-4 text-center border border-gray-100" whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}>
+          <Flame className="w-6 h-6 text-amber-500 mx-auto mb-2" />
+          <p className="text-xl font-bold text-gray-900">7</p>
+          <p className="text-xs text-gray-500">Racha</p>
+        </motion.button>
+        <motion.button onClick={onPrecisionClick} className="bg-white rounded-2xl p-4 text-center border border-gray-100" whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}>
+          <Target className="w-6 h-6 text-purple-500 mx-auto mb-2" />
+          <p className="text-xl font-bold text-gray-900">87%</p>
+          <p className="text-xs text-gray-500">Precisión</p>
+        </motion.button>
+        <motion.button onClick={onLevelClick} className="bg-white rounded-2xl p-4 text-center border border-gray-100" whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}>
+          <Trophy className="w-6 h-6 text-pink-500 mx-auto mb-2" />
+          <p className="text-xl font-bold text-gray-900">12</p>
+          <p className="text-xs text-gray-500">Nivel</p>
+        </motion.button>
+      </div>
+
+      {/* Today's goals */}
+      <motion.div className="bg-white rounded-2xl p-4 border border-gray-100">
+        <div className="flex items-center justify-between mb-3">
+          <h3 className="font-semibold text-gray-900 flex items-center gap-2">
+            <Star className="w-4 h-4 text-amber-500" />
+            Objetivos de hoy
+          </h3>
+          <span className="text-xs text-emerald-500 bg-emerald-50 px-2 py-0.5 rounded-full">1/3</span>
+        </div>
+        <div className="flex gap-2">
+          {[
+            { label: '15 preguntas', done: false, icon: Target },
+            { label: 'Racha', done: true, icon: Flame },
+            { label: 'Repaso', done: false, icon: BookOpen },
+          ].map((goal, i) => {
+            const GoalIcon = goal.icon;
+            return (
+              <div key={i} className={`flex-1 p-2 rounded-xl text-center ${goal.done ? 'bg-emerald-50' : 'bg-gray-50'}`}>
+                <GoalIcon className={`w-4 h-4 mx-auto mb-1 ${goal.done ? 'text-emerald-500' : 'text-gray-400'}`} />
+                <p className={`text-xs ${goal.done ? 'text-emerald-600 font-medium' : 'text-gray-500'}`}>
+                  {goal.done ? '✓' : goal.label}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </motion.div>
+
+      {/* Footer links - FAQ, About, etc. */}
+      <div className="bg-white rounded-xl border border-gray-100 divide-y divide-gray-100 overflow-hidden">
+        <motion.button
+          className="w-full px-4 py-4 flex items-center justify-between hover:bg-gray-50 transition"
+          whileTap={{ scale: 0.98 }}
+        >
+          <div className="flex items-center gap-3">
+            <Info className="w-5 h-5 text-gray-400" />
+            <span className="text-gray-700">Acerca de</span>
+          </div>
+          <ChevronRight className="w-5 h-5 text-gray-300" />
+        </motion.button>
+        <motion.button
+          className="w-full px-4 py-4 flex items-center justify-between hover:bg-gray-50 transition"
+          whileTap={{ scale: 0.98 }}
+        >
+          <div className="flex items-center gap-3">
+            <HelpCircle className="w-5 h-5 text-gray-400" />
+            <span className="text-gray-700">FAQ</span>
+          </div>
+          <ChevronRight className="w-5 h-5 text-gray-300" />
+        </motion.button>
+        <motion.button
+          className="w-full px-4 py-4 flex items-center justify-between hover:bg-gray-50 transition"
+          whileTap={{ scale: 0.98 }}
+        >
+          <div className="flex items-center gap-3">
+            <Instagram className="w-5 h-5 text-gray-400" />
+            <span className="text-gray-700">Síguenos</span>
+          </div>
+          <ChevronRight className="w-5 h-5 text-gray-300" />
+        </motion.button>
+        <motion.button
+          className="w-full px-4 py-4 flex items-center justify-between hover:bg-gray-50 transition"
+          whileTap={{ scale: 0.98 }}
+        >
+          <div className="flex items-center gap-3">
+            <Mail className="w-5 h-5 text-gray-400" />
+            <span className="text-gray-700">Contacto</span>
+          </div>
+          <ChevronRight className="w-5 h-5 text-gray-300" />
+        </motion.button>
+      </div>
+
+      {/* Legal links */}
+      <div className="text-center space-y-2 py-4">
+        <div className="flex justify-center gap-4 text-xs text-gray-400">
+          <button className="hover:text-purple-600 transition">Privacidad</button>
+          <span>·</span>
+          <button className="hover:text-purple-600 transition">Términos</button>
+          <span>·</span>
+          <button className="hover:text-purple-600 transition">Legal</button>
+        </div>
+        <p className="text-xs text-gray-300">Oposita Smart v1.0 · Hecho con 💜</p>
+      </div>
+    </motion.div>
+  );
+}
+
+// ============================================
+// SETTINGS MODAL - Demo
+// ============================================
+
+function SettingsModal({ isOpen, onClose }) {
+  if (!isOpen) return null;
+
+  const SettingsRow = ({ icon: Icon, label, rightText, locked }) => (
+    <motion.button
+      className="w-full px-4 py-3.5 flex items-center justify-between hover:bg-gray-50 transition"
+      whileTap={{ scale: 0.98 }}
+    >
+      <div className="flex items-center gap-3">
+        <Icon className="w-5 h-5 text-gray-500" />
+        <span className="text-gray-700">{label}</span>
+      </div>
+      <div className="flex items-center gap-2">
+        {rightText && <span className="text-sm text-gray-400">{rightText}</span>}
+        {locked && <span className="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full">Próximamente</span>}
+        <ChevronRight className="w-4 h-4 text-gray-300" />
+      </div>
+    </motion.button>
+  );
+
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <>
+          <motion.div
+            className="fixed inset-0 bg-black/40 z-[300]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={onClose}
+          />
+          <motion.div
+            className="fixed inset-x-4 top-1/2 -translate-y-1/2 max-w-md mx-auto bg-white rounded-3xl shadow-2xl z-[301] overflow-hidden max-h-[80vh] overflow-y-auto"
+            initial={{ opacity: 0, scale: 0.9, y: '-40%' }}
+            animate={{ opacity: 1, scale: 1, y: '-50%' }}
+            exit={{ opacity: 0, scale: 0.9, y: '-40%' }}
+            transition={spring.bouncy}
+          >
+            {/* Header */}
+            <div className="sticky top-0 bg-white border-b border-gray-100 px-5 py-4 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <Settings className="w-7 h-7 text-gray-700" />
+                <h3 className="text-lg font-bold text-gray-900">Ajustes</h3>
+              </div>
+              <motion.button onClick={onClose} className="p-2 rounded-xl hover:bg-gray-100" whileTap={{ scale: 0.95 }}>
+                <X className="w-5 h-5 text-gray-400" />
+              </motion.button>
+            </div>
+
+            {/* Sections */}
+            <div className="divide-y divide-gray-100">
+              {/* Preferencias */}
+              <div className="py-2">
+                <p className="px-4 py-2 text-xs font-semibold text-gray-400 uppercase">Preferencias</p>
+                <SettingsRow icon={Bell} label="Notificaciones" rightText="Activadas" locked />
+                <SettingsRow icon={Calendar} label="Meta diaria" rightText="15 preguntas" />
+              </div>
+
+              {/* Cuenta */}
+              <div className="py-2">
+                <p className="px-4 py-2 text-xs font-semibold text-gray-400 uppercase">Cuenta</p>
+                <SettingsRow icon={Users} label="Editar perfil" rightText="Usuario" />
+                <SettingsRow icon={Trophy} label="Plan Premium" rightText="Próximamente" />
+                <SettingsRow icon={Mail} label="Contacto" />
+              </div>
+
+              {/* Legal */}
+              <div className="py-2">
+                <p className="px-4 py-2 text-xs font-semibold text-gray-400 uppercase">Legal</p>
+                <SettingsRow icon={Shield} label="Política de privacidad" />
+                <SettingsRow icon={FileText} label="Términos de servicio" />
+                <SettingsRow icon={FileText} label="Aviso legal" />
+              </div>
+            </div>
+
+            {/* App info */}
+            <div className="px-5 py-4 bg-gray-50 text-center">
+              <p className="text-xs text-gray-400">Oposita Smart v1.0</p>
+              <p className="text-xs text-gray-300 mt-1">Hecho con 💜 para opositores</p>
+            </div>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
+  );
+}
+
+// ============================================
+// PROGRESS MODAL - Daily progress details
+// ============================================
+
+function DailyProgressModal({ isOpen, onClose }) {
+  if (!isOpen) return null;
+
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <>
+          <motion.div
+            className="fixed inset-0 bg-black/40 z-[300]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={onClose}
+          />
+          <motion.div
+            className="fixed inset-x-4 top-1/2 -translate-y-1/2 max-w-md mx-auto bg-white rounded-3xl shadow-2xl z-[301] overflow-hidden"
+            initial={{ opacity: 0, scale: 0.9, y: '-40%' }}
+            animate={{ opacity: 1, scale: 1, y: '-50%' }}
+            exit={{ opacity: 0, scale: 0.9, y: '-40%' }}
+            transition={spring.bouncy}
+          >
+            {/* Header */}
+            <div className="px-5 py-4 border-b border-gray-100 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl flex items-center justify-center">
+                  <Target className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900">Progreso de Hoy</h3>
+                  <p className="text-xs text-gray-500">Tu meta diaria</p>
+                </div>
+              </div>
+              <motion.button onClick={onClose} className="p-2 rounded-xl hover:bg-gray-100" whileTap={{ scale: 0.95 }}>
+                <X className="w-5 h-5 text-gray-400" />
+              </motion.button>
+            </div>
+
+            {/* Main progress */}
+            <div className="px-5 py-6 bg-gradient-to-br from-purple-50 to-violet-50 text-center">
+              <motion.div
+                className="relative w-32 h-32 mx-auto mb-4"
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={spring.bouncy}
+              >
+                <svg className="w-32 h-32 transform -rotate-90">
+                  <circle cx="64" cy="64" r="56" fill="none" stroke="#E9D5FF" strokeWidth="12" />
+                  <motion.circle
+                    cx="64" cy="64" r="56" fill="none" stroke="#8B5CF6" strokeWidth="12"
+                    strokeLinecap="round"
+                    initial={{ strokeDasharray: "0 352" }}
+                    animate={{ strokeDasharray: `${(40 / 100) * 352} 352` }}
+                    transition={spring.smooth}
+                  />
+                </svg>
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  <span className="text-3xl font-bold text-purple-600">6</span>
+                  <span className="text-sm text-gray-500">de 15</span>
+                </div>
+              </motion.div>
+              <p className="text-lg font-semibold text-gray-800">¡Vas por buen camino!</p>
+              <p className="text-sm text-gray-500">9 preguntas más para cumplir tu meta</p>
+            </div>
+
+            {/* Stats */}
+            <div className="px-5 py-4 grid grid-cols-3 gap-3">
+              <div className="text-center p-3 bg-gray-50 rounded-xl">
+                <p className="text-xl font-bold text-gray-800">45</p>
+                <p className="text-xs text-gray-500">Esta semana</p>
+              </div>
+              <div className="text-center p-3 bg-gray-50 rounded-xl">
+                <p className="text-xl font-bold text-emerald-600">87%</p>
+                <p className="text-xs text-gray-500">Precisión</p>
+              </div>
+              <div className="text-center p-3 bg-gray-50 rounded-xl">
+                <p className="text-xl font-bold text-amber-600">7</p>
+                <p className="text-xs text-gray-500">Racha</p>
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="px-5 py-4 bg-gray-50 border-t border-gray-100">
+              <motion.button
+                onClick={onClose}
+                className="w-full py-3 bg-purple-600 text-white font-semibold rounded-xl"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                ¡Seguir estudiando!
+              </motion.button>
+            </div>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
+  );
+}
+
+// ============================================
+// FOCUS MODE ORIGINAL - For comparison
+// ============================================
+
+function FocusModeOriginal({ temas, onStartSession }) {
+  const nextTema = temas.find(t => t.estado === 'riesgo') || temas.find(t => t.estado === 'progreso') || temas[0];
+  const config = estadoConfig[nextTema?.estado] || estadoConfig.nuevo;
+
+  return (
+    <motion.div
+      className="space-y-4"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
+      {/* Hero card - What to focus on */}
+      <motion.div
+        className="bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-700 rounded-3xl p-6 text-white relative overflow-hidden"
+        initial={{ y: 20 }}
+        animate={{ y: 0 }}
+      >
+        <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+
+        <div className="relative">
+          <p className="text-purple-200 text-sm mb-2">Tu enfoque de hoy</p>
+          <h2 className="text-2xl font-bold mb-1">T{nextTema?.id} {nextTema?.nombre}</h2>
+          <p className="text-purple-200 text-sm mb-4">{config.label} · {nextTema?.progreso}% completado</p>
+
+          <div className="flex items-center gap-4 mb-4">
+            <div className="relative w-16 h-16">
+              <svg className="w-16 h-16 transform -rotate-90">
+                <circle cx="32" cy="32" r="28" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="6" />
+                <motion.circle
+                  cx="32" cy="32" r="28" fill="none" stroke="white" strokeWidth="6"
+                  strokeLinecap="round" strokeDasharray={175.9}
+                  initial={{ strokeDashoffset: 175.9 }}
+                  animate={{ strokeDashoffset: 175.9 - (175.9 * (nextTema?.progreso || 0) / 100) }}
+                  transition={spring.smooth}
+                />
+              </svg>
+              <span className="absolute inset-0 flex items-center justify-center text-lg font-bold">{nextTema?.progreso}%</span>
+            </div>
+            <div>
+              <p className="font-medium">15 preguntas restantes</p>
+              <p className="text-sm text-purple-200">~10 min estimado</p>
+            </div>
+          </div>
+
+          <motion.button
+            onClick={onStartSession}
+            className="w-full py-4 bg-white text-purple-600 font-bold rounded-2xl flex items-center justify-center gap-2"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <Zap className="w-5 h-5" />
+            Empezar sesión enfocada
+          </motion.button>
+        </div>
+      </motion.div>
+
+      {/* Quick stats - NON INTERACTIVE (original) */}
+      <div className="grid grid-cols-3 gap-3">
+        <motion.div className="bg-white rounded-2xl p-4 text-center border border-gray-100" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
+          <Flame className="w-6 h-6 text-amber-500 mx-auto mb-2" />
+          <p className="text-xl font-bold text-gray-900">7</p>
+          <p className="text-xs text-gray-500">Racha</p>
+        </motion.div>
+        <motion.div className="bg-white rounded-2xl p-4 text-center border border-gray-100" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }}>
+          <Target className="w-6 h-6 text-purple-500 mx-auto mb-2" />
+          <p className="text-xl font-bold text-gray-900">87%</p>
+          <p className="text-xs text-gray-500">Precisión</p>
+        </motion.div>
+        <motion.div className="bg-white rounded-2xl p-4 text-center border border-gray-100" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
+          <Trophy className="w-6 h-6 text-pink-500 mx-auto mb-2" />
+          <p className="text-xl font-bold text-gray-900">12</p>
+          <p className="text-xs text-gray-500">Nivel</p>
+        </motion.div>
+      </div>
+
+      {/* Today's goals - EXPANDED VERSION (original) */}
+      <motion.div
+        className="bg-white rounded-2xl p-4 border border-gray-100"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.25 }}
+      >
+        <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+          <Star className="w-4 h-4 text-amber-500" />
+          Objetivos de hoy
+        </h3>
+        <div className="space-y-3">
+          {[
+            { label: 'Completar 15 preguntas', done: false, progress: 40 },
+            { label: 'Mantener racha', done: true, progress: 100 },
+            { label: 'Repasar tema débil', done: false, progress: 0 },
+          ].map((goal, i) => (
+            <div key={i} className="flex items-center gap-3">
+              <div className={`w-6 h-6 rounded-full flex items-center justify-center ${goal.done ? 'bg-emerald-100' : 'bg-gray-100'}`}>
+                {goal.done ? <Check className="w-4 h-4 text-emerald-600" /> : <span className="w-2 h-2 rounded-full bg-gray-300" />}
+              </div>
+              <div className="flex-1">
+                <p className={`text-sm ${goal.done ? 'text-gray-400 line-through' : 'text-gray-700'}`}>{goal.label}</p>
+                {!goal.done && goal.progress > 0 && (
+                  <div className="h-1 bg-gray-100 rounded-full mt-1 overflow-hidden">
+                    <div className="h-full bg-purple-500 rounded-full" style={{ width: `${goal.progress}%` }} />
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+}
+
+// ============================================
 // MAIN DRAFT FEATURES COMPONENT
 // ============================================
 
 export default function DraftFeatures({ onClose }) {
-  const [activeTab, setActiveTab] = useState('focus'); // Default to new Focus Mode
+  const [activeTab, setActiveTab] = useState('full-home'); // Default to full home page
   const [selectedTema, setSelectedTema] = useState(null);
   const [showAllTemas, setShowAllTemas] = useState(false);
   const [showPrecisionModal, setShowPrecisionModal] = useState(false);
   const [showLevelModal, setShowLevelModal] = useState(false);
   const [showRachaModal, setShowRachaModal] = useState(false);
+  const [showSettingsModal, setShowSettingsModal] = useState(false);
+  const [showProgressModal, setShowProgressModal] = useState(false);
 
   // Demo data
   const demoTemas = [
@@ -2100,9 +2730,10 @@ export default function DraftFeatures({ onClose }) {
   ];
 
   const tabs = [
-    { id: 'interactive', label: '🏰 Interactivo' },
+    { id: 'full-home', label: '🏠 Home Completo' },
     { id: 'focus', label: '🎯 Focus Mode' },
-    { id: 'expandable', label: 'Cards Expandibles' },
+    { id: 'focus-original', label: '📋 Original' },
+    { id: 'interactive', label: '🏰 Interactivo' },
   ];
 
   return (
@@ -2243,25 +2874,46 @@ export default function DraftFeatures({ onClose }) {
             </motion.div>
           )}
 
-          {activeTab === 'expandable' && (
+          {/* NEW: Full Home Page with all elements */}
+          {activeTab === 'full-home' && (
             <motion.div
-              key="expandable"
+              key="full-home"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="space-y-4"
             >
-              <div className="bg-blue-50 border border-blue-200 rounded-xl p-3 text-sm text-blue-800">
-                <strong>Sugerencias de uso:</strong>
-                <ul className="mt-2 space-y-1 text-xs">
-                  <li>• Estadísticas en página de inicio</li>
-                  <li>• Detalles de temas débiles</li>
-                  <li>• Logros y achievements</li>
-                  <li>• FAQ en configuración</li>
-                  <li>• Explicaciones de preguntas</li>
-                </ul>
+              <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-3 text-sm text-emerald-800 mb-4">
+                <strong>🏠 Home Completo:</strong> TopBar con progreso + Settings + FAQ + About + Footer
               </div>
-              <ExpandableCardsDemo />
+              <FullHomePage
+                temas={demoTemas}
+                onStartSession={() => console.log('Start session')}
+                onTemaAction={(tema) => setSelectedTema(tema)}
+                onVerTodos={() => setShowAllTemas(true)}
+                onRachaClick={() => setShowRachaModal(true)}
+                onPrecisionClick={() => setShowPrecisionModal(true)}
+                onLevelClick={() => setShowLevelModal(true)}
+                onSettingsClick={() => setShowSettingsModal(true)}
+                onShowProgress={() => setShowProgressModal(true)}
+              />
+            </motion.div>
+          )}
+
+          {/* Focus Mode Original - For comparison */}
+          {activeTab === 'focus-original' && (
+            <motion.div
+              key="focus-original"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <div className="bg-gray-50 border border-gray-200 rounded-xl p-3 text-sm text-gray-700 mb-4">
+                <strong>📋 Versión Original:</strong> Focus Mode sin swipe · Stats no interactivos · Objetivos expandidos
+              </div>
+              <FocusModeOriginal
+                temas={demoTemas}
+                onStartSession={() => console.log('Start focused session')}
+              />
             </motion.div>
           )}
         </AnimatePresence>
@@ -2325,6 +2977,18 @@ export default function DraftFeatures({ onClose }) {
       <LevelModal
         isOpen={showLevelModal}
         onClose={() => setShowLevelModal(false)}
+      />
+
+      {/* Settings Modal */}
+      <SettingsModal
+        isOpen={showSettingsModal}
+        onClose={() => setShowSettingsModal(false)}
+      />
+
+      {/* Daily Progress Modal */}
+      <DailyProgressModal
+        isOpen={showProgressModal}
+        onClose={() => setShowProgressModal(false)}
       />
     </div>
   );
