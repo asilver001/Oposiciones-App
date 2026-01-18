@@ -18,7 +18,7 @@ import {
   Users, Medal, Percent, Activity, PieChart, ArrowUpRight,
   Settings, HelpCircle, Info, Instagram, Mail, Bell, Shield, FileText,
   Search, Heart, Scale, MapPin, GraduationCap, Lightbulb, BookMarked, ExternalLink,
-  ClipboardCheck, Home, History, Code
+  ClipboardCheck, Home, History, Code, Shuffle, RotateCcw, ThumbsUp, ThumbsDown
 } from 'lucide-react';
 
 // ============================================
@@ -3017,17 +3017,46 @@ function HomeMomentumFortaleza({
 // ============================================
 
 function ActivitiesPage({ onClose }) {
-  const weekProgress = [65, 80, 45, 90, 60, 0, 0]; // Mon-Sun
-  const monthData = [
-    { week: 'Sem 1', questions: 45, accuracy: 82 },
-    { week: 'Sem 2', questions: 62, accuracy: 85 },
-    { week: 'Sem 3', questions: 38, accuracy: 79 },
-    { week: 'Sem 4', questions: 55, accuracy: 87 },
-  ];
+  // Helper to generate random stats
+  const generateRandomStats = () => ({
+    weekProgress: Array.from({ length: 7 }, () => Math.floor(Math.random() * 100)),
+    monthData: [
+      { week: 'Sem 1', questions: Math.floor(Math.random() * 70) + 10, accuracy: Math.floor(Math.random() * 25) + 70 },
+      { week: 'Sem 2', questions: Math.floor(Math.random() * 70) + 10, accuracy: Math.floor(Math.random() * 25) + 70 },
+      { week: 'Sem 3', questions: Math.floor(Math.random() * 70) + 10, accuracy: Math.floor(Math.random() * 25) + 70 },
+      { week: 'Sem 4', questions: Math.floor(Math.random() * 70) + 10, accuracy: Math.floor(Math.random() * 25) + 70 },
+    ],
+    weeklyQuestions: Math.floor(Math.random() * 80) + 20,
+    bestWeekQuestions: Math.floor(Math.random() * 50) + 40,
+    streak: Math.floor(Math.random() * 20) + 1,
+    accuracy: Math.floor(Math.random() * 20) + 75,
+    accuracyChange: Math.floor(Math.random() * 15) - 5,
+  });
+
+  const [stats, setStats] = useState({
+    weekProgress: [65, 80, 45, 90, 60, 0, 0],
+    monthData: [
+      { week: 'Sem 1', questions: 45, accuracy: 82 },
+      { week: 'Sem 2', questions: 62, accuracy: 85 },
+      { week: 'Sem 3', questions: 38, accuracy: 79 },
+      { week: 'Sem 4', questions: 55, accuracy: 87 },
+    ],
+    weeklyQuestions: 45,
+    bestWeekQuestions: 62,
+    streak: 7,
+    accuracy: 83,
+    accuracyChange: 5,
+  });
+  const [randomKey, setRandomKey] = useState(0);
+
+  const handleRandomize = () => {
+    setStats(generateRandomStats());
+    setRandomKey(prev => prev + 1);
+  };
 
   return (
     <motion.div
-      className="space-y-4"
+      className="space-y-4 relative"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
@@ -3047,6 +3076,7 @@ function ActivitiesPage({ onClose }) {
 
       {/* Weekly progress - Featured card */}
       <motion.div
+        key={`week-${randomKey}`}
         className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm"
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -3058,7 +3088,7 @@ function ActivitiesPage({ onClose }) {
             <p className="text-xs text-gray-500">Lun 13 - Dom 19 Enero</p>
           </div>
           <div className="text-right">
-            <p className="text-2xl font-bold text-purple-600">45</p>
+            <p className="text-2xl font-bold text-purple-600">{stats.weeklyQuestions}</p>
             <p className="text-xs text-gray-500">preguntas</p>
           </div>
         </div>
@@ -3073,9 +3103,9 @@ function ActivitiesPage({ onClose }) {
                 >
                   <div className="w-full h-full bg-gray-100 flex items-end">
                     <motion.div
-                      className={`w-full ${weekProgress[i] > 0 ? 'bg-gradient-to-t from-purple-600 to-purple-400' : 'bg-gray-200'} rounded-t-lg`}
+                      className={`w-full ${stats.weekProgress[i] > 0 ? 'bg-gradient-to-t from-purple-600 to-purple-400' : 'bg-gray-200'} rounded-t-lg`}
                       initial={{ height: 0 }}
-                      animate={{ height: `${weekProgress[i]}%` }}
+                      animate={{ height: `${stats.weekProgress[i]}%` }}
                       transition={{ delay: 0.2 + i * 0.05, ...spring.bouncy }}
                     />
                   </div>
@@ -3102,6 +3132,7 @@ function ActivitiesPage({ onClose }) {
 
       {/* Monthly summary */}
       <motion.div
+        key={`month-${randomKey}`}
         className="bg-white rounded-2xl p-5 border border-gray-100"
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -3112,7 +3143,7 @@ function ActivitiesPage({ onClose }) {
           <span className="text-xs text-gray-400">Enero 2026</span>
         </div>
         <div className="space-y-3">
-          {monthData.map((week, i) => (
+          {stats.monthData.map((week, i) => (
             <motion.div
               key={week.week}
               className="flex items-center gap-3"
@@ -3141,6 +3172,7 @@ function ActivitiesPage({ onClose }) {
       {/* Stats cards */}
       <div className="grid grid-cols-2 gap-3">
         <motion.div
+          key={`best-${randomKey}`}
           className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-4 border border-emerald-100"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -3150,11 +3182,12 @@ function ActivitiesPage({ onClose }) {
             <TrendingUp className="w-5 h-5 text-emerald-500" />
             <span className="text-xs text-emerald-600 font-medium">Mejor semana</span>
           </div>
-          <p className="text-2xl font-bold text-gray-900">62</p>
+          <p className="text-2xl font-bold text-gray-900">{stats.bestWeekQuestions}</p>
           <p className="text-xs text-gray-500">preguntas · Sem 2</p>
         </motion.div>
 
         <motion.div
+          key={`streak-${randomKey}`}
           className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-4 border border-amber-100"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -3164,13 +3197,14 @@ function ActivitiesPage({ onClose }) {
             <Flame className="w-5 h-5 text-amber-500" />
             <span className="text-xs text-amber-600 font-medium">Racha actual</span>
           </div>
-          <p className="text-2xl font-bold text-gray-900">7</p>
+          <p className="text-2xl font-bold text-gray-900">{stats.streak}</p>
           <p className="text-xs text-gray-500">días consecutivos</p>
         </motion.div>
       </div>
 
       {/* Accuracy trend */}
       <motion.div
+        key={`accuracy-${randomKey}`}
         className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-5 border border-purple-100"
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -3181,13 +3215,29 @@ function ActivitiesPage({ onClose }) {
             <Target className="w-5 h-5 text-purple-500" />
             <h3 className="font-semibold text-gray-900">Precisión media</h3>
           </div>
-          <span className="text-xs text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">↑ +5% vs mes anterior</span>
+          <span className={`text-xs ${stats.accuracyChange >= 0 ? 'text-emerald-600 bg-emerald-50' : 'text-red-600 bg-red-50'} px-2 py-0.5 rounded-full`}>
+            {stats.accuracyChange >= 0 ? '↑' : '↓'} {stats.accuracyChange >= 0 ? '+' : ''}{stats.accuracyChange}% vs mes anterior
+          </span>
         </div>
         <div className="flex items-end gap-2">
-          <span className="text-4xl font-bold text-purple-600">83%</span>
+          <span className="text-4xl font-bold text-purple-600">{stats.accuracy}%</span>
           <span className="text-sm text-gray-500 mb-1">este mes</span>
         </div>
       </motion.div>
+
+      {/* Dev Mode Randomizer Button - Floating */}
+      <motion.button
+        onClick={handleRandomize}
+        className="fixed bottom-24 right-4 w-14 h-14 bg-gradient-to-br from-purple-500 to-violet-600 text-white rounded-full shadow-lg shadow-purple-500/30 flex items-center justify-center z-50"
+        whileHover={{ scale: 1.1, rotate: 180 }}
+        whileTap={{ scale: 0.9 }}
+        initial={{ scale: 0, rotate: -180 }}
+        animate={{ scale: 1, rotate: 0 }}
+        transition={spring.bouncy}
+        title="Randomizar valores (modo dev)"
+      >
+        <Shuffle className="w-6 h-6" />
+      </motion.button>
 
       {/* Footer - same as Soft+Fort */}
       <motion.footer
@@ -5980,102 +6030,569 @@ function TemaFlipCard({ tema }) {
   );
 }
 
-// FlipCard Demos Page
-function FlipCardDemos() {
-  const demoTemas = [
-    { id: 1, nombre: 'Constitucion Espanola', estado: 'dominado', progreso: 95 },
-    { id: 4, nombre: 'La Corona', estado: 'riesgo', progreso: 45 },
-    { id: 8, nombre: 'Tribunal Constitucional', estado: 'nuevo', progreso: 0 },
-  ];
+// ============================================
+// FLASHCARD STUDY MODES - Interactive Proposals
+// ============================================
+
+// Mock flashcard data for Constitucion Espanola
+const mockFlashcards = [
+  { id: 1, front: '¿Cuántos artículos tiene la Constitución Española?', back: '169 artículos', topic: 'Constitución' },
+  { id: 2, front: '¿En qué año se aprobó la Constitución?', back: '1978 (6 de diciembre)', topic: 'Constitución' },
+  { id: 3, front: '¿Quién es el Jefe del Estado según la CE?', back: 'El Rey', topic: 'La Corona' },
+  { id: 4, front: '¿Cuál es la capital de España según la CE?', back: 'Madrid (Art. 5)', topic: 'Constitución' },
+  { id: 5, front: '¿Qué artículo regula el derecho a la educación?', back: 'Artículo 27', topic: 'Derechos' },
+];
+
+// PROPUESTA 1: Modo Estudio Rapido - Swipe Cards
+function FlipCardModoRapido({ onBack }) {
+  const [cards, setCards] = useState([...mockFlashcards]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isFlipped, setIsFlipped] = useState(false);
+  const [results, setResults] = useState({ known: [], review: [] });
+  const [isFinished, setIsFinished] = useState(false);
+  const x = useMotionValue(0);
+  const rotate = useTransform(x, [-200, 200], [-25, 25]);
+  const opacity = useTransform(x, [-200, -100, 0, 100, 200], [0.5, 1, 1, 1, 0.5]);
+
+  const currentCard = cards[currentIndex];
+
+  const handleSwipe = (direction) => {
+    const card = cards[currentIndex];
+    if (direction === 'right') {
+      setResults(prev => ({ ...prev, known: [...prev.known, card] }));
+    } else {
+      setResults(prev => ({ ...prev, review: [...prev.review, card] }));
+    }
+
+    if (currentIndex < cards.length - 1) {
+      setCurrentIndex(prev => prev + 1);
+      setIsFlipped(false);
+    } else {
+      setIsFinished(true);
+    }
+  };
+
+  const handleDragEnd = (event, info) => {
+    if (info.offset.x > 100) {
+      handleSwipe('right');
+    } else if (info.offset.x < -100) {
+      handleSwipe('left');
+    }
+  };
+
+  const resetStudy = () => {
+    setCards([...mockFlashcards]);
+    setCurrentIndex(0);
+    setIsFlipped(false);
+    setResults({ known: [], review: [] });
+    setIsFinished(false);
+  };
+
+  if (isFinished) {
+    return (
+      <motion.div
+        className="flex flex-col items-center justify-center py-8"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={spring.bouncy}
+      >
+        <div className="w-20 h-20 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-full flex items-center justify-center mb-4 shadow-lg shadow-emerald-500/30">
+          <Trophy className="w-10 h-10 text-white" />
+        </div>
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">¡Sesión completada!</h2>
+        <p className="text-gray-500 mb-6">Has revisado {cards.length} tarjetas</p>
+
+        <div className="w-full max-w-xs space-y-3 mb-6">
+          <div className="flex items-center justify-between p-4 bg-emerald-50 rounded-xl border border-emerald-200">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center">
+                <ThumbsUp className="w-5 h-5 text-emerald-600" />
+              </div>
+              <div>
+                <p className="font-semibold text-emerald-700">Lo sé</p>
+                <p className="text-xs text-emerald-600">Bien memorizadas</p>
+              </div>
+            </div>
+            <span className="text-2xl font-bold text-emerald-600">{results.known.length}</span>
+          </div>
+
+          <div className="flex items-center justify-between p-4 bg-amber-50 rounded-xl border border-amber-200">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center">
+                <RotateCcw className="w-5 h-5 text-amber-600" />
+              </div>
+              <div>
+                <p className="font-semibold text-amber-700">A repasar</p>
+                <p className="text-xs text-amber-600">Necesitan práctica</p>
+              </div>
+            </div>
+            <span className="text-2xl font-bold text-amber-600">{results.review.length}</span>
+          </div>
+        </div>
+
+        <div className="flex gap-3 w-full max-w-xs">
+          <motion.button
+            onClick={onBack}
+            className="flex-1 py-3 bg-gray-100 text-gray-700 font-semibold rounded-xl"
+            whileTap={{ scale: 0.98 }}
+          >
+            Volver
+          </motion.button>
+          <motion.button
+            onClick={resetStudy}
+            className="flex-1 py-3 bg-purple-600 text-white font-semibold rounded-xl"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            Repetir
+          </motion.button>
+        </div>
+      </motion.div>
+    );
+  }
 
   return (
-    <div className="space-y-6">
-      {/* Propuesta 1 - Flashcards de Repaso */}
-      <motion.div
-        className="space-y-3"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={spring.gentle}
-      >
-        <div className="bg-rose-50 border border-rose-200 rounded-xl p-3 text-sm text-rose-800">
-          <strong>Propuesta 1 - Flashcards de Repaso:</strong> Pregunta en el frente, respuesta con explicacion al reverso
+    <div className="relative">
+      {/* Progress bar */}
+      <div className="mb-6">
+        <div className="flex items-center justify-between text-sm text-gray-500 mb-2">
+          <span>Progreso</span>
+          <span>{currentIndex + 1} / {cards.length}</span>
         </div>
-        <FlashcardRepaso
-          pregunta="Segun el Art. 1.1 CE, Espana se constituye en un Estado social y democratico de Derecho. Cual NO es uno de los valores superiores?"
-          respuesta="La eficiencia administrativa"
-          explicacion="Los valores superiores del ordenamiento juridico son: libertad, justicia, igualdad y pluralismo politico (Art. 1.1 CE)."
-        />
-      </motion.div>
-
-      {/* Propuesta 2 - Stats Cards */}
-      <motion.div
-        className="space-y-3"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ ...spring.gentle, delay: 0.1 }}
-      >
-        <div className="bg-violet-50 border border-violet-200 rounded-xl p-3 text-sm text-violet-800">
-          <strong>Propuesta 2 - Stats Cards:</strong> Estadisticas con detalle al voltear
-        </div>
-        <div className="grid grid-cols-2 gap-3">
-          <StatsFlipCard
-            value="87%"
-            label="Precision"
-            detail="43 correctas de 50 preguntas respondidas esta semana"
-            color="emerald"
-          />
-          <StatsFlipCard
-            value="12"
-            label="Racha"
-            detail="12 dias consecutivos estudiando. Tu mejor racha: 15 dias"
-            color="amber"
+        <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+          <motion.div
+            className="h-full bg-gradient-to-r from-purple-500 to-violet-600 rounded-full"
+            initial={{ width: 0 }}
+            animate={{ width: `${((currentIndex) / cards.length) * 100}%` }}
+            transition={spring.smooth}
           />
         </div>
-      </motion.div>
+      </div>
 
-      {/* Propuesta 3 - Temas con Progreso */}
+      {/* Swipe indicators */}
+      <div className="flex justify-between mb-4 px-4">
+        <motion.div
+          className="flex items-center gap-2 text-amber-500"
+          animate={{ x: x.get() < -50 ? [-5, 0] : 0 }}
+        >
+          <ThumbsDown className="w-5 h-5" />
+          <span className="text-sm font-medium">No lo sé</span>
+        </motion.div>
+        <motion.div
+          className="flex items-center gap-2 text-emerald-500"
+          animate={{ x: x.get() > 50 ? [5, 0] : 0 }}
+        >
+          <span className="text-sm font-medium">Lo sé</span>
+          <ThumbsUp className="w-5 h-5" />
+        </motion.div>
+      </div>
+
+      {/* Card stack */}
+      <div className="relative h-[300px] flex items-center justify-center" style={{ perspective: '1000px' }}>
+        {/* Background cards */}
+        {cards.slice(currentIndex + 1, currentIndex + 3).map((card, i) => (
+          <motion.div
+            key={card.id}
+            className="absolute w-full max-w-[280px] h-[240px] bg-white rounded-2xl shadow-lg border border-gray-100"
+            style={{
+              scale: 1 - (i + 1) * 0.05,
+              y: (i + 1) * 8,
+              zIndex: -i - 1,
+            }}
+          />
+        ))}
+
+        {/* Active card */}
+        {currentCard && (
+          <motion.div
+            className="absolute w-full max-w-[280px] h-[240px] cursor-grab active:cursor-grabbing"
+            style={{ x, rotate, opacity, transformStyle: 'preserve-3d' }}
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.7}
+            onDragEnd={handleDragEnd}
+            onClick={() => setIsFlipped(!isFlipped)}
+            whileTap={{ scale: 0.98 }}
+          >
+            <motion.div
+              className="w-full h-full"
+              style={{ transformStyle: 'preserve-3d' }}
+              animate={{ rotateY: isFlipped ? 180 : 0 }}
+              transition={spring.snappy}
+            >
+              {/* Front */}
+              <div
+                className="absolute inset-0 bg-white rounded-2xl shadow-xl border border-gray-100 p-6 flex flex-col items-center justify-center"
+                style={{ backfaceVisibility: 'hidden' }}
+              >
+                <span className="text-xs text-purple-500 font-medium mb-3 px-2 py-1 bg-purple-50 rounded-full">
+                  {currentCard.topic}
+                </span>
+                <p className="text-center text-gray-800 font-medium leading-relaxed">
+                  {currentCard.front}
+                </p>
+                <p className="text-xs text-gray-400 mt-4">Toca para ver respuesta</p>
+              </div>
+
+              {/* Back */}
+              <div
+                className="absolute inset-0 bg-gradient-to-br from-purple-600 to-violet-700 rounded-2xl shadow-xl p-6 flex flex-col items-center justify-center text-white"
+                style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+              >
+                <Brain className="w-8 h-8 mb-3 opacity-50" />
+                <p className="text-center text-xl font-bold leading-relaxed">
+                  {currentCard.back}
+                </p>
+                <p className="text-xs text-purple-200 mt-4">Desliza para continuar</p>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </div>
+
+      {/* Action buttons (alternative to swipe) */}
+      <div className="flex justify-center gap-4 mt-6">
+        <motion.button
+          onClick={() => handleSwipe('left')}
+          className="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center text-amber-600"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <X className="w-6 h-6" />
+        </motion.button>
+        <motion.button
+          onClick={() => setIsFlipped(!isFlipped)}
+          className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center text-gray-600"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <RotateCcw className="w-6 h-6" />
+        </motion.button>
+        <motion.button
+          onClick={() => handleSwipe('right')}
+          className="w-14 h-14 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <Check className="w-6 h-6" />
+        </motion.button>
+      </div>
+    </div>
+  );
+}
+
+// PROPUESTA 2: Modo Zen - One card at a time, no pressure
+function FlipCardModoZen({ onBack }) {
+  const [cards] = useState([...mockFlashcards]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isFlipped, setIsFlipped] = useState(false);
+  const [isFinished, setIsFinished] = useState(false);
+
+  const currentCard = cards[currentIndex];
+
+  const handleNext = () => {
+    if (currentIndex < cards.length - 1) {
+      setCurrentIndex(prev => prev + 1);
+      setIsFlipped(false);
+    } else {
+      setIsFinished(true);
+    }
+  };
+
+  const handleReview = () => {
+    // In a real implementation, this would mark for spaced repetition
+    handleNext();
+  };
+
+  const resetStudy = () => {
+    setCurrentIndex(0);
+    setIsFlipped(false);
+    setIsFinished(false);
+  };
+
+  if (isFinished) {
+    return (
       <motion.div
-        className="space-y-3"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ ...spring.gentle, delay: 0.2 }}
+        className="flex flex-col items-center justify-center py-12"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
       >
-        <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-3 text-sm text-indigo-800">
-          <strong>Propuesta 3 - Temas con Progreso:</strong> Nombre del tema con estado al frente, mini-estadisticas al reverso
-        </div>
-        <div className="space-y-2">
-          {demoTemas.map((tema) => (
-            <TemaFlipCard key={tema.id} tema={tema} />
-          ))}
+        <motion.div
+          className="w-24 h-24 bg-gradient-to-br from-purple-100 to-violet-100 rounded-full flex items-center justify-center mb-6"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={spring.bouncy}
+        >
+          <Sparkles className="w-12 h-12 text-purple-500" />
+        </motion.div>
+
+        <h2 className="text-xl font-semibold text-gray-800 mb-2">Sesión completada</h2>
+        <p className="text-gray-500 text-center mb-8 max-w-[250px]">
+          Has repasado {cards.length} conceptos. Cada paso cuenta.
+        </p>
+
+        <div className="flex flex-col gap-3 w-full max-w-[200px]">
+          <motion.button
+            onClick={resetStudy}
+            className="py-3 bg-purple-600 text-white font-medium rounded-xl"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            Repasar de nuevo
+          </motion.button>
+          <motion.button
+            onClick={onBack}
+            className="py-3 text-gray-500 font-medium"
+            whileTap={{ scale: 0.98 }}
+          >
+            Volver al menu
+          </motion.button>
         </div>
       </motion.div>
+    );
+  }
 
-      {/* Resumen */}
-      <motion.div
-        className="bg-gradient-to-br from-purple-600 to-violet-700 rounded-2xl p-5 text-white"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ ...spring.gentle, delay: 0.3 }}
+  return (
+    <div className="flex flex-col items-center">
+      {/* Minimal header */}
+      <p className="text-sm text-gray-400 mb-8">Toca la tarjeta para voltear</p>
+
+      {/* Single centered card */}
+      <div className="w-full max-w-[300px] mb-8" style={{ perspective: '1000px' }}>
+        <motion.div
+          className="relative w-full h-[280px] cursor-pointer"
+          onClick={() => setIsFlipped(!isFlipped)}
+          style={{ transformStyle: 'preserve-3d' }}
+          whileTap={{ scale: 0.98 }}
+        >
+          <motion.div
+            className="w-full h-full"
+            style={{ transformStyle: 'preserve-3d' }}
+            animate={{ rotateY: isFlipped ? 180 : 0 }}
+            transition={{ type: 'spring', stiffness: 200, damping: 25 }}
+          >
+            {/* Front - Question */}
+            <div
+              className="absolute inset-0 bg-white rounded-3xl shadow-lg border border-gray-100 p-8 flex flex-col items-center justify-center"
+              style={{ backfaceVisibility: 'hidden' }}
+            >
+              <div className="w-12 h-12 bg-purple-50 rounded-full flex items-center justify-center mb-4">
+                <BookOpen className="w-6 h-6 text-purple-500" />
+              </div>
+              <p className="text-center text-gray-700 text-lg leading-relaxed">
+                {currentCard.front}
+              </p>
+            </div>
+
+            {/* Back - Answer */}
+            <div
+              className="absolute inset-0 bg-gradient-to-br from-purple-50 to-violet-50 rounded-3xl shadow-lg border border-purple-100 p-8 flex flex-col items-center justify-center"
+              style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+            >
+              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                <Lightbulb className="w-6 h-6 text-purple-600" />
+              </div>
+              <p className="text-center text-purple-800 text-xl font-semibold leading-relaxed">
+                {currentCard.back}
+              </p>
+            </div>
+          </motion.div>
+        </motion.div>
+      </div>
+
+      {/* Action buttons - Only shown when flipped */}
+      <AnimatePresence>
+        {isFlipped && (
+          <motion.div
+            className="flex gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={spring.gentle}
+          >
+            <motion.button
+              onClick={handleReview}
+              className="px-6 py-3 bg-amber-50 text-amber-700 font-medium rounded-xl border border-amber-200 flex items-center gap-2"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <RotateCcw className="w-4 h-4" />
+              Repasar
+            </motion.button>
+            <motion.button
+              onClick={handleNext}
+              className="px-6 py-3 bg-purple-600 text-white font-medium rounded-xl flex items-center gap-2"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              Siguiente
+              <ChevronRight className="w-4 h-4" />
+            </motion.button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Subtle progress indicator at bottom */}
+      <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-1.5">
+        {cards.map((_, i) => (
+          <motion.div
+            key={i}
+            className={`w-2 h-2 rounded-full ${i === currentIndex ? 'bg-purple-500' : i < currentIndex ? 'bg-purple-200' : 'bg-gray-200'}`}
+            animate={{ scale: i === currentIndex ? 1.2 : 1 }}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// FlipCard Demos Page - Main Container
+function FlipCardDemos() {
+  const [activeMode, setActiveMode] = useState(null); // null, 'rapido', 'zen'
+
+  // Show mode selector if no mode is active
+  if (!activeMode) {
+    return (
+      <div className="space-y-6">
+        {/* Header */}
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">FlipCards de Estudio</h2>
+          <p className="text-gray-500">Elige tu modo de repaso preferido</p>
+        </div>
+
+        {/* Mode Selection Cards */}
+        <motion.button
+          onClick={() => setActiveMode('rapido')}
+          className="w-full bg-gradient-to-br from-purple-500 to-violet-600 rounded-2xl p-6 text-left text-white shadow-lg shadow-purple-500/20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          whileHover={{ scale: 1.02, y: -4 }}
+          whileTap={{ scale: 0.98 }}
+          transition={spring.snappy}
+        >
+          <div className="flex items-start gap-4">
+            <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+              <Zap className="w-7 h-7" />
+            </div>
+            <div className="flex-1">
+              <h3 className="text-xl font-bold mb-1">Modo Estudio Rápido</h3>
+              <p className="text-purple-100 text-sm mb-3">
+                Cards apiladas con swipe. Desliza a la derecha si lo sabes, a la izquierda si necesitas repasar.
+              </p>
+              <div className="flex items-center gap-2 text-xs text-purple-200">
+                <span className="px-2 py-0.5 bg-white/20 rounded-full">Swipe</span>
+                <span className="px-2 py-0.5 bg-white/20 rounded-full">Progreso visible</span>
+                <span className="px-2 py-0.5 bg-white/20 rounded-full">Resumen final</span>
+              </div>
+            </div>
+            <ChevronRight className="w-6 h-6 opacity-50" />
+          </div>
+        </motion.button>
+
+        <motion.button
+          onClick={() => setActiveMode('zen')}
+          className="w-full bg-white rounded-2xl p-6 text-left border border-gray-100 shadow-sm"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ ...spring.snappy, delay: 0.1 }}
+          whileHover={{ scale: 1.02, y: -4 }}
+          whileTap={{ scale: 0.98 }}
+        >
+          <div className="flex items-start gap-4">
+            <div className="w-14 h-14 bg-purple-50 rounded-xl flex items-center justify-center flex-shrink-0">
+              <Sparkles className="w-7 h-7 text-purple-500" />
+            </div>
+            <div className="flex-1">
+              <h3 className="text-xl font-bold text-gray-900 mb-1">Modo Zen</h3>
+              <p className="text-gray-500 text-sm mb-3">
+                Una tarjeta a la vez, sin presión. Toca para voltear, avanza a tu ritmo.
+              </p>
+              <div className="flex items-center gap-2 text-xs text-gray-400">
+                <span className="px-2 py-0.5 bg-gray-100 rounded-full">Sin contadores</span>
+                <span className="px-2 py-0.5 bg-gray-100 rounded-full">Tap to flip</span>
+                <span className="px-2 py-0.5 bg-gray-100 rounded-full">Relajado</span>
+              </div>
+            </div>
+            <ChevronRight className="w-6 h-6 text-gray-300" />
+          </div>
+        </motion.button>
+
+        {/* Info card */}
+        <motion.div
+          className="bg-purple-50 border border-purple-100 rounded-xl p-4 text-sm text-purple-700"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+        >
+          <div className="flex items-start gap-2">
+            <Info className="w-4 h-4 mt-0.5 flex-shrink-0" />
+            <div>
+              <p className="font-medium mb-1">Draft de FlipCards interactivas</p>
+              <p className="text-purple-600">
+                Estas son propuestas de interfaz para el sistema de flashcards.
+                Prueba ambos modos para comparar la experiencia.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    );
+  }
+
+  // Active mode view
+  return (
+    <div className="relative min-h-[500px]">
+      {/* Back button */}
+      <motion.button
+        onClick={() => setActiveMode(null)}
+        className="absolute top-0 left-0 flex items-center gap-2 text-gray-500 hover:text-gray-700"
+        initial={{ opacity: 0, x: -10 }}
+        animate={{ opacity: 1, x: 0 }}
+        whileTap={{ scale: 0.95 }}
       >
-        <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
-          <Sparkles className="w-5 h-5" />
-          Notas de Implementacion
+        <ArrowLeft className="w-5 h-5" />
+        <span className="text-sm font-medium">Volver</span>
+      </motion.button>
+
+      {/* Mode title */}
+      <div className="text-center mb-6 pt-8">
+        <h3 className="text-lg font-bold text-gray-900">
+          {activeMode === 'rapido' ? 'Modo Estudio Rápido' : 'Modo Zen'}
         </h3>
-        <div className="space-y-2 text-sm text-purple-100">
-          <div className="flex items-start gap-2">
-            <Check className="w-4 h-4 text-emerald-300 mt-0.5 flex-shrink-0" />
-            <span>Animacion 3D con perspective y rotateY</span>
-          </div>
-          <div className="flex items-start gap-2">
-            <Check className="w-4 h-4 text-emerald-300 mt-0.5 flex-shrink-0" />
-            <span>backface-visibility: hidden para ocultar reverso</span>
-          </div>
-          <div className="flex items-start gap-2">
-            <Check className="w-4 h-4 text-emerald-300 mt-0.5 flex-shrink-0" />
-            <span>Spring animation para transicion suave</span>
-          </div>
-        </div>
-      </motion.div>
+        <p className="text-sm text-gray-500">
+          {activeMode === 'rapido'
+            ? 'Desliza o usa los botones para clasificar'
+            : 'Toma tu tiempo, sin presión'
+          }
+        </p>
+      </div>
+
+      {/* Active mode component */}
+      <AnimatePresence mode="wait">
+        {activeMode === 'rapido' && (
+          <motion.div
+            key="rapido"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
+            transition={spring.gentle}
+          >
+            <FlipCardModoRapido onBack={() => setActiveMode(null)} />
+          </motion.div>
+        )}
+        {activeMode === 'zen' && (
+          <motion.div
+            key="zen"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
+            transition={spring.gentle}
+          >
+            <FlipCardModoZen onBack={() => setActiveMode(null)} />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
@@ -6404,19 +6921,21 @@ export default function DraftFeatures({ onClose }) {
   ];
 
   const tabs = [
-    { id: 'momentum-fortaleza', label: '🏰 Soft+Fort' },
-    { id: 'temas-lista', label: '📚 Temas A' },
-    { id: 'temas-grid', label: '📚 Temas B' },
-    { id: 'temas-fortaleza', label: '📚 Temas C' },
-    { id: 'proposals', label: '💡 Propuestas' },
-    { id: 'recursos', label: '📖 Recursos' },
-    { id: 'activities', label: '📈 Actividad' },
+    // Active drafts
     { id: 'flipcards', label: '🃏 FlipCards' },
+    { id: 'proposals', label: '💡 Propuestas' },
     { id: 'contadores', label: '🔢 Contadores' },
     { id: 'admin-flow', label: '🔐 Admin Flow' },
     { id: 'focus', label: '🎯 Focus' },
     { id: 'focus-original', label: '📋 Original' },
     { id: 'quick-wins', label: '⚡ Quick Wins' },
+    // Archived (implemented in production)
+    { id: 'momentum-fortaleza', label: '✅ Soft+Fort' },
+    { id: 'temas-lista', label: '✅ Temas A' },
+    { id: 'temas-grid', label: '✅ Temas B' },
+    { id: 'temas-fortaleza', label: '✅ Temas C' },
+    { id: 'recursos', label: '✅ Recursos' },
+    { id: 'activities', label: '✅ Actividad' },
   ];
 
   return (
