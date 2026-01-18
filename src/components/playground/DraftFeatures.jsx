@@ -7695,6 +7695,467 @@ function FSRSDebugPanel() {
 }
 
 // ============================================
+// ACTIVIDAD V2 - TABS DESLIZANTES
+// ============================================
+
+function ActividadV2Demo() {
+  const [activeSubTab, setActiveSubTab] = useState(0); // 0 = Mi Progreso, 1 = Modos
+  const [simulationMode, setSimulationMode] = useState(null);
+  const [showRandomizerMenu, setShowRandomizerMenu] = useState(false);
+  const [selectedMode, setSelectedMode] = useState(null);
+
+  // User states for simulation
+  const userStates = {
+    nuevo: {
+      label: '👤 Usuario Nuevo',
+      emoji: '👤',
+      testsCompleted: 0,
+      questionsCorrect: 0,
+      accuracyRate: 0,
+      currentStreak: 0,
+      daysStudied: 0,
+      weeklyData: [0, 0, 0, 0, 0, 0, 0],
+      sessionHistory: [],
+      calendarData: []
+    },
+    activo: {
+      label: '📊 Usuario Activo',
+      emoji: '📊',
+      testsCompleted: 15,
+      questionsCorrect: 87,
+      accuracyRate: 68,
+      currentStreak: 5,
+      daysStudied: 12,
+      weeklyData: [3, 5, 2, 4, 6, 0, 2],
+      sessionHistory: [
+        { id: 1, tema: 'Constitución', correctas: 7, total: 10, accuracy: 70, date: 'Hace 2h' },
+        { id: 2, tema: 'La Corona', correctas: 5, total: 10, accuracy: 50, date: 'Ayer' },
+        { id: 3, tema: 'Mixto', correctas: 8, total: 10, accuracy: 80, date: 'Hace 2 días' },
+      ],
+      calendarData: [2, 5, 8, 12, 15]
+    },
+    veterano: {
+      label: '🏆 Usuario Veterano',
+      emoji: '🏆',
+      testsCompleted: 89,
+      questionsCorrect: 534,
+      accuracyRate: 82,
+      currentStreak: 23,
+      daysStudied: 45,
+      weeklyData: [8, 12, 10, 15, 9, 6, 11],
+      sessionHistory: [
+        { id: 1, tema: 'Constitución', correctas: 9, total: 10, accuracy: 90, date: 'Hace 1h' },
+        { id: 2, tema: 'Derechos', correctas: 8, total: 10, accuracy: 80, date: 'Hace 3h' },
+        { id: 3, tema: 'La Corona', correctas: 10, total: 10, accuracy: 100, date: 'Ayer' },
+        { id: 4, tema: 'Gobierno', correctas: 7, total: 10, accuracy: 70, date: 'Ayer' },
+        { id: 5, tema: 'Mixto', correctas: 9, total: 10, accuracy: 90, date: 'Hace 2 días' },
+      ],
+      calendarData: [1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 15, 16, 17, 18]
+    },
+    aleatorio: {
+      label: '🎲 Aleatorio',
+      emoji: '🎲',
+    }
+  };
+
+  // Generate random stats
+  const generateRandom = () => ({
+    testsCompleted: Math.floor(Math.random() * 100),
+    questionsCorrect: Math.floor(Math.random() * 600),
+    accuracyRate: Math.floor(Math.random() * 40) + 50,
+    currentStreak: Math.floor(Math.random() * 30),
+    daysStudied: Math.floor(Math.random() * 60),
+    weeklyData: Array(7).fill(0).map(() => Math.floor(Math.random() * 15)),
+    sessionHistory: Array(Math.floor(Math.random() * 5) + 1).fill(0).map((_, i) => ({
+      id: i,
+      tema: ['Constitución', 'La Corona', 'Derechos', 'Mixto'][Math.floor(Math.random() * 4)],
+      correctas: Math.floor(Math.random() * 5) + 5,
+      total: 10,
+      accuracy: Math.floor(Math.random() * 40) + 50,
+      date: ['Hace 1h', 'Hace 2h', 'Ayer', 'Hace 2 días'][Math.floor(Math.random() * 4)]
+    })),
+    calendarData: Array(Math.floor(Math.random() * 15)).fill(0).map(() => Math.floor(Math.random() * 18) + 1)
+  });
+
+  // Get current display data
+  const getDisplayData = () => {
+    if (!simulationMode) return userStates.activo;
+    if (simulationMode === 'aleatorio') return generateRandom();
+    return userStates[simulationMode];
+  };
+
+  const data = getDisplayData();
+
+  // Study modes
+  const studyModes = [
+    { id: 'test-rapido', icon: Zap, title: 'Test Rápido', desc: '5-10 preguntas', time: '~5 min', gradient: 'from-purple-500 to-violet-600', status: 'disponible' },
+    { id: 'practica-tema', icon: Target, title: 'Por Tema', desc: 'Elige tema', time: '~15 min', gradient: 'from-blue-500 to-cyan-600', status: 'disponible' },
+    { id: 'repaso-errores', icon: AlertTriangle, title: 'Errores', desc: '12 pendientes', time: 'Variable', gradient: 'from-amber-500 to-orange-600', status: 'disponible', badge: '12' },
+    { id: 'flashcards', icon: BookMarked, title: 'Flashcards', desc: 'Memorización', time: '~10 min', gradient: 'from-emerald-500 to-teal-600', status: 'disponible' },
+    { id: 'simulacro', icon: Clock, title: 'Simulacro', desc: '100 preguntas', time: '60 min', gradient: 'from-rose-500 to-pink-600', status: 'proximamente' },
+    { id: 'lectura', icon: Eye, title: 'Solo Lectura', desc: 'Sin contestar', time: 'Libre', gradient: 'from-gray-500 to-slate-600', status: 'premium' },
+  ];
+
+  const subTabs = [
+    { id: 0, icon: BarChart3, label: 'Mi Progreso' },
+    { id: 1, icon: Target, label: 'Modos de Estudio' }
+  ];
+
+  return (
+    <div className="space-y-4">
+      {/* Header info */}
+      <div className="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-xl p-4">
+        <h3 className="font-bold text-indigo-800 mb-1">Actividad v2 - Tabs Deslizantes</h3>
+        <p className="text-sm text-indigo-600">
+          Página de Actividad con dos subpáginas: Mi Progreso + Modos de Estudio. Swipe o click para cambiar.
+        </p>
+      </div>
+
+      {/* Simulation badge */}
+      {simulationMode && (
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-amber-100 border border-amber-300 rounded-lg px-3 py-2 flex items-center justify-between"
+        >
+          <span className="text-sm text-amber-800">
+            Simulando: <strong>{userStates[simulationMode]?.emoji || '🎲'} {simulationMode}</strong>
+          </span>
+          <button
+            onClick={() => setSimulationMode(null)}
+            className="text-amber-600 hover:text-amber-800 text-sm font-medium"
+          >
+            Mostrar datos reales
+          </button>
+        </motion.div>
+      )}
+
+      {/* Phone mockup frame */}
+      <div className="bg-gray-900 rounded-[2.5rem] p-3 shadow-2xl max-w-sm mx-auto">
+        <div className="bg-white rounded-[2rem] overflow-hidden">
+          {/* Status bar mockup */}
+          <div className="bg-gray-100 px-6 py-2 flex items-center justify-between text-xs text-gray-600">
+            <span>9:41</span>
+            <div className="flex items-center gap-1">
+              <span>📶</span>
+              <span>🔋</span>
+            </div>
+          </div>
+
+          {/* App content */}
+          <div className="h-[580px] overflow-y-auto">
+            {/* Header */}
+            <div className="sticky top-0 bg-white/95 backdrop-blur-lg border-b border-gray-100 z-10 px-4 py-3">
+              <h2 className="text-lg font-bold text-gray-900">Actividad</h2>
+            </div>
+
+            {/* Tab Headers */}
+            <div className="sticky top-[52px] bg-white/95 backdrop-blur-lg z-10 px-4 py-2 border-b border-gray-100">
+              <div className="flex gap-2 relative">
+                {subTabs.map((tab) => {
+                  const Icon = tab.icon;
+                  const isActive = activeSubTab === tab.id;
+                  return (
+                    <button
+                      key={tab.id}
+                      onClick={() => setActiveSubTab(tab.id)}
+                      className={`flex-1 py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 transition-all ${
+                        isActive
+                          ? 'bg-purple-100 text-purple-700'
+                          : 'text-gray-500 hover:bg-gray-50'
+                      }`}
+                    >
+                      <Icon className="w-4 h-4" />
+                      <span className="text-sm font-medium">{tab.label}</span>
+                    </button>
+                  );
+                })}
+              </div>
+              {/* Animated indicator */}
+              <motion.div
+                className="h-0.5 bg-purple-500 rounded-full mt-2"
+                animate={{ x: activeSubTab === 0 ? '0%' : '100%', width: '50%' }}
+                transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+              />
+            </div>
+
+            {/* Swipeable content */}
+            <AnimatePresence mode="wait">
+              {activeSubTab === 0 ? (
+                <motion.div
+                  key="progreso"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 20 }}
+                  className="p-4 space-y-4"
+                  drag="x"
+                  dragConstraints={{ left: 0, right: 0 }}
+                  dragElastic={0.2}
+                  onDragEnd={(e, { offset, velocity }) => {
+                    if (offset.x < -100 || velocity.x < -500) setActiveSubTab(1);
+                  }}
+                >
+                  {/* Empty state for new user */}
+                  {data.testsCompleted === 0 ? (
+                    <div className="text-center py-12">
+                      <div className="text-6xl mb-4">📊</div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">Aún no hay actividad</h3>
+                      <p className="text-gray-500 mb-6">Completa tu primer test para ver tu progreso</p>
+                      <button
+                        onClick={() => setActiveSubTab(1)}
+                        className="bg-purple-600 text-white px-6 py-3 rounded-xl font-semibold"
+                      >
+                        Empezar a estudiar →
+                      </button>
+                    </div>
+                  ) : (
+                    <>
+                      {/* Stats Grid */}
+                      <div className="grid grid-cols-2 gap-3">
+                        <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+                          <div className="flex items-center gap-2 mb-1">
+                            <Trophy className="w-5 h-5 text-purple-500" />
+                            <span className="text-xs text-gray-500">Tests</span>
+                          </div>
+                          <p className="text-2xl font-bold text-gray-900">{data.testsCompleted}</p>
+                        </div>
+                        <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+                          <div className="flex items-center gap-2 mb-1">
+                            <Target className="w-5 h-5 text-green-500" />
+                            <span className="text-xs text-gray-500">Acierto</span>
+                          </div>
+                          <p className="text-2xl font-bold text-gray-900">{data.accuracyRate}%</p>
+                        </div>
+                        <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+                          <div className="flex items-center gap-2 mb-1">
+                            <Flame className="w-5 h-5 text-orange-500" />
+                            <span className="text-xs text-gray-500">Racha</span>
+                          </div>
+                          <p className="text-2xl font-bold text-gray-900">{data.currentStreak} días</p>
+                        </div>
+                        <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+                          <div className="flex items-center gap-2 mb-1">
+                            <Calendar className="w-5 h-5 text-blue-500" />
+                            <span className="text-xs text-gray-500">Días</span>
+                          </div>
+                          <p className="text-2xl font-bold text-gray-900">{data.daysStudied}</p>
+                        </div>
+                      </div>
+
+                      {/* Weekly Chart */}
+                      <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+                        <h4 className="font-semibold text-gray-900 mb-3">Esta semana</h4>
+                        <div className="flex items-end justify-between h-24 gap-1">
+                          {['L', 'M', 'X', 'J', 'V', 'S', 'D'].map((day, i) => {
+                            const value = data.weeklyData[i] || 0;
+                            const maxVal = Math.max(...data.weeklyData, 1);
+                            const height = (value / maxVal) * 100;
+                            const isToday = new Date().getDay() === (i === 6 ? 0 : i + 1);
+                            return (
+                              <div key={day} className="flex-1 flex flex-col items-center gap-1">
+                                <div className="w-full bg-gray-100 rounded-t-lg flex-1 relative" style={{ minHeight: 60 }}>
+                                  <motion.div
+                                    className={`absolute bottom-0 w-full rounded-t-lg ${isToday ? 'bg-orange-400' : 'bg-purple-400'}`}
+                                    initial={{ height: 0 }}
+                                    animate={{ height: `${Math.max(height, value > 0 ? 10 : 0)}%` }}
+                                  />
+                                </div>
+                                <span className={`text-xs ${isToday ? 'text-orange-600 font-bold' : 'text-gray-400'}`}>{day}</span>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+
+                      {/* Session History */}
+                      <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+                        <h4 className="font-semibold text-gray-900 mb-3">Últimas sesiones</h4>
+                        <div className="space-y-2">
+                          {data.sessionHistory.slice(0, 3).map((session) => (
+                            <div key={session.id} className="flex items-center gap-3 p-2 bg-gray-50 rounded-lg">
+                              <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                                📚
+                              </div>
+                              <div className="flex-1">
+                                <p className="text-sm font-medium text-gray-900">{session.tema}</p>
+                                <p className="text-xs text-gray-500">{session.correctas}/{session.total} · {session.date}</p>
+                              </div>
+                              <span className={`text-sm font-bold ${session.accuracy >= 70 ? 'text-green-600' : 'text-orange-600'}`}>
+                                {session.accuracy}%
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Swipe hint */}
+                      <p className="text-center text-xs text-gray-400 py-2">
+                        ← Desliza para ver modos de estudio
+                      </p>
+                    </>
+                  )}
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="modos"
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  className="p-4 space-y-3"
+                  drag="x"
+                  dragConstraints={{ left: 0, right: 0 }}
+                  dragElastic={0.2}
+                  onDragEnd={(e, { offset, velocity }) => {
+                    if (offset.x > 100 || velocity.x > 500) setActiveSubTab(0);
+                  }}
+                >
+                  <h4 className="text-sm font-semibold text-gray-700 mb-2">¿Cómo quieres estudiar hoy?</h4>
+
+                  {studyModes.map((mode) => {
+                    const Icon = mode.icon;
+                    const isSelected = selectedMode === mode.id;
+                    const isDisabled = mode.status !== 'disponible';
+
+                    return (
+                      <motion.button
+                        key={mode.id}
+                        onClick={() => !isDisabled && setSelectedMode(isSelected ? null : mode.id)}
+                        className={`w-full text-left ${isDisabled ? 'opacity-50' : ''}`}
+                        whileTap={!isDisabled ? { scale: 0.98 } : {}}
+                        disabled={isDisabled}
+                      >
+                        <div className={`bg-white rounded-xl p-3 border-2 transition-all ${
+                          isSelected ? 'border-purple-400 shadow-md' : 'border-gray-100'
+                        }`}>
+                          <div className="flex items-center gap-3">
+                            <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${mode.gradient} flex items-center justify-center`}>
+                              <Icon className="w-5 h-5 text-white" />
+                            </div>
+                            <div className="flex-1">
+                              <div className="flex items-center gap-2">
+                                <h5 className="font-semibold text-gray-900 text-sm">{mode.title}</h5>
+                                {mode.badge && (
+                                  <span className="text-xs bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded-full">{mode.badge}</span>
+                                )}
+                                {mode.status === 'proximamente' && (
+                                  <span className="text-xs bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded-full">Próximo</span>
+                                )}
+                                {mode.status === 'premium' && (
+                                  <span className="text-xs bg-purple-100 text-purple-600 px-1.5 py-0.5 rounded-full">★</span>
+                                )}
+                              </div>
+                              <p className="text-xs text-gray-500">{mode.desc} · {mode.time}</p>
+                            </div>
+                            <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${
+                              isSelected ? 'border-purple-500 bg-purple-500' : 'border-gray-300'
+                            }`}>
+                              {isSelected && <Check className="w-3 h-3 text-white" />}
+                            </div>
+                          </div>
+                        </div>
+                      </motion.button>
+                    );
+                  })}
+
+                  {/* Start button */}
+                  <AnimatePresence>
+                    {selectedMode && (
+                      <motion.button
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        className="w-full mt-4 bg-purple-600 text-white py-3 rounded-xl font-semibold"
+                      >
+                        Comenzar →
+                      </motion.button>
+                    )}
+                  </AnimatePresence>
+
+                  {/* Swipe hint */}
+                  <p className="text-center text-xs text-gray-400 py-2">
+                    Desliza para ver tu progreso →
+                  </p>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          {/* Bottom nav mockup */}
+          <div className="bg-white border-t border-gray-100 px-4 py-2">
+            <div className="flex justify-around">
+              {['Inicio', 'Actividad', 'Temas', 'Recursos'].map((tab, i) => (
+                <div key={tab} className={`text-xs ${i === 1 ? 'text-purple-600 font-semibold' : 'text-gray-400'}`}>
+                  {tab}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Dev Randomizer (outside phone) */}
+      <div className="relative">
+        <motion.button
+          onClick={() => setShowRandomizerMenu(!showRandomizerMenu)}
+          className="fixed bottom-24 right-4 z-50 w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full shadow-lg flex items-center justify-center"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          animate={simulationMode ? { rotate: [0, 10, -10, 0] } : {}}
+          transition={simulationMode ? { duration: 0.5, repeat: Infinity, repeatDelay: 2 } : {}}
+        >
+          <Shuffle className="w-5 h-5 text-white" />
+        </motion.button>
+
+        {/* Menu */}
+        <AnimatePresence>
+          {showRandomizerMenu && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 10 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 10 }}
+              className="fixed bottom-40 right-4 z-50 bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden w-48"
+            >
+              <div className="px-3 py-2 border-b border-gray-100 bg-gray-50">
+                <p className="text-xs font-semibold text-gray-600">Simular Usuario</p>
+              </div>
+              {Object.entries(userStates).filter(([k]) => k !== 'aleatorio').map(([key, state]) => (
+                <button
+                  key={key}
+                  onClick={() => { setSimulationMode(key); setShowRandomizerMenu(false); }}
+                  className={`w-full px-3 py-2.5 text-left text-sm hover:bg-gray-50 flex items-center gap-2 ${
+                    simulationMode === key ? 'bg-purple-50 text-purple-700' : 'text-gray-700'
+                  }`}
+                >
+                  <span>{state.emoji}</span>
+                  <span>{state.label.replace(state.emoji + ' ', '')}</span>
+                </button>
+              ))}
+              <button
+                onClick={() => { setSimulationMode('aleatorio'); setShowRandomizerMenu(false); }}
+                className={`w-full px-3 py-2.5 text-left text-sm hover:bg-gray-50 flex items-center gap-2 border-t border-gray-100 ${
+                  simulationMode === 'aleatorio' ? 'bg-purple-50 text-purple-700' : 'text-gray-700'
+                }`}
+              >
+                <span>🎲</span>
+                <span>Aleatorio</span>
+              </button>
+              {simulationMode && (
+                <button
+                  onClick={() => { setSimulationMode(null); setShowRandomizerMenu(false); }}
+                  className="w-full px-3 py-2.5 text-left text-sm text-red-600 hover:bg-red-50 border-t border-gray-100"
+                >
+                  ✕ Mostrar datos reales
+                </button>
+              )}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </div>
+  );
+}
+
+// ============================================
 // MAIN DRAFT FEATURES COMPONENT
 // ============================================
 
@@ -7725,6 +8186,7 @@ export default function DraftFeatures({ onClose }) {
 
   const tabs = [
     // Active drafts - New proposals based on assessment
+    { id: 'actividad-v2', label: '📱 Actividad v2' },
     { id: 'flipcards', label: '🃏 FlipCards' },
     { id: 'flipcards-actividad', label: '📱 FC+Actividad' },
     { id: 'flipcards-temas', label: '📚 FC+Temas' },
@@ -8158,6 +8620,18 @@ export default function DraftFeatures({ onClose }) {
               exit={{ opacity: 0, y: -20 }}
             >
               <QuickWinsPreview />
+            </motion.div>
+          )}
+
+          {/* ACTIVIDAD V2 - Tabs deslizantes */}
+          {activeTab === 'actividad-v2' && (
+            <motion.div
+              key="actividad-v2"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <ActividadV2Demo />
             </motion.div>
           )}
         </AnimatePresence>
