@@ -845,11 +845,12 @@ export default function OpositaApp() {
   };
 
   // ADMIN PANELS (render before other pages)
-  if (currentPage === 'admin-panel' && isAdminLoggedIn) {
+  // Acceso via AdminContext (PIN) O via AuthContext (login normal con rol)
+  if (currentPage === 'admin-panel' && (isAdminLoggedIn || isUserAdmin)) {
     return <AdminPanel onBack={() => setCurrentPage('home')} />;
   }
 
-  if (currentPage === 'reviewer-panel' && isAdminLoggedIn) {
+  if (currentPage === 'reviewer-panel' && (isAdminLoggedIn || isUserReviewer)) {
     return <ReviewerPanel onBack={() => setCurrentPage('home')} />;
   }
 
