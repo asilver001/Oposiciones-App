@@ -18,20 +18,20 @@ import {
   Activity,
   Crown,
   Shuffle,
-  X
+  X,
+  Zap,
+  AlertTriangle,
+  BookMarked,
+  Eye,
+  Check
 } from 'lucide-react';
 
 /**
- * ActividadPage - Activity and statistics page
+ * ActividadPage - Activity page with swipeable tabs
  *
- * Props:
- * - weeklyData: array of daily activity data
- * - sessionHistory: array of past sessions
- * - totalStats: object with overall statistics
- * - motivationalMessage: object with motivational content
- * - calendarData: array of days practiced this month
- * - onStartTest: function to start a new test
- * - devMode: boolean to show the randomizer button
+ * Two tabs:
+ * 1. Modos (left) - Study mode selection
+ * 2. Progreso (right) - Statistics and history
  */
 
 // Simulated user states for dev mode
@@ -49,6 +49,7 @@ const generateSessionHistory = (count, baseAccuracy) => {
       id: `sim-${i}`,
       created_at: date.toISOString(),
       tema_id: Math.random() > 0.3 ? Math.floor(Math.random() * 10) + 1 : null,
+      tema: ['Constitución', 'La Corona', 'Derechos', 'Gobierno'][Math.floor(Math.random() * 4)],
       correctas: correct,
       total_preguntas: total,
       porcentaje_acierto: Math.round(accuracy)
@@ -146,6 +147,16 @@ const userStates = {
   }
 };
 
+// Study modes configuration
+const studyModes = [
+  { id: 'test-rapido', icon: Zap, title: 'Test Rápido', desc: '5-10 preguntas', time: '~5 min', gradient: 'from-purple-500 to-violet-600', status: 'disponible' },
+  { id: 'practica-tema', icon: Target, title: 'Por Tema', desc: 'Elige tema', time: '~15 min', gradient: 'from-blue-500 to-cyan-600', status: 'disponible' },
+  { id: 'repaso-errores', icon: AlertTriangle, title: 'Errores', desc: 'Pendientes', time: 'Variable', gradient: 'from-amber-500 to-orange-600', status: 'disponible', badge: '12' },
+  { id: 'flashcards', icon: BookMarked, title: 'Flashcards', desc: 'Memorización', time: '~10 min', gradient: 'from-emerald-500 to-teal-600', status: 'disponible' },
+  { id: 'simulacro', icon: Clock, title: 'Simulacro', desc: '100 preguntas', time: '60 min', gradient: 'from-rose-500 to-pink-600', status: 'proximamente' },
+  { id: 'lectura', icon: Eye, title: 'Solo Lectura', desc: 'Sin contestar', time: 'Libre', gradient: 'from-gray-500 to-slate-600', status: 'premium' },
+];
+
 /**
  * DevModeRandomizer - Floating button with dropdown for simulating user states
  */
@@ -153,7 +164,6 @@ function DevModeRandomizer({ activeMode, onSelectMode, onClear }) {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
 
-  // Close menu when clicking outside
   useEffect(() => {
     function handleClickOutside(event) {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -214,7 +224,7 @@ function DevModeRandomizer({ activeMode, onSelectMode, onClear }) {
                     className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-left transition-colors hover:bg-red-50 text-red-600"
                   >
                     <X className="w-4 h-4" />
-                    <span className="text-sm font-medium">Mostrar datos reales</span>
+                    <span className="text-sm font-medium">Datos reales</span>
                   </button>
                 </>
               )}
@@ -223,7 +233,6 @@ function DevModeRandomizer({ activeMode, onSelectMode, onClear }) {
         )}
       </AnimatePresence>
 
-      {/* Main floating button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
         whileHover={{ scale: 1.05 }}
@@ -239,7 +248,6 @@ function DevModeRandomizer({ activeMode, onSelectMode, onClear }) {
         <Dices className="w-6 h-6" />
       </motion.button>
 
-      {/* Active mode badge */}
       {activeMode && (
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -253,355 +261,248 @@ function DevModeRandomizer({ activeMode, onSelectMode, onClear }) {
   );
 }
 
-// Animation variants
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.4, ease: 'easeOut' }
-  }
-};
-
 /**
- * StatCard - Individual statistic card
+ * StudyModesTab - Study mode selection view
  */
-function StatCard({ icon: Icon, iconColor, label, value, bgColor = 'bg-white' }) {
+function StudyModesTab({ onSelectMode, selectedMode, onStartSession, onSwipeRight }) {
   return (
     <motion.div
-      variants={itemVariants}
-      className={`${bgColor} rounded-2xl p-5 shadow-lg`}
+      key="modos"
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -20 }}
+      className="space-y-3"
+      drag="x"
+      dragConstraints={{ left: 0, right: 0 }}
+      dragElastic={0.2}
+      onDragEnd={(e, { offset, velocity }) => {
+        if (offset.x < -100 || velocity.x < -500) onSwipeRight();
+      }}
     >
-      <div className="flex items-center gap-3 mb-2">
-        <Icon className={`w-6 h-6 ${iconColor}`} />
-        <span className="text-gray-600 text-sm font-medium">{label}</span>
-      </div>
-      <div className="text-3xl font-bold text-gray-900">{value}</div>
-    </motion.div>
-  );
-}
+      <h4 className="text-sm font-semibold text-gray-700 mb-2">¿Cómo quieres estudiar hoy?</h4>
 
-/**
- * WeeklyChart - Bar chart for weekly activity
- */
-function WeeklyChart({ weeklyData }) {
-  const maxValue = Math.max(...weeklyData.map(d => d.questions || 0), 1);
-  const days = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
-  const today = new Date().getDay();
-  const todayIndex = today === 0 ? 6 : today - 1;
+      {studyModes.map((mode) => {
+        const Icon = mode.icon;
+        const isSelected = selectedMode === mode.id;
+        const isDisabled = mode.status !== 'disponible';
 
-  // Handle both array formats
-  const normalizedData = days.map((day, i) => {
-    if (weeklyData[i] && typeof weeklyData[i] === 'object') {
-      return weeklyData[i];
-    }
-    return { day, questions: weeklyData[i] || 0, correct: 0 };
-  });
-
-  const hasData = normalizedData.some(d => d.questions > 0);
-
-  if (!hasData) {
-    return (
-      <motion.div variants={itemVariants} className="bg-white rounded-2xl p-6 shadow-lg">
-        <h3 className="font-bold text-gray-900 mb-4">Progreso semanal</h3>
-        <div className="text-center py-8">
-          <BarChart3 className="w-12 h-12 mx-auto text-gray-300 mb-2" />
-          <p className="text-gray-500 text-sm">Completa tu primer test para ver tu progreso</p>
-        </div>
-      </motion.div>
-    );
-  }
-
-  return (
-    <motion.div variants={itemVariants} className="bg-white rounded-2xl p-6 shadow-lg">
-      <h3 className="font-bold text-gray-900 mb-4">Progreso semanal</h3>
-      <div className="flex items-end justify-between h-32 gap-2">
-        {normalizedData.map((data, i) => {
-          const value = data.questions || 0;
-          const height = maxValue > 0 ? (value / maxValue) * 100 : 0;
-          const isToday = i === todayIndex;
-
-          return (
-            <div key={i} className="flex-1 flex flex-col items-center gap-2">
-              <div className="w-full bg-gray-100 rounded-t-lg flex-1 relative min-h-[80px]">
-                <motion.div
-                  className={`absolute bottom-0 w-full rounded-t-lg ${
-                    isToday
-                      ? 'bg-gradient-to-t from-orange-500 to-orange-400'
-                      : 'bg-gradient-to-t from-purple-500 to-purple-400'
-                  }`}
-                  initial={{ height: 0 }}
-                  animate={{ height: `${Math.max(height, value > 0 ? 8 : 0)}%` }}
-                  transition={{ duration: 0.5, delay: i * 0.05 }}
-                />
-                {value > 0 && (
-                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 text-xs font-medium text-gray-600">
-                    {value}
-                  </div>
-                )}
-              </div>
-              <span className={`text-xs font-medium ${isToday ? 'text-orange-600' : 'text-gray-500'}`}>
-                {days[i]}
-              </span>
-            </div>
-          );
-        })}
-      </div>
-    </motion.div>
-  );
-}
-
-/**
- * MonthlyCalendar - Calendar heatmap for the current month
- */
-function MonthlyCalendar({ calendarData = [] }) {
-  const calendar = useMemo(() => {
-    const now = new Date();
-    const year = now.getFullYear();
-    const month = now.getMonth();
-    const firstDay = new Date(year, month, 1);
-    const lastDay = new Date(year, month + 1, 0);
-    const daysInMonth = lastDay.getDate();
-
-    // Get the day of week for the first day (0 = Sunday, adjust to Monday = 0)
-    let startDay = firstDay.getDay() - 1;
-    if (startDay === -1) startDay = 6;
-
-    const result = [];
-    // Add empty cells for days before the first of the month
-    for (let i = 0; i < startDay; i++) {
-      result.push({ day: null, practiced: false });
-    }
-    // Add days of the month
-    for (let day = 1; day <= daysInMonth; day++) {
-      result.push({
-        day,
-        practiced: calendarData.includes(day),
-        isToday: day === now.getDate()
-      });
-    }
-    return result;
-  }, [calendarData]);
-
-  const monthName = new Date().toLocaleDateString('es-ES', { month: 'long', year: 'numeric' });
-
-  return (
-    <motion.div variants={itemVariants} className="bg-white rounded-2xl p-6 shadow-lg">
-      <h3 className="font-bold text-gray-900 mb-4 capitalize">{monthName}</h3>
-      <div className="grid grid-cols-7 gap-1">
-        {['L', 'M', 'X', 'J', 'V', 'S', 'D'].map(day => (
-          <div key={day} className="text-center text-xs font-medium text-gray-400 py-1">
-            {day}
-          </div>
-        ))}
-        {calendar.map((cell, idx) => (
-          <div
-            key={idx}
-            className={`aspect-square flex items-center justify-center rounded-lg text-xs relative ${
-              cell.day === null
-                ? ''
-                : cell.isToday
-                ? 'bg-purple-100 font-bold text-purple-700'
-                : cell.practiced
-                ? 'bg-gray-50 text-gray-700'
-                : 'text-gray-400'
-            }`}
+        return (
+          <motion.button
+            key={mode.id}
+            onClick={() => !isDisabled && onSelectMode(isSelected ? null : mode.id)}
+            className={`w-full text-left ${isDisabled ? 'opacity-50' : ''}`}
+            whileTap={!isDisabled ? { scale: 0.98 } : {}}
+            disabled={isDisabled}
           >
-            {cell.day}
-            {cell.practiced && (
-              <div className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-green-500 rounded-full" />
-            )}
-          </div>
-        ))}
-      </div>
-      <div className="flex items-center gap-4 mt-4 pt-3 border-t text-xs text-gray-500">
-        <div className="flex items-center gap-1">
-          <div className="w-2 h-2 bg-green-500 rounded-full" />
-          <span>Dia practicado</span>
-        </div>
-        <div className="flex items-center gap-1">
-          <div className="w-4 h-4 bg-purple-100 rounded" />
-          <span>Hoy</span>
-        </div>
-      </div>
+            <div className={`bg-white rounded-xl p-3 border-2 transition-all ${
+              isSelected ? 'border-purple-400 shadow-md' : 'border-gray-100'
+            }`}>
+              <div className="flex items-center gap-3">
+                <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${mode.gradient} flex items-center justify-center`}>
+                  <Icon className="w-5 h-5 text-white" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2">
+                    <h5 className="font-semibold text-gray-900 text-sm">{mode.title}</h5>
+                    {mode.badge && (
+                      <span className="text-xs bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded-full">{mode.badge}</span>
+                    )}
+                    {mode.status === 'proximamente' && (
+                      <span className="text-xs bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded-full">Próximo</span>
+                    )}
+                    {mode.status === 'premium' && (
+                      <span className="text-xs bg-purple-100 text-purple-600 px-1.5 py-0.5 rounded-full">★</span>
+                    )}
+                  </div>
+                  <p className="text-xs text-gray-500">{mode.desc} · {mode.time}</p>
+                </div>
+                <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${
+                  isSelected ? 'border-purple-500 bg-purple-500' : 'border-gray-300'
+                }`}>
+                  {isSelected && <Check className="w-3 h-3 text-white" />}
+                </div>
+              </div>
+            </div>
+          </motion.button>
+        );
+      })}
+
+      <AnimatePresence>
+        {selectedMode && (
+          <motion.button
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
+            onClick={onStartSession}
+            className="w-full mt-4 bg-purple-600 text-white py-3 rounded-xl font-semibold"
+          >
+            Comenzar →
+          </motion.button>
+        )}
+      </AnimatePresence>
+
+      <p className="text-center text-xs text-gray-400 py-2">
+        ← Desliza para ver tu progreso
+      </p>
     </motion.div>
   );
 }
 
 /**
- * SessionHistory - List of recent sessions
+ * ProgressTab - Statistics and history view
  */
-function SessionHistory({ sessions = [], formatRelativeDate }) {
-  // Default date formatter if not provided
+function ProgressTab({ data, onSwipeLeft, onStartTest, formatRelativeDate }) {
   const formatDate = formatRelativeDate || ((date) => {
     const d = new Date(date);
     const now = new Date();
     const diffDays = Math.floor((now - d) / (1000 * 60 * 60 * 24));
-
     if (diffDays === 0) return 'Hoy';
     if (diffDays === 1) return 'Ayer';
-    if (diffDays < 7) return `Hace ${diffDays} dias`;
+    if (diffDays < 7) return `Hace ${diffDays}d`;
     return d.toLocaleDateString('es-ES', { day: 'numeric', month: 'short' });
   });
 
-  // Determine trend compared to previous session
-  const getTrend = (session, index) => {
-    if (index >= sessions.length - 1) return 'neutral';
-    const prevSession = sessions[index + 1];
-    if (!prevSession) return 'neutral';
+  const hasData = data.testsCompleted > 0;
 
-    const currentRate = session.porcentaje_acierto || session.accuracy || 0;
-    const prevRate = prevSession.porcentaje_acierto || prevSession.accuracy || 0;
-
-    if (currentRate > prevRate + 5) return 'up';
-    if (currentRate < prevRate - 5) return 'down';
-    return 'neutral';
-  };
-
-  if (sessions.length === 0) {
+  if (!hasData) {
     return (
-      <motion.div variants={itemVariants} className="bg-white rounded-2xl p-6 shadow-lg">
-        <h3 className="font-bold text-gray-900 mb-4">Ultimas sesiones</h3>
-        <div className="text-center py-6">
-          <Clock className="w-12 h-12 mx-auto text-gray-300 mb-2" />
-          <p className="text-gray-500 text-sm">Aun no has completado ningun test</p>
+      <motion.div
+        key="progreso-empty"
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: 20 }}
+        className="space-y-4"
+        drag="x"
+        dragConstraints={{ left: 0, right: 0 }}
+        dragElastic={0.2}
+        onDragEnd={(e, { offset, velocity }) => {
+          if (offset.x > 100 || velocity.x > 500) onSwipeLeft();
+        }}
+      >
+        <div className="text-center py-12">
+          <div className="text-6xl mb-4">📊</div>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">Aún no hay actividad</h3>
+          <p className="text-gray-500 mb-6">Completa tu primer test para ver tu progreso</p>
+          <button
+            onClick={onStartTest}
+            className="bg-purple-600 text-white px-6 py-3 rounded-xl font-semibold"
+          >
+            Empezar a estudiar →
+          </button>
         </div>
+        <p className="text-center text-xs text-gray-400 py-2">
+          Desliza para ver modos de estudio →
+        </p>
       </motion.div>
     );
   }
 
   return (
-    <motion.div variants={itemVariants} className="bg-white rounded-2xl p-6 shadow-lg">
-      <h3 className="font-bold text-gray-900 mb-4">Ultimas sesiones</h3>
-      <div className="space-y-3">
-        {sessions.slice(0, 7).map((session, idx) => {
-          const trend = getTrend(session, idx);
-          const temaName = session.tema_id ? `Tema ${session.tema_id}` : (session.topics || 'Mixto');
-          const correct = session.correctas || session.correctAnswers || 0;
-          const total = session.total_preguntas || session.questionsAnswered || 0;
-          const accuracy = session.porcentaje_acierto || session.accuracy || 0;
+    <motion.div
+      key="progreso"
+      initial={{ opacity: 0, x: 20 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: 20 }}
+      className="space-y-4"
+      drag="x"
+      dragConstraints={{ left: 0, right: 0 }}
+      dragElastic={0.2}
+      onDragEnd={(e, { offset, velocity }) => {
+        if (offset.x > 100 || velocity.x > 500) onSwipeLeft();
+      }}
+    >
+      {/* Stats Grid */}
+      <div className="grid grid-cols-2 gap-3">
+        <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+          <div className="flex items-center gap-2 mb-1">
+            <Trophy className="w-5 h-5 text-purple-500" />
+            <span className="text-xs text-gray-500">Tests</span>
+          </div>
+          <p className="text-2xl font-bold text-gray-900">{data.testsCompleted}</p>
+        </div>
+        <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+          <div className="flex items-center gap-2 mb-1">
+            <Target className="w-5 h-5 text-green-500" />
+            <span className="text-xs text-gray-500">Acierto</span>
+          </div>
+          <p className="text-2xl font-bold text-gray-900">{data.accuracyRate}%</p>
+        </div>
+        <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+          <div className="flex items-center gap-2 mb-1">
+            <Flame className="w-5 h-5 text-orange-500" />
+            <span className="text-xs text-gray-500">Racha</span>
+          </div>
+          <p className="text-2xl font-bold text-gray-900">{data.currentStreak} días</p>
+        </div>
+        <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+          <div className="flex items-center gap-2 mb-1">
+            <Calendar className="w-5 h-5 text-blue-500" />
+            <span className="text-xs text-gray-500">Días</span>
+          </div>
+          <p className="text-2xl font-bold text-gray-900">{data.daysStudied}</p>
+        </div>
+      </div>
 
-          return (
-            <motion.div
-              key={session.id || idx}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: idx * 0.05 }}
-              className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl"
-            >
-              <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-lg">
-                {session.tema_id ? '📚' : '🎯'}
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2">
-                  <span className="font-medium text-gray-900 truncate">{temaName}</span>
-                  <span className="text-xs text-gray-400">
-                    {formatDate(session.created_at || session.date)}
-                  </span>
+      {/* Weekly Chart */}
+      <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+        <h4 className="font-semibold text-gray-900 mb-3">Esta semana</h4>
+        <div className="flex items-end justify-between h-24 gap-1">
+          {['L', 'M', 'X', 'J', 'V', 'S', 'D'].map((day, i) => {
+            const value = data.weeklyData[i] || 0;
+            const maxVal = Math.max(...data.weeklyData, 1);
+            const height = (value / maxVal) * 100;
+            const isToday = new Date().getDay() === (i === 6 ? 0 : i + 1);
+            return (
+              <div key={day} className="flex-1 flex flex-col items-center gap-1">
+                <div className="w-full bg-gray-100 rounded-t-lg flex-1 relative" style={{ minHeight: 60 }}>
+                  <motion.div
+                    className={`absolute bottom-0 w-full rounded-t-lg ${isToday ? 'bg-orange-400' : 'bg-purple-400'}`}
+                    initial={{ height: 0 }}
+                    animate={{ height: `${Math.max(height, value > 0 ? 10 : 0)}%` }}
+                    transition={{ duration: 0.5, delay: i * 0.05 }}
+                  />
                 </div>
-                <div className="text-sm text-gray-500">
-                  {correct}/{total} correctas
-                  <span className="mx-1">·</span>
-                  <span className={
-                    accuracy >= 70 ? 'text-green-600' :
-                    accuracy >= 50 ? 'text-orange-600' : 'text-red-500'
-                  }>
+                <span className={`text-xs ${isToday ? 'text-orange-600 font-bold' : 'text-gray-400'}`}>{day}</span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Session History */}
+      {data.sessionHistory && data.sessionHistory.length > 0 && (
+        <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+          <h4 className="font-semibold text-gray-900 mb-3">Últimas sesiones</h4>
+          <div className="space-y-2">
+            {data.sessionHistory.slice(0, 5).map((session, idx) => {
+              const temaName = session.tema || (session.tema_id ? `Tema ${session.tema_id}` : 'Mixto');
+              const correct = session.correctas || 0;
+              const total = session.total_preguntas || 0;
+              const accuracy = session.porcentaje_acierto || 0;
+
+              return (
+                <div key={session.id || idx} className="flex items-center gap-3 p-2 bg-gray-50 rounded-lg">
+                  <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                    📚
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-medium text-gray-900 truncate">{temaName}</p>
+                    <p className="text-xs text-gray-500">{correct}/{total} · {formatDate(session.created_at)}</p>
+                  </div>
+                  <span className={`text-sm font-bold ${accuracy >= 70 ? 'text-green-600' : 'text-orange-600'}`}>
                     {accuracy}%
                   </span>
                 </div>
-              </div>
-              <div className={`p-1 rounded-full ${
-                trend === 'up' ? 'bg-green-100' :
-                trend === 'down' ? 'bg-red-100' : 'bg-gray-100'
-              }`}>
-                {trend === 'up' ? (
-                  <TrendingUp className="w-4 h-4 text-green-600" />
-                ) : trend === 'down' ? (
-                  <TrendingDown className="w-4 h-4 text-red-500" />
-                ) : (
-                  <Minus className="w-4 h-4 text-gray-400" />
-                )}
-              </div>
-            </motion.div>
-          );
-        })}
-      </div>
-    </motion.div>
-  );
-}
-
-/**
- * MotivationalBanner - Displays motivational message
- */
-function MotivationalBanner({ message }) {
-  if (!message) return null;
-
-  return (
-    <motion.div
-      variants={itemVariants}
-      className={`rounded-2xl p-4 ${message.bg || 'bg-purple-50'} border border-opacity-50`}
-    >
-      <div className="flex items-center gap-3">
-        <span className="text-2xl">{message.emoji || '✨'}</span>
-        <p className={`font-medium ${message.color || 'text-purple-700'}`}>
-          {message.message}
-        </p>
-      </div>
-    </motion.div>
-  );
-}
-
-/**
- * EmptyState - Shown when no activity exists
- */
-function EmptyState({ onStartTest }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="bg-white rounded-2xl p-8 shadow-lg text-center"
-    >
-      <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-        <BarChart3 className="w-8 h-8 text-purple-600" />
-      </div>
-      <h3 className="text-xl font-bold text-gray-900 mb-2">Aun no hay actividad</h3>
-      <p className="text-gray-600 mb-6">Completa tu primer test para ver tu progreso aqui</p>
-      {onStartTest && (
-        <button
-          onClick={onStartTest}
-          className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700
-            text-white font-semibold py-3 px-6 rounded-xl transition-all
-            active:scale-[0.98] shadow-lg shadow-purple-600/30"
-        >
-          <Play className="w-5 h-5" />
-          Hacer mi primer test
-        </button>
+              );
+            })}
+          </div>
+        </div>
       )}
-    </motion.div>
-  );
-}
 
-/**
- * LoadingState - Skeleton loading
- */
-function LoadingState() {
-  return (
-    <div className="space-y-6">
-      <h2 className="text-2xl font-bold text-gray-900">Tu actividad</h2>
-      <div className="flex items-center justify-center py-12">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600" />
-      </div>
-    </div>
+      <p className="text-center text-xs text-gray-400 py-2">
+        Desliza para ver modos de estudio →
+      </p>
+    </motion.div>
   );
 }
 
@@ -626,16 +527,25 @@ export default function ActividadPage({
   formatRelativeDate,
   devMode = false
 }) {
+  // Tab state: 0 = Modos (left), 1 = Progreso (right)
+  const [activeTab, setActiveTab] = useState(0);
+  const [selectedMode, setSelectedMode] = useState(null);
+
   // Dev mode state for simulation
   const [simulationMode, setSimulationMode] = useState(null);
   const [simulatedData, setSimulatedData] = useState(null);
+
+  // Tab configuration - Modos first (left), Progreso second (right)
+  const tabs = [
+    { id: 0, icon: Target, label: 'Modos' },
+    { id: 1, icon: BarChart3, label: 'Progreso' }
+  ];
 
   // Handle mode selection
   const handleSelectMode = (mode) => {
     setSimulationMode(mode);
     const state = userStates[mode];
     if (mode === 'aleatorio') {
-      // Generate new random data each time
       setSimulatedData(state.generate());
     } else {
       setSimulatedData({
@@ -647,7 +557,6 @@ export default function ActividadPage({
     }
   };
 
-  // Clear simulation
   const handleClear = () => {
     setSimulationMode(null);
     setSimulatedData(null);
@@ -661,23 +570,33 @@ export default function ActividadPage({
     calendarData
   };
 
-  if (loading) {
-    return <LoadingState />;
-  }
+  // Flatten data for ProgressTab
+  const progressData = {
+    testsCompleted: displayData.totalStats.testsCompleted,
+    accuracyRate: displayData.totalStats.accuracyRate,
+    currentStreak: displayData.totalStats.currentStreak,
+    daysStudied: displayData.totalStats.daysStudied || displayData.totalStats.totalDaysStudied || 0,
+    weeklyData: displayData.weeklyData,
+    sessionHistory: displayData.sessionHistory
+  };
 
-  const hasActivity = displayData.totalStats.testsCompleted > 0;
+  if (loading) {
+    return (
+      <div className="space-y-6">
+        <h2 className="text-2xl font-bold text-gray-900">Actividad</h2>
+        <div className="flex items-center justify-center py-12">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600" />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>
-      <motion.div
-        className="space-y-6"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        {/* Header with simulation badge */}
+      <div className="space-y-4">
+        {/* Header */}
         <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-bold text-gray-900">Tu actividad</h2>
+          <h2 className="text-2xl font-bold text-gray-900">Actividad</h2>
           {simulationMode && (
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -685,80 +604,60 @@ export default function ActividadPage({
               className="flex items-center gap-2 bg-purple-100 text-purple-700 px-3 py-1.5 rounded-full text-sm font-medium"
             >
               <Dices className="w-4 h-4" />
-              <span>Simulado: {userStates[simulationMode].emoji}</span>
+              <span>{userStates[simulationMode].emoji}</span>
             </motion.div>
           )}
         </div>
 
-        {!hasActivity ? (
-          <EmptyState onStartTest={onStartTest} />
-        ) : (
-          <>
-            {/* Stats Cards */}
-            <div className="grid grid-cols-2 gap-4">
-              <StatCard
-                icon={Trophy}
-                iconColor="text-purple-600"
-                label="Tests completados"
-                value={displayData.totalStats.testsCompleted}
-              />
-              <StatCard
-                icon={Target}
-                iconColor="text-green-600"
-                label="Tasa de acierto"
-                value={`${displayData.totalStats.accuracyRate}%`}
-              />
-              <StatCard
-                icon={CheckCircle}
-                iconColor="text-blue-600"
-                label="Preguntas correctas"
-                value={displayData.totalStats.questionsCorrect}
-              />
-              <StatCard
-                icon={Calendar}
-                iconColor="text-orange-600"
-                label="Dias estudiando"
-                value={displayData.totalStats.daysStudied || displayData.totalStats.totalDaysStudied || 0}
-              />
-            </div>
+        {/* Tab Headers */}
+        <div className="bg-white rounded-xl p-1.5 shadow-sm border border-gray-100">
+          <div className="flex gap-1 relative">
+            {tabs.map((tab) => {
+              const Icon = tab.icon;
+              const isActive = activeTab === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`flex-1 py-2.5 px-3 rounded-lg flex items-center justify-center gap-2 transition-all ${
+                    isActive
+                      ? 'bg-purple-100 text-purple-700'
+                      : 'text-gray-500 hover:bg-gray-50'
+                  }`}
+                >
+                  <Icon className="w-4 h-4" />
+                  <span className="text-sm font-medium">{tab.label}</span>
+                </button>
+              );
+            })}
+          </div>
+          {/* Animated indicator */}
+          <motion.div
+            className="h-0.5 bg-purple-500 rounded-full mt-1.5"
+            animate={{ x: activeTab === 0 ? '0%' : '100%', width: '50%' }}
+            transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+          />
+        </div>
 
-            {/* Current Streak - if exists */}
-            {displayData.totalStats.currentStreak > 0 && (
-              <motion.div
-                variants={itemVariants}
-                className="bg-gradient-to-r from-orange-500 to-amber-500 rounded-2xl p-4 shadow-lg"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                    <Flame className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="text-white">
-                    <p className="text-sm opacity-90">Racha actual</p>
-                    <p className="text-2xl font-bold">{displayData.totalStats.currentStreak} dias consecutivos</p>
-                  </div>
-                </div>
-              </motion.div>
-            )}
-
-            {/* Weekly Progress Chart */}
-            <WeeklyChart weeklyData={displayData.weeklyData} />
-
-            {/* Monthly Calendar */}
-            <MonthlyCalendar calendarData={displayData.calendarData} />
-
-            {/* Session History */}
-            <SessionHistory
-              sessions={displayData.sessionHistory}
+        {/* Swipeable content */}
+        <AnimatePresence mode="wait">
+          {activeTab === 0 ? (
+            <StudyModesTab
+              selectedMode={selectedMode}
+              onSelectMode={setSelectedMode}
+              onStartSession={onStartTest}
+              onSwipeRight={() => setActiveTab(1)}
+            />
+          ) : (
+            <ProgressTab
+              data={progressData}
+              onSwipeLeft={() => setActiveTab(0)}
+              onStartTest={() => setActiveTab(0)}
               formatRelativeDate={formatRelativeDate}
             />
-
-            {/* Motivational Message */}
-            {motivationalMessage && (
-              <MotivationalBanner message={motivationalMessage} />
-            )}
-          </>
-        )}
-      </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
 
       {/* Dev Mode Randomizer Button */}
       {devMode && (
