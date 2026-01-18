@@ -9,12 +9,39 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [isAnonymous, setIsAnonymous] = useState(false); // User using app without account
+  const [userRole, setUserRole] = useState(null); // { isAdmin, isReviewer, role, name }
+
+  // Check if user has admin/reviewer role
+  const checkUserRole = async (email) => {
+    if (!email) {
+      setUserRole(null);
+      return null;
+    }
+    try {
+      const { data, error } = await supabase.rpc('check_user_role', { p_email: email });
+      if (error) {
+        console.error('Error checking user role:', error);
+        setUserRole(null);
+        return null;
+      }
+      setUserRole(data);
+      return data;
+    } catch (err) {
+      console.error('Error checking user role:', err);
+      setUserRole(null);
+      return null;
+    }
+  };
 
   useEffect(() => {
     // Get initial session
-    supabase.auth.getSession().then(({ data: { session } }) => {
+    supabase.auth.getSession().then(async ({ data: { session } }) => {
       setSession(session);
       setUser(session?.user ?? null);
+      // Check role for existing session
+      if (session?.user?.email) {
+        await checkUserRole(session.user.email);
+      }
       setLoading(false);
     });
 
@@ -24,6 +51,14 @@ export function AuthProvider({ children }) {
         console.log('Auth event:', event);
         setSession(session);
         setUser(session?.user ?? null);
+
+        // Check role when user signs in
+        if (session?.user?.email) {
+          await checkUserRole(session.user.email);
+        } else {
+          setUserRole(null);
+        }
+
         setLoading(false);
 
         // Create profile when user signs up
@@ -263,6 +298,11 @@ export function AuthProvider({ children }) {
     isAnonymous,
     continueAsAnonymous,
     exitAnonymousMode,
+    // Role-based access
+    userRole,
+    isAdmin: userRole?.isAdmin ?? false,
+    isReviewer: userRole?.isReviewer ?? false,
+    checkUserRole,
   };
 
   return (

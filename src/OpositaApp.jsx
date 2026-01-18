@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Home, BookOpen, Trophy, Clock, TrendingUp, TrendingDown, ArrowLeft, CheckCircle, XCircle, Target, Flame, Zap, Star, Lock, Crown, BarChart3, Calendar, History, GraduationCap, Lightbulb, Info, Settings, ChevronRight, Instagram, Mail, Bell, User, LogOut, HelpCircle, FileText, Shield, ExternalLink, Minus } from 'lucide-react';
+import { Home, BookOpen, Trophy, Clock, TrendingUp, TrendingDown, ArrowLeft, CheckCircle, XCircle, Target, Flame, Zap, Star, Lock, Crown, BarChart3, Calendar, History, GraduationCap, Lightbulb, Info, Settings, ChevronRight, Instagram, Mail, Bell, User, LogOut, HelpCircle, FileText, Shield, ExternalLink, Minus, Code, Eye, ClipboardCheck } from 'lucide-react';
 import { allQuestions, topicsList, getRandomQuestions } from './data/questions';
 import { supabase } from './lib/supabase';
 import { useAuth } from './contexts/AuthContext';
@@ -94,7 +94,11 @@ export default function OpositaApp() {
     resetPassword,
     isAuthenticated,
     isAnonymous,
-    continueAsAnonymous
+    continueAsAnonymous,
+    // Role-based access from AuthContext
+    userRole,
+    isAdmin: isUserAdmin,
+    isReviewer: isUserReviewer
   } = useAuth();
 
   // Admin context
@@ -743,56 +747,78 @@ export default function OpositaApp() {
   );
 
   // Bottom Tab Bar Component - Fase 1 floating style
-  const BottomTabBar = () => (
-    <div className="fixed bottom-0 left-0 right-0 z-40 px-4 pb-2">
-      {/* Contenedor floating con márgenes, sombra y bordes redondeados */}
-      <div className="max-w-md mx-auto">
-        <div className="bg-white rounded-[20px] shadow-[0_2px_24px_rgba(0,0,0,0.12)] border border-gray-100/80">
-          <div className="flex justify-around items-center h-[58px] px-1">
-            {[
-              { id: 'inicio', label: 'Inicio', icon: Home },
-              { id: 'actividad', label: 'Actividad', icon: History },
-              { id: 'temas', label: 'Temas', icon: BookOpen },
-              { id: 'recursos', label: 'Recursos', icon: GraduationCap }
-            ].map(tab => {
-              const isActive = activeTab === tab.id;
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className="flex flex-col items-center justify-center min-w-[4rem] py-1 px-2 rounded-xl transition-all duration-200 active:scale-95"
-                >
-                  <div className={`
-                    flex items-center justify-center w-9 h-9 rounded-full mb-0.5 transition-all duration-200
-                    ${isActive ? 'bg-gray-100' : ''}
-                  `}>
-                    <tab.icon
-                      className={`
-                        w-[22px] h-[22px] transition-all duration-200
-                        ${isActive
-                          ? 'text-gray-900 stroke-[2]'
-                          : 'text-gray-400 stroke-[1.5]'
+  const BottomTabBar = () => {
+    // Tabs base para todos los usuarios
+    const baseTabs = [
+      { id: 'inicio', label: 'Inicio', icon: Home },
+      { id: 'actividad', label: 'Actividad', icon: History },
+      { id: 'temas', label: 'Temas', icon: BookOpen },
+      { id: 'recursos', label: 'Recursos', icon: GraduationCap }
+    ];
+
+    // Añadir tab "Revisar" si el usuario es reviewer
+    const tabs = isUserReviewer
+      ? [...baseTabs, { id: 'reviewer-panel', label: 'Revisar', icon: ClipboardCheck }]
+      : baseTabs;
+
+    return (
+      <div className="fixed bottom-0 left-0 right-0 z-40 px-4 pb-2">
+        {/* Contenedor floating con márgenes, sombra y bordes redondeados */}
+        <div className="max-w-md mx-auto">
+          <div className="bg-white rounded-[20px] shadow-[0_2px_24px_rgba(0,0,0,0.12)] border border-gray-100/80">
+            <div className="flex justify-around items-center h-[58px] px-1">
+              {tabs.map(tab => {
+                // Para el tab "Revisar" usamos currentPage en lugar de activeTab
+                const isActive = tab.id === 'reviewer-panel'
+                  ? currentPage === 'reviewer-panel'
+                  : activeTab === tab.id;
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() => {
+                      if (tab.id === 'reviewer-panel') {
+                        setCurrentPage('reviewer-panel');
+                      } else {
+                        setActiveTab(tab.id);
+                        if (currentPage === 'reviewer-panel') {
+                          setCurrentPage('home'); // Salir del reviewer panel al cambiar de tab
                         }
-                      `}
-                    />
-                  </div>
-                  <span className={`
-                    text-[10px] leading-tight transition-all duration-200
-                    ${isActive
-                      ? 'text-gray-900 font-semibold'
-                      : 'text-gray-400 font-medium'
-                    }
-                  `}>
-                    {tab.label}
-                  </span>
-                </button>
-              );
-            })}
+                      }
+                    }}
+                    className="flex flex-col items-center justify-center min-w-[3.5rem] py-1 px-1.5 rounded-xl transition-all duration-200 active:scale-95"
+                  >
+                    <div className={`
+                      flex items-center justify-center w-9 h-9 rounded-full mb-0.5 transition-all duration-200
+                      ${isActive ? 'bg-gray-100' : ''}
+                    `}>
+                      <tab.icon
+                        className={`
+                          w-[22px] h-[22px] transition-all duration-200
+                          ${isActive
+                            ? 'text-gray-900 stroke-[2]'
+                            : 'text-gray-400 stroke-[1.5]'
+                          }
+                        `}
+                      />
+                    </div>
+                    <span className={`
+                      text-[10px] leading-tight transition-all duration-200
+                      ${isActive
+                        ? 'text-gray-900 font-semibold'
+                        : 'text-gray-400 font-medium'
+                      }
+                    `}>
+                      {tab.label}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   if (isLoading) {
     return (
@@ -2207,6 +2233,37 @@ export default function OpositaApp() {
             )}
           </div>
 
+          {/* Sección: Administración (solo para admin/reviewer) */}
+          {(isUserAdmin || isUserReviewer) && (
+            <>
+              <SectionTitle>Administración</SectionTitle>
+              <div className="bg-white rounded-xl border border-gray-100 divide-y divide-gray-100 overflow-hidden">
+                {isUserAdmin && (
+                  <>
+                    <SettingsRow
+                      icon={Shield}
+                      label="Panel de Administrador"
+                      onClick={() => { setShowSettingsModal(false); setCurrentPage('admin-panel'); }}
+                      rightText="Admin"
+                    />
+                    <SettingsRow
+                      icon={Code}
+                      label="Draft Features"
+                      onClick={() => { setShowSettingsModal(false); setShowDraftFeatures(true); }}
+                      rightText="Dev"
+                    />
+                  </>
+                )}
+                <SettingsRow
+                  icon={Eye}
+                  label="Panel de Revisor"
+                  onClick={() => { setShowSettingsModal(false); setCurrentPage('reviewer-panel'); }}
+                  rightText={isUserAdmin ? 'Admin' : 'Revisor'}
+                />
+              </div>
+            </>
+          )}
+
           {/* Sección: Otros */}
           <SectionTitle>Otros</SectionTitle>
           <div className="bg-white rounded-xl border border-gray-100 divide-y divide-gray-100 overflow-hidden">
@@ -2469,18 +2526,20 @@ export default function OpositaApp() {
         </div>
       </div>
 
-      {/* DEV Panel Colapsable */}
-      <DevPanel
-        onReset={handleDevReset}
-        onShowPremium={() => setShowPremiumModal(true)}
-        onShowAdminLogin={() => setShowAdminLoginModal(true)}
-        onShowPlayground={() => setShowAnimationPlayground(true)}
-        onShowDraftFeatures={() => setShowDraftFeatures(true)}
-        premiumMode={premiumMode}
-        onTogglePremium={() => setPremiumMode(!premiumMode)}
-        streakCount={displayStreak}
-        testsCount={totalStats.testsCompleted}
-      />
+      {/* DEV Panel Colapsable - Solo visible para admin autenticado */}
+      {isAuthenticated && isUserAdmin && (
+        <DevPanel
+          onReset={handleDevReset}
+          onShowPremium={() => setShowPremiumModal(true)}
+          onShowAdminLogin={() => setShowAdminLoginModal(true)}
+          onShowPlayground={() => setShowAnimationPlayground(true)}
+          onShowDraftFeatures={() => setShowDraftFeatures(true)}
+          premiumMode={premiumMode}
+          onTogglePremium={() => setPremiumMode(!premiumMode)}
+          streakCount={displayStreak}
+          testsCount={totalStats.testsCompleted}
+        />
+      )}
 
       <BottomTabBar />
       {showPremiumModal && <PremiumModal />}
