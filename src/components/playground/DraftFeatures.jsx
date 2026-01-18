@@ -3998,6 +3998,512 @@ function RecursosPage() {
 }
 
 // ============================================
+// FEATURE PROPOSALS PAGE
+// ============================================
+
+// FlipCard component (from AnimationPlayground)
+function FlipCard({ front, back, className = "" }) {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  return (
+    <div
+      className={`perspective-1000 cursor-pointer ${className}`}
+      onClick={() => setIsFlipped(!isFlipped)}
+    >
+      <motion.div
+        className="relative w-full h-full"
+        animate={{ rotateY: isFlipped ? 180 : 0 }}
+        transition={spring.gentle}
+        style={{ transformStyle: 'preserve-3d' }}
+      >
+        <div
+          className="absolute inset-0 rounded-2xl flex items-center justify-center backface-hidden"
+          style={{ backfaceVisibility: 'hidden' }}
+        >
+          {front}
+        </div>
+        <div
+          className="absolute inset-0 rounded-2xl flex items-center justify-center"
+          style={{ transform: 'rotateY(180deg)', backfaceVisibility: 'hidden' }}
+        >
+          {back}
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+
+// AnimatedCounter component (from AnimationPlayground)
+function AnimatedCounter({ value, duration = 1, suffix = "", className = "" }) {
+  const [displayValue, setDisplayValue] = useState(0);
+
+  React.useEffect(() => {
+    let start = 0;
+    const end = value;
+    const increment = end / (duration * 60);
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= end) {
+        setDisplayValue(end);
+        clearInterval(timer);
+      } else {
+        setDisplayValue(Math.floor(start));
+      }
+    }, 1000 / 60);
+    return () => clearInterval(timer);
+  }, [value, duration]);
+
+  return (
+    <motion.span className={className} key={value}>
+      {displayValue.toLocaleString()}{suffix}
+    </motion.span>
+  );
+}
+
+// Feature Proposals Page Component
+function FeatureProposalsPage() {
+  const [activeProposal, setActiveProposal] = useState('flip-card');
+  const [demoStreak, setDemoStreak] = useState(7);
+  const [demoAccuracy, setDemoAccuracy] = useState(87);
+  const [demoQuestions, setDemoQuestions] = useState(1247);
+
+  // Demo tema data for FlipCard proposals
+  const demoTemaCards = [
+    { id: 1, tema: 'Art. 66 CE', pregunta: 'Quien representa al pueblo espanol?', respuesta: 'Las Cortes Generales' },
+    { id: 2, tema: 'Art. 1.1 CE', pregunta: 'Cuales son los valores superiores?', respuesta: 'Libertad, justicia, igualdad, pluralismo' },
+    { id: 3, tema: 'Art. 2 CE', pregunta: 'Fundamento de la Constitucion?', respuesta: 'La indisoluble unidad de la Nacion' },
+  ];
+
+  const proposals = [
+    { id: 'flip-card', label: 'Flip Card', icon: '🔄' },
+    { id: 'counter', label: 'Contador Animado', icon: '🔢' },
+  ];
+
+  return (
+    <div className="space-y-6">
+      {/* Intro */}
+      <div className="bg-gradient-to-r from-violet-50 to-purple-50 border border-violet-200 rounded-xl p-4">
+        <h3 className="font-bold text-violet-800 mb-1">Propuestas de Integracion</h3>
+        <p className="text-sm text-violet-600">
+          Mockups interactivos de features del Animation Playground. Click en cada propuesta para probar.
+        </p>
+      </div>
+
+      {/* Proposal selector */}
+      <div className="flex gap-2">
+        {proposals.map((p) => (
+          <motion.button
+            key={p.id}
+            onClick={() => setActiveProposal(p.id)}
+            className={`px-4 py-2 rounded-xl font-medium text-sm flex items-center gap-2
+              ${activeProposal === p.id
+                ? 'bg-purple-600 text-white shadow-lg shadow-purple-500/25'
+                : 'bg-white border border-gray-200 text-gray-700'}`}
+            whileTap={{ scale: 0.97 }}
+          >
+            {p.icon} {p.label}
+          </motion.button>
+        ))}
+      </div>
+
+      <AnimatePresence mode="wait">
+        {/* FLIP CARD PROPOSALS */}
+        {activeProposal === 'flip-card' && (
+          <motion.div
+            key="flip-card"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="space-y-6"
+          >
+            {/* Proposal 1: Flashcards de repaso */}
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+              <div className="px-4 py-3 border-b border-gray-100 bg-rose-50/50">
+                <div className="flex items-center gap-2">
+                  <span className="text-lg">📚</span>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Propuesta 1: Flashcards de Repaso</h4>
+                    <p className="text-xs text-gray-500">Tarjetas pregunta/respuesta para modo repaso</p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4">
+                <p className="text-sm text-gray-600 mb-4">
+                  <strong>Ubicacion:</strong> Modo Repaso, Sesion de estudio tipo flashcard
+                </p>
+                <div className="flex gap-4 overflow-x-auto pb-2">
+                  {demoTemaCards.map((card) => (
+                    <FlipCard
+                      key={card.id}
+                      className="w-48 h-32 flex-shrink-0"
+                      front={
+                        <div className="w-full h-full bg-gradient-to-br from-rose-400 to-purple-500 rounded-2xl p-4 flex flex-col justify-between text-white shadow-lg">
+                          <span className="text-xs font-medium opacity-80">{card.tema}</span>
+                          <p className="text-sm font-medium">{card.pregunta}</p>
+                          <span className="text-xs opacity-60">Tap para ver</span>
+                        </div>
+                      }
+                      back={
+                        <div className="w-full h-full bg-gradient-to-br from-emerald-400 to-teal-500 rounded-2xl p-4 flex flex-col justify-center items-center text-white shadow-lg">
+                          <Check className="w-6 h-6 mb-2 opacity-80" />
+                          <p className="text-sm font-bold text-center">{card.respuesta}</p>
+                        </div>
+                      }
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Proposal 2: Stats que muestran detalles */}
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+              <div className="px-4 py-3 border-b border-gray-100 bg-violet-50/50">
+                <div className="flex items-center gap-2">
+                  <span className="text-lg">📊</span>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Propuesta 2: Stats con Detalles</h4>
+                    <p className="text-xs text-gray-500">Estadisticas que revelan info al voltear</p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4">
+                <p className="text-sm text-gray-600 mb-4">
+                  <strong>Ubicacion:</strong> Dashboard, Bento grid de estadisticas
+                </p>
+                <div className="grid grid-cols-2 gap-3">
+                  <FlipCard
+                    className="h-28"
+                    front={
+                      <div className="w-full h-full bg-gradient-to-br from-purple-100 to-violet-100 rounded-xl p-4 flex flex-col justify-between border border-purple-200">
+                        <Target className="w-5 h-5 text-purple-600" />
+                        <div>
+                          <p className="text-2xl font-bold text-purple-700">87%</p>
+                          <p className="text-xs text-purple-500">Precision</p>
+                        </div>
+                      </div>
+                    }
+                    back={
+                      <div className="w-full h-full bg-purple-600 rounded-xl p-4 flex flex-col justify-center text-white">
+                        <p className="text-xs opacity-80">Ultimas 50 preguntas</p>
+                        <p className="text-sm font-medium mt-1">43 correctas, 7 fallidas</p>
+                        <p className="text-xs mt-2 opacity-60">Tendencia: +5% esta semana</p>
+                      </div>
+                    }
+                  />
+                  <FlipCard
+                    className="h-28"
+                    front={
+                      <div className="w-full h-full bg-gradient-to-br from-amber-100 to-orange-100 rounded-xl p-4 flex flex-col justify-between border border-amber-200">
+                        <Flame className="w-5 h-5 text-amber-600" />
+                        <div>
+                          <p className="text-2xl font-bold text-amber-700">7 dias</p>
+                          <p className="text-xs text-amber-500">Racha actual</p>
+                        </div>
+                      </div>
+                    }
+                    back={
+                      <div className="w-full h-full bg-amber-500 rounded-xl p-6 flex flex-col justify-center text-white">
+                        <p className="text-xs opacity-80">Record personal</p>
+                        <p className="text-sm font-medium mt-1">14 dias consecutivos</p>
+                        <p className="text-xs mt-2 opacity-60">Meta: 30 dias</p>
+                      </div>
+                    }
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Proposal 3: Tema cards con info oculta */}
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+              <div className="px-4 py-3 border-b border-gray-100 bg-pink-50/50">
+                <div className="flex items-center gap-2">
+                  <span className="text-lg">🏰</span>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Propuesta 3: Temas en Fortaleza</h4>
+                    <p className="text-xs text-gray-500">Cards de tema que revelan estadisticas</p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4">
+                <p className="text-sm text-gray-600 mb-4">
+                  <strong>Ubicacion:</strong> Tu Fortaleza, grid de temas
+                </p>
+                <div className="grid grid-cols-3 gap-2">
+                  {[
+                    { id: 1, nombre: 'CE', estado: 'dominado', progreso: 95, correctas: 47, total: 50 },
+                    { id: 2, nombre: 'LPAC', estado: 'avanzando', progreso: 72, correctas: 36, total: 50 },
+                    { id: 3, nombre: 'Corona', estado: 'riesgo', progreso: 45, correctas: 9, total: 20 },
+                  ].map((tema) => {
+                    const config = estadoConfig[tema.estado];
+                    return (
+                      <FlipCard
+                        key={tema.id}
+                        className="h-20"
+                        front={
+                          <div className={`w-full h-full bg-gradient-to-br ${config.gradient} rounded-xl p-3 flex flex-col justify-between text-white shadow-md`}>
+                            <span className="text-xs font-medium opacity-80">T{tema.id}</span>
+                            <div>
+                              <p className="text-lg font-bold">{tema.progreso}%</p>
+                              <p className="text-xs opacity-80">{tema.nombre}</p>
+                            </div>
+                          </div>
+                        }
+                        back={
+                          <div className="w-full h-full bg-white border-2 border-gray-200 rounded-xl p-2 flex flex-col justify-center items-center">
+                            <p className="text-xs text-gray-500">Aciertos</p>
+                            <p className="text-sm font-bold text-gray-800">{tema.correctas}/{tema.total}</p>
+                            <div className="h-1 w-full bg-gray-100 rounded-full mt-2 overflow-hidden">
+                              <div
+                                className={`h-full bg-gradient-to-r ${config.gradient}`}
+                                style={{ width: `${tema.progreso}%` }}
+                              />
+                            </div>
+                          </div>
+                        }
+                      />
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+
+            {/* Proposal 4: Pregunta con explicacion */}
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+              <div className="px-4 py-3 border-b border-gray-100 bg-emerald-50/50">
+                <div className="flex items-center gap-2">
+                  <span className="text-lg">💡</span>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Propuesta 4: Pregunta con Explicacion</h4>
+                    <p className="text-xs text-gray-500">Ver la explicacion al voltear la tarjeta</p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4">
+                <p className="text-sm text-gray-600 mb-4">
+                  <strong>Ubicacion:</strong> Resultado de pregunta, revision post-sesion
+                </p>
+                <FlipCard
+                  className="w-full h-40"
+                  front={
+                    <div className="w-full h-full bg-gradient-to-br from-emerald-50 to-teal-50 border-2 border-emerald-200 rounded-2xl p-4 flex flex-col">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Check className="w-5 h-5 text-emerald-600" />
+                        <span className="text-sm font-medium text-emerald-700">Respuesta correcta</span>
+                      </div>
+                      <p className="text-gray-800 font-medium flex-1">
+                        Las Cortes Generales representan al pueblo espanol
+                      </p>
+                      <p className="text-xs text-emerald-600">Tap para ver explicacion detallada</p>
+                    </div>
+                  }
+                  back={
+                    <div className="w-full h-full bg-white border-2 border-gray-200 rounded-2xl p-4 flex flex-col">
+                      <div className="flex items-center gap-2 mb-2">
+                        <BookOpen className="w-5 h-5 text-purple-600" />
+                        <span className="text-sm font-medium text-purple-700">Explicacion</span>
+                      </div>
+                      <p className="text-sm text-gray-700 flex-1">
+                        Segun el Art. 66.1 CE, las Cortes Generales representan al pueblo espanol y estan formadas por el Congreso y el Senado.
+                      </p>
+                      <p className="text-xs text-gray-400">Art. 66 - Titulo III CE</p>
+                    </div>
+                  }
+                />
+              </div>
+            </div>
+          </motion.div>
+        )}
+
+        {/* ANIMATED COUNTER PROPOSALS */}
+        {activeProposal === 'counter' && (
+          <motion.div
+            key="counter"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="space-y-6"
+          >
+            {/* Proposal 1: Total preguntas respondidas */}
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+              <div className="px-4 py-3 border-b border-gray-100 bg-purple-50/50">
+                <div className="flex items-center gap-2">
+                  <span className="text-lg">📝</span>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Propuesta 1: Total Preguntas</h4>
+                    <p className="text-xs text-gray-500">Contador del total de preguntas respondidas</p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4">
+                <p className="text-sm text-gray-600 mb-4">
+                  <strong>Ubicacion:</strong> Dashboard principal, estadisticas generales
+                </p>
+                <div className="bg-gradient-to-br from-purple-50 to-violet-100 rounded-xl p-6 text-center border border-purple-200">
+                  <BookOpen className="w-8 h-8 text-purple-500 mx-auto mb-2" />
+                  <AnimatedCounter
+                    value={demoQuestions}
+                    duration={1.5}
+                    className="text-4xl font-bold text-purple-700 tabular-nums"
+                  />
+                  <p className="text-sm text-purple-600 mt-1">preguntas respondidas</p>
+                  <motion.button
+                    onClick={() => setDemoQuestions(q => q + Math.floor(Math.random() * 50) + 10)}
+                    className="mt-4 px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-medium"
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Simular +preguntas
+                  </motion.button>
+                </div>
+              </div>
+            </div>
+
+            {/* Proposal 2: Precision porcentaje */}
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+              <div className="px-4 py-3 border-b border-gray-100 bg-emerald-50/50">
+                <div className="flex items-center gap-2">
+                  <span className="text-lg">🎯</span>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Propuesta 2: Precision Animada</h4>
+                    <p className="text-xs text-gray-500">Porcentaje de aciertos con animacion</p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4">
+                <p className="text-sm text-gray-600 mb-4">
+                  <strong>Ubicacion:</strong> Resultado de sesion, stats en dashboard
+                </p>
+                <div className="bg-gradient-to-br from-emerald-50 to-teal-100 rounded-xl p-6 text-center border border-emerald-200">
+                  <Target className="w-8 h-8 text-emerald-500 mx-auto mb-2" />
+                  <div className="flex items-baseline justify-center gap-1">
+                    <AnimatedCounter
+                      value={demoAccuracy}
+                      duration={1}
+                      className="text-5xl font-bold text-emerald-700 tabular-nums"
+                    />
+                    <span className="text-2xl font-bold text-emerald-600">%</span>
+                  </div>
+                  <p className="text-sm text-emerald-600 mt-1">precision global</p>
+                  <div className="flex gap-2 justify-center mt-4">
+                    <motion.button
+                      onClick={() => setDemoAccuracy(a => Math.min(100, a + 5))}
+                      className="px-3 py-1.5 bg-emerald-600 text-white rounded-lg text-sm font-medium"
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      +5%
+                    </motion.button>
+                    <motion.button
+                      onClick={() => setDemoAccuracy(a => Math.max(0, a - 5))}
+                      className="px-3 py-1.5 bg-gray-200 text-gray-700 rounded-lg text-sm font-medium"
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      -5%
+                    </motion.button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Proposal 3: Racha de dias */}
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+              <div className="px-4 py-3 border-b border-gray-100 bg-amber-50/50">
+                <div className="flex items-center gap-2">
+                  <span className="text-lg">🔥</span>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Propuesta 3: Racha Animada</h4>
+                    <p className="text-xs text-gray-500">Contador de dias de racha</p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4">
+                <p className="text-sm text-gray-600 mb-4">
+                  <strong>Ubicacion:</strong> TopBar, Dashboard, celebracion de racha
+                </p>
+                <div className="bg-gradient-to-br from-amber-50 to-orange-100 rounded-xl p-6 text-center border border-amber-200">
+                  <motion.div
+                    animate={{ scale: [1, 1.1, 1], rotate: [0, -5, 5, 0] }}
+                    transition={{ duration: 0.5, repeat: Infinity, repeatDelay: 2 }}
+                    className="text-4xl mb-2"
+                  >
+                    🔥
+                  </motion.div>
+                  <div className="flex items-baseline justify-center gap-2">
+                    <AnimatedCounter
+                      value={demoStreak}
+                      duration={0.8}
+                      className="text-5xl font-bold text-amber-700 tabular-nums"
+                    />
+                    <span className="text-xl font-medium text-amber-600">dias</span>
+                  </div>
+                  <p className="text-sm text-amber-600 mt-1">racha actual</p>
+                  <motion.button
+                    onClick={() => setDemoStreak(s => s + 1)}
+                    className="mt-4 px-4 py-2 bg-amber-500 text-white rounded-lg text-sm font-medium"
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    +1 dia
+                  </motion.button>
+                </div>
+              </div>
+            </div>
+
+            {/* Proposal 4: Nivel y XP */}
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+              <div className="px-4 py-3 border-b border-gray-100 bg-pink-50/50">
+                <div className="flex items-center gap-2">
+                  <span className="text-lg">⭐</span>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Propuesta 4: Nivel y XP</h4>
+                    <p className="text-xs text-gray-500">Contador de puntos de experiencia</p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4">
+                <p className="text-sm text-gray-600 mb-4">
+                  <strong>Ubicacion:</strong> Perfil de usuario, resultado de sesion con XP ganado
+                </p>
+                <div className="bg-gradient-to-br from-pink-50 to-rose-100 rounded-xl p-6 border border-pink-200">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-sm text-pink-600">Nivel actual</p>
+                      <div className="flex items-baseline gap-1">
+                        <span className="text-3xl font-bold text-pink-700">12</span>
+                        <Trophy className="w-5 h-5 text-pink-500" />
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-sm text-pink-600">XP Total</p>
+                      <AnimatedCounter
+                        value={2450}
+                        duration={1.2}
+                        className="text-2xl font-bold text-pink-700 tabular-nums"
+                      />
+                    </div>
+                  </div>
+                  <div className="mt-4">
+                    <div className="flex justify-between text-xs text-pink-600 mb-1">
+                      <span>Progreso al nivel 13</span>
+                      <span>450/1000 XP</span>
+                    </div>
+                    <div className="h-3 bg-pink-200 rounded-full overflow-hidden">
+                      <motion.div
+                        className="h-full bg-gradient-to-r from-pink-500 to-rose-500 rounded-full"
+                        initial={{ width: 0 }}
+                        animate={{ width: '45%' }}
+                        transition={{ duration: 1, delay: 0.5 }}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
+// ============================================
 // MAIN DRAFT FEATURES COMPONENT
 // ============================================
 
@@ -4028,11 +4534,13 @@ export default function DraftFeatures({ onClose }) {
 
   const tabs = [
     { id: 'momentum-fortaleza', label: '🏰 Soft+Fort' },
+    { id: 'temas-lista', label: '📚 Temas A' },
+    { id: 'temas-grid', label: '📚 Temas B' },
+    { id: 'temas-fortaleza', label: '📚 Temas C' },
+    { id: 'proposals', label: '💡 Propuestas' },
     { id: 'recursos', label: '📖 Recursos' },
     { id: 'activities', label: '📈 Actividad' },
     { id: 'focus', label: '🎯 Focus' },
-    { id: 'momentum-purple', label: '💜 Purple' },
-    { id: 'momentum-white', label: '⚪ White' },
     { id: 'focus-original', label: '📋 Original' },
   ];
 
@@ -4296,6 +4804,18 @@ export default function DraftFeatures({ onClose }) {
                 temas={demoTemas}
                 onStartSession={() => console.log('Start focused session')}
               />
+            </motion.div>
+          )}
+
+          {/* FEATURE PROPOSALS PAGE */}
+          {activeTab === 'proposals' && (
+            <motion.div
+              key="proposals"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <FeatureProposalsPage />
             </motion.div>
           )}
         </AnimatePresence>
