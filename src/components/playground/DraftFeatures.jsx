@@ -16,7 +16,8 @@ import {
   Zap, Star, AlertTriangle, Plus, Eye, Calendar,
   BarChart3, Award, Brain, Sparkles, GripVertical,
   Users, Medal, Percent, Activity, PieChart, ArrowUpRight,
-  Settings, HelpCircle, Info, Instagram, Mail, Bell, Shield, FileText
+  Settings, HelpCircle, Info, Instagram, Mail, Bell, Shield, FileText,
+  Search, Heart, Scale, MapPin, GraduationCap, Lightbulb, BookMarked, ExternalLink
 } from 'lucide-react';
 
 // ============================================
@@ -2725,63 +2726,60 @@ function HomeMomentumFortaleza({
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
+      className="space-y-3"
     >
-      {/* Fixed TopBar - like webapp */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-white/98 backdrop-blur-lg shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
-        <div className="max-w-lg mx-auto px-4">
-          <div className="flex items-center justify-between h-14">
-            {/* Left - Progress circle button */}
-            <motion.button
-              onClick={onShowProgress}
-              className="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-purple-50 active:scale-95 transition-all duration-200"
-              whileTap={{ scale: 0.95 }}
-            >
-              <svg className="w-9 h-9 transform -rotate-90">
-                <circle
-                  cx="18" cy="18" r="14"
-                  fill="none"
-                  stroke="#F3E8FF"
-                  strokeWidth="3"
-                />
-                <circle
-                  cx="18" cy="18" r="14"
-                  fill="none"
-                  stroke="#8B5CF6"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  strokeDasharray={`${(dailyProgressPercent / 100) * 88} 88`}
-                  className="transition-all duration-500"
-                />
-              </svg>
-              <span className="absolute inset-0 flex items-center justify-center text-[10px] font-bold text-purple-600">
-                {dailyProgressPercent}
-              </span>
-            </motion.button>
+      {/* TopBar - inside content flow, not fixed */}
+      <div className="bg-white rounded-xl border border-gray-100 shadow-sm">
+        <div className="flex items-center justify-between h-14 px-4">
+          {/* Left - Progress circle button */}
+          <motion.button
+            onClick={onShowProgress}
+            className="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-purple-50 active:scale-95 transition-all duration-200"
+            whileTap={{ scale: 0.95 }}
+          >
+            <svg className="w-9 h-9 transform -rotate-90">
+              <circle
+                cx="18" cy="18" r="14"
+                fill="none"
+                stroke="#F3E8FF"
+                strokeWidth="3"
+              />
+              <circle
+                cx="18" cy="18" r="14"
+                fill="none"
+                stroke="#8B5CF6"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeDasharray={`${(dailyProgressPercent / 100) * 88} 88`}
+                className="transition-all duration-500"
+              />
+            </svg>
+            <span className="absolute inset-0 flex items-center justify-center text-[10px] font-bold text-purple-600">
+              {dailyProgressPercent}
+            </span>
+          </motion.button>
 
-            {/* Center - Title */}
-            <h1 className="text-[15px] font-semibold text-gray-800 tracking-tight">Oposita Smart</h1>
+          {/* Center - Title */}
+          <h1 className="text-[15px] font-semibold text-gray-800 tracking-tight">Oposita Smart</h1>
 
-            {/* Right - Settings */}
-            <motion.button
-              onClick={onSettingsClick}
-              className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 active:scale-95 transition-all duration-200"
-              whileTap={{ scale: 0.95 }}
-            >
-              <Settings className="w-[18px] h-[18px] text-gray-500" />
-            </motion.button>
-          </div>
+          {/* Right - Settings */}
+          <motion.button
+            onClick={onSettingsClick}
+            className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 active:scale-95 transition-all duration-200"
+            whileTap={{ scale: 0.95 }}
+          >
+            <Settings className="w-[18px] h-[18px] text-gray-500" />
+          </motion.button>
         </div>
       </div>
 
-      {/* Content with padding for fixed TopBar */}
-      <div className="pt-16 space-y-3">
-        {/* Greeting section */}
-        <div>
-          <p className="text-xs text-purple-500 font-medium uppercase tracking-wider">
-            {new Date().toLocaleDateString('es-ES', { weekday: 'long' })}
-          </p>
-          <h2 className="text-xl font-bold text-gray-900">Tu Momentum</h2>
-        </div>
+      {/* Greeting section */}
+      <div>
+        <p className="text-xs text-purple-500 font-medium uppercase tracking-wider">
+          {new Date().toLocaleDateString('es-ES', { weekday: 'long' })}
+        </p>
+        <h2 className="text-xl font-bold text-gray-900">Tu Momentum</h2>
+      </div>
 
       {/* Bento Grid */}
       <div className="grid grid-cols-2 gap-3">
@@ -3009,7 +3007,6 @@ function HomeMomentumFortaleza({
           <p className="text-gray-500 text-sm">La forma inteligente de opositar</p>
         </div>
       </motion.footer>
-      </div>{/* End of pt-16 wrapper */}
     </motion.div>
   );
 }
@@ -3190,6 +3187,59 @@ function ActivitiesPage({ onClose }) {
           <span className="text-sm text-gray-500 mb-1">este mes</span>
         </div>
       </motion.div>
+
+      {/* Footer - same as Soft+Fort */}
+      <motion.footer
+        className="mt-6 mb-4"
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.5 }}
+      >
+        <div className="bg-white rounded-xl border border-gray-100 divide-y divide-gray-100 overflow-hidden mb-8">
+          {/* Acerca de */}
+          <motion.button
+            className="w-full px-4 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
+            whileTap={{ scale: 0.98 }}
+          >
+            <div className="flex items-center gap-3">
+              <Info className="w-5 h-5 text-gray-400" />
+              <span className="text-gray-700">Acerca de</span>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-300" />
+          </motion.button>
+
+          {/* FAQ */}
+          <motion.button
+            className="w-full px-4 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
+            whileTap={{ scale: 0.98 }}
+          >
+            <div className="flex items-center gap-3">
+              <HelpCircle className="w-5 h-5 text-gray-400" />
+              <span className="text-gray-700">Preguntas Frecuentes</span>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-300" />
+          </motion.button>
+
+          {/* Instagram */}
+          <motion.button
+            onClick={() => window.open('https://instagram.com/opositasmart', '_blank')}
+            className="w-full px-4 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
+            whileTap={{ scale: 0.98 }}
+          >
+            <div className="flex items-center gap-3">
+              <Instagram className="w-5 h-5 text-gray-400" />
+              <span className="text-gray-700">Instagram</span>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-300" />
+          </motion.button>
+        </div>
+
+        {/* Branding */}
+        <div className="text-center py-6">
+          <p className="text-gray-900 font-semibold text-lg mb-1">Oposita Smart</p>
+          <p className="text-gray-500 text-sm">La forma inteligente de opositar</p>
+        </div>
+      </motion.footer>
     </motion.div>
   );
 }
@@ -3533,15 +3583,11 @@ export default function DraftFeatures({ onClose }) {
   ];
 
   const tabs = [
-    { id: 'full-home', label: '🏠 Home' },
     { id: 'momentum-fortaleza', label: '🏰 Soft+Fort' },
-    { id: 'momentum', label: '📊 Dark' },
-    { id: 'momentum-purple', label: '💜 Purple' },
-    { id: 'momentum-soft', label: '🌸 Soft' },
-    { id: 'momentum-white', label: '⚪ White' },
-    { id: 'momentum-gradient', label: '🌈 Gradient' },
     { id: 'activities', label: '📈 Actividad' },
     { id: 'focus', label: '🎯 Focus' },
+    { id: 'momentum-purple', label: '💜 Purple' },
+    { id: 'momentum-white', label: '⚪ White' },
     { id: 'focus-original', label: '📋 Original' },
   ];
 
@@ -3723,32 +3769,6 @@ export default function DraftFeatures({ onClose }) {
             </motion.div>
           )}
 
-          {/* MOMENTUM - Dark (Original) */}
-          {activeTab === 'momentum' && (
-            <motion.div
-              key="momentum"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-            >
-              <div className="bg-slate-100 border border-slate-200 rounded-xl p-3 text-sm text-slate-700 mb-4">
-                <strong>📊 Dark:</strong> Hero card negro · Estilo Notion/Linear
-              </div>
-              <HomeMomentum
-                temas={demoTemas}
-                theme="dark"
-                onStartSession={() => console.log('Start session')}
-                onTemaAction={(tema) => setSelectedTema(tema)}
-                onVerTodos={() => setShowAllTemas(true)}
-                onRachaClick={() => setShowRachaModal(true)}
-                onPrecisionClick={() => setShowPrecisionModal(true)}
-                onLevelClick={() => setShowLevelModal(true)}
-                onSettingsClick={() => setShowSettingsModal(true)}
-                onShowProgress={() => setShowProgressModal(true)}
-              />
-            </motion.div>
-          )}
-
           {/* MOMENTUM - Purple */}
           {activeTab === 'momentum-purple' && (
             <motion.div
@@ -3775,32 +3795,6 @@ export default function DraftFeatures({ onClose }) {
             </motion.div>
           )}
 
-          {/* MOMENTUM - Soft */}
-          {activeTab === 'momentum-soft' && (
-            <motion.div
-              key="momentum-soft"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-            >
-              <div className="bg-rose-50 border border-rose-200 rounded-xl p-3 text-sm text-rose-800 mb-4">
-                <strong>🌸 Soft:</strong> Tonos pastel suaves · Femenino y relajado
-              </div>
-              <HomeMomentum
-                temas={demoTemas}
-                theme="soft"
-                onStartSession={() => console.log('Start session')}
-                onTemaAction={(tema) => setSelectedTema(tema)}
-                onVerTodos={() => setShowAllTemas(true)}
-                onRachaClick={() => setShowRachaModal(true)}
-                onPrecisionClick={() => setShowPrecisionModal(true)}
-                onLevelClick={() => setShowLevelModal(true)}
-                onSettingsClick={() => setShowSettingsModal(true)}
-                onShowProgress={() => setShowProgressModal(true)}
-              />
-            </motion.div>
-          )}
-
           {/* MOMENTUM - White */}
           {activeTab === 'momentum-white' && (
             <motion.div
@@ -3815,57 +3809,6 @@ export default function DraftFeatures({ onClose }) {
               <HomeMomentum
                 temas={demoTemas}
                 theme="white"
-                onStartSession={() => console.log('Start session')}
-                onTemaAction={(tema) => setSelectedTema(tema)}
-                onVerTodos={() => setShowAllTemas(true)}
-                onRachaClick={() => setShowRachaModal(true)}
-                onPrecisionClick={() => setShowPrecisionModal(true)}
-                onLevelClick={() => setShowLevelModal(true)}
-                onSettingsClick={() => setShowSettingsModal(true)}
-                onShowProgress={() => setShowProgressModal(true)}
-              />
-            </motion.div>
-          )}
-
-          {/* MOMENTUM - Gradient */}
-          {activeTab === 'momentum-gradient' && (
-            <motion.div
-              key="momentum-gradient"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-            >
-              <div className="bg-gradient-to-r from-purple-50 via-pink-50 to-orange-50 border border-purple-200 rounded-xl p-3 text-sm text-purple-800 mb-4">
-                <strong>🌈 Gradient:</strong> Gradiente colorido · Energético y moderno
-              </div>
-              <HomeMomentum
-                temas={demoTemas}
-                theme="gradient"
-                onStartSession={() => console.log('Start session')}
-                onTemaAction={(tema) => setSelectedTema(tema)}
-                onVerTodos={() => setShowAllTemas(true)}
-                onRachaClick={() => setShowRachaModal(true)}
-                onPrecisionClick={() => setShowPrecisionModal(true)}
-                onLevelClick={() => setShowLevelModal(true)}
-                onSettingsClick={() => setShowSettingsModal(true)}
-                onShowProgress={() => setShowProgressModal(true)}
-              />
-            </motion.div>
-          )}
-
-          {/* Full Home Page with all elements */}
-          {activeTab === 'full-home' && (
-            <motion.div
-              key="full-home"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-            >
-              <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-3 text-sm text-emerald-800 mb-4">
-                <strong>🏠 Home:</strong> Swipeable Focus/Fortaleza + Stats + Goals + FAQ + Footer
-              </div>
-              <FullHomePage
-                temas={demoTemas}
                 onStartSession={() => console.log('Start session')}
                 onTemaAction={(tema) => setSelectedTema(tema)}
                 onVerTodos={() => setShowAllTemas(true)}
