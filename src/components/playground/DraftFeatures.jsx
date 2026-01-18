@@ -17,7 +17,8 @@ import {
   BarChart3, Award, Brain, Sparkles, GripVertical,
   Users, Medal, Percent, Activity, PieChart, ArrowUpRight,
   Settings, HelpCircle, Info, Instagram, Mail, Bell, Shield, FileText,
-  Search, Heart, Scale, MapPin, GraduationCap, Lightbulb, BookMarked, ExternalLink
+  Search, Heart, Scale, MapPin, GraduationCap, Lightbulb, BookMarked, ExternalLink,
+  ClipboardCheck, Home, History, Code
 } from 'lucide-react';
 
 // ============================================
@@ -3245,6 +3246,393 @@ function ActivitiesPage({ onClose }) {
 }
 
 // ============================================
+// ADMIN FLOW PAGE - Role-based access mockups
+// ============================================
+
+function AdminFlowPage() {
+  const [activeView, setActiveView] = useState('login');
+
+  const MockPhone = ({ children, title }) => (
+    <div className="relative mx-auto w-full max-w-[280px]">
+      {/* Phone frame */}
+      <div className="bg-gray-900 rounded-[2.5rem] p-2 shadow-2xl">
+        {/* Screen */}
+        <div className="bg-white rounded-[2rem] overflow-hidden h-[500px] relative">
+          {/* Status bar */}
+          <div className="bg-white px-6 py-2 flex items-center justify-between text-xs">
+            <span className="font-medium">9:41</span>
+            <div className="flex items-center gap-1">
+              <div className="w-4 h-2 rounded-sm bg-gray-900" />
+            </div>
+          </div>
+          {/* Content */}
+          <div className="px-4 pb-4 h-full overflow-y-auto">
+            {children}
+          </div>
+        </div>
+      </div>
+      {/* Title badge */}
+      <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-purple-600 text-white px-4 py-1.5 rounded-full text-xs font-medium shadow-lg whitespace-nowrap">
+        {title}
+      </div>
+    </div>
+  );
+
+  // Login Screen with Face ID
+  const LoginWithFaceID = () => (
+    <div className="flex flex-col h-[420px]">
+      {/* Logo */}
+      <div className="flex-1 flex flex-col items-center justify-center">
+        <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl flex items-center justify-center mb-4 shadow-lg">
+          <span className="text-4xl">📚</span>
+        </div>
+        <h2 className="text-xl font-bold text-gray-900 mb-1">Oposita Smart</h2>
+        <p className="text-sm text-gray-500">Bienvenido de nuevo</p>
+      </div>
+
+      {/* Login buttons */}
+      <div className="space-y-3 mb-6">
+        <motion.button
+          className="w-full py-3.5 bg-gray-900 text-white font-semibold rounded-xl flex items-center justify-center gap-2"
+          whileTap={{ scale: 0.98 }}
+        >
+          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v15.86zm2-15.86c1.03.13 2 .45 2.87.93H13v-.93zM13 7h5.24c.25.31.48.65.68 1H13V7zm0 2h6.74c.08.33.15.66.19 1H13V9zm0 2h6.93c0 .34-.04.67-.08 1H13v-1zm0 2h6.74c-.11.35-.24.69-.4 1H13v-1zm0 2h5.91c-.27.38-.58.73-.93 1.05H13v-1.05z"/>
+          </svg>
+          Continuar con Face ID
+        </motion.button>
+
+        <motion.button
+          className="w-full py-3.5 bg-purple-600 text-white font-semibold rounded-xl"
+          whileTap={{ scale: 0.98 }}
+        >
+          Iniciar sesión con email
+        </motion.button>
+
+        <p className="text-center text-sm text-gray-500">
+          ¿No tienes cuenta? <span className="text-purple-600 font-medium">Regístrate</span>
+        </p>
+      </div>
+    </div>
+  );
+
+  // Settings view for Admin
+  const SettingsAdmin = () => (
+    <div className="py-2 space-y-4">
+      {/* Header */}
+      <div className="flex items-center gap-3 mb-4">
+        <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+          <span className="text-lg">👤</span>
+        </div>
+        <div>
+          <p className="font-semibold text-gray-900 text-sm">Alberto Silverio</p>
+          <p className="text-xs text-purple-600 font-medium">Administrador</p>
+        </div>
+      </div>
+
+      {/* Normal settings */}
+      <div className="bg-gray-50 rounded-xl overflow-hidden text-xs">
+        <div className="px-3 py-2.5 border-b border-gray-100 flex items-center gap-2">
+          <Bell className="w-4 h-4 text-gray-400" />
+          <span className="text-gray-700">Notificaciones</span>
+          <ChevronRight className="w-4 h-4 text-gray-300 ml-auto" />
+        </div>
+        <div className="px-3 py-2.5 border-b border-gray-100 flex items-center gap-2">
+          <Settings className="w-4 h-4 text-gray-400" />
+          <span className="text-gray-700">Preferencias</span>
+          <ChevronRight className="w-4 h-4 text-gray-300 ml-auto" />
+        </div>
+        <div className="px-3 py-2.5 flex items-center gap-2">
+          <HelpCircle className="w-4 h-4 text-gray-400" />
+          <span className="text-gray-700">Ayuda</span>
+          <ChevronRight className="w-4 h-4 text-gray-300 ml-auto" />
+        </div>
+      </div>
+
+      {/* Admin section - highlighted */}
+      <div>
+        <p className="text-[10px] text-purple-500 font-semibold uppercase tracking-wide px-1 mb-2">Administración</p>
+        <div className="bg-purple-50 rounded-xl overflow-hidden text-xs border border-purple-100">
+          <div className="px-3 py-2.5 border-b border-purple-100 flex items-center gap-2">
+            <Shield className="w-4 h-4 text-purple-500" />
+            <span className="text-purple-700 font-medium">Panel de Administrador</span>
+            <span className="ml-auto text-[10px] bg-purple-200 text-purple-700 px-1.5 py-0.5 rounded">Admin</span>
+          </div>
+          <div className="px-3 py-2.5 border-b border-purple-100 flex items-center gap-2">
+            <Code className="w-4 h-4 text-purple-500" />
+            <span className="text-purple-700 font-medium">Draft Features</span>
+            <span className="ml-auto text-[10px] bg-purple-200 text-purple-700 px-1.5 py-0.5 rounded">Dev</span>
+          </div>
+          <div className="px-3 py-2.5 flex items-center gap-2">
+            <Eye className="w-4 h-4 text-purple-500" />
+            <span className="text-purple-700 font-medium">Panel de Revisor</span>
+            <span className="ml-auto text-[10px] bg-purple-200 text-purple-700 px-1.5 py-0.5 rounded">Admin</span>
+          </div>
+        </div>
+      </div>
+
+      {/* DevPanel indicator */}
+      <div className="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-xl">
+        <p className="text-xs text-amber-700 flex items-center gap-2">
+          <span className="w-5 h-5 bg-amber-500 rounded-lg flex items-center justify-center text-white text-[10px]">DEV</span>
+          <span>Botón flotante visible abajo-izquierda</span>
+        </p>
+      </div>
+    </div>
+  );
+
+  // Settings view for Reviewer
+  const SettingsReviewer = () => (
+    <div className="py-2 space-y-4">
+      {/* Header */}
+      <div className="flex items-center gap-3 mb-4">
+        <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+          <span className="text-lg">👤</span>
+        </div>
+        <div>
+          <p className="font-semibold text-gray-900 text-sm">Héctor (Cuñado)</p>
+          <p className="text-xs text-blue-600 font-medium">Revisor</p>
+        </div>
+      </div>
+
+      {/* Normal settings */}
+      <div className="bg-gray-50 rounded-xl overflow-hidden text-xs">
+        <div className="px-3 py-2.5 border-b border-gray-100 flex items-center gap-2">
+          <Bell className="w-4 h-4 text-gray-400" />
+          <span className="text-gray-700">Notificaciones</span>
+          <ChevronRight className="w-4 h-4 text-gray-300 ml-auto" />
+        </div>
+        <div className="px-3 py-2.5 border-b border-gray-100 flex items-center gap-2">
+          <Settings className="w-4 h-4 text-gray-400" />
+          <span className="text-gray-700">Preferencias</span>
+          <ChevronRight className="w-4 h-4 text-gray-300 ml-auto" />
+        </div>
+        <div className="px-3 py-2.5 flex items-center gap-2">
+          <HelpCircle className="w-4 h-4 text-gray-400" />
+          <span className="text-gray-700">Ayuda</span>
+          <ChevronRight className="w-4 h-4 text-gray-300 ml-auto" />
+        </div>
+      </div>
+
+      {/* Reviewer section */}
+      <div>
+        <p className="text-[10px] text-blue-500 font-semibold uppercase tracking-wide px-1 mb-2">Administración</p>
+        <div className="bg-blue-50 rounded-xl overflow-hidden text-xs border border-blue-100">
+          <div className="px-3 py-2.5 flex items-center gap-2">
+            <Eye className="w-4 h-4 text-blue-500" />
+            <span className="text-blue-700 font-medium">Panel de Revisor</span>
+            <span className="ml-auto text-[10px] bg-blue-200 text-blue-700 px-1.5 py-0.5 rounded">Revisor</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Note */}
+      <div className="mt-4 p-3 bg-gray-50 border border-gray-200 rounded-xl">
+        <p className="text-xs text-gray-600">
+          ✓ Sin acceso a DevPanel ni Admin Panel
+        </p>
+      </div>
+    </div>
+  );
+
+  // Bottom Tab Bar for Reviewer
+  const BottomBarReviewer = () => (
+    <div className="py-2 space-y-4">
+      {/* Mock app content */}
+      <div className="bg-gray-50 rounded-xl p-4 h-[280px] flex items-center justify-center">
+        <p className="text-gray-400 text-sm">Contenido de la app...</p>
+      </div>
+
+      {/* Bottom bar with 5 tabs */}
+      <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+        <div className="flex items-center justify-around py-3">
+          {[
+            { icon: Home, label: 'Inicio', active: false },
+            { icon: History, label: 'Actividad', active: false },
+            { icon: BookOpen, label: 'Temas', active: false },
+            { icon: GraduationCap, label: 'Recursos', active: false },
+            { icon: ClipboardCheck, label: 'Revisar', active: true, highlight: true },
+          ].map((tab, i) => (
+            <div key={i} className={`flex flex-col items-center gap-1 ${tab.highlight ? 'relative' : ''}`}>
+              {tab.highlight && (
+                <div className="absolute -top-1 -right-1 w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
+              )}
+              <tab.icon className={`w-5 h-5 ${tab.active ? 'text-blue-600' : 'text-gray-400'}`} />
+              <span className={`text-[10px] ${tab.active ? 'text-blue-600 font-medium' : 'text-gray-400'}`}>{tab.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Note */}
+      <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl">
+        <p className="text-xs text-blue-700">
+          📋 El reviewer ve un 5º tab "Revisar" en la barra inferior para acceder fácilmente al panel de revisión de preguntas.
+        </p>
+      </div>
+    </div>
+  );
+
+  return (
+    <motion.div
+      className="space-y-6"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
+      {/* Header */}
+      <div className="bg-gradient-to-br from-purple-50 to-violet-50 border border-purple-200 rounded-xl p-4">
+        <h2 className="font-bold text-purple-800 text-lg mb-2 flex items-center gap-2">
+          🔐 Sistema de Roles
+        </h2>
+        <p className="text-sm text-purple-700">
+          Visualización del flujo de acceso para Admin y Reviewer. El DevPanel solo aparece para admins autenticados.
+        </p>
+      </div>
+
+      {/* View selector */}
+      <div className="flex gap-2 overflow-x-auto pb-2">
+        {[
+          { id: 'login', label: '🔑 Login' },
+          { id: 'settings-admin', label: '⚙️ Admin' },
+          { id: 'settings-reviewer', label: '👁️ Reviewer' },
+          { id: 'bottombar-reviewer', label: '📱 Tab Reviewer' },
+        ].map(view => (
+          <motion.button
+            key={view.id}
+            onClick={() => setActiveView(view.id)}
+            className={`px-4 py-2 rounded-xl font-medium whitespace-nowrap text-sm transition-all ${
+              activeView === view.id
+                ? 'bg-purple-600 text-white shadow-lg shadow-purple-200'
+                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+            }`}
+            whileTap={{ scale: 0.97 }}
+          >
+            {view.label}
+          </motion.button>
+        ))}
+      </div>
+
+      {/* Phone mockups */}
+      <AnimatePresence mode="wait">
+        {activeView === 'login' && (
+          <motion.div
+            key="login"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+          >
+            <MockPhone title="Login con Face ID">
+              <LoginWithFaceID />
+            </MockPhone>
+            <div className="mt-6 p-4 bg-gray-50 rounded-xl text-sm text-gray-700 space-y-2">
+              <p><strong>Flujo:</strong></p>
+              <ol className="list-decimal pl-5 space-y-1 text-xs">
+                <li>Usuario abre la app → ve pantalla de login</li>
+                <li>Click "Continuar con Face ID" (si configurado)</li>
+                <li>Sistema verifica email en <code className="bg-gray-200 px-1 rounded">admin_users</code></li>
+                <li>Si admin → muestra DevPanel flotante</li>
+                <li>Si reviewer → muestra tab "Revisar"</li>
+              </ol>
+            </div>
+          </motion.div>
+        )}
+
+        {activeView === 'settings-admin' && (
+          <motion.div
+            key="settings-admin"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+          >
+            <MockPhone title="Settings - Admin">
+              <SettingsAdmin />
+            </MockPhone>
+            <div className="mt-6 p-4 bg-purple-50 rounded-xl text-sm text-purple-800 space-y-2">
+              <p><strong>Admin ve:</strong></p>
+              <ul className="list-disc pl-5 space-y-1 text-xs">
+                <li>Sección "Administración" con 3 opciones</li>
+                <li>DevPanel flotante (botón DEV abajo-izquierda)</li>
+                <li>Acceso completo a todas las funciones</li>
+              </ul>
+            </div>
+          </motion.div>
+        )}
+
+        {activeView === 'settings-reviewer' && (
+          <motion.div
+            key="settings-reviewer"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+          >
+            <MockPhone title="Settings - Reviewer">
+              <SettingsReviewer />
+            </MockPhone>
+            <div className="mt-6 p-4 bg-blue-50 rounded-xl text-sm text-blue-800 space-y-2">
+              <p><strong>Reviewer ve:</strong></p>
+              <ul className="list-disc pl-5 space-y-1 text-xs">
+                <li>Solo opción "Panel de Revisor"</li>
+                <li>Sin DevPanel ni Admin Panel</li>
+                <li>Acceso via Settings O via tab inferior</li>
+              </ul>
+            </div>
+          </motion.div>
+        )}
+
+        {activeView === 'bottombar-reviewer' && (
+          <motion.div
+            key="bottombar-reviewer"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+          >
+            <MockPhone title="BottomBar - Reviewer">
+              <BottomBarReviewer />
+            </MockPhone>
+            <div className="mt-6 p-4 bg-blue-50 rounded-xl text-sm text-blue-800 space-y-2">
+              <p><strong>Tab "Revisar":</strong></p>
+              <ul className="list-disc pl-5 space-y-1 text-xs">
+                <li>5º tab visible solo para reviewers</li>
+                <li>Acceso directo sin entrar a Settings</li>
+                <li>Indicador azul de nueva funcionalidad</li>
+              </ul>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Implementation status */}
+      <div className="bg-white border border-gray-200 rounded-xl p-4">
+        <h3 className="font-semibold text-gray-900 mb-3 text-sm">✅ Estado de Implementación</h3>
+        <div className="space-y-2 text-xs">
+          {[
+            { label: 'Función SQL check_user_role()', done: true },
+            { label: 'AuthContext con detección de roles', done: true },
+            { label: 'DevPanel condicional (solo admin)', done: true },
+            { label: 'Settings con sección admin/reviewer', done: true },
+            { label: 'Tab "Revisar" en BottomTabBar', done: true },
+            { label: 'Face ID / Passkey (WebAuthn)', done: false },
+          ].map((item, i) => (
+            <div key={i} className="flex items-center gap-2">
+              <div className={`w-4 h-4 rounded-full flex items-center justify-center ${
+                item.done ? 'bg-emerald-100' : 'bg-gray-100'
+              }`}>
+                {item.done ? (
+                  <Check className="w-3 h-3 text-emerald-600" />
+                ) : (
+                  <Clock className="w-3 h-3 text-gray-400" />
+                )}
+              </div>
+              <span className={item.done ? 'text-gray-700' : 'text-gray-400'}>{item.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+// ============================================
 // SETTINGS MODAL - Demo
 // ============================================
 
@@ -4976,6 +5364,7 @@ export default function DraftFeatures({ onClose }) {
     { id: 'proposals', label: '💡 Propuestas' },
     { id: 'recursos', label: '📖 Recursos' },
     { id: 'activities', label: '📈 Actividad' },
+    { id: 'admin-flow', label: '🔐 Admin Flow' },
     { id: 'focus', label: '🎯 Focus' },
     { id: 'focus-original', label: '📋 Original' },
   ];
@@ -5215,6 +5604,18 @@ export default function DraftFeatures({ onClose }) {
                 <strong>📈 Actividad:</strong> Página de actividades con "Esta semana" y estadísticas mensuales
               </div>
               <ActivitiesPage />
+            </motion.div>
+          )}
+
+          {/* ADMIN FLOW PAGE */}
+          {activeTab === 'admin-flow' && (
+            <motion.div
+              key="admin-flow"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <AdminFlowPage />
             </motion.div>
           )}
 
