@@ -2526,20 +2526,18 @@ export default function OpositaApp() {
         </div>
       </div>
 
-      {/* DEV Panel Colapsable - Visible en dev mode O para admin autenticado */}
-      {(import.meta.env.DEV || (isAuthenticated && isUserAdmin)) && (
-        <DevPanel
-          onReset={handleDevReset}
-          onShowPremium={() => setShowPremiumModal(true)}
-          onShowAdminLogin={() => setShowAdminLoginModal(true)}
-          onShowPlayground={() => setShowAnimationPlayground(true)}
-          onShowDraftFeatures={() => setShowDraftFeatures(true)}
-          premiumMode={premiumMode}
-          onTogglePremium={() => setPremiumMode(!premiumMode)}
-          streakCount={displayStreak}
-          testsCount={totalStats.testsCompleted}
-        />
-      )}
+      {/* DEV Panel Colapsable - Siempre visible por ahora (TODO: ocultar en prod cuando sistema de roles esté listo) */}
+      <DevPanel
+        onReset={handleDevReset}
+        onShowPremium={() => setShowPremiumModal(true)}
+        onShowAdminLogin={() => setShowAdminLoginModal(true)}
+        onShowPlayground={() => setShowAnimationPlayground(true)}
+        onShowDraftFeatures={() => setShowDraftFeatures(true)}
+        premiumMode={premiumMode}
+        onTogglePremium={() => setPremiumMode(!premiumMode)}
+        streakCount={displayStreak}
+        testsCount={totalStats.testsCompleted}
+      />
 
       <BottomTabBar />
       {showPremiumModal && <PremiumModal />}
