@@ -59,8 +59,7 @@ const statusConfig = {
   }
 };
 
-// Block names for filtering
-const BLOCKS = ['Bloque I', 'Bloque II', 'Bloque III', 'Bloque IV'];
+// Block names are now dynamic from the data
 
 /**
  * StatusBadge - Displays status with icon and color
@@ -297,28 +296,59 @@ export default function TemasListView({
 }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedBlock, setSelectedBlock] = useState(null);
-  const [expandedBlocks, setExpandedBlocks] = useState(new Set(['Bloque I']));
+  const [expandedBlocks, setExpandedBlocks] = useState(new Set());
+
+  // Normalize topicsByBlock structure from useTopics hook
+  // Hook returns: { blockId: { id, name, number, code, topics: [...] } }
+  // We need: { blockName: { id, name, topics: [...] } }
+  const normalizedBlocks = useMemo(() => {
+    const result = {};
+
+    Object.values(topicsByBlock).forEach((block) => {
+      if (block && block.name && block.topics) {
+        result[block.name] = {
+          id: block.id,
+          name: block.name,
+          number: block.number,
+          topics: block.topics
+        };
+      }
+    });
+
+    return result;
+  }, [topicsByBlock]);
+
+  // Initialize expanded blocks with first block
+  React.useEffect(() => {
+    const blockNames = Object.keys(normalizedBlocks);
+    if (blockNames.length > 0 && expandedBlocks.size === 0) {
+      setExpandedBlocks(new Set([blockNames[0]]));
+    }
+  }, [normalizedBlocks]);
 
   // Filter topics based on search and block
   const filteredTopicsByBlock = useMemo(() => {
     const result = {};
 
-    Object.entries(topicsByBlock).forEach(([block, blockTopics]) => {
+    Object.entries(normalizedBlocks).forEach(([blockName, block]) => {
       // Filter by selected block
-      if (selectedBlock && block !== selectedBlock) return;
+      if (selectedBlock && blockName !== selectedBlock) return;
 
       // Filter by search query
-      const filtered = blockTopics.filter((topic) =>
+      const filtered = (block.topics || []).filter((topic) =>
         topic.name.toLowerCase().includes(searchQuery.toLowerCase())
       );
 
       if (filtered.length > 0) {
-        result[block] = filtered;
+        result[blockName] = {
+          ...block,
+          topics: filtered
+        };
       }
     });
 
     return result;
-  }, [topicsByBlock, searchQuery, selectedBlock]);
+  }, [normalizedBlocks, searchQuery, selectedBlock]);
 
   // Toggle block expansion
   const toggleBlock = (blockName) => {
@@ -404,12 +434,12 @@ export default function TemasListView({
           isActive={selectedBlock === null}
           onClick={() => setSelectedBlock(null)}
         />
-        {BLOCKS.map((block) => (
+        {Object.keys(normalizedBlocks).map((blockName) => (
           <FilterChip
-            key={block}
-            label={block}
-            isActive={selectedBlock === block}
-            onClick={() => setSelectedBlock(block)}
+            key={blockName}
+            label={blockName}
+            isActive={selectedBlock === blockName}
+            onClick={() => setSelectedBlock(blockName)}
           />
         ))}
       </div>
@@ -417,11 +447,11 @@ export default function TemasListView({
       {/* Topics List */}
       {hasResults ? (
         <div className="space-y-4">
-          {Object.entries(filteredTopicsByBlock).map(([blockName, blockTopics]) => (
+          {Object.entries(filteredTopicsByBlock).map(([blockName, block]) => (
             <BlockSection
               key={blockName}
               blockName={blockName}
-              topics={blockTopics}
+              topics={block.topics || []}
               isExpanded={expandedBlocks.has(blockName)}
               onToggle={() => toggleBlock(blockName)}
               onTopicSelect={onTopicSelect}
