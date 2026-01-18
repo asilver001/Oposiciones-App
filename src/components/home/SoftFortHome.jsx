@@ -276,7 +276,9 @@ export default function SoftFortHome({
   onAccuracyClick,
   onLevelClick,
   onViewAllTopics,
-  onNavigate
+  onNavigate,
+  showTopBar = true,
+  showFooter = true
 }) {
   // Calculate daily progress (simplified - can be enhanced)
   const dailyProgress = Math.min(100, totalStats.testsCompleted * 10);
@@ -313,14 +315,16 @@ export default function SoftFortHome({
       animate={{ opacity: 1 }}
       className="space-y-3"
     >
-      {/* TopBar */}
-      <TopBar
-        dailyProgress={dailyProgress}
-        dailyGoal={100}
-        userName={userName}
-        onSettingsClick={onSettingsClick}
-        onProgressClick={onProgressClick}
-      />
+      {/* TopBar - optional, can be disabled when using parent's TopBar */}
+      {showTopBar && (
+        <TopBar
+          dailyProgress={dailyProgress}
+          dailyGoal={100}
+          userName={userName}
+          onSettingsClick={onSettingsClick}
+          onProgressClick={onProgressClick}
+        />
+      )}
 
       {/* Greeting section */}
       <div>
@@ -381,8 +385,8 @@ export default function SoftFortHome({
         />
       </div>
 
-      {/* Footer */}
-      <Footer onNavigate={onNavigate} />
+      {/* Footer - optional */}
+      {showFooter && <Footer onNavigate={onNavigate} />}
     </motion.div>
   );
 }

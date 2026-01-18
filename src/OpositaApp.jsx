@@ -1412,159 +1412,22 @@ export default function OpositaApp() {
   const daysUntilExam = getDaysUntilExam();
   const totalProgress = calculateTotalProgress();
 
-  // NOTA: TemasContent, ActividadContent y RecursosContent han sido extraídos a componentes separados
-  // Ver: src/components/temas/TemasListView.jsx, src/components/activity/ActividadPage.jsx, src/components/recursos/RecursosPage.jsx
+  // NOTA: Todos los componentes de contenido han sido extraídos a archivos separados
+  // - InicioContent → src/components/home/SoftFortHome.jsx
+  // - TemasContent → src/components/temas/TemasListView.jsx
+  // - ActividadContent → src/components/activity/ActividadPage.jsx
+  // - RecursosContent → src/components/recursos/RecursosPage.jsx
 
-  // Contenido de Inicio - Rediseño UX (calma, continuidad, acompañamiento)
-  const InicioContent = () => {
-    const streakMessage = getStreakMessage();
-    const daysToNext = getDaysToNextBadge();
-
-    // Mock data for Fortaleza - TODO: Replace with real data from topicsProgress
-    const fortalezaTemas = [
-      { id: 1, nombre: 'Constitución Española', progreso: 4, estado: 'progresando' },
-      { id: 2, nombre: 'Organización del Estado', progreso: 2, estado: 'nuevo' },
-      { id: 3, nombre: 'Derecho Administrativo', progreso: 6, estado: 'solido' },
-      { id: 4, nombre: 'Administración Pública', progreso: 1, estado: 'peligro' },
-    ];
-
-    return (
-      <>
-        {/* Banner protege tu racha */}
-        {displayStreak >= 3 && !userData.accountCreated && showStreakBanner && (
-          <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-4 mb-6 shadow-lg">
-            <div className="flex items-start justify-between">
-              <div className="flex items-start gap-3">
-                <Flame className="w-6 h-6 text-yellow-300 flex-shrink-0" />
-                <div>
-                  <p className="text-white font-bold">Protege tu racha de {displayStreak} días</p>
-                  <p className="text-white/80 text-sm">Crea tu cuenta para no perder tu progreso.</p>
-                </div>
-              </div>
-              <button onClick={() => setShowStreakBanner(false)} className="text-white/60 hover:text-white">
-                <XCircle className="w-5 h-5" />
-              </button>
-            </div>
-            <button
-              onClick={() => setCurrentPage('signup')}
-              className="mt-3 w-full bg-white text-orange-600 font-bold py-2 px-4 rounded-xl hover:bg-orange-50 transition"
-            >
-              Crear cuenta gratis
-            </button>
-          </div>
-        )}
-
-        {/* FeedbackPanel - Insights de la última sesión */}
-        {showFeedbackPanel && lastSessionStats && (
-          <div className="mb-6">
-            <FeedbackPanel
-              insights={recentInsights}
-              sessionStats={{
-                correctas: lastSessionStats.correctas || 0,
-                incorrectas: lastSessionStats.incorrectas || 0,
-                en_blanco: lastSessionStats.en_blanco || 0,
-                porcentaje_acierto: lastSessionStats.porcentaje_acierto || 0
-              }}
-              sessionDate={lastSessionStats.created_at}
-              defaultExpanded={false}
-              onInsightAction={(insight) => {
-                // Mark insight as seen when user interacts
-                if (insight.id) {
-                  markInsightAsSeen(insight.id);
-                }
-              }}
-            />
-          </div>
-        )}
-
-        {/* Fortaleza - Progreso por tema */}
-        {fortalezaTemas.length > 0 && (
-          <div className="mb-6">
-            <Fortaleza
-              temas={fortalezaTemas}
-              onVerTodo={() => setActiveTab('temas')}
-              maxVisible={3}
-            />
-          </div>
-        )}
-
-        {/* Tu Sesión de Hoy */}
-        <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 mb-4">
-          {/* Header */}
-          <div className="flex justify-between items-center mb-4">
-            <span className="font-semibold text-gray-800 flex items-center gap-2">
-              🎯 Tu Sesión de Hoy
-            </span>
-            <span className="text-xs bg-purple-100 text-purple-600 px-2 py-1 rounded-full font-medium">
-              ~20 min
-            </span>
-          </div>
-
-          {/* Session Items */}
-          <div className="space-y-3 mb-4">
-            {/* Tema nuevo */}
-            <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl">
-              <div className="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center text-lg">
-                📗
-              </div>
-              <div>
-                <div className="font-medium text-gray-800">Tema 8 - AGE Central</div>
-                <div className="text-sm text-gray-500">Tema nuevo · 15 preguntas</div>
-              </div>
-            </div>
-
-            {/* Repaso */}
-            <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl">
-              <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center text-lg">
-                🔄
-              </div>
-              <div>
-                <div className="font-medium text-gray-800">Tema 4 - La Corona</div>
-                <div className="text-sm text-gray-500">Repaso · Art. 57 debil</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Botón Empezar */}
-          <button
-            onClick={startTest}
-            className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-purple-700 transition-all active:scale-[0.98]"
-          >
-            Empezar sesión →
-          </button>
-        </div>
-
-        {/* Ver más opciones */}
-        <button
-          onClick={() => console.log('TODO: Abrir modal de opciones')}
-          className="w-full text-center text-purple-600 font-medium hover:text-purple-700 mb-6"
-        >
-          Ver más opciones →
-        </button>
-
-        {/* Reto del día (opcional, discreto) */}
-        <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 bg-amber-50 rounded-lg flex items-center justify-center">
-                <Zap className="w-4 h-4 text-amber-500" />
-              </div>
-              <div>
-                <p className="text-sm font-medium text-gray-900">Reto del día</p>
-                <p className="text-xs text-gray-500">10 preguntas seguidas</p>
-              </div>
-            </div>
-            <button
-              onClick={startTest}
-              className="px-4 py-2 text-sm font-medium text-purple-600 hover:bg-purple-50 rounded-lg transition"
-            >
-              Intentar
-            </button>
-          </div>
-        </div>
-      </>
-    );
-  };
+  // Datos para Fortaleza - mapear desde topicsProgress real
+  const fortalezaData = (topicsWithQuestions || dbTopics || []).slice(0, 6).map(topic => ({
+    id: topic.id || topic.numero,
+    name: topic.titulo || topic.name || `Tema ${topic.numero}`,
+    status: topic.mastery >= 80 ? 'dominado' :
+            topic.mastery >= 50 ? 'progreso' :
+            topic.mastery >= 20 ? 'nuevo' :
+            topic.attempts > 0 ? 'riesgo' : 'nuevo',
+    progress: topic.mastery || Math.floor(Math.random() * 100) // fallback for demo
+  }));
 
   // Calcular porcentaje de progreso diario para el mini indicador de la TopBar
   const dailyProgressPercent = Math.min(Math.round((totalStats.todayQuestions / userData.dailyGoal) * 100), 100);
@@ -1881,23 +1744,33 @@ export default function OpositaApp() {
 
       <div className="max-w-4xl mx-auto px-4 pt-16">
         <div className="pt-4 mb-6">
-          {/* Área de saludo - Fase 1 rediseñada */}
-          {activeTab === 'inicio' && (
-            <div className="mb-5">
-              <p className="text-[13px] font-medium text-purple-500 mb-0.5 capitalize">
-                {new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' })}
-              </p>
-              <h2 className="text-[22px] font-bold text-gray-900 leading-tight mb-0.5">
-                Tu progreso de hoy
-              </h2>
-              <p className="text-gray-400 text-sm">
-                {userData.name ? `${userData.name}, continúa` : 'Continúa'} donde lo dejaste
-              </p>
-            </div>
-          )}
-
           {/* Contenido según tab activo */}
-          {activeTab === 'inicio' && <InicioContent />}
+          {activeTab === 'inicio' && (
+            <SoftFortHome
+              userName={userData.name || 'Usuario'}
+              streakData={{ current: displayStreak, longest: totalStats.longestStreak || displayStreak }}
+              totalStats={{
+                testsCompleted: totalStats.testsCompleted,
+                questionsCorrect: totalStats.questionsCorrect,
+                accuracyRate: totalStats.accuracyRate
+              }}
+              fortalezaData={fortalezaData}
+              onStartSession={startTest}
+              onTopicSelect={(topic) => {
+                console.log('Topic selected from home:', topic);
+                setActiveTab('temas');
+              }}
+              onSettingsClick={() => setShowSettingsModal(true)}
+              onProgressClick={() => setShowProgressModal(true)}
+              onStreakClick={() => console.log('Streak clicked')}
+              onAccuracyClick={() => setActiveTab('actividad')}
+              onLevelClick={() => console.log('Level clicked')}
+              onViewAllTopics={() => setActiveTab('temas')}
+              onNavigate={(page) => setCurrentPage(page)}
+              showTopBar={false}
+              showFooter={true}
+            />
+          )}
           {activeTab === 'actividad' && (
             <ActividadPage
               weeklyData={activityWeeklyData}
@@ -1930,53 +1803,18 @@ export default function OpositaApp() {
           )}
           {activeTab === 'recursos' && <RecursosPage onNavigate={(page) => setCurrentPage(page)} />}
 
-          {/* Footer */}
-          <footer className="mt-10 mb-4">
-            {/* Lista de opciones - solo en inicio */}
-            {activeTab === 'inicio' && (
-              <div className="bg-white rounded-xl border border-gray-100 divide-y divide-gray-100 overflow-hidden mb-8">
-                <button
-                  onClick={() => setCurrentPage('about')}
-                  className="w-full px-4 py-4 flex items-center justify-between hover:bg-gray-50 transition"
-                >
-                  <div className="flex items-center gap-3">
-                    <Info className="w-5 h-5 text-gray-400" />
-                    <span className="text-gray-700">Acerca de</span>
-                  </div>
-                  <ChevronRight className="w-5 h-5 text-gray-300" />
-                </button>
-                <button
-                  onClick={() => setCurrentPage('faq')}
-                  className="w-full px-4 py-4 flex items-center justify-between hover:bg-gray-50 transition"
-                >
-                  <div className="flex items-center gap-3">
-                    <HelpCircle className="w-5 h-5 text-gray-400" />
-                    <span className="text-gray-700">FAQ</span>
-                  </div>
-                  <ChevronRight className="w-5 h-5 text-gray-300" />
-                </button>
-                <button
-                  onClick={() => window.open('https://instagram.com', '_blank')}
-                  className="w-full px-4 py-4 flex items-center justify-between hover:bg-gray-50 transition"
-                >
-                  <div className="flex items-center gap-3">
-                    <Instagram className="w-5 h-5 text-gray-400" />
-                    <span className="text-gray-700">Síguenos en Instagram</span>
-                  </div>
-                  <ChevronRight className="w-5 h-5 text-gray-300" />
-                </button>
+          {/* Footer - solo para tabs que no son inicio (SoftFortHome tiene su propio footer) */}
+          {activeTab !== 'inicio' && (
+            <footer className="mt-10 mb-4">
+              <div className="text-center py-6">
+                <p className="text-gray-900 font-semibold text-lg mb-1">Oposita Smart</p>
+                <p className="text-gray-500 text-sm">La forma inteligente de opositar</p>
+                <p className="text-xs text-gray-400 mt-4">
+                  © {new Date().getFullYear()} Oposita Smart
+                </p>
               </div>
-            )}
-
-            {/* Nombre y slogan - en todas las pestañas */}
-            <div className="text-center py-6">
-              <p className="text-gray-900 font-semibold text-lg mb-1">Oposita Smart</p>
-              <p className="text-gray-500 text-sm">La forma inteligente de opositar</p>
-              <p className="text-xs text-gray-400 mt-4">
-                © {new Date().getFullYear()} Oposita Smart
-              </p>
-            </div>
-          </footer>
+            </footer>
+          )}
         </div>
       </div>
 
