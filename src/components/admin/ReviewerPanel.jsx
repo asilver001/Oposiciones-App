@@ -6,6 +6,7 @@ import {
   Keyboard, GitCompare, LayoutGrid, List, RotateCcw
 } from 'lucide-react';
 import { useAdmin } from '../../contexts/AdminContext';
+import { useAuth } from '../../contexts/AuthContext';
 import { supabase } from '../../lib/supabase';
 import { ViewModeSelector, QuestionCardCompact, QuestionDetailModal } from '../review';
 
@@ -21,7 +22,16 @@ const reformulationLabels = {
 };
 
 export default function ReviewerPanel({ onBack }) {
+  // Support both AdminContext (PIN login) and AuthContext (normal login with role)
   const { adminUser, logoutAdmin, reviewQuestion, markForRefresh } = useAdmin();
+  const { user: authUser, userRole, isReviewer: isReviewerFromAuth } = useAuth();
+
+  // Use whichever user is available
+  const currentUser = adminUser || (isReviewerFromAuth ? {
+    name: userRole?.name || authUser?.user_metadata?.display_name || authUser?.email,
+    email: authUser?.email,
+    role: userRole?.role || 'reviewer'
+  } : null);
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -403,7 +413,11 @@ export default function ReviewerPanel({ onBack }) {
   }, [handleApprove, handleReject, handleMarkRefresh, goToNext, goToPrev, viewMode, selectedQuestion]);
 
   const handleLogout = () => {
-    logoutAdmin();
+    // Logout from AdminContext if logged in via PIN
+    if (adminUser) {
+      logoutAdmin();
+    }
+    // Just go back (don't sign out from AuthContext)
     onBack();
   };
 
@@ -435,7 +449,7 @@ export default function ReviewerPanel({ onBack }) {
                   Panel de Revisión
                 </h1>
                 <p className="text-purple-200 text-sm">
-                  {adminUser?.name || 'Revisor'}
+                  {currentUser?.name || 'Revisor'}
                 </p>
               </div>
             </div>
