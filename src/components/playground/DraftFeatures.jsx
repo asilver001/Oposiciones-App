@@ -4504,6 +4504,442 @@ function FeatureProposalsPage() {
 }
 
 // ============================================
+// TEMAS DATA - Full 28 topics from AGE syllabus
+// ============================================
+
+const temasAGECompleto = [
+  // Bloque I: Organizacion Publica (Temas 1-18)
+  { id: 1, nombre: 'La Constitucion Espanola de 1978', bloque: 'Constitucion', preguntas: 42, estado: 'dominado', progreso: 92 },
+  { id: 2, nombre: 'Derechos y deberes fundamentales', bloque: 'Constitucion', preguntas: 38, estado: 'avanzando', progreso: 78 },
+  { id: 3, nombre: 'La Corona. Las Cortes Generales', bloque: 'Constitucion', preguntas: 40, estado: 'progreso', progreso: 55 },
+  { id: 4, nombre: 'El Gobierno y la Administracion. El Poder Judicial', bloque: 'Constitucion', preguntas: 35, estado: 'riesgo', progreso: 32 },
+  { id: 5, nombre: 'Organizacion territorial del Estado', bloque: 'Constitucion', preguntas: 28, estado: 'nuevo', progreso: 0 },
+  { id: 6, nombre: 'La Administracion General del Estado', bloque: 'Organizacion', preguntas: 45, estado: 'progreso', progreso: 48 },
+  { id: 7, nombre: 'La AGE: Organos territoriales', bloque: 'Organizacion', preguntas: 32, estado: 'riesgo', progreso: 25 },
+  { id: 8, nombre: 'Las Comunidades Autonomas', bloque: 'Organizacion', preguntas: 30, estado: 'nuevo', progreso: 0 },
+  { id: 9, nombre: 'La Administracion Local', bloque: 'Organizacion', preguntas: 27, estado: 'nuevo', progreso: 0 },
+  { id: 10, nombre: 'La Union Europea', bloque: 'Organizacion', preguntas: 35, estado: 'avanzando', progreso: 65 },
+  { id: 11, nombre: 'Personal al servicio de las AAPP. El EBEP', bloque: 'Funcion Publica', preguntas: 48, estado: 'progreso', progreso: 42 },
+  { id: 12, nombre: 'Derechos y deberes de los empleados publicos', bloque: 'Funcion Publica', preguntas: 36, estado: 'nuevo', progreso: 0 },
+  { id: 13, nombre: 'Regimen disciplinario', bloque: 'Funcion Publica', preguntas: 22, estado: 'nuevo', progreso: 0 },
+  { id: 14, nombre: 'Ley 39/2015: Disposiciones generales', bloque: 'Procedimiento', preguntas: 50, estado: 'avanzando', progreso: 70 },
+  { id: 15, nombre: 'El acto administrativo', bloque: 'Procedimiento', preguntas: 44, estado: 'dominado', progreso: 88 },
+  { id: 16, nombre: 'Disposiciones sobre procedimiento comun', bloque: 'Procedimiento', preguntas: 46, estado: 'progreso', progreso: 52 },
+  { id: 17, nombre: 'Revision de actos. Recursos administrativos', bloque: 'Procedimiento', preguntas: 42, estado: 'riesgo', progreso: 28 },
+  { id: 18, nombre: 'Ley 40/2015: Regimen Juridico del Sector Publico', bloque: 'Procedimiento', preguntas: 40, estado: 'nuevo', progreso: 0 },
+  // Bloque II: Ofimatica (Temas 19-28)
+  { id: 19, nombre: 'Informatica basica: Conceptos fundamentales', bloque: 'Ofimatica', preguntas: 38, estado: 'dominado', progreso: 95 },
+  { id: 20, nombre: 'Sistemas operativos: Windows 11', bloque: 'Ofimatica', preguntas: 52, estado: 'avanzando', progreso: 72 },
+  { id: 21, nombre: 'Procesadores de texto: Word 2019', bloque: 'Ofimatica', preguntas: 55, estado: 'progreso', progreso: 58 },
+  { id: 22, nombre: 'Hojas de calculo: Excel 2019', bloque: 'Ofimatica', preguntas: 58, estado: 'riesgo', progreso: 35 },
+  { id: 23, nombre: 'Bases de datos: Access 2019', bloque: 'Ofimatica', preguntas: 42, estado: 'nuevo', progreso: 0 },
+  { id: 24, nombre: 'Presentaciones: PowerPoint 2019', bloque: 'Ofimatica', preguntas: 32, estado: 'nuevo', progreso: 0 },
+  { id: 25, nombre: 'Correo electronico: Outlook 2019', bloque: 'Ofimatica', preguntas: 28, estado: 'progreso', progreso: 45 },
+  { id: 26, nombre: 'Internet y navegadores', bloque: 'Ofimatica', preguntas: 30, estado: 'avanzando', progreso: 68 },
+  { id: 27, nombre: 'Administracion electronica', bloque: 'Ofimatica', preguntas: 44, estado: 'progreso', progreso: 40 },
+  { id: 28, nombre: 'Proteccion de datos (RGPD y LOPDGDD)', bloque: 'Ofimatica', preguntas: 46, estado: 'riesgo', progreso: 22 },
+];
+
+// ============================================
+// PROPUESTA A - Lista Clasica Mejorada
+// ============================================
+
+function TemasListaClasica({ temas = temasAGECompleto, onTemaClick }) {
+  const [filtroEstado, setFiltroEstado] = useState('todos');
+  const [busqueda, setBusqueda] = useState('');
+
+  const filtros = [
+    { id: 'todos', label: 'Todos', count: temas.length },
+    { id: 'dominado', label: 'Dominados', count: temas.filter(t => t.estado === 'dominado').length },
+    { id: 'avanzando', label: 'Avanzando', count: temas.filter(t => t.estado === 'avanzando').length },
+    { id: 'progreso', label: 'En progreso', count: temas.filter(t => t.estado === 'progreso').length },
+    { id: 'riesgo', label: 'En riesgo', count: temas.filter(t => t.estado === 'riesgo').length },
+    { id: 'nuevo', label: 'Nuevos', count: temas.filter(t => t.estado === 'nuevo').length },
+  ];
+
+  const temasFiltrados = temas
+    .filter(t => filtroEstado === 'todos' || t.estado === filtroEstado)
+    .filter(t => busqueda === '' || t.nombre.toLowerCase().includes(busqueda.toLowerCase()));
+
+  const bloques = [...new Set(temasFiltrados.map(t => t.bloque))];
+
+  return (
+    <motion.div className="min-h-screen bg-gradient-to-b from-rose-50/50 via-purple-50/30 to-violet-50/50" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      <div className="bg-white/80 backdrop-blur-lg border-b border-purple-100 sticky top-0 z-10">
+        <div className="px-4 py-4">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-violet-600 flex items-center justify-center">
+              <BookOpen className="w-5 h-5 text-white" />
+            </div>
+            <div>
+              <h1 className="text-lg font-bold text-gray-900">Temario AGE</h1>
+              <p className="text-xs text-gray-500">28 temas - Auxiliar Administrativo</p>
+            </div>
+          </div>
+          <div className="relative mb-3">
+            <input type="text" placeholder="Buscar tema..." value={busqueda} onChange={(e) => setBusqueda(e.target.value)}
+              className="w-full px-4 py-2.5 pl-10 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-purple-500/20 focus:border-purple-300" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+          </div>
+          <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+            {filtros.map((filtro) => (
+              <motion.button key={filtro.id} onClick={() => setFiltroEstado(filtro.id)}
+                className={`px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap flex items-center gap-1.5 transition-all
+                  ${filtroEstado === filtro.id ? 'bg-purple-600 text-white shadow-lg shadow-purple-600/25' : 'bg-white text-gray-600 border border-gray-200'}`}
+                whileTap={{ scale: 0.95 }}>
+                {filtro.label}
+                <span className={`px-1.5 py-0.5 rounded-full text-[10px] ${filtroEstado === filtro.id ? 'bg-white/20' : 'bg-gray-100'}`}>{filtro.count}</span>
+              </motion.button>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="px-4 py-4 space-y-6">
+        {bloques.map((bloque) => {
+          const temasBloque = temasFiltrados.filter(t => t.bloque === bloque);
+          if (temasBloque.length === 0) return null;
+          return (
+            <motion.div key={bloque} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-xs font-semibold text-purple-600 uppercase tracking-wider">{bloque}</span>
+                <div className="flex-1 h-px bg-purple-200" />
+                <span className="text-xs text-gray-400">{temasBloque.length} temas</span>
+              </div>
+              <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                {temasBloque.map((tema, index) => {
+                  const config = estadoConfig[tema.estado] || estadoConfig.nuevo;
+                  const Icon = config.icon;
+                  return (
+                    <motion.button key={tema.id} onClick={() => onTemaClick?.(tema)}
+                      className="w-full px-4 py-3.5 flex items-center gap-3 border-b border-gray-50 last:border-b-0 hover:bg-purple-50/50 transition-colors text-left"
+                      initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: index * 0.03 }} whileTap={{ scale: 0.99 }}>
+                      <div className={`w-10 h-10 rounded-xl ${config.bg} flex items-center justify-center flex-shrink-0`}>
+                        <Icon className={`w-5 h-5 ${config.text}`} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-xs font-medium text-gray-400">T{tema.id}</span>
+                          <p className="text-sm font-medium text-gray-800 truncate">{tema.nombre}</p>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                            <motion.div className={`h-full bg-gradient-to-r ${config.gradient} rounded-full`}
+                              initial={{ width: 0 }} animate={{ width: `${tema.progreso}%` }} transition={{ delay: 0.2 + index * 0.03, ...spring.smooth }} />
+                          </div>
+                          <span className="text-xs text-gray-500 w-10 text-right">{tema.progreso}%</span>
+                        </div>
+                      </div>
+                      <div className="flex flex-col items-end gap-1">
+                        <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${config.bg} ${config.text}`}>{config.label}</span>
+                        <span className="text-[10px] text-gray-400">{tema.preguntas} preguntas</span>
+                      </div>
+                      <ChevronRight className="w-4 h-4 text-gray-300 flex-shrink-0" />
+                    </motion.button>
+                  );
+                })}
+              </div>
+            </motion.div>
+          );
+        })}
+        {temasFiltrados.length === 0 && (
+          <div className="text-center py-12">
+            <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mx-auto mb-4">
+              <Search className="w-8 h-8 text-gray-400" />
+            </div>
+            <p className="text-gray-500">No se encontraron temas</p>
+          </div>
+        )}
+      </div>
+      <div className="px-4 pb-6">
+        <div className="bg-gradient-to-r from-purple-500 to-violet-600 rounded-2xl p-4 text-white">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-purple-200 text-xs">Progreso global</p>
+              <p className="text-2xl font-bold">{Math.round(temas.reduce((acc, t) => acc + t.progreso, 0) / temas.length)}%</p>
+            </div>
+            <div className="text-right">
+              <p className="text-purple-200 text-xs">Total preguntas</p>
+              <p className="text-2xl font-bold">{temas.reduce((acc, t) => acc + t.preguntas, 0)}</p>
+            </div>
+          </div>
+          <div className="mt-3 h-2 bg-white/20 rounded-full overflow-hidden">
+            <motion.div className="h-full bg-white rounded-full" initial={{ width: 0 }}
+              animate={{ width: `${Math.round(temas.reduce((acc, t) => acc + t.progreso, 0) / temas.length)}%` }} transition={spring.smooth} />
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+// ============================================
+// PROPUESTA B - Grid de Bloques
+// ============================================
+
+function TemasGridBloques({ temas = temasAGECompleto, onTemaClick }) {
+  const [expandedTema, setExpandedTema] = useState(null);
+  const [filtroBloque, setFiltroBloque] = useState('todos');
+
+  const bloques = ['todos', ...new Set(temas.map(t => t.bloque))];
+  const temasFiltrados = filtroBloque === 'todos' ? temas : temas.filter(t => t.bloque === filtroBloque);
+
+  const getEstadoBgColor = (estado) => {
+    const colors = { dominado: 'bg-emerald-50', avanzando: 'bg-purple-50', progreso: 'bg-blue-50', riesgo: 'bg-amber-50', nuevo: 'bg-gray-50' };
+    return colors[estado] || colors.nuevo;
+  };
+
+  return (
+    <motion.div className="min-h-screen bg-gradient-to-b from-rose-50/50 via-purple-50/30 to-violet-50/50" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      <div className="bg-white/80 backdrop-blur-lg border-b border-purple-100 sticky top-0 z-10 px-4 py-4">
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center">
+              <PieChart className="w-5 h-5 text-white" />
+            </div>
+            <div>
+              <h1 className="text-lg font-bold text-gray-900">Temario AGE</h1>
+              <p className="text-xs text-gray-500">Vista de bloques</p>
+            </div>
+          </div>
+          <div className="text-right">
+            <p className="text-2xl font-bold text-purple-600">{Math.round(temas.reduce((acc, t) => acc + t.progreso, 0) / temas.length)}%</p>
+            <p className="text-xs text-gray-500">completado</p>
+          </div>
+        </div>
+        <div className="flex gap-2 overflow-x-auto scrollbar-hide">
+          {bloques.map((bloque) => (
+            <motion.button key={bloque} onClick={() => setFiltroBloque(bloque)}
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-all
+                ${filtroBloque === bloque ? 'bg-purple-600 text-white shadow-lg shadow-purple-600/25' : 'bg-white text-gray-600 border border-gray-200'}`}
+              whileTap={{ scale: 0.95 }}>
+              {bloque === 'todos' ? 'Todos' : bloque}
+            </motion.button>
+          ))}
+        </div>
+      </div>
+      <div className="px-4 py-4">
+        <div className="grid grid-cols-2 gap-3">
+          {temasFiltrados.map((tema, index) => {
+            const config = estadoConfig[tema.estado] || estadoConfig.nuevo;
+            const Icon = config.icon;
+            const isExpanded = expandedTema === tema.id;
+            return (
+              <motion.div key={tema.id} initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: index * 0.02 }} layout className={`${isExpanded ? 'col-span-2' : ''}`}>
+                <motion.button onClick={() => setExpandedTema(isExpanded ? null : tema.id)}
+                  className={`w-full ${getEstadoBgColor(tema.estado)} rounded-2xl p-4 border ${tema.estado === 'riesgo' ? 'border-amber-200' : 'border-gray-100'} text-left relative overflow-hidden`}
+                  whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} layout>
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gray-200">
+                    <motion.div className={`h-full bg-gradient-to-r ${config.gradient}`} initial={{ width: 0 }} animate={{ width: `${tema.progreso}%` }} transition={spring.smooth} />
+                  </div>
+                  <div className="pt-2">
+                    <div className="flex items-start justify-between mb-2">
+                      <div className={`w-8 h-8 rounded-lg ${config.bg} flex items-center justify-center`}>
+                        <Icon className={`w-4 h-4 ${config.text}`} />
+                      </div>
+                      <span className="text-lg font-bold text-gray-800">{tema.progreso}%</span>
+                    </div>
+                    <p className="text-[10px] text-gray-400 font-medium uppercase tracking-wide">T{tema.id}</p>
+                    <p className={`text-sm font-semibold text-gray-800 ${isExpanded ? '' : 'line-clamp-2'} leading-tight mb-2`}>{tema.nombre}</p>
+                    <div className="flex items-center justify-between">
+                      <span className={`text-[10px] px-2 py-0.5 rounded-full ${config.bg} ${config.text} font-medium`}>{config.label}</span>
+                      <span className="text-[10px] text-gray-400">{tema.preguntas} preg.</span>
+                    </div>
+                    <AnimatePresence>
+                      {isExpanded && (
+                        <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }}
+                          className="mt-4 pt-4 border-t border-gray-200 space-y-2">
+                          <motion.button onClick={(e) => { e.stopPropagation(); onTemaClick?.(tema); }}
+                            className="w-full py-2.5 bg-purple-600 text-white rounded-xl text-sm font-medium flex items-center justify-center gap-2" whileTap={{ scale: 0.98 }}>
+                            <Zap className="w-4 h-4" /> Test rapido
+                          </motion.button>
+                          <div className="grid grid-cols-2 gap-2">
+                            <button className="py-2 bg-white rounded-lg text-xs font-medium text-gray-600 border border-gray-200">Simulacro</button>
+                            <button className="py-2 bg-white rounded-lg text-xs font-medium text-gray-600 border border-gray-200">Repasar</button>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </motion.button>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+      <div className="px-4 pb-6">
+        <div className="bg-white rounded-2xl border border-gray-100 p-4">
+          <p className="text-xs font-medium text-gray-500 mb-3">Leyenda de estados</p>
+          <div className="grid grid-cols-3 gap-2">
+            {Object.entries(estadoConfig).slice(0, 5).map(([key, config]) => (
+              <div key={key} className="flex items-center gap-2">
+                <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${config.gradient}`} />
+                <span className="text-[10px] text-gray-500">{config.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+// ============================================
+// PROPUESTA C - Fortaleza Expandida
+// ============================================
+
+function TemasFortalezaExpandida({ temas = temasAGECompleto, onTemaClick }) {
+  const [selectedTorre, setSelectedTorre] = useState(null);
+
+  const torres = [
+    { id: 'constitucion', nombre: 'Torre de la Constitucion', emoji: '🏛️', bloques: ['Constitucion'] },
+    { id: 'organizacion', nombre: 'Torre de la Organizacion', emoji: '🏢', bloques: ['Organizacion'] },
+    { id: 'funcion', nombre: 'Torre de la Funcion Publica', emoji: '👥', bloques: ['Funcion Publica'] },
+    { id: 'procedimiento', nombre: 'Torre del Procedimiento', emoji: '📋', bloques: ['Procedimiento'] },
+    { id: 'ofimatica', nombre: 'Torre Digital', emoji: '💻', bloques: ['Ofimatica'] },
+  ];
+
+  const getTorreStats = (torre) => {
+    const temasTorre = temas.filter(t => torre.bloques.includes(t.bloque));
+    const progreso = temasTorre.length > 0 ? Math.round(temasTorre.reduce((acc, t) => acc + t.progreso, 0) / temasTorre.length) : 0;
+    const dominados = temasTorre.filter(t => t.estado === 'dominado').length;
+    const enRiesgo = temasTorre.filter(t => t.estado === 'riesgo').length;
+    return { temasTorre, progreso, dominados, enRiesgo, total: temasTorre.length };
+  };
+
+  const getTorreLevel = (progreso) => {
+    if (progreso >= 90) return { level: 5, label: 'Maestro', color: 'from-amber-400 to-yellow-500' };
+    if (progreso >= 70) return { level: 4, label: 'Avanzado', color: 'from-emerald-400 to-emerald-500' };
+    if (progreso >= 50) return { level: 3, label: 'Intermedio', color: 'from-purple-400 to-purple-500' };
+    if (progreso >= 25) return { level: 2, label: 'Aprendiz', color: 'from-blue-400 to-blue-500' };
+    return { level: 1, label: 'Iniciado', color: 'from-gray-400 to-gray-500' };
+  };
+
+  const globalProgreso = Math.round(temas.reduce((acc, t) => acc + t.progreso, 0) / temas.length);
+  const totalPreguntas = temas.reduce((acc, t) => acc + t.preguntas, 0);
+  const temasDominados = temas.filter(t => t.estado === 'dominado').length;
+  const temasEnRiesgo = temas.filter(t => t.estado === 'riesgo').length;
+
+  return (
+    <motion.div className="min-h-screen bg-gradient-to-b from-rose-50/50 via-purple-50/30 to-violet-50/50" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      <div className="bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-700 px-4 pt-6 pb-8 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl" />
+        <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-xl" />
+        <div className="relative">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="text-4xl">🏰</span>
+            <div>
+              <h1 className="text-xl font-bold text-white">Tu Fortaleza</h1>
+              <p className="text-purple-200 text-sm">Construye tu conocimiento</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-6 bg-white/10 backdrop-blur-sm rounded-2xl p-4">
+            <div className="relative w-20 h-20">
+              <svg className="w-20 h-20 transform -rotate-90">
+                <circle cx="40" cy="40" r="32" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="8" />
+                <motion.circle cx="40" cy="40" r="32" fill="none" stroke="white" strokeWidth="8" strokeLinecap="round"
+                  initial={{ strokeDasharray: "0 201" }} animate={{ strokeDasharray: `${(globalProgreso / 100) * 201} 201` }} transition={spring.smooth} />
+              </svg>
+              <span className="absolute inset-0 flex items-center justify-center text-xl font-bold text-white">{globalProgreso}%</span>
+            </div>
+            <div className="flex-1 grid grid-cols-2 gap-3">
+              <div><p className="text-2xl font-bold text-white">{temasDominados}</p><p className="text-xs text-purple-200">Temas dominados</p></div>
+              <div><p className="text-2xl font-bold text-amber-300">{temasEnRiesgo}</p><p className="text-xs text-purple-200">Necesitan atencion</p></div>
+              <div><p className="text-2xl font-bold text-white">{totalPreguntas}</p><p className="text-xs text-purple-200">Preguntas totales</p></div>
+              <div><p className="text-2xl font-bold text-white">{temas.length}</p><p className="text-xs text-purple-200">Temas en total</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="px-4 py-4 -mt-4 space-y-3">
+        {torres.map((torre, index) => {
+          const stats = getTorreStats(torre);
+          const levelInfo = getTorreLevel(stats.progreso);
+          const isSelected = selectedTorre === torre.id;
+          return (
+            <motion.div key={torre.id} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: index * 0.1 }} layout>
+              <motion.button onClick={() => setSelectedTorre(isSelected ? null : torre.id)}
+                className={`w-full bg-white rounded-2xl border ${stats.enRiesgo > 0 ? 'border-amber-200' : 'border-gray-100'} shadow-sm overflow-hidden text-left`}
+                whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.99 }} layout>
+                <div className="h-1.5 bg-gray-100">
+                  <motion.div className={`h-full bg-gradient-to-r ${levelInfo.color}`} initial={{ width: 0 }} animate={{ width: `${stats.progreso}%` }}
+                    transition={{ delay: 0.3 + index * 0.1, ...spring.smooth }} />
+                </div>
+                <div className="p-4">
+                  <div className="flex items-center gap-3">
+                    <div className="text-3xl">{torre.emoji}</div>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-1">
+                        <h3 className="font-semibold text-gray-800">{torre.nombre}</h3>
+                        {stats.enRiesgo > 0 && (
+                          <span className="flex items-center gap-1 px-2 py-0.5 bg-amber-100 text-amber-700 rounded-full text-[10px] font-medium">
+                            <AlertTriangle className="w-3 h-3" /> {stats.enRiesgo}
+                          </span>
+                        )}
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <span className={`text-xs px-2 py-0.5 rounded-full bg-gradient-to-r ${levelInfo.color} text-white font-medium`}>
+                          Nv.{levelInfo.level} {levelInfo.label}
+                        </span>
+                        <span className="text-xs text-gray-500">{stats.total} temas</span>
+                        <span className="text-xs text-emerald-600">{stats.dominados} dominados</span>
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-2xl font-bold text-gray-800">{stats.progreso}%</p>
+                      <motion.div animate={{ rotate: isSelected ? 180 : 0 }} transition={{ duration: 0.2 }}>
+                        <ChevronDown className="w-5 h-5 text-gray-400 mx-auto" />
+                      </motion.div>
+                    </div>
+                  </div>
+                </div>
+                <AnimatePresence>
+                  {isSelected && (
+                    <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="border-t border-gray-100">
+                      <div className="p-3 space-y-2">
+                        {stats.temasTorre.map((tema) => {
+                          const config = estadoConfig[tema.estado] || estadoConfig.nuevo;
+                          const Icon = config.icon;
+                          return (
+                            <motion.button key={tema.id} onClick={(e) => { e.stopPropagation(); onTemaClick?.(tema); }}
+                              className="w-full flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-50 transition-colors" whileTap={{ scale: 0.98 }}>
+                              <div className={`w-8 h-8 rounded-lg ${config.bg} flex items-center justify-center`}>
+                                <Icon className={`w-4 h-4 ${config.text}`} />
+                              </div>
+                              <div className="flex-1 text-left">
+                                <p className="text-sm font-medium text-gray-700"><span className="text-gray-400">T{tema.id}</span> {tema.nombre}</p>
+                                <div className="flex items-center gap-2 mt-1">
+                                  <div className="flex-1 h-1 bg-gray-100 rounded-full overflow-hidden">
+                                    <div className={`h-full bg-gradient-to-r ${config.gradient} rounded-full`} style={{ width: `${tema.progreso}%` }} />
+                                  </div>
+                                  <span className="text-[10px] text-gray-500">{tema.progreso}%</span>
+                                </div>
+                              </div>
+                              <div className="text-right"><span className="text-[10px] text-gray-400">{tema.preguntas} preg.</span></div>
+                              <ChevronRight className="w-4 h-4 text-gray-300" />
+                            </motion.button>
+                          );
+                        })}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.button>
+            </motion.div>
+          );
+        })}
+      </div>
+      <div className="px-4 pb-6">
+        <motion.button className="w-full bg-gradient-to-r from-purple-500 to-violet-600 text-white py-4 rounded-2xl font-semibold flex items-center justify-center gap-2 shadow-lg shadow-purple-500/25"
+          whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+          <Sparkles className="w-5 h-5" /> Continuar donde lo dejaste
+        </motion.button>
+      </div>
+    </motion.div>
+  );
+}
+
+// ============================================
 // MAIN DRAFT FEATURES COMPONENT
 // ============================================
 
@@ -4704,6 +5140,51 @@ export default function DraftFeatures({ onClose }) {
                 onSettingsClick={() => setShowSettingsModal(true)}
                 onShowProgress={() => setShowProgressModal(true)}
               />
+            </motion.div>
+          )}
+
+          {/* PROPUESTA A - Temas Lista Clasica Mejorada */}
+          {activeTab === 'temas-lista' && (
+            <motion.div
+              key="temas-lista"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <div className="bg-purple-50 border border-purple-200 rounded-xl p-3 text-sm text-purple-800 mb-4">
+                <strong>📚 Propuesta A - Lista Clasica Mejorada:</strong> Lista vertical con busqueda, filtros por estado, agrupacion por bloques y contador de preguntas
+              </div>
+              <TemasListaClasica onTemaClick={(tema) => setSelectedTema(tema)} />
+            </motion.div>
+          )}
+
+          {/* PROPUESTA B - Temas Grid de Bloques */}
+          {activeTab === 'temas-grid' && (
+            <motion.div
+              key="temas-grid"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <div className="bg-violet-50 border border-violet-200 rounded-xl p-3 text-sm text-violet-800 mb-4">
+                <strong>📚 Propuesta B - Grid de Bloques:</strong> Temas en grid compacto color-coded, expandibles al click para acciones rapidas
+              </div>
+              <TemasGridBloques onTemaClick={(tema) => setSelectedTema(tema)} />
+            </motion.div>
+          )}
+
+          {/* PROPUESTA C - Temas Fortaleza Expandida */}
+          {activeTab === 'temas-fortaleza' && (
+            <motion.div
+              key="temas-fortaleza"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-3 text-sm text-indigo-800 mb-4">
+                <strong>📚 Propuesta C - Fortaleza Expandida:</strong> Torres por bloque con niveles, progreso global y gamificacion visual
+              </div>
+              <TemasFortalezaExpandida onTemaClick={(tema) => setSelectedTema(tema)} />
             </motion.div>
           )}
 
