@@ -5328,6 +5328,1053 @@ function TemasFortalezaExpandida({ temas = temasAGECompleto, onTemaClick }) {
 }
 
 // ============================================
+// QUICK WINS PREVIEW COMPONENT
+// ============================================
+
+function QuickWinsPreview() {
+  // State for interactive demos
+  const [autoAdvanceTime, setAutoAdvanceTime] = useState(500);
+  const [showTimer, setShowTimer] = useState(true);
+  const [demoAnswered, setDemoAnswered] = useState(false);
+  const [demoTimerRunning, setDemoTimerRunning] = useState(false);
+  const [demoTime, setDemoTime] = useState(0);
+
+  // Auto-advance demo effect
+  React.useEffect(() => {
+    if (demoAnswered) {
+      const timer = setTimeout(() => {
+        setDemoAnswered(false);
+      }, autoAdvanceTime);
+      return () => clearTimeout(timer);
+    }
+  }, [demoAnswered, autoAdvanceTime]);
+
+  // Timer demo effect
+  React.useEffect(() => {
+    let interval;
+    if (demoTimerRunning && showTimer) {
+      interval = setInterval(() => {
+        setDemoTime(prev => prev + 1);
+      }, 1000);
+    }
+    return () => clearInterval(interval);
+  }, [demoTimerRunning, showTimer]);
+
+  const autoAdvanceOptions = [
+    { value: 300, label: '300ms (actual)' },
+    { value: 500, label: '500ms' },
+    { value: 1000, label: '1s' },
+    { value: 2000, label: '2s (recomendado)' },
+  ];
+
+  const CodeSnippet = ({ code }) => (
+    <div className="bg-gray-900 rounded-lg p-3 overflow-x-auto">
+      <code className="text-xs text-green-400 font-mono">{code}</code>
+    </div>
+  );
+
+  return (
+    <div className="space-y-6">
+      {/* Header */}
+      <div className="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-xl p-4">
+        <div className="flex items-center gap-2 mb-2">
+          <Zap className="w-5 h-5 text-amber-600" />
+          <h2 className="font-bold text-amber-800">Quick Wins Preview</h2>
+        </div>
+        <p className="text-sm text-amber-700">
+          Mejoras pequenas con alto impacto en UX y accesibilidad.
+          Prueba cada demo interactivamente.
+        </p>
+      </div>
+
+      {/* Demo 1: Focus States */}
+      <motion.div
+        className="bg-white rounded-2xl border border-gray-200 overflow-hidden"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
+      >
+        <div className="px-4 py-3 bg-purple-50 border-b border-purple-100">
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">1</span>
+            </div>
+            <div>
+              <h3 className="font-semibold text-purple-900">Focus States</h3>
+              <p className="text-xs text-purple-600">Mejora la navegacion con teclado</p>
+            </div>
+          </div>
+        </div>
+        <div className="p-4 space-y-4">
+          <p className="text-sm text-gray-600">
+            <strong>Problema:</strong> Sin estilos de focus, usuarios de teclado no saben que elemento esta seleccionado.
+          </p>
+
+          {/* Side by side comparison */}
+          <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <p className="text-xs font-medium text-red-600 flex items-center gap-1">
+                <X className="w-3 h-3" /> Sin focus-visible
+              </p>
+              <button
+                className="w-full py-2 px-4 bg-purple-600 text-white rounded-lg font-medium transition-colors hover:bg-purple-700"
+                style={{ outline: 'none' }}
+              >
+                Boton A
+              </button>
+              <button
+                className="w-full py-2 px-4 bg-gray-100 text-gray-700 rounded-lg font-medium transition-colors hover:bg-gray-200"
+                style={{ outline: 'none' }}
+              >
+                Boton B
+              </button>
+            </div>
+            <div className="space-y-2">
+              <p className="text-xs font-medium text-green-600 flex items-center gap-1">
+                <Check className="w-3 h-3" /> Con focus-visible
+              </p>
+              <button
+                className="w-full py-2 px-4 bg-purple-600 text-white rounded-lg font-medium transition-colors hover:bg-purple-700 focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2"
+              >
+                Boton A
+              </button>
+              <button
+                className="w-full py-2 px-4 bg-gray-100 text-gray-700 rounded-lg font-medium transition-colors hover:bg-gray-200 focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2"
+              >
+                Boton B
+              </button>
+            </div>
+          </div>
+
+          <div className="bg-blue-50 rounded-lg p-3 border border-blue-200">
+            <p className="text-xs text-blue-700 mb-2 flex items-center gap-1">
+              <Info className="w-3 h-3" /> Prueba: Usa Tab para navegar entre botones
+            </p>
+          </div>
+
+          <CodeSnippet code="focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2" />
+        </div>
+      </motion.div>
+
+      {/* Demo 2: Contraste de Grises */}
+      <motion.div
+        className="bg-white rounded-2xl border border-gray-200 overflow-hidden"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+      >
+        <div className="px-4 py-3 bg-gray-100 border-b border-gray-200">
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">2</span>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900">Contraste de Grises</h3>
+              <p className="text-xs text-gray-600">Mejora la legibilidad del texto</p>
+            </div>
+          </div>
+        </div>
+        <div className="p-4 space-y-4">
+          <p className="text-sm text-gray-600">
+            <strong>Problema:</strong> Texto demasiado claro dificulta la lectura.
+            WCAG recomienda ratio de contraste 4.5:1 para texto normal.
+          </p>
+
+          {/* Sobre fondo blanco */}
+          <div className="space-y-3">
+            <p className="text-xs font-semibold text-gray-800">Sobre fondo blanco:</p>
+            <div className="grid grid-cols-3 gap-2">
+              <div className="p-3 bg-white border border-gray-200 rounded-lg text-center">
+                <p className="text-gray-400 text-sm mb-1">gray-400</p>
+                <p className="text-xs text-red-500">Bajo contraste</p>
+                <p className="text-[10px] text-gray-400 mt-1">Ratio: ~3:1</p>
+              </div>
+              <div className="p-3 bg-white border border-gray-200 rounded-lg text-center">
+                <p className="text-gray-500 text-sm mb-1">gray-500</p>
+                <p className="text-xs text-amber-500">Aceptable</p>
+                <p className="text-[10px] text-gray-400 mt-1">Ratio: ~4.5:1</p>
+              </div>
+              <div className="p-3 bg-white border border-gray-200 rounded-lg text-center">
+                <p className="text-gray-600 text-sm mb-1">gray-600</p>
+                <p className="text-xs text-green-500">Recomendado</p>
+                <p className="text-[10px] text-gray-400 mt-1">Ratio: ~7:1</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Sobre fondo púrpura */}
+          <div className="space-y-3">
+            <p className="text-xs font-semibold text-gray-800">Sobre fondo coloreado:</p>
+            <div className="grid grid-cols-2 gap-2">
+              <div className="p-3 bg-purple-600 rounded-lg">
+                <p className="text-purple-200 text-sm mb-1">purple-200</p>
+                <p className="text-xs text-red-300">Bajo contraste</p>
+              </div>
+              <div className="p-3 bg-purple-600 rounded-lg">
+                <p className="text-white text-sm mb-1">white</p>
+                <p className="text-xs text-green-300">Recomendado</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-amber-50 rounded-lg p-3 border border-amber-200">
+            <p className="text-xs text-amber-700">
+              <strong>Recomendacion:</strong> Usar gray-600 o mas oscuro para texto secundario.
+              Evitar gray-400 excepto para placeholders.
+            </p>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Demo 3: Auto-avance Configurable */}
+      <motion.div
+        className="bg-white rounded-2xl border border-gray-200 overflow-hidden"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+      >
+        <div className="px-4 py-3 bg-emerald-50 border-b border-emerald-100">
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">3</span>
+            </div>
+            <div>
+              <h3 className="font-semibold text-emerald-900">Auto-avance Configurable</h3>
+              <p className="text-xs text-emerald-600">Ajusta la velocidad al usuario</p>
+            </div>
+          </div>
+        </div>
+        <div className="p-4 space-y-4">
+          <p className="text-sm text-gray-600">
+            <strong>Problema:</strong> El auto-avance actual (300ms) puede ser demasiado rapido
+            para procesar el feedback antes de la siguiente pregunta.
+          </p>
+
+          {/* Slider control */}
+          <div className="space-y-3">
+            <div className="flex items-center justify-between">
+              <span className="text-sm font-medium text-gray-700">Tiempo de espera:</span>
+              <span className="text-sm font-bold text-emerald-600">{autoAdvanceTime}ms</span>
+            </div>
+            <div className="flex gap-2">
+              {autoAdvanceOptions.map(opt => (
+                <button
+                  key={opt.value}
+                  onClick={() => setAutoAdvanceTime(opt.value)}
+                  className={`flex-1 py-2 px-2 rounded-lg text-xs font-medium transition-all ${
+                    autoAdvanceTime === opt.value
+                      ? 'bg-emerald-600 text-white'
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  }`}
+                >
+                  {opt.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Demo simulation */}
+          <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
+            <p className="text-xs text-gray-500 mb-3">Simulacion de respuesta:</p>
+            <AnimatePresence mode="wait">
+              {!demoAnswered ? (
+                <motion.div
+                  key="question"
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  className="space-y-3"
+                >
+                  <p className="text-sm font-medium text-gray-800">El Rey puede disolver las Cortes Generales</p>
+                  <div className="grid grid-cols-2 gap-2">
+                    <button
+                      onClick={() => setDemoAnswered(true)}
+                      className="py-2 px-3 bg-white border border-gray-200 rounded-lg text-sm hover:bg-emerald-50 hover:border-emerald-200 transition-colors"
+                    >
+                      Verdadero
+                    </button>
+                    <button
+                      onClick={() => setDemoAnswered(true)}
+                      className="py-2 px-3 bg-white border border-gray-200 rounded-lg text-sm hover:bg-red-50 hover:border-red-200 transition-colors"
+                    >
+                      Falso
+                    </button>
+                  </div>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="feedback"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  className="bg-emerald-100 border border-emerald-200 rounded-lg p-3"
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <Check className="w-5 h-5 text-emerald-600" />
+                    <span className="font-medium text-emerald-800">Correcto!</span>
+                  </div>
+                  <p className="text-xs text-emerald-700">
+                    Avanzando en {autoAdvanceTime}ms...
+                  </p>
+                  <motion.div
+                    className="h-1 bg-emerald-300 rounded-full mt-2 overflow-hidden"
+                  >
+                    <motion.div
+                      className="h-full bg-emerald-600"
+                      initial={{ width: '0%' }}
+                      animate={{ width: '100%' }}
+                      transition={{ duration: autoAdvanceTime / 1000, ease: 'linear' }}
+                    />
+                  </motion.div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          <div className="bg-blue-50 rounded-lg p-3 border border-blue-200">
+            <p className="text-xs text-blue-700">
+              <strong>Sugerencia:</strong> Permitir al usuario configurar este tiempo en ajustes,
+              con 1-2 segundos como valor por defecto.
+            </p>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Demo 4: Timer Opcional */}
+      <motion.div
+        className="bg-white rounded-2xl border border-gray-200 overflow-hidden"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}
+      >
+        <div className="px-4 py-3 bg-violet-50 border-b border-violet-100">
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 bg-violet-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">4</span>
+            </div>
+            <div>
+              <h3 className="font-semibold text-violet-900">Timer Opcional</h3>
+              <p className="text-xs text-violet-600">Modo Tranquilo sin presion</p>
+            </div>
+          </div>
+        </div>
+        <div className="p-4 space-y-4">
+          <p className="text-sm text-gray-600">
+            <strong>Concepto:</strong> Algunos usuarios prefieren estudiar sin la presion
+            del tiempo. El timer debe ser opcional.
+          </p>
+
+          {/* Toggle control */}
+          <div className="flex items-center justify-between p-3 bg-gray-50 rounded-xl">
+            <div className="flex items-center gap-3">
+              <Clock className={`w-5 h-5 ${showTimer ? 'text-violet-600' : 'text-gray-400'}`} />
+              <div>
+                <p className="text-sm font-medium text-gray-800">Mostrar timer</p>
+                <p className="text-xs text-gray-500">
+                  {showTimer ? 'Visible durante la sesion' : 'Modo Tranquilo activado'}
+                </p>
+              </div>
+            </div>
+            <button
+              onClick={() => setShowTimer(!showTimer)}
+              className={`relative w-12 h-7 rounded-full transition-colors ${
+                showTimer ? 'bg-violet-600' : 'bg-gray-300'
+              }`}
+            >
+              <motion.div
+                className="absolute top-1 w-5 h-5 bg-white rounded-full shadow"
+                animate={{ left: showTimer ? '1.5rem' : '0.25rem' }}
+                transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+              />
+            </button>
+          </div>
+
+          {/* Preview */}
+          <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
+            <p className="text-xs text-gray-500 mb-3">Vista previa de sesion:</p>
+            <div className="bg-white rounded-lg p-4 border border-gray-100 shadow-sm">
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-sm font-medium text-gray-700">Pregunta 5/15</span>
+                <AnimatePresence mode="wait">
+                  {showTimer ? (
+                    <motion.div
+                      key="timer"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.8 }}
+                      className="flex items-center gap-1.5 px-3 py-1.5 bg-violet-100 rounded-full"
+                    >
+                      <Clock className="w-4 h-4 text-violet-600" />
+                      <span className="text-sm font-mono font-medium text-violet-700">
+                        {Math.floor(demoTime / 60)}:{(demoTime % 60).toString().padStart(2, '0')}
+                      </span>
+                    </motion.div>
+                  ) : (
+                    <motion.div
+                      key="calm"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.8 }}
+                      className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-100 rounded-full"
+                    >
+                      <Heart className="w-4 h-4 text-emerald-600" />
+                      <span className="text-xs font-medium text-emerald-700">Modo Tranquilo</span>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+              <div className="h-16 bg-gray-50 rounded-lg flex items-center justify-center">
+                <span className="text-sm text-gray-400">[Contenido de pregunta]</span>
+              </div>
+              <div className="flex gap-2 mt-4">
+                <button
+                  onClick={() => {
+                    setDemoTimerRunning(!demoTimerRunning);
+                    if (!demoTimerRunning) setDemoTime(0);
+                  }}
+                  className="flex-1 py-2 bg-violet-600 text-white rounded-lg text-sm font-medium"
+                >
+                  {demoTimerRunning ? 'Pausar' : 'Iniciar'} demo
+                </button>
+                <button
+                  onClick={() => {
+                    setDemoTimerRunning(false);
+                    setDemoTime(0);
+                  }}
+                  className="px-4 py-2 bg-gray-100 text-gray-600 rounded-lg text-sm font-medium"
+                >
+                  Reset
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-violet-50 rounded-lg p-3 border border-violet-200">
+            <p className="text-xs text-violet-700">
+              <strong>Filosofia OpositaSmart:</strong> "A tu ritmo, sin agobios".
+              El timer puede crear ansiedad innecesaria. Ofrecerlo como opcion
+              respeta diferentes estilos de aprendizaje.
+            </p>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Summary Card */}
+      <motion.div
+        className="bg-gradient-to-br from-purple-600 to-violet-700 rounded-2xl p-5 text-white"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
+      >
+        <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
+          <Sparkles className="w-5 h-5" />
+          Resumen de Quick Wins
+        </h3>
+        <div className="space-y-2 text-sm text-purple-100">
+          <div className="flex items-start gap-2">
+            <Check className="w-4 h-4 text-emerald-300 mt-0.5 flex-shrink-0" />
+            <span><strong>Focus states:</strong> Accesibilidad para navegacion con teclado</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <Check className="w-4 h-4 text-emerald-300 mt-0.5 flex-shrink-0" />
+            <span><strong>Contraste:</strong> Mejor legibilidad con grises mas oscuros</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <Check className="w-4 h-4 text-emerald-300 mt-0.5 flex-shrink-0" />
+            <span><strong>Auto-avance:</strong> Tiempo configurable (recomendado 1-2s)</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <Check className="w-4 h-4 text-emerald-300 mt-0.5 flex-shrink-0" />
+            <span><strong>Timer opcional:</strong> Modo Tranquilo sin presion temporal</span>
+          </div>
+        </div>
+        <div className="mt-4 pt-4 border-t border-purple-400/30">
+          <p className="text-xs text-purple-200">
+            Estas mejoras son de bajo esfuerzo pero alto impacto en la experiencia de usuario.
+          </p>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+
+// ============================================
+// FLIPCARD DEMOS (uses FlipCard from FEATURE PROPOSALS PAGE section)
+// ============================================
+
+// Propuesta 1 - Flashcards de Repaso
+function FlashcardRepaso({ pregunta, respuesta, explicacion }) {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  return (
+    <motion.div
+      className="relative h-48 cursor-pointer"
+      style={{ perspective: '1000px' }}
+      onClick={() => setIsFlipped(!isFlipped)}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+    >
+      <motion.div
+        className="relative w-full h-full"
+        style={{ transformStyle: 'preserve-3d' }}
+        animate={{ rotateY: isFlipped ? 180 : 0 }}
+        transition={spring.snappy}
+      >
+        {/* Front - Pregunta */}
+        <div
+          className="absolute inset-0 bg-gradient-to-br from-rose-500 to-purple-600 rounded-2xl p-5 flex flex-col justify-center shadow-lg shadow-purple-500/25"
+          style={{ backfaceVisibility: 'hidden' }}
+        >
+          <div className="text-white/80 text-xs font-medium mb-2">Pregunta</div>
+          <p className="text-white font-semibold text-lg leading-snug">{pregunta}</p>
+          <div className="absolute bottom-3 right-3 text-white/60 text-xs flex items-center gap-1">
+            <span>Toca para ver respuesta</span>
+            <ChevronRight className="w-3 h-3" />
+          </div>
+        </div>
+        {/* Back - Respuesta */}
+        <div
+          className="absolute inset-0 bg-white rounded-2xl p-5 flex flex-col shadow-lg border border-gray-100"
+          style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+        >
+          <div className="text-emerald-600 text-xs font-medium mb-2">Respuesta</div>
+          <p className="text-gray-900 font-semibold mb-3">{respuesta}</p>
+          <p className="text-gray-500 text-sm flex-1">{explicacion}</p>
+          <div className="flex gap-2 mt-3">
+            <button className="flex-1 py-2 bg-emerald-100 text-emerald-700 rounded-lg text-sm font-medium">
+              Lo sabia
+            </button>
+            <button className="flex-1 py-2 bg-amber-100 text-amber-700 rounded-lg text-sm font-medium">
+              Repasar
+            </button>
+          </div>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+}
+
+// Propuesta 2 - Stats Cards
+function StatsFlipCard({ value, label, detail, color = 'purple' }) {
+  const [isFlipped, setIsFlipped] = useState(false);
+  const colors = {
+    purple: { gradient: 'from-purple-500 to-violet-600', bg: 'bg-purple-50', text: 'text-purple-600' },
+    emerald: { gradient: 'from-emerald-500 to-teal-600', bg: 'bg-emerald-50', text: 'text-emerald-600' },
+    amber: { gradient: 'from-amber-500 to-orange-600', bg: 'bg-amber-50', text: 'text-amber-600' },
+  };
+  const c = colors[color] || colors.purple;
+
+  return (
+    <motion.div
+      className="relative h-32 cursor-pointer"
+      style={{ perspective: '1000px' }}
+      onClick={() => setIsFlipped(!isFlipped)}
+      whileHover={{ scale: 1.03, y: -2 }}
+      whileTap={{ scale: 0.98 }}
+    >
+      <motion.div
+        className="relative w-full h-full"
+        style={{ transformStyle: 'preserve-3d' }}
+        animate={{ rotateY: isFlipped ? 180 : 0 }}
+        transition={spring.snappy}
+      >
+        {/* Front - Big stat */}
+        <div
+          className={`absolute inset-0 bg-gradient-to-br ${c.gradient} rounded-xl p-4 flex flex-col items-center justify-center shadow-lg`}
+          style={{ backfaceVisibility: 'hidden' }}
+        >
+          <motion.span
+            className="text-4xl font-bold text-white"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.1 }}
+          >
+            {value}
+          </motion.span>
+          <span className="text-white/80 text-sm font-medium mt-1">{label}</span>
+        </div>
+        {/* Back - Details */}
+        <div
+          className={`absolute inset-0 ${c.bg} rounded-xl p-4 flex flex-col border border-gray-100 shadow-sm`}
+          style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+        >
+          <span className={`text-xs font-medium ${c.text} mb-2`}>{label}</span>
+          <p className="text-gray-700 text-sm flex-1">{detail}</p>
+          <div className={`text-xs ${c.text} flex items-center gap-1 mt-2`}>
+            <TrendingUp className="w-3 h-3" />
+            <span>+5% esta semana</span>
+          </div>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+}
+
+// Propuesta 3 - Temas con Progreso
+function TemaFlipCard({ tema }) {
+  const [isFlipped, setIsFlipped] = useState(false);
+  const config = estadoConfig[tema.estado] || estadoConfig.progreso;
+  const Icon = config.icon;
+
+  return (
+    <motion.div
+      className="relative h-28 cursor-pointer"
+      style={{ perspective: '1000px' }}
+      onClick={() => setIsFlipped(!isFlipped)}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+    >
+      <motion.div
+        className="relative w-full h-full"
+        style={{ transformStyle: 'preserve-3d' }}
+        animate={{ rotateY: isFlipped ? 180 : 0 }}
+        transition={spring.snappy}
+      >
+        {/* Front - Topic name with badge */}
+        <div
+          className={`absolute inset-0 bg-white rounded-xl p-4 flex items-center gap-3 border ${config.pulse ? 'border-amber-200 bg-amber-50/30' : 'border-gray-100'} shadow-sm`}
+          style={{ backfaceVisibility: 'hidden' }}
+        >
+          <div className={`w-12 h-12 rounded-xl ${config.bg} flex items-center justify-center flex-shrink-0`}>
+            <Icon className={`w-6 h-6 ${config.text}`} />
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="font-semibold text-gray-900 truncate">T{tema.id}. {tema.nombre}</p>
+            <div className="flex items-center gap-2 mt-1">
+              <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${config.bg} ${config.text}`}>
+                {config.label}
+              </span>
+              <span className="text-xs text-gray-400">{tema.progreso}%</span>
+            </div>
+          </div>
+          <ChevronRight className="w-5 h-5 text-gray-300 flex-shrink-0" />
+        </div>
+        {/* Back - Mini stats */}
+        <div
+          className="absolute inset-0 bg-white rounded-xl p-4 border border-gray-100 shadow-sm"
+          style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+        >
+          <div className="flex items-center justify-between mb-2">
+            <span className="font-medium text-gray-700 text-sm">T{tema.id}</span>
+            <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${config.bg} ${config.text}`}>
+              {tema.progreso}%
+            </span>
+          </div>
+          <div className="space-y-2">
+            <div className="flex justify-between text-xs">
+              <span className="text-gray-500">Preguntas respondidas</span>
+              <span className="font-medium text-gray-700">24/30</span>
+            </div>
+            <div className="flex justify-between text-xs">
+              <span className="text-gray-500">Precision</span>
+              <span className="font-medium text-emerald-600">87%</span>
+            </div>
+            <div className="flex justify-between text-xs">
+              <span className="text-gray-500">Ultimo repaso</span>
+              <span className="font-medium text-gray-700">Hace 2 dias</span>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+}
+
+// FlipCard Demos Page
+function FlipCardDemos() {
+  const demoTemas = [
+    { id: 1, nombre: 'Constitucion Espanola', estado: 'dominado', progreso: 95 },
+    { id: 4, nombre: 'La Corona', estado: 'riesgo', progreso: 45 },
+    { id: 8, nombre: 'Tribunal Constitucional', estado: 'nuevo', progreso: 0 },
+  ];
+
+  return (
+    <div className="space-y-6">
+      {/* Propuesta 1 - Flashcards de Repaso */}
+      <motion.div
+        className="space-y-3"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={spring.gentle}
+      >
+        <div className="bg-rose-50 border border-rose-200 rounded-xl p-3 text-sm text-rose-800">
+          <strong>Propuesta 1 - Flashcards de Repaso:</strong> Pregunta en el frente, respuesta con explicacion al reverso
+        </div>
+        <FlashcardRepaso
+          pregunta="Segun el Art. 1.1 CE, Espana se constituye en un Estado social y democratico de Derecho. Cual NO es uno de los valores superiores?"
+          respuesta="La eficiencia administrativa"
+          explicacion="Los valores superiores del ordenamiento juridico son: libertad, justicia, igualdad y pluralismo politico (Art. 1.1 CE)."
+        />
+      </motion.div>
+
+      {/* Propuesta 2 - Stats Cards */}
+      <motion.div
+        className="space-y-3"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ ...spring.gentle, delay: 0.1 }}
+      >
+        <div className="bg-violet-50 border border-violet-200 rounded-xl p-3 text-sm text-violet-800">
+          <strong>Propuesta 2 - Stats Cards:</strong> Estadisticas con detalle al voltear
+        </div>
+        <div className="grid grid-cols-2 gap-3">
+          <StatsFlipCard
+            value="87%"
+            label="Precision"
+            detail="43 correctas de 50 preguntas respondidas esta semana"
+            color="emerald"
+          />
+          <StatsFlipCard
+            value="12"
+            label="Racha"
+            detail="12 dias consecutivos estudiando. Tu mejor racha: 15 dias"
+            color="amber"
+          />
+        </div>
+      </motion.div>
+
+      {/* Propuesta 3 - Temas con Progreso */}
+      <motion.div
+        className="space-y-3"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ ...spring.gentle, delay: 0.2 }}
+      >
+        <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-3 text-sm text-indigo-800">
+          <strong>Propuesta 3 - Temas con Progreso:</strong> Nombre del tema con estado al frente, mini-estadisticas al reverso
+        </div>
+        <div className="space-y-2">
+          {demoTemas.map((tema) => (
+            <TemaFlipCard key={tema.id} tema={tema} />
+          ))}
+        </div>
+      </motion.div>
+
+      {/* Resumen */}
+      <motion.div
+        className="bg-gradient-to-br from-purple-600 to-violet-700 rounded-2xl p-5 text-white"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ ...spring.gentle, delay: 0.3 }}
+      >
+        <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
+          <Sparkles className="w-5 h-5" />
+          Notas de Implementacion
+        </h3>
+        <div className="space-y-2 text-sm text-purple-100">
+          <div className="flex items-start gap-2">
+            <Check className="w-4 h-4 text-emerald-300 mt-0.5 flex-shrink-0" />
+            <span>Animacion 3D con perspective y rotateY</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <Check className="w-4 h-4 text-emerald-300 mt-0.5 flex-shrink-0" />
+            <span>backface-visibility: hidden para ocultar reverso</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <Check className="w-4 h-4 text-emerald-300 mt-0.5 flex-shrink-0" />
+            <span>Spring animation para transicion suave</span>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+
+// ============================================
+// CONTADOR ANIMADO DEMOS
+// ============================================
+
+// Hook para animar numeros
+function useAnimatedNumber(target, duration = 1000) {
+  const [current, setCurrent] = useState(0);
+
+  React.useEffect(() => {
+    const startTime = Date.now();
+    const startValue = current;
+    const diff = target - startValue;
+
+    const animate = () => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // Easing function (ease out)
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCurrent(Math.round(startValue + diff * eased));
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }, [target, duration]);
+
+  return current;
+}
+
+// Variante 1 - Simple
+function ContadorSimple({ target, label }) {
+  const value = useAnimatedNumber(target, 800);
+
+  return (
+    <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm text-center">
+      <motion.span
+        className="text-4xl font-bold text-gray-900"
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={spring.bouncy}
+      >
+        {value}
+      </motion.span>
+      <p className="text-sm text-gray-500 mt-1">{label}</p>
+    </div>
+  );
+}
+
+// Variante 2 - Con Porcentaje
+function ContadorPorcentaje({ target, label, color = 'purple' }) {
+  const value = useAnimatedNumber(target, 1000);
+  const colors = {
+    purple: 'text-purple-600',
+    emerald: 'text-emerald-600',
+    amber: 'text-amber-600',
+  };
+
+  return (
+    <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm text-center">
+      <div className="flex items-baseline justify-center gap-1">
+        <motion.span
+          className={`text-4xl font-bold ${colors[color]}`}
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={spring.bouncy}
+        >
+          {value}
+        </motion.span>
+        <motion.span
+          className={`text-2xl font-semibold ${colors[color]}`}
+          initial={{ opacity: 0, x: -10 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.3 }}
+        >
+          %
+        </motion.span>
+      </div>
+      <p className="text-sm text-gray-500 mt-1">{label}</p>
+    </div>
+  );
+}
+
+// Variante 3 - Con Icono
+function ContadorConIcono({ target, label, icon: Icon, color = 'purple' }) {
+  const value = useAnimatedNumber(target, 800);
+  const colors = {
+    purple: { gradient: 'from-purple-500 to-violet-600', text: 'text-purple-600' },
+    emerald: { gradient: 'from-emerald-500 to-teal-600', text: 'text-emerald-600' },
+    amber: { gradient: 'from-amber-500 to-orange-600', text: 'text-amber-600' },
+    pink: { gradient: 'from-pink-500 to-rose-600', text: 'text-pink-600' },
+  };
+  const c = colors[color] || colors.purple;
+
+  return (
+    <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
+      <div className="flex items-center gap-3">
+        <motion.div
+          className={`w-12 h-12 rounded-xl bg-gradient-to-br ${c.gradient} flex items-center justify-center shadow-lg`}
+          initial={{ scale: 0, rotate: -180 }}
+          animate={{ scale: 1, rotate: 0 }}
+          transition={spring.bouncy}
+        >
+          <Icon className="w-6 h-6 text-white" />
+        </motion.div>
+        <div>
+          <motion.span
+            className={`text-3xl font-bold ${c.text}`}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            {value}
+          </motion.span>
+          <p className="text-sm text-gray-500">{label}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Variante 4 - Gamificacion Suave (XP style)
+function ContadorXP({ current, max, label }) {
+  const value = useAnimatedNumber(current, 1000);
+  const percentage = (current / max) * 100;
+
+  return (
+    <div className="bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl p-4 shadow-lg shadow-purple-500/25">
+      <div className="flex items-center justify-between mb-2">
+        <span className="text-white/80 text-sm font-medium">{label}</span>
+        <motion.span
+          className="text-white text-xs bg-white/20 px-2 py-0.5 rounded-full"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
+          Nivel {Math.floor(current / 100) + 1}
+        </motion.span>
+      </div>
+      <div className="flex items-baseline gap-2 mb-3">
+        <motion.span
+          className="text-3xl font-bold text-white"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={spring.bouncy}
+        >
+          {value}
+        </motion.span>
+        <span className="text-white/60 text-sm">/ {max} XP</span>
+      </div>
+      <div className="h-2 bg-white/20 rounded-full overflow-hidden">
+        <motion.div
+          className="h-full bg-white rounded-full"
+          initial={{ width: 0 }}
+          animate={{ width: `${percentage}%` }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        />
+      </div>
+      <div className="flex justify-between mt-2 text-xs text-white/60">
+        <span>Progreso</span>
+        <span>{Math.round(percentage)}%</span>
+      </div>
+    </div>
+  );
+}
+
+// Contador Demos Page
+function ContadorAnimadoDemos() {
+  const [targetSimple, setTargetSimple] = useState(247);
+  const [targetPorcentaje, setTargetPorcentaje] = useState(87);
+  const [targetIcono, setTargetIcono] = useState(12);
+  const [targetXP, setTargetXP] = useState(340);
+
+  const randomize = () => {
+    setTargetSimple(Math.floor(Math.random() * 500) + 50);
+    setTargetPorcentaje(Math.floor(Math.random() * 50) + 50);
+    setTargetIcono(Math.floor(Math.random() * 30) + 1);
+    setTargetXP(Math.floor(Math.random() * 400) + 100);
+  };
+
+  return (
+    <div className="space-y-6">
+      {/* Controls */}
+      <motion.div
+        className="bg-purple-50 border border-purple-200 rounded-xl p-4"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={spring.gentle}
+      >
+        <div className="flex items-center justify-between mb-3">
+          <span className="font-medium text-purple-800">Controles de Demo</span>
+          <motion.button
+            onClick={randomize}
+            className="px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-medium flex items-center gap-2"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <Sparkles className="w-4 h-4" />
+            Randomizar valores
+          </motion.button>
+        </div>
+        <p className="text-sm text-purple-600">Haz click en "Randomizar valores" para ver las animaciones en accion</p>
+      </motion.div>
+
+      {/* Variante 1 - Simple */}
+      <motion.div
+        className="space-y-3"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ ...spring.gentle, delay: 0.05 }}
+      >
+        <div className="bg-gray-50 border border-gray-200 rounded-xl p-3 text-sm text-gray-700">
+          <strong>Variante 1 - Simple:</strong> Numero que cuenta desde 0 hasta el objetivo
+        </div>
+        <ContadorSimple target={targetSimple} label="Preguntas respondidas" />
+      </motion.div>
+
+      {/* Variante 2 - Con Porcentaje */}
+      <motion.div
+        className="space-y-3"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ ...spring.gentle, delay: 0.1 }}
+      >
+        <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-3 text-sm text-emerald-700">
+          <strong>Variante 2 - Con Porcentaje:</strong> Numero + "%" con animacion
+        </div>
+        <ContadorPorcentaje target={targetPorcentaje} label="Precision global" color="emerald" />
+      </motion.div>
+
+      {/* Variante 3 - Con Icono */}
+      <motion.div
+        className="space-y-3"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ ...spring.gentle, delay: 0.15 }}
+      >
+        <div className="bg-amber-50 border border-amber-200 rounded-xl p-3 text-sm text-amber-700">
+          <strong>Variante 3 - Con Icono:</strong> Icono animado (bounce/rotate) + numero
+        </div>
+        <div className="grid grid-cols-2 gap-3">
+          <ContadorConIcono target={targetIcono} label="Dias de racha" icon={Flame} color="amber" />
+          <ContadorConIcono target={Math.round(targetSimple / 3)} label="Temas vistos" icon={BookOpen} color="purple" />
+        </div>
+      </motion.div>
+
+      {/* Variante 4 - Gamificacion Suave */}
+      <motion.div
+        className="space-y-3"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ ...spring.gentle, delay: 0.2 }}
+      >
+        <div className="bg-violet-50 border border-violet-200 rounded-xl p-3 text-sm text-violet-700">
+          <strong>Variante 4 - Gamificacion Suave:</strong> Estilo XP con barra de progreso y nivel
+        </div>
+        <ContadorXP current={targetXP} max={500} label="Experiencia" />
+      </motion.div>
+
+      {/* Resumen */}
+      <motion.div
+        className="bg-gradient-to-br from-indigo-600 to-violet-700 rounded-2xl p-5 text-white"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ ...spring.gentle, delay: 0.25 }}
+      >
+        <h3 className="font-bold text-lg mb-3 flex items-center gap-2">
+          <Sparkles className="w-5 h-5" />
+          Notas Tecnicas
+        </h3>
+        <div className="space-y-2 text-sm text-indigo-100">
+          <div className="flex items-start gap-2">
+            <Check className="w-4 h-4 text-emerald-300 mt-0.5 flex-shrink-0" />
+            <span>useAnimatedNumber hook con requestAnimationFrame</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <Check className="w-4 h-4 text-emerald-300 mt-0.5 flex-shrink-0" />
+            <span>Easing ease-out para movimiento natural</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <Check className="w-4 h-4 text-emerald-300 mt-0.5 flex-shrink-0" />
+            <span>Combinable con Framer Motion para efectos extra</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <Check className="w-4 h-4 text-emerald-300 mt-0.5 flex-shrink-0" />
+            <span>Filosofia "gamificacion suave" - sin presion</span>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+
+// ============================================
 // MAIN DRAFT FEATURES COMPONENT
 // ============================================
 
@@ -5364,9 +6411,12 @@ export default function DraftFeatures({ onClose }) {
     { id: 'proposals', label: '💡 Propuestas' },
     { id: 'recursos', label: '📖 Recursos' },
     { id: 'activities', label: '📈 Actividad' },
+    { id: 'flipcards', label: '🃏 FlipCards' },
+    { id: 'contadores', label: '🔢 Contadores' },
     { id: 'admin-flow', label: '🔐 Admin Flow' },
     { id: 'focus', label: '🎯 Focus' },
     { id: 'focus-original', label: '📋 Original' },
+    { id: 'quick-wins', label: '⚡ Quick Wins' },
   ];
 
   return (
@@ -5607,6 +6657,30 @@ export default function DraftFeatures({ onClose }) {
             </motion.div>
           )}
 
+          {/* FLIPCARD DEMOS */}
+          {activeTab === 'flipcards' && (
+            <motion.div
+              key="flipcards"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <FlipCardDemos />
+            </motion.div>
+          )}
+
+          {/* CONTADOR ANIMADO DEMOS */}
+          {activeTab === 'contadores' && (
+            <motion.div
+              key="contadores"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <ContadorAnimadoDemos />
+            </motion.div>
+          )}
+
           {/* ADMIN FLOW PAGE */}
           {activeTab === 'admin-flow' && (
             <motion.div
@@ -5698,6 +6772,18 @@ export default function DraftFeatures({ onClose }) {
               exit={{ opacity: 0, y: -20 }}
             >
               <FeatureProposalsPage />
+            </motion.div>
+          )}
+
+          {/* QUICK WINS PREVIEW */}
+          {activeTab === 'quick-wins' && (
+            <motion.div
+              key="quick-wins"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <QuickWinsPreview />
             </motion.div>
           )}
         </AnimatePresence>

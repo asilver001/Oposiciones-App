@@ -38,32 +38,33 @@ export function AuthProvider({ children }) {
     supabase.auth.getSession().then(async ({ data: { session } }) => {
       setSession(session);
       setUser(session?.user ?? null);
-      // Check role for existing session
+      // Check role for existing session (don't block on this)
       if (session?.user?.email) {
-        await checkUserRole(session.user.email);
+        checkUserRole(session.user.email).catch(console.error);
       }
       setLoading(false);
     });
 
     // Listen for auth changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      async (event, session) => {
+      (event, session) => {
         console.log('Auth event:', event);
         setSession(session);
         setUser(session?.user ?? null);
 
-        // Check role when user signs in
+        // IMPORTANT: Set loading false IMMEDIATELY, don't wait for async operations
+        setLoading(false);
+
+        // Check role when user signs in (don't block UI on this)
         if (session?.user?.email) {
-          await checkUserRole(session.user.email);
+          checkUserRole(session.user.email).catch(console.error);
         } else {
           setUserRole(null);
         }
 
-        setLoading(false);
-
-        // Create profile when user signs up
+        // Create profile when user signs up (background, don't block)
         if (event === 'SIGNED_IN' && session?.user) {
-          await ensureUserProfile(session.user);
+          ensureUserProfile(session.user).catch(console.error);
         }
       }
     );

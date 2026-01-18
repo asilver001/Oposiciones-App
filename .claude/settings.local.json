@@ -31,7 +31,17 @@
       "mcp__supabase__search_docs",
       "mcp__supabase__get_logs",
       "mcp__supabase__list_tables",
-      "mcp__supabase__get_project"
+      "mcp__supabase__get_project",
+      "mcp__supabase__get_advisors",
+      "Bash(npx eslint:*)",
+      "Bash(dir:*)",
+      "mcp__supabase__list_migrations",
+      "Bash(node --check:*)",
+      "Bash(npm run lint:*)",
+      "Bash(node -e:*)",
+      "Bash(npx vite build:*)",
+      "Bash(npx esbuild:*)",
+      "Bash(wc:*)"
     ]
   }
 }

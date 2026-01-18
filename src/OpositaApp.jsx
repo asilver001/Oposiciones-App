@@ -16,69 +16,13 @@ import { useAppNavigation } from './hooks/useAppNavigation';
 import { Button, Card, Modal, ProgressBar } from './components/ui';
 import AnimationPlayground from './components/playground/AnimationPlayground';
 import DraftFeatures from './components/playground/DraftFeatures';
-
-// ============ DEV PANEL COMPONENT ============
-
-function DevPanel({ onReset, onShowPremium, onShowAdminLogin, onShowPlayground, onShowDraftFeatures, premiumMode, onTogglePremium, streakCount, testsCount }) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  if (!isOpen) {
-    return (
-      <button
-        onClick={() => setIsOpen(true)}
-        className="fixed bottom-24 left-4 z-50 w-10 h-10 bg-gray-900/80 hover:bg-gray-900 text-white rounded-full shadow-lg flex items-center justify-center text-xs font-bold"
-      >
-        DEV
-      </button>
-    );
-  }
-
-  return (
-    <div className="fixed bottom-24 left-4 z-50 bg-gray-900/95 rounded-2xl p-4 shadow-2xl min-w-[220px]">
-      <div className="flex items-center justify-between mb-3">
-        <span className="text-white font-semibold text-sm">🛠️ Dev Tools</span>
-        <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-white text-lg">×</button>
-      </div>
-      <div className="space-y-2">
-        <button onClick={onShowPlayground} className="w-full bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white text-xs py-2 px-3 rounded-lg text-left font-medium">
-          ✨ Animation Playground
-        </button>
-        <button onClick={onShowDraftFeatures} className="w-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white text-xs py-2 px-3 rounded-lg text-left font-medium">
-          🚧 Draft Features
-        </button>
-        <button onClick={onShowAdminLogin} className="w-full bg-indigo-500/90 hover:bg-indigo-600 text-white text-xs py-2 px-3 rounded-lg text-left">
-          🔐 Acceso Admin
-        </button>
-        <div className="border-t border-gray-700 my-2"></div>
-        {/* Premium Mode Toggle */}
-        <button
-          onClick={onTogglePremium}
-          className={`w-full text-xs py-2 px-3 rounded-lg text-left flex items-center justify-between ${
-            premiumMode
-              ? 'bg-gradient-to-r from-yellow-500 to-amber-500 text-white'
-              : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-          }`}
-        >
-          <span>👑 Modo Premium</span>
-          <span className={`px-2 py-0.5 rounded text-[10px] font-bold ${
-            premiumMode ? 'bg-white/20 text-white' : 'bg-gray-600 text-gray-400'
-          }`}>
-            {premiumMode ? 'ON' : 'OFF'}
-          </span>
-        </button>
-        <button onClick={onReset} className="w-full bg-red-500/90 hover:bg-red-600 text-white text-xs py-2 px-3 rounded-lg text-left">
-          🗑️ Reset TODO
-        </button>
-        <button onClick={onShowPremium} className="w-full bg-yellow-500/90 hover:bg-yellow-600 text-white text-xs py-2 px-3 rounded-lg text-left">
-          👀 Ver Premium Modal
-        </button>
-        <div className="pt-2 border-t border-gray-700 text-[10px] text-gray-500">
-          streak: {streakCount} · tests: {testsCount}
-        </div>
-      </div>
-    </div>
-  );
-}
+// Nuevos componentes extraídos (Fase 3 Refactor)
+import DevPanel from './components/dev/DevPanel';
+import { SoftFortHome } from './components/home';
+import TemasListView from './components/temas/TemasListView';
+import ActividadPage from './components/activity/ActividadPage';
+import RecursosPage from './components/recursos/RecursosPage';
+import { BottomTabBar } from './components/navigation';
 
 // ============ MAIN APP COMPONENT ============
 
@@ -746,79 +690,7 @@ export default function OpositaApp() {
     </div>
   );
 
-  // Bottom Tab Bar Component - Fase 1 floating style
-  const BottomTabBar = () => {
-    // Tabs base para todos los usuarios
-    const baseTabs = [
-      { id: 'inicio', label: 'Inicio', icon: Home },
-      { id: 'actividad', label: 'Actividad', icon: History },
-      { id: 'temas', label: 'Temas', icon: BookOpen },
-      { id: 'recursos', label: 'Recursos', icon: GraduationCap }
-    ];
-
-    // Añadir tab "Revisar" si el usuario es reviewer
-    const tabs = isUserReviewer
-      ? [...baseTabs, { id: 'reviewer-panel', label: 'Revisar', icon: ClipboardCheck }]
-      : baseTabs;
-
-    return (
-      <div className="fixed bottom-0 left-0 right-0 z-40 px-4 pb-2">
-        {/* Contenedor floating con márgenes, sombra y bordes redondeados */}
-        <div className="max-w-md mx-auto">
-          <div className="bg-white rounded-[20px] shadow-[0_2px_24px_rgba(0,0,0,0.12)] border border-gray-100/80">
-            <div className="flex justify-around items-center h-[58px] px-1">
-              {tabs.map(tab => {
-                // Para el tab "Revisar" usamos currentPage en lugar de activeTab
-                const isActive = tab.id === 'reviewer-panel'
-                  ? currentPage === 'reviewer-panel'
-                  : activeTab === tab.id;
-                return (
-                  <button
-                    key={tab.id}
-                    onClick={() => {
-                      if (tab.id === 'reviewer-panel') {
-                        setCurrentPage('reviewer-panel');
-                      } else {
-                        setActiveTab(tab.id);
-                        if (currentPage === 'reviewer-panel') {
-                          setCurrentPage('home'); // Salir del reviewer panel al cambiar de tab
-                        }
-                      }
-                    }}
-                    className="flex flex-col items-center justify-center min-w-[3.5rem] py-1 px-1.5 rounded-xl transition-all duration-200 active:scale-95"
-                  >
-                    <div className={`
-                      flex items-center justify-center w-9 h-9 rounded-full mb-0.5 transition-all duration-200
-                      ${isActive ? 'bg-gray-100' : ''}
-                    `}>
-                      <tab.icon
-                        className={`
-                          w-[22px] h-[22px] transition-all duration-200
-                          ${isActive
-                            ? 'text-gray-900 stroke-[2]'
-                            : 'text-gray-400 stroke-[1.5]'
-                          }
-                        `}
-                      />
-                    </div>
-                    <span className={`
-                      text-[10px] leading-tight transition-all duration-200
-                      ${isActive
-                        ? 'text-gray-900 font-semibold'
-                        : 'text-gray-400 font-medium'
-                      }
-                    `}>
-                      {tab.label}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  };
+  // NOTA: BottomTabBar extraído a src/components/navigation/BottomTabBar.jsx
 
   if (isLoading) {
     return (
@@ -1540,455 +1412,8 @@ export default function OpositaApp() {
   const daysUntilExam = getDaysUntilExam();
   const totalProgress = calculateTotalProgress();
 
-  // Contenido de Actividad
-  const ActividadContent = () => {
-    // Use real data from Supabase if available, fallback to local totalStats
-    const hasRealData = activityTotalStats.testsCompleted > 0;
-    const displayStats = hasRealData ? activityTotalStats : totalStats;
-    const displayWeeklyData = hasRealData ? activityWeeklyData : totalStats.weeklyProgress;
-    const maxWeeklyValue = Math.max(...displayWeeklyData, 1); // Avoid division by zero
-
-    // Generate calendar for current month
-    const generateCalendar = () => {
-      const now = new Date();
-      const year = now.getFullYear();
-      const month = now.getMonth();
-      const firstDay = new Date(year, month, 1);
-      const lastDay = new Date(year, month + 1, 0);
-      const daysInMonth = lastDay.getDate();
-
-      // Get the day of week for the first day (0 = Sunday, adjust to Monday = 0)
-      let startDay = firstDay.getDay() - 1;
-      if (startDay === -1) startDay = 6;
-
-      const calendar = [];
-      // Add empty cells for days before the first of the month
-      for (let i = 0; i < startDay; i++) {
-        calendar.push({ day: null, practiced: false });
-      }
-      // Add days of the month
-      for (let day = 1; day <= daysInMonth; day++) {
-        calendar.push({
-          day,
-          practiced: calendarData.includes(day),
-          isToday: day === now.getDate()
-        });
-      }
-      return calendar;
-    };
-
-    const calendar = generateCalendar();
-
-    // Determine trend for session
-    const getTrend = (session, index) => {
-      if (index >= sessionHistory.length - 1) return 'neutral';
-      const prevSession = sessionHistory[index + 1];
-      if (!prevSession) return 'neutral';
-
-      const currentRate = session.porcentaje_acierto || 0;
-      const prevRate = prevSession.porcentaje_acierto || 0;
-
-      if (currentRate > prevRate + 5) return 'up';
-      if (currentRate < prevRate - 5) return 'down';
-      return 'neutral';
-    };
-
-    if (activityLoading) {
-      return (
-        <div className="space-y-6">
-          <h2 className="text-2xl font-bold text-gray-900">Tu actividad</h2>
-          <div className="flex items-center justify-center py-12">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600"></div>
-          </div>
-        </div>
-      );
-    }
-
-    return (
-      <div className="space-y-6">
-        <h2 className="text-2xl font-bold text-gray-900">Tu actividad</h2>
-
-        {displayStats.testsCompleted === 0 ? (
-          <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
-            <div className="text-6xl mb-4">📊</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">Aún no hay actividad</h3>
-            <p className="text-gray-600 mb-4">Completa tu primer test para ver tu progreso aquí</p>
-            <button
-              onClick={startTest}
-              className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition"
-            >
-              Hacer mi primer test
-            </button>
-          </div>
-        ) : (
-          <>
-            {/* Stats Cards */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white rounded-2xl p-5 shadow-lg">
-                <div className="flex items-center gap-3 mb-2">
-                  <Trophy className="w-6 h-6 text-purple-600" />
-                  <span className="text-gray-600 text-sm font-medium">Tests completados</span>
-                </div>
-                <div className="text-3xl font-bold text-gray-900">{displayStats.testsCompleted}</div>
-              </div>
-
-              <div className="bg-white rounded-2xl p-5 shadow-lg">
-                <div className="flex items-center gap-3 mb-2">
-                  <Target className="w-6 h-6 text-green-600" />
-                  <span className="text-gray-600 text-sm font-medium">Tasa de acierto</span>
-                </div>
-                <div className="text-3xl font-bold text-gray-900">{displayStats.accuracyRate}%</div>
-              </div>
-
-              <div className="bg-white rounded-2xl p-5 shadow-lg">
-                <div className="flex items-center gap-3 mb-2">
-                  <CheckCircle className="w-6 h-6 text-blue-600" />
-                  <span className="text-gray-600 text-sm font-medium">Preguntas correctas</span>
-                </div>
-                <div className="text-3xl font-bold text-gray-900">{displayStats.questionsCorrect}</div>
-              </div>
-
-              <div className="bg-white rounded-2xl p-5 shadow-lg">
-                <div className="flex items-center gap-3 mb-2">
-                  <Calendar className="w-6 h-6 text-orange-600" />
-                  <span className="text-gray-600 text-sm font-medium">Días estudiando</span>
-                </div>
-                <div className="text-3xl font-bold text-gray-900">{displayStats.daysStudied || displayStats.totalDaysStudied || 0}</div>
-              </div>
-            </div>
-
-            {/* Weekly Progress Chart */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <h3 className="font-bold text-gray-900 mb-4">Progreso semanal</h3>
-              {displayWeeklyData.every(v => v === 0) ? (
-                <div className="text-center py-8">
-                  <div className="text-4xl mb-2">📈</div>
-                  <p className="text-gray-500 text-sm">Completa tu primer test para ver tu progreso</p>
-                </div>
-              ) : (
-                <div className="flex items-end justify-between h-32 gap-2">
-                  {['L', 'M', 'X', 'J', 'V', 'S', 'D'].map((day, i) => {
-                    const value = displayWeeklyData[i] || 0;
-                    const height = maxWeeklyValue > 0 ? (value / maxWeeklyValue) * 100 : 0;
-                    const isToday = new Date().getDay() === (i === 6 ? 0 : i + 1);
-
-                    return (
-                      <div key={day} className="flex-1 flex flex-col items-center gap-2">
-                        <div className="w-full bg-gray-100 rounded-t-lg flex-1 relative min-h-[80px]">
-                          <div
-                            className={`absolute bottom-0 w-full rounded-t-lg transition-all duration-500 ${
-                              isToday
-                                ? 'bg-gradient-to-t from-orange-500 to-orange-400'
-                                : 'bg-gradient-to-t from-purple-500 to-purple-400'
-                            }`}
-                            style={{ height: `${Math.max(height, value > 0 ? 8 : 0)}%` }}
-                          ></div>
-                          {value > 0 && (
-                            <div className="absolute -top-5 left-1/2 -translate-x-1/2 text-xs font-medium text-gray-600">
-                              {value}
-                            </div>
-                          )}
-                        </div>
-                        <span className={`text-xs font-medium ${isToday ? 'text-orange-600' : 'text-gray-500'}`}>
-                          {day}
-                        </span>
-                      </div>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-
-            {/* Monthly Calendar */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <h3 className="font-bold text-gray-900 mb-4">
-                {new Date().toLocaleDateString('es-ES', { month: 'long', year: 'numeric' })}
-              </h3>
-              <div className="grid grid-cols-7 gap-1">
-                {['L', 'M', 'X', 'J', 'V', 'S', 'D'].map(day => (
-                  <div key={day} className="text-center text-xs font-medium text-gray-400 py-1">
-                    {day}
-                  </div>
-                ))}
-                {calendar.map((cell, idx) => (
-                  <div
-                    key={idx}
-                    className={`aspect-square flex items-center justify-center rounded-lg text-xs relative ${
-                      cell.day === null
-                        ? ''
-                        : cell.isToday
-                        ? 'bg-purple-100 font-bold text-purple-700'
-                        : cell.practiced
-                        ? 'bg-gray-50 text-gray-700'
-                        : 'text-gray-400'
-                    }`}
-                  >
-                    {cell.day}
-                    {cell.practiced && (
-                      <div className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                    )}
-                  </div>
-                ))}
-              </div>
-              <div className="flex items-center gap-4 mt-4 pt-3 border-t text-xs text-gray-500">
-                <div className="flex items-center gap-1">
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span>Día practicado</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <div className="w-4 h-4 bg-purple-100 rounded"></div>
-                  <span>Hoy</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Session History */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <h3 className="font-bold text-gray-900 mb-4">Últimas sesiones</h3>
-              {sessionHistory.length === 0 ? (
-                <div className="text-center py-6">
-                  <p className="text-gray-500 text-sm">Aún no has completado ningún test</p>
-                </div>
-              ) : (
-                <div className="space-y-3">
-                  {sessionHistory.slice(0, 7).map((session, idx) => {
-                    const trend = getTrend(session, idx);
-                    const temaName = session.tema_id ? `Tema ${session.tema_id}` : 'Mixto';
-
-                    return (
-                      <div
-                        key={session.id || idx}
-                        className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl"
-                      >
-                        <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-lg">
-                          {session.tema_id ? '📚' : '🎯'}
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center gap-2">
-                            <span className="font-medium text-gray-900 truncate">{temaName}</span>
-                            <span className="text-xs text-gray-400">
-                              {formatRelativeDate(session.created_at)}
-                            </span>
-                          </div>
-                          <div className="text-sm text-gray-500">
-                            {session.correctas}/{session.total_preguntas} correctas
-                            <span className="mx-1">·</span>
-                            <span className={
-                              session.porcentaje_acierto >= 70 ? 'text-green-600' :
-                              session.porcentaje_acierto >= 50 ? 'text-orange-600' : 'text-red-500'
-                            }>
-                              {session.porcentaje_acierto}%
-                            </span>
-                          </div>
-                        </div>
-                        <div className={`p-1 rounded-full ${
-                          trend === 'up' ? 'bg-green-100' :
-                          trend === 'down' ? 'bg-red-100' : 'bg-gray-100'
-                        }`}>
-                          {trend === 'up' ? (
-                            <TrendingUp className="w-4 h-4 text-green-600" />
-                          ) : trend === 'down' ? (
-                            <TrendingDown className="w-4 h-4 text-red-500" />
-                          ) : (
-                            <Minus className="w-4 h-4 text-gray-400" />
-                          )}
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-
-            {/* Motivational Message */}
-            {motivationalMessage && (
-              <div className={`rounded-2xl p-4 ${motivationalMessage.bg} border border-opacity-50`}>
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl">{motivationalMessage.emoji}</span>
-                  <p className={`font-medium ${motivationalMessage.color}`}>
-                    {motivationalMessage.message}
-                  </p>
-                </div>
-              </div>
-            )}
-          </>
-        )}
-      </div>
-    );
-  };
-
-  // Contenido de Temas
-  const TemasContent = () => (
-    <div className="space-y-6">
-      <h2 className="text-2xl font-bold text-gray-900">Tus temas</h2>
-
-      <div className="space-y-4">
-        {topicsList.map((topic) => {
-          const progress = topicsProgress[topic.id];
-          const percentage = Math.round((progress.completed / progress.total) * 100);
-          const isLocked = progress.locked;
-
-          return (
-            <div
-              key={topic.id}
-              className={`rounded-xl p-4 transition-all ${
-                isLocked
-                  ? 'bg-gray-50 border-2 border-gray-200'
-                  : 'bg-gradient-to-r from-purple-50 to-white border-2 border-purple-200 hover:border-purple-400 cursor-pointer'
-              }`}
-            >
-              <div className="flex items-start gap-4">
-                <div className="text-4xl">{topic.icon}</div>
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-1">
-                    <h4 className="font-bold text-gray-900">{topic.title}</h4>
-                    {isLocked && <Lock className="w-4 h-4 text-gray-400" />}
-                    {progress.streak > 0 && !isLocked && (
-                      <div className="flex items-center gap-1 bg-orange-100 px-2 py-1 rounded-full">
-                        <Flame className="w-3 h-3 text-orange-600" />
-                        <span className="text-xs font-bold text-orange-600">{progress.streak} días</span>
-                      </div>
-                    )}
-                  </div>
-
-                  {isLocked ? (
-                    <div>
-                      <p className="text-sm text-gray-500 mb-1">
-                        {progress.total} preguntas · Simulacros incluidos
-                      </p>
-                      <p className="text-xs text-purple-600 font-medium mb-2">Solo disponible en Premium</p>
-                      <button
-                        onClick={() => {
-                          setPremiumModalTrigger('locked-topic');
-                          setShowPremiumModal(true);
-                        }}
-                        className="flex items-center gap-2 bg-purple-100 text-purple-700 font-semibold text-sm px-3 py-1.5 rounded-lg hover:bg-purple-200 transition"
-                      >
-                        <Lock className="w-3 h-3" />
-                        Desbloquear con Premium
-                      </button>
-                    </div>
-                  ) : (
-                    <>
-                      <p className="text-sm text-gray-600 mb-2">
-                        {progress.completed} de {progress.total} preguntas completadas
-                      </p>
-                      <div className="flex items-center gap-3">
-                        <div className="flex-1 bg-gray-200 rounded-full h-2">
-                          <div
-                            className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-full h-2 transition-all duration-500"
-                            style={{ width: `${percentage}%` }}
-                          ></div>
-                        </div>
-                        <span className="text-sm font-bold text-gray-700">{percentage}%</span>
-                      </div>
-                      {topic.id === 1 && (
-                        <button
-                          onClick={startTest}
-                          className="mt-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg text-sm transition-all"
-                        >
-                          Continuar
-                        </button>
-                      )}
-                      {topic.id === 2 && progress.completed === 0 && (
-                        <button className="mt-3 bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded-lg text-sm transition-all flex items-center gap-2">
-                          <Star className="w-4 h-4" />
-                          Empezar tema
-                        </button>
-                      )}
-                    </>
-                  )}
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  );
-
-  // Contenido de Recursos
-  const RecursosContent = () => (
-    <div className="space-y-6">
-      <h2 className="text-2xl font-bold text-gray-900">Recursos para tu oposición</h2>
-
-      <div className="bg-white rounded-2xl p-6 shadow-lg">
-        <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
-          <Lightbulb className="w-5 h-5 text-yellow-500" />
-          Consejos de estudio
-        </h3>
-        <ul className="space-y-3 text-gray-700">
-          <li className="flex items-start gap-2">
-            <span className="text-purple-500">•</span>
-            <span>Estudia a la misma hora cada día para crear un hábito</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-purple-500">•</span>
-            <span>Repasa los errores del día anterior antes de empezar</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-purple-500">•</span>
-            <span>Haz descansos cortos cada 25-30 minutos</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-purple-500">•</span>
-            <span>Practica con simulacros completos una vez por semana</span>
-          </li>
-        </ul>
-      </div>
-
-      <div className="bg-gray-100 rounded-2xl p-6 border-2 border-gray-200">
-        <div className="flex items-center gap-3 mb-3">
-          <div className="bg-gray-200 p-2 rounded-lg">
-            <BarChart3 className="w-6 h-6 text-gray-400" />
-          </div>
-          <div>
-            <h3 className="font-bold text-gray-500">Análisis con IA</h3>
-            <span className="text-xs bg-gray-300 text-gray-600 px-2 py-0.5 rounded">Próximamente</span>
-          </div>
-        </div>
-        <p className="text-gray-500 text-sm">
-          Pronto podrás recibir análisis personalizados de tu rendimiento y recomendaciones de estudio basadas en IA.
-        </p>
-      </div>
-
-      <div className="bg-white rounded-2xl p-6 shadow-lg">
-        <h3 className="font-bold text-gray-900 mb-4">Enlaces útiles</h3>
-        <div className="space-y-3">
-          <a
-            href="https://www.boe.es/buscar/boe.php"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium"
-          >
-            📄 BOE - Convocatorias oficiales
-            <ExternalLink className="w-3.5 h-3.5 opacity-60" />
-          </a>
-          <a
-            href="https://www.hacienda.gob.es/es-ES/Areas%20Tematicas/Funcion%20Publica/Paginas/Cuerpos%20y%20Escalas.aspx"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium"
-          >
-            📚 Información oficial de oposiciones
-            <ExternalLink className="w-3.5 h-3.5 opacity-60" />
-          </a>
-          <button
-            onClick={() => setCurrentPage('faq')}
-            className="block text-purple-600 hover:text-purple-700 font-medium text-left"
-          >
-            ❓ Preguntas frecuentes
-          </button>
-          <button
-            onClick={() => setCurrentPage('contact')}
-            className="block text-purple-600 hover:text-purple-700 font-medium text-left"
-          >
-            ✉️ Contacto
-          </button>
-        </div>
-      </div>
-    </div>
-  );
+  // NOTA: TemasContent, ActividadContent y RecursosContent han sido extraídos a componentes separados
+  // Ver: src/components/temas/TemasListView.jsx, src/components/activity/ActividadPage.jsx, src/components/recursos/RecursosPage.jsx
 
   // Contenido de Inicio - Rediseño UX (calma, continuidad, acompañamiento)
   const InicioContent = () => {
@@ -2473,9 +1898,37 @@ export default function OpositaApp() {
 
           {/* Contenido según tab activo */}
           {activeTab === 'inicio' && <InicioContent />}
-          {activeTab === 'actividad' && <ActividadContent />}
-          {activeTab === 'temas' && <TemasContent />}
-          {activeTab === 'recursos' && <RecursosContent />}
+          {activeTab === 'actividad' && (
+            <ActividadPage
+              weeklyData={activityWeeklyData}
+              sessionHistory={sessionHistory}
+              totalStats={{
+                testsCompleted: activityTotalStats.testsCompleted || totalStats.testsCompleted,
+                questionsCorrect: activityTotalStats.totalCorrect || totalStats.questionsCorrect,
+                accuracyRate: activityTotalStats.averageAccuracy || totalStats.accuracyRate,
+                totalMinutes: activityTotalStats.totalMinutes || 0,
+                currentStreak: activityStreak || displayStreak,
+                daysStudied: activityTotalStats.daysStudied || totalStats.totalDaysStudied
+              }}
+              calendarData={calendarData}
+              motivationalMessage={motivationalMessage}
+              loading={activityLoading}
+              onStartTest={startTest}
+              formatRelativeDate={formatRelativeDate}
+            />
+          )}
+          {activeTab === 'temas' && (
+            <TemasListView
+              topics={topicsWithQuestions || dbTopics}
+              topicsByBlock={topicsByBlock}
+              onTopicSelect={(topic) => {
+                console.log('Topic selected:', topic);
+                // TODO: Navigate to topic practice
+              }}
+              loading={topicsLoading}
+            />
+          )}
+          {activeTab === 'recursos' && <RecursosPage onNavigate={(page) => setCurrentPage(page)} />}
 
           {/* Footer */}
           <footer className="mt-10 mb-4">
@@ -2540,7 +1993,13 @@ export default function OpositaApp() {
         testsCount={totalStats.testsCompleted}
       />
 
-      <BottomTabBar />
+      <BottomTabBar
+        activeTab={activeTab}
+        currentPage={currentPage}
+        isUserReviewer={isUserReviewer}
+        onTabChange={setActiveTab}
+        onPageChange={setCurrentPage}
+      />
       {showPremiumModal && <PremiumModal />}
       {showSettingsModal && <SettingsModal />}
       {showProgressModal && <ProgressModal />}
