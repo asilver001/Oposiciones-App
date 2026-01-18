@@ -6892,6 +6892,809 @@ function ContadorAnimadoDemos() {
 }
 
 // ============================================
+// TAB 1: FLIPCARDS + ACTIVIDAD
+// ============================================
+
+function FlipCardsActividadDemo() {
+  // Mock flashcard data
+  const pendingFlashcards = [
+    { id: 1, front: 'Art. 1.1 CE - Valores superiores', back: 'Libertad, justicia, igualdad, pluralismo politico', tema: 'Constitucion' },
+    { id: 2, front: 'Art. 66 CE - Cortes Generales', back: 'Representan al pueblo espanol', tema: 'Cortes' },
+    { id: 3, front: 'Plazo recurso de amparo', back: '20 dias habiles', tema: 'TC' },
+    { id: 4, front: 'Art. 14 CE', back: 'Igualdad ante la ley', tema: 'Derechos' },
+    { id: 5, front: 'Defensor del Pueblo', back: 'Elegido por las Cortes Generales', tema: 'Instituciones' },
+  ];
+
+  const [expandedFlashcards, setExpandedFlashcards] = useState(false);
+  const [flippedCards, setFlippedCards] = useState({});
+  const visibleCards = expandedFlashcards ? pendingFlashcards : pendingFlashcards.slice(0, 3);
+
+  const toggleFlip = (id) => {
+    setFlippedCards(prev => ({ ...prev, [id]: !prev[id] }));
+  };
+
+  return (
+    <div className="space-y-6">
+      {/* Header */}
+      <div className="bg-gradient-to-r from-purple-50 to-violet-50 border border-purple-200 rounded-xl p-4">
+        <h3 className="font-bold text-purple-800 mb-1">FlipCards + Actividad</h3>
+        <p className="text-sm text-purple-600">
+          Integracion de flashcards en la pagina de Actividad. Las flashcards aparecen ANTES de las estadisticas.
+        </p>
+      </div>
+
+      {/* Repaso Rapido del Dia Section */}
+      <motion.div
+        className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        {/* Header */}
+        <div className="px-4 py-3 border-b border-gray-100 bg-gradient-to-r from-amber-50 to-orange-50">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <motion.div
+                animate={{ rotate: [0, 10, -10, 0] }}
+                transition={{ duration: 0.5, repeat: Infinity, repeatDelay: 3 }}
+              >
+                <Zap className="w-5 h-5 text-amber-500" />
+              </motion.div>
+              <div>
+                <h4 className="font-semibold text-gray-900">Repaso Rapido del Dia</h4>
+                <p className="text-xs text-gray-500">{pendingFlashcards.length} flashcards pendientes</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-xs bg-amber-100 text-amber-700 px-2 py-1 rounded-full font-medium">
+                3 revisadas hoy
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* Flashcards Grid */}
+        <div className="p-4">
+          <div className="grid grid-cols-1 gap-3">
+            {visibleCards.map((card, index) => (
+              <motion.div
+                key={card.id}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="relative h-24 cursor-pointer"
+                style={{ perspective: '1000px' }}
+                onClick={() => toggleFlip(card.id)}
+              >
+                <motion.div
+                  className="relative w-full h-full"
+                  style={{ transformStyle: 'preserve-3d' }}
+                  animate={{ rotateY: flippedCards[card.id] ? 180 : 0 }}
+                  transition={spring.snappy}
+                >
+                  {/* Front */}
+                  <div
+                    className="absolute inset-0 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl p-4 flex flex-col justify-between text-white shadow-md"
+                    style={{ backfaceVisibility: 'hidden' }}
+                  >
+                    <div className="flex items-start justify-between">
+                      <span className="text-xs bg-white/20 px-2 py-0.5 rounded-full">{card.tema}</span>
+                      <span className="text-xs opacity-60">Tap para ver</span>
+                    </div>
+                    <p className="text-sm font-medium">{card.front}</p>
+                  </div>
+                  {/* Back */}
+                  <div
+                    className="absolute inset-0 bg-white border-2 border-emerald-200 rounded-xl p-4 flex flex-col justify-between"
+                    style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+                  >
+                    <div className="flex items-center gap-2">
+                      <Check className="w-4 h-4 text-emerald-500" />
+                      <span className="text-xs text-emerald-600 font-medium">Respuesta</span>
+                    </div>
+                    <p className="text-sm font-semibold text-gray-800">{card.back}</p>
+                    <div className="flex gap-2">
+                      <button className="flex-1 py-1 text-xs bg-amber-50 text-amber-600 rounded-lg font-medium">Repasar</button>
+                      <button className="flex-1 py-1 text-xs bg-emerald-50 text-emerald-600 rounded-lg font-medium">Lo se</button>
+                    </div>
+                  </div>
+                </motion.div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Ver todas button */}
+          <motion.button
+            onClick={() => setExpandedFlashcards(!expandedFlashcards)}
+            className="w-full mt-3 py-3 text-sm text-purple-600 font-medium hover:bg-purple-50 rounded-xl transition-colors flex items-center justify-center gap-2"
+            whileTap={{ scale: 0.98 }}
+          >
+            {expandedFlashcards ? (
+              <>
+                <ChevronUp className="w-4 h-4" />
+                Ver menos
+              </>
+            ) : (
+              <>
+                <ChevronDown className="w-4 h-4" />
+                Ver todas las flashcards ({pendingFlashcards.length})
+              </>
+            )}
+          </motion.button>
+        </div>
+      </motion.div>
+
+      {/* Mini stats */}
+      <div className="grid grid-cols-2 gap-3">
+        <motion.div
+          className="bg-white rounded-xl p-4 border border-gray-100"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center">
+              <BookOpen className="w-5 h-5 text-purple-600" />
+            </div>
+            <div>
+              <p className="text-2xl font-bold text-gray-900">12</p>
+              <p className="text-xs text-gray-500">Revisadas hoy</p>
+            </div>
+          </div>
+        </motion.div>
+        <motion.div
+          className="bg-white rounded-xl p-4 border border-gray-100"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.25 }}
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center">
+              <Clock className="w-5 h-5 text-amber-600" />
+            </div>
+            <div>
+              <p className="text-2xl font-bold text-gray-900">23</p>
+              <p className="text-xs text-gray-500">Pendientes</p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Placeholder for regular activity stats */}
+      <motion.div
+        className="bg-gray-50 rounded-xl p-6 border border-dashed border-gray-300"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3 }}
+      >
+        <p className="text-center text-gray-400 text-sm">
+          [Aqui irian las estadisticas normales de Actividad]
+        </p>
+      </motion.div>
+    </div>
+  );
+}
+
+// ============================================
+// TAB 2: FLIPCARDS + TEMAS
+// ============================================
+
+function FlipCardsTemasDemo() {
+  const [selectedTema, setSelectedTema] = useState(null);
+  const [selectedMode, setSelectedMode] = useState(null);
+
+  const temas = [
+    { id: 1, nombre: 'Constitucion Espanola', flashcards: 15, pendientes: 5, estado: 'dominado', progreso: 92 },
+    { id: 2, nombre: 'Derechos Fundamentales', flashcards: 12, pendientes: 8, estado: 'avanzando', progreso: 72 },
+    { id: 3, nombre: 'La Corona', flashcards: 8, pendientes: 3, estado: 'riesgo', progreso: 45 },
+    { id: 4, nombre: 'Cortes Generales', flashcards: 10, pendientes: 10, estado: 'nuevo', progreso: 0 },
+  ];
+
+  const previewFlashcards = [
+    { front: 'Art. 1.1 CE - Valores superiores', back: 'Libertad, justicia, igualdad, pluralismo' },
+    { front: 'Art. 2 CE - Fundamento', back: 'Unidad de la Nacion espanola' },
+    { front: 'Art. 9.3 CE - Principios', back: 'Legalidad, jerarquia, publicidad...' },
+  ];
+
+  return (
+    <div className="space-y-6">
+      {/* Header */}
+      <div className="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-xl p-4">
+        <h3 className="font-bold text-indigo-800 mb-1">FlipCards + Temas</h3>
+        <p className="text-sm text-indigo-600">
+          Integracion de flashcards en la pagina de Temas. Al seleccionar un tema, opciones: Test | Flashcards | Solo lectura
+        </p>
+      </div>
+
+      {/* Temas List with flashcard badges */}
+      <div className="space-y-2">
+        {temas.map((tema, index) => {
+          const config = estadoConfig[tema.estado] || estadoConfig.nuevo;
+          const Icon = config.icon;
+          const isSelected = selectedTema?.id === tema.id;
+
+          return (
+            <motion.div
+              key={tema.id}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.05 }}
+            >
+              <motion.button
+                onClick={() => setSelectedTema(isSelected ? null : tema)}
+                className={`w-full bg-white rounded-xl p-4 border transition-all text-left ${
+                  isSelected ? 'border-purple-300 shadow-md' : 'border-gray-100'
+                }`}
+                whileTap={{ scale: 0.99 }}
+              >
+                <div className="flex items-center gap-3">
+                  <div className={`w-10 h-10 rounded-xl ${config.bg} flex items-center justify-center`}>
+                    <Icon className={`w-5 h-5 ${config.text}`} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center justify-between">
+                      <p className="text-sm font-medium text-gray-800 truncate">
+                        <span className="text-gray-400">T{tema.id}</span> {tema.nombre}
+                      </p>
+                      {/* Flashcard badge */}
+                      <span className="text-xs bg-purple-100 text-purple-600 px-2 py-0.5 rounded-full font-medium flex items-center gap-1">
+                        <BookMarked className="w-3 h-3" />
+                        {tema.flashcards}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2 mt-1">
+                      <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                        <div className={`h-full bg-gradient-to-r ${config.gradient}`} style={{ width: `${tema.progreso}%` }} />
+                      </div>
+                      <span className="text-xs text-gray-500">{tema.progreso}%</span>
+                      {tema.pendientes > 0 && (
+                        <span className="text-xs text-amber-600 font-medium">{tema.pendientes} pendientes</span>
+                      )}
+                    </div>
+                  </div>
+                  <motion.div animate={{ rotate: isSelected ? 180 : 0 }}>
+                    <ChevronDown className="w-5 h-5 text-gray-400" />
+                  </motion.div>
+                </div>
+              </motion.button>
+
+              {/* Expanded content */}
+              <AnimatePresence>
+                {isSelected && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="bg-gray-50 rounded-b-xl p-4 border-x border-b border-gray-100 space-y-4">
+                      {/* Mode selector */}
+                      <div className="flex gap-2">
+                        {[
+                          { id: 'test', label: 'Test', icon: Target, color: 'purple' },
+                          { id: 'flashcards', label: 'Flashcards', icon: BookMarked, color: 'amber' },
+                          { id: 'lectura', label: 'Solo lectura', icon: Eye, color: 'gray' },
+                        ].map((mode) => (
+                          <motion.button
+                            key={mode.id}
+                            onClick={() => setSelectedMode(mode.id)}
+                            className={`flex-1 py-2 rounded-lg text-sm font-medium flex items-center justify-center gap-1.5 transition-all ${
+                              selectedMode === mode.id
+                                ? mode.color === 'purple' ? 'bg-purple-600 text-white' :
+                                  mode.color === 'amber' ? 'bg-amber-500 text-white' :
+                                  'bg-gray-600 text-white'
+                                : 'bg-white border border-gray-200 text-gray-600'
+                            }`}
+                            whileTap={{ scale: 0.97 }}
+                          >
+                            <mode.icon className="w-4 h-4" />
+                            {mode.label}
+                          </motion.button>
+                        ))}
+                      </div>
+
+                      {/* Flashcard preview (if flashcards mode selected) */}
+                      {selectedMode === 'flashcards' && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          className="space-y-2"
+                        >
+                          <p className="text-xs text-gray-500 font-medium">Preview de flashcards:</p>
+                          <div className="flex gap-2 overflow-x-auto pb-2">
+                            {previewFlashcards.map((card, i) => (
+                              <div
+                                key={i}
+                                className="flex-shrink-0 w-40 bg-gradient-to-br from-purple-500 to-violet-600 rounded-lg p-3 text-white"
+                              >
+                                <p className="text-xs opacity-80 mb-1">Pregunta</p>
+                                <p className="text-xs font-medium line-clamp-2">{card.front}</p>
+                              </div>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+
+                      {/* Start button */}
+                      <motion.button
+                        className="w-full py-3 bg-purple-600 text-white font-semibold rounded-xl flex items-center justify-center gap-2"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        <Zap className="w-5 h-5" />
+                        Empezar {selectedMode === 'flashcards' ? 'Flashcards' : selectedMode === 'lectura' ? 'Lectura' : 'Test'}
+                      </motion.button>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+// ============================================
+// TAB 3: STUDY MODE SELECTOR
+// ============================================
+
+function StudyModeSelector() {
+  const [selectedMode, setSelectedMode] = useState(null);
+
+  const studyModes = [
+    {
+      id: 'test-rapido',
+      icon: Zap,
+      title: 'Test Rapido',
+      description: '5-10 preguntas aleatorias',
+      time: '~5 min',
+      color: 'purple',
+      gradient: 'from-purple-500 to-violet-600',
+      status: 'disponible',
+    },
+    {
+      id: 'practica-tema',
+      icon: Target,
+      title: 'Practica por Tema',
+      description: 'Elige un tema especifico',
+      time: '~15 min',
+      color: 'blue',
+      gradient: 'from-blue-500 to-cyan-600',
+      status: 'disponible',
+    },
+    {
+      id: 'repaso-errores',
+      icon: AlertTriangle,
+      title: 'Repaso de Errores',
+      description: 'Solo preguntas falladas',
+      time: 'Variable',
+      color: 'amber',
+      gradient: 'from-amber-500 to-orange-600',
+      status: 'disponible',
+      badge: '12 pendientes',
+    },
+    {
+      id: 'simulacro',
+      icon: Clock,
+      title: 'Simulacro',
+      description: '100 preguntas, 60 min cronometrado',
+      time: '60 min',
+      color: 'rose',
+      gradient: 'from-rose-500 to-pink-600',
+      status: 'proximamente',
+    },
+    {
+      id: 'flashcards',
+      icon: BookMarked,
+      title: 'Flashcards',
+      description: 'Memorizacion rapida',
+      time: '~10 min',
+      color: 'emerald',
+      gradient: 'from-emerald-500 to-teal-600',
+      status: 'disponible',
+    },
+    {
+      id: 'solo-lectura',
+      icon: Eye,
+      title: 'Solo Lectura',
+      description: 'Revisar sin contestar',
+      time: 'Libre',
+      color: 'gray',
+      gradient: 'from-gray-500 to-slate-600',
+      status: 'premium',
+    },
+  ];
+
+  return (
+    <div className="space-y-6">
+      {/* Header */}
+      <div className="bg-gradient-to-r from-violet-50 to-purple-50 border border-violet-200 rounded-xl p-4">
+        <h3 className="font-bold text-violet-800 mb-1">Selector de Modo de Estudio</h3>
+        <p className="text-sm text-violet-600">
+          Basado en el assessment USER_JOURNEY_STUDY_MODES. Modal/pagina de seleccion de modo antes de comenzar.
+        </p>
+      </div>
+
+      {/* Mode Selection */}
+      <div className="space-y-3">
+        <h4 className="text-sm font-semibold text-gray-700">Como quieres estudiar hoy?</h4>
+
+        {studyModes.map((mode, index) => {
+          const Icon = mode.icon;
+          const isSelected = selectedMode === mode.id;
+          const isDisabled = mode.status === 'proximamente' || mode.status === 'premium';
+
+          return (
+            <motion.button
+              key={mode.id}
+              onClick={() => !isDisabled && setSelectedMode(isSelected ? null : mode.id)}
+              className={`w-full text-left transition-all ${isDisabled ? 'opacity-60' : ''}`}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.05 }}
+              whileTap={!isDisabled ? { scale: 0.99 } : {}}
+              disabled={isDisabled}
+            >
+              <div className={`bg-white rounded-xl p-4 border-2 transition-all ${
+                isSelected ? 'border-purple-400 shadow-md' : 'border-gray-100 hover:border-gray-200'
+              }`}>
+                <div className="flex items-start gap-4">
+                  {/* Icon */}
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${mode.gradient} flex items-center justify-center flex-shrink-0`}>
+                    <Icon className="w-6 h-6 text-white" />
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2">
+                      <h5 className="font-semibold text-gray-900">{mode.title}</h5>
+                      {mode.badge && (
+                        <span className="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full font-medium">
+                          {mode.badge}
+                        </span>
+                      )}
+                      {mode.status === 'proximamente' && (
+                        <span className="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full">
+                          Proximamente
+                        </span>
+                      )}
+                      {mode.status === 'premium' && (
+                        <span className="text-xs bg-purple-100 text-purple-600 px-2 py-0.5 rounded-full flex items-center gap-1">
+                          <Star className="w-3 h-3" /> Premium
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-sm text-gray-500 mt-0.5">{mode.description}</p>
+                    <div className="flex items-center gap-2 mt-2">
+                      <Clock className="w-3 h-3 text-gray-400" />
+                      <span className="text-xs text-gray-400">{mode.time}</span>
+                    </div>
+                  </div>
+
+                  {/* Selection indicator */}
+                  <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0 ${
+                    isSelected ? 'border-purple-500 bg-purple-500' : 'border-gray-300'
+                  }`}>
+                    {isSelected && <Check className="w-4 h-4 text-white" />}
+                  </div>
+                </div>
+              </div>
+            </motion.button>
+          );
+        })}
+      </div>
+
+      {/* Start button */}
+      <AnimatePresence>
+        {selectedMode && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            className="sticky bottom-4"
+          >
+            <motion.button
+              className="w-full py-4 bg-purple-600 text-white font-bold rounded-xl shadow-lg shadow-purple-500/25 flex items-center justify-center gap-2"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <Zap className="w-5 h-5" />
+              Empezar {studyModes.find(m => m.id === selectedMode)?.title}
+            </motion.button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
+// ============================================
+// TAB 4: FSRS DEBUG PANEL
+// ============================================
+
+function FSRSDebugPanel() {
+  const [simulatedDays, setSimulatedDays] = useState(0);
+  const [selectedQuestion, setSelectedQuestion] = useState(null);
+
+  // Mock FSRS data
+  const mockFSRSQueue = [
+    { id: 'q001', question: 'Cuantos articulos tiene la CE?', tema: 1, lastReview: '2026-01-15', nextReview: '2026-01-18', ease: 2.5, interval: 3, state: 'review', timesCorrect: 3, timesSeen: 4 },
+    { id: 'q002', question: 'En que ano se aprobo la CE?', tema: 1, lastReview: '2026-01-10', nextReview: '2026-01-17', ease: 2.1, interval: 7, state: 'review', timesCorrect: 5, timesSeen: 6 },
+    { id: 'q003', question: 'Valores superiores del Art. 1.1?', tema: 1, lastReview: '2026-01-16', nextReview: '2026-01-19', ease: 2.8, interval: 3, state: 'learning', timesCorrect: 2, timesSeen: 3 },
+    { id: 'q004', question: 'El Rey puede disolver las Cortes?', tema: 3, lastReview: '2026-01-14', nextReview: '2026-01-21', ease: 2.6, interval: 7, state: 'review', timesCorrect: 4, timesSeen: 5 },
+    { id: 'q005', question: 'Plazo del recurso de amparo?', tema: 4, lastReview: '2026-01-12', nextReview: '2026-01-26', ease: 3.0, interval: 14, state: 'mastered', timesCorrect: 8, timesSeen: 8 },
+  ];
+
+  const today = new Date('2026-01-18');
+  const simulatedDate = new Date(today);
+  simulatedDate.setDate(simulatedDate.getDate() + simulatedDays);
+
+  // Filter due questions based on simulated date
+  const getDueStatus = (nextReview) => {
+    const reviewDate = new Date(nextReview);
+    const diff = Math.ceil((reviewDate - simulatedDate) / (1000 * 60 * 60 * 24));
+    if (diff <= 0) return { status: 'due', label: 'Hoy', color: 'red' };
+    if (diff === 1) return { status: 'tomorrow', label: 'Manana', color: 'amber' };
+    return { status: 'future', label: `+${diff} dias`, color: 'gray' };
+  };
+
+  const dueNow = mockFSRSQueue.filter(q => getDueStatus(q.nextReview).status === 'due').length;
+  const dueTomorrow = mockFSRSQueue.filter(q => getDueStatus(q.nextReview).status === 'tomorrow').length;
+
+  return (
+    <div className="space-y-6">
+      {/* Header */}
+      <div className="bg-gradient-to-r from-slate-800 to-gray-900 rounded-xl p-4 text-white">
+        <div className="flex items-center gap-2 mb-2">
+          <Code className="w-5 h-5" />
+          <h3 className="font-bold">FSRS Debug Panel</h3>
+          <span className="text-xs bg-amber-500 text-black px-2 py-0.5 rounded-full font-medium ml-auto">DEV</span>
+        </div>
+        <p className="text-sm text-gray-300">
+          Panel para probar el sistema de repeticion espaciada. Simula el paso del tiempo y verifica que el algoritmo funciona.
+        </p>
+      </div>
+
+      {/* Time Simulator */}
+      <motion.div
+        className="bg-white rounded-xl border border-gray-200 p-4"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        <div className="flex items-center gap-2 mb-4">
+          <Clock className="w-5 h-5 text-purple-600" />
+          <h4 className="font-semibold text-gray-900">Simulador de Tiempo</h4>
+        </div>
+
+        <div className="space-y-3">
+          <div className="flex items-center justify-between text-sm">
+            <span className="text-gray-500">Fecha actual:</span>
+            <span className="font-mono text-gray-900">2026-01-18</span>
+          </div>
+          <div className="flex items-center justify-between text-sm">
+            <span className="text-gray-500">Fecha simulada:</span>
+            <span className="font-mono text-purple-600 font-bold">{simulatedDate.toISOString().split('T')[0]}</span>
+          </div>
+
+          {/* Slider */}
+          <div className="pt-2">
+            <input
+              type="range"
+              min="0"
+              max="30"
+              value={simulatedDays}
+              onChange={(e) => setSimulatedDays(parseInt(e.target.value))}
+              className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-purple-600"
+            />
+            <div className="flex justify-between text-xs text-gray-400 mt-1">
+              <span>Hoy</span>
+              <span>+{simulatedDays} dias</span>
+              <span>+30 dias</span>
+            </div>
+          </div>
+
+          <div className="flex gap-2 mt-3">
+            <button
+              onClick={() => setSimulatedDays(0)}
+              className="flex-1 py-2 text-sm bg-gray-100 text-gray-700 rounded-lg font-medium"
+            >
+              Reset a hoy
+            </button>
+            <button
+              onClick={() => setSimulatedDays(7)}
+              className="flex-1 py-2 text-sm bg-purple-100 text-purple-700 rounded-lg font-medium"
+            >
+              +7 dias
+            </button>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Queue Stats */}
+      <motion.div
+        className="bg-white rounded-xl border border-gray-200 p-4"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
+      >
+        <div className="flex items-center gap-2 mb-4">
+          <BarChart3 className="w-5 h-5 text-blue-600" />
+          <h4 className="font-semibold text-gray-900">Cola de Repasos</h4>
+        </div>
+
+        <div className="grid grid-cols-3 gap-3 mb-4">
+          <div className="bg-red-50 rounded-lg p-3 text-center">
+            <p className="text-2xl font-bold text-red-600">{dueNow}</p>
+            <p className="text-xs text-red-500">Due ahora</p>
+          </div>
+          <div className="bg-amber-50 rounded-lg p-3 text-center">
+            <p className="text-2xl font-bold text-amber-600">{dueTomorrow}</p>
+            <p className="text-xs text-amber-500">Due manana</p>
+          </div>
+          <div className="bg-gray-50 rounded-lg p-3 text-center">
+            <p className="text-2xl font-bold text-gray-600">{mockFSRSQueue.length}</p>
+            <p className="text-xs text-gray-500">Total</p>
+          </div>
+        </div>
+
+        {/* Questions Table */}
+        <div className="overflow-x-auto">
+          <table className="w-full text-xs">
+            <thead>
+              <tr className="border-b border-gray-100">
+                <th className="text-left py-2 text-gray-500 font-medium">ID</th>
+                <th className="text-left py-2 text-gray-500 font-medium">Estado</th>
+                <th className="text-left py-2 text-gray-500 font-medium">Intervalo</th>
+                <th className="text-left py-2 text-gray-500 font-medium">Ease</th>
+                <th className="text-left py-2 text-gray-500 font-medium">Due</th>
+              </tr>
+            </thead>
+            <tbody>
+              {mockFSRSQueue.map((q) => {
+                const dueInfo = getDueStatus(q.nextReview);
+                return (
+                  <tr
+                    key={q.id}
+                    className={`border-b border-gray-50 cursor-pointer hover:bg-gray-50 ${selectedQuestion?.id === q.id ? 'bg-purple-50' : ''}`}
+                    onClick={() => setSelectedQuestion(q)}
+                  >
+                    <td className="py-2 font-mono text-gray-700">{q.id}</td>
+                    <td className="py-2">
+                      <span className={`px-1.5 py-0.5 rounded text-[10px] font-medium ${
+                        q.state === 'mastered' ? 'bg-emerald-100 text-emerald-700' :
+                        q.state === 'learning' ? 'bg-amber-100 text-amber-700' :
+                        'bg-blue-100 text-blue-700'
+                      }`}>
+                        {q.state}
+                      </span>
+                    </td>
+                    <td className="py-2 text-gray-600">{q.interval}d</td>
+                    <td className="py-2 text-gray-600">{q.ease.toFixed(2)}</td>
+                    <td className="py-2">
+                      <span className={`px-1.5 py-0.5 rounded text-[10px] font-medium ${
+                        dueInfo.color === 'red' ? 'bg-red-100 text-red-700' :
+                        dueInfo.color === 'amber' ? 'bg-amber-100 text-amber-700' :
+                        'bg-gray-100 text-gray-600'
+                      }`}>
+                        {dueInfo.label}
+                      </span>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </motion.div>
+
+      {/* Question Inspector */}
+      <AnimatePresence>
+        {selectedQuestion && (
+          <motion.div
+            className="bg-white rounded-xl border border-gray-200 p-4"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-2">
+                <Search className="w-5 h-5 text-emerald-600" />
+                <h4 className="font-semibold text-gray-900">Inspector de Pregunta</h4>
+              </div>
+              <button
+                onClick={() => setSelectedQuestion(null)}
+                className="p-1 rounded hover:bg-gray-100"
+              >
+                <X className="w-4 h-4 text-gray-400" />
+              </button>
+            </div>
+
+            <div className="space-y-3">
+              <div className="bg-gray-50 rounded-lg p-3">
+                <p className="text-xs text-gray-500 mb-1">Pregunta</p>
+                <p className="text-sm font-medium text-gray-800">{selectedQuestion.question}</p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3 text-xs">
+                <div className="bg-gray-50 rounded-lg p-2">
+                  <p className="text-gray-500">times_seen</p>
+                  <p className="font-mono font-bold text-gray-800">{selectedQuestion.timesSeen}</p>
+                </div>
+                <div className="bg-gray-50 rounded-lg p-2">
+                  <p className="text-gray-500">times_correct</p>
+                  <p className="font-mono font-bold text-gray-800">{selectedQuestion.timesCorrect}</p>
+                </div>
+                <div className="bg-gray-50 rounded-lg p-2">
+                  <p className="text-gray-500">interval</p>
+                  <p className="font-mono font-bold text-gray-800">{selectedQuestion.interval} dias</p>
+                </div>
+                <div className="bg-gray-50 rounded-lg p-2">
+                  <p className="text-gray-500">ease_factor</p>
+                  <p className="font-mono font-bold text-gray-800">{selectedQuestion.ease.toFixed(2)}</p>
+                </div>
+                <div className="bg-gray-50 rounded-lg p-2">
+                  <p className="text-gray-500">state</p>
+                  <p className="font-mono font-bold text-gray-800">{selectedQuestion.state}</p>
+                </div>
+                <div className="bg-gray-50 rounded-lg p-2">
+                  <p className="text-gray-500">next_review</p>
+                  <p className="font-mono font-bold text-gray-800">{selectedQuestion.nextReview}</p>
+                </div>
+              </div>
+
+              <div className="flex gap-2 mt-4">
+                <button className="flex-1 py-2 text-sm bg-amber-100 text-amber-700 rounded-lg font-medium">
+                  Forzar como Due
+                </button>
+                <button className="flex-1 py-2 text-sm bg-red-100 text-red-700 rounded-lg font-medium">
+                  Reset Progreso
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Debug Actions */}
+      <motion.div
+        className="bg-white rounded-xl border border-gray-200 p-4"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+      >
+        <div className="flex items-center gap-2 mb-4">
+          <Settings className="w-5 h-5 text-red-600" />
+          <h4 className="font-semibold text-gray-900">Acciones de Debug</h4>
+        </div>
+
+        <div className="space-y-3">
+          <div className="p-3 bg-amber-50 border border-amber-200 rounded-lg">
+            <p className="text-sm font-medium text-amber-800 mb-2">Reset Progreso</p>
+            <div className="flex gap-2">
+              <select className="flex-1 py-2 px-3 text-sm border border-amber-200 rounded-lg bg-white">
+                <option value="all">Todo el progreso</option>
+                <option value="tema-1">Solo Tema 1</option>
+                <option value="tema-2">Solo Tema 2</option>
+              </select>
+              <button className="px-4 py-2 text-sm bg-red-500 text-white rounded-lg font-medium">
+                Ejecutar
+              </button>
+            </div>
+            <p className="text-xs text-amber-600 mt-2">Escribe "RESET" para confirmar</p>
+          </div>
+
+          <button className="w-full py-2 text-sm bg-gray-100 text-gray-700 rounded-lg font-medium flex items-center justify-center gap-2">
+            <Activity className="w-4 h-4" />
+            Exportar datos FSRS (CSV)
+          </button>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+
+// ============================================
 // MAIN DRAFT FEATURES COMPONENT
 // ============================================
 
@@ -6921,8 +7724,12 @@ export default function DraftFeatures({ onClose }) {
   ];
 
   const tabs = [
-    // Active drafts
+    // Active drafts - New proposals based on assessment
     { id: 'flipcards', label: '🃏 FlipCards' },
+    { id: 'flipcards-actividad', label: '📱 FC+Actividad' },
+    { id: 'flipcards-temas', label: '📚 FC+Temas' },
+    { id: 'study-modes', label: '🎯 Modos' },
+    { id: 'fsrs-debug', label: '🔧 FSRS Debug' },
     { id: 'proposals', label: '💡 Propuestas' },
     { id: 'contadores', label: '🔢 Contadores' },
     { id: 'admin-flow', label: '🔐 Admin Flow' },
@@ -7185,6 +7992,54 @@ export default function DraftFeatures({ onClose }) {
               exit={{ opacity: 0, y: -20 }}
             >
               <FlipCardDemos />
+            </motion.div>
+          )}
+
+          {/* NEW: FLIPCARDS + ACTIVIDAD */}
+          {activeTab === 'flipcards-actividad' && (
+            <motion.div
+              key="flipcards-actividad"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <FlipCardsActividadDemo />
+            </motion.div>
+          )}
+
+          {/* NEW: FLIPCARDS + TEMAS */}
+          {activeTab === 'flipcards-temas' && (
+            <motion.div
+              key="flipcards-temas"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <FlipCardsTemasDemo />
+            </motion.div>
+          )}
+
+          {/* NEW: STUDY MODE SELECTOR */}
+          {activeTab === 'study-modes' && (
+            <motion.div
+              key="study-modes"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <StudyModeSelector />
+            </motion.div>
+          )}
+
+          {/* NEW: FSRS DEBUG PANEL */}
+          {activeTab === 'fsrs-debug' && (
+            <motion.div
+              key="fsrs-debug"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <FSRSDebugPanel />
             </motion.div>
           )}
 

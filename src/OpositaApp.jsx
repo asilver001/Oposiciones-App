@@ -1788,6 +1788,7 @@ export default function OpositaApp() {
               loading={activityLoading}
               onStartTest={startTest}
               formatRelativeDate={formatRelativeDate}
+              devMode={import.meta.env.DEV}
             />
           )}
           {activeTab === 'temas' && (

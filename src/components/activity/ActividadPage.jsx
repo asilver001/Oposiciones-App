@@ -1,5 +1,5 @@
-import React, { useMemo } from 'react';
-import { motion } from 'framer-motion';
+import React, { useMemo, useState, useRef, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   Trophy,
   Target,
@@ -12,7 +12,13 @@ import {
   Clock,
   BarChart3,
   Sparkles,
-  Play
+  Play,
+  Dices,
+  User,
+  Activity,
+  Crown,
+  Shuffle,
+  X
 } from 'lucide-react';
 
 /**
@@ -25,7 +31,227 @@ import {
  * - motivationalMessage: object with motivational content
  * - calendarData: array of days practiced this month
  * - onStartTest: function to start a new test
+ * - devMode: boolean to show the randomizer button
  */
+
+// Simulated user states for dev mode
+const generateSessionHistory = (count, baseAccuracy) => {
+  const sessions = [];
+  const now = new Date();
+  for (let i = 0; i < count; i++) {
+    const daysAgo = Math.floor(i * 1.5);
+    const date = new Date(now);
+    date.setDate(date.getDate() - daysAgo);
+    const accuracy = Math.max(30, Math.min(100, baseAccuracy + (Math.random() * 20 - 10)));
+    const total = Math.floor(Math.random() * 15) + 5;
+    const correct = Math.round(total * (accuracy / 100));
+    sessions.push({
+      id: `sim-${i}`,
+      created_at: date.toISOString(),
+      tema_id: Math.random() > 0.3 ? Math.floor(Math.random() * 10) + 1 : null,
+      correctas: correct,
+      total_preguntas: total,
+      porcentaje_acierto: Math.round(accuracy)
+    });
+  }
+  return sessions;
+};
+
+const generateCalendarData = (daysCount) => {
+  const days = [];
+  const now = new Date();
+  const currentDay = now.getDate();
+  for (let i = 0; i < daysCount && i < currentDay; i++) {
+    const day = currentDay - Math.floor(Math.random() * currentDay);
+    if (!days.includes(day)) {
+      days.push(day);
+    }
+  }
+  return days.sort((a, b) => a - b);
+};
+
+const userStates = {
+  nuevo: {
+    label: 'Usuario Nuevo',
+    emoji: '👤',
+    icon: User,
+    totalStats: {
+      testsCompleted: 0,
+      questionsCorrect: 0,
+      accuracyRate: 0,
+      totalMinutes: 0,
+      currentStreak: 0,
+      daysStudied: 0
+    },
+    weeklyData: [0, 0, 0, 0, 0, 0, 0],
+    sessionHistory: [],
+    calendarData: []
+  },
+  activo: {
+    label: 'Usuario Activo',
+    emoji: '📊',
+    icon: Activity,
+    totalStats: {
+      testsCompleted: 15,
+      questionsCorrect: 87,
+      accuracyRate: 68,
+      totalMinutes: 145,
+      currentStreak: 5,
+      daysStudied: 12
+    },
+    weeklyData: [3, 5, 2, 4, 6, 0, 2],
+    sessionHistory: generateSessionHistory(5, 68),
+    calendarData: generateCalendarData(12)
+  },
+  veterano: {
+    label: 'Usuario Veterano',
+    emoji: '🏆',
+    icon: Crown,
+    totalStats: {
+      testsCompleted: 89,
+      questionsCorrect: 534,
+      accuracyRate: 82,
+      totalMinutes: 890,
+      currentStreak: 23,
+      daysStudied: 45
+    },
+    weeklyData: [8, 12, 10, 15, 9, 6, 11],
+    sessionHistory: generateSessionHistory(15, 82),
+    calendarData: generateCalendarData(20)
+  },
+  aleatorio: {
+    label: 'Aleatorio',
+    emoji: '🎲',
+    icon: Shuffle,
+    generate: () => {
+      const testsCompleted = Math.floor(Math.random() * 100);
+      const accuracyRate = Math.floor(Math.random() * 60) + 40;
+      const questionsCorrect = Math.floor(testsCompleted * 8 * (accuracyRate / 100));
+      const currentStreak = Math.floor(Math.random() * 30);
+      const daysStudied = Math.floor(Math.random() * 60) + 1;
+      return {
+        totalStats: {
+          testsCompleted,
+          questionsCorrect,
+          accuracyRate,
+          totalMinutes: testsCompleted * 10,
+          currentStreak,
+          daysStudied
+        },
+        weeklyData: Array(7).fill(0).map(() => Math.floor(Math.random() * 20)),
+        sessionHistory: generateSessionHistory(Math.floor(Math.random() * 15) + 1, accuracyRate),
+        calendarData: generateCalendarData(daysStudied)
+      };
+    }
+  }
+};
+
+/**
+ * DevModeRandomizer - Floating button with dropdown for simulating user states
+ */
+function DevModeRandomizer({ activeMode, onSelectMode, onClear }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const modes = ['nuevo', 'activo', 'veterano', 'aleatorio'];
+
+  return (
+    <div ref={menuRef} className="fixed bottom-24 right-4 z-50">
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: 10, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 10, scale: 0.95 }}
+            transition={{ duration: 0.15 }}
+            className="absolute bottom-16 right-0 bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden min-w-[180px]"
+          >
+            <div className="p-2 border-b bg-gray-50">
+              <p className="text-xs font-semibold text-gray-600 px-2">Simular Usuario</p>
+            </div>
+            <div className="p-1">
+              {modes.map((mode) => {
+                const state = userStates[mode];
+                const Icon = state.icon;
+                const isActive = activeMode === mode;
+                return (
+                  <button
+                    key={mode}
+                    onClick={() => {
+                      onSelectMode(mode);
+                      setIsOpen(false);
+                    }}
+                    className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-left transition-colors ${
+                      isActive
+                        ? 'bg-purple-100 text-purple-700'
+                        : 'hover:bg-gray-100 text-gray-700'
+                    }`}
+                  >
+                    <Icon className="w-4 h-4" />
+                    <span className="text-sm font-medium">{state.emoji} {state.label}</span>
+                  </button>
+                );
+              })}
+              {activeMode && (
+                <>
+                  <div className="border-t my-1" />
+                  <button
+                    onClick={() => {
+                      onClear();
+                      setIsOpen(false);
+                    }}
+                    className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-left transition-colors hover:bg-red-50 text-red-600"
+                  >
+                    <X className="w-4 h-4" />
+                    <span className="text-sm font-medium">Mostrar datos reales</span>
+                  </button>
+                </>
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Main floating button */}
+      <motion.button
+        onClick={() => setIsOpen(!isOpen)}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        animate={activeMode ? { rotate: [0, 10, -10, 0] } : {}}
+        transition={{ duration: 0.5, repeat: activeMode ? Infinity : 0, repeatDelay: 3 }}
+        className={`w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-colors ${
+          activeMode
+            ? 'bg-purple-600 text-white'
+            : 'bg-white text-gray-700 border border-gray-200'
+        }`}
+      >
+        <Dices className="w-6 h-6" />
+      </motion.button>
+
+      {/* Active mode badge */}
+      {activeMode && (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="absolute -top-2 -left-2 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow-md"
+        >
+          {userStates[activeMode].emoji}
+        </motion.div>
+      )}
+    </div>
+  );
+}
 
 // Animation variants
 const containerVariants = {
@@ -397,91 +623,151 @@ export default function ActividadPage({
   motivationalMessage = null,
   loading = false,
   onStartTest,
-  formatRelativeDate
+  formatRelativeDate,
+  devMode = false
 }) {
+  // Dev mode state for simulation
+  const [simulationMode, setSimulationMode] = useState(null);
+  const [simulatedData, setSimulatedData] = useState(null);
+
+  // Handle mode selection
+  const handleSelectMode = (mode) => {
+    setSimulationMode(mode);
+    const state = userStates[mode];
+    if (mode === 'aleatorio') {
+      // Generate new random data each time
+      setSimulatedData(state.generate());
+    } else {
+      setSimulatedData({
+        totalStats: state.totalStats,
+        weeklyData: state.weeklyData,
+        sessionHistory: state.sessionHistory,
+        calendarData: state.calendarData
+      });
+    }
+  };
+
+  // Clear simulation
+  const handleClear = () => {
+    setSimulationMode(null);
+    setSimulatedData(null);
+  };
+
+  // Determine which data to use
+  const displayData = simulatedData || {
+    totalStats,
+    weeklyData,
+    sessionHistory,
+    calendarData
+  };
+
   if (loading) {
     return <LoadingState />;
   }
 
-  const hasActivity = totalStats.testsCompleted > 0;
+  const hasActivity = displayData.totalStats.testsCompleted > 0;
 
   return (
-    <motion.div
-      className="space-y-6"
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-    >
-      <h2 className="text-2xl font-bold text-gray-900">Tu actividad</h2>
-
-      {!hasActivity ? (
-        <EmptyState onStartTest={onStartTest} />
-      ) : (
-        <>
-          {/* Stats Cards */}
-          <div className="grid grid-cols-2 gap-4">
-            <StatCard
-              icon={Trophy}
-              iconColor="text-purple-600"
-              label="Tests completados"
-              value={totalStats.testsCompleted}
-            />
-            <StatCard
-              icon={Target}
-              iconColor="text-green-600"
-              label="Tasa de acierto"
-              value={`${totalStats.accuracyRate}%`}
-            />
-            <StatCard
-              icon={CheckCircle}
-              iconColor="text-blue-600"
-              label="Preguntas correctas"
-              value={totalStats.questionsCorrect}
-            />
-            <StatCard
-              icon={Calendar}
-              iconColor="text-orange-600"
-              label="Dias estudiando"
-              value={totalStats.daysStudied || totalStats.totalDaysStudied || 0}
-            />
-          </div>
-
-          {/* Current Streak - if exists */}
-          {totalStats.currentStreak > 0 && (
+    <>
+      <motion.div
+        className="space-y-6"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        {/* Header with simulation badge */}
+        <div className="flex items-center justify-between">
+          <h2 className="text-2xl font-bold text-gray-900">Tu actividad</h2>
+          {simulationMode && (
             <motion.div
-              variants={itemVariants}
-              className="bg-gradient-to-r from-orange-500 to-amber-500 rounded-2xl p-4 shadow-lg"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="flex items-center gap-2 bg-purple-100 text-purple-700 px-3 py-1.5 rounded-full text-sm font-medium"
             >
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                  <Flame className="w-6 h-6 text-white" />
-                </div>
-                <div className="text-white">
-                  <p className="text-sm opacity-90">Racha actual</p>
-                  <p className="text-2xl font-bold">{totalStats.currentStreak} dias consecutivos</p>
-                </div>
-              </div>
+              <Dices className="w-4 h-4" />
+              <span>Simulado: {userStates[simulationMode].emoji}</span>
             </motion.div>
           )}
+        </div>
 
-          {/* Weekly Progress Chart */}
-          <WeeklyChart weeklyData={weeklyData} />
+        {!hasActivity ? (
+          <EmptyState onStartTest={onStartTest} />
+        ) : (
+          <>
+            {/* Stats Cards */}
+            <div className="grid grid-cols-2 gap-4">
+              <StatCard
+                icon={Trophy}
+                iconColor="text-purple-600"
+                label="Tests completados"
+                value={displayData.totalStats.testsCompleted}
+              />
+              <StatCard
+                icon={Target}
+                iconColor="text-green-600"
+                label="Tasa de acierto"
+                value={`${displayData.totalStats.accuracyRate}%`}
+              />
+              <StatCard
+                icon={CheckCircle}
+                iconColor="text-blue-600"
+                label="Preguntas correctas"
+                value={displayData.totalStats.questionsCorrect}
+              />
+              <StatCard
+                icon={Calendar}
+                iconColor="text-orange-600"
+                label="Dias estudiando"
+                value={displayData.totalStats.daysStudied || displayData.totalStats.totalDaysStudied || 0}
+              />
+            </div>
 
-          {/* Monthly Calendar */}
-          <MonthlyCalendar calendarData={calendarData} />
+            {/* Current Streak - if exists */}
+            {displayData.totalStats.currentStreak > 0 && (
+              <motion.div
+                variants={itemVariants}
+                className="bg-gradient-to-r from-orange-500 to-amber-500 rounded-2xl p-4 shadow-lg"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                    <Flame className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="text-white">
+                    <p className="text-sm opacity-90">Racha actual</p>
+                    <p className="text-2xl font-bold">{displayData.totalStats.currentStreak} dias consecutivos</p>
+                  </div>
+                </div>
+              </motion.div>
+            )}
 
-          {/* Session History */}
-          <SessionHistory
-            sessions={sessionHistory}
-            formatRelativeDate={formatRelativeDate}
-          />
+            {/* Weekly Progress Chart */}
+            <WeeklyChart weeklyData={displayData.weeklyData} />
 
-          {/* Motivational Message */}
-          {motivationalMessage && (
-            <MotivationalBanner message={motivationalMessage} />
-          )}
-        </>
+            {/* Monthly Calendar */}
+            <MonthlyCalendar calendarData={displayData.calendarData} />
+
+            {/* Session History */}
+            <SessionHistory
+              sessions={displayData.sessionHistory}
+              formatRelativeDate={formatRelativeDate}
+            />
+
+            {/* Motivational Message */}
+            {motivationalMessage && (
+              <MotivationalBanner message={motivationalMessage} />
+            )}
+          </>
+        )}
+      </motion.div>
+
+      {/* Dev Mode Randomizer Button */}
+      {devMode && (
+        <DevModeRandomizer
+          activeMode={simulationMode}
+          onSelectMode={handleSelectMode}
+          onClear={handleClear}
+        />
       )}
-    </motion.div>
+    </>
   );
 }
