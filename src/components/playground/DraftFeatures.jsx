@@ -3554,6 +3554,450 @@ function FocusModeOriginal({ temas, onStartSession }) {
 }
 
 // ============================================
+// RECURSOS PAGE
+// ============================================
+
+// Resource category configuration
+const recursosCategorias = [
+  {
+    id: 'legislacion',
+    title: 'Legislacion',
+    icon: Scale,
+    description: 'Leyes fundamentales para tu oposicion',
+    gradient: 'from-rose-500 to-pink-600',
+    bg: 'bg-rose-50',
+    text: 'text-rose-700',
+    border: 'border-rose-200',
+    recursos: [
+      { id: 'ce', title: 'Constitucion Espanola 1978', subtitle: 'Texto consolidado BOE', type: 'pdf', isNew: false, isFavorite: true, lastAccessed: '2024-01-15' },
+      { id: 'ley39', title: 'Ley 39/2015 - LPACAP', subtitle: 'Procedimiento Administrativo Comun', type: 'pdf', isNew: false, isFavorite: true, lastAccessed: '2024-01-14' },
+      { id: 'ley40', title: 'Ley 40/2015 - LRJSP', subtitle: 'Regimen Juridico Sector Publico', type: 'pdf', isNew: true, isFavorite: false, lastAccessed: null },
+      { id: 'ebep', title: 'RDL 5/2015 - EBEP', subtitle: 'Estatuto Basico Empleado Publico', type: 'pdf', isNew: false, isFavorite: false, lastAccessed: '2024-01-10' },
+      { id: 'lofage', title: 'Ley 6/1997 - LOFAGE', subtitle: 'Organizacion y Func. de la AGE', type: 'pdf', isNew: false, isFavorite: false, lastAccessed: null },
+    ]
+  },
+  {
+    id: 'esquemas',
+    title: 'Esquemas y Mapas',
+    icon: MapPin,
+    description: 'Visualiza conceptos clave',
+    gradient: 'from-violet-500 to-purple-600',
+    bg: 'bg-violet-50',
+    text: 'text-violet-700',
+    border: 'border-violet-200',
+    recursos: [
+      { id: 'esq-ce', title: 'Estructura de la Constitucion', subtitle: '10 Titulos + Disposiciones', type: 'esquema', isNew: false, isFavorite: true, lastAccessed: '2024-01-15' },
+      { id: 'esq-derechos', title: 'Derechos Fundamentales', subtitle: 'Arts. 14-29 CE', type: 'esquema', isNew: true, isFavorite: false, lastAccessed: null },
+      { id: 'esq-cortes', title: 'Las Cortes Generales', subtitle: 'Congreso y Senado', type: 'mapa', isNew: false, isFavorite: false, lastAccessed: '2024-01-12' },
+      { id: 'esq-gobierno', title: 'El Gobierno', subtitle: 'Composicion y funciones', type: 'esquema', isNew: false, isFavorite: false, lastAccessed: null },
+      { id: 'esq-proc', title: 'Procedimiento Administrativo', subtitle: 'Fases y plazos', type: 'mapa', isNew: true, isFavorite: false, lastAccessed: null },
+    ]
+  },
+  {
+    id: 'resumenes',
+    title: 'Resumenes por Tema',
+    icon: FileText,
+    description: 'Lo esencial de cada tema',
+    gradient: 'from-emerald-500 to-teal-600',
+    bg: 'bg-emerald-50',
+    text: 'text-emerald-700',
+    border: 'border-emerald-200',
+    recursos: [
+      { id: 'res-t1', title: 'T1: La Constitucion', subtitle: 'Caracteristicas y estructura', type: 'resumen', isNew: false, isFavorite: true, lastAccessed: '2024-01-15' },
+      { id: 'res-t2', title: 'T2: Derechos y Deberes', subtitle: 'Derechos fundamentales', type: 'resumen', isNew: false, isFavorite: false, lastAccessed: '2024-01-14' },
+      { id: 'res-t3', title: 'T3: Corona y Cortes', subtitle: 'Instituciones del Estado', type: 'resumen', isNew: false, isFavorite: true, lastAccessed: '2024-01-13' },
+      { id: 'res-t14', title: 'T14: Ley 39/2015', subtitle: 'Disposiciones generales', type: 'resumen', isNew: true, isFavorite: false, lastAccessed: null },
+      { id: 'res-t15', title: 'T15: El Acto Administrativo', subtitle: 'Eficacia y validez', type: 'resumen', isNew: true, isFavorite: false, lastAccessed: null },
+    ]
+  },
+  {
+    id: 'calendario',
+    title: 'Calendario de Estudio',
+    icon: Calendar,
+    description: 'Planifica tu preparacion',
+    gradient: 'from-amber-500 to-orange-600',
+    bg: 'bg-amber-50',
+    text: 'text-amber-700',
+    border: 'border-amber-200',
+    recursos: [
+      { id: 'cal-6m', title: 'Plan 6 meses', subtitle: 'Preparacion intensiva', type: 'calendario', isNew: false, isFavorite: true, lastAccessed: '2024-01-10' },
+      { id: 'cal-12m', title: 'Plan 12 meses', subtitle: 'Preparacion equilibrada', type: 'calendario', isNew: false, isFavorite: false, lastAccessed: null },
+      { id: 'cal-conv', title: 'Fechas convocatoria 2025', subtitle: 'AGE C2 - Aux. Administrativo', type: 'info', isNew: true, isFavorite: false, lastAccessed: null },
+    ]
+  },
+  {
+    id: 'tecnicas',
+    title: 'Tecnicas de Estudio',
+    icon: Lightbulb,
+    description: 'Aprende a estudiar mejor',
+    gradient: 'from-sky-500 to-blue-600',
+    bg: 'bg-sky-50',
+    text: 'text-sky-700',
+    border: 'border-sky-200',
+    recursos: [
+      { id: 'tec-fsrs', title: 'Repeticion espaciada', subtitle: 'Como funciona el algoritmo', type: 'guia', isNew: false, isFavorite: true, lastAccessed: '2024-01-08' },
+      { id: 'tec-test', title: 'Estrategia de tests', subtitle: 'Maximiza tu puntuacion', type: 'guia', isNew: false, isFavorite: false, lastAccessed: '2024-01-05' },
+      { id: 'tec-mem', title: 'Tecnicas de memoria', subtitle: 'Articulos y fechas', type: 'guia', isNew: true, isFavorite: false, lastAccessed: null },
+      { id: 'tec-plan', title: 'Gestion del tiempo', subtitle: 'Estudiar sin agobios', type: 'guia', isNew: false, isFavorite: false, lastAccessed: null },
+    ]
+  },
+  {
+    id: 'glosario',
+    title: 'Glosario de Terminos',
+    icon: BookMarked,
+    description: 'Definiciones clave',
+    gradient: 'from-fuchsia-500 to-pink-600',
+    bg: 'bg-fuchsia-50',
+    text: 'text-fuchsia-700',
+    border: 'border-fuchsia-200',
+    recursos: [
+      { id: 'glo-admin', title: 'Derecho Administrativo', subtitle: '120 terminos', type: 'glosario', isNew: false, isFavorite: true, lastAccessed: '2024-01-12' },
+      { id: 'glo-const', title: 'Derecho Constitucional', subtitle: '85 terminos', type: 'glosario', isNew: false, isFavorite: false, lastAccessed: '2024-01-11' },
+      { id: 'glo-proc', title: 'Procedimiento', subtitle: '60 terminos', type: 'glosario', isNew: true, isFavorite: false, lastAccessed: null },
+    ]
+  },
+];
+
+// Filter types for resources
+const filterOptions = [
+  { id: 'todos', label: 'Todos', icon: BookOpen },
+  { id: 'favoritos', label: 'Favoritos', icon: Heart },
+  { id: 'recientes', label: 'Recientes', icon: Clock },
+  { id: 'nuevos', label: 'Nuevos', icon: Sparkles },
+];
+
+// Expandable Resource Card component
+function ResourceCategoryCard({ categoria, isExpanded, onToggle, onResourceClick, favoriteIds, onToggleFavorite }) {
+  const Icon = categoria.icon;
+  const newCount = categoria.recursos.filter(r => r.isNew).length;
+
+  return (
+    <motion.div
+      className={`bg-white rounded-2xl border shadow-sm overflow-hidden ${categoria.border}`}
+      layout
+      transition={spring.gentle}
+    >
+      {/* Header - Always visible */}
+      <motion.button
+        onClick={onToggle}
+        className="w-full p-4 flex items-center gap-3 text-left"
+        whileHover={{ backgroundColor: 'rgba(0,0,0,0.01)' }}
+        whileTap={{ scale: 0.995 }}
+      >
+        <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${categoria.gradient} flex items-center justify-center shadow-lg`}>
+          <Icon className="w-6 h-6 text-white" />
+        </div>
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-2">
+            <p className="font-semibold text-gray-900">{categoria.title}</p>
+            {newCount > 0 && (
+              <motion.span
+                className="px-2 py-0.5 bg-rose-100 text-rose-600 text-xs font-medium rounded-full"
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={spring.bouncy}
+              >
+                {newCount} nuevo{newCount > 1 ? 's' : ''}
+              </motion.span>
+            )}
+          </div>
+          <p className="text-sm text-gray-500 truncate">{categoria.description}</p>
+        </div>
+        <div className="flex items-center gap-2">
+          <span className={`text-xs font-medium ${categoria.text} px-2 py-1 rounded-lg ${categoria.bg}`}>
+            {categoria.recursos.length}
+          </span>
+          <motion.div
+            animate={{ rotate: isExpanded ? 180 : 0 }}
+            transition={spring.snappy}
+          >
+            <ChevronDown className="w-5 h-5 text-gray-400" />
+          </motion.div>
+        </div>
+      </motion.button>
+
+      {/* Expanded content */}
+      <AnimatePresence>
+        {isExpanded && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={spring.gentle}
+          >
+            <div className="px-4 pb-4 space-y-2 border-t border-gray-100 pt-3">
+              {categoria.recursos.map((recurso, i) => {
+                const isFav = favoriteIds.includes(recurso.id);
+                return (
+                  <motion.div
+                    key={recurso.id}
+                    className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-50 transition-colors group"
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ ...spring.gentle, delay: i * 0.03 }}
+                  >
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onToggleFavorite(recurso.id);
+                      }}
+                      className="p-1.5 rounded-lg hover:bg-gray-100 transition-colors"
+                    >
+                      <Heart
+                        className={`w-4 h-4 transition-colors ${isFav ? 'fill-rose-500 text-rose-500' : 'text-gray-300 group-hover:text-gray-400'}`}
+                      />
+                    </button>
+                    <button
+                      onClick={() => onResourceClick(recurso)}
+                      className="flex-1 min-w-0 text-left flex items-center gap-3"
+                    >
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2">
+                          <p className="text-sm font-medium text-gray-800 truncate">{recurso.title}</p>
+                          {recurso.isNew && (
+                            <span className="px-1.5 py-0.5 bg-emerald-100 text-emerald-600 text-[10px] font-medium rounded">
+                              NUEVO
+                            </span>
+                          )}
+                        </div>
+                        <p className="text-xs text-gray-500 truncate">{recurso.subtitle}</p>
+                      </div>
+                      <ChevronRight className="w-4 h-4 text-gray-300 group-hover:text-gray-400 flex-shrink-0" />
+                    </button>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
+  );
+}
+
+// Main RecursosPage component
+function RecursosPage() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeFilter, setActiveFilter] = useState('todos');
+  const [expandedCategories, setExpandedCategories] = useState(['legislacion']); // Default expanded
+  const [favoriteIds, setFavoriteIds] = useState(['ce', 'ley39', 'esq-ce', 'res-t1', 'res-t3', 'cal-6m', 'tec-fsrs', 'glo-admin']);
+
+  // Toggle category expansion
+  const toggleCategory = (categoryId) => {
+    setExpandedCategories(prev =>
+      prev.includes(categoryId)
+        ? prev.filter(id => id !== categoryId)
+        : [...prev, categoryId]
+    );
+  };
+
+  // Toggle favorite
+  const toggleFavorite = (resourceId) => {
+    setFavoriteIds(prev =>
+      prev.includes(resourceId)
+        ? prev.filter(id => id !== resourceId)
+        : [...prev, resourceId]
+    );
+  };
+
+  // Handle resource click
+  const handleResourceClick = (recurso) => {
+    console.log('Open resource:', recurso);
+    // In production, this would open the resource
+  };
+
+  // Filter categories based on search and filter
+  const filteredCategorias = recursosCategorias.map(cat => {
+    let filteredRecursos = cat.recursos;
+
+    // Apply search filter
+    if (searchQuery) {
+      const query = searchQuery.toLowerCase();
+      filteredRecursos = filteredRecursos.filter(r =>
+        r.title.toLowerCase().includes(query) ||
+        r.subtitle.toLowerCase().includes(query)
+      );
+    }
+
+    // Apply type filter
+    if (activeFilter === 'favoritos') {
+      filteredRecursos = filteredRecursos.filter(r => favoriteIds.includes(r.id));
+    } else if (activeFilter === 'nuevos') {
+      filteredRecursos = filteredRecursos.filter(r => r.isNew);
+    } else if (activeFilter === 'recientes') {
+      filteredRecursos = filteredRecursos.filter(r => r.lastAccessed);
+    }
+
+    return { ...cat, recursos: filteredRecursos };
+  }).filter(cat => cat.recursos.length > 0);
+
+  // Count totals
+  const totalRecursos = recursosCategorias.reduce((sum, cat) => sum + cat.recursos.length, 0);
+  const totalNuevos = recursosCategorias.reduce((sum, cat) => sum + cat.recursos.filter(r => r.isNew).length, 0);
+
+  return (
+    <div className="space-y-4">
+      {/* Header stats */}
+      <motion.div
+        className="bg-gradient-to-br from-rose-50 via-purple-50 to-violet-50 rounded-2xl p-4 border border-rose-100"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={spring.gentle}
+      >
+        <div className="flex items-center gap-3 mb-3">
+          <div className="w-10 h-10 bg-gradient-to-br from-rose-500 to-purple-600 rounded-xl flex items-center justify-center">
+            <BookMarked className="w-5 h-5 text-white" />
+          </div>
+          <div>
+            <h2 className="font-bold text-gray-900">Biblioteca de Recursos</h2>
+            <p className="text-sm text-gray-500">{totalRecursos} recursos disponibles</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-3 gap-2">
+          <div className="bg-white/60 backdrop-blur rounded-xl p-2 text-center">
+            <p className="text-lg font-bold text-purple-600">{recursosCategorias.length}</p>
+            <p className="text-xs text-gray-500">Categorias</p>
+          </div>
+          <div className="bg-white/60 backdrop-blur rounded-xl p-2 text-center">
+            <p className="text-lg font-bold text-rose-600">{favoriteIds.length}</p>
+            <p className="text-xs text-gray-500">Favoritos</p>
+          </div>
+          <div className="bg-white/60 backdrop-blur rounded-xl p-2 text-center">
+            <p className="text-lg font-bold text-emerald-600">{totalNuevos}</p>
+            <p className="text-xs text-gray-500">Nuevos</p>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Search bar */}
+      <motion.div
+        className="relative"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ ...spring.gentle, delay: 0.05 }}
+      >
+        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+        <input
+          type="text"
+          placeholder="Buscar recursos..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="w-full pl-10 pr-4 py-3 bg-white rounded-xl border border-gray-200 focus:border-purple-300 focus:ring-2 focus:ring-purple-100 outline-none transition-all text-sm"
+        />
+        {searchQuery && (
+          <button
+            onClick={() => setSearchQuery('')}
+            className="absolute right-3 top-1/2 -translate-y-1/2 p-1 rounded-full hover:bg-gray-100"
+          >
+            <X className="w-4 h-4 text-gray-400" />
+          </button>
+        )}
+      </motion.div>
+
+      {/* Filter chips */}
+      <motion.div
+        className="flex gap-2 overflow-x-auto scrollbar-hide pb-1"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ ...spring.gentle, delay: 0.1 }}
+      >
+        {filterOptions.map((filter) => {
+          const FilterIcon = filter.icon;
+          const isActive = activeFilter === filter.id;
+          return (
+            <motion.button
+              key={filter.id}
+              onClick={() => setActiveFilter(filter.id)}
+              className={`flex items-center gap-1.5 px-3 py-2 rounded-xl font-medium text-sm whitespace-nowrap transition-colors
+                ${isActive
+                  ? 'bg-purple-600 text-white shadow-lg shadow-purple-600/25'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
+              whileTap={{ scale: 0.97 }}
+            >
+              <FilterIcon className="w-4 h-4" />
+              {filter.label}
+            </motion.button>
+          );
+        })}
+      </motion.div>
+
+      {/* Categories */}
+      <motion.div
+        className="space-y-3"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ ...spring.gentle, delay: 0.15 }}
+      >
+        {filteredCategorias.length > 0 ? (
+          filteredCategorias.map((categoria, i) => (
+            <motion.div
+              key={categoria.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ ...spring.gentle, delay: 0.1 + i * 0.05 }}
+            >
+              <ResourceCategoryCard
+                categoria={categoria}
+                isExpanded={expandedCategories.includes(categoria.id)}
+                onToggle={() => toggleCategory(categoria.id)}
+                onResourceClick={handleResourceClick}
+                favoriteIds={favoriteIds}
+                onToggleFavorite={toggleFavorite}
+              />
+            </motion.div>
+          ))
+        ) : (
+          <motion.div
+            className="text-center py-12"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+          >
+            <Search className="w-12 h-12 text-gray-300 mx-auto mb-3" />
+            <p className="text-gray-500 font-medium">No se encontraron recursos</p>
+            <p className="text-sm text-gray-400">Prueba con otra busqueda o filtro</p>
+          </motion.div>
+        )}
+      </motion.div>
+
+      {/* Quick access - Recent */}
+      {activeFilter === 'todos' && !searchQuery && (
+        <motion.div
+          className="bg-white rounded-2xl border border-gray-100 shadow-sm p-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ ...spring.gentle, delay: 0.3 }}
+        >
+          <div className="flex items-center gap-2 mb-3">
+            <Clock className="w-4 h-4 text-gray-400" />
+            <h3 className="font-semibold text-gray-800 text-sm">Ultimo acceso</h3>
+          </div>
+          <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-1">
+            {recursosCategorias
+              .flatMap(cat => cat.recursos.filter(r => r.lastAccessed))
+              .sort((a, b) => new Date(b.lastAccessed) - new Date(a.lastAccessed))
+              .slice(0, 5)
+              .map((recurso, i) => (
+                <motion.button
+                  key={recurso.id}
+                  onClick={() => handleResourceClick(recurso)}
+                  className="flex-shrink-0 px-3 py-2 bg-gray-50 hover:bg-gray-100 rounded-xl transition-colors text-left"
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.35 + i * 0.05 }}
+                  whileTap={{ scale: 0.97 }}
+                >
+                  <p className="text-sm font-medium text-gray-700 whitespace-nowrap">{recurso.title}</p>
+                  <p className="text-xs text-gray-400">{recurso.lastAccessed}</p>
+                </motion.button>
+              ))}
+          </div>
+        </motion.div>
+      )}
+    </div>
+  );
+}
+
+// ============================================
 // MAIN DRAFT FEATURES COMPONENT
 // ============================================
 
@@ -3584,6 +4028,7 @@ export default function DraftFeatures({ onClose }) {
 
   const tabs = [
     { id: 'momentum-fortaleza', label: '🏰 Soft+Fort' },
+    { id: 'recursos', label: '📖 Recursos' },
     { id: 'activities', label: '📈 Actividad' },
     { id: 'focus', label: '🎯 Focus' },
     { id: 'momentum-purple', label: '💜 Purple' },
@@ -3751,6 +4196,21 @@ export default function DraftFeatures({ onClose }) {
                 onSettingsClick={() => setShowSettingsModal(true)}
                 onShowProgress={() => setShowProgressModal(true)}
               />
+            </motion.div>
+          )}
+
+          {/* RECURSOS PAGE */}
+          {activeTab === 'recursos' && (
+            <motion.div
+              key="recursos"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <div className="bg-rose-50 border border-rose-200 rounded-xl p-3 text-sm text-rose-800 mb-4">
+                <strong>📖 Recursos:</strong> Biblioteca de recursos con categorias expandibles, busqueda y favoritos
+              </div>
+              <RecursosPage />
             </motion.div>
           )}
 
