@@ -2526,8 +2526,8 @@ export default function OpositaApp() {
         </div>
       </div>
 
-      {/* DEV Panel Colapsable - Solo visible para admin autenticado */}
-      {isAuthenticated && isUserAdmin && (
+      {/* DEV Panel Colapsable - Visible en dev mode O para admin autenticado */}
+      {(import.meta.env.DEV || (isAuthenticated && isUserAdmin)) && (
         <DevPanel
           onReset={handleDevReset}
           onShowPremium={() => setShowPremiumModal(true)}
