@@ -41,7 +41,14 @@
       "Bash(node -e:*)",
       "Bash(npx vite build:*)",
       "Bash(npx esbuild:*)",
-      "Bash(wc:*)"
+      "Bash(wc:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(grep:*)",
+      "Bash(tree:*)",
+      "Bash(curl:*)",
+      "Bash(bash)",
+      "Bash(vercel:*)",
+      "Bash(npx supabase:*)"
     ]
   }
 }

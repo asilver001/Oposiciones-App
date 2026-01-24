@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { Home, BookOpen, Trophy, Clock, TrendingUp, TrendingDown, ArrowLeft, CheckCircle, XCircle, Target, Flame, Zap, Star, Lock, Crown, BarChart3, Calendar, History, GraduationCap, Lightbulb, Info, Settings, ChevronRight, Instagram, Mail, Bell, User, LogOut, HelpCircle, FileText, Shield, ExternalLink, Minus, Code, Eye, ClipboardCheck } from 'lucide-react';
 import { allQuestions, topicsList, getRandomQuestions } from './data/questions';
 import { supabase } from './lib/supabase';
@@ -14,8 +14,10 @@ import Fortaleza from './components/Fortaleza';
 import { WelcomeScreen, GoalStep, DateStep, IntroStep } from './components/onboarding';
 import { useAppNavigation } from './hooks/useAppNavigation';
 import { Button, Card, Modal, ProgressBar } from './components/ui';
-import AnimationPlayground from './components/playground/AnimationPlayground';
-import DraftFeatures from './components/playground/DraftFeatures';
+// Lazy load AnimationPlayground (dev-only, 50KB)
+const AnimationPlayground = lazy(() => import('./components/dev/AnimationPlayground'));
+// Lazy load DraftFeatures (admin-only, 381KB)
+const DraftFeatures = lazy(() => import('./components/dev/DraftFeatures'));
 // Nuevos componentes extraídos (Fase 3 Refactor)
 import DevPanel from './components/dev/DevPanel';
 import { SoftFortHome } from './components/home';
@@ -1845,14 +1847,32 @@ export default function OpositaApp() {
 
       {/* Animation Playground */}
       {showAnimationPlayground && (
-        <div className="fixed inset-0 z-[100]">
-          <AnimationPlayground onClose={() => setShowAnimationPlayground(false)} />
-        </div>
+        <Suspense fallback={
+          <div className="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center">
+            <div className="text-white text-center">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
+              <p className="text-sm">Cargando Animation Playground...</p>
+            </div>
+          </div>
+        }>
+          <div className="fixed inset-0 z-[100]">
+            <AnimationPlayground onClose={() => setShowAnimationPlayground(false)} />
+          </div>
+        </Suspense>
       )}
 
       {/* Draft Features Preview */}
       {showDraftFeatures && (
-        <DraftFeatures onClose={() => setShowDraftFeatures(false)} />
+        <Suspense fallback={
+          <div className="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center">
+            <div className="text-white text-center">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
+              <p className="text-sm">Cargando Draft Features...</p>
+            </div>
+          </div>
+        }>
+          <DraftFeatures onClose={() => setShowDraftFeatures(false)} />
+        </Suspense>
       )}
 
       {/* Admin Login Modal */}

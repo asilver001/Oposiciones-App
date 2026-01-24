@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useAdmin } from '../../contexts/AdminContext';
 
 export default function DevPanel({
   onReset,
@@ -12,12 +13,19 @@ export default function DevPanel({
   testsCount
 }) {
   const [isOpen, setIsOpen] = useState(false);
+  const { isAdmin, adminUser } = useAdmin();
+
+  // 🔐 CRITICAL: Only render DevPanel if user is logged in as admin
+  if (!isAdmin) {
+    return null;
+  }
 
   if (!isOpen) {
     return (
       <button
         onClick={() => setIsOpen(true)}
         className="fixed bottom-24 left-4 z-50 w-10 h-10 bg-gray-900/80 hover:bg-gray-900 text-white rounded-full shadow-lg flex items-center justify-center text-xs font-bold"
+        title={`Dev Mode - ${adminUser?.email}`}
       >
         DEV
       </button>
@@ -27,18 +35,19 @@ export default function DevPanel({
   return (
     <div className="fixed bottom-24 left-4 z-50 bg-gray-900/95 rounded-2xl p-4 shadow-2xl min-w-[220px]">
       <div className="flex items-center justify-between mb-3">
-        <span className="text-white font-semibold text-sm">🛠️ Dev Tools</span>
+        <div>
+          <span className="text-white font-semibold text-sm">🛠️ Dev Tools</span>
+          <div className="text-[9px] text-gray-400 mt-0.5">{adminUser?.email}</div>
+        </div>
         <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-white text-lg">×</button>
       </div>
       <div className="space-y-2">
         <button onClick={onShowPlayground} className="w-full bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white text-xs py-2 px-3 rounded-lg text-left font-medium">
           ✨ Animation Playground
         </button>
+
         <button onClick={onShowDraftFeatures} className="w-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white text-xs py-2 px-3 rounded-lg text-left font-medium">
           🚧 Draft Features
-        </button>
-        <button onClick={onShowAdminLogin} className="w-full bg-indigo-500/90 hover:bg-indigo-600 text-white text-xs py-2 px-3 rounded-lg text-left">
-          🔐 Acceso Admin
         </button>
         <div className="border-t border-gray-700 my-2"></div>
         {/* Premium Mode Toggle */}
