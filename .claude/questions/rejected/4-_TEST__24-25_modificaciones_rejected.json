@@ -1,0 +1,1512 @@
+{
+  "metadata": {
+    "source_file": "4- TEST  24-25 modificaciones.pdf",
+    "source_path": "Test financiero\\4- TEST  24-25 modificaciones.pdf",
+    "tema": 0,
+    "categoria": "financiero",
+    "extraction_date": "2026-01-15T23:41:22.362237",
+    "reformulation_date": "2026-01-15T23:47:35.591826",
+    "total_questions": 30,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.551558",
+    "completed_count": 0,
+    "failed_count": 30
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "A tenor de lo establecido por la LGP no se podrn hacer transferencias de crdito:",
+        "options": [
+          {
+            "text": "Que incrementen crditos suplementados.",
+            "is_correct": false
+          },
+          {
+            "text": "Desde el captulo destinado al pago de intereses de prstamos al captulo destinado a la",
+            "is_correct": false
+          },
+          {
+            "text": "ompra de acciones.",
+            "is_correct": false
+          },
+          {
+            "text": "Desde el captulo destinado a la reposicin de mobiliario al captulo destinado al gasto de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "A tenor de lo establecido por la LGP no se podrn hacer transferencias de crdito:",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El artculo 51 de la LGP establece que la cuanta y finalidad de los crditos contenidos en",
+        "options": [
+          {
+            "text": "Transferencias, reasignaciones, generaciones, ampliaciones, crditos extraordinarios,",
+            "is_correct": false
+          },
+          {
+            "text": "Transferencias, generaciones, ampliaciones, crditos extraordinarios, suplementos e",
+            "is_correct": false
+          },
+          {
+            "text": "Transferencias, generaciones, ampliaciones, crditos extraordinarios, suplementos e",
+            "is_correct": false
+          },
+          {
+            "text": "Transferencias, generaciones, ampliaciones, crditos extraordinarios, suplementos,",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El artculo 51 de la LGP establece que la cuanta y finalidad de los crditos contenidos en",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 63 de la LGP, los titulares de los distintos ministerios podrn autorizar,",
+        "options": [
+          {
+            "text": "Las transferencias entre crditos de un mismo programa o entre programas de un mismo",
+            "is_correct": false
+          },
+          {
+            "text": "e bienes corrientes y servicios o inversiones reales, siempre que no se encuentren",
+            "is_correct": false
+          },
+          {
+            "text": "fecten a los de personal o no incrementen los crditos del articulo 43.2 de la LGP.",
+            "is_correct": false
+          },
+          {
+            "text": "Las transferencias entre crditos de un mismo programa o entre programas de un mismo",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 63 de la LGP, los titulares de los distintos ministerios podrn autorizar,",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "Cuando los ingresos procedan de la venta de bienes o prestaciones de servicios:",
+        "options": [
+          {
+            "text": "nicamente podrn dar lugar a generaciones en aquellos crditos destinados a la",
+            "is_correct": false
+          },
+          {
+            "text": "dquisicin de bienes muebles.",
+            "is_correct": false
+          },
+          {
+            "text": "Las generaciones se efectuarn nicamente en aquellos crditos destinados a cubrir gastos",
+            "is_correct": false
+          },
+          {
+            "text": "e la misma naturaleza que los que se originaron por la adquisicin o produccin de los",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cuando los ingresos procedan de la venta de bienes o prestaciones de servicios:",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Conforme a la LGP podrn hacerse transferencias de crdito entre distintas secciones:",
+        "options": [
+          {
+            "text": "Si afectan a la seccin 06 Deuda Pblica.",
+            "is_correct": false
+          },
+          {
+            "text": "Si afectan a la seccin 06 Deuda Pblica, siendo autorizadas por el Ministro de",
+            "is_correct": false
+          },
+          {
+            "text": "Si se ocasionan por reorganizaciones administrativas, siendo autorizadas por el Consejo",
+            "is_correct": false
+          },
+          {
+            "text": "e Ministros.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Conforme a la LGP podrn hacerse transferencias de crdito entre distintas secciones:",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Segn la LGP, a quin corresponde autorizar una transferencia desde el subconcepto",
+        "options": [
+          {
+            "text": "A nadie, pues se trata de una reasignacin de crdito.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Ministro de Hacienda.",
+            "is_correct": false
+          },
+          {
+            "text": "Al titular del Departamento Ministerial.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Consejo de Ministros.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn la LGP, a quin corresponde autorizar una transferencia desde el subconcepto",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Las ampliaciones de crdito en organismos autnomos se pueden financiar:",
+        "options": [
+          {
+            "text": "Con cargo a la parte del remanente de tesorera al fin del ejercicio anterior que no haya",
+            "is_correct": false
+          },
+          {
+            "text": "Con cargo a la parte del remanente de tesorera al fin del ejercicio anterior que no haya",
+            "is_correct": false
+          },
+          {
+            "text": "Con cargo a la parte del remanente de tesorera al fin del ejercicio anterior que no haya",
+            "is_correct": false
+          },
+          {
+            "text": "Con cargo a la parte del remanente de tesorera al fin del ejercicio anterior que no haya",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las ampliaciones de crdito en organismos autnomos se pueden financiar:",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Si hay que hacer frente a un gasto que no se puede demorar al ejercicio siguiente, para el",
+        "options": [
+          {
+            "text": "Una generacin de crdito.",
+            "is_correct": false
+          },
+          {
+            "text": "Un suplemento de crdito.",
+            "is_correct": false
+          },
+          {
+            "text": "Una ampliacin de crdito.",
+            "is_correct": false
+          },
+          {
+            "text": "Una incorporacin de crdito.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Si hay que hacer frente a un gasto que no se puede demorar al ejercicio siguiente, para el",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En relacin con las modificaciones presupuestarias del presupuesto de gastos respectivo,",
+        "options": [
+          {
+            "text": "on carcter general y salvo excepciones, el presidente del Tribunal de Cuentas tiene las",
+            "is_correct": false
+          },
+          {
+            "text": "El titular de un Departamento Ministerial.",
+            "is_correct": false
+          },
+          {
+            "text": "El Ministro de Hacienda.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente o Director de un Organismo Autnomo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En relacin con las modificaciones presupuestarias del presupuesto de gastos respectivo,",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En un departamento ministerial, el Consejo de Ministros aprobar:",
+        "options": [
+          {
+            "text": "Los suplementos de crdito cuya cuanta exceda del milln de euros.",
+            "is_correct": false
+          },
+          {
+            "text": "Los crditos extraordinarios que se financien con cargo al Fondo de Contingencia y se",
+            "is_correct": false
+          },
+          {
+            "text": "estinen a atender obligaciones de ejercicios anteriores para los que se anul crdito.",
+            "is_correct": false
+          },
+          {
+            "text": "Las transferencias de crdito entre distintas secciones.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En un departamento ministerial, el Consejo de Ministros aprobar:",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Quin es competente para autorizar una transferencia de crdito desde",
+        "options": [
+          {
+            "text": "plicacin presupuestaria 35.01 929N 500 a la aplicacin 16.02 132A 220.00?",
+            "is_correct": false
+          },
+          {
+            "text": "Aunque se trata de crditos de distintas secciones, por afectar al programa de contratacin",
+            "is_correct": false
+          },
+          {
+            "text": "entralizada esta transferencia la autorizara el Ministro de Hacienda.",
+            "is_correct": false
+          },
+          {
+            "text": "Dicha transferencia no se puede realizar.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Quin es competente para autorizar una transferencia de crdito desde",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 58 de la LGP, se podrn incorporar a los correspondientes crditos de",
+        "options": [
+          {
+            "text": "Los derivados de retenciones efectuadas para la financiacin de crditos extraordinarios o",
+            "is_correct": false
+          },
+          {
+            "text": "Los que resulten de crditos extraordinarios y suplementos de crdito que hayan sido",
+            "is_correct": false
+          },
+          {
+            "text": "oncedidos mediante norma con rango de ley en el ltimo trimestre del ejercicio",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando as lo disponga una norma de rango legal.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 58 de la LGP, se podrn incorporar a los correspondientes crditos de",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los suplementos de crdito concedidos en los ministerios que afecten al captulo",
+        "options": [
+          {
+            "text": "estinado al pago de los intereses de prstamos recibidos se financiarn:",
+            "is_correct": false
+          },
+          {
+            "text": "Mediante la emisin de Deuda Pblica o baja en crditos operaciones no financieras.",
+            "is_correct": false
+          },
+          {
+            "text": "Mediante baja en el Fondo de Contingencia o baja en crditos de la misma naturaleza.",
+            "is_correct": false
+          },
+          {
+            "text": "Mediante baja en el Fondo de Contingencia o baja en crditos no financieros que se",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los suplementos de crdito concedidos en los ministerios que afecten al captulo",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 60 de la LGP, de los anticipos de Tesorera se puede afirmar que:",
+        "options": [
+          {
+            "text": "Los concede el Consejo de Ministros, a propuesta del titular del departamento y previa",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo de Ministros, a propuesta del Ministro de Economa, Comercio y Empresa",
+            "is_correct": false
+          },
+          {
+            "text": "ispondr su cancelacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Los concede el Consejo de Ministros a propuesta del Ministro de Economa, Comercio y",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 60 de la LGP, de los anticipos de Tesorera se puede afirmar que:",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Si hay que hacer frente a un gasto que no se puede demorar al ejercicio siguiente para el",
+        "options": [
+          {
+            "text": "Una ampliacin de crdito.",
+            "is_correct": false
+          },
+          {
+            "text": "Una incorporacin de crdito.",
+            "is_correct": false
+          },
+          {
+            "text": "Un suplemento de crdito si no es posible otra modificacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Un crdito extraordinario si no es posible otra modificacin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Si hay que hacer frente a un gasto que no se puede demorar al ejercicio siguiente para el",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Las incorporaciones de crdito en organismos autnomos se podrn financiar:",
+        "options": [
+          {
+            "text": "Exclusivamente con mayores ingresos sobre los previstos inicialmente.",
+            "is_correct": false
+          },
+          {
+            "text": "Con cargo a la parte del remanente de tesorera al fin del ejercicio anterior que no haya",
+            "is_correct": false
+          },
+          {
+            "text": "on baja en otros crditos no financieros del presupuesto del organismo.",
+            "is_correct": false
+          },
+          {
+            "text": "Mediante baja en el Fondo de Contingencia o baja en cualquier otro crdito del",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las incorporaciones de crdito en organismos autnomos se podrn financiar:",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Conforme a la LGP tienen consideracin de crditos ampliables en el presupuesto del",
+        "options": [
+          {
+            "text": "La amortizacin de prstamos.",
+            "is_correct": false
+          },
+          {
+            "text": "Todas las pensiones.",
+            "is_correct": false
+          },
+          {
+            "text": "Los intereses de la Deuda pblica.",
+            "is_correct": false
+          },
+          {
+            "text": "Todos los anteriores.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Conforme a la LGP tienen consideracin de crditos ampliables en el presupuesto del",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los anticipos de Tesorera, segn el artculo 60 de la LGP:",
+        "options": [
+          {
+            "text": "Pueden concederse por un lmite mximo del 1% del total de crditos no financieros",
+            "is_correct": false
+          },
+          {
+            "text": "oncedidos al Estado por la ley de presupuestos.",
+            "is_correct": false
+          },
+          {
+            "text": "Pueden concederse por un lmite mximo del 1% del total de crditos concedidos al",
+            "is_correct": false
+          },
+          {
+            "text": "Pueden concederse por un lmite mximo del 1% del total de crditos financieros",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los anticipos de Tesorera, segn el artculo 60 de la LGP:",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Una transferencia de crdito desde un crdito que ha sido ampliado a otro crdito:",
+        "options": [
+          {
+            "text": "Puede realizarse si afecta al programa de contratacin centralizada.",
+            "is_correct": false
+          },
+          {
+            "text": "Se puede realizar si es por reorganizaciones administrativas y corresponde autorizarla al",
+            "is_correct": false
+          },
+          {
+            "text": "Podr realizarse si afecta a la seccin 06 Deuda Pblica.",
+            "is_correct": false
+          },
+          {
+            "text": "Todas son correctas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Una transferencia de crdito desde un crdito que ha sido ampliado a otro crdito:",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Qu modificacin presupuestaria procede tramitar si se obtienen ingresos superiores a",
+        "options": [
+          {
+            "text": "Una generacin de crdito.",
+            "is_correct": false
+          },
+          {
+            "text": "Un crdito extraordinario.",
+            "is_correct": false
+          },
+          {
+            "text": "Una incorporacin de crdito.",
+            "is_correct": false
+          },
+          {
+            "text": "Ninguna.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu modificacin presupuestaria procede tramitar si se obtienen ingresos superiores a",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Ninguna....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "A quin corresponde autorizar la generacin de crdito si se produce un ingreso no",
+        "options": [
+          {
+            "text": "A nadie, pues ese ingreso no puede dar lugar a generacin de crdito.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Ministro de Hacienda.",
+            "is_correct": false
+          },
+          {
+            "text": "Al titular del departamento ministerial o al presidente o director del organismo autnomo.",
+            "is_correct": false
+          },
+          {
+            "text": "Al presidente o director del organismo autnomo, o al ministro de Hacienda si se trata de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "A quin corresponde autorizar la generacin de crdito si se produce un ingreso no",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En un organismo autnomo, la concesin de un suplemento por 10.000 para el pago de",
+        "options": [
+          {
+            "text": "fectado y se financia con mayores",
+            "is_correct": false
+          },
+          {
+            "text": "orresponde:",
+            "is_correct": false
+          },
+          {
+            "text": "A nadie, porque esta operacin no es posible en un OA, ya que es un crdito ampliable.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Ministro de Hacienda.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En un organismo autnomo, la concesin de un suplemento por 10.000 para el pago de",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Respecto a las generaciones de crdito en un organismo autnomo se puede afirmar que:",
+        "options": [
+          {
+            "text": "Si la generacin procede de ingresos legalmente afectados le corresponde su aprobacin",
+            "is_correct": false
+          },
+          {
+            "text": "l Ministro de adscripcin si avoca la competencia.",
+            "is_correct": false
+          },
+          {
+            "text": "Si la generacin procede de ingresos por prestacin de servicios corresponde su",
+            "is_correct": false
+          },
+          {
+            "text": "probacin al presidente o director del OA salvo avocacin por parte del ministro de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Respecto a las generaciones de crdito en un organismo autnomo se puede afirmar que:",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Los ingresos superiores a los previstos que se hayan obtenido como consecuencia de la",
+        "options": [
+          {
+            "text": "En cualquier crdito donde exista una necesidad.",
+            "is_correct": false
+          },
+          {
+            "text": "En los crditos correspondientes a operaciones de la misma naturaleza econmica.",
+            "is_correct": false
+          },
+          {
+            "text": "En aquellos crditos destinados a cubrir gastos de la misma naturaleza que los que se",
+            "is_correct": false
+          },
+          {
+            "text": "Estos ingresos no pueden generar crdito.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los ingresos superiores a los previstos que se hayan obtenido como consecuencia de la",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Previamente a la tramitacin y posterior aprobacin de una incorporacin en un",
+        "options": [
+          {
+            "text": "Previamente a la tramitacin un documento RC y con la aprobacin un documento MC.",
+            "is_correct": false
+          },
+          {
+            "text": "Previamente a la tramitacin ningn documento y con la aprobacin un documento MC.",
+            "is_correct": false
+          },
+          {
+            "text": "Previamente a la tramitacin un documento RC y con la aprobacin dos documentos MC.",
+            "is_correct": false
+          },
+          {
+            "text": "Durante la tramitacin ningn documento y con la aprobacin dos documentos MC.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Previamente a la tramitacin y posterior aprobacin de una incorporacin en un",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Quin autoriza el documento contable RC101 de Retencin de Crdito para",
+        "options": [
+          {
+            "text": "ontratacin centralizada?",
+            "is_correct": false
+          },
+          {
+            "text": "El jefe de la Oficina Presupuestaria.",
+            "is_correct": false
+          },
+          {
+            "text": "El Director General de Presupuestos.",
+            "is_correct": false
+          },
+          {
+            "text": "El responsable del servicio gestor.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Quin autoriza el documento contable RC101 de Retencin de Crdito para",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn la LGP, quin autoriza una transferencia desde el concepto 203 al concepto 202",
+        "options": [
+          {
+            "text": "No es una transferencia, se trata de una reasignacin de crdito.",
+            "is_correct": false
+          },
+          {
+            "text": "El presidente o director del organismo autnomo, previo informe favorable del",
+            "is_correct": false
+          },
+          {
+            "text": "El Ministro de Hacienda.",
+            "is_correct": false
+          },
+          {
+            "text": "Dicha transferencia no se puede realizar por incrementar el concepto 202.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn la LGP, quin autoriza una transferencia desde el concepto 203 al concepto 202",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn la LGP, el Ministro de Economa, Comercio y Empresa podr autorizar una",
+        "options": [
+          {
+            "text": "mpliacin de crdito:",
+            "is_correct": false
+          },
+          {
+            "text": "En ningn caso.",
+            "is_correct": false
+          },
+          {
+            "text": "Si la ampliacin de crdito se financia mediante la emisin de Deuda Pblica.",
+            "is_correct": false
+          },
+          {
+            "text": "Para atender los gastos derivados de las operaciones de emisin, conversin, canje o",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn la LGP, el Ministro de Economa, Comercio y Empresa podr autorizar una",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El presupuesto del Estado incluir una seccin bajo la rbrica Fondo de Contingencia:",
+        "options": [
+          {
+            "text": "A fin de hacer frente durante el ejercicio presupuestario a necesidades inaplazables, de",
+            "is_correct": false
+          },
+          {
+            "text": "arcter discrecional para las que no se hiciera en todo o en parte, la adecuada dotacin",
+            "is_correct": false
+          },
+          {
+            "text": "e crdito.",
+            "is_correct": false
+          },
+          {
+            "text": "La aplicacin del Fondo de Contingencia se aprobar, a propuesta del Ministro de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El presupuesto del Estado incluir una seccin bajo la rbrica Fondo de Contingencia:",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'e crdito....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Ministro de Hacienda remitir a las Cortes Generales, a travs de su Oficina",
+        "options": [
+          {
+            "text": "Trimestral de los crditos extraordinarios y suplementos de crdito tramitados durante el",
+            "is_correct": false
+          },
+          {
+            "text": "Trimestral de los crditos extraordinarios y suplementos de crdito tramitados en los",
+            "is_correct": false
+          },
+          {
+            "text": "Semestral acerca de la utilizacin del Fondo de Contingencia de ejecucin presupuestaria.",
+            "is_correct": false
+          },
+          {
+            "text": "Trimestral acerca de la utilizacin del Fondo de Contingencia de ejecucin",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Ministro de Hacienda remitir a las Cortes Generales, a travs de su Oficina",
+        "source": "4- TEST  24-25 modificaciones.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:22.050862"
+}

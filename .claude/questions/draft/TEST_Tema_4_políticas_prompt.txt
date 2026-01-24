@@ -1,0 +1,1205 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** TEST Tema 4 políticas.pdf
+**Total preguntas:** 98
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** �Qui�n puede disponer la compatibilidad de dos pensiones del R�gimen General?:
+
+**Opciones:**
+  0. De forma expresa una Ley o un Reglamento.
+  1. De forma t�cita una ley y de forma expresa un Reglamento.
+  2. Una ley expresamente.
+  3. Una norma con rango de Ley, de forma t�cita o expresa.
+
+---
+
+### Pregunta 2
+
+**Texto:** Es correcto que el SMI:
+
+**Opciones:**
+  0. Se fija para la agricultura, la industria y los servicios, sin distinci�n de sexo y dependiendo
+  1. e la edad de los trabajadores.
+  2. Lo fija anualmente la Ley de Presupuestos Generales del Estado.
+  3. Se fija anualmente por Real Decreto del Consejo de Ministros
+
+---
+
+### Pregunta 3
+
+**Texto:** El tope m�nimo de cotizaci�n:
+
+**Opciones:**
+  0. Est� constituido por el SMI mensual incrementado en un sexto.
+  1. Lo fija anualmente la Ley de Presupuestos Generales del Estado.
+  2. Coincide con el SMI mensual.
+  3. Se incrementa por la Ley de Presupuestos Generales del Estado en el mismo porcentaje que
+
+---
+
+### Pregunta 4
+
+**Texto:** Las prestaciones contributivas y los gastos derivados de su gesti�n (se�alar la incorrecta)
+
+**Opciones:**
+  0. Se financian, exclusivamente, con las cuotas de las personas obligadas.
+  1. Se financian con las cantidades recaudadas en concepto de recargos, sanciones u otras de
+  2. Se financian con los frutos, rentas o intereses y cualquier otro producto de sus recursos
+  3. Se financian con las aportaciones del Estado que se acuerden para atenciones espec�ficas.
+
+---
+
+### Pregunta 5
+
+**Texto:** Seg�n el art�culo 7.1 de la LGSS, estar�n comprendidos en el Sistema de la Seguridad
+
+**Opciones:**
+  0. Los trabajadores por cuenta propia o aut�nomos, mayores de 18 a�os.
+  1. Los trabajadores por cuenta propia o aut�nomos, mayores de 16 a�os.
+  2. La b) es correcta a partir de la Ley 20/2007, de 11 de julio, del Estatuto del Trabajador
+  3. ut�nomo.
+
+---
+
+### Pregunta 6
+
+**Texto:** Los funcionarios del Estado transferidos a las comunidades aut�nomas:
+
+**Opciones:**
+  0. Se incluyen obligatoriamente en el R�gimen General de la Seguridad Social.
+  1. Se incluyen en el R�gimen General siempre que hayan ingresado o ingresen
+  2. Pueden optar entre el R�gimen Especial de Funcionarios y el R�gimen General.
+  3. Se incluyen obligatoriamente en el R�gimen Especial de Funcionarios y sin posibilidad de
+
+---
+
+### Pregunta 7
+
+**Texto:** Los subsidios de riesgo durante el embarazo y riesgo durante la lactancia natural tendr�n la
+
+**Opciones:**
+  0. Derivadas de contingencias comunes.
+  1. Derivadas de contingencias profesionales.
+  2. Derivadas de contingencias comunes o profesionales, dependiendo del riesgo que las origine.
+  3. La a) es correcta para el riesgo durante la lactancia natural y la b) es correcta para el riesgo
+
+---
+
+### Pregunta 8
+
+**Texto:** Las prestaciones econ�micas no contributivas por invalidez y jubilaci�n y las prestaciones
+
+**Opciones:**
+  0. En el T�tulo III de la LGSS 8/2015.
+  1. En el T�tulo I de la LGSS 8/2015.
+  2. En T�tulo V de la LGSS 8/2015.
+  3. En el T�tulo VI de la LGSS 8/2015.
+
+---
+
+### Pregunta 9
+
+**Texto:** Seg�n el art�culo 136 de la LGSS 8/2015, se declaran expresamente comprendidos en el
+
+**Opciones:**
+  0. Los miembros de las Corporaciones Locales y los miembros de las Juntas Generales de los
+  1. esempe�en sus cargos con dedicaci�n exclusiva o parcial.
+  2. Los cargos representativos de los sindicatos constituidos al amparo de la Ley Org�nica
+  3. on dedicaci�n exclusiva o parcial y percibiendo una retribuci�n.
+
+---
+
+### Pregunta 10
+
+**Texto:** Los riesgos que protege la prestaci�n de asistencia sanitaria son (se�alar la incorrecta):
+
+**Opciones:**
+  0. La enfermedad com�n o profesional.
+  1. El accidente, sea o no de trabajo.
+  2. El riesgo durante el embarazo.
+  3. El nacimiento.
+
+---
+
+### Pregunta 11
+
+**Texto:** Seg�n el art�culo 42.2 de la LGSS, referente a la acci�n protectora del Sistema de la
+
+**Opciones:**
+  0. De servicios sociales.
+  1. De asistencia social.
+  2. No contributivos establecidos, en su caso, para cada prestaci�n.
+  3. De asistencia sanitaria en materia de formaci�n y rehabilitaci�n de personas con
+
+---
+
+### Pregunta 12
+
+**Texto:** Las pensiones de la Seguridad Social, en su modalidad no contributiva, �se actualizan en la
+
+**Opciones:**
+  0. orrespondiente Ley de Presupuestos Generales del Estado, de acuerdo con lo previsto en la
+  1. No. El porcentaje exacto de su actualizaci�n no tiene por qu� recogerse en la Ley de
+  2. No. Se actualizan en la correspondiente Ley de Medidas Fiscales, Administrativas y del Orden
+  3. S�, y se actualizan, al menos, en el mismo porcentaje que dicha Ley establezca como
+
+---
+
+### Pregunta 13
+
+**Texto:** Una de las siguientes prestaciones no est� comprendida en la acci�n protectora del Sistema
+
+**Opciones:**
+  0. e la Seguridad social:
+  1. La prestaci�n econ�mica por invalidez, en su modalidad no contributiva.
+  2. El subsidio para cuidado de menores afectados por c�ncer u otra enfermedad grave.
+  3. Las prestaciones econ�micas por muerte y supervivencia, en su modalidad no contributiva.
+
+---
+
+### Pregunta 14
+
+**Texto:** Las personas comprendidas en el campo de aplicaci�n del Sistema de la Seguridad Social:
+
+**Opciones:**
+  0. Podr�n estar incluidas por el mismo trabajo en otros reg�menes de previsi�n distintos de
+  1. No podr�n estar incluidas por el mismo trabajo en otros reg�menes de previsi�n distintos de
+  2. Deber�n estar incluidas por el mismo trabajo, con car�cter obligatorio, en otros reg�menes de
+  3. Todas son falsas.
+
+---
+
+### Pregunta 15
+
+**Texto:** �Qu� prestaciones no est�n exentas de IRPF?:
+
+**Opciones:**
+  0. Las pensiones de incapacidad permanente absoluta y de gran invalidez.
+  1. Las pensiones de orfandad y las prestaciones familiares por hijo a cargo, nacimiento y parto
+  2. Las prestaciones percibidas por entierro o sepelio, con el l�mite del importe total de los
+  3. Los subsidios por nacimiento y cuidado de menor otorgados por la Seguridad Social.
+
+---
+
+### Pregunta 16
+
+**Texto:** La acci�n protectora del Sistema de la Seguridad Social se fundamenta en los principios de:
+
+**Opciones:**
+  0. Universalidad, unidad, solidaridad e igualdad.
+  1. La a) es correcta, tanto para la acci�n protectora en su modalidad contributiva como no
+  2. ontributiva.
+  3. La a) es correcta, pero �nicamente para las prestaciones en su modalidad no contributiva.
+
+---
+
+### Pregunta 17
+
+**Texto:** El art�culo 42 de la LGSS 8/2015:
+
+**Opciones:**
+  0. Establece y limita el �mbito de extensi�n posible del R�gimen General.
+  1. Establece y limita el �mbito de extensi�n posible de los Reg�menes Especiales.
+  2. Establece y limita el �mbito de extensi�n posible de la modalidad no contributiva de las
+  3. Todas son correctas.
+
+---
+
+### Pregunta 18
+
+**Texto:** Conforme dispone el art�culo 163 de la LGSS las pensiones del R�gimen General:
+
+**Opciones:**
+  0. Ser�n compatibles entre s� aunque coincidan en un mismo beneficiario.
+  1. Ser�n compatibles entre s� aunque coincidan en un mismo beneficiario, a no ser que
+  2. Ser�n incompatibles entre s� y en todo caso, cuando coincidan en un mismo beneficiario.
+  3. Ser�n incompatibles entre s� cuando coincidan en un mismo beneficiario, a no ser que se
+
+---
+
+### Pregunta 19
+
+**Texto:** En caso de incompatibilidad, seg�n la pregunta anterior:
+
+**Opciones:**
+  0. Quien pudiera tener derecho a dos o m�s pensiones optar� por una de ellas.
+  1. La entidad gestora iniciar� el pago o, en su caso, continuar� con el abono de la pensi�n de
+  2. orresponda.
+  3. La b) es correcta, no obstante, el interesado podr� solicitar que se revoque dicho acuerdo y
+
+---
+
+### Pregunta 20
+
+**Texto:** �Cu�l de las siguientes prestaciones figura regulada en el T�tulo II de la LGSS de 2015?:
+
+**Opciones:**
+  0. El nacimiento y cuidad o de menor .
+  1. La protecci�n por cese de actividad.
+  2. Invalidez en la modalidad no contributiva.
+  3. Desempleo.
+
+---
+
+### Pregunta 21
+
+**Texto:** �Hace referencia el art�culo 41 de la Constituci�n Espa�ola a alguna causa concreta de la
+
+**Opciones:**
+  0. No menciona ninguna en concreto.
+  1. Alude a la asistencia sanitaria.
+  2. Alude al desempleo.
+  3. Alude a la enfermedad y al desempleo.
+
+---
+
+### Pregunta 22
+
+**Texto:** Son imprescriptibles:
+
+**Opciones:**
+  0. Que debe ser p�blico.
+  1. Que debe ser obligatorio y p�blico.
+  2. La pensi�n de jubilaci�n, las prestaciones de muerte y supervivencia, salvo el auxilio por
+  3. efunci�n, y las prestaciones familiares en su modalidad contributiva.
+
+---
+
+### Pregunta 23
+
+**Texto:** El derecho al percibo de las prestaciones de la Seguridad Social:
+
+**Opciones:**
+  0. Caduca al a�o, sin excepciones.
+  1. Caduca solo cuando se trate de prestaciones a tanto alzado.
+  2. Caduca a los cuatro a�os.
+  3. No caduca, prescribe.
+
+---
+
+### Pregunta 24
+
+**Texto:** �Qu� contingencia de las enumeradas a continuaci�n originar� situaci�n de necesidad
+
+**Opciones:**
+  0. No tener trabajo.
+  1. La separaci�n de los c�nyuges.
+  2. La muerte de un trabajador.
+  3. El cierre de una empresa.
+
+---
+
+### Pregunta 25
+
+**Texto:** Cuando hablamos de prestaciones peri�dicas de la Seguridad Social, nos estamos refiriendo
+
+**Opciones:**
+  0. Cantidades a tanto alzado.
+  1. Visitas peri�dicas al facultativo de la Seguridad Social.
+  2. Subsidios, solamente.
+  3. Pensiones y subsidios.
+
+---
+
+### Pregunta 26
+
+**Texto:** Las prestaciones de la Seguridad Social son:
+
+**Opciones:**
+  0. Embargables, cualquiera que sea su cuant�a.
+  1. Inembargables en las cantidades que excedan del SMI.
+  2. Compensables y compatibles.
+  3. Inembargables en la cuant�a que no exceda del SMI vigente en cada momento.
+
+---
+
+### Pregunta 27
+
+**Texto:** Seg�n la LGSS podr� ser mejorada voluntariamente:
+
+**Opciones:**
+  0. La modalidad contributiva de la acci�n protectora de la Seguridad Social.
+  1. La modalidad no contributiva.
+  2. Ninguna puede ser objeto de mejora voluntaria.
+  3. Las dos modalidades pueden ser objeto de mejoras voluntarias.
+
+---
+
+### Pregunta 28
+
+**Texto:** El derecho al reconocimiento de las prestaciones:
+
+**Opciones:**
+  0. Es imprescriptible.
+  1. Caducar� al a�o, a contar desde el d�a siguiente al de la notificaci�n.
+  2. Prescribe a los 5 a�os contados desde el d�a siguiente a aquel en que tenga lugar el hecho
+  3. ausante de la prestaci�n de que se trate, salvo excepciones.
+
+---
+
+### Pregunta 29
+
+**Texto:** La obligaci�n de reintegro del importe de las prestaciones indebidamente percibidas
+
+**Opciones:**
+  0. A los 4 a�os, contados a partir de la fecha de su cobro.
+  1. A los 4 a�os, contados desde que fue posible ejercitar la acci�n para exigir su devoluci�n.
+  2. A los 4 a�os, con independencia de la causa que origin� la percepci�n indebida.
+  3. A los 4 a�os, a excepci�n hecha de los supuestos de revisi�n de las prestaciones por error
+
+---
+
+### Pregunta 30
+
+**Texto:** El accidente in it�nere aparece definido en la LGSS como:
+
+**Opciones:**
+  0. El sucedido en actos de salvamento u otros de naturaleza an�loga, cuando unos y otros tengan
+  1. onexi�n con el trabajo.
+  2. El sufrido por el trabajador durante el tiempo y en el lugar de trabajo.
+  3. El que sufra el trabajador como consecuencia del desempe�o de cargos electivos de car�cter
+
+---
+
+### Pregunta 31
+
+**Texto:** La LGSS en el art�culo 156 se�ala que se entiende por accidente de trabajo:
+
+**Opciones:**
+  0. Toda lesi�n que el trabajador sufra por m�quinas, artefactos o herramientas de trabajo.
+  1. Toda lesi�n que el trabajador sufra durante el tiempo y en el lugar de trabajo.
+  2. Toda lesi�n corporal que el trabajador sufra con ocasi�n o por consecuencia del trabajo que
+  3. El contra�do a consecuencia del trabajo ejecutado por cuenta ajena en las actividades que se
+
+---
+
+### Pregunta 32
+
+**Texto:** Uno de los siguientes apartados no se relaciona en el art�culo 7 de la LGSS a efectos de la
+
+**Opciones:**
+  0. Los trabajadores por cuenta propia.
+  1. Los funcionarios p�blicos militares.
+  2. Los estudiantes.
+  3. Los empleados de hogar.
+
+---
+
+### Pregunta 33
+
+**Texto:** La estructura del Sistema de la Seguridad Social en Espa�a viene integrada por:
+
+**Opciones:**
+  0. El R�gimen General y los Reg�menes Especiales a que se refiere la Ley de Presupuestos
+  1. El R�gimen General regulado en la LGSS, texto refundido del a�o 2015.
+  2. El R�gimen General y los Reg�menes Especiales a que se refiere la LGSS, texto refundido del a�o
+  3. El R�gimen General, los Reg�menes Especiales y los Sistemas Especiales.
+
+---
+
+### Pregunta 34
+
+**Texto:** Est�n excluidos del �mbito de aplicaci�n del R�gimen General (Se�alar la incorrecta):
+
+**Opciones:**
+  0. Las personas que realicen trabajos ejecutados mediante servicios amistosos y ocasionales .
+  1. Las personas que se integran en alg�n R�gimen Especial.
+  2. Los profesores universitarios em�ritos y el personal licenciado sanitario em�rito
+  3. Las relaciones laborales especiales.
+
+---
+
+### Pregunta 35
+
+**Texto:** Se regula necesariamente por Ley:
+
+**Opciones:**
+  0. Ninguno de los Reg�menes Especiales.
+  1. El R�gimen Especial de Trabajadores del Mar y el de Funcionarios P�blicos Civiles o Militares.
+  2. El R�gimen Especial de Funcionarios P�blicos, Civiles y Militares y el de la Miner�a del
+  3. arb�n.
+
+---
+
+### Pregunta 36
+
+**Texto:** �En cu�l de los siguientes Reg�menes Especiales existen trabajadores por cuenta propia y
+
+**Opciones:**
+  0. jena?
+  1. En el R�gimen Especial de Trabajadores Aut�nomos.
+  2. En el R�gimen Especial de estudiantes y en el de funcionarios.
+  3. R�gimen Especial de la Miner�a del Carb�n.
+
+---
+
+### Pregunta 37
+
+**Texto:** Estar�n incluidos en el campo de aplicaci�n, a efectos de la modalidad contributiva,
+
+**Opciones:**
+  0. ualquiera que sea su sexo, estado civil y profesi�n:
+  1. Todos los espa�oles.
+  2. Todos los espa�oles y los extranjeros que residan legalmente en Espa�a.
+  3. Los espa�oles que residan en Espa�a y los extranjeros que residan o se encuentren legalmente en
+
+---
+
+### Pregunta 38
+
+**Texto:** Podr�n establecerse Sistemas Especiales de la Seguridad Social:
+
+**Opciones:**
+  0. En aquellos Reg�menes de la Seguridad Social en que as� resulte necesario.
+  1. S�lo dentro del �mbito del R�gimen General de la Seguridad Social.
+  2. �nicamente, dentro del �mbito del R�gimen Especial de Trabajadores Aut�nomos.
+  3. S�lo dentro del �mbito de los Reg�menes Especiales cuyo desarrollo deba establecerse por
+
+---
+
+### Pregunta 39
+
+**Texto:** No constituye un Sistema Especial de la Seguridad Social el relativo a:
+
+**Opciones:**
+  0. Empleados de hogar.
+  1. Trabajadores por cuenta ajena de la agricultura.
+  2. Realizaci�n de actividades de pesca mar�tima.
+  3. Trabajadores por cuenta propia de la agricultura.
+
+---
+
+### Pregunta 40
+
+**Texto:** La integraci�n que en el R�gimen General o en alguno de los Reg�menes Especiales puede
+
+**Opciones:**
+  0. e cualquier r�gimen especial ya existente no podr� afectar:
+  1. Al R�gimen Especial de Trabajadores Aut�nomos.
+  2. Al R�gimen Especial de Estudiantes.
+  3. Al R�gimen Especial de Miner�a del Carb�n.
+
+---
+
+### Pregunta 41
+
+**Texto:** Los Sistemas Especiales regulados actualmente:
+
+**Opciones:**
+  0. Est�n todos ellos incluidos en el R�gimen General.
+  1. Est�n incluidos en el R�gimen General y en Aut�nomos.
+  2. Se diferencian del R�gimen General en que tienen distinta acci�n protectora.
+  3. Est�n todos ellos incluidos en el R�gimen Especial de Aut�nomos.
+
+---
+
+### Pregunta 42
+
+**Texto:** El R�gimen Especial de la Miner�a del Carb�n:
+
+**Opciones:**
+  0. Lo crea la LGSS en su art�culo 10.
+  1. Lo cre� el Gobierno.
+  2. Lo cre� el Gobierno y ha de ser regulado por ley.
+  3. Desapareci� como tal y hoy se denomina R�gimen Especial de la Miner�a, englobando a
+
+---
+
+### Pregunta 43
+
+**Texto:** �Cu�l de los siguientes es un R�gimen Especial de la Seguridad Social?:
+
+**Opciones:**
+  0. El R�gimen Especial Agrario.
+  1. El R�gimen Especial de Empleados de Hogar.
+  2. El de los servicios extraordinarios de hosteler�a.
+  3. Ninguno de ellos.
+
+---
+
+### Pregunta 44
+
+**Texto:** A efectos del art�culo 136 de la LGSS, se declaran expresamente comprendidos en el R�gimen
+
+**Opciones:**
+  0. Los trabajadores por cuenta ajena y los socios trabajadores de sociedades mercantiles
+  1. apitalistas, siempre que no sean miembros de su �rgano de administraci�n ni posean el
+  2. ontrol de la sociedad.
+  3. Los trabajadores por cuenta ajena y los socios trabajadores de sociedades mercantiles
+
+---
+
+### Pregunta 45
+
+**Texto:** La protecci�n de los consejeros y administradores de las sociedades de capital, que no
+
+**Opciones:**
+  0. e direcci�n y gerencia de la sociedad, siendo retribuidos por ello o por su condici�n de
+  1. Es por todas las contingencias.
+  2. Se les excluye de la protecci�n por desempleo, FOGASA y formaci�n profesional.
+  3. Es la establecida para el R�gimen General de la Seguridad Social.
+
+---
+
+### Pregunta 46
+
+**Texto:** El Real Decreto 2621/1986, de 24 de diciembre, procedi� a la integraci�n en el R�gimen General
+
+**Opciones:**
+  0. Los escritores de libros.
+  1. Los estudiantes.
+  2. Los socios trabajadores de cooperativas de trabajo asociado.
+  3. Los trabajadores ferroviarios.
+
+---
+
+### Pregunta 47
+
+**Texto:** Entre los siguientes trabajadores no se encuentran comprendidos expresamente en el
+
+**Opciones:**
+  0. Los conductores de veh�culos de turismo al servicio de particulares.
+  1. Los escritores de libros.
+  2. El personal contratado al servicio de Notar�as y Registros de la Propiedad.
+  3. Los laicos o seglares que presten servicios retribuidos en los establecimientos de las
+
+---
+
+### Pregunta 48
+
+**Texto:** B�sicamente, estar�n comprendidos en el R�gimen General:
+
+**Opciones:**
+  0. Los trabajadores por cuenta ajena, mayores de 16 a�os, de la industria, de los servicios y de
+  1. Los trabajadores por cuenta ajena y por cuenta propia, mayores de 18 a�os, de la industria,
+  2. e los servicios y de la agricultura..
+  3. Los trabajadores por cuenta ajena de la industria, los servicios y del mar.
+
+---
+
+### Pregunta 49
+
+**Texto:** Respecto de la Seguridad Social aplicable a los emigrantes espa�oles que residan y trabajen
+
+**Opciones:**
+  0. La del pa�s de prestaci�n de servicios, generalmente, salvo excepciones.
+  1. La Seguridad Social espa�ola, salvo excepciones.
+  2. La Seguridad Social que elija el propio trabajador.
+  3. La Seguridad Social que se haya determinado anualmente por el INSS.
+
+---
+
+### Pregunta 50
+
+**Texto:** Seg�n establece la LGSS en su art�culo 7.1, son criterios que determinan la inclusi�n en el
+
+**Opciones:**
+  0. ampo de aplicaci�n de la Seguridad Social, en la modalidad contributiva:
+  1. La nacionalidad y el ejercicio de una determinada actividad profesional en territorio nacional .
+  2. La residencia y el ejercicio de una determinada actividad profesional en territorio nacional.
+  3. La nacionalidad, la residencia, el sexo y el estado civil.
+
+---
+
+### Pregunta 51
+
+**Texto:** El Real Decreto Legislativo 8/2015, de 30 de octubre, por el que se aprueba el Texto
+
+**Opciones:**
+  0. De 373 art�culos.
+  1. De un art�culo, una disposici�n adicional, una derogatoria y una final.
+  2. De 373 art�culos, 59 disposiciones adicionales y 44 transitorias.
+  3. La c) es correcta, adem�s de 8 finales.
+
+---
+
+### Pregunta 52
+
+**Texto:** Seg�n la Constituci�n no es correcto:
+
+**Opciones:**
+  0. Que las CCAA podr�n asumir competencias en sanidad y salud.
+  1. Que las CCAA podr�n asumir competencias en materia de legislaci�n sobre productos
+  2. Que el Estado tiene competencia exclusiva en materia de sanidad exterior.
+  3. Que el Estado tiene competencia exclusiva en materia de bases y coordinaci�n general de la
+
+---
+
+### Pregunta 53
+
+**Texto:** �Qu� art�culo de la Constituci�n Espa�ola encarga a los poderes p�blicos asegurar la
+
+**Opciones:**
+  0. El 129.
+  1. El 39.
+  2. El 49.
+  3. El 50.
+
+---
+
+### Pregunta 54
+
+**Texto:** �Qu� art�culo de la Constituci�n Espa�ola reconoce el derecho a la protecci�n de la salud y a
+
+**Opciones:**
+  0. El 39.
+  1. El 41.
+  2. El 43.
+  3. El 50.
+
+---
+
+### Pregunta 55
+
+**Texto:** Se encuentran comprendidos en el campo de aplicaci�n del R�gimen General, los miembros
+
+**Opciones:**
+  0. e las Corporaciones Locales y los miembros de las Juntas Generales de los territorios
+  1. Que desempe�en sus cargos con dedicaci�n exclusiva.
+  2. Que desempe�en sus cargos con dedicaci�n parcial.
+  3. Que desempe�en sus cargos con dedicaci�n exclusiva o parcial.
+
+---
+
+### Pregunta 56
+
+**Texto:** Forma parte del Sistema de la Seguridad Social y est� sujeta a los principios recogidos en el
+
+**Opciones:**
+  0. rt. 2 de la LGSS:
+  1. Cualquier prestaci�n de car�cter p�blico o privado que tenga por finalidad complementar,
+  2. mpliar o modificar las prestaciones econ�micas de la Seguridad Social.
+  3. Cualquier prestaci�n de car�cter p�blico que tenga por finalidad complementar, ampliar o
+
+---
+
+### Pregunta 57
+
+**Texto:** El punto de partida del Sistema espa�ol de Seguridad Social fue:
+
+**Opciones:**
+  0. El Real Decreto-Ley de 11 de marzo de 1919 por el que se crea el Retiro Obrero.
+  1. El Decreto de 18-4-1947 de creaci�n del SOVI.
+  2. La Ley de Bases de la Seguridad Social de 28-12-1963.
+  3. La Ley de Financiaci�n y Perfeccionamiento de la acci�n protectora del R�gimen General
+
+---
+
+### Pregunta 58
+
+**Texto:** El Texto Refundido de la LGSS de 30 de octubre de 2015 fue aprobado:
+
+**Opciones:**
+  0. Por ley.
+  1. Por Real Decreto legislativo.
+  2. Por Real Decreto-ley.
+  3. Por Decreto legislativo.
+
+---
+
+### Pregunta 59
+
+**Texto:** La cuant�a de las prestaciones por incumplimiento empresarial de las normas de seguridad y
+
+**Opciones:**
+  0. Con un recargo de un 10 a un 20%, seg�n la gravedad de la falta.
+  1. Con un recargo del 20 al 50%, seg�n la gravedad de la falta.
+  2. Con un recargo del 30 al 50%, seg�n la gravedad de la falta.
+  3. Con un recargo del 10 al 30%, seg�n la gravedad de la falta.
+
+---
+
+### Pregunta 60
+
+**Texto:** La responsabilidad del pago del recargo en
+
+**Opciones:**
+  0. Podr� ser objeto de seguro con una Mutua Colaboradora con la Seguridad Social.
+  1. Podr� ser objeto de seguro y reaseguro con las entidades aseguradoras privadas.
+  2. No podr� ser objeto de seguro alguno.
+  3. No podr� ser objeto de seguro, salvo en los supuestos excepcionales legalmente
+
+---
+
+### Pregunta 61
+
+**Texto:** Se entiende por acci�n protectora de un Sistema de Seguridad Social:
+
+**Opciones:**
+  0. El conjunto de situaciones de necesidad protegidas.
+  1. El conjunto de prestaciones que se otorgan a los colectivos protegidos.
+  2. El conjunto de recursos econ�micos y financieros del Sistema de Seguridad Social.
+  3. Los sujetos incluidos en el �mbito de aplicaci�n del Sistema de la Seguridad Social.
+
+---
+
+### Pregunta 62
+
+**Texto:** Las pensiones contributivas derivadas de riesgos comunes, de cualquiera de los Reg�menes
+
+**Opciones:**
+  0. e la Seguridad Social se abonar�n en:
+  1. 14 pagas.
+  2. 12 pagas.
+  3. 16 pagas.
+
+---
+
+### Pregunta 63
+
+**Texto:** El pago de las pensiones en su modalidad no contributiva se abonar�:
+
+**Opciones:**
+  0. En 14 pagas.
+  1. En 12 pagas, todas las prestaciones no contributivas.
+  2. En 14 pagas, �nicamente la pensi�n de jubilaci�n.
+  3. En 10 pagas.
+
+---
+
+### Pregunta 64
+
+**Texto:** �Cu�l de estas prestaciones se abona de una sola vez?:
+
+**Opciones:**
+  0. La prestaci�n por incapacidad permanente parcial.
+  1. La prestaci�n econ�mica para cuidado de menores afectados por c�ncer u otra enfermedad
+  2. La prestaci�n por corresponsabilidad en el cuidado del lactante.
+  3. La prestaci�n por gran invalidez.
+
+---
+
+### Pregunta 65
+
+**Texto:** Las prestaciones a que tiene derecho el beneficiario son de car�cter m�nimo, es decir:
+
+**Opciones:**
+  0. Que la cuant�a de las mismas puede ser inferior a la determinada legalmente.
+  1. Que la cuant�a de las mismas no puede ser inferior a la determinada legalmente.
+  2. Que la cuant�a de las mismas no puede ser inferior al salario m�nimo interprofesional .
+  3. Que la cuant�a de las mismas no puede ser inferior a la base m�nima de cotizaci�n.
+
+---
+
+### Pregunta 66
+
+**Texto:** De los supuestos que se exponen a continuaci�n, �en cu�l de ellos se exige tener cubierto un
+
+**Opciones:**
+  0. Para causar derecho a las prestaciones derivadas de accidente de trabajo.
+  1. Para causar derecho a las prestaciones derivadas de accidente no laboral.
+  2. Para causar derecho a las prestaciones derivadas de enfermedad com�n, en todo caso .
+  3. Para causar derecho a las prestaciones derivadas de enfermedad profesional.
+
+---
+
+### Pregunta 67
+
+**Texto:** No consiste en una cantidad a tanto alzado la siguiente prestaci�n:
+
+**Opciones:**
+  0. El auxilio por defunci�n.
+  1. La incapacidad permanente parcial.
+  2. La correspondiente a una lesi�n permanente no invalidante.
+  3. La ejecuci�n corresponsable del cuidado del lactante.
+
+---
+
+### Pregunta 68
+
+**Texto:** El personal civil interino al Servicio de la Administraci�n del Estado:
+
+**Opciones:**
+  0. Est� excluido del Sistema de la Seguridad Social.
+  1. Est� incluido en el R�gimen General de la Seguridad Social.
+  2. Est� incluido en el R�gimen Especial de funcionarios de la Seguridad Social.
+  3. Todas son falsas.
+
+---
+
+### Pregunta 69
+
+**Texto:** El Estado, por medio de la Seguridad Social, garantiza la protecci�n adecuada frente a las
+
+**Opciones:**
+  0. ontingencias y en las situaciones que se contemplan en la LGSS 8/2015:
+  1. A las personas comprendidas en el campo de aplicaci�n de la Seguridad Social.
+  2. A las personas que cumplan los requisitos exigidos en las modalidades contributivas o no
+  3. ontributivas.
+
+---
+
+### Pregunta 70
+
+**Texto:** La diferencia entre los Reg�menes Especiales y los Sistemas Especiales de la Seguridad Social
+
+**Opciones:**
+  0. Los Sistemas Especiales
+  1. Los Reg�menes Especiales tienen una regulaci�n propia y distinta de la acci�n protectora y
+  2. Los Sistemas Especiales tienen peculiaridades en lo referente a afiliaci�n y cotizaci�n.
+  3. Todas las anteriores son correctas.
+
+---
+
+### Pregunta 71
+
+**Texto:** Los Reg�menes Especiales enumerados por el art�culo 10 de la LGSS:
+
+**Opciones:**
+  0. Constituyen una lista cerrada que no puede ser modificada.
+  1. Pueden ser ampliados por voluntad de los colectivos interesados.
+  2. Pueden ser ampliados por decisi�n de las Entidades Gestoras y Servicios Comunes de la
+  3. Pueden ser ampliados por el Gobierno a propuesta del Ministerio de Inclusi�n, Seguridad
+
+---
+
+### Pregunta 72
+
+**Texto:** Los altos cargos de las Administraciones P�blicas que no sean funcionarios p�blicos:
+
+**Opciones:**
+  0. Constituyen un R�gimen Especial de la Seguridad Social.
+  1. Se incluyen en el R�gimen General.
+  2. Se incluyen en el R�gimen Especial de los Funcionarios Civiles del Estado.
+  3. Se incluyen en el R�gimen Especial de la Administraci�n de Justicia.
+
+---
+
+### Pregunta 73
+
+**Texto:** Respecto a los socios trabajadores de las cooperativas de trabajo asociado, se incorporar�n
+
+**Opciones:**
+  0. l Sistema de la Seguridad Social:
+  1. A opci�n de la cooperativa, bien como asimilados a trabajadores por cuenta ajena o bien
+  2. omo trabajadores aut�nomos.
+  3. En todo caso en el R�gimen General de la Seguridad Social.
+
+---
+
+### Pregunta 74
+
+**Texto:** Se entiende que se posee el control efectivo de la sociedad:
+
+**Opciones:**
+  0. En todo caso, cuando las acciones o participaciones del trabajador supongan, al menos, la
+  1. Salvo prueba en contrario, cuando las acciones o participaciones del trabajador supongan, al
+  2. En todo caso, cuando su participaci�n en el capital social sea igual o superior a la tercera parte del
+  3. En todo caso, cuando al menos la mitad del capital social est� distribuido entre socios, con los que
+
+---
+
+### Pregunta 75
+
+**Texto:** Seg�n el art�culo 7.2 de la LGSS de 2015, estar�n comprendidos en el campo de
+
+**Opciones:**
+  0. plicaci�n del Sistema de la Seguridad Social, a efectos de las prestaciones no contributivas:
+  1. Todos los espa�oles residentes en territorio nacional, y los extranjeros que residan
+  2. Todas son falsas.
+
+---
+
+### Pregunta 76
+
+**Texto:** El grupo profesional del trabajador por cuenta ajena y la remuneraci�n que el mismo
+
+**Opciones:**
+  0. Su exclusi�n del campo de aplicaci�n del sistema cuando El grupo profesional exige
+  1. Su exclusi�n del campo de aplicaci�n del sistema cuando su retribuci�n supera la cantidad
+  2. Su exclusi�n del campo de aplicaci�n cuando, como consecuencia de ambos conceptos,
+  3. esempe�a un puesto de alta direcci�n en la empresa.
+
+---
+
+### Pregunta 77
+
+**Texto:** Para el a�o 2025, hasta que se apruebe la LPGE para el citado a�o y fije su nueva cuant�a, el
+
+**Opciones:**
+  0. 3.175,04 euros/mes, entendiendo que esta cantidad
+  1. 3.175,04 euros/mes, entendiendo esta cantidad referida a una mensualidad ordinaria, sin
+  2. 3.058,81 euros/mes, sin perjuicio de las pagas extras que pudieran corresponder.
+  3. 42.823,34 euros/a�o.
+
+---
+
+### Pregunta 78
+
+**Texto:** Llevar� a efecto la gesti�n liquidatoria y recaudatoria de los recursos de la Seguridad Social
+
+**Opciones:**
+  0. s� como de los conceptos de recaudaci�n conjunta con las cuotas de la Seguridad Social:
+  1. La TGSS, como caja �nica del Sistema de Seguridad Social.
+  2. El INSS c�mo Entidad Gestora principal de la Seguridad Social.
+  3. El Ministerio de Trabajo y Econom�a social
+
+---
+
+### Pregunta 79
+
+**Texto:** A partir de 1 de enero de 2015 los miembros del cuerpo de registradores de la propiedad
+
+**Opciones:**
+  0. En el R�gimen Especial de Funcionarios.
+  1. En el R�gimen Especial de Trabajadores por cuenta propia o Aut�nomos, como los notarios.
+  2. En el R�gimen General.
+  3. En cualquiera de los tres anteriores a elecci�n del propio registrador.
+
+---
+
+### Pregunta 80
+
+**Texto:** Se entender� por enfermedad profesional la contra�da:
+
+**Opciones:**
+  0. A consecuencia del trabajo ejecutado por cuenta ajena en las actividades que se
+  1. Con ocasi�n del trabajo ejecutado por cuenta ajena en las actividades que se especifiquen en
+  2. A consecuencia o con ocasi�n del trabajo ejecutado por cuenta ajena en las actividades que
+  3. Las enfermedades que contraiga el trabajador con motivo de la realizaci�n de su trabajo,
+
+---
+
+### Pregunta 81
+
+**Texto:** A partir de su puesta en funcionamiento quedar� integrado en la Tarjeta Social Digital:
+
+**Opciones:**
+  0. El Registro de prestaciones sociales p�blicas.
+  1. El Banco de datos de pensiones p�blicas.
+  2. El registro de las Mutuas Colaboradoras con la Seguridad Social.
+  3. El registro de empresarios y trabajadores incluidos en el Sistema de la Seguridad Social.
+
+---
+
+### Pregunta 82
+
+**Texto:** El reconocimiento y control del derecho a la protecci�n de la salud y a la atenci�n
+
+**Opciones:**
+  0. Al INSS.
+  1. Al Ministerio de Sanidad en la forma en que se determine reglamentariamente.
+  2. Al INGESA.
+  3. A la Tesorer�a General de la Seguridad Social.
+
+---
+
+### Pregunta 83
+
+**Texto:** La acci�n protectora comprendida en el R�gimen General de la Seguridad Social es:
+
+**Opciones:**
+  0. La relacionada en el art�culo 42 de la LGSS 8/2015.
+  1. La relacionada en el art�culo 42 de la LGSS 8/2015, con la exclusi�n de la protecci�n por
+  2. ese de actividad y de las prestaciones no contributivas.
+  3. La relacionada en el art�culo 42 de la LGSS 8/2015, con la exclusi�n de la protecci�n por
+
+---
+
+### Pregunta 84
+
+**Texto:** El ingreso m�nimo vital:
+
+**Opciones:**
+  0. Es una prestaci�n econ�mica contributiva que forma parte del Sistema de la Seguridad
+  1. Es una prestaci�n econ�mica no contributiva que forma parte del Sistema de la Seguridad
+  2. Es una prestaci�n en especie contributiva que forma parte del Sistema de la Seguridad
+  3. Es una prestaci�n en especie no contributiva que forma parte del Sistema de la Seguridad
+
+---
+
+### Pregunta 85
+
+**Texto:** El ingreso m�nimo vital se encuentra regulado:
+
+**Opciones:**
+  0. En el t�tulo VI de la LGSS 8/2015.
+  1. En el t�tulo II de la LGSS 8/2015
+  2. En el T�tulo V de la LGSS 8/2015.
+  3. Todas son falsas.
+
+---
+
+### Pregunta 86
+
+**Texto:** Los socios trabajadores de las cooperativas de explotaci�n comunitaria de la tierra:
+
+**Opciones:**
+  0. Ser�n asimilados a trabajadores por cuenta ajena a efectos de Seguridad Social.
+  1. Ser�n Aut�nomos.
+  2. Ser�n asimilados a trabajadores por cuenta ajena o trabajadores aut�nomos, a opci�n de la
+  3. ooperativa.
+
+---
+
+### Pregunta 87
+
+**Texto:** Se presumir�, salvo prueba en contrario, que son constitutivas de accidente de trabajo:
+
+**Opciones:**
+  0. Las lesiones que sufra el trabajador durante el tiempo y en el lugar del trabajo.
+  1. Las lesiones por imprudencia profesional que sea consecuencia del ejercicio habitual de un
+  2. Los acaecidos en actos de salvamento y en otros de naturaleza an�loga, cuando unos y otros
+  3. Los que sufra el trabajador al ir o al volver del lugar de trabajo.
+
+---
+
+### Pregunta 88
+
+**Texto:** Los Reg�menes de la Seguridad Social existentes en la actualidad, son:
+
+**Opciones:**
+  0. Cinco.
+  1. Siete.
+  2. Seis.
+  3. Depende de si hablamos de la parte contributiva o de la no contributiva.
+
+---
+
+### Pregunta 89
+
+**Texto:** Las pensiones de la Seguridad se revalorizar�n al comienzo de cada a�o:
+
+**Opciones:**
+  0. Las contributivas, en el porcentaje equivalente al valor medio del IPC de los 12 meses
+  1. Las no contributivas, en el porcentaje equivalente al valor medio del IPC de los 12
+  2. Las contributivas y las no contributivas, en el porcentaje equivalente al valor medio del
+  3. Las contributivas, en funci�n del �ndice de revalorizaci�n previsto en la correspondiente
+
+---
+
+### Pregunta 90
+
+**Texto:** No es correcto que:
+
+**Opciones:**
+  0. Las personas que realizasen pr�cticas formativas en empresas, instituciones o entidades
+  1. La a) es correcta con independencia de que las pr�cticas sean remuneradas o no.
+  2. La acci�n protectora ser� la correspondiente al r�gimen General con la exclusi�n de
+  3. esempleo, FOGASA y formaci�n profesional. En el supuesto de las pr�cticas no
+
+---
+
+### Pregunta 91
+
+**Texto:** No es correcto que:
+
+**Opciones:**
+  0. El ejercicio corresponsable del cuidado del lactante consiste en un subsidio.
+  1. El nacimiento y cuidado de menor consiste en un subsidio.
+  2. La prestaci�n de orfandad consiste en un subsidio.
+  3. La pensi�n de orfandad consiste en un subsidio.
+
+---
+
+### Pregunta 92
+
+**Texto:** Seg�n el art�culo 109 de la LGSS 8/2015, el primer recurso para la financiaci�n de la
+
+**Opciones:**
+  0. Las cuotas de las personas obligadas.
+  1. Las aportaciones progresivas del Estado, que se consignar�n con car�cter permanente en sus
+  2. Las cantidades recaudadas en concepto de recargos, sanciones u otras de naturaleza an�loga.
+  3. Los frutos, rentas o intereses y cualquier otro producto de sus recursos patrimoniales en los
+
+---
+
+### Pregunta 93
+
+**Texto:** Quienes por acci�n u omisi�n hayan contribuido a hacer posible la percepci�n indebida de
+
+**Opciones:**
+  0. Responder�n subsidiariamente con los perceptores, salvo buena fe probada, de la obligaci�n
+  1. e reintegrar.
+  2. Responder�n solidariamente con los perceptores, salvo buena fe probada, de la obligaci�n
+  3. e reintegrar.
+
+---
+
+### Pregunta 94
+
+**Texto:** No es correcto con respecto al complemento de pensiones contributivas para la reducci�n
+
+**Opciones:**
+  0. e la brecha de g�nero: :
+  1. Que su importe por hijo o hija se fijar� en la LPGE. La cuant�a a percibir estar� limitada a
+  2. uatro veces el importe mensual fijado por hijo o hija y ser� incrementada al comienzo de
+  3. ada a�o en el mismo porcentaje previsto en la correspondiente LPGE para las pensiones
+
+---
+
+### Pregunta 95
+
+**Texto:** El Fondo de Reserva de la Seguridad Social tiene por finalidad:
+
+**Opciones:**
+  0. Atender las necesidades financieras en materia de prestaciones contributivas del sistema de
+  1. Atender las necesidades originadas por desviaciones entre ingresos y gastos.
+  2. Atender las necesidades financieras en materia de prestaciones contributivas y no
+  3. ontributivas del sistema de la Seguridad Social.
+
+---
+
+### Pregunta 96
+
+**Texto:** Se revalorizar�n al comienzo de cada a�o en el porcentaje equivalente al valor medio de las
+
+**Opciones:**
+  0. onsumo de los doce meses previos a diciembre del a�o anterior:
+  1. Todas las pensiones de Seguridad Social en su modalidad contributiva.
+  2. El complemento de brecha de g�nero.
+  3. La cuant�a m�xima y m�nima de las pensiones contributivas,
+
+---
+
+### Pregunta 97
+
+**Texto:** Se declaran expresamente comprendidos en el RETA:
+
+**Opciones:**
+  0. Los trabajadores incluidos en el Sistema Especial para Trabajadores por Cuenta Propia
+  1. grarios.
+  2. Quienes ejerzan las funciones de direcci�n y gerencia que conlleva el desempe�o del
+  3. argo de consejero o administrador.
+
+---
+
+### Pregunta 98
+
+**Texto:** El tope m�ximo de cotizaci�n (se�alar la incorrecta):
+
+**Opciones:**
+  0. Lo fija anualmente la LPGE.
+  1. Se incrementa en el mismo porcentaje en que se incrementen las pensiones
+  2. ontributivas.
+  3. Desaparece desde el 1 de enero de 2025.
+
+---

@@ -1,0 +1,510 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 11 TEST TEMA 10 INICIALES.docx
+**Total preguntas:** 40
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** Los Estatutos de Autonom�a son definidos en la Constituci�n como la norma institucional b�sica:
+
+**Opciones:**
+  0. Del Estado de las Autonom�as.
+  1. De cada Comunidad Aut�noma y parte integrante del ordenamiento jur�dico local.
+  2. De cada Comunidad Aut�noma y parte integrante del ordenamiento jur�dico estatal.
+  3. De les Comunidades Aut�nomas y de la Administraci�n Local.
+
+---
+
+### Pregunta 2
+
+**Texto:** Los Estatutos de Autonom�a deben plasmarse en:
+
+**Opciones:**
+  0. Leyes de Bases.
+  1. Leyes org�nicas.
+  2. Leyes ordinarias.
+  3. Leyes de transferencias.
+
+---
+
+### Pregunta 3
+
+**Texto:** La reforma de los Estatutos de Autonom�a:
+
+**Opciones:**
+  0. Est� prohibida.
+  1. En todo caso, requiere aprobaci�n por las Cortes mediante Ley org�nica.
+  2. En todo caso, requiere aprobaci�n por las Cortes mediante Ley ordinaria.
+  3. En todo caso, requiere la aprobaci�n por refer�ndum.
+
+---
+
+### Pregunta 4
+
+**Texto:** Son �rganos institucionales auton�micos:
+
+**Opciones:**
+  0. La Asamblea Legislativa, el Delegado del Gobierno, el Consejo de Gobierno y el Presidente de la Comunidad.
+  1. La Asamblea Legislativa, el Consejo de Gobierno, el Presidente de la Comunidad y los Presidentes de las Diputaciones Provinciales.
+  2. La Asamblea Legislativa, el Consejo de Gobierno y el Presidente de la Comunidad.
+  3. La Asamblea Legislativa, el Consejo de Gobierno, el Tribunal Superior de Justicia y el Presidente de la Comunidad.
+
+---
+
+### Pregunta 5
+
+**Texto:** El Presidente de la Comunidad Aut�noma es elegido por:
+
+**Opciones:**
+  0. Sufragio universal, libre, igual, directo y secreto en los t�rminos que establece la Ley.
+  1. La Asamblea Legislativa de la Comunidad, de entre sus miembros.
+  2. El Consejo de Gobierno de la Comunidad, de entre sus miembros.
+  3. El Congreso, de entre sus miembros.
+
+---
+
+### Pregunta 6
+
+**Texto:** Los miembros de las Asambleas Legislativas de las Comunidades Aut�nomas son elegidos:
+
+**Opciones:**
+  0. Por los Alcaldes de los municipios que las integran.
+  1. Por sufragio universal.
+  2. Por las Cortes Generales.
+  3. Por los Concejales electos de los municipios que las integran.
+
+---
+
+### Pregunta 7
+
+**Texto:** La Constituci�n espa�ola de 1978:
+
+**Opciones:**
+  0. Autoriza la federaci�n de Comunidades Aut�nomas.
+  1. Proh�be la federaci�n de Comunidades Aut�nomas.
+  2. Autoriza la federaci�n de Comunidades Aut�nomas cuando sean lim�trofes y tengan caracter�sticas hist�ricas, culturales y econ�micas comunes.
+  3. No establece nada en relaci�n a la federaci�n de Comunidades Aut�nomas.
+
+---
+
+### Pregunta 8
+
+**Texto:** �Qu� principio, consagrado en el art�culo 2 de la Constituci�n, ha de presidir la organizaci�n territorial del Estado?:
+
+**Opciones:**
+  0. El principio de igualdad.
+  1. El principio de solidaridad.
+  2. El principio de coordinaci�n.
+  3. El principio de eficacia.
+
+---
+
+### Pregunta 9
+
+**Texto:** Las Ciudades Aut�nomas de Ceuta y Melilla, �tienen Estatutos de Autonom�a?:
+
+**Opciones:**
+  0. No, se rigen por leyes que no tienen car�cter de Estatuto de Autonom�a.
+  1. S�, aprobados por ley ordinaria.
+  2. S�, aprobados por ley org�nica.
+  3. No, se rigen exclusivamente por el ordenamiento jur�dico estatal.
+
+---
+
+### Pregunta 10
+
+**Texto:** De conformidad con el art�culo 143.2 de la Constituci�n, la iniciativa del proceso auton�mico corresponde:
+
+**Opciones:**
+  0. A todas las Diputaciones interesadas o al �rgano interinsular correspondiente y a las tres cuartas partes de los municipios cuya poblaci�n represente, al menos, la mayor�a del censo electoral de cada provincia o isla.
+  1. A todas las Diputaciones interesadas o al �rgano interinsular correspondiente y a las dos terceras partes de los municipios cuya poblaci�n represente, al menos, la mayor�a del censo electoral de cada provincia o isla.
+  2. A todas las Diputaciones interesadas o al �rgano interinsular correspondiente y a las dos terceras partes de los municipios cuya poblaci�n represente, al menos, la mayor�a absoluta del censo electoral de cada provincia o isla.
+  3. A todas las Diputaciones interesadas o el �rgano interinsular correspondiente y a las tres cuartas partes de los municipios cuya poblaci�n represente, al menos, la mayor�a absoluta del censo electoral de cada provincia o isla.
+
+---
+
+### Pregunta 11
+
+**Texto:** Los requisitos previstos en la pregunta anterior deber�n ser cumplidos:
+
+**Opciones:**
+  0. En el plazo de cinco meses desde el primer acuerdo adoptado al respecto por alguna de las Corporaciones Locales interesadas.
+  1. En el plazo de cinco meses desde el refer�ndum celebrado en las Corporaciones Locales interesadas.
+  2. En el plazo de seis meses desde el primer acuerdo adoptado al respecto por alguna de las Corporaciones Locales interesadas.
+  3. En el plazo de seis meses desde el refer�ndum celebrado en las Corporaciones Locales interesadas.
+
+---
+
+### Pregunta 12
+
+**Texto:** En virtud de lo establecido por el art. 143.3, si la iniciativa auton�mica no prosperase, s�lo podr� reiterarse:
+
+**Opciones:**
+  0. Transcurridos cuatro a�os.
+  1. Transcurridos cinco a�os.
+  2. Transcurridos tres a�os.
+  3. Transcurridos cinco meses.
+
+---
+
+### Pregunta 13
+
+**Texto:** El art. 144 de la Constituci�n establece que las CCGG, mediante ley org�nica, podr�n, por motivos de inter�s nacional:
+
+**Opciones:**
+  0. Autorizar la constituci�n de una Comunidad Aut�noma cuando su �mbito territorial no supere el de una provincia y no re�na las condiciones del art. 143.1.
+  1. Autorizar o acordar, en su caso, un Estatuto de autonom�a para territorios que est�n integrados en la organizaci�n provincial.
+  2. Sustituir la iniciativa de las Asambleas Legislativas a que se refiere el art. 143.2.
+  3. Todas son verdaderas
+
+---
+
+### Pregunta 14
+
+**Texto:** El Presidente de la Comunidad Aut�noma ostenta:
+
+**Opciones:**
+  0. La suprema representaci�n del Estado y la ordinaria de la Comunidad Aut�noma.
+  1. La suprema representaci�n de la Comunidad Aut�noma y la ordinaria del Gobierno en su territorio.
+  2. La suprema representaci�n del Estado y la ordinaria del Gobierno en su territorio.
+  3. La suprema representaci�n de la Comunidad Aut�noma y la ordinaria del Estado en su territorio.
+
+---
+
+### Pregunta 15
+
+**Texto:** El Presidente de la Comunidad Aut�noma y los miembros del Consejo de Gobierno:
+
+**Opciones:**
+  0. Ser�n pol�ticamente responsables ante el Congreso y el Senado.
+  1. Ser� pol�ticamente responsables �nicamente ante el Congreso.
+  2. Ser�n pol�ticamente responsables ante el Rey.
+  3. Ser�n pol�ticamente responsables ante la Asamblea.
+
+---
+
+### Pregunta 16
+
+**Texto:** Las Asambleas Legislativas de las Comunidades Aut�nomas:
+
+**Opciones:**
+  0. Podr�n elaborar proyectos de ley.
+  1. No tienen iniciativa legislativa.
+  2. Podr�n solicitar del Gobierno la adopci�n de un proyecto de ley.
+  3. Podr�n remitir a la Mesa del Congreso una proposici�n de ley, delegando ante dicha c�mara un m�nimo de tres miembros de la Asamblea encargados de su defensa.
+
+---
+
+### Pregunta 17
+
+**Texto:** Para constituirse una comunidad aut�noma uniprovincial, sin que la provincia tenga entidad regional hist�rica, es necesario que las Cortes:
+
+**Opciones:**
+  0. Sustituyan la iniciativa de las Corporaciones Locales.
+  1. Autoricen la iniciativa de las Corporaciones Locales.
+  2. Autoricen su constituci�n mediante Ley org�nica.
+  3. Autoricen su constituci�n mediante Ley ordinaria.
+
+---
+
+### Pregunta 18
+
+**Texto:** El control de la actividad de los �rganos de las Comunidades Aut�nomas, se ejercer�:
+
+**Opciones:**
+  0. Por el Tribunal de Cuentas el econ�mico y presupuestario.
+  1. Por el Tribunal Supremo, el relativo a la Constitucionalidad de sus disposiciones normativas con fuerza de ley.
+  2. Por el Gobierno, previa autorizaci�n del Congreso, en el ejercicio de funciones delegadas a que se refiere el art. 150.2
+  3. Todas son correctas
+
+---
+
+### Pregunta 19
+
+**Texto:** Si una Comunidad Aut�noma no cumpliere las obligaciones que la Constituci�n u otras leyes le impongan, o actuare de forma que atente gravemente al inter�s general de Espa�a, el Gobierno podr� adoptar las medidas necesarias, siempre que se cumplan los siguientes requisitos:
+
+**Opciones:**
+  0. Previo requerimiento al Presidente de la Comunidad Aut�noma y aprobaci�n por mayor�a absoluta del Senado.
+  1. Previo requerimiento al Presidente de la Comunidad Aut�noma y aprobaci�n por mayor�a absoluta del Congreso.
+  2. Previo requerimiento al Presidente de la Comunidad Aut�noma y aprobaci�n por mayor�a simple del Senado.
+  3. Previo requerimiento al Presidente de la Comunidad Aut�noma y aprobaci�n por mayor�a simple del Congreso.
+
+---
+
+### Pregunta 20
+
+**Texto:** No es una competencia exclusiva del estado:
+
+**Opciones:**
+  0. Legislaci�n sobre propiedad intelectual e industrial.
+  1. Defensa y Fuerzas armadas.
+  2. Artesan�a.
+  3. R�gimen aduanero y arancelario.
+
+---
+
+### Pregunta 21
+
+**Texto:** De las siguientes, es competencia exclusiva del Estado:
+
+**Opciones:**
+  0. La iluminaci�n de costas y se�ales mar�timas.
+  1. Las ferias interiores.
+  2. La gesti�n en materia de protecci�n del medio ambiente.
+  3. La pesca en aguas interiores y fluviales.
+
+---
+
+### Pregunta 22
+
+**Texto:** La apreciaci�n de la necesidad de armonizaci�n le corresponde a:
+
+**Opciones:**
+  0. El jefe del Estado, mediante RD refrendado por el Presidente del Gobierno.
+  1. Las CCGG, por mayor�a absoluta de cada C�mara.
+  2. Al Congreso de los Diputados, por mayor�a absoluta.
+  3. A las CCGG, por mayor�a simple de cada C�mara.
+
+---
+
+### Pregunta 23
+
+**Texto:** El Derecho Estatal ser�, seg�n la Constituci�n:
+
+**Opciones:**
+  0. En algunos casos, supletorio del Derecho de las Comunidades Aut�nomas.
+  1. En todo caso, supletorio del Derecho de las Comunidades Aut�nomas.
+  2. Primera fuente del Derecho en el ordenamiento jur�dico de las Comunidades Aut�nomas.
+  3. Supletorio del Derecho de las Comunidades Aut�nomas en todo lo no atribuido a la exclusiva competencia de �stas.
+
+---
+
+### Pregunta 24
+
+**Texto:** El Estado tiene competencia exclusiva sobre las siguientes materias (se�ale la falsa):
+
+**Opciones:**
+  0. Defensa y Fuerzas Armadas.
+  1. Nacionalidad.
+  2. Montes y Aprovechamientos forestales.
+  3. Administraci�n de Justicia.
+
+---
+
+### Pregunta 25
+
+**Texto:** El Estado tiene competencia exclusiva sobre:
+
+**Opciones:**
+  0. Relaciones internacionales.
+  1. Comercio exterior.
+  2. R�gimen aduanero y arancelario.
+  3. Las tres respuestas anteriores son correctas.
+
+---
+
+### Pregunta 26
+
+**Texto:** Las leyes de transferencia o delegaci�n ser�n:
+
+**Opciones:**
+  0. Leyes org�nicas.
+  1. Leyes ordinarias.
+  2. Leyes org�nicas u ordinarias, seg�n transfieran o deleguen.
+  3. Leyes de bases.
+
+---
+
+### Pregunta 27
+
+**Texto:** La Constituci�n se fundamenta, en su art�culo 2 en:
+
+**Opciones:**
+  0. La indisoluble unidad de la naci�n espa�ola, patria com�n e indivisible de todos los espa�oles.
+  1. La indiscutible unidad de la naci�n espa�ola, patria com�n e indivisible de todos los espa�oles.
+  2. La unidad y solidaridad de la naci�n espa�ola.
+  3. El indiscutible derecho a la autonom�a de las nacionalidades y regiones que integran Espa�a y la solidaridad entre todas ellas.
+
+---
+
+### Pregunta 28
+
+**Texto:** Las Comunidades Aut�nomas que accedieron a su autonom�a por la v�a general del art�culo 143 de la Constituci�n, podr�n acceder al m�ximo techo competencial previsto en el art�culo 149.1 de la misma norma:
+
+**Opciones:**
+  0. Transcurridos cinco a�os y mediante la reforma de sus respectivos Estatutos.
+  1. Transcurridos cinco a�os y mediante la aprobaci�n de una ley de armonizaci�n.
+  2. Transcurridos cinco meses y mediante la reforma de sus respectivos Estatutos.
+  3. Transcurridos cinco meses y mediante la aprobaci�n de una ley de armonizaci�n.
+
+---
+
+### Pregunta 29
+
+**Texto:** Se�ala cu�l de las siguientes materias no aparece enumerada en el art�culo 148 de la CE:
+
+**Opciones:**
+  0. Ferias interiores.
+  1. Urbanismo.
+  2. Caza.
+  3. Tenencia de armas.
+
+---
+
+### Pregunta 30
+
+**Texto:** Una vez acreditada la iniciativa auton�mica prevista en el art�culo 151.1 de la Constituci�n se proceder� a la convocatoria del refer�ndum:
+
+**Opciones:**
+  0. En el plazo de 5 meses.
+  1. En el plazo de 3 meses.
+  2. En el plazo de 6 meses.
+  3. En el plazo de 30 d�as.
+
+---
+
+### Pregunta 31
+
+**Texto:** En cu�l de las siguientes materias se atribuye al Estado la facultad de dictar la legislaci�n tanto b�sica como de desarrollo en el art�culo 149 de la Constituci�n Espa�ola:
+
+**Opciones:**
+  0. Contratos y concesiones administrativas.
+  1. R�gimen minero y energ�tico.
+  2. R�gimen de prensa, radio y televisi�n.
+  3. Propiedad intelectual e industrial.
+
+---
+
+### Pregunta 32
+
+**Texto:** Se�ale la respuesta correcta siguiendo la regulaci�n prevista en el art�culo 152 de la Constituci�n Espa�ola:
+
+**Opciones:**
+  0. La Asamblea es elegida por sufragio universal, con arreglo a un sistema de representaci�n mayoritaria que asegure, adem�s, la representaci�n de las diversas zonas del territorio.
+  1. El Presidente es elegido por sufragio universal y nombrado por el Rey.
+  2. El Consejo de Gobierno tiene funciones ejecutivas y administrativas.
+  3. El Presidente y los miembros del Consejo de Gobierno ser�n pol�ticamente responsables ante el Congreso de los Diputados.
+
+---
+
+### Pregunta 33
+
+**Texto:** �Cu�ntos municipios deb�an formar parte de la iniciativa auton�mica en el caso de las Comunidades que accedieron por la v�a especial, en el caso de que no hubieran plesbiscitado afirmativamente proyectos de estatutos en el pasado?:
+
+**Opciones:**
+  0. Dos terceras partes.
+  1. Tres quintas partes.
+  2. Tres cuartas partes.
+  3. No es necesaria la iniciativa de municipios en la v�a especial ya que la misma se ejerce por acuerdo por mayor�a absoluta del �rgano colegiado ejecutivo superior.
+
+---
+
+### Pregunta 34
+
+**Texto:** Seg�n el art�culo 147 de la Constituci�n Espa�ola, dentro de los t�rminos de la Constituci�n, los Estatutos ser�n:
+
+**Opciones:**
+  0. la norma constitucional b�sica de cada Comunidad Aut�noma y el Estado los reconocer� y amparar� como parte integrante de su ordenamiento jur�dico.
+  1. la norma constitucional b�sica de cada Comunidad Aut�noma y el Estado y Corporaciones locales los reconocer�n y amparar�n como parte integrante de su ordenamiento jur�dico.
+  2. la norma institucional b�sica de cada Comunidad Aut�noma y el Estado los reconocer� y amparar� como parte integrante de su ordenamiento jur�dico.
+  3. la norma institucional b�sica de cada Comunidad Aut�noma y el Estado y Corporaciones locales los reconocer�n y amparar�n como parte integrante de su ordenamiento jur�dico.
+
+---
+
+### Pregunta 35
+
+**Texto:** Los estatutos de autonom�a deber�n establecer la denominaci�n, organizaci�n y sede de sus instituciones aut�nomas propias. No forma parte de la organizaci�n institucional auton�mica:
+
+**Opciones:**
+  0. El Tribunal Superior de Justicia.
+  1. La Asamblea.
+  2. El Presidente.
+  3. El Consejo de Gobierno.
+
+---
+
+### Pregunta 36
+
+**Texto:** Se�ale la respuesta correcta en relaci�n con las facultades que el art�culo 149 de la Constituci�n Espa�ola atribuye al Estado en cada una de las siguientes materias:
+
+**Opciones:**
+  0. Legislaci�n b�sica sobre propiedad intelectual e industrial.
+  1. Legislaci�n b�sica sobre pesas y medidas.
+  2. Legislaci�n y r�gimen econ�mico de la Seguridad Social.
+  3. Normas b�sicas del r�gimen de presa, radio y televisi�n.
+
+---
+
+### Pregunta 37
+
+**Texto:** En materia de contratos y concesiones administrativas corresponde al Estado la/s siguiente/s facultad/es:
+
+**Opciones:**
+  0. Legislaci�n b�sica.
+  1. Legislaci�n.
+  2. Legislaci�n y ejecuci�n.
+  3. Contratos y concesiones administrativas es una competencia atribuida a las CCAA en virtud del art�culo 148 CE.
+
+---
+
+### Pregunta 38
+
+**Texto:** �Cu�l de las siguientes competencias corresponde a la Comunidad Aut�noma de conformidad con el art�culo 148 de la Constituci�n Espa�ola?:
+
+**Opciones:**
+  0. Marisqueo.
+  1. Iluminaci�n de costas.
+  2. Abanderamiento de buques.
+  3. Marina mercante.
+
+---
+
+### Pregunta 39
+
+**Texto:** Se�ale la respuesta correcta:
+
+**Opciones:**
+  0. Corresponde al Estado la competencia exclusiva sobre administraci�n de justicia.
+  1. Corresponde al Estado la competencia para dictar las bases en materia de artesan�a.
+  2. Las CCAA podr�n asumir el desarrollo legislativo y la ejecuci�n en materia de propiedad intelectual e industrial.
+  3. Corresponde a las CCAA la competencia sobre el r�gimen econ�mico de la Seguridad Social.
+
+---
+
+### Pregunta 40
+
+**Texto:** El Estado garantiza la realizaci�n efectiva del principio de solidaridad consagrado en el art�culo 2 de la Constituci�n, velando por el establecimiento de un equilibrio econ�mico, adecuado y justo entre las diversas partes del territorio espa�ol, y atendiendo en particular a las circunstancias del hecho:
+
+**Opciones:**
+  0. Auton�mico.
+  1. Insular.
+  2. Municipal.
+  3. Provincial.
+
+---

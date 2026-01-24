@@ -1,0 +1,1308 @@
+{
+  "metadata": {
+    "source_file": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+    "source_path": "Test financiero\\8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+    "tema": 0,
+    "categoria": "financiero",
+    "extraction_date": "2026-01-15T23:41:30.648335",
+    "reformulation_date": "2026-01-15T23:47:35.679836",
+    "total_questions": 26,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.796944",
+    "completed_count": 0,
+    "failed_count": 26
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "De conformidad con la Ley 30/1984, de 2 de agosto, de medidas para la reforma de la",
+        "options": [
+          {
+            "text": "El sueldo y los trienios.",
+            "is_correct": false
+          },
+          {
+            "text": "El sueldo, los trienios y las pagas extraordinarias.",
+            "is_correct": false
+          },
+          {
+            "text": "El sueldo, los trienios y el complemento de destino.",
+            "is_correct": false
+          },
+          {
+            "text": "El sueldo, los trienios y la indemnizacin por razn del servicio.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De conformidad con la Ley 30/1984, de 2 de agosto, de medidas para la reforma de la",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Las gratificaciones por servicios extraordinarios:",
+        "options": [
+          {
+            "text": "Se imputan al concepto 121, al tratarse de retribuciones complementarias.",
+            "is_correct": false
+          },
+          {
+            "text": "Podrn ser fijas en su cuanta, pero no peridicas en su devengo.",
+            "is_correct": false
+          },
+          {
+            "text": "Tendrn carcter excepcional y solamente podrn ser reconocidas por servicios",
+            "is_correct": false
+          },
+          {
+            "text": "Son retribuciones bsicas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las gratificaciones por servicios extraordinarios:",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta en relacin con las pagas extraordinarias:",
+        "options": [
+          {
+            "text": "Sern dos al ao, una en el mes de junio y otra en el mes de diciembre.",
+            "is_correct": false
+          },
+          {
+            "text": "Se devengarn el da 1 de los meses de junio y diciembre y con referencia a la situacin y",
+            "is_correct": false
+          },
+          {
+            "text": "erechos del funcionario en dichas fechas.",
+            "is_correct": false
+          },
+          {
+            "text": "En el ejercicio actual, la cuanta de cada paga extraordinaria ser de una mensualidad de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta en relacin con las pagas extraordinarias:",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La cuanta del complemento de destino asignado a cada puesto de trabajo deber",
+        "options": [
+          {
+            "text": "Las relaciones de puestos de trabajo.",
+            "is_correct": false
+          },
+          {
+            "text": "La Ley 30/1984, de medidas para la reforma de la Funcin Pblica.",
+            "is_correct": false
+          },
+          {
+            "text": "La Ley de Presupuestos Generales del Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "La Ley 47/2003, General Presupuestaria.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La cuanta del complemento de destino asignado a cada puesto de trabajo deber",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Respecto a los trienios, indique la respuesta INCORRECTA:",
+        "options": [
+          {
+            "text": "Consisten en una cantidad igual para cada grupo o subgrupo, por cada 3 meses de servicio",
+            "is_correct": false
+          },
+          {
+            "text": "En el caso de que un funcionario preste sus servicios sucesivamente en diferentes Cuerpos",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando un funcionario cambie de adscripcin a grupo antes de completar un trienio, la",
+            "is_correct": false
+          },
+          {
+            "text": "Se trata de una retribucin bsica.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Respecto a los trienios, indique la respuesta INCORRECTA:",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Los funcionarios de carrera que, en situacin de activo o de servicios especiales, ocupen",
+        "options": [
+          {
+            "text": "Las retribuciones bsicas correspondientes al grupo o subgrupo de clasificacin al que el",
+            "is_correct": false
+          },
+          {
+            "text": "omplementarias que correspondan al puesto de trabajo que desempeen.",
+            "is_correct": false
+          },
+          {
+            "text": "Las retribuciones bsicas correspondientes a su grupo o subgrupo de clasificacin,",
+            "is_correct": false
+          },
+          {
+            "text": "Las retribuciones bsicas correspondientes al grupo o subgrupo de clasificacin al que el",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los funcionarios de carrera que, en situacin de activo o de servicios especiales, ocupen",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "Cul de las siguientes retribuciones no tiene el carcter de retribucin bsica?",
+        "options": [
+          {
+            "text": "El sueldo.",
+            "is_correct": false
+          },
+          {
+            "text": "Las pagas extraordinarias, ya que incluyen una mensualidad de complemento de destino.",
+            "is_correct": false
+          },
+          {
+            "text": "El complemento de productividad.",
+            "is_correct": false
+          },
+          {
+            "text": "Las respuestas b) y c) son correctas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de las siguientes retribuciones no tiene el carcter de retribucin bsica?",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La indemnizacin que viene a compensar de un modo especial a los funcionarios que",
+        "options": [
+          {
+            "text": "Indemnizacin por destino en el extranjero que se imputa al concepto 123",
+            "is_correct": false
+          },
+          {
+            "text": "Indemnizacin por residencia que se imputa al concepto 121 Retribuciones",
+            "is_correct": false
+          },
+          {
+            "text": "omplementarias.",
+            "is_correct": false
+          },
+          {
+            "text": "Indemnizacin por residencia y se percibe por aquellos funcionarios que residen en Islas",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La indemnizacin que viene a compensar de un modo especial a los funcionarios que",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El complemento especfico:",
+        "options": [
+          {
+            "text": "Retribuir el especial rendimiento, la actividad y dedicacin extraordinarias y el inters o",
+            "is_correct": false
+          },
+          {
+            "text": "Se percibir en catorce pagas iguales de las que doce sern de percepcin mensual y dos",
+            "is_correct": false
+          },
+          {
+            "text": "dicionales, del mismo importe que una mensual, en los meses de julio y diciembre.",
+            "is_correct": false
+          },
+          {
+            "text": "Se fija en las relaciones de puestos de trabajo y se incrementar anualmente en el",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El complemento especfico:",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Las retribuciones bsicas y complementarias que se devenguen con carcter fijo y",
+        "options": [
+          {
+            "text": "la situacin y derechos del funcionario referidos al primer da hbil del mes a que",
+            "is_correct": false
+          },
+          {
+            "text": "orrespondan, salvo en los siguientes casos, en que se liquidarn por das:",
+            "is_correct": false
+          },
+          {
+            "text": "En el mes de iniciacin de una licencia con derecho a retribucin.",
+            "is_correct": false
+          },
+          {
+            "text": "En el mes en que se produzca un cambio de puesto de trabajo dentro de la Administracin",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las retribuciones bsicas y complementarias que se devenguen con carcter fijo y",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Cuando el tiempo de servicios prestados hasta el da en que se devengue la paga",
+        "options": [
+          {
+            "text": "Computando cada da de servicios prestados en el importe resultante de dividir la cuanta",
+            "is_correct": false
+          },
+          {
+            "text": "e la paga extraordinaria entre 182 das o 183 das en aos bisiestos.",
+            "is_correct": false
+          },
+          {
+            "text": "Computando cada da de servicios prestados en el importe resultante de dividir la cuanta",
+            "is_correct": false
+          },
+          {
+            "text": "e la paga extraordinaria entre 183 das.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cuando el tiempo de servicios prestados hasta el da en que se devengue la paga",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "Si el da 28 del mes de junio se produce un cambio de puesto de trabajo de un funcionario",
+        "options": [
+          {
+            "text": "el Ministerio de Economa, Comercio y Empresa al Ministerio de Hacienda, el pago de",
+            "is_correct": false
+          },
+          {
+            "text": "Al Ministerio de Economa, Comercio y Empresa.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Ministerio de Hacienda.",
+            "is_correct": false
+          },
+          {
+            "text": "A ambos Ministerios, liquidando cada uno de ellos el nmero de das correspondientes a",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Si el da 28 del mes de junio se produce un cambio de puesto de trabajo de un funcionario",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El importe lquido:",
+        "options": [
+          {
+            "text": "Es la cantidad resultante de sumar los importes de todas las retribuciones.",
+            "is_correct": false
+          },
+          {
+            "text": "Es la cantidad resultante de restar al importe ntegro la suma de los importes de todas las",
+            "is_correct": false
+          },
+          {
+            "text": "educciones formalizables.",
+            "is_correct": false
+          },
+          {
+            "text": "Es la cantidad resultante de restar al importe lquido la suma de los importes de todas las",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El importe lquido:",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta muy corta",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La hoja resumen de nmina deber ir firmada por:",
+        "options": [
+          {
+            "text": "El Habilitado y funcionario que designe el Jefe de la Unidad Administrativa a la que est",
+            "is_correct": false
+          },
+          {
+            "text": "dscrita la Habilitacin.",
+            "is_correct": false
+          },
+          {
+            "text": "El Habilitado.",
+            "is_correct": false
+          },
+          {
+            "text": "El Jefe del Centro o dependencia correspondiente.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La hoja resumen de nmina deber ir firmada por:",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Las nminas ordinarias:",
+        "options": [
+          {
+            "text": "Comprendern para cada perceptor, al menos, las remuneraciones fijas en su cuanta y",
+            "is_correct": false
+          },
+          {
+            "text": "orrespondiente las pagas extraordinarias de junio y diciembre.",
+            "is_correct": false
+          },
+          {
+            "text": "Se cerrarn antes del da 5 del mes al que corresponden los haberes.",
+            "is_correct": false
+          },
+          {
+            "text": "Se cerrarn el da 7 del mes al que correspondan los haberes.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las nminas ordinarias:",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Se considera una modificacin en nmina transitoria:",
+        "options": [
+          {
+            "text": "El reconocimiento de un trienio.",
+            "is_correct": false
+          },
+          {
+            "text": "Las pagas extraordinarias.",
+            "is_correct": false
+          },
+          {
+            "text": "Una reduccin de jornada de trabajo.",
+            "is_correct": false
+          },
+          {
+            "text": "Una reincorporacin al puesto de trabajo de personal con licencia, si sta implic la baja",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Se considera una modificacin en nmina transitoria:",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cul de las siguientes deducciones que pueden aparecer en la nmina se considera no",
+        "options": [
+          {
+            "text": "IRPF.",
+            "is_correct": false
+          },
+          {
+            "text": "Derechos pasivos.",
+            "is_correct": false
+          },
+          {
+            "text": "MUFACE.",
+            "is_correct": false
+          },
+          {
+            "text": "Cuota obrera del Rgimen General de la Seguridad Social.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de las siguientes deducciones que pueden aparecer en la nmina se considera no",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'IRPF....'",
+        "Distractor muy corto: 'MUFACE....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "La nmina se divide en las siguientes partes:",
+        "options": [
+          {
+            "text": "Cuerpo de la nmina, resmenes de nmina y estados justificativos de la nmina.",
+            "is_correct": false
+          },
+          {
+            "text": "Datos de cabecera, resmenes de nmina y estados justificativos de la nmina.",
+            "is_correct": false
+          },
+          {
+            "text": "Cuerpo de la nmina, informacin de cabecera y estados justificativos de la nmina.",
+            "is_correct": false
+          },
+          {
+            "text": "Resmenes de nmina y estados justificativos de la nmina.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La nmina se divide en las siguientes partes:",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Quin ordena el pago de la nmina en un ministerio?",
+        "options": [
+          {
+            "text": "El Director General del Tesoro y Poltica Financiera.",
+            "is_correct": false
+          },
+          {
+            "text": "El Director General de Presupuestos.",
+            "is_correct": false
+          },
+          {
+            "text": "El Titular del Departamento Ministerial.",
+            "is_correct": false
+          },
+          {
+            "text": "El Habilitado.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Quin ordena el pago de la nmina en un ministerio?",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La devolucin, por parte de un funcionario, de un anticipo reintegrable:",
+        "options": [
+          {
+            "text": "Es una deduccin no formalizable que se imputa al captulo 1 de gastos.",
+            "is_correct": false
+          },
+          {
+            "text": "Es una deduccin formalizable que se imputa al captulo 1 de ingresos.",
+            "is_correct": false
+          },
+          {
+            "text": "Es una deduccin no formalizable que se imputa al captulo 8 de gastos.",
+            "is_correct": false
+          },
+          {
+            "text": "Es una deduccin formalizable que se imputa al captulo 8 de ingresos.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La devolucin, por parte de un funcionario, de un anticipo reintegrable:",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Con carcter general, la tramitacin contable de las retribuciones de carcter fijo y",
+        "options": [
+          {
+            "text": "Documento RC y AD al inicio del ejercicio, por el importe que se prevea gastar durante",
+            "is_correct": false
+          },
+          {
+            "text": "icho ejercicio y documentos OK por cada nmina.",
+            "is_correct": false
+          },
+          {
+            "text": "Documento AD al inicio del ejercicio, por el importe que se prevea gastar durante dicho",
+            "is_correct": false
+          },
+          {
+            "text": "Documento ADOK por cada nmina.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Con carcter general, la tramitacin contable de las retribuciones de carcter fijo y",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El pago de las retribuciones del personal se har, a opcin de los interesados, mediante:",
+        "options": [
+          {
+            "text": "Transferencia bancaria o cheque nominativo.",
+            "is_correct": false
+          },
+          {
+            "text": "Transferencia bancaria, cheque nominativo o efectivo.",
+            "is_correct": false
+          },
+          {
+            "text": "Transferencia bancaria o cheque al portador.",
+            "is_correct": false
+          },
+          {
+            "text": "Transferencia bancaria.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El pago de las retribuciones del personal se har, a opcin de los interesados, mediante:",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Los libramientos para atender el pago de las retribuciones:",
+        "options": [
+          {
+            "text": "Se expedirn, en todo caso, a favor de cuentas corrientes abiertas a nombre de las",
+            "is_correct": false
+          },
+          {
+            "text": "Se transferirn con antelacin suficiente para que las Habilitaciones puedan cumplir con",
+            "is_correct": false
+          },
+          {
+            "text": "eba hacerse efectivo el pago.",
+            "is_correct": false
+          },
+          {
+            "text": "Se expedirn a favor de las correspondientes Habilitaciones por el importe neto.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los libramientos para atender el pago de las retribuciones:",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Segn el Decreto 680/1974, de 28 de febrero, por el que se dispone el pago de haberes y",
+        "options": [
+          {
+            "text": "El rgano que aprob el gasto.",
+            "is_correct": false
+          },
+          {
+            "text": "El rgano que reconoci la obligacin.",
+            "is_correct": false
+          },
+          {
+            "text": "El rgano que orden el pago.",
+            "is_correct": false
+          },
+          {
+            "text": "El rgano que realiz el pago material.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el Decreto 680/1974, de 28 de febrero, por el que se dispone el pago de haberes y",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Las habilitaciones remitirn las cuentas justificativas al rgano que reconoci la",
+        "options": [
+          {
+            "text": "Dentro del mes siguiente a aquel en que se produjo el pago de las retribuciones.",
+            "is_correct": false
+          },
+          {
+            "text": "Dentro de los dos meses siguientes a aquel en que se produjo el pago de las retribuciones.",
+            "is_correct": false
+          },
+          {
+            "text": "Dentro de los tres meses siguientes a aquel en que se produjo el pago de las retribuciones.",
+            "is_correct": false
+          },
+          {
+            "text": "Dentro de los seis meses siguientes a aquel en que se produjo el pago de las retribuciones.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las habilitaciones remitirn las cuentas justificativas al rgano que reconoci la",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Un alta en nmina de un funcionario de carrera de nuevo ingreso se justifica con:",
+        "options": [
+          {
+            "text": "Copia del ttulo administrativo, acuerdo de nombramiento o disposicin en el BOE en la",
+            "is_correct": false
+          },
+          {
+            "text": "Acuerdo de licencia y certificacin expedida por el rgano competente acreditativa de la",
+            "is_correct": false
+          },
+          {
+            "text": "Acuerdo de nombramiento o disposicin en el BOE en la que figure el nombramiento y",
+            "is_correct": false
+          },
+          {
+            "text": "La respuesta a) es correcta, y adems se unir la liquidacin de trienios extendida por el",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Un alta en nmina de un funcionario de carrera de nuevo ingreso se justifica con:",
+        "source": "8.-  TEST GF 24-25 Retribuciones y nóminas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:22.251507"
+}

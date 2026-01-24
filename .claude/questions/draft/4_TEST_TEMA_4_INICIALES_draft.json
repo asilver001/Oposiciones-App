@@ -1,0 +1,677 @@
+{
+  "metadata": {
+    "source_file": "4 TEST TEMA 4 INICIALES.docx",
+    "source_path": "4 TEST TEMA 4 INICIALES.docx",
+    "tema": 4,
+    "categoria": "general",
+    "extraction_date": "2026-01-15T23:39:55.588142",
+    "reformulation_date": "2026-01-15T23:47:35.600470",
+    "total_questions": 20,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.574570",
+    "completed_count": 0,
+    "failed_count": 20
+  },
+  "questions": [
+    {
+      "question_text": "Qu Ttulo de la Constitucin regula la Corona?:",
+      "options": [
+        {
+          "text": "El Ttulo I.",
+          "is_correct": false
+        },
+        {
+          "text": "El Ttulo II.",
+          "is_correct": false
+        },
+        {
+          "text": "El Ttulo IV.",
+          "is_correct": false
+        },
+        {
+          "text": "El Ttulo III.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu Ttulo de la Constitucin regula la Corona?:",
+      "source": "4 TEST TEMA 4 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El nombramiento y relevo de los miembros Civiles y Militares de la Casa Real:",
+      "options": [
+        {
+          "text": "Ser refrendado por el Presidente del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Ser refrendado por el Ministro de Presidencia o por el Ministro de Defensa, segn los casos.",
+          "is_correct": false
+        },
+        {
+          "text": "Ser refrendado por el Presidente del Congreso.",
+          "is_correct": false
+        },
+        {
+          "text": "No est sujeto a refrendo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El nombramiento y relevo de los miembros Civiles y Militares de la Casa Real:",
+      "source": "4 TEST TEMA 4 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "A quin corresponde, segn la C.E. de 1978, declarar la Guerra y hacer la Paz?:",
+      "options": [
+        {
+          "text": "A las CCGG, a propuesta del Rey.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Congreso, a propuesta del Rey.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Presidente del Gobierno, previa deliberacin en Consejo de Ministros.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Rey, previa autorizacin de las CCGG.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "A quin corresponde, segn la C.E. de 1978, declarar la Guerra y hacer la Paz?:",
+      "source": "4 TEST TEMA 4 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con la Constitucin, al Rey le corresponde:",
+      "options": [
+        {
+          "text": "Previa autorizacin del presidente del Gobierno, declarar la guerra y hacer la paz.",
+          "is_correct": false
+        },
+        {
+          "text": "Previo referndum consultivo, declarar la guerra y hacer la paz.",
+          "is_correct": false
+        },
+        {
+          "text": "Previa autorizacin del Consejo de Ministros, declarar la guerra y hacer la paz.",
+          "is_correct": false
+        },
+        {
+          "text": "Previa autorizacin de las Cortes Generales, declarar la guerra y hacer la paz.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con la Constitucin, al Rey le corresponde:",
+      "source": "4 TEST TEMA 4 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Si no hubiere ninguna persona a quien corresponda la Regencia:",
+      "options": [
+        {
+          "text": "sta ser nombrada por las Cortes Generales, y se compondr de una, tres o cinco personas.",
+          "is_correct": false
+        },
+        {
+          "text": "sta ser nombrada por las Cortes Generales, y se compondr de tres o cinco personas.",
+          "is_correct": false
+        },
+        {
+          "text": "sta ser nombrada por el Gobierno, y se compondr de una, tres o cinco personas.",
+          "is_correct": false
+        },
+        {
+          "text": "sta ser nombrada por el Gobierno, y se compondr de tres o cinco personas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Si no hubiere ninguna persona a quien corresponda la Regencia:",
+      "source": "4 TEST TEMA 4 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No podrn acumularse los cargos de Regente y de tutor sino en:",
+      "options": [
+        {
+          "text": "el padre, madre o descendientes directos del Rey.",
+          "is_correct": false
+        },
+        {
+          "text": "la madre o descendientes directos del Rey.",
+          "is_correct": false
+        },
+        {
+          "text": "el padre, madre o ascendientes directos del Rey.",
+          "is_correct": false
+        },
+        {
+          "text": "la madre o ascendientes directos del Rey.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No podrn acumularse los cargos de Regente y de tutor sino en:",
+      "source": "4 TEST TEMA 4 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Aquellas personas que teniendo derecho a la sucesin en el trono contrajeren matrimonio contra la expresa prohibicin del Rey y de las Cortes Generales, quedarn excluidas en la sucesin a la Corona:",
+      "options": [
+        {
+          "text": "Por s y por sus descendientes.",
+          "is_correct": false
+        },
+        {
+          "text": "Por s y por sus ascendientes.",
+          "is_correct": false
+        },
+        {
+          "text": "Por s y por sus ascendientes y descendientes.",
+          "is_correct": false
+        },
+        {
+          "text": "Por s, pero no por sus ascendientes y descendientes.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Aquellas personas que teniendo derecho a la sucesin en el trono contrajeren matrimonio contra la expresa prohibicin del Rey y de las Cortes Generales, quedarn excluidas en la sucesin a la Corona:",
+      "source": "4 TEST TEMA 4 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Rey asume la ms alta representacin del Estado en las relaciones internacionales, pero la Constitucin matiza que dicha representacin ser especialmente con:",
+      "options": [
+        {
+          "text": "Con las naciones integrantes de la Unin Europea.",
+          "is_correct": false
+        },
+        {
+          "text": "Con las naciones Iberoamericanas.",
+          "is_correct": false
+        },
+        {
+          "text": "Con las naciones de su comunidad histrica.",
+          "is_correct": false
+        },
+        {
+          "text": "Con las naciones de su entorno cultural y geogrfico.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Rey asume la ms alta representacin del Estado en las relaciones internacionales, pero la Constitucin matiza que dicha representacin ser especialmente con:",
+      "source": "4 TEST TEMA 4 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de los siguientes actos del Rey ser refrendado por el Presidente del Congreso?:",
+      "options": [
+        {
+          "text": "Acreditacin de embajadores.",
+          "is_correct": false
+        },
+        {
+          "text": "Propuesta de candidato a Presidente del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Convocatoria de referndum.",
+          "is_correct": false
+        },
+        {
+          "text": "Declaracin de guerra.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de los siguientes actos del Rey ser refrendado por el Presidente del Congreso?:",
+      "source": "4 TEST TEMA 4 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Quin prestar, de conformidad con el artculo 61 de la Constitucin Espaola, juramento de fidelidad al Rey?:",
+      "options": [
+        {
+          "text": "El Prncipe heredero, al alcanzar la mayora de edad, y el Regente o Regentes al hacerse cargo de sus funciones.",
+          "is_correct": false
+        },
+        {
+          "text": "El Prncipe heredero, al alcanzar la mayora de edad, y el Tutor o Tutores al hacerse cargo de sus funciones.",
+          "is_correct": false
+        },
+        {
+          "text": "El Prncipe heredero, cuando se produzca el hecho que origine su llamamiento, y el Regente o Regentes al hacerse cargo de sus funciones.",
+          "is_correct": false
+        },
+        {
+          "text": "El Prncipe heredero, cuando se produzca el hecho que origine su llamamiento, y el Tutor o Tutores al hacerse cargo de sus funciones.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Quin prestar, de conformidad con el artculo 61 de la Constitucin Espaola, juramento de fidelidad al Rey?:",
+      "source": "4 TEST TEMA 4 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la falsa:",
+      "options": [
+        {
+          "text": "La justicia se administra en nombre del Rey.",
+          "is_correct": false
+        },
+        {
+          "text": "El Rey ostenta la ms alta representacin del Estado Espaol en las relaciones internacionales.",
+          "is_correct": false
+        },
+        {
+          "text": "El Rey es el Jefe del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "La soberana nacional reside en el Rey, del que emanan los poderes del Estado.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la falsa:",
+      "source": "4 TEST TEMA 4 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Rey es:",
+      "options": [
+        {
+          "text": "el Jefe del Estado, smbolo de su integridad y permanencia.",
+          "is_correct": false
+        },
+        {
+          "text": "el Jefe del Gobierno, smbolo de su integridad y permanencia.",
+          "is_correct": false
+        },
+        {
+          "text": "el Jefe del Estado, smbolo de su unidad y permanencia.",
+          "is_correct": false
+        },
+        {
+          "text": "el Jefe del Gobierno, smbolo de su unidad y permanencia.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Rey es:",
+      "source": "4 TEST TEMA 4 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Rey, al ser proclamado ante las Cortes Generales, prestar juramento. Seale cul de las siguientes afirmaciones se recoge en el artculo 61 CE como parte de ese juramento regio:",
+      "options": [
+        {
+          "text": "respetar los derechos de las Comunidades Autnomas.",
+          "is_correct": false
+        },
+        {
+          "text": "ejercer fielmente su autoridad.",
+          "is_correct": false
+        },
+        {
+          "text": "respetar los derechos de los partidos polticos.",
+          "is_correct": false
+        },
+        {
+          "text": "guardar y hacer guardar la Constitucin y los tratados y convenios que Espaa suscriba, especialmente con las naciones de su comunidad histrica.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Rey, al ser proclamado ante las Cortes Generales, prestar juramento. Seale cul de las siguientes afirmaciones se recoge en el artculo 61 CE como parte de ese juramento regio:",
+      "source": "4 TEST TEMA 4 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La renuncia al trono requerir:",
+      "options": [
+        {
+          "text": "Ley Orgnica.",
+          "is_correct": false
+        },
+        {
+          "text": "Acuerdo de las CCGG.",
+          "is_correct": false
+        },
+        {
+          "text": "Previa autorizacin del Consejo de Ministros.",
+          "is_correct": false
+        },
+        {
+          "text": "Dictamen del Consejo de Estado.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La renuncia al trono requerir:",
+      "source": "4 TEST TEMA 4 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn la Constitucin Espaola, es competencia del Rey:",
+      "options": [
+        {
+          "text": "Refrendar los actos del Presidente de Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Previa autorizacin del Presidente de Gobierno, declarar la guerra y hacer la paz.",
+          "is_correct": false
+        },
+        {
+          "text": "El Alto Patronazgo de las Fuerzas Armadas.",
+          "is_correct": false
+        },
+        {
+          "text": "Sancionar, en el plazo de 15 das, las leyes aprobadas por las CCGG.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn la Constitucin Espaola, es competencia del Rey:",
+      "source": "4 TEST TEMA 4 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta correcta en relacin al Jefe del Estado:",
+      "options": [
+        {
+          "text": "Su ttulo es el de Rey de Espaa y podr utilizar los dems que correspondan a la Corona.",
+          "is_correct": false
+        },
+        {
+          "text": "Nombra y releva libremente a los miembros civiles y militares de su Casa con el refrendo del Presidente del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Recibe de los Presupuestos del Estado una cantidad global para el sostenimiento de su Familia y Casa, que es distribuida por las Cortes Generales.",
+          "is_correct": false
+        },
+        {
+          "text": "Su persona es inviolable, por lo que est sujeta a responsabilidad.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta correcta en relacin al Jefe del Estado:",
+      "source": "4 TEST TEMA 4 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La sucesin en el trono:",
+      "options": [
+        {
+          "text": "Seguir el orden regular de primogenitura y representacin, siendo preferida siempre la lnea anterior a las posteriores; en la misma lnea, el grado ms prximo al ms remoto; en el mismo grado, la persona de ms edad a la de menos y en el mismo sexo, el varn a la mujer.",
+          "is_correct": false
+        },
+        {
+          "text": "Seguir el orden regular de primogenitura y prelacin, siendo preferida siempre la lnea anterior a las posteriores; en la misma lnea, el grado ms prximo al ms remoto; en el mismo grado, la persona de ms edad a la de menos y en el mismo sexo, el varn a la mujer.",
+          "is_correct": false
+        },
+        {
+          "text": "Seguir el orden regular de primogenitura y representacin, siendo preferida siempre la lnea anterior a las posteriores; en la misma lnea, el grado ms prximo al ms remoto; en el mismo grado, el varn a la mujer, y en el mismo sexo, la persona de ms edad a la de menos.",
+          "is_correct": false
+        },
+        {
+          "text": "Seguir el orden regular de primogenitura y prelacin, siendo preferida siempre la lnea anterior a las posteriores; en la misma lnea, el grado ms prximo al ms remoto; en el mismo grado, el varn a la mujer, y en el mismo sexo, la persona de ms edad a la de menos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La sucesin en el trono:",
+      "source": "4 TEST TEMA 4 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con el artculo 60 de la Constitucin Espaola:",
+      "options": [
+        {
+          "text": "El ejercicio de la tutela es compatible con todo cargo o representacin poltica",
+          "is_correct": false
+        },
+        {
+          "text": "En ningn caso podrn acumularse los cargos de Regente y tutor",
+          "is_correct": false
+        },
+        {
+          "text": "Ser tutor del Rey menor la persona que en su testamento hubiese nombrado el Rey difunto, siempre que sea mayor de edad y espaol de nacimiento.",
+          "is_correct": false
+        },
+        {
+          "text": "Si el Rey difunto no hubiese nombrado tutor en su testamento, ser tutor el padre o la madre aunque contraigan nuevas nupcias.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con el artculo 60 de la Constitucin Espaola:",
+      "source": "4 TEST TEMA 4 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En qu supuestos procede el ejercicio de la Regencia?:",
+      "options": [
+        {
+          "text": "Cuando el Rey fuere menor de edad y si el Rey se inhabilitare para el ejercicio de su autoridad y la imposibilidad fuere reconocida por el Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Cuando el Rey fuere menor de edad y si el Rey se inhabilitare para el ejercicio de su autoridad y la imposibilidad fuere reconocida por las Cortes Generales.",
+          "is_correct": false
+        },
+        {
+          "text": "En caso de fallecimiento del Rey, cuando el Rey fuere menor de edad y si el Rey se inhabilitare para el ejercicio de su autoridad y la imposibilidad fuere reconocida por el Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "En caso de fallecimiento del Rey, cuando el Rey fuere menor de edad y si el Rey se inhabilitare para el ejercicio de su autoridad y la imposibilidad fuere reconocida por las Cortes Generales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En qu supuestos procede el ejercicio de la Regencia?:",
+      "source": "4 TEST TEMA 4 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Si el Rey se inhabilitara para el ejercicio de su autoridad y la imposibilidad fuere reconocida por las CCGG, quin entrara a ejercer la Regencia en primer trmino?:",
+      "options": [
+        {
+          "text": "El Prncipe Heredero si fuera mayor de edad.",
+          "is_correct": false
+        },
+        {
+          "text": "El padre o la madre del Rey.",
+          "is_correct": false
+        },
+        {
+          "text": "La persona que designe el Rey siempre que sea espaol de nacimiento y mayor de edad.",
+          "is_correct": false
+        },
+        {
+          "text": "El pariente mayor de edad ms prximo a suceder en el trono.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Si el Rey se inhabilitara para el ejercicio de su autoridad y la imposibilidad fuere reconocida por las CCGG, quin entrara a ejercer la Regencia en primer trmino?:",
+      "source": "4 TEST TEMA 4 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 4,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

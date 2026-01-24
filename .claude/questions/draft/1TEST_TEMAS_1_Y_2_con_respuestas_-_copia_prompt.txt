@@ -1,0 +1,485 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 1TEST TEMAS 1 Y 2 con respuestas - copia.pdf
+**Total preguntas:** 38
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** De acuerdo con el art�culo 17.2 de la CE, �cu�l es la duraci�n m�xima de la
+
+**Opciones:**
+  0. etenci�n preventiva?
+  1. 48 horas.
+  2. El tiempo estrictamente necesario para la realizaci�n de las averiguaciones
+  3. e 72 horas.
+
+---
+
+### Pregunta 2
+
+**Texto:** El art�culo 20.1.d) de la CE reconoce y garantiza el derecho a:
+
+**Opciones:**
+  0. A expresar y difundir libremente los pensamientos, ideas y opiniones mediante
+  1. A comunicar o recibir libremente informaci�n veraz por cualquier medio
+  2. e difusi�n. La ley regular� el derecho a la cl�usula de conciencia y al
+  3. A la libertad de c�tedra.
+
+---
+
+### Pregunta 3
+
+**Texto:** En virtud del art�culo 55.2 de la CE puede suspenderse alguno de los derechos
+
+**Opciones:**
+  0. 17.3
+  1. 18.2
+  2. 20.5
+
+---
+
+### Pregunta 4
+
+**Texto:** Los poderes p�blicos, seg�n el art�culo 41 de la CE, mantendr�n un r�gimen
+
+**Opciones:**
+  0. aso de:
+  1. Incapacidad.
+  2. Desempleo.
+  3. Viudedad.
+
+---
+
+### Pregunta 5
+
+**Texto:** Seg�n afirma el art�culo 25.2 de la CE el condenado a pena de prisi�n que
+
+**Opciones:**
+  0. No gozar� de los derechos del Cap�tulo II del T�tulo I de la CE.
+  1. Gozar� de los derechos del Cap�tulo II del T�tulo I de la CE, excepto de los
+  2. En todo caso tendr� derecho al ejercicio del sufragio activo y pasivo.
+  3. No gozar� de los derechos del T�tulo I de la CE.
+
+---
+
+### Pregunta 6
+
+**Texto:** �Cu�l de los siguientes Derechos no puede suspenderse con la declaraci�n de los
+
+**Opciones:**
+  0. Huelga.
+  1. Libertad de Circulaci�n por el territorio nacional.
+  2. Negociaci�n colectiva laboral.
+  3. Reuni�n.
+
+---
+
+### Pregunta 7
+
+**Texto:** De acuerdo con el art�culo 167 de la Constituci�n espa�ola, aprobada la reforma
+
+**Opciones:**
+  0. onstitucional por las Cortes Generales, ser� sometida a refer�ndum para su
+  1. Se solicita por una d�cima parte de los miembros de cualquiera de las C�maras,
+  2. entro de los diez d�as siguientes a su aprobaci�n.
+  3. Se solicita por una d�cima parte de los miembros de cualquiera de las
+
+---
+
+### Pregunta 8
+
+**Texto:** Est� reservado a Ley Org�nica la regulaci�n de:
+
+**Opciones:**
+  0. El derecho de fundaci�n.
+  1. El derecho a la objeci�n de conciencia.
+  2. El derecho a la protecci�n de la salud.
+  3. El derecho de huelga.
+
+---
+
+### Pregunta 9
+
+**Texto:** Respecto al Defensor del Pueblo, responda la alternativa correcta:
+
+**Opciones:**
+  0. Ser� elegido por el Congreso por un per�odo de 4 a�os.
+  1. Ser� elegido por las Cortes Generales por un per�odo de 4 a�os.
+  2. Ser� elegido por el Congreso por un per�odo de 5 a�os.
+  3. Ser� elegido por las Cortes Generales por un per�odo de 5 a�os.
+
+---
+
+### Pregunta 10
+
+**Texto:** �Cu�l de
+
+**Opciones:**
+  0. El derecho y deber de defender a Espa�a.
+  1. El derecho a la protecci�n de la salud
+  2. El derecho a la libertad de c�tedra.
+  3. El derecho de los trabajadores y empresarios a adoptar medidas de conflicto
+
+---
+
+### Pregunta 11
+
+**Texto:** En el procedimiento ordinario de reforma regulado en el art�culo 167 CE, una vez
+
+**Opciones:**
+  0. Siempre que el texto hubiere obtenido el voto favorable de la mayor�a
+  1. bsoluta del Senado, el Congreso, por mayor�a de dos tercios, podr�
+  2. probar la reforma.
+  3. Siempre que el texto hubiere obtenido el voto favorable de la mayor�a absoluta
+
+---
+
+### Pregunta 12
+
+**Texto:** La declaraci�n del estado de excepci�n corresponde:
+
+**Opciones:**
+  0. Al Congreso a propuesta exclusiva del Gobierno.
+  1. A las Cortes Generales.
+  2. Al Gobierno dando cuenta al Congreso.
+  3. Al Gobierno previa autorizaci�n del Congreso.
+
+---
+
+### Pregunta 13
+
+**Texto:** El Defensor del Pueblo en sus funciones est� auxiliado:
+
+**Opciones:**
+  0. Por tres adjuntos a los cuales nombrar� y separar�, previa conformidad de las
+  1. �maras.
+  2. Por tres adjuntos a los cuales nombrar� y separar�, previa conformidad del
+  3. Por dos adjuntos a los cuales nombrar� y separar�, previa conformidad de
+
+---
+
+### Pregunta 14
+
+**Texto:** La ratificaci�n del principio de reforma regulado en el art�culo 168 CE precisa,
+
+**Opciones:**
+  0. 2/3.
+  1. Mayor�a simple.
+  2. 3/5
+  3. Mayor�a absoluta.
+
+---
+
+### Pregunta 15
+
+**Texto:** Una modificaci�n que afecte al T�tulo Preliminar de la Constituci�n requiere de:
+
+**Opciones:**
+  0. Una aprobaci�n inicial del principio de reforma de tres quintos de cada una de
+  1. Una aprobaci�n inicial del principio de reforma de dos tercios del Congreso de
+  2. Una aprobaci�n inicial del principio de reforma de dos tercios de cada una
+  3. e las C�maras.
+
+---
+
+### Pregunta 16
+
+**Texto:** La iniciativa de reforma constitucional requiere en el Congreso:
+
+**Opciones:**
+  0. Una quinta parte de los diputados o dos grupos parlamentarios.
+  1. Un grupo parlamentario o 25 diputados.
+  2. Dos grupos parlamentarios o 50 diputados.
+  3. Un grupo parlamentario o una quinta parte de los diputados.
+
+---
+
+### Pregunta 17
+
+**Texto:** De acuerdo con la Constituci�n, se�ale cu�l de los siguientes derechos puede ser
+
+**Opciones:**
+  0. El derecho de participaci�n en los asuntos p�blicos.
+  1. El derecho a la propiedad privada.
+  2. El derecho al trabajo.
+  3. El derecho a la negociaci�n colectiva.
+
+---
+
+### Pregunta 18
+
+**Texto:** Conforme establece la Ley Org�nica 4/1981, de 1 de junio, de los estados de
+
+**Opciones:**
+  0. larma, excepci�n y sitio, el estado de excepci�n podr� declararse en caso de:
+  1. Crisis sanitarias
+  2. El normal funcionamiento de las instituciones democr�ticas resulte tan
+  3. Cuando se produzca un acto de fuerza contra la soberan�a o independencia de
+
+---
+
+### Pregunta 19
+
+**Texto:** En los casos de refer�ndum constitucional previstos en los art�culos 167 y 168 de la
+
+**Opciones:**
+  0. E, ser� condici�n previa la comunicaci�n por las Cortes Generales al Presidente
+  1. el Gobierno del proyecto de reforma aprobado que haya de ser objeto de
+  2. onvocatoria dentro del plazo de:
+  3. Sesenta d�as
+
+---
+
+### Pregunta 20
+
+**Texto:** El reconocimiento, el respecto y la protecci�n informar� la legislaci�n positiva, la
+
+**Opciones:**
+  0. Derecho a la educaci�n.
+  1. El derecho a la negociaci�n colectiva.
+  2. El derecho de acceso a la cultura.
+  3. El derecho al trabajo.
+
+---
+
+### Pregunta 21
+
+**Texto:** Conforme al art�culo 13.3 de la CE quedan excluidos de la extradici�n:
+
+**Opciones:**
+  0. Los derechos pol�ticos.
+  1. Lo delitos sexuales.
+  2. Los actos de terrorismo.
+  3. Lo delitos econ�micos.
+
+---
+
+### Pregunta 22
+
+**Texto:** El art�culo 38 de la CE reconoce:
+
+**Opciones:**
+  0. El derecho a la negociaci�n colectiva.
+  1. El deber de trabajar.
+  2. La libertad de empresa.
+  3. El derecho a la propiedad privada.
+
+---
+
+### Pregunta 23
+
+**Texto:** Seg�n establece el art�culo 4 de la Ley Org�nica 2/1980, de 18 de enero, sobre
+
+**Opciones:**
+  0. Durante la vigencia de los estados regulados en el art�culo 116 de la CE.
+  1. Entre los noventa d�as anteriores y los noventa posteriores a la fecha de
+  2. elebraci�n en el territorio a que afecte, de elecciones parlamentarias o
+  3. elebre sea en aplicaci�n de los art�culos 167 y 168 de la CE.
+
+---
+
+### Pregunta 24
+
+**Texto:** Se�ale la respuesta incorrecta en relaci�n al procedimiento de investigaci�n ante el
+
+**Opciones:**
+  0. efensor del Pueblo:
+  1. Se rechazar�n las quejas an�nimas.
+  2. S�lo pueden presentarse por ciudadanos espa�oles.
+  3. No puede iniciarse a instancia de una autoridad administrativa sobre asuntos de
+
+---
+
+### Pregunta 25
+
+**Texto:** Se�ale
+
+**Opciones:**
+  0. onstitucional:
+  1. Puede ser iniciada a instancia de la Asamblea Legislativas y Gobiernos de las
+  2. omunidades Aut�nomas.
+  3. Est� regulado en el T�tulo IX de la CE.
+
+---
+
+### Pregunta 26
+
+**Texto:** La pr�rroga del estado de alarma:
+
+**Opciones:**
+  0. Se declara por el Congreso sin l�mite de tiempo.
+  1. Se declara por el Gobierno previa autorizaci�n de las Cortes Generales.
+  2. No est� contemplada en la CE.
+  3. Requiere autorizaci�n del Congreso de los Diputados.
+
+---
+
+### Pregunta 27
+
+**Texto:** Durante la vigencia del estado de excepci�n el plazo m�ximo de la detenci�n
+
+**Opciones:**
+  0. 72 horas.
+  1. 10 d�as.
+  2. 48 horas.
+  3. 5 d�as
+
+---
+
+### Pregunta 28
+
+**Texto:** Admitida una queja por el Defensor del Pueblo, �ste promover� la oportuna
+
+**Opciones:**
+  0. Quince d�as.
+  1. Diez d�as
+  2. Veinte d�as.
+  3. Un mes
+
+---
+
+### Pregunta 29
+
+**Texto:** En caso de renuncia del Defensor del Pueblo su vacante se declarar�:
+
+**Opciones:**
+  0. Por la Comisi�n mixta Congreso-Senado de relaciones con el Defensor del
+  1. Por los Presidentes del Congreso y del Senado de manera conjunta.
+  2. Por los Plenos de ambas C�maras.
+  3. Por el Presidente del Congreso de los Diputados.
+
+---
+
+### Pregunta 30
+
+**Texto:** En caso de muerte del Defensor del Pueblo:
+
+**Opciones:**
+  0. Cesar�n autom�ticamente los Adjuntos.
+  1. Se iniciar� el procedimiento para el nombramiento de nuevo Defensor del
+  2. El Adjunto Primero ser� nombrado Defensor del Pueblo.
+  3. El Presidente del Senado declarar� la vacante.
+
+---
+
+### Pregunta 31
+
+**Texto:** El refer�ndum previsto en el art�culo 92 de la CE:
+
+**Opciones:**
+  0. Requerir� la previa autorizaci�n del Congreso de los Diputados por
+  1. Ser� convocado por el Presidente del Gobierno.
+  2. Es de car�cter vinculante.
+  3. Se realiza a propuesta del Gobierno.
+
+---
+
+### Pregunta 32
+
+**Texto:** El plazo para presentaci�n de una queja ante el Defensor del pueblo es de:
+
+**Opciones:**
+  0. 6 meses desde la fecha de los hechos objeto de la queja.
+  1. 1 a�o desde la fecha de los hechos objeto de la queja
+  2. 6 meses desde el conocimiento de los hechos objeto de la queja
+  3. 1 a�o desde el conocimiento de los hechos objeto de la queja
+
+---
+
+### Pregunta 33
+
+**Texto:** Indique cual de los siguientes no se encuentra legitimado para iniciar una reforma
+
+**Opciones:**
+  0. onstitucional:
+  1. Gobierno
+  2. Congreso
+  3. Los ciudadanos mediante una iniciativa legislativa popular
+
+---
+
+### Pregunta 34
+
+**Texto:** Seg�n la Constituci�n, mediante ley podr�n regularse los deberes de los
+
+**Opciones:**
+  0. iudadanos en varios supuestos. Indique el no recogido por la Constituci�n:
+  1. Grave riesgo
+  2. Cat�strofe
+  3. Calamidad p�blica
+
+---
+
+### Pregunta 35
+
+**Texto:** El derecho al procedimiento del �habeas corpus� podr� ser suspendido en los
+
+**Opciones:**
+  0. S�lo cuando se declare el estado de sitio
+  1. S�lo cuando se declare el estado de excepci�n
+  2. Cuando se declare tanto el estado de excepci�n como el de sitio
+  3. Este derecho no se puede suspender.
+
+---
+
+### Pregunta 36
+
+**Texto:** La forma pol�tica del estado espa�ol es la monarqu�a parlamentaria seg�n el
+
+**Opciones:**
+  0. rt�culo de la CE:
+  1. 1.1
+  2. 1.3
+  3. 3.1
+
+---
+
+### Pregunta 37
+
+**Texto:** El refer�ndum asociado a la reforma constitucional, es potestativo para la reforma
+
+**Opciones:**
+  0. Se convocar� en el plazo de 60 d�as desde su aprobaci�n y se celebrar� en el
+  1. Se convocar� en el plazo de 30 d�as desde su aprobaci�n y se celebrar� en el
+  2. Se convocar� en el plazo de 30 d�as desde su aprobaci�n y se celebrar� en el
+  3. Se convocar� en el plazo de 15 d�as desde su aprobaci�n y se celebrar� en el
+
+---
+
+### Pregunta 38
+
+**Texto:** C�mo parte del procedimiento constituyente que culminar�a con la entrada en
+
+**Opciones:**
+  0. emocr�ticas en varias d�cadas. Indique la fecha de esas elecciones
+  1. 10 de febrero de 1977
+  2. 20 de mayo de 1977
+  3. 15 de junio de 1977
+
+---

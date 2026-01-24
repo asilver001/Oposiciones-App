@@ -1,0 +1,483 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** Test tema 1.pdf
+**Total preguntas:** 38
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** Se�ale la respuesta INCORRECTA en relaci�n con la Declaraci�n Schuman:
+
+**Opciones:**
+  0. Fue una propuesta del ministro de Asuntos Exteriores franc�s Robert Schuman
+  1. Se pronunci� el 9 de mayo de 1950
+  2. Propon�a situar el conjunto de la producci�n franco-alemana del carb�n y del acero bajo
+  3. Fue favorablemente acogida por Alemania, Francia, Italia, Pa�ses Bajos, Suecia y B�lgica
+
+---
+
+### Pregunta 2
+
+**Texto:** La Comunidad Europea del Carb�n y del Acero expir�:
+
+**Opciones:**
+  0. El 1 de enero de 1958
+  1. El 14 de abril de 1951
+  2. El 23 de julio de 2002
+  3. El 1 de febrero de 2003
+
+---
+
+### Pregunta 3
+
+**Texto:** De acuerdo con el art�culo 3 del Tratado de la Uni�n Europea, NO es un objetivo de
+
+**Opciones:**
+  0. Promover la paz, sus valores y el bienestar de sus pueblos
+  1. Ofrecer a sus ciudadanos un espacio de libertad, seguridad y justicia sin fronteras
+  2. Establecer un mercado interior
+  3. La Uni�n establecer� una uni�n econ�mica y monetaria con las monedas nacionales de
+
+---
+
+### Pregunta 4
+
+**Texto:** Se�ale cu�l de los siguientes pa�ses tiene en la actualidad el estatus de potencialmente
+
+**Opciones:**
+  0. andidato:
+  1. Bosnia y Herzegovina
+  2. Ucrania
+  3. Moldavia
+
+---
+
+### Pregunta 5
+
+**Texto:** En el caso de que un Estado miembro est� en riesgo claro de violar de modo grave
+
+**Opciones:**
+  0. A petici�n del Consejo Europeo
+  1. A propuesta motivada de 1/3 de los Estados miembros o de la Comisi�n
+  2. A propuesta motivada de 1/3 de los Estados miembros, la Comisi�n o el Parlamento
+  3. A propuesta del Consejo
+
+---
+
+### Pregunta 6
+
+**Texto:** De acuerdo con el art�culo 50 del Tratado de la Uni�n Europea, todo Estado
+
+**Opciones:**
+  0. Previa autorizaci�n del Consejo Europeo
+  1. Si as� lo decide, de conformidad con sus normas constitucionales
+  2. No se prev� la posibilidad de que un Estado miembro abandone la Uni�n Europea
+  3. Requerir� aprobaci�n por unanimidad de todos los miembros del Consejo
+
+---
+
+### Pregunta 7
+
+**Texto:** La pol�tica de empleo fue introducida por:
+
+**Opciones:**
+  0. Tratado de �msterdam
+  1. Tratado de Niza
+  2. Tratado de Maastricht
+  3. Tratado de Lisboa
+
+---
+
+### Pregunta 8
+
+**Texto:** Con el Tratado de Corf�, firmado el 24 de junio de 1994, se incorpor� a la Uni�n
+
+**Opciones:**
+  0. Suecia
+  1. Austria
+  2. Finlandia
+
+---
+
+### Pregunta 9
+
+**Texto:** El Tratado de Bruselas, por el que se incorporaron a la entonces Comunidad
+
+**Opciones:**
+  0. El 22 de enero de 1972
+  1. El 1 de enero de 1973
+  2. El 28 de mayo de 1975
+  3. El 1 de enero de 1981
+
+---
+
+### Pregunta 10
+
+**Texto:** Se�ale la respuesta correcta en relaci�n con la ciudadan�a europea:
+
+**Opciones:**
+  0. Sustituye a la nacional
+  1. Se reconoce a todo nacional de un Estado miembro de la Uni�n Europea, as� como a los
+  2. iudadanos de terceros pa�ses residentes en �sta
+  3. Los ciudadanos europeos tienen derecho a la libre circulaci�n y residencia en el territorio
+
+---
+
+### Pregunta 11
+
+**Texto:** Los Estados miembros que deseen instaurar entre s� una cooperaci�n reforzada en
+
+**Opciones:**
+  0. Por el Consejo
+  1. Por el Consejo Europeo
+  2. La a) es correcta y si la cooperaci�n reforzada afecta a la Pol�tica Exterior y de Seguridad
+  3. om�n la autorizar� por unanimidad
+
+---
+
+### Pregunta 12
+
+**Texto:** El Tratado de la Uni�n Europea se estructura:
+
+**Opciones:**
+  0. En 7 partes y 358 art�culos
+  1. En 6 t�tulos y 55 art�culos
+  2. En 6 partes y 358 art�culos
+  3. En 7 t�tulos y 55 art�culos
+
+---
+
+### Pregunta 13
+
+**Texto:** La modificaci�n de la Parte Tercera del Tratado de Funcionamiento de la Uni�n
+
+**Opciones:**
+  0. abo mediante:
+  1. La firma y ratificaci�n de un tratado internacional suscrito por los Estados miembros de
+  2. Una decisi�n del Consejo adoptada por mayor�a cualificada
+  3. Una decisi�n del Consejo Europeo adoptada por unanimidad
+
+---
+
+### Pregunta 14
+
+**Texto:** Podr�n presentar su solicitud de adhesi�n a la Uni�n Europea:
+
+**Opciones:**
+  0. Pa�ses europeos
+  1. Pa�ses que respeten los valores de la Uni�n Europea
+  2. Pa�ses que se comprometan a promover los valores de la Uni�n Europea
+  3. Los pa�ses que cumplan todos los requisitos citados en las respuestas a), b) y c)
+
+---
+
+### Pregunta 15
+
+**Texto:** En el caso de que se produzca una violaci�n grave y persistente de los valores de la
+
+**Opciones:**
+  0. Ser� constatada por unanimidad del Consejo Europeo
+  1. Ser� constatada por mayor�a de 4/5 del Consejo
+  2. Ser� constatada por mayor�a cualificada del Consejo
+  3. Ser� constatada por mayor�a cualificada del Consejo Europeo
+
+---
+
+### Pregunta 16
+
+**Texto:** Indique cu�l de los siguientes Estados miembros se incorpor� a la Uni�n Europea
+
+**Opciones:**
+  0. Espa�a
+  1. Croacia
+  2. Grecia
+
+---
+
+### Pregunta 17
+
+**Texto:** De acuerdo con el art�culo 48 del Tratado de La Uni�n Europea podr� presentar al
+
+**Opciones:**
+  0. onsejo proyectos de revisi�n de los Tratados (SE�ALE LA FALSA):
+  1. El Gobierno de cualquier Estado miembro
+  2. El Parlamento Europeo
+  3. La Comisi�n
+
+---
+
+### Pregunta 18
+
+**Texto:** El Tratado de adhesi�n a la Uni�n Europea de Austria, Finlandia y Suecia entr� en
+
+**Opciones:**
+  0. 24-06-1994
+  1. 01-01-1995
+  2. 16-04-2003
+  3. 01-05-2004
+
+---
+
+### Pregunta 19
+
+**Texto:** Indique cu�l de los siguientes Estados no entr� a formar parte de la Uni�n Europea
+
+**Opciones:**
+  0. Bulgaria
+  1. Rep�blica Checa
+  2. Polonia
+  3. Chipre
+
+---
+
+### Pregunta 20
+
+**Texto:** El Convenio relativo a ciertas instituciones comunes por el que se unificaron los
+
+**Opciones:**
+  0. 25-03-1957
+  1. 01-01-1952
+  2. 01-01-1958
+  3. 23-07-1952
+
+---
+
+### Pregunta 21
+
+**Texto:** El Tratado de Lisboa no fue redactado inicialmente en una de las siguientes lenguas:
+
+**Opciones:**
+  0. Espa�ola
+  1. Eslovena
+  2. Finesa
+  3. Croata
+
+---
+
+### Pregunta 22
+
+**Texto:** De acuerdo con el art�culo 10 del Tratado de la Uni�n Europea, el funcionamiento
+
+**Opciones:**
+  0. e la Uni�n se basa en uno de los siguientes principios:
+  1. Democracia representativa
+  2. Representaci�n participativa
+  3. Participaci�n ciudadana
+
+---
+
+### Pregunta 23
+
+**Texto:** Seg�n el art�culo 10 del TUE, los ciudadanos estar�n directamente representados en
+
+**Opciones:**
+  0. El Consejo.
+  1. El Parlamento Europeo.
+  2. Sus parlamentos nacionales.
+  3. El Comit� de las Regiones.
+
+---
+
+### Pregunta 24
+
+**Texto:** �Ante qui�n presentan los ciudadanos de la Uni�n las propuestas basadas en la
+
+**Opciones:**
+  0. Ante sus parlamentos.
+  1. Ante la Comisi�n.
+  2. Ante el Parlamento Europeo.
+  3. Ante el Consejo y el Parlamento Europeo como colegisladores.
+
+---
+
+### Pregunta 25
+
+**Texto:** �Para cu�l de los siguientes casos se podr� utilizar un procedimiento de revisi�n
+
+**Opciones:**
+  0. Para la reforma de la tercera parte del TFUE, pero sin aumentar las competencias de la
+  1. Para permitir que el Consejo se pronuncie por unanimidad en vez de por mayor�a
+  2. ualificada.
+  3. Para permitir que una materia se regule mediante el procedimiento legislativo especial en
+
+---
+
+### Pregunta 26
+
+**Texto:** Se�ale la cierta en relaci�n con Espa�a:
+
+**Opciones:**
+  0. La firma del Tratado de adhesi�n a las Comunidades Europeas tuvo lugar el 12 de junio
+  1. e 1985
+  2. El 1 de julio de 1986 se incorpor� a la Uni�n Europea
+  3. Espa�a se incorpor� a las Comunidades Europeas a la vez que Portugal y Grecia
+
+---
+
+### Pregunta 27
+
+**Texto:** Se�ale la cierta:
+
+**Opciones:**
+  0. El TUE se concluye para un per�odo de tiempo ilimitado, pero el TFUE tiene una vigencia
+  1. El TFUE se concluye para un per�odo de tiempo ilimitado, pero el TUE tiene una vigencia
+  2. TUE y TFUE se concluyen para un per�odo de tiempo ilimitado.
+  3. Los dos Tratados se concluyen para un per�odo de tiempo limitado.
+
+---
+
+### Pregunta 28
+
+**Texto:** �Puede el Parlamento Europeo autorizar cooperaciones reforzadas?
+
+**Opciones:**
+  0. S�, pero lo tendr� que hacer por � partes de sus miembros.
+  1. S�, pero se precisar� la unanimidad del PE.
+  2. S�, pero siempre que lo haga a propuesta de la Comisi�n.
+  3. No, porque las cooperaciones reforzadas las autoriza el Consejo.
+
+---
+
+### Pregunta 29
+
+**Texto:** Se�ale la cierta sobre los Tratados constitutivos de las Comunidades Europeas.
+
+**Opciones:**
+  0. El Tratado CECA no inclu�a una Comisi�n entre sus instituciones.
+  1. El Tratado CEEA expir� en 2002, tras cincuenta a�os de existencia.
+  2. El Tratado de la CEE fue el primero y m�s importante de los tres tratados originarios.
+  3. El Tratado de la CECA se firm� en Roma el 18-4-51 y los Tratados CEEA y CEE se
+
+---
+
+### Pregunta 30
+
+**Texto:** �Qu� tratado incorpor� la ciudadan�a europea a la normativa de la Uni�n?
+
+**Opciones:**
+  0. Tratado de Maastricht.
+  1. Tratado de �msterdam.
+  2. Tratado de Niza.
+  3. Tratado de Lisboa.
+
+---
+
+### Pregunta 31
+
+**Texto:** �Qu� tratado incorpor� el procedimiento de codecisi�n?
+
+**Opciones:**
+  0. El Acta �nica Europea.
+  1. El Tratado de Maastricht.
+  2. El Tratado de �msterdam.
+  3. El Tratado de Niza.
+
+---
+
+### Pregunta 32
+
+**Texto:** �Qu� se regula en la tercera parte del TFUE?:
+
+**Opciones:**
+  0. Las disposiciones institucionales y financieras.
+  1. Las pol�ticas y acciones internas de la Uni�n.
+  2. La acci�n exterior de la Uni�n.
+  3. Los principios de la Uni�n Europea.
+
+---
+
+### Pregunta 33
+
+**Texto:** Se�ale la cierta sobre el Tratado de Maastricht:
+
+**Opciones:**
+  0. Crea la Comunidad Europea de la Energ�a At�mica.
+  1. Crea el Comit� de las Regiones.
+  2. Establece el procedimiento de retirada de la Uni�n.
+  3. Crea la iniciativa ciudadana europea.
+
+---
+
+### Pregunta 34
+
+**Texto:** �Qu� aportaci�n se puede atribuir al Tratado de Niza?
+
+**Opciones:**
+  0. Crea la pol�tica de empleo.
+  1. Da carta de naturaleza a Eurojust.
+  2. Crea la figura del Defensor del Pueblo Europeo.
+  3. La creaci�n del procedimiento de dictamen conforme.
+
+---
+
+### Pregunta 35
+
+**Texto:** Se�ale la afirmaci�n FALSA.
+
+**Opciones:**
+  0. La CEEA ten�a y tiene personalidad jur�dica.
+  1. La Uni�n Europea siempre ha tenido personalidad jur�dica.
+  2. La CEE mientras existi� tuvo personalidad jur�dica.
+  3. La CECA mientras existi� tuvo personalidad jur�dica.
+
+---
+
+### Pregunta 36
+
+**Texto:** �Se puede incorporar un nuevo pa�s a la Uni�n Europea sin la unanimidad de los
+
+**Opciones:**
+  0. No.
+  1. S�, si la propuesta proviene del Consejo Europeo por consenso.
+  2. S�, pero lo han de aprobar al menos 4/5 partes de sus miembros.
+  3. S�, si lo acuerda el Consejo Europeo por consenso
+
+---
+
+### Pregunta 37
+
+**Texto:** �C�mo se denominan las condiciones de adhesi�n?:
+
+**Opciones:**
+  0. Criterios de Maastricht.
+  1. Criterios de Copenhague
+  2. Criterios de Dinamarca.
+
+---
+
+### Pregunta 38
+
+**Texto:** �Qu� pa�s no se incorpor� a la Uni�n Europea en mayo de 2004?
+
+**Opciones:**
+  0. Hungr�a.
+  1. Rep�blica Checa.
+  2. Ruman�a.
+  3. Chipre
+
+---

@@ -1,0 +1,390 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 7.- TEST GF 24-25 Gastos capítulos.pdf
+**Total preguntas:** 30
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** �Qu� gastos de car�cter inmaterial se presupuestan en el cap�tulo 2?
+
+**Opciones:**
+  0. Los arrendamientos sin opci�n a compra.
+  1. La adquisici�n de propiedad intelectual.
+  2. Los que puedan tener car�cter reiterativo, no sean susceptibles de amortizaci�n y est�n
+  3. Las indemnizaciones por destino en el extranjero.
+
+---
+
+### Pregunta 2
+
+**Texto:** Se�ale la afirmaci�n INCORRECTA en relaci�n con la imputaci�n al presupuesto de los
+
+**Opciones:**
+  0. Los gastos de transporte devengados por un funcionario en comisi�n de servicios que
+  1. La adquisici�n de elementos de transporte se imputa al art�culo 23 �Transportes�.
+  2. Los gastos por seguros de veh�culos, edificios y locales se imputan al concepto 224
+  3. La distribuci�n de vales de comidas al personal se imputa al cap�tulo 1.
+
+---
+
+### Pregunta 3
+
+**Texto:** Los honorarios que recibe el personal al servicio de la Administraci�n P�blica por la
+
+**Opciones:**
+  0. Subconcepto 162.00 Formaci�n y perfeccionamiento del personal.
+  1. Subconcepto 226.06 Reuniones, conferencias y cursos.
+  2. Art�culo 23 Indemnizaciones por raz�n del servicio.
+  3. Concepto 150 Gratificaciones.
+
+---
+
+### Pregunta 4
+
+**Texto:** �Cu�l de los siguientes gastos NO se imputa al concepto 227 Trabajos realizados por
+
+**Opciones:**
+  0. Gastos de asesor�a t�cnica.
+  1. Dotaci�n de premios
+  2. ontraprestaci�n.
+  3. Otorgamiento de poderes notariales.
+
+---
+
+### Pregunta 5
+
+**Texto:** De acuerdo con el art�culo 31.2 de la Constituci�n, la programaci�n y ejecuci�n del gasto
+
+**Opciones:**
+  0. Eficacia, eficiencia y econom�a.
+  1. Eficacia y sostenibilidad financiera.
+  2. Eficiencia y econom�a.
+  3. Justicia y eficacia.
+
+---
+
+### Pregunta 6
+
+**Texto:** Las grandes reparaciones se imputan al:
+
+**Opciones:**
+  0. En todo caso al art�culo 21 �Reparaciones, mantenimiento y conservaci�n�.
+  1. Al art�culo 61 �Inversi�n de reposici�n en infraestructura y bienes destinados al uso
+  2. Al art�culo 21 �Reparaciones, mantenimiento y conservaci�n� o 63 �Inversi�n de
+  3. En todo caso al art�culo 63 �Inversi�n de reposici�n en infraestructura y bienes destinados
+
+---
+
+### Pregunta 7
+
+**Texto:** Se imputan al cap�tulo 6 del presupuesto de gastos:
+
+**Opciones:**
+  0. Todos los gastos de leasing o arrendamiento financiero con opci�n a compra.
+  1. La adquisici�n de monitores y dispositivos auxiliares de memoria.
+  2. Los paquetes est�ndar de software.
+  3. La adquisici�n de libros y revistas.
+
+---
+
+### Pregunta 8
+
+**Texto:** �Cu�l de los siguientes gastos NO se reflejar� presupuestariamente en el cap�tulo 3 del
+
+**Opciones:**
+  0. Intereses de demora como consecuencia del incumplimiento del pago de las obligaciones,
+  1. Intereses de deuda p�blica emitida.
+  2. Gastos por realizaci�n de transferencias bancarias.
+  3. Intereses de pr�stamos recibidos.
+
+---
+
+### Pregunta 9
+
+**Texto:** Los gastos relativos a seguros se imputan:
+
+**Opciones:**
+  0. En todo caso al subconcepto 162.05 �Seguros�.
+  1. En todo caso al concepto 224 �Seguros�.
+  2. Al subconcepto 162.05 �Seguros� si son seguros de vida, accidente o responsabilidad
+  3. ivil del personal.
+
+---
+
+### Pregunta 10
+
+**Texto:** Los reintegros de pr�stamos recibidos se consideran:
+
+**Opciones:**
+  0. Gastos del cap�tulo 8.
+  1. Gastos del cap�tulo 9.
+  2. Gastos del cap�tulo 3.
+  3. Gastos del cap�tulo 5.
+
+---
+
+### Pregunta 11
+
+**Texto:** El concepto correspondiente al gasto relativo al suministro de energ�a el�ctrica es el:
+
+**Opciones:**
+  0. 120.
+  1. 232.
+  2. 630.
+  3. 221.
+
+---
+
+### Pregunta 12
+
+**Texto:** �A qu� concepto del estado de gastos se imputar�n los gastos destinados a la cobertura
+
+**Opciones:**
+  0. e tasas, contribuciones o impuestos, ya sean estatales, auton�micos o locales?
+  1. 223.
+  2. 224.
+  3. 225.
+
+---
+
+### Pregunta 13
+
+**Texto:** Las tasas y precios p�blicos tienen la consideraci�n de:
+
+**Opciones:**
+  0. Ingresos por operaciones corrientes.
+  1. Ingresos por operaciones de capital.
+  2. Ingresos patrimoniales.
+  3. Ingresos por operaciones financieras.
+
+---
+
+### Pregunta 14
+
+**Texto:** La amortizaci�n de deuda p�blica emitida se imputar� al:
+
+**Opciones:**
+  0. Cap�tulo 8 del estado de ingresos.
+  1. Cap�tulo 8 del estado de gastos.
+  2. Cap�tulo 9 del estado de ingresos.
+  3. Cap�tulo 9 del estado de gastos.
+
+---
+
+### Pregunta 15
+
+**Texto:** �Cu�l de los siguientes gastos ha de imputarse al cap�tulo 4 del presupuesto de gastos?
+
+**Opciones:**
+  0. Una transferencia a una comunidad aut�noma destinada a financiar la construcci�n de un
+  1. La compra de un ordenador.
+  2. Una ayuda estatal destinada a la compra de una vivienda.
+  3. Las cantidades destinadas a las salidas programadas de los reclusos al exterior, como
+
+---
+
+### Pregunta 16
+
+**Texto:** �A qu� art�culo del estado de gastos se imputar�n las retribuciones b�sicas de los
+
+**Opciones:**
+  0. 10.
+  1. 11.
+  2. 12.
+  3. 13.
+
+---
+
+### Pregunta 17
+
+**Texto:** Conforme al art�culo 43 de la Ley 47/2003, de 26 de noviembre, General Presupuestaria,
+
+**Opciones:**
+  0. Cap�tulo.
+  1. Art�culo.
+  2. Concepto.
+  3. Al nivel que corresponda conforme a su concreta clasificaci�n econ�mica.
+
+---
+
+### Pregunta 18
+
+**Texto:** �A qu� art�culo se imputan los gastos realizados en un ejercicio, no materializados en
+
+**Opciones:**
+  0. ctivos, susceptibles de producir sus efectos en varios ejercicios futuros, tales como
+  1. ampa�as de promoci�n de turismo, ferias y exposiciones?
+  2. 60.
+  3. 64.
+
+---
+
+### Pregunta 19
+
+**Texto:** �A qu� concepto presupuestario se imputan los ingresos por intereses derivados de
+
+**Opciones:**
+  0. 399.
+  1. 400.
+  2. 500.
+  3. 800.
+
+---
+
+### Pregunta 20
+
+**Texto:** La diferencia entre el cap�tulo 6 de gastos y el cap�tulo 6 de ingresos se denomina:
+
+**Opciones:**
+  0. Saldo neto de inversiones reales.
+  1. Variaci�n neta de capital.
+  2. Variaci�n neta de inversiones reales.
+  3. Formaci�n bruta de capital.
+
+---
+
+### Pregunta 21
+
+**Texto:** Son transferencias corrientes:
+
+**Opciones:**
+  0. Los pagos, siempre que sean condicionados, efectuados por el Estado, organismos
+  1. ut�nomos, agencias estatales y otros organismos p�blicos con contrapartida directa por
+  2. Los pagos, condicionados o no, efectuados por el Estado, organismos aut�nomos,
+  3. gencias estatales y otros organismos p�blicos con contrapartida directa por parte de los
+
+---
+
+### Pregunta 22
+
+**Texto:** En el presupuesto del Estado, los cr�ditos destinados a atenciones protocolarias y
+
+**Opciones:**
+  0. A nivel de cap�tulo.
+  1. A nivel de art�culo.
+  2. A nivel de concepto.
+  3. Al nivel que corresponda conforme a su concreta clasificaci�n econ�mica.
+
+---
+
+### Pregunta 23
+
+**Texto:** El gasto por pensiones de aquellos funcionarios que se jubilen se imputar� al cap�tulo:
+
+**Opciones:**
+  0. 1 �Gastos de personal�.
+  1. 4 �Transferencias corrientes�.
+  2. 8 �Activos financieros�.
+  3. 9 �Pasivos financieros�.
+
+---
+
+### Pregunta 24
+
+**Texto:** Los gastos por la impresi�n del D.N.I. deben imputarse:
+
+**Opciones:**
+  0. Al subconcepto 220.00 �Material de oficina ordinario no inventariable�.
+  1. Al subconcepto 221.09 �Labores de la F�brica Nacional de la Moneda y Timbre�.
+  2. Al concepto 240 �Gastos de edici�n y distribuci�n�.
+  3. Al subconcepto 226.08 �Gastos reservados�.
+
+---
+
+### Pregunta 25
+
+**Texto:** Las inversiones que tienen por objeto prorrogar la vida �til del bien o poner �ste en un
+
+**Opciones:**
+  0. Inversiones asociadas al funcionamiento operativo de los servicios.
+  1. Inversiones en bienes destinados al uso general.
+  2. Inversiones nuevas.
+  3. Inversiones de reposici�n.
+
+---
+
+### Pregunta 26
+
+**Texto:** La adquisici�n de acciones y participaciones en el sector p�blico se imputa al:
+
+**Opciones:**
+  0. Cap�tulo 4 �Transferencias corrientes�.
+  1. Cap�tulo 7 �Transferencias de capital�.
+  2. Cap�tulo 8 �Activos financieros�.
+  3. Cap�tulo 9 �Pasivos financieros�.
+
+---
+
+### Pregunta 27
+
+**Texto:** Los gastos de reparaci�n de un veh�culo, cuando alargue su vida �til, se imputan al:
+
+**Opciones:**
+  0. Art�culo 21 �Reparaciones, mantenimiento y conservaci�n�.
+  1. Art�culo 60 �Inversi�n nueva en infraestructura y bienes destinados al uso general�.
+  2. Art�culo 61 �Inversi�n de reposici�n en infraestructura y bienes destinados al uso
+  3. Art�culo 63 �Inversi�n de reposici�n asociada al funcionamiento operativo de los
+
+---
+
+### Pregunta 28
+
+**Texto:** �A qu� cap�tulo del Presupuesto de Gastos se imputan las ayudas y actividades de acci�n
+
+**Opciones:**
+  0. Cap�tulo 1 �Gastos de personal�.
+  1. Cap�tulo 2 �Gatos corrientes en bienes y servicios�.
+  2. Cap�tulo 3 �Gastos financieros�.
+  3. Cap�tulo 4 �Transferencias corrientes�.
+
+---
+
+### Pregunta 29
+
+**Texto:** �A qu� cap�tulo del estado de gastos se imputar� la adquisici�n de deuda p�blica?
+
+**Opciones:**
+  0. Cap�tulo 3.
+  1. Cap�tulo 5.
+  2. Cap�tulo 8.
+  3. Cap�tulo 9.
+
+---
+
+### Pregunta 30
+
+**Texto:** C�mo se denominan las cantidades satisfechas peri�dicamente por la cesi�n de un bien,
+
+**Opciones:**
+  0. Arrendamientos inmateriales.
+  1. C�nones.
+  2. Tasas.
+  3. Arrendamientos financieros.
+
+---

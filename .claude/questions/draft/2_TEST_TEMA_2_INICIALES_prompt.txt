@@ -1,0 +1,510 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 2 TEST TEMA 2 INICIALES.pdf
+**Total preguntas:** 40
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** De acuerdo con el art�culo 17.2 de la Constituci�n, la detenci�n preventiva tendr� la siguiente
+
+**Opciones:**
+  0. uraci�n:
+  1. El tiempo estrictamente necesario para la realizaci�n de las averiguaciones tendentes al
+  2. 48 horas.
+  3. 72 horas.
+
+---
+
+### Pregunta 2
+
+**Texto:** Sobre el derecho de reuni�n responda la afirmaci�n correcta:
+
+**Opciones:**
+  0. Precisa de autorizaci�n previa.
+  1. No puede ser objeto de recurso de amparo.
+  2. Su desarrollo legislativo se efect�a por Ley Org�nica.
+  3. Es un principio rector de la pol�tica social y econ�mica.
+
+---
+
+### Pregunta 3
+
+**Texto:** El derecho a la objeci�n de conciencia sobre el servicio militar:
+
+**Opciones:**
+  0. Se regula en el art�culo 31 de la Constituci�n.
+  1. Podr� ser objeto de recurso de amparo.
+  2. Su desarrollo normativo se efectuar� por ley org�nica.
+  3. Es un derecho fundamental regulado en la Secci�n I, del Cap�tulo II del T�tulo I.
+
+---
+
+### Pregunta 4
+
+**Texto:** Se incluye entre los principios rectores de la pol�tica social y econ�mica, cuyo reconocimiento, respeto
+
+**Opciones:**
+  0. El derecho de fundaci�n para fines de inter�s general.
+  1. El derecho a disfrutar de un medio ambiente adecuado para el desarrollo de la persona, as� como el
+  2. eber de conservarlo.
+  3. El derecho a la propiedad privada y a la herencia.
+
+---
+
+### Pregunta 5
+
+**Texto:** Sobre el contenido de las Resoluciones del Defensor del Pueblo se�ale cu�l de las siguientes
+
+**Opciones:**
+  0. firmaciones no es correcta:
+  1. Si como consecuencia de sus investigaciones llegase al convencimiento de que el cumplimiento
+  2. Est� legitimado para interponer recurso de inconstitucionalidad.
+  3. ARCELONA
+
+---
+
+### Pregunta 6
+
+**Texto:** El Defensor del Pueblo:
+
+**Opciones:**
+  0. Es designado por el Gobierno de la naci�n, al que dar� cuenta.
+  1. Es designado por el Rey, dando cuenta de su actividad a las Cortes Generales.
+  2. Es designado por el Congreso de los Diputados, dando cuenta de su actividad al Rey.
+  3. Es designado por las Cortes Generales, a las que dar� cuenta.
+
+---
+
+### Pregunta 7
+
+**Texto:** El derecho de un hijo menor de edad a ser asistido en todos los �rdenes por sus padres:
+
+**Opciones:**
+  0. Podr� ser recabado a trav�s del procedimiento basado en los principios de preferencia y
+  1. Podr� ser recabado a trav�s del recurso de amparo.
+  2. Informar� la legislaci�n positiva y la pr�ctica judicial y la actuaci�n de los poderes p�blicos.
+  3. Podr� ser objeto de suspensi�n durante la vigencia del estado de sitio.
+
+---
+
+### Pregunta 8
+
+**Texto:** Durante la vigencia de los estados de excepci�n y sitio:
+
+**Opciones:**
+  0. El derecho reconocido en el art. 17.3 no podr� suspenderse durante la vigencia del estado de
+  1. El derecho reconocido en el art. 17.3 no podr� suspenderse durante la vigencia del estado de sitio,
+  2. El derecho reconocido en el art. 17.3 podr� suspenderse durante la vigencia de los estados de
+  3. El derecho reconocido en el art. 17.3 no podr� suspenderse durante la vigencia de los estados de
+
+---
+
+### Pregunta 9
+
+**Texto:** �Cu�les de los siguientes derechos pueden suspenderse tanto en supuestos de declaraci�n de estados
+
+**Opciones:**
+  0. e excepci�n y sitio como en investigaciones de bandas armadas o elementos terroristas?:
+  1. El plazo m�ximo de detenci�n preventiva, la inviolabilidad del domicilio y la asistencia de
+  2. bogado al detenido.
+  3. El plazo m�ximo de detenci�n preventiva, la inviolabilidad del domicilio, la asistencia de
+
+---
+
+### Pregunta 10
+
+**Texto:** El plazo para presentar una queja ante el Defensor del Pueblo, ser� como m�ximo:
+
+**Opciones:**
+  0. 1 a�o contado a partir del momento en que tuviera conocimiento de los hechos objeto de la misma.
+  1. 1 a�o desde que se produjeran los hechos objeto de la misma.
+  2. 2 a�os contados a partir del momento en que tuviera conocimiento de los hechos objeto de la
+  3. 2 a�os desde que se produjeran los hechos objeto de la misma.
+
+---
+
+### Pregunta 11
+
+**Texto:** �Cu�l de los siguientes derechos informar� la pr�ctica judicial:
+
+**Opciones:**
+  0. El derecho a la propiedad privada.
+  1. El derecho a un r�gimen p�blico de seguridad social.
+  2. El derecho a la adopci�n de medidas de conflicto colectivo.
+  3. El derecho a crear fundaciones para fines de inter�s general.
+
+---
+
+### Pregunta 12
+
+**Texto:** �Cu�l de los siguientes derechos podr� ser objeto de recurso de amparo ante el Tribunal
+
+**Opciones:**
+  0. onstitucional?:
+  1. El derecho de fundaci�n.
+  2. El derecho de asociaci�n.
+  3. El derecho a la propiedad privada y a la herencia.
+
+---
+
+### Pregunta 13
+
+**Texto:** El Defensor del Pueblo:
+
+**Opciones:**
+  0. Es el Alto Comisionado del Congreso.
+  1. Su �mbito se circunscribe en exclusiva a la defensa de los derechos regulados en la Secci�n 1�.
+  2. ap�tulo II del T�tulo I �Derechos Fundamentales y Libertades P�blicas�.
+  3. Su mandato es de 4 a�os.
+
+---
+
+### Pregunta 14
+
+**Texto:** �Cu�l de los siguientes derechos no puede suspenderse con la declaraci�n de los Estados de
+
+**Opciones:**
+  0. Huelga.
+  1. Libertad de Circulaci�n por el territorio nacional.
+  2. Derecho al Trabajo.
+  3. Pueden suspenderse todos los indicados.
+
+---
+
+### Pregunta 15
+
+**Texto:** En el procedimiento de elecci�n del Defensor del Pueblo, la Ley Org�nica 3/1981 exige que el
+
+**Opciones:**
+  0. ongreso alcance la siguiente mayor�a:
+  1. Mayor�a de 2/3.
+  2. Mayor�a de 3/5.
+  3. Mayor�a absoluta.
+
+---
+
+### Pregunta 16
+
+**Texto:** �Cu�l de los derechos constitucionales podr� suspenderse �nicamente durante la vigencia del estado
+
+**Opciones:**
+  0. e sitio?:
+  1. El plazo m�ximo de detenci�n preventiva regulado en el art�culo 17.2 CE.
+  2. La inviolabilidad del domicilio regulada en el art�culo 18.2 CE.
+  3. La asistencia de abogado al detenido regulada en el art�culo 17.3 CE.
+
+---
+
+### Pregunta 17
+
+**Texto:** Conforme al art�culo 53 de la Constituci�n Espa�ola de 1978, pueden ser objeto de tutela ante los
+
+**Opciones:**
+  0. Las libertades y derechos reconocidos en el Cap�tulo II del T�tulo I de la Constituci�n.
+  1. Las libertades y derechos reconocidos en el Cap�tulo III del T�tulo I de la Constituci�n.
+  2. Las libertades y derechos reconocidos en la Secci�n 2� Cap�tulo II del T�tulo I de la Constituci�n.
+  3. Las libertades y derechos reconocidos en el art�culo 14 y en la Secci�n 1� Cap�tulo II del T�tulo I de
+
+---
+
+### Pregunta 18
+
+**Texto:** Son susceptibles de amparo constitucional:
+
+**Opciones:**
+  0. Los derechos del t�tulo I de la Constituci�n.
+  1. Los derechos del Cap�tulo II del T�tulo I de la Constituci�n.
+  2. Los derechos y libertades reconocidos en los art�culos 14 a 29 de la Constituci�n.
+  3. Los derechos y libertades reconocidos en el art�culo 14, en la secci�n 1� cap�tulo II del t�tulo I y la
+
+---
+
+### Pregunta 19
+
+**Texto:** El cese del Defensor del Pueblo por actuar con notoria negligencia en el cumplimiento de las
+
+**Opciones:**
+  0. Se declarar� por el Presidente del Congreso.
+  1. Se decidir�, por mayor�a de las tres quintas partes de los componentes de cada C�mara.
+  2. Se decidir�, por mayor�a de las dos terceras partes de los componentes de cada C�mara.
+  3. Se declarar� por los Presidentes de ambas C�maras conjuntamente.
+
+---
+
+### Pregunta 20
+
+**Texto:** El Defensor del Pueblo dar� cuenta a las Cortes Generales de la gesti�n realizada, en un informe que
+
+**Opciones:**
+  0. Semestral.
+  1. Trimestral.
+  2. Anual.
+  3. Mensual.
+
+---
+
+### Pregunta 21
+
+**Texto:** El art�culo 29 de la Constituci�n Espa�ola reconoce el siguiente derecho:
+
+**Opciones:**
+  0. La libertad de empresa en el marco de la econom�a de mercado.
+  1. El derecho de petici�n.
+  2. El derecho a la educaci�n.
+  3. El derecho a la negociaci�n colectiva laboral entre los representantes de los trabajadores y
+
+---
+
+### Pregunta 22
+
+**Texto:** El Defensor del Pueblo tiene un mandato de:
+
+**Opciones:**
+  0. 4 a�os pudiendo ser reelegido para un nuevo mandato una sola vez.
+  1. 5 a�os pudiendo ser reelegido para un nuevo mandato una sola vez.
+  2. 4 a�os.
+  3. 5 a�os.
+
+---
+
+### Pregunta 23
+
+**Texto:** �Cu�l de los siguientes derechos est� protegido judicialmente por un procedimiento especial
+
+**Opciones:**
+  0. El derecho y deber de defender a Espa�a.
+  1. El derecho a la protecci�n de la salud.
+  2. El derecho a la libertad de c�tedra.
+  3. El derecho de los trabajadores y empresarios a adoptar medidas de conflicto colectivo.
+
+---
+
+### Pregunta 24
+
+**Texto:** No est� reservado a ley org�nica el desarrollo del siguiente derecho:
+
+**Opciones:**
+  0. El derecho a la propiedad privada.
+  1. El derecho de petici�n.
+  2. El derecho de asociaci�n.
+  3. El derecho de sindicaci�n.
+
+---
+
+### Pregunta 25
+
+**Texto:** Indique c�mo se asegura el reconocimiento, el respecto y la protecci�n de los principios rectores de la
+
+**Opciones:**
+  0. Est�n protegidos mediante el acceso al recurso de amparo.
+  1. No cabe la interposici�n de recurso de amparo, pero es posible la v�a judicial sumaria y preferente.
+  2. Informar�n la legislaci�n positiva, la pr�ctica judicial y la actuaci�n de los poderes p�blicos.
+  3. Est�n sujetos a reserva de Ley Org�nica.
+
+---
+
+### Pregunta 26
+
+**Texto:** El derecho de sindicaci�n:
+
+**Opciones:**
+  0. Queda regulado en el art�culo 37 de la Constituci�n.
+  1. Es objeto de desarrollo mediante ley ordinaria.
+  2. Puede interponerse recurso de amparo para su defensa.
+  3. Puede suspenderse durante la vigencia del estado de sitio.
+
+---
+
+### Pregunta 27
+
+**Texto:** El art�culo 15 de la Constituci�n espa�ola reconoce:
+
+**Opciones:**
+  0. El derecho a la libertad ideol�gica y religiosa.
+  1. El derecho a la vida y a la integridad f�sica y moral.
+  2. El derecho de reuni�n pac�fica y sin armas.
+  3. El derecho al trabajo.
+
+---
+
+### Pregunta 28
+
+**Texto:** Los miembros de las Fuerzas Armadas o de Cuerpos sometidos a disciplina militar, �pueden ejercer
+
+**Opciones:**
+  0. S�, pero solamente a t�tulo individual.
+  1. S�, en las mismas condiciones que los dem�s ciudadanos.
+  2. S�, pero solo pueden hacerlo de forma colectiva.
+  3. No, en ning�n caso.
+
+---
+
+### Pregunta 29
+
+**Texto:** Se proh�ben los Tribunales de Honor, seg�n el art�culo 26 de la Constituci�n Espa�ola:
+
+**Opciones:**
+  0. En el �mbito de la Administraci�n Militar y de las organizaciones profesionales.
+  1. En el �mbito de la Administraci�n de Justicia y de las organizaciones profesionales.
+  2. En el �mbito de la Administraci�n Civil y de las organizaciones profesionales.
+  3. En el �mbito de la Administraci�n Institucional y de las organizaciones profesionales.
+
+---
+
+### Pregunta 30
+
+**Texto:** La igualdad regulada en el art�culo 14 es objeto de las siguientes garant�as (se�ale la falsa):
+
+**Opciones:**
+  0. Recurso de amparo ante el Tribunal Constitucional.
+  1. Desarrollo por Ley ordinaria.
+  2. Tutela a trav�s de un procedimiento basado en los principios de preferencia y sumariedad.
+  3. Procedimiento de reforma agravado (art�culo 168 CE).
+
+---
+
+### Pregunta 31
+
+**Texto:** El art�culo 22 de la Constituci�n:
+
+**Opciones:**
+  0. Reconoce el derecho de asociaci�n y su reforma seguir� los tr�mites del art�culo 167 de la CE.
+  1. Reconoce el derecho de asociaci�n y es objeto de desarrollo mediante ley org�nica.
+  2. Reconoce el derecho de huelga y su reforma seguir� los tr�mites del art�culo 167 de la CE.
+  3. Reconoce el derecho de huelga y es objeto de desarrollo mediante ley org�nica.
+
+---
+
+### Pregunta 32
+
+**Texto:** Siguiendo lo dispuesto en la Constituci�n Espa�ola, es una garant�a com�n a la igualdad regulada en
+
+**Opciones:**
+  0. Procedimiento de reforma agravado regulado en el art�culo 168 CE.
+  1. Recurso de amparo.
+  2. Desarrollo por ley org�nica.
+  3. Las tres garant�as mencionadas se aplican a los derechos de los art�culos 14 y 30.2.
+
+---
+
+### Pregunta 33
+
+**Texto:** Todos los siguientes derechos, menos uno, podr�n ser suspendidos en caso de que se acuerde la
+
+**Opciones:**
+  0. eclaraci�n de estado de excepci�n o de sitio. Se�ale qu� derecho no puede suspenderse:
+  1. Derecho a la inviolabilidad del domicilio.
+  2. Derecho a la libertad y seguridad.
+  3. Derecho al honor.
+
+---
+
+### Pregunta 34
+
+**Texto:** El art. 18.4 de nuestra Constituci�n, de cara a garantizar el honor y la intimidad personal y familiar
+
+**Opciones:**
+  0. e los ciudadanos, y el pleno ejercicio de sus derechos, limita:
+  1. El uso de la libertad de prensa.
+  2. El uso de la libertad de expresi�n.
+  3. El uso de la inform�tica.
+
+---
+
+### Pregunta 35
+
+**Texto:** De conformidad con el art�culo 41 de la CE, los poderes p�blicos deber�n mantener un r�gimen
+
+**Opciones:**
+  0. En caso de desempleo.
+  1. En caso de enfermedad.
+  2. En caso de necesidad econ�mica.
+  3. En caso de crisis econ�mica.
+
+---
+
+### Pregunta 36
+
+**Texto:** El art�culo 24 de la Constituci�n Espa�ola, recoge:
+
+**Opciones:**
+  0. El derecho a obtener la tutela judicial efectiva de jueces y tribunales
+  1. El derecho al honor.
+  2. El derecho de Huelga.
+  3. El derecho a la vida y a la integridad f�sica y moral.
+
+---
+
+### Pregunta 37
+
+**Texto:** �Cu�l de los siguientes derechos es un principio rector de la pol�tica social y econ�mica?:
+
+**Opciones:**
+  0. Derecho a la protecci�n de la salud.
+  1. El derecho de Huelga.
+  2. El derecho al trabajo.
+  3. El derecho de sindicaci�n.
+
+---
+
+### Pregunta 38
+
+**Texto:** El derecho de reuni�n en lugares de tr�nsito p�blico y manifestaciones, requiere seg�n la
+
+**Opciones:**
+  0. onstituci�n
+  1. No est� sujeto a ning�n requisito.
+  2. Est� sujeto a control cuando supere un n�mero de personas, que ser� establecido por ley.
+  3. Requiere comunicaci�n previa a la autoridad.
+
+---
+
+### Pregunta 39
+
+**Texto:** El derecho a entrar y salir libremente de Espa�a se realizar�:
+
+**Opciones:**
+  0. Con las limitaciones establecidas por Orden del Ministro del Interior.
+  1. Con las limitaciones establecidas por Real Decreto.
+  2. Si ninguna limitaci�n.
+  3. En los t�rminos que la ley establezca.
+
+---
+
+### Pregunta 40
+
+**Texto:** �La Administraci�n civil puede imponer sanciones que subsidiariamente impliquen privaci�n de
+
+**Opciones:**
+  0. Si, cuando lo establezca la correspondiente ley org�nica de desarrollo.
+  1. Si, con los requisitos establecidos reglamentariamente.
+  2. No.
+  3. Si.
+
+---

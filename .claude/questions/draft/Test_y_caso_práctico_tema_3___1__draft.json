@@ -1,0 +1,1007 @@
+{
+  "metadata": {
+    "source_file": "Test y caso práctico tema 3. (1).pdf",
+    "source_path": "TEMA Iniciales Administrativo\\Test y caso práctico tema 3. (1).pdf",
+    "tema": 3,
+    "categoria": "administrativo",
+    "extraction_date": "2026-01-15T23:40:53.611578",
+    "reformulation_date": "2026-01-15T23:47:35.821226",
+    "total_questions": 30,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:56.254967",
+    "completed_count": 0,
+    "failed_count": 30
+  },
+  "questions": [
+    {
+      "question_text": "La potestad reglamentaria est atribuida por la CE al:",
+      "options": [
+        {
+          "text": "Congreso de los Diputados, como depositarios de la soberana popular.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Presidente del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Gobierno, segn el artculo 97 de la Constitucin.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Jefe del Estado.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La potestad reglamentaria est atribuida por la CE al:",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las disposiciones del ejecutivo con rango inferior a la ley, se denominan:",
+      "options": [
+        {
+          "text": "Reglamentos.",
+          "is_correct": false
+        },
+        {
+          "text": "Legislacin delegada.",
+          "is_correct": false
+        },
+        {
+          "text": "Decretos legislativos.",
+          "is_correct": false
+        },
+        {
+          "text": "Decretos - Leyes.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las disposiciones del ejecutivo con rango inferior a la ley, se denominan:",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El reglamento es jerrquicamente:",
+      "options": [
+        {
+          "text": "Superior a un Decreto Legislativo.",
+          "is_correct": false
+        },
+        {
+          "text": "Inferior a un Decreto legislativo",
+          "is_correct": false
+        },
+        {
+          "text": "De igual rango que un Decreto-Ley.",
+          "is_correct": false
+        },
+        {
+          "text": "De igual rango que una ley ordinaria.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El reglamento es jerrquicamente:",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las disposiciones del ejecutivo que desarrollan una ley, deben aprobarse,",
+      "options": [
+        {
+          "text": "Por el Consejo de Ministros.",
+          "is_correct": false
+        },
+        {
+          "text": "Por el Presidente del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Por el Ministro de la Presidencia, Relaciones con las Cortes y memoria",
+          "is_correct": false
+        },
+        {
+          "text": "emocrtica.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las disposiciones del ejecutivo que desarrollan una ley, deben aprobarse,",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los reglamentos no podrn regular materias:",
+      "options": [
+        {
+          "text": "Objeto de reserva de ley, ni infringir normas con dicho rango.",
+          "is_correct": false
+        },
+        {
+          "text": "Objeto de reserva de ley orgnica, pero si pueden entrar a regular materias",
+          "is_correct": false
+        },
+        {
+          "text": "Objeto de reserva de ley, ni infringir normas con dicho rango salvo que el",
+          "is_correct": false
+        },
+        {
+          "text": "Materias de reserva reglamentaria.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los reglamentos no podrn regular materias:",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn el artculo 26.5 de la Ley del Gobierno, cuando la propuesta normativa",
+      "options": [
+        {
+          "text": "fecte a materias de organizacin administrativa, rgimen de personal,",
+          "is_correct": false
+        },
+        {
+          "text": "Informe previo del Ministerio de Hacienda y Funcin Pblica.",
+          "is_correct": false
+        },
+        {
+          "text": "Informe favorable del Consejo de Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "No requieren ningn requisito especial.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el artculo 26.5 de la Ley del Gobierno, cuando la propuesta normativa",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La costumbre se aplica:",
+      "options": [
+        {
+          "text": "Al ser una fuente indirecta, siempre que resulte probada.",
+          "is_correct": false
+        },
+        {
+          "text": "Siempre que los Jueces y Tribunales lo consideren conveniente.",
+          "is_correct": false
+        },
+        {
+          "text": "En defecto de ley aplicable, cuando resulte probada y siempre que no sea",
+          "is_correct": false
+        },
+        {
+          "text": "ontraria a la moral o al orden pblico.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La costumbre se aplica:",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Si un reglamento establece la retroactividad de disposiciones sancionadoras",
+      "options": [
+        {
+          "text": "Nulo de pleno derecho, segn establece el artculo 47.2 de la LPACAP.",
+          "is_correct": false
+        },
+        {
+          "text": "Anulable.",
+          "is_correct": false
+        },
+        {
+          "text": "Convalidable por el superior jerrquico de quin dict el reglamento.",
+          "is_correct": false
+        },
+        {
+          "text": "Irregular, pero vlido.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Si un reglamento establece la retroactividad de disposiciones sancionadoras",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Si existe contradiccin entre la CE y un Tratado Internacional:",
+      "options": [
+        {
+          "text": "Ser resulta por el Tribunal de Justicia de la Unin Europea.",
+          "is_correct": false
+        },
+        {
+          "text": "Ser resulto por el Tribunal de la Haya, dependiente de Naciones Unidas.",
+          "is_correct": false
+        },
+        {
+          "text": "Ser apreciada por los Tribunales ordinarios espaoles.",
+          "is_correct": false
+        },
+        {
+          "text": "Deber ser apreciada por el Tribunal Constitucional.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Si existe contradiccin entre la CE y un Tratado Internacional:",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los reglamentos para el desarrollo y ejecucin de las leyes:",
+      "options": [
+        {
+          "text": "Necesitan dictamen del Consejo de Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Necesitan informe vinculante del Ministerio de Presidencia.",
+          "is_correct": false
+        },
+        {
+          "text": "Necesitan aprobacin previa de la Secretara General Tcnica",
+          "is_correct": false
+        },
+        {
+          "text": "Todas son correctas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los reglamentos para el desarrollo y ejecucin de las leyes:",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Es fuente del Derecho Administrativo espaol:",
+      "options": [
+        {
+          "text": "Solamente las leyes y reglamentos.",
+          "is_correct": false
+        },
+        {
+          "text": "El principio de publicidad de normas.",
+          "is_correct": false
+        },
+        {
+          "text": "La Constitucin de los diferentes Estados miembros de la Unin Europea.",
+          "is_correct": false
+        },
+        {
+          "text": "Las sentencias dictadas por la Sala Tercera del Tribunal Supremo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Es fuente del Derecho Administrativo espaol:",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn el artculo 37 de la LPACAP, el principio de inderogabilidad singular",
+      "options": [
+        {
+          "text": "e las disposiciones administrativas de carcter general se formula de la",
+          "is_correct": false
+        },
+        {
+          "text": "Ninguna disposicin administrativa podr vulnerar los preceptos de otra de",
+          "is_correct": false
+        },
+        {
+          "text": "Las disposiciones administrativas se ajustarn al orden de jerarqua que",
+          "is_correct": false
+        },
+        {
+          "text": "Las disposiciones administrativas no podrn vulnerar la Constitucin ni las",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el artculo 37 de la LPACAP, el principio de inderogabilidad singular",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los Reales Decretos del Consejo de Ministros, segn el artculo 24 de la Ley",
+      "options": [
+        {
+          "text": "el Gobierno:",
+          "is_correct": false
+        },
+        {
+          "text": "Pueden establecer tributos.",
+          "is_correct": false
+        },
+        {
+          "text": "Tienen el mismo rango jerrquico que los Reales Decretos del Presidente del",
+          "is_correct": false
+        },
+        {
+          "text": "Regulan, entre otras, las materias reservadas por la Constitucin a las",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los Reales Decretos del Consejo de Ministros, segn el artculo 24 de la Ley",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale cul de los siguientes documentos no deben estar incluido en la",
+      "options": [
+        {
+          "text": "Oportunidad de la propuesta y alternativas de regulacin estudiadas, lo que",
+          "is_correct": false
+        },
+        {
+          "text": "eber incluir una justificacin de la necesidad de la nueva norma frente a la",
+          "is_correct": false
+        },
+        {
+          "text": "lternativa de no aprobar ninguna regulacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Anlisis sobre la adecuacin de la norma propuesta al orden de distribucin",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale cul de los siguientes documentos no deben estar incluido en la",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con el artculo 94 de la Constitucin, para la conclusin por",
+      "options": [
+        {
+          "text": "Tramitar la autorizacin correspondiente ante el Consejo de Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Autorizacin del Congreso de los Diputados.",
+          "is_correct": false
+        },
+        {
+          "text": "Autorizacin del Senado.",
+          "is_correct": false
+        },
+        {
+          "text": "Autorizacin previa de las Cortes Generales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con el artculo 94 de la Constitucin, para la conclusin por",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los principios Generales del Derecho se",
+      "options": [
+        {
+          "text": "plicarn: a) Con preferencia a la ley.",
+          "is_correct": false
+        },
+        {
+          "text": "Slo en el caso de que se encuentren reconocidos en una ley.",
+          "is_correct": false
+        },
+        {
+          "text": "En defecto de ley o costumbre.",
+          "is_correct": false
+        },
+        {
+          "text": "Slo los que se encuentran reconocidos en la Constitucin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los principios Generales del Derecho se",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Contra los actos de aplicacin de los reglamentos ilegales:",
+      "options": [
+        {
+          "text": "Podr interponerse recurso administrativo per saltum directamente ante el",
+          "is_correct": false
+        },
+        {
+          "text": "Podr interponerse recurso administrativo per saltum directamente ante el",
+          "is_correct": false
+        },
+        {
+          "text": "Podr impugnarse directamente en va jurisdiccional dicho acto de aplicacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Podr impugnarse indirectamente en va jurisdiccional dicha disposicin, en",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Contra los actos de aplicacin de los reglamentos ilegales:",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con el artculo 93 de la CE, en cul de los siguientes casos",
+      "options": [
+        {
+          "text": "Tratados en materia de iniciativa legislativa popular.",
+          "is_correct": false
+        },
+        {
+          "text": "Tratados en materia de rgimen electoral.",
+          "is_correct": false
+        },
+        {
+          "text": "Tratados por los que se atribuya a una organizacin o institucin",
+          "is_correct": false
+        },
+        {
+          "text": "Tratados que afecten a la integridad territorial del Estado",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con el artculo 93 de la CE, en cul de los siguientes casos",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn el artculo 24 de la Ley del Gobierno, las disposiciones y",
+      "options": [
+        {
+          "text": "uando la disposicin o resolucin afecte a varios Departamentos revestir",
+          "is_correct": false
+        },
+        {
+          "text": "Orden del Ministro de la Presidencia, dictada a propuesta de los Ministros",
+          "is_correct": false
+        },
+        {
+          "text": "Orden del Ministro de la Presidencia, dictada a propuesta del Ministro de la",
+          "is_correct": false
+        },
+        {
+          "text": "Real Decreto, dictado a propuesta de los Ministros interesados.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el artculo 24 de la Ley del Gobierno, las disposiciones y",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Conforme a lo establecido en la CE, para la denuncia de un Tratado",
+      "options": [
+        {
+          "text": "Se utilizar el procedimiento previsto en el propio Tratado, siendo necesaria",
+          "is_correct": false
+        },
+        {
+          "text": "Se utilizar el mismo procedimiento previsto para su aprobacin, siendo",
+          "is_correct": false
+        },
+        {
+          "text": "Se utilizar el mismo procedimiento previsto para su aprobacin, dando",
+          "is_correct": false
+        },
+        {
+          "text": "uenta a las CCGG.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Conforme a lo establecido en la CE, para la denuncia de un Tratado",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn lo dispuesto en el artculo 24 de la Ley del Gobierno, los reglamentos",
+      "options": [
+        {
+          "text": "1Disposiciones aprobadas por Reales Decretos Legislativos y Reales",
+          "is_correct": false
+        },
+        {
+          "text": "ecretos Leyes. 2Disposiciones aprobadas por RD del Presidente del",
+          "is_correct": false
+        },
+        {
+          "text": "1Disposiciones aprobadas por RD del Presidente del Gobierno o del CM.",
+          "is_correct": false
+        },
+        {
+          "text": "1Disposiciones aprobada por Reales Decretos Legislativos y Reales",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn lo dispuesto en el artculo 24 de la Ley del Gobierno, los reglamentos",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de los siguientes mecanismos de control es aplicable a los",
+      "options": [
+        {
+          "text": "Recurso de inconstitucionalidad.",
+          "is_correct": false
+        },
+        {
+          "text": "Revisin de oficio.",
+          "is_correct": false
+        },
+        {
+          "text": "Recurso de alzada.",
+          "is_correct": false
+        },
+        {
+          "text": "Recurso de reposicin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de los siguientes mecanismos de control es aplicable a los",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale en qu supuesto en materia de Tratados Internacionales, segn el",
+      "options": [
+        {
+          "text": "Los que exigen la previa revisin de la CE.",
+          "is_correct": false
+        },
+        {
+          "text": "Aquellos cuya constitucionalidad ha sido sometida al TC por el Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Los que han sido sometidos a revisin de constitucionalidad por el",
+          "is_correct": false
+        },
+        {
+          "text": "ongreso.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale en qu supuesto en materia de Tratados Internacionales, segn el",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la afirmacin correcta. De conformidad con la Ley del Gobierno:",
+      "options": [
+        {
+          "text": "Las Comisiones Delegadas del Gobierno pueden aprobar Reales Decretos",
+          "is_correct": false
+        },
+        {
+          "text": "Los Reales Decretos son siempre aprobados por el Consejo de Ministros.",
+          "is_correct": false
+        },
+        {
+          "text": "El trmite de audiencia pblica previsto en la elaboracin de reglamentos no",
+          "is_correct": false
+        },
+        {
+          "text": "utoridades del Gobierno.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la afirmacin correcta. De conformidad con la Ley del Gobierno:",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la correcta: La jerarqua entre Reglamentos:",
+      "options": [
+        {
+          "text": "No existe. La jerarqua se plantea entre leyes y reglamentos, pero no entre",
+          "is_correct": false
+        },
+        {
+          "text": "Existe, en este sentido los Reales Decretos-Leyes y los Reales Decretos",
+          "is_correct": false
+        },
+        {
+          "text": "Existe. As las disposiciones aprobadas por RD del Presidente del Gobierno",
+          "is_correct": false
+        },
+        {
+          "text": "Existe. Por ello, las disposiciones aprobadas por Real Decreto son",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la correcta: La jerarqua entre Reglamentos:",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las resoluciones administrativas que vulneren lo establecido en un",
+      "options": [
+        {
+          "text": "Son nulas slo si han sido dictadas si han sido dictadas por rganos de igual o",
+          "is_correct": false
+        },
+        {
+          "text": "Son nulas siempre que hayan sido dictadas por rganos de menor jerarqua y",
+          "is_correct": false
+        },
+        {
+          "text": "nulables si han sido emitidas por rganos de igual jerarqua que el que ha",
+          "is_correct": false
+        },
+        {
+          "text": "ictado el reglamento en cuestin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las resoluciones administrativas que vulneren lo establecido en un",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn el artculo 95 de la CE, la celebracin de un Tratado Internacional que",
+      "options": [
+        {
+          "text": "ontenga estipulaciones contrarias a la CE conllevar:",
+          "is_correct": false
+        },
+        {
+          "text": "La anulacin automtica del Tratado Internacional.",
+          "is_correct": false
+        },
+        {
+          "text": "Que el Gobierno o cualquiera de las Cmaras puedan requerir al TC para que",
+          "is_correct": false
+        },
+        {
+          "text": "eclare si existe o no esa contradiccin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el artculo 95 de la CE, la celebracin de un Tratado Internacional que",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "dificil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Una Orden Ministerial es la forma que adopta:",
+      "options": [
+        {
+          "text": "Un acto o reglamento del Presidente del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Un acuerdo del Consejo de Ministros.",
+          "is_correct": false
+        },
+        {
+          "text": "Un reglamento del Presidente del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Un acto o reglamento de un Ministro.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Una Orden Ministerial es la forma que adopta:",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La Memoria del Anlisis de Impacto Normativo NO deber contener el",
+      "options": [
+        {
+          "text": "Oportunidad de la propuesta y alternativas de regulacin estudiadas.",
+          "is_correct": false
+        },
+        {
+          "text": "Contenido y anlisis jurdico, con referencia al Derecho nacional y de la",
+          "is_correct": false
+        },
+        {
+          "text": "Resumen de las regulaciones que, sobre la materia en concreto, las",
+          "is_correct": false
+        },
+        {
+          "text": "C.AA. han aprobado en sus territorios.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La Memoria del Anlisis de Impacto Normativo NO deber contener el",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La revisin de oficio:",
+      "options": [
+        {
+          "text": "Es un medio para anular los Reglamentos, de oficio por la Administracin o a",
+          "is_correct": false
+        },
+        {
+          "text": "Es un medio que sirve para anular actos, pero no Reglamentos",
+          "is_correct": false
+        },
+        {
+          "text": "Es un medio de anular los Reglamentos nulos y anulables",
+          "is_correct": false
+        },
+        {
+          "text": "Es un medio para anular los Reglamentos, nicamente de oficio por la propia",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La revisin de oficio:",
+      "source": "Test y caso práctico tema 3. (1).pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 3,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

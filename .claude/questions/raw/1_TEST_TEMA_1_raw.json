@@ -1,0 +1,412 @@
+{
+  "metadata": {
+    "source_file": "1 TEST TEMA 1.pdf",
+    "source_path": "1 TEST TEMA 1.pdf",
+    "extraction_date": "2026-01-15T23:39:40.174567",
+    "tema": 1,
+    "categoria": "general",
+    "total_questions": 40
+  },
+  "questions": [
+    {
+      "raw_text": "�Qu� d�a entr� en vigor la Constituci�n Espa�ola de 1978?:",
+      "raw_options": [
+        "El 6 de diciembre de 1978.",
+        "El 27 de diciembre de 1978.",
+        "El 31 de octubre de 1978.",
+        "El 29 de diciembre de 1978."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n la Constituci�n de 1978, la forma pol�tica del Estado espa�ol es:",
+      "raw_options": [
+        "La Monarqu�a.",
+        "La Monarqu�a Limitada.",
+        "La Monarqu�a Constitucional.",
+        "La Monarqu�a Parlamentaria."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Las primeras elecciones democr�ticas celebradas en Espa�a tras la muerte de Franco tuvieron lugar",
+      "raw_options": [
+        "1977",
+        "1975",
+        "1976",
+        "1978"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El refer�ndum en el que se aprob� popularmente la Constituci�n se llev� a efecto el:",
+      "raw_options": [
+        "27 de diciembre de 1978",
+        "6 de diciembre de 1978",
+        "31 de octubre de 1978",
+        "29 de diciembre de 1979"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La Constituci�n de 1978 consta de:",
+      "raw_options": [
+        "Un  pre�mbulo,  169  art�culos,  4  disposiciones  adicionales,  8  disposiciones  transitorias,  1",
+        "isposici�n derogatoria y disposici�n final.",
+        "Un  pre�mbulo,  169  art�culos,  4  disposiciones  adicionales,  8  disposiciones",
+        "isposiciones derogatorias y 1 disposici�n final."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El T�tulo II de la Constituci�n de 1978 est� dedicado a:",
+      "raw_options": [
+        "Las Cortes Generales.",
+        "La Corona.",
+        "Los Derechos y Deberes Fundamentales.",
+        "El Gobierno."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La Constituci�n de 1978 se fundamenta:",
+      "raw_options": [
+        "En la indisoluble unidad de la Naci�n Espa�ola.",
+        "En la solidaridad de todos los espa�oles.",
+        "En la pluralidad de pueblos integrantes de la Naci�n Espa�ola.",
+        "En  el  compromiso  de  unidad  de  todos  los  pueblos  y  nacionalidades  integrantes  de  la  Naci�n"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El T�tulo VII de la Constituci�n Espa�ola se denomina:",
+      "raw_options": [
+        "Econom�a y Hacienda.",
+        "Organizaci�n Territorial del Estado.",
+        "Del Poder Judicial.",
+        "Del Gobierno y de la Administraci�n."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Son valores superiores del ordenamiento, seg�n la Constituci�n Espa�ola de 1978:",
+      "raw_options": [
+        "Libertad, justicia, solidaridad, pluralismo pol�tico.",
+        "Pluralismo pol�tico, solidaridad, igualdad y seguridad jur�dica.",
+        "Legalidad, liberta, igualdad y justicia.",
+        "Pluralismo pol�tico, justicia, libertad e igualdad."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qu� denominaci�n recibe el Cap�tulo III del T�tulo I de la Constituci�n Espa�ola?:",
+      "raw_options": [
+        "�De los principios rectores de la pol�tica social y econ�mica�.",
+        "�De los derechos fundamentales y de las libertades p�blicas�.",
+        "�De los derechos y deberes de los ciudadanos�.",
+        "�Derechos y libertades�."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qu� art�culos de la Constituci�n Espa�ola han sido objeto de reforma?:",
+      "raw_options": [
+        "El 35.",
+        "El 48",
+        "El 13.1, el 137 y el 50",
+        "El 13.2, el 135 y el 49"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Conforme  a  lo  establecido  en  el  art�culo  116  de  la  Constituci�n,  la  declaraci�n  del  estado  de",
+      "raw_options": [
+        "Al Presidente del Gobierno mediante Real Decreto, previa autorizaci�n de las Cortes Generales.",
+        "Al Congreso de los Diputados, a propuesta del Gobierno.",
+        "Al Gobierno mediante Real Decreto, previa autorizaci�n del Congreso.",
+        "Al Rey a propuesta del Presidente del Gobierno."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n el art�culo 1.2 de la Constituci�n, la Soberan�a Nacional reside:",
+      "raw_options": [
+        "En los poderes del Estado.",
+        "En el Rey como Monarca.",
+        "En el pueblo espa�ol.",
+        "En las Cortes Generales."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El T�tulo de la Constituci�n m�s extenso es:",
+      "raw_options": [
+        "El T�tulo VIII �De la organizaci�n territorial del Estado�.",
+        "El T�tulo I �De los derechos y deberes fundamentales�.",
+        "El T�tulo X �De la reforma constitucional�.",
+        "El T�tulo IX �del Tribunal Constitucional�"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qu� d�a fue aprobada por las CCGG la Constituci�n Espa�ola de 1978:",
+      "raw_options": [
+        "El 6 de diciembre de 1978",
+        "El 31 de octubre de 1978.",
+        "El 27 de diciembre de 1978.",
+        "El 29 de diciembre de 1978."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El art�culo 4 de la Constituci�n establece que:",
+      "raw_options": [
+        "El castellano es la lengua espa�ola oficial del Estado.",
+        "La capital del Estado es la villa de Madrid.",
+        "La  bandera  de  Espa�a  est�  formada  por  tres  franjas  horizontales,  roja,  amarilla  y  roja,  siendo  la",
+        "marilla de doble anchura que cada una de las rojas."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "En  relaci�n  con  el  T�tulo  Preliminar  de  la  Constituci�n  Espa�ola  indique  cu�l  de  las  siguientes",
+      "raw_options": [
+        "firmaciones es correcta:",
+        "Se compone de diez art�culos.",
+        "Su reforma de realiza por la v�a del art�culo 167.",
+        "Reconoce  que  los  Estatutos  podr�n  reconocer  banderas  y  ense�as  propias  de  las  Comunidades"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La reforma constitucional del derecho a sindicarse libremente (art�culo 28.1 CE), requiere:",
+      "raw_options": [
+        "Aprobaci�n por mayor�a de tres quintos de cada una de las C�maras.",
+        "Aprobaci�n por mayor�a de dos tercios de cada una de las C�maras.",
+        "Aprobaci�n  por  mayor�a  de  tres  quintos  de  cada  una  de  las  C�maras,  y  si  no  hay  acuerdo,",
+        "probaci�n por Comisi�n paritaria de Diputados y Senadores."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale a qui�n corresponde la iniciativa para la reforma constitucional:",
+      "raw_options": [
+        "Al Presidente del Gobierno y al Congreso.",
+        "Al Gobierno y al Defensor del Pueblo.",
+        "Al Gobierno, al Congreso y al Senado y al pueblo.",
+        "Al  Gobierno,  al  Congreso,  al  Senado  ya  las  Asambleas  Legislativas  de  las  Comunidades"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale la respuesta correcta en relaci�n con la reforma operada en el art�culo 13.2 de la Constituci�n",
+      "raw_options": [
+        "Supuso la ampliaci�n del sufragio pasivo a los extranjeros en las elecciones auton�micas, en virtud",
+        "e lo que, atendiendo a criterios de reciprocidad, pueda establecerse por Tratado o ley.",
+        "La citada reforma exigi� la celebraci�n de refer�ndum preceptivo y vinculante.",
+        "Se tramit� por el procedimiento ordinario de reformar previsto en el art�culo 167 CE."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se pretende reformar el art�culo de la Constituci�n referido a la propiedad privada y a la",
+      "raw_options": [
+        "el citado art�culo:",
+        "La reforma por iniciativa popular exigir� no menos de 500.000 firmas acreditadas.",
+        "Se proceder� a la aprobaci�n del principio de reforma por mayor�a de dos tercios y a la disoluci�n",
+        "Una vez disueltas las Cortes, las C�maras elegidas deber�n ratificar la decisi�n y proceder al"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De acuerdo con su Disposici�n Final, la Constituci�n entr� en vigor:",
+      "raw_options": [
+        "En el momento de la sanci�n real.",
+        "Tras su aprobaci�n por refer�ndum.",
+        "Una vez aprobada por las Cortes Generales.",
+        "El d�a de su publicaci�n en el BOE."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El castellano es la lengua oficial del Estado y, de acuerdo con el T�tulo Preliminar, todos los espa�oles",
+      "raw_options": [
+        "El derecho a conocerla.",
+        "El deber de usarla.",
+        "El deber de conocerla y el derecho a usarla.",
+        "El deber de usarla y el derecho a conocerla."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El art�culo 7 del T�tulo Preliminar de la Constituci�n Espa�ola regula:",
+      "raw_options": [
+        "Los sindicatos de trabajadores y asociaciones empresariales.",
+        "Los partidos pol�ticos.",
+        "Las Fuerzas Armadas.",
+        "La capitalidad del Estado."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Cuando se propusiere la reforma constitucional del derecho de reuni�n reconocido en el art�culo 21,",
+      "raw_options": [
+        "Mayor�a de tres quintos del Congreso y mayor�a absoluta del Senado.",
+        "Mayor�a absoluta de cada C�mara.",
+        "Mayor�a de tres quintos de ambas C�maras.",
+        "Mayor�a de dos tercios de ambas C�maras."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El art�culo 166 CE remite el ejercicio de la iniciativa de reforma a los �rganos previstos en:",
+      "raw_options": [
+        "El art�culo 87 apartado 1 de la Constituci�n Espa�ola.",
+        "El art�culo 87 apartados 1 y 2 de la Constituci�n Espa�ola.",
+        "El art�culo 87 apartados 1, 2 y 3 de la Constituci�n Espa�ola.",
+        "Los art�culos 86 y 87 de la Constituci�n Espa�ola."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "En el procedimiento de reforma ordinaria de la Constituci�n de 1978, contemplado en el Art. 167 de",
+      "raw_options": [
+        "Por 3/5 de cada una de las C�maras y, si no hubiera acuerdo entre ambas, se intentar� obtenerlos",
+        "Por  2/3  de cada  una  de las  C�maras  y,  si no  hubiera  acuerdo  entre  ambas,  se intentar�  obtenerlo",
+        "Por mayor�a absoluta de cada una de las C�maras y, si no hubiera acuerdo entre ambas, se intentar�",
+        "Por acuerdo favorable del Congreso y mayor�a absoluta del Senado y, si no hubiera acuerdo entre"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "En  caso  de  procederse  a  la  reforma  del  art�culo  18  de  la  CE  que  regula  el  derecho  al  honor,  a  la",
+      "raw_options": [
+        "Aprobaci�n del principio de reforma por mayor�a de 3/5 de cada C�mara.",
+        "Refer�ndum facultativo y vinculante, que se celebrar� cuando as� lo soliciten una d�cima pate de",
+        "Aprobaci�n del principio de reforma por mayor�a de 2/3 de cada C�mara y disoluci�n inmediata de",
+        "ortes."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El refer�ndum en caso de reforma agravada de la Constituci�n de 1978:",
+      "raw_options": [
+        "Es facultativo y no vinculante.",
+        "Es facultativo y vinculante.",
+        "Es preceptivo y no vinculante.",
+        "Es preceptivo y vinculante."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qui�n debe solicitar la celebraci�n de refer�ndum en caso de reforma ordinaria de la Constituci�n",
+      "raw_options": [
+        "e 1978?",
+        "La mayor�a absoluta de miembros del Congreso y del Senado.",
+        "1/10 parte de los miembros de cualquier de las C�maras.",
+        "1/5 parte de los miembros de cada una de las C�maras."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qu� plazo establece la Constituci�n de 1978 para solicitar la celebraci�n de refer�ndum en caso de",
+      "raw_options": [
+        "probaci�n de una reforma constitucional del art. 167?:",
+        "Habr� de solicitarse dentro de los 5 d�as siguientes a su aprobaci�n.",
+        "Habr� de solicitarse dentro de los 10 d�as siguientes a su aprobaci�n.",
+        "Habr� de solicitarse dentro de los 15 d�as siguientes a su aprobaci�n."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La iniciativa para la reforma constitucional debe ir suscrita, al menos, en el Congreso por:",
+      "raw_options": [
+        "Mayor�a absoluta de los Diputados.",
+        "50 diputados que pertenezcan a 2 grupos parlamentarios.",
+        "2 grupos parlamentarios o 1/5 de los diputados.",
+        "1 grupo parlamentario o 15 Diputados."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�l/es de los siguientes estados de anomal�a pol�tica regulados en el art�culo 116 CE ser� declarado",
+      "raw_options": [
+        "Los estados de alarma y excepci�n.",
+        "El estado de alarma.",
+        "El estado de excepci�n.",
+        "Los estados de excepci�n y sitio."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "En caso de declaraci�n del estado de alarma, el Gobierno podr� prorrogar el mismo:",
+      "raw_options": [
+        "Previa autorizaci�n de las Cortes Generales.",
+        "Previa autorizaci�n del Congreso.",
+        "Dando cuenta a las Cortes Generales.",
+        "Dando cuenta al Congreso."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El art�culo 169 de la Constituci�n Espa�ola dispone que:",
+      "raw_options": [
+        "No podr� iniciarse la reforma constitucional en tiempo de guerra o de vigencia de algunos de los",
+        "No podr� iniciarse  la reforma  constitucional  en tiempo  de  guerra  o  de  vigencia  de  alguno  de  los",
+        "No podr� aprobarse la reforma constitucional en tiempo de guerra o de vigencia de alguno de los",
+        "No podr� aprobarse la reforma constitucional en tiempo de guerra o de vigencia de algunos de los"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qui�n aprob� la Constituci�n Espa�ola de 1978:",
+      "raw_options": [
+        "El Rey.",
+        "El pueblo espa�ol.",
+        "Las Cortes Generales.",
+        "El Congreso de los Diputados."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�les son los tres T�tulos de la Constituci�n Espa�ola que se subdividen en Cap�tulos?:",
+      "raw_options": [
+        "Preliminar, I y VIII",
+        "I, III y VIII.",
+        "I, V y VII.",
+        "II, IV y VIII."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�De las garant�as de las libertades y derechos fundamentales� es el nombre de un Cap�tulo del T�tulo",
+      "raw_options": [
+        "Primero",
+        "Segundo.",
+        "Tercero",
+        "Cuarto."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El derecho a una vivienda digna (art�culo 47 CE), para la Constituci�n espa�ola:",
+      "raw_options": [
+        "Es un valor superior de nuestro ordenamiento",
+        "Es un derecho fundamental.",
+        "Es un principio rector de la pol�tica social y econ�mica.",
+        "No est� regulado de manera expresa."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El art�culo 2 de la Constituci�n Espa�ola, establece que:",
+      "raw_options": [
+        "La capital del Estado es la villa de Madrid",
+        "La  bandera  de  Espa�a  est�  formada  por  tres  franjas  horizontales,  roja,  amarilla  y  roja,  siendo  la",
+        "marilla de doble anchura que cada una de las rojas",
+        "La  Constituci�n  se  fundamenta  en  la  indisoluble  unidad  de  la  Naci�n  espa�ola,  patria  com�n  e"
+      ],
+      "correct_index": null
+    }
+  ]
+}

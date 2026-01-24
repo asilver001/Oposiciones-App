@@ -1,0 +1,1337 @@
+{
+  "metadata": {
+    "source_file": "Test tema 5.pdf",
+    "source_path": "Test Iniciales UE\\Test tema 5.pdf",
+    "tema": 5,
+    "categoria": "union-europea",
+    "extraction_date": "2026-01-15T23:42:10.415915",
+    "reformulation_date": "2026-01-15T23:47:35.786333",
+    "total_questions": 40,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:56.126577",
+    "completed_count": 0,
+    "failed_count": 40
+  },
+  "questions": [
+    {
+      "question_text": "Seale la FALSA de acuerdo con el artculo 310 del TFUE:",
+      "options": [
+        {
+          "text": "Todos los ingresos y gastos de la Unin debern estar comprendidos en las previsiones",
+          "is_correct": false
+        },
+        {
+          "text": "orrespondientes a cada ejercicio presupuestario y consignados en el presupuesto",
+          "is_correct": false
+        },
+        {
+          "text": "El Parlamento Europeo y el Consejo establecern el presupuesto anual de la Unin con",
+          "is_correct": false
+        },
+        {
+          "text": "rreglo al procedimiento legislativo ordinario",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la FALSA de acuerdo con el artculo 310 del TFUE:",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El presupuesto anual comprender:",
+      "options": [
+        {
+          "text": "Los ingresos y gastos de la Unin, exclusivamente.",
+          "is_correct": false
+        },
+        {
+          "text": "Los ingresos y gastos de la Comunidad Econmica Europea.",
+          "is_correct": false
+        },
+        {
+          "text": "Los ingresos y gastos de la Unin y los de la Comunidad Europea de Energa Atmica",
+          "is_correct": false
+        },
+        {
+          "text": "Los ingresos y gastos de los Estados miembros.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El presupuesto anual comprender:",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cmo se adopta el presupuesto de la Unin?:",
+      "options": [
+        {
+          "text": "Lo adopta el Consejo Europeo, por unanimidad.",
+          "is_correct": false
+        },
+        {
+          "text": "Lo adoptan los Estados miembros, de comn acuerdo.",
+          "is_correct": false
+        },
+        {
+          "text": "Lo adopta el Banco Central Europeo.",
+          "is_correct": false
+        },
+        {
+          "text": "Lo adoptan el Consejo y el Parlamento, sobre un proyecto de la Comisin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cmo se adopta el presupuesto de la Unin?:",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la FALSA, de conformidad con el artculo 311 del TFUE:",
+      "options": [
+        {
+          "text": "La Unin se dotar de los medios necesarios para alcanzar sus objetivos y para llevar a",
+          "is_correct": false
+        },
+        {
+          "text": "abo sus polticas.",
+          "is_correct": false
+        },
+        {
+          "text": "Sin perjuicio del concurso de otros ingresos, el presupuesto ser financiado ntegramente",
+          "is_correct": false
+        },
+        {
+          "text": "on cargo a los recursos propios.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la FALSA, de conformidad con el artculo 311 del TFUE:",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Respecto al Marco Financiero Plurianual, seale la correcta:",
+      "options": [
+        {
+          "text": "El marco financiero plurianual tendr por objeto garantizar la evolucin ordenada de los",
+          "is_correct": false
+        },
+        {
+          "text": "Se establecer para un perodo mnimo de siete aos.",
+          "is_correct": false
+        },
+        {
+          "text": "El presupuesto anual de la Unin respetar el marco financiero plurianual.",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo adoptar con arreglo a un procedimiento legislativo ordinario un reglamento",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Respecto al Marco Financiero Plurianual, seale la correcta:",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Respecto al presupuesto de la Unin:",
+      "options": [
+        {
+          "text": "El ejercicio presupuestario comenzar el 1 de enero y finalizar el 1 de diciembre.",
+          "is_correct": false
+        },
+        {
+          "text": "El Parlamento Europeo y el Consejo Europeo establecern el presupuesto anual de la",
+          "is_correct": false
+        },
+        {
+          "text": "Cada institucin, excepto el Banco Central Europeo, elaborar, antes del 1 de octubre,",
+          "is_correct": false
+        },
+        {
+          "text": "La Comisin presentar el proyecto de presupuesto, a ms tardar el 1 de septiembre del",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Respecto al presupuesto de la Unin:",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cuando en la Unin Europea es preciso realizar acciones plurianuales, se recurre",
+      "options": [
+        {
+          "text": "los crditos disociados, seale la correcta:",
+          "is_correct": false
+        },
+        {
+          "text": "Se dividen en crditos iniciales y crditos definitivos.",
+          "is_correct": false
+        },
+        {
+          "text": "Se dividen en crditos de compromiso y crditos de pago.",
+          "is_correct": false
+        },
+        {
+          "text": "Los crditos de compromiso financiarn los gastos resultantes de la ejecucin de los",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cuando en la Unin Europea es preciso realizar acciones plurianuales, se recurre",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de las siguientes instituciones u rganos NO cuenta con una seccin en el",
+      "options": [
+        {
+          "text": "El Supervisor Europeo de Proteccin de Datos.",
+          "is_correct": false
+        },
+        {
+          "text": "El Defensor del Pueblo.",
+          "is_correct": false
+        },
+        {
+          "text": "El Alto Representante.",
+          "is_correct": false
+        },
+        {
+          "text": "El Servicio Europeo de Accin Exterior.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de las siguientes instituciones u rganos NO cuenta con una seccin en el",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de los siguientes es un recurso propio previsto en la Decisin 2020/2053, del",
+      "options": [
+        {
+          "text": "onsejo?:",
+          "is_correct": false
+        },
+        {
+          "text": "El 0,80 % del IVA recaudado en los Estados miembros.",
+          "is_correct": false
+        },
+        {
+          "text": "Un porcentaje del PIB de los Estados miembros.",
+          "is_correct": false
+        },
+        {
+          "text": "Las cotizaciones sobre el tabaco.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de los siguientes es un recurso propio previsto en la Decisin 2020/2053, del",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la FALSA en relacin con los recursos propios de la Unin:",
+      "options": [
+        {
+          "text": "Sin perjuicio del concurso de otros ingresos, financiarn ntegramente el presupuesto de",
+          "is_correct": false
+        },
+        {
+          "text": "Aparecen regulados en una decisin que se adopta por procedimiento legislativo",
+          "is_correct": false
+        },
+        {
+          "text": "El que ms recaudacin aporta en la actualidad a las arcas comunitarias es el procedente",
+          "is_correct": false
+        },
+        {
+          "text": "e la Renta Nacional Bruta.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la FALSA en relacin con los recursos propios de la Unin:",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con la Decisin 2020/2053:",
+      "options": [
+        {
+          "text": "El importe total de los recursos propios asignados a la Unin para financiar los crditos",
+          "is_correct": false
+        },
+        {
+          "text": "e compromiso anuales no rebasar el 1,46 % de la suma de la RNB de los 27.",
+          "is_correct": false
+        },
+        {
+          "text": "El importe total de los recursos propios asignados a la Unin para financiar los crditos",
+          "is_correct": false
+        },
+        {
+          "text": "e compromiso anuales no rebasar el 1,40 % de la suma de la RNB de los 27.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con la Decisin 2020/2053:",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Sobre el Marco Financiero Plurianual (MFP) es FALSO lo siguiente:",
+      "options": [
+        {
+          "text": "Se regula en el artculo 312 del TFUE.",
+          "is_correct": false
+        },
+        {
+          "text": "Deber cubrir un periodo mnimo de cinco aos.",
+          "is_correct": false
+        },
+        {
+          "text": "Se establece mediante una decisin legislativa.",
+          "is_correct": false
+        },
+        {
+          "text": "Tiene por objeto garantizar la evolucin ordenada de los gastos de la Unin dentro del",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Sobre el Marco Financiero Plurianual (MFP) es FALSO lo siguiente:",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El proyecto de presupuesto anual de la Unin:",
+      "options": [
+        {
+          "text": "Comprende una previsin de ingresos y una previsin de gastos de todas las instituciones",
+          "is_correct": false
+        },
+        {
+          "text": "e la Unin.",
+          "is_correct": false
+        },
+        {
+          "text": "Se presenta antes de 1 de septiembre al Consejo, y antes del 1 de octubre al Parlamento",
+          "is_correct": false
+        },
+        {
+          "text": "Comprende una previsin de ingresos y gastos de las instituciones de la Unin, salvo del",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El proyecto de presupuesto anual de la Unin:",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En cuanto a la elaboracin del presupuesto de la Unin:",
+      "options": [
+        {
+          "text": "El Consejo tiene un plazo de 42 das para adoptar su posicin sobre el proyecto de",
+          "is_correct": false
+        },
+        {
+          "text": "El Comit de Conciliacin dispone de un plazo de 14 das para adoptar un texto conjunto",
+          "is_correct": false
+        },
+        {
+          "text": "El Parlamento Europeo dispone de 21 das para aprobar la posicin del Consejo o",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo y el Parlamento cuentan con 14 das para aprobar el texto conjunto adoptado",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En cuanto a la elaboracin del presupuesto de la Unin:",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu ocurrir cuando el Parlamento Europeo rechace el texto conjunto del Comit",
+      "options": [
+        {
+          "text": "e Conciliacin, y el Consejo lo apruebe?:",
+          "is_correct": false
+        },
+        {
+          "text": "El Parlamento podr, en un plazo de 14 das desde dicho rechazo, decidir por mayora",
+          "is_correct": false
+        },
+        {
+          "text": "e los miembros que lo componen y tres quintas partes de los votos emitidos que",
+          "is_correct": false
+        },
+        {
+          "text": "onfirma la totalidad o parte de las enmiendas que introdujo en el proyecto y el",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu ocurrir cuando el Parlamento Europeo rechace el texto conjunto del Comit",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El presupuesto de la Unin se ejecutar",
+      "options": [
+        {
+          "text": "El Alto Representante y la Comisin.",
+          "is_correct": false
+        },
+        {
+          "text": "El Tribunal de Cuentas y la Comisin.",
+          "is_correct": false
+        },
+        {
+          "text": "El Parlamento Europeo y el Consejo.",
+          "is_correct": false
+        },
+        {
+          "text": "La Comisin y los Estados Miembros.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El presupuesto de la Unin se ejecutar",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cuando haya concluido el procedimiento presupuestario, quin declara que ha",
+      "options": [
+        {
+          "text": "El presidente del Consejo Europeo",
+          "is_correct": false
+        },
+        {
+          "text": "El presidente del Consejo",
+          "is_correct": false
+        },
+        {
+          "text": "El presidente del Parlamento Europeo",
+          "is_correct": false
+        },
+        {
+          "text": "El presidente del Parlamento Europeo junto con el presidente del Consejo",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cuando haya concluido el procedimiento presupuestario, quin declara que ha",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Si al iniciarse un ejercicio presupuestario an no se ha adoptado definitivamente el",
+      "options": [
+        {
+          "text": "Los gastos podrn efectuarse mensualmente por partidas dentro del lmite de la doceava",
+          "is_correct": false
+        },
+        {
+          "text": "Los gastos podrn efectuarse mensualmente por captulos dentro del lmite de la doceava",
+          "is_correct": false
+        },
+        {
+          "text": "Los gastos podrn efectuarse anualmente por captulos dentro del lmite de la doceava",
+          "is_correct": false
+        },
+        {
+          "text": "Los gastos podrn efectuarse mensualmente por captulos dentro del lmite de la doceava",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Si al iniciarse un ejercicio presupuestario an no se ha adoptado definitivamente el",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con el artculo 174 del TFUE, la Unin prestar especial atencin a las",
+      "options": [
+        {
+          "text": "Las regiones de la Repblica Federal de Alemania afectadas por la divisin de Alemania.",
+          "is_correct": false
+        },
+        {
+          "text": "Las regiones ultraperifricas y transnacionales.",
+          "is_correct": false
+        },
+        {
+          "text": "Las zonas afectadas por una transicin poltica",
+          "is_correct": false
+        },
+        {
+          "text": "Las zonas rurales y a las regiones que padecen desventajas naturales o demogrficas",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con el artculo 174 del TFUE, la Unin prestar especial atencin a las",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu fondo estar destinado a contribuir a la correccin de los principales",
+      "options": [
+        {
+          "text": "esequilibrios regionales dentro de la Unin mediante una participacin en el",
+          "is_correct": false
+        },
+        {
+          "text": "esarrollo y en el ajuste estructural de las regiones menos desarrolladas y en la",
+          "is_correct": false
+        },
+        {
+          "text": "El Fondo Social Europeo +.",
+          "is_correct": false
+        },
+        {
+          "text": "El Fondo de Cohesin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu fondo estar destinado a contribuir a la correccin de los principales",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la correcta respecto a los",
+      "options": [
+        {
+          "text": "El objetivo de inversin en empleo y crecimiento en los Estados miembros y las",
+          "is_correct": false
+        },
+        {
+          "text": "El objetivo cooperacin territorial europea o Interreg, ser financiado por el FSE+ y el",
+          "is_correct": false
+        },
+        {
+          "text": "La inversin en empleo y crecimiento en los Estados miembros y las regiones, se",
+          "is_correct": false
+        },
+        {
+          "text": "La cooperacin territorial europea (Interreg), se financia con el FEDER pero tambin",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la correcta respecto a los",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Dentro del objetivo de inversin en empleo y crecimiento, el FEDER prestar",
+      "options": [
+        {
+          "text": "yuda a:",
+          "is_correct": false
+        },
+        {
+          "text": "Las regiones menos desarrolladas, en transicin o las ms desarrolladas.",
+          "is_correct": false
+        },
+        {
+          "text": "Las regiones en transicin cuyo PIB sea inferior al 70% de la media de la UE-27.",
+          "is_correct": false
+        },
+        {
+          "text": "Los Estados miembros cuya RNB sea inferior al 90% de la RNB media de la UE-27.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Dentro del objetivo de inversin en empleo y crecimiento, el FEDER prestar",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de los siguientes NO es uno de los cinco objetivos polticos de la poltica de",
+      "options": [
+        {
+          "text": "ohesin para el periodo 2021-2027?",
+          "is_correct": false
+        },
+        {
+          "text": "Una Europa ms competitiva e inteligente.",
+          "is_correct": false
+        },
+        {
+          "text": "Una Europa ms verde, baja en carbono y resiliente.",
+          "is_correct": false
+        },
+        {
+          "text": "Una Europa ms conectada, mejorando la movilidad.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de los siguientes NO es uno de los cinco objetivos polticos de la poltica de",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu fondo proporciona una contribucin financiera a proyectos en los sectores",
+      "options": [
+        {
+          "text": "el medioambiente y de las redes transeuropeas en materia de infraestructuras del",
+          "is_correct": false
+        },
+        {
+          "text": "El FEDER.",
+          "is_correct": false
+        },
+        {
+          "text": "El Fondo de Cohesin.",
+          "is_correct": false
+        },
+        {
+          "text": "El Fondo de Transicin Justa.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu fondo proporciona una contribucin financiera a proyectos en los sectores",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta FALSA en relacin con el Fondo de Transicin Justa:",
+      "options": [
+        {
+          "text": "Fue creado en 2021, mediante un reglamento aprobado por el procedimiento legislativo",
+          "is_correct": false
+        },
+        {
+          "text": "Apoya el objetivo de inversin en empleo y crecimiento, pero no los cinco objetivos",
+          "is_correct": false
+        },
+        {
+          "text": "Respaldar el objetivo especfico de hacer posible que las regiones y las personas afronten",
+          "is_correct": false
+        },
+        {
+          "text": "limticamente neutra de la Unin de aqu a 2050.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta FALSA en relacin con el Fondo de Transicin Justa:",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las regiones cuyo PIB es equivalente al 82 % del PIB medio de la UE-27:",
+      "options": [
+        {
+          "text": "Se denominan regiones menos desarrolladas y pueden recibir financiacin del FEDER",
+          "is_correct": false
+        },
+        {
+          "text": "Se denominan regiones ms desarrolladas y pueden recibir financiacin del FEDER y",
+          "is_correct": false
+        },
+        {
+          "text": "el FSE+ dentro del objetivo de inversin en empleo y crecimiento.",
+          "is_correct": false
+        },
+        {
+          "text": "Se denominan regiones en transicin y pueden recibir financiacin del FEDER y FSE+",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las regiones cuyo PIB es equivalente al 82 % del PIB medio de la UE-27:",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con el Reglamento 2021/1056, el Fondo de Transicin Justa dar ayuda",
+      "options": [
+        {
+          "text": "La recuperacin tras los daos ocasionados por una catstrofe natural grave.",
+          "is_correct": false
+        },
+        {
+          "text": "Los despidos masivos a causa de cambios ocasionados por la globalizacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Las inversiones en medio ambiente, redes transeuropeas, asistencia tcnica e",
+          "is_correct": false
+        },
+        {
+          "text": "La poblacin,",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con el Reglamento 2021/1056, el Fondo de Transicin Justa dar ayuda",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu organismo concede de prstamos y garantas sin perseguir fines lucrativos?",
+      "options": [
+        {
+          "text": "El Banco Central Europeo.",
+          "is_correct": false
+        },
+        {
+          "text": "El Banco Europeo de Inversiones.",
+          "is_correct": false
+        },
+        {
+          "text": "El Mecanismo de Desarrollo Europeo.",
+          "is_correct": false
+        },
+        {
+          "text": "El Tribunal de Cuentas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu organismo concede de prstamos y garantas sin perseguir fines lucrativos?",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cada cuntos aos y qu institucin presentar un informe al Parlamento",
+      "options": [
+        {
+          "text": "Cada dos aos y el Consejo Europeo",
+          "is_correct": false
+        },
+        {
+          "text": "Cada cinco aos y la Comisin",
+          "is_correct": false
+        },
+        {
+          "text": "Cada tres aos y la Comisin",
+          "is_correct": false
+        },
+        {
+          "text": "Cada seis aos y el Consejo Europeo",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cada cuntos aos y qu institucin presentar un informe al Parlamento",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de los siguientes es un componente del objetivo de cooperacin territorial",
+      "options": [
+        {
+          "text": "La cooperacin martima.",
+          "is_correct": false
+        },
+        {
+          "text": "La cooperacin transnacional.",
+          "is_correct": false
+        },
+        {
+          "text": "La cooperacin continental.",
+          "is_correct": false
+        },
+        {
+          "text": "La cooperacin de las regiones rurales",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de los siguientes es un componente del objetivo de cooperacin territorial",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu es el Next Generation EU?",
+      "options": [
+        {
+          "text": "Un fondo presupuestario con finalidad estructural creado en 2021.",
+          "is_correct": false
+        },
+        {
+          "text": "Un programa de apoyo exclusivo a las empresas del sector sanitario.",
+          "is_correct": false
+        },
+        {
+          "text": "Un instrumento europeo para apoyar la recuperacin tras la crisis de la COVID-19.",
+          "is_correct": false
+        },
+        {
+          "text": "Un instrumento europeo para apoyar la recuperacin de las regiones ms dependientes",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu es el Next Generation EU?",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de las siguientes medidas NO apoya el Next Generation EU?",
+      "options": [
+        {
+          "text": "Medidas para restablecer el empleo y la creacin de puestos de trabajo.",
+          "is_correct": false
+        },
+        {
+          "text": "Medidas de apoyo a empresas no comunitarias.",
+          "is_correct": false
+        },
+        {
+          "text": "Medidas para la investigacin y la innovacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Medidas para garantizar una transicin justa hacia una economa neutra desde el punto",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de las siguientes medidas NO apoya el Next Generation EU?",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cmo se distribuyen las ayudas del instrumento Next Generation EU?",
+      "options": [
+        {
+          "text": "Todas las ayudas se conceden a travs de prstamos reembolsables.",
+          "is_correct": false
+        },
+        {
+          "text": "Todas las ayudas se conceden a travs de subvenciones no reembolsables",
+          "is_correct": false
+        },
+        {
+          "text": "La Comisin y el Consejo decidirn qu parte de las ayudas que reciban es reembolsable",
+          "is_correct": false
+        },
+        {
+          "text": "En torno a 360.000 millones de euros son reembolsables y los restantes 390.000 millones",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cmo se distribuyen las ayudas del instrumento Next Generation EU?",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Ordene de mayor a menor cantidad econmica los mecanismos o instrumentos que",
+      "options": [
+        {
+          "text": "analizan las ayudas del Next Generation EU:",
+          "is_correct": false
+        },
+        {
+          "text": "RescEU, REACT-EU y Mecanismo de Recuperacin y Resiliencia.",
+          "is_correct": false
+        },
+        {
+          "text": "El Mecanismo de Recuperacin y Resiliencia, RescEU y REACT-EU.",
+          "is_correct": false
+        },
+        {
+          "text": "El Mecanismo de Recuperacin y Resiliencia, REACT-EU y RescEU.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Ordene de mayor a menor cantidad econmica los mecanismos o instrumentos que",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cmo se conoce al Reglamento (UE, Euratom) 2020/2092 del Parlamento Europeo",
+      "options": [
+        {
+          "text": "Reglamento del Next Generation.",
+          "is_correct": false
+        },
+        {
+          "text": "Reglamento IPA III.",
+          "is_correct": false
+        },
+        {
+          "text": "Reglamento de condicionalidad.",
+          "is_correct": false
+        },
+        {
+          "text": "Reglamento financiero.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cmo se conoce al Reglamento (UE, Euratom) 2020/2092 del Parlamento Europeo",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Respecto de los principios que rigen el presupuesto de la Unin, seale la correcta:",
+      "options": [
+        {
+          "text": "El principio de transparencia se manifiesta mediante la publicacin del presupuesto en",
+          "is_correct": false
+        },
+        {
+          "text": "El principio de especialidad especifica que los crditos se especializarn por ttulos y",
+          "is_correct": false
+        },
+        {
+          "text": "aptulos y los captulos estarn subdivididos en artculos y partidas.",
+          "is_correct": false
+        },
+        {
+          "text": "El principio de unidad de cuenta implica que la totalidad de los ingresos cubrir la",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Respecto de los principios que rigen el presupuesto de la Unin, seale la correcta:",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la correcta en relacin a los recursos propios:",
+      "options": [
+        {
+          "text": "En el recurso procedente del plstico se aplica un tipo uniforme de 0,30 euros/kg con",
+          "is_correct": false
+        },
+        {
+          "text": "El recurso del IVA consiste en la aplicacin de un tipo uniforme de referencia del 1,30%",
+          "is_correct": false
+        },
+        {
+          "text": "todos los Estados miembros.",
+          "is_correct": false
+        },
+        {
+          "text": "En el recurso RNB se aplica un tipo uniforme del 0,3%, a la suma de las RNB de todos",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la correcta en relacin a los recursos propios:",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Indique la correcta respecto del MFP:",
+      "options": [
+        {
+          "text": "Se establecer para un periodo mnimo de 5 aos.",
+          "is_correct": false
+        },
+        {
+          "text": "En la actualidad cubre el periodo 2023-2030.",
+          "is_correct": false
+        },
+        {
+          "text": "Se regula en el TFUE desde el Tratado de Maastricht.",
+          "is_correct": false
+        },
+        {
+          "text": "Se aprueba por Reglamento del Consejo por mayora cualificada, previa aprobacin del",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Indique la correcta respecto del MFP:",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Indique qu suceder a ms tardar el 1 de octubre:",
+      "options": [
+        {
+          "text": "La Comisin elabora el proyecto de presupuesto y lo remite al Consejo y al Parlamento",
+          "is_correct": false
+        },
+        {
+          "text": "Cada institucin, salvo el BCE, elabora las previsiones de sus gastos y las remite a la",
+          "is_correct": false
+        },
+        {
+          "text": "omisin",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo adopta su posicin y la transmite al Parlamento Europeo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Indique qu suceder a ms tardar el 1 de octubre:",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Reglamento 2020/2093 fija el lmite mximo anual del total del gasto de la Unin",
+      "options": [
+        {
+          "text": "orrecto segn la mayor cantidad asignada:",
+          "is_correct": false
+        },
+        {
+          "text": "Mercado nico, innovacin y economa digital, Migracin y gestin de fronteras,",
+          "is_correct": false
+        },
+        {
+          "text": "Cohesin, resiliencia y valores, Recursos naturales y medio ambiente, Mercado nico,",
+          "is_correct": false
+        },
+        {
+          "text": "Seguridad y defensa, Administracin pblica europea, Migracin y gestin de fronteras",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Reglamento 2020/2093 fija el lmite mximo anual del total del gasto de la Unin",
+      "source": "Test tema 5.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "union-europea",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

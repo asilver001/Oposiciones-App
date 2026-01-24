@@ -1,0 +1,677 @@
+{
+  "metadata": {
+    "source_file": "1. Test Título preliminar.pdf",
+    "source_path": "Test contratos\\1. Test Título preliminar.pdf",
+    "tema": 0,
+    "categoria": "contratos",
+    "extraction_date": "2026-01-15T23:40:59.442751",
+    "reformulation_date": "2026-01-15T23:47:35.529458",
+    "total_questions": 20,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.353899",
+    "completed_count": 0,
+    "failed_count": 20
+  },
+  "questions": [
+    {
+      "question_text": "De conformidad con la ley 9/2017, de 8 de noviembre, de Contratos",
+      "options": [
+        {
+          "text": "el Sector Pblico, por la que se transponen al ordenamiento",
+          "is_correct": false
+        },
+        {
+          "text": "onsejo 2014/23/UE y 2014/24/UE, de 26 de febrero de 2014 ( en",
+          "is_correct": false
+        },
+        {
+          "text": "delante, LCSP), las Entidades Gestoras y Servicios Comunes de la",
+          "is_correct": false
+        },
+        {
+          "text": "Poder adjudicador no Administracin Pblica.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con la ley 9/2017, de 8 de noviembre, de Contratos",
+      "source": "1. Test Título preliminar.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con la LCSP, las Mutuas colaboradoras con la",
+      "options": [
+        {
+          "text": "Poder adjudicador no Administracin Pblica.",
+          "is_correct": false
+        },
+        {
+          "text": "No poder adjudicador.",
+          "is_correct": false
+        },
+        {
+          "text": "Administracin pblica no poder adjudicador.",
+          "is_correct": false
+        },
+        {
+          "text": "Administracin pblica.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con la LCSP, las Mutuas colaboradoras con la",
+      "source": "1. Test Título preliminar.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con la LCSP, un Organismo Autnomo es:",
+      "options": [
+        {
+          "text": "Poder adjudicador no Administracin Pblica.",
+          "is_correct": false
+        },
+        {
+          "text": "No poder adjudicador.",
+          "is_correct": false
+        },
+        {
+          "text": "Administracin pblica no poder adjudicador.",
+          "is_correct": false
+        },
+        {
+          "text": "Administracin pblica.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con la LCSP, un Organismo Autnomo es:",
+      "source": "1. Test Título preliminar.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con la LCSP, seale la respuesta correcta:",
+      "options": [
+        {
+          "text": "Las Administraciones Pblicas no pueden celebrar contratos",
+          "is_correct": false
+        },
+        {
+          "text": "Los",
+          "is_correct": false
+        },
+        {
+          "text": "dministrativos.",
+          "is_correct": false
+        },
+        {
+          "text": "djudicadores",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con la LCSP, seale la respuesta correcta:",
+      "source": "1. Test Título preliminar.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Una entidad pblica empresarial, creada especficamente para",
+      "options": [
+        {
+          "text": "Tiene el carcter de Administracin Pblica, en todo caso.",
+          "is_correct": false
+        },
+        {
+          "text": "Tiene el carcter de poder adjudicador.",
+          "is_correct": false
+        },
+        {
+          "text": "Tiene el carcter de sector pblico administrativo estatal.",
+          "is_correct": false
+        },
+        {
+          "text": "Tiene el carcter de sector pblico, no pudiendo ser poder",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Una entidad pblica empresarial, creada especficamente para",
+      "source": "1. Test Título preliminar.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Quedan excluidos de la aplicacin de la LCSP:",
+      "options": [
+        {
+          "text": "Los acuerdos que celebre el Estado con otros Estados o con otros",
+          "is_correct": false
+        },
+        {
+          "text": "Los contratos de adquisicin de programas informticos a medida.",
+          "is_correct": false
+        },
+        {
+          "text": "Los contratos no sujetos a regulacin armonizada.",
+          "is_correct": false
+        },
+        {
+          "text": "Los contratos privados.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Quedan excluidos de la aplicacin de la LCSP:",
+      "source": "1. Test Título preliminar.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Quedan excluidos de la aplicacin de la LCSP:",
+      "options": [
+        {
+          "text": "La relacin de servicio de los funcionarios pblicos",
+          "is_correct": false
+        },
+        {
+          "text": "Los contratos",
+          "is_correct": false
+        },
+        {
+          "text": "Los arrendamientos de bienes inmuebles.",
+          "is_correct": false
+        },
+        {
+          "text": "Todos los anteriores.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Quedan excluidos de la aplicacin de la LCSP:",
+      "source": "1. Test Título preliminar.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Pueden celebrar contratos de concesin de servicios:",
+      "options": [
+        {
+          "text": "Solo las Administraciones Pblicas.",
+          "is_correct": false
+        },
+        {
+          "text": "Solo los Poderes adjudicadores",
+          "is_correct": false
+        },
+        {
+          "text": "Solo los No Poderes adjudicadores",
+          "is_correct": false
+        },
+        {
+          "text": "Cualquier entidad siempre que sea del sector pblico.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Pueden celebrar contratos de concesin de servicios:",
+      "source": "1. Test Título preliminar.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Se considerar que el concesionario asume un riesgo operacional",
+      "options": [
+        {
+          "text": "uando:",
+          "is_correct": false
+        },
+        {
+          "text": "No est garantizado que, en condiciones normales de",
+          "is_correct": false
+        },
+        {
+          "text": "onsecuencia de la explotacin de las obras que sean objeto de",
+          "is_correct": false
+        },
+        {
+          "text": "No est garantizado que, en condiciones anormales de",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Se considerar que el concesionario asume un riesgo operacional",
+      "source": "1. Test Título preliminar.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con la LCSP, son contratos de suministros:",
+      "options": [
+        {
+          "text": "Los que tengan por objeto la adquisicin y el arrendamiento de",
+          "is_correct": false
+        },
+        {
+          "text": "La a), a excepcin de los contratos de adquisicin de programas",
+          "is_correct": false
+        },
+        {
+          "text": "e ordenador desarrollados a medida, que se considerarn",
+          "is_correct": false
+        },
+        {
+          "text": "ontratos de servicios.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con la LCSP, son contratos de suministros:",
+      "source": "1. Test Título preliminar.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con la LCSP, seale la correcta respecto a los",
+      "options": [
+        {
+          "text": "ontratos mixtos:",
+          "is_correct": false
+        },
+        {
+          "text": "Cuando un contrato mixto comprenda prestaciones propias de dos",
+          "is_correct": false
+        },
+        {
+          "text": "En el caso de los contratos mixtos que comprendan en parte",
+          "is_correct": false
+        },
+        {
+          "text": "En el caso de los contratos mixtos compuestos en parte por",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con la LCSP, seale la correcta respecto a los",
+      "source": "1. Test Título preliminar.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Son contratos sujetos a una regulacin armonizada cuando",
+      "options": [
+        {
+          "text": "elebrados por un poder adjudicador, se trate de:",
+          "is_correct": false
+        },
+        {
+          "text": "Contratos de obras cuyo presupuesto de licitacin sea igual o",
+          "is_correct": false
+        },
+        {
+          "text": "Contratos de concesin de obras cuyo precio de adjudicacin sea",
+          "is_correct": false
+        },
+        {
+          "text": "Contratos de concesin de servicios cuyo valor estimado sea igual",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Son contratos sujetos a una regulacin armonizada cuando",
+      "source": "1. Test Título preliminar.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con la LCSP, los contratos de concesin de",
+      "options": [
+        {
+          "text": "rmonizada:",
+          "is_correct": false
+        },
+        {
+          "text": "En todo caso",
+          "is_correct": false
+        },
+        {
+          "text": "En ningn caso",
+          "is_correct": false
+        },
+        {
+          "text": "Cuando el valor estimado sea igual o superior a 750.0000 euros.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con la LCSP, los contratos de concesin de",
+      "source": "1. Test Título preliminar.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Una entidad gestora pretende licitar un contrato de servicios (que",
+      "options": [
+        {
+          "text": "Tendr la consideracin de contrato administrativo sujeto a",
+          "is_correct": false
+        },
+        {
+          "text": "Tendr la consideracin de contrato privado sujeto a regulacin",
+          "is_correct": false
+        },
+        {
+          "text": "rmonizada.",
+          "is_correct": false
+        },
+        {
+          "text": "Tendr",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Una entidad gestora pretende licitar un contrato de servicios (que",
+      "source": "1. Test Título preliminar.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con",
+      "options": [
+        {
+          "text": "Tendrn la consideracin de contrato administrativo en todo caso.",
+          "is_correct": false
+        },
+        {
+          "text": "Tendrn la consideracin de contrato privado en determinados",
+          "is_correct": false
+        },
+        {
+          "text": "asos.",
+          "is_correct": false
+        },
+        {
+          "text": "Tendrn la consideracin de contrato sujeto a regulacin en todo",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con",
+      "source": "1. Test Título preliminar.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Un contrato de suscripcin a una publicacin peridica celebrado",
+      "options": [
+        {
+          "text": "Tendr carcter de contrato administrativo.",
+          "is_correct": false
+        },
+        {
+          "text": "La a) y tendrn siempre la consideracin de contrato sujeto a",
+          "is_correct": false
+        },
+        {
+          "text": "Tendr carcter privado",
+          "is_correct": false
+        },
+        {
+          "text": "La b) y tendrn siempre la consideracin de contrato sujeto a",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Un contrato de suscripcin a una publicacin peridica celebrado",
+      "source": "1. Test Título preliminar.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Sern competencia del orden",
+      "options": [
+        {
+          "text": "dministrativo:",
+          "is_correct": false
+        },
+        {
+          "text": "Las cuestiones que se susciten en relacin con la preparacin y",
+          "is_correct": false
+        },
+        {
+          "text": "djudicacin de los contratos privados de las Administraciones",
+          "is_correct": false
+        },
+        {
+          "text": "Todas las controversias que se susciten entre las partes en",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Sern competencia del orden",
+      "source": "1. Test Título preliminar.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El orden jurisdiccional civil conocer de:",
+      "options": [
+        {
+          "text": "De las cuestiones referidas a efectos y extincin de los contratos",
+          "is_correct": false
+        },
+        {
+          "text": "arcter de poderes adjudicadores",
+          "is_correct": false
+        },
+        {
+          "text": "De las cuestiones referidas a la preparacin y adjudicacin de los",
+          "is_correct": false
+        },
+        {
+          "text": "ontratos que celebren las entidades del sector pblico que no",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El orden jurisdiccional civil conocer de:",
+      "source": "1. Test Título preliminar.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta correcta:",
+      "options": [
+        {
+          "text": "Un contrato celebrado por un organismo autnomo tendr",
+          "is_correct": false
+        },
+        {
+          "text": "Un contrato celebrado por un poder adjudicador estar siempre",
+          "is_correct": false
+        },
+        {
+          "text": "Un contrato celebrado por un Ministerio tendr siempre el carcter",
+          "is_correct": false
+        },
+        {
+          "text": "e administrativo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta correcta:",
+      "source": "1. Test Título preliminar.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Sern competencia del orden",
+      "options": [
+        {
+          "text": "dministrativo:",
+          "is_correct": false
+        },
+        {
+          "text": "Las relativas a la preparacin y adjudicacin de los contratos",
+          "is_correct": false
+        },
+        {
+          "text": "dministrativos.",
+          "is_correct": false
+        },
+        {
+          "text": "Las relativas a los efectos, modificacin y extincin de los",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Sern competencia del orden",
+      "source": "1. Test Título preliminar.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "contratos-publicos",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

@@ -1,0 +1,412 @@
+{
+  "metadata": {
+    "source_file": "Test tema 2.pdf",
+    "source_path": "Test Iniciales UE\\Test tema 2.pdf",
+    "extraction_date": "2026-01-15T23:42:03.865631",
+    "tema": 2,
+    "categoria": "union-europea",
+    "total_questions": 40
+  },
+  "questions": [
+    {
+      "raw_text": "�Cu�l de las siguientes instituciones fue reconocida como tal m�s tarde en los Tra-",
+      "raw_options": [
+        "El Consejo Europeo",
+        "El Consejo",
+        "La Comisi�n Europea",
+        "El Parlamento Europeo"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El Consejo Europeo estar� compuesto por�",
+      "raw_options": [
+        "Los jefes de Estado o de Gobierno de los Estados miembros, as� como por su presidente",
+        "El presidente de la Comisi�n, el presidente del Consejo Europeo, el presidente del Parla-",
+        "Un ministro y el presidente del Gobierno de cada Estado miembro",
+        "Los jefes de Estado de cada Estado miembro, as� como por su presidente y por el presi-"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale la afirmaci�n correcta sobre el Consejo Europeo:",
+      "raw_options": [
+        "Dar� a la Uni�n los impulsos necesarios para su desarrollo",
+        "Definir� las orientaciones y prioridades pol�ticas generales de la Uni�n",
+        "No ejercer� funci�n legislativa alguna",
+        "Todas son correctas"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�l de las siguientes competencias NO le corresponde al Consejo Europeo?:",
+      "raw_options": [
+        "Elegir al presidente del Consejo Europeo",
+        "Elegir al presidente del Parlamento Europeo",
+        "Nombrar a la Comisi�n",
+        "Nombrar al presidente, al vicepresidente y a los dem�s miembros del Comit� Ejecutivo"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La elecci�n del presidente del Consejo Europeo se realiza:",
+      "raw_options": [
+        "Por mayor�a cualificada del Consejo",
+        "Por mayor�a cualificada del Consejo Europeo",
+        "Por consenso del Consejo Europeo",
+        "Por mayor�a de miembros de la Comisi�n"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El mandato del presidente del Consejo Europeo es de:",
+      "raw_options": [
+        "Cinco a�os",
+        "Dos a�os y medio. Y podr� renovarse una sola vez",
+        "Tres a�os. Y podr� renovarse una sola vez",
+        "Dos a�os y medio. Y puede renovarse indefinidamente"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n el art�culo 15 del TUE, el Consejo Europeo se reunir�:",
+      "raw_options": [
+        "Dos veces por trimestre",
+        "Dos veces por semestre",
+        "Una vez al mes",
+        "La b) es cierta y cuando la situaci�n lo exija el presidente convocar� una reuni�n extra-"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale la FALSA sobre el presidente del Consejo Europeo:",
+      "raw_options": [
+        "Al t�rmino de cada reuni�n del Consejo Europeo, presentar� un informe al Parlamento",
+        "No podr� ejercer mandato nacional alguno",
+        "Asumir�, en su rango y condici�n, la representaci�n exterior de la Uni�n en los asuntos",
+        "e pol�tica exterior y de seguridad com�n, sin perjuicio de las atribuciones del alto repre-"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "En relaci�n con la toma de decisiones del Consejo Europeo es cierto que:",
+      "raw_options": [
+        "Se pronunciar� por mayor�a simple en las cuestiones de procedimiento y para la aproba-",
+        "i�n de su reglamento interno",
+        "La abstenci�n de los miembros  presentes o representados impedir� la adopci�n de los",
+        "cuerdos del Consejo Europeo que requieran unanimidad"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�l de las siguientes decisiones NO la ha de adoptar el Consejo Europeo?:",
+      "raw_options": [
+        "Una decisi�n sobre la composici�n del Parlamento Europeo",
+        "Una decisi�n relativa a las formaciones del Consejo distintas a la de Asuntos Generales",
+        "Una decisi�n relativa a las formaciones del propio Consejo Europeo",
+        "Una decisi�n relativa a la rotaci�n de las presidencias del Consejo"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qui�n presidir� el Consejo de Asuntos Exteriores?:",
+      "raw_options": [
+        "El alto representante de la Uni�n para Asuntos Exteriores y Pol�tica de Seguridad",
+        "El ministro de Asuntos Exteriores del Estado miembro al que le corresponda la presiden-",
+        "ia de turno del Consejo",
+        "El presidente del Consejo Europeo, en su rango y condici�n"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qui�n nombrar� al alto representante de la Uni�n para Asuntos Exteriores y Pol�-",
+      "raw_options": [
+        "La Comisi�n, por mayor�a de miembros, con la aprobaci�n del presidente del Consejo",
+        "El Consejo Europeo, por mayor�a cualificada, con la aprobaci�n del presidente de la Co-",
+        "El Consejo Europeo, por unanimidad, con la aprobaci�n del presidente de la Comisi�n",
+        "El Consejo, por mayor�a cualificada, con la aprobaci�n del presidente de la Comisi�n"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale la FALSA sobre el alto representante de la Uni�n para Asuntos Exteriores y",
+      "raw_options": [
+        "Ser� uno de los vicepresidentes del Consejo",
+        "Se encargar�, dentro de la Comisi�n, de las responsabilidades que incumben a la misma",
+        "cci�n exterior de la Uni�n",
+        "El Consejo Europeo podr� poner fin a su mandato"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Indique cu�l de las siguientes personalidades ostenta en la actualidad la Presidencia",
+      "raw_options": [
+        "el Consejo Europeo:",
+        "Charles Michel",
+        "Antonio Costa",
+        "�rsula von der Leyen"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�l de las siguientes funciones NO figuran entre las que el art�culo 16 del TUE",
+      "raw_options": [
+        "tribuye al Consejo?:",
+        "La funci�n presupuestaria. que ejercer� conjuntamente con el Parlamento Europeo",
+        "Supervisar la aplicaci�n del Derecho de la Uni�n bajo el control del Tribunal de Justicia",
+        "e la Uni�n Europea"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El Consejo estar� compuesto:",
+      "raw_options": [
+        "Por al menos un representante de cada Estado miembro",
+        "Por personas con competencia general y compromiso europeo",
+        "Por personas con rango ministerial, facultadas para comprometer al Gobierno del Estado",
+        "Por personas que ofrezcan absolutas garant�as de independencia en inter�s general de la"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qu� formaci�n del Consejo velar� por la coherencia de los trabajos de las diferen-",
+      "raw_options": [
+        "El Consejo de Asuntos Exteriores",
+        "El Consejo de Justicia y Asuntos de Interior",
+        "El Consejo de Asuntos Generales",
+        "El ECOFIN."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Sobre la toma de decisiones del Consejo, es FALSO que:",
+      "raw_options": [
+        "Se pronunciar� por mayor�a cualificada, excepto cuando los Tratados dispongan otra cosa",
+        "No adopta ninguna decisi�n por unanimidad",
+        "Cuando deba adoptar un acuerdo por mayor�a simple, se pronunciar� por mayor�a de los",
+        "En caso de votaci�n, cada miembro  del Consejo  podr�  votar en representaci�n de uno"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n el art�culo 16 del TUE, la mayor�a cualificada del Consejo se define:",
+      "raw_options": [
+        "Como un m�nimo del 55 por 100 de los miembros del Consejo que incluya al menos a",
+        "e la poblaci�n de la Uni�n, cuando el Consejo act�a a propuesta de la Comisi�n o del",
+        "lto representante de la Uni�n para Asuntos Exteriores y Pol�tica de Seguridad",
+        "Como un m�nimo del 55 por 100 de los miembros del Consejo que incluya al menos a"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�ntos miembros del Consejo como m�nimo han de formar la minor�a de bloqueo",
+      "raw_options": [
+        "Cuatro",
+        "Cinco",
+        "Catorce",
+        "Tres"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�A qu� pa�s le corresponde la presidencia semestral del Consejo en el segundo se-",
+      "raw_options": [
+        "Dinamarca",
+        "Chipre",
+        "Hungr�a",
+        "Polonia"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale la cierta sobre el ECOFIN:",
+      "raw_options": [
+        "Est� formado por los ministros de Econom�a y Hacienda de los Estados miembros de la",
+        "Es el nombre con el que se conoce el Consejo de Asuntos Exteriores",
+        "Es el nombre actual del COREPER",
+        "Es el nombre del Consejo de Asuntos Econ�micos y Financieros"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale la FALSA sobre el COREPER:",
+      "raw_options": [
+        "Se  trata  del  Comit�  de  Representantes  Permanentes  de  los  Gobiernos  de  los  Estados",
+        "Se encarga de preparar los trabajos de la Comisi�n",
+        "El COREPER II se compone de los representantes permanentes",
+        "El COREPER I se compone de los representantes permanentes adjuntos"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n el art�culo 16.8 del TUE, �cu�ndo se reunir� en p�blico el Consejo?:",
+      "raw_options": [
+        "Cuando delibere y vote sobre un proyecto de acto legislativo",
+        "Para las actividades no legislativas",
+        "Siempre se re�ne en p�blico",
+        "Nunca se re�ne en p�blico"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El Consejo  se  reunir�  por  convocatoria  de  su  presidente,  pero  �por  iniciativa  de",
+      "raw_options": [
+        "Por iniciativa del propio presidente del Consejo",
+        "Por iniciativa de uno de los miembros del Consejo",
+        "Por iniciativa de la Comisi�n",
+        "Todas son correctas"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El art�culo 243 del TFUE indica  los  sueldos, dietas y  pensiones que ha de fijar el",
+      "raw_options": [
+        "onsejo. Se�ale de cu�l de los siguientes cargos no fija las citadas retribuciones:",
+        "De los miembros de la Comisi�n Europea",
+        "Del presidente del Consejo Europeo",
+        "De los miembros del propio Consejo"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La Comisi�n que funciona de 2024 a 2029 est� formada por:",
+      "raw_options": [
+        "Un nacional por Estado miembro, m�s el presidente de la Comisi�n y el alto representante",
+        "e la Uni�n para Asuntos Exteriores y Pol�tica de Seguridad",
+        "Un nacional por Estado miembro, incluidos el presidente de la Comisi�n y el alto repre-",
+        "18 miembros, ya que el TUE establece que la Comisi�n tendr� un n�mero de miembros"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�l de las siguientes NO es una competencia de la Comisi�n?:",
+      "raw_options": [
+        "Promover el inter�s general de la Uni�n y tomar las iniciativas adecuadas para este fin",
+        "Velar por que se apliquen los Tratados y las medidas adoptadas por las instituciones en",
+        "Asumir la representaci�n exterior de la Uni�n en el �mbito de la pol�tica exterior y de",
+        "Ejecutar el presupuesto y gestionar los programas"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale la FALSA:",
+      "raw_options": [
+        "Todos los actos jur�dicos de la Uni�n se adoptan a propuesta de la Comisi�n",
+        "El mandato de la Comisi�n ser� de cinco a�os",
+        "Los miembros de la Comisi�n ser�n elegidos en raz�n de su competencia general y de su",
+        "ompromiso europeo"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale la afirmaci�n correcta:",
+      "raw_options": [
+        "Un miembro de la Comisi�n presentar� su dimisi�n si lo solicitan dos tercios de los miem-",
+        "ros de la propia Comisi�n",
+        "El presidente de la Comisi�n podr� decidir excepcionalmente que haya dos miembros de",
+        "El presidente de la Comisi�n nombrar� vicepresidentes de la Comisi�n distintos del alto"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qui�n nombrar� a la Comisi�n?",
+      "raw_options": [
+        "El Consejo Europeo, por mayor�a cualificada.",
+        "El Consejo Europeo, por unanimidad",
+        "El Parlamento Europeo, por mayor�a de miembros que lo componen",
+        "El Consejo Europeo, por consenso"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale la FALSA respecto al proceso de elecci�n y nombramiento de los comisarios:",
+      "raw_options": [
+        "Teniendo en cuenta el resultado de las elecciones al Parlamento Europeo, el Consejo, por",
+        "ente de la Comisi�n",
+        "El Parlamento Europeo elegir� al candidato a presidente de la Comisi�n por mayor�a de",
+        "El Consejo, de com�n acuerdo con  el presidente  electo, adoptar� la lista de las dem�s"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qui�n puede votar una moci�n de censura sobre la gesti�n de la Comisi�n?:",
+      "raw_options": [
+        "El Consejo Europeo",
+        "El Parlamento Europeo",
+        "El Consejo y el Parlamento Europeo, conjuntamente",
+        "El Tribunal de Justicia de la Uni�n Europea"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n el art�culo 246 del TFUE, �qu� ocurre si dimite, cesa o fallece un miembro de",
+      "raw_options": [
+        "Ser� sustituido por el resto de su mandato por un nuevo miembro de la misma nacionali-",
+        "ad.",
+        "El  sustituto  ser� nombrado por  el  Consejo,  de  com�n  acuerdo  con  el  presidente  de  la",
+        "omisi�n y previa consulta al Parlamento Europeo"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n el art�culo 247 del TFUE, en relaci�n con los ceses de miembros de la Comi-",
+      "raw_options": [
+        "Dicho cese puede llevarse a cabo a instancia del Consejo, por mayor�a simple.",
+        "Dicho cese puede llevarse a cabo a instancia del Parlamento Europeo",
+        "Dicho cese puede llevarse a cabo a instancia de la Comisi�n",
+        "El cese se producir� si el miembro de la Comisi�n deja de reunir las condiciones necesa-"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Tras la entrada en vigor del Tratado de Lisboa, las instituciones de la Uni�n son:",
+      "raw_options": [
+        "El Parlamento Europeo, el Consejo Europeo, el Consejo, la Comisi�n y el BCE.",
+        "El Parlamento Europeo, el Consejo Europeo, el Consejo, la Comisi�n, el TJUE, el BCE y",
+        "El Parlamento Europeo, el Consejo de Europa, el Consejo, la Comisi�n, el TJUE, el BCE",
+        "El Parlamento Europeo, el Consejo, la Comisi�n, el TJUE, el Tribunal de Cuentas y el"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n el art�culo 250 del TFUE, los acuerdos de la Comisi�n se adoptar�n�:",
+      "raw_options": [
+        "Por mayor�a cualificada",
+        "Por mayor�a de sus miembros",
+        "Por mayor�a de votos emitidos",
+        "Con al menos la tercera parte de sus miembros a favor"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�De qu� plazo disponen los parlamentos nacionales para analizar los proyectos de",
+      "raw_options": [
+        "ctos legislativos que les remite la Comisi�n y ver si respetan el principio de subsi-",
+        "iariedad?",
+        "Seis semanas",
+        "Un mes"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�En  qu� procedimiento  decisorio  creado  por  el  Tratado de  Maastricht se  basa  el",
+      "raw_options": [
+        "ctual procedimiento legislativo ordinario?",
+        "Procedimiento de cooperaci�n",
+        "Dictamen conforme",
+        "Procedimiento de codecisi�n"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qu� actos jur�dicos se pueden adoptar por el procedimiento legislativo especial y",
+      "raw_options": [
+        "Reglamento, directiva o decisi�n adoptados por la Comisi�n",
+        "Reglamento, directiva  o  decisi�n  adoptados  conjuntamente  por  el  Consejo  y  el  Parla-",
+        "Reglamento, directiva o decisi�n adoptados por el Consejo con la participaci�n del Par-",
+        "Cualquier acto jur�dico se puede adoptar por el procedimiento legislativo especial"
+      ],
+      "correct_index": null
+    }
+  ]
+}

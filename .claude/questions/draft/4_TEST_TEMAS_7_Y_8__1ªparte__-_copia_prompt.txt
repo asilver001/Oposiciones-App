@@ -1,0 +1,474 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 4 TEST TEMAS 7 Y 8 (1ªparte) - copia.pdf
+**Total preguntas:** 37
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** Se�ale cu�les son las Comisiones que integran la organizaci�n del CGPJ:
+
+**Opciones:**
+  0. La Comisi�n Permanente, la Comisi�n Disciplinaria y la Comisi�n de Igualdad.
+  1. La Comisi�n Permanente, la Comisi�n Disciplinaria, la Comisi�n de Asuntos
+  2. La Comisi�n Permanente,
+  3. alificaci�n, la Comisi�n de Asuntos Econ�micos y la Comisi�n de Igualdad ,
+
+---
+
+### Pregunta 2
+
+**Texto:** De acuerdo con el art�culo 122 de la CE 1978, el Consejo General del Poder
+
+**Opciones:**
+  0. El presidente del Tribunal Supremo, que lo presidir�, y por 20 miembros
+  1. bogados y otros juristas, todos ellos de reconocida competencia y con m�s de
+  2. El presidente del Tribunal Supremo, que lo presidir�, y por 20 miembros
+  3. bogados y otros juristas, todos ellos de reconocida competencia y con m�s de
+
+---
+
+### Pregunta 3
+
+**Texto:** La Comisi�n Permanente del CGPJ estar� compuesta por:
+
+**Opciones:**
+  0. El Presidente del Tribunal Supremo y del Consejo General del Poder Judicial,
+  1. e los designados por el turno de juristas de reconocida competencia
+  2. El Presidente del Tribunal Superior de Justicia y del Consejo General del Poder
+  3. ompetencia
+
+---
+
+### Pregunta 4
+
+**Texto:** La Sala de lo Penal de la Audiencia Nacional conocer� (marque la incorrecta):
+
+**Opciones:**
+  0. Delitos contra el titular de la Corona.
+  1. Falsificaci�n de moneda y fabricaci�n de tarjetas de cr�dito y d�bito falsas y
+  2. heques de viajero falsos, siempre que sean cometidos por organizaciones o
+  3. De las demandas de responsabilidad civil por hechos realizados en el ejercicio
+
+---
+
+### Pregunta 5
+
+**Texto:** Se�ale la respuesta correcta:
+
+**Opciones:**
+  0. Las actuaciones judiciales ser�n privadas, con las excepciones que prevean las
+  1. El procedimiento ser� predominantemente escrito, sobre todo en materia
+  2. riminal.
+  3. Las sentencias ser�n siempre motivadas y se pronunciar�n en audiencia privada.
+
+---
+
+### Pregunta 6
+
+**Texto:** El Vicepresidente del Tribunal Supremo:
+
+**Opciones:**
+  0. Ser� nombrado, por mayor�a absoluta del Pleno del Consejo General del Poder
+  1. Ejercer�, en funciones, el cargo de Presidente del Tribunal Supremo y del
+  2. onsejo General del Poder Judicial en los casos legalmente previstos de cese
+  3. nticipado del Presidente y hasta el nombramiento de un nuevo Presidente.
+
+---
+
+### Pregunta 7
+
+**Texto:** Qu� Tribunal de Instancia tiene una secci�n de lo mercantil que ejerce las
+
+**Opciones:**
+  0. ompetencias en Marca Comunitaria, y conoce en primera instancia y de forma
+  1. e 1993, sobre la marca comunitaria, y 6/2002, del Consejo de la Uni�n Europea,
+  2. e 12 de diciembre de 2001, sobre los dibujos y modelos comunitarios:
+  3. El Tribunal de Instancia de Barcelona.
+
+---
+
+### Pregunta 8
+
+**Texto:** El mandato del Fiscal General del Estado, de conformidad con el art�culo 31 del
+
+**Opciones:**
+  0. 4 a�os y no podr� ser renovado excepto en los supuestos en que el titular
+  1. 4 a�os y no podr� ser renovado excepto en los supuestos en que el titular
+  2. 5 a�os y no podr� ser renovado excepto en los supuestos en que el titular
+  3. 5 a�os y no podr� ser renovado excepto en los supuestos en que el titular
+
+---
+
+### Pregunta 9
+
+**Texto:** En el �mbito del poder judicial y de conformidad con el art�culo 26 LOPJ 6/1985,
+
+**Opciones:**
+  0. El Tribunal Constitucional.
+  1. El Tribunal de Cuentas.
+  2. El Tribunal Supremo.
+  3. Todas son correctas.
+
+---
+
+### Pregunta 10
+
+**Texto:** El art�culo 122 de la Constituci�n Espa�ola se�ala que:
+
+**Opciones:**
+  0. El Consejo General del Poder Judicial estar� integrado por el Presidente del
+  1. CGG.
+  2. Sus miembros son nombrados por un per�odo de 4 a�os.
+  3. De sus miembros 12 son nombrados entre abogados y otros juristas, todos ellos
+
+---
+
+### Pregunta 11
+
+**Texto:** Culminar� la organizaci�n judicial en el �mbito territorial de la Comunidad
+
+**Opciones:**
+  0. ut�noma:
+  1. Un Tribunal Superior de Justicia, sin perjuicio de la jurisdicci�n que
+  2. orresponda al Tribunal Constitucional.
+  3. Un Tribunal Superior de Justicia, sin perjuicio de la jurisdicci�n que
+
+---
+
+### Pregunta 12
+
+**Texto:** Una de las siguientes afirmaciones no se ajusta a la realidad. El Ministerio Fiscal,
+
+**Opciones:**
+  0. Promover la acci�n de la justicia en defensa de la equidad.
+  1. Promover la acci�n de la justicia en defensa de la legalidad.
+  2. Promover la acci�n de la justicia en defensa de los derechos de los ciudadanos.
+  3. Promover la acci�n de la justicia en defensa del inter�s p�blico tutelado por ley.
+
+---
+
+### Pregunta 13
+
+**Texto:** El Juez o Magistrado que desee presentar su candidatura podr� elegir entre
+
+**Opciones:**
+  0. portar el aval de:
+  1. Veinticinco miembros de la carrera judicial en servicio activo o el aval de un
+  2. pertura del plazo de presentaci�n de candidaturas.
+  3. Cincuenta miembros de la carrera judicial en servicio activo o el aval de un
+
+---
+
+### Pregunta 14
+
+**Texto:** La Sala de lo Penal del Tribunal Supremo conocer� (se�ale la falsa):
+
+**Opciones:**
+  0. De la instrucci�n y enjuiciamiento de las causas contra el Presidente del
+  1. De la instrucci�n y enjuiciamiento de las causas contra Diputados y Senadores.
+  2. De la instrucci�n y enjuiciamiento de las causas contra el Presidente del
+  3. De la instrucci�n y enjuiciamiento de las causas contra la Reina consorte o el
+
+---
+
+### Pregunta 15
+
+**Texto:** Se�ale la afirmaci�n correcta de acuerdo con la Constituci�n:
+
+**Opciones:**
+  0. El Ministerio Fiscal ejerce sus funciones conforme a los principios de unidad de
+  1. ctuaci�n e independencia jer�rquica y con sujeci�n, en todo caso a los de
+  2. El Fiscal General del Estado ser� nombrado por el Rey a propuesta del CGPJ.
+  3. El Ministerio Fiscal ejerce sus funciones conforme a los principios de unidad de
+
+---
+
+### Pregunta 16
+
+**Texto:** Los conflictos de jurisdicci�n entre los Juzgados o Tribunales y la Administraci�n
+
+**Opciones:**
+  0. Un �rgano colegiado constituido por el Presidente del Tribunal Supremo, que lo
+  1. ontencioso-Administrativo del Tribunal Supremo, y los otros tres Consejeros
+  2. Un �rgano colegiado constituido por el Presidente del Tribunal Supremo, que lo
+  3. ontencioso-Administrativo del Tribunal Supremo, y los otros tres Consejeros
+
+---
+
+### Pregunta 17
+
+**Texto:** Los conflictos de jurisdicci�n entre los Juzgados o Tribunales de cualquier orden
+
+**Opciones:**
+  0. El Presidente del Tribunal Supremo, que la presidir�, tres Magistrados de la
+  1. onsejo General del Poder Judicial. Actuar� como Secretario de esta Sala el de
+  2. El Presidente del Tribunal Supremo, que la presidir�, cuatro Magistrados de la
+  3. onsejo General del Poder Judicial. Actuar� como Secretario de esta Sala el de
+
+---
+
+### Pregunta 18
+
+**Texto:** Los conflictos de competencia entre Juzgados o Tribunales de distinto orden
+
+**Opciones:**
+  0. el Tribunal Supremo:
+  1. Presidida por el Presidente y compuesta por dos Magistrados, uno por cada
+  2. e Gobierno. Actuar� como Secretario de esta Sala especial el de Gobierno del
+  3. Presidida por el Presidente y compuesta por cuatro Magistrados, dos por cada
+
+---
+
+### Pregunta 19
+
+**Texto:** Los jueces y magistrados, asi como los Fiscales:
+
+**Opciones:**
+  0. Podr�n sindicarse pero no constituir asociaciones profesionales
+  1. No podr�n sindicarse ni constituir asociaciones profesionales.
+  2. Podr�n sindicarse y constituir asociaciones profesionales
+  3. No podr�n sindicarse, pero si constituir asociaciones profesionales.
+
+---
+
+### Pregunta 20
+
+**Texto:** El ejercicio de la potestad jurisdiccional en todo tipo de procesos, juzgando y
+
+**Opciones:**
+  0. Principio de independencia judicial
+  1. Principio de origen popular de la justicia.
+  2. Principio de inamovilidad de jueces y magistrados
+  3. Principio de unidad jurisdiccional.
+
+---
+
+### Pregunta 21
+
+**Texto:** Dar�n derecho a una indemnizaci�n a cargo del Estado:
+
+**Opciones:**
+  0. Los da�os que sean consecuencia de funcionamiento defectuoso de la
+  1. dministraci�n de Justicia
+  2. Los da�os que sean consecuencia de funcionamiento anormal de
+  3. dministraci�n de Justicia
+
+---
+
+### Pregunta 22
+
+**Texto:** La base de la organizaci�n y funcionamiento de los tribunales es:
+
+**Opciones:**
+  0. La independencia judicial.
+  1. La divisi�n de poderes.
+  2. La unidad jurisdiccional.
+  3. El origen popular de la justicia.
+
+---
+
+### Pregunta 23
+
+**Texto:** Las sentencias judiciales:
+
+**Opciones:**
+  0. Ser� gratuitas cuando as� lo disponga la ley y, en todo caso, respecto de quienes
+  1. crediten insuficiencia de recursos para litigar.
+  2. Ser�n gratuitas en todo caso.
+  3. Es obligado cumplirlas, siempre que una ley lo establezca previamente.
+
+---
+
+### Pregunta 24
+
+**Texto:** Es un �rgano directivo de la Administraci�n General del Estado:
+
+**Opciones:**
+  0. Los Secretarios de Estado.
+  1. Los Directores Generales
+  2. Los Directores Insulares.
+  3. El Presidente del Gobierno.
+
+---
+
+### Pregunta 25
+
+**Texto:** El Secretario General T�cnico de un Departamento Ministerial depender�:
+
+**Opciones:**
+  0. Siempre del Subsecretario.
+  1. Del Ministro o del Subsecretario.
+  2. Del Secretario de Estado o del Subsecretario.
+  3. Siempre directamente del titular del Departamento Ministerial.
+
+---
+
+### Pregunta 26
+
+**Texto:** La determinaci�n del n�mero, la denominaci�n y el �mbito de competencia
+
+**Opciones:**
+  0. Real Decreto del Consejo de Ministros a propuesta del Presidente del Gobierno.
+  1. Real Decreto del Presidente del Gobierno.
+  2. Real Decreto del Consejo de Ministros a propuesta del Ministerio de la
+  3. Real Decreto del Consejo de Ministros a propuesta del Ministerio competente
+
+---
+
+### Pregunta 27
+
+**Texto:** Los �rganos de nivel inferior a Subdirecci�n General se crean, modifican y
+
+**Opciones:**
+  0. Orden del Ministerio de Transformaci�n Digital y Funci�n P�blica.
+  1. Real Decreto del Consejo de Ministros.
+  2. Orden del Ministro respectivo.
+  3. Las relaciones de puestos de trabajo.
+
+---
+
+### Pregunta 28
+
+**Texto:** Conforme al art�culo 61 de la Ley 40/2015, de 1 de octubre, de R�gimen Jur�dico
+
+**Opciones:**
+  0. el Sector P�blico, no es una funci�n propia de los Ministros:
+  1. Ejercer la potestad reglamentaria en las materias propias de su Departamento.
+  2. Imponer la sanci�n de separaci�n del servicio por faltas muy graves.
+  3. Nombrar y separar a los titulares de los �rganos directivos del Ministerio y de
+
+---
+
+### Pregunta 29
+
+**Texto:** Los Secretarios Generales de la Organizaci�n Central de la AGE:
+
+**Opciones:**
+  0. Ser�n nombrados mediante Real Decreto del Presidente del Gobierno.
+  1. Tienen rango de Director General.
+  2. El Real Decreto de estructura puede permitir que, en atenci�n a las
+  3. aracter�sticas espec�ficas de sus funciones, no re�nan la condici�n de
+
+---
+
+### Pregunta 30
+
+**Texto:** �En qu� cargos de la administraci�n general del estado podr� ser nombrado
+
+**Opciones:**
+  0. lguien que haya perdido la condici�n de funcionario como consecuencia de su
+  1. En los cargos de Secretario general t�cnico y Director general.
+  2. En los cargos de Secretario general y Director general.
+  3. En los cargos de Secretario general y Secretario general t�cnico.
+
+---
+
+### Pregunta 31
+
+**Texto:** Los Subsecretarios:
+
+**Opciones:**
+  0. Ser�n nombrados y separados por Real Decreto del Consejo de Ministros,
+  1. Su superior jer�rquico directo ser� el Ministro o un Secretario de Estado.
+  2. Convocan y resuelven los concursos de personal funcionario.
+  3. Son los titulares de los �rganos directivos encargados de la gesti�n de una o
+
+---
+
+### Pregunta 32
+
+**Texto:** Se�ale la respuesta correcta:
+
+**Opciones:**
+  0. Los ministros son nombrados por el Presidente del Gobierno.
+  1. Los Secretarios de Estado son nombrados por el Presidente del Gobierno.
+  2. Los Subdirectores Generales son nombrados por el Ministro, Secretario de
+  3. Los Directores Generales son nombrados por el Consejo de Ministros.
+
+---
+
+### Pregunta 33
+
+**Texto:** Seg�n lo dispuesto en el art�culo 55 de la Ley 40/2015, de 1 de octubre, de
+
+**Opciones:**
+  0. Son �rganos superiores los embajadores y representantes permanentes ante
+  1. Son �rganos directivos los embajadores y c�nsules.
+  2. Son �rganos directivos los embajadores y representantes permanentes ante
+  3. Son �rganos superiores los embajadores y c�nsules.
+
+---
+
+### Pregunta 34
+
+**Texto:** Indique cual de los siguientes �rganos directivos deber�n reunir la condici�n de
+
+**Opciones:**
+  0. Subsecretario, Secretario General T�cnico y Subdirector General.
+  1. Director General y Subdirector General
+  2. Director General
+  3. Subdirector General
+
+---
+
+### Pregunta 35
+
+**Texto:** Las unidades administrativas son los elementos organizativos b�sicos de las
+
+**Opciones:**
+  0. Real Decreto del Consejo de Ministros.
+  1. Orden del Ministro de Transformaci�n Digital y Funci�n P�blica.
+  2. Relaci�n de Puestos de Trabajo.
+  3. Real Decreto del Presidente del Gobierno.
+
+---
+
+### Pregunta 36
+
+**Texto:** De los siguientes, ser�n nombrados por Real Decreto del Consejo de Ministros
+
+**Opciones:**
+  0. Subsecretario, Secretario General y Director General y subdirector general.
+  1. Subsecretario, Secretario General, Secretario General T�cnico, Director General
+  2. Secretario General T�cnico, Director General y Subdirector General.
+  3. Subsecretario y Secretario General T�cnico.
+
+---
+
+### Pregunta 37
+
+**Texto:** El Secretario de Estado ser� nombrado entre aquellos que cumplan los
+
+**Opciones:**
+  0. Funcionario de carrera perteneciente al Subgrupo A1.
+  1. Persona id�nea, siendo id�neo qui�n re�ne honorabilidad y la debida formaci�n
+  2. Persona con cualificaci�n y experiencia en el desempe�o de puestos de
+  3. Espa�ol, mayor de edad, disfrutar de los derechos de sufragio activo y pasivo,
+
+---

@@ -1,0 +1,66 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 8 TEST TEMA 8 (1ªPARTE). INICIALESdocx (1).docx
+**Total preguntas:** 3
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** La Ley de R�gimen Jur�dico del Sector P�blico se�ala en su art. 54 que la Administraci�n General del Estado act�a y se organiza de acuerdo con los principios establecidos en el art�culo 3, as� como los de:
+
+**Opciones:**
+  0. Descentralizaci�n funcional y desconcentraci�n funcional y territorial.
+  1. Austeridad e integridad.
+  2. Jerarqu�a y eficacia.
+  3. Objetividad y responsabilidad.
+
+---
+
+### Pregunta 2
+
+**Texto:** �Qu� �rgano tiene la competencia para imponer la sanci�n de separaci�n del servicio por falta muy grave?:
+
+**Opciones:**
+  0. El Subsecretario.
+  1. La Comisi�n Superior de Personal.
+  2. Un Director General.
+  3. El Ministro del Departamento.
+
+---
+
+### Pregunta 3
+
+**Texto:** De acuerdo con el art�culo 68 de la LRJSP �es posible que los ministerios compartan la gesti�n de servicios comunes?:
+
+**Opciones:**
+  0. No, al tratarse de servicios comunes dependientes de cada subsecretar�a.
+  1. S�, por orden ministerial conjunta de los ministerios afectados.
+  2. S�, mediante Real Decreto.
+  3. S�, previo informe preceptivo favorable del Ministerio de Hacienda y Funci�n P�blica.
+
+---

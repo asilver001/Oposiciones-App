@@ -1,0 +1,42 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** TEST Tema 3 políticas.pdf
+**Total preguntas:** 1
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** Qu� compromiso de reducci�n de emisiones de Gases de Efecto Invernadero ha asumido
+
+**Opciones:**
+  0. Al menos, un 75% respecto a 1990.
+  1. Al menos un 55% respecto a 2005.
+  2. Al menos un 55% respecto a 1990.
+  3. Al menos un 75% respecto a 2005.
+
+---

@@ -1,0 +1,270 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 1. Test Título preliminar.pdf
+**Total preguntas:** 20
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** De conformidad con la ley 9/2017, de 8 de noviembre, de Contratos
+
+**Opciones:**
+  0. el Sector P�blico, por la que se transponen al ordenamiento
+  1. onsejo 2014/23/UE y 2014/24/UE, de 26 de febrero de 2014 ( en
+  2. delante, LCSP), las Entidades Gestoras y Servicios Comunes de la
+  3. Poder adjudicador no Administraci�n P�blica.
+
+---
+
+### Pregunta 2
+
+**Texto:** De conformidad con la LCSP, las Mutuas colaboradoras con la
+
+**Opciones:**
+  0. Poder adjudicador no Administraci�n P�blica.
+  1. No poder adjudicador.
+  2. Administraci�n p�blica no poder adjudicador.
+  3. Administraci�n p�blica.
+
+---
+
+### Pregunta 3
+
+**Texto:** De conformidad con la LCSP, un Organismo Aut�nomo es:
+
+**Opciones:**
+  0. Poder adjudicador no Administraci�n P�blica.
+  1. No poder adjudicador.
+  2. Administraci�n p�blica no poder adjudicador.
+  3. Administraci�n p�blica.
+
+---
+
+### Pregunta 4
+
+**Texto:** De conformidad con la LCSP, se�ale la respuesta correcta:
+
+**Opciones:**
+  0. Las Administraciones P�blicas no pueden celebrar contratos
+  1. Los
+  2. dministrativos.
+  3. djudicadores
+
+---
+
+### Pregunta 5
+
+**Texto:** Una entidad p�blica empresarial, creada espec�ficamente para
+
+**Opciones:**
+  0. Tiene el car�cter de Administraci�n P�blica, en todo caso.
+  1. Tiene el car�cter de poder adjudicador.
+  2. Tiene el car�cter de sector p�blico administrativo estatal.
+  3. Tiene el car�cter de sector p�blico, no pudiendo ser poder
+
+---
+
+### Pregunta 6
+
+**Texto:** Quedan excluidos de la aplicaci�n de la LCSP:
+
+**Opciones:**
+  0. Los acuerdos que celebre el Estado con otros Estados o con otros
+  1. Los contratos de adquisici�n de programas inform�ticos a medida.
+  2. Los contratos no sujetos a regulaci�n armonizada.
+  3. Los contratos privados.
+
+---
+
+### Pregunta 7
+
+**Texto:** Quedan excluidos de la aplicaci�n de la LCSP:
+
+**Opciones:**
+  0. La relaci�n de servicio de los funcionarios p�blicos
+  1. Los contratos
+  2. Los arrendamientos de bienes inmuebles.
+  3. Todos los anteriores.
+
+---
+
+### Pregunta 8
+
+**Texto:** Pueden celebrar contratos de concesi�n de servicios:
+
+**Opciones:**
+  0. Solo las Administraciones P�blicas.
+  1. Solo los Poderes adjudicadores
+  2. Solo los No Poderes adjudicadores
+  3. Cualquier entidad siempre que sea del sector p�blico.
+
+---
+
+### Pregunta 9
+
+**Texto:** Se considerar� que el concesionario asume un riesgo operacional
+
+**Opciones:**
+  0. uando:
+  1. No est� garantizado que, en condiciones normales de
+  2. onsecuencia de la explotaci�n de las obras que sean objeto de
+  3. No est� garantizado que, en condiciones anormales de
+
+---
+
+### Pregunta 10
+
+**Texto:** De conformidad con la LCSP, son contratos de suministros:
+
+**Opciones:**
+  0. Los que tengan por objeto la adquisici�n y el arrendamiento de
+  1. La a), a excepci�n de los contratos de adquisici�n de programas
+  2. e ordenador desarrollados a medida, que se considerar�n
+  3. ontratos de servicios.
+
+---
+
+### Pregunta 11
+
+**Texto:** De conformidad con la LCSP, se�ale la correcta respecto a los
+
+**Opciones:**
+  0. ontratos mixtos:
+  1. Cuando un contrato mixto comprenda prestaciones propias de dos
+  2. En el caso de los contratos mixtos que comprendan en parte
+  3. En el caso de los contratos mixtos compuestos en parte por
+
+---
+
+### Pregunta 12
+
+**Texto:** Son contratos sujetos a una regulaci�n armonizada cuando
+
+**Opciones:**
+  0. elebrados por un poder adjudicador, se trate de:
+  1. Contratos de obras cuyo presupuesto de licitaci�n sea igual o
+  2. Contratos de concesi�n de obras cuyo precio de adjudicaci�n sea
+  3. Contratos de concesi�n de servicios cuyo valor estimado sea igual
+
+---
+
+### Pregunta 13
+
+**Texto:** De conformidad con la LCSP, los contratos de concesi�n de
+
+**Opciones:**
+  0. rmonizada:
+  1. En todo caso
+  2. En ning�n caso
+  3. Cuando el valor estimado sea igual o superior a 750.0000 euros.
+
+---
+
+### Pregunta 14
+
+**Texto:** Una entidad gestora pretende licitar un contrato de servicios (que
+
+**Opciones:**
+  0. Tendr� la consideraci�n de contrato administrativo sujeto a
+  1. Tendr� la consideraci�n de contrato privado sujeto a regulaci�n
+  2. rmonizada.
+  3. Tendr�
+
+---
+
+### Pregunta 15
+
+**Texto:** De conformidad con
+
+**Opciones:**
+  0. Tendr�n la consideraci�n de contrato administrativo en todo caso.
+  1. Tendr�n la consideraci�n de contrato privado en determinados
+  2. asos.
+  3. Tendr�n la consideraci�n de contrato sujeto a regulaci�n en todo
+
+---
+
+### Pregunta 16
+
+**Texto:** Un contrato de suscripci�n a una publicaci�n peri�dica celebrado
+
+**Opciones:**
+  0. Tendr� car�cter de contrato administrativo.
+  1. La a) y tendr�n siempre la consideraci�n de contrato sujeto a
+  2. Tendr� car�cter privado
+  3. La b) y tendr�n siempre la consideraci�n de contrato sujeto a
+
+---
+
+### Pregunta 17
+
+**Texto:** Ser�n competencia del orden
+
+**Opciones:**
+  0. dministrativo:
+  1. Las cuestiones que se susciten en relaci�n con la preparaci�n y
+  2. djudicaci�n de los contratos privados de las Administraciones
+  3. Todas las controversias que se susciten entre las partes en
+
+---
+
+### Pregunta 18
+
+**Texto:** El orden jurisdiccional civil conocer� de:
+
+**Opciones:**
+  0. De las cuestiones referidas a efectos y extinci�n de los contratos
+  1. ar�cter de poderes adjudicadores
+  2. De las cuestiones referidas a la preparaci�n y adjudicaci�n de los
+  3. ontratos que celebren las entidades del sector p�blico que no
+
+---
+
+### Pregunta 19
+
+**Texto:** Se�ale la respuesta correcta:
+
+**Opciones:**
+  0. Un contrato celebrado por un organismo aut�nomo tendr�
+  1. Un contrato celebrado por un poder adjudicador estar� siempre
+  2. Un contrato celebrado por un Ministerio tendr� siempre el car�cter
+  3. e administrativo.
+
+---
+
+### Pregunta 20
+
+**Texto:** Ser�n competencia del orden
+
+**Opciones:**
+  0. dministrativo:
+  1. Las relativas a la preparaci�n y adjudicaci�n de los contratos
+  2. dministrativos.
+  3. Las relativas a los efectos, modificaci�n y extinci�n de los
+
+---

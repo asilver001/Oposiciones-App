@@ -1,0 +1,446 @@
+{
+  "metadata": {
+    "source_file": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 5 AL 8.pdf",
+    "source_path": "Segundo repaso\\PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 5 AL 8.pdf",
+    "tema": 0,
+    "categoria": "repaso",
+    "extraction_date": "2026-01-15T23:40:37.282243",
+    "reformulation_date": "2026-01-15T23:47:35.717364",
+    "total_questions": 13,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.918427",
+    "completed_count": 0,
+    "failed_count": 13
+  },
+  "questions": [
+    {
+      "question_text": "De acuerdo con el artculo 90 de la CE, en los proyectos de ley declarados urgentes",
+      "options": [
+        {
+          "text": "Dos meses.",
+          "is_correct": false
+        },
+        {
+          "text": "Veinte das naturales.",
+          "is_correct": false
+        },
+        {
+          "text": "Un mes.",
+          "is_correct": false
+        },
+        {
+          "text": "Quince das naturales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con el artculo 90 de la CE, en los proyectos de ley declarados urgentes",
+      "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 5 AL 8.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con el artculo 91 de la CE, en qu plazo debe sancionar el Rey",
+      "options": [
+        {
+          "text": "En un plazo de quince das.",
+          "is_correct": false
+        },
+        {
+          "text": "En un plazo de veinte",
+          "is_correct": false
+        },
+        {
+          "text": "as.",
+          "is_correct": false
+        },
+        {
+          "text": "En un plazo de un mes.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con el artculo 91 de la CE, en qu plazo debe sancionar el Rey",
+      "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 5 AL 8.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con la Ley 50/1997, de 27 de noviembre, del Gobierno,",
+      "options": [
+        {
+          "text": "orresponde al Consejo de Ministros:",
+          "is_correct": false
+        },
+        {
+          "text": "Proponer al Rey la convocatoria de un referndum consultivo, previa autorizacin",
+          "is_correct": false
+        },
+        {
+          "text": "el Congreso de los Diputados.",
+          "is_correct": false
+        },
+        {
+          "text": "Declarar el estado de sitio, as como proponer al Congreso de los Diputados la",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con la Ley 50/1997, de 27 de noviembre, del Gobierno,",
+      "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 5 AL 8.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con el artculo 99 de la CE, el candidato propuesto por el Rey a",
+      "options": [
+        {
+          "text": "El Rey.",
+          "is_correct": false
+        },
+        {
+          "text": "El Congreso de los Diputados.",
+          "is_correct": false
+        },
+        {
+          "text": "El Senado.",
+          "is_correct": false
+        },
+        {
+          "text": "Las Cortes Generales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con el artculo 99 de la CE, el candidato propuesto por el Rey a",
+      "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 5 AL 8.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn lo que se dispone en la Ley Orgnica 3/1980, de 22 de abril, del Consejo de",
+      "options": [
+        {
+          "text": "El Presidente del Consejo de Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "El Presidente del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo de Ministros.",
+          "is_correct": false
+        },
+        {
+          "text": "La Comisin Permanente del Consejo de Estado.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn lo que se dispone en la Ley Orgnica 3/1980, de 22 de abril, del Consejo de",
+      "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 5 AL 8.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn el artculo 115 de la Constitucin Espaola, la disolucin de las Cortes ha de",
+      "options": [
+        {
+          "text": "La mayora absoluta del Congreso.",
+          "is_correct": false
+        },
+        {
+          "text": "La mayora absoluta de las dos Cmaras.",
+          "is_correct": false
+        },
+        {
+          "text": "El presidente del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "El Rey.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el artculo 115 de la Constitucin Espaola, la disolucin de las Cortes ha de",
+      "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 5 AL 8.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn la Ley Orgnica 3/1980, de 22 de abril, del Consejo de Estado, seale la",
+      "options": [
+        {
+          "text": "firmacin correcta:",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo de Estado emitir dictamen sobre cuantos asuntos sometan a su",
+          "is_correct": false
+        },
+        {
+          "text": "onsulta el Gobierno o sus miembros.",
+          "is_correct": false
+        },
+        {
+          "text": "La consulta al Consejo de Estado ser facultativa cuando as lo establezcan las",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn la Ley Orgnica 3/1980, de 22 de abril, del Consejo de Estado, seale la",
+      "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 5 AL 8.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con el artculo 26 de la Ley Orgnica 6/1985, de 1 de julio, del",
+      "options": [
+        {
+          "text": "Habrn de ser nombrados entre personas con cualificacin y experiencia en",
+          "is_correct": false
+        },
+        {
+          "text": "Tendrn las competencias sobre servicios comunes que les atribuya el Real",
+          "is_correct": false
+        },
+        {
+          "text": "ecreto de estructura del Departamento y, en todo caso, las relativas a",
+          "is_correct": false
+        },
+        {
+          "text": "Tendrn a todos los efectos la categora de Director General.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con el artculo 26 de la Ley Orgnica 6/1985, de 1 de julio, del",
+      "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 5 AL 8.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn el artculo 76 de la Ley 40/2015, la estructura de las Delegaciones del",
+      "options": [
+        {
+          "text": "Ley.",
+          "is_correct": false
+        },
+        {
+          "text": "Orden del Ministerio de Hacienda y Funcin Pblica.",
+          "is_correct": false
+        },
+        {
+          "text": "Real Decreto-Ley.",
+          "is_correct": false
+        },
+        {
+          "text": "Real Decreto del Consejo de Ministros.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el artculo 76 de la Ley 40/2015, la estructura de las Delegaciones del",
+      "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 5 AL 8.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Conforme a la Ley 40/2015, la norma de creacin de un rgano colegiado",
+      "options": [
+        {
+          "text": "Orden del Ministerio de Presidencia.",
+          "is_correct": false
+        },
+        {
+          "text": "Real decreto.",
+          "is_correct": false
+        },
+        {
+          "text": "Orden ministerial conjunta.",
+          "is_correct": false
+        },
+        {
+          "text": "Acuerdo de Consejo de Ministros.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Conforme a la Ley 40/2015, la norma de creacin de un rgano colegiado",
+      "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 5 AL 8.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con el artculo 70 de la ley 40/2015, de 1 de octubre, los Directores",
+      "options": [
+        {
+          "text": "Del Ministro de Poltica Territorial y Funcin Pblica.",
+          "is_correct": false
+        },
+        {
+          "text": "Del Delegado del Gobierno en la Comunidad Autnoma o del Subdelegado del",
+          "is_correct": false
+        },
+        {
+          "text": "De Subsecretario del Ministerio de Poltica Territorial y Funcin Pblica.",
+          "is_correct": false
+        },
+        {
+          "text": "Del Ministro de Presidencia.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con el artculo 70 de la ley 40/2015, de 1 de octubre, los Directores",
+      "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 5 AL 8.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn lo dispuesto en el artculo 57 de la Ley 40/2015, de 1 de octubre, de Rgimen",
+      "options": [
+        {
+          "text": "Acuerdo del Consejo de Ministros.",
+          "is_correct": false
+        },
+        {
+          "text": "Real Decreto del Consejo de Ministros.",
+          "is_correct": false
+        },
+        {
+          "text": "Real Decreto del Presidente del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Orden Ministerial.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn lo dispuesto en el artculo 57 de la Ley 40/2015, de 1 de octubre, de Rgimen",
+      "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 5 AL 8.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con la Ley 2/2014, de 25 de marzo, de la Accin y del Servicio",
+      "options": [
+        {
+          "text": "Real decreto del Consejo de Ministros, a iniciativa del Ministerio de Asuntos",
+          "is_correct": false
+        },
+        {
+          "text": "dministraciones Pblicas, previo informe del Consejo Ejecutivo de Poltica",
+          "is_correct": false
+        },
+        {
+          "text": "Ley de las Cortes Generales, previo informe del Consejo de Poltica Exterior.",
+          "is_correct": false
+        },
+        {
+          "text": "Orden del Ministro de Asuntos Exteriores.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con la Ley 2/2014, de 25 de marzo, de la Accin y del Servicio",
+      "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 5 AL 8.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

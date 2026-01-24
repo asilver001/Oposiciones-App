@@ -1,0 +1,390 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 6.- TEST 2024-25 ACF y PAJ.pdf
+**Total preguntas:** 30
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** �Qui�n es el �rgano competente para establecer las normas que regulan la expedici�n
+
+**Opciones:**
+  0. e �rdenes de pago a justificar?
+  1. El titular del Departamento Ministerial o el Presidente o Director del organismo aut�nomo
+  2. El titular del Departamento Ministerial o el Presidente o Director del organismo aut�nomo
+  3. El titular del Departamento Ministerial o el Presidente o Director del organismo aut�nomo
+
+---
+
+### Pregunta 2
+
+**Texto:** Cuando, excepcionalmente, no pueda aportarse la documentaci�n justificativa antes del
+
+**Opciones:**
+  0. Propuestas de pagos extrapresupuestarios y librarse fondos con cargo al sistema de
+  1. nticipos de caja fija.
+  2. Propuestas de pagos presupuestarios y librarse fondos en firme.
+  3. Propuestas de pagos presupuestarios y librarse fondos con el car�cter de a justificar.
+
+---
+
+### Pregunta 3
+
+**Texto:** Los gastos realizados a trav�s del sistema de Anticipos de Caja Fija se imputar�n al
+
+**Opciones:**
+  0. Se justifiquen los pagos efectuados, solicitando la reposici�n de los fondos.
+  1. No se imputan al presupuesto porque son extrapresupuestarios.
+  2. Se libren los fondos necesarios para constituir el anticipo.
+  3. Se realicen los correspondientes gastos.
+
+---
+
+### Pregunta 4
+
+**Texto:** Seg�n la LGP, con cargo a los libramientos a justificar �nicamente podr�n satisfacerse:
+
+**Opciones:**
+  0. Obligaciones derivadas de las actuaciones realizadas y exigibles en el ejercicio
+  1. Obligaciones derivadas de las actuaciones realizadas y exigibles en el ejercicio
+  2. Obligaciones derivadas de las actuaciones realizadas y exigibles en los dos ejercicios
+  3. ortes Generales podr� acordar que, con los fondos librados a justificar para gastos en el
+
+---
+
+### Pregunta 5
+
+**Texto:** Los titulares de los Departamentos Ministeriales son competentes en relaci�n con el
+
+**Opciones:**
+  0. Ordenar los pagos presupuestarios.
+  1. Acordar su establecimiento.
+  2. b) y ampliar los plazos de rendici�n de las cuentas a 6 y 12 meses.
+  3. Todas son correctas.
+
+---
+
+### Pregunta 6
+
+**Texto:** �Se puede utilizar el sistema de Anticipos de Caja Fija para atender un gasto de una
+
+**Opciones:**
+  0. ampa�a de informaci�n y sensibilizaci�n sobre medioambiente?
+  1. S�, siempre que el importe del gasto no supere los 5.000 euros.
+  2. No, al tratarse de un gasto del cap�tulo 6.
+  3. S�, siempre que el importe del gasto no supere los 600 euros.
+
+---
+
+### Pregunta 7
+
+**Texto:** En relaci�n con la cuenta justificativa de pagos a justificar en un Departamento
+
+**Opciones:**
+  0. Se llevar� a cabo la aprobaci�n o reparo de la cuenta en el mes siguiente a la fecha de
+  1. portaci�n de los documentos justificativos.
+  2. Una vez aprobada la cuenta, la Unidad Central de Caja expedir� el documento contable
+  3. La Intervenci�n Delegada del Departamento Ministerial realizar� la intervenci�n de la
+
+---
+
+### Pregunta 8
+
+**Texto:** �Cu�l es la cuant�a global de los anticipos de Caja Fija?
+
+**Opciones:**
+  0. M�ximo el 7 % del cr�dito inicial del cap�tulo 2 vigente en cada momento.
+  1. M�ximo el 7 % del cr�dito total del cap�tulo 2 vigente en cada momento.
+  2. El 7% del cr�dito inicial del cap�tulo 2 vigente en cada momento.
+  3. El 7 % del cr�dito total del cap�tulo 2 vigente en cada momento.
+
+---
+
+### Pregunta 9
+
+**Texto:** �Cu�l de las siguientes es una caracter�stica del sistema de anticipos de caja fija?
+
+**Opciones:**
+  0. No es necesario su cancelaci�n al cierre de cada ejercicio.
+  1. Tienen el car�cter de provisiones de fondos de car�cter presupuestario y permanente.
+  2. Se pueden realizar pagos imputables a cualquier cap�tulo presupuestario.
+  3. Podr�n realizarse pagos individualizados superiores a 5.000 euros.
+
+---
+
+### Pregunta 10
+
+**Texto:** Tienen la consideraci�n de anticipos de caja fija:
+
+**Opciones:**
+  0. Las provisiones de fondos de car�cter presupuestario y permanente que se realicen a
+  1. Los que, excepcionalmente, se libren para atender gastos sin la previa aportaci�n de la
+  2. ocumentaci�n en que se acredite la realizaci�n de la prestaci�n o el derecho del acreedor.
+  3. Las provisiones de fondos de car�cter permanente que se realicen a pagadur�as, cajas y
+
+---
+
+### Pregunta 11
+
+**Texto:** En el caso de pagos de expropiaciones, �en qu� plazo deben rendirse las cuentas
+
+**Opciones:**
+  0. En el plazo de un mes desde la fecha de inversi�n de los fondos, y en todo caso en el plazo
+  1. e 3 meses desde la fecha de recepci�n de los fondos.
+  2. En el plazo de un mes desde la fecha de recepci�n de los fondos, y en todo caso en el plazo
+  3. e 3 meses desde la fecha de inversi�n de los fondos.
+
+---
+
+### Pregunta 12
+
+**Texto:** �Cu�l de los siguientes gastos NO puede tramitarse mediante el sistema de Anticipos de
+
+**Opciones:**
+  0. aja Fija?
+  1. Una factura de gas por importe de 6.000 �.
+  2. Una factura de luz por importe de 4.800 �.
+  3. Una factura de tel�fono por importe de 5.100 �.
+
+---
+
+### Pregunta 13
+
+**Texto:** Cuando en un Departamento ministerial se establezcan las normas reguladoras de la
+
+**Opciones:**
+  0. Se dar� traslado de los correspondientes acuerdos a la oficina de contabilidad.
+  1. Se dar� traslado de los correspondientes acuerdos a la oficina presupuestaria.
+  2. Se dar� traslado de los correspondientes acuerdos a la oficina de contabilidad,
+  3. compa�ados del documento �Adopci�n/Distribuci�n de PJ�.
+
+---
+
+### Pregunta 14
+
+**Texto:** De los siguientes documentos contables, en un Departamento Ministerial, �cu�l podr�a
+
+**Opciones:**
+  0. �ADO� expedido a favor de la Caja Pagadora que deba efectuar el pago a los acreedores
+  1. �ADOK� expedido a favor de la Caja Pagadora que deba efectuar el pago a los acreedores
+  2. �PMP� expedido a favor de la Caja Pagadora que deba efectuar el pago a los acreedores
+  3. �Control de pagos a justificar� expedido a favor de la Caja Pagadora que deba efectuar el
+
+---
+
+### Pregunta 15
+
+**Texto:** En un Organismo Aut�nomo, la aplicaci�n a presupuesto de los gastos realizados con
+
+**Opciones:**
+  0. argo al anticipo de caja fija y la propuesta de reposici�n de fondos al Cajero Pagador
+  1. Documento �ADOK�.
+  2. Documento �PMP�.
+  3. Documento �Adopci�n/distribuci�n ACF�.
+
+---
+
+### Pregunta 16
+
+**Texto:** El documento de Control de pagos a justificar:
+
+**Opciones:**
+  0. Se utilizar� para registrar el establecimiento del sistema de PJ.
+  1. Ser� autorizado por la autoridad que haya adoptado el acuerdo de PJ.
+  2. Se utilizar� para el registro de las pr�rrogas autorizadas de los plazos de justificaci�n, para
+  3. e la cuenta justificativa
+
+---
+
+### Pregunta 17
+
+**Texto:** Los perceptores de las �rdenes de pago a justificar:
+
+**Opciones:**
+  0. Son responsables de la custodia y uso de los fondos y de la rendici�n de la cuenta.
+  1. No son responsables de la custodia y uso de los fondos, pero s� de la rendici�n de la cuenta.
+  2. Son responsables de la custodia y uso de los fondos, pero no de la rendici�n de la cuenta.
+  3. No son responsables ni de la custodia y uso de los fondos ni de la rendici�n de la cuenta.
+
+---
+
+### Pregunta 18
+
+**Texto:** A tenor de lo establecido en el art�culo 79 de la LGP, �cu�l es el plazo de aprobaci�n de
+
+**Opciones:**
+  0. 3 meses, excepto las correspondientes a pagos de expropiaciones y pagos en el extranjero
+  1. 2 meses.
+  2. 1 mes.
+  3. 3 meses, excepto las correspondientes a pagos de expropiaciones y pagos en el extranjero
+
+---
+
+### Pregunta 19
+
+**Texto:** En un organismo aut�nomo, cuando se produzca la supresi�n de una caja pagadora:
+
+**Opciones:**
+  0. Deber� reintegrar a la Direcci�n General del Tesoro y Pol�tica Financiera el importe del
+  1. nticipo recibido.
+  2. Deber� traspasar a la Caja que asuma sus funciones el importe del anticipo recibido.
+  3. Deber� reintegrar a la Tesorer�a del organismo el importe del anticipo recibido, sin que
+
+---
+
+### Pregunta 20
+
+**Texto:** Si el 10 de abril realiza un libramiento a justificar de 500.000 � en la cuenta que
+
+**Opciones:**
+  0. realizar un pago a la empresa ABM. �Qu� d�a finaliza el plazo para la justificaci�n?
+  1. El d�a 8 de julio.
+  2. El d�a 10 de mayo.
+  3. El d�a 10 de julio.
+
+---
+
+### Pregunta 21
+
+**Texto:** En el sistema de Pagos a justificar, la situaci�n de fondos a favor de la Caja Pagadora
+
+**Opciones:**
+  0. Transferencia bancaria, cheque nominativo o efectivo.
+  1. Transferencia bancaria.
+  2. Transferencia bancaria o cheque nominativo.
+  3. Transferencia bancaria, cheque al portador o efectivo.
+
+---
+
+### Pregunta 22
+
+**Texto:** Los Cajeros pagadores rendir�n cuentas por los gastos atendidos con anticipos de Caja
+
+**Opciones:**
+  0. A medida que sus necesidades de tesorer�a aconsejen la reposici�n de los fondos
+  1. orresponden los gastos.
+  2. A medida que sus necesidades de tesorer�a aconsejen la reposici�n de los fondos
+  3. A medida que sus necesidades de tesorer�a aconsejen la reposici�n de los fondos
+
+---
+
+### Pregunta 23
+
+**Texto:** Se incluir� un calendario de las actuaciones que se pretenda financiar con el
+
+**Opciones:**
+  0. orrespondiente libramiento:
+  1. En todas las propuestas de pago a justificar, cualquiera que sea su finalidad.
+  2. En todas las propuestas de mandamiento de pago extrapresupuestario, cualquiera que sea
+  3. En todas las cuentas justificativas que rinda la Caja Pagadora.
+
+---
+
+### Pregunta 24
+
+**Texto:** Las �rdenes de pago a justificar se expedir�n a favor de:
+
+**Opciones:**
+  0. Los acreedores directos.
+  1. Las Cajas Pagadoras que se creen en los Ministerios y Organismos aut�nomos.
+  2. La Direcci�n General del Tesoro y Pol�tica Financiera.
+  3. La Direcci�n General de Presupuestos.
+
+---
+
+### Pregunta 25
+
+**Texto:** Cuando el sistema de ACF se haya establecido en un departamento ministerial, no
+
+**Opciones:**
+  0. Inferior a 600 euros, excepto los destinados a reposici�n del anticipo.
+  1. Superior a 600 euros, excepto los destinados a reposici�n del anticipo.
+  2. Inferior a 600 euros.
+  3. Superior a 5.000 euros.
+
+---
+
+### Pregunta 26
+
+**Texto:** La fiscalizaci�n previa de las �rdenes de pago para la constituci�n o modificaci�n de
+
+**Opciones:**
+  0. La existencia de acuerdo del Ministro o Presidente o Director del organismo aut�nomo
+  1. Que la propuesta de pago no se basa en resoluci�n de autoridad competente.
+  2. Que existe cr�dito y el propuesto es adecuado.
+  3. Todas son correctas.
+
+---
+
+### Pregunta 27
+
+**Texto:** Los pagos con cargo a los fondos librados a justificar se efectuar�n mediante:
+
+**Opciones:**
+  0. Transferencias bancarias o cheques al portador.
+  1. Transferencias bancarias o cheques nominativos.
+  2. Transferencias bancarias o cheques nominativos. No obstante, los Ministros y Presidentes
+  3. Transferencias bancarias o cheques al portador. No obstante, los Ministros y Presidentes
+
+---
+
+### Pregunta 28
+
+**Texto:** En el sistema de ACF, indique la respuesta correcta:
+
+**Opciones:**
+  0. Podr�n acumularse en un solo justificante pagos que se deriven de diversos gastos.
+  1. Podr� fraccionarse un �nico gasto en varios pagos.
+  2. No podr�n acumularse en un solo justificante pagos que se deriven de diversos gastos, ni
+  3. Podr�n acumularse en un solo justificante pagos que se deriven de diversos gastos, pero
+
+---
+
+### Pregunta 29
+
+**Texto:** En relaci�n con la intervenci�n de las cuentas justificativas de los pagos a justificar y de
+
+**Opciones:**
+  0. Los resultados de la verificaci�n se reflejar�n en un informe en el que el Interventor
+  1. Se comprobar� que se acredita la realizaci�n efectiva y conforme de los gastos o servicios.
+  2. Se podr�n utilizar procedimientos de muestreo.
+  3. Se formular� un reparo por la Intervenci�n en el caso de detectar defectos en la cuenta
+
+---
+
+### Pregunta 30
+
+**Texto:** Se formular�n estados de situaci�n de Tesorer�a:
+
+**Opciones:**
+  0. Con la periodicidad que establezcan los Titulares de los departamentos Ministeriales y
+  1. Con la periodicidad que establezcan los Interventores Delegados en los Departamentos
+  2. nterior.
+  3. Con la periodicidad que establezcan los Titulares de los departamentos Ministeriales y
+
+---

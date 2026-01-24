@@ -1,0 +1,510 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 7 TEST TEMA 7 INICIALES.docx
+**Total preguntas:** 40
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** De conformidad con el art�culo 117.1 de la Constituci�n Espa�ola, �en nombre de qui�n se administra la Justicia?
+
+**Opciones:**
+  0. En nombre del pueblo espa�ol.
+  1. En nombre de la Constituci�n y las leyes.
+  2. En nombre del Rey.
+  3. En nombre de Espa�a.
+
+---
+
+### Pregunta 2
+
+**Texto:** �Cu�nto tiempo dura el mandato de los vocales del Consejo General del Poder Judicial?
+
+**Opciones:**
+  0. Tres a�os.
+  1. Cuatro a�os.
+  2. Cinco a�os.
+  3. Seis a�os.
+
+---
+
+### Pregunta 3
+
+**Texto:** �Cu�ntos miembros del Consejo General del Poder Judicial son propuestos de entre Jueces y Magistrados de todas las categor�as judiciales?
+
+**Opciones:**
+  0. Seis.
+  1. Diez.
+  2. Todos.
+  3. Doce.
+
+---
+
+### Pregunta 4
+
+**Texto:** �Qui�n nombra al Presidente del Consejo General del Poder Judicial?:
+
+**Opciones:**
+  0. El Jefe del Estado.
+  1. El Jefe de Gobierno.
+  2. El Gobierno.
+  3. Las Cortes Generales.
+
+---
+
+### Pregunta 5
+
+**Texto:** �Qui�n debe refrendar el nombramiento del Presidente del Consejo General del Poder Judicial?:
+
+**Opciones:**
+  0. No es un acto Real, por tanto, no conlleva refrendo.
+  1. El Presidente del Gobierno.
+  2. El Presidente de las Cortes Generales.
+  3. El Presidente del Senado.
+
+---
+
+### Pregunta 6
+
+**Texto:** Seg�n el art�culo 64.1 de la Ley Org�nica 6/1985, de 1 de julio, del Poder Judicial, la Audiencia Nacional estar� integrada por las siguientes salas:
+
+**Opciones:**
+  0. Sala de lo Civil, de lo Contencioso Administrativo y de lo Social.
+  1. Sala de Apelaci�n, de lo Penal, de lo Contencioso Administrativo y de lo Social.
+  2. Sala de lo Penal, de lo Contencioso Administrativo, de lo Social y de lo Militar.
+  3. Sala de Apelaci�n, de lo Penal, de lo Contencioso Administrativo, de lo Social y de lo Militar.
+
+---
+
+### Pregunta 7
+
+**Texto:** Seg�n el art�culo 124.4 de la Constituci�n Espa�ola, el Fiscal General del Estado:
+
+**Opciones:**
+  0. Ser� nombrado por el Rey, a propuesta del Tribunal Constitucional, o�do el Consejo General del Poder Judicial.
+  1. Ser� nombrado por el Rey, a propuesta del Presidente del Gobierno, de acuerdo con el Consejo General del Poder Judicial.
+  2. Ser� nombrado por el Rey, a propuesta conjunta del Gobierno y el Congreso de los Diputados, o�do el Consejo General del Poder Judicial.
+  3. Ser� nombrado por el Rey, a propuesta del Gobierno, o�do el Consejo General del Poder Judicial.
+
+---
+
+### Pregunta 8
+
+**Texto:** Los Juzgados de Paz existen:
+
+**Opciones:**
+  0. En todos los Municipios
+  1. En todos los Municipios que sean cabeza de partido judicial.
+  2. En todos los Municipios donde no exista Juzgado de Primera Instancia e Instrucci�n.
+  3. En todos los Municipios donde no exista Juzgado de Distrito.
+
+---
+
+### Pregunta 9
+
+**Texto:** Los Jueces de Paz son elegidos por:
+
+**Opciones:**
+  0. El Consejo General del Poder Judicial.
+  1. El Alcalde, o�do el Pleno del Ayuntamiento.
+  2. El Pleno del Ayuntamiento, por mayor�a simple.
+  3. El Pleno del Ayuntamiento, por mayor�a absoluta.
+
+---
+
+### Pregunta 10
+
+**Texto:** No es un �rgano unipersonal del poder judicial:
+
+**Opciones:**
+  0. La Audiencia Provincial.
+  1. El Juzgado de lo Contencioso administrativo.
+  2. El Juzgado de lo Mercantil.
+  3. El Juzgado de lo Social.
+
+---
+
+### Pregunta 11
+
+**Texto:** De conformidad con el art�culo 26 LOPJ, ejercen la potestad jurisdiccional en nuestro Estado, los siguientes juzgados y tribunales integrantes del poder judicial:
+
+**Opciones:**
+  0. El Tribunal de Cuentas.
+  1. El Tribunal Constitucional.
+  2. El Tribunal Supremo.
+  3. El Tribunal de las Aguas de la Vega de Valencia.
+
+---
+
+### Pregunta 12
+
+**Texto:** El Tribunal Supremo (se�ale la falsa):
+
+**Opciones:**
+  0. Tiene su sede en la Villa de Madrid.
+  1. Tiene jurisdicci�n en toda Espa�a.
+  2. Su Presidente lo es tambi�n de la Audiencia Nacional.
+  3. Tiene 5 Salas: Civil, Penal, Contencioso administrativo, Social y Militar.
+
+---
+
+### Pregunta 13
+
+**Texto:** Para ser elegido Presidente del Tribunal Supremo, la LOPJ establece como requisitos que:
+
+**Opciones:**
+  0. Ser� necesario ser miembro de la carrera judicial con la categor�a de Magistrado del Tribunal Supremo y reunir las condiciones exigidas para ser Presidente de Sala del mismo, o bien ser un jurista de reconocida competencia con m�s de 20 a�os de antig�edad en el ejercicio de su profesi�n.
+  1. Ser� necesario ser Magistrado o Fiscal, Profesor de Universidad, funcionario p�blico o Abogado, todos ellos juristas de reconocida competencia con m�s de 25 a�os de ejercicio profesional.
+  2. Ser� necesario ser miembro de la carrera judicial con la categor�a de Magistrado del Tribunal Supremo y reunir las condiciones exigidas para ser Presidente de Sala del mismo, o bien ser un jurista de reconocida competencia con m�s de 25 a�os de antig�edad en el ejercicio de su profesi�n.
+  3. Ser� necesario ser Magistrado o Fiscal, Profesor de Universidad, funcionario p�blico o Abogado, todos ellos juristas de reconocida competencia con m�s de 20 a�os de ejercicio profesional.
+
+---
+
+### Pregunta 14
+
+**Texto:** El mandato del Fiscal General del Estado, de conformidad con el art�culo 31 del Estatuto Org�nico del Ministerio Fiscal, tendr� una duraci�n de:
+
+**Opciones:**
+  0. 4 a�os y no podr� ser renovado excepto en los supuestos en que el titular hubiera ostentado el cargo durante un per�odo inferior a 2 a�os.
+  1. 4 a�os y no podr� ser renovado excepto en los supuestos en que el titular hubiera ostentado el cargo durante un per�odo inferior a 1 a�o.
+  2. 5 a�os y no podr� ser renovado excepto en los supuestos en que el titular hubiera ostentado el cargo durante un per�odo inferior a 2 a�os.
+  3. 5 a�os y no podr� ser renovado excepto en los supuestos en que el titular hubiera ostentado el cargo durante un per�odo inferior a 3 a�os.
+
+---
+
+### Pregunta 15
+
+**Texto:** De acuerdo con la Constituci�n Espa�ola:
+
+**Opciones:**
+  0. El procedimiento ser� predominantemente oral, sobre todo en materia criminal.
+  1. La justicia emana del Rey y se administra en nombre del pueblo
+  2. El ejercicio de la jurisdicci�n militar se limitar� �mbito estrictamente castrense y a los supuestos de estados de excepci�n y de sitio
+  3. Se proh�ben los Tribunales de excepci�n en el �mbito de la Administraci�n Civil y de las organizaciones profesionales
+
+---
+
+### Pregunta 16
+
+**Texto:** Los Jueces y Magistrados, conforme a la que dispone la Constituci�n, son:
+
+**Opciones:**
+  0. Independientes, inviolables, responsables y sometidos �nicamente al imperio de la Ley.
+  1. Independientes, inamovibles, invulnerables y sometidos �nicamente al imperio de la Ley.
+  2. Independientes, neutrales, inamovibles, responsables y sometidos �nicamente al imperio de la Ley.
+  3. Independientes, inamovibles, responsables y sometidos �nicamente al imperio de la Ley.
+
+---
+
+### Pregunta 17
+
+**Texto:** Seg�n el art�culo 122 de la Constituci�n Espa�ola, el Consejo General del Poder Judicial se configura como el �rgano:
+
+**Opciones:**
+  0. Consultivo del Poder Judicial.
+  1. De gobierno del Poder Judicial.
+  2. Representativo del Poder Judicial.
+  3. Jurisdiccional superior en todos los �rdenes.
+
+---
+
+### Pregunta 18
+
+**Texto:** El Consejo General del Poder Judicial:
+
+**Opciones:**
+  0. Estar� integrado por el Presidente del Tribunal Supremo, que lo presidir�, y por 20 miembros.
+  1. Estar� integrado por el Presidente del Tribunal Supremo, que lo presidir�, y por 21 miembros.
+  2. Estar� integrado por un total de 20 miembros.
+  3. Estar� integrado por el Presidente de la Audiencia Nacional, que lo presidir�, y por 20 miembros.
+
+---
+
+### Pregunta 19
+
+**Texto:** La responsabilidad de los jueces por los da�os que puedan cometer en el ejercicio de su funci�n jurisdiccional, puede ser:
+
+**Opciones:**
+  0. Civil o Penal.
+  1. Civil exclusivamente.
+  2. Civil, Penal o Disciplinaria.
+  3. Penal o Disciplinaria.
+
+---
+
+### Pregunta 20
+
+**Texto:** �Cu�les son los principios que rigen el ejercicio de las funciones del Ministerio Fiscal de acuerdo con el art�culo 124.2 de la Constituci�n Espa�ola?:
+
+**Opciones:**
+  0. Independencia, inamovilidad, legalidad e imparcialidad
+  1. Oportunidad, autonom�a, unidad jurisdiccional y legalidad.
+  2. Autonom�a, unidad jurisdiccional, legalidad y oportunidad
+  3. Unidad de actuaci�n, dependencia jer�rquica, legalidad e imparcialidad.
+
+---
+
+### Pregunta 21
+
+**Texto:** La justicia ser� gratuita cuando as� lo disponga una ley, y:
+
+**Opciones:**
+  0. Seg�n los casos, respecto de quienes acrediten insuficiencia de recursos para litigar.
+  1. Seg�n los casos, respecto de quienes parezcan manifestar insuficiencia de recursos para litigar.
+  2. En todo caso, respecto de quienes parezcan manifestar insuficiencia de recursos para litigar.
+  3. En todo caso, respecto de quienes acrediten insuficiencia de recursos para litigar.
+
+---
+
+### Pregunta 22
+
+**Texto:** Las actuaciones judiciales ser�n p�blicas:
+
+**Opciones:**
+  0. Siempre.
+  1. Siempre que lo prevea una norma con rango de ley.
+  2. En ning�n caso.
+  3. Con las excepciones que prevean las leyes de procedimiento.
+
+---
+
+### Pregunta 23
+
+**Texto:** A efectos judiciales, el Estado se organiza territorialmente en:
+
+**Opciones:**
+  0. Municipios, Provincias, Comarcas y Comunidades Aut�nomas.
+  1. Municipios, Provincias y Comunidades Aut�nomas.
+  2. Municipios, Partidos, Provincias y Comunidades Aut�nomas.
+  3. Municipios, Partidos y Comunidades Aut�nomas.
+
+---
+
+### Pregunta 24
+
+**Texto:** Seg�n la Constituci�n, la justicia:
+
+**Opciones:**
+  0. Se administra en nombre del pueblo por Jueces y Magistrados.
+  1. Emana del pueblo
+  2. Emana del Rey
+  3. Emana de los Jueces y Magistrados integrantes del poder judicial.
+
+---
+
+### Pregunta 25
+
+**Texto:** La competencia sobre la Administraci�n de Justicia, de acuerdo con el art�culo 149.1.5 de la Constituci�n:
+
+**Opciones:**
+  0. Se atribuye en exclusiva al Estado
+  1. Podr� ser asumida como exclusiva por las Comunidades aut�nomas en sus respectivos estatutos
+  2. Le corresponde la legislaci�n al Estado y la ejecuci�n puede corresponder a las Comunidades aut�nomas seg�n sus respectivos estatutos
+  3. No aparece regulada esta cuesti�n en el texto constitucional.
+
+---
+
+### Pregunta 26
+
+**Texto:** La competencia de la jurisdicci�n militar:
+
+**Opciones:**
+  0. No tiene l�mites
+  1. Quedar� limitada al �mbito estrictamente castrense y a los supuestos de estado de alarma
+  2. Quedar� limitada al �mbito estrictamente castrense y a los supuestos de estado de excepci�n
+  3. Quedar� limitada al �mbito estrictamente castrense y a los supuestos de estado de sitio
+
+---
+
+### Pregunta 27
+
+**Texto:** De conformidad con la LOPJ:
+
+**Opciones:**
+  0. La demarcaci�n judicial, que determinar� la circunscripci�n territorial de los �rganos judiciales, se establecer� por ley.
+  1. La demarcaci�n judicial, que determinar� la circunscripci�n territorial de los �rganos judiciales, se establecer� por ley o, en los casos expresamente contemplados en esta norma, por real decreto.
+  2. La demarcaci�n judicial, que determinar� la circunscripci�n territorial de los �rganos judiciales, se establecer� por ley org�nica.
+  3. La demarcaci�n judicial, que determinar� la circunscripci�n territorial de los �rganos judiciales, se establecer� por ley org�nica o, en los casos expresamente contemplados en esta norma, por ley ordinaria.
+
+---
+
+### Pregunta 28
+
+**Texto:** Se�ale la falsa en relaci�n con el mandato y renovaci�n de los miembros del CGPJ:
+
+**Opciones:**
+  0. El CGPJ se renovar� en su totalidad cada 5 a�os, contados desde la fecha de su constituci�n.
+  1. Las C�maras deber�n comenzar el proceso de renovaci�n 4 meses antes de que expire el mandato.
+  2. La toma de posesi�n y la sesi�n constitutiva tendr�n lugar dentro de los 15 d�as posteriores a la expiraci�n del anterior Consejo.
+  3. En ning�n caso podr� recaer la designaci�n de Vocales del Consejo General del Poder Judicial en Vocales del Consejo saliente.
+
+---
+
+### Pregunta 29
+
+**Texto:** Ser� nombrado Presidente del Tribunal Supremo y del CGPJ la persona que alcance las siguientes mayor�as en el Pleno:
+
+**Opciones:**
+  0. Mayor�a absoluta.
+  1. Mayor�a de 2/3.
+  2. Mayor�a de 3/5.
+  3. Mayor�a de votos.
+
+---
+
+### Pregunta 30
+
+**Texto:** Se�ale la composici�n de la Comisi�n Permanente del CGPJ:
+
+**Opciones:**
+  0. Presidente, que la preside, y 4 vocales, 2 del turno judicial y dos juristas.
+  1. Presidente, que la preside, y 7 vocales, 4 del turno judicial y tres juristas.
+  2. Presidente, que la preside, y 6 vocales, 3 del turno judicial y tres juristas.
+  3. Presidente, que la preside, y 5 vocales, 2 del turno judicial y tres juristas.
+
+---
+
+### Pregunta 31
+
+**Texto:** El Promotor de la Acci�n Disciplinaria (se�ale la falsa):
+
+**Opciones:**
+  0. Tiene un mandato de 5 a�os.
+  1. Ser� elegido por mayor�a absoluta del Pleno.
+  2. Ser� elegido entre magistrados del Tribunal Supremo y magistrados con m�s de 25 a�os de antig�edad en la carrera judicial.
+  3. Mientras desempe�e el cargo tendr� la consideraci�n honor�fica de Magistrado de la Audiencia Nacional.
+
+---
+
+### Pregunta 32
+
+**Texto:** �Cu�l de los siguientes no es un �rgano del CGPJ? :
+
+**Opciones:**
+  0. Comisi�n de Asuntos Econ�micos.
+  1. Promotor de la Acci�n Disciplinaria.
+  2. Comisi�n Disciplinaria.
+  3. Comisi�n de personal judicial.
+
+---
+
+### Pregunta 33
+
+**Texto:** El Presidente del Tribunal Superior de Justicia ser� nombrado por:
+
+**Opciones:**
+  0. El Consejo General del Poder Judicial.
+  1. El Presidente de Tribunal Supremo.
+  2. El Rey.
+  3. El Presidente de la Comunidad Aut�noma.
+
+---
+
+### Pregunta 34
+
+**Texto:** El Presidente del Tribunal Superior de Justicia tiene adem�s la condici�n de:
+
+**Opciones:**
+  0. Presidente de la Sala de lo Contencioso Administrativo del propio Tribunal Superior de Justicia.
+  1. Presidente de la Sala de lo Civil y lo Penal del propio Tribunal Superior de Justicia.
+  2. Miembro del Consejo General del Poder Judicial.
+  3. Magistrado de la Audiencia Nacional.
+
+---
+
+### Pregunta 35
+
+**Texto:** La Sala Especial del Tribunal Supremo regulada en el art�culo 61 de la LOPJ est� compuesta por:
+
+**Opciones:**
+  0. El Presidente del Tribunal Supremo y el Magistrado m�s antiguo y m�s moderno de cada una de las Salas.
+  1. El Presidente del Tribunal Constitucional y el Magistrado m�s antiguo y m�s moderno de cada una de las Salas.
+  2. El Presidente del Tribunal Supremo, los Presidentes de Sala y el Magistrado m�s antiguo y m�s moderno de cada una de ellas.
+  3. El Presidente del Tribunal Constitucional, los Presidentes de Sala y el Magistrado m�s antiguo y m�s moderno de cada una de ellas.
+
+---
+
+### Pregunta 36
+
+**Texto:** Seg�n la Constituci�n el Jurado popular se limita a los procesos:
+
+**Opciones:**
+  0. Civiles.
+  1. Penales.
+  2. Civiles y penales.
+  3. Penales y sociales.
+
+---
+
+### Pregunta 37
+
+**Texto:** �Qu� Comisiones del CGPJ est�n integradas por tres vocales?:
+
+**Opciones:**
+  0. La Comisi�n Disciplinaria y la Comisi�n de Asuntos Econ�micos.
+  1. La Comisi�n Disciplinaria y la Comisi�n de Igualdad.
+  2. La Comisi�n de Asuntos Econ�micos y la Comisi�n de Igualdad.
+  3. La Comisi�n Disciplinaria, la Comisi�n de Igualdad y la Comisi�n de Asuntos Econ�micos.
+
+---
+
+### Pregunta 38
+
+**Texto:** La elecci�n del Presidente de la Audiencia Nacional corresponde:
+
+**Opciones:**
+  0. Al Pleno del CGPJ por mayor�a absoluta de miembros presentes.
+  1. Al Pleno del CGPJ por mayor�a de 3/5 de miembros presentes.
+  2. A la Comisi�n Permanente del CGPJ por mayor�a absoluta de miembros presentes.
+  3. A la Comisi�n Permanente del CGPJ por mayor�a de 3/5 de miembros presentes.
+
+---
+
+### Pregunta 39
+
+**Texto:** El mandato de la Comisi�n Permanente ser�:
+
+**Opciones:**
+  0. Rotaci�n bianual.
+  1. Rotaci�n anual.
+  2. De 5 a�os.
+  3. De 3 a�os.
+
+---
+
+### Pregunta 40
+
+**Texto:** En cada provincia existir�n:
+
+**Opciones:**
+  0. Uno o varios juzgados de primera instancia e instrucci�n.
+  1. Uno o varios juzgados de Violencia sobre la mujer.
+  2. Uno o varios Juzgados de lo Mercantil.
+  3. Un juzgado de Paz.
+
+---

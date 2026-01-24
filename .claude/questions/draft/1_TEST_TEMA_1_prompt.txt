@@ -1,0 +1,510 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 1 TEST TEMA 1.pdf
+**Total preguntas:** 40
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** �Qu� d�a entr� en vigor la Constituci�n Espa�ola de 1978?:
+
+**Opciones:**
+  0. El 6 de diciembre de 1978.
+  1. El 27 de diciembre de 1978.
+  2. El 31 de octubre de 1978.
+  3. El 29 de diciembre de 1978.
+
+---
+
+### Pregunta 2
+
+**Texto:** Seg�n la Constituci�n de 1978, la forma pol�tica del Estado espa�ol es:
+
+**Opciones:**
+  0. La Monarqu�a.
+  1. La Monarqu�a Limitada.
+  2. La Monarqu�a Constitucional.
+  3. La Monarqu�a Parlamentaria.
+
+---
+
+### Pregunta 3
+
+**Texto:** Las primeras elecciones democr�ticas celebradas en Espa�a tras la muerte de Franco tuvieron lugar
+
+**Opciones:**
+  0. 1977
+  1. 1975
+  2. 1976
+  3. 1978
+
+---
+
+### Pregunta 4
+
+**Texto:** El refer�ndum en el que se aprob� popularmente la Constituci�n se llev� a efecto el:
+
+**Opciones:**
+  0. 27 de diciembre de 1978
+  1. 6 de diciembre de 1978
+  2. 31 de octubre de 1978
+  3. 29 de diciembre de 1979
+
+---
+
+### Pregunta 5
+
+**Texto:** La Constituci�n de 1978 consta de:
+
+**Opciones:**
+  0. Un pre�mbulo, 169 art�culos, 4 disposiciones adicionales, 8 disposiciones transitorias, 1
+  1. isposici�n derogatoria y disposici�n final.
+  2. Un pre�mbulo, 169 art�culos, 4 disposiciones adicionales, 8 disposiciones
+  3. isposiciones derogatorias y 1 disposici�n final.
+
+---
+
+### Pregunta 6
+
+**Texto:** El T�tulo II de la Constituci�n de 1978 est� dedicado a:
+
+**Opciones:**
+  0. Las Cortes Generales.
+  1. La Corona.
+  2. Los Derechos y Deberes Fundamentales.
+  3. El Gobierno.
+
+---
+
+### Pregunta 7
+
+**Texto:** La Constituci�n de 1978 se fundamenta:
+
+**Opciones:**
+  0. En la indisoluble unidad de la Naci�n Espa�ola.
+  1. En la solidaridad de todos los espa�oles.
+  2. En la pluralidad de pueblos integrantes de la Naci�n Espa�ola.
+  3. En el compromiso de unidad de todos los pueblos y nacionalidades integrantes de la Naci�n
+
+---
+
+### Pregunta 8
+
+**Texto:** El T�tulo VII de la Constituci�n Espa�ola se denomina:
+
+**Opciones:**
+  0. Econom�a y Hacienda.
+  1. Organizaci�n Territorial del Estado.
+  2. Del Poder Judicial.
+  3. Del Gobierno y de la Administraci�n.
+
+---
+
+### Pregunta 9
+
+**Texto:** Son valores superiores del ordenamiento, seg�n la Constituci�n Espa�ola de 1978:
+
+**Opciones:**
+  0. Libertad, justicia, solidaridad, pluralismo pol�tico.
+  1. Pluralismo pol�tico, solidaridad, igualdad y seguridad jur�dica.
+  2. Legalidad, liberta, igualdad y justicia.
+  3. Pluralismo pol�tico, justicia, libertad e igualdad.
+
+---
+
+### Pregunta 10
+
+**Texto:** �Qu� denominaci�n recibe el Cap�tulo III del T�tulo I de la Constituci�n Espa�ola?:
+
+**Opciones:**
+  0. �De los principios rectores de la pol�tica social y econ�mica�.
+  1. �De los derechos fundamentales y de las libertades p�blicas�.
+  2. �De los derechos y deberes de los ciudadanos�.
+  3. �Derechos y libertades�.
+
+---
+
+### Pregunta 11
+
+**Texto:** �Qu� art�culos de la Constituci�n Espa�ola han sido objeto de reforma?:
+
+**Opciones:**
+  0. El 35.
+  1. El 48
+  2. El 13.1, el 137 y el 50
+  3. El 13.2, el 135 y el 49
+
+---
+
+### Pregunta 12
+
+**Texto:** Conforme a lo establecido en el art�culo 116 de la Constituci�n, la declaraci�n del estado de
+
+**Opciones:**
+  0. Al Presidente del Gobierno mediante Real Decreto, previa autorizaci�n de las Cortes Generales.
+  1. Al Congreso de los Diputados, a propuesta del Gobierno.
+  2. Al Gobierno mediante Real Decreto, previa autorizaci�n del Congreso.
+  3. Al Rey a propuesta del Presidente del Gobierno.
+
+---
+
+### Pregunta 13
+
+**Texto:** Seg�n el art�culo 1.2 de la Constituci�n, la Soberan�a Nacional reside:
+
+**Opciones:**
+  0. En los poderes del Estado.
+  1. En el Rey como Monarca.
+  2. En el pueblo espa�ol.
+  3. En las Cortes Generales.
+
+---
+
+### Pregunta 14
+
+**Texto:** El T�tulo de la Constituci�n m�s extenso es:
+
+**Opciones:**
+  0. El T�tulo VIII �De la organizaci�n territorial del Estado�.
+  1. El T�tulo I �De los derechos y deberes fundamentales�.
+  2. El T�tulo X �De la reforma constitucional�.
+  3. El T�tulo IX �del Tribunal Constitucional�
+
+---
+
+### Pregunta 15
+
+**Texto:** �Qu� d�a fue aprobada por las CCGG la Constituci�n Espa�ola de 1978:
+
+**Opciones:**
+  0. El 6 de diciembre de 1978
+  1. El 31 de octubre de 1978.
+  2. El 27 de diciembre de 1978.
+  3. El 29 de diciembre de 1978.
+
+---
+
+### Pregunta 16
+
+**Texto:** El art�culo 4 de la Constituci�n establece que:
+
+**Opciones:**
+  0. El castellano es la lengua espa�ola oficial del Estado.
+  1. La capital del Estado es la villa de Madrid.
+  2. La bandera de Espa�a est� formada por tres franjas horizontales, roja, amarilla y roja, siendo la
+  3. marilla de doble anchura que cada una de las rojas.
+
+---
+
+### Pregunta 17
+
+**Texto:** En relaci�n con el T�tulo Preliminar de la Constituci�n Espa�ola indique cu�l de las siguientes
+
+**Opciones:**
+  0. firmaciones es correcta:
+  1. Se compone de diez art�culos.
+  2. Su reforma de realiza por la v�a del art�culo 167.
+  3. Reconoce que los Estatutos podr�n reconocer banderas y ense�as propias de las Comunidades
+
+---
+
+### Pregunta 18
+
+**Texto:** La reforma constitucional del derecho a sindicarse libremente (art�culo 28.1 CE), requiere:
+
+**Opciones:**
+  0. Aprobaci�n por mayor�a de tres quintos de cada una de las C�maras.
+  1. Aprobaci�n por mayor�a de dos tercios de cada una de las C�maras.
+  2. Aprobaci�n por mayor�a de tres quintos de cada una de las C�maras, y si no hay acuerdo,
+  3. probaci�n por Comisi�n paritaria de Diputados y Senadores.
+
+---
+
+### Pregunta 19
+
+**Texto:** Se�ale a qui�n corresponde la iniciativa para la reforma constitucional:
+
+**Opciones:**
+  0. Al Presidente del Gobierno y al Congreso.
+  1. Al Gobierno y al Defensor del Pueblo.
+  2. Al Gobierno, al Congreso y al Senado y al pueblo.
+  3. Al Gobierno, al Congreso, al Senado ya las Asambleas Legislativas de las Comunidades
+
+---
+
+### Pregunta 20
+
+**Texto:** Se�ale la respuesta correcta en relaci�n con la reforma operada en el art�culo 13.2 de la Constituci�n
+
+**Opciones:**
+  0. Supuso la ampliaci�n del sufragio pasivo a los extranjeros en las elecciones auton�micas, en virtud
+  1. e lo que, atendiendo a criterios de reciprocidad, pueda establecerse por Tratado o ley.
+  2. La citada reforma exigi� la celebraci�n de refer�ndum preceptivo y vinculante.
+  3. Se tramit� por el procedimiento ordinario de reformar previsto en el art�culo 167 CE.
+
+---
+
+### Pregunta 21
+
+**Texto:** Se pretende reformar el art�culo de la Constituci�n referido a la propiedad privada y a la
+
+**Opciones:**
+  0. el citado art�culo:
+  1. La reforma por iniciativa popular exigir� no menos de 500.000 firmas acreditadas.
+  2. Se proceder� a la aprobaci�n del principio de reforma por mayor�a de dos tercios y a la disoluci�n
+  3. Una vez disueltas las Cortes, las C�maras elegidas deber�n ratificar la decisi�n y proceder al
+
+---
+
+### Pregunta 22
+
+**Texto:** De acuerdo con su Disposici�n Final, la Constituci�n entr� en vigor:
+
+**Opciones:**
+  0. En el momento de la sanci�n real.
+  1. Tras su aprobaci�n por refer�ndum.
+  2. Una vez aprobada por las Cortes Generales.
+  3. El d�a de su publicaci�n en el BOE.
+
+---
+
+### Pregunta 23
+
+**Texto:** El castellano es la lengua oficial del Estado y, de acuerdo con el T�tulo Preliminar, todos los espa�oles
+
+**Opciones:**
+  0. El derecho a conocerla.
+  1. El deber de usarla.
+  2. El deber de conocerla y el derecho a usarla.
+  3. El deber de usarla y el derecho a conocerla.
+
+---
+
+### Pregunta 24
+
+**Texto:** El art�culo 7 del T�tulo Preliminar de la Constituci�n Espa�ola regula:
+
+**Opciones:**
+  0. Los sindicatos de trabajadores y asociaciones empresariales.
+  1. Los partidos pol�ticos.
+  2. Las Fuerzas Armadas.
+  3. La capitalidad del Estado.
+
+---
+
+### Pregunta 25
+
+**Texto:** Cuando se propusiere la reforma constitucional del derecho de reuni�n reconocido en el art�culo 21,
+
+**Opciones:**
+  0. Mayor�a de tres quintos del Congreso y mayor�a absoluta del Senado.
+  1. Mayor�a absoluta de cada C�mara.
+  2. Mayor�a de tres quintos de ambas C�maras.
+  3. Mayor�a de dos tercios de ambas C�maras.
+
+---
+
+### Pregunta 26
+
+**Texto:** El art�culo 166 CE remite el ejercicio de la iniciativa de reforma a los �rganos previstos en:
+
+**Opciones:**
+  0. El art�culo 87 apartado 1 de la Constituci�n Espa�ola.
+  1. El art�culo 87 apartados 1 y 2 de la Constituci�n Espa�ola.
+  2. El art�culo 87 apartados 1, 2 y 3 de la Constituci�n Espa�ola.
+  3. Los art�culos 86 y 87 de la Constituci�n Espa�ola.
+
+---
+
+### Pregunta 27
+
+**Texto:** En el procedimiento de reforma ordinaria de la Constituci�n de 1978, contemplado en el Art. 167 de
+
+**Opciones:**
+  0. Por 3/5 de cada una de las C�maras y, si no hubiera acuerdo entre ambas, se intentar� obtenerlos
+  1. Por 2/3 de cada una de las C�maras y, si no hubiera acuerdo entre ambas, se intentar� obtenerlo
+  2. Por mayor�a absoluta de cada una de las C�maras y, si no hubiera acuerdo entre ambas, se intentar�
+  3. Por acuerdo favorable del Congreso y mayor�a absoluta del Senado y, si no hubiera acuerdo entre
+
+---
+
+### Pregunta 28
+
+**Texto:** En caso de procederse a la reforma del art�culo 18 de la CE que regula el derecho al honor, a la
+
+**Opciones:**
+  0. Aprobaci�n del principio de reforma por mayor�a de 3/5 de cada C�mara.
+  1. Refer�ndum facultativo y vinculante, que se celebrar� cuando as� lo soliciten una d�cima pate de
+  2. Aprobaci�n del principio de reforma por mayor�a de 2/3 de cada C�mara y disoluci�n inmediata de
+  3. ortes.
+
+---
+
+### Pregunta 29
+
+**Texto:** El refer�ndum en caso de reforma agravada de la Constituci�n de 1978:
+
+**Opciones:**
+  0. Es facultativo y no vinculante.
+  1. Es facultativo y vinculante.
+  2. Es preceptivo y no vinculante.
+  3. Es preceptivo y vinculante.
+
+---
+
+### Pregunta 30
+
+**Texto:** �Qui�n debe solicitar la celebraci�n de refer�ndum en caso de reforma ordinaria de la Constituci�n
+
+**Opciones:**
+  0. e 1978?
+  1. La mayor�a absoluta de miembros del Congreso y del Senado.
+  2. 1/10 parte de los miembros de cualquier de las C�maras.
+  3. 1/5 parte de los miembros de cada una de las C�maras.
+
+---
+
+### Pregunta 31
+
+**Texto:** �Qu� plazo establece la Constituci�n de 1978 para solicitar la celebraci�n de refer�ndum en caso de
+
+**Opciones:**
+  0. probaci�n de una reforma constitucional del art. 167?:
+  1. Habr� de solicitarse dentro de los 5 d�as siguientes a su aprobaci�n.
+  2. Habr� de solicitarse dentro de los 10 d�as siguientes a su aprobaci�n.
+  3. Habr� de solicitarse dentro de los 15 d�as siguientes a su aprobaci�n.
+
+---
+
+### Pregunta 32
+
+**Texto:** La iniciativa para la reforma constitucional debe ir suscrita, al menos, en el Congreso por:
+
+**Opciones:**
+  0. Mayor�a absoluta de los Diputados.
+  1. 50 diputados que pertenezcan a 2 grupos parlamentarios.
+  2. 2 grupos parlamentarios o 1/5 de los diputados.
+  3. 1 grupo parlamentario o 15 Diputados.
+
+---
+
+### Pregunta 33
+
+**Texto:** �Cu�l/es de los siguientes estados de anomal�a pol�tica regulados en el art�culo 116 CE ser� declarado
+
+**Opciones:**
+  0. Los estados de alarma y excepci�n.
+  1. El estado de alarma.
+  2. El estado de excepci�n.
+  3. Los estados de excepci�n y sitio.
+
+---
+
+### Pregunta 34
+
+**Texto:** En caso de declaraci�n del estado de alarma, el Gobierno podr� prorrogar el mismo:
+
+**Opciones:**
+  0. Previa autorizaci�n de las Cortes Generales.
+  1. Previa autorizaci�n del Congreso.
+  2. Dando cuenta a las Cortes Generales.
+  3. Dando cuenta al Congreso.
+
+---
+
+### Pregunta 35
+
+**Texto:** El art�culo 169 de la Constituci�n Espa�ola dispone que:
+
+**Opciones:**
+  0. No podr� iniciarse la reforma constitucional en tiempo de guerra o de vigencia de algunos de los
+  1. No podr� iniciarse la reforma constitucional en tiempo de guerra o de vigencia de alguno de los
+  2. No podr� aprobarse la reforma constitucional en tiempo de guerra o de vigencia de alguno de los
+  3. No podr� aprobarse la reforma constitucional en tiempo de guerra o de vigencia de algunos de los
+
+---
+
+### Pregunta 36
+
+**Texto:** �Qui�n aprob� la Constituci�n Espa�ola de 1978:
+
+**Opciones:**
+  0. El Rey.
+  1. El pueblo espa�ol.
+  2. Las Cortes Generales.
+  3. El Congreso de los Diputados.
+
+---
+
+### Pregunta 37
+
+**Texto:** �Cu�les son los tres T�tulos de la Constituci�n Espa�ola que se subdividen en Cap�tulos?:
+
+**Opciones:**
+  0. Preliminar, I y VIII
+  1. I, III y VIII.
+  2. I, V y VII.
+  3. II, IV y VIII.
+
+---
+
+### Pregunta 38
+
+**Texto:** �De las garant�as de las libertades y derechos fundamentales� es el nombre de un Cap�tulo del T�tulo
+
+**Opciones:**
+  0. Primero
+  1. Segundo.
+  2. Tercero
+  3. Cuarto.
+
+---
+
+### Pregunta 39
+
+**Texto:** El derecho a una vivienda digna (art�culo 47 CE), para la Constituci�n espa�ola:
+
+**Opciones:**
+  0. Es un valor superior de nuestro ordenamiento
+  1. Es un derecho fundamental.
+  2. Es un principio rector de la pol�tica social y econ�mica.
+  3. No est� regulado de manera expresa.
+
+---
+
+### Pregunta 40
+
+**Texto:** El art�culo 2 de la Constituci�n Espa�ola, establece que:
+
+**Opciones:**
+  0. La capital del Estado es la villa de Madrid
+  1. La bandera de Espa�a est� formada por tres franjas horizontales, roja, amarilla y roja, siendo la
+  2. marilla de doble anchura que cada una de las rojas
+  3. La Constituci�n se fundamenta en la indisoluble unidad de la Naci�n espa�ola, patria com�n e
+
+---

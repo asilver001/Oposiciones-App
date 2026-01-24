@@ -9,26 +9,62 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [isAnonymous, setIsAnonymous] = useState(false); // User using app without account
+  const [userRole, setUserRole] = useState(null); // { isAdmin, isReviewer, role, name }
+
+  // Check if user has admin/reviewer role
+  const checkUserRole = async (email) => {
+    if (!email) {
+      setUserRole(null);
+      return null;
+    }
+    try {
+      const { data, error } = await supabase.rpc('check_user_role', { p_email: email });
+      if (error) {
+        console.error('Error checking user role:', error);
+        setUserRole(null);
+        return null;
+      }
+      setUserRole(data);
+      return data;
+    } catch (err) {
+      console.error('Error checking user role:', err);
+      setUserRole(null);
+      return null;
+    }
+  };
 
   useEffect(() => {
     // Get initial session
-    supabase.auth.getSession().then(({ data: { session } }) => {
+    supabase.auth.getSession().then(async ({ data: { session } }) => {
       setSession(session);
       setUser(session?.user ?? null);
+      // Check role for existing session (don't block on this)
+      if (session?.user?.email) {
+        checkUserRole(session.user.email).catch(console.error);
+      }
       setLoading(false);
     });
 
     // Listen for auth changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      async (event, session) => {
+      (event, session) => {
         console.log('Auth event:', event);
         setSession(session);
         setUser(session?.user ?? null);
+
+        // IMPORTANT: Set loading false IMMEDIATELY, don't wait for async operations
         setLoading(false);
 
-        // Create profile when user signs up
+        // Check role when user signs in (don't block UI on this)
+        if (session?.user?.email) {
+          checkUserRole(session.user.email).catch(console.error);
+        } else {
+          setUserRole(null);
+        }
+
+        // Create profile when user signs up (background, don't block)
         if (event === 'SIGNED_IN' && session?.user) {
-          await ensureUserProfile(session.user);
+          ensureUserProfile(session.user).catch(console.error);
         }
       }
     );
@@ -263,6 +299,11 @@ export function AuthProvider({ children }) {
     isAnonymous,
     continueAsAnonymous,
     exitAnonymousMode,
+    // Role-based access
+    userRole,
+    isAdmin: userRole?.isAdmin ?? false,
+    isReviewer: userRole?.isReviewer ?? false,
+    checkUserRole,
   };
 
   return (

@@ -1,0 +1,507 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** Test tema 4.pdf
+**Total preguntas:** 40
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** En virtud del principio de primac�a del Derecho de la Uni�n:
+
+**Opciones:**
+  0. Los Estados miembros tienen la obligaci�n de eliminar de su ordenamiento jur�dico la
+  1. La validez y eficacia de las normas que integran el Derecho de la Uni�n son indepen-
+  2. ientes de su aceptaci�n por parte de los Estados miembros o el desarrollo de cualquier
+  3. ctividad por parte de estos
+
+---
+
+### Pregunta 2
+
+**Texto:** Se�ale la FALSA seg�n el art. 296 del TFUE, para ejercer las competencias de la
+
+**Opciones:**
+  0. Cuando los Tratados no establezcan el tipo de acto que deba adoptarse, las instituciones
+  1. ecidir�n en cada caso conforme a los procedimientos aplicables y al principio de pro-
+  2. Los actos jur�dicos deber�n estar motivados y se referir�n a las propuestas, iniciativas,
+  3. Cuando los Tratados establezcan el tipo de acto que deba adoptarse, las instituciones
+
+---
+
+### Pregunta 3
+
+**Texto:** En la celebraci�n de acuerdos internacionales, la Comisi�n:
+
+**Opciones:**
+  0. Solicitar� en exclusiva el dictamen al Tribunal de Justicia de la Uni�n.
+  1. Autorizar� la apertura de negociaciones.
+  2. Negociar� los acuerdos no comerciales.
+  3. Propone la celebraci�n de acuerdos internacionales, salvo en materia PESC.
+
+---
+
+### Pregunta 4
+
+**Texto:** De los siguientes actos jur�dicos, cu�les son obligatorios en todos sus elementos:
+
+**Opciones:**
+  0. Reglamentos y Directivas.
+  1. Directivas y Decisiones.
+  2. Reglamentos y Decisiones.
+  3. Recomendaciones y Dict�menes.
+
+---
+
+### Pregunta 5
+
+**Texto:** En virtud del principio de cooperaci�n leal:
+
+**Opciones:**
+  0. El contenido y la forma de la acci�n de la Uni�n no exceder�n de lo necesario para
+  1. lcanzar los objetivos de los Tratados.
+  2. La Uni�n y los Estados miembros se respetar�n y asistir�n mutuamente en el cumpli-
+  3. La Uni�n act�a dentro de los l�mites de las competencias que le atribuyen los Estados
+
+---
+
+### Pregunta 6
+
+**Texto:** Son principios espec�ficos del Derecho de la Uni�n elaborados por el Tribunal de
+
+**Opciones:**
+  0. Primac�a, efecto directo, interpretaci�n conforme
+  1. Cooperaci�n leal.
+  2. Non bis in idem.
+
+---
+
+### Pregunta 7
+
+**Texto:** Las directivas:
+
+**Opciones:**
+  0. Entran en vigor a los 20 d�as desde la notificaci�n
+  1. Se publicar�n en el DOUE si son legislativas o si tienen por destinatarios a todos los
+  2. Obligan en cuanto al resultado y al procedimiento para alcanzarlo
+  3. Se publicar�n en el DOUE cuando no indiquen destinatarios
+
+---
+
+### Pregunta 8
+
+**Texto:** El Derecho Originario de la Uni�n Europea:
+
+**Opciones:**
+  0. Est� compuesto por las normas que aprueban las instituciones de la Uni�n.
+  1. Se adopta para cumplir los objetivos de los Tratados.
+  2. Un ejemplo de norma originaria es el Reglamento Financiero.
+  3. Ha de ratificarse por todos los Estados Miembros y tiene una posici�n de supremac�a
+
+---
+
+### Pregunta 9
+
+**Texto:** Se�ale cu�l de las siguientes NO forma parte del Derecho originario:
+
+**Opciones:**
+  0. Carta de Derechos Fundamentales de la Uni�n
+  1. Reglamentos
+  2. Tratado de Lisboa- Madrid
+  3. Acta �nica Europea
+
+---
+
+### Pregunta 10
+
+**Texto:** Seg�n el principio de subsidiariedad, previsto en el art�culo 5 del TUE:
+
+**Opciones:**
+  0. La Uni�n act�a dentro de los l�mites de las competencias que le atribuyen los Estados
+  1. El contenido y la forma de la acci�n de la Uni�n no exceder�n de lo necesario para
+  2. lcanzar los objetivos de los Tratados.
+  3. La Uni�n y los Estados miembros se respetar�n y asistir�n mutuamente en el cumpli-
+
+---
+
+### Pregunta 11
+
+**Texto:** Respecto de las directivas se�ale la cierta:
+
+**Opciones:**
+  0. No son vinculantes
+  1. Tienen alcance general
+  2. Obliga en todos sus elementos
+  3. No son directamente aplicables
+
+---
+
+### Pregunta 12
+
+**Texto:** �Cu�l de las siguientes normas es jer�rquicamente superior a las dem�s?
+
+**Opciones:**
+  0. La Directiva (UE) 2021/1187 del Parlamento Europeo y del Consejo de 7 de julio de
+  1. El Reglamento 2021/1529, del Parlamento Europeo y del Consejo, por el que se regula
+  2. La Decisi�n 2020/2053 del Consejo, sobre recursos propios.
+  3. La Decisi�n 2022/591 del Parlamento Europeo y del Consejo, relativa al Programa Ge-
+
+---
+
+### Pregunta 13
+
+**Texto:** Se�ale la FALSA respecto del Derecho derivado:
+
+**Opciones:**
+  0. Lo adoptan las instituciones de la Uni�n
+  1. Prevalece sobre el Derecho originario
+  2. Las decisiones y directivas forman parte del mismo
+  3. Se adopta para cumplir los objetivos de los Tratados
+
+---
+
+### Pregunta 14
+
+**Texto:** Los reglamentos adoptados siguiendo el procedimiento legislativo ordinario ser�n
+
+**Opciones:**
+  0. El presidente del Parlamento Europeo y el presidente del Consejo
+  1. El presidente de la instituci�n que la haya adoptado, que podr� ser tanto el Presidente
+  2. el Parlamento Europeo como del Consejo
+  3. El presidente de la Comisi�n, por ser la instituci�n que propone la adopci�n del acto
+
+---
+
+### Pregunta 15
+
+**Texto:** El principio de interpretaci�n conforme fue declarado por:
+
+**Opciones:**
+  0. La Sentencia Comisi�n/Italia de 1985
+  1. La Sentencia Marleasing de 1990
+  2. La Sentencia Van Duyn de 1974
+  3. La Sentencia Costa/Enel de 1964
+
+---
+
+### Pregunta 16
+
+**Texto:** Se�ale cu�l de las siguientes normas forma parte del Derecho derivado:
+
+**Opciones:**
+  0. Decisi�n 2020/2053 del Consejo por la que se establecen las disposiciones aplicables al
+  1. Carta de los Derechos Fundamentales de la Uni�n.
+  2. Reglamento (UE) n � 1308/2013 del Parlamento Europeo y del Consejo, por el que se
+  3. rea la organizaci�n com�n de mercados de los productos agrarios
+
+---
+
+### Pregunta 17
+
+**Texto:** Respecto de los reglamentos, se�ale la FALSA:
+
+**Opciones:**
+  0. Tienen alcance general
+  1. Obligan en todos sus elementos
+  2. Se publican preceptivamente en el DOUE
+  3. Carecen de alcance general
+
+---
+
+### Pregunta 18
+
+**Texto:** Se publicar�n en el DOUE:
+
+**Opciones:**
+  0. Las decisiones que indiquen destinatarios
+  1. Todos los reglamentos
+  2. Las directivas que no tengan por destinatarios a todos los EEMM
+  3. Todos los actos adoptados por las instituciones se publican en el DOUE
+
+---
+
+### Pregunta 19
+
+**Texto:** Conforme al art�culo 290 del TFUE, por el que se regulan los actos delegados:
+
+**Opciones:**
+  0. Un acto no legislativo podr� delegar en la Comisi�n los poderes para adoptar actos le-
+  1. Delimitar�n de forma expresa los objetivos, el contenido, el alcance y la duraci�n de la
+  2. elegaci�n de poderes
+  3. No precisan fijar expresamente las condiciones de la delegaci�n
+
+---
+
+### Pregunta 20
+
+**Texto:** Se�ale la cierta respecto de los Tratados internacionales:
+
+**Opciones:**
+  0. El Consejo negocia los acuerdos comerciales que celebre la Uni�n
+  1. Prevalecen sobre los Tratados
+  2. La Comisi�n propone la celebraci�n de los acuerdos internacionales salvo en materia
+  3. Vinculan �nicamente a los Estados miembros
+
+---
+
+### Pregunta 21
+
+**Texto:** Indique cu�l de los siguientes actos es vinculante:
+
+**Opciones:**
+  0. Decisi�n
+  1. Dictamen
+  2. Recomendaci�n
+  3. Libro Blanco de la Comisi�n
+
+---
+
+### Pregunta 22
+
+**Texto:** Las directivas:
+
+**Opciones:**
+  0. Son obligatorias en todos sus elementos
+  1. Entran en vigor a los 30 d�as de su publicaci�n en el DOUE
+  2. Se notifican si son adoptadas por un procedimiento legislativo y cuando se destinen a
+  3. Requieren de transposici�n normativa por los Estados Miembros
+
+---
+
+### Pregunta 23
+
+**Texto:** Seg�n el art�culo 291 del TFUE:
+
+**Opciones:**
+  0. El Parlamento y el Consejo adoptar�n todas las medidas de Derecho interno necesarias
+  1. Cuando se requieran condiciones uniformes de ejecuci�n de los actos jur�dicamente vin-
+  2. ulantes de la Uni�n, �stos conferir�n competencias de ejecuci�n al Consejo
+  3. Cuando se requieran condiciones uniformes de ejecuci�n de los actos jur�dicamente vin-
+
+---
+
+### Pregunta 24
+
+**Texto:** En virtud de qu� principio, si un particular sufre un perjuicio por la no transposi-
+
+**Opciones:**
+  0. i�n o transposici�n incorrecta de una directiva en plazo, podr� reclamar ante el
+  1. Autonom�a
+  2. Responsabilidad patrimonial
+  3. Efecto directo
+
+---
+
+### Pregunta 25
+
+**Texto:** Seg�n el art�culo 288 del TFUE, los dict�menes y las recomendaciones son actos:
+
+**Opciones:**
+  0. Vinculantes
+  1. Legislativos
+  2. Los Estados miembros manifiestan a trav�s de ellos su criterio sobre un determinado
+  3. sunto
+
+---
+
+### Pregunta 26
+
+**Texto:** En cuanto a la celebraci�n de acuerdos internacionales, se�ale la cierta:
+
+**Opciones:**
+  0. La Comisi�n propone la celebraci�n de todos los acuerdos
+  1. El Consejo autorizar� la apertura de negociaciones, aprobar� las directrices de negocia-
+  2. i�n, autorizar� la firma y celebrar� los acuerdos
+  3. El Parlamento Europeo interviene en acuerdos materia PESC
+
+---
+
+### Pregunta 27
+
+**Texto:** Indique cu�l de las siguientes es una norma de Derecho derivado:
+
+**Opciones:**
+  0. Acta de adhesi�n de Grecia a la Uni�n Europea
+  1. Decisi�n 2020/2053 del Consejo sobre el sistema de recursos propio de la UE
+  2. Acta Electoral de Bruselas de 1976
+  3. Reglamento (UE) 2021/1529 del Parlamento Europeo y del Consejo, por el que se esta-
+
+---
+
+### Pregunta 28
+
+**Texto:** Se�ale la FALSA respecto del principio de efecto directo:
+
+**Opciones:**
+  0. Se contempla el efecto directo vertical y horizontal
+  1. Se establece por primera vez por la Sentencia Van Gend en Loos de 1963
+  2. Se establece por primera vez por la Sentencia Van Duyn de 1974
+
+---
+
+### Pregunta 29
+
+**Texto:** En virtud de la Sentencia Comisi�n/Italia de 1985:
+
+**Opciones:**
+  0. El juez nacional no est� obligado a aplicar la norma europea y seguir� aplicando la norma
+  1. Los Estados miembros tienen la obligaci�n de eliminar de su ordenamiento jur�dico la
+  2. Un particular podr� reclamar la indemnizaci�n al Estado incumplidor por su actuaci�n
+  3. eficiente
+
+---
+
+### Pregunta 30
+
+**Texto:** En los acuerdos internacionales, NO se requiere la previa aprobaci�n del Parla-
+
+**Opciones:**
+  0. Acuerdos referidos a �mbitos en los que se aplique el procedimiento legislativo ordinario
+  1. Acuerdos en materia PESC
+  2. Acuerdos de asociaci�n
+  3. Acuerdos con repercusiones presupuestarias importantes para la Uni�n
+
+---
+
+### Pregunta 31
+
+**Texto:** De conformidad con el art�culo 289 del TFUE:
+
+**Opciones:**
+  0. El procedimiento legislativo ordinario consiste en la adopci�n conjunta por el Parla-
+  1. ecisi�n, una recomendaci�n o un dictamen.
+  2. En los casos espec�ficos previstos por los Tratados, la adopci�n de un reglamento, una
+  3. irectiva o una decisi�n, bien por el Parlamento Europeo con la participaci�n del Con-
+
+---
+
+### Pregunta 32
+
+**Texto:** La regla general en la toma de decisiones del Consejo para celebrar un acuerdo
+
+**Opciones:**
+  0. Acuerdo de colaboraci�n
+  1. Acuerdo de asociaci�n o acuerdos con estados candidatos
+  2. Acuerdos con repercusiones ambientales
+  3. Cuando en la Uni�n no se precise unanimidad para su aprobaci�n
+
+---
+
+### Pregunta 33
+
+**Texto:** Se�ale la FALSA:
+
+**Opciones:**
+  0. El Derecho derivado lo adoptan las instituciones de la Uni�n
+  1. El Derecho originario es aprobado por los Estados miembros
+  2. El Derecho derivado es jer�rquicamente inferior al originario
+  3. Los actos de la Uni�n no han de estar motivados
+
+---
+
+### Pregunta 34
+
+**Texto:** La Sentencia Van Duyn reconoce el principio de:
+
+**Opciones:**
+  0. Efecto directo
+  1. Efecto directo de una directiva
+  2. Seguridad jur�dica
+
+---
+
+### Pregunta 35
+
+**Texto:** Se�ale la cierta respecto de los tratados internacionales celebrados por la Uni�n:
+
+**Opciones:**
+  0. Son inferiores jer�rquicamente al Derecho derivado
+  1. Pueden contradecir los Tratados con la autorizaci�n del Tribunal de Justicia
+  2. El Alto Representante propone la celebraci�n de los acuerdos en materia PESC
+  3. Como norma general, se requiere la previa aprobaci�n del Parlamento Europeo
+
+---
+
+### Pregunta 36
+
+**Texto:** �Qu� norma prev� la Constituci�n Espa�ola para autorizar la celebraci�n de
+
+**Opciones:**
+  0. cuerdos internacionales que atribuyan competencias de la CE a una organizaci�n
+  1. Reglamentos
+  2. Reales Decretos legislativos
+  3. Leyes
+
+---
+
+### Pregunta 37
+
+**Texto:** Si hay colisi�n entre una norma europea y la Constituci�n Espa�ola:
+
+**Opciones:**
+  0. El juez espa�ol aplica la norma nacional
+  1. Prevalece la Constituci�n Espa�ola por el principio de jerarqu�a normativa
+  2. El juez espa�ol inaplica la Constituci�n sin necesidad de modificarla
+  3. Prevalece la norma europea sobre la nacional y habr� que modificar la Constituci�n
+
+---
+
+### Pregunta 38
+
+**Texto:** Una Directiva del Consejo destinada a Espa�a, Francia y Portugal:
+
+**Opciones:**
+  0. Se publicar� en el DOUE.
+  1. Se notificar� a estos Estados miembros.
+  2. Se publicar� en los boletines oficiales correspondientes de dichos Estados.
+  3. Todas las directivas se publican en el DOUE.
+
+---
+
+### Pregunta 39
+
+**Texto:** Para que una directiva tenga reconocido el efecto directo, es preciso que:
+
+**Opciones:**
+  0. No sea legislativa
+  1. Sea clara, precisa, autosuficiente e incondicional
+  2. El Estado miembro la haya transpuesto correctamente
+  3. El efecto directo ser� horizontal
+
+---
+
+### Pregunta 40
+
+**Texto:** �En virtud de qu� principio el juez nacional ha de inaplicar la norma nacional si
+
+**Opciones:**
+  0. Seguridad jur�dica.
+  1. Primac�a.
+  2. Cooperaci�n leal.
+  3. Eficiencia.
+
+---

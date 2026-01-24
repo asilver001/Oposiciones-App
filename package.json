@@ -15,6 +15,7 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.87.3",
     "@tailwindcss/vite": "^4.1.17",
+    "framer-motion": "^12.26.2",
     "lucide-react": "^0.556.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",

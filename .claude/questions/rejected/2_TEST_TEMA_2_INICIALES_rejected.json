@@ -1,0 +1,2010 @@
+{
+  "metadata": {
+    "source_file": "2 TEST TEMA 2 INICIALES.pdf",
+    "source_path": "2 TEST TEMA 2 INICIALES.pdf",
+    "tema": 2,
+    "categoria": "general",
+    "extraction_date": "2026-01-15T23:39:51.681045",
+    "reformulation_date": "2026-01-15T23:47:35.555181",
+    "total_questions": 40,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.438136",
+    "completed_count": 0,
+    "failed_count": 40
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "De acuerdo con el artculo 17.2 de la Constitucin, la detencin preventiva tendr la siguiente",
+        "options": [
+          {
+            "text": "uracin:",
+            "is_correct": false
+          },
+          {
+            "text": "El tiempo estrictamente necesario para la realizacin de las averiguaciones tendentes al",
+            "is_correct": false
+          },
+          {
+            "text": "48 horas.",
+            "is_correct": false
+          },
+          {
+            "text": "72 horas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con el artculo 17.2 de la Constitucin, la detencin preventiva tendr la siguiente",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'uracin:...'",
+        "Distractor muy corto: '48 horas....'",
+        "Distractor muy corto: '72 horas....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.25,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.48
+    },
+    {
+      "question": {
+        "question_text": "Sobre el derecho de reunin responda la afirmacin correcta:",
+        "options": [
+          {
+            "text": "Precisa de autorizacin previa.",
+            "is_correct": false
+          },
+          {
+            "text": "No puede ser objeto de recurso de amparo.",
+            "is_correct": false
+          },
+          {
+            "text": "Su desarrollo legislativo se efecta por Ley Orgnica.",
+            "is_correct": false
+          },
+          {
+            "text": "Es un principio rector de la poltica social y econmica.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Sobre el derecho de reunin responda la afirmacin correcta:",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El derecho a la objecin de conciencia sobre el servicio militar:",
+        "options": [
+          {
+            "text": "Se regula en el artculo 31 de la Constitucin.",
+            "is_correct": false
+          },
+          {
+            "text": "Podr ser objeto de recurso de amparo.",
+            "is_correct": false
+          },
+          {
+            "text": "Su desarrollo normativo se efectuar por ley orgnica.",
+            "is_correct": false
+          },
+          {
+            "text": "Es un derecho fundamental regulado en la Seccin I, del Captulo II del Ttulo I.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El derecho a la objecin de conciencia sobre el servicio militar:",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Se incluye entre los principios rectores de la poltica social y econmica, cuyo reconocimiento, respeto",
+        "options": [
+          {
+            "text": "El derecho de fundacin para fines de inters general.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho a disfrutar de un medio ambiente adecuado para el desarrollo de la persona, as como el",
+            "is_correct": false
+          },
+          {
+            "text": "eber de conservarlo.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho a la propiedad privada y a la herencia.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Se incluye entre los principios rectores de la poltica social y econmica, cuyo reconocimiento, respeto",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Sobre el contenido de las Resoluciones del Defensor del Pueblo seale cul de las siguientes",
+        "options": [
+          {
+            "text": "firmaciones no es correcta:",
+            "is_correct": false
+          },
+          {
+            "text": "Si como consecuencia de sus investigaciones llegase al convencimiento de que el cumplimiento",
+            "is_correct": false
+          },
+          {
+            "text": "Est legitimado para interponer recurso de inconstitucionalidad.",
+            "is_correct": false
+          },
+          {
+            "text": "ARCELONA",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Sobre el contenido de las Resoluciones del Defensor del Pueblo seale cul de las siguientes",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'ARCELONA...'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "El Defensor del Pueblo:",
+        "options": [
+          {
+            "text": "Es designado por el Gobierno de la nacin, al que dar cuenta.",
+            "is_correct": false
+          },
+          {
+            "text": "Es designado por el Rey, dando cuenta de su actividad a las Cortes Generales.",
+            "is_correct": false
+          },
+          {
+            "text": "Es designado por el Congreso de los Diputados, dando cuenta de su actividad al Rey.",
+            "is_correct": false
+          },
+          {
+            "text": "Es designado por las Cortes Generales, a las que dar cuenta.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Defensor del Pueblo:",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El derecho de un hijo menor de edad a ser asistido en todos los rdenes por sus padres:",
+        "options": [
+          {
+            "text": "Podr ser recabado a travs del procedimiento basado en los principios de preferencia y",
+            "is_correct": false
+          },
+          {
+            "text": "Podr ser recabado a travs del recurso de amparo.",
+            "is_correct": false
+          },
+          {
+            "text": "Informar la legislacin positiva y la prctica judicial y la actuacin de los poderes pblicos.",
+            "is_correct": false
+          },
+          {
+            "text": "Podr ser objeto de suspensin durante la vigencia del estado de sitio.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El derecho de un hijo menor de edad a ser asistido en todos los rdenes por sus padres:",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Durante la vigencia de los estados de excepcin y sitio:",
+        "options": [
+          {
+            "text": "El derecho reconocido en el art. 17.3 no podr suspenderse durante la vigencia del estado de",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho reconocido en el art. 17.3 no podr suspenderse durante la vigencia del estado de sitio,",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho reconocido en el art. 17.3 podr suspenderse durante la vigencia de los estados de",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho reconocido en el art. 17.3 no podr suspenderse durante la vigencia de los estados de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Durante la vigencia de los estados de excepcin y sitio:",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cules de los siguientes derechos pueden suspenderse tanto en supuestos de declaracin de estados",
+        "options": [
+          {
+            "text": "e excepcin y sitio como en investigaciones de bandas armadas o elementos terroristas?:",
+            "is_correct": false
+          },
+          {
+            "text": "El plazo mximo de detencin preventiva, la inviolabilidad del domicilio y la asistencia de",
+            "is_correct": false
+          },
+          {
+            "text": "bogado al detenido.",
+            "is_correct": false
+          },
+          {
+            "text": "El plazo mximo de detencin preventiva, la inviolabilidad del domicilio, la asistencia de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cules de los siguientes derechos pueden suspenderse tanto en supuestos de declaracin de estados",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El plazo para presentar una queja ante el Defensor del Pueblo, ser como mximo:",
+        "options": [
+          {
+            "text": "1 ao contado a partir del momento en que tuviera conocimiento de los hechos objeto de la misma.",
+            "is_correct": false
+          },
+          {
+            "text": "1 ao desde que se produjeran los hechos objeto de la misma.",
+            "is_correct": false
+          },
+          {
+            "text": "2 aos contados a partir del momento en que tuviera conocimiento de los hechos objeto de la",
+            "is_correct": false
+          },
+          {
+            "text": "2 aos desde que se produjeran los hechos objeto de la misma.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El plazo para presentar una queja ante el Defensor del Pueblo, ser como mximo:",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cul de los siguientes derechos informar la prctica judicial:",
+        "options": [
+          {
+            "text": "El derecho a la propiedad privada.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho a un rgimen pblico de seguridad social.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho a la adopcin de medidas de conflicto colectivo.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho a crear fundaciones para fines de inters general.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de los siguientes derechos informar la prctica judicial:",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cul de los siguientes derechos podr ser objeto de recurso de amparo ante el Tribunal",
+        "options": [
+          {
+            "text": "onstitucional?:",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho de fundacin.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho de asociacin.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho a la propiedad privada y a la herencia.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de los siguientes derechos podr ser objeto de recurso de amparo ante el Tribunal",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Defensor del Pueblo:",
+        "options": [
+          {
+            "text": "Es el Alto Comisionado del Congreso.",
+            "is_correct": false
+          },
+          {
+            "text": "Su mbito se circunscribe en exclusiva a la defensa de los derechos regulados en la Seccin 1.",
+            "is_correct": false
+          },
+          {
+            "text": "aptulo II del Ttulo I Derechos Fundamentales y Libertades Pblicas.",
+            "is_correct": false
+          },
+          {
+            "text": "Su mandato es de 4 aos.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Defensor del Pueblo:",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cul de los siguientes derechos no puede suspenderse con la declaracin de los Estados de",
+        "options": [
+          {
+            "text": "Huelga.",
+            "is_correct": false
+          },
+          {
+            "text": "Libertad de Circulacin por el territorio nacional.",
+            "is_correct": false
+          },
+          {
+            "text": "Derecho al Trabajo.",
+            "is_correct": false
+          },
+          {
+            "text": "Pueden suspenderse todos los indicados.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de los siguientes derechos no puede suspenderse con la declaracin de los Estados de",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Huelga....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "En el procedimiento de eleccin del Defensor del Pueblo, la Ley Orgnica 3/1981 exige que el",
+        "options": [
+          {
+            "text": "ongreso alcance la siguiente mayora:",
+            "is_correct": false
+          },
+          {
+            "text": "Mayora de 2/3.",
+            "is_correct": false
+          },
+          {
+            "text": "Mayora de 3/5.",
+            "is_correct": false
+          },
+          {
+            "text": "Mayora absoluta.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En el procedimiento de eleccin del Defensor del Pueblo, la Ley Orgnica 3/1981 exige que el",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Cul de los derechos constitucionales podr suspenderse nicamente durante la vigencia del estado",
+        "options": [
+          {
+            "text": "e sitio?:",
+            "is_correct": false
+          },
+          {
+            "text": "El plazo mximo de detencin preventiva regulado en el artculo 17.2 CE.",
+            "is_correct": false
+          },
+          {
+            "text": "La inviolabilidad del domicilio regulada en el artculo 18.2 CE.",
+            "is_correct": false
+          },
+          {
+            "text": "La asistencia de abogado al detenido regulada en el artculo 17.3 CE.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de los derechos constitucionales podr suspenderse nicamente durante la vigencia del estado",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'e sitio?:...'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Conforme al artculo 53 de la Constitucin Espaola de 1978, pueden ser objeto de tutela ante los",
+        "options": [
+          {
+            "text": "Las libertades y derechos reconocidos en el Captulo II del Ttulo I de la Constitucin.",
+            "is_correct": false
+          },
+          {
+            "text": "Las libertades y derechos reconocidos en el Captulo III del Ttulo I de la Constitucin.",
+            "is_correct": false
+          },
+          {
+            "text": "Las libertades y derechos reconocidos en la Seccin 2 Captulo II del Ttulo I de la Constitucin.",
+            "is_correct": false
+          },
+          {
+            "text": "Las libertades y derechos reconocidos en el artculo 14 y en la Seccin 1 Captulo II del Ttulo I de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Conforme al artculo 53 de la Constitucin Espaola de 1978, pueden ser objeto de tutela ante los",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Son susceptibles de amparo constitucional:",
+        "options": [
+          {
+            "text": "Los derechos del ttulo I de la Constitucin.",
+            "is_correct": false
+          },
+          {
+            "text": "Los derechos del Captulo II del Ttulo I de la Constitucin.",
+            "is_correct": false
+          },
+          {
+            "text": "Los derechos y libertades reconocidos en los artculos 14 a 29 de la Constitucin.",
+            "is_correct": false
+          },
+          {
+            "text": "Los derechos y libertades reconocidos en el artculo 14, en la seccin 1 captulo II del ttulo I y la",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Son susceptibles de amparo constitucional:",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El cese del Defensor del Pueblo por actuar con notoria negligencia en el cumplimiento de las",
+        "options": [
+          {
+            "text": "Se declarar por el Presidente del Congreso.",
+            "is_correct": false
+          },
+          {
+            "text": "Se decidir, por mayora de las tres quintas partes de los componentes de cada Cmara.",
+            "is_correct": false
+          },
+          {
+            "text": "Se decidir, por mayora de las dos terceras partes de los componentes de cada Cmara.",
+            "is_correct": false
+          },
+          {
+            "text": "Se declarar por los Presidentes de ambas Cmaras conjuntamente.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El cese del Defensor del Pueblo por actuar con notoria negligencia en el cumplimiento de las",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Defensor del Pueblo dar cuenta a las Cortes Generales de la gestin realizada, en un informe que",
+        "options": [
+          {
+            "text": "Semestral.",
+            "is_correct": false
+          },
+          {
+            "text": "Trimestral.",
+            "is_correct": false
+          },
+          {
+            "text": "Anual.",
+            "is_correct": false
+          },
+          {
+            "text": "Mensual.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Defensor del Pueblo dar cuenta a las Cortes Generales de la gestin realizada, en un informe que",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Anual....'",
+        "Distractor muy corto: 'Mensual....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "El artculo 29 de la Constitucin Espaola reconoce el siguiente derecho:",
+        "options": [
+          {
+            "text": "La libertad de empresa en el marco de la economa de mercado.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho de peticin.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho a la educacin.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho a la negociacin colectiva laboral entre los representantes de los trabajadores y",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El artculo 29 de la Constitucin Espaola reconoce el siguiente derecho:",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El Defensor del Pueblo tiene un mandato de:",
+        "options": [
+          {
+            "text": "4 aos pudiendo ser reelegido para un nuevo mandato una sola vez.",
+            "is_correct": false
+          },
+          {
+            "text": "5 aos pudiendo ser reelegido para un nuevo mandato una sola vez.",
+            "is_correct": false
+          },
+          {
+            "text": "4 aos.",
+            "is_correct": false
+          },
+          {
+            "text": "5 aos.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Defensor del Pueblo tiene un mandato de:",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: '4 aos....'",
+        "Distractor muy corto: '5 aos....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Cul de los siguientes derechos est protegido judicialmente por un procedimiento especial",
+        "options": [
+          {
+            "text": "El derecho y deber de defender a Espaa.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho a la proteccin de la salud.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho a la libertad de ctedra.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho de los trabajadores y empresarios a adoptar medidas de conflicto colectivo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de los siguientes derechos est protegido judicialmente por un procedimiento especial",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "No est reservado a ley orgnica el desarrollo del siguiente derecho:",
+        "options": [
+          {
+            "text": "El derecho a la propiedad privada.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho de peticin.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho de asociacin.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho de sindicacin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "No est reservado a ley orgnica el desarrollo del siguiente derecho:",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Indique cmo se asegura el reconocimiento, el respecto y la proteccin de los principios rectores de la",
+        "options": [
+          {
+            "text": "Estn protegidos mediante el acceso al recurso de amparo.",
+            "is_correct": false
+          },
+          {
+            "text": "No cabe la interposicin de recurso de amparo, pero es posible la va judicial sumaria y preferente.",
+            "is_correct": false
+          },
+          {
+            "text": "Informarn la legislacin positiva, la prctica judicial y la actuacin de los poderes pblicos.",
+            "is_correct": false
+          },
+          {
+            "text": "Estn sujetos a reserva de Ley Orgnica.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Indique cmo se asegura el reconocimiento, el respecto y la proteccin de los principios rectores de la",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El derecho de sindicacin:",
+        "options": [
+          {
+            "text": "Queda regulado en el artculo 37 de la Constitucin.",
+            "is_correct": false
+          },
+          {
+            "text": "Es objeto de desarrollo mediante ley ordinaria.",
+            "is_correct": false
+          },
+          {
+            "text": "Puede interponerse recurso de amparo para su defensa.",
+            "is_correct": false
+          },
+          {
+            "text": "Puede suspenderse durante la vigencia del estado de sitio.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El derecho de sindicacin:",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El artculo 15 de la Constitucin espaola reconoce:",
+        "options": [
+          {
+            "text": "El derecho a la libertad ideolgica y religiosa.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho a la vida y a la integridad fsica y moral.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho de reunin pacfica y sin armas.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho al trabajo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El artculo 15 de la Constitucin espaola reconoce:",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Los miembros de las Fuerzas Armadas o de Cuerpos sometidos a disciplina militar, pueden ejercer",
+        "options": [
+          {
+            "text": "S, pero solamente a ttulo individual.",
+            "is_correct": false
+          },
+          {
+            "text": "S, en las mismas condiciones que los dems ciudadanos.",
+            "is_correct": false
+          },
+          {
+            "text": "S, pero solo pueden hacerlo de forma colectiva.",
+            "is_correct": false
+          },
+          {
+            "text": "No, en ningn caso.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los miembros de las Fuerzas Armadas o de Cuerpos sometidos a disciplina militar, pueden ejercer",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Se prohben los Tribunales de Honor, segn el artculo 26 de la Constitucin Espaola:",
+        "options": [
+          {
+            "text": "En el mbito de la Administracin Militar y de las organizaciones profesionales.",
+            "is_correct": false
+          },
+          {
+            "text": "En el mbito de la Administracin de Justicia y de las organizaciones profesionales.",
+            "is_correct": false
+          },
+          {
+            "text": "En el mbito de la Administracin Civil y de las organizaciones profesionales.",
+            "is_correct": false
+          },
+          {
+            "text": "En el mbito de la Administracin Institucional y de las organizaciones profesionales.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Se prohben los Tribunales de Honor, segn el artculo 26 de la Constitucin Espaola:",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La igualdad regulada en el artculo 14 es objeto de las siguientes garantas (seale la falsa):",
+        "options": [
+          {
+            "text": "Recurso de amparo ante el Tribunal Constitucional.",
+            "is_correct": false
+          },
+          {
+            "text": "Desarrollo por Ley ordinaria.",
+            "is_correct": false
+          },
+          {
+            "text": "Tutela a travs de un procedimiento basado en los principios de preferencia y sumariedad.",
+            "is_correct": false
+          },
+          {
+            "text": "Procedimiento de reforma agravado (artculo 168 CE).",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La igualdad regulada en el artculo 14 es objeto de las siguientes garantas (seale la falsa):",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El artculo 22 de la Constitucin:",
+        "options": [
+          {
+            "text": "Reconoce el derecho de asociacin y su reforma seguir los trmites del artculo 167 de la CE.",
+            "is_correct": false
+          },
+          {
+            "text": "Reconoce el derecho de asociacin y es objeto de desarrollo mediante ley orgnica.",
+            "is_correct": false
+          },
+          {
+            "text": "Reconoce el derecho de huelga y su reforma seguir los trmites del artculo 167 de la CE.",
+            "is_correct": false
+          },
+          {
+            "text": "Reconoce el derecho de huelga y es objeto de desarrollo mediante ley orgnica.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El artculo 22 de la Constitucin:",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Siguiendo lo dispuesto en la Constitucin Espaola, es una garanta comn a la igualdad regulada en",
+        "options": [
+          {
+            "text": "Procedimiento de reforma agravado regulado en el artculo 168 CE.",
+            "is_correct": false
+          },
+          {
+            "text": "Recurso de amparo.",
+            "is_correct": false
+          },
+          {
+            "text": "Desarrollo por ley orgnica.",
+            "is_correct": false
+          },
+          {
+            "text": "Las tres garantas mencionadas se aplican a los derechos de los artculos 14 y 30.2.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Siguiendo lo dispuesto en la Constitucin Espaola, es una garanta comn a la igualdad regulada en",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Todos los siguientes derechos, menos uno, podrn ser suspendidos en caso de que se acuerde la",
+        "options": [
+          {
+            "text": "eclaracin de estado de excepcin o de sitio. Seale qu derecho no puede suspenderse:",
+            "is_correct": false
+          },
+          {
+            "text": "Derecho a la inviolabilidad del domicilio.",
+            "is_correct": false
+          },
+          {
+            "text": "Derecho a la libertad y seguridad.",
+            "is_correct": false
+          },
+          {
+            "text": "Derecho al honor.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Todos los siguientes derechos, menos uno, podrn ser suspendidos en caso de que se acuerde la",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El art. 18.4 de nuestra Constitucin, de cara a garantizar el honor y la intimidad personal y familiar",
+        "options": [
+          {
+            "text": "e los ciudadanos, y el pleno ejercicio de sus derechos, limita:",
+            "is_correct": false
+          },
+          {
+            "text": "El uso de la libertad de prensa.",
+            "is_correct": false
+          },
+          {
+            "text": "El uso de la libertad de expresin.",
+            "is_correct": false
+          },
+          {
+            "text": "El uso de la informtica.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El art. 18.4 de nuestra Constitucin, de cara a garantizar el honor y la intimidad personal y familiar",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De conformidad con el artculo 41 de la CE, los poderes pblicos debern mantener un rgimen",
+        "options": [
+          {
+            "text": "En caso de desempleo.",
+            "is_correct": false
+          },
+          {
+            "text": "En caso de enfermedad.",
+            "is_correct": false
+          },
+          {
+            "text": "En caso de necesidad econmica.",
+            "is_correct": false
+          },
+          {
+            "text": "En caso de crisis econmica.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De conformidad con el artculo 41 de la CE, los poderes pblicos debern mantener un rgimen",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El artculo 24 de la Constitucin Espaola, recoge:",
+        "options": [
+          {
+            "text": "El derecho a obtener la tutela judicial efectiva de jueces y tribunales",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho al honor.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho de Huelga.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho a la vida y a la integridad fsica y moral.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El artculo 24 de la Constitucin Espaola, recoge:",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cul de los siguientes derechos es un principio rector de la poltica social y econmica?:",
+        "options": [
+          {
+            "text": "Derecho a la proteccin de la salud.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho de Huelga.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho al trabajo.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho de sindicacin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de los siguientes derechos es un principio rector de la poltica social y econmica?:",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El derecho de reunin en lugares de trnsito pblico y manifestaciones, requiere segn la",
+        "options": [
+          {
+            "text": "onstitucin",
+            "is_correct": false
+          },
+          {
+            "text": "No est sujeto a ningn requisito.",
+            "is_correct": false
+          },
+          {
+            "text": "Est sujeto a control cuando supere un nmero de personas, que ser establecido por ley.",
+            "is_correct": false
+          },
+          {
+            "text": "Requiere comunicacin previa a la autoridad.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El derecho de reunin en lugares de trnsito pblico y manifestaciones, requiere segn la",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El derecho a entrar y salir libremente de Espaa se realizar:",
+        "options": [
+          {
+            "text": "Con las limitaciones establecidas por Orden del Ministro del Interior.",
+            "is_correct": false
+          },
+          {
+            "text": "Con las limitaciones establecidas por Real Decreto.",
+            "is_correct": false
+          },
+          {
+            "text": "Si ninguna limitacin.",
+            "is_correct": false
+          },
+          {
+            "text": "En los trminos que la ley establezca.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El derecho a entrar y salir libremente de Espaa se realizar:",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La Administracin civil puede imponer sanciones que subsidiariamente impliquen privacin de",
+        "options": [
+          {
+            "text": "Si, cuando lo establezca la correspondiente ley orgnica de desarrollo.",
+            "is_correct": false
+          },
+          {
+            "text": "Si, con los requisitos establecidos reglamentariamente.",
+            "is_correct": false
+          },
+          {
+            "text": "No.",
+            "is_correct": false
+          },
+          {
+            "text": "Si.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La Administracin civil puede imponer sanciones que subsidiariamente impliquen privacin de",
+        "source": "2 TEST TEMA 2 INICIALES.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'No....'",
+        "Distractor muy corto: 'Si....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:21.967517"
+}

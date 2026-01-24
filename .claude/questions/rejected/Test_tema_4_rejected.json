@@ -1,0 +1,1985 @@
+{
+  "metadata": {
+    "source_file": "Test tema 4.pdf",
+    "source_path": "Test Iniciales UE\\Test tema 4.pdf",
+    "tema": 4,
+    "categoria": "union-europea",
+    "extraction_date": "2026-01-15T23:42:08.053830",
+    "reformulation_date": "2026-01-15T23:47:35.773587",
+    "total_questions": 40,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:56.056402",
+    "completed_count": 0,
+    "failed_count": 40
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "En virtud del principio de primaca del Derecho de la Unin:",
+        "options": [
+          {
+            "text": "Los Estados miembros tienen la obligacin de eliminar de su ordenamiento jurdico la",
+            "is_correct": false
+          },
+          {
+            "text": "La validez y eficacia de las normas que integran el Derecho de la Unin son indepen-",
+            "is_correct": false
+          },
+          {
+            "text": "ientes de su aceptacin por parte de los Estados miembros o el desarrollo de cualquier",
+            "is_correct": false
+          },
+          {
+            "text": "ctividad por parte de estos",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En virtud del principio de primaca del Derecho de la Unin:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la FALSA segn el art. 296 del TFUE, para ejercer las competencias de la",
+        "options": [
+          {
+            "text": "Cuando los Tratados no establezcan el tipo de acto que deba adoptarse, las instituciones",
+            "is_correct": false
+          },
+          {
+            "text": "ecidirn en cada caso conforme a los procedimientos aplicables y al principio de pro-",
+            "is_correct": false
+          },
+          {
+            "text": "Los actos jurdicos debern estar motivados y se referirn a las propuestas, iniciativas,",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando los Tratados establezcan el tipo de acto que deba adoptarse, las instituciones",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la FALSA segn el art. 296 del TFUE, para ejercer las competencias de la",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "dificil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En la celebracin de acuerdos internacionales, la Comisin:",
+        "options": [
+          {
+            "text": "Solicitar en exclusiva el dictamen al Tribunal de Justicia de la Unin.",
+            "is_correct": false
+          },
+          {
+            "text": "Autorizar la apertura de negociaciones.",
+            "is_correct": false
+          },
+          {
+            "text": "Negociar los acuerdos no comerciales.",
+            "is_correct": false
+          },
+          {
+            "text": "Propone la celebracin de acuerdos internacionales, salvo en materia PESC.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En la celebracin de acuerdos internacionales, la Comisin:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "De los siguientes actos jurdicos, cules son obligatorios en todos sus elementos:",
+        "options": [
+          {
+            "text": "Reglamentos y Directivas.",
+            "is_correct": false
+          },
+          {
+            "text": "Directivas y Decisiones.",
+            "is_correct": false
+          },
+          {
+            "text": "Reglamentos y Decisiones.",
+            "is_correct": false
+          },
+          {
+            "text": "Recomendaciones y Dictmenes.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De los siguientes actos jurdicos, cules son obligatorios en todos sus elementos:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En virtud del principio de cooperacin leal:",
+        "options": [
+          {
+            "text": "El contenido y la forma de la accin de la Unin no excedern de lo necesario para",
+            "is_correct": false
+          },
+          {
+            "text": "lcanzar los objetivos de los Tratados.",
+            "is_correct": false
+          },
+          {
+            "text": "La Unin y los Estados miembros se respetarn y asistirn mutuamente en el cumpli-",
+            "is_correct": false
+          },
+          {
+            "text": "La Unin acta dentro de los lmites de las competencias que le atribuyen los Estados",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En virtud del principio de cooperacin leal:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Son principios especficos del Derecho de la Unin elaborados por el Tribunal de",
+        "options": [
+          {
+            "text": "Primaca, efecto directo, interpretacin conforme",
+            "is_correct": false
+          },
+          {
+            "text": "Cooperacin leal.",
+            "is_correct": false
+          },
+          {
+            "text": "Non bis in idem.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Son principios especficos del Derecho de la Unin elaborados por el Tribunal de",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Las directivas:",
+        "options": [
+          {
+            "text": "Entran en vigor a los 20 das desde la notificacin",
+            "is_correct": false
+          },
+          {
+            "text": "Se publicarn en el DOUE si son legislativas o si tienen por destinatarios a todos los",
+            "is_correct": false
+          },
+          {
+            "text": "Obligan en cuanto al resultado y al procedimiento para alcanzarlo",
+            "is_correct": false
+          },
+          {
+            "text": "Se publicarn en el DOUE cuando no indiquen destinatarios",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las directivas:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta muy corta",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Derecho Originario de la Unin Europea:",
+        "options": [
+          {
+            "text": "Est compuesto por las normas que aprueban las instituciones de la Unin.",
+            "is_correct": false
+          },
+          {
+            "text": "Se adopta para cumplir los objetivos de los Tratados.",
+            "is_correct": false
+          },
+          {
+            "text": "Un ejemplo de norma originaria es el Reglamento Financiero.",
+            "is_correct": false
+          },
+          {
+            "text": "Ha de ratificarse por todos los Estados Miembros y tiene una posicin de supremaca",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Derecho Originario de la Unin Europea:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale cul de las siguientes NO forma parte del Derecho originario:",
+        "options": [
+          {
+            "text": "Carta de Derechos Fundamentales de la Unin",
+            "is_correct": false
+          },
+          {
+            "text": "Reglamentos",
+            "is_correct": false
+          },
+          {
+            "text": "Tratado de Lisboa- Madrid",
+            "is_correct": false
+          },
+          {
+            "text": "Acta nica Europea",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale cul de las siguientes NO forma parte del Derecho originario:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Segn el principio de subsidiariedad, previsto en el artculo 5 del TUE:",
+        "options": [
+          {
+            "text": "La Unin acta dentro de los lmites de las competencias que le atribuyen los Estados",
+            "is_correct": false
+          },
+          {
+            "text": "El contenido y la forma de la accin de la Unin no excedern de lo necesario para",
+            "is_correct": false
+          },
+          {
+            "text": "lcanzar los objetivos de los Tratados.",
+            "is_correct": false
+          },
+          {
+            "text": "La Unin y los Estados miembros se respetarn y asistirn mutuamente en el cumpli-",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el principio de subsidiariedad, previsto en el artculo 5 del TUE:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Respecto de las directivas seale la cierta:",
+        "options": [
+          {
+            "text": "No son vinculantes",
+            "is_correct": false
+          },
+          {
+            "text": "Tienen alcance general",
+            "is_correct": false
+          },
+          {
+            "text": "Obliga en todos sus elementos",
+            "is_correct": false
+          },
+          {
+            "text": "No son directamente aplicables",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Respecto de las directivas seale la cierta:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cul de las siguientes normas es jerrquicamente superior a las dems?",
+        "options": [
+          {
+            "text": "La Directiva (UE) 2021/1187 del Parlamento Europeo y del Consejo de 7 de julio de",
+            "is_correct": false
+          },
+          {
+            "text": "El Reglamento 2021/1529, del Parlamento Europeo y del Consejo, por el que se regula",
+            "is_correct": false
+          },
+          {
+            "text": "La Decisin 2020/2053 del Consejo, sobre recursos propios.",
+            "is_correct": false
+          },
+          {
+            "text": "La Decisin 2022/591 del Parlamento Europeo y del Consejo, relativa al Programa Ge-",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de las siguientes normas es jerrquicamente superior a las dems?",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la FALSA respecto del Derecho derivado:",
+        "options": [
+          {
+            "text": "Lo adoptan las instituciones de la Unin",
+            "is_correct": false
+          },
+          {
+            "text": "Prevalece sobre el Derecho originario",
+            "is_correct": false
+          },
+          {
+            "text": "Las decisiones y directivas forman parte del mismo",
+            "is_correct": false
+          },
+          {
+            "text": "Se adopta para cumplir los objetivos de los Tratados",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la FALSA respecto del Derecho derivado:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Los reglamentos adoptados siguiendo el procedimiento legislativo ordinario sern",
+        "options": [
+          {
+            "text": "El presidente del Parlamento Europeo y el presidente del Consejo",
+            "is_correct": false
+          },
+          {
+            "text": "El presidente de la institucin que la haya adoptado, que podr ser tanto el Presidente",
+            "is_correct": false
+          },
+          {
+            "text": "el Parlamento Europeo como del Consejo",
+            "is_correct": false
+          },
+          {
+            "text": "El presidente de la Comisin, por ser la institucin que propone la adopcin del acto",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los reglamentos adoptados siguiendo el procedimiento legislativo ordinario sern",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El principio de interpretacin conforme fue declarado por:",
+        "options": [
+          {
+            "text": "La Sentencia Comisin/Italia de 1985",
+            "is_correct": false
+          },
+          {
+            "text": "La Sentencia Marleasing de 1990",
+            "is_correct": false
+          },
+          {
+            "text": "La Sentencia Van Duyn de 1974",
+            "is_correct": false
+          },
+          {
+            "text": "La Sentencia Costa/Enel de 1964",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El principio de interpretacin conforme fue declarado por:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale cul de las siguientes normas forma parte del Derecho derivado:",
+        "options": [
+          {
+            "text": "Decisin 2020/2053 del Consejo por la que se establecen las disposiciones aplicables al",
+            "is_correct": false
+          },
+          {
+            "text": "Carta de los Derechos Fundamentales de la Unin.",
+            "is_correct": false
+          },
+          {
+            "text": "Reglamento (UE) n  1308/2013 del Parlamento Europeo y del Consejo, por el que se",
+            "is_correct": false
+          },
+          {
+            "text": "rea la organizacin comn de mercados de los productos agrarios",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale cul de las siguientes normas forma parte del Derecho derivado:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Respecto de los reglamentos, seale la FALSA:",
+        "options": [
+          {
+            "text": "Tienen alcance general",
+            "is_correct": false
+          },
+          {
+            "text": "Obligan en todos sus elementos",
+            "is_correct": false
+          },
+          {
+            "text": "Se publican preceptivamente en el DOUE",
+            "is_correct": false
+          },
+          {
+            "text": "Carecen de alcance general",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Respecto de los reglamentos, seale la FALSA:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Se publicarn en el DOUE:",
+        "options": [
+          {
+            "text": "Las decisiones que indiquen destinatarios",
+            "is_correct": false
+          },
+          {
+            "text": "Todos los reglamentos",
+            "is_correct": false
+          },
+          {
+            "text": "Las directivas que no tengan por destinatarios a todos los EEMM",
+            "is_correct": false
+          },
+          {
+            "text": "Todos los actos adoptados por las instituciones se publican en el DOUE",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Se publicarn en el DOUE:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Conforme al artculo 290 del TFUE, por el que se regulan los actos delegados:",
+        "options": [
+          {
+            "text": "Un acto no legislativo podr delegar en la Comisin los poderes para adoptar actos le-",
+            "is_correct": false
+          },
+          {
+            "text": "Delimitarn de forma expresa los objetivos, el contenido, el alcance y la duracin de la",
+            "is_correct": false
+          },
+          {
+            "text": "elegacin de poderes",
+            "is_correct": false
+          },
+          {
+            "text": "No precisan fijar expresamente las condiciones de la delegacin",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Conforme al artculo 290 del TFUE, por el que se regulan los actos delegados:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la cierta respecto de los Tratados internacionales:",
+        "options": [
+          {
+            "text": "El Consejo negocia los acuerdos comerciales que celebre la Unin",
+            "is_correct": false
+          },
+          {
+            "text": "Prevalecen sobre los Tratados",
+            "is_correct": false
+          },
+          {
+            "text": "La Comisin propone la celebracin de los acuerdos internacionales salvo en materia",
+            "is_correct": false
+          },
+          {
+            "text": "Vinculan nicamente a los Estados miembros",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la cierta respecto de los Tratados internacionales:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Indique cul de los siguientes actos es vinculante:",
+        "options": [
+          {
+            "text": "Decisin",
+            "is_correct": false
+          },
+          {
+            "text": "Dictamen",
+            "is_correct": false
+          },
+          {
+            "text": "Recomendacin",
+            "is_correct": false
+          },
+          {
+            "text": "Libro Blanco de la Comisin",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Indique cul de los siguientes actos es vinculante:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Decisin...'",
+        "Distractor muy corto: 'Dictamen...'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Las directivas:",
+        "options": [
+          {
+            "text": "Son obligatorias en todos sus elementos",
+            "is_correct": false
+          },
+          {
+            "text": "Entran en vigor a los 30 das de su publicacin en el DOUE",
+            "is_correct": false
+          },
+          {
+            "text": "Se notifican si son adoptadas por un procedimiento legislativo y cuando se destinen a",
+            "is_correct": false
+          },
+          {
+            "text": "Requieren de transposicin normativa por los Estados Miembros",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las directivas:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta muy corta",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 291 del TFUE:",
+        "options": [
+          {
+            "text": "El Parlamento y el Consejo adoptarn todas las medidas de Derecho interno necesarias",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando se requieran condiciones uniformes de ejecucin de los actos jurdicamente vin-",
+            "is_correct": false
+          },
+          {
+            "text": "ulantes de la Unin, stos conferirn competencias de ejecucin al Consejo",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando se requieran condiciones uniformes de ejecucin de los actos jurdicamente vin-",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 291 del TFUE:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "En virtud de qu principio, si un particular sufre un perjuicio por la no transposi-",
+        "options": [
+          {
+            "text": "in o transposicin incorrecta de una directiva en plazo, podr reclamar ante el",
+            "is_correct": false
+          },
+          {
+            "text": "Autonoma",
+            "is_correct": false
+          },
+          {
+            "text": "Responsabilidad patrimonial",
+            "is_correct": false
+          },
+          {
+            "text": "Efecto directo",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En virtud de qu principio, si un particular sufre un perjuicio por la no transposi-",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Autonoma...'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 288 del TFUE, los dictmenes y las recomendaciones son actos:",
+        "options": [
+          {
+            "text": "Vinculantes",
+            "is_correct": false
+          },
+          {
+            "text": "Legislativos",
+            "is_correct": false
+          },
+          {
+            "text": "Los Estados miembros manifiestan a travs de ellos su criterio sobre un determinado",
+            "is_correct": false
+          },
+          {
+            "text": "sunto",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 288 del TFUE, los dictmenes y las recomendaciones son actos:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'sunto...'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En cuanto a la celebracin de acuerdos internacionales, seale la cierta:",
+        "options": [
+          {
+            "text": "La Comisin propone la celebracin de todos los acuerdos",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo autorizar la apertura de negociaciones, aprobar las directrices de negocia-",
+            "is_correct": false
+          },
+          {
+            "text": "in, autorizar la firma y celebrar los acuerdos",
+            "is_correct": false
+          },
+          {
+            "text": "El Parlamento Europeo interviene en acuerdos materia PESC",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En cuanto a la celebracin de acuerdos internacionales, seale la cierta:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Indique cul de las siguientes es una norma de Derecho derivado:",
+        "options": [
+          {
+            "text": "Acta de adhesin de Grecia a la Unin Europea",
+            "is_correct": false
+          },
+          {
+            "text": "Decisin 2020/2053 del Consejo sobre el sistema de recursos propio de la UE",
+            "is_correct": false
+          },
+          {
+            "text": "Acta Electoral de Bruselas de 1976",
+            "is_correct": false
+          },
+          {
+            "text": "Reglamento (UE) 2021/1529 del Parlamento Europeo y del Consejo, por el que se esta-",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Indique cul de las siguientes es una norma de Derecho derivado:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la FALSA respecto del principio de efecto directo:",
+        "options": [
+          {
+            "text": "Se contempla el efecto directo vertical y horizontal",
+            "is_correct": false
+          },
+          {
+            "text": "Se establece por primera vez por la Sentencia Van Gend en Loos de 1963",
+            "is_correct": false
+          },
+          {
+            "text": "Se establece por primera vez por la Sentencia Van Duyn de 1974",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la FALSA respecto del principio de efecto directo:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En virtud de la Sentencia Comisin/Italia de 1985:",
+        "options": [
+          {
+            "text": "El juez nacional no est obligado a aplicar la norma europea y seguir aplicando la norma",
+            "is_correct": false
+          },
+          {
+            "text": "Los Estados miembros tienen la obligacin de eliminar de su ordenamiento jurdico la",
+            "is_correct": false
+          },
+          {
+            "text": "Un particular podr reclamar la indemnizacin al Estado incumplidor por su actuacin",
+            "is_correct": false
+          },
+          {
+            "text": "eficiente",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En virtud de la Sentencia Comisin/Italia de 1985:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'eficiente...'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En los acuerdos internacionales, NO se requiere la previa aprobacin del Parla-",
+        "options": [
+          {
+            "text": "Acuerdos referidos a mbitos en los que se aplique el procedimiento legislativo ordinario",
+            "is_correct": false
+          },
+          {
+            "text": "Acuerdos en materia PESC",
+            "is_correct": false
+          },
+          {
+            "text": "Acuerdos de asociacin",
+            "is_correct": false
+          },
+          {
+            "text": "Acuerdos con repercusiones presupuestarias importantes para la Unin",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En los acuerdos internacionales, NO se requiere la previa aprobacin del Parla-",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De conformidad con el artculo 289 del TFUE:",
+        "options": [
+          {
+            "text": "El procedimiento legislativo ordinario consiste en la adopcin conjunta por el Parla-",
+            "is_correct": false
+          },
+          {
+            "text": "ecisin, una recomendacin o un dictamen.",
+            "is_correct": false
+          },
+          {
+            "text": "En los casos especficos previstos por los Tratados, la adopcin de un reglamento, una",
+            "is_correct": false
+          },
+          {
+            "text": "irectiva o una decisin, bien por el Parlamento Europeo con la participacin del Con-",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De conformidad con el artculo 289 del TFUE:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La regla general en la toma de decisiones del Consejo para celebrar un acuerdo",
+        "options": [
+          {
+            "text": "Acuerdo de colaboracin",
+            "is_correct": false
+          },
+          {
+            "text": "Acuerdo de asociacin o acuerdos con estados candidatos",
+            "is_correct": false
+          },
+          {
+            "text": "Acuerdos con repercusiones ambientales",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando en la Unin no se precise unanimidad para su aprobacin",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La regla general en la toma de decisiones del Consejo para celebrar un acuerdo",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la FALSA:",
+        "options": [
+          {
+            "text": "El Derecho derivado lo adoptan las instituciones de la Unin",
+            "is_correct": false
+          },
+          {
+            "text": "El Derecho originario es aprobado por los Estados miembros",
+            "is_correct": false
+          },
+          {
+            "text": "El Derecho derivado es jerrquicamente inferior al originario",
+            "is_correct": false
+          },
+          {
+            "text": "Los actos de la Unin no han de estar motivados",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la FALSA:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta muy corta",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La Sentencia Van Duyn reconoce el principio de:",
+        "options": [
+          {
+            "text": "Efecto directo",
+            "is_correct": false
+          },
+          {
+            "text": "Efecto directo de una directiva",
+            "is_correct": false
+          },
+          {
+            "text": "Seguridad jurdica",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La Sentencia Van Duyn reconoce el principio de:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la cierta respecto de los tratados internacionales celebrados por la Unin:",
+        "options": [
+          {
+            "text": "Son inferiores jerrquicamente al Derecho derivado",
+            "is_correct": false
+          },
+          {
+            "text": "Pueden contradecir los Tratados con la autorizacin del Tribunal de Justicia",
+            "is_correct": false
+          },
+          {
+            "text": "El Alto Representante propone la celebracin de los acuerdos en materia PESC",
+            "is_correct": false
+          },
+          {
+            "text": "Como norma general, se requiere la previa aprobacin del Parlamento Europeo",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la cierta respecto de los tratados internacionales celebrados por la Unin:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Qu norma prev la Constitucin Espaola para autorizar la celebracin de",
+        "options": [
+          {
+            "text": "cuerdos internacionales que atribuyan competencias de la CE a una organizacin",
+            "is_correct": false
+          },
+          {
+            "text": "Reglamentos",
+            "is_correct": false
+          },
+          {
+            "text": "Reales Decretos legislativos",
+            "is_correct": false
+          },
+          {
+            "text": "Leyes",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu norma prev la Constitucin Espaola para autorizar la celebracin de",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Leyes...'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Si hay colisin entre una norma europea y la Constitucin Espaola:",
+        "options": [
+          {
+            "text": "El juez espaol aplica la norma nacional",
+            "is_correct": false
+          },
+          {
+            "text": "Prevalece la Constitucin Espaola por el principio de jerarqua normativa",
+            "is_correct": false
+          },
+          {
+            "text": "El juez espaol inaplica la Constitucin sin necesidad de modificarla",
+            "is_correct": false
+          },
+          {
+            "text": "Prevalece la norma europea sobre la nacional y habr que modificar la Constitucin",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Si hay colisin entre una norma europea y la Constitucin Espaola:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Una Directiva del Consejo destinada a Espaa, Francia y Portugal:",
+        "options": [
+          {
+            "text": "Se publicar en el DOUE.",
+            "is_correct": false
+          },
+          {
+            "text": "Se notificar a estos Estados miembros.",
+            "is_correct": false
+          },
+          {
+            "text": "Se publicar en los boletines oficiales correspondientes de dichos Estados.",
+            "is_correct": false
+          },
+          {
+            "text": "Todas las directivas se publican en el DOUE.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Una Directiva del Consejo destinada a Espaa, Francia y Portugal:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Para que una directiva tenga reconocido el efecto directo, es preciso que:",
+        "options": [
+          {
+            "text": "No sea legislativa",
+            "is_correct": false
+          },
+          {
+            "text": "Sea clara, precisa, autosuficiente e incondicional",
+            "is_correct": false
+          },
+          {
+            "text": "El Estado miembro la haya transpuesto correctamente",
+            "is_correct": false
+          },
+          {
+            "text": "El efecto directo ser horizontal",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Para que una directiva tenga reconocido el efecto directo, es preciso que:",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En virtud de qu principio el juez nacional ha de inaplicar la norma nacional si",
+        "options": [
+          {
+            "text": "Seguridad jurdica.",
+            "is_correct": false
+          },
+          {
+            "text": "Primaca.",
+            "is_correct": false
+          },
+          {
+            "text": "Cooperacin leal.",
+            "is_correct": false
+          },
+          {
+            "text": "Eficiencia.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En virtud de qu principio el juez nacional ha de inaplicar la norma nacional si",
+        "source": "Test tema 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 4,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Primaca....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:22.467063"
+}

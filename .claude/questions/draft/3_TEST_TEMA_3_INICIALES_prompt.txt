@@ -1,0 +1,510 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 3 TEST TEMA 3 INICIALES.docx
+**Total preguntas:** 40
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** Est�n legitimados para interponer el recurso de inconstitucionalidad, seg�n el Art. 162 de la Constituci�n:
+
+**Opciones:**
+  0. El Presidente del Gobierno, el Defensor del Pueblo, 50 diputados, 50 senadores, los �rganos colegiados ejecutivos de las Comunidades Aut�nomas y, en su caso, las Asambleas de las mismas.
+  1. El Presidente del Gobierno, 50 diputados, 50 senadores, los �rganos colegiados ejecutivos de las Comunidades Aut�nomas y, en su caso, las Asambleas de las mismas.
+  2. El Presidente del Gobierno, el Defensor del Pueblo, 50 diputados y 50 senadores.
+  3. El Presidente del Gobierno, el Defensor del Pueblo, 50 diputados, 50 senadores, los �rganos colegiados ejecutivos de las Comunidades Aut�nomas.
+
+---
+
+### Pregunta 2
+
+**Texto:** Est�n legitimados para interponer el recurso de amparo constitucional, seg�n el Art. 162 de la Constituci�n:
+
+**Opciones:**
+  0. Toda persona natural o jur�dica que invoque un inter�s leg�timo, as� como el Presidente del Gobierno.
+  1. Toda persona natural o jur�dica que invoque un inter�s leg�timo, as� como el Presidente del Tribunal Constitucional.
+  2. Los mismos que para interponer el recurso de inconstitucionalidad.
+  3. Toda persona natural o jur�dica que invoque un inter�s leg�timo, as� como el Defensor del Pueblo y el Ministerio Fiscal.
+
+---
+
+### Pregunta 3
+
+**Texto:** Las sentencias del Tribunal Constitucional, seg�n el Art. 164 de la Constituci�n:
+
+**Opciones:**
+  0. Se publicar�n en el BOE y los Boletines Oficiales de las CCAA afectadas.
+  1. Se publicar�n en el Diario Oficial de las Comunidades Europeas.
+  2. Se publicar�n en el BOE, con los votos particulares si los hubiere.
+  3. Se publicar�n en Diario del Tribunal, con los votos particulares si los hubiere.
+
+---
+
+### Pregunta 4
+
+**Texto:** El Tribunal Constitucional, como int�rprete supremo de la Constituci�n:
+
+**Opciones:**
+  0. Es independiente de los dem�s �rganos constitucionales y est� sometido s�lo a la Constituci�n y a su propia Ley Org�nica.
+  1. Es independiente de los dem�s �rganos del Estado y est� sometido s�lo a la Constituci�n y a la ley que lo regula.
+  2. Es independiente de los dem�s �rganos del Estado y est� sometido a la Constituci�n y a las leyes.
+  3. Es independiente de los dem�s �rganos del Estado y est� sometido a la Constituci�n y al imperio de la ley.
+
+---
+
+### Pregunta 5
+
+**Texto:** El Tribunal en Pleno, elige de entre sus miembros:
+
+**Opciones:**
+  0. Por votaci�n p�blica a su Presidente, y propone al Presidente del Gobierno su nombramiento.
+  1. Por votaci�n secreta a su Presidente, y propone al Presidente del Gobierno su nombramiento.
+  2. Por votaci�n secreta a su Presidente, y propone al Rey su nombramiento.
+  3. Por votaci�n p�blica a su Presidente, y propone al Rey del Gobierno su nombramiento.
+
+---
+
+### Pregunta 6
+
+**Texto:** La sentencia del Tribunal Constitucional, en el caso del recurso de inconstitucionalidad:
+
+**Opciones:**
+  0. Se dictar� en el plazo de 10 d�as, salvo ampliaci�n de plazo por un m�ximo de 30 d�as.
+  1. Se dictar� en el plazo de 15 d�as, salvo ampliaci�n de plazo por un m�ximo de 30 d�as.
+  2. Se dictar� en el plazo de 5 d�as, salvo ampliaci�n de plazo por un m�ximo de 30 d�as.
+  3. Se dictar� en el plazo de 2 meses, salvo ampliaci�n a 3 meses.
+
+---
+
+### Pregunta 7
+
+**Texto:** La cuesti�n de inconstitucionalidad s�lo podr� plantearse:
+
+**Opciones:**
+  0. Siempre que el proceso no est� concluso y antes de dictar sentencia.
+  1. Una vez concluso el procedimiento y dentro del plazo para dictar sentencia.
+  2. Cuando las partes lo soliciten en per�odo de prueba.
+  3. Cuando la sentencia judicial sea firma.
+
+---
+
+### Pregunta 8
+
+**Texto:** La condici�n de miembro del Tribunal Constitucional es incompatible:
+
+**Opciones:**
+  0. Con todo mandato imperativo y con los cargos pol�tico y administrativos.
+  1. Con el desempe�o de funciones en un partido pol�tico o en un sindicato y con el empleo al servicio de los mismos.
+  2. Con el ejercicio de las carrera Judicial y Fiscal y con cualquier actividad profesional o mercantil.
+  3. Las tres afirmaciones anteriores son correctas.
+
+---
+
+### Pregunta 9
+
+**Texto:** Los conflictos en defensa de la Autonom�a Local:
+
+**Opciones:**
+  0. Figuraban en la redacci�n originaria de la LOTC 2/1979, de 3 de octubre.
+  1. Fueron introducidos en la LOTC, mediante la LO 7/ 1989, de 21 de abril.
+  2. Fueron introducidos en la LOTC, mediante LO 7/1999, de 21 de abril.
+  3. Fueron introducidos en la LOTC, mediante LO 7/2000, de 21 de abril.
+
+---
+
+### Pregunta 10
+
+**Texto:** Podr�n dar lugar al planteamiento de los conflictos en defensa de la Autonom�a Local:
+
+**Opciones:**
+  0. Las normas del Estado con rango reglamentario o las disposiciones del mismo rango de las CCAA que lesionen la autonom�a local constitucionalmente garantizada.
+  1. Las normas del Estado con rango de ley o las disposiciones con rango de ley de las CCAA que lesionen la autonom�a local constitucionalmente garantizada.
+  2. Las normas del Estado con rango reglamentario que lesionen la autonom�a local constitucionalmente garantizada, pero no las de las CCAA.
+  3. Las normas del Estado con rango de ley que lesionen la autonom�a local constitucionalmente garantizada, pero no las de las CCAA.
+
+---
+
+### Pregunta 11
+
+**Texto:** La sentencia del recurso de amparo constitucional contendr� alguno de los siguientes pronunciamientos:
+
+**Opciones:**
+  0. Otorgamiento del amparo o desestimaci�n del amparo.
+  1. Estimaci�n del amparo o desestimaci�n del amparo.
+  2. Otorgamiento del amparo o denegaci�n del amparo.
+  3. Afirmaci�n del amparo o negaci�n del amparo.
+
+---
+
+### Pregunta 12
+
+**Texto:** Preside la Sala Primera del TC:
+
+**Opciones:**
+  0. El Presidente, y en su defecto el magistrado de mayor edad.
+  1. El Presidente, y en su defecto el vicepresidente.
+  2. El Presidente, y en su defecto el magistrado de mayor antig�edad.
+  3. El Vicepresidente, y en su defecto el magistrado de mayor antig�edad.
+
+---
+
+### Pregunta 13
+
+**Texto:** La elecci�n del Presidente del TC requiere, en primera votaci�n, mayor�a:
+
+**Opciones:**
+  0. Absoluta.
+  1. De 2/3.
+  2. De 3/5.
+  3. Simple.
+
+---
+
+### Pregunta 14
+
+**Texto:** El Presidente del TC puede ser reelegido:
+
+**Opciones:**
+  0. Una vez
+  1. Dos veces
+  2. Tres veces
+  3. La LOTC nada indica al respecto
+
+---
+
+### Pregunta 15
+
+**Texto:** �Cu�l de estas afirmaciones en relaci�n con el Tribunal Constitucional es falsa?:
+
+**Opciones:**
+  0. En el plazo de 3 d�as desde la notificaci�n de la sentencia, las partes podr�n solicitar la aclaraci�n de la misma.
+  1. El qu�rum para la adopci�n de acuerdos es de 2/3 de los miembros que lo componen.
+  2. Apreciar� de oficio o a instancia de parte su falta de jurisdicci�n o competencia.
+  3. El procedimiento ante este Tribunal es gratuito, salvo que se aprecie temeridad o mala fe, en cuyo caso podr� condenarse en costas.
+
+---
+
+### Pregunta 16
+
+**Texto:** El recurso de inconstitucionalidad es conocido por:
+
+**Opciones:**
+  0. Las Salas.
+  1. El Pleno.
+  2. Las Salas, excepto en los de mera aplicaci�n de doctrina, que ser�n competencia del Pleno.
+  3. El Pleno, excepto en los de mera aplicaci�n de doctrina, que podr�n atribuirse a las Salas.
+
+---
+
+### Pregunta 17
+
+**Texto:** De los doce Magistrados del TC, el Senado debe proponer:
+
+**Opciones:**
+  0. 2 entre los candidatos propuestos por la Comisi�n General de Comunidades Aut�nomas del Senado.
+  1. 4 entre los candidatos propuestos por la Comisi�n General de Comunidades Aut�nomas del Senado.
+  2. 2 entre los candidatos propuestos por las Asambleas Legislativas de las Comunidades Aut�nomas.
+  3. 4 entre los candidatos propuestos por las Asambleas Legislativas de las Comunidades Aut�nomas.
+
+---
+
+### Pregunta 18
+
+**Texto:** En el supuesto de conflictos de competencias, el previo requerimiento es:
+
+**Opciones:**
+  0. Obligatorio en todo caso.
+  1. Obligatorio para las CCAA y potestativo para el Estado.
+  2. Obligatorio para el Estado y potestativo para las CCAA.
+  3. Potestativo en todo caso.
+
+---
+
+### Pregunta 19
+
+**Texto:** El plazo para efectuar el previo requerimiento al que se refiere la pregunta anterior es de:
+
+**Opciones:**
+  0. 1 mes.
+  1. 2 meses.
+  2. 20 d�as h�biles.
+  3. 15 d�as h�biles.
+
+---
+
+### Pregunta 20
+
+**Texto:** �Qu� plazo prev� la Ley Org�nica 2/1979, de 3 de octubre del Tribunal Constitucional para el planteamiento del recurso de amparo cuando la vulneraci�n de los derechos objeto del mismo procede de decisiones o actos sin valor de ley de las Cortes Generales o cualquiera de sus �rganos o de las Asambleas Legislativas de la Comunidades Aut�nomas o sus �rganos?:
+
+**Opciones:**
+  0. 3 meses desde que con arreglo a sus normas internas sean firmes.
+  1. 30 d�as desde que con arreglo a sus normas internas sean firmes.
+  2. 1 mes desde la notificaci�n del acto o decisi�n.
+  3. 20 d�as desde la notificaci�n del acto o decisi�n.
+
+---
+
+### Pregunta 21
+
+**Texto:** Los miembros del Tribunal Constitucional elegidos a propuesta del Congreso y del Senado son:
+
+**Opciones:**
+  0. 8 elegidos por mayor�a de 2/3.
+  1. 8 elegidos por mayor�a de 3/5.
+  2. 10 elegidos por mayor�a de 2/3.
+  3. 10 elegidos por mayor�a de 3/5.
+
+---
+
+### Pregunta 22
+
+**Texto:** De las siguientes competencias del Tribunal Constitucional, �cu�l de ellas corresponde a las Salas?:
+
+**Opciones:**
+  0. Recurso de inconstitucionalidad.
+  1. Recurso de amparo.
+  2. Conflictos entre �rganos constitucionales del estado.
+  3. Recurso previo de inconstitucionalidad.
+
+---
+
+### Pregunta 23
+
+**Texto:** El requerimiento ante el Tribunal Constitucional para que se pronuncie sobre la existencia o inexistencia de contradicci�n entre la Constituci�n y las estipulaciones de un Tratado internacional, podr� hacerla:
+
+**Opciones:**
+  0. El gobierno exclusivamente.
+  1. El Gobierno o el Congreso, exclusivamente.
+  2. El Congreso o el Senado, exclusivamente.
+  3. El Gobierno o cualquiera de las C�maras.
+
+---
+
+### Pregunta 24
+
+**Texto:** Entre los legitimados para interponer el recurso previo de inconstitucionalidad se encuentra:
+
+**Opciones:**
+  0. El Presidente del Gobierno
+  1. El Ministerio Fiscal
+  2. La persona directamente afectada
+  3. El Consejo General del Poder Judicial.
+
+---
+
+### Pregunta 25
+
+**Texto:** El Tribunal Constitucional consta de dos Salas. Se�ale la respuesta correcta:
+
+**Opciones:**
+  0. El Presidente del Tribunal lo es tambi�n de la Sala Primera, que presidir� en su defecto, el Magistrado m�s antiguo y, en caso de igual antig�edad, el de mayor edad.
+  1. El Presidente del Tribunal lo es tambi�n de la Sala Primera, que presidir� en su defecto, el Magistrado de mayor edad y, en caso de igual edad, el m�s antiguo.
+  2. El Presidente del Tribunal lo es tambi�n de la Sala Segunda, que presidir� en su defecto, el Magistrado m�s antiguo y, en caso de igual antig�edad, el de mayor edad.
+  3. El Presidente del Tribunal lo es tambi�n de la Sala Segunda, que presidir� en su defecto, el Magistrado de mayor edad y, en caso de igual edad, el m�s antiguo.
+
+---
+
+### Pregunta 26
+
+**Texto:** Se�ale la respuesta correcta:
+
+**Opciones:**
+  0. La admisi�n de un recurso o de una cuesti�n de inconstitucionalidad no suspender� la vigencia ni la aplicaci�n de la Ley, de la disposici�n normativa o del acto con fuerza de Ley, excepto en el caso en que el Gobierno se ampare en lo dispuesto por el art�culo ciento sesenta y uno, dos, de la Constituci�n para impugnar, por medio de su Presidente, Leyes, disposiciones normativas o actos con fuerza de Ley de las Comunidades Aut�nomas.
+  1. La admisi�n de un recurso o de una cuesti�n de inconstitucionalidad no suspender� la vigencia ni la aplicaci�n de la Ley, de la disposici�n normativa o del acto con fuerza de Ley, excepto en el caso en que el Congreso se ampare en lo dispuesto por el art�culo ciento sesenta y uno, dos, de la Constituci�n para impugnar, por medio de su Presidente, Leyes, disposiciones normativas o actos con fuerza de Ley de las Comunidades Aut�nomas.
+  2. La admisi�n de un recurso o de una cuesti�n de inconstitucionalidad suspender� la vigencia y la aplicaci�n de la Ley, de la disposici�n normativa o del acto con fuerza de Ley, excepto en el caso en que el Gobierno se ampare en lo dispuesto por el art�culo ciento sesenta y uno, dos, de la Constituci�n para impugnar, por medio de su Presidente, Leyes, disposiciones normativas o actos con fuerza de Ley de las Comunidades Aut�nomas.
+  3. La admisi�n de un recurso o de una cuesti�n de inconstitucionalidad suspender� la vigencia y la aplicaci�n de la Ley, de la disposici�n normativa o del acto con fuerza de Ley, excepto en el caso en que el Congreso se ampare en lo dispuesto por el art�culo ciento sesenta y uno, dos, de la Constituci�n para impugnar, por medio de su Presidente, Leyes, disposiciones normativas o actos con fuerza de Ley de las Comunidades Aut�nomas.
+
+---
+
+### Pregunta 27
+
+**Texto:** Los Magistrados del Tribunal Constitucional ser�n nombrados por el Rey, a propuesta de:
+
+**Opciones:**
+  0. las C�maras y del Gobierno.
+  1. las C�maras y del Consejo General del Poder Judicial.
+  2. las C�maras, del Gobierno y del Tribunal Supremo.
+  3. las C�maras, del Gobierno y del Consejo General del Poder Judicial.
+
+---
+
+### Pregunta 28
+
+**Texto:** El Ministerio Fiscal est� legitimado para plantear ante el Tribunal Constitucional:
+
+**Opciones:**
+  0. El recurso de amparo.
+  1. El recurso de inconstitucionalidad y el recurso previo de inconstitucionalidad.
+  2. El recurso de amparo, el recurso de inconstitucionalidad y el recurso previo de inconstitucionalidad.
+  3. El recurso de inconstitucionalidad y el recurso de amparo.
+
+---
+
+### Pregunta 29
+
+**Texto:** Se�ale la respuesta correcta en relaci�n con lo dispuesto en el art�culo 163 CE:
+
+**Opciones:**
+  0. Cuando un �rgano judicial considere, en alg�n proceso, que una norma con rango de ley, aplicable al caso, de cuya validez dependa el fallo, pueda ser contraria a la Constituci�n, plantear� la cuesti�n ante el Tribunal Constitucional en los supuestos, en la forma y con los efectos que establezca la ley, que en todo caso ser�n suspensivos.
+  1. Cuando un �rgano judicial considere, en alg�n proceso, que una norma con rango de ley, aplicable al caso, de cuya validez dependa el fallo, pueda ser contraria a la Constituci�n, plantear� la cuesti�n ante el Tribunal Constitucional en los supuestos, en la forma y con los efectos que establezca la ley, que en ning�n caso ser�n suspensivos.
+  2. Cuando un �rgano judicial considere, en alg�n proceso, que una norma sin rango de ley, aplicable al caso, de cuya validez dependa el fallo, pueda ser contraria a la Constituci�n, plantear� la cuesti�n ante el Tribunal Constitucional en los supuestos, en la forma y con los efectos que establezca la ley, que en todo caso ser�n suspensivos.
+  3. Cuando un �rgano judicial considere, en alg�n proceso, que una norma sin rango de ley, aplicable al caso, de cuya validez dependa el fallo, pueda ser contraria a la Constituci�n, plantear� la cuesti�n ante el Tribunal Constitucional en los supuestos, en la forma y con los efectos que establezca la ley, que en ning�n caso ser�n suspensivos.
+
+---
+
+### Pregunta 30
+
+**Texto:** Las Sentencias del Tribunal Constitucional, de conformidad con el art�culo 164 CE:
+
+**Opciones:**
+  0. Tienen el valor de cosa juzgada a partir del d�a siguiente de su publicaci�n y contra las mismas no cabe recurso alguno.
+  1. Tienen el valor de cosa juzgada a partir del d�a siguiente de su publicaci�n y contra las mismas cabe recurso de s�plica.
+  2. Tienen el valor de cosa juzgada desde el mismo d�a de su publicaci�n y contra las mismas cabe recurso de s�plica.
+  3. Tienen el valor de cosa juzgada desde el mismo d�a de su publicaci�n y contra las mismas no cabe recurso alguno.
+
+---
+
+### Pregunta 31
+
+**Texto:** El Tribunal Constitucional se compone de 12 miembros nombrados por el Rey; de ellos:
+
+**Opciones:**
+  0. cuatro a propuesta del Congreso por mayor�a de dos tercios de sus miembros; cuatro a propuesta del Senado, con id�ntica mayor�a; dos a propuesta del Gobierno, y dos a propuesta del Consejo General del Poder Judicial.
+  1. cuatro a propuesta del Congreso por mayor�a de dos tercios de sus miembros; cuatro a propuesta del Senado, con id�ntica mayor�a; dos a propuesta del Gobierno, y dos a propuesta del Tribunal Supremo.
+  2. cuatro a propuesta del Congreso por mayor�a de tres quintos de sus miembros; cuatro a propuesta del Senado, con id�ntica mayor�a; dos a propuesta del Gobierno, y dos a propuesta del Consejo General del Poder Judicial.
+  3. cuatro a propuesta del Congreso por mayor�a de tres quintos de sus miembros; cuatro a propuesta del Senado, con id�ntica mayor�a; dos a propuesta del Gobierno, y dos a propuesta del Tribunal Supremo.
+
+---
+
+### Pregunta 32
+
+**Texto:** El Tribunal Constitucional consta de dos Salas. Cada Sala est� compuesta por:
+
+**Opciones:**
+  0. seis Magistrados nombrados por el Tribunal en Pleno.
+  1. seis Magistrados nombrados por el Presidente del Tribunal.
+  2. ocho Magistrados nombrados por el Tribunal en Pleno.
+  3. ocho Magistrados nombrados por el Presidente del Tribunal
+
+---
+
+### Pregunta 33
+
+**Texto:** El Tribunal Constitucional entender� de los conflictos en defensa de la autonom�a local que planteen:
+
+**Opciones:**
+  0. los municipios y provincias frente al Estado.
+  1. los municipios y provincias frente al Estado o a una Comunidad Aut�noma.
+  2. los municipios, provincias y entes de �mbito territorial inferior al municipio frente al Estado.
+  3. los municipios, provincias y entes de �mbito territorial inferior al municipio frente al Estado o a una Comunidad Aut�noma.
+
+---
+
+### Pregunta 34
+
+**Texto:** Los conflictos de competencia que opongan al Estado con una Comunidad Aut�noma o a �stas entre s�, podr�n ser suscitados por:
+
+**Opciones:**
+  0. el Gobierno o por los �rganos colegiados ejecutivos de las Comunidades Aut�nomas.
+  1. el Congreso o por las asambleas legislativas de las Comunidades Aut�nomas.
+  2. el Presidente del Gobierno o por los �rganos colegiados ejecutivos de las Comunidades Aut�nomas.
+  3. las Cortes Generales o por las asambleas legislativas de las Comunidades Aut�nomas.
+
+---
+
+### Pregunta 35
+
+**Texto:** Se�ale la respuesta correcta en relaci�n con el control previo de constitucionalidad de los Tratados Internacionales:
+
+**Opciones:**
+  0. El Gobierno o cualquiera de ambas C�maras podr�n requerir al Tribunal Constitucional para que se pronuncie sobre la existencia o inexistencia de contradicci�n entre la Constituci�n y las estipulaciones de un tratado internacional cuyo texto estuviera ya definitivamente fijado, una vez prestado el consentimiento del Estado.
+  1. El Gobierno o cualquiera de ambas C�maras podr�n requerir al Tribunal Constitucional para que se pronuncie sobre la existencia o inexistencia de contradicci�n entre la Constituci�n y las estipulaciones de un tratado internacional cuyo texto estuviera ya definitivamente fijado, pero al que no se hubiere prestado a�n el consentimiento del Estado.
+  2. El Gobierno o el Congreso de los Diputados podr�n requerir al Tribunal Constitucional para que se pronuncie sobre la existencia o inexistencia de contradicci�n entre la Constituci�n y las estipulaciones de un tratado internacional cuyo texto estuviera ya definitivamente fijado, una vez prestado el consentimiento del Estado.
+  3. El Gobierno o el Congreso de los Diputados podr�n requerir al Tribunal Constitucional para que se pronuncie sobre la existencia o inexistencia de contradicci�n entre la Constituci�n y las estipulaciones de un tratado internacional cuyo texto estuviera ya definitivamente fijado, pero al que no se hubiere prestado a�n el consentimiento del Estado.
+
+---
+
+### Pregunta 36
+
+**Texto:** Para iniciar la tramitaci�n de los conflictos en defensa de la autonom�a local ser� necesario el acuerdo del �rgano plenario de las Corporaciones Locales con el voto favorable de:
+
+**Opciones:**
+  0. La mayor�a absoluta del n�mero legal de miembros de las mismas
+  1. La mayor�a simple de los miembros presentes
+  2. La mayor�a de dos tercios de sus miembros
+  3. La mayor�a de tres quintos de sus miembros
+
+---
+
+### Pregunta 37
+
+**Texto:** Se�ale la respuesta correcta acerca del recurso de amparo:
+
+**Opciones:**
+  0. Su conocimiento se atribuye al Pleno, salvo los de mera aplicaci�n de doctrina cuyo conocimiento podr� atribuirse a las Salas en el tr�mite de admisi�n
+  1. Protege a los ciudadanos frente a las violaciones de los derechos previstos en los art�culo 14 a 30 de la Constituci�n
+  2. El plazo para su interposici�n ser� de seis meses desde la publicaci�n de la norma o desde que se tenga conocimiento de ella
+  3. Entre los legitimados para su interposici�n se encuentra el Defensor del Pueblo
+
+---
+
+### Pregunta 38
+
+**Texto:** La admisi�n del recurso de inconstitucionalidad contra una Ley:
+
+**Opciones:**
+  0. Suspende, en todo caso, su aplicaci�n y vigencia
+  1. En ning�n caso suspende su aplicaci�n y vigencia
+  2. Suspender� su aplicaci�n y vigencia si el Gobierno de la naci�n y los �rganos colegiados ejecutivos de las Comunidades Aut�nomas se amparan en lo dispuesto en el art�culo 161.2 de la Constituci�n
+  3. Suspender� su aplicaci�n y vigencia si el Gobierno de la naci�n se ampara en lo dispuesto en el art�culo 161.2 de la Constituci�n
+
+---
+
+### Pregunta 39
+
+**Texto:** El recurso previo de inconstitucionalidad deber� ser resuelto por el Tribunal Constitucional en el plazo improrrogable de:
+
+**Opciones:**
+  0. Seis meses desde su interposici�n
+  1. Tres meses desde su interposici�n
+  2. Seis meses desde la publicaci�n del texto en el Bolet�n de las CCGG
+  3. Tres meses desde la publicaci�n del texto en el Bolet�n de las CCGG
+
+---
+
+### Pregunta 40
+
+**Texto:** Las decisiones de inadmisi�n inicial, desistimiento y caducidad, salvo que la LOTC disponga expresamente otra forma, adoptar�n la forma de:
+
+**Opciones:**
+  0. Providencias
+  1. Autos
+  2. Declaraciones
+  3. Sentencias
+
+---

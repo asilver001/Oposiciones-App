@@ -1,0 +1,390 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 4- TEST  24-25 modificaciones.pdf
+**Total preguntas:** 30
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** A tenor de lo establecido por la LGP no se podr�n hacer transferencias de cr�dito:
+
+**Opciones:**
+  0. Que incrementen cr�ditos suplementados.
+  1. Desde el cap�tulo destinado al pago de intereses de pr�stamos al cap�tulo destinado a la
+  2. ompra de acciones.
+  3. Desde el cap�tulo destinado a la reposici�n de mobiliario al cap�tulo destinado al gasto de
+
+---
+
+### Pregunta 2
+
+**Texto:** El art�culo 51 de la LGP establece que la cuant�a y finalidad de los cr�ditos contenidos en
+
+**Opciones:**
+  0. Transferencias, reasignaciones, generaciones, ampliaciones, cr�ditos extraordinarios,
+  1. Transferencias, generaciones, ampliaciones, cr�ditos extraordinarios, suplementos e
+  2. Transferencias, generaciones, ampliaciones, cr�ditos extraordinarios, suplementos e
+  3. Transferencias, generaciones, ampliaciones, cr�ditos extraordinarios, suplementos,
+
+---
+
+### Pregunta 3
+
+**Texto:** Seg�n el art�culo 63 de la LGP, los titulares de los distintos ministerios podr�n autorizar,
+
+**Opciones:**
+  0. Las transferencias entre cr�ditos de un mismo programa o entre programas de un mismo
+  1. e bienes corrientes y servicios o inversiones reales, siempre que no se encuentren
+  2. fecten a los de personal o no incrementen los cr�ditos del articulo 43.2 de la LGP.
+  3. Las transferencias entre cr�ditos de un mismo programa o entre programas de un mismo
+
+---
+
+### Pregunta 4
+
+**Texto:** Cuando los ingresos procedan de la venta de bienes o prestaciones de servicios:
+
+**Opciones:**
+  0. �nicamente podr�n dar lugar a generaciones en aquellos cr�ditos destinados a la
+  1. dquisici�n de bienes muebles.
+  2. Las generaciones se efectuar�n �nicamente en aquellos cr�ditos destinados a cubrir gastos
+  3. e la misma naturaleza que los que se originaron por la adquisici�n o producci�n de los
+
+---
+
+### Pregunta 5
+
+**Texto:** Conforme a la LGP podr�n hacerse transferencias de cr�dito entre distintas secciones:
+
+**Opciones:**
+  0. Si afectan a la secci�n �06� Deuda P�blica.
+  1. Si afectan a la secci�n �06� Deuda P�blica, siendo autorizadas por el Ministro de
+  2. Si se ocasionan por reorganizaciones administrativas, siendo autorizadas por el Consejo
+  3. e Ministros.
+
+---
+
+### Pregunta 6
+
+**Texto:** Seg�n la LGP, �a qui�n corresponde autorizar una transferencia desde el subconcepto
+
+**Opciones:**
+  0. A nadie, pues se trata de una reasignaci�n de cr�dito.
+  1. Al Ministro de Hacienda.
+  2. Al titular del Departamento Ministerial.
+  3. Al Consejo de Ministros.
+
+---
+
+### Pregunta 7
+
+**Texto:** Las ampliaciones de cr�dito en organismos aut�nomos se pueden financiar:
+
+**Opciones:**
+  0. Con cargo a la parte del remanente de tesorer�a al fin del ejercicio anterior que no haya
+  1. Con cargo a la parte del remanente de tesorer�a al fin del ejercicio anterior que no haya
+  2. Con cargo a la parte del remanente de tesorer�a al fin del ejercicio anterior que no haya
+  3. Con cargo a la parte del remanente de tesorer�a al fin del ejercicio anterior que no haya
+
+---
+
+### Pregunta 8
+
+**Texto:** Si hay que hacer frente a un gasto que no se puede demorar al ejercicio siguiente, para el
+
+**Opciones:**
+  0. Una generaci�n de cr�dito.
+  1. Un suplemento de cr�dito.
+  2. Una ampliaci�n de cr�dito.
+  3. Una incorporaci�n de cr�dito.
+
+---
+
+### Pregunta 9
+
+**Texto:** En relaci�n con las modificaciones presupuestarias del presupuesto de gastos respectivo,
+
+**Opciones:**
+  0. on car�cter general y salvo excepciones, el presidente del Tribunal de Cuentas tiene las
+  1. El titular de un Departamento Ministerial.
+  2. El Ministro de Hacienda.
+  3. El Presidente o Director de un Organismo Aut�nomo.
+
+---
+
+### Pregunta 10
+
+**Texto:** En un departamento ministerial, el Consejo de Ministros aprobar�:
+
+**Opciones:**
+  0. Los suplementos de cr�dito cuya cuant�a exceda del mill�n de euros.
+  1. Los cr�ditos extraordinarios que se financien con cargo al Fondo de Contingencia y se
+  2. estinen a atender obligaciones de ejercicios anteriores para los que se anul� cr�dito.
+  3. Las transferencias de cr�dito entre distintas secciones.
+
+---
+
+### Pregunta 11
+
+**Texto:** �Qui�n es competente para autorizar una transferencia de cr�dito desde
+
+**Opciones:**
+  0. plicaci�n presupuestaria 35.01 929N 500 a la aplicaci�n 16.02 132A 220.00?
+  1. Aunque se trata de cr�ditos de distintas secciones, por afectar al programa de contrataci�n
+  2. entralizada esta transferencia la autorizar�a el Ministro de Hacienda.
+  3. Dicha transferencia no se puede realizar.
+
+---
+
+### Pregunta 12
+
+**Texto:** Seg�n el art�culo 58 de la LGP, se podr�n incorporar a los correspondientes cr�ditos de
+
+**Opciones:**
+  0. Los derivados de retenciones efectuadas para la financiaci�n de cr�ditos extraordinarios o
+  1. Los que resulten de cr�ditos extraordinarios y suplementos de cr�dito que hayan sido
+  2. oncedidos mediante norma con rango de ley en el �ltimo trimestre del ejercicio
+  3. Cuando as� lo disponga una norma de rango legal.
+
+---
+
+### Pregunta 13
+
+**Texto:** Los suplementos de cr�dito concedidos en los ministerios que afecten al cap�tulo
+
+**Opciones:**
+  0. estinado al pago de los intereses de pr�stamos recibidos se financiar�n:
+  1. Mediante la emisi�n de Deuda P�blica o baja en cr�ditos operaciones no financieras.
+  2. Mediante baja en el Fondo de Contingencia o baja en cr�ditos de la misma naturaleza.
+  3. Mediante baja en el Fondo de Contingencia o baja en cr�ditos no financieros que se
+
+---
+
+### Pregunta 14
+
+**Texto:** Seg�n el art�culo 60 de la LGP, de los anticipos de Tesorer�a se puede afirmar que:
+
+**Opciones:**
+  0. Los concede el Consejo de Ministros, a propuesta del titular del departamento y previa
+  1. El Consejo de Ministros, a propuesta del Ministro de Econom�a, Comercio y Empresa
+  2. ispondr� su cancelaci�n.
+  3. Los concede el Consejo de Ministros a propuesta del Ministro de Econom�a, Comercio y
+
+---
+
+### Pregunta 15
+
+**Texto:** Si hay que hacer frente a un gasto que no se puede demorar al ejercicio siguiente para el
+
+**Opciones:**
+  0. Una ampliaci�n de cr�dito.
+  1. Una incorporaci�n de cr�dito.
+  2. Un suplemento de cr�dito si no es posible otra modificaci�n.
+  3. Un cr�dito extraordinario si no es posible otra modificaci�n.
+
+---
+
+### Pregunta 16
+
+**Texto:** Las incorporaciones de cr�dito en organismos aut�nomos se podr�n financiar:
+
+**Opciones:**
+  0. Exclusivamente con mayores ingresos sobre los previstos inicialmente.
+  1. Con cargo a la parte del remanente de tesorer�a al fin del ejercicio anterior que no haya
+  2. on baja en otros cr�ditos no financieros del presupuesto del organismo.
+  3. Mediante baja en el Fondo de Contingencia o baja en cualquier otro cr�dito del
+
+---
+
+### Pregunta 17
+
+**Texto:** Conforme a la LGP tienen consideraci�n de cr�ditos ampliables en el presupuesto del
+
+**Opciones:**
+  0. La amortizaci�n de pr�stamos.
+  1. Todas las pensiones.
+  2. Los intereses de la Deuda p�blica.
+  3. Todos los anteriores.
+
+---
+
+### Pregunta 18
+
+**Texto:** Los anticipos de Tesorer�a, seg�n el art�culo 60 de la LGP:
+
+**Opciones:**
+  0. Pueden concederse por un l�mite m�ximo del 1% del total de cr�ditos no financieros
+  1. oncedidos al Estado por la ley de presupuestos.
+  2. Pueden concederse por un l�mite m�ximo del 1% del total de cr�ditos concedidos al
+  3. Pueden concederse por un l�mite m�ximo del 1% del total de cr�ditos financieros
+
+---
+
+### Pregunta 19
+
+**Texto:** Una transferencia de cr�dito desde un cr�dito que ha sido ampliado a otro cr�dito:
+
+**Opciones:**
+  0. Puede realizarse si afecta al programa de contrataci�n centralizada.
+  1. Se puede realizar si es por reorganizaciones administrativas y corresponde autorizarla al
+  2. Podr� realizarse si afecta a la secci�n 06 Deuda P�blica.
+  3. Todas son correctas.
+
+---
+
+### Pregunta 20
+
+**Texto:** �Qu� modificaci�n presupuestaria procede tramitar si se obtienen ingresos superiores a
+
+**Opciones:**
+  0. Una generaci�n de cr�dito.
+  1. Un cr�dito extraordinario.
+  2. Una incorporaci�n de cr�dito.
+  3. Ninguna.
+
+---
+
+### Pregunta 21
+
+**Texto:** �A qui�n corresponde autorizar la generaci�n de cr�dito si se produce un ingreso no
+
+**Opciones:**
+  0. A nadie, pues ese ingreso no puede dar lugar a generaci�n de cr�dito.
+  1. Al Ministro de Hacienda.
+  2. Al titular del departamento ministerial o al presidente o director del organismo aut�nomo.
+  3. Al presidente o director del organismo aut�nomo, o al ministro de Hacienda si se trata de
+
+---
+
+### Pregunta 22
+
+**Texto:** En un organismo aut�nomo, la concesi�n de un suplemento por 10.000� para el pago de
+
+**Opciones:**
+  0. fectado y se financia con mayores
+  1. orresponde:
+  2. A nadie, porque esta operaci�n no es posible en un OA, ya que es un cr�dito ampliable.
+  3. Al Ministro de Hacienda.
+
+---
+
+### Pregunta 23
+
+**Texto:** Respecto a las generaciones de cr�dito en un organismo aut�nomo se puede afirmar que:
+
+**Opciones:**
+  0. Si la generaci�n procede de ingresos legalmente afectados le corresponde su aprobaci�n
+  1. l Ministro de adscripci�n si avoca la competencia.
+  2. Si la generaci�n procede de ingresos por prestaci�n de servicios corresponde su
+  3. probaci�n al presidente o director del OA salvo avocaci�n por parte del ministro de
+
+---
+
+### Pregunta 24
+
+**Texto:** Los ingresos superiores a los previstos que se hayan obtenido como consecuencia de la
+
+**Opciones:**
+  0. En cualquier cr�dito donde exista una necesidad.
+  1. En los cr�ditos correspondientes a operaciones de la misma naturaleza econ�mica.
+  2. En aquellos cr�ditos destinados a cubrir gastos de la misma naturaleza que los que se
+  3. Estos ingresos no pueden generar cr�dito.
+
+---
+
+### Pregunta 25
+
+**Texto:** Previamente a la tramitaci�n y posterior aprobaci�n de una incorporaci�n en un
+
+**Opciones:**
+  0. Previamente a la tramitaci�n un documento RC y con la aprobaci�n un documento MC.
+  1. Previamente a la tramitaci�n ning�n documento y con la aprobaci�n un documento MC.
+  2. Previamente a la tramitaci�n un documento RC y con la aprobaci�n dos documentos MC.
+  3. Durante la tramitaci�n ning�n documento y con la aprobaci�n dos documentos MC.
+
+---
+
+### Pregunta 26
+
+**Texto:** �Qui�n autoriza el documento contable RC101 de Retenci�n de Cr�dito para
+
+**Opciones:**
+  0. ontrataci�n centralizada?
+  1. El jefe de la Oficina Presupuestaria.
+  2. El Director General de Presupuestos.
+  3. El responsable del servicio gestor.
+
+---
+
+### Pregunta 27
+
+**Texto:** Seg�n la LGP, �qui�n autoriza una transferencia desde el concepto 203 al concepto 202
+
+**Opciones:**
+  0. No es una transferencia, se trata de una reasignaci�n de cr�dito.
+  1. El presidente o director del organismo aut�nomo, previo informe favorable del
+  2. El Ministro de Hacienda.
+  3. Dicha transferencia no se puede realizar por incrementar el concepto 202.
+
+---
+
+### Pregunta 28
+
+**Texto:** Seg�n la LGP, el Ministro de Econom�a, Comercio y Empresa podr� autorizar una
+
+**Opciones:**
+  0. mpliaci�n de cr�dito:
+  1. En ning�n caso.
+  2. Si la ampliaci�n de cr�dito se financia mediante la emisi�n de Deuda P�blica.
+  3. Para atender los gastos derivados de las operaciones de emisi�n, conversi�n, canje o
+
+---
+
+### Pregunta 29
+
+**Texto:** El presupuesto del Estado incluir� una secci�n bajo la r�brica �Fondo de Contingencia�:
+
+**Opciones:**
+  0. A fin de hacer frente durante el ejercicio presupuestario a necesidades inaplazables, de
+  1. ar�cter discrecional para las que no se hiciera en todo o en parte, la adecuada dotaci�n
+  2. e cr�dito.
+  3. La aplicaci�n del Fondo de Contingencia se aprobar�, a propuesta del Ministro de
+
+---
+
+### Pregunta 30
+
+**Texto:** El Ministro de Hacienda remitir� a las Cortes Generales, a trav�s de su Oficina
+
+**Opciones:**
+  0. Trimestral de los cr�ditos extraordinarios y suplementos de cr�dito tramitados durante el
+  1. Trimestral de los cr�ditos extraordinarios y suplementos de cr�dito tramitados en los
+  2. Semestral acerca de la utilizaci�n del Fondo de Contingencia de ejecuci�n presupuestaria.
+  3. Trimestral acerca de la utilizaci�n del Fondo de Contingencia de ejecuci�n
+
+---

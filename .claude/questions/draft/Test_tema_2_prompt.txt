@@ -1,0 +1,510 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** Test tema 2.pdf
+**Total preguntas:** 40
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** �Cu�l de las siguientes instituciones fue reconocida como tal m�s tarde en los Tra-
+
+**Opciones:**
+  0. El Consejo Europeo
+  1. El Consejo
+  2. La Comisi�n Europea
+  3. El Parlamento Europeo
+
+---
+
+### Pregunta 2
+
+**Texto:** El Consejo Europeo estar� compuesto por�
+
+**Opciones:**
+  0. Los jefes de Estado o de Gobierno de los Estados miembros, as� como por su presidente
+  1. El presidente de la Comisi�n, el presidente del Consejo Europeo, el presidente del Parla-
+  2. Un ministro y el presidente del Gobierno de cada Estado miembro
+  3. Los jefes de Estado de cada Estado miembro, as� como por su presidente y por el presi-
+
+---
+
+### Pregunta 3
+
+**Texto:** Se�ale la afirmaci�n correcta sobre el Consejo Europeo:
+
+**Opciones:**
+  0. Dar� a la Uni�n los impulsos necesarios para su desarrollo
+  1. Definir� las orientaciones y prioridades pol�ticas generales de la Uni�n
+  2. No ejercer� funci�n legislativa alguna
+  3. Todas son correctas
+
+---
+
+### Pregunta 4
+
+**Texto:** �Cu�l de las siguientes competencias NO le corresponde al Consejo Europeo?:
+
+**Opciones:**
+  0. Elegir al presidente del Consejo Europeo
+  1. Elegir al presidente del Parlamento Europeo
+  2. Nombrar a la Comisi�n
+  3. Nombrar al presidente, al vicepresidente y a los dem�s miembros del Comit� Ejecutivo
+
+---
+
+### Pregunta 5
+
+**Texto:** La elecci�n del presidente del Consejo Europeo se realiza:
+
+**Opciones:**
+  0. Por mayor�a cualificada del Consejo
+  1. Por mayor�a cualificada del Consejo Europeo
+  2. Por consenso del Consejo Europeo
+  3. Por mayor�a de miembros de la Comisi�n
+
+---
+
+### Pregunta 6
+
+**Texto:** El mandato del presidente del Consejo Europeo es de:
+
+**Opciones:**
+  0. Cinco a�os
+  1. Dos a�os y medio. Y podr� renovarse una sola vez
+  2. Tres a�os. Y podr� renovarse una sola vez
+  3. Dos a�os y medio. Y puede renovarse indefinidamente
+
+---
+
+### Pregunta 7
+
+**Texto:** Seg�n el art�culo 15 del TUE, el Consejo Europeo se reunir�:
+
+**Opciones:**
+  0. Dos veces por trimestre
+  1. Dos veces por semestre
+  2. Una vez al mes
+  3. La b) es cierta y cuando la situaci�n lo exija el presidente convocar� una reuni�n extra-
+
+---
+
+### Pregunta 8
+
+**Texto:** Se�ale la FALSA sobre el presidente del Consejo Europeo:
+
+**Opciones:**
+  0. Al t�rmino de cada reuni�n del Consejo Europeo, presentar� un informe al Parlamento
+  1. No podr� ejercer mandato nacional alguno
+  2. Asumir�, en su rango y condici�n, la representaci�n exterior de la Uni�n en los asuntos
+  3. e pol�tica exterior y de seguridad com�n, sin perjuicio de las atribuciones del alto repre-
+
+---
+
+### Pregunta 9
+
+**Texto:** En relaci�n con la toma de decisiones del Consejo Europeo es cierto que:
+
+**Opciones:**
+  0. Se pronunciar� por mayor�a simple en las cuestiones de procedimiento y para la aproba-
+  1. i�n de su reglamento interno
+  2. La abstenci�n de los miembros presentes o representados impedir� la adopci�n de los
+  3. cuerdos del Consejo Europeo que requieran unanimidad
+
+---
+
+### Pregunta 10
+
+**Texto:** �Cu�l de las siguientes decisiones NO la ha de adoptar el Consejo Europeo?:
+
+**Opciones:**
+  0. Una decisi�n sobre la composici�n del Parlamento Europeo
+  1. Una decisi�n relativa a las formaciones del Consejo distintas a la de Asuntos Generales
+  2. Una decisi�n relativa a las formaciones del propio Consejo Europeo
+  3. Una decisi�n relativa a la rotaci�n de las presidencias del Consejo
+
+---
+
+### Pregunta 11
+
+**Texto:** �Qui�n presidir� el Consejo de Asuntos Exteriores?:
+
+**Opciones:**
+  0. El alto representante de la Uni�n para Asuntos Exteriores y Pol�tica de Seguridad
+  1. El ministro de Asuntos Exteriores del Estado miembro al que le corresponda la presiden-
+  2. ia de turno del Consejo
+  3. El presidente del Consejo Europeo, en su rango y condici�n
+
+---
+
+### Pregunta 12
+
+**Texto:** �Qui�n nombrar� al alto representante de la Uni�n para Asuntos Exteriores y Pol�-
+
+**Opciones:**
+  0. La Comisi�n, por mayor�a de miembros, con la aprobaci�n del presidente del Consejo
+  1. El Consejo Europeo, por mayor�a cualificada, con la aprobaci�n del presidente de la Co-
+  2. El Consejo Europeo, por unanimidad, con la aprobaci�n del presidente de la Comisi�n
+  3. El Consejo, por mayor�a cualificada, con la aprobaci�n del presidente de la Comisi�n
+
+---
+
+### Pregunta 13
+
+**Texto:** Se�ale la FALSA sobre el alto representante de la Uni�n para Asuntos Exteriores y
+
+**Opciones:**
+  0. Ser� uno de los vicepresidentes del Consejo
+  1. Se encargar�, dentro de la Comisi�n, de las responsabilidades que incumben a la misma
+  2. cci�n exterior de la Uni�n
+  3. El Consejo Europeo podr� poner fin a su mandato
+
+---
+
+### Pregunta 14
+
+**Texto:** Indique cu�l de las siguientes personalidades ostenta en la actualidad la Presidencia
+
+**Opciones:**
+  0. el Consejo Europeo:
+  1. Charles Michel
+  2. Antonio Costa
+  3. �rsula von der Leyen
+
+---
+
+### Pregunta 15
+
+**Texto:** �Cu�l de las siguientes funciones NO figuran entre las que el art�culo 16 del TUE
+
+**Opciones:**
+  0. tribuye al Consejo?:
+  1. La funci�n presupuestaria. que ejercer� conjuntamente con el Parlamento Europeo
+  2. Supervisar la aplicaci�n del Derecho de la Uni�n bajo el control del Tribunal de Justicia
+  3. e la Uni�n Europea
+
+---
+
+### Pregunta 16
+
+**Texto:** El Consejo estar� compuesto:
+
+**Opciones:**
+  0. Por al menos un representante de cada Estado miembro
+  1. Por personas con competencia general y compromiso europeo
+  2. Por personas con rango ministerial, facultadas para comprometer al Gobierno del Estado
+  3. Por personas que ofrezcan absolutas garant�as de independencia en inter�s general de la
+
+---
+
+### Pregunta 17
+
+**Texto:** �Qu� formaci�n del Consejo velar� por la coherencia de los trabajos de las diferen-
+
+**Opciones:**
+  0. El Consejo de Asuntos Exteriores
+  1. El Consejo de Justicia y Asuntos de Interior
+  2. El Consejo de Asuntos Generales
+  3. El ECOFIN.
+
+---
+
+### Pregunta 18
+
+**Texto:** Sobre la toma de decisiones del Consejo, es FALSO que:
+
+**Opciones:**
+  0. Se pronunciar� por mayor�a cualificada, excepto cuando los Tratados dispongan otra cosa
+  1. No adopta ninguna decisi�n por unanimidad
+  2. Cuando deba adoptar un acuerdo por mayor�a simple, se pronunciar� por mayor�a de los
+  3. En caso de votaci�n, cada miembro del Consejo podr� votar en representaci�n de uno
+
+---
+
+### Pregunta 19
+
+**Texto:** Seg�n el art�culo 16 del TUE, la mayor�a cualificada del Consejo se define:
+
+**Opciones:**
+  0. Como un m�nimo del 55 por 100 de los miembros del Consejo que incluya al menos a
+  1. e la poblaci�n de la Uni�n, cuando el Consejo act�a a propuesta de la Comisi�n o del
+  2. lto representante de la Uni�n para Asuntos Exteriores y Pol�tica de Seguridad
+  3. Como un m�nimo del 55 por 100 de los miembros del Consejo que incluya al menos a
+
+---
+
+### Pregunta 20
+
+**Texto:** �Cu�ntos miembros del Consejo como m�nimo han de formar la minor�a de bloqueo
+
+**Opciones:**
+  0. Cuatro
+  1. Cinco
+  2. Catorce
+  3. Tres
+
+---
+
+### Pregunta 21
+
+**Texto:** �A qu� pa�s le corresponde la presidencia semestral del Consejo en el segundo se-
+
+**Opciones:**
+  0. Dinamarca
+  1. Chipre
+  2. Hungr�a
+  3. Polonia
+
+---
+
+### Pregunta 22
+
+**Texto:** Se�ale la cierta sobre el ECOFIN:
+
+**Opciones:**
+  0. Est� formado por los ministros de Econom�a y Hacienda de los Estados miembros de la
+  1. Es el nombre con el que se conoce el Consejo de Asuntos Exteriores
+  2. Es el nombre actual del COREPER
+  3. Es el nombre del Consejo de Asuntos Econ�micos y Financieros
+
+---
+
+### Pregunta 23
+
+**Texto:** Se�ale la FALSA sobre el COREPER:
+
+**Opciones:**
+  0. Se trata del Comit� de Representantes Permanentes de los Gobiernos de los Estados
+  1. Se encarga de preparar los trabajos de la Comisi�n
+  2. El COREPER II se compone de los representantes permanentes
+  3. El COREPER I se compone de los representantes permanentes adjuntos
+
+---
+
+### Pregunta 24
+
+**Texto:** Seg�n el art�culo 16.8 del TUE, �cu�ndo se reunir� en p�blico el Consejo?:
+
+**Opciones:**
+  0. Cuando delibere y vote sobre un proyecto de acto legislativo
+  1. Para las actividades no legislativas
+  2. Siempre se re�ne en p�blico
+  3. Nunca se re�ne en p�blico
+
+---
+
+### Pregunta 25
+
+**Texto:** El Consejo se reunir� por convocatoria de su presidente, pero �por iniciativa de
+
+**Opciones:**
+  0. Por iniciativa del propio presidente del Consejo
+  1. Por iniciativa de uno de los miembros del Consejo
+  2. Por iniciativa de la Comisi�n
+  3. Todas son correctas
+
+---
+
+### Pregunta 26
+
+**Texto:** El art�culo 243 del TFUE indica los sueldos, dietas y pensiones que ha de fijar el
+
+**Opciones:**
+  0. onsejo. Se�ale de cu�l de los siguientes cargos no fija las citadas retribuciones:
+  1. De los miembros de la Comisi�n Europea
+  2. Del presidente del Consejo Europeo
+  3. De los miembros del propio Consejo
+
+---
+
+### Pregunta 27
+
+**Texto:** La Comisi�n que funciona de 2024 a 2029 est� formada por:
+
+**Opciones:**
+  0. Un nacional por Estado miembro, m�s el presidente de la Comisi�n y el alto representante
+  1. e la Uni�n para Asuntos Exteriores y Pol�tica de Seguridad
+  2. Un nacional por Estado miembro, incluidos el presidente de la Comisi�n y el alto repre-
+  3. 18 miembros, ya que el TUE establece que la Comisi�n tendr� un n�mero de miembros
+
+---
+
+### Pregunta 28
+
+**Texto:** �Cu�l de las siguientes NO es una competencia de la Comisi�n?:
+
+**Opciones:**
+  0. Promover el inter�s general de la Uni�n y tomar las iniciativas adecuadas para este fin
+  1. Velar por que se apliquen los Tratados y las medidas adoptadas por las instituciones en
+  2. Asumir la representaci�n exterior de la Uni�n en el �mbito de la pol�tica exterior y de
+  3. Ejecutar el presupuesto y gestionar los programas
+
+---
+
+### Pregunta 29
+
+**Texto:** Se�ale la FALSA:
+
+**Opciones:**
+  0. Todos los actos jur�dicos de la Uni�n se adoptan a propuesta de la Comisi�n
+  1. El mandato de la Comisi�n ser� de cinco a�os
+  2. Los miembros de la Comisi�n ser�n elegidos en raz�n de su competencia general y de su
+  3. ompromiso europeo
+
+---
+
+### Pregunta 30
+
+**Texto:** Se�ale la afirmaci�n correcta:
+
+**Opciones:**
+  0. Un miembro de la Comisi�n presentar� su dimisi�n si lo solicitan dos tercios de los miem-
+  1. ros de la propia Comisi�n
+  2. El presidente de la Comisi�n podr� decidir excepcionalmente que haya dos miembros de
+  3. El presidente de la Comisi�n nombrar� vicepresidentes de la Comisi�n distintos del alto
+
+---
+
+### Pregunta 31
+
+**Texto:** �Qui�n nombrar� a la Comisi�n?
+
+**Opciones:**
+  0. El Consejo Europeo, por mayor�a cualificada.
+  1. El Consejo Europeo, por unanimidad
+  2. El Parlamento Europeo, por mayor�a de miembros que lo componen
+  3. El Consejo Europeo, por consenso
+
+---
+
+### Pregunta 32
+
+**Texto:** Se�ale la FALSA respecto al proceso de elecci�n y nombramiento de los comisarios:
+
+**Opciones:**
+  0. Teniendo en cuenta el resultado de las elecciones al Parlamento Europeo, el Consejo, por
+  1. ente de la Comisi�n
+  2. El Parlamento Europeo elegir� al candidato a presidente de la Comisi�n por mayor�a de
+  3. El Consejo, de com�n acuerdo con el presidente electo, adoptar� la lista de las dem�s
+
+---
+
+### Pregunta 33
+
+**Texto:** �Qui�n puede votar una moci�n de censura sobre la gesti�n de la Comisi�n?:
+
+**Opciones:**
+  0. El Consejo Europeo
+  1. El Parlamento Europeo
+  2. El Consejo y el Parlamento Europeo, conjuntamente
+  3. El Tribunal de Justicia de la Uni�n Europea
+
+---
+
+### Pregunta 34
+
+**Texto:** Seg�n el art�culo 246 del TFUE, �qu� ocurre si dimite, cesa o fallece un miembro de
+
+**Opciones:**
+  0. Ser� sustituido por el resto de su mandato por un nuevo miembro de la misma nacionali-
+  1. ad.
+  2. El sustituto ser� nombrado por el Consejo, de com�n acuerdo con el presidente de la
+  3. omisi�n y previa consulta al Parlamento Europeo
+
+---
+
+### Pregunta 35
+
+**Texto:** Seg�n el art�culo 247 del TFUE, en relaci�n con los ceses de miembros de la Comi-
+
+**Opciones:**
+  0. Dicho cese puede llevarse a cabo a instancia del Consejo, por mayor�a simple.
+  1. Dicho cese puede llevarse a cabo a instancia del Parlamento Europeo
+  2. Dicho cese puede llevarse a cabo a instancia de la Comisi�n
+  3. El cese se producir� si el miembro de la Comisi�n deja de reunir las condiciones necesa-
+
+---
+
+### Pregunta 36
+
+**Texto:** Tras la entrada en vigor del Tratado de Lisboa, las instituciones de la Uni�n son:
+
+**Opciones:**
+  0. El Parlamento Europeo, el Consejo Europeo, el Consejo, la Comisi�n y el BCE.
+  1. El Parlamento Europeo, el Consejo Europeo, el Consejo, la Comisi�n, el TJUE, el BCE y
+  2. El Parlamento Europeo, el Consejo de Europa, el Consejo, la Comisi�n, el TJUE, el BCE
+  3. El Parlamento Europeo, el Consejo, la Comisi�n, el TJUE, el Tribunal de Cuentas y el
+
+---
+
+### Pregunta 37
+
+**Texto:** Seg�n el art�culo 250 del TFUE, los acuerdos de la Comisi�n se adoptar�n�:
+
+**Opciones:**
+  0. Por mayor�a cualificada
+  1. Por mayor�a de sus miembros
+  2. Por mayor�a de votos emitidos
+  3. Con al menos la tercera parte de sus miembros a favor
+
+---
+
+### Pregunta 38
+
+**Texto:** �De qu� plazo disponen los parlamentos nacionales para analizar los proyectos de
+
+**Opciones:**
+  0. ctos legislativos que les remite la Comisi�n y ver si respetan el principio de subsi-
+  1. iariedad?
+  2. Seis semanas
+  3. Un mes
+
+---
+
+### Pregunta 39
+
+**Texto:** �En qu� procedimiento decisorio creado por el Tratado de Maastricht se basa el
+
+**Opciones:**
+  0. ctual procedimiento legislativo ordinario?
+  1. Procedimiento de cooperaci�n
+  2. Dictamen conforme
+  3. Procedimiento de codecisi�n
+
+---
+
+### Pregunta 40
+
+**Texto:** �Qu� actos jur�dicos se pueden adoptar por el procedimiento legislativo especial y
+
+**Opciones:**
+  0. Reglamento, directiva o decisi�n adoptados por la Comisi�n
+  1. Reglamento, directiva o decisi�n adoptados conjuntamente por el Consejo y el Parla-
+  2. Reglamento, directiva o decisi�n adoptados por el Consejo con la participaci�n del Par-
+  3. Cualquier acto jur�dico se puede adoptar por el procedimiento legislativo especial
+
+---

@@ -1,0 +1,2023 @@
+{
+  "metadata": {
+    "source_file": "2 TEST TEMAS 3 Y 4 - copia.docx",
+    "source_path": "Segundo repaso\\2 TEST TEMAS 3 Y 4 - copia.docx",
+    "tema": 2,
+    "categoria": "repaso",
+    "extraction_date": "2026-01-15T23:40:12.689137",
+    "reformulation_date": "2026-01-15T23:47:35.562198",
+    "total_questions": 40,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.466281",
+    "completed_count": 0,
+    "failed_count": 40
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "Entre los legitimados para interponer el recurso previo de inconstitucionalidad se encuentra",
+        "options": [
+          {
+            "text": "El Presidente del Gobierno",
+            "is_correct": false
+          },
+          {
+            "text": "El Ministerio Fiscal",
+            "is_correct": false
+          },
+          {
+            "text": "La persona directamente afectada",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo General del Poder Judicial.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Entre los legitimados para interponer el recurso previo de inconstitucionalidad se encuentra",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Tribunal Constitucional consta de dos Salas. Seale la respuesta correcta",
+        "options": [
+          {
+            "text": "El Presidente del Tribunal lo es tambin de la Sala Primera, que presidir en su defecto, el Magistrado ms antiguo y, en caso de igual antigedad, el de mayor edad.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Tribunal lo es tambin de la Sala Primera, que presidir en su defecto, el Magistrado de mayor edad y, en caso de igual edad, el ms antiguo.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Tribunal lo es tambin de la Sala Segunda, que presidir en su defecto, el Magistrado ms antiguo y, en caso de igual antigedad, el de mayor edad.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Tribunal lo es tambin de la Sala Segunda, que presidir en su defecto, el Magistrado de mayor edad y, en caso de igual edad, el ms antiguo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Tribunal Constitucional consta de dos Salas. Seale la respuesta correcta",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta",
+        "options": [
+          {
+            "text": "La admisin de un recurso o de una cuestin de inconstitucionalidad no suspender la vigencia ni la aplicacin de la Ley, de la disposicin normativa o del acto con fuerza de Ley, excepto en el caso en que el Gobierno se ampare en lo dispuesto por el artculo ciento sesenta y uno, dos, de la Constitucin para impugnar, por medio de su Presidente, Leyes, disposiciones normativas o actos con fuerza de Ley de las Comunidades Autnomas.",
+            "is_correct": false
+          },
+          {
+            "text": "La admisin de un recurso o de una cuestin de inconstitucionalidad no suspender la vigencia ni la aplicacin de la Ley, de la disposicin normativa o del acto con fuerza de Ley, excepto en el caso en que el Congreso se ampare en lo dispuesto por el artculo ciento sesenta y uno, dos, de la Constitucin para impugnar, por medio de su Presidente, Leyes, disposiciones normativas o actos con fuerza de Ley de las Comunidades Autnomas.",
+            "is_correct": false
+          },
+          {
+            "text": "La admisin de un recurso o de una cuestin de inconstitucionalidad suspender la vigencia y la aplicacin de la Ley, de la disposicin normativa o del acto con fuerza de Ley, excepto en el caso en que el Gobierno se ampare en lo dispuesto",
+            "is_correct": false
+          },
+          {
+            "text": "La admisin de un recurso o de una cuestin de inconstitucionalidad suspender la vigencia y la aplicacin de la Ley, de la disposicin normativa o del acto con fuerza de Ley, excepto en el caso en que el Congreso se ampare en lo dispuesto por el artculo ciento sesenta y uno, dos, de la Constitucin para impugnar, por medio de su Presidente, Leyes, disposiciones normativas o actos con fuerza de Ley de las Comunidades Autnomas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los Magistrados del Tribunal Constitucional sern nombrados por el Rey, a propuesta de",
+        "options": [
+          {
+            "text": "Las Cmaras y del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Las Cmaras y del Consejo General del Poder Judicial.",
+            "is_correct": false
+          },
+          {
+            "text": "Las Cmaras, del Gobierno y del Tribunal Supremo.",
+            "is_correct": false
+          },
+          {
+            "text": "Las Cmaras, del Gobierno y del Consejo General del Poder Judicial",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los Magistrados del Tribunal Constitucional sern nombrados por el Rey, a propuesta de",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Ministerio Fiscal est legitimado para plantear ante el Tribunal Constitucional",
+        "options": [
+          {
+            "text": "El recurso de amparo.",
+            "is_correct": false
+          },
+          {
+            "text": "El recurso de inconstitucionalidad y el recurso previo de inconstitucionalidad.",
+            "is_correct": false
+          },
+          {
+            "text": "El recurso de amparo, el recurso de inconstitucionalidad y el recurso previo de inconstitucionalidad.",
+            "is_correct": false
+          },
+          {
+            "text": "El recurso de inconstitucionalidad y el recurso de amparo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Ministerio Fiscal est legitimado para plantear ante el Tribunal Constitucional",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Sern refrendados por el Presidente del Congreso los siguientes actos del Rey",
+        "options": [
+          {
+            "text": "La propuesta y el nombramiento del Presidente del Gobierno, Vicepresidentes, en su caso y Ministros, y la disolucin prevista en el artculo 99.",
+            "is_correct": false
+          },
+          {
+            "text": "La propuesta y el nombramiento del Presidente del Gobierno, Vicepresidentes, en su caso y Ministros, y la disolucin prevista en el artculo 115.",
+            "is_correct": false
+          },
+          {
+            "text": "La propuesta y el nombramiento del Presidente del Gobierno, y la disolucin prevista en el artculo 99 CE.",
+            "is_correct": false
+          },
+          {
+            "text": "La propuesta y el nombramiento del Presidente del Gobierno, y la disolucin prevista en el artculo 115 CE.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Sern refrendados por el Presidente del Congreso los siguientes actos del Rey",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta en relacin con lo dispuesto en el artculo 163 CE",
+        "options": [
+          {
+            "text": "Cuando un rgano judicial considere, en algn proceso, que una norma con rango de ley, aplicable al caso, de cuya validez dependa el fallo, pueda ser contraria a la Constitucin, plantear la cuestin ante el Tribunal Constitucional en los supuestos, en la forma y con los efectos que establezca la ley, que en todo caso sern suspensivos.",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando un rgano judicial considere, en algn proceso, que una norma con rango de ley, aplicable al caso, de cuya validez dependa el fallo, pueda ser contraria a la Constitucin, plantear la cuestin ante el Tribunal Constitucional en los supuestos, en la forma y con los efectos que establezca la ley, que en ningn caso sern suspensivos.",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando un rgano judicial considere, en algn proceso, que una norma sin rango de ley, aplicable al caso, de cuya validez dependa el fallo, pueda ser contraria a la Constitucin, plantear la cuestin ante el Tribunal Constitucional en los supuestos, en la forma y con los efectos que establezca la ley, que en todo caso sern suspensivos.",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando un rgano judicial considere, en algn proceso, que una norma sin rango de ley, aplicable al caso, de cuya validez dependa el fallo, pueda ser contraria a la Constitucin, plantear la cuestin ante el Tribunal Constitucional en los supuestos, en la forma y con los efectos que establezca la ley, que en ningn caso sern suspensivos.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta en relacin con lo dispuesto en el artculo 163 CE",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Las Sentencias del Tribunal Constitucional, de conformidad con el artculo 164 CE",
+        "options": [
+          {
+            "text": "Tienen el valor de cosa juzgada a partir del da siguiente de su publicacin y contra las mismas no cabe recurso alguno.",
+            "is_correct": false
+          },
+          {
+            "text": "Tienen el valor de cosa juzgada a partir del da siguiente de su publicacin y contra las mismas cabe recurso de splica.",
+            "is_correct": false
+          },
+          {
+            "text": "Tienen el valor de cosa juzgada desde el mismo da de su publicacin y contra las mismas cabe recurso de splica.",
+            "is_correct": false
+          },
+          {
+            "text": "Tienen el valor de cosa juzgada desde el mismo da de su publicacin y contra las mismas no cabe recurso alguno.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las Sentencias del Tribunal Constitucional, de conformidad con el artculo 164 CE",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Tribunal Constitucional se compone de 12 miembros nombrados por el Rey; de ellos",
+        "options": [
+          {
+            "text": "Cuatro a propuesta del Congreso por mayora de dos tercios de sus miembros; cuatro a propuesta del Senado, con idntica mayora; dos a propuesta del Gobierno, y dos a propuesta del Consejo General del Poder Judicial.",
+            "is_correct": false
+          },
+          {
+            "text": "Cuatro a propuesta del Congreso por mayora de dos tercios de sus miembros; cuatro a propuesta del Senado, con idntica mayora; dos a propuesta del Gobierno, y dos a propuesta del Tribunal Supremo.",
+            "is_correct": false
+          },
+          {
+            "text": "Cuatro a propuesta del Congreso por mayora de tres quintos de sus miembros; cuatro a propuesta del Senado, con idntica mayora; dos a propuesta del Gobierno, y dos a propuesta del Consejo General del Poder Judicial.",
+            "is_correct": false
+          },
+          {
+            "text": "Cuatro a propuesta del Congreso por mayora de tres quintos de sus miembros; cuatro a propuesta del Senado, con idntica mayora; dos a propuesta del Gobierno, y dos a propuesta del Tribunal Supremo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Tribunal Constitucional se compone de 12 miembros nombrados por el Rey; de ellos",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Tribunal Constitucional consta de dos Salas. Cada Sala est compuesta por",
+        "options": [
+          {
+            "text": "Seis Magistrados nombrados por el Tribunal en Pleno.",
+            "is_correct": false
+          },
+          {
+            "text": "Seis Magistrados nombrados por el Presidente del Tribunal.",
+            "is_correct": false
+          },
+          {
+            "text": "Ocho Magistrados nombrados por el Tribunal en Pleno.",
+            "is_correct": false
+          },
+          {
+            "text": "Ocho Magistrados nombrados por el Presidente del Tribunal",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Tribunal Constitucional consta de dos Salas. Cada Sala est compuesta por",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Tribunal Constitucional entender de los conflictos en defensa de la autonoma local que planteen",
+        "options": [
+          {
+            "text": "Los municipios y provincias frente al Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "Los municipios y provincias frente al Estado o a una Comunidad Autnoma.",
+            "is_correct": false
+          },
+          {
+            "text": "Los municipios, provincias y entes de mbito territorial inferior al municipio frente al Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "Los municipios, provincias y entes de mbito territorial inferior al municipio frente al Estado o a una Comunidad Autnoma.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Tribunal Constitucional entender de los conflictos en defensa de la autonoma local que planteen",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los conflictos de competencia que opongan al Estado con una Comunidad Autnoma o a stas entre s, podrn ser suscitados por",
+        "options": [
+          {
+            "text": "El Gobierno o por los rganos colegiados ejecutivos de las Comunidades Autnomas.",
+            "is_correct": false
+          },
+          {
+            "text": "El Congreso o por las asambleas legislativas de las Comunidades Autnomas.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Gobierno o por los rganos colegiados ejecutivos de las Comunidades Autnomas.",
+            "is_correct": false
+          },
+          {
+            "text": "Las Cortes Generales o por las asambleas legislativas de las Comunidades Autnomas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los conflictos de competencia que opongan al Estado con una Comunidad Autnoma o a stas entre s, podrn ser suscitados por",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta en relacin con el control previo de constitucionalidad de los Tratados Internacionales",
+        "options": [
+          {
+            "text": "El Gobierno o cualquiera de ambas Cmaras podrn requerir al Tribunal Constitucional para que se pronuncie sobre la existencia o inexistencia de contradiccin entre la Constitucin y las estipulaciones de un tratado internacional cuyo texto estuviera ya definitivamente fijado, una vez prestado el consentimiento del Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "El Gobierno o cualquiera de ambas Cmaras podrn requerir al Tribunal Constitucional para que se pronuncie sobre la existencia o inexistencia de contradiccin entre la Constitucin y las estipulaciones de un tratado internacional cuyo texto estuviera ya definitivamente fijado, pero al que no se hubiere prestado an el consentimiento del Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "El Gobierno o el Congreso de los Diputados podrn requerir al Tribunal Constitucional para que se pronuncie sobre la existencia o inexistencia de contradiccin entre la Constitucin y las estipulaciones de un tratado",
+            "is_correct": false
+          },
+          {
+            "text": "El Gobierno o el Congreso de los Diputados podrn requerir al Tribunal Constitucional para que se pronuncie sobre la existencia o inexistencia de contradiccin entre la Constitucin y las estipulaciones de un tratado internacional cuyo texto estuviera ya definitivamente fijado, pero al que no se hubiere prestado an el consentimiento del Estado.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta en relacin con el control previo de constitucionalidad de los Tratados Internacionales",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Para iniciar la tramitacin de los conflictos en defensa de la autonoma local ser necesario",
+        "options": [
+          {
+            "text": "El acuerdo del rgano plenario de las Corporaciones locales con el voto favorable de la mayora de dos tercios del nmero legal de miembros de las mismas y el dictamen, con carcter preceptivo pero no vinculante, del Consejo de Estado u rgano consultivo de la correspondiente Comunidad Autnoma.",
+            "is_correct": false
+          },
+          {
+            "text": "El acuerdo del rgano plenario de las Corporaciones locales con el voto favorable de la mayora de dos tercios del nmero legal de miembros de las mismas y el dictamen, con carcter preceptivo y vinculante, del Consejo de Estado u rgano consultivo de la correspondiente Comunidad Autnoma.",
+            "is_correct": false
+          },
+          {
+            "text": "El acuerdo del rgano plenario de las Corporaciones locales con el voto favorable de la mayora absoluta del nmero legal de miembros de las mismas y el dictamen, con carcter preceptivo pero no vinculante, del Consejo de Estado u rgano consultivo de la correspondiente Comunidad Autnoma.",
+            "is_correct": false
+          },
+          {
+            "text": "El acuerdo del rgano plenario de las Corporaciones locales con el voto favorable de la mayora absoluta del nmero legal de miembros de las mismas y el dictamen, con carcter preceptivo y vinculante, del Consejo de Estado u rgano consultivo de la correspondiente Comunidad Autnoma.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Para iniciar la tramitacin de los conflictos en defensa de la autonoma local ser necesario",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La renovacin por terceras partes de los miembros del Tribunal Constitucional se realizada cada",
+        "options": [
+          {
+            "text": "6 aos.",
+            "is_correct": false
+          },
+          {
+            "text": "3 aos.",
+            "is_correct": false
+          },
+          {
+            "text": "9 aos",
+            "is_correct": false
+          },
+          {
+            "text": "5 aos",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La renovacin por terceras partes de los miembros del Tribunal Constitucional se realizada cada",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: '6 aos....'",
+        "Distractor muy corto: '3 aos....'",
+        "Distractor muy corto: '9 aos...'",
+        "Distractor muy corto: '5 aos...'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.443
+    },
+    {
+      "question": {
+        "question_text": "La distribucin de asuntos entre las salas se realiza por",
+        "options": [
+          {
+            "text": "El Pleno",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Tribunal Constitucional.",
+            "is_correct": false
+          },
+          {
+            "text": "La seccin de que se trate.",
+            "is_correct": false
+          },
+          {
+            "text": "La comisin Permanente",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La distribucin de asuntos entre las salas se realiza por",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'El Pleno...'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Seale la correcta en relacin al mandato del Presidente del Tribunal Constitucional",
+        "options": [
+          {
+            "text": "Es de 9 aos, no renovable.",
+            "is_correct": false
+          },
+          {
+            "text": "Es de 3 aos, no renovable.",
+            "is_correct": false
+          },
+          {
+            "text": "Es de 9 aos, renovable una sola vez.",
+            "is_correct": false
+          },
+          {
+            "text": "Es de 3 aos, renovable una sola vez.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la correcta en relacin al mandato del Presidente del Tribunal Constitucional",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "A quin le corresponde la defensa del ordenamiento constitucional de conformidad con el artculo 8 de la Constitucin Espaola",
+        "options": [
+          {
+            "text": "A las Fuerzas Armadas",
+            "is_correct": false
+          },
+          {
+            "text": "A las Cortes Generales.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Tribunal Constitucional",
+            "is_correct": false
+          },
+          {
+            "text": "Al Gobierno.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "A quin le corresponde la defensa del ordenamiento constitucional de conformidad con el artculo 8 de la Constitucin Espaola",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn la constitucin espaola, el Rey arbitra y modera",
+        "options": [
+          {
+            "text": "El funcionamiento del Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "El funcionamiento regular de las instituciones.",
+            "is_correct": false
+          },
+          {
+            "text": "Los poderes del Estado",
+            "is_correct": false
+          },
+          {
+            "text": "La Justicia.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn la constitucin espaola, el Rey arbitra y modera",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Quin debe reconocer la imposibilidad del Rey para el ejercicio de sus funciones?",
+        "options": [
+          {
+            "text": "El Gobierno",
+            "is_correct": false
+          },
+          {
+            "text": "Las Cortes Generales",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo General del Poder Judicial.",
+            "is_correct": false
+          },
+          {
+            "text": "El Tribunal Constitucional.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Quin debe reconocer la imposibilidad del Rey para el ejercicio de sus funciones?",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la afirmacin correcta en relacin a la institucin del refrendo",
+        "options": [
+          {
+            "text": "La propuesta y nombramiento del Presidente del Gobierno son actos exentos de refrendo.",
+            "is_correct": false
+          },
+          {
+            "text": "La sancin de las leyes, es refrendada por el Presidente del Congreso.",
+            "is_correct": false
+          },
+          {
+            "text": "Los Ministros refrendan actos del Rey en materias de su competencia.",
+            "is_correct": false
+          },
+          {
+            "text": "Todos los actos del Rey son refrendados por el Presidente del Gobierno o por el Consejo de Ministros.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la afirmacin correcta en relacin a la institucin del refrendo",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Ser tutor del Rey menor",
+        "options": [
+          {
+            "text": "El padre o la madre del Rey y, en su defecto, el pariente mayor de edad ms prximo a suceder en la Corona. Si no hubiere ninguna persona a quien corresponda la Tutela, sta ser nombrada por las Cortes Generales",
+            "is_correct": false
+          },
+          {
+            "text": "El padre o la madre del Rey mientras permanezcan viudos, y, en su defecto, el pariente mayor de edad ms prximo a suceder en la Corona. Si no hubiere ninguna persona a quien corresponda la Tutela, sta ser nombrada por las Cortes Generales",
+            "is_correct": false
+          },
+          {
+            "text": "La persona que en su testamento hubiese nombrado el Rey difunto, siempre que sea mayor de edad y espaol de nacimiento; si no lo hubiese nombrado, ser tutor el padre o la madre. En su defecto, lo nombrarn las Cortes Generales.",
+            "is_correct": false
+          },
+          {
+            "text": "La persona que en su testamento hubiese nombrado el Rey difunto, siempre que sea mayor de edad y espaol de nacimiento; si no lo hubiese nombrado, ser tutor el padre o la madre mientras permanezcan viudos. En su defecto, lo nombrarn las Cortes Generales.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Ser tutor del Rey menor",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La Reina consorte o el consorte de la Reina",
+        "options": [
+          {
+            "text": "Podrn asumir funciones constitucionales, salvo lo dispuesto para la Regencia.",
+            "is_correct": false
+          },
+          {
+            "text": "Podrn asumir funciones constitucionales, salvo lo dispuesto para la Tutela.",
+            "is_correct": false
+          },
+          {
+            "text": "No podrn asumir funciones constitucionales, salvo lo dispuesto para la Regencia.",
+            "is_correct": false
+          },
+          {
+            "text": "No podrn asumir funciones constitucionales, salvo lo dispuesto para la Tutela.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La Reina consorte o el consorte de la Reina",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con la Constitucin, al Rey le corresponde",
+        "options": [
+          {
+            "text": "Previa autorizacin del presidente del Gobierno, declarar la guerra y hacer la paz.",
+            "is_correct": false
+          },
+          {
+            "text": "Previo referndum consultivo, declarar la guerra y hacer la paz.",
+            "is_correct": false
+          },
+          {
+            "text": "Previa autorizacin del Consejo de Ministros, declarar la guerra y hacer la paz.",
+            "is_correct": false
+          },
+          {
+            "text": "Previa autorizacin de las Cortes Generales, declarar la guerra y hacer la paz.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con la Constitucin, al Rey le corresponde",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Rey, al ser proclamado ante las Cortes Generales, prestar juramento. Seale cul de las siguientes afirmaciones se recoge en el artculo 61 CE como parte de ese juramento regio",
+        "options": [
+          {
+            "text": "Respetar los derechos de las Comunidades Autnomas.",
+            "is_correct": false
+          },
+          {
+            "text": "Ejercer fielmente su autoridad.",
+            "is_correct": false
+          },
+          {
+            "text": "Respetar los derechos de los partidos polticos.",
+            "is_correct": false
+          },
+          {
+            "text": "Guardar y hacer guardar la Constitucin y los tratados y convenios que Espaa suscriba, especialmente con las naciones de su comunidad histrica.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Rey, al ser proclamado ante las Cortes Generales, prestar juramento. Seale cul de las siguientes afirmaciones se recoge en el artculo 61 CE como parte de ese juramento regio",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Corresponde al Rey",
+        "options": [
+          {
+            "text": "Sancionar y promulgar las leyes aprobadas por las CCGG y los decretos acordados en Consejo de Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "Sancionar y promulgar los decretos acordados en el Consejo de Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "Expedir los decretos acordados en el Consejo de Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "Sancionar y expedir las leyes.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Corresponde al Rey",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta muy corta",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.5,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Si no hubiere ninguna persona a quien corresponda la Regencia",
+        "options": [
+          {
+            "text": "sta ser nombrada por las Cortes Generales, y se compondr de una, tres o cinco personas.",
+            "is_correct": false
+          },
+          {
+            "text": "sta ser nombrada por las Cortes Generales, y se compondr de tres o cinco personas.",
+            "is_correct": false
+          },
+          {
+            "text": "sta ser nombrada por el Gobierno, y se compondr de una, tres o cinco personas.",
+            "is_correct": false
+          },
+          {
+            "text": "sta ser nombrada por el Gobierno, y se compondr de tres o cinco personas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Si no hubiere ninguna persona a quien corresponda la Regencia",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "No podrn acumularse los cargos de Regente y de tutor sino en",
+        "options": [
+          {
+            "text": "El padre, madre o descendientes directos del Rey.",
+            "is_correct": false
+          },
+          {
+            "text": "La madre o descendientes directos del Rey.",
+            "is_correct": false
+          },
+          {
+            "text": "El padre, madre o ascendientes directos del Rey.",
+            "is_correct": false
+          },
+          {
+            "text": "La madre o ascendientes directos del Rey.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "No podrn acumularse los cargos de Regente y de tutor sino en",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En qu supuestos procede el ejercicio de la Regencia?",
+        "options": [
+          {
+            "text": "Cuando el Rey fuere menor de edad y si el Rey se inhabilitare para el ejercicio de su autoridad y la imposibilidad fuere reconocida por el Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando el Rey fuere menor de edad y si el Rey se inhabilitare para el ejercicio de su autoridad y la imposibilidad fuere reconocida por las Cortes Generales.",
+            "is_correct": false
+          },
+          {
+            "text": "En caso de fallecimiento del Rey, cuando el Rey fuere menor de edad y si el Rey se inhabilitare para el ejercicio de su autoridad y la imposibilidad fuere reconocida por el Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "En caso de fallecimiento del Rey, cuando el Rey fuere menor de edad y si el Rey se inhabilitare para el ejercicio de su autoridad y la imposibilidad fuere reconocida por las Cortes Generales.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En qu supuestos procede el ejercicio de la Regencia?",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La sucesin en el trono",
+        "options": [
+          {
+            "text": "Seguir el orden regular de primogenitura y representacin, siendo preferida siempre la lnea anterior a las posteriores; en la misma lnea, el grado ms prximo al ms remoto; en el mismo grado, la persona de ms edad a la de menos y en el mismo sexo, el varn a la mujer.",
+            "is_correct": false
+          },
+          {
+            "text": "Seguir el orden regular de primogenitura y prelacin, siendo preferida siempre la lnea anterior a las posteriores; en la misma lnea, el grado ms prximo al",
+            "is_correct": false
+          },
+          {
+            "text": "Seguir el orden regular de primogenitura y representacin, siendo preferida siempre la lnea anterior a las posteriores; en la misma lnea, el grado ms prximo al ms remoto; en el mismo grado, el varn a la mujer, y en el mismo sexo, la persona de ms edad a la de menos.",
+            "is_correct": false
+          },
+          {
+            "text": "Seguir el orden regular de primogenitura y prelacin, siendo preferida siempre la lnea anterior a las posteriores; en la misma lnea, el grado ms prximo al ms remoto; en el mismo grado, el varn a la mujer, y en el mismo sexo, la persona de ms edad a la de menos.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La sucesin en el trono",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Aquellas personas que teniendo derecho a la sucesin en el trono contrajeren matrimonio contra la expresa prohibicin del Rey y de las Cortes Generales, quedarn excluidas en la sucesin a la Corona",
+        "options": [
+          {
+            "text": "Por s y por sus descendientes.",
+            "is_correct": false
+          },
+          {
+            "text": "Por s y por sus ascendientes.",
+            "is_correct": false
+          },
+          {
+            "text": "Por s y por sus ascendientes y descendientes.",
+            "is_correct": false
+          },
+          {
+            "text": "Por s, pero no por sus ascendientes y descendientes.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Aquellas personas que teniendo derecho a la sucesin en el trono contrajeren matrimonio contra la expresa prohibicin del Rey y de las Cortes Generales, quedarn excluidas en la sucesin a la Corona",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Rey asume la ms alta representacin del Estado en las relaciones internacionales, pero la Constitucin matiza que dicha representacin ser especialmente con",
+        "options": [
+          {
+            "text": "Con las naciones integrantes de la Unin Europea.",
+            "is_correct": false
+          },
+          {
+            "text": "Con las naciones Iberoamericanas.",
+            "is_correct": false
+          },
+          {
+            "text": "Con las naciones de su comunidad histrica.",
+            "is_correct": false
+          },
+          {
+            "text": "Con las naciones de su entorno cultural y geogrfico.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Rey asume la ms alta representacin del Estado en las relaciones internacionales, pero la Constitucin matiza que dicha representacin ser especialmente con",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De conformidad con lo establecido en la Constitucin Espaola, en relacin a la Corona, indicar cul de las siguientes afirmaciones es correcta",
+        "options": [
+          {
+            "text": "Extinguidas todas las lneas sucesorias llamadas en derecho, el Senado proveer a la sucesin en la Corona en la forma que ms convenga a los intereses de Espaa.",
+            "is_correct": false
+          },
+          {
+            "text": "Si no hubiere ninguna persona a quien corresponda la Regencia, sta ser nombrada por las Cortes Generales, y se compondr de una, tres o cinco personas.",
+            "is_correct": false
+          },
+          {
+            "text": "Para ejercer la regencia no es preciso ser espaol.",
+            "is_correct": false
+          },
+          {
+            "text": "Los actos del Rey sern refrendados por el Presidente del Senado",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De conformidad con lo establecido en la Constitucin Espaola, en relacin a la Corona, indicar cul de las siguientes afirmaciones es correcta",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 56.1 de la CE, el Rey es el Jefe de Estado, y es el smbolo de",
+        "options": [
+          {
+            "text": "Su unidad e integridad",
+            "is_correct": false
+          },
+          {
+            "text": "Su independencia y soberana",
+            "is_correct": false
+          },
+          {
+            "text": "Su unidad y permanencia",
+            "is_correct": false
+          },
+          {
+            "text": "Su integridad y soberana",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 56.1 de la CE, el Rey es el Jefe de Estado, y es el smbolo de",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 59 de la Constitucin Espaola, si el Rey se inhabilitare para el ejercicio de su autoridad y la imposibilidad fuere reconocida por las Cortes Generales, entrar a ejercer inmediatamente la Regencia",
+        "options": [
+          {
+            "text": "El Presidente del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente de las Cortes Generales.",
+            "is_correct": false
+          },
+          {
+            "text": "La Princesa heredera de la Corona, si fuese mayor de edad.",
+            "is_correct": false
+          },
+          {
+            "text": "La Princesa heredera de la Corona, aunque fuese menor de edad.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 59 de la Constitucin Espaola, si el Rey se inhabilitare para el ejercicio de su autoridad y la imposibilidad fuere reconocida por las Cortes Generales, entrar a ejercer inmediatamente la Regencia",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La Constitucin Espaola establece que extinguidas todas las lneas llamadas en Derecho a la sucesin a la Corona",
+        "options": [
+          {
+            "text": "Las Cortes Generales proveern a la sucesin en la Corona en la forma en que ms convenga a los intereses de Espaa.",
+            "is_correct": false
+          },
+          {
+            "text": "Ejercer las funciones la Reina consorte o el consorte de la Reina.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Gobierno proveer a la sucesin en la Corona en la forma que ms convenga a los intereses de Espaa.",
+            "is_correct": false
+          },
+          {
+            "text": "Ejercer sus funciones el tutor que hubiera nombrado el Rey difunto.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La Constitucin Espaola establece que extinguidas todas las lneas llamadas en Derecho a la sucesin a la Corona",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Qu carcter tiene la Corona de Espaa, monarqua espaola, segn el artculo 57 de la misma",
+        "options": [
+          {
+            "text": "Hereditaria",
+            "is_correct": false
+          },
+          {
+            "text": "constitucional",
+            "is_correct": false
+          },
+          {
+            "text": "Electiva.",
+            "is_correct": false
+          },
+          {
+            "text": "Limitada.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu carcter tiene la Corona de Espaa, monarqua espaola, segn el artculo 57 de la misma",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Electiva....'",
+        "Distractor muy corto: 'Limitada....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "El refrendo de los actos del rey, est ntimamente relacionado con",
+        "options": [
+          {
+            "text": "La divisin de poderes.",
+            "is_correct": false
+          },
+          {
+            "text": "La soberana popular.",
+            "is_correct": false
+          },
+          {
+            "text": "La irresponsabilidad del Rey.",
+            "is_correct": false
+          },
+          {
+            "text": "La Regencia.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El refrendo de los actos del rey, est ntimamente relacionado con",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn la Constitucin, las abdicaciones y renuncias a la Corona, Cmo se resolvern?",
+        "options": [
+          {
+            "text": "Por ley orgnica, si plantea dudas de hecho o de derecho.",
+            "is_correct": false
+          },
+          {
+            "text": "Por ley orgnica.",
+            "is_correct": false
+          },
+          {
+            "text": "Procedimiento que incluye referndum popular.",
+            "is_correct": false
+          },
+          {
+            "text": "Por la Cortes Generales en sesin conjunta de ambas cmaras.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn la Constitucin, las abdicaciones y renuncias a la Corona, Cmo se resolvern?",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El prncipe heredero tendr la dignidad",
+        "options": [
+          {
+            "text": "De Prncipe de Asturias, y los dems vinculados tradicionalmente al sucesor de la Corona.",
+            "is_correct": false
+          },
+          {
+            "text": "De Prncipe de Asturias, y los dems vinculados tradicionalmente al Rey de Espaa.",
+            "is_correct": false
+          },
+          {
+            "text": "De Prncipe de Asturias, y los dems atribuidos por la Constitucin espaola.",
+            "is_correct": false
+          },
+          {
+            "text": "De Prncipe de Asturias.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El prncipe heredero tendr la dignidad",
+        "source": "2 TEST TEMAS 3 Y 4 - copia.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 2,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:21.982151"
+}

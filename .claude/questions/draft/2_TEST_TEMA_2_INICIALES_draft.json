@@ -1,0 +1,587 @@
+{
+  "metadata": {
+    "source_file": "2 TEST TEMA 2 INICIALES.pdf",
+    "source_path": "2 TEST TEMA 2 INICIALES.pdf",
+    "tema": 2,
+    "categoria": "general",
+    "extraction_date": "2026-01-15T23:39:51.681045",
+    "reformulation_date": "2026-01-17T12:00:00.000000",
+    "total_questions": 40,
+    "status": "ai_completed",
+    "ai_completion_date": "2026-01-17T12:00:00.000000",
+    "completed_count": 40,
+    "failed_count": 0
+  },
+  "questions": [
+    {
+      "question_text": "De acuerdo con el artículo 17.2 de la Constitución, la detención preventiva tendrá la siguiente duración:",
+      "options": [
+        {"text": "El tiempo estrictamente necesario para la realización de las averiguaciones tendentes al esclarecimiento de los hechos.", "is_correct": true},
+        {"text": "48 horas.", "is_correct": false},
+        {"text": "72 horas.", "is_correct": false},
+        {"text": "24 horas.", "is_correct": false}
+      ],
+      "explanation": "El Art. 17.2 CE establece que la detención preventiva no podrá durar más del tiempo estrictamente necesario para la realización de las averiguaciones tendentes al esclarecimiento de los hechos, y, en todo caso, en el plazo máximo de 72 horas.",
+      "legal_reference": "Art. 17.2 CE",
+      "confidence_score": 0.98,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "media"
+    },
+    {
+      "question_text": "Sobre el derecho de reunión, responda la afirmación correcta:",
+      "options": [
+        {"text": "Precisa de autorización previa.", "is_correct": false},
+        {"text": "No puede ser objeto de recurso de amparo.", "is_correct": false},
+        {"text": "Su desarrollo legislativo se efectúa por Ley Orgánica.", "is_correct": true},
+        {"text": "Es un principio rector de la política social y económica.", "is_correct": false}
+      ],
+      "explanation": "El derecho de reunión (Art. 21 CE) está en la Sección 1ª del Capítulo II del Título I, por lo que su desarrollo requiere Ley Orgánica (Art. 81 CE). No precisa autorización previa, sí puede ser objeto de amparo y es un derecho fundamental, no un principio rector.",
+      "legal_reference": "Arts. 21 y 81 CE",
+      "confidence_score": 0.98,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "media"
+    },
+    {
+      "question_text": "El derecho a la objeción de conciencia sobre el servicio militar:",
+      "options": [
+        {"text": "Se regula en el artículo 31 de la Constitución.", "is_correct": false},
+        {"text": "Podrá ser objeto de recurso de amparo.", "is_correct": true},
+        {"text": "Su desarrollo normativo se efectuará por ley ordinaria.", "is_correct": false},
+        {"text": "Es un derecho fundamental regulado en la Sección I del Capítulo II del Título I.", "is_correct": false}
+      ],
+      "explanation": "La objeción de conciencia al servicio militar se regula en el Art. 30.2 CE y puede ser objeto de recurso de amparo según el Art. 53.2 CE. Se desarrolla por Ley Orgánica y está en la Sección 2ª (no la 1ª) del Capítulo II.",
+      "legal_reference": "Art. 30.2 CE",
+      "confidence_score": 0.97,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "dificil"
+    },
+    {
+      "question_text": "Se incluye entre los principios rectores de la política social y económica:",
+      "options": [
+        {"text": "El derecho de fundación para fines de interés general.", "is_correct": false},
+        {"text": "El derecho a disfrutar de un medio ambiente adecuado para el desarrollo de la persona, así como el deber de conservarlo.", "is_correct": true},
+        {"text": "El derecho a la propiedad privada y a la herencia.", "is_correct": false},
+        {"text": "El derecho a la libertad de empresa.", "is_correct": false}
+      ],
+      "explanation": "El derecho al medio ambiente (Art. 45 CE) está en el Capítulo III del Título I (Principios rectores). La fundación (Art. 34), propiedad (Art. 33) y libertad de empresa (Art. 38) están en la Sección 2ª del Capítulo II (derechos de los ciudadanos).",
+      "legal_reference": "Art. 45 CE",
+      "confidence_score": 0.98,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "media"
+    },
+    {
+      "question_text": "El Defensor del Pueblo:",
+      "options": [
+        {"text": "Es designado por el Gobierno de la nación, al que dará cuenta.", "is_correct": false},
+        {"text": "Es designado por el Rey, dando cuenta de su actividad a las Cortes Generales.", "is_correct": false},
+        {"text": "Es designado por el Congreso de los Diputados, dando cuenta de su actividad al Rey.", "is_correct": false},
+        {"text": "Es designado por las Cortes Generales, a las que dará cuenta.", "is_correct": true}
+      ],
+      "explanation": "El Art. 54 CE establece que el Defensor del Pueblo es designado por las Cortes Generales para la defensa de los derechos del Título I, a cuyo efecto podrá supervisar la actividad de la Administración, dando cuenta a las Cortes Generales.",
+      "legal_reference": "Art. 54 CE",
+      "confidence_score": 0.99,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "facil"
+    },
+    {
+      "question_text": "El derecho de un hijo menor de edad a ser asistido en todos los órdenes por sus padres:",
+      "options": [
+        {"text": "Podrá ser recabado a través del procedimiento basado en los principios de preferencia y sumariedad.", "is_correct": false},
+        {"text": "Podrá ser recabado a través del recurso de amparo.", "is_correct": false},
+        {"text": "Informará la legislación positiva y la práctica judicial y la actuación de los poderes públicos.", "is_correct": true},
+        {"text": "Podrá ser objeto de suspensión durante la vigencia del estado de sitio.", "is_correct": false}
+      ],
+      "explanation": "La protección de la familia y los hijos (Art. 39 CE) es un principio rector del Capítulo III. Según el Art. 53.3 CE, estos principios informarán la legislación positiva, la práctica judicial y la actuación de los poderes públicos, pero no son directamente invocables ante los tribunales.",
+      "legal_reference": "Arts. 39 y 53.3 CE",
+      "confidence_score": 0.97,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "dificil"
+    },
+    {
+      "question_text": "Durante la vigencia de los estados de excepción y sitio, el derecho reconocido en el artículo 17.3 (asistencia de abogado al detenido):",
+      "options": [
+        {"text": "No podrá suspenderse durante la vigencia del estado de excepción.", "is_correct": false},
+        {"text": "No podrá suspenderse durante la vigencia del estado de sitio.", "is_correct": false},
+        {"text": "Podrá suspenderse durante la vigencia de los estados de excepción y sitio.", "is_correct": false},
+        {"text": "Podrá suspenderse únicamente durante la vigencia del estado de sitio.", "is_correct": true}
+      ],
+      "explanation": "Según el Art. 55.1 CE, el derecho a la asistencia de abogado (Art. 17.3) solo puede suspenderse en el estado de sitio, no en el de excepción. El estado de excepción permite suspender otros derechos del Art. 55.1, pero no la asistencia letrada.",
+      "legal_reference": "Art. 55.1 CE",
+      "confidence_score": 0.96,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "dificil"
+    },
+    {
+      "question_text": "El plazo para presentar una queja ante el Defensor del Pueblo será como máximo:",
+      "options": [
+        {"text": "1 año contado a partir del momento en que tuviera conocimiento de los hechos objeto de la misma.", "is_correct": true},
+        {"text": "1 año desde que se produjeran los hechos objeto de la misma.", "is_correct": false},
+        {"text": "2 años contados a partir del momento en que tuviera conocimiento de los hechos objeto de la misma.", "is_correct": false},
+        {"text": "2 años desde que se produjeran los hechos objeto de la misma.", "is_correct": false}
+      ],
+      "explanation": "Según el Art. 15.1 de la LO 3/1981 del Defensor del Pueblo, el plazo máximo para interponer quejas es de un año, contado a partir del momento en que se tuviera conocimiento de los hechos objeto de la misma.",
+      "legal_reference": "Art. 15.1 LO 3/1981",
+      "confidence_score": 0.97,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "media"
+    },
+    {
+      "question_text": "¿Cuál de los siguientes derechos informará la práctica judicial?",
+      "options": [
+        {"text": "El derecho a la propiedad privada.", "is_correct": false},
+        {"text": "El derecho a un régimen público de seguridad social.", "is_correct": true},
+        {"text": "El derecho a la adopción de medidas de conflicto colectivo.", "is_correct": false},
+        {"text": "El derecho a crear fundaciones para fines de interés general.", "is_correct": false}
+      ],
+      "explanation": "El derecho a la Seguridad Social (Art. 41 CE) es un principio rector del Capítulo III. Según el Art. 53.3 CE, estos principios informarán la práctica judicial. La propiedad, conflicto colectivo y fundaciones están en el Capítulo II.",
+      "legal_reference": "Arts. 41 y 53.3 CE",
+      "confidence_score": 0.97,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "media"
+    },
+    {
+      "question_text": "¿Cuál de los siguientes derechos podrá ser objeto de recurso de amparo ante el Tribunal Constitucional?",
+      "options": [
+        {"text": "El derecho de fundación.", "is_correct": false},
+        {"text": "El derecho de asociación.", "is_correct": true},
+        {"text": "El derecho a la propiedad privada y a la herencia.", "is_correct": false},
+        {"text": "El derecho a la libertad de empresa.", "is_correct": false}
+      ],
+      "explanation": "El derecho de asociación (Art. 22 CE) está en la Sección 1ª del Capítulo II del Título I, protegido por recurso de amparo según Art. 53.2 CE. Fundación, propiedad y libertad de empresa están en la Sección 2ª, sin amparo constitucional.",
+      "legal_reference": "Arts. 22 y 53.2 CE",
+      "confidence_score": 0.99,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "facil"
+    },
+    {
+      "question_text": "El Defensor del Pueblo:",
+      "options": [
+        {"text": "Es el Alto Comisionado del Congreso.", "is_correct": false},
+        {"text": "Su ámbito se circunscribe en exclusiva a la defensa de los derechos de la Sección 1ª del Capítulo II del Título I.", "is_correct": false},
+        {"text": "Su mandato es de 4 años.", "is_correct": false},
+        {"text": "Su mandato es de 5 años.", "is_correct": true}
+      ],
+      "explanation": "El Defensor del Pueblo tiene un mandato de 5 años (Art. 2 LO 3/1981). Es el Alto Comisionado de las Cortes Generales (no solo del Congreso) y defiende todos los derechos del Título I (no solo la Sección 1ª).",
+      "legal_reference": "Art. 2 LO 3/1981",
+      "confidence_score": 0.98,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "facil"
+    },
+    {
+      "question_text": "¿Cuál de los siguientes derechos no puede suspenderse con la declaración de los Estados de Excepción o Sitio?",
+      "options": [
+        {"text": "Huelga.", "is_correct": false},
+        {"text": "Libertad de Circulación por el territorio nacional.", "is_correct": false},
+        {"text": "Derecho al Trabajo.", "is_correct": true},
+        {"text": "Pueden suspenderse todos los indicados.", "is_correct": false}
+      ],
+      "explanation": "El Art. 55.1 CE enumera taxativamente los derechos suspendibles: Arts. 17, 18.2 y 3, 19, 20.1.a) y d) y 5, 21, 28.2 y 37.2. El derecho al trabajo (Art. 35) NO está incluido, por lo que no puede suspenderse. Huelga (28.2) y circulación (19) sí pueden suspenderse.",
+      "legal_reference": "Art. 55.1 CE",
+      "confidence_score": 0.98,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "media"
+    },
+    {
+      "question_text": "En el procedimiento de elección del Defensor del Pueblo, la Ley Orgánica 3/1981 exige que el Congreso alcance la siguiente mayoría:",
+      "options": [
+        {"text": "Mayoría de 2/3.", "is_correct": false},
+        {"text": "Mayoría de 3/5.", "is_correct": true},
+        {"text": "Mayoría absoluta.", "is_correct": false},
+        {"text": "Mayoría simple.", "is_correct": false}
+      ],
+      "explanation": "El Art. 2.3 de la LO 3/1981 establece que el Defensor del Pueblo será elegido por las Cortes Generales mediante mayoría de 3/5 de los miembros del Congreso y posteriormente, en plazo máximo de 20 días, ser ratificado por la misma mayoría del Senado.",
+      "legal_reference": "Art. 2.3 LO 3/1981",
+      "confidence_score": 0.98,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "media"
+    },
+    {
+      "question_text": "¿Cuál de los derechos constitucionales podrá suspenderse únicamente durante la vigencia del estado de sitio?",
+      "options": [
+        {"text": "El plazo máximo de detención preventiva regulado en el artículo 17.2 CE.", "is_correct": false},
+        {"text": "La inviolabilidad del domicilio regulada en el artículo 18.2 CE.", "is_correct": false},
+        {"text": "La asistencia de abogado al detenido regulada en el artículo 17.3 CE.", "is_correct": true},
+        {"text": "El derecho de huelga regulado en el artículo 28.2 CE.", "is_correct": false}
+      ],
+      "explanation": "Según el Art. 55.1 CE, el derecho a la asistencia de abogado del Art. 17.3 solo puede suspenderse en el estado de sitio. Los demás derechos mencionados pueden suspenderse tanto en estado de excepción como de sitio.",
+      "legal_reference": "Art. 55.1 CE",
+      "confidence_score": 0.97,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "dificil"
+    },
+    {
+      "question_text": "Conforme al artículo 53 de la Constitución Española de 1978, pueden ser objeto de tutela ante los tribunales ordinarios mediante procedimiento preferente y sumario:",
+      "options": [
+        {"text": "Las libertades y derechos reconocidos en el Capítulo II del Título I de la Constitución.", "is_correct": false},
+        {"text": "Las libertades y derechos reconocidos en el Capítulo III del Título I de la Constitución.", "is_correct": false},
+        {"text": "Las libertades y derechos reconocidos en la Sección 2ª del Capítulo II del Título I de la Constitución.", "is_correct": false},
+        {"text": "Las libertades y derechos reconocidos en el artículo 14 y en la Sección 1ª del Capítulo II del Título I de la Constitución.", "is_correct": true}
+      ],
+      "explanation": "El Art. 53.2 CE establece que cualquier ciudadano podrá recabar la tutela de las libertades y derechos reconocidos en el Art. 14 y la Sección 1ª del Capítulo II mediante un procedimiento basado en los principios de preferencia y sumariedad.",
+      "legal_reference": "Art. 53.2 CE",
+      "confidence_score": 0.99,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "media"
+    },
+    {
+      "question_text": "Son susceptibles de amparo constitucional:",
+      "options": [
+        {"text": "Los derechos del Título I de la Constitución.", "is_correct": false},
+        {"text": "Los derechos del Capítulo II del Título I de la Constitución.", "is_correct": false},
+        {"text": "Los derechos y libertades reconocidos en los artículos 14 a 29 de la Constitución.", "is_correct": false},
+        {"text": "Los derechos y libertades reconocidos en el artículo 14, en la Sección 1ª del Capítulo II del Título I y la objeción de conciencia del artículo 30.2.", "is_correct": true}
+      ],
+      "explanation": "El Art. 53.2 CE y la LOTC establecen que el recurso de amparo protege: Art. 14 (igualdad), Sección 1ª del Capítulo II del Título I (Arts. 15-29) y la objeción de conciencia del Art. 30.2.",
+      "legal_reference": "Art. 53.2 CE y Art. 41 LOTC",
+      "confidence_score": 0.99,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "media"
+    },
+    {
+      "question_text": "El cese del Defensor del Pueblo por actuar con notoria negligencia en el cumplimiento de las obligaciones y deberes del cargo:",
+      "options": [
+        {"text": "Se declarará por el Presidente del Congreso.", "is_correct": false},
+        {"text": "Se decidirá por mayoría de las tres quintas partes de los componentes de cada Cámara.", "is_correct": true},
+        {"text": "Se decidirá por mayoría de las dos terceras partes de los componentes de cada Cámara.", "is_correct": false},
+        {"text": "Se declarará por los Presidentes de ambas Cámaras conjuntamente.", "is_correct": false}
+      ],
+      "explanation": "El Art. 5.2 de la LO 3/1981 establece que el cese del Defensor del Pueblo por notoria negligencia se decidirá por mayoría de 3/5 partes de los componentes de cada Cámara, mediante debate y previa audiencia del interesado.",
+      "legal_reference": "Art. 5.2 LO 3/1981",
+      "confidence_score": 0.97,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "media"
+    },
+    {
+      "question_text": "El Defensor del Pueblo dará cuenta a las Cortes Generales de la gestión realizada, en un informe que presentará con carácter:",
+      "options": [
+        {"text": "Semestral.", "is_correct": false},
+        {"text": "Trimestral.", "is_correct": false},
+        {"text": "Anual.", "is_correct": true},
+        {"text": "Mensual.", "is_correct": false}
+      ],
+      "explanation": "El Art. 32 de la LO 3/1981 establece que el Defensor del Pueblo dará cuenta anualmente a las Cortes Generales de la gestión realizada en un informe que presentará ante las mismas.",
+      "legal_reference": "Art. 32 LO 3/1981",
+      "confidence_score": 0.99,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "facil"
+    },
+    {
+      "question_text": "El artículo 29 de la Constitución Española reconoce el siguiente derecho:",
+      "options": [
+        {"text": "La libertad de empresa en el marco de la economía de mercado.", "is_correct": false},
+        {"text": "El derecho de petición.", "is_correct": true},
+        {"text": "El derecho a la educación.", "is_correct": false},
+        {"text": "El derecho a la negociación colectiva laboral.", "is_correct": false}
+      ],
+      "explanation": "El Art. 29 CE reconoce el derecho de petición individual y colectiva por escrito. La libertad de empresa está en el Art. 38, la educación en el Art. 27, y la negociación colectiva en el Art. 37.",
+      "legal_reference": "Art. 29 CE",
+      "confidence_score": 0.99,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "facil"
+    },
+    {
+      "question_text": "El Defensor del Pueblo tiene un mandato de:",
+      "options": [
+        {"text": "4 años pudiendo ser reelegido para un nuevo mandato una sola vez.", "is_correct": false},
+        {"text": "5 años pudiendo ser reelegido para un nuevo mandato una sola vez.", "is_correct": false},
+        {"text": "4 años.", "is_correct": false},
+        {"text": "5 años.", "is_correct": true}
+      ],
+      "explanation": "El Art. 2.1 de la LO 3/1981 establece que el Defensor del Pueblo será elegido por un período de 5 años. La ley no establece límite de mandatos, por lo que puede ser reelegido indefinidamente.",
+      "legal_reference": "Art. 2.1 LO 3/1981",
+      "confidence_score": 0.98,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "facil"
+    },
+    {
+      "question_text": "¿Cuál de los siguientes derechos está protegido judicialmente por un procedimiento especial preferente y sumario?",
+      "options": [
+        {"text": "El derecho y deber de defender a España.", "is_correct": false},
+        {"text": "El derecho a la protección de la salud.", "is_correct": false},
+        {"text": "El derecho a la libertad de cátedra.", "is_correct": true},
+        {"text": "El derecho de los trabajadores y empresarios a adoptar medidas de conflicto colectivo.", "is_correct": false}
+      ],
+      "explanation": "La libertad de cátedra (Art. 20.1.c CE) está en la Sección 1ª del Capítulo II del Título I, protegida por el procedimiento preferente y sumario del Art. 53.2 CE. Defensa de España (Art. 30), salud (Art. 43) y conflicto colectivo (Art. 37.2) no tienen esta protección.",
+      "legal_reference": "Arts. 20.1.c y 53.2 CE",
+      "confidence_score": 0.98,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "media"
+    },
+    {
+      "question_text": "No está reservado a ley orgánica el desarrollo del siguiente derecho:",
+      "options": [
+        {"text": "El derecho a la propiedad privada.", "is_correct": true},
+        {"text": "El derecho de petición.", "is_correct": false},
+        {"text": "El derecho de asociación.", "is_correct": false},
+        {"text": "El derecho de sindicación.", "is_correct": false}
+      ],
+      "explanation": "El derecho a la propiedad privada (Art. 33 CE) está en la Sección 2ª del Capítulo II y se desarrolla por ley ordinaria. Los derechos de petición (Art. 29), asociación (Art. 22) y sindicación (Art. 28) están en la Sección 1ª y requieren Ley Orgánica según el Art. 81 CE.",
+      "legal_reference": "Arts. 33 y 81 CE",
+      "confidence_score": 0.98,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "media"
+    },
+    {
+      "question_text": "Indique cómo se asegura el reconocimiento, el respeto y la protección de los principios rectores de la política social y económica:",
+      "options": [
+        {"text": "Están protegidos mediante el acceso al recurso de amparo.", "is_correct": false},
+        {"text": "No cabe la interposición de recurso de amparo, pero es posible la vía judicial sumaria y preferente.", "is_correct": false},
+        {"text": "Informarán la legislación positiva, la práctica judicial y la actuación de los poderes públicos.", "is_correct": true},
+        {"text": "Están sujetos a reserva de Ley Orgánica.", "is_correct": false}
+      ],
+      "explanation": "El Art. 53.3 CE establece que los principios rectores del Capítulo III solo podrán ser alegados ante la jurisdicción ordinaria de acuerdo con las leyes que los desarrollen, pero informarán la legislación positiva, la práctica judicial y la actuación de los poderes públicos.",
+      "legal_reference": "Art. 53.3 CE",
+      "confidence_score": 0.99,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "media"
+    },
+    {
+      "question_text": "El derecho de sindicación:",
+      "options": [
+        {"text": "Queda regulado en el artículo 37 de la Constitución.", "is_correct": false},
+        {"text": "Es objeto de desarrollo mediante ley ordinaria.", "is_correct": false},
+        {"text": "Puede interponerse recurso de amparo para su defensa.", "is_correct": true},
+        {"text": "Puede suspenderse durante la vigencia del estado de sitio.", "is_correct": false}
+      ],
+      "explanation": "El derecho de sindicación (Art. 28 CE) está en la Sección 1ª del Capítulo II del Título I, por lo que puede defenderse mediante recurso de amparo (Art. 53.2 CE). Se regula en el Art. 28 (no 37), requiere LO, y no es suspendible en ningún estado excepcional (Art. 55.1 CE solo permite suspender el derecho de huelga, no la sindicación).",
+      "legal_reference": "Arts. 28 y 53.2 CE",
+      "confidence_score": 0.97,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "media"
+    },
+    {
+      "question_text": "El artículo 15 de la Constitución española reconoce:",
+      "options": [
+        {"text": "El derecho a la libertad ideológica y religiosa.", "is_correct": false},
+        {"text": "El derecho a la vida y a la integridad física y moral.", "is_correct": true},
+        {"text": "El derecho de reunión pacífica y sin armas.", "is_correct": false},
+        {"text": "El derecho al trabajo.", "is_correct": false}
+      ],
+      "explanation": "El Art. 15 CE reconoce el derecho a la vida y a la integridad física y moral, prohibiendo la tortura y las penas o tratos inhumanos o degradantes, y aboliendo la pena de muerte salvo disposiciones de leyes penales militares en tiempo de guerra.",
+      "legal_reference": "Art. 15 CE",
+      "confidence_score": 0.99,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "facil"
+    },
+    {
+      "question_text": "Los miembros de las Fuerzas Armadas o de Cuerpos sometidos a disciplina militar, ¿pueden ejercer el derecho de petición?",
+      "options": [
+        {"text": "Sí, pero solamente a título individual.", "is_correct": true},
+        {"text": "Sí, en las mismas condiciones que los demás ciudadanos.", "is_correct": false},
+        {"text": "Sí, pero solo pueden hacerlo de forma colectiva.", "is_correct": false},
+        {"text": "No, en ningún caso.", "is_correct": false}
+      ],
+      "explanation": "El Art. 29.2 CE establece que los miembros de las Fuerzas o Institutos armados o de los Cuerpos sometidos a disciplina militar podrán ejercer el derecho de petición solo individualmente y con arreglo a lo dispuesto en su legislación específica.",
+      "legal_reference": "Art. 29.2 CE",
+      "confidence_score": 0.99,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "facil"
+    },
+    {
+      "question_text": "Se prohíben los Tribunales de Honor, según el artículo 26 de la Constitución Española:",
+      "options": [
+        {"text": "En el ámbito de la Administración Militar y de las organizaciones profesionales.", "is_correct": false},
+        {"text": "En el ámbito de la Administración de Justicia y de las organizaciones profesionales.", "is_correct": false},
+        {"text": "En el ámbito de la Administración Civil y de las organizaciones profesionales.", "is_correct": true},
+        {"text": "En el ámbito de la Administración Institucional y de las organizaciones profesionales.", "is_correct": false}
+      ],
+      "explanation": "El Art. 26 CE establece la prohibición de los Tribunales de Honor en el ámbito de la Administración civil y de las organizaciones profesionales. En el ámbito militar no están prohibidos expresamente.",
+      "legal_reference": "Art. 26 CE",
+      "confidence_score": 0.99,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "facil"
+    },
+    {
+      "question_text": "La igualdad regulada en el artículo 14 es objeto de las siguientes garantías (señale la FALSA):",
+      "options": [
+        {"text": "Recurso de amparo ante el Tribunal Constitucional.", "is_correct": false},
+        {"text": "Desarrollo por Ley ordinaria.", "is_correct": true},
+        {"text": "Tutela a través de un procedimiento basado en los principios de preferencia y sumariedad.", "is_correct": false},
+        {"text": "Procedimiento de reforma agravado (artículo 168 CE).", "is_correct": false}
+      ],
+      "explanation": "El Art. 14 (igualdad) tiene: amparo constitucional, procedimiento preferente y sumario, y reforma por Art. 168. Pero NO se desarrolla por ley ordinaria, ya que al estar mencionado expresamente en el Art. 53.2 junto con la Sección 1ª, comparte su régimen de desarrollo por LO.",
+      "legal_reference": "Arts. 14, 53.2 y 168 CE",
+      "confidence_score": 0.96,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "dificil"
+    },
+    {
+      "question_text": "El artículo 22 de la Constitución:",
+      "options": [
+        {"text": "Reconoce el derecho de asociación y su reforma seguirá los trámites del artículo 167 de la CE.", "is_correct": false},
+        {"text": "Reconoce el derecho de asociación y es objeto de desarrollo mediante ley orgánica.", "is_correct": true},
+        {"text": "Reconoce el derecho de huelga y su reforma seguirá los trámites del artículo 167 de la CE.", "is_correct": false},
+        {"text": "Reconoce el derecho de huelga y es objeto de desarrollo mediante ley orgánica.", "is_correct": false}
+      ],
+      "explanation": "El Art. 22 CE reconoce el derecho de asociación (no de huelga, que es el Art. 28.2). Al estar en la Sección 1ª del Capítulo II del Título I, su desarrollo es por LO (Art. 81) y su reforma por el procedimiento agravado del Art. 168.",
+      "legal_reference": "Arts. 22, 81 y 168 CE",
+      "confidence_score": 0.98,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "media"
+    },
+    {
+      "question_text": "Siguiendo lo dispuesto en la Constitución Española, es una garantía común a la igualdad regulada en el artículo 14 y a la objeción de conciencia del artículo 30.2:",
+      "options": [
+        {"text": "Procedimiento de reforma agravado regulado en el artículo 168 CE.", "is_correct": false},
+        {"text": "Recurso de amparo.", "is_correct": true},
+        {"text": "Desarrollo por ley orgánica.", "is_correct": false},
+        {"text": "Las tres garantías mencionadas se aplican a los derechos de los artículos 14 y 30.2.", "is_correct": false}
+      ],
+      "explanation": "Tanto el Art. 14 como el Art. 30.2 (objeción de conciencia) están protegidos por recurso de amparo según el Art. 53.2 CE. Sin embargo, el Art. 14 se reforma por Art. 168 mientras que el Art. 30.2 se reforma por Art. 167, por lo que no comparten todas las garantías.",
+      "legal_reference": "Art. 53.2 CE",
+      "confidence_score": 0.97,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "dificil"
+    },
+    {
+      "question_text": "Todos los siguientes derechos, menos uno, podrán ser suspendidos en caso de que se acuerde la declaración de estado de excepción o de sitio. Señale qué derecho NO puede suspenderse:",
+      "options": [
+        {"text": "Derecho a la inviolabilidad del domicilio.", "is_correct": false},
+        {"text": "Derecho a la libertad y seguridad.", "is_correct": false},
+        {"text": "Derecho al honor.", "is_correct": true},
+        {"text": "Derecho de huelga.", "is_correct": false}
+      ],
+      "explanation": "El Art. 55.1 CE enumera los derechos suspendibles: Arts. 17 (libertad), 18.2 y 3 (domicilio y comunicaciones), 19, 20, 21, 28.2 (huelga) y 37.2. El derecho al honor (Art. 18.1) NO está incluido y no puede suspenderse.",
+      "legal_reference": "Art. 55.1 CE",
+      "confidence_score": 0.98,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "media"
+    },
+    {
+      "question_text": "El artículo 18.4 de nuestra Constitución, de cara a garantizar el honor y la intimidad personal y familiar de los ciudadanos, y el pleno ejercicio de sus derechos, limita:",
+      "options": [
+        {"text": "El uso de la libertad de prensa.", "is_correct": false},
+        {"text": "El uso de la libertad de expresión.", "is_correct": false},
+        {"text": "El uso de la informática.", "is_correct": true},
+        {"text": "El uso de las comunicaciones privadas.", "is_correct": false}
+      ],
+      "explanation": "El Art. 18.4 CE establece que la ley limitará el uso de la informática para garantizar el honor y la intimidad personal y familiar de los ciudadanos y el pleno ejercicio de sus derechos (protección de datos personales).",
+      "legal_reference": "Art. 18.4 CE",
+      "confidence_score": 0.99,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "facil"
+    },
+    {
+      "question_text": "De conformidad con el artículo 41 de la CE, los poderes públicos deberán mantener un régimen público de Seguridad Social para todos los ciudadanos que garantice la asistencia y prestaciones sociales suficientes ante situaciones de necesidad, especialmente:",
+      "options": [
+        {"text": "En caso de desempleo.", "is_correct": true},
+        {"text": "En caso de enfermedad.", "is_correct": false},
+        {"text": "En caso de necesidad económica.", "is_correct": false},
+        {"text": "En caso de crisis económica.", "is_correct": false}
+      ],
+      "explanation": "El Art. 41 CE menciona expresamente el desempleo como situación de necesidad especial. Establece que los poderes públicos mantendrán un régimen público de Seguridad Social, siendo la asistencia y prestaciones complementarias libres.",
+      "legal_reference": "Art. 41 CE",
+      "confidence_score": 0.98,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "media"
+    },
+    {
+      "question_text": "El artículo 24 de la Constitución Española recoge:",
+      "options": [
+        {"text": "El derecho a obtener la tutela judicial efectiva de jueces y tribunales.", "is_correct": true},
+        {"text": "El derecho al honor.", "is_correct": false},
+        {"text": "El derecho de Huelga.", "is_correct": false},
+        {"text": "El derecho a la vida y a la integridad física y moral.", "is_correct": false}
+      ],
+      "explanation": "El Art. 24 CE reconoce el derecho a la tutela judicial efectiva de los jueces y tribunales en el ejercicio de sus derechos e intereses legítimos, sin que en ningún caso pueda producirse indefensión.",
+      "legal_reference": "Art. 24 CE",
+      "confidence_score": 0.99,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "facil"
+    },
+    {
+      "question_text": "¿Cuál de los siguientes derechos es un principio rector de la política social y económica?",
+      "options": [
+        {"text": "Derecho a la protección de la salud.", "is_correct": true},
+        {"text": "El derecho de Huelga.", "is_correct": false},
+        {"text": "El derecho al trabajo.", "is_correct": false},
+        {"text": "El derecho de sindicación.", "is_correct": false}
+      ],
+      "explanation": "El derecho a la protección de la salud (Art. 43 CE) está en el Capítulo III del Título I (Principios rectores). El derecho de huelga (Art. 28.2), trabajo (Art. 35) y sindicación (Art. 28.1) están en el Capítulo II.",
+      "legal_reference": "Art. 43 CE",
+      "confidence_score": 0.99,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "facil"
+    },
+    {
+      "question_text": "El derecho de reunión en lugares de tránsito público y manifestaciones, requiere según la Constitución:",
+      "options": [
+        {"text": "Autorización previa.", "is_correct": false},
+        {"text": "No está sujeto a ningún requisito.", "is_correct": false},
+        {"text": "Está sujeto a control cuando supere un número de personas, que será establecido por ley.", "is_correct": false},
+        {"text": "Comunicación previa a la autoridad.", "is_correct": true}
+      ],
+      "explanation": "El Art. 21.2 CE establece que en los casos de reuniones en lugares de tránsito público y manifestaciones se dará comunicación previa a la autoridad, que solo podrá prohibirlas cuando existan razones fundadas de alteración del orden público.",
+      "legal_reference": "Art. 21.2 CE",
+      "confidence_score": 0.99,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "facil"
+    },
+    {
+      "question_text": "El derecho a entrar y salir libremente de España se realizará:",
+      "options": [
+        {"text": "Con las limitaciones establecidas por Orden del Ministro del Interior.", "is_correct": false},
+        {"text": "Con las limitaciones establecidas por Real Decreto.", "is_correct": false},
+        {"text": "Sin ninguna limitación.", "is_correct": false},
+        {"text": "En los términos que la ley establezca.", "is_correct": true}
+      ],
+      "explanation": "El Art. 19 CE establece que los españoles tienen derecho a entrar y salir libremente de España en los términos que la ley establezca. Este derecho no podrá ser limitado por motivos políticos o ideológicos.",
+      "legal_reference": "Art. 19 CE",
+      "confidence_score": 0.99,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "facil"
+    },
+    {
+      "question_text": "¿Puede la Administración civil imponer sanciones que directa o subsidiariamente impliquen privación de libertad?",
+      "options": [
+        {"text": "Sí, cuando lo establezca la correspondiente ley orgánica de desarrollo.", "is_correct": false},
+        {"text": "Sí, con los requisitos establecidos reglamentariamente.", "is_correct": false},
+        {"text": "No.", "is_correct": true},
+        {"text": "Sí, en casos de extrema gravedad.", "is_correct": false}
+      ],
+      "explanation": "El Art. 25.3 CE establece expresamente que la Administración civil no podrá imponer sanciones que, directa o subsidiariamente, impliquen privación de libertad. Esta es una reserva absoluta a favor de los órganos jurisdiccionales.",
+      "legal_reference": "Art. 25.3 CE",
+      "confidence_score": 0.99,
+      "tema": 2,
+      "materia": "constitucion",
+      "difficulty": "facil"
+    }
+  ]
+}

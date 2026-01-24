@@ -1,0 +1,510 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf
+**Total preguntas:** 40
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** El Director Insular de la Isla de Menorca depende:
+
+**Opciones:**
+  0. Esa isla no tiene Director insular.
+  1. Del Delegado del Gobierno.
+  2. Del Subdelegado del Gobierno.
+  3. Del Consejo Insular.
+
+---
+
+### Pregunta 2
+
+**Texto:** La organizaci�n de los servicios territoriales no integrados en las Delegaciones del
+
+**Opciones:**
+  0. Real Decreto.
+  1. Orden conjunta del Ministerio del que dependan y del titular del Ministerio que
+  2. Orden del Ministerio del que dependan previa autorizaci�n del Ministerio de
+  3. Resoluci�n del Subsecretario del Ministerio del que dependan.
+
+---
+
+### Pregunta 3
+
+**Texto:** Los Delegados del Gobierno:
+
+**Opciones:**
+  0. Son �rganos superiores.
+  1. Son nombrados por el Presidente del Gobierno.
+  2. Org�nicamente dependen del Presidente del Gobierno.
+  3. Ostentan la representaci�n ordinaria del Estado en el territorio de la Comunidad
+
+---
+
+### Pregunta 4
+
+**Texto:** De acuerdo con el art�culo 73 de la Ley 40/2015, de 1 de octubre, de R�gimen
+
+**Opciones:**
+  0. Elevan al Ministerio de Pol�tica Territorial, con car�cter semestral, un informe
+  1. uton�mico.
+  2. Resuelven
+  3. Ejercer�n las potestades administrativas que le sean atribuidas excepto la
+
+---
+
+### Pregunta 5
+
+**Texto:** Los Subdelegados del Gobierno:
+
+**Opciones:**
+  0. Se nombran mediante Real Decreto del Consejo de Ministros.
+  1. No son altos cargos.
+  2. Tiene el rango que se determine en la relaci�n de puestos de trabajo.
+  3. Se encuentran bajo la inmediata dependencia del titular del Ministerio de
+
+---
+
+### Pregunta 6
+
+**Texto:** Las Delegaciones del Gobierno en las Comunidades Aut�nomas contar�n con las
+
+**Opciones:**
+  0. �rea de Fomento.
+  1. �rea de Industria y Energ�a.
+  2. �rea de Agricultura, que se denominar� de Agricultura y Pesca en las
+  3. elegaciones del Gobierno con territorio litoral.
+
+---
+
+### Pregunta 7
+
+**Texto:** Si el Estatuto de Autonom�a de una Comunidad Aut�noma no hubiera se�alado
+
+**Opciones:**
+  0. �nde se sit�a la sede de la Delegaci�n del Gobierno, �sta radicar�:
+  1. En la localidad que determine el Presidente del Gobierno.
+  2. En la localidad donde radique la Asamblea Legislativa de la Comunidad
+  3. ut�noma.
+
+---
+
+### Pregunta 8
+
+**Texto:** La gesti�n de los servicios comunes en las Delegaciones del Gobierno corresponde
+
+**Opciones:**
+  0. La Secretaria General
+  1. La Secretaria General T�cnica.
+  2. La Subdelegaci�n del Gobierno.
+  3. Subsecretaria del Ministerio de Pol�tica Territorial
+
+---
+
+### Pregunta 9
+
+**Texto:** Los Directores Insulares de la Administraci�n General del Estado:
+
+**Opciones:**
+  0. Tienen rango de Subdirector General.
+  1. Existen en las islas que se determinen por norma con rango de ley.
+  2. Se nombran a trav�s del procedimiento de libre designaci�n.
+  3. En caso de vacante, ausencia o enfermedad ser�n suplidos por quien designe el
+
+---
+
+### Pregunta 10
+
+**Texto:** �Cu�l de los siguientes cargos es nombrado por el Consejo de Ministros?:
+
+**Opciones:**
+  0. Director Insular.
+  1. Delegado del Gobierno.
+  2. Subdelegado del Gobierno
+  3. Ministro de Pol�tica Territorial
+
+---
+
+### Pregunta 11
+
+**Texto:** De acuerdo con lo dispuesto en la Ley 40/2015, de 1 de octubre, del R�gimen
+
+**Opciones:**
+  0. elegados del Gobierno en las comunidades aut�nomas es la correcta?:
+  1. Son �rganos superiores que dependen org�nicamente del Presidente del
+  2. Son �rganos superiores con rango de Director General que dependen
+  3. ompetente por raz�n de la materia.
+
+---
+
+### Pregunta 12
+
+**Texto:** De conformidad con el art�culo 154 de la Constituci�n Espa�ola, dirigir� la
+
+**Opciones:**
+  0. dministraci�n general del Estado en el territorio de la Comunidad aut�noma un
+  1. elegado nombrado por:
+  2. El Gobierno.
+  3. El Presidente del Gobierno.
+
+---
+
+### Pregunta 13
+
+**Texto:** De conformidad con el art�culo 71 LRJSP, los servicios territoriales no integrados
+
+**Opciones:**
+  0. epender�n:
+  1. Del Delegado del Gobierno, o en su caso Subdelegado del Gobierno, a trav�s de
+  2. Del �rgano central competente sobre el sector de actividad en el que aqu�llos
+  3. De la Presidencia del Gobierno.
+
+---
+
+### Pregunta 14
+
+**Texto:** �Qui�n ejercer� la suplencia de un director insular en primer t�rmino?:
+
+**Opciones:**
+  0. La persona que designe el delegado del gobierno del que dependa.
+  1. La persona que designe el subdelegado del gobierno del que dependa.
+  2. El secretario general.
+  3. La persona que designe el propio director insular.
+
+---
+
+### Pregunta 15
+
+**Texto:** Corresponde a los Delegados del Gobierno proteger el libre ejercicio de los
+
+**Opciones:**
+  0. erechos y libertades y garantizar la seguridad ciudadana, a trav�s de los
+  1. uya jefatura corresponder� al Delegado del Gobierno, quien ejercer� las
+  2. ompetencias del Estado en esta materia bajo la dependencia funcional:
+  3. Del Ministerio del Interior.
+
+---
+
+### Pregunta 16
+
+**Texto:** Las entidades integrantes del sector p�blico institucional estatal estar�n sometidas
+
+**Opciones:**
+  0. l control de eficacia y supervisi�n continua. A la luz del art�culo 85 de la Ley
+  1. El control de eficacia ser� ejercido por la Intervenci�n General de la
+  2. dministraci�n del Estado.
+  3. Para el desarrollo de estas actuaciones de control todas las entidades integrantes
+
+---
+
+### Pregunta 17
+
+**Texto:** Los Organismos Aut�nomos se regir�n:
+
+**Opciones:**
+  0. Por lo dispuesto en la Ley 40/2015, en su ley de creaci�n, sus estatutos, la Ley
+  1. e Procedimiento Administrativo Com�n de las Administraciones P�blicas, la
+  2. e las normas de derecho administrativo general y especial que le sea de
+  3. plicaci�n.
+
+---
+
+### Pregunta 18
+
+**Texto:** Sobre las sociedades mercantiles estatales responda cu�l de las siguientes
+
+**Opciones:**
+  0. firmaciones es correcta:
+  1. Se crean mediante ley.
+  2. Se crean por normal reglamentaria
+  3. Se crean por Acuerdo del Consejo de Ministros.
+
+---
+
+### Pregunta 19
+
+**Texto:** El acuerdo de disoluci�n de un organismo p�blico como consecuencia de la
+
+**Opciones:**
+  0. sunci�n de sus fines por los servicios de la AGE se adoptar� por:
+  1. La Secretar�a de Estado de Funci�n P�blica en el plazo de un mes desde la
+  2. El Consejo de Ministros en el plazo de un mes desde la recepci�n de la
+  3. omunicaci�n de incurrir en la mencionada causa de disoluci�n.
+
+---
+
+### Pregunta 20
+
+**Texto:** �Cu�l de los siguientes entes integrantes del sector p�blico institucional estatal no
+
+**Opciones:**
+  0. Las Sociedades Mercantiles Estatales.
+  1. Las Fundaciones del Sector P�blico Estatal.
+  2. Las Autoridades Administrativas Independientes.
+  3. Las Agencias Estatales.
+
+---
+
+### Pregunta 21
+
+**Texto:** Seg�n lo establecido en el art�culo 95.2 de la Ley 40/2015, se consideran servicios
+
+**Opciones:**
+  0. omunes de los organismos p�blicos, al menos, los siguientes:
+  1. Contrataci�n p�blica.
+  2. Gesti�n de bienes muebles.
+  3. Organizaci�n y recursos humanos.
+
+---
+
+### Pregunta 22
+
+**Texto:** Las Entidades P�blicas empresariales Aut�nomos se regir�n:
+
+**Opciones:**
+  0. Por lo dispuesto en la Ley 40/2015, en su ley de creaci�n, sus estatutos, la Ley
+  1. e Procedimiento Administrativo Com�n de las Administraciones P�blicas, la
+  2. e las normas de derecho administrativo general y especial que le sea de
+  3. plicaci�n.
+
+---
+
+### Pregunta 23
+
+**Texto:** Se�ale la afirmaci�n correcta en relaci�n con los organismos p�blicos:
+
+**Opciones:**
+  0. Los organismos p�blicos se estructuran en los �rganos de gobierno, y ejecutivos
+  1. Los organismos p�blicos se estructuran en los �rganos de gobierno, y de control
+  2. Los organismos p�blicos se estructuran en los �rganos de gobierno, y ejecutivos
+  3. Los organismos p�blicos se estructuran en los �rganos de gobierno, y de control
+
+---
+
+### Pregunta 24
+
+**Texto:** Cuando una entidad p�blica empresarial se transforme en una agencia estatal:
+
+**Opciones:**
+  0. La ley mediante la que se lleve a cabo la transformaci�n deber� ir acompa�ada
+  1. La ley mediante la que se lleve a cabo la transformaci�n deber� ir acompa�ada
+  2. El Real Decreto mediante el que se lleve a cabo la transformaci�n deber� ir
+  3. compa�ado por una memoria y un informe preceptivo del Ministerio de
+
+---
+
+### Pregunta 25
+
+**Texto:** En los Consorcios en que participe la AGE, el convenio:
+
+**Opciones:**
+  0. Precisar� de autorizaci�n previa del Consejo de Ministros y la competencia para
+  1. Precisar� de autorizaci�n previa de la IGAE y la competencia para su
+  2. Precisar� de autorizaci�n previa del Consejo de Ministros y la competencia para
+  3. Precisar� de autorizaci�n previa de la IGAE y la competencia para su
+
+---
+
+### Pregunta 26
+
+**Texto:** Los Estatutos de las Fundaciones se aprobar�n:
+
+**Opciones:**
+  0. Por ley.
+  1. Por convenio.
+  2. Por RD del Consejo de Ministros.
+  3. Por Acuerdo del Consejo de Ministros.
+
+---
+
+### Pregunta 27
+
+**Texto:** Seg�n el art�culo 93.2 de la Ley 40/2015, de 1 de octubre, de R�gimen Jur�dico del
+
+**Opciones:**
+  0. De forma conjunta con la norma de creaci�n del propio Organismo.
+  1. Por Orden ministerial conjunta del Ministerio de Hacienda y Administraciones
+  2. Por Real Decreto del Consejo de Ministros a propuesta conjunta del Ministerio
+  3. e Administraciones P�blicas (actualmente Transformaci�n Digital y Funci�n
+
+---
+
+### Pregunta 28
+
+**Texto:** Las Oficinas Consulares Honorarias se crear�n mediante:
+
+**Opciones:**
+  0. Real Decreto aprobado en Consejo de Ministros a propuesta del Ministro de
+  1. suntos Exteriores y Cooperaci�n
+  2. Acuerdo del Consejo de Ministros a propuesta del Ministro de Asuntos
+  3. Orden de la Presidencia del Gobierno a propuesta del Ministro de Asuntos
+
+---
+
+### Pregunta 29
+
+**Texto:** De conformidad con lo establecido en la Ley 2/2014, de 25 de marzo de la Acci�n y
+
+**Opciones:**
+  0. Acci�n exterior
+  1. Servicio exterior
+  2. Pol�tica exterior
+  3. Relaciones internacionales
+
+---
+
+### Pregunta 30
+
+**Texto:** Son sujetos de la acci�n exterior (se�ale la falsa):
+
+**Opciones:**
+  0. La Corona
+  1. El Consejo General del Poder Judicial
+  2. Las Comunidades Aut�nomas y entidades que integran la Administraci�n Local
+  3. El Consejo de Estado
+
+---
+
+### Pregunta 31
+
+**Texto:** La creaci�n y supresi�n de las Misiones Diplom�ticas Permanentes se realizar�
+
+**Opciones:**
+  0. Real decreto del Consejo de Ministros, a iniciativa del Ministerio de Asuntos
+  1. dministraciones P�blicas, previo informe del Consejo Ejecutivo de Pol�tica
+  2. Real decreto del Consejo de Ministros, a iniciativa del Ministerio de Hacienda y
+  3. dministraciones P�blicas, y a propuesta del Ministerio de Asuntos Exteriores
+
+---
+
+### Pregunta 32
+
+**Texto:** La Jefatura de las Representaciones Permanentes, ser� ejercida por:
+
+**Opciones:**
+  0. Embajador Extraordinario y Plenipotenciario
+  1. Encargado de Negocios
+  2. Embajador Representante Permanente
+  3. C�nsul
+
+---
+
+### Pregunta 33
+
+**Texto:** Los Embajadores ser�n designados y cesar�n por:
+
+**Opciones:**
+  0. Real decreto acordado en Consejo de Ministros a propuesta del Ministro de
+  1. suntos Exteriores y de Cooperaci�n
+  2. Orden del Ministro de Asuntos Exteriores y de Cooperaci�n
+  3. Real decreto acordado en Consejo de Ministros a propuesta del Presidente del
+
+---
+
+### Pregunta 34
+
+**Texto:** La Misi�n Diplom�tica o Representaci�n Permanente se integra por (se�ale la
+
+**Opciones:**
+  0. Jefatura
+  1. La Canciller�a Diplom�tica
+  2. Las Consejer�as, Agregadur�as, Oficinas sectoriales, Oficinas Econ�micas y
+  3. omerciales, Oficinas T�cnicas de Cooperaci�n, Centros Culturales, Centros de
+
+---
+
+### Pregunta 35
+
+**Texto:** Las Misiones Diplom�ticas Especiales:
+
+**Opciones:**
+  0. Representan con car�cter permanente a Espa�a ante uno o varios Estados con
+  1. Representa con car�cter permanente a Espa�a ante la Uni�n Europea o una
+  2. Representan temporalmente al Reino de Espa�a ante uno o varios Estados, con
+  3. onde no existe Misi�n Diplom�tica permanente o ante el conjunto de Estados,
+
+---
+
+### Pregunta 36
+
+**Texto:** La creaci�n y supresi�n de los �rganos t�cnicos especializados a que se refiere el
+
+**Opciones:**
+  0. rt�culo 45.3 de la Ley 2/2014, de 25 de marzo, se realizar�:
+  1. Real decreto del Consejo de Ministros, a iniciativa del Ministerio de Asuntos
+  2. dministraciones P�blicas, previo informe del Consejo Ejecutivo de Pol�tica
+  3. Real decreto, a iniciativa del Ministerio competente, previo informe del
+
+---
+
+### Pregunta 37
+
+**Texto:** La Jefatura de la Canciller�a Diplom�tica ser� ejercida por:
+
+**Opciones:**
+  0. El Embajador extraordinario y plenipotenciario
+  1. El Embajador representante permanente
+  2. El funcionario de la Carrera Diplom�tica que desempe�e la Segunda Jefatura de
+  3. El C�nsul
+
+---
+
+### Pregunta 38
+
+**Texto:** Son �rganos t�cnicos especializados de la Misi�n Diplom�tica o Representaci�n
+
+**Opciones:**
+  0. Las Consejer�as
+  1. Las Agregadur�as
+  2. Canciller�a Diplom�tica
+  3. El Instituto Cervantes
+
+---
+
+### Pregunta 39
+
+**Texto:** Los representantes permanentes ante organizaciones internacionales son:
+
+**Opciones:**
+  0. �rganos superiores y alto cargo
+  1. �rganos superiores pero no alto cargo
+  2. �rganos directivos y alto cargo
+  3. �rganos directivos pero no alto cargo
+
+---
+
+### Pregunta 40
+
+**Texto:** La Jefatura de la Misi�n Diplom�tica Permanente ser� ejercida por:
+
+**Opciones:**
+  0. Un Embajador Representante Permanente
+  1. Un Embajador Extraordinario y Plenipotenciario
+  2. Un C�nsul
+  3. Un Canciller
+
+---

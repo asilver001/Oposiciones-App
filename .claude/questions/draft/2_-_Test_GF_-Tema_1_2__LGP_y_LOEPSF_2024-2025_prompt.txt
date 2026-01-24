@@ -1,0 +1,390 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 2.- Test GF -Tema 1.2. LGP y LOEPSF 2024-2025.pdf
+**Total preguntas:** 30
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** El ejercicio presupuestario coincidir� con el a�o natural y a �l se imputar�n:
+
+**Opciones:**
+  0. Las obligaciones reconocidas hasta el fin del mes de enero siguiente.
+  1. Las obligaciones reconocidas hasta el fin del ejercicio.
+  2. Los derechos liquidados durante el mismo cualquiera que sea el periodo de que se
+  3. eriven.
+
+---
+
+### Pregunta 2
+
+**Texto:** De conformidad con la Ley 47/2003, de 26 de noviembre, General Presupuestaria, el
+
+**Opciones:**
+  0. ontrol externo del sector p�blico estatal, corresponder�:
+  1. Al Ministro de Hacienda.
+  2. Al Tribunal de Cuentas.
+  3. A la Intervenci�n General de la Administraci�n General del Estado.
+
+---
+
+### Pregunta 3
+
+**Texto:** Los cr�ditos presupuestarios de la Administraci�n General del Estado, sus organismos
+
+**Opciones:**
+  0. ut�nomos y de las entidades integrantes del sector p�blico estatal con presupuesto
+  1. utorizados por:
+  2. La Ley de Presupuestos.
+  3. Las modificaciones presupuestarias aprobadas conforme a esta Ley.
+
+---
+
+### Pregunta 4
+
+**Texto:** Es funci�n del Tesoro P�blico:
+
+**Opciones:**
+  0. Servir el principio de unidad patrimonial mediante la centralizaci�n de todos los fondos
+  1. Servir el principio de unidad presupuestaria mediante la centralizaci�n de todos los
+  2. Servir el principio de unidad de caja mediante la centralizaci�n de todos los fondos y
+  3. Servir el principio de unidad de caja mediante la centralizaci�n de todos los fondos y
+
+---
+
+### Pregunta 5
+
+**Texto:** La Ley Org�nica 2/2012, de 27 de abril, de Estabilidad Presupuestaria y Sostenibilidad
+
+**Opciones:**
+  0. Determina los l�mites de d�ficit y deuda sin que en ning�n caso se puedan sobrepasar.
+  1. Fija los procedimientos necesarios para la aplicaci�n efectiva de los principios de
+  2. Establece unos principios, sin car�cter vinculante, que orientan la actuaci�n de las
+  3. dministraciones P�blicas.
+
+---
+
+### Pregunta 6
+
+**Texto:** �Cu�l de los siguientes principios NO es un principio recogido en la Ley Org�nica 2/2012,
+
+**Opciones:**
+  0. e Estabilidad Presupuestaria y Sostenibilidad Financiera?
+  1. Anualidad.
+  2. Transparencia.
+  3. Responsabilidad.
+
+---
+
+### Pregunta 7
+
+**Texto:** El Estado y CC.AA. podr�n incurrir en d�ficit estructural:
+
+**Opciones:**
+  0. En ning�n caso.
+  1. En caso de cat�strofe natural.
+  2. En �pocas de crisis.
+  3. Pueden sobrepasarse en caso de situaci�n de urgencia.
+
+---
+
+### Pregunta 8
+
+**Texto:** El volumen de deuda p�blica no podr� superar el 60 % del PIB nacional con la siguiente
+
+**Opciones:**
+  0. istribuci�n:
+  1. La Administraci�n Central (44%), las Comunidades Aut�nomas (13%) y las
+  2. orporaciones Locales (3%).
+  3. La Administraci�n Central (25%), las Comunidades Aut�nomas (25%) y las
+
+---
+
+### Pregunta 9
+
+**Texto:** La Ley Org�nica 2/212, de Estabilidad Presupuestaria y Sostenibilidad Financiera
+
+**Opciones:**
+  0. El l�mite de deuda p�blica de cada una de las Comunidades Aut�nomas no podr�
+  1. El Estado responder� y asumir� los compromisos de las Comunidades Aut�nomas.
+  2. En el primer semestre de cada a�o el Gobierno fijar� el objetivo de estabilidad
+  3. La variaci�n del gasto computable no podr� superar la tasa de referencia de crecimiento
+
+---
+
+### Pregunta 10
+
+**Texto:** No podr�n adquirirse compromisos de gasto ni adquirirse obligaciones por cuant�a
+
+**Opciones:**
+  0. Las normas con rango de ley que incumplan esta limitaci�n.
+  1. Los actos administrativos y las disposiciones generales que incumplan esta limitaci�n.
+  2. Los actos administrativos y las disposiciones generales con rango inferior a ley que
+  3. Los actos administrativos y disposiciones generales con rango de ley que incumplan
+
+---
+
+### Pregunta 11
+
+**Texto:** De conformidad con la Ley Org�nica 2/2012, de 27 de abril, de Estabilidad Presupuestaria
+
+**Opciones:**
+  0. isposiciones de dicha Ley o de las normas y acuerdos que se adopten en su desarrollo, y
+  1. e los sistemas de recopilaci�n y tratamiento de datos?
+  2. Eficiencia en la asignaci�n y utilizaci�n de los recursos p�blicos.
+  3. Transparencia.
+
+---
+
+### Pregunta 12
+
+**Texto:** La aplicaci�n de la dotaci�n del Fondo de Contingencia de los Presupuestos Generales del
+
+**Opciones:**
+  0. Aprobaci�n del Consejo de Ministros a propuesta del titular del departamento.
+  1. Aprobaci�n del Congreso de los Diputados.
+  2. Aprobaci�n del Consejo de Ministros a propuesta del Ministro de Hacienda.
+  3. No precisa aprobaci�n, ya que aparece establecida en la Ley Org�nica de Estabilidad
+
+---
+
+### Pregunta 13
+
+**Texto:** El l�mite de deuda p�blica de cada comunidad aut�noma no podr� superar:
+
+**Opciones:**
+  0. El 3 % de su PIB regional.
+  1. El 13 % del PIB nacional.
+  2. El 3 % del PIB nacional
+  3. El 13 % de su PIB regional.
+
+---
+
+### Pregunta 14
+
+**Texto:** Seg�n el art�culo 5 de la Ley 47/2003, de 26 de noviembre, General Presupuestaria, por el
+
+**Opciones:**
+  0. onstituida por:
+  1. El conjunto de derechos y obligaciones de contenido econ�mico cuya titularidad
+  2. orresponde al Estado.
+  3. Los ingresos tanto de derecho p�blico como de derecho privado percibidos por el
+
+---
+
+### Pregunta 15
+
+**Texto:** La dotaci�n del Fondo de Contingencia en los Presupuestos Generales del Estado:
+
+**Opciones:**
+  0. Est� incluido en la secci�n 35 del presupuesto de gastos del Estado, cuya cuant�a es del
+  1. Est� incluido en la secci�n 35 del presupuesto de gastos del Estado, cuya cuant�a es del
+  2. las comunidades aut�nomas y entidades locales en aplicaci�n de sus respectivos
+  3. Est� incluido en la secci�n 35 del presupuesto de gastos del Estado, cuya cuant�a es del
+
+---
+
+### Pregunta 16
+
+**Texto:** El pago de los intereses y el capital de la deuda de las Administraciones p�blicas gozar� de
+
+**Opciones:**
+  0. Solo cuando se establezca en el Marco Financiero Plurianual
+  1. Frente a cualquier otro gasto, excluidos los gastos financieros.
+  2. Frente a cualquier otro gasto.
+  3. Pero esta prioridad est� supeditada a la satisfacci�n de otros gastos m�s prioritarios,
+
+---
+
+### Pregunta 17
+
+**Texto:** El volumen de deuda p�blica, definida de acuerdo con el Protocolo sobre Procedimiento
+
+**Opciones:**
+  0. e d�ficit excesivo, del conjunto de Administraciones P�blicas no podr� superar:
+  1. El 60 por ciento del Producto Interior Bruto nacional expresado en t�rminos nominales.
+  2. El 50 por ciento del Producto Interior Bruto nacional expresado en t�rminos nominales,
+  3. El 60 por ciento del Producto Interior Bruto nacional expresado en t�rminos nominales,
+
+---
+
+### Pregunta 18
+
+**Texto:** El sector Administraciones P�blicas, seg�n establece la LOEPySF, est� formado por:
+
+**Opciones:**
+  0. Administraci�n central, Administraciones de Seguridad Social, Sector p�blico
+  1. Sector p�blico empresarial estatal.
+  2. b) y por el Sector p�blico Administrativo estatal y Fundacional.
+  3. Administraci�n central, las CCAA, las Corporaciones Locales y Administraciones de
+
+---
+
+### Pregunta 19
+
+**Texto:** Respecto de las Corporaciones Locales, la LOEPySF dispone que:
+
+**Opciones:**
+  0. Excepcionalmente, podr�n incurrir en d�ficit estructural.
+  1. Deber�n mantener una posici�n de equilibrio o super�vit presupuestario.
+  2. Deber�n mantener una posici�n de super�vit presupuestario.
+  3. Excepcionalmente, podr�n incurrir en d�ficit estructural cuando incurran en �l el Estado
+
+---
+
+### Pregunta 20
+
+**Texto:** �A qui�n corresponde calcular la tasa de referencia de crecimiento del Producto Interior
+
+**Opciones:**
+  0. ruto de medio plazo de la econom�a espa�ola?
+  1. Al Ministro de Econom�a, Comercio y Empresa conjuntamente con el Ministro de
+  2. Al Ministro de Econom�a, Comercio y Empresa.
+  3. Al Ministro de Hacienda.
+
+---
+
+### Pregunta 21
+
+**Texto:** De acuerdo con la LOEPySF, las administraciones que incurran en d�ficit estructural
+
+**Opciones:**
+  0. ebido a cat�strofes naturales, recesi�n econ�mica grave o situaciones de emergencia
+  1. Plan de reequilibrio.
+  2. Plan econ�mico-financiero.
+  3. Plan de equilibrio presupuestario.
+
+---
+
+### Pregunta 22
+
+**Texto:** Respecto del art�culo 135 de la Constituci�n Espa�ola, se�ale la respuesta correcta:
+
+**Opciones:**
+  0. El volumen de la deuda p�blica del conjunto de las Administraciones P�blicas en
+  1. Todas las Administraciones P�blicas adecuar�n sus actuaciones al principio de
+  2. Las entidades locales deber�n presentar super�vit presupuestario.
+  3. Una ley org�nica fijar� el d�ficit estructural m�nimo permitido al Estado y a las
+
+---
+
+### Pregunta 23
+
+**Texto:** En el supuesto de que la liquidaci�n presupuestaria se sit�e en super�vit, este se destinar�:
+
+**Opciones:**
+  0. En el Estado y Comunidades Aut�nomas a reducir su volumen de deuda, mientras que
+  1. En el Estado, Comunidades Aut�nomas y Corporaciones Locales a reducir su
+  2. En el Estado y Comunidades Aut�nomas a incrementar el fondo de reserva.
+  3. En el Estado y comunidades aut�nomas a reducir su d�ficit.
+
+---
+
+### Pregunta 24
+
+**Texto:** Seg�n establece Ley 47/2003, de 26 de noviembre, General Presupuestaria, los recursos del
+
+**Opciones:**
+  0. No, en ning�n caso.
+  1. S�, cuando as� establezca una ley.
+  2. Si, cuando as� lo decida el Gobierno.
+  3. No, salvo excepciones.
+
+---
+
+### Pregunta 25
+
+**Texto:** �Por cu�l de los siguientes principios NO se rige la programaci�n presupuestaria seg�n el
+
+**Opciones:**
+  0. rt�culo 26 de la Ley 47/2003, de 26 de noviembre, General Presupuestaria?
+  1. Estabilidad presupuestaria.
+  2. Coordinaci�n.
+  3. Transparencia.
+
+---
+
+### Pregunta 26
+
+**Texto:** No integran los PGE, los presupuestos de:
+
+**Opciones:**
+  0. Organismos aut�nomos estatales.
+  1. Fundaciones del Sector P�blico Estatal
+  2. Administraci�n General del Estado.
+  3. Comunidades Aut�nomas.
+
+---
+
+### Pregunta 27
+
+**Texto:** De acuerdo con la Ley Org�nica 2/2012, de 27 de abril, de Estabilidad Presupuestaria y
+
+**Opciones:**
+  0. estinar�n a:
+  1. �ntegramente a reducir el nivel de deuda p�blica.
+  2. Incrementar el Fondo de contingencia.
+  3. A financiar inversiones.
+
+---
+
+### Pregunta 28
+
+**Texto:** �A qui�n corresponde la competencia para formular las propuestas de objetivos de
+
+**Opciones:**
+  0. Al Ministerio de Hacienda.
+  1. Al Ministerio de Hacienda, previo informe de la Autoridad Independiente de
+  2. Al Gobierno.
+  3. A la Autoridad Independiente de Responsabilidad Fiscal.
+
+---
+
+### Pregunta 29
+
+**Texto:** Seg�n establece Ley 47/2003, de 26 de noviembre, General Presupuestaria, la gesti�n del
+
+**Opciones:**
+  0. El Congreso de los Diputados.
+  1. Las Cortes Generales.
+  2. El Gobierno.
+  3. El Ministro de Hacienda.
+
+---
+
+### Pregunta 30
+
+**Texto:** Los derechos liquidados y las obligaciones reconocidas se aplicar�n a los presupuestos:
+
+**Opciones:**
+  0. Por su importe �ntegro.
+  1. Por su importe bruto.
+  2. Por su importe liquidado.
+  3. Por su importe exacto.
+
+---

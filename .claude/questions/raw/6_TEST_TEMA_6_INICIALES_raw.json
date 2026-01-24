@@ -1,0 +1,412 @@
+{
+  "metadata": {
+    "source_file": "6 TEST TEMA 6 INICIALES.docx",
+    "source_path": "6 TEST TEMA 6 INICIALES.docx",
+    "extraction_date": "2026-01-15T23:40:01.302828",
+    "tema": 6,
+    "categoria": "general",
+    "total_questions": 40
+  },
+  "questions": [
+    {
+      "raw_text": "�Qu� nombre reciben las disposiciones legislativas provisionales emanadas del Gobierno?",
+      "raw_options": [
+        "Decreto Ley",
+        "Decreto",
+        "Decreto Legislativo",
+        "Reglamento"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qu� medio utilizan las Cortes Generales para delegar en el Gobierno la potestad de refundir varios textos legales en uno solo?",
+      "raw_options": [
+        "Ley de Bases.",
+        "Ley ordinaria.",
+        "Decreto Ley.",
+        "Decreto Legislativo."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El esquema b�sico de la composici�n del Gobierno ser�, seg�n la Constituci�n",
+      "raw_options": [
+        "El Presidente, el Vicepresidente, los Ministros y los dem�s miembros que establezca la ley.",
+        "El Presidente, los Vicepresidentes en su caso, los Ministros y los dem�s miembros que establezca la ley.",
+        "El Presidente, los Vicepresidentes, los Ministros, en su caso, y los dem�s miembros que establezca la ley.",
+        "El Presidente, los Ministros, y los dem�s miembros que establezca la ley."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "En caso de que existan Ministros sin cartera",
+      "raw_options": [
+        "Por Real Decreto se determinar� el �mbito de sus competencias, la estructura administrativa, as� como los medios materiales y personales que queden adscritos al mismo.",
+        "Por Orden del Ministro de Presidencia, Relaciones con las Cortes y memoria democr�tica se determinar� el �mbito de sus competencias, la estructura administrativa, as� como los medios materiales y personales que queden adscritos al mismo.",
+        "Por Ley de las CCGG se determinar� el �mbito de sus competencias, la estructura administrativa, as� como los medios materiales y personales que queden adscritos al mismo.",
+        "Por Resoluci�n del Secretario de Estado del Ministerio de Presidencia, Relaciones con las Cortes y memoria democr�tica se determinar� el �mbito de sus competencias, la estructura administrativa, as� como los medios materiales y personales que queden adscritos al mismo."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La acusaci�n a miembros del Gobierno por delitos de traici�n o contra la seguridad del Estado s�lo podr� ser planteada por iniciativa de",
+      "raw_options": [
+        "La tercera parte de los miembros del Congreso, y con aprobaci�n de la",
+        "La cuarta parte de los miembros del Congreso, y con aprobaci�n de la mayor�a absoluta del mismo.",
+        "La tercera parte de los miembros del Congreso, y con aprobaci�n de la mayor�a absoluta del Senado",
+        "La cuarta parte de los miembros del Congreso, y con aprobaci�n de la mayor�a absoluta del Senado"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La disoluci�n de las C�maras, por transcurso de dos meses desde la primera votaci�n de investidura, sin obtenci�n de la confianza por los candidatos, se refrenda por",
+      "raw_options": [
+        "Presidente del Gobierno.",
+        "El Rey.",
+        "El Presidente del Congreso.",
+        "No necesita refrendo."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�l de las siguientes competencias puede desempe�ar un Presidente del Gobierno en funciones?",
+      "raw_options": [
+        "Resolver los conflictos de atribuciones entre los ministerios.",
+        "Proponer al Rey la disoluci�n de las C�maras.",
+        "Proponer al Rey la convocatoria de refer�ndum consultivo.",
+        "Plantear la cuesti�n de confianza."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n la Ley 50/1997, de 27 de noviembre, �a qui�n corresponde la secretar�a del Consejo de Ministros?",
+      "raw_options": [
+        "Al Presidente del Gobierno, en todo caso.",
+        "Al Ministro del Interior.",
+        "Al Ministro de la Presidencia, Justicia y Relaciones con las Cortes.",
+        "A un Vicepresidente, y en su defecto, al Ministro de la Presidencia, Justicia y Relaciones con las Cortes."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale la respuesta falsa en relaci�n con la Comisi�n General de Secretarios de Estado y Subsecretarios",
+      "raw_options": [
+        "La Presidencia de la Comisi�n General de Secretarios de Estado y Subsecretarios corresponde a un Vicepresidente del Gobierno o, en su defecto, al Ministro de la Presidencia, Justicia y Relaciones con las Cortes.",
+        "La Secretar�a de la Comisi�n General de Secretarios de Estado y Subsecretarios ser� ejercida por el Subsecretario de la Presidencia, justicia y Relaciones con las Cortes.",
+        "Las deliberaciones de la Comisi�n General de Secretarios de Estado y Subsecretarios ser�n reservadas",
+        "La Comisi�n podr� adoptar decisiones o acuerdos por delegaci�n del Gobierno."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La cuesti�n de confianza prevista en el art�culo 112 CE",
+      "raw_options": [
+        "Se presenta por el Presidente del Gobierno, previa deliberaci�n del Consejo de Ministros, ante las Cortes Generales.",
+        "Se presentar� por el Presidente del Gobierno sobre su programa o sobre una declaraci�n de pol�tica general.",
+        "La confianza se entender� otorgada cuando vote a favor de la misma la mayor�a absoluta de los Diputados.",
+        "Podr� ser planteada por el Presidente del Gobierno en funciones."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Los Secretarios de Estado",
+      "raw_options": [
+        "Son miembros del Gobierno.",
+        "Son �rganos de colaboraci�n y apoyo al Gobierno.",
+        "Son �rganos directivos de la Administraci�n.",
+        "Son miembros del gobierno y �rganos superiores de la AGE."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El Secretariado de Gobierno",
+      "raw_options": [
+        "Se integra en la estructura org�nica del Ministerio de Hacienda.",
+        "Se integra en la estructura org�nica del Ministerio de la Presidencia, Justicia y Relaciones con las Cortes.",
+        "Se integra en la estructura org�nica de la Presidencia del Gobierno",
+        "Se integra en la estructura org�nica del Ministerio Hacienda."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De acuerdo con la Ley 50/1997, de 27 de noviembre, del Gobierno, se�ale qu� competencia corresponde al Consejo de Ministros",
+      "raw_options": [
+        "Resolver los conflictos de atribuciones que puedan surgir entre los Ministerios",
+        "Establecer el programa pol�tico del Gobierno y determinar las directrices de pol�tica interior y exterior y velar por su cumplimiento",
+        "Adoptar programas, planes, y directrices vinculantes para todos los �rganos de la AGE.",
+        "Crear, modificar y suprimir los Departamentos Ministeriales y las Secretar�as de Estado."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�l de las siguientes funciones no le corresponde ejercer al Presidente del Gobierno?",
+      "raw_options": [
+        "Interponer el recurso de inconstitucionalidad.",
+        "Proponer al Rey la celebraci�n de refer�ndum consultivo.",
+        "Proponer la disoluci�n de las Cortes Generales.",
+        "Aprobar proyectos de ley."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qui�n propone el candidato a la Presidencia del Gobierno",
+      "raw_options": [
+        "El pueblo espa�ol.",
+        "El Congreso de los Diputados.",
+        "El Rey.",
+        "Las Cortes Generales."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�ntos d�as deben transcurrir al menos desde que se presente una moci�n de censura hasta que pueda ser votada?",
+      "raw_options": [
+        "Dos d�as.",
+        "Tres d�as.",
+        "Cuatro d�as.",
+        "Cinco d�as."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�A qui�n debe presentar el Gobierno su dimisi�n en el supuesto de que no obtenga la mayor�a necesaria en una votaci�n de cuesti�n de confianza?",
+      "raw_options": [
+        "Ante el Congreso de los Diputados.",
+        "Ante el Rey.",
+        "Ante las Cortes Generales.",
+        "Ante el Consejo de Ministros."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Para ser nombrado Ministro es necesario ostentar los siguientes requisitos",
+      "raw_options": [
+        "Se requiere ser espa�ol, mayor de edad, disfrutar de los derechos de sufragio activo y pasivo, as� como no estar inhabilitado para ejercer empleo o cargo p�blico por sentencia judicial firme y reunir el resto de requisitos de idoneidad previstos en la Ley 3/2015, de 30 de marzo, reguladora del ejercicio del alto cargo de la Administraci�n General del Estado.",
+        "Mayor de edad, disfrutar de los derechos de sufragio activo y pasivo, as� como no estar inhabilitado para ejercer empleo o cargo p�blico por sentencia judicial firme y reunir el resto de requisitos de idoneidad previstos en la Ley 3/2015, de",
+        "Espa�ol, mayor de edad y disfrutar de los derechos de sufragio activo y pasivo",
+        "Espa�ol, mayor de edad, as� como no estar inhabilitado para ejercer empleo o cargo p�blico por sentencia judicial firme."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "En los casos de vacante, ausencia o enfermedad, las funciones del Presidente del Gobierno ser�n asumidas por",
+      "raw_options": [
+        "Los Vicepresidentes, de acuerdo con el correspondiente orden de prelaci�n, y, en defecto de ellos, por los Ministros, seg�n el orden de precedencia de los Departamentos.",
+        "Los Ministros, seg�n el orden de precedencia de los Departamentos y, en defecto de ellos, por los Vicepresidentes, de acuerdo con el correspondiente orden de prelaci�n",
+        "Los Vicepresidentes, de acuerdo con el correspondiente orden de prelaci�n, y, en defecto de ellos, por los Secretarios de Estado, seg�n el orden de precedencia de los Departamentos.",
+        "Los Ministros, seg�n el orden de precedencia de los Departamentos y, en defecto de ellos, por los Secretarios de Estado, seg�n el orden de precedencia de los Departamentos."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La suplencia de los Ministros, para el despacho ordinario de los asuntos de su competencia, ser� determinada por",
+      "raw_options": [
+        "Real Decreto del Consejo de Ministros.",
+        "Orden del propio ministro.",
+        "Real Decreto del Presidente del Gobierno.",
+        "Acuerdo del Consejo de Ministros."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale la falsa en relaci�n con los �rganos de colaboraci�n y apoyo al Gobierno",
+      "raw_options": [
+        "Tienen esta consideraci�n los secretarios de Estado, la Comisi�n General de Secretarios de Estado y Subsecretarios, el Secretariado del Gobierno y los Gabinetes.",
+        "El Secretariado del Gobierno se integra en la estructura org�nica del Ministerio de la Presidencia, Justicia y Relaciones con las Cortes.",
+        "Los Gabinetes son �rganos de apoyo pol�tico y t�cnico del Presidente del Gobierno, de los Vicepresidentes, de los Ministros, de los Secretarios de Estado y de los subsecretarios.",
+        "La Presidencia de la Comisi�n General de Secretarios de Estado y Subsecretarios corresponde a un Vicepresidente del Gobierno o, en su defecto, al Ministro de la Presidencia, Justicia y Relaciones con las Cortes."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Los Vicepresidentes son nombrados por",
+      "raw_options": [
+        "El presidente del Gobierno.",
+        "El Rey.",
+        "El Congreso.",
+        "El Senado."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale la respuesta correcta en relaci�n con las reuniones del Consejo de Ministros",
+      "raw_options": [
+        "A las reuniones del Consejo de Ministros podr�n asistir los Secretarios de Estado y excepcionalmente otros altos cargos, cuando sean convocados para ello.",
+        "Act�a como Secretario el Ministro de Hacienda.",
+        "El orden del d�a de las reuniones del Consejo de Ministros se fijar� por el Secretario.",
+        "Las reuniones del Consejo de Ministros podr�n tener car�cter decisorio o consultivo."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Al Consejo de Ministros, como �rgano colegiado del Gobierno, le corresponde",
+      "raw_options": [
+        "Declarar los estados de alarma, excepci�n y sitio",
+        "Crear, modificar y suprimir los �rganos directivos de los Departamentos Ministeriales.",
+        "Aprobar los Reales Decretos-Leyes y las leyes org�nicas",
+        "Aprobar la Ley de Presupuestos Generales del Estado."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale la afirmaci�n correcta sobre el Gobierno",
+      "raw_options": [
+        "Dirige la pol�tica interior y exterior, la Administraci�n civil y militar y la defensa del Estado.",
+        "Se compone del Presidente, los ministros, en su caso, y de los Vicepresidentes.",
+        "Sus miembros se re�nen en Consejo de Ministros y en Comisi�n General de Secretarios de Estado y Subsecretarios.",
+        "Responde solidariamente de su gesti�n pol�tica ante las CCGG."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De acuerdo con el art�culo 103.1 de la Constituci�n de 1978, La Administraci�n P�blica sirve con objetividad los intereses generales y act�a de acuerdo con los principios de",
+      "raw_options": [
+        "Eficacia, eficiencia, descentralizaci�n, desconcentraci�n y cooperaci�n, con sometimiento pleno a la Ley y al Derecho.",
+        "Eficacia, jerarqu�a, descentralizaci�n, desconcentraci�n y coordinaci�n, con sometimiento pleno a la Ley y al Derecho.",
+        "Eficiencia, jerarqu�a, descentralizaci�n, desconcentraci�n y coordinaci�n, con sometimiento pleno a la Ley y al Derecho.",
+        "Eficacia, objetividad, jerarqu�a, descentralizaci�n, desconcentraci�n y coordinaci�n, con sometimiento pleno al ordenamiento jur�dico."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El Presidente del Gobierno en funciones no puede",
+      "raw_options": [
+        "Plantear la cuesti�n de confianza.",
+        "Resolver los conflictos de atribuciones que puedan surgir entre distintos Ministerios.",
+        "Plantear un recurso de inconstitucionalidad.",
+        "Convocar al Consejo de Ministros."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "En la elecci�n del Presidente del Gobierno, ser� necesario que el Congreso de los Diputados otorgue su confianza",
+      "raw_options": [
+        "Por mayor�a absoluta de sus miembros, y de no alcanzarse dicha mayor�a, por las 2/3 partes 48 horas despu�s.",
+        "Por mayor�a absoluta de sus miembros, y de no alcanzarse dicha mayor�a, por las 2/3 partes 72 horas despu�s.",
+        "Por mayor�a absoluta de sus miembros, y de no alcanzarse dicha mayor�a, por mayor�a simple 48 horas despu�s.",
+        "Por mayor�a absoluta de sus miembros, y de no alcanzarse dicha mayor�a, por mayor�a simple 72 horas despu�s."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�En cu�l de estos supuestos no se produce el cese del gobierno?",
+      "raw_options": [
+        "Por dimisi�n de su Presidente.",
+        "Por p�rdida de la cuesti�n de confianza.",
+        "Por fallecimiento de su Presidente.",
+        "Por la convocatoria de elecciones generales."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n la Constituci�n, el Gobierno responder� solidariamente de su gesti�n",
+      "raw_options": [
+        "Ante el Senado.",
+        "Ante el Congreso de los Diputados.",
+        "Ante el Senado y el Congreso de los Diputados.",
+        "Ante el Rey y el Congreso de los Diputados."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n el art�culo 101.2 de la Constituci�n, el Gobierno cesante continuar� en funciones hasta",
+      "raw_options": [
+        "El nombramiento del nuevo Presidente del Gobierno.",
+        "La elecci�n del nuevo Gobierno.",
+        "El nombramiento de los Ministros.",
+        "La toma de posesi�n del nuevo Gobierno."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El Director de Gabinete de un Secretario de Estado ser� nombrado por",
+      "raw_options": [
+        "RD del Consejo de Ministros.",
+        "Orden Ministerial, previo conocimiento del Consejo de Ministros.",
+        "Orden Ministerial, previa aprobaci�n del Consejo de Ministros.",
+        "RD del Consejo de Ministros, a propuesta del Presidente del Gobierno."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El Gabinete de la Presidencia del Gobierno se regular� por",
+      "raw_options": [
+        "Real Decreto del Presidente del Gobierno.",
+        "Real Decreto del Consejo de Ministros.",
+        "Ley.",
+        "Acuerdo del Consejo de Ministros."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El Subsecretario de la Presidencia",
+      "raw_options": [
+        "Ejerce la presidencia de la Comisi�n General de Secretarios de Estado y Subsecretarios.",
+        "Ejerce la secretar�a de la Comisi�n General de Secretarios de Estado y Subsecretarios.",
+        "Es el Director del Secretariado de Gobierno.",
+        "Es el Secretario del Secretariado de Gobierno."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qu� car�cter tienen las deliberaciones del Consejo de Ministros?",
+      "raw_options": [
+        "Secretas.",
+        "P�blicas.",
+        "Reservadas.",
+        "Solemnes y privadas."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De acuerdo con el art�culo 8 de la Ley Org�nica 3/1980, de 22 de abril, del Consejo de Estado, no tiene la condici�n de Consejero nato no vitalicio",
+      "raw_options": [
+        "El Fiscal General del Estado.",
+        "El Gobernador del Banco de Espa�a.",
+        "El Defensor del Pueblo.",
+        "El Presidente del Consejo Econ�mico y Social."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Las Secciones del Consejo de Estado ser�n",
+      "raw_options": [
+        "Ocho, como m�nimo.",
+        "Diez, en todo caso.",
+        "Ocho, como m�ximo.",
+        "Doce, como m�nimo."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El Consejo de Estado en Pleno deber� ser consultado en el siguiente asunto",
+      "raw_options": [
+        "Proyectos de Decretos legislativos.",
+        "Anteproyectos de Ley Org�nica de transferencias o delegaci�n de competencias estatales a las Comunidades Aut�nomas.",
+        "Reglamentos o disposiciones de car�cter general que se dicten en ejecuci�n de las Leyes, as� como sus modificaciones.",
+        "Impugnaci�n de las disposiciones y resoluciones adoptadas por los �rganos de las Comunidades Aut�nomas ante el Tribunal Constitucional, con car�cter previo a la interposici�n del recurso."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "A la vista de lo establecido en el art�culo 9 de la Ley Org�nica 3/1980, de 22 de abril, del Consejo de Estado, responda cu�l es la afirmaci�n correcta sobre los Consejeros electivos del Consejo de Estado",
+      "raw_options": [
+        "Ser�n nombrados por el Pleno del Consejo de Estado, a propuesta de su Presidente.",
+        "Son un total de 8.",
+        "De entre ellos, dos deber�n haber desempe�ado el cargo de Presidente del Consejo Ejecutivo de Comunidad Aut�noma por un per�odo m�nimo de ocho a�os.",
+        "Su mandato es de 9 a�os."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La Comisi�n de Estudios estar� presidida por el Presidente del Consejo de Estado e integrada por",
+      "raw_options": [
+        "Dos Consejeros permanentes, dos natos y dos electivos, designados por el Pleno a propuesta del Presidente, as� como por el Secretario General.",
+        "Los Consejeros permanentes y el Secretario general.",
+        "Los Consejeros permanentes, los Consejeros natos y el Secretario general.",
+        "Un Consejero permanente, un Letrado Mayor y los Letrados que sean necesarios seg�n la importancia de los asuntos o el n�mero de las consultas."
+      ],
+      "correct_index": null
+    }
+  ]
+}

@@ -1,0 +1,1112 @@
+{
+  "metadata": {
+    "source_file": "1.- Test GF Tema 1.1. 2024-2025.pdf",
+    "source_path": "Test financiero\\1.- Test GF Tema 1.1. 2024-2025.pdf",
+    "tema": 1,
+    "categoria": "financiero",
+    "extraction_date": "2026-01-15T23:41:16.243330",
+    "reformulation_date": "2026-01-15T23:47:35.526136",
+    "total_questions": 22,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.344578",
+    "completed_count": 0,
+    "failed_count": 22
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "En el presupuesto por programas, la determinacin del conjunto de los objetivos a",
+        "options": [
+          {
+            "text": "lcanzar se encuadrara dentro de la etapa de:",
+            "is_correct": false
+          },
+          {
+            "text": "Planificacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Programacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Control.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En el presupuesto por programas, la determinacin del conjunto de los objetivos a",
+        "source": "1.- Test GF Tema 1.1. 2024-2025.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Control....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "En qu se fundamenta el presupuesto clsico?",
+        "options": [
+          {
+            "text": "En la intervencin econmica.",
+            "is_correct": false
+          },
+          {
+            "text": "En la economa social y de mercado.",
+            "is_correct": false
+          },
+          {
+            "text": "En la liberalizacin econmica y la ideologa liberal.",
+            "is_correct": false
+          },
+          {
+            "text": "En la expansin del gastos pblico.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En qu se fundamenta el presupuesto clsico?",
+        "source": "1.- Test GF Tema 1.1. 2024-2025.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El presupuesto est formalmente equilibrado, consecuencia de:",
+        "options": [
+          {
+            "text": "Un equilibrio contable.",
+            "is_correct": false
+          },
+          {
+            "text": "Un equilibrio econmico.",
+            "is_correct": false
+          },
+          {
+            "text": "Un equilibrio econmico-financiero.",
+            "is_correct": false
+          },
+          {
+            "text": "Un equilibrio financiero.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El presupuesto est formalmente equilibrado, consecuencia de:",
+        "source": "1.- Test GF Tema 1.1. 2024-2025.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El abandono del presupuesto clsico se debe a:",
+        "options": [
+          {
+            "text": "A la no intervencin econmica.",
+            "is_correct": false
+          },
+          {
+            "text": "La limitacin de la demanda.",
+            "is_correct": false
+          },
+          {
+            "text": "La crisis de las teoras de liberalizacin econmica y la ideologa liberal.",
+            "is_correct": false
+          },
+          {
+            "text": "La contraccin del gasto pblico.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El abandono del presupuesto clsico se debe a:",
+        "source": "1.- Test GF Tema 1.1. 2024-2025.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cul es una fase del presupuesto por programas?",
+        "options": [
+          {
+            "text": "Anlisis de los paquetes de decisin.",
+            "is_correct": false
+          },
+          {
+            "text": "Identificacin de las unidades de decisin.",
+            "is_correct": false
+          },
+          {
+            "text": "Programacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Ordenacin de paquetes de decisin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul es una fase del presupuesto por programas?",
+        "source": "1.- Test GF Tema 1.1. 2024-2025.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "No es una frmula presupuestaria de estabilizacin econmica:",
+        "options": [
+          {
+            "text": "El presupuesto cclico.",
+            "is_correct": false
+          },
+          {
+            "text": "El presupuesto de estabilizacin automtica.",
+            "is_correct": false
+          },
+          {
+            "text": "El presupuesto compensatorio",
+            "is_correct": false
+          },
+          {
+            "text": "El presupuesto de las cuentas de renta nacional.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "No es una frmula presupuestaria de estabilizacin econmica:",
+        "source": "1.- Test GF Tema 1.1. 2024-2025.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "gestion-financiera",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cul es el presupuesto que no admite como vlido el nivel de gasto de aos anteriores?",
+        "options": [
+          {
+            "text": "Presupuesto de ejecucin o por tareas.",
+            "is_correct": false
+          },
+          {
+            "text": "Presupuesto por programas.",
+            "is_correct": false
+          },
+          {
+            "text": "Presupuesto en base cero.",
+            "is_correct": false
+          },
+          {
+            "text": "Presupuesto cclico.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul es el presupuesto que no admite como vlido el nivel de gasto de aos anteriores?",
+        "source": "1.- Test GF Tema 1.1. 2024-2025.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El presupuesto que expone los programas de accin de cada unidad administrativa,",
+        "options": [
+          {
+            "text": "ada una precisa, as como los indicadores de los medios fsicos sobre los que acta y los",
+            "is_correct": false
+          },
+          {
+            "text": "Presupuesto de ejecucin o por tareas.",
+            "is_correct": false
+          },
+          {
+            "text": "Presupuesto por programas.",
+            "is_correct": false
+          },
+          {
+            "text": "Presupuesto en base cero.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El presupuesto que expone los programas de accin de cada unidad administrativa,",
+        "source": "1.- Test GF Tema 1.1. 2024-2025.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En el presupuesto clsico NO es un principio econmico:",
+        "options": [
+          {
+            "text": "Deuda pblica autoliquidable.",
+            "is_correct": false
+          },
+          {
+            "text": "Neutralidad impositiva.",
+            "is_correct": false
+          },
+          {
+            "text": "Equilibrio presupuestario.",
+            "is_correct": false
+          },
+          {
+            "text": "Principio de presupuesto bruto.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En el presupuesto clsico NO es un principio econmico:",
+        "source": "1.- Test GF Tema 1.1. 2024-2025.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "gestion-financiera",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El principio del presupuesto clsico por que se establece que el presupuesto debe recoger",
+        "options": [
+          {
+            "text": "Universalidad.",
+            "is_correct": false
+          },
+          {
+            "text": "No afectacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Especialidad.",
+            "is_correct": false
+          },
+          {
+            "text": "Unidad.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El principio del presupuesto clsico por que se establece que el presupuesto debe recoger",
+        "source": "1.- Test GF Tema 1.1. 2024-2025.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Unidad....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Segn el principio de Deuda pblica autoliquidable para los seguidores de la teora",
+        "options": [
+          {
+            "text": "Solo se justifica la emisin de deuda pblica cuando con el producto obtenido por la",
+            "is_correct": false
+          },
+          {
+            "text": "Solo se justifica la emisin de deuda pblica cuando con el producto obtenido por la",
+            "is_correct": false
+          },
+          {
+            "text": "Los ingresos ordinarios deben ser suficientes para financiar los gastos ordinarios,",
+            "is_correct": false
+          },
+          {
+            "text": "No se justifica la emisin de deuda pblica.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el principio de Deuda pblica autoliquidable para los seguidores de la teora",
+        "source": "1.- Test GF Tema 1.1. 2024-2025.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "Son fases del presupuesto por programas:",
+        "options": [
+          {
+            "text": "Planificacin, programacin, presupuestacin y control.",
+            "is_correct": false
+          },
+          {
+            "text": "Elaboracin, aprobacin, ejecucin y control.",
+            "is_correct": false
+          },
+          {
+            "text": "Programacin, presupuestacin, ejecucin y control.",
+            "is_correct": false
+          },
+          {
+            "text": "Planificacin, presupuestacin, ejecucin y control.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Son fases del presupuesto por programas:",
+        "source": "1.- Test GF Tema 1.1. 2024-2025.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La fase del Presupuesto por programas por la que se traduce en trminos fsicos y",
+        "options": [
+          {
+            "text": "Presupuestacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Programacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Planificacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Control.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La fase del Presupuesto por programas por la que se traduce en trminos fsicos y",
+        "source": "1.- Test GF Tema 1.1. 2024-2025.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Control....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Respecto a los ingresos, el presupuesto es un/una:",
+        "options": [
+          {
+            "text": "Clculo aproximado.",
+            "is_correct": false
+          },
+          {
+            "text": "Autorizacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Lmite cuantitativo.",
+            "is_correct": false
+          },
+          {
+            "text": "Lmite cualitativo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Respecto a los ingresos, el presupuesto es un/una:",
+        "source": "1.- Test GF Tema 1.1. 2024-2025.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cuando se dice que solo se pueden contraer gastos hasta el importe que figura en el",
+        "options": [
+          {
+            "text": "Principio de especialidad cualitativa.",
+            "is_correct": false
+          },
+          {
+            "text": "Principio de especialidad cuantitativa.",
+            "is_correct": false
+          },
+          {
+            "text": "Principio de especialidad temporal.",
+            "is_correct": false
+          },
+          {
+            "text": "Principio de exactitud.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cuando se dice que solo se pueden contraer gastos hasta el importe que figura en el",
+        "source": "1.- Test GF Tema 1.1. 2024-2025.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La regla de oro del presupuesto clsico es:",
+        "options": [
+          {
+            "text": "El equilibrio presupuestario anual.",
+            "is_correct": false
+          },
+          {
+            "text": "El equilibrio contable anual.",
+            "is_correct": false
+          },
+          {
+            "text": "El desequilibrio econmico anual.",
+            "is_correct": false
+          },
+          {
+            "text": "El desequilibrio contable autofinanciable.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La regla de oro del presupuesto clsico es:",
+        "source": "1.- Test GF Tema 1.1. 2024-2025.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cuando en el presupuesto clsico se hace referencia a la necesidad de que los gastos y los",
+        "options": [
+          {
+            "text": "Presupuesto bruto.",
+            "is_correct": false
+          },
+          {
+            "text": "Especialidad.",
+            "is_correct": false
+          },
+          {
+            "text": "Universalidad.",
+            "is_correct": false
+          },
+          {
+            "text": "Presupuesto cerrado.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cuando en el presupuesto clsico se hace referencia a la necesidad de que los gastos y los",
+        "source": "1.- Test GF Tema 1.1. 2024-2025.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Dentro del presupuesto en base cero, el nivel que permite realizar las actividades del ao",
+        "options": [
+          {
+            "text": "nterior sin cambios importantes, se denomina:",
+            "is_correct": false
+          },
+          {
+            "text": "Nivel mnimo",
+            "is_correct": false
+          },
+          {
+            "text": "Nivel corriente.",
+            "is_correct": false
+          },
+          {
+            "text": "Nivel de mejora.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Dentro del presupuesto en base cero, el nivel que permite realizar las actividades del ao",
+        "source": "1.- Test GF Tema 1.1. 2024-2025.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Como la expresin contable del plan econmico de la Hacienda Pblica para un periodo",
+        "options": [
+          {
+            "text": "e tiempo determinado se conoce al:",
+            "is_correct": false
+          },
+          {
+            "text": "Presupuesto base cero.",
+            "is_correct": false
+          },
+          {
+            "text": "Ciclo presupuestario.",
+            "is_correct": false
+          },
+          {
+            "text": "Presupuesto.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Como la expresin contable del plan econmico de la Hacienda Pblica para un periodo",
+        "source": "1.- Test GF Tema 1.1. 2024-2025.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Quines propugnan que el gasto pblico debe ser mnimo y solo atender aquellos gastos",
+        "options": [
+          {
+            "text": "Los economistas clsicos.",
+            "is_correct": false
+          },
+          {
+            "text": "Los economistas keynesianos.",
+            "is_correct": false
+          },
+          {
+            "text": "Los economistas de presupuesto compensatorio.",
+            "is_correct": false
+          },
+          {
+            "text": "Los economistas del presupuesto funcional.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Quines propugnan que el gasto pblico debe ser mnimo y solo atender aquellos gastos",
+        "source": "1.- Test GF Tema 1.1. 2024-2025.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Cul de los siguientes principios no se aplica actualmente al presupuesto?",
+        "options": [
+          {
+            "text": "Universalidad.",
+            "is_correct": false
+          },
+          {
+            "text": "Especialidad.",
+            "is_correct": false
+          },
+          {
+            "text": "Unidad.",
+            "is_correct": false
+          },
+          {
+            "text": "Deuda pblica autoliquidable.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de los siguientes principios no se aplica actualmente al presupuesto?",
+        "source": "1.- Test GF Tema 1.1. 2024-2025.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Unidad....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La norma jurdica que reviste la aprobacin del presupuesto ser la de:",
+        "options": [
+          {
+            "text": "Ley",
+            "is_correct": false
+          },
+          {
+            "text": "Ley orgnica.",
+            "is_correct": false
+          },
+          {
+            "text": "Real Decreto.",
+            "is_correct": false
+          },
+          {
+            "text": "Decreto Ley.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La norma jurdica que reviste la aprobacin del presupuesto ser la de:",
+        "source": "1.- Test GF Tema 1.1. 2024-2025.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Ley...'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:21.895583"
+}

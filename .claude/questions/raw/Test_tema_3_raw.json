@@ -1,0 +1,402 @@
+{
+  "metadata": {
+    "source_file": "Test tema 3.pdf",
+    "source_path": "Test Iniciales UE\\Test tema 3.pdf",
+    "extraction_date": "2026-01-15T23:42:05.842288",
+    "tema": 3,
+    "categoria": "union-europea",
+    "total_questions": 39
+  },
+  "questions": [
+    {
+      "raw_text": "�Cu�l es el n�mero m�nimo de diputados en el Parlamento Europeo para un Estado",
+      "raw_options": [
+        "6, 751",
+        "9, 705",
+        "9, 721",
+        "6, 720"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�l de los siguientes no es un tipo de formaci�n prevista en relaci�n al trabajo en",
+      "raw_options": [
+        "Pleno",
+        "Comisi�n de investigaci�n",
+        "Comisi�n permanente",
+        "Comisi�n de inspecci�n"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale la respuesta FALSA en relaci�n con el Tribunal General:",
+      "raw_options": [
+        "Est� compuesto en la actualidad por 54 jueces y 11 abogados generales",
+        "El Tratado de Lisboa le cambi� el nombre, pues inicialmente se llamaba Tribunal de Pri-",
+        "Resolver� en primera instancia los recursos entre la Uni�n y sus agentes.",
+        "De las resoluciones judiciales del Tribunal General conocer� en casaci�n el Tribunal de"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La  duraci�n  del  mandato  del Defensor  del  Pueblo  Europeo  es  de,  y actualmente",
+      "raw_options": [
+        "4 a�os, Roberta Metsola",
+        "5 a�os, Teresa Anjinho",
+        "4 a�os, Emily O�Reilly",
+        "5 a�os, Roberta Metsola"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El Parlamento Europeo celebra sus sesiones del mes de junio en:",
+      "raw_options": [
+        "Bruselas",
+        "Estrasburgo",
+        "Luxemburgo",
+        "Ninguna es correcta"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Los miembros del Tribunal de Cuentas:",
+      "raw_options": [
+        "Son uno por Estado miembro, m�s su Presidente.",
+        "Son  nombrados  por  el  Consejo,  por  mayor�a  cualificada,  previa  aprobaci�n  del  Parla-",
+        "Tienen un mandato es de 6 a�os, como el de los miembros del TJUE.",
+        "No pueden  haber pertenecido en sus respectivos Estados a las  instituciones de control"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�l de las siguientes instituciones NO fue unificada por el Tratado de Fusi�n de",
+      "raw_options": [
+        "El Parlamento Europeo",
+        "El Tribunal de Justicia de la UE",
+        "El Tribunal de Cuentas",
+        "La Comisi�n Europea"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�l de los siguientes recursos NO es competencia del TJUE?",
+      "raw_options": [
+        "Los recursos entre la Uni�n y sus agentes",
+        "Los recursos por violaci�n del Convenio Europeo de Derechos Humanos",
+        "Las cuestiones prejudiciales",
+        "Los recursos por incumplimiento o infracci�n"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La Gran Sala del Tribunal de Justicia:",
+      "raw_options": [
+        "Est� compuesta por 15 jueces",
+        "El Tribunal General carece de Gran Sala",
+        "Conocer� de asuntos de car�cter excepcional, cuando as� lo decida el TJ, o�do el Abogado",
+        "Fue establecida por el Tratado de Lisboa"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Respecto a los grupos pol�ticos del Parlamento Europeo, NO es cierto que:",
+      "raw_options": [
+        "Est�n formados por diputados de la misma nacionalidad",
+        "Es preciso que cuente al menos con 25 diputados",
+        "Deben estar formados por diputados de 1/10 de los EEMM",
+        "Ninguna es correcta"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Salvo disposici�n en contrario de los Tratados, el Parlamento Europeo decidir�:",
+      "raw_options": [
+        "Por mayor�a de los votos emitidos",
+        "Por mayor�a de miembros",
+        "Por mayor�a absoluta de los votos emitidos",
+        "Por mayor�a de asistentes"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�En qu� se diferencian principalmente el Comit� Econ�mico y Social y el Comit� de",
+      "raw_options": [
+        "En las instituciones a las que asisten a trav�s de sus dict�menes.",
+        "En el n�mero m�ximo de miembros (sin contar suplentes)",
+        "En los intereses que representan",
+        "En su naturaleza jur�dica"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El Tribunal de Cuentas adopta sus informes especiales, anual y sus dict�menes por:",
+      "raw_options": [
+        "Mayor�a cualificada",
+        "Mayor�a de sus miembros",
+        "Mayor�a de votos emitidos",
+        "Unanimidad"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Indique cu�l de las siguientes personalidades ostenta en la actualidad la Presidencia",
+      "raw_options": [
+        "el Banco Central Europeo:",
+        "Charles Michel",
+        "Christine Lagarde",
+        "Roberta Metsola"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale la cierta en relaci�n con los abogados generales del Tribunal de Justicia:",
+      "raw_options": [
+        "Fueron creados por el Tratado de Lisboa",
+        "En la actualidad son 11, y �nicamente asisten al Tribunal de Justicia, no al Tribunal Ge-",
+        "El Consejo Europeo, por unanimidad, podr� aumentar su n�mero",
+        "Ofrecen asistencia jur�dica gratuita a cualquier de las partes del proceso"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Las primeras elecciones al Parlamento Europeo tuvieron lugar en:",
+      "raw_options": [
+        "1958",
+        "1974",
+        "1979",
+        "1994"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Componen la Mesa del Parlamento Europeo:",
+      "raw_options": [
+        "El Presidente, el Vicepresidente y, a t�tulo consultivo, los 5 cuestores",
+        "El Presidente y los 14 Vicepresidentes",
+        "El Presidente, los 14 Vicepresidentes y, a t�tulo consultivo, los 5 cuestores",
+        "El Presidente, los 14 Vicepresidentes, a t�tulo consultivo, los 5 cuestores, y el Secretario"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La sede del Tribunal de Cuentas se encuentra:",
+      "raw_options": [
+        "En Fr�ncfort",
+        "En Bruselas",
+        "En Estrasburgo",
+        "En Luxemburgo"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El Presidente del Parlamento Europeo es elegido:",
+      "raw_options": [
+        "Por el Consejo Europeo, por mayor�a cualificada",
+        "Por el Parlamento Europeo, por mayor�a absoluta de los votos emitidos",
+        "Por la Comisi�n Europea",
+        "Por la Mesa del Parlamento Europeo"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El BCE, m�s los 20 gobernadores de los bancos centrales nacionales de los Estados",
+      "raw_options": [
+        "El Eurosistema",
+        "El Eurogrupo",
+        "La Eurozona",
+        "El Consejo General del BCE"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El BCE pas� a formar parte del marco institucional de la Uni�n con el:",
+      "raw_options": [
+        "Tratado de Maastricht",
+        "Tratado de �msterdam",
+        "Tratado de Niza",
+        "Tratado de Lisboa"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Los jueces del Tribunal General deber�n cumplir el siguiente requisito:",
+      "raw_options": [
+        "Reunir las condiciones necesarias para ejercer, en sus respectivos pa�ses, las m�s altas",
+        "Ser juristas de reconocida competencia",
+        "Reunir las condiciones necesarias para ejercer, en sus respectivos pa�ses, altas funciones",
+        "Reunir las condiciones necesarias para ejercer, en sus respectivos pa�ses, funciones juris-"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "NO es una competencia o potestad del Parlamento Europeo:",
+      "raw_options": [
+        "La aprobaci�n del presupuesto de la Uni�n, conjuntamente con el Consejo",
+        "La elecci�n y cese del Defensor del Pueblo",
+        "Ejercer la funci�n legislativa, conjuntamente con el Consejo",
+        "Presentaci�n de la moci�n de censura contra la Comisi�n"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "En la actualidad tiene/n 329 miembros y 329 suplentes:",
+      "raw_options": [
+        "El Parlamento Europeo",
+        "El Comit� de las Regiones",
+        "El Comit� Econ�mico y Social",
+        "La b) y la c) son correctas"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Le corresponde en exclusiva autorizar la emisi�n de euros, seg�n el TFUE:",
+      "raw_options": [
+        "El BCE",
+        "El SEBC",
+        "El Eurosistema",
+        "El Consejo Europeo"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se constituyen a solicitud de � de los miembros del PE para examinar alegaciones",
+      "raw_options": [
+        "e infracci�n o mala administraci�n en la aplicaci�n del Derecho de la Uni�n:",
+        "Las comisiones especiales",
+        "Las comisiones permanentes",
+        "Las comisiones rogatorias"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El quorum en las Salas de 3 o 5 miembros en el Tribunal de Justicia es de:",
+      "raw_options": [
+        "2 miembros y 3 miembros, respectivamente",
+        "3 miembros en ambos casos",
+        "1 miembro y 3 miembros, respectivamente",
+        "3 miembros y 5 miembros, respectivamente"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "En la legislatura del Parlamento Europeo 2024-2029, a Espa�a le corresponden:",
+      "raw_options": [
+        "51 diputados",
+        "59 diputados",
+        "61 diputados",
+        "69 diputados"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qui�n elige al Presidente del Banco Central Europeo?",
+      "raw_options": [
+        "El propio BCE.",
+        "El Consejo Europeo, por mayor�a cualificada.",
+        "La a) es correcta, y su mandato no es renovable.",
+        "La b) es correcta, y su mandato no es renovable"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�A trav�s de qu� norma se pueden crear tribunales especializados?",
+      "raw_options": [
+        "Una decisi�n legislativa",
+        "Un reglamento legislativo",
+        "Una decisi�n no legislativa",
+        "Un reglamento no legislativo"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale la FALSA respecto la composici�n de los �rganos de gobierno del BCE:",
+      "raw_options": [
+        "El Presidente del BCE participa en los cuatro �rganos de gobierno del BCE",
+        "El Comit� Ejecutivo est� compuesto por 6 miembros",
+        "En el Consejo de Gobierno del BCE no participan los EEMM cuya moneda no es el euro.",
+        "Los miembros del Comit� Ejecutivo forman parte del Consejo de Gobierno del BCE"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale la FALSA respecto del BCE:",
+      "raw_options": [
+        "Tiene su sede en Fr�ncfort",
+        "Se regula en el TUE, en el TFUE, y en su propio Estatuto",
+        "Fue creado en 1998",
+        "En la actualidad no todos los Estados miembros tienen como moneda oficial el euro"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El mandato de los miembros del Tribunal de Cuentas Europeo, del Parlamento Eu-",
+      "raw_options": [
+        "6 a�os, 5 a�os y 4 a�os, respectivamente",
+        "6 a�os, 5 a�os y 5 a�os, respectivamente",
+        "6 a�os, 4 a�os y 4 a�os, respectivamente",
+        "6 a�os, 4 a�os y 5 a�os, respectivamente"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De acuerdo con lo establecido en el art�culo 234 del TFUE, el plazo m�nimo que ha",
+      "raw_options": [
+        "e transcurrir entre la presentaci�n de una moci�n de censura ante el Presidente del",
+        "3 d�as",
+        "5 d�as",
+        "24 horas"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La sede del Comit� de las Regiones se encuentra en:",
+      "raw_options": [
+        "Es rotatoria, entra las distintas regiones que conforman la UE.",
+        "Bruselas",
+        "Estrasburgo",
+        "Luxemburgo"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qu� recursos son competencia del Tribunal de Justicia, en �nica instancia?",
+      "raw_options": [
+        "Recurso por incumplimiento o infracci�n de un Estado miembro",
+        "Recurso en anulaci�n",
+        "Recurso entre la Uni�n y sus agentes",
+        "Recurso de responsabilidad contractual"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La legislatura 2024-2029 del Parlamento Europeo ser� la:",
+      "raw_options": [
+        "S�ptima legislatura",
+        "Octava legislatura",
+        "Novena legislatura",
+        "D�cima legislatura"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El Comit� Econ�mico y Social y el Comit� de las Regiones fueron creados por:",
+      "raw_options": [
+        "El Tratado de Roma y el de Maastricht, respectivamente",
+        "El Tratado de Maastricht y el de Lisboa, respectivamente",
+        "El Tratado de Maastricht y el de Roma, respectivamente",
+        "El Tratado de Maastricht y el de Niza, respectivamente"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n  el TFUE, �cu�ntos periodos de sesiones celebra el Parlamento Europeo  en",
+      "raw_options": [
+        "ada legislatura?",
+        "5, uno al a�o",
+        "4, uno al a�o",
+        "60, 12 al a�o"
+      ],
+      "correct_index": null
+    }
+  ]
+}

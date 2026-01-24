@@ -1,0 +1,1304 @@
+{
+  "metadata": {
+    "source_file": "6 TEST TEMAS   10 y 11 - copia.pdf",
+    "source_path": "Segundo repaso\\6 TEST TEMAS   10 y 11 - copia.pdf",
+    "tema": 6,
+    "categoria": "repaso",
+    "extraction_date": "2026-01-15T23:40:27.973752",
+    "reformulation_date": "2026-01-15T23:47:35.649165",
+    "total_questions": 39,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.711006",
+    "completed_count": 0,
+    "failed_count": 39
+  },
+  "questions": [
+    {
+      "question_text": "Seale",
+      "options": [
+        {
+          "text": "utonmicos:",
+          "is_correct": false
+        },
+        {
+          "text": "La Asamblea legislativa es elegida por sufragio universal atendiendo a criterios",
+          "is_correct": false
+        },
+        {
+          "text": "e representacin proporcional.",
+          "is_correct": false
+        },
+        {
+          "text": "El Presidente ostenta la suprema representacin de la Comunidad autnoma y la",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de los siguientes extremos en relacin con las instituciones autnomas",
+      "options": [
+        {
+          "text": "onformidad con la Constitucin?:",
+          "is_correct": false
+        },
+        {
+          "text": "La denominacin.",
+          "is_correct": false
+        },
+        {
+          "text": "La sede.",
+          "is_correct": false
+        },
+        {
+          "text": "La composicin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de los siguientes extremos en relacin con las instituciones autnomas",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El artculo 138.2 de la Constitucin indica que las diferencias entre los Estatutos de",
+      "options": [
+        {
+          "text": "Privilegios econmicos o fiscales.",
+          "is_correct": false
+        },
+        {
+          "text": "Privilegios fiscales o sociales.",
+          "is_correct": false
+        },
+        {
+          "text": "Privilegios econmicos o sociales.",
+          "is_correct": false
+        },
+        {
+          "text": "Privilegios econmicos, sociales o fiscales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El artculo 138.2 de la Constitucin indica que las diferencias entre los Estatutos de",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn el artculo 148.1.1, las CCAA podrn asumir competencias en la",
+      "options": [
+        {
+          "text": "Polticas.",
+          "is_correct": false
+        },
+        {
+          "text": "Locales.",
+          "is_correct": false
+        },
+        {
+          "text": "Judiciales.",
+          "is_correct": false
+        },
+        {
+          "text": "De autogobierno.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el artculo 148.1.1, las CCAA podrn asumir competencias en la",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Se podr autorizar la constitucin de una Comunidad Autnoma cuyos lmites no",
+      "options": [
+        {
+          "text": "Mediante Ley orgnica de las CCGG por motivos de inters general.",
+          "is_correct": false
+        },
+        {
+          "text": "Mediante Ley de las CCGG por motivos de inters general.",
+          "is_correct": false
+        },
+        {
+          "text": "Mediante Ley orgnica de las CCGG por motivos de inters nacional.",
+          "is_correct": false
+        },
+        {
+          "text": "Mediante Ley de las CCGG por motivos de inters nacional.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Se podr autorizar la constitucin de una Comunidad Autnoma cuyos lmites no",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Estado tiene competencia exclusiva sobre las siguientes materias:",
+      "options": [
+        {
+          "text": "La pesca en aguas interiores, el marisqueo y la acuicultura, la caza y la pesca",
+          "is_correct": false
+        },
+        {
+          "text": "La agricultura y ganadera, de acuerdo con la ordenacin general de la",
+          "is_correct": false
+        },
+        {
+          "text": "Legislacin sobre pesas y medidas, determinacin de la hora oficial.",
+          "is_correct": false
+        },
+        {
+          "text": "Ferias interiores.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Estado tiene competencia exclusiva sobre las siguientes materias:",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de las siguientes materias se atribuye en exclusiva al Estado en la",
+      "options": [
+        {
+          "text": "onstitucin?:",
+          "is_correct": false
+        },
+        {
+          "text": "Marisqueo y acuicultura.",
+          "is_correct": false
+        },
+        {
+          "text": "Caza.",
+          "is_correct": false
+        },
+        {
+          "text": "Asistencia Social.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de las siguientes materias se atribuye en exclusiva al Estado en la",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La eleccin a travs de un sistema de representacin proporcional se aplica, de",
+      "options": [
+        {
+          "text": "onformidad con la Constitucin a los miembros de:",
+          "is_correct": false
+        },
+        {
+          "text": "Congreso y Senado.",
+          "is_correct": false
+        },
+        {
+          "text": "Congreso, Senado y Asambleas de CCAA.",
+          "is_correct": false
+        },
+        {
+          "text": "Congreso y Asambleas de CCAA.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La eleccin a travs de un sistema de representacin proporcional se aplica, de",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la incorrecta en relacin con los Estatutos de Autonoma:",
+      "options": [
+        {
+          "text": "Son la norma institucional bsica de cada comunidad autnoma.",
+          "is_correct": false
+        },
+        {
+          "text": "El Estado los reconoce y ampara como parte integrante de su ordenamiento",
+          "is_correct": false
+        },
+        {
+          "text": "Se aprueban por ley orgnica.",
+          "is_correct": false
+        },
+        {
+          "text": "El procedimiento para su reforma requerir en todo caso la celebracin de",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la incorrecta en relacin con los Estatutos de Autonoma:",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Estatuto de autonoma deber comprender la denominacin de comunidad",
+      "options": [
+        {
+          "text": "utnoma:",
+          "is_correct": false
+        },
+        {
+          "text": "Que ratifiquen sus ciudadanos en referndum.",
+          "is_correct": false
+        },
+        {
+          "text": "Que decida la Asamblea de la comunidad autnoma a iniciativa de los",
+          "is_correct": false
+        },
+        {
+          "text": "yuntamientos y diputaciones.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Estatuto de autonoma deber comprender la denominacin de comunidad",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Sobre qu materia de las expuestas a continuacin tiene el Estado competencia",
+      "options": [
+        {
+          "text": "Ordenacin del territorio, urbanismo y vivienda.",
+          "is_correct": false
+        },
+        {
+          "text": "Montes y aprovechamientos forestales.",
+          "is_correct": false
+        },
+        {
+          "text": "La gestin en materia de proteccin del medio ambiente.",
+          "is_correct": false
+        },
+        {
+          "text": "Legislacin sobre propiedad intelectual e industrial.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Sobre qu materia de las expuestas a continuacin tiene el Estado competencia",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cuntos municipios deban formar parte de la iniciativa autonmica en caso de",
+      "options": [
+        {
+          "text": "2/3 partes",
+          "is_correct": false
+        },
+        {
+          "text": "1/3 parte",
+          "is_correct": false
+        },
+        {
+          "text": "2/5 partes",
+          "is_correct": false
+        },
+        {
+          "text": "3/4 partes",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cuntos municipios deban formar parte de la iniciativa autonmica en caso de",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn la Constitucin Espaola, las CCAA podrn asumir competencias en:",
+      "options": [
+        {
+          "text": "Comercio exterior",
+          "is_correct": false
+        },
+        {
+          "text": "Sanidad e higiene",
+          "is_correct": false
+        },
+        {
+          "text": "Bases del rgimen minero y energtico",
+          "is_correct": false
+        },
+        {
+          "text": "Pesca martima",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn la Constitucin Espaola, las CCAA podrn asumir competencias en:",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con el artculo 138 CE, el Estado velando por el establecimiento",
+      "options": [
+        {
+          "text": "e un equilibrio econmico adecuado y justo entre las diversas partes del territorio",
+          "is_correct": false
+        },
+        {
+          "text": "La realizacin efectiva del principio de igualdad.",
+          "is_correct": false
+        },
+        {
+          "text": "La realizacin efectiva del principio de solidaridad.",
+          "is_correct": false
+        },
+        {
+          "text": "La realizacin efectiva del principio de libertad.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con el artculo 138 CE, el Estado velando por el establecimiento",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El control econmico y presupuestaria de los rganos e instituciones de las CCAA,",
+      "options": [
+        {
+          "text": "e acuerdo con la Constitucin Espaola, lo ejerce:",
+          "is_correct": false
+        },
+        {
+          "text": "El Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "El Tribunal Constitucional.",
+          "is_correct": false
+        },
+        {
+          "text": "El Tribunal de Cuentas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El control econmico y presupuestaria de los rganos e instituciones de las CCAA,",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Es competencia estatal, en virtud de lo dispuesto en el artculo 149.1 CE:",
+      "options": [
+        {
+          "text": "Regulacin de las condiciones de obtencin, expedicin y homologacin de",
+          "is_correct": false
+        },
+        {
+          "text": "Patrimonio monumental de inters de la Comunidad Autnoma.",
+          "is_correct": false
+        },
+        {
+          "text": "Ferias interiores.",
+          "is_correct": false
+        },
+        {
+          "text": "Aguas minerales y termales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Es competencia estatal, en virtud de lo dispuesto en el artculo 149.1 CE:",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La representacin ordinaria del Estado en una Comunidad Autnoma",
+      "options": [
+        {
+          "text": "orresponde:",
+          "is_correct": false
+        },
+        {
+          "text": "Al Presidente del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Delegado del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Presidente del Consejo de Gobierno de la Comunidad Autnoma.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La representacin ordinaria del Estado en una Comunidad Autnoma",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los requisitos para la iniciativa del proceso autonmico deben ser cumplidos en el",
+      "options": [
+        {
+          "text": "6 meses desde el primer acuerdo adoptado al respecto por alguna de las",
+          "is_correct": false
+        },
+        {
+          "text": "orporaciones locales interesadas.",
+          "is_correct": false
+        },
+        {
+          "text": "5 aos desde el primer acuerdo adoptado al respecto por alguna de las",
+          "is_correct": false
+        },
+        {
+          "text": "orporaciones locales interesadas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los requisitos para la iniciativa del proceso autonmico deben ser cumplidos en el",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu mayora parlamentaria se precisa para apreciar la presencia de un inters",
+      "options": [
+        {
+          "text": "Mayora absoluta del Congreso de los Diputados y simple en el Senado.",
+          "is_correct": false
+        },
+        {
+          "text": "Mayora absoluta del Senado y simple en el Congreso de los Diputados",
+          "is_correct": false
+        },
+        {
+          "text": "Dos tercios de los votos favorables del Congreso de los Diputados",
+          "is_correct": false
+        },
+        {
+          "text": "Mayora absoluta de cada Cmara",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu mayora parlamentaria se precisa para apreciar la presencia de un inters",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En cul de las siguientes materias la Constitucin atribuye la facultad de dictar las",
+      "options": [
+        {
+          "text": "ases de conformidad con el artculo 149:",
+          "is_correct": false
+        },
+        {
+          "text": "Rgimen minero y energtico.",
+          "is_correct": false
+        },
+        {
+          "text": "Productos farmacuticos.",
+          "is_correct": false
+        },
+        {
+          "text": "Propiedad intelectual e industrial.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En cul de las siguientes materias la Constitucin atribuye la facultad de dictar las",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta correcta en relacin con los distritos:",
+      "options": [
+        {
+          "text": "Corresponde al alcalde de la Corporacin la creacin de los distritos y su",
+          "is_correct": false
+        },
+        {
+          "text": "Los ayuntamientos de los municipios de gran poblacin debern crear distritos,",
+          "is_correct": false
+        },
+        {
+          "text": "omo divisiones",
+          "is_correct": false
+        },
+        {
+          "text": "escentralizada.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta correcta en relacin con los distritos:",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Son rganos superiores en los municipios de gran poblacin regulados en el ttulo",
+      "options": [
+        {
+          "text": "El Alcalde y los miembros de la Junta de Gobierno Local.",
+          "is_correct": false
+        },
+        {
+          "text": "El Alcalde y los miembros del Pleno.",
+          "is_correct": false
+        },
+        {
+          "text": "El Alcalde y los Tenientes de Alcalde.",
+          "is_correct": false
+        },
+        {
+          "text": "El Alcalde y el Secretario General.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Son rganos superiores en los municipios de gran poblacin regulados en el ttulo",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Si una Entidad local adoptara actos o acuerdos que atenten gravemente al inters",
+      "options": [
+        {
+          "text": "El Consejo de Ministros.",
+          "is_correct": false
+        },
+        {
+          "text": "El Presidente del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "El Congreso.",
+          "is_correct": false
+        },
+        {
+          "text": "El Delegado del Gobierno.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Si una Entidad local adoptara actos o acuerdos que atenten gravemente al inters",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con el artculo 20 LBRL, la organizacin municipal responde a",
+      "options": [
+        {
+          "text": "El Alcalde, los Tenientes de Alcalde y el Pleno existen en todos los",
+          "is_correct": false
+        },
+        {
+          "text": "yuntamientos.",
+          "is_correct": false
+        },
+        {
+          "text": "La Junta de Gobierno Local existe en todos los municipios con poblacin igual",
+          "is_correct": false
+        },
+        {
+          "text": "La Comisin Especial de Sugerencias y Reclamaciones existe en los municipios",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con el artculo 20 LBRL, la organizacin municipal responde a",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con el artculo 140 de la Constitucin, respecto de los municipios y su",
+      "options": [
+        {
+          "text": "Una Ley Orgnica regular las condiciones en las que proceda el rgimen del",
+          "is_correct": false
+        },
+        {
+          "text": "oncejo abierto.",
+          "is_correct": false
+        },
+        {
+          "text": "Los Concejales sern elegidos por el Alcalde o por los vecinos del municipio",
+          "is_correct": false
+        },
+        {
+          "text": "Los Alcaldes sern elegidos por los Concejales o por los vecinos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con el artculo 140 de la Constitucin, respecto de los municipios y su",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En todos los municipios se deber prestar el siguiente servicio:",
+      "options": [
+        {
+          "text": "Tratamiento de residuos.",
+          "is_correct": false
+        },
+        {
+          "text": "Biblioteca y parque pblico.",
+          "is_correct": false
+        },
+        {
+          "text": "Acceso a los ncleos de poblacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Prevencin y extincin de incendios.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En todos los municipios se deber prestar el siguiente servicio:",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Como se crea un rea Metropolitana:",
+      "options": [
+        {
+          "text": "Real Decreto del Consejo de Ministros.",
+          "is_correct": false
+        },
+        {
+          "text": "Ley de las Cortes Generales.",
+          "is_correct": false
+        },
+        {
+          "text": "Norma Reglamentaria.",
+          "is_correct": false
+        },
+        {
+          "text": "Por Ley de la Comunidad Autnoma.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Como se crea un rea Metropolitana:",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Responda cul de las siguientes no es una entidad local:",
+      "options": [
+        {
+          "text": "Mancomunidades.",
+          "is_correct": false
+        },
+        {
+          "text": "Consorcios.",
+          "is_correct": false
+        },
+        {
+          "text": "reas metropolitanas.",
+          "is_correct": false
+        },
+        {
+          "text": "Comarcas",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Responda cul de las siguientes no es una entidad local:",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La modificacin de los lmites de la provincia se realiza:",
+      "options": [
+        {
+          "text": "De acuerdo con lo establecido en la legislacin autonmica en materia de",
+          "is_correct": false
+        },
+        {
+          "text": "Mediante Real Decreto del Consejo de Ministros.",
+          "is_correct": false
+        },
+        {
+          "text": "A travs de Ley orgnica.",
+          "is_correct": false
+        },
+        {
+          "text": "Por ley ordinaria de las Cortes Generales",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La modificacin de los lmites de la provincia se realiza:",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La formacin, mantenimiento, revisin y custodia del Padrn municipal",
+      "options": [
+        {
+          "text": "orresponde:",
+          "is_correct": false
+        },
+        {
+          "text": "Al Ministerio del Interior.",
+          "is_correct": false
+        },
+        {
+          "text": "A los Ayuntamientos.",
+          "is_correct": false
+        },
+        {
+          "text": "A las Diputaciones Provinciales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La formacin, mantenimiento, revisin y custodia del Padrn municipal",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Conforme al artculo 20 de la Ley 7/1985, de 2 de abril, Reguladora de las Bases",
+      "options": [
+        {
+          "text": "el Rgimen Local en un municipio de 7.587 habitantes, cul de los siguientes",
+          "is_correct": false
+        },
+        {
+          "text": "Junta de Gobierno Local.",
+          "is_correct": false
+        },
+        {
+          "text": "Comisin Especial de Cuentas.",
+          "is_correct": false
+        },
+        {
+          "text": "Tenientes de Alcalde.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Conforme al artculo 20 de la Ley 7/1985, de 2 de abril, Reguladora de las Bases",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En un municipio de 18.000 habitantes no es obligatorio el servicio siguiente:",
+      "options": [
+        {
+          "text": "Prevencin y extincin de incendios.",
+          "is_correct": false
+        },
+        {
+          "text": "Biblioteca pblica.",
+          "is_correct": false
+        },
+        {
+          "text": "Pavimentacin de las vas pblicas.",
+          "is_correct": false
+        },
+        {
+          "text": "Tratamiento de residuos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En un municipio de 18.000 habitantes no es obligatorio el servicio siguiente:",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con el artculo 29 de la Ley 7/1985, de 2 de abril, Reguladora de las",
+      "options": [
+        {
+          "text": "ases del Rgimen Local pueden funcionar en rgimen de Concejo abierto",
+          "is_correct": false
+        },
+        {
+          "text": "qullos municipios que por su localizacin geogrfica, la mejor gestin de los",
+          "is_correct": false
+        },
+        {
+          "text": "Lo pidan la mayora de los vecinos y lo decidan por acuerdo favorable la",
+          "is_correct": false
+        },
+        {
+          "text": "omunidad Autnoma.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con el artculo 29 de la Ley 7/1985, de 2 de abril, Reguladora de las",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La provincia de Barcelona tiene una poblacin de 5.664.579 habitantes. A la vista",
+      "options": [
+        {
+          "text": "e ello, la Diputacin de esa provincia cuenta con:",
+          "is_correct": false
+        },
+        {
+          "text": "25 diputados provinciales.",
+          "is_correct": false
+        },
+        {
+          "text": "51 diputados provinciales.",
+          "is_correct": false
+        },
+        {
+          "text": "31 diputados provinciales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La provincia de Barcelona tiene una poblacin de 5.664.579 habitantes. A la vista",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Conforme a los datos del Instituto Nacional de Estadstica en 2022 el municipio de",
+      "options": [
+        {
+          "text": "uenca tena una poblacin de 53.389 habitantes. Conforme a este dato seale si la",
+          "is_correct": false
+        },
+        {
+          "text": "ases del Rgimen Local:",
+          "is_correct": false
+        },
+        {
+          "text": "S, en todo caso, por ser capital de provincia.",
+          "is_correct": false
+        },
+        {
+          "text": "S, siempre que a iniciativa del Ayuntamiento de Cuenca lo decida la Asamblea",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Conforme a los datos del Instituto Nacional de Estadstica en 2022 el municipio de",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta falsa sobre el Rgimen de organizacin de los municipios de",
+      "options": [
+        {
+          "text": "Debern crear distritos, como divisiones territoriales propias, dotadas de",
+          "is_correct": false
+        },
+        {
+          "text": "Existir un Consejo Social de la Ciudad.",
+          "is_correct": false
+        },
+        {
+          "text": "Los miembros de la Junta de Gobierno Local son rganos directivos.",
+          "is_correct": false
+        },
+        {
+          "text": "El titular de la Intervencin general municipal tiene la consideracin de rgano",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta falsa sobre el Rgimen de organizacin de los municipios de",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En un municipio de 25.000 habitantes no es obligatorio el servicio siguiente:",
+      "options": [
+        {
+          "text": "Transporte colectivo urbano de viajeros.",
+          "is_correct": false
+        },
+        {
+          "text": "Proteccin civil.",
+          "is_correct": false
+        },
+        {
+          "text": "Biblioteca pblica.",
+          "is_correct": false
+        },
+        {
+          "text": "Instalaciones deportivas de uso pblico",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En un municipio de 25.000 habitantes no es obligatorio el servicio siguiente:",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La jefatura superior de todo el personal en la organizacin provincial se atribuye",
+      "options": [
+        {
+          "text": "El Pleno.",
+          "is_correct": false
+        },
+        {
+          "text": "El Presidente de la Diputacin.",
+          "is_correct": false
+        },
+        {
+          "text": "La Junta de Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Los Vicepresidentes en su orden.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La jefatura superior de todo el personal en la organizacin provincial se atribuye",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu mayora se precisa para ser elegido Alcalde por los Concejales?:",
+      "options": [
+        {
+          "text": "Mayora absoluta.",
+          "is_correct": false
+        },
+        {
+          "text": "Mayora de votos.",
+          "is_correct": false
+        },
+        {
+          "text": "Mayora de 2/3.",
+          "is_correct": false
+        },
+        {
+          "text": "Mayora de 3/5.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu mayora se precisa para ser elegido Alcalde por los Concejales?:",
+      "source": "6 TEST TEMAS   10 y 11 - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 6,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

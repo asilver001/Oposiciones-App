@@ -1,0 +1,212 @@
+{
+  "metadata": {
+    "source_file": "Test subvenciones.pdf",
+    "source_path": "Test contratos\\Test subvenciones.pdf",
+    "extraction_date": "2026-01-15T23:41:14.462995",
+    "tema": 0,
+    "categoria": "contratos",
+    "total_questions": 20
+  },
+  "questions": [
+    {
+      "raw_text": "Se�ale cu�l de los siguientes no es un sujeto al que se refiere la LGS:",
+      "raw_options": [
+        "El �rgano de contrataci�n",
+        "Las entidades colaboradoras",
+        "El beneficiario",
+        "El �rgano concedente"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale cu�l de los siguientes es requisito para entender que estamos ante una",
+      "raw_options": [
+        "Debe tratarse de una disposici�n dineraria",
+        "No implica contraprestaci�n.",
+        "Va destinada a favorecer actividades, comportamientos o conductas",
+        "onsideradas de utilidad p�blica o inter�s social."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�En qu� plazo debe resolverse y notificarse el procedimiento de otorgamiento de",
+      "raw_options": [
+        "En 6 meses",
+        "En 12 meses",
+        "En 3 meses",
+        "La ley no prev� ning�n plazo espec�fico."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�En qu� plazo debe resolverse y notificarse el procedimiento de reintegro de",
+      "raw_options": [
+        "En 6 meses",
+        "En 12 meses",
+        "En 3 meses",
+        "La ley no prev� ning�n plazo espec�fico."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qui�n puede ser beneficiario de una subvenci�n?",
+      "raw_options": [
+        "Cualquier entidad privada",
+        "Cualquier entidad p�blica",
+        "Cualquier entidad p�blica o privada",
+        "Cualquier entidad p�blica o privada siempre que sean personas jur�dicas"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�nto puede durar c�mo m�ximo un convenio de colaboraci�n entre entidad",
+      "raw_options": [
+        "oncedente y entidad colaboradora?",
+        "4 a�os",
+        "Hasta 6 si incluye pr�rrogas",
+        "No se puede prorrogar por un tiempo superior al inicialmente fijado"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qu� plazo general hay para rendir cuentas justificativas del importe recibido en",
+      "raw_options": [
+        "oncepto de subvenci�n?",
+        "1 mes",
+        "3 meses",
+        "6 meses"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "No podr�n obtener la condici�n de beneficiarios quienes:",
+      "raw_options": [
+        "Hayan dado lugar a resoluci�n firme y culpable de cualquier contrato.",
+        "Tengan su residencia fiscal en un para�so fiscal.",
+        "No est�n al corriente de sus obligaciones tributarias",
+        "Todas son correctas."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale la correcta:",
+      "raw_options": [
+        "La convocatoria tiene car�cter reglamentario y se publica en el BOE",
+        "La convocatoria tiene car�cter reglamentario y su aprobaci�n se puede delegar",
+        "La convocatoria tiene car�cter de acto administrativo y se publica en la Base",
+        "e Datos Nacional de Subvenciones y un extracto en el BOE"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Pueden ser beneficiarios de una subvenci�n:",
+      "raw_options": [
+        "Personas f�sicas o jur�dicas privadas",
+        "Personas f�sicas o jur�dicas p�blicas o privadas",
+        "Personas f�sicas o jur�dicas p�blicas",
+        "Personas f�sicas o jur�dicas p�blicas o privadas e incluso, si las bases lo prev�n,"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale la correcta:",
+      "raw_options": [
+        "Las bases reguladoras son acto administrativo",
+        "Las bases reguladoras se publican en el BOE",
+        "La aprobaci�n de las bases reguladoras es delegable.",
+        "Las aprueba el Presidente o Director del organismo aut�nomo."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale la correcta:",
+      "raw_options": [
+        "El procedimiento de otorgamiento de subvenciones se inicia de oficio",
+        "El plazo para subsanaci�n de las solicitudes es de 10 d�as",
+        "El instructor puede solicitar informes.",
+        "Todas son correctas."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se admite la concesi�n directa de subvenciones (se�ale la incorrecta):",
+      "raw_options": [
+        "Cuando as� venga impuesto por una norma de rango reglamentario",
+        "Cuando est�n previstas nominativamente en los Presupuestos Generales del",
+        "Cuando se acrediten razones de inter�s humanitario debidamente justificadas",
+        "Cuando se acrediten razones de inter�s p�blico, social o econ�mico"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�l es el plazo de prescripci�n del derecho de la Administraci�n a reconocer el",
+      "raw_options": [
+        "4 a�os",
+        "2 a�os",
+        "3 a�os",
+        "1 a�o"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Son sanciones por infracciones leves:",
+      "raw_options": [
+        "La multa de 75 a 6.000 euros",
+        "La p�rdida hasta 1 a�o de la posibilidad de obtener subvenciones",
+        "La prohibici�n de contratar durante 1 a�o",
+        "La p�rdida de la posibilidad de ser entidad colaboradora durante 1 a�o"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Las infracciones y sanciones prescriben:",
+      "raw_options": [
+        "Al a�o",
+        "A los 4 a�os",
+        "A los 3 a�os",
+        "A los 2 a�os"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Cuando la sanci�n consista en multa, la impone, con car�cter general:",
+      "raw_options": [
+        "El Ministro de Hacienda",
+        "El ministro o secretario de Estado del departamento concedente.",
+        "A o b indistintamente",
+        "El Presidente o Director del organismo aut�nomo."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale la correcta:",
+      "raw_options": [
+        "Las cantidades a reintegrar tendr�n la consideraci�n de ingresos de derecho",
+        "El inter�s de demora aplicable ser� el inter�s legal del dinero incrementado en",
+        "Los procedimientos para la exigencia de reintegro tendr�n siempre car�cter",
+        "B y c es correcto."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qu� duraci�n tienen con car�cter general los planes estrat�gicos en materia de",
+      "raw_options": [
+        "3 a�os",
+        "1 a�o",
+        "4 a�os",
+        "No tiene una duraci�n concreta"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Son obligaciones de los beneficiarios:",
+      "raw_options": [
+        "Comunicar la obtenci�n de otras subvenciones",
+        "Adoptar medidas de difusi�n",
+        "Cumplir el objetivo",
+        "Todas son correctas"
+      ],
+      "correct_index": null
+    }
+  ]
+}

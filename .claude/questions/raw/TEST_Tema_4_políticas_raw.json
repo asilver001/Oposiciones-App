@@ -1,0 +1,991 @@
+{
+  "metadata": {
+    "source_file": "TEST Tema 4 políticas.pdf",
+    "source_path": "TEST Iniciales políticas\\TEST Tema 4 políticas.pdf",
+    "extraction_date": "2026-01-15T23:41:46.542664",
+    "tema": 4,
+    "categoria": "general",
+    "total_questions": 98
+  },
+  "questions": [
+    {
+      "raw_text": "�Qui�n puede disponer la compatibilidad de dos pensiones del R�gimen General?:",
+      "raw_options": [
+        "De forma expresa una Ley o un Reglamento.",
+        "De forma t�cita una ley y de forma expresa un Reglamento.",
+        "Una ley expresamente.",
+        "Una norma con rango de Ley, de forma t�cita o expresa."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Es correcto que el SMI:",
+      "raw_options": [
+        "Se fija para la agricultura, la industria y los servicios, sin distinci�n de sexo y dependiendo",
+        "e la edad de los trabajadores.",
+        "Lo fija anualmente la Ley de Presupuestos Generales del Estado.",
+        "Se fija anualmente por Real Decreto del Consejo de Ministros"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El tope m�nimo de cotizaci�n:",
+      "raw_options": [
+        "Est� constituido por el SMI mensual incrementado en un sexto.",
+        "Lo fija anualmente la Ley de Presupuestos Generales del Estado.",
+        "Coincide con el SMI mensual.",
+        "Se incrementa por la Ley de Presupuestos Generales del Estado en el mismo porcentaje que"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Las prestaciones contributivas y los gastos derivados de su gesti�n (se�alar la incorrecta)",
+      "raw_options": [
+        "Se financian, exclusivamente, con las cuotas de las personas obligadas.",
+        "Se  financian  con  las  cantidades  recaudadas  en  concepto  de  recargos,  sanciones  u  otras  de",
+        "Se  financian  con  los  frutos,  rentas  o  intereses  y  cualquier  otro  producto  de  sus  recursos",
+        "Se financian con  las aportaciones del Estado que se acuerden para atenciones espec�ficas."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n  el  art�culo  7.1  de  la  LGSS,  estar�n  comprendidos  en  el  Sistema  de  la  Seguridad",
+      "raw_options": [
+        "Los trabajadores por cuenta propia o aut�nomos, mayores de 18 a�os.",
+        "Los trabajadores por cuenta propia o aut�nomos, mayores de 16 a�os.",
+        "La  b)  es  correcta  a  partir  de  la  Ley  20/2007,  de  11  de  julio,  del  Estatuto  del  Trabajador",
+        "ut�nomo."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Los funcionarios del Estado transferidos a las comunidades aut�nomas:",
+      "raw_options": [
+        "Se incluyen obligatoriamente en el R�gimen General de la Seguridad Social.",
+        "Se  incluyen  en  el  R�gimen  General    siempre    que    hayan    ingresado    o    ingresen",
+        "Pueden optar entre el R�gimen Especial de Funcionarios y el R�gimen General.",
+        "Se  incluyen  obligatoriamente  en  el  R�gimen  Especial  de  Funcionarios  y  sin  posibilidad  de"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Los subsidios de riesgo durante el embarazo y riesgo durante la lactancia natural tendr�n la",
+      "raw_options": [
+        "Derivadas de contingencias comunes.",
+        "Derivadas de contingencias profesionales.",
+        "Derivadas de contingencias comunes o profesionales, dependiendo del riesgo que las origine.",
+        "La a) es correcta para el riesgo durante la lactancia natural y la b) es correcta para el riesgo"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Las  prestaciones  econ�micas  no  contributivas  por  invalidez  y  jubilaci�n  y  las  prestaciones",
+      "raw_options": [
+        "En el T�tulo III de la LGSS 8/2015.",
+        "En el T�tulo I de la LGSS 8/2015.",
+        "En T�tulo V de la LGSS 8/2015.",
+        "En el T�tulo VI de la LGSS 8/2015."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n  el  art�culo  136  de  la  LGSS  8/2015,  se  declaran  expresamente  comprendidos  en  el",
+      "raw_options": [
+        "Los  miembros  de  las  Corporaciones  Locales  y  los  miembros  de  las  Juntas  Generales  de  los",
+        "esempe�en sus cargos con dedicaci�n exclusiva o parcial.",
+        "Los  cargos  representativos  de  los  sindicatos  constituidos  al  amparo  de  la  Ley  Org�nica",
+        "on dedicaci�n exclusiva o parcial y percibiendo una retribuci�n."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Los riesgos que protege la prestaci�n de asistencia sanitaria son (se�alar la incorrecta):",
+      "raw_options": [
+        "La enfermedad com�n o profesional.",
+        "El accidente, sea o no de trabajo.",
+        "El  riesgo  durante  el  embarazo.",
+        "El nacimiento."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n  el  art�culo  42.2  de  la  LGSS,  referente  a  la  acci�n  protectora  del  Sistema  de  la",
+      "raw_options": [
+        "De servicios sociales.",
+        "De asistencia social.",
+        "No contributivos establecidos, en su caso, para cada prestaci�n.",
+        "De  asistencia  sanitaria  en  materia  de  formaci�n  y  rehabilitaci�n  de  personas  con"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Las pensiones de la Seguridad Social, en su modalidad no contributiva, �se actualizan en la",
+      "raw_options": [
+        "orrespondiente Ley de Presupuestos Generales del Estado, de acuerdo con lo previsto en la",
+        "No.  El  porcentaje  exacto  de  su  actualizaci�n  no  tiene  por  qu�  recogerse  en  la  Ley  de",
+        "No. Se actualizan en la correspondiente Ley de Medidas Fiscales, Administrativas y del Orden",
+        "S�,  y  se  actualizan,  al  menos,  en  el  mismo  porcentaje  que  dicha  Ley  establezca  como"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Una de las siguientes prestaciones no est� comprendida en la acci�n protectora del Sistema",
+      "raw_options": [
+        "e la Seguridad social:",
+        "La prestaci�n econ�mica por invalidez, en su modalidad no contributiva.",
+        "El subsidio para cuidado de menores afectados por c�ncer u otra enfermedad grave.",
+        "Las prestaciones econ�micas por muerte y supervivencia, en su modalidad no contributiva."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Las personas comprendidas en el campo de aplicaci�n del Sistema de la Seguridad Social:",
+      "raw_options": [
+        "Podr�n  estar  incluidas  por  el  mismo  trabajo  en  otros  reg�menes  de  previsi�n  distintos  de",
+        "No podr�n estar incluidas por el mismo trabajo en otros reg�menes de previsi�n distintos de",
+        "Deber�n estar incluidas por el mismo trabajo, con car�cter obligatorio, en otros reg�menes de",
+        "Todas son falsas."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qu� prestaciones no est�n exentas de IRPF?:",
+      "raw_options": [
+        "Las pensiones de incapacidad permanente absoluta y de gran invalidez.",
+        "Las pensiones de orfandad y las prestaciones familiares por hijo a cargo, nacimiento y parto",
+        "Las  prestaciones  percibidas  por  entierro  o  sepelio,  con  el  l�mite  del  importe  total  de  los",
+        "Los subsidios por nacimiento y cuidado de menor otorgados por la Seguridad Social."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La acci�n protectora del Sistema de la Seguridad Social se fundamenta en los principios de:",
+      "raw_options": [
+        "Universalidad, unidad, solidaridad e igualdad.",
+        "La  a)  es  correcta,  tanto  para  la  acci�n  protectora  en  su  modalidad  contributiva  como  no",
+        "ontributiva.",
+        "La a) es correcta, pero �nicamente para las prestaciones en su modalidad no contributiva."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El art�culo 42 de la LGSS 8/2015:",
+      "raw_options": [
+        "Establece y limita el �mbito de extensi�n posible del R�gimen General.",
+        "Establece y limita el �mbito de extensi�n posible de los Reg�menes Especiales.",
+        "Establece  y  limita  el  �mbito  de  extensi�n  posible  de  la  modalidad  no  contributiva  de  las",
+        "Todas son correctas."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Conforme dispone el art�culo 163 de la LGSS las pensiones del R�gimen General:",
+      "raw_options": [
+        "Ser�n compatibles entre s� aunque coincidan en un mismo beneficiario.",
+        "Ser�n  compatibles  entre  s�  aunque  coincidan  en  un  mismo  beneficiario,  a  no  ser  que",
+        "Ser�n incompatibles entre s� y en todo caso, cuando coincidan en un mismo beneficiario.",
+        "Ser�n  incompatibles  entre  s�  cuando  coincidan  en  un  mismo  beneficiario,  a  no  ser  que  se"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "En caso de incompatibilidad, seg�n la pregunta anterior:",
+      "raw_options": [
+        "Quien pudiera tener derecho a dos o m�s pensiones optar� por una de ellas.",
+        "La  entidad  gestora  iniciar�  el  pago  o,  en  su  caso,  continuar�  con  el  abono  de  la  pensi�n  de",
+        "orresponda.",
+        "La  b)  es  correcta,  no  obstante,  el  interesado  podr�  solicitar  que  se  revoque  dicho  acuerdo  y"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�l de las siguientes prestaciones figura regulada en el T�tulo II de la LGSS de 2015?:",
+      "raw_options": [
+        "El nacimiento y cuidad o de menor .",
+        "La protecci�n por cese de actividad.",
+        "Invalidez en la modalidad no contributiva.",
+        "Desempleo."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Hace  referencia  el  art�culo  41  de  la  Constituci�n  Espa�ola  a  alguna  causa  concreta  de  la",
+      "raw_options": [
+        "No menciona ninguna en concreto.",
+        "Alude a la asistencia sanitaria.",
+        "Alude al desempleo.",
+        "Alude a la enfermedad y al desempleo."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Son imprescriptibles:",
+      "raw_options": [
+        "Que debe ser p�blico.",
+        "Que debe ser obligatorio y p�blico.",
+        "La  pensi�n  de  jubilaci�n,  las  prestaciones  de  muerte  y  supervivencia,  salvo  el  auxilio  por",
+        "efunci�n, y las prestaciones familiares en su modalidad contributiva."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El derecho al percibo de las prestaciones de la Seguridad Social:",
+      "raw_options": [
+        "Caduca al a�o, sin excepciones.",
+        "Caduca solo cuando se trate de prestaciones a tanto alzado.",
+        "Caduca a los cuatro a�os.",
+        "No caduca, prescribe."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qu�  contingencia  de  las  enumeradas  a  continuaci�n  originar�  situaci�n  de  necesidad",
+      "raw_options": [
+        "No tener trabajo.",
+        "La separaci�n de los c�nyuges.",
+        "La muerte de un trabajador.",
+        "El cierre de una empresa."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Cuando hablamos de prestaciones peri�dicas de la Seguridad Social, nos estamos refiriendo",
+      "raw_options": [
+        "Cantidades a tanto alzado.",
+        "Visitas peri�dicas al facultativo de la Seguridad  Social.",
+        "Subsidios, solamente.",
+        "Pensiones y subsidios."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Las prestaciones de la Seguridad Social son:",
+      "raw_options": [
+        "Embargables, cualquiera que sea su cuant�a.",
+        "Inembargables en las cantidades que excedan del SMI.",
+        "Compensables y compatibles.",
+        "Inembargables en la cuant�a que no exceda del SMI vigente en cada momento."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n la LGSS podr� ser mejorada voluntariamente:",
+      "raw_options": [
+        "La modalidad contributiva de la acci�n protectora de la Seguridad Social.",
+        "La modalidad no contributiva.",
+        "Ninguna puede ser objeto de mejora voluntaria.",
+        "Las dos modalidades pueden ser objeto de mejoras voluntarias."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El derecho al reconocimiento de las prestaciones:",
+      "raw_options": [
+        "Es imprescriptible.",
+        "Caducar� al a�o, a contar desde el d�a siguiente al de la notificaci�n.",
+        "Prescribe  a  los  5  a�os  contados desde  el d�a  siguiente  a  aquel  en que  tenga  lugar  el  hecho",
+        "ausante de la prestaci�n de que se trate, salvo excepciones."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La  obligaci�n  de  reintegro  del  importe  de  las  prestaciones  indebidamente  percibidas",
+      "raw_options": [
+        "A los 4 a�os, contados a partir de la fecha de su cobro.",
+        "A los 4 a�os, contados desde que fue posible ejercitar la acci�n para exigir su devoluci�n.",
+        "A los 4 a�os, con independencia de la causa que origin� la percepci�n indebida.",
+        "A  los  4  a�os,  a  excepci�n  hecha  de  los  supuestos  de revisi�n  de  las  prestaciones  por  error"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El accidente in it�nere aparece definido en la LGSS como:",
+      "raw_options": [
+        "El sucedido en actos de salvamento u otros de naturaleza an�loga, cuando unos y otros tengan",
+        "onexi�n con el trabajo.",
+        "El sufrido por el trabajador durante el tiempo y en el lugar de trabajo.",
+        "El  que  sufra  el  trabajador  como  consecuencia  del  desempe�o  de  cargos  electivos  de  car�cter"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La LGSS en el art�culo 156 se�ala que se entiende por accidente de trabajo:",
+      "raw_options": [
+        "Toda lesi�n que el trabajador sufra por m�quinas, artefactos o herramientas de trabajo.",
+        "Toda lesi�n que el trabajador sufra durante el tiempo y en el lugar de trabajo.",
+        "Toda lesi�n corporal que el trabajador sufra con ocasi�n o por consecuencia del trabajo que",
+        "El contra�do a consecuencia del trabajo ejecutado por cuenta ajena en las actividades que se"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Uno  de  los  siguientes  apartados  no  se  relaciona  en  el  art�culo  7  de  la  LGSS  a  efectos  de  la",
+      "raw_options": [
+        "Los trabajadores por cuenta propia.",
+        "Los funcionarios p�blicos militares.",
+        "Los estudiantes.",
+        "Los empleados de hogar."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La estructura del Sistema de la Seguridad Social en Espa�a viene integrada por:",
+      "raw_options": [
+        "El  R�gimen  General  y  los  Reg�menes  Especiales  a  que  se  refiere  la  Ley  de  Presupuestos",
+        "El R�gimen General regulado en la LGSS, texto refundido del a�o 2015.",
+        "El R�gimen General y los Reg�menes Especiales a que se refiere la LGSS, texto refundido del a�o",
+        "El R�gimen General, los Reg�menes Especiales y los Sistemas Especiales."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Est�n excluidos del �mbito de aplicaci�n del R�gimen General (Se�alar la incorrecta):",
+      "raw_options": [
+        "Las personas que realicen trabajos ejecutados mediante servicios amistosos y ocasionales .",
+        "Las personas que se integran en alg�n R�gimen Especial.",
+        "Los profesores universitarios em�ritos y el personal licenciado sanitario em�rito",
+        "Las relaciones laborales especiales."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se regula necesariamente por Ley:",
+      "raw_options": [
+        "Ninguno de los Reg�menes Especiales.",
+        "El R�gimen Especial de Trabajadores del Mar y el de Funcionarios P�blicos Civiles o Militares.",
+        "El  R�gimen  Especial  de  Funcionarios  P�blicos,  Civiles  y  Militares  y  el  de  la  Miner�a  del",
+        "arb�n."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�En  cu�l  de  los  siguientes  Reg�menes  Especiales  existen  trabajadores  por  cuenta  propia  y",
+      "raw_options": [
+        "jena?",
+        "En el R�gimen Especial de Trabajadores Aut�nomos.",
+        "En el R�gimen Especial de estudiantes y en el de funcionarios.",
+        "R�gimen Especial de la Miner�a del Carb�n."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Estar�n  incluidos  en  el  campo  de  aplicaci�n,  a  efectos  de  la  modalidad  contributiva,",
+      "raw_options": [
+        "ualquiera que sea su sexo, estado civil y profesi�n:",
+        "Todos los espa�oles.",
+        "Todos los espa�oles y los extranjeros que residan legalmente en Espa�a.",
+        "Los espa�oles que residan en Espa�a y los extranjeros que residan o se encuentren legalmente en"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Podr�n establecerse Sistemas Especiales de la Seguridad Social:",
+      "raw_options": [
+        "En aquellos Reg�menes de la Seguridad Social en que as� resulte necesario.",
+        "S�lo dentro del �mbito del R�gimen General de la Seguridad Social.",
+        "�nicamente, dentro del �mbito del R�gimen Especial de Trabajadores Aut�nomos.",
+        "S�lo  dentro  del  �mbito  de  los  Reg�menes  Especiales  cuyo  desarrollo  deba  establecerse  por"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "No constituye un Sistema Especial de la Seguridad Social el relativo a:",
+      "raw_options": [
+        "Empleados de hogar.",
+        "Trabajadores por cuenta ajena de la agricultura.",
+        "Realizaci�n de actividades de pesca mar�tima.",
+        "Trabajadores por cuenta propia de la agricultura."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La  integraci�n  que  en  el  R�gimen  General  o  en  alguno  de  los  Reg�menes  Especiales  puede",
+      "raw_options": [
+        "e cualquier r�gimen especial ya existente no podr� afectar:",
+        "Al R�gimen Especial de Trabajadores Aut�nomos.",
+        "Al R�gimen Especial de Estudiantes.",
+        "Al R�gimen Especial de Miner�a del Carb�n."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Los Sistemas Especiales regulados actualmente:",
+      "raw_options": [
+        "Est�n todos ellos incluidos en el R�gimen General.",
+        "Est�n incluidos en el R�gimen General y en Aut�nomos.",
+        "Se diferencian del R�gimen General en que tienen distinta acci�n protectora.",
+        "Est�n todos ellos incluidos en el R�gimen Especial de Aut�nomos."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El R�gimen Especial de la Miner�a del Carb�n:",
+      "raw_options": [
+        "Lo crea la LGSS en su art�culo 10.",
+        "Lo cre� el Gobierno.",
+        "Lo cre� el Gobierno y ha de ser regulado por ley.",
+        "Desapareci�  como  tal  y  hoy  se  denomina  R�gimen  Especial  de  la  Miner�a,  englobando  a"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�l de los siguientes es un R�gimen Especial de la Seguridad Social?:",
+      "raw_options": [
+        "El R�gimen Especial Agrario.",
+        "El R�gimen Especial de Empleados de Hogar.",
+        "El de los servicios extraordinarios de hosteler�a.",
+        "Ninguno de ellos."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "A efectos del art�culo 136 de la LGSS, se declaran expresamente comprendidos en el R�gimen",
+      "raw_options": [
+        "Los  trabajadores  por  cuenta  ajena  y  los  socios  trabajadores  de  sociedades  mercantiles",
+        "apitalistas,  siempre  que  no  sean  miembros  de  su  �rgano  de  administraci�n  ni  posean  el",
+        "ontrol de la sociedad.",
+        "Los  trabajadores  por  cuenta  ajena  y  los  socios  trabajadores  de  sociedades  mercantiles"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La  protecci�n  de  los  consejeros  y  administradores  de  las  sociedades  de  capital,  que  no",
+      "raw_options": [
+        "e  direcci�n  y  gerencia  de  la  sociedad,  siendo  retribuidos  por  ello  o  por  su  condici�n  de",
+        "Es por todas las contingencias.",
+        "Se les excluye de la protecci�n por desempleo, FOGASA y formaci�n profesional.",
+        "Es la establecida para el R�gimen General de la Seguridad Social."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El Real Decreto 2621/1986, de 24 de diciembre, procedi� a la integraci�n en el R�gimen General",
+      "raw_options": [
+        "Los escritores de libros.",
+        "Los estudiantes.",
+        "Los socios trabajadores de cooperativas de trabajo asociado.",
+        "Los trabajadores ferroviarios."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Entre  los  siguientes  trabajadores  no  se  encuentran  comprendidos  expresamente  en  el",
+      "raw_options": [
+        "Los conductores de veh�culos de turismo al servicio de particulares.",
+        "Los escritores de libros.",
+        "El personal contratado al servicio de Notar�as y Registros de la Propiedad.",
+        "Los  laicos  o  seglares  que  presten  servicios  retribuidos  en  los  establecimientos  de  las"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "B�sicamente, estar�n comprendidos en el R�gimen General:",
+      "raw_options": [
+        "Los trabajadores por cuenta ajena, mayores de 16 a�os, de la industria, de los servicios y de",
+        "Los trabajadores por cuenta ajena y por cuenta propia, mayores de 18 a�os, de la industria,",
+        "e los servicios y de la agricultura..",
+        "Los trabajadores por cuenta ajena de la industria, los servicios y del mar."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Respecto de la Seguridad Social aplicable a los emigrantes espa�oles que residan y trabajen",
+      "raw_options": [
+        "La del pa�s de prestaci�n de servicios, generalmente, salvo excepciones.",
+        "La Seguridad Social espa�ola, salvo excepciones.",
+        "La Seguridad Social que elija el propio trabajador.",
+        "La Seguridad Social que se haya determinado anualmente por el INSS."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n  establece  la  LGSS  en  su  art�culo  7.1,  son  criterios  que  determinan  la  inclusi�n  en  el",
+      "raw_options": [
+        "ampo de aplicaci�n de la Seguridad Social, en la modalidad contributiva:",
+        "La nacionalidad y el ejercicio de una determinada actividad profesional en territorio nacional .",
+        "La residencia y el ejercicio de una determinada actividad profesional en territorio nacional.",
+        "La nacionalidad, la residencia, el sexo y el estado civil."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El  Real  Decreto  Legislativo  8/2015,  de  30  de  octubre,  por  el  que  se  aprueba  el  Texto",
+      "raw_options": [
+        "De 373 art�culos.",
+        "De un art�culo, una disposici�n adicional, una derogatoria y una final.",
+        "De 373 art�culos, 59 disposiciones adicionales y 44 transitorias.",
+        "La c) es correcta, adem�s de 8 finales."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n la Constituci�n no es correcto:",
+      "raw_options": [
+        "Que las CCAA podr�n asumir competencias en sanidad y salud.",
+        "Que  las  CCAA  podr�n  asumir  competencias  en  materia  de  legislaci�n  sobre  productos",
+        "Que el Estado tiene competencia exclusiva en materia de sanidad exterior.",
+        "Que el Estado tiene competencia exclusiva en  materia  de bases  y coordinaci�n  general de  la"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qu�  art�culo  de  la  Constituci�n  Espa�ola  encarga  a  los  poderes  p�blicos  asegurar  la",
+      "raw_options": [
+        "El 129.",
+        "El 39.",
+        "El 49.",
+        "El 50."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qu� art�culo de la Constituci�n Espa�ola reconoce el derecho a la protecci�n de la salud y a",
+      "raw_options": [
+        "El 39.",
+        "El 41.",
+        "El 43.",
+        "El 50."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se encuentran comprendidos en el campo de aplicaci�n del R�gimen General, los miembros",
+      "raw_options": [
+        "e  las  Corporaciones  Locales  y  los  miembros  de  las  Juntas  Generales  de  los  territorios",
+        "Que desempe�en sus cargos con dedicaci�n exclusiva.",
+        "Que desempe�en sus cargos con dedicaci�n parcial.",
+        "Que desempe�en sus cargos con dedicaci�n exclusiva o parcial."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Forma parte del Sistema de la Seguridad Social y est� sujeta a los principios recogidos en el",
+      "raw_options": [
+        "rt. 2 de la LGSS:",
+        "Cualquier  prestaci�n  de  car�cter  p�blico  o  privado  que  tenga  por  finalidad  complementar,",
+        "mpliar o modificar las prestaciones econ�micas de la Seguridad Social.",
+        "Cualquier  prestaci�n  de  car�cter  p�blico  que  tenga  por  finalidad  complementar,  ampliar  o"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El punto de partida del Sistema espa�ol de Seguridad Social fue:",
+      "raw_options": [
+        "El Real Decreto-Ley de 11 de marzo de 1919 por el que se crea el Retiro Obrero.",
+        "El Decreto de 18-4-1947 de creaci�n del SOVI.",
+        "La Ley de Bases de la Seguridad Social de 28-12-1963.",
+        "La Ley de Financiaci�n y Perfeccionamiento de la acci�n protectora del R�gimen General"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El Texto Refundido de la LGSS de 30 de octubre de 2015 fue aprobado:",
+      "raw_options": [
+        "Por ley.",
+        "Por Real Decreto legislativo.",
+        "Por Real Decreto-ley.",
+        "Por Decreto legislativo."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La cuant�a de las prestaciones por incumplimiento empresarial de las normas de seguridad y",
+      "raw_options": [
+        "Con un recargo de un 10 a un 20%, seg�n la gravedad de la falta.",
+        "Con un recargo del 20 al 50%, seg�n la gravedad de la falta.",
+        "Con un recargo del 30 al 50%, seg�n la gravedad de la falta.",
+        "Con un recargo del 10 al 30%, seg�n la gravedad de la falta."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La  responsabilidad  del  pago  del  recargo  en",
+      "raw_options": [
+        "Podr� ser objeto de seguro con una Mutua Colaboradora con la Seguridad Social.",
+        "Podr� ser objeto de seguro y reaseguro con las entidades aseguradoras privadas.",
+        "No podr� ser objeto de seguro alguno.",
+        "No  podr�  ser  objeto  de  seguro,  salvo  en  los  supuestos  excepcionales  legalmente"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se entiende por acci�n protectora de un Sistema de Seguridad Social:",
+      "raw_options": [
+        "El conjunto de situaciones de necesidad protegidas.",
+        "El conjunto de prestaciones que se otorgan a los colectivos protegidos.",
+        "El conjunto de recursos econ�micos y financieros del Sistema de Seguridad Social.",
+        "Los sujetos incluidos en el �mbito de aplicaci�n del Sistema de la Seguridad Social."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Las  pensiones  contributivas  derivadas  de  riesgos  comunes,  de  cualquiera  de  los  Reg�menes",
+      "raw_options": [
+        "e la Seguridad Social se abonar�n en:",
+        "14 pagas.",
+        "12 pagas.",
+        "16 pagas."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El pago de las pensiones en su modalidad no contributiva se abonar�:",
+      "raw_options": [
+        "En 14 pagas.",
+        "En 12 pagas, todas las prestaciones no contributivas.",
+        "En 14 pagas, �nicamente la pensi�n de jubilaci�n.",
+        "En 10 pagas."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�l de estas prestaciones se abona de una sola vez?:",
+      "raw_options": [
+        "La prestaci�n por incapacidad permanente parcial.",
+        "La  prestaci�n  econ�mica  para  cuidado  de  menores  afectados  por  c�ncer  u  otra  enfermedad",
+        "La prestaci�n por corresponsabilidad en el cuidado del lactante.",
+        "La prestaci�n por gran invalidez."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Las prestaciones a que tiene derecho el beneficiario son de car�cter m�nimo, es decir:",
+      "raw_options": [
+        "Que la cuant�a de las mismas puede ser inferior a la determinada legalmente.",
+        "Que la cuant�a de las mismas no puede ser inferior a la determinada legalmente.",
+        "Que la cuant�a de las mismas no puede ser inferior al salario m�nimo interprofesional .",
+        "Que la cuant�a de las mismas no puede ser inferior a la base m�nima de cotizaci�n."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De los supuestos que se exponen a continuaci�n, �en cu�l de ellos se exige tener cubierto un",
+      "raw_options": [
+        "Para causar derecho a las prestaciones derivadas de accidente de trabajo.",
+        "Para causar derecho a las prestaciones derivadas de accidente no laboral.",
+        "Para causar derecho a las prestaciones derivadas de enfermedad com�n, en todo caso .",
+        "Para causar derecho a las prestaciones derivadas de enfermedad profesional."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "No consiste en una cantidad a tanto alzado la siguiente prestaci�n:",
+      "raw_options": [
+        "El auxilio por defunci�n.",
+        "La incapacidad permanente parcial.",
+        "La correspondiente a una lesi�n permanente no invalidante.",
+        "La ejecuci�n corresponsable del cuidado del lactante."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El personal civil interino al Servicio de la Administraci�n del Estado:",
+      "raw_options": [
+        "Est� excluido del Sistema de la Seguridad Social.",
+        "Est� incluido en el R�gimen General de la Seguridad Social.",
+        "Est� incluido en el R�gimen Especial de funcionarios de la Seguridad Social.",
+        "Todas son falsas."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El  Estado,  por medio  de  la  Seguridad  Social,  garantiza  la  protecci�n adecuada  frente  a las",
+      "raw_options": [
+        "ontingencias y en las situaciones que se contemplan en la LGSS 8/2015:",
+        "A las personas comprendidas en el campo de aplicaci�n de la Seguridad Social.",
+        "A  las  personas  que  cumplan  los  requisitos  exigidos  en  las  modalidades  contributivas  o  no",
+        "ontributivas."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La  diferencia  entre  los  Reg�menes  Especiales  y  los  Sistemas  Especiales  de  la  Seguridad  Social",
+      "raw_options": [
+        "Los  Sistemas  Especiales",
+        "Los Reg�menes Especiales tienen una regulaci�n propia y distinta de la acci�n protectora y",
+        "Los Sistemas Especiales tienen peculiaridades en lo referente a afiliaci�n y cotizaci�n.",
+        "Todas las anteriores son correctas."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Los Reg�menes Especiales enumerados por el art�culo 10 de la LGSS:",
+      "raw_options": [
+        "Constituyen una lista cerrada que no puede ser modificada.",
+        "Pueden ser ampliados por voluntad de los colectivos interesados.",
+        "Pueden  ser  ampliados  por  decisi�n  de  las  Entidades  Gestoras  y  Servicios  Comunes  de  la",
+        "Pueden  ser  ampliados  por  el  Gobierno  a  propuesta    del  Ministerio  de  Inclusi�n,  Seguridad"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Los altos cargos de las Administraciones P�blicas que no sean funcionarios p�blicos:",
+      "raw_options": [
+        "Constituyen un R�gimen Especial de la Seguridad Social.",
+        "Se incluyen en el R�gimen General.",
+        "Se incluyen en el R�gimen Especial de los Funcionarios Civiles del Estado.",
+        "Se incluyen en el R�gimen Especial de la Administraci�n de Justicia."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Respecto a los socios trabajadores de las cooperativas de trabajo asociado, se incorporar�n",
+      "raw_options": [
+        "l Sistema de la Seguridad Social:",
+        "A  opci�n  de  la  cooperativa,  bien  como  asimilados  a  trabajadores  por  cuenta  ajena  o  bien",
+        "omo trabajadores aut�nomos.",
+        "En todo caso en el R�gimen General de la Seguridad Social."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se entiende que se posee el control efectivo de la sociedad:",
+      "raw_options": [
+        "En  todo  caso,  cuando  las  acciones  o  participaciones  del  trabajador  supongan,  al  menos,  la",
+        "Salvo prueba en contrario, cuando las acciones o participaciones del trabajador supongan, al",
+        "En todo caso, cuando su participaci�n en el capital social sea igual o superior a la tercera parte del",
+        "En todo caso, cuando al menos la mitad del capital social est� distribuido entre socios, con los que"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n  el  art�culo  7.2  de  la  LGSS  de  2015,  estar�n  comprendidos  en  el  campo  de",
+      "raw_options": [
+        "plicaci�n del Sistema de la Seguridad Social, a efectos de las prestaciones no contributivas:",
+        "Todos  los  espa�oles  residentes  en  territorio  nacional,  y  los  extranjeros  que  residan",
+        "Todas son falsas."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El  grupo  profesional  del  trabajador  por  cuenta  ajena  y  la  remuneraci�n  que  el  mismo",
+      "raw_options": [
+        "Su  exclusi�n  del  campo  de  aplicaci�n  del  sistema  cuando  El  grupo  profesional  exige",
+        "Su  exclusi�n  del  campo  de  aplicaci�n  del  sistema  cuando  su  retribuci�n  supera  la  cantidad",
+        "Su  exclusi�n  del  campo  de  aplicaci�n  cuando,  como  consecuencia  de  ambos  conceptos,",
+        "esempe�a un puesto de alta direcci�n en la empresa."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Para el a�o 2025, hasta que se apruebe la LPGE para el citado a�o y fije su nueva cuant�a, el",
+      "raw_options": [
+        "3.175,04  euros/mes,  entendiendo  que  esta  cantidad",
+        "3.175,04    euros/mes,  entendiendo  esta  cantidad  referida  a  una  mensualidad  ordinaria,  sin",
+        "3.058,81 euros/mes, sin perjuicio de las pagas extras que pudieran corresponder.",
+        "42.823,34 euros/a�o."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Llevar� a efecto la gesti�n liquidatoria y recaudatoria de los recursos de la Seguridad Social",
+      "raw_options": [
+        "s� como de los conceptos de recaudaci�n conjunta con las cuotas de la Seguridad Social:",
+        "La TGSS, como caja �nica del Sistema de Seguridad Social.",
+        "El INSS c�mo Entidad Gestora principal de la Seguridad Social.",
+        "El  Ministerio de Trabajo y Econom�a social"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "A  partir  de  1  de  enero  de  2015  los  miembros  del  cuerpo  de  registradores  de  la  propiedad",
+      "raw_options": [
+        "En el R�gimen Especial de Funcionarios.",
+        "En el R�gimen Especial de Trabajadores por cuenta propia o Aut�nomos, como los notarios.",
+        "En el R�gimen General.",
+        "En cualquiera de los tres anteriores a elecci�n del propio registrador."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se entender� por enfermedad profesional la contra�da:",
+      "raw_options": [
+        "A  consecuencia  del  trabajo  ejecutado  por  cuenta  ajena  en  las  actividades  que  se",
+        "Con ocasi�n del trabajo ejecutado por cuenta ajena en las actividades que se especifiquen en",
+        "A consecuencia o con ocasi�n del trabajo ejecutado por cuenta ajena en las actividades que",
+        "Las  enfermedades  que  contraiga  el  trabajador  con  motivo  de  la  realizaci�n  de  su  trabajo,"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "A partir de su puesta en funcionamiento quedar� integrado en la Tarjeta Social Digital:",
+      "raw_options": [
+        "El Registro de prestaciones sociales p�blicas.",
+        "El Banco de datos de pensiones p�blicas.",
+        "El registro de las Mutuas Colaboradoras con la Seguridad Social.",
+        "El registro de empresarios y trabajadores incluidos en el Sistema de la Seguridad Social."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El  reconocimiento  y  control  del  derecho  a  la  protecci�n  de  la  salud  y  a  la  atenci�n",
+      "raw_options": [
+        "Al INSS.",
+        "Al Ministerio de Sanidad en la forma en que se determine reglamentariamente.",
+        "Al INGESA.",
+        "A la Tesorer�a General de la Seguridad Social."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La acci�n protectora comprendida en el R�gimen General de la Seguridad Social es:",
+      "raw_options": [
+        "La relacionada en el art�culo 42 de la LGSS 8/2015.",
+        "La relacionada en el art�culo 42 de la LGSS 8/2015, con la exclusi�n de la protecci�n por",
+        "ese de actividad y de las prestaciones no contributivas.",
+        "La relacionada en el art�culo 42 de la LGSS 8/2015, con la exclusi�n de la protecci�n por"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El ingreso m�nimo vital:",
+      "raw_options": [
+        "Es  una  prestaci�n  econ�mica  contributiva  que  forma  parte  del  Sistema  de  la  Seguridad",
+        "Es una prestaci�n econ�mica  no contributiva que  forma parte del Sistema de la Seguridad",
+        "Es  una  prestaci�n  en  especie  contributiva  que  forma  parte  del  Sistema  de  la  Seguridad",
+        "Es una prestaci�n en especie  no contributiva  que  forma  parte del Sistema de la Seguridad"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El ingreso m�nimo vital se encuentra regulado:",
+      "raw_options": [
+        "En el t�tulo VI de la LGSS 8/2015.",
+        "En el t�tulo II de la LGSS 8/2015",
+        "En el T�tulo V de la LGSS 8/2015.",
+        "Todas son falsas."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Los socios trabajadores de las cooperativas de explotaci�n comunitaria de la tierra:",
+      "raw_options": [
+        "Ser�n asimilados a trabajadores por cuenta ajena a efectos de Seguridad Social.",
+        "Ser�n Aut�nomos.",
+        "Ser�n asimilados a trabajadores por cuenta ajena o trabajadores aut�nomos, a opci�n de la",
+        "ooperativa."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se presumir�, salvo prueba en contrario, que son constitutivas de accidente de trabajo:",
+      "raw_options": [
+        "Las lesiones que sufra el trabajador durante el tiempo y en el lugar del trabajo.",
+        "Las lesiones por imprudencia profesional que sea consecuencia del ejercicio habitual de un",
+        "Los acaecidos en actos de salvamento y en otros de naturaleza an�loga, cuando unos y otros",
+        "Los que sufra el trabajador al ir o al volver del lugar de trabajo."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Los Reg�menes de la Seguridad Social existentes en la actualidad, son:",
+      "raw_options": [
+        "Cinco.",
+        "Siete.",
+        "Seis.",
+        "Depende de si hablamos de la parte contributiva o de la no contributiva."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Las pensiones de la Seguridad se revalorizar�n al comienzo de cada a�o:",
+      "raw_options": [
+        "Las contributivas, en el porcentaje equivalente al valor medio del IPC de los 12 meses",
+        "Las  no  contributivas,  en  el  porcentaje  equivalente  al  valor  medio  del  IPC  de  los  12",
+        "Las contributivas y las no contributivas, en el porcentaje equivalente al valor medio del",
+        "Las contributivas, en funci�n del �ndice de revalorizaci�n previsto en la correspondiente"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "No es correcto que:",
+      "raw_options": [
+        "Las personas que  realizasen pr�cticas formativas en empresas, instituciones o entidades",
+        "La a) es correcta con independencia de que las pr�cticas sean remuneradas o no.",
+        "La  acci�n  protectora  ser�  la  correspondiente  al  r�gimen  General  con  la  exclusi�n  de",
+        "esempleo,  FOGASA  y  formaci�n  profesional.  En  el  supuesto  de  las  pr�cticas  no"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "No es correcto que:",
+      "raw_options": [
+        "El ejercicio corresponsable del cuidado del lactante consiste en un subsidio.",
+        "El nacimiento y cuidado de menor consiste en un subsidio.",
+        "La prestaci�n de orfandad consiste en un subsidio.",
+        "La pensi�n de orfandad consiste en un subsidio."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n  el  art�culo  109  de  la  LGSS  8/2015,  el  primer  recurso  para  la  financiaci�n  de  la",
+      "raw_options": [
+        "Las cuotas de las personas obligadas.",
+        "Las aportaciones progresivas del Estado, que se consignar�n con car�cter permanente en sus",
+        "Las cantidades recaudadas en concepto de recargos, sanciones u otras de naturaleza an�loga.",
+        "Los frutos, rentas o intereses y cualquier otro producto de sus recursos patrimoniales en los"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Quienes por acci�n u omisi�n hayan contribuido a hacer posible la percepci�n indebida de",
+      "raw_options": [
+        "Responder�n subsidiariamente con los perceptores, salvo buena fe probada, de la obligaci�n",
+        "e reintegrar.",
+        "Responder�n  solidariamente con los perceptores, salvo buena  fe  probada, de  la obligaci�n",
+        "e reintegrar."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "No es correcto con respecto al complemento de pensiones contributivas para la reducci�n",
+      "raw_options": [
+        "e la brecha de g�nero: :",
+        "Que su  importe por hijo o hija se fijar� en la LPGE. La cuant�a a percibir estar� limitada a",
+        "uatro veces el importe mensual fijado por hijo o hija y ser� incrementada al comienzo de",
+        "ada  a�o  en  el  mismo  porcentaje  previsto  en  la  correspondiente  LPGE  para  las  pensiones"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El Fondo de Reserva de la Seguridad Social tiene por finalidad:",
+      "raw_options": [
+        "Atender las necesidades financieras en materia de prestaciones contributivas del sistema de",
+        "Atender las necesidades originadas por desviaciones entre ingresos y gastos.",
+        "Atender  las  necesidades  financieras  en  materia  de  prestaciones  contributivas  y  no",
+        "ontributivas del sistema de la Seguridad Social."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se revalorizar�n al comienzo de cada a�o en el porcentaje equivalente al valor medio de las",
+      "raw_options": [
+        "onsumo de los doce meses previos a diciembre del a�o anterior:",
+        "Todas las pensiones de Seguridad Social en su modalidad contributiva.",
+        "El complemento de brecha de g�nero.",
+        "La cuant�a m�xima y m�nima de las pensiones contributivas,"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se declaran expresamente comprendidos en el RETA:",
+      "raw_options": [
+        "Los trabajadores incluidos en el Sistema Especial para Trabajadores por Cuenta Propia",
+        "grarios.",
+        "Quienes  ejerzan  las  funciones  de  direcci�n  y  gerencia  que  conlleva  el  desempe�o  del",
+        "argo de consejero o administrador."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El tope m�ximo de cotizaci�n (se�alar la incorrecta):",
+      "raw_options": [
+        "Lo fija anualmente la LPGE.",
+        "Se  incrementa  en  el  mismo  porcentaje  en  que  se  incrementen  las  pensiones",
+        "ontributivas.",
+        "Desaparece desde el 1 de enero de 2025."
+      ],
+      "correct_index": null
+    }
+  ]
+}

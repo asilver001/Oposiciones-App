@@ -1,0 +1,1337 @@
+{
+  "metadata": {
+    "source_file": "TEST Tema 2 politicas.docx",
+    "source_path": "TEST Iniciales políticas\\TEST Tema 2 politicas.docx",
+    "tema": 2,
+    "categoria": "general",
+    "extraction_date": "2026-01-15T23:41:39.918310",
+    "reformulation_date": "2026-01-15T23:47:35.740681",
+    "total_questions": 40,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:56.016184",
+    "completed_count": 0,
+    "failed_count": 40
+  },
+  "questions": [
+    {
+      "question_text": "*Al cierre del ao 2023, el nivel de la deuda pblica en Espaa se situ:*",
+      "options": [
+        {
+          "text": "En torno al 60% del PIB.",
+          "is_correct": false
+        },
+        {
+          "text": "Ligeramente por debajo del 85% del PIB.",
+          "is_correct": false
+        },
+        {
+          "text": "Por encima del 100% del PIB.",
+          "is_correct": false
+        },
+        {
+          "text": "En torno al 135% del PIB.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*Al cierre del ao 2023, el nivel de la deuda pblica en Espaa se situ:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*Qu Pacto fue adoptado tras la verificacin de los criterios de convergencia econmica establecidos por el TUE para poder acceder a la Unin Econmica y Monetaria (UEM) con el fin de seguir garantizado el control del Dficit Pblico por parte de los Estados miembros?*",
+      "options": [
+        {
+          "text": "El Pacto por el Euro y la Convergencia (PEC).",
+          "is_correct": false
+        },
+        {
+          "text": "El Pacto de Economa y Convergencia (PEC).",
+          "is_correct": false
+        },
+        {
+          "text": "El Pacto de Economa y Crecimiento (PEC).",
+          "is_correct": false
+        },
+        {
+          "text": "El Pacto de Estabilidad y Crecimiento (PEC).",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*Qu Pacto fue adoptado tras la verificacin de los criterios de convergencia econmica establecidos por el TUE para poder acceder a la Unin Econmica y Monetaria (UEM) con el fin de seguir garantizado el control del Dficit Pblico por parte de los Estados miembros?*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*Tras la reforma la reforma de las reglas fiscales en 2024, los Estados Miembros tendr que remitir a la Unin Europea:*",
+      "options": [
+        {
+          "text": "El Plan fiscal y estructural a medio plazo y el Programa Nacional de Reformas.",
+          "is_correct": false
+        },
+        {
+          "text": "El Plan fiscal y estructural a medio plazo.",
+          "is_correct": false
+        },
+        {
+          "text": "El Programa de Estabilidad y el Programa Nacional de Reformas.",
+          "is_correct": false
+        },
+        {
+          "text": "El Programa de Estabilidad.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*Tras la reforma la reforma de las reglas fiscales en 2024, los Estados Miembros tendr que remitir a la Unin Europea:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*En virtud de qu artculo de la Constitucin espaola estn las Administraciones Pblicas obligadas a adecuar sus actuaciones al principio de estabilidad presupuestaria:*",
+      "options": [
+        {
+          "text": "Artculo 153.",
+          "is_correct": false
+        },
+        {
+          "text": "Artculo 135.",
+          "is_correct": false
+        },
+        {
+          "text": "Artculo 165.",
+          "is_correct": false
+        },
+        {
+          "text": "Artculo 156.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*En virtud de qu artculo de la Constitucin espaola estn las Administraciones Pblicas obligadas a adecuar sus actuaciones al principio de estabilidad presupuestaria:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*En virtud del principio de estabilidad presupuestaria y de acuerdo con lo establecido en la LO 2/2012, de 27 de abril, el dficit estructural en el que podrn incurrir las Administraciones Pblicas:*",
+      "options": [
+        {
+          "text": "No podr superar el 0,4% del PIB, con carcter general.",
+          "is_correct": false
+        },
+        {
+          "text": "Las Administraciones Pblicas no podrn incurrir en dficit estructural, con carcter general.",
+          "is_correct": false
+        },
+        {
+          "text": "No podr superar el 3% del PIB, con carcter general.",
+          "is_correct": false
+        },
+        {
+          "text": "No podr superar el 4% del PIB, con carcter general.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*En virtud del principio de estabilidad presupuestaria y de acuerdo con lo establecido en la LO 2/2012, de 27 de abril, el dficit estructural en el que podrn incurrir las Administraciones Pblicas:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*De acuerdo con lo establecido en la LO 2/2012, de 27 de abril, cundo podr alcanzarse en el conjunto de las Administraciones Pblicas un dficit estructural que no supere el 0,4% del PIB:*",
+      "options": [
+        {
+          "text": "En el caso de catstrofes naturales.",
+          "is_correct": false
+        },
+        {
+          "text": "a) es correcta y, adems, en los supuestos de recesin econmica.",
+          "is_correct": false
+        },
+        {
+          "text": "b) es correcta y, adems, cuando concurran situaciones de emergencia extraordinaria.",
+          "is_correct": false
+        },
+        {
+          "text": "Todas las respuestas son incorrectas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*De acuerdo con lo establecido en la LO 2/2012, de 27 de abril, cundo podr alcanzarse en el conjunto de las Administraciones Pblicas un dficit estructural que no supere el 0,4% del PIB:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*Qu principio rector de la poltica presupuestaria del sector pblico es definido como la capacidad para financiar compromisos de gasto presentes y futuros dentro de los lmites de dficit, deuda pblica y morosidad de deuda comercial?:*",
+      "options": [
+        {
+          "text": "Principio de sostenibilidad financiera.",
+          "is_correct": false
+        },
+        {
+          "text": "Principio de responsabilidad.",
+          "is_correct": false
+        },
+        {
+          "text": "Principio de plurianualidad.",
+          "is_correct": false
+        },
+        {
+          "text": "Principio de estabilidad presupuestaria.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*Qu principio rector de la poltica presupuestaria del sector pblico es definido como la capacidad para financiar compromisos de gasto presentes y futuros dentro de los lmites de dficit, deuda pblica y morosidad de deuda comercial?:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*El principio de plurianualidad rige en relacin con:*",
+      "options": [
+        {
+          "text": "La elaboracin del presupuesto.",
+          "is_correct": false
+        },
+        {
+          "text": "La elaboracin y aprobacin del presupuesto.",
+          "is_correct": false
+        },
+        {
+          "text": "La aprobacin y ejecucin del presupuesto.",
+          "is_correct": false
+        },
+        {
+          "text": "La elaboracin, aprobacin y ejecucin del presupuesto.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*El principio de plurianualidad rige en relacin con:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*Con carcter general, el nivel de deuda pblica de las Administraciones Pblicas en relacin con el PIB, no podr superar:*",
+      "options": [
+        {
+          "text": "El 40%",
+          "is_correct": false
+        },
+        {
+          "text": "El 50%",
+          "is_correct": false
+        },
+        {
+          "text": "El 60%",
+          "is_correct": false
+        },
+        {
+          "text": "El 70%",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*Con carcter general, el nivel de deuda pblica de las Administraciones Pblicas en relacin con el PIB, no podr superar:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*La concurrencia de las circunstancias excepcionales previstas en la Constitucin que permitirn superar los lmites dficit y de deuda pblica sern apreciadas:*",
+      "options": [
+        {
+          "text": "Por mayora absoluta del Congreso.",
+          "is_correct": false
+        },
+        {
+          "text": "Por mayora absoluta del Senado.",
+          "is_correct": false
+        },
+        {
+          "text": "Por dictamen de la Autoridad Independiente de Responsabilidad Fiscal.",
+          "is_correct": false
+        },
+        {
+          "text": "Por Acuerdo del Consejo de Ministros a propuesta de la Autoridad Independiente de Responsabilidad Fiscal.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*La concurrencia de las circunstancias excepcionales previstas en la Constitucin que permitirn superar los lmites dficit y de deuda pblica sern apreciadas:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*El Acuerdo del Consejo de Ministros por el que se fijan los objetivos de estabilidad presupuestaria y de deuda pblica estar referido:*",
+      "options": [
+        {
+          "text": "Al conjunto de las Administraciones Pblicas.",
+          "is_correct": false
+        },
+        {
+          "text": "nicamente a la Administracin General del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Tanto al conjunto de las Administraciones Pblicas, como a cada uno de sus subsectores.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Estado, CCAA y EELL y, excepcionalmente, a la Seguridad Social.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*El Acuerdo del Consejo de Ministros por el que se fijan los objetivos de estabilidad presupuestaria y de deuda pblica estar referido:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*El Acuerdo por el que se fija el objetivo de estabilidad presupuestaria y deuda pblica deber ser aprobado:*",
+      "options": [
+        {
+          "text": "Por el Congreso y por el Senado.",
+          "is_correct": false
+        },
+        {
+          "text": "Por mayora absoluta del Congreso y del Senado.",
+          "is_correct": false
+        },
+        {
+          "text": "Por mayora absoluta del Congreso y por mayora simple del Senado.",
+          "is_correct": false
+        },
+        {
+          "text": "Por mayora simple del Congreso y por mayora absoluta del Senado.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*El Acuerdo por el que se fija el objetivo de estabilidad presupuestaria y deuda pblica deber ser aprobado:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*Continuando con la pregunta anterior, si aprobados los objetivos de estabilidad presupuestaria y de deuda pblica por el Congreso, los mismos fuesen rechazados por el Senado:*",
+      "options": [
+        {
+          "text": "El Gobierno deber remitir un nuevo Acuerdo en el plazo de un mes.",
+          "is_correct": false
+        },
+        {
+          "text": "Los objetivos se sometern a nueva votacin en el Pleno del Congreso, aprobndose si este los ratifica por mayora simple.",
+          "is_correct": false
+        },
+        {
+          "text": "Los objetivos se sometern a nueva votacin en el Pleno del Congreso, aprobndose si este los ratifica por mayora absoluta.",
+          "is_correct": false
+        },
+        {
+          "text": "El Gobierno deber remitir un nuevo Acuerdo en el plazo de dos meses.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*Continuando con la pregunta anterior, si aprobados los objetivos de estabilidad presupuestaria y de deuda pblica por el Congreso, los mismos fuesen rechazados por el Senado:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*El objetivo de estabilidad presupuestaria y de deuda pblica de cada CCAA ser fijado:*",
+      "options": [
+        {
+          "text": "Por el Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Por el Senado.",
+          "is_correct": false
+        },
+        {
+          "text": "Por el Consejo de Poltica Fiscal y Financiera.",
+          "is_correct": false
+        },
+        {
+          "text": "Por el Gobierno y por el Consejo de Poltica Fiscal y Financiera conjuntamente.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*El objetivo de estabilidad presupuestaria y de deuda pblica de cada CCAA ser fijado:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*Qu Administracin est obligada a aprobar un lmite de gasto no financiero en sus presupuestos anuales que no podr rebasarse durante la ejecucin presupuestaria?:*",
+      "options": [
+        {
+          "text": "La Administracin General del Estado, las CCAA y las Entidades Locales.",
+          "is_correct": false
+        },
+        {
+          "text": "Todas las Administraciones Pblicas, salvo que concurran las circunstancias excepcionales previstas en la Ley.",
+          "is_correct": false
+        },
+        {
+          "text": "La Administracin General del Estado y las CCAA.",
+          "is_correct": false
+        },
+        {
+          "text": "La Administracin General del Estado y las CCAA salvo que concurran alguna de las circunstancias excepcionales previstas en la Ley.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*Qu Administracin est obligada a aprobar un lmite de gasto no financiero en sus presupuestos anuales que no podr rebasarse durante la ejecucin presupuestaria?:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*Si la AGE incumple el objetivo de estabilidad, de deuda pblica o la regla de gasto por concurrir, y as haber sido apreciado, alguna de las circunstancias excepcionales previstas en la Constitucin Espaola, qu deber hacer:*",
+      "options": [
+        {
+          "text": "Presentar un plan econmico  financiero.",
+          "is_correct": false
+        },
+        {
+          "text": "Presentar un plan de reequilibrio.",
+          "is_correct": false
+        },
+        {
+          "text": "Constituir un depsito con intereses en el Banco de Espaa igual al 2% del PIB.",
+          "is_correct": false
+        },
+        {
+          "text": "Aplicar las recomendaciones que acuerde un Comit de expertos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*Si la AGE incumple el objetivo de estabilidad, de deuda pblica o la regla de gasto por concurrir, y as haber sido apreciado, alguna de las circunstancias excepcionales previstas en la Constitucin Espaola, qu deber hacer:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*En el caso de la AGE, los planes econmico-financieros y los planes de reequilibrio sern elaborados:*",
+      "options": [
+        {
+          "text": "Y aprobados por el Gobierno a propuesta del Ministro de Hacienda y Administraciones Pblicas (En la actualidad, Ministro de Hacienda).",
+          "is_correct": false
+        },
+        {
+          "text": "Por la Comisin Delegada del Gobierno para Asuntos Econmicos y remitidos a las Cortes Generales para su aprobacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Por el Gobierno a propuesta del Ministro de Hacienda y Administraciones Pblicas (En la actualidad, Ministro de Hacienda) y sern remitidos al Tribunal de Cuentas para su aprobacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Por el Gobierno a propuesta del Ministro de Hacienda y Administraciones Pblicas (En la actualidad, Ministro de Hacienda) y sern remitidos a las Cortes Generales para su aprobacin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*En el caso de la AGE, los planes econmico-financieros y los planes de reequilibrio sern elaborados:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*Con el fin de garantizar el cumplimiento efectivo del objetivo de estabilidad presupuestaria, la Autoridad Independiente de Responsabilidad Fiscal (AIReF) evaluar y analizar (seale la respuesta incorrecta):*",
+      "options": [
+        {
+          "text": "El ciclo presupuestario.",
+          "is_correct": false
+        },
+        {
+          "text": "El endeudamiento pblico.",
+          "is_correct": false
+        },
+        {
+          "text": "Las previsiones econmicas.",
+          "is_correct": false
+        },
+        {
+          "text": "El fraude fiscal.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*Con el fin de garantizar el cumplimiento efectivo del objetivo de estabilidad presupuestaria, la Autoridad Independiente de Responsabilidad Fiscal (AIReF) evaluar y analizar (seale la respuesta incorrecta):*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*La AIReF es:*",
+      "options": [
+        {
+          "text": "Es una Autoridad Administrativa Independiente, con personalidad jurdica propia y plena capacidad pblica y privada, que ejerce sus funciones con autonoma e independencia respecto de las Administraciones Pblicas.",
+          "is_correct": false
+        },
+        {
+          "text": "Es una Autoridad Administrativa Independiente, con personalidad jurdica propia y plena capacidad pblica, que ejerce sus funciones con autonoma e independencia respecto de las Administraciones Pblicas.",
+          "is_correct": false
+        },
+        {
+          "text": "Es una Agencia Estatal, con personalidad jurdica propia y plena capacidad pblica y privada, que ejerce sus funciones con autonoma e independencia respecto de las Administraciones Pblicas.",
+          "is_correct": false
+        },
+        {
+          "text": "Es una Agencia Estatal, con personalidad jurdica propia y plena capacidad pblica, que ejerce sus funciones con autonoma e independencia respecto de las Administraciones Pblicas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*La AIReF es:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*El Presidente de la Autoridad Independiente de Responsabilidad Fiscal ser nombrado, entre personas de reconocido prestigio y experiencia mnima de diez aos de ejercicio profesional en materias de anlisis presupuestario, econmico y financiero del sector pblico, por:*",
+      "options": [
+        {
+          "text": "El Consejo de Ministros a propuesta del Ministro de Hacienda y Administraciones Pblicas (En la actualidad, Ministro de Hacienda).",
+          "is_correct": false
+        },
+        {
+          "text": "El Congreso a propuesta del Presidente del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Las Cortes Generales a propuesta del Presidente del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Real Decreto del Presidente del Gobierno.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*El Presidente de la Autoridad Independiente de Responsabilidad Fiscal ser nombrado, entre personas de reconocido prestigio y experiencia mnima de diez aos de ejercicio profesional en materias de anlisis presupuestario, econmico y financiero del sector pblico, por:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*En relacin con la Autoridad Independiente de Responsabilidad Fiscal, seale la respuesta incorrecta:*",
+      "options": [
+        {
+          "text": "Ejercer sus funciones a travs de informes, opiniones y estudios.",
+          "is_correct": false
+        },
+        {
+          "text": "Emitir los informes previstos en la Ley. Si el organismo destinatario se aparta de las recomendaciones recogidas en el Informe, deber motivarlo e incorporar dicho informe en el correspondiente expediente",
+          "is_correct": false
+        },
+        {
+          "text": "Emitir, a iniciativa propia, opiniones sobre sobre las materias previstas la Ley. Si el organismo destinatario se aparta de las recomendaciones, deber motivarlo.",
+          "is_correct": false
+        },
+        {
+          "text": "Realizar los estudios que le soliciten entre otros el Gobierno de la Nacin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*En relacin con la Autoridad Independiente de Responsabilidad Fiscal, seale la respuesta incorrecta:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*El Presidente de la Autoridad Independiente de Responsabilidad Fiscal tiene rango de:*",
+      "options": [
+        {
+          "text": "Ministro.",
+          "is_correct": false
+        },
+        {
+          "text": "Secretario de Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Subsecretario.",
+          "is_correct": false
+        },
+        {
+          "text": "La Ley slo seala que tendr la consideracin de Alto Cargo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*El Presidente de la Autoridad Independiente de Responsabilidad Fiscal tiene rango de:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*De acuerdo con lo establecido en la LO 6/2013, la Autoridad Independiente de Responsabilidad Fiscal no tiene obligacin de emitir informe sobre:*",
+      "options": [
+        {
+          "text": "Los Presupuestos iniciales de las Administraciones Pblicas.",
+          "is_correct": false
+        },
+        {
+          "text": "El Acuerdo del Consejo de Ministros en el que se establecen los objetivos de estabilidad presupuestaria y de sostenibilidad financiera.",
+          "is_correct": false
+        },
+        {
+          "text": "Las previsiones econmicas que se incorporen en los proyectos de presupuestos y en el programa de estabilidad.",
+          "is_correct": false
+        },
+        {
+          "text": "Los proyectos y lneas fundamentales de los presupuestos de las Administraciones Pblicas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*De acuerdo con lo establecido en la LO 6/2013, la Autoridad Independiente de Responsabilidad Fiscal no tiene obligacin de emitir informe sobre:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*Cunto representa el gasto pblico en Espaa?:*",
+      "options": [
+        {
+          "text": "El 25% del PIB.",
+          "is_correct": false
+        },
+        {
+          "text": "Menos del 80% del PIB.",
+          "is_correct": false
+        },
+        {
+          "text": "En torno al 45% del PIB.",
+          "is_correct": false
+        },
+        {
+          "text": "Alrededor del 100% del PIB.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*Cunto representa el gasto pblico en Espaa?:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*Tras la aprobacin de la Constitucin Espaola, el gasto pblico ha experimentado:*",
+      "options": [
+        {
+          "text": "Una progresiva descentralizacin en su gestin.",
+          "is_correct": false
+        },
+        {
+          "text": "Una progresiva desconcentracin en su gestin.",
+          "is_correct": false
+        },
+        {
+          "text": "Una progresiva unificacin en su gestin.",
+          "is_correct": false
+        },
+        {
+          "text": "Una progresiva homogenizacin en su gestin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*Tras la aprobacin de la Constitucin Espaola, el gasto pblico ha experimentado:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*Cuantitativamente, cul de los siguientes gastos pblicos es el ms importante:*",
+      "options": [
+        {
+          "text": "Proteccin social y, dentro de ste, pensiones de jubilacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Proteccin social y, dentro de ste, prestaciones y subsidios por desempleo.",
+          "is_correct": false
+        },
+        {
+          "text": "Educacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Sanidad.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*Cuantitativamente, cul de los siguientes gastos pblicos es el ms importante:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*La funcin de asignacin de la poltica fiscal consiste en:*",
+      "options": [
+        {
+          "text": "Recaudar los recursos necesarios para financiar servicios pblicos.",
+          "is_correct": false
+        },
+        {
+          "text": "Corregir las desigualdades en los niveles de renta entre personas y grupos.",
+          "is_correct": false
+        },
+        {
+          "text": "Utilizar las potestades pblicas recaudatorias con el fin de influir sobre el nivel de actividad de la economa y moderar, en su caso, ciclos econmicos.",
+          "is_correct": false
+        },
+        {
+          "text": "Utilizar las potestades pblicas recaudatorias con el fin de controlar la inflacin y moderar el incremento de los precios.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*La funcin de asignacin de la poltica fiscal consiste en:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*Cmo se denomina la poltica fiscal que implica un aumento del gasto pblico, una menor recaudacin fiscal o una combinacin de ambos?*",
+      "options": [
+        {
+          "text": "Poltica fiscal expansiva.",
+          "is_correct": false
+        },
+        {
+          "text": "Poltica fiscal neutra.",
+          "is_correct": false
+        },
+        {
+          "text": "Poltica fiscal contractiva.",
+          "is_correct": false
+        },
+        {
+          "text": "Poltica fiscal distributiva.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*Cmo se denomina la poltica fiscal que implica un aumento del gasto pblico, una menor recaudacin fiscal o una combinacin de ambos?*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*Dentro de los impuestos, la figura que presenta la mayor recaudacin es:*",
+      "options": [
+        {
+          "text": "Impuesto sobre el Valor Aadido (IVA)",
+          "is_correct": false
+        },
+        {
+          "text": "Impuesto sobre la Renta de las Personas Fsicas (IRPF)",
+          "is_correct": false
+        },
+        {
+          "text": "Impuesto de Sociedades (IS)",
+          "is_correct": false
+        },
+        {
+          "text": "Impuestos Especiales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*Dentro de los impuestos, la figura que presenta la mayor recaudacin es:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*En relacin con el Plan de Recuperacin, Transformacin y Resiliencia, seale la respuesta correcta:*",
+      "options": [
+        {
+          "text": "Se presenta en cumplimiento del Pacto de Estabilidad y Crecimiento.",
+          "is_correct": false
+        },
+        {
+          "text": "El grueso del presupuesto inicial del Plan se concentra en el mbito de la transformacin digital.",
+          "is_correct": false
+        },
+        {
+          "text": "Se estructura en torno a diez polticas palanca, entre ellas, la transicin energtica justa e inclusiva y la modernizacin del sistema fiscal.",
+          "is_correct": false
+        },
+        {
+          "text": "Todas las respuestas son correctas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*En relacin con el Plan de Recuperacin, Transformacin y Resiliencia, seale la respuesta correcta:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*El Plan de Recuperacin, Transformacin y Resiliencia se asiente sobre cuatros objetivos que constituyen a su vez sus ejes transversales cul no es uno de ellos?:*",
+      "options": [
+        {
+          "text": "La transicin ecolgica.",
+          "is_correct": false
+        },
+        {
+          "text": "La transformacin digital.",
+          "is_correct": false
+        },
+        {
+          "text": "El relevo generacional.",
+          "is_correct": false
+        },
+        {
+          "text": "La igualdad territorial.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*El Plan de Recuperacin, Transformacin y Resiliencia se asiente sobre cuatros objetivos que constituyen a su vez sus ejes transversales cul no es uno de ellos?:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*Qu principio general de la organizacin territorial del Estado, de los recogidos en el Captulo I del Ttulo VIII de la Constitucin, ha sido fundamento de la Ley 20/2013, de 9 de diciembre, de garanta de la unidad de mercado?:*",
+      "options": [
+        {
+          "text": "Ninguna autoridad podr adoptar medidas que directa o indirectamente obstaculicen la libertad de circulacin y establecimiento de las personas y la libre circulacin de bienes por todo el territorio nacional.",
+          "is_correct": false
+        },
+        {
+          "text": "El Estado garantiza la realizacin efectiva del principio de solidaridad.",
+          "is_correct": false
+        },
+        {
+          "text": "Las diferencias entre los Estatutos de las diferentes Comunidades Autnomas no podrn implicar, en ningn caso, privilegios econmicos o sociales.",
+          "is_correct": false
+        },
+        {
+          "text": "El Estado velar por el establecimiento de un equilibrio econmico, adecuado y justo entre las diversas partes del territorio espaol, y atendiendo en particular a las circunstancias del hecho insular.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*Qu principio general de la organizacin territorial del Estado, de los recogidos en el Captulo I del Ttulo VIII de la Constitucin, ha sido fundamento de la Ley 20/2013, de 9 de diciembre, de garanta de la unidad de mercado?:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*La Ley 20/2013, de 9 de diciembre, de garanta de unidad de mercado, resulta de aplicacin:*",
+      "options": [
+        {
+          "text": "Al acceso a actividades econmicas que se prestan en condiciones de mercado y su ejercicio por parte de operadores legalmente establecidos en cualquier lugar del territorio nacional.",
+          "is_correct": false
+        },
+        {
+          "text": "Al acceso a actividades econmicas que se prestan en condiciones de mercado y su ejercicio por parte de operadores legalmente establecidos en cualquier lugar del territorio europeo.",
+          "is_correct": false
+        },
+        {
+          "text": "Al acceso a actividades econmicas que se prestan en condiciones de mercado y su ejercicio por parte de operadores legalmente establecidos en cualquier lugar del territorio nacional, salvo las materias de mbito tributario.",
+          "is_correct": false
+        },
+        {
+          "text": "Al acceso a actividades econmicas que se prestan en condiciones de mercado y su ejercicio por parte de operadores legalmente establecidos en cualquier lugar del territorio europeo, salvo las materias de mbito tributario.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*La Ley 20/2013, de 9 de diciembre, de garanta de unidad de mercado, resulta de aplicacin:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*Qu principio regulado en la Ley 20/2013, de 9 de diciembre, de garanta de unidad de mercado, fue declarado nulo e inconstitucional por el Tribunal Constitucional?*",
+      "options": [
+        {
+          "text": "El principio de cooperacin y confianza mutua.",
+          "is_correct": false
+        },
+        {
+          "text": "El principio de simplificacin de cargas.",
+          "is_correct": false
+        },
+        {
+          "text": "El principio de necesidad y proporcionalidad de las actuaciones de las autoridades competentes.",
+          "is_correct": false
+        },
+        {
+          "text": "El principio de eficacia de las actuaciones de las autoridades competentes en todo el territorio nacional.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*Qu principio regulado en la Ley 20/2013, de 9 de diciembre, de garanta de unidad de mercado, fue declarado nulo e inconstitucional por el Tribunal Constitucional?*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*En cul de los siguientes supuestos permite la Ley 20/2013, de 9 de diciembre, establecer un rgimen de autorizacin:*",
+      "options": [
+        {
+          "text": "Cuando las infraestructuras o instalaciones puedan comprometer el orden pblico y no se pueda salvaguardar mediante una comunicacin o declaracin responsable.",
+          "is_correct": false
+        },
+        {
+          "text": "Por razones de orden, seguridad o salud pblicos, o por proteccin del medio ambiente o del entorno urbano, y aunque se pueda salvaguardar mediante una comunicacin o declaracin responsable",
+          "is_correct": false
+        },
+        {
+          "text": "Cuando el nmero de operadores sea limitado, entre otros motivos, por la escasez de recursos naturales o la existencia de servicios pblicos sometidos a tarifas reguladas.",
+          "is_correct": false
+        },
+        {
+          "text": "La Ley 20/2013, de 9 de diciembre, slo lo permite cuando as lo disponga la normativa de la UE o tratados y convenios internacionales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*En cul de los siguientes supuestos permite la Ley 20/2013, de 9 de diciembre, establecer un rgimen de autorizacin:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*Con el fin de garantizar la unidad de mercado, qu rgano de cooperacin administrativa integrado por representantes de la AGE, CCAA y EELL regula la Ley 20/2013 de 9 de diciembre:*",
+      "options": [
+        {
+          "text": "La Conferencia Sectorial para la Mejora Regulatoria y el Clima de Negocios.",
+          "is_correct": false
+        },
+        {
+          "text": "La Autoridad Independiente de Responsabilidad Fiscal.",
+          "is_correct": false
+        },
+        {
+          "text": "La Comisin para la Reforma de la Administracin.",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo para la Unidad de Mercado.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*Con el fin de garantizar la unidad de mercado, qu rgano de cooperacin administrativa integrado por representantes de la AGE, CCAA y EELL regula la Ley 20/2013 de 9 de diciembre:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*En relacin con el procedimiento (reclamacin) para la unidad de mercado regulada en el artculo 26 de la Ley 20/2013, de 9 de diciembre, seale la respuesta correcta:*",
+      "options": [
+        {
+          "text": "Se puede interponer contra disposiciones de carcter general, actos, actuaciones, inactividad o vas de hecho que pueda ser incompatibles con la libertad de establecimiento o de circulacin**.**",
+          "is_correct": false
+        },
+        {
+          "text": "Slo estn legitimados para interponer esta reclamacin los operadores econmicos, as como sus organizaciones representativas.",
+          "is_correct": false
+        },
+        {
+          "text": "Corresponde resolver sobre esta reclamacin a la Secretara para la Unidad de Mercado.",
+          "is_correct": false
+        },
+        {
+          "text": "El procedimiento (reclamacin) previsto en el artculo 26 tiene carcter sustitutivo de los recursos ordinarios que procedan.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*En relacin con el procedimiento (reclamacin) para la unidad de mercado regulada en el artculo 26 de la Ley 20/2013, de 9 de diciembre, seale la respuesta correcta:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*La reclamacin regulada en el artculo 26 de la Ley 20/2013, de 9 de diciembre, no se puede interponer:*",
+      "options": [
+        {
+          "text": "Contra disposiciones de carcter general que revistan la forma de Reales Decretos.",
+          "is_correct": false
+        },
+        {
+          "text": "Contra disposiciones de carcter general que revistan la forma de Reales Decretos y contra actuaciones que sean susceptibles de recurso administrativo especial en materia de contratacin",
+          "is_correct": false
+        },
+        {
+          "text": "Contra actuaciones que sean susceptibles de recurso de alzada o del recurso administrativo especial en materia de contratacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Contra actuaciones que sean susceptibles de recurso administrativo especial en materia de contratacin o en el caso de que los interesados hayan manifestado su conformidad con una resolucin sancionadora.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*La reclamacin regulada en el artculo 26 de la Ley 20/2013, de 9 de diciembre, no se puede interponer:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*Cul es el plazo para interponer la reclamacin regulada en el artculo 26 de la Ley 20/2013, de 9 de diciembre?:*",
+      "options": [
+        {
+          "text": "Un mes.",
+          "is_correct": false
+        },
+        {
+          "text": "20 das.",
+          "is_correct": false
+        },
+        {
+          "text": "Un mes y en el caso de actuaciones constitutivas de va de hecho, 20 contados desde aquel en que se iniciaron.",
+          "is_correct": false
+        },
+        {
+          "text": "Un mes y en el caso de actuaciones constitutivas de va de hecho, 15 das contados desde aquel en que se iniciaron.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*Cul es el plazo para interponer la reclamacin regulada en el artculo 26 de la Ley 20/2013, de 9 de diciembre?:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "*Quin est legitimado para interponer el procedimiento especial para la garanta de la unidad de mercado introducido en la Ley de la Jurisdiccin Contenciosa  Administrativa por la Ley 20/2013, de 9 de diciembre:*",
+      "options": [
+        {
+          "text": "La Comisin Nacional de los Mercados y la Competencia.",
+          "is_correct": false
+        },
+        {
+          "text": "La Secretara para la Unidad de Mercado.",
+          "is_correct": false
+        },
+        {
+          "text": "Los operadores econmicos que entienda que se han vulnerado sus derechos o intereses legtimos.",
+          "is_correct": false
+        },
+        {
+          "text": "Las respuestas a) y b) son correctas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "*Quin est legitimado para interponer el procedimiento especial para la garanta de la unidad de mercado introducido en la Ley de la Jurisdiccin Contenciosa  Administrativa por la Ley 20/2013, de 9 de diciembre:*",
+      "source": "TEST Tema 2 politicas.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 2,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

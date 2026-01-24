@@ -1,0 +1,390 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** Test tema 9. Enunciado.pdf
+**Total preguntas:** 30
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** La Ley 33/2003, de 3 de noviembre, del Patrimonio de las Administraciones
+
+**Opciones:**
+  0. Es una ley estatal dictada al amparo del art. 149.1.18 que se aplica en
+  1. Es una ley b�sica estatal dictada al amparo del art. 149.1.18 principalmente,
+  2. Es una ley b�sica estatal dictada al amparo del art. 149.1.18 principalmente,
+  3. ut�nomas y Entidades Locales.
+
+---
+
+### Pregunta 2
+
+**Texto:** Se entiende por patrimonio de las Administraciones P�blicas:
+
+**Opciones:**
+  0. Los bienes y derechos de titularidad de las administraciones p�blicas
+  1. ualquiera que sea su naturaleza y el t�tulo de su adquisici�n o aquel en
+  2. Los bienes y derechos de titularidad de las administraciones p�blicas que
+  3. El conjunto de sus bienes y derechos, cualquiera que sea su naturaleza y
+
+---
+
+### Pregunta 3
+
+**Texto:** Son bienes demaniales:
+
+**Opciones:**
+  0. Las costas.
+  1. El derecho de arrendamiento.
+  2. El edificio adquirido a trav�s de una donaci�n.
+  3. Los saldos abandonados.
+
+---
+
+### Pregunta 4
+
+**Texto:** Es un principio de gesti�n de los bienes demaniales:
+
+**Opciones:**
+  0. Su uso privativo preferente por los ciudadanos.
+  1. Eficacia y rentabilidad en la explotaci�n de estos bienes y derechos.
+  2. Eficiencia y econom�a en su gesti�n.
+  3. Adecuaci�n y suficiencia de los bienes para servir al uso general o al servicio
+
+---
+
+### Pregunta 5
+
+**Texto:** No es un principio de gesti�n de bienes patrimoniales:
+
+**Opciones:**
+  0. Eficiencia y econom�a en su gesti�n.
+  1. Eficacia y rentabilidad en la explotaci�n de estos bienes y derechos.
+  2. Adecuaci�n y suficiencia de los bienes para servir al uso general o al servicio
+  3. Identificaci�n y control a trav�s de inventarios o registros adecuados.
+
+---
+
+### Pregunta 6
+
+**Texto:** La inalienabilidad es aplicable a:
+
+**Opciones:**
+  0. Exclusivamente a los bienes comunales.
+  1. Los bienes del Patrimonio Nacional.
+  2. Los bienes demaniales �nicamente titularidad de la Administraci�n General
+  3. el Estado.
+
+---
+
+### Pregunta 7
+
+**Texto:** �En qu� consiste la mutaci�n demanial?
+
+**Opciones:**
+  0. Es el acto en virtud del cual se efect�a la desafectaci�n de un bien o derecho
+  1. el Patrimonio del Estado, con simult�nea afectaci�n a otro uso general, fin
+  2. La vinculaci�n de los bienes y derechos a un uso general o a un servicio
+  3. Es el acto en virtud del cual se deja de destinar un bien a una finalidad
+
+---
+
+### Pregunta 8
+
+**Texto:** Indique la respuesta correcta en relaci�n con el acto de afectaci�n:
+
+**Opciones:**
+  0. Siempre ha de ser expreso y dictarse por el �rgano competente, indic�ndose
+  1. e quedar aqu�l integrado en el dominio p�blico y el �rgano al que
+  2. orresponda el ejercicio de las competencias demaniales, incluidas las
+  3. Ha de ser expreso, salvo que la afectaci�n derive de una norma con rango
+
+---
+
+### Pregunta 9
+
+**Texto:** Conforme el art. 32 de la Ley sobre la obligaci�n de formar inventario, el
+
+**Opciones:**
+  0. Los bienes demaniales.
+  1. Los bienes patrimoniales.
+  2. Los bienes y derechos que integran su patrimonio, sin excepci�n.
+  3. Los bienes y derechos que integran su patrimonio.
+
+---
+
+### Pregunta 10
+
+**Texto:** Las Administraciones p�blicas podr�n adquirir bienes y derechos:
+
+**Opciones:**
+  0. Por cualquiera de los modos previstos en el ordenamiento jur�dico y, en
+  1. �nicamente por atribuci�n expresa por ley o por herencia, legado o donaci�n.
+  2. Por los modos citados expresamente en la LPAP.
+  3. Solo cabe a trav�s de negocios jur�dicos mediante la correspondiente
+
+---
+
+### Pregunta 11
+
+**Texto:** �En qu� consiste la potestad de recuperaci�n posesoria?
+
+**Opciones:**
+  0. Es una potestad de las administraciones p�blicas para ejercitar una acci�n
+  1. Es una potestad de las administraciones p�blicas para recuperar la posesi�n
+  2. Es una potestad de las administraciones p�blicas que pueden ejercer frente
+  3. terceros para recuperar en v�a administrativa la posesi�n de sus bienes
+
+---
+
+### Pregunta 12
+
+**Texto:** Indique cual no es una facultad y prerrogativa de la administraciones
+
+**Opciones:**
+  0. Deslindar en v�a administrativa los inmuebles de su titularidad.
+  1. Recuperar de oficio la posesi�n indebidamente perdida sobre sus bienes y
+  2. erechos.
+  3. Desahuciar, a trav�s de la correspondiente acci�n en v�a judicial, a los
+
+---
+
+### Pregunta 13
+
+**Texto:** Indique la opci�n incorrecta en relaci�n con la facultad de recuperaci�n
+
+**Opciones:**
+  0. Se puede ejercer en cualquier momento, con independencia del tipo de bien,
+  1. emanial o patrimonial, que se intente recuperar.
+  2. Respecto de los bienes y derechos de la Administraci�n General del Estado,
+  3. Reglamentariamente se regular� el procedimiento para el ejercicio de
+
+---
+
+### Pregunta 14
+
+**Texto:** Indique la opci�n correcta respecto la afectaci�n de bienes y derechos:
+
+**Opciones:**
+  0. La afectaci�n de los bienes y derechos del Patrimonio del Estado a los
+  1. epartamentos ministeriales compete al Director General de Patrimonio del
+  2. La afectaci�n se adopta por Real Decreto.
+  3. Salvo que la afectaci�n derive de una norma reglamentaria, �sta deber�
+
+---
+
+### Pregunta 15
+
+**Texto:** �En qu� consiste la adscripci�n y qui�n es el �rgano competente para su
+
+**Opciones:**
+  0. probaci�n?
+  1. Los bienes y derechos patrimoniales y demaniales de las Administraciones
+  2. quellas para su vinculaci�n directa a un servicio de su competencia, o para
+  3. Los bienes y derechos patrimoniales de la Administraci�n General del Estado
+
+---
+
+### Pregunta 16
+
+**Texto:** Indique la opci�n corecta en relaci�n con los tipos de uso de los bienes de
+
+**Opciones:**
+  0. ominio p�blico, conforme el art. 85 de la Ley 33/2003:
+  1. Se considera uso com�n de los bienes de dominio p�blico el que
+  2. orresponde por igual y de forma indistinta a todas las administraciones
+  3. Es uso que implica un aprovechamiento especial del dominio p�blico el que,
+
+---
+
+### Pregunta 17
+
+**Texto:** �Cu�ndo ser� necesario obtener una autorizaci�n para el uso de un bien
+
+**Opciones:**
+  0. emanial?
+  1. Es necesario tanto para el uso com�n como para el uso privativo.
+  2. En el caso de uso que suponga un aprovechamiento especial a trav�s de
+  3. Es nececesario para el uso privativo de los bienes de dominio p�blico que
+
+---
+
+### Pregunta 18
+
+**Texto:** La Seguridad Social cuenta con un edificio que viene siendo utilizado para
+
+**Opciones:**
+  0. lojar oficinas en el t�rmino de Toledo. No obstante, ya no lo necesita. El
+  1. yuntamiento de Toledo lo aprecia conveniente para destinarlo como
+  2. iblioteca municipal Indique la figura jur�dica aplicable para el cambio entre
+  3. mbas entidades:
+
+---
+
+### Pregunta 19
+
+**Texto:** �En que consiste el procedimiento de deslinde?
+
+**Opciones:**
+  0. Es un procedimiento administrativo iniciado de oficio o a solicitud de
+  1. dminsitraciones p�blicas cuando sean imprecisos o existan indicios de
+  2. Es un procedimiento administrativo que se inicia de oficio, por iniciativa
+  3. e propiedad de las Administraciones publicas sean imprecisos o existan
+
+---
+
+### Pregunta 20
+
+**Texto:** Indique la opci�n correcta en relaci�n con la figura de la desafectaci�n:
+
+**Opciones:**
+  0. Los bienes y derechos patrimoniales perder�n su condici�n en los casos en
+  1. La desafectaci�n de los bienes y derechos integrados en el patrimonio de la
+  2. GE requerir�, para su efectividad, de su recepci�n formal por el Ministerio
+  3. e Hacienda, bien mediante acta de entrega suscrita por un representante
+
+---
+
+### Pregunta 21
+
+**Texto:** Indique la opci�n incorrecta en relaci�n con las reservas demaniales:
+
+**Opciones:**
+  0. La AGE podr� reservarse el uso exclusivo de bienes de su titularidad
+  1. estinados al uso general para la realizaci�n de fines de su competencia,
+  2. uando existan razones de utilidad p�blica o inter�s general que lo
+  3. La duraci�n de la reserva se limitar� al tiempo necesario para el cumplimiento
+
+---
+
+### Pregunta 22
+
+**Texto:** Los bienes del patrimonio nacional:
+
+**Opciones:**
+  0. Son de titularidad de la Administraci�n General del Estado.
+  1. Se regulan exclusivamente por la Ley 33/2003, del Patrimonio de las
+  2. dministraciones P�blicas.
+  3. Son bienes demaniales o patrimoniales.
+
+---
+
+### Pregunta 23
+
+**Texto:** Los inmuebles vacantes, conforme la Ley 33/2003:
+
+**Opciones:**
+  0. Pertenecen a la Administraci�n General del Estado.
+  1. Pertenecen a la Administraci�n P�blica en cuyo t�rmino radiquen.
+  2. La adquisici�n de estos bienes se producir� por ministerio de la ley, aunque
+  3. dministraci�n General del Estado.
+
+---
+
+### Pregunta 24
+
+**Texto:** Se�ale la respuesta incorrecta respecto la potestad de desahucio:
+
+**Opciones:**
+  0. La administraci�n puede iniciar el procedimiento administrativo de desahucio
+  1. La administraci�n puede recuperar a trav�s de este procedimiento sus bienes
+  2. emaniales cuando decaigan o desaparezcan el t�tulo, las condiciones o las
+  3. ircunstancias que legitimaban su ocupaci�n por terceros.
+
+---
+
+### Pregunta 25
+
+**Texto:** Indique de las siguientes, la competencia que le corresponde al Consejo
+
+**Opciones:**
+  0. e Ministros en el �mbito patrimonial.
+  1. Definir la pol�tica aplicable a los bienes y derechos del Patrimonio del Estado.
+  2. La afectaci�n de bienes patrimoniales de la AGE.
+  3. La declaraci�n de reserva patrimonial.
+
+---
+
+### Pregunta 26
+
+**Texto:** �Puede la AGE enajenar un bien inmueble demanial?
+
+**Opciones:**
+  0. S�, siempre que se realice mediante concurso o adjudicaci�n directa y se
+  1. cuerde por �rgano competente.
+  2. No.
+  3. No, no puede vender bienes inmuebles en ningun caso. �nicamente la ley
+
+---
+
+### Pregunta 27
+
+**Texto:** �C�mo ha de proceder la AGE para vender un bien mueble?
+
+**Opciones:**
+  0. La enajenaci�n
+  1. En caso de bienes obsoletos, perecederos o deteriorados por el uso o en el
+  2. La enajenaci�n tendr� lugar �nicamente por subasta.
+  3. Ninguna es correcta.
+
+---
+
+### Pregunta 28
+
+**Texto:** �Podr�a ser cedido gratuitamente un bien inmueble de AGE a una
+
+**Opciones:**
+  0. S�, siempre que se sigan las reglas sobre competencia y procedimiento
+  1. No. La cesi�n gratuita de bienes y derechos est� prevista para
+  2. omunidades aut�nomas, entidades locales, fundaciones p�blicas o
+  3. sociaciones declaradas de utilidad p�blica, as� como Estados
+
+---
+
+### Pregunta 29
+
+**Texto:** �Cabe la permuta de bienes y derechos?
+
+**Opciones:**
+  0. La permuta puede acordarse cuando por razones debidamente
+  1. Podr�n ser permutados cuando por razones debidamente justificadas en
+  2. e valor entre los bienes o derechos que se trate de permutar, seg�n
+  3. S�. Ser�n de aplicaci�n a la permuta las normas previstas para la
+
+---
+
+### Pregunta 30
+
+**Texto:** Indique la opci�n correcta respecto la concesi�n demanial:
+
+**Opciones:**
+  0. El otorgamiento de concesiones sobre bienes de dominio p�blico se
+  1. Cualquiera que haya sido el procedimiento seguido para la adjudicaci�n, una
+  2. Las concesiones se puede otorgar por tiempo indeterminado.
+  3. Las concesiones tendr�n una duraci�n de 75 a�os.
+
+---

@@ -1,0 +1,1016 @@
+{
+  "metadata": {
+    "source_file": "4. Test preparación parte especial..pdf",
+    "source_path": "Test contratos\\4. Test preparación parte especial..pdf",
+    "tema": 0,
+    "categoria": "contratos",
+    "extraction_date": "2026-01-15T23:41:05.241731",
+    "reformulation_date": "2026-01-15T23:47:35.595417",
+    "total_questions": 20,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.562837",
+    "completed_count": 0,
+    "failed_count": 20
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "De acuerdo con la LCSP, seale la respuesta correcta:",
+        "options": [
+          {
+            "text": "La adjudicacin de un contrato requerir la previa elaboracin,",
+            "is_correct": false
+          },
+          {
+            "text": "probacin, supervisin, y replanteo del correspondiente proyecto",
+            "is_correct": false
+          },
+          {
+            "text": "La adjudicacin de un contrato de obras requerir la previa",
+            "is_correct": false
+          },
+          {
+            "text": "probacin,",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con la LCSP, seale la respuesta correcta:",
+        "source": "4. Test preparación parte especial..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'probacin,...'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Se consideran como obras de reparacin:",
+        "options": [
+          {
+            "text": "Las necesarias para enmendar un menoscabo producido en un",
+            "is_correct": false
+          },
+          {
+            "text": "ien inmueble por causas fortuitas o accidentales.",
+            "is_correct": false
+          },
+          {
+            "text": "Las necesarias para enmendar un menoscabo producido en un",
+            "is_correct": false
+          },
+          {
+            "text": "ien inmueble por el natural paso del tiempo, cuando stas",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Se consideran como obras de reparacin:",
+        "source": "4. Test preparación parte especial..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Son obras de restauracin:",
+        "options": [
+          {
+            "text": "Aquellas que",
+            "is_correct": false
+          },
+          {
+            "text": "onservando su esttica, respetando su valor histrico y",
+            "is_correct": false
+          },
+          {
+            "text": "ARCELONA",
+            "is_correct": false
+          },
+          {
+            "text": "Aquellas que",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Son obras de restauracin:",
+        "source": "4. Test preparación parte especial..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'ARCELONA...'",
+        "Hay opciones duplicadas",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta, en relacin con el proyecto de las",
+        "options": [
+          {
+            "text": "Los proyectos de obras de primer establecimiento, reforma o gran",
+            "is_correct": false
+          },
+          {
+            "text": "Se podr simplificar, refundir o incluso suprimir, alguno o algunos",
+            "is_correct": false
+          },
+          {
+            "text": "e los documentos en todos los proyectos de obras, cualquiera",
+            "is_correct": false
+          },
+          {
+            "text": "Se podr simplificar, refundir o incluso suprimir, alguno o algunos",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta, en relacin con el proyecto de las",
+        "source": "4. Test preparación parte especial..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta incorrecta:",
+        "options": [
+          {
+            "text": "Los proyectos debern sujetarse a las instrucciones tcnicas que",
+            "is_correct": false
+          },
+          {
+            "text": "Salvo que ello resulte incompatible con la naturaleza de la obra, el",
+            "is_correct": false
+          },
+          {
+            "text": "La contratacin conjunta de la elaboracin del proyecto y la",
+            "is_correct": false
+          },
+          {
+            "text": "La contratacin conjunta de la elaboracin del proyecto y la",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta incorrecta:",
+        "source": "4. Test preparación parte especial..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "En el supuesto de contratacin conjunta de la elaboracin del",
+        "options": [
+          {
+            "text": "El contratista ser el encargado de la elaboracin, supervisin,",
+            "is_correct": false
+          },
+          {
+            "text": "probacin y comprobacin del correspondiente replanteo del",
+            "is_correct": false
+          },
+          {
+            "text": "El contratista presentar el proyecto al rgano de contratacin",
+            "is_correct": false
+          },
+          {
+            "text": "El contratista ser el encargado de la elaboracin y supervisin,",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En el supuesto de contratacin conjunta de la elaboracin del",
+        "source": "4. Test preparación parte especial..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En cuanto a la supervisin del proyecto de obras:",
+        "options": [
+          {
+            "text": "Antes de la aprobacin del proyecto, cuando el presupuesto base",
+            "is_correct": false
+          },
+          {
+            "text": "e licitacin del contrato de obras sea igual o superior a 500.000",
+            "is_correct": false
+          },
+          {
+            "text": "En los proyectos de presupuesto base de licitacin inferior al",
+            "is_correct": false
+          },
+          {
+            "text": "Una vez aprobado el proyecto, cuando el presupuesto base de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En cuanto a la supervisin del proyecto de obras:",
+        "source": "4. Test preparación parte especial..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta incorrecta:",
+        "options": [
+          {
+            "text": "Aprobado el proyecto y previamente a",
+            "is_correct": false
+          },
+          {
+            "text": "El replanteo del proyecto de la obra consistir en comprobar la",
+            "is_correct": false
+          },
+          {
+            "text": "Los proyectos de obras debern comprender, entre otros",
+            "is_correct": false
+          },
+          {
+            "text": "ocumentos una memoria en la que se describa el objeto de las",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta incorrecta:",
+        "source": "4. Test preparación parte especial..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En el contrato de concesin de obra, el estudio de viabilidad de la",
+        "options": [
+          {
+            "text": "Es siempre potestativo.",
+            "is_correct": false
+          },
+          {
+            "text": "Es obligatorio para los contratos de obras de presupuesto base",
+            "is_correct": false
+          },
+          {
+            "text": "e licitacin sin IVA, inferior a 50.000 euros.",
+            "is_correct": false
+          },
+          {
+            "text": "Es obligatorio para los contratos de concesin obras de valor",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En el contrato de concesin de obra, el estudio de viabilidad de la",
+        "source": "4. Test preparación parte especial..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta en relacin con el estudio de",
+        "options": [
+          {
+            "text": "Con carcter previo a la decisin de construir y explotar en",
+            "is_correct": false
+          },
+          {
+            "text": "La Administracin concedente someter el estudio de viabilidad a",
+            "is_correct": false
+          },
+          {
+            "text": "Se admitir la iniciativa privada en la presentacin de estudios de",
+            "is_correct": false
+          },
+          {
+            "text": "La Administracin concedente podr acordar motivadamente la",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta en relacin con el estudio de",
+        "source": "4. Test preparación parte especial..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con la LCSP:",
+        "options": [
+          {
+            "text": "Se admitir la iniciativa privada en la presentacin de estudios de",
+            "is_correct": false
+          },
+          {
+            "text": "Presentado el estudio de viabilidad, ser elevado al rgano",
+            "is_correct": false
+          },
+          {
+            "text": "ompetente para que comunique al particular la decisin de",
+            "is_correct": false
+          },
+          {
+            "text": "En las concesiones de servicios no es necesario estudio de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con la LCSP:",
+        "source": "4. Test preparación parte especial..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En cuanto al estudio de viabilidad, Qu plazo establece la LCSP",
+        "options": [
+          {
+            "text": "Tres meses, no prorrogables.",
+            "is_correct": false
+          },
+          {
+            "text": "Dos meses, no prorrogables.",
+            "is_correct": false
+          },
+          {
+            "text": "Cuatro meses, no obstante, se puede fijar un plazo superior para",
+            "is_correct": false
+          },
+          {
+            "text": "Tres meses, no obstante, se puede fijar un plazo superior para su",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En cuanto al estudio de viabilidad, Qu plazo establece la LCSP",
+        "source": "4. Test preparación parte especial..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En cuanto a la iniciativa privada en la presentacin de los estudios",
+        "options": [
+          {
+            "text": "e viabilidad:",
+            "is_correct": false
+          },
+          {
+            "text": "El silencio de la Administracin o de la entidad que corresponda",
+            "is_correct": false
+          },
+          {
+            "text": "El silencio de la Administracin o de la entidad que corresponda",
+            "is_correct": false
+          },
+          {
+            "text": "La Administracin estar obligada a contestar, en todo caso.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En cuanto a la iniciativa privada en la presentacin de los estudios",
+        "source": "4. Test preparación parte especial..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "En cuanto a la concesin de servicios, seale la respuesta",
+        "options": [
+          {
+            "text": "La tramitacin del expediente ir precedida de la realizacin y",
+            "is_correct": false
+          },
+          {
+            "text": "probacin de un estudio de viabilidad de los mismos o en su",
+            "is_correct": false
+          },
+          {
+            "text": "aso, de un estudio de viabilidad econmico-financiera, que",
+            "is_correct": false
+          },
+          {
+            "text": "Antes de proceder a la contratacin de una concesin de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En cuanto a la concesin de servicios, seale la respuesta",
+        "source": "4. Test preparación parte especial..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En el supuesto de que el estudio de viabilidad culminara en el",
+        "options": [
+          {
+            "text": "dicionales a los obtenidos por aplicacin de los criterios de",
+            "is_correct": false
+          },
+          {
+            "text": "djudicacin.",
+            "is_correct": false
+          },
+          {
+            "text": "A que se le adjudique el contrato a su favor.",
+            "is_correct": false
+          },
+          {
+            "text": "Al resarcimiento de los gastos efectuados para su elaboracin,",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En el supuesto de que el estudio de viabilidad culminara en el",
+        "source": "4. Test preparación parte especial..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta:",
+        "options": [
+          {
+            "text": "En las concesiones de obras, en funcin de la complejidad de las",
+            "is_correct": false
+          },
+          {
+            "text": "dministracin concedente, aprobado el estudio de viabilidad,",
+            "is_correct": false
+          },
+          {
+            "text": "En todo caso, se tendr que elaborar anteproyecto por el",
+            "is_correct": false
+          },
+          {
+            "text": "ontratista de la obra.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta:",
+        "source": "4. Test preparación parte especial..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En cuanto a los contratos de fabricacin:",
+        "options": [
+          {
+            "text": "El rgimen jurdico, en todo caso, ser el de los contratos de",
+            "is_correct": false
+          },
+          {
+            "text": "Se les aplicarn directamente las normas generales y especiales",
+            "is_correct": false
+          },
+          {
+            "text": "el contrato de suministros que el rgano de contratacin",
+            "is_correct": false
+          },
+          {
+            "text": "lusulas",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En cuanto a los contratos de fabricacin:",
+        "source": "4. Test preparación parte especial..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'lusulas...'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En relacin con los contratos de servicios:",
+        "options": [
+          {
+            "text": "En ningn caso la entidad contratante podr instrumentar la",
+            "is_correct": false
+          },
+          {
+            "text": "ontratacin de personal a travs del contrato de servicios,",
+            "is_correct": false
+          },
+          {
+            "text": "ontratos menores.",
+            "is_correct": false
+          },
+          {
+            "text": "La entidad contratante podr instrumentar la contratacin de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En relacin con los contratos de servicios:",
+        "source": "4. Test preparación parte especial..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con lo establecido en el artculo 310 de la LCSP, en los",
+        "options": [
+          {
+            "text": "ontratos que tengan por objeto la prestacin de actividades",
+            "is_correct": false
+          },
+          {
+            "text": "ocentes:",
+            "is_correct": false
+          },
+          {
+            "text": "Podr establecerse el pago parcial anticipado, sin necesidad",
+            "is_correct": false
+          },
+          {
+            "text": "La LCSP ser de aplicacin a la preparacin y adjudicacin del",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con lo establecido en el artculo 310 de la LCSP, en los",
+        "source": "4. Test preparación parte especial..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'ocentes:...'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "En cuanto al rgimen de contratacin para actividades docentes:",
+        "options": [
+          {
+            "text": "Para acreditar la existencia de estos contratos, bastar la",
+            "is_correct": false
+          },
+          {
+            "text": "esignacin o nombramiento por autoridad competente.",
+            "is_correct": false
+          },
+          {
+            "text": "En esta clase de contratos no podr establecerse el pago parcial",
+            "is_correct": false
+          },
+          {
+            "text": "nticipado.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En cuanto al rgimen de contratacin para actividades docentes:",
+        "source": "4. Test preparación parte especial..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:22.063258"
+}

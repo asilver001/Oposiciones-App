@@ -1,0 +1,510 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 5 TEST TEMA 5 INICIALES.pdf
+**Total preguntas:** 40
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** Las Cortes Generales -en adelante, CCGG- se regulan en:
+
+**Opciones:**
+  0. El T�tulo II de la Constituci�n.
+  1. El T�tulo III de la Constituci�n.
+  2. El T�tulo IV de la Constituci�n.
+  3. El T�tulo V de la Constituci�n.
+
+---
+
+### Pregunta 2
+
+**Texto:** A tenor del art�culo 66 de la Constituci�n, las CCGG representan:
+
+**Opciones:**
+  0. A los ciudadanos y a los poderes p�blicos.
+  1. Al pueblo espa�ol.
+  2. A las instituciones del Estado.
+  3. Al Rey.
+
+---
+
+### Pregunta 3
+
+**Texto:** De acuerdo con lo establecido en el art�culo 69 de la Constituci�n, el Senado es la C�mara:
+
+**Opciones:**
+  0. De representaci�n Territorial.
+  1. De representaci�n Provincial.
+  2. De representaci�n Auton�mica.
+  3. De representaci�n Local.
+
+---
+
+### Pregunta 4
+
+**Texto:** Se�ale la respuesta correcta seg�n lo previsto en el art�culo 78 de la Constituci�n Espa�ola:
+
+**Opciones:**
+  0. En cada C�mara habr� una Diputaci�n Permanente compuesta por veinti�n miembros, que
+  1. En cada C�mara habr� una Diputaci�n Permanente compuesta por un m�nimo de veinti�n
+  2. En cada C�mara habr� una Diputaci�n Permanente compuesta por veinticinco miembros, que
+  3. En cada C�mara habr� una Diputaci�n Permanente compuesta por un m�nimo de veinticinco
+
+---
+
+### Pregunta 5
+
+**Texto:** La iniciativa legislativa corresponde, seg�n el art�culo 87 de la Constituci�n Espa�ola a:
+
+**Opciones:**
+  0. Presidente del Gobierno, Congreso y Senado.
+  1. Gobierno, Congreso, Senado y �rganos colegiados ejecutivos de las Comunidades Aut�nomas.
+  2. Gobierno, Congreso, Senado, Asambleas Legislativas de las Comunidades Aut�nomas e iniciativa
+  3. Gobierno, Congreso, Senado y Consejo General del Poder Judicial.
+
+---
+
+### Pregunta 6
+
+**Texto:** A tenor del art�culo 68 de la Constituci�n, el Congreso se compone:
+
+**Opciones:**
+  0. De un m�nimo de 300 y un m�ximo de 400 Diputados.
+  1. De un m�nimo de 350 y un m�ximo de 400 Diputados.
+  2. De un m�nimo de 350 y un m�ximo de 450 Diputados.
+  3. De un m�nimo de 300 y un m�ximo de 450 Diputados.
+
+---
+
+### Pregunta 7
+
+**Texto:** En las elecciones al Senado, en cada provincia se elegir�n:
+
+**Opciones:**
+  0. Cuatro senadores.
+  1. Dos senadores.
+  2. Un senador.
+  3. Tres senadores.
+
+---
+
+### Pregunta 8
+
+**Texto:** En las elecciones al Senado, en las poblaciones de Ceuta y Melilla elegir�n cada una de ellas:
+
+**Opciones:**
+  0. Cuatro senadores.
+  1. Dos senadores.
+  2. Un senador.
+  3. Tres senadores.
+
+---
+
+### Pregunta 9
+
+**Texto:** En el Congreso de los Diputados, las poblaciones de Ceuta y Melilla estar�n representadas cada una
+
+**Opciones:**
+  0. e ellas por:
+  1. Dos diputados.
+  2. Cuatro diputados.
+  3. Tres diputados.
+
+---
+
+### Pregunta 10
+
+**Texto:** La circunscripci�n electoral en las elecciones al Congreso de los Diputados es:
+
+**Opciones:**
+  0. La CCAA.
+  1. El Estado Espa�ol.
+  2. La Provincia.
+  3. El Municipio.
+
+---
+
+### Pregunta 11
+
+**Texto:** Las CCAA designar�n:
+
+**Opciones:**
+  0. Un senador, y otro m�s por cada mill�n de habitantes.
+  1. Dos senadores, y otro m�s por cada mill�n de habitantes.
+  2. Un senador por cada mill�n de habitantes.
+  3. Dos senadores por cada mill�n de habitantes.
+
+---
+
+### Pregunta 12
+
+**Texto:** En las provincias insulares:
+
+**Opciones:**
+  0. Corresponden cuatro senadores a cada una de las islas mayores (Gran Canaria, Mallorca y
+  1. Corresponden dos senadores a cada una de las islas mayores (Gran Canaria, Mallorca y Tenerife).
+  2. Corresponde un senador a cada una de las islas mayores (Gran Canaria, Mallorca y Tenerife).
+  3. Corresponden tres senadores a cada una de las islas mayores (Gran Canaria, Mallorca y Tenerife).
+
+---
+
+### Pregunta 13
+
+**Texto:** Conforme a lo previsto en el art�culo 73 de la Constituci�n, las C�maras se reunir�n anualmente en
+
+**Opciones:**
+  0. os per�odos ordinarios de sesiones:
+  1. El primero de enero a junio y el segundo de agosto a diciembre.
+  2. El primero de enero a mayo y el segundo de julio a diciembre.
+  3. El primero de septiembre a diciembre y el segundo de febrero a junio.
+
+---
+
+### Pregunta 14
+
+**Texto:** Se�ale la respuesta correcta de conformidad con lo previsto en el art�culo 68 de la Constituci�n
+
+**Opciones:**
+  0. Las elecciones tendr�n lugar entre los treinta d�as y noventa d�as desde la terminaci�n del mandato.
+  1. Las elecciones tendr�n lugar entre los veinticinco d�as y noventa d�as desde la terminaci�n del
+  2. Las elecciones tendr�n lugar entre los sesenta d�as y noventa d�as desde la terminaci�n del
+  3. Las elecciones tendr�n lugar entre los treinta d�as y sesenta d�as desde la terminaci�n del mandato.
+
+---
+
+### Pregunta 15
+
+**Texto:** Seg�n el art�culo 91 de la CE el Rey sanciona las leyes aprobadas por las Cortes Generales, �qu�
+
+**Opciones:**
+  0. Diez d�as.
+  1. Quince d�as.
+  2. Veinte d�as.
+  3. Veinticinco d�as.
+
+---
+
+### Pregunta 16
+
+**Texto:** Los Diputados y Senadores:
+
+**Opciones:**
+  0. Gozar�n de inmunidad por las opiniones manifestadas en el ejercicio de sus funciones.
+  1. Durante su mandato, gozar�n de inmunidad y no podr�n ser detenidos.
+  2. No podr�n ser inculpados ni procesados sin la previa autorizaci�n de la C�mara respectiva
+  3. Est�n sujetos a mandato imperativo.
+
+---
+
+### Pregunta 17
+
+**Texto:** El art�culo 75.1 de la Constituci�n establece que las C�maras funcionar�n:
+
+**Opciones:**
+  0. Siempre en Pleno.
+  1. Siempre por Comisiones.
+  2. En Pleno o en Comisiones.
+  3. En Pleno o en Secciones.
+
+---
+
+### Pregunta 18
+
+**Texto:** Las C�maras podr�n delegar en las Comisiones Legislativas Permanentes la aprobaci�n de proyectos
+
+**Opciones:**
+  0. La reforma constitucional, las cuestiones internacionales, las leyes org�nicas y de bases y los PGE.
+  1. La reforma constitucional, las cuestiones internacionales, las leyes de bases, los textos refundidos y
+  2. La reforma constitucional, las cuestiones tributarias, las leyes org�nicas y de bases y los PGE.
+  3. La reforma constitucional, las cuestiones internacionales, las leyes org�nicas, ordinarias y de bases
+
+---
+
+### Pregunta 19
+
+**Texto:** Las sesiones plenarias de las C�maras:
+
+**Opciones:**
+  0. Ser�n p�blicas, en todo caso.
+  1. Ser�n privadas, excepto para los miembros del Gobierno.
+  2. Ser�n p�blicas, salvo acuerdo adoptado por mayor�a absoluta o con arreglo al Reglamento.
+  3. Ser�n privadas, salvo acuerdo adoptado por mayor�a absoluta o con arreglo al Reglamento.
+
+---
+
+### Pregunta 20
+
+**Texto:** Seg�n el art�culo 90.2 de la Constituci�n, el plazo de 2 meses del que el Senado dispone para vetar o
+
+**Opciones:**
+  0. Se reducir� a 20 d�as naturales en los proyectos declarados urgentes por el Gobierno o por el
+  1. ongreso.
+  2. Se reducir� a 20 d�as h�biles en los proyectos declarados urgentes por el Gobierno o por el
+  3. ongreso.
+
+---
+
+### Pregunta 21
+
+**Texto:** De conformidad con la Ley Org�nica del R�gimen Electoral General, el Congreso de los Diputados
+
+**Opciones:**
+  0. 300 Diputados.
+  1. 325 Diputados.
+  2. 350 Diputados.
+  3. 400 Diputados.
+
+---
+
+### Pregunta 22
+
+**Texto:** �Cu�ntos Diputados se elegir�n por provincia?:
+
+**Opciones:**
+  0. La LOREG asigna una representaci�n m�nima inicial de dos diputados y se distribuyen los dem�s
+  1. La LOREG asigna una representaci�n m�nima inicial de cuatro diputados y se distribuyen los
+  2. em�s en proporci�n a la poblaci�n.
+  3. La LOREG asigna una representaci�n m�nima inicial de tres diputados y se distribuyen los dem�s
+
+---
+
+### Pregunta 23
+
+**Texto:** El Congreso electo deber� ser convocado:
+
+**Opciones:**
+  0. Dentro de los 60 d�as siguientes a la celebraci�n de elecciones.
+  1. Dentro de los 40 d�as siguientes a la celebraci�n de elecciones.
+  2. Dentro de los 30 d�as siguientes a la celebraci�n de elecciones.
+  3. Dentro de los 25 d�as siguientes a la celebraci�n de elecciones.
+
+---
+
+### Pregunta 24
+
+**Texto:** La condici�n de Senador es compatible con:
+
+**Opciones:**
+  0. El cargo de Defensor del Pueblo.
+  1. El cargo de Magistrado del Tribunal Constitucional.
+  2. La condici�n de Diputado de Asamblea de una Comunidad Aut�noma.
+  3. La condici�n de miembro de una Junta Electoral.
+
+---
+
+### Pregunta 25
+
+**Texto:** Las C�maras podr�n reunirse en sesi�n extraordinaria a petici�n de:
+
+**Opciones:**
+  0. La mayor�a de miembros de cualquiera de las C�maras.
+  1. El Rey.
+  2. El Defensor del Pueblo.
+  3. El Gobierno.
+
+---
+
+### Pregunta 26
+
+**Texto:** En caso de veto por el Senado, es necesaria una de las siguientes mayor�as para levantarlo por el
+
+**Opciones:**
+  0. ongreso:
+  1. Mayor�a absoluta o transcurridos dos meses mayor�a simple.
+  2. Mayor�a absoluta o transcurridos tres meses mayor�a simple.
+  3. Mayor�a de dos tercios o transcurridos dos meses mayor�a simple.
+
+---
+
+### Pregunta 27
+
+**Texto:** Las enmiendas introducidas por el Senado en un proyecto de Ley:
+
+**Opciones:**
+  0. Deben ser aceptadas o rechazadas en el Congreso por mayor�a simple.
+  1. Deben ser aceptadas o rechazadas en el Congreso por mayor�a absoluta.
+  2. Deben ser aceptadas o rechazadas en el Congreso por mayor�a de dos tercios.
+  3. Deben ser aceptadas o rechazadas en el Congreso por mayor�a de tres quintos.
+
+---
+
+### Pregunta 28
+
+**Texto:** �Cu�l es el n�mero m�nimo de Senadores necesario para constituir Grupo Parlamentario en el
+
+**Opciones:**
+  0. 10 Senadores.
+  1. 15 Senadores.
+  2. 18 Senadores.
+  3. 20 Senadores
+
+---
+
+### Pregunta 29
+
+**Texto:** De conformidad con el art�culo 74 CE, las C�maras se reunir�n en sesi�n conjunta:
+
+**Opciones:**
+  0. Para ejercer las competencias legislativas que el T�tulo II atribuye expresamente a las Cortes
+  1. Para ejercer las competencias legislativas que el T�tulo V atribuye expresamente a las Cortes
+  2. Para ejercer las competencias no legislativas que el T�tulo II atribuye expresamente a las Cortes
+  3. Para ejercer las competencias no legislativas que el T�tulo V atribuye expresamente a las Cortes
+
+---
+
+### Pregunta 30
+
+**Texto:** Se�ale la respuesta falsa:
+
+**Opciones:**
+  0. El Senado es la C�mara de representaci�n territorial.
+  1. En cada C�mara habr� una Diputaci�n Permanente compuesta por un m�ximo de veinti�n
+  2. Las sesiones plenarias de las C�maras ser�n p�blicas, salvo acuerdo en contrario de cada C�mara,
+  3. doptado por mayor�a absoluta o con arreglo al Reglamento.
+
+---
+
+### Pregunta 31
+
+**Texto:** Los Decretos-Leyes deber�n ser sometidos inmediatamente a debate y votaci�n de totalidad en el
+
+**Opciones:**
+  0. ongreso, convocado al efecto si no estuviera reunido:
+  1. En el plazo de los veinte d�as siguientes a su promulgaci�n.
+  2. En el plazo de los treinta d�as siguientes a su promulgaci�n.
+  3. En el plazo de los veinticinco d�as siguientes a su promulgaci�n.
+
+---
+
+### Pregunta 32
+
+**Texto:** La Constituci�n prev� distintas causas de inelegibilidad e incompatibilidad de los Diputados y
+
+**Opciones:**
+  0. Ser miembro de la Junta electoral.
+  1. Ser miembro del Gobierno.
+  2. Ser miembro de la polic�a en activo.
+  3. Ser miembro del Tribunal Constitucional.
+
+---
+
+### Pregunta 33
+
+**Texto:** Los acuerdos de las C�maras, seg�n lo establecido en el art�culo 79 de la Constituci�n, precisan:
+
+**Opciones:**
+  0. Mayor�a absoluta, sin perjuicio de las mayor�as especiales que establezcan la Constituci�n o las
+  1. Mayor�a de 2/3, sin perjuicio de las mayor�as especiales que establezcan la Constituci�n o las leyes
+  2. Mayor�a de miembros presentes, sin perjuicio de las mayor�as especiales que establezcan la
+  3. onstituci�n o las leyes org�nicas y las que para elecci�n de personas establezcan los Reglamentos
+
+---
+
+### Pregunta 34
+
+**Texto:** La convocatoria de las elecciones generales se realiza:
+
+**Opciones:**
+  0. Por el Rey.
+  1. Por el Congreso.
+  2. Por el Gobierno.
+  3. Por las Cortes Generales.
+
+---
+
+### Pregunta 35
+
+**Texto:** Los Diputados que componen el Congreso:
+
+**Opciones:**
+  0. Gozan de inmunidad por las opiniones manifestadas en el ejercicio de su cargo.
+  1. No podr�n ser simult�neamente miembros del Senado.
+  2. Son elegidos con arreglo a criterios de representaci�n mayoritaria.
+  3. Son elegidos entre espa�oles o miembros de un pa�s perteneciente a la Uni�n Europea si as� lo
+
+---
+
+### Pregunta 36
+
+**Texto:** Se�ale la respuesta correcta en relaci�n con la tramitaci�n de los proyectos de ley:
+
+**Opciones:**
+  0. Se remiten siempre a la Mesa del Congreso.
+  1. No admiten enmiendas a la totalidad de devoluci�n.
+  2. En caso de que el proyecto sea declarado urgente por el congreso o por el gobierno, el senado
+  3. ispondr� de 20 d�as naturales para vetar o enmendar el proyecto.
+
+---
+
+### Pregunta 37
+
+**Texto:** Ser�n materias de Pleno, seg�n lo dispuesto en el art�culo 75 de la Constituci�n (se�ale la incorrecta):
+
+**Opciones:**
+  0. La reforma Constitucional.
+  1. La Planificaci�n General de la actividad econ�mica.
+  2. Los Presupuestos Generales del Estado.
+  3. Las leyes org�nicas y de bases.
+
+---
+
+### Pregunta 38
+
+**Texto:** En una Comunidad aut�noma que tuviera 8 provincias no insulares y 8.538.376 habitantes, �cu�ntos
+
+**Opciones:**
+  0. 40.
+  1. 41.
+  2. 39.
+  3. 38.
+
+---
+
+### Pregunta 39
+
+**Texto:** Entre las funciones de car�cter financiero atribuidas a las Cortes Generales se encuentra (Se�ale la
+
+**Opciones:**
+  0. Elaboraci�n de los Presupuestos Generales del Estado.
+  1. Examen, enmienda y aprobaci�n de los Presupuestos Generales del Estado.
+  2. Examen y aprobaci�n de la Cuenta General del Estado.
+  3. Ejercicio de la potestad originaria para establecer tributos mediante ley.
+
+---
+
+### Pregunta 40
+
+**Texto:** Una proposici�n de ley cuya iniciativa venga del Senado, deber� ir suscrita por:
+
+**Opciones:**
+  0. 25 senadores o un grupo parlamentario.
+  1. 50 senadores que no pertenezcan al mismo grupo parlamentario.
+  2. 25 senadores con la firma de su portavoz.
+  3. 2 grupos parlamentarios.
+
+---

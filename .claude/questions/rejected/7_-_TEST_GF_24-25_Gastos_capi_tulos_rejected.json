@@ -1,0 +1,1524 @@
+{
+  "metadata": {
+    "source_file": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+    "source_path": "Test financiero\\7.- TEST GF 24-25 Gastos capítulos.pdf",
+    "tema": 0,
+    "categoria": "financiero",
+    "extraction_date": "2026-01-15T23:41:28.564142",
+    "reformulation_date": "2026-01-15T23:47:35.654292",
+    "total_questions": 30,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.726288",
+    "completed_count": 0,
+    "failed_count": 30
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "Qu gastos de carcter inmaterial se presupuestan en el captulo 2?",
+        "options": [
+          {
+            "text": "Los arrendamientos sin opcin a compra.",
+            "is_correct": false
+          },
+          {
+            "text": "La adquisicin de propiedad intelectual.",
+            "is_correct": false
+          },
+          {
+            "text": "Los que puedan tener carcter reiterativo, no sean susceptibles de amortizacin y estn",
+            "is_correct": false
+          },
+          {
+            "text": "Las indemnizaciones por destino en el extranjero.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu gastos de carcter inmaterial se presupuestan en el captulo 2?",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la afirmacin INCORRECTA en relacin con la imputacin al presupuesto de los",
+        "options": [
+          {
+            "text": "Los gastos de transporte devengados por un funcionario en comisin de servicios que",
+            "is_correct": false
+          },
+          {
+            "text": "La adquisicin de elementos de transporte se imputa al artculo 23 Transportes.",
+            "is_correct": false
+          },
+          {
+            "text": "Los gastos por seguros de vehculos, edificios y locales se imputan al concepto 224",
+            "is_correct": false
+          },
+          {
+            "text": "La distribucin de vales de comidas al personal se imputa al captulo 1.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la afirmacin INCORRECTA en relacin con la imputacin al presupuesto de los",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los honorarios que recibe el personal al servicio de la Administracin Pblica por la",
+        "options": [
+          {
+            "text": "Subconcepto 162.00 Formacin y perfeccionamiento del personal.",
+            "is_correct": false
+          },
+          {
+            "text": "Subconcepto 226.06 Reuniones, conferencias y cursos.",
+            "is_correct": false
+          },
+          {
+            "text": "Artculo 23 Indemnizaciones por razn del servicio.",
+            "is_correct": false
+          },
+          {
+            "text": "Concepto 150 Gratificaciones.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los honorarios que recibe el personal al servicio de la Administracin Pblica por la",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Cul de los siguientes gastos NO se imputa al concepto 227 Trabajos realizados por",
+        "options": [
+          {
+            "text": "Gastos de asesora tcnica.",
+            "is_correct": false
+          },
+          {
+            "text": "Dotacin de premios",
+            "is_correct": false
+          },
+          {
+            "text": "ontraprestacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Otorgamiento de poderes notariales.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de los siguientes gastos NO se imputa al concepto 227 Trabajos realizados por",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con el artculo 31.2 de la Constitucin, la programacin y ejecucin del gasto",
+        "options": [
+          {
+            "text": "Eficacia, eficiencia y economa.",
+            "is_correct": false
+          },
+          {
+            "text": "Eficacia y sostenibilidad financiera.",
+            "is_correct": false
+          },
+          {
+            "text": "Eficiencia y economa.",
+            "is_correct": false
+          },
+          {
+            "text": "Justicia y eficacia.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con el artculo 31.2 de la Constitucin, la programacin y ejecucin del gasto",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Las grandes reparaciones se imputan al:",
+        "options": [
+          {
+            "text": "En todo caso al artculo 21 Reparaciones, mantenimiento y conservacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Al artculo 61 Inversin de reposicin en infraestructura y bienes destinados al uso",
+            "is_correct": false
+          },
+          {
+            "text": "Al artculo 21 Reparaciones, mantenimiento y conservacin o 63 Inversin de",
+            "is_correct": false
+          },
+          {
+            "text": "En todo caso al artculo 63 Inversin de reposicin en infraestructura y bienes destinados",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las grandes reparaciones se imputan al:",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Se imputan al captulo 6 del presupuesto de gastos:",
+        "options": [
+          {
+            "text": "Todos los gastos de leasing o arrendamiento financiero con opcin a compra.",
+            "is_correct": false
+          },
+          {
+            "text": "La adquisicin de monitores y dispositivos auxiliares de memoria.",
+            "is_correct": false
+          },
+          {
+            "text": "Los paquetes estndar de software.",
+            "is_correct": false
+          },
+          {
+            "text": "La adquisicin de libros y revistas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Se imputan al captulo 6 del presupuesto de gastos:",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cul de los siguientes gastos NO se reflejar presupuestariamente en el captulo 3 del",
+        "options": [
+          {
+            "text": "Intereses de demora como consecuencia del incumplimiento del pago de las obligaciones,",
+            "is_correct": false
+          },
+          {
+            "text": "Intereses de deuda pblica emitida.",
+            "is_correct": false
+          },
+          {
+            "text": "Gastos por realizacin de transferencias bancarias.",
+            "is_correct": false
+          },
+          {
+            "text": "Intereses de prstamos recibidos.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de los siguientes gastos NO se reflejar presupuestariamente en el captulo 3 del",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los gastos relativos a seguros se imputan:",
+        "options": [
+          {
+            "text": "En todo caso al subconcepto 162.05 Seguros.",
+            "is_correct": false
+          },
+          {
+            "text": "En todo caso al concepto 224 Seguros.",
+            "is_correct": false
+          },
+          {
+            "text": "Al subconcepto 162.05 Seguros si son seguros de vida, accidente o responsabilidad",
+            "is_correct": false
+          },
+          {
+            "text": "ivil del personal.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los gastos relativos a seguros se imputan:",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Los reintegros de prstamos recibidos se consideran:",
+        "options": [
+          {
+            "text": "Gastos del captulo 8.",
+            "is_correct": false
+          },
+          {
+            "text": "Gastos del captulo 9.",
+            "is_correct": false
+          },
+          {
+            "text": "Gastos del captulo 3.",
+            "is_correct": false
+          },
+          {
+            "text": "Gastos del captulo 5.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los reintegros de prstamos recibidos se consideran:",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El concepto correspondiente al gasto relativo al suministro de energa elctrica es el:",
+        "options": [
+          {
+            "text": "120.",
+            "is_correct": false
+          },
+          {
+            "text": "232.",
+            "is_correct": false
+          },
+          {
+            "text": "630.",
+            "is_correct": false
+          },
+          {
+            "text": "221.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El concepto correspondiente al gasto relativo al suministro de energa elctrica es el:",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: '120....'",
+        "Distractor muy corto: '232....'",
+        "Distractor muy corto: '630....'",
+        "Distractor muy corto: '221....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.48
+    },
+    {
+      "question": {
+        "question_text": "A qu concepto del estado de gastos se imputarn los gastos destinados a la cobertura",
+        "options": [
+          {
+            "text": "e tasas, contribuciones o impuestos, ya sean estatales, autonmicos o locales?",
+            "is_correct": false
+          },
+          {
+            "text": "223.",
+            "is_correct": false
+          },
+          {
+            "text": "224.",
+            "is_correct": false
+          },
+          {
+            "text": "225.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "A qu concepto del estado de gastos se imputarn los gastos destinados a la cobertura",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: '223....'",
+        "Distractor muy corto: '224....'",
+        "Distractor muy corto: '225....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.25,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.48
+    },
+    {
+      "question": {
+        "question_text": "Las tasas y precios pblicos tienen la consideracin de:",
+        "options": [
+          {
+            "text": "Ingresos por operaciones corrientes.",
+            "is_correct": false
+          },
+          {
+            "text": "Ingresos por operaciones de capital.",
+            "is_correct": false
+          },
+          {
+            "text": "Ingresos patrimoniales.",
+            "is_correct": false
+          },
+          {
+            "text": "Ingresos por operaciones financieras.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las tasas y precios pblicos tienen la consideracin de:",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La amortizacin de deuda pblica emitida se imputar al:",
+        "options": [
+          {
+            "text": "Captulo 8 del estado de ingresos.",
+            "is_correct": false
+          },
+          {
+            "text": "Captulo 8 del estado de gastos.",
+            "is_correct": false
+          },
+          {
+            "text": "Captulo 9 del estado de ingresos.",
+            "is_correct": false
+          },
+          {
+            "text": "Captulo 9 del estado de gastos.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La amortizacin de deuda pblica emitida se imputar al:",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cul de los siguientes gastos ha de imputarse al captulo 4 del presupuesto de gastos?",
+        "options": [
+          {
+            "text": "Una transferencia a una comunidad autnoma destinada a financiar la construccin de un",
+            "is_correct": false
+          },
+          {
+            "text": "La compra de un ordenador.",
+            "is_correct": false
+          },
+          {
+            "text": "Una ayuda estatal destinada a la compra de una vivienda.",
+            "is_correct": false
+          },
+          {
+            "text": "Las cantidades destinadas a las salidas programadas de los reclusos al exterior, como",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de los siguientes gastos ha de imputarse al captulo 4 del presupuesto de gastos?",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "A qu artculo del estado de gastos se imputarn las retribuciones bsicas de los",
+        "options": [
+          {
+            "text": "10.",
+            "is_correct": false
+          },
+          {
+            "text": "11.",
+            "is_correct": false
+          },
+          {
+            "text": "12.",
+            "is_correct": false
+          },
+          {
+            "text": "13.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "A qu artculo del estado de gastos se imputarn las retribuciones bsicas de los",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: '10....'",
+        "Distractor muy corto: '11....'",
+        "Distractor muy corto: '12....'",
+        "Distractor muy corto: '13....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.443
+    },
+    {
+      "question": {
+        "question_text": "Conforme al artculo 43 de la Ley 47/2003, de 26 de noviembre, General Presupuestaria,",
+        "options": [
+          {
+            "text": "Captulo.",
+            "is_correct": false
+          },
+          {
+            "text": "Artculo.",
+            "is_correct": false
+          },
+          {
+            "text": "Concepto.",
+            "is_correct": false
+          },
+          {
+            "text": "Al nivel que corresponda conforme a su concreta clasificacin econmica.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Conforme al artculo 43 de la Ley 47/2003, de 26 de noviembre, General Presupuestaria,",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Captulo....'",
+        "Distractor muy corto: 'Artculo....'",
+        "Distractor muy corto: 'Concepto....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.25,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.48
+    },
+    {
+      "question": {
+        "question_text": "A qu artculo se imputan los gastos realizados en un ejercicio, no materializados en",
+        "options": [
+          {
+            "text": "ctivos, susceptibles de producir sus efectos en varios ejercicios futuros, tales como",
+            "is_correct": false
+          },
+          {
+            "text": "ampaas de promocin de turismo, ferias y exposiciones?",
+            "is_correct": false
+          },
+          {
+            "text": "60.",
+            "is_correct": false
+          },
+          {
+            "text": "64.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "A qu artculo se imputan los gastos realizados en un ejercicio, no materializados en",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: '60....'",
+        "Distractor muy corto: '64....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "A qu concepto presupuestario se imputan los ingresos por intereses derivados de",
+        "options": [
+          {
+            "text": "399.",
+            "is_correct": false
+          },
+          {
+            "text": "400.",
+            "is_correct": false
+          },
+          {
+            "text": "500.",
+            "is_correct": false
+          },
+          {
+            "text": "800.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "A qu concepto presupuestario se imputan los ingresos por intereses derivados de",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: '399....'",
+        "Distractor muy corto: '400....'",
+        "Distractor muy corto: '500....'",
+        "Distractor muy corto: '800....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.443
+    },
+    {
+      "question": {
+        "question_text": "La diferencia entre el captulo 6 de gastos y el captulo 6 de ingresos se denomina:",
+        "options": [
+          {
+            "text": "Saldo neto de inversiones reales.",
+            "is_correct": false
+          },
+          {
+            "text": "Variacin neta de capital.",
+            "is_correct": false
+          },
+          {
+            "text": "Variacin neta de inversiones reales.",
+            "is_correct": false
+          },
+          {
+            "text": "Formacin bruta de capital.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La diferencia entre el captulo 6 de gastos y el captulo 6 de ingresos se denomina:",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Son transferencias corrientes:",
+        "options": [
+          {
+            "text": "Los pagos, siempre que sean condicionados, efectuados por el Estado, organismos",
+            "is_correct": false
+          },
+          {
+            "text": "utnomos, agencias estatales y otros organismos pblicos con contrapartida directa por",
+            "is_correct": false
+          },
+          {
+            "text": "Los pagos, condicionados o no, efectuados por el Estado, organismos autnomos,",
+            "is_correct": false
+          },
+          {
+            "text": "gencias estatales y otros organismos pblicos con contrapartida directa por parte de los",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Son transferencias corrientes:",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En el presupuesto del Estado, los crditos destinados a atenciones protocolarias y",
+        "options": [
+          {
+            "text": "A nivel de captulo.",
+            "is_correct": false
+          },
+          {
+            "text": "A nivel de artculo.",
+            "is_correct": false
+          },
+          {
+            "text": "A nivel de concepto.",
+            "is_correct": false
+          },
+          {
+            "text": "Al nivel que corresponda conforme a su concreta clasificacin econmica.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En el presupuesto del Estado, los crditos destinados a atenciones protocolarias y",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El gasto por pensiones de aquellos funcionarios que se jubilen se imputar al captulo:",
+        "options": [
+          {
+            "text": "1 Gastos de personal.",
+            "is_correct": false
+          },
+          {
+            "text": "4 Transferencias corrientes.",
+            "is_correct": false
+          },
+          {
+            "text": "8 Activos financieros.",
+            "is_correct": false
+          },
+          {
+            "text": "9 Pasivos financieros.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El gasto por pensiones de aquellos funcionarios que se jubilen se imputar al captulo:",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Los gastos por la impresin del D.N.I. deben imputarse:",
+        "options": [
+          {
+            "text": "Al subconcepto 220.00 Material de oficina ordinario no inventariable.",
+            "is_correct": false
+          },
+          {
+            "text": "Al subconcepto 221.09 Labores de la Fbrica Nacional de la Moneda y Timbre.",
+            "is_correct": false
+          },
+          {
+            "text": "Al concepto 240 Gastos de edicin y distribucin.",
+            "is_correct": false
+          },
+          {
+            "text": "Al subconcepto 226.08 Gastos reservados.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los gastos por la impresin del D.N.I. deben imputarse:",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Las inversiones que tienen por objeto prorrogar la vida til del bien o poner ste en un",
+        "options": [
+          {
+            "text": "Inversiones asociadas al funcionamiento operativo de los servicios.",
+            "is_correct": false
+          },
+          {
+            "text": "Inversiones en bienes destinados al uso general.",
+            "is_correct": false
+          },
+          {
+            "text": "Inversiones nuevas.",
+            "is_correct": false
+          },
+          {
+            "text": "Inversiones de reposicin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las inversiones que tienen por objeto prorrogar la vida til del bien o poner ste en un",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La adquisicin de acciones y participaciones en el sector pblico se imputa al:",
+        "options": [
+          {
+            "text": "Captulo 4 Transferencias corrientes.",
+            "is_correct": false
+          },
+          {
+            "text": "Captulo 7 Transferencias de capital.",
+            "is_correct": false
+          },
+          {
+            "text": "Captulo 8 Activos financieros.",
+            "is_correct": false
+          },
+          {
+            "text": "Captulo 9 Pasivos financieros.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La adquisicin de acciones y participaciones en el sector pblico se imputa al:",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Los gastos de reparacin de un vehculo, cuando alargue su vida til, se imputan al:",
+        "options": [
+          {
+            "text": "Artculo 21 Reparaciones, mantenimiento y conservacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Artculo 60 Inversin nueva en infraestructura y bienes destinados al uso general.",
+            "is_correct": false
+          },
+          {
+            "text": "Artculo 61 Inversin de reposicin en infraestructura y bienes destinados al uso",
+            "is_correct": false
+          },
+          {
+            "text": "Artculo 63 Inversin de reposicin asociada al funcionamiento operativo de los",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los gastos de reparacin de un vehculo, cuando alargue su vida til, se imputan al:",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "A qu captulo del Presupuesto de Gastos se imputan las ayudas y actividades de accin",
+        "options": [
+          {
+            "text": "Captulo 1 Gastos de personal.",
+            "is_correct": false
+          },
+          {
+            "text": "Captulo 2 Gatos corrientes en bienes y servicios.",
+            "is_correct": false
+          },
+          {
+            "text": "Captulo 3 Gastos financieros.",
+            "is_correct": false
+          },
+          {
+            "text": "Captulo 4 Transferencias corrientes.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "A qu captulo del Presupuesto de Gastos se imputan las ayudas y actividades de accin",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "A qu captulo del estado de gastos se imputar la adquisicin de deuda pblica?",
+        "options": [
+          {
+            "text": "Captulo 3.",
+            "is_correct": false
+          },
+          {
+            "text": "Captulo 5.",
+            "is_correct": false
+          },
+          {
+            "text": "Captulo 8.",
+            "is_correct": false
+          },
+          {
+            "text": "Captulo 9.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "A qu captulo del estado de gastos se imputar la adquisicin de deuda pblica?",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cmo se denominan las cantidades satisfechas peridicamente por la cesin de un bien,",
+        "options": [
+          {
+            "text": "Arrendamientos inmateriales.",
+            "is_correct": false
+          },
+          {
+            "text": "Cnones.",
+            "is_correct": false
+          },
+          {
+            "text": "Tasas.",
+            "is_correct": false
+          },
+          {
+            "text": "Arrendamientos financieros.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cmo se denominan las cantidades satisfechas peridicamente por la cesin de un bien,",
+        "source": "7.- TEST GF 24-25 Gastos capítulos.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "gestion-financiera",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Cnones....'",
+        "Distractor muy corto: 'Tasas....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:22.194048"
+}

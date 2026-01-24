@@ -1,0 +1,270 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 3. Test preparación parte general..pdf
+**Total preguntas:** 20
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** En relaci�n con las consultas preliminares de mercado, se�ale la respuesta
+
+**Opciones:**
+  0. Los �rganos de contrataci�n deber�n realizar estudios de mercado y
+  1. irigir consultas a los operadores econ�micos que estuvieran activos en
+  2. Antes de iniciarse la consulta, el �rgano de contrataci�n la publicar� en
+  3. Cuando el �rgano de contrataci�n haya realizado las consultas har�
+
+---
+
+### Pregunta 2
+
+**Texto:** Las consultas preliminares de mercado:
+
+**Opciones:**
+  0. Se publicar�n en el Bolet�n Oficial del Estado y en el perfil del contratante.
+  1. Se publicar�n en el Diario Oficial de la Uni�n europea, si el contrato est�
+  2. Se publicar� en el perfil del contratante.
+  3. Se publicar� a elecci�n del �rgano de contrataci�n en el perfil del
+
+---
+
+### Pregunta 3
+
+**Texto:** En cuanto a las consultas preliminares de mercado:
+
+**Opciones:**
+  0. En el caso de realizarse, el �rgano de contrataci�n, al elaborar los pliegos
+  1. eber� tener en cuenta los resultados de las consultas realizadas; de no
+  2. No se puede utilizar en los contratos sujetos a regulaci�n armonizada.
+  3. Con car�cter general el �rgano de contrataci�n al elaborar los pliegos no
+
+---
+
+### Pregunta 4
+
+**Texto:** De acuerdo con la LCSP, se�ale la respuesta incorrecta:
+
+**Opciones:**
+  0. El expediente de contrataci�n se iniciar� por el �rgano de contrataci�n
+  1. Todos los expedientes de contrataci�n contar�n con un informe de
+  2. Completado el expediente de contrataci�n, se dictar� resoluci�n
+  3. isponiendo la apertura del procedimiento de adjudicaci�n.
+
+---
+
+### Pregunta 5
+
+**Texto:** En cuanto al expediente de contrataci�n:
+
+**Opciones:**
+  0. El expediente deber� referirse a la totalidad del objeto del contrato, salvo
+  1. Al expediente se incorporar�n el pliego de cl�usulas administrativas
+  2. Deber� incorporarse el certificado de existencia de cr�dito y la
+  3. En el expediente se justificar� adecuadamente, entre otros aspectos, la
+
+---
+
+### Pregunta 6
+
+**Texto:** Se�ale la respuesta correcta en relaci�n con los contratos menores:
+
+**Opciones:**
+  0. Se consideran contratos menores los contratos de valor estimado inferior
+  1. 40.000 euros.
+  2. Se requerir� la aprobaci�n del gasto y la incorporaci�n al mismo de la
+  3. Con car�cter general, en los contratos menores la tramitaci�n del
+
+---
+
+### Pregunta 7
+
+**Texto:** Se�ale la respuesta incorrecta:
+
+**Opciones:**
+  0. Los expedientes de contrataci�n podr�n ultimarse incluso con la
+  1. djudicaci�n y formalizaci�n del correspondiente contrato, aun cuando su
+  2. Completado el expediente de contrataci�n, se dictar� resoluci�n
+  3. La resoluci�n de aprobaci�n implicar� tambi�n la aprobaci�n del gasto,
+
+---
+
+### Pregunta 8
+
+**Texto:** Se consideran contratos menores:
+
+**Opciones:**
+  0. Los contratos de valor estimado inferior a 40.000 euros, cuando se trate
+  1. e contratos de obras, siempre que su duraci�n sea superior a un a�o.
+  2. Los contratos de valor estimado inferior a 15.000 euros siempre que sean
+  3. Los contratos de valor estimado inferior a 40.000 euros, cuando se trate
+
+---
+
+### Pregunta 9
+
+**Texto:** De acuerdo con la LCSP:
+
+**Opciones:**
+  0. Atendiendo a la singular naturaleza de su actividad, como excepci�n al
+  1. onsideraci�n de contratos menores los contratos de suministro o de
+  2. elebren por los agentes p�blicos del Sistema Espa�ol de Ciencia,
+  3. La respuesta a, siempre que no vayan destinados a servicios generales
+
+---
+
+### Pregunta 10
+
+**Texto:** De acuerdo con la LCSP, podr�n ser objeto de tramitaci�n urgente los
+
+**Opciones:**
+  0. Cuya celebraci�n responda a una necesidad inaplazable.
+  1. Cuya adjudicaci�n sea preciso acelerar por razones de inter�s p�blico.
+  2. Las respuestas a y b son correctas.
+  3. Cuya actuaci�n sea necesaria a causa de acontecimientos catastr�ficos.
+
+---
+
+### Pregunta 11
+
+**Texto:** Los expedientes calificados de urgentes se tramitar�n, se�ale la respuesta
+
+**Opciones:**
+  0. orrecta:
+  1. Siguiendo el mismo procedimiento que los ordinarios, salvo que existe
+  2. Acordada la apertura del procedimiento de adjudicaci�n, los plazos
+  3. el contrato se reducir�n a la mitad, con car�cter general.
+
+---
+
+### Pregunta 12
+
+**Texto:** Cuando la Administraci�n tenga que actuar de manera inmediata a causa
+
+**Opciones:**
+  0. e acontecimientos catastr�ficos, de situaciones que supongan grave
+  1. El �rgano de contrataci�n, sin obligaci�n de tramitar expediente de
+  2. ontrataci�n, podr� ordenar la ejecuci�n de lo necesario para remediar el
+  3. contecimiento producido o satisfacer la necesidad sobrevenida, o
+
+---
+
+### Pregunta 13
+
+**Texto:** Se�ale la respuesta correcta:
+
+**Opciones:**
+  0. En la tramitaci�n de emergencia no se podr� llevar a cabo una
+  1. ontrataci�n verbal.
+  2. En la tramitaci�n de emergencia ser� necesario formalizar el contrato con
+  3. ar�cter previo a la ejecuci�n.
+
+---
+
+### Pregunta 14
+
+**Texto:** En la tramitaci�n de emergencia:
+
+**Opciones:**
+  0. El plazo de inicio de la ejecuci�n del contrato no podr� exceder de un
+  1. El plazo de inicio de la ejecuci�n de las prestaciones no podr� ser
+  2. El plazo de inicio de la ejecuci�n de las prestaciones no podr� ser
+  3. El plazo de inicio de la ejecuci�n del contrato no podr� exceder de 30
+
+---
+
+### Pregunta 15
+
+**Texto:** Los pliegos de cl�usulas administrativas generales:
+
+**Opciones:**
+  0. Contendr�n las declaraciones jur�dicas, econ�micas y administrativas,
+  1. n�logo.
+  2. El Consejo de Ministros, a iniciativa de los Ministerios interesados, a
+  3. el Consejo de Estado, podr� aprobar pliegos de cl�usulas
+
+---
+
+### Pregunta 16
+
+**Texto:** En cuanto a los pliegos de cl�usulas administrativas particulares:
+
+**Opciones:**
+  0. En los pliegos de cl�usulas administrativas particulares se incluir�n entre
+  1. onsideraciones sociales, laborales y ambientales que, como criterios de
+  2. En los pliegos de cl�usulas administrativas particulares se incluir�n las
+  3. aracter�sticas t�cnicas que hayan de reunir los bienes o prestaciones
+
+---
+
+### Pregunta 17
+
+**Texto:** Los pliegos de cl�usulas administrativas generales, de acuerdo con la
+
+**Opciones:**
+  0. Ser�n aprobados por el Consejo de Ministros, a iniciativa de los
+  1. Ser�n aprobados por el Consejo de Estado, a iniciativa de los Ministerios
+  2. onsejo de Ministros.
+  3. Ser�n aprobados por el �rgano de contrataci�n, a iniciativa de los
+
+---
+
+### Pregunta 18
+
+**Texto:** �Qu� informe ser� necesario para la aprobaci�n de los pliegos de
+
+**Opciones:**
+  0. l�usulas administrativas particulares?
+  1. Informe del Consejo de Ministros.
+  2. Informe de la Junta Consultiva de Contrataci�n P�blica del Estado.
+  3. Informe del Servicio jur�dico.
+
+---
+
+### Pregunta 19
+
+**Texto:** �Qu� informe ser� necesario para la aprobaci�n de los pliegos de
+
+**Opciones:**
+  0. Informe del Consejo de Ministros.
+  1. Informe de la Mesa de contrataci�n.
+  2. Informe del servicio jur�dico.
+  3. Ninguno.
+
+---
+
+### Pregunta 20
+
+**Texto:** Se�ale la respuesta correcta:
+
+**Opciones:**
+  0. En la tramitaci�n de urgencia, se dar� cuenta de dichos acuerdos al
+  1. onsejo de Ministros en el plazo m�ximo de treinta d�as.
+  2. En la tramitaci�n de urgencia, el plazo de inicio de la ejecuci�n de las
+  3. el acuerdo de tramitaci�n de urgencia.
+
+---

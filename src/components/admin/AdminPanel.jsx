@@ -7,6 +7,7 @@ import {
   BookOpen, List, TrendingUp, Plus, Lightbulb
 } from 'lucide-react';
 import { useAdmin } from '../../contexts/AdminContext';
+import { useAuth } from '../../contexts/AuthContext';
 import { supabase } from '../../lib/supabase';
 import QuestionImporter from './QuestionImporter';
 import QuestionExporter from './QuestionExporter';
@@ -17,7 +18,17 @@ import InsightsTab from './InsightsTab';
 import { ReviewContainer } from '../review';
 
 export default function AdminPanel({ onBack }) {
-  const { adminUser, logoutAdmin, isAdmin } = useAdmin();
+  // Support both AdminContext (PIN login) and AuthContext (normal login with role)
+  const { adminUser, logoutAdmin, isAdmin: isAdminFromPin } = useAdmin();
+  const { user: authUser, userRole, signOut, isAdmin: isAdminFromAuth } = useAuth();
+
+  // Use whichever user is available (prioritize AdminContext for backwards compatibility)
+  const currentUser = adminUser || (isAdminFromAuth ? {
+    name: userRole?.name || authUser?.user_metadata?.display_name || authUser?.email,
+    email: authUser?.email,
+    role: 'admin'
+  } : null);
+  const isAdmin = isAdminFromPin || isAdminFromAuth;
   const [activeTab, setActiveTab] = useState('overview');
   const [stats, setStats] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -105,8 +116,13 @@ export default function AdminPanel({ onBack }) {
     }
   }, [activeTab, loadStats]);
 
-  const handleLogout = () => {
-    logoutAdmin();
+  const handleLogout = async () => {
+    // Logout from whichever context is active
+    if (adminUser) {
+      logoutAdmin();
+    }
+    // Don't sign out from AuthContext - just go back to home
+    // User stays logged in to the app, just exits admin panel
     onBack();
   };
 
@@ -140,7 +156,7 @@ export default function AdminPanel({ onBack }) {
                   Panel de Admin
                 </h1>
                 <p className="text-purple-200 text-sm">
-                  {adminUser?.name || adminUser?.email}
+                  {currentUser?.name || currentUser?.email}
                 </p>
               </div>
             </div>

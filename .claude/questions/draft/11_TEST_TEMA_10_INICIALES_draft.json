@@ -1,0 +1,1337 @@
+{
+  "metadata": {
+    "source_file": "11 TEST TEMA 10 INICIALES.docx",
+    "source_path": "11 TEST TEMA 10 INICIALES.docx",
+    "tema": 10,
+    "categoria": "general",
+    "extraction_date": "2026-01-15T23:39:45.951953",
+    "reformulation_date": "2026-01-15T23:47:35.516252",
+    "total_questions": 40,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.310911",
+    "completed_count": 0,
+    "failed_count": 40
+  },
+  "questions": [
+    {
+      "question_text": "Los Estatutos de Autonoma son definidos en la Constitucin como la norma institucional bsica:",
+      "options": [
+        {
+          "text": "Del Estado de las Autonomas.",
+          "is_correct": false
+        },
+        {
+          "text": "De cada Comunidad Autnoma y parte integrante del ordenamiento jurdico local.",
+          "is_correct": false
+        },
+        {
+          "text": "De cada Comunidad Autnoma y parte integrante del ordenamiento jurdico estatal.",
+          "is_correct": false
+        },
+        {
+          "text": "De les Comunidades Autnomas y de la Administracin Local.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los Estatutos de Autonoma son definidos en la Constitucin como la norma institucional bsica:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los Estatutos de Autonoma deben plasmarse en:",
+      "options": [
+        {
+          "text": "Leyes de Bases.",
+          "is_correct": false
+        },
+        {
+          "text": "Leyes orgnicas.",
+          "is_correct": false
+        },
+        {
+          "text": "Leyes ordinarias.",
+          "is_correct": false
+        },
+        {
+          "text": "Leyes de transferencias.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los Estatutos de Autonoma deben plasmarse en:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La reforma de los Estatutos de Autonoma:",
+      "options": [
+        {
+          "text": "Est prohibida.",
+          "is_correct": false
+        },
+        {
+          "text": "En todo caso, requiere aprobacin por las Cortes mediante Ley orgnica.",
+          "is_correct": false
+        },
+        {
+          "text": "En todo caso, requiere aprobacin por las Cortes mediante Ley ordinaria.",
+          "is_correct": false
+        },
+        {
+          "text": "En todo caso, requiere la aprobacin por referndum.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La reforma de los Estatutos de Autonoma:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Son rganos institucionales autonmicos:",
+      "options": [
+        {
+          "text": "La Asamblea Legislativa, el Delegado del Gobierno, el Consejo de Gobierno y el Presidente de la Comunidad.",
+          "is_correct": false
+        },
+        {
+          "text": "La Asamblea Legislativa, el Consejo de Gobierno, el Presidente de la Comunidad y los Presidentes de las Diputaciones Provinciales.",
+          "is_correct": false
+        },
+        {
+          "text": "La Asamblea Legislativa, el Consejo de Gobierno y el Presidente de la Comunidad.",
+          "is_correct": false
+        },
+        {
+          "text": "La Asamblea Legislativa, el Consejo de Gobierno, el Tribunal Superior de Justicia y el Presidente de la Comunidad.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Son rganos institucionales autonmicos:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Presidente de la Comunidad Autnoma es elegido por:",
+      "options": [
+        {
+          "text": "Sufragio universal, libre, igual, directo y secreto en los trminos que establece la Ley.",
+          "is_correct": false
+        },
+        {
+          "text": "La Asamblea Legislativa de la Comunidad, de entre sus miembros.",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo de Gobierno de la Comunidad, de entre sus miembros.",
+          "is_correct": false
+        },
+        {
+          "text": "El Congreso, de entre sus miembros.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Presidente de la Comunidad Autnoma es elegido por:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los miembros de las Asambleas Legislativas de las Comunidades Autnomas son elegidos:",
+      "options": [
+        {
+          "text": "Por los Alcaldes de los municipios que las integran.",
+          "is_correct": false
+        },
+        {
+          "text": "Por sufragio universal.",
+          "is_correct": false
+        },
+        {
+          "text": "Por las Cortes Generales.",
+          "is_correct": false
+        },
+        {
+          "text": "Por los Concejales electos de los municipios que las integran.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los miembros de las Asambleas Legislativas de las Comunidades Autnomas son elegidos:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La Constitucin espaola de 1978:",
+      "options": [
+        {
+          "text": "Autoriza la federacin de Comunidades Autnomas.",
+          "is_correct": false
+        },
+        {
+          "text": "Prohbe la federacin de Comunidades Autnomas.",
+          "is_correct": false
+        },
+        {
+          "text": "Autoriza la federacin de Comunidades Autnomas cuando sean limtrofes y tengan caractersticas histricas, culturales y econmicas comunes.",
+          "is_correct": false
+        },
+        {
+          "text": "No establece nada en relacin a la federacin de Comunidades Autnomas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La Constitucin espaola de 1978:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu principio, consagrado en el artculo 2 de la Constitucin, ha de presidir la organizacin territorial del Estado?:",
+      "options": [
+        {
+          "text": "El principio de igualdad.",
+          "is_correct": false
+        },
+        {
+          "text": "El principio de solidaridad.",
+          "is_correct": false
+        },
+        {
+          "text": "El principio de coordinacin.",
+          "is_correct": false
+        },
+        {
+          "text": "El principio de eficacia.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu principio, consagrado en el artculo 2 de la Constitucin, ha de presidir la organizacin territorial del Estado?:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las Ciudades Autnomas de Ceuta y Melilla, tienen Estatutos de Autonoma?:",
+      "options": [
+        {
+          "text": "No, se rigen por leyes que no tienen carcter de Estatuto de Autonoma.",
+          "is_correct": false
+        },
+        {
+          "text": "S, aprobados por ley ordinaria.",
+          "is_correct": false
+        },
+        {
+          "text": "S, aprobados por ley orgnica.",
+          "is_correct": false
+        },
+        {
+          "text": "No, se rigen exclusivamente por el ordenamiento jurdico estatal.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las Ciudades Autnomas de Ceuta y Melilla, tienen Estatutos de Autonoma?:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con el artculo 143.2 de la Constitucin, la iniciativa del proceso autonmico corresponde:",
+      "options": [
+        {
+          "text": "A todas las Diputaciones interesadas o al rgano interinsular correspondiente y a las tres cuartas partes de los municipios cuya poblacin represente, al menos, la mayora del censo electoral de cada provincia o isla.",
+          "is_correct": false
+        },
+        {
+          "text": "A todas las Diputaciones interesadas o al rgano interinsular correspondiente y a las dos terceras partes de los municipios cuya poblacin represente, al menos, la mayora del censo electoral de cada provincia o isla.",
+          "is_correct": false
+        },
+        {
+          "text": "A todas las Diputaciones interesadas o al rgano interinsular correspondiente y a las dos terceras partes de los municipios cuya poblacin represente, al menos, la mayora absoluta del censo electoral de cada provincia o isla.",
+          "is_correct": false
+        },
+        {
+          "text": "A todas las Diputaciones interesadas o el rgano interinsular correspondiente y a las tres cuartas partes de los municipios cuya poblacin represente, al menos, la mayora absoluta del censo electoral de cada provincia o isla.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con el artculo 143.2 de la Constitucin, la iniciativa del proceso autonmico corresponde:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los requisitos previstos en la pregunta anterior debern ser cumplidos:",
+      "options": [
+        {
+          "text": "En el plazo de cinco meses desde el primer acuerdo adoptado al respecto por alguna de las Corporaciones Locales interesadas.",
+          "is_correct": false
+        },
+        {
+          "text": "En el plazo de cinco meses desde el referndum celebrado en las Corporaciones Locales interesadas.",
+          "is_correct": false
+        },
+        {
+          "text": "En el plazo de seis meses desde el primer acuerdo adoptado al respecto por alguna de las Corporaciones Locales interesadas.",
+          "is_correct": false
+        },
+        {
+          "text": "En el plazo de seis meses desde el referndum celebrado en las Corporaciones Locales interesadas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los requisitos previstos en la pregunta anterior debern ser cumplidos:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En virtud de lo establecido por el art. 143.3, si la iniciativa autonmica no prosperase, slo podr reiterarse:",
+      "options": [
+        {
+          "text": "Transcurridos cuatro aos.",
+          "is_correct": false
+        },
+        {
+          "text": "Transcurridos cinco aos.",
+          "is_correct": false
+        },
+        {
+          "text": "Transcurridos tres aos.",
+          "is_correct": false
+        },
+        {
+          "text": "Transcurridos cinco meses.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En virtud de lo establecido por el art. 143.3, si la iniciativa autonmica no prosperase, slo podr reiterarse:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El art. 144 de la Constitucin establece que las CCGG, mediante ley orgnica, podrn, por motivos de inters nacional:",
+      "options": [
+        {
+          "text": "Autorizar la constitucin de una Comunidad Autnoma cuando su mbito territorial no supere el de una provincia y no rena las condiciones del art. 143.1.",
+          "is_correct": false
+        },
+        {
+          "text": "Autorizar o acordar, en su caso, un Estatuto de autonoma para territorios que estn integrados en la organizacin provincial.",
+          "is_correct": false
+        },
+        {
+          "text": "Sustituir la iniciativa de las Asambleas Legislativas a que se refiere el art. 143.2.",
+          "is_correct": false
+        },
+        {
+          "text": "Todas son verdaderas",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El art. 144 de la Constitucin establece que las CCGG, mediante ley orgnica, podrn, por motivos de inters nacional:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Presidente de la Comunidad Autnoma ostenta:",
+      "options": [
+        {
+          "text": "La suprema representacin del Estado y la ordinaria de la Comunidad Autnoma.",
+          "is_correct": false
+        },
+        {
+          "text": "La suprema representacin de la Comunidad Autnoma y la ordinaria del Gobierno en su territorio.",
+          "is_correct": false
+        },
+        {
+          "text": "La suprema representacin del Estado y la ordinaria del Gobierno en su territorio.",
+          "is_correct": false
+        },
+        {
+          "text": "La suprema representacin de la Comunidad Autnoma y la ordinaria del Estado en su territorio.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Presidente de la Comunidad Autnoma ostenta:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Presidente de la Comunidad Autnoma y los miembros del Consejo de Gobierno:",
+      "options": [
+        {
+          "text": "Sern polticamente responsables ante el Congreso y el Senado.",
+          "is_correct": false
+        },
+        {
+          "text": "Ser polticamente responsables nicamente ante el Congreso.",
+          "is_correct": false
+        },
+        {
+          "text": "Sern polticamente responsables ante el Rey.",
+          "is_correct": false
+        },
+        {
+          "text": "Sern polticamente responsables ante la Asamblea.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Presidente de la Comunidad Autnoma y los miembros del Consejo de Gobierno:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las Asambleas Legislativas de las Comunidades Autnomas:",
+      "options": [
+        {
+          "text": "Podrn elaborar proyectos de ley.",
+          "is_correct": false
+        },
+        {
+          "text": "No tienen iniciativa legislativa.",
+          "is_correct": false
+        },
+        {
+          "text": "Podrn solicitar del Gobierno la adopcin de un proyecto de ley.",
+          "is_correct": false
+        },
+        {
+          "text": "Podrn remitir a la Mesa del Congreso una proposicin de ley, delegando ante dicha cmara un mnimo de tres miembros de la Asamblea encargados de su defensa.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las Asambleas Legislativas de las Comunidades Autnomas:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Para constituirse una comunidad autnoma uniprovincial, sin que la provincia tenga entidad regional histrica, es necesario que las Cortes:",
+      "options": [
+        {
+          "text": "Sustituyan la iniciativa de las Corporaciones Locales.",
+          "is_correct": false
+        },
+        {
+          "text": "Autoricen la iniciativa de las Corporaciones Locales.",
+          "is_correct": false
+        },
+        {
+          "text": "Autoricen su constitucin mediante Ley orgnica.",
+          "is_correct": false
+        },
+        {
+          "text": "Autoricen su constitucin mediante Ley ordinaria.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Para constituirse una comunidad autnoma uniprovincial, sin que la provincia tenga entidad regional histrica, es necesario que las Cortes:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El control de la actividad de los rganos de las Comunidades Autnomas, se ejercer:",
+      "options": [
+        {
+          "text": "Por el Tribunal de Cuentas el econmico y presupuestario.",
+          "is_correct": false
+        },
+        {
+          "text": "Por el Tribunal Supremo, el relativo a la Constitucionalidad de sus disposiciones normativas con fuerza de ley.",
+          "is_correct": false
+        },
+        {
+          "text": "Por el Gobierno, previa autorizacin del Congreso, en el ejercicio de funciones delegadas a que se refiere el art. 150.2",
+          "is_correct": false
+        },
+        {
+          "text": "Todas son correctas",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El control de la actividad de los rganos de las Comunidades Autnomas, se ejercer:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Si una Comunidad Autnoma no cumpliere las obligaciones que la Constitucin u otras leyes le impongan, o actuare de forma que atente gravemente al inters general de Espaa, el Gobierno podr adoptar las medidas necesarias, siempre que se cumplan los siguientes requisitos:",
+      "options": [
+        {
+          "text": "Previo requerimiento al Presidente de la Comunidad Autnoma y aprobacin por mayora absoluta del Senado.",
+          "is_correct": false
+        },
+        {
+          "text": "Previo requerimiento al Presidente de la Comunidad Autnoma y aprobacin por mayora absoluta del Congreso.",
+          "is_correct": false
+        },
+        {
+          "text": "Previo requerimiento al Presidente de la Comunidad Autnoma y aprobacin por mayora simple del Senado.",
+          "is_correct": false
+        },
+        {
+          "text": "Previo requerimiento al Presidente de la Comunidad Autnoma y aprobacin por mayora simple del Congreso.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Si una Comunidad Autnoma no cumpliere las obligaciones que la Constitucin u otras leyes le impongan, o actuare de forma que atente gravemente al inters general de Espaa, el Gobierno podr adoptar las medidas necesarias, siempre que se cumplan los siguientes requisitos:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No es una competencia exclusiva del estado:",
+      "options": [
+        {
+          "text": "Legislacin sobre propiedad intelectual e industrial.",
+          "is_correct": false
+        },
+        {
+          "text": "Defensa y Fuerzas armadas.",
+          "is_correct": false
+        },
+        {
+          "text": "Artesana.",
+          "is_correct": false
+        },
+        {
+          "text": "Rgimen aduanero y arancelario.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No es una competencia exclusiva del estado:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De las siguientes, es competencia exclusiva del Estado:",
+      "options": [
+        {
+          "text": "La iluminacin de costas y seales martimas.",
+          "is_correct": false
+        },
+        {
+          "text": "Las ferias interiores.",
+          "is_correct": false
+        },
+        {
+          "text": "La gestin en materia de proteccin del medio ambiente.",
+          "is_correct": false
+        },
+        {
+          "text": "La pesca en aguas interiores y fluviales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De las siguientes, es competencia exclusiva del Estado:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La apreciacin de la necesidad de armonizacin le corresponde a:",
+      "options": [
+        {
+          "text": "El jefe del Estado, mediante RD refrendado por el Presidente del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Las CCGG, por mayora absoluta de cada Cmara.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Congreso de los Diputados, por mayora absoluta.",
+          "is_correct": false
+        },
+        {
+          "text": "A las CCGG, por mayora simple de cada Cmara.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La apreciacin de la necesidad de armonizacin le corresponde a:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Derecho Estatal ser, segn la Constitucin:",
+      "options": [
+        {
+          "text": "En algunos casos, supletorio del Derecho de las Comunidades Autnomas.",
+          "is_correct": false
+        },
+        {
+          "text": "En todo caso, supletorio del Derecho de las Comunidades Autnomas.",
+          "is_correct": false
+        },
+        {
+          "text": "Primera fuente del Derecho en el ordenamiento jurdico de las Comunidades Autnomas.",
+          "is_correct": false
+        },
+        {
+          "text": "Supletorio del Derecho de las Comunidades Autnomas en todo lo no atribuido a la exclusiva competencia de stas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Derecho Estatal ser, segn la Constitucin:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Estado tiene competencia exclusiva sobre las siguientes materias (seale la falsa):",
+      "options": [
+        {
+          "text": "Defensa y Fuerzas Armadas.",
+          "is_correct": false
+        },
+        {
+          "text": "Nacionalidad.",
+          "is_correct": false
+        },
+        {
+          "text": "Montes y Aprovechamientos forestales.",
+          "is_correct": false
+        },
+        {
+          "text": "Administracin de Justicia.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Estado tiene competencia exclusiva sobre las siguientes materias (seale la falsa):",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Estado tiene competencia exclusiva sobre:",
+      "options": [
+        {
+          "text": "Relaciones internacionales.",
+          "is_correct": false
+        },
+        {
+          "text": "Comercio exterior.",
+          "is_correct": false
+        },
+        {
+          "text": "Rgimen aduanero y arancelario.",
+          "is_correct": false
+        },
+        {
+          "text": "Las tres respuestas anteriores son correctas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Estado tiene competencia exclusiva sobre:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las leyes de transferencia o delegacin sern:",
+      "options": [
+        {
+          "text": "Leyes orgnicas.",
+          "is_correct": false
+        },
+        {
+          "text": "Leyes ordinarias.",
+          "is_correct": false
+        },
+        {
+          "text": "Leyes orgnicas u ordinarias, segn transfieran o deleguen.",
+          "is_correct": false
+        },
+        {
+          "text": "Leyes de bases.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las leyes de transferencia o delegacin sern:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La Constitucin se fundamenta, en su artculo 2 en:",
+      "options": [
+        {
+          "text": "La indisoluble unidad de la nacin espaola, patria comn e indivisible de todos los espaoles.",
+          "is_correct": false
+        },
+        {
+          "text": "La indiscutible unidad de la nacin espaola, patria comn e indivisible de todos los espaoles.",
+          "is_correct": false
+        },
+        {
+          "text": "La unidad y solidaridad de la nacin espaola.",
+          "is_correct": false
+        },
+        {
+          "text": "El indiscutible derecho a la autonoma de las nacionalidades y regiones que integran Espaa y la solidaridad entre todas ellas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La Constitucin se fundamenta, en su artculo 2 en:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las Comunidades Autnomas que accedieron a su autonoma por la va general del artculo 143 de la Constitucin, podrn acceder al mximo techo competencial previsto en el artculo 149.1 de la misma norma:",
+      "options": [
+        {
+          "text": "Transcurridos cinco aos y mediante la reforma de sus respectivos Estatutos.",
+          "is_correct": false
+        },
+        {
+          "text": "Transcurridos cinco aos y mediante la aprobacin de una ley de armonizacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Transcurridos cinco meses y mediante la reforma de sus respectivos Estatutos.",
+          "is_correct": false
+        },
+        {
+          "text": "Transcurridos cinco meses y mediante la aprobacin de una ley de armonizacin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las Comunidades Autnomas que accedieron a su autonoma por la va general del artculo 143 de la Constitucin, podrn acceder al mximo techo competencial previsto en el artculo 149.1 de la misma norma:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seala cul de las siguientes materias no aparece enumerada en el artculo 148 de la CE:",
+      "options": [
+        {
+          "text": "Ferias interiores.",
+          "is_correct": false
+        },
+        {
+          "text": "Urbanismo.",
+          "is_correct": false
+        },
+        {
+          "text": "Caza.",
+          "is_correct": false
+        },
+        {
+          "text": "Tenencia de armas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seala cul de las siguientes materias no aparece enumerada en el artculo 148 de la CE:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Una vez acreditada la iniciativa autonmica prevista en el artculo 151.1 de la Constitucin se proceder a la convocatoria del referndum:",
+      "options": [
+        {
+          "text": "En el plazo de 5 meses.",
+          "is_correct": false
+        },
+        {
+          "text": "En el plazo de 3 meses.",
+          "is_correct": false
+        },
+        {
+          "text": "En el plazo de 6 meses.",
+          "is_correct": false
+        },
+        {
+          "text": "En el plazo de 30 das.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Una vez acreditada la iniciativa autonmica prevista en el artculo 151.1 de la Constitucin se proceder a la convocatoria del referndum:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En cul de las siguientes materias se atribuye al Estado la facultad de dictar la legislacin tanto bsica como de desarrollo en el artculo 149 de la Constitucin Espaola:",
+      "options": [
+        {
+          "text": "Contratos y concesiones administrativas.",
+          "is_correct": false
+        },
+        {
+          "text": "Rgimen minero y energtico.",
+          "is_correct": false
+        },
+        {
+          "text": "Rgimen de prensa, radio y televisin.",
+          "is_correct": false
+        },
+        {
+          "text": "Propiedad intelectual e industrial.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En cul de las siguientes materias se atribuye al Estado la facultad de dictar la legislacin tanto bsica como de desarrollo en el artculo 149 de la Constitucin Espaola:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta correcta siguiendo la regulacin prevista en el artculo 152 de la Constitucin Espaola:",
+      "options": [
+        {
+          "text": "La Asamblea es elegida por sufragio universal, con arreglo a un sistema de representacin mayoritaria que asegure, adems, la representacin de las diversas zonas del territorio.",
+          "is_correct": false
+        },
+        {
+          "text": "El Presidente es elegido por sufragio universal y nombrado por el Rey.",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo de Gobierno tiene funciones ejecutivas y administrativas.",
+          "is_correct": false
+        },
+        {
+          "text": "El Presidente y los miembros del Consejo de Gobierno sern polticamente responsables ante el Congreso de los Diputados.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta correcta siguiendo la regulacin prevista en el artculo 152 de la Constitucin Espaola:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cuntos municipios deban formar parte de la iniciativa autonmica en el caso de las Comunidades que accedieron por la va especial, en el caso de que no hubieran plesbiscitado afirmativamente proyectos de estatutos en el pasado?:",
+      "options": [
+        {
+          "text": "Dos terceras partes.",
+          "is_correct": false
+        },
+        {
+          "text": "Tres quintas partes.",
+          "is_correct": false
+        },
+        {
+          "text": "Tres cuartas partes.",
+          "is_correct": false
+        },
+        {
+          "text": "No es necesaria la iniciativa de municipios en la va especial ya que la misma se ejerce por acuerdo por mayora absoluta del rgano colegiado ejecutivo superior.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cuntos municipios deban formar parte de la iniciativa autonmica en el caso de las Comunidades que accedieron por la va especial, en el caso de que no hubieran plesbiscitado afirmativamente proyectos de estatutos en el pasado?:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn el artculo 147 de la Constitucin Espaola, dentro de los trminos de la Constitucin, los Estatutos sern:",
+      "options": [
+        {
+          "text": "la norma constitucional bsica de cada Comunidad Autnoma y el Estado los reconocer y amparar como parte integrante de su ordenamiento jurdico.",
+          "is_correct": false
+        },
+        {
+          "text": "la norma constitucional bsica de cada Comunidad Autnoma y el Estado y Corporaciones locales los reconocern y ampararn como parte integrante de su ordenamiento jurdico.",
+          "is_correct": false
+        },
+        {
+          "text": "la norma institucional bsica de cada Comunidad Autnoma y el Estado los reconocer y amparar como parte integrante de su ordenamiento jurdico.",
+          "is_correct": false
+        },
+        {
+          "text": "la norma institucional bsica de cada Comunidad Autnoma y el Estado y Corporaciones locales los reconocern y ampararn como parte integrante de su ordenamiento jurdico.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el artculo 147 de la Constitucin Espaola, dentro de los trminos de la Constitucin, los Estatutos sern:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los estatutos de autonoma debern establecer la denominacin, organizacin y sede de sus instituciones autnomas propias. No forma parte de la organizacin institucional autonmica:",
+      "options": [
+        {
+          "text": "El Tribunal Superior de Justicia.",
+          "is_correct": false
+        },
+        {
+          "text": "La Asamblea.",
+          "is_correct": false
+        },
+        {
+          "text": "El Presidente.",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo de Gobierno.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los estatutos de autonoma debern establecer la denominacin, organizacin y sede de sus instituciones autnomas propias. No forma parte de la organizacin institucional autonmica:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta correcta en relacin con las facultades que el artculo 149 de la Constitucin Espaola atribuye al Estado en cada una de las siguientes materias:",
+      "options": [
+        {
+          "text": "Legislacin bsica sobre propiedad intelectual e industrial.",
+          "is_correct": false
+        },
+        {
+          "text": "Legislacin bsica sobre pesas y medidas.",
+          "is_correct": false
+        },
+        {
+          "text": "Legislacin y rgimen econmico de la Seguridad Social.",
+          "is_correct": false
+        },
+        {
+          "text": "Normas bsicas del rgimen de presa, radio y televisin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta correcta en relacin con las facultades que el artculo 149 de la Constitucin Espaola atribuye al Estado en cada una de las siguientes materias:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En materia de contratos y concesiones administrativas corresponde al Estado la/s siguiente/s facultad/es:",
+      "options": [
+        {
+          "text": "Legislacin bsica.",
+          "is_correct": false
+        },
+        {
+          "text": "Legislacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Legislacin y ejecucin.",
+          "is_correct": false
+        },
+        {
+          "text": "Contratos y concesiones administrativas es una competencia atribuida a las CCAA en virtud del artculo 148 CE.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En materia de contratos y concesiones administrativas corresponde al Estado la/s siguiente/s facultad/es:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de las siguientes competencias corresponde a la Comunidad Autnoma de conformidad con el artculo 148 de la Constitucin Espaola?:",
+      "options": [
+        {
+          "text": "Marisqueo.",
+          "is_correct": false
+        },
+        {
+          "text": "Iluminacin de costas.",
+          "is_correct": false
+        },
+        {
+          "text": "Abanderamiento de buques.",
+          "is_correct": false
+        },
+        {
+          "text": "Marina mercante.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de las siguientes competencias corresponde a la Comunidad Autnoma de conformidad con el artculo 148 de la Constitucin Espaola?:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta correcta:",
+      "options": [
+        {
+          "text": "Corresponde al Estado la competencia exclusiva sobre administracin de justicia.",
+          "is_correct": false
+        },
+        {
+          "text": "Corresponde al Estado la competencia para dictar las bases en materia de artesana.",
+          "is_correct": false
+        },
+        {
+          "text": "Las CCAA podrn asumir el desarrollo legislativo y la ejecucin en materia de propiedad intelectual e industrial.",
+          "is_correct": false
+        },
+        {
+          "text": "Corresponde a las CCAA la competencia sobre el rgimen econmico de la Seguridad Social.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta correcta:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Estado garantiza la realizacin efectiva del principio de solidaridad consagrado en el artculo 2 de la Constitucin, velando por el establecimiento de un equilibrio econmico, adecuado y justo entre las diversas partes del territorio espaol, y atendiendo en particular a las circunstancias del hecho:",
+      "options": [
+        {
+          "text": "Autonmico.",
+          "is_correct": false
+        },
+        {
+          "text": "Insular.",
+          "is_correct": false
+        },
+        {
+          "text": "Municipal.",
+          "is_correct": false
+        },
+        {
+          "text": "Provincial.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Estado garantiza la realizacin efectiva del principio de solidaridad consagrado en el artculo 2 de la Constitucin, velando por el establecimiento de un equilibrio econmico, adecuado y justo entre las diversas partes del territorio espaol, y atendiendo en particular a las circunstancias del hecho:",
+      "source": "11 TEST TEMA 10 INICIALES.docx",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

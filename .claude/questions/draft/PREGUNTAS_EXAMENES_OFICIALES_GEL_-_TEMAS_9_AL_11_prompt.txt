@@ -1,0 +1,149 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 9 AL 11.pdf
+**Total preguntas:** 10
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** De acuerdo con la Ley 40/2015, de 1 de octubre, de R�gimen Jur�dico del Sector
+
+**Opciones:**
+  0. Son entidades de derecho p�blico, con personalidad jur�dica propia, tesorer�a y
+  1. iferenciadas y dependientes de �sta.
+  2. Son entidades de derecho p�blico, con personalidad jur�dica propia, patrimonio
+  3. esarrollan actividades prestacionales
+
+---
+
+### Pregunta 2
+
+**Texto:** Seg�n el art�culo 84 de la ley 40/2015, de 1 de octubre, el sector p�blico institucional
+
+**Opciones:**
+  0. Los fondos con personalidad jur�dica.
+  1. Las universidades p�blicas transferidas y no transferidas.
+  2. Las fundaciones privadas.
+  3. Las sociedades mercantiles estatales.
+
+---
+
+### Pregunta 3
+
+**Texto:** Dentro del sector p�blico institucional estatal, los organismos p�blicos vinculados o
+
+**Opciones:**
+  0. ependientes de la Administraci�n General del Estado se clasifican en:
+  1. Organismos aut�nomos, Entidades P�blicas Empresariales, autoridades
+  2. dministrativas independientes, sociedades mercantiles estatales, consorcios y
+  3. Organismos aut�nomos, Entidades P�blicas Empresariales, autoridades
+
+---
+
+### Pregunta 4
+
+**Texto:** Seg�n el art�culo 89 de la ley 40/2015, de 1 de octubre, los Organismos P�blicos
+
+**Opciones:**
+  0. La potestad expropiatoria.
+  1. La potestad normativa.
+  2. La potestad de autoorganizaci�n.
+  3. La potestad de deslinde.
+
+---
+
+### Pregunta 5
+
+**Texto:** Seg�n la Ley 40/2015, de 1 de octubre, de R�gimen Jur�dico del Sector P�blico, la
+
+**Opciones:**
+  0. Mediante Real Decreto, aunque suponga modificaci�n de la Ley de creaci�n.
+  1. Por Orden Ministerial.
+  2. Por Ley.
+  3. Mediante Decreto, aunque suponga modificaci�n de la Ley de creaci�n.
+
+---
+
+### Pregunta 6
+
+**Texto:** Seg�n la Ley 40/2015, de 1 de octubre, de R�gimen Jur�dico del Sector P�blico,
+
+**Opciones:**
+  0. arecen de personalidad jur�dica propia aunque gozan de poderes especiales
+  1. eterminado sector o actividad econ�mica.
+  2. ctuar�n en el desarrollo de su actividad para el cumplimiento de sus fines con
+
+---
+
+### Pregunta 7
+
+**Texto:** De conformidad con el art�culo 84 de la Ley 40/2015, de 1 de octubre, de R�gimen
+
+**Opciones:**
+  0. Las fundaciones del sector p�blico.
+  1. Los consorcios.
+  2. Las universidades p�blicas no transferidas.
+  3. Las sociedades administrativas independientes.
+
+---
+
+### Pregunta 8
+
+**Texto:** Seg�n la Constituci�n Espa�ola de 1978, en los Estatutos aprobados por el
+
+**Opciones:**
+  0. uton�mica contar� con un Presidente elegido por:
+  1. La Asamblea, de entre sus miembros.
+  2. El Consejo de Gobierno, de entre los miembros de la Asamblea.
+  3. La Asamblea, de entre los miembros del Consejo de Gobierno.
+
+---
+
+### Pregunta 9
+
+**Texto:** Seg�n el art�culo 149.1 de la Constituci�n Espa�ola de 1978, �qu� competencias de
+
+**Opciones:**
+  0. Defensa y Fuerzas Armadas.
+  1. Los montes y aprovechamientos forestales.
+  2. Administraci�n de Justicia.
+  3. Legislaci�n sobre la propiedad intelectual e industrial.
+
+---
+
+### Pregunta 10
+
+**Texto:** De acuerdo con el art�culo 44 de la Ley 7/1985, de 2 de abril, Reguladora de las
+
+**Opciones:**
+  0. ases del R�gimen Local, en una mancomunidad de municipios podr�n integrarse:
+  1. S�lo municipios lim�trofes.
+  2. S�lo municipios pertenecientes a la misma provincia.
+  3. S�lo municipios pertenecientes a la misma Comunidad Aut�noma, siempre que lo
+
+---

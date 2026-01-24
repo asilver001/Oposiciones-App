@@ -1,0 +1,412 @@
+{
+  "metadata": {
+    "source_file": "TEST Tema 5 políticas.pdf",
+    "source_path": "TEST Iniciales políticas\\TEST Tema 5 políticas.pdf",
+    "extraction_date": "2026-01-15T23:41:50.566208",
+    "tema": 5,
+    "categoria": "general",
+    "total_questions": 40
+  },
+  "questions": [
+    {
+      "raw_text": "La poblaci�n activa:",
+      "raw_options": [
+        "Es la suma de la poblaci�n ocupada y la poblaci�n desempleada.",
+        "Es la poblaci�n que tiene edad para trabajar.",
+        "Es la poblaci�n total de un pa�s, menos las personas jubiladas.",
+        "Poblaci�n activa y poblaci�n ocupada son expresiones sin�nimas."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El desempleo friccional fluct�a entre:",
+      "raw_options": [
+        "El 0,1 y 0,3%.",
+        "El 1 y 3%.",
+        "El 3 y 5%.",
+        "El 2 y 3%."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n los datos de la Encuesta de Poblaci�n Activa (EPA) elaborada por el Instituto",
+      "raw_options": [
+        "En torno al 9%.",
+        "En torno al 11%.",
+        "En torno al 14%",
+        "En torno al 17%."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "En el mismo per�odo, la poblaci�n ocupada ascend�a a:",
+      "raw_options": [
+        "En torno a 21 millones de personas.",
+        "En torno a 23 millones de personas.",
+        "En torno a 25 millones de personas.",
+        "En torno a 27 millones de personas."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El n�mero de empleados p�blicos asciende a:",
+      "raw_options": [
+        "Alrededor de 2.300.000 trabajadores.",
+        "Alrededor de 2.900.000 trabajadores.",
+        "Alrededor de 3.500.000 trabajadores.",
+        "Alrededor de 4.000.000 trabajadores."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De acuerdo con lo establecido en la Ley 3/2023, de 28 de febrero, de Empleo (Ley de",
+      "raw_options": [
+        "Las pol�ticas activas de empleo y las pol�ticas de protecci�n frente al desempleo.",
+        "Las pol�ticas activas y las pol�ticas pasivas de empleo.",
+        "Las  pol�ticas  activas  de  empleo,",
+        "omplementarias de empleo."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De acuerdo con lo establecido en la Ley de Empleo (Ley 3/2023, de 28 de febrero), no",
+      "raw_options": [
+        "onforman las pol�ticas activas de empleo:",
+        "El conjunto de decisiones, medidas, servicios y programas orientados a la mejora de la",
+        "El conjunto de decisiones, medidas, servicios y programas orientados a la reducci�n del",
+        "esempleo"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De acuerdo con lo establecido en la Ley de Empleo, no es un objetivo de la pol�tica de",
+      "raw_options": [
+        "Mantener la unidad del mercado de trabajo en todo el territorio estatal.",
+        "El  impulso  a  la  creaci�n  de  empleos  de  calidad  y  estables  que  faciliten  la  transici�n",
+        "ienestar econ�mico para las personas trabajadoras.",
+        "El  mantenimiento  del  empleo  y  la  progresi�n  profesional  de  las  personas  ocupadas,"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "No es un principio rector de la pol�tica de empleo:",
+      "raw_options": [
+        "Los principios de adaptaci�n, acompa�amiento y activaci�n.",
+        "El principio de transparencia en el funcionamiento del mercado de trabajo.",
+        "El  principio  de  inclusividad  en  el  dise�o  de  los  instrumentos  de  planificaci�n  de  la",
+        "El principio de adecuaci�n a las caracter�sticas del territorio."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De  acuerdo  con  lo  establecido  en  la  Ley  3/2023,  de  28  de  octubre,  de  Empleo,  no",
+      "raw_options": [
+        "orresponde  al  Gobierno,  a  trav�s  o  a  propuesta  del  Ministerio  de  Trabajo  y",
+        "La coordinaci�n de la pol�tica de empleo.",
+        "Aprobar los proyectos de normas con rango de Ley y las disposiciones reglamentarias",
+        "e trabajo, fomento de empleo, protecci�n por desempleo y formaci�n en el trabajo."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El Sistema Nacional de Empleo est� conformado por:",
+      "raw_options": [
+        "La  Agencia  Espa�ola  de  Empleo  y  los  Servicios  P�blicos  de  Empleo  de  las",
+        "omunidades Aut�nomas.",
+        "La Agencia Espa�ola de Empleo, los Servicios P�blicos de Empleo de las Comunidades",
+        "ut�nomas y las Entidades Locales que colaboren con los servicios p�blicos de empleo."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Es un �rgano de gobernanza del Sistema Nacional de Empleo (SNE):",
+      "raw_options": [
+        "La Agencia Espa�ola de Empleo.",
+        "El Consejo General del Servicio P�blico de Empleo Estatal.",
+        "La Secretar�a de Estado de Empleo.",
+        "La Conferencia Sectorial de Empleo y Asuntos Laborales."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De acuerdo con lo establecido en la Ley de Empleo, �cu�l es el �rgano consultivo y de",
+      "raw_options": [
+        "El Consejo Rector de los Servicios P�blicos de Empleo.",
+        "La Secretar�a de Estado de Empleo.",
+        "La Conferencia Sectorial de Empleo y Asuntos Laborales.",
+        "El Consejo General del Sistema Nacional de Empleo."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Es un instrumento de planificaci�n y coordinaci�n de la pol�tica de empleo:",
+      "raw_options": [
+        "La Estrategia Europea de Empleo",
+        "El Plan Anual de Pol�tica de Empleo.",
+        "Las Directrices Integradas para el Empleo.",
+        "El Sistema P�blico Integrado de Informaci�n de los Servicios de Empleo"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La Estrategia Espa�ola de Apoyo Activo al Empleo se aprobar�:",
+      "raw_options": [
+        "Por Acuerdo del Consejo de Ministros.",
+        "Por el Gobierno mediante Real Decreto.",
+        "Por Orden del titular del Ministerio de Trabajo y Econom�a Social.",
+        "Por las Cortes Generales."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�l de los siguientes es uno de los ejes de pol�ticas de activaci�n para el empleo en",
+      "raw_options": [
+        "Oportunidades de empleo para personas con discapacidad.",
+        "Oportunidades de empleo para personas j�venes.",
+        "Oportunidades de empleo para mujeres, colectivos LGTBI y personas trans.",
+        "Oportunidades de empleo para mayores de 45 a�os."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La Estrategia Espa�ola de Apoyo Activo al Empleo:",
+      "raw_options": [
+        "Tendr� una duraci�n cuatrienal.",
+        "Tendr� una duraci�n plurianual.",
+        "Podr� ser objeto de revisi�n a partir de los resultados de las evaluaciones que se hagan",
+        "nualmente."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qu�  instrumento  de  planificaci�n  del  Sistema  Nacional  de  Empleo  (SNE)",
+      "raw_options": [
+        "oncretar�,  con  car�cter  anual,  las  directrices  necesarias  para  alcanzar  en  el",
+        "onjunto del Estado y en cada una de las Comunidades Aut�nomas, los objetivos de",
+        "El Plan Anual para el Impulso del Empleo Decente.",
+        "El Plan Anual para el Fomento del Empleo Digno."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "A qui�n le corresponde informar la Estrategia Espa�ola de Apoyo Activo al Empleo y",
+      "raw_options": [
+        "A la Secretar�a de Estado de Empleo y Econom�a Social.",
+        "A la Secretar�a de Estado de Empleo y Econom�a Social y a la Conferencia Sectorial de",
+        "A la Conferencia Sectorial de Empleo y Asuntos Laborales.",
+        "A  la  Conferencia  Sectorial  de  Empleo  y  Asuntos  Laborales  y  al  Consejo  General  del"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De acuerdo con lo establecido en la Ley 3/2023, de 28 de febrero, de Empleo, tienen",
+      "raw_options": [
+        "La  Agencia  Espa�ola  de  Empleo  y  los  Servicios  P�blicos  de  Empleo  de  las",
+        "omunidades Aut�nomas.",
+        "La Agencia Espa�ola de Empleo, los Servicios P�blicos de Empleo de las Comunidades",
+        "ut�nomas y las Entidades Locales que colaboren con los servicios p�blicos de empleo."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La Agencia Espa�ola de Empleo es:",
+      "raw_options": [
+        "Un Organismo Aut�nomo.",
+        "Una Agencia Estatal.",
+        "Una Entidad Gestora.",
+        "Un Organismo rector."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "No es una competencia de la Agencia Espa�ola de Empleo:",
+      "raw_options": [
+        "Gestionar el Observatorio de las Ocupaciones.",
+        "La gesti�n y el control de las prestaciones por desempleo, sin perjuicio del cometido de",
+        "tribuye a los funcionarios del Cuerpo Superior de Inspectores de Trabajo y Seguridad",
+        "Elaborar y elevar al Ministerio de Trabajo y Econom�a Social las propuestas normativas"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La prestaci�n de servicios de empleo tiene naturaleza de:",
+      "raw_options": [
+        "Servicio  p�blico,  si  dicha  prestaci�n  se  realiza  a  trav�s  de  los  Servicios  P�blicos  de",
+        "Servicio p�blico, con independencia de la entidad que la realice.",
+        "Servicio  de  inter�s  general,  si  dicha  prestaci�n  se  realiza  a  trav�s  de  los  Servicios",
+        "Servicio de inter�s general, con independencia de la entidad que la realice."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Podr�n ser usuarios de los servicios p�blicos de empleo:",
+      "raw_options": [
+        "S�lo las personas desempleadas demandantes de servicios de empleo.",
+        "Las  personas  demandantes  de  servicios  de  empleo  siempre  y  cuando  est�n",
+        "esempleadas o, en el caso de estar ocupadas, si tienen baja cualificaci�n.",
+        "Las entidades empleadoras siempre y cuando sean personas jur�dicas."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "No  es  uno  de  los  servicios  incluido  en  el  cat�logo  de  servicios  garantizados  a  las",
+      "raw_options": [
+        "La elaboraci�n de un curriculum vitae digital.",
+        "La elaboraci�n de un perfil individualizado.",
+        "el  establecimiento  de  un  canal  de  recepci�n  de  los  servicios  presencial  o  digital",
+        "lternativo."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "No es un compromiso de todas las personas demandantes de servicios de empleo:",
+      "raw_options": [
+        "cumplir, salvo causa justificada, con las acciones de formaci�n",
+        "aceptar ofertas de empleo adecuadas.",
+        "colaborar activamente en la elaboraci�n del perfil individualizado.",
+        "comunicar los cambios de domicilio."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "No  es  una  de  las  categor�as  en  las  que  se  agrupar�n  los  servicios  incluidos  en  la",
+      "raw_options": [
+        "artera com�n de servicios del Sistema Nacional de Empleo:",
+        "Servicios de orientaci�n para el empleo personalizada, integral e inclusiva.",
+        "Servicios de intermediaci�n, colocaci�n y asesoramiento a empresas.",
+        "Servicios  de  asesoramiento  para  el  autoempleo,  el  emprendimiento  viable  y  la"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "A  efectos  del  Sistema  Nacional  de  Empleo,  la  intermediaci�n  en  el  mercado  de",
+      "raw_options": [
+        "Los servicios p�blicos de empleo.",
+        "Las agencias de intermediaci�n sean agencias de intermediaci�n propiamente dichas o",
+        "gencias especializadas en la recolocaci�n o en la selecci�n de personal.",
+        "Aquellos  otros  servicios  que  reglamentariamente  se  determinen  para  las  personas"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De acuerdo con la Ley de Empleo se entiende por intermediaci�n laboral:",
+      "raw_options": [
+        "El acuerdo documentado mediante el que se establecen derechos y obligaciones entre la",
+        "aso, a las necesidades de los colectivos prioritarios.",
+        "La colocaci�n en la profesi�n demandada por la persona trabajadora, de acuerdo con su",
+        "juste a sus aptitudes f�sicas y formativas."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "En relaci�n con la empleabilidad, se�ale la respuesta correcta:",
+      "raw_options": [
+        "Es  un  derecho  y  un  deber  de  las  personas  demandantes  de  los  servicios  de  empleo,",
+        "omo desarrollo del art�culo 37 de la Constituci�n Espa�ola.",
+        "Corresponde al Sistema Nacional de Empleo velar por el mantenimiento y mejora de la",
+        "La empleabilidad debe producir un ajuste din�mico entre las competencias propias y las"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De acuerdo con lo establecido en el art�culo 50 no se considera colectivo vulnerable",
+      "raw_options": [
+        "e atenci�n prioritaria a los efectos de la Ley de Empleo:",
+        "Personas gitanas.",
+        "Mujeres del entorno rural.",
+        "Personas afectadas por drogodependencias y otras adicciones."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "En qu� art�culo de la Constituci�n se indica que los poderes p�blicos mantendr�n un",
+      "raw_options": [
+        "sistencia  y  prestaciones  sociales  suficientes  ante  situaciones  de  necesidad,",
+        "Art�culo 40.",
+        "Art�culo 41.",
+        "Art�culo 42."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Para tener derecho a la prestaci�n por desempleo, en la modalidad contributiva, ser�",
+      "raw_options": [
+        "De 360 d�as en los �ltimos 6 a�os.",
+        "De 180 d�as en los �ltimos 6 a�os.",
+        "De 360 d�as en los �ltimos 3 a�os.",
+        "De 180 d�as en los �ltimos 3 a�os."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La cuant�a de la prestaci�n por desempleo a partir del d�a 181 ser� igual al:",
+      "raw_options": [
+        "80% de las bases reguladoras.",
+        "70% de las bases reguladoras.",
+        "60% de las bases reguladoras.",
+        "50% de las bases reguladoras."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De acuerdo con lo establecido en el art�culo 274.1 de la Ley General de la Seguridad",
+      "raw_options": [
+        "e las siguientes situaciones:",
+        "Haber  agotado  la  prestaci�n  por  desempleo.  En  caso  de  ser  menor  de  55  a�os  sin",
+        "gotada haya tenido una duraci�n igual o superior a trescientos sesenta d�as.",
+        "Haber  agotado  la  prestaci�n  por  desempleo.  En  caso  de  ser  menor  de  45  a�os  sin"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Entre  otros  requisitos,  se  les  exigir�  adem�s  carecer  de  rentas  propias.  Se  entiende",
+      "raw_options": [
+        "umplido el requisito de carencia de rentas propias en la fecha de la solicitud del alta",
+        "ichas fechas no superen:",
+        "El 75% del del salario m�nimo interprofesional (SMI), excluida la parte proporcional de",
+        "os pagas extraordinarias."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Durante los primeros 180 d�as, la cuant�a del subsidio por desempleo ser� equivalente",
+      "raw_options": [
+        "95% del IPREM.",
+        "90% del IPREM.",
+        "80% del IPREM.",
+        "75% del IPREM."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "En  cumplimiento  de  la  Ley  de  Empleo,  en  la  actualidad,  cu�l  es  la  Estrategia  en",
+      "raw_options": [
+        "La Estrategia Espa�ola de Activaci�n para el Empleo (2018 - 2022)",
+        "La Estrategia Espa�ola de Apoyo Activo al Empleo (2020 - 2030)",
+        "La Estrategia Espa�ola de Apoyo Activo al Empleo (2021 - 2024)",
+        "La Estrategia Espa�ola de Activaci�n para el Empleo (2021 � 2030)."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "No es uno de los objetivos estrat�gicos:",
+      "raw_options": [
+        "Reducir el desempleo.",
+        "Gobernanza y cohesi�n del SNE.",
+        "Orientaci�n a resultados.",
+        "Coherencia con la transformaci�n productiva."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Es  uno  de  los  objetivos  espec�ficos  que  recoge  el  objetivo  estrat�gico  relativo  a",
+      "raw_options": [
+        "Mejorar  la  coordinaci�n  operativa  de  los  distintos  niveles  administrativos  que",
+        "Consolidar un modelo integrado de evaluaci�n de las pol�ticas activas de empleo.",
+        "Impulsar  la  transformaci�n  digital  y  la  modernizaci�n  de  los  servicios  p�blicos  de",
+        "Acompa�ar,  con  el  conjunto  de  pol�ticas  activas  de  empleo,  las  estrategias  p�blicas"
+      ],
+      "correct_index": null
+    }
+  ]
+}

@@ -1,0 +1,390 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** Test y caso práctico temas 1 y 2..pdf
+**Total preguntas:** 30
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** En relaci�n con las fuentes del Derecho previstas en el art�culo 1 del
+
+**Opciones:**
+  0. �digo Civil, se�ale la respuesta correcta:
+  1. Los principios generales del derecho solo se aplicar�n en defecto de
+  2. ostumbre siempre que no sean contrarios a la moral o al orden p�blico.
+  3. La jurisprudencia es fuente del ordenamiento jur�dico espa�ol junto con
+
+---
+
+### Pregunta 2
+
+**Texto:** Se�ale cu�l no es una fuente del Derecho Administrativo:
+
+**Opciones:**
+  0. La Ley de Expropiaci�n Forzosa.
+  1. Los recursos administrativos.
+  2. Los principios generales del Derecho.
+  3. Los usos jur�dicos que no sean meramente interpretativos de una
+
+---
+
+### Pregunta 3
+
+**Texto:** En virtud del art�culo 2 del C�digo Civil, las leyes entrar�n en vigor:
+
+**Opciones:**
+  0. En todo caso, desde el mismo d�a de su completa publicaci�n en el BOE.
+  1. A los treinta d�as naturales desde su completa publicaci�n en el BOE si
+  2. A los veinte d�as naturales desde su completa publicaci�n en el BOE si
+  3. A los veinte d�as h�biles desde su aprobaci�n.
+
+---
+
+### Pregunta 4
+
+**Texto:** Se�ale la respuesta correcta:
+
+**Opciones:**
+  0. Las leyes no se pueden derogar una vez que forman parte del
+  1. Por la simple derogaci�n de una ley recobran vigencia las leyes
+  2. nteriores que esta hubiera derogado.
+  3. Las leyes tendr�n siempre efecto retractivo mientras no dispongan lo contrario.
+
+---
+
+### Pregunta 5
+
+**Texto:** Se�ale cual de las siguientes materias se ha de regular por ley org�nica:
+
+**Opciones:**
+  0. Derecho de educaci�n, reconocido en el art�culo 27 de la CE.
+  1. Derecho a la negociaci�n colectiva laboral, regulado en el art�culo 37 de
+  2. Las organizaciones profesionales, recogidas en el art�culo 52 de la CE.
+  3. La planificaci�n de la actividad econ�mica general conforme al art. 131 de
+
+---
+
+### Pregunta 6
+
+**Texto:** Seg�n lo previsto en el art�culo 149.1.8 de la Constituci�n, se�ale la
+
+**Opciones:**
+  0. El Estado tiene competencia exclusiva sobre la determinaci�n de las
+  1. El Estado no tiene competencias en materia de fuentes del derecho.
+  2. Las Comunidades Aut�nomas tienen competencia exclusiva sobre la
+  3. eterminaci�n de las fuentes del Derecho.
+
+---
+
+### Pregunta 7
+
+**Texto:** Se quiere reformar el art�culo de la Constituci�n en el que se dispone:
+
+**Opciones:**
+  0. decuada�. Se�ale la respuesta correcta:
+  1. Se acudir� al procedimiento de reforma agravada previsto en el art�culo
+  2. La reforma constitucional podr� ser promovida a trav�s de una iniciativa
+  3. creditadas.
+
+---
+
+### Pregunta 8
+
+**Texto:** Tienen iniciativa para la reforma constitucional (se�ale la falsa):
+
+**Opciones:**
+  0. El Gobierno.
+  1. El Congreso y el Senado.
+  2. Las Asambleas Legislativas de las Comunidades Aut�nomas.
+  3. El Tribunal Constitucional.
+
+---
+
+### Pregunta 9
+
+**Texto:** Las leyes org�nicas (se�ale la falsa):
+
+**Opciones:**
+  0. Desarrollan los deberes, derechos y libertades previstos en el
+  1. Aprueban los Estatutos de Autonom�a.
+  2. Regulan el r�gimen electoral general.
+  3. Requieren mayor�a absoluta en el Congreso.
+
+---
+
+### Pregunta 10
+
+**Texto:** No se podr� delegar en las Comisiones Legislativas Permanentes, entre
+
+**Opciones:**
+  0. La reforma constitucional y las leyes ordinarias.
+  1. Las cuestiones internacionales y las leyes de bases.
+  2. Los Presupuestos Generales del Estado y las proposiciones de ley.
+  3. Las leyes org�nicas y las leyes tributarias.
+
+---
+
+### Pregunta 11
+
+**Texto:** Seg�n el art�culo 87 de la Constituci�n, la iniciativa legislativa
+
+**Opciones:**
+  0. orresponde:
+  1. Congreso, Senado y Gobiernos de las Comunidades Aut�nomas.
+  2. Congreso, Ministerio Fiscal y el Rey.
+  3. Gobierno, Consejo General del Poder Judicial y Defensor del Pueblo.
+
+---
+
+### Pregunta 12
+
+**Texto:** La Constituci�n establece que las Asambleas de las Comunidades
+
+**Opciones:**
+  0. ut�nomas:
+  1. Podr�n �nicamente remitir a la Mesa del Senado una proposici�n de ley
+  2. Podr�n solicitar del Gobierno la adopci�n de un proyecto de ley o remitir
+  3. la Mesa del Congreso una proposici�n de ley.
+
+---
+
+### Pregunta 13
+
+**Texto:** En virtud del art�culo 90.2 de la Constituci�n, �con qu� plazo cuenta el
+
+**Opciones:**
+  0. ongreso?
+  1. Un mes desde el d�a de la remisi�n del texto.
+  2. Dos meses desde el d�a de la recepci�n del texto.
+  3. Tres meses desde el d�a de la recepci�n del texto.
+
+---
+
+### Pregunta 14
+
+**Texto:** El veto introducido por el Senado deber� ser aprobado por:
+
+**Opciones:**
+  0. Mayor�a de 2/3.
+  1. Mayor�a absoluta.
+  2. Mayor�a de 3/5.
+  3. Mayor�a simple.
+
+---
+
+### Pregunta 15
+
+**Texto:** Seg�n el art�culo 91 de la Constituci�n, el Rey sancionar� las leyes
+
+**Opciones:**
+  0. probadas por las Cortes Generales en el plazo de:
+  1. Diez d�as.
+  2. Quince d�as.
+  3. Veinte d�as.
+
+---
+
+### Pregunta 16
+
+**Texto:** Las leyes marco:
+
+**Opciones:**
+  0. Permiten al Estado transferir o delegar facultades sobre materias de
+  1. ompetencia estatal a las Comunidades Aut�nomas.
+  2. Requieren mayor�a absoluta en el Congreso.
+  3. No pueden prever m�s medidas de control que la ejercida por los
+
+---
+
+### Pregunta 17
+
+**Texto:** Las leyes de transferencia o delegaci�n:
+
+**Opciones:**
+  0. Son leyes ordinarias.
+  1. Son leyes auton�micas.
+  2. Son leyes org�nicas.
+  3. Son decretos-leyes.
+
+---
+
+### Pregunta 18
+
+**Texto:** Se podr�n dictar leyes de armonizaci�n cuando as� lo exija:
+
+**Opciones:**
+  0. El inter�s regional.
+  1. El inter�s institucional.
+  2. El inter�s general.
+  3. El inter�s econ�mico y social.
+
+---
+
+### Pregunta 19
+
+**Texto:** Seg�n el art�culo 150.3 de la Constituci�n, la apreciaci�n de la
+
+**Opciones:**
+  0. El Gobierno.
+  1. Al Congreso por mayor�a de 3/5.
+  2. A las Cortes Generales, por mayor�a absoluta de cada C�mara.
+  3. A las Cortes Generales por mayor�a de 2/3 de cada C�mara.
+
+---
+
+### Pregunta 20
+
+**Texto:** Las disposiciones del Gobierno que contengan legislaci�n delegada
+
+**Opciones:**
+  0. Decretos legislativos.
+  1. Decretos-leyes.
+  2. Leyes org�nicas.
+  3. Leyes de bases.
+
+---
+
+### Pregunta 21
+
+**Texto:** Seg�n el art�culo 84 de la Constituci�n, cuando una proposici�n de ley
+
+**Opciones:**
+  0. El Gobierno est� facultado para oponerse a su tramitaci�n.
+  1. El Gobierno debe suspender la delegaci�n legislativa hasta que se
+  2. Queda en suspenso la delegaci�n hasta que se tramite esa proposici�n
+  3. El Gobierno puede dictar la correspondiente norma antes de que se
+
+---
+
+### Pregunta 22
+
+**Texto:** Cuando se pretenda refundir varios textos legales en uno, la
+
+**Opciones:**
+  0. elegaci�n legislativa se otorgar� por:
+  1. Una ley de bases.
+  2. Una ley ordinaria.
+  3. Una ley org�nica.
+
+---
+
+### Pregunta 23
+
+**Texto:** Seg�n la Constituci�n, las disposiciones legislativas provisionales
+
+**Opciones:**
+  0. ictadas por el Gobierno se denominan:
+  1. Reglamentos
+  2. Leyes org�nicas.
+  3. Decretos-leyes.
+
+---
+
+### Pregunta 24
+
+**Texto:** Seg�n la Constituci�n, el plazo m�ximo para que el Congreso se
+
+**Opciones:**
+  0. ecreto-ley aprobado por
+  1. Dos meses desde su publicaci�n.
+  2. Tres meses desde su aprobaci�n.
+  3. Veinte d�as siguientes a su publicaci�n.
+
+---
+
+### Pregunta 25
+
+**Texto:** Por decreto-ley no podr� regularse:
+
+**Opciones:**
+  0. El Derecho electoral general.
+  1. Asuntos de car�cter laboral.
+  2. Las cuestiones ya reguladas por una ley ordinaria.
+  3. Materias de car�cter econ�mico.
+
+---
+
+### Pregunta 26
+
+**Texto:** El procedimiento por el que el Congreso convalidar� o derogar� un
+
+**Opciones:**
+  0. ecreto-ley, seg�n prev� el art�culo 86 de la Constituci�n, ser�:
+  1. Preferente y sumario.
+  2. Especial y sumario.
+  3. Urgente.
+
+---
+
+### Pregunta 27
+
+**Texto:** La iniciativa legislativa le corresponde a:
+
+**Opciones:**
+  0. Presidente del Gobierno y presidentes de las Comunidades Aut�nomas.
+  1. A los ciudadanos espa�oles mayores de edad en los t�rminos indicados
+  2. Al presidente del Senado y del Congreso de los Diputados.
+  3. Al Defensor del Pueblo.
+
+---
+
+### Pregunta 28
+
+**Texto:** Podr�n ser sometidas a refer�ndum consultivo:
+
+**Opciones:**
+  0. Las leyes de especial trascendencia
+  1. Las decisiones pol�ticas de especial trascendencia
+  2. Todas aquellas cuestiones que se aprueben por las Cortes Generales.
+  3. No se puede someter a refer�ndum ninguna cuesti�n, excepto la
+
+---
+
+### Pregunta 29
+
+**Texto:** Se requerir� informe del Consejo de Estado:
+
+**Opciones:**
+  0. En todos los anteproyectos de ley.
+  1. Solo cuando as� lo determine el Congreso.
+  2. En los proyectos de decretos legislativos.
+  3. En los proyectos de decretos-leyes.
+
+---
+
+### Pregunta 30
+
+**Texto:** El refer�ndum consultivo al que se refiere el art. 92 de la CE:
+
+**Opciones:**
+  0. Ser� convocado por el presidente del Gobierno.
+  1. Ser� convocado por el Rey, a propuesta del Congreso de los Diputados.
+  2. Ser� convocado por el `presidente del Gobierno, a propuesta del
+  3. ongreso de los Diputados.
+
+---

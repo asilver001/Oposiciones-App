@@ -1,0 +1,1337 @@
+{
+  "metadata": {
+    "source_file": "5 TEST TEMA 5 INICIALES.pdf",
+    "source_path": "5 TEST TEMA 5 INICIALES.pdf",
+    "tema": 5,
+    "categoria": "general",
+    "extraction_date": "2026-01-15T23:39:59.262809",
+    "reformulation_date": "2026-01-15T23:47:35.618358",
+    "total_questions": 40,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.622919",
+    "completed_count": 0,
+    "failed_count": 40
+  },
+  "questions": [
+    {
+      "question_text": "Las Cortes Generales -en adelante, CCGG- se regulan en:",
+      "options": [
+        {
+          "text": "El Ttulo II de la Constitucin.",
+          "is_correct": false
+        },
+        {
+          "text": "El Ttulo III de la Constitucin.",
+          "is_correct": false
+        },
+        {
+          "text": "El Ttulo IV de la Constitucin.",
+          "is_correct": false
+        },
+        {
+          "text": "El Ttulo V de la Constitucin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las Cortes Generales -en adelante, CCGG- se regulan en:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "A tenor del artculo 66 de la Constitucin, las CCGG representan:",
+      "options": [
+        {
+          "text": "A los ciudadanos y a los poderes pblicos.",
+          "is_correct": false
+        },
+        {
+          "text": "Al pueblo espaol.",
+          "is_correct": false
+        },
+        {
+          "text": "A las instituciones del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Rey.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "A tenor del artculo 66 de la Constitucin, las CCGG representan:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con lo establecido en el artculo 69 de la Constitucin, el Senado es la Cmara:",
+      "options": [
+        {
+          "text": "De representacin Territorial.",
+          "is_correct": false
+        },
+        {
+          "text": "De representacin Provincial.",
+          "is_correct": false
+        },
+        {
+          "text": "De representacin Autonmica.",
+          "is_correct": false
+        },
+        {
+          "text": "De representacin Local.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con lo establecido en el artculo 69 de la Constitucin, el Senado es la Cmara:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta correcta segn lo previsto en el artculo 78 de la Constitucin Espaola:",
+      "options": [
+        {
+          "text": "En cada Cmara habr una Diputacin Permanente compuesta por veintin miembros, que",
+          "is_correct": false
+        },
+        {
+          "text": "En cada Cmara habr una Diputacin Permanente compuesta por un mnimo de veintin",
+          "is_correct": false
+        },
+        {
+          "text": "En cada Cmara habr una Diputacin Permanente compuesta por veinticinco miembros, que",
+          "is_correct": false
+        },
+        {
+          "text": "En cada Cmara habr una Diputacin Permanente compuesta por un mnimo de veinticinco",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta correcta segn lo previsto en el artculo 78 de la Constitucin Espaola:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La iniciativa legislativa corresponde, segn el artculo 87 de la Constitucin Espaola a:",
+      "options": [
+        {
+          "text": "Presidente del Gobierno, Congreso y Senado.",
+          "is_correct": false
+        },
+        {
+          "text": "Gobierno, Congreso, Senado y rganos colegiados ejecutivos de las Comunidades Autnomas.",
+          "is_correct": false
+        },
+        {
+          "text": "Gobierno, Congreso, Senado, Asambleas Legislativas de las Comunidades Autnomas e iniciativa",
+          "is_correct": false
+        },
+        {
+          "text": "Gobierno, Congreso, Senado y Consejo General del Poder Judicial.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La iniciativa legislativa corresponde, segn el artculo 87 de la Constitucin Espaola a:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "A tenor del artculo 68 de la Constitucin, el Congreso se compone:",
+      "options": [
+        {
+          "text": "De un mnimo de 300 y un mximo de 400 Diputados.",
+          "is_correct": false
+        },
+        {
+          "text": "De un mnimo de 350 y un mximo de 400 Diputados.",
+          "is_correct": false
+        },
+        {
+          "text": "De un mnimo de 350 y un mximo de 450 Diputados.",
+          "is_correct": false
+        },
+        {
+          "text": "De un mnimo de 300 y un mximo de 450 Diputados.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "A tenor del artculo 68 de la Constitucin, el Congreso se compone:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En las elecciones al Senado, en cada provincia se elegirn:",
+      "options": [
+        {
+          "text": "Cuatro senadores.",
+          "is_correct": false
+        },
+        {
+          "text": "Dos senadores.",
+          "is_correct": false
+        },
+        {
+          "text": "Un senador.",
+          "is_correct": false
+        },
+        {
+          "text": "Tres senadores.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En las elecciones al Senado, en cada provincia se elegirn:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En las elecciones al Senado, en las poblaciones de Ceuta y Melilla elegirn cada una de ellas:",
+      "options": [
+        {
+          "text": "Cuatro senadores.",
+          "is_correct": false
+        },
+        {
+          "text": "Dos senadores.",
+          "is_correct": false
+        },
+        {
+          "text": "Un senador.",
+          "is_correct": false
+        },
+        {
+          "text": "Tres senadores.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En las elecciones al Senado, en las poblaciones de Ceuta y Melilla elegirn cada una de ellas:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En el Congreso de los Diputados, las poblaciones de Ceuta y Melilla estarn representadas cada una",
+      "options": [
+        {
+          "text": "e ellas por:",
+          "is_correct": false
+        },
+        {
+          "text": "Dos diputados.",
+          "is_correct": false
+        },
+        {
+          "text": "Cuatro diputados.",
+          "is_correct": false
+        },
+        {
+          "text": "Tres diputados.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En el Congreso de los Diputados, las poblaciones de Ceuta y Melilla estarn representadas cada una",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La circunscripcin electoral en las elecciones al Congreso de los Diputados es:",
+      "options": [
+        {
+          "text": "La CCAA.",
+          "is_correct": false
+        },
+        {
+          "text": "El Estado Espaol.",
+          "is_correct": false
+        },
+        {
+          "text": "La Provincia.",
+          "is_correct": false
+        },
+        {
+          "text": "El Municipio.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La circunscripcin electoral en las elecciones al Congreso de los Diputados es:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las CCAA designarn:",
+      "options": [
+        {
+          "text": "Un senador, y otro ms por cada milln de habitantes.",
+          "is_correct": false
+        },
+        {
+          "text": "Dos senadores, y otro ms por cada milln de habitantes.",
+          "is_correct": false
+        },
+        {
+          "text": "Un senador por cada milln de habitantes.",
+          "is_correct": false
+        },
+        {
+          "text": "Dos senadores por cada milln de habitantes.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las CCAA designarn:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En las provincias insulares:",
+      "options": [
+        {
+          "text": "Corresponden cuatro senadores a cada una de las islas mayores (Gran Canaria, Mallorca y",
+          "is_correct": false
+        },
+        {
+          "text": "Corresponden dos senadores a cada una de las islas mayores (Gran Canaria, Mallorca y Tenerife).",
+          "is_correct": false
+        },
+        {
+          "text": "Corresponde un senador a cada una de las islas mayores (Gran Canaria, Mallorca y Tenerife).",
+          "is_correct": false
+        },
+        {
+          "text": "Corresponden tres senadores a cada una de las islas mayores (Gran Canaria, Mallorca y Tenerife).",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En las provincias insulares:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Conforme a lo previsto en el artculo 73 de la Constitucin, las Cmaras se reunirn anualmente en",
+      "options": [
+        {
+          "text": "os perodos ordinarios de sesiones:",
+          "is_correct": false
+        },
+        {
+          "text": "El primero de enero a junio y el segundo de agosto a diciembre.",
+          "is_correct": false
+        },
+        {
+          "text": "El primero de enero a mayo y el segundo de julio a diciembre.",
+          "is_correct": false
+        },
+        {
+          "text": "El primero de septiembre a diciembre y el segundo de febrero a junio.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Conforme a lo previsto en el artculo 73 de la Constitucin, las Cmaras se reunirn anualmente en",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta correcta de conformidad con lo previsto en el artculo 68 de la Constitucin",
+      "options": [
+        {
+          "text": "Las elecciones tendrn lugar entre los treinta das y noventa das desde la terminacin del mandato.",
+          "is_correct": false
+        },
+        {
+          "text": "Las elecciones tendrn lugar entre los veinticinco das y noventa das desde la terminacin del",
+          "is_correct": false
+        },
+        {
+          "text": "Las elecciones tendrn lugar entre los sesenta das y noventa das desde la terminacin del",
+          "is_correct": false
+        },
+        {
+          "text": "Las elecciones tendrn lugar entre los treinta das y sesenta das desde la terminacin del mandato.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta correcta de conformidad con lo previsto en el artculo 68 de la Constitucin",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn el artculo 91 de la CE el Rey sanciona las leyes aprobadas por las Cortes Generales, qu",
+      "options": [
+        {
+          "text": "Diez das.",
+          "is_correct": false
+        },
+        {
+          "text": "Quince das.",
+          "is_correct": false
+        },
+        {
+          "text": "Veinte das.",
+          "is_correct": false
+        },
+        {
+          "text": "Veinticinco das.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el artculo 91 de la CE el Rey sanciona las leyes aprobadas por las Cortes Generales, qu",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los Diputados y Senadores:",
+      "options": [
+        {
+          "text": "Gozarn de inmunidad por las opiniones manifestadas en el ejercicio de sus funciones.",
+          "is_correct": false
+        },
+        {
+          "text": "Durante su mandato, gozarn de inmunidad y no podrn ser detenidos.",
+          "is_correct": false
+        },
+        {
+          "text": "No podrn ser inculpados ni procesados sin la previa autorizacin de la Cmara respectiva",
+          "is_correct": false
+        },
+        {
+          "text": "Estn sujetos a mandato imperativo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los Diputados y Senadores:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El artculo 75.1 de la Constitucin establece que las Cmaras funcionarn:",
+      "options": [
+        {
+          "text": "Siempre en Pleno.",
+          "is_correct": false
+        },
+        {
+          "text": "Siempre por Comisiones.",
+          "is_correct": false
+        },
+        {
+          "text": "En Pleno o en Comisiones.",
+          "is_correct": false
+        },
+        {
+          "text": "En Pleno o en Secciones.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El artculo 75.1 de la Constitucin establece que las Cmaras funcionarn:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las Cmaras podrn delegar en las Comisiones Legislativas Permanentes la aprobacin de proyectos",
+      "options": [
+        {
+          "text": "La reforma constitucional, las cuestiones internacionales, las leyes orgnicas y de bases y los PGE.",
+          "is_correct": false
+        },
+        {
+          "text": "La reforma constitucional, las cuestiones internacionales, las leyes de bases, los textos refundidos y",
+          "is_correct": false
+        },
+        {
+          "text": "La reforma constitucional, las cuestiones tributarias, las leyes orgnicas y de bases y los PGE.",
+          "is_correct": false
+        },
+        {
+          "text": "La reforma constitucional, las cuestiones internacionales, las leyes orgnicas, ordinarias y de bases",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las Cmaras podrn delegar en las Comisiones Legislativas Permanentes la aprobacin de proyectos",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las sesiones plenarias de las Cmaras:",
+      "options": [
+        {
+          "text": "Sern pblicas, en todo caso.",
+          "is_correct": false
+        },
+        {
+          "text": "Sern privadas, excepto para los miembros del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Sern pblicas, salvo acuerdo adoptado por mayora absoluta o con arreglo al Reglamento.",
+          "is_correct": false
+        },
+        {
+          "text": "Sern privadas, salvo acuerdo adoptado por mayora absoluta o con arreglo al Reglamento.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las sesiones plenarias de las Cmaras:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn el artculo 90.2 de la Constitucin, el plazo de 2 meses del que el Senado dispone para vetar o",
+      "options": [
+        {
+          "text": "Se reducir a 20 das naturales en los proyectos declarados urgentes por el Gobierno o por el",
+          "is_correct": false
+        },
+        {
+          "text": "ongreso.",
+          "is_correct": false
+        },
+        {
+          "text": "Se reducir a 20 das hbiles en los proyectos declarados urgentes por el Gobierno o por el",
+          "is_correct": false
+        },
+        {
+          "text": "ongreso.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el artculo 90.2 de la Constitucin, el plazo de 2 meses del que el Senado dispone para vetar o",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con la Ley Orgnica del Rgimen Electoral General, el Congreso de los Diputados",
+      "options": [
+        {
+          "text": "300 Diputados.",
+          "is_correct": false
+        },
+        {
+          "text": "325 Diputados.",
+          "is_correct": false
+        },
+        {
+          "text": "350 Diputados.",
+          "is_correct": false
+        },
+        {
+          "text": "400 Diputados.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con la Ley Orgnica del Rgimen Electoral General, el Congreso de los Diputados",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cuntos Diputados se elegirn por provincia?:",
+      "options": [
+        {
+          "text": "La LOREG asigna una representacin mnima inicial de dos diputados y se distribuyen los dems",
+          "is_correct": false
+        },
+        {
+          "text": "La LOREG asigna una representacin mnima inicial de cuatro diputados y se distribuyen los",
+          "is_correct": false
+        },
+        {
+          "text": "ems en proporcin a la poblacin.",
+          "is_correct": false
+        },
+        {
+          "text": "La LOREG asigna una representacin mnima inicial de tres diputados y se distribuyen los dems",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cuntos Diputados se elegirn por provincia?:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Congreso electo deber ser convocado:",
+      "options": [
+        {
+          "text": "Dentro de los 60 das siguientes a la celebracin de elecciones.",
+          "is_correct": false
+        },
+        {
+          "text": "Dentro de los 40 das siguientes a la celebracin de elecciones.",
+          "is_correct": false
+        },
+        {
+          "text": "Dentro de los 30 das siguientes a la celebracin de elecciones.",
+          "is_correct": false
+        },
+        {
+          "text": "Dentro de los 25 das siguientes a la celebracin de elecciones.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Congreso electo deber ser convocado:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La condicin de Senador es compatible con:",
+      "options": [
+        {
+          "text": "El cargo de Defensor del Pueblo.",
+          "is_correct": false
+        },
+        {
+          "text": "El cargo de Magistrado del Tribunal Constitucional.",
+          "is_correct": false
+        },
+        {
+          "text": "La condicin de Diputado de Asamblea de una Comunidad Autnoma.",
+          "is_correct": false
+        },
+        {
+          "text": "La condicin de miembro de una Junta Electoral.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La condicin de Senador es compatible con:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las Cmaras podrn reunirse en sesin extraordinaria a peticin de:",
+      "options": [
+        {
+          "text": "La mayora de miembros de cualquiera de las Cmaras.",
+          "is_correct": false
+        },
+        {
+          "text": "El Rey.",
+          "is_correct": false
+        },
+        {
+          "text": "El Defensor del Pueblo.",
+          "is_correct": false
+        },
+        {
+          "text": "El Gobierno.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las Cmaras podrn reunirse en sesin extraordinaria a peticin de:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En caso de veto por el Senado, es necesaria una de las siguientes mayoras para levantarlo por el",
+      "options": [
+        {
+          "text": "ongreso:",
+          "is_correct": false
+        },
+        {
+          "text": "Mayora absoluta o transcurridos dos meses mayora simple.",
+          "is_correct": false
+        },
+        {
+          "text": "Mayora absoluta o transcurridos tres meses mayora simple.",
+          "is_correct": false
+        },
+        {
+          "text": "Mayora de dos tercios o transcurridos dos meses mayora simple.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En caso de veto por el Senado, es necesaria una de las siguientes mayoras para levantarlo por el",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las enmiendas introducidas por el Senado en un proyecto de Ley:",
+      "options": [
+        {
+          "text": "Deben ser aceptadas o rechazadas en el Congreso por mayora simple.",
+          "is_correct": false
+        },
+        {
+          "text": "Deben ser aceptadas o rechazadas en el Congreso por mayora absoluta.",
+          "is_correct": false
+        },
+        {
+          "text": "Deben ser aceptadas o rechazadas en el Congreso por mayora de dos tercios.",
+          "is_correct": false
+        },
+        {
+          "text": "Deben ser aceptadas o rechazadas en el Congreso por mayora de tres quintos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las enmiendas introducidas por el Senado en un proyecto de Ley:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul es el nmero mnimo de Senadores necesario para constituir Grupo Parlamentario en el",
+      "options": [
+        {
+          "text": "10 Senadores.",
+          "is_correct": false
+        },
+        {
+          "text": "15 Senadores.",
+          "is_correct": false
+        },
+        {
+          "text": "18 Senadores.",
+          "is_correct": false
+        },
+        {
+          "text": "20 Senadores",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul es el nmero mnimo de Senadores necesario para constituir Grupo Parlamentario en el",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con el artculo 74 CE, las Cmaras se reunirn en sesin conjunta:",
+      "options": [
+        {
+          "text": "Para ejercer las competencias legislativas que el Ttulo II atribuye expresamente a las Cortes",
+          "is_correct": false
+        },
+        {
+          "text": "Para ejercer las competencias legislativas que el Ttulo V atribuye expresamente a las Cortes",
+          "is_correct": false
+        },
+        {
+          "text": "Para ejercer las competencias no legislativas que el Ttulo II atribuye expresamente a las Cortes",
+          "is_correct": false
+        },
+        {
+          "text": "Para ejercer las competencias no legislativas que el Ttulo V atribuye expresamente a las Cortes",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con el artculo 74 CE, las Cmaras se reunirn en sesin conjunta:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta falsa:",
+      "options": [
+        {
+          "text": "El Senado es la Cmara de representacin territorial.",
+          "is_correct": false
+        },
+        {
+          "text": "En cada Cmara habr una Diputacin Permanente compuesta por un mximo de veintin",
+          "is_correct": false
+        },
+        {
+          "text": "Las sesiones plenarias de las Cmaras sern pblicas, salvo acuerdo en contrario de cada Cmara,",
+          "is_correct": false
+        },
+        {
+          "text": "doptado por mayora absoluta o con arreglo al Reglamento.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta falsa:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los Decretos-Leyes debern ser sometidos inmediatamente a debate y votacin de totalidad en el",
+      "options": [
+        {
+          "text": "ongreso, convocado al efecto si no estuviera reunido:",
+          "is_correct": false
+        },
+        {
+          "text": "En el plazo de los veinte das siguientes a su promulgacin.",
+          "is_correct": false
+        },
+        {
+          "text": "En el plazo de los treinta das siguientes a su promulgacin.",
+          "is_correct": false
+        },
+        {
+          "text": "En el plazo de los veinticinco das siguientes a su promulgacin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los Decretos-Leyes debern ser sometidos inmediatamente a debate y votacin de totalidad en el",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La Constitucin prev distintas causas de inelegibilidad e incompatibilidad de los Diputados y",
+      "options": [
+        {
+          "text": "Ser miembro de la Junta electoral.",
+          "is_correct": false
+        },
+        {
+          "text": "Ser miembro del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Ser miembro de la polica en activo.",
+          "is_correct": false
+        },
+        {
+          "text": "Ser miembro del Tribunal Constitucional.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La Constitucin prev distintas causas de inelegibilidad e incompatibilidad de los Diputados y",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los acuerdos de las Cmaras, segn lo establecido en el artculo 79 de la Constitucin, precisan:",
+      "options": [
+        {
+          "text": "Mayora absoluta, sin perjuicio de las mayoras especiales que establezcan la Constitucin o las",
+          "is_correct": false
+        },
+        {
+          "text": "Mayora de 2/3, sin perjuicio de las mayoras especiales que establezcan la Constitucin o las leyes",
+          "is_correct": false
+        },
+        {
+          "text": "Mayora de miembros presentes, sin perjuicio de las mayoras especiales que establezcan la",
+          "is_correct": false
+        },
+        {
+          "text": "onstitucin o las leyes orgnicas y las que para eleccin de personas establezcan los Reglamentos",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los acuerdos de las Cmaras, segn lo establecido en el artculo 79 de la Constitucin, precisan:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La convocatoria de las elecciones generales se realiza:",
+      "options": [
+        {
+          "text": "Por el Rey.",
+          "is_correct": false
+        },
+        {
+          "text": "Por el Congreso.",
+          "is_correct": false
+        },
+        {
+          "text": "Por el Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Por las Cortes Generales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La convocatoria de las elecciones generales se realiza:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los Diputados que componen el Congreso:",
+      "options": [
+        {
+          "text": "Gozan de inmunidad por las opiniones manifestadas en el ejercicio de su cargo.",
+          "is_correct": false
+        },
+        {
+          "text": "No podrn ser simultneamente miembros del Senado.",
+          "is_correct": false
+        },
+        {
+          "text": "Son elegidos con arreglo a criterios de representacin mayoritaria.",
+          "is_correct": false
+        },
+        {
+          "text": "Son elegidos entre espaoles o miembros de un pas perteneciente a la Unin Europea si as lo",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los Diputados que componen el Congreso:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la respuesta correcta en relacin con la tramitacin de los proyectos de ley:",
+      "options": [
+        {
+          "text": "Se remiten siempre a la Mesa del Congreso.",
+          "is_correct": false
+        },
+        {
+          "text": "No admiten enmiendas a la totalidad de devolucin.",
+          "is_correct": false
+        },
+        {
+          "text": "En caso de que el proyecto sea declarado urgente por el congreso o por el gobierno, el senado",
+          "is_correct": false
+        },
+        {
+          "text": "ispondr de 20 das naturales para vetar o enmendar el proyecto.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la respuesta correcta en relacin con la tramitacin de los proyectos de ley:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Sern materias de Pleno, segn lo dispuesto en el artculo 75 de la Constitucin (seale la incorrecta):",
+      "options": [
+        {
+          "text": "La reforma Constitucional.",
+          "is_correct": false
+        },
+        {
+          "text": "La Planificacin General de la actividad econmica.",
+          "is_correct": false
+        },
+        {
+          "text": "Los Presupuestos Generales del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Las leyes orgnicas y de bases.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Sern materias de Pleno, segn lo dispuesto en el artculo 75 de la Constitucin (seale la incorrecta):",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En una Comunidad autnoma que tuviera 8 provincias no insulares y 8.538.376 habitantes, cuntos",
+      "options": [
+        {
+          "text": "40.",
+          "is_correct": false
+        },
+        {
+          "text": "41.",
+          "is_correct": false
+        },
+        {
+          "text": "39.",
+          "is_correct": false
+        },
+        {
+          "text": "38.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En una Comunidad autnoma que tuviera 8 provincias no insulares y 8.538.376 habitantes, cuntos",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Entre las funciones de carcter financiero atribuidas a las Cortes Generales se encuentra (Seale la",
+      "options": [
+        {
+          "text": "Elaboracin de los Presupuestos Generales del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Examen, enmienda y aprobacin de los Presupuestos Generales del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Examen y aprobacin de la Cuenta General del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Ejercicio de la potestad originaria para establecer tributos mediante ley.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Entre las funciones de carcter financiero atribuidas a las Cortes Generales se encuentra (Seale la",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Una proposicin de ley cuya iniciativa venga del Senado, deber ir suscrita por:",
+      "options": [
+        {
+          "text": "25 senadores o un grupo parlamentario.",
+          "is_correct": false
+        },
+        {
+          "text": "50 senadores que no pertenezcan al mismo grupo parlamentario.",
+          "is_correct": false
+        },
+        {
+          "text": "25 senadores con la firma de su portavoz.",
+          "is_correct": false
+        },
+        {
+          "text": "2 grupos parlamentarios.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Una proposicin de ley cuya iniciativa venga del Senado, deber ir suscrita por:",
+      "source": "5 TEST TEMA 5 INICIALES.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 5,
+      "materia": "ce-constitucion",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

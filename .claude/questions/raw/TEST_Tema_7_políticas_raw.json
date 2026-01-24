@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "source_file": "TEST Tema 7 políticas.pdf",
+    "source_path": "TEST Iniciales políticas\\TEST Tema 7 políticas.pdf",
+    "extraction_date": "2026-01-15T23:41:54.485008",
+    "tema": 7,
+    "categoria": "general",
+    "total_questions": 6
+  },
+  "questions": [
+    {
+      "raw_text": "Se�ale la afirmaci�n correcta en relaci�n con el Gobierno Abierto:",
+      "raw_options": [
+        "Es un t�rmino completamente nuevo que aparece asociado al movimiento de software",
+        "Es  mencionado  por  primera  vez  en  el  Informe  de  la  OCDE  �Un  gobierno  abierto:",
+        "Ha sido en el �mbito de la Uni�n Europea donde se ha acu�ado este concepto.",
+        "Todas las respuestas son incorrectas."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El t�rmino Gobierno Abierto cobr� protagonismo a ra�z del:",
+      "raw_options": [
+        "Memorando sobre Transparencia y Gobierno Abierto presentado por Barack Obama en",
+        "Memorando sobre Transparencia y Gobierno Abierto presentado por Barack Obama en",
+        "Memorando sobre Transparencia y Gobierno Abierto presentado por Bill Clinton en el",
+        "�o 2000."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "No es un principio informador del Gobierno Abierto:",
+      "raw_options": [
+        "Participaci�n.",
+        "Transparencia.",
+        "Rendici�n de cuentas.",
+        "Eficiencia."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "En qu� a�o se puso en marcha la Alianza para un Gobierno Abierto (OGP, en sus siglas en",
+      "raw_options": [
+        "En 2005",
+        "En 2009",
+        "En 2011",
+        "En 2015"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Con el fin de conocer el avance y grado de cumplimiento de los planes de acci�n de Gobierno",
+      "raw_options": [
+        "bierto:",
+        "Los Gobiernos deben presentar informes de autoevaluaci�n.",
+        "El  grado  de  avance  y  cumplimiento  ser�  evaluado  por  el  Mecanismo  de  Revisi�n",
+        "El grado de avance y cumplimiento ser� evaluado por el Comit� Directivo de la Alianza"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Cu�ndo se sum� Espa�a a la Alianza para un Gobierno Abierto:",
+      "raw_options": [
+        "En 2005",
+        "En 2009",
+        "En 2011",
+        "En 2015"
+      ],
+      "correct_index": null
+    }
+  ]
+}

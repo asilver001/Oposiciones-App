@@ -1,0 +1,1007 @@
+{
+  "metadata": {
+    "source_file": "6.- TEST 2024-25 ACF y PAJ.pdf",
+    "source_path": "Test financiero\\6.- TEST 2024-25 ACF y PAJ.pdf",
+    "tema": 0,
+    "categoria": "financiero",
+    "extraction_date": "2026-01-15T23:41:26.680522",
+    "reformulation_date": "2026-01-15T23:47:35.631203",
+    "total_questions": 30,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.659426",
+    "completed_count": 0,
+    "failed_count": 30
+  },
+  "questions": [
+    {
+      "question_text": "Quin es el rgano competente para establecer las normas que regulan la expedicin",
+      "options": [
+        {
+          "text": "e rdenes de pago a justificar?",
+          "is_correct": false
+        },
+        {
+          "text": "El titular del Departamento Ministerial o el Presidente o Director del organismo autnomo",
+          "is_correct": false
+        },
+        {
+          "text": "El titular del Departamento Ministerial o el Presidente o Director del organismo autnomo",
+          "is_correct": false
+        },
+        {
+          "text": "El titular del Departamento Ministerial o el Presidente o Director del organismo autnomo",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Quin es el rgano competente para establecer las normas que regulan la expedicin",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cuando, excepcionalmente, no pueda aportarse la documentacin justificativa antes del",
+      "options": [
+        {
+          "text": "Propuestas de pagos extrapresupuestarios y librarse fondos con cargo al sistema de",
+          "is_correct": false
+        },
+        {
+          "text": "nticipos de caja fija.",
+          "is_correct": false
+        },
+        {
+          "text": "Propuestas de pagos presupuestarios y librarse fondos en firme.",
+          "is_correct": false
+        },
+        {
+          "text": "Propuestas de pagos presupuestarios y librarse fondos con el carcter de a justificar.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cuando, excepcionalmente, no pueda aportarse la documentacin justificativa antes del",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los gastos realizados a travs del sistema de Anticipos de Caja Fija se imputarn al",
+      "options": [
+        {
+          "text": "Se justifiquen los pagos efectuados, solicitando la reposicin de los fondos.",
+          "is_correct": false
+        },
+        {
+          "text": "No se imputan al presupuesto porque son extrapresupuestarios.",
+          "is_correct": false
+        },
+        {
+          "text": "Se libren los fondos necesarios para constituir el anticipo.",
+          "is_correct": false
+        },
+        {
+          "text": "Se realicen los correspondientes gastos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los gastos realizados a travs del sistema de Anticipos de Caja Fija se imputarn al",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn la LGP, con cargo a los libramientos a justificar nicamente podrn satisfacerse:",
+      "options": [
+        {
+          "text": "Obligaciones derivadas de las actuaciones realizadas y exigibles en el ejercicio",
+          "is_correct": false
+        },
+        {
+          "text": "Obligaciones derivadas de las actuaciones realizadas y exigibles en el ejercicio",
+          "is_correct": false
+        },
+        {
+          "text": "Obligaciones derivadas de las actuaciones realizadas y exigibles en los dos ejercicios",
+          "is_correct": false
+        },
+        {
+          "text": "ortes Generales podr acordar que, con los fondos librados a justificar para gastos en el",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn la LGP, con cargo a los libramientos a justificar nicamente podrn satisfacerse:",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los titulares de los Departamentos Ministeriales son competentes en relacin con el",
+      "options": [
+        {
+          "text": "Ordenar los pagos presupuestarios.",
+          "is_correct": false
+        },
+        {
+          "text": "Acordar su establecimiento.",
+          "is_correct": false
+        },
+        {
+          "text": "b) y ampliar los plazos de rendicin de las cuentas a 6 y 12 meses.",
+          "is_correct": false
+        },
+        {
+          "text": "Todas son correctas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los titulares de los Departamentos Ministeriales son competentes en relacin con el",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Se puede utilizar el sistema de Anticipos de Caja Fija para atender un gasto de una",
+      "options": [
+        {
+          "text": "ampaa de informacin y sensibilizacin sobre medioambiente?",
+          "is_correct": false
+        },
+        {
+          "text": "S, siempre que el importe del gasto no supere los 5.000 euros.",
+          "is_correct": false
+        },
+        {
+          "text": "No, al tratarse de un gasto del captulo 6.",
+          "is_correct": false
+        },
+        {
+          "text": "S, siempre que el importe del gasto no supere los 600 euros.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Se puede utilizar el sistema de Anticipos de Caja Fija para atender un gasto de una",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En relacin con la cuenta justificativa de pagos a justificar en un Departamento",
+      "options": [
+        {
+          "text": "Se llevar a cabo la aprobacin o reparo de la cuenta en el mes siguiente a la fecha de",
+          "is_correct": false
+        },
+        {
+          "text": "portacin de los documentos justificativos.",
+          "is_correct": false
+        },
+        {
+          "text": "Una vez aprobada la cuenta, la Unidad Central de Caja expedir el documento contable",
+          "is_correct": false
+        },
+        {
+          "text": "La Intervencin Delegada del Departamento Ministerial realizar la intervencin de la",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En relacin con la cuenta justificativa de pagos a justificar en un Departamento",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul es la cuanta global de los anticipos de Caja Fija?",
+      "options": [
+        {
+          "text": "Mximo el 7 % del crdito inicial del captulo 2 vigente en cada momento.",
+          "is_correct": false
+        },
+        {
+          "text": "Mximo el 7 % del crdito total del captulo 2 vigente en cada momento.",
+          "is_correct": false
+        },
+        {
+          "text": "El 7% del crdito inicial del captulo 2 vigente en cada momento.",
+          "is_correct": false
+        },
+        {
+          "text": "El 7 % del crdito total del captulo 2 vigente en cada momento.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul es la cuanta global de los anticipos de Caja Fija?",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de las siguientes es una caracterstica del sistema de anticipos de caja fija?",
+      "options": [
+        {
+          "text": "No es necesario su cancelacin al cierre de cada ejercicio.",
+          "is_correct": false
+        },
+        {
+          "text": "Tienen el carcter de provisiones de fondos de carcter presupuestario y permanente.",
+          "is_correct": false
+        },
+        {
+          "text": "Se pueden realizar pagos imputables a cualquier captulo presupuestario.",
+          "is_correct": false
+        },
+        {
+          "text": "Podrn realizarse pagos individualizados superiores a 5.000 euros.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de las siguientes es una caracterstica del sistema de anticipos de caja fija?",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Tienen la consideracin de anticipos de caja fija:",
+      "options": [
+        {
+          "text": "Las provisiones de fondos de carcter presupuestario y permanente que se realicen a",
+          "is_correct": false
+        },
+        {
+          "text": "Los que, excepcionalmente, se libren para atender gastos sin la previa aportacin de la",
+          "is_correct": false
+        },
+        {
+          "text": "ocumentacin en que se acredite la realizacin de la prestacin o el derecho del acreedor.",
+          "is_correct": false
+        },
+        {
+          "text": "Las provisiones de fondos de carcter permanente que se realicen a pagaduras, cajas y",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Tienen la consideracin de anticipos de caja fija:",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En el caso de pagos de expropiaciones, en qu plazo deben rendirse las cuentas",
+      "options": [
+        {
+          "text": "En el plazo de un mes desde la fecha de inversin de los fondos, y en todo caso en el plazo",
+          "is_correct": false
+        },
+        {
+          "text": "e 3 meses desde la fecha de recepcin de los fondos.",
+          "is_correct": false
+        },
+        {
+          "text": "En el plazo de un mes desde la fecha de recepcin de los fondos, y en todo caso en el plazo",
+          "is_correct": false
+        },
+        {
+          "text": "e 3 meses desde la fecha de inversin de los fondos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En el caso de pagos de expropiaciones, en qu plazo deben rendirse las cuentas",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de los siguientes gastos NO puede tramitarse mediante el sistema de Anticipos de",
+      "options": [
+        {
+          "text": "aja Fija?",
+          "is_correct": false
+        },
+        {
+          "text": "Una factura de gas por importe de 6.000 .",
+          "is_correct": false
+        },
+        {
+          "text": "Una factura de luz por importe de 4.800 .",
+          "is_correct": false
+        },
+        {
+          "text": "Una factura de telfono por importe de 5.100 .",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de los siguientes gastos NO puede tramitarse mediante el sistema de Anticipos de",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cuando en un Departamento ministerial se establezcan las normas reguladoras de la",
+      "options": [
+        {
+          "text": "Se dar traslado de los correspondientes acuerdos a la oficina de contabilidad.",
+          "is_correct": false
+        },
+        {
+          "text": "Se dar traslado de los correspondientes acuerdos a la oficina presupuestaria.",
+          "is_correct": false
+        },
+        {
+          "text": "Se dar traslado de los correspondientes acuerdos a la oficina de contabilidad,",
+          "is_correct": false
+        },
+        {
+          "text": "compaados del documento Adopcin/Distribucin de PJ.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cuando en un Departamento ministerial se establezcan las normas reguladoras de la",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De los siguientes documentos contables, en un Departamento Ministerial, cul podra",
+      "options": [
+        {
+          "text": "ADO expedido a favor de la Caja Pagadora que deba efectuar el pago a los acreedores",
+          "is_correct": false
+        },
+        {
+          "text": "ADOK expedido a favor de la Caja Pagadora que deba efectuar el pago a los acreedores",
+          "is_correct": false
+        },
+        {
+          "text": "PMP expedido a favor de la Caja Pagadora que deba efectuar el pago a los acreedores",
+          "is_correct": false
+        },
+        {
+          "text": "Control de pagos a justificar expedido a favor de la Caja Pagadora que deba efectuar el",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De los siguientes documentos contables, en un Departamento Ministerial, cul podra",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En un Organismo Autnomo, la aplicacin a presupuesto de los gastos realizados con",
+      "options": [
+        {
+          "text": "argo al anticipo de caja fija y la propuesta de reposicin de fondos al Cajero Pagador",
+          "is_correct": false
+        },
+        {
+          "text": "Documento ADOK.",
+          "is_correct": false
+        },
+        {
+          "text": "Documento PMP.",
+          "is_correct": false
+        },
+        {
+          "text": "Documento Adopcin/distribucin ACF.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En un Organismo Autnomo, la aplicacin a presupuesto de los gastos realizados con",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El documento de Control de pagos a justificar:",
+      "options": [
+        {
+          "text": "Se utilizar para registrar el establecimiento del sistema de PJ.",
+          "is_correct": false
+        },
+        {
+          "text": "Ser autorizado por la autoridad que haya adoptado el acuerdo de PJ.",
+          "is_correct": false
+        },
+        {
+          "text": "Se utilizar para el registro de las prrrogas autorizadas de los plazos de justificacin, para",
+          "is_correct": false
+        },
+        {
+          "text": "e la cuenta justificativa",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El documento de Control de pagos a justificar:",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los perceptores de las rdenes de pago a justificar:",
+      "options": [
+        {
+          "text": "Son responsables de la custodia y uso de los fondos y de la rendicin de la cuenta.",
+          "is_correct": false
+        },
+        {
+          "text": "No son responsables de la custodia y uso de los fondos, pero s de la rendicin de la cuenta.",
+          "is_correct": false
+        },
+        {
+          "text": "Son responsables de la custodia y uso de los fondos, pero no de la rendicin de la cuenta.",
+          "is_correct": false
+        },
+        {
+          "text": "No son responsables ni de la custodia y uso de los fondos ni de la rendicin de la cuenta.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los perceptores de las rdenes de pago a justificar:",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "A tenor de lo establecido en el artculo 79 de la LGP, cul es el plazo de aprobacin de",
+      "options": [
+        {
+          "text": "3 meses, excepto las correspondientes a pagos de expropiaciones y pagos en el extranjero",
+          "is_correct": false
+        },
+        {
+          "text": "2 meses.",
+          "is_correct": false
+        },
+        {
+          "text": "1 mes.",
+          "is_correct": false
+        },
+        {
+          "text": "3 meses, excepto las correspondientes a pagos de expropiaciones y pagos en el extranjero",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "A tenor de lo establecido en el artculo 79 de la LGP, cul es el plazo de aprobacin de",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En un organismo autnomo, cuando se produzca la supresin de una caja pagadora:",
+      "options": [
+        {
+          "text": "Deber reintegrar a la Direccin General del Tesoro y Poltica Financiera el importe del",
+          "is_correct": false
+        },
+        {
+          "text": "nticipo recibido.",
+          "is_correct": false
+        },
+        {
+          "text": "Deber traspasar a la Caja que asuma sus funciones el importe del anticipo recibido.",
+          "is_correct": false
+        },
+        {
+          "text": "Deber reintegrar a la Tesorera del organismo el importe del anticipo recibido, sin que",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En un organismo autnomo, cuando se produzca la supresin de una caja pagadora:",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Si el 10 de abril realiza un libramiento a justificar de 500.000  en la cuenta que",
+      "options": [
+        {
+          "text": "realizar un pago a la empresa ABM. Qu da finaliza el plazo para la justificacin?",
+          "is_correct": false
+        },
+        {
+          "text": "El da 8 de julio.",
+          "is_correct": false
+        },
+        {
+          "text": "El da 10 de mayo.",
+          "is_correct": false
+        },
+        {
+          "text": "El da 10 de julio.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Si el 10 de abril realiza un libramiento a justificar de 500.000  en la cuenta que",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En el sistema de Pagos a justificar, la situacin de fondos a favor de la Caja Pagadora",
+      "options": [
+        {
+          "text": "Transferencia bancaria, cheque nominativo o efectivo.",
+          "is_correct": false
+        },
+        {
+          "text": "Transferencia bancaria.",
+          "is_correct": false
+        },
+        {
+          "text": "Transferencia bancaria o cheque nominativo.",
+          "is_correct": false
+        },
+        {
+          "text": "Transferencia bancaria, cheque al portador o efectivo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En el sistema de Pagos a justificar, la situacin de fondos a favor de la Caja Pagadora",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los Cajeros pagadores rendirn cuentas por los gastos atendidos con anticipos de Caja",
+      "options": [
+        {
+          "text": "A medida que sus necesidades de tesorera aconsejen la reposicin de los fondos",
+          "is_correct": false
+        },
+        {
+          "text": "orresponden los gastos.",
+          "is_correct": false
+        },
+        {
+          "text": "A medida que sus necesidades de tesorera aconsejen la reposicin de los fondos",
+          "is_correct": false
+        },
+        {
+          "text": "A medida que sus necesidades de tesorera aconsejen la reposicin de los fondos",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los Cajeros pagadores rendirn cuentas por los gastos atendidos con anticipos de Caja",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Se incluir un calendario de las actuaciones que se pretenda financiar con el",
+      "options": [
+        {
+          "text": "orrespondiente libramiento:",
+          "is_correct": false
+        },
+        {
+          "text": "En todas las propuestas de pago a justificar, cualquiera que sea su finalidad.",
+          "is_correct": false
+        },
+        {
+          "text": "En todas las propuestas de mandamiento de pago extrapresupuestario, cualquiera que sea",
+          "is_correct": false
+        },
+        {
+          "text": "En todas las cuentas justificativas que rinda la Caja Pagadora.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Se incluir un calendario de las actuaciones que se pretenda financiar con el",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las rdenes de pago a justificar se expedirn a favor de:",
+      "options": [
+        {
+          "text": "Los acreedores directos.",
+          "is_correct": false
+        },
+        {
+          "text": "Las Cajas Pagadoras que se creen en los Ministerios y Organismos autnomos.",
+          "is_correct": false
+        },
+        {
+          "text": "La Direccin General del Tesoro y Poltica Financiera.",
+          "is_correct": false
+        },
+        {
+          "text": "La Direccin General de Presupuestos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las rdenes de pago a justificar se expedirn a favor de:",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cuando el sistema de ACF se haya establecido en un departamento ministerial, no",
+      "options": [
+        {
+          "text": "Inferior a 600 euros, excepto los destinados a reposicin del anticipo.",
+          "is_correct": false
+        },
+        {
+          "text": "Superior a 600 euros, excepto los destinados a reposicin del anticipo.",
+          "is_correct": false
+        },
+        {
+          "text": "Inferior a 600 euros.",
+          "is_correct": false
+        },
+        {
+          "text": "Superior a 5.000 euros.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cuando el sistema de ACF se haya establecido en un departamento ministerial, no",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La fiscalizacin previa de las rdenes de pago para la constitucin o modificacin de",
+      "options": [
+        {
+          "text": "La existencia de acuerdo del Ministro o Presidente o Director del organismo autnomo",
+          "is_correct": false
+        },
+        {
+          "text": "Que la propuesta de pago no se basa en resolucin de autoridad competente.",
+          "is_correct": false
+        },
+        {
+          "text": "Que existe crdito y el propuesto es adecuado.",
+          "is_correct": false
+        },
+        {
+          "text": "Todas son correctas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La fiscalizacin previa de las rdenes de pago para la constitucin o modificacin de",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los pagos con cargo a los fondos librados a justificar se efectuarn mediante:",
+      "options": [
+        {
+          "text": "Transferencias bancarias o cheques al portador.",
+          "is_correct": false
+        },
+        {
+          "text": "Transferencias bancarias o cheques nominativos.",
+          "is_correct": false
+        },
+        {
+          "text": "Transferencias bancarias o cheques nominativos. No obstante, los Ministros y Presidentes",
+          "is_correct": false
+        },
+        {
+          "text": "Transferencias bancarias o cheques al portador. No obstante, los Ministros y Presidentes",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los pagos con cargo a los fondos librados a justificar se efectuarn mediante:",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En el sistema de ACF, indique la respuesta correcta:",
+      "options": [
+        {
+          "text": "Podrn acumularse en un solo justificante pagos que se deriven de diversos gastos.",
+          "is_correct": false
+        },
+        {
+          "text": "Podr fraccionarse un nico gasto en varios pagos.",
+          "is_correct": false
+        },
+        {
+          "text": "No podrn acumularse en un solo justificante pagos que se deriven de diversos gastos, ni",
+          "is_correct": false
+        },
+        {
+          "text": "Podrn acumularse en un solo justificante pagos que se deriven de diversos gastos, pero",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En el sistema de ACF, indique la respuesta correcta:",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En relacin con la intervencin de las cuentas justificativas de los pagos a justificar y de",
+      "options": [
+        {
+          "text": "Los resultados de la verificacin se reflejarn en un informe en el que el Interventor",
+          "is_correct": false
+        },
+        {
+          "text": "Se comprobar que se acredita la realizacin efectiva y conforme de los gastos o servicios.",
+          "is_correct": false
+        },
+        {
+          "text": "Se podrn utilizar procedimientos de muestreo.",
+          "is_correct": false
+        },
+        {
+          "text": "Se formular un reparo por la Intervencin en el caso de detectar defectos en la cuenta",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En relacin con la intervencin de las cuentas justificativas de los pagos a justificar y de",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Se formularn estados de situacin de Tesorera:",
+      "options": [
+        {
+          "text": "Con la periodicidad que establezcan los Titulares de los departamentos Ministeriales y",
+          "is_correct": false
+        },
+        {
+          "text": "Con la periodicidad que establezcan los Interventores Delegados en los Departamentos",
+          "is_correct": false
+        },
+        {
+          "text": "nterior.",
+          "is_correct": false
+        },
+        {
+          "text": "Con la periodicidad que establezcan los Titulares de los departamentos Ministeriales y",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Se formularn estados de situacin de Tesorera:",
+      "source": "6.- TEST 2024-25 ACF y PAJ.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

@@ -1,0 +1,1909 @@
+{
+  "metadata": {
+    "source_file": "Test tema 1.pdf",
+    "source_path": "Test Iniciales UE\\Test tema 1.pdf",
+    "tema": 1,
+    "categoria": "union-europea",
+    "extraction_date": "2026-01-15T23:42:01.829761",
+    "reformulation_date": "2026-01-15T23:47:35.733758",
+    "total_questions": 38,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.970722",
+    "completed_count": 0,
+    "failed_count": 38
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "Seale la respuesta INCORRECTA en relacin con la Declaracin Schuman:",
+        "options": [
+          {
+            "text": "Fue una propuesta del ministro de Asuntos Exteriores francs Robert Schuman",
+            "is_correct": false
+          },
+          {
+            "text": "Se pronunci el 9 de mayo de 1950",
+            "is_correct": false
+          },
+          {
+            "text": "Propona situar el conjunto de la produccin franco-alemana del carbn y del acero bajo",
+            "is_correct": false
+          },
+          {
+            "text": "Fue favorablemente acogida por Alemania, Francia, Italia, Pases Bajos, Suecia y Blgica",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta INCORRECTA en relacin con la Declaracin Schuman:",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La Comunidad Europea del Carbn y del Acero expir:",
+        "options": [
+          {
+            "text": "El 1 de enero de 1958",
+            "is_correct": false
+          },
+          {
+            "text": "El 14 de abril de 1951",
+            "is_correct": false
+          },
+          {
+            "text": "El 23 de julio de 2002",
+            "is_correct": false
+          },
+          {
+            "text": "El 1 de febrero de 2003",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La Comunidad Europea del Carbn y del Acero expir:",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con el artculo 3 del Tratado de la Unin Europea, NO es un objetivo de",
+        "options": [
+          {
+            "text": "Promover la paz, sus valores y el bienestar de sus pueblos",
+            "is_correct": false
+          },
+          {
+            "text": "Ofrecer a sus ciudadanos un espacio de libertad, seguridad y justicia sin fronteras",
+            "is_correct": false
+          },
+          {
+            "text": "Establecer un mercado interior",
+            "is_correct": false
+          },
+          {
+            "text": "La Unin establecer una unin econmica y monetaria con las monedas nacionales de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con el artculo 3 del Tratado de la Unin Europea, NO es un objetivo de",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale cul de los siguientes pases tiene en la actualidad el estatus de potencialmente",
+        "options": [
+          {
+            "text": "andidato:",
+            "is_correct": false
+          },
+          {
+            "text": "Bosnia y Herzegovina",
+            "is_correct": false
+          },
+          {
+            "text": "Ucrania",
+            "is_correct": false
+          },
+          {
+            "text": "Moldavia",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale cul de los siguientes pases tiene en la actualidad el estatus de potencialmente",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'andidato:...'",
+        "Distractor muy corto: 'Ucrania...'",
+        "Distractor muy corto: 'Moldavia...'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.25,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.48
+    },
+    {
+      "question": {
+        "question_text": "En el caso de que un Estado miembro est en riesgo claro de violar de modo grave",
+        "options": [
+          {
+            "text": "A peticin del Consejo Europeo",
+            "is_correct": false
+          },
+          {
+            "text": "A propuesta motivada de 1/3 de los Estados miembros o de la Comisin",
+            "is_correct": false
+          },
+          {
+            "text": "A propuesta motivada de 1/3 de los Estados miembros, la Comisin o el Parlamento",
+            "is_correct": false
+          },
+          {
+            "text": "A propuesta del Consejo",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En el caso de que un Estado miembro est en riesgo claro de violar de modo grave",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con el artculo 50 del Tratado de la Unin Europea, todo Estado",
+        "options": [
+          {
+            "text": "Previa autorizacin del Consejo Europeo",
+            "is_correct": false
+          },
+          {
+            "text": "Si as lo decide, de conformidad con sus normas constitucionales",
+            "is_correct": false
+          },
+          {
+            "text": "No se prev la posibilidad de que un Estado miembro abandone la Unin Europea",
+            "is_correct": false
+          },
+          {
+            "text": "Requerir aprobacin por unanimidad de todos los miembros del Consejo",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con el artculo 50 del Tratado de la Unin Europea, todo Estado",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La poltica de empleo fue introducida por:",
+        "options": [
+          {
+            "text": "Tratado de msterdam",
+            "is_correct": false
+          },
+          {
+            "text": "Tratado de Niza",
+            "is_correct": false
+          },
+          {
+            "text": "Tratado de Maastricht",
+            "is_correct": false
+          },
+          {
+            "text": "Tratado de Lisboa",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La poltica de empleo fue introducida por:",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Con el Tratado de Corf, firmado el 24 de junio de 1994, se incorpor a la Unin",
+        "options": [
+          {
+            "text": "Suecia",
+            "is_correct": false
+          },
+          {
+            "text": "Austria",
+            "is_correct": false
+          },
+          {
+            "text": "Finlandia",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Con el Tratado de Corf, firmado el 24 de junio de 1994, se incorpor a la Unin",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Suecia...'",
+        "Distractor muy corto: 'Austria...'",
+        "Distractor muy corto: 'Finlandia...'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.25,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.48
+    },
+    {
+      "question": {
+        "question_text": "El Tratado de Bruselas, por el que se incorporaron a la entonces Comunidad",
+        "options": [
+          {
+            "text": "El 22 de enero de 1972",
+            "is_correct": false
+          },
+          {
+            "text": "El 1 de enero de 1973",
+            "is_correct": false
+          },
+          {
+            "text": "El 28 de mayo de 1975",
+            "is_correct": false
+          },
+          {
+            "text": "El 1 de enero de 1981",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Tratado de Bruselas, por el que se incorporaron a la entonces Comunidad",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta en relacin con la ciudadana europea:",
+        "options": [
+          {
+            "text": "Sustituye a la nacional",
+            "is_correct": false
+          },
+          {
+            "text": "Se reconoce a todo nacional de un Estado miembro de la Unin Europea, as como a los",
+            "is_correct": false
+          },
+          {
+            "text": "iudadanos de terceros pases residentes en sta",
+            "is_correct": false
+          },
+          {
+            "text": "Los ciudadanos europeos tienen derecho a la libre circulacin y residencia en el territorio",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta en relacin con la ciudadana europea:",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Los Estados miembros que deseen instaurar entre s una cooperacin reforzada en",
+        "options": [
+          {
+            "text": "Por el Consejo",
+            "is_correct": false
+          },
+          {
+            "text": "Por el Consejo Europeo",
+            "is_correct": false
+          },
+          {
+            "text": "La a) es correcta y si la cooperacin reforzada afecta a la Poltica Exterior y de Seguridad",
+            "is_correct": false
+          },
+          {
+            "text": "omn la autorizar por unanimidad",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los Estados miembros que deseen instaurar entre s una cooperacin reforzada en",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Tratado de la Unin Europea se estructura:",
+        "options": [
+          {
+            "text": "En 7 partes y 358 artculos",
+            "is_correct": false
+          },
+          {
+            "text": "En 6 ttulos y 55 artculos",
+            "is_correct": false
+          },
+          {
+            "text": "En 6 partes y 358 artculos",
+            "is_correct": false
+          },
+          {
+            "text": "En 7 ttulos y 55 artculos",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Tratado de la Unin Europea se estructura:",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La modificacin de la Parte Tercera del Tratado de Funcionamiento de la Unin",
+        "options": [
+          {
+            "text": "abo mediante:",
+            "is_correct": false
+          },
+          {
+            "text": "La firma y ratificacin de un tratado internacional suscrito por los Estados miembros de",
+            "is_correct": false
+          },
+          {
+            "text": "Una decisin del Consejo adoptada por mayora cualificada",
+            "is_correct": false
+          },
+          {
+            "text": "Una decisin del Consejo Europeo adoptada por unanimidad",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La modificacin de la Parte Tercera del Tratado de Funcionamiento de la Unin",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Podrn presentar su solicitud de adhesin a la Unin Europea:",
+        "options": [
+          {
+            "text": "Pases europeos",
+            "is_correct": false
+          },
+          {
+            "text": "Pases que respeten los valores de la Unin Europea",
+            "is_correct": false
+          },
+          {
+            "text": "Pases que se comprometan a promover los valores de la Unin Europea",
+            "is_correct": false
+          },
+          {
+            "text": "Los pases que cumplan todos los requisitos citados en las respuestas a), b) y c)",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Podrn presentar su solicitud de adhesin a la Unin Europea:",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En el caso de que se produzca una violacin grave y persistente de los valores de la",
+        "options": [
+          {
+            "text": "Ser constatada por unanimidad del Consejo Europeo",
+            "is_correct": false
+          },
+          {
+            "text": "Ser constatada por mayora de 4/5 del Consejo",
+            "is_correct": false
+          },
+          {
+            "text": "Ser constatada por mayora cualificada del Consejo",
+            "is_correct": false
+          },
+          {
+            "text": "Ser constatada por mayora cualificada del Consejo Europeo",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En el caso de que se produzca una violacin grave y persistente de los valores de la",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Indique cul de los siguientes Estados miembros se incorpor a la Unin Europea",
+        "options": [
+          {
+            "text": "Espaa",
+            "is_correct": false
+          },
+          {
+            "text": "Croacia",
+            "is_correct": false
+          },
+          {
+            "text": "Grecia",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Indique cul de los siguientes Estados miembros se incorpor a la Unin Europea",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Espaa...'",
+        "Distractor muy corto: 'Croacia...'",
+        "Distractor muy corto: 'Grecia...'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.25,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.48
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con el artculo 48 del Tratado de La Unin Europea podr presentar al",
+        "options": [
+          {
+            "text": "onsejo proyectos de revisin de los Tratados (SEALE LA FALSA):",
+            "is_correct": false
+          },
+          {
+            "text": "El Gobierno de cualquier Estado miembro",
+            "is_correct": false
+          },
+          {
+            "text": "El Parlamento Europeo",
+            "is_correct": false
+          },
+          {
+            "text": "La Comisin",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con el artculo 48 del Tratado de La Unin Europea podr presentar al",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Tratado de adhesin a la Unin Europea de Austria, Finlandia y Suecia entr en",
+        "options": [
+          {
+            "text": "24-06-1994",
+            "is_correct": false
+          },
+          {
+            "text": "01-01-1995",
+            "is_correct": false
+          },
+          {
+            "text": "16-04-2003",
+            "is_correct": false
+          },
+          {
+            "text": "01-05-2004",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Tratado de adhesin a la Unin Europea de Austria, Finlandia y Suecia entr en",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Indique cul de los siguientes Estados no entr a formar parte de la Unin Europea",
+        "options": [
+          {
+            "text": "Bulgaria",
+            "is_correct": false
+          },
+          {
+            "text": "Repblica Checa",
+            "is_correct": false
+          },
+          {
+            "text": "Polonia",
+            "is_correct": false
+          },
+          {
+            "text": "Chipre",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Indique cul de los siguientes Estados no entr a formar parte de la Unin Europea",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Bulgaria...'",
+        "Distractor muy corto: 'Polonia...'",
+        "Distractor muy corto: 'Chipre...'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.25,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.48
+    },
+    {
+      "question": {
+        "question_text": "El Convenio relativo a ciertas instituciones comunes por el que se unificaron los",
+        "options": [
+          {
+            "text": "25-03-1957",
+            "is_correct": false
+          },
+          {
+            "text": "01-01-1952",
+            "is_correct": false
+          },
+          {
+            "text": "01-01-1958",
+            "is_correct": false
+          },
+          {
+            "text": "23-07-1952",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Convenio relativo a ciertas instituciones comunes por el que se unificaron los",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Tratado de Lisboa no fue redactado inicialmente en una de las siguientes lenguas:",
+        "options": [
+          {
+            "text": "Espaola",
+            "is_correct": false
+          },
+          {
+            "text": "Eslovena",
+            "is_correct": false
+          },
+          {
+            "text": "Finesa",
+            "is_correct": false
+          },
+          {
+            "text": "Croata",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Tratado de Lisboa no fue redactado inicialmente en una de las siguientes lenguas:",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Espaola...'",
+        "Distractor muy corto: 'Eslovena...'",
+        "Distractor muy corto: 'Finesa...'",
+        "Distractor muy corto: 'Croata...'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.48
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con el artculo 10 del Tratado de la Unin Europea, el funcionamiento",
+        "options": [
+          {
+            "text": "e la Unin se basa en uno de los siguientes principios:",
+            "is_correct": false
+          },
+          {
+            "text": "Democracia representativa",
+            "is_correct": false
+          },
+          {
+            "text": "Representacin participativa",
+            "is_correct": false
+          },
+          {
+            "text": "Participacin ciudadana",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con el artculo 10 del Tratado de la Unin Europea, el funcionamiento",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 10 del TUE, los ciudadanos estarn directamente representados en",
+        "options": [
+          {
+            "text": "El Consejo.",
+            "is_correct": false
+          },
+          {
+            "text": "El Parlamento Europeo.",
+            "is_correct": false
+          },
+          {
+            "text": "Sus parlamentos nacionales.",
+            "is_correct": false
+          },
+          {
+            "text": "El Comit de las Regiones.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 10 del TUE, los ciudadanos estarn directamente representados en",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Ante quin presentan los ciudadanos de la Unin las propuestas basadas en la",
+        "options": [
+          {
+            "text": "Ante sus parlamentos.",
+            "is_correct": false
+          },
+          {
+            "text": "Ante la Comisin.",
+            "is_correct": false
+          },
+          {
+            "text": "Ante el Parlamento Europeo.",
+            "is_correct": false
+          },
+          {
+            "text": "Ante el Consejo y el Parlamento Europeo como colegisladores.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Ante quin presentan los ciudadanos de la Unin las propuestas basadas en la",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Para cul de los siguientes casos se podr utilizar un procedimiento de revisin",
+        "options": [
+          {
+            "text": "Para la reforma de la tercera parte del TFUE, pero sin aumentar las competencias de la",
+            "is_correct": false
+          },
+          {
+            "text": "Para permitir que el Consejo se pronuncie por unanimidad en vez de por mayora",
+            "is_correct": false
+          },
+          {
+            "text": "ualificada.",
+            "is_correct": false
+          },
+          {
+            "text": "Para permitir que una materia se regule mediante el procedimiento legislativo especial en",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Para cul de los siguientes casos se podr utilizar un procedimiento de revisin",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la cierta en relacin con Espaa:",
+        "options": [
+          {
+            "text": "La firma del Tratado de adhesin a las Comunidades Europeas tuvo lugar el 12 de junio",
+            "is_correct": false
+          },
+          {
+            "text": "e 1985",
+            "is_correct": false
+          },
+          {
+            "text": "El 1 de julio de 1986 se incorpor a la Unin Europea",
+            "is_correct": false
+          },
+          {
+            "text": "Espaa se incorpor a las Comunidades Europeas a la vez que Portugal y Grecia",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la cierta en relacin con Espaa:",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'e 1985...'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la cierta:",
+        "options": [
+          {
+            "text": "El TUE se concluye para un perodo de tiempo ilimitado, pero el TFUE tiene una vigencia",
+            "is_correct": false
+          },
+          {
+            "text": "El TFUE se concluye para un perodo de tiempo ilimitado, pero el TUE tiene una vigencia",
+            "is_correct": false
+          },
+          {
+            "text": "TUE y TFUE se concluyen para un perodo de tiempo ilimitado.",
+            "is_correct": false
+          },
+          {
+            "text": "Los dos Tratados se concluyen para un perodo de tiempo limitado.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la cierta:",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta muy corta",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Puede el Parlamento Europeo autorizar cooperaciones reforzadas?",
+        "options": [
+          {
+            "text": "S, pero lo tendr que hacer por  partes de sus miembros.",
+            "is_correct": false
+          },
+          {
+            "text": "S, pero se precisar la unanimidad del PE.",
+            "is_correct": false
+          },
+          {
+            "text": "S, pero siempre que lo haga a propuesta de la Comisin.",
+            "is_correct": false
+          },
+          {
+            "text": "No, porque las cooperaciones reforzadas las autoriza el Consejo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Puede el Parlamento Europeo autorizar cooperaciones reforzadas?",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la cierta sobre los Tratados constitutivos de las Comunidades Europeas.",
+        "options": [
+          {
+            "text": "El Tratado CECA no inclua una Comisin entre sus instituciones.",
+            "is_correct": false
+          },
+          {
+            "text": "El Tratado CEEA expir en 2002, tras cincuenta aos de existencia.",
+            "is_correct": false
+          },
+          {
+            "text": "El Tratado de la CEE fue el primero y ms importante de los tres tratados originarios.",
+            "is_correct": false
+          },
+          {
+            "text": "El Tratado de la CECA se firm en Roma el 18-4-51 y los Tratados CEEA y CEE se",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la cierta sobre los Tratados constitutivos de las Comunidades Europeas.",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Qu tratado incorpor la ciudadana europea a la normativa de la Unin?",
+        "options": [
+          {
+            "text": "Tratado de Maastricht.",
+            "is_correct": false
+          },
+          {
+            "text": "Tratado de msterdam.",
+            "is_correct": false
+          },
+          {
+            "text": "Tratado de Niza.",
+            "is_correct": false
+          },
+          {
+            "text": "Tratado de Lisboa.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu tratado incorpor la ciudadana europea a la normativa de la Unin?",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Qu tratado incorpor el procedimiento de codecisin?",
+        "options": [
+          {
+            "text": "El Acta nica Europea.",
+            "is_correct": false
+          },
+          {
+            "text": "El Tratado de Maastricht.",
+            "is_correct": false
+          },
+          {
+            "text": "El Tratado de msterdam.",
+            "is_correct": false
+          },
+          {
+            "text": "El Tratado de Niza.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu tratado incorpor el procedimiento de codecisin?",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Qu se regula en la tercera parte del TFUE?:",
+        "options": [
+          {
+            "text": "Las disposiciones institucionales y financieras.",
+            "is_correct": false
+          },
+          {
+            "text": "Las polticas y acciones internas de la Unin.",
+            "is_correct": false
+          },
+          {
+            "text": "La accin exterior de la Unin.",
+            "is_correct": false
+          },
+          {
+            "text": "Los principios de la Unin Europea.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu se regula en la tercera parte del TFUE?:",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la cierta sobre el Tratado de Maastricht:",
+        "options": [
+          {
+            "text": "Crea la Comunidad Europea de la Energa Atmica.",
+            "is_correct": false
+          },
+          {
+            "text": "Crea el Comit de las Regiones.",
+            "is_correct": false
+          },
+          {
+            "text": "Establece el procedimiento de retirada de la Unin.",
+            "is_correct": false
+          },
+          {
+            "text": "Crea la iniciativa ciudadana europea.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la cierta sobre el Tratado de Maastricht:",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Qu aportacin se puede atribuir al Tratado de Niza?",
+        "options": [
+          {
+            "text": "Crea la poltica de empleo.",
+            "is_correct": false
+          },
+          {
+            "text": "Da carta de naturaleza a Eurojust.",
+            "is_correct": false
+          },
+          {
+            "text": "Crea la figura del Defensor del Pueblo Europeo.",
+            "is_correct": false
+          },
+          {
+            "text": "La creacin del procedimiento de dictamen conforme.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu aportacin se puede atribuir al Tratado de Niza?",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la afirmacin FALSA.",
+        "options": [
+          {
+            "text": "La CEEA tena y tiene personalidad jurdica.",
+            "is_correct": false
+          },
+          {
+            "text": "La Unin Europea siempre ha tenido personalidad jurdica.",
+            "is_correct": false
+          },
+          {
+            "text": "La CEE mientras existi tuvo personalidad jurdica.",
+            "is_correct": false
+          },
+          {
+            "text": "La CECA mientras existi tuvo personalidad jurdica.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la afirmacin FALSA.",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Se puede incorporar un nuevo pas a la Unin Europea sin la unanimidad de los",
+        "options": [
+          {
+            "text": "No.",
+            "is_correct": false
+          },
+          {
+            "text": "S, si la propuesta proviene del Consejo Europeo por consenso.",
+            "is_correct": false
+          },
+          {
+            "text": "S, pero lo han de aprobar al menos 4/5 partes de sus miembros.",
+            "is_correct": false
+          },
+          {
+            "text": "S, si lo acuerda el Consejo Europeo por consenso",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Se puede incorporar un nuevo pas a la Unin Europea sin la unanimidad de los",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'No....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Cmo se denominan las condiciones de adhesin?:",
+        "options": [
+          {
+            "text": "Criterios de Maastricht.",
+            "is_correct": false
+          },
+          {
+            "text": "Criterios de Copenhague",
+            "is_correct": false
+          },
+          {
+            "text": "Criterios de Dinamarca.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cmo se denominan las condiciones de adhesin?:",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Qu pas no se incorpor a la Unin Europea en mayo de 2004?",
+        "options": [
+          {
+            "text": "Hungra.",
+            "is_correct": false
+          },
+          {
+            "text": "Repblica Checa.",
+            "is_correct": false
+          },
+          {
+            "text": "Rumana.",
+            "is_correct": false
+          },
+          {
+            "text": "Chipre",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu pas no se incorpor a la Unin Europea en mayo de 2004?",
+        "source": "Test tema 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "union-europea",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Hungra....'",
+        "Distractor muy corto: 'Rumana....'",
+        "Distractor muy corto: 'Chipre...'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.25,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:22.397694"
+}

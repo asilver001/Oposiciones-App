@@ -1,0 +1,1010 @@
+{
+  "metadata": {
+    "source_file": "3. Test preparación parte general..pdf",
+    "source_path": "Test contratos\\3. Test preparación parte general..pdf",
+    "tema": 0,
+    "categoria": "contratos",
+    "extraction_date": "2026-01-15T23:41:03.321093",
+    "reformulation_date": "2026-01-15T23:47:35.572597",
+    "total_questions": 20,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.492398",
+    "completed_count": 0,
+    "failed_count": 20
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "En relacin con las consultas preliminares de mercado, seale la respuesta",
+        "options": [
+          {
+            "text": "Los rganos de contratacin debern realizar estudios de mercado y",
+            "is_correct": false
+          },
+          {
+            "text": "irigir consultas a los operadores econmicos que estuvieran activos en",
+            "is_correct": false
+          },
+          {
+            "text": "Antes de iniciarse la consulta, el rgano de contratacin la publicar en",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando el rgano de contratacin haya realizado las consultas har",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En relacin con las consultas preliminares de mercado, seale la respuesta",
+        "source": "3. Test preparación parte general..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Las consultas preliminares de mercado:",
+        "options": [
+          {
+            "text": "Se publicarn en el Boletn Oficial del Estado y en el perfil del contratante.",
+            "is_correct": false
+          },
+          {
+            "text": "Se publicarn en el Diario Oficial de la Unin europea, si el contrato est",
+            "is_correct": false
+          },
+          {
+            "text": "Se publicar en el perfil del contratante.",
+            "is_correct": false
+          },
+          {
+            "text": "Se publicar a eleccin del rgano de contratacin en el perfil del",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las consultas preliminares de mercado:",
+        "source": "3. Test preparación parte general..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En cuanto a las consultas preliminares de mercado:",
+        "options": [
+          {
+            "text": "En el caso de realizarse, el rgano de contratacin, al elaborar los pliegos",
+            "is_correct": false
+          },
+          {
+            "text": "eber tener en cuenta los resultados de las consultas realizadas; de no",
+            "is_correct": false
+          },
+          {
+            "text": "No se puede utilizar en los contratos sujetos a regulacin armonizada.",
+            "is_correct": false
+          },
+          {
+            "text": "Con carcter general el rgano de contratacin al elaborar los pliegos no",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En cuanto a las consultas preliminares de mercado:",
+        "source": "3. Test preparación parte general..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con la LCSP, seale la respuesta incorrecta:",
+        "options": [
+          {
+            "text": "El expediente de contratacin se iniciar por el rgano de contratacin",
+            "is_correct": false
+          },
+          {
+            "text": "Todos los expedientes de contratacin contarn con un informe de",
+            "is_correct": false
+          },
+          {
+            "text": "Completado el expediente de contratacin, se dictar resolucin",
+            "is_correct": false
+          },
+          {
+            "text": "isponiendo la apertura del procedimiento de adjudicacin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con la LCSP, seale la respuesta incorrecta:",
+        "source": "3. Test preparación parte general..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En cuanto al expediente de contratacin:",
+        "options": [
+          {
+            "text": "El expediente deber referirse a la totalidad del objeto del contrato, salvo",
+            "is_correct": false
+          },
+          {
+            "text": "Al expediente se incorporarn el pliego de clusulas administrativas",
+            "is_correct": false
+          },
+          {
+            "text": "Deber incorporarse el certificado de existencia de crdito y la",
+            "is_correct": false
+          },
+          {
+            "text": "En el expediente se justificar adecuadamente, entre otros aspectos, la",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En cuanto al expediente de contratacin:",
+        "source": "3. Test preparación parte general..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta en relacin con los contratos menores:",
+        "options": [
+          {
+            "text": "Se consideran contratos menores los contratos de valor estimado inferior",
+            "is_correct": false
+          },
+          {
+            "text": "40.000 euros.",
+            "is_correct": false
+          },
+          {
+            "text": "Se requerir la aprobacin del gasto y la incorporacin al mismo de la",
+            "is_correct": false
+          },
+          {
+            "text": "Con carcter general, en los contratos menores la tramitacin del",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta en relacin con los contratos menores:",
+        "source": "3. Test preparación parte general..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta incorrecta:",
+        "options": [
+          {
+            "text": "Los expedientes de contratacin podrn ultimarse incluso con la",
+            "is_correct": false
+          },
+          {
+            "text": "djudicacin y formalizacin del correspondiente contrato, aun cuando su",
+            "is_correct": false
+          },
+          {
+            "text": "Completado el expediente de contratacin, se dictar resolucin",
+            "is_correct": false
+          },
+          {
+            "text": "La resolucin de aprobacin implicar tambin la aprobacin del gasto,",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta incorrecta:",
+        "source": "3. Test preparación parte general..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Se consideran contratos menores:",
+        "options": [
+          {
+            "text": "Los contratos de valor estimado inferior a 40.000 euros, cuando se trate",
+            "is_correct": false
+          },
+          {
+            "text": "e contratos de obras, siempre que su duracin sea superior a un ao.",
+            "is_correct": false
+          },
+          {
+            "text": "Los contratos de valor estimado inferior a 15.000 euros siempre que sean",
+            "is_correct": false
+          },
+          {
+            "text": "Los contratos de valor estimado inferior a 40.000 euros, cuando se trate",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Se consideran contratos menores:",
+        "source": "3. Test preparación parte general..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con la LCSP:",
+        "options": [
+          {
+            "text": "Atendiendo a la singular naturaleza de su actividad, como excepcin al",
+            "is_correct": false
+          },
+          {
+            "text": "onsideracin de contratos menores los contratos de suministro o de",
+            "is_correct": false
+          },
+          {
+            "text": "elebren por los agentes pblicos del Sistema Espaol de Ciencia,",
+            "is_correct": false
+          },
+          {
+            "text": "La respuesta a, siempre que no vayan destinados a servicios generales",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con la LCSP:",
+        "source": "3. Test preparación parte general..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con la LCSP, podrn ser objeto de tramitacin urgente los",
+        "options": [
+          {
+            "text": "Cuya celebracin responda a una necesidad inaplazable.",
+            "is_correct": false
+          },
+          {
+            "text": "Cuya adjudicacin sea preciso acelerar por razones de inters pblico.",
+            "is_correct": false
+          },
+          {
+            "text": "Las respuestas a y b son correctas.",
+            "is_correct": false
+          },
+          {
+            "text": "Cuya actuacin sea necesaria a causa de acontecimientos catastrficos.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con la LCSP, podrn ser objeto de tramitacin urgente los",
+        "source": "3. Test preparación parte general..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los expedientes calificados de urgentes se tramitarn, seale la respuesta",
+        "options": [
+          {
+            "text": "orrecta:",
+            "is_correct": false
+          },
+          {
+            "text": "Siguiendo el mismo procedimiento que los ordinarios, salvo que existe",
+            "is_correct": false
+          },
+          {
+            "text": "Acordada la apertura del procedimiento de adjudicacin, los plazos",
+            "is_correct": false
+          },
+          {
+            "text": "el contrato se reducirn a la mitad, con carcter general.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los expedientes calificados de urgentes se tramitarn, seale la respuesta",
+        "source": "3. Test preparación parte general..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'orrecta:...'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Cuando la Administracin tenga que actuar de manera inmediata a causa",
+        "options": [
+          {
+            "text": "e acontecimientos catastrficos, de situaciones que supongan grave",
+            "is_correct": false
+          },
+          {
+            "text": "El rgano de contratacin, sin obligacin de tramitar expediente de",
+            "is_correct": false
+          },
+          {
+            "text": "ontratacin, podr ordenar la ejecucin de lo necesario para remediar el",
+            "is_correct": false
+          },
+          {
+            "text": "contecimiento producido o satisfacer la necesidad sobrevenida, o",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cuando la Administracin tenga que actuar de manera inmediata a causa",
+        "source": "3. Test preparación parte general..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta:",
+        "options": [
+          {
+            "text": "En la tramitacin de emergencia no se podr llevar a cabo una",
+            "is_correct": false
+          },
+          {
+            "text": "ontratacin verbal.",
+            "is_correct": false
+          },
+          {
+            "text": "En la tramitacin de emergencia ser necesario formalizar el contrato con",
+            "is_correct": false
+          },
+          {
+            "text": "arcter previo a la ejecucin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta:",
+        "source": "3. Test preparación parte general..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En la tramitacin de emergencia:",
+        "options": [
+          {
+            "text": "El plazo de inicio de la ejecucin del contrato no podr exceder de un",
+            "is_correct": false
+          },
+          {
+            "text": "El plazo de inicio de la ejecucin de las prestaciones no podr ser",
+            "is_correct": false
+          },
+          {
+            "text": "El plazo de inicio de la ejecucin de las prestaciones no podr ser",
+            "is_correct": false
+          },
+          {
+            "text": "El plazo de inicio de la ejecucin del contrato no podr exceder de 30",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En la tramitacin de emergencia:",
+        "source": "3. Test preparación parte general..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Los pliegos de clusulas administrativas generales:",
+        "options": [
+          {
+            "text": "Contendrn las declaraciones jurdicas, econmicas y administrativas,",
+            "is_correct": false
+          },
+          {
+            "text": "nlogo.",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo de Ministros, a iniciativa de los Ministerios interesados, a",
+            "is_correct": false
+          },
+          {
+            "text": "el Consejo de Estado, podr aprobar pliegos de clusulas",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los pliegos de clusulas administrativas generales:",
+        "source": "3. Test preparación parte general..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'nlogo....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En cuanto a los pliegos de clusulas administrativas particulares:",
+        "options": [
+          {
+            "text": "En los pliegos de clusulas administrativas particulares se incluirn entre",
+            "is_correct": false
+          },
+          {
+            "text": "onsideraciones sociales, laborales y ambientales que, como criterios de",
+            "is_correct": false
+          },
+          {
+            "text": "En los pliegos de clusulas administrativas particulares se incluirn las",
+            "is_correct": false
+          },
+          {
+            "text": "aractersticas tcnicas que hayan de reunir los bienes o prestaciones",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En cuanto a los pliegos de clusulas administrativas particulares:",
+        "source": "3. Test preparación parte general..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Los pliegos de clusulas administrativas generales, de acuerdo con la",
+        "options": [
+          {
+            "text": "Sern aprobados por el Consejo de Ministros, a iniciativa de los",
+            "is_correct": false
+          },
+          {
+            "text": "Sern aprobados por el Consejo de Estado, a iniciativa de los Ministerios",
+            "is_correct": false
+          },
+          {
+            "text": "onsejo de Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "Sern aprobados por el rgano de contratacin, a iniciativa de los",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los pliegos de clusulas administrativas generales, de acuerdo con la",
+        "source": "3. Test preparación parte general..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Qu informe ser necesario para la aprobacin de los pliegos de",
+        "options": [
+          {
+            "text": "lusulas administrativas particulares?",
+            "is_correct": false
+          },
+          {
+            "text": "Informe del Consejo de Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "Informe de la Junta Consultiva de Contratacin Pblica del Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "Informe del Servicio jurdico.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu informe ser necesario para la aprobacin de los pliegos de",
+        "source": "3. Test preparación parte general..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Qu informe ser necesario para la aprobacin de los pliegos de",
+        "options": [
+          {
+            "text": "Informe del Consejo de Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "Informe de la Mesa de contratacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Informe del servicio jurdico.",
+            "is_correct": false
+          },
+          {
+            "text": "Ninguno.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu informe ser necesario para la aprobacin de los pliegos de",
+        "source": "3. Test preparación parte general..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Ninguno....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta:",
+        "options": [
+          {
+            "text": "En la tramitacin de urgencia, se dar cuenta de dichos acuerdos al",
+            "is_correct": false
+          },
+          {
+            "text": "onsejo de Ministros en el plazo mximo de treinta das.",
+            "is_correct": false
+          },
+          {
+            "text": "En la tramitacin de urgencia, el plazo de inicio de la ejecucin de las",
+            "is_correct": false
+          },
+          {
+            "text": "el acuerdo de tramitacin de urgencia.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta:",
+        "source": "3. Test preparación parte general..pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:22.008387"
+}

@@ -1,0 +1,1980 @@
+{
+  "metadata": {
+    "source_file": "12 TEST TEMA 11 INICIALES.docx",
+    "source_path": "12 TEST TEMA 11 INICIALES.docx",
+    "tema": 11,
+    "categoria": "general",
+    "extraction_date": "2026-01-15T23:39:47.979955",
+    "reformulation_date": "2026-01-15T23:47:35.522316",
+    "total_questions": 40,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.331407",
+    "completed_count": 0,
+    "failed_count": 40
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "No forman parte de la Administracin Local:",
+        "options": [
+          {
+            "text": "Las comarcas",
+            "is_correct": false
+          },
+          {
+            "text": "Las provincias.",
+            "is_correct": false
+          },
+          {
+            "text": "Las reas metropolitanas.",
+            "is_correct": false
+          },
+          {
+            "text": "Las mancomunidades de provincias.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "No forman parte de la Administracin Local:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Segn la Constitucin, articulo 140, el gobierno y la administracin de los municipios corresponde:",
+        "options": [
+          {
+            "text": "A sus respectivos Ayuntamientos.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Gobierno de la Nacin.",
+            "is_correct": false
+          },
+          {
+            "text": "A los Diputados Provinciales.",
+            "is_correct": false
+          },
+          {
+            "text": "A las personas que designen los respectivos Alcaldes.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn la Constitucin, articulo 140, el gobierno y la administracin de los municipios corresponde:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En los archipilagos, las islas tendrn adems su administracin propia en forma de:",
+        "options": [
+          {
+            "text": "Comisiones Permanentes.",
+            "is_correct": false
+          },
+          {
+            "text": "Delegaciones del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Juntas Administrativas.",
+            "is_correct": false
+          },
+          {
+            "text": "Cabildos o Consejos.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En los archipilagos, las islas tendrn adems su administracin propia en forma de:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Segn la Constitucin, la provincia es:",
+        "options": [
+          {
+            "text": "Una Entidad institucional publica territorial carente de personalidad.",
+            "is_correct": false
+          },
+          {
+            "text": "Una Entidad Local con personalidad jurdica propia.",
+            "is_correct": false
+          },
+          {
+            "text": "Una Entidad Local con personalidad jurdica plena.",
+            "is_correct": false
+          },
+          {
+            "text": "Una Entidad Local con personalidad jurdica derivada.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn la Constitucin, la provincia es:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Segn la actual Constitucin espaola, la provincia viene determinada por:",
+        "options": [
+          {
+            "text": "La agrupacin de comarcas y divisin territorial para el cumplimiento de las actividades del Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "La agrupacin de Entidades Locales no territoriales.",
+            "is_correct": false
+          },
+          {
+            "text": "La agrupacin de municipios y divisin territorial para el cumplimiento de las actividades del Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "La agrupacin de municipios y divisin territorial para el cumplimiento de las actividades de las Comunidades Autnomas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn la actual Constitucin espaola, la provincia viene determinada por:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Los Alcaldes, segn el artculo 140 de la Constitucin, sern elegidos por:",
+        "options": [
+          {
+            "text": "Los Concejales o los vecinos.",
+            "is_correct": false
+          },
+          {
+            "text": "Las Cortes Generales.",
+            "is_correct": false
+          },
+          {
+            "text": "Los Concejales.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Gobierno.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los Alcaldes, segn el artculo 140 de la Constitucin, sern elegidos por:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cualquier alteracin de los lmites provinciales, habr de ser aprobada:",
+        "options": [
+          {
+            "text": "Por el Gobierno mediante Decreto.",
+            "is_correct": false
+          },
+          {
+            "text": "Por las Cortes Generales mediante Ley orgnica.",
+            "is_correct": false
+          },
+          {
+            "text": "Por las Diputaciones provinciales mediante acuerdo.",
+            "is_correct": false
+          },
+          {
+            "text": "Por las Asambleas de las Comunidades Autnomas mediante ley.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cualquier alteracin de los lmites provinciales, habr de ser aprobada:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La creacin, supresin o alteracin de los trminos municipales, exige como requisito:",
+        "options": [
+          {
+            "text": "Audiencia de los municipios interesados y dictamen del Consejo de Estado o del rgano consultivo equivalente de las CCAA, si lo hubiera.",
+            "is_correct": false
+          },
+          {
+            "text": "Informe de la Administracin que ejerza la tutela poltico - administrativa.",
+            "is_correct": false
+          },
+          {
+            "text": "Puesta en conocimiento de la Administracin de la Comunidad Autnoma.",
+            "is_correct": false
+          },
+          {
+            "text": "Aprobacin de las Cortes Generales mediante Ley Orgnica.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La creacin, supresin o alteracin de los trminos municipales, exige como requisito:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En los municipios con poblacin igual o inferior a 5.000 habitantes:",
+        "options": [
+          {
+            "text": "Existirn en todo caso una Junta de Gobierno Local.",
+            "is_correct": false
+          },
+          {
+            "text": "Existir una Junta de Gobierno Local cuando as se determine por Ley Orgnica.",
+            "is_correct": false
+          },
+          {
+            "text": "Existir una Junta de Gobierno Local si as lo establece el Reglamento Orgnico o se decide por acuerdo del respectivo Pleno del Ayuntamiento.",
+            "is_correct": false
+          },
+          {
+            "text": "En ningn caso existir Junta de Gobierno local.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En los municipios con poblacin igual o inferior a 5.000 habitantes:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La junta de Gobierno Local est formada por:",
+        "options": [
+          {
+            "text": "El Alcalde y los concejales elegidos por el Pleno en nmero no superior a un tercio del nmero total de concejales.",
+            "is_correct": false
+          },
+          {
+            "text": "El Alcalde y los concejales elegidos por el propio alcalde en nmero no superior a un tercio del nmero total de concejales.",
+            "is_correct": false
+          },
+          {
+            "text": "Por los concejales elegidos por el Pleno en nmero no superior a un tercio del nmero total de Concejales.",
+            "is_correct": false
+          },
+          {
+            "text": "Por los concejales elegidos por el alcalde en nmero no superior a un tercio del nmero total de concejales.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La junta de Gobierno Local est formada por:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Son competencias del Alcalde (seale la falsa):",
+        "options": [
+          {
+            "text": "Dirigir e inspeccionar los servicios y obras del Ayuntamiento",
+            "is_correct": false
+          },
+          {
+            "text": "Disponer gastos y ordenar pagos.",
+            "is_correct": false
+          },
+          {
+            "text": "Actuar la potestad sancionadora.",
+            "is_correct": false
+          },
+          {
+            "text": "La aprobacin del Reglamento Orgnico del Ayuntamiento.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Son competencias del Alcalde (seale la falsa):",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cul de los siguientes no es un elemento constitutivo del municipio?:",
+        "options": [
+          {
+            "text": "Organizacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Soberana.",
+            "is_correct": false
+          },
+          {
+            "text": "Territorio.",
+            "is_correct": false
+          },
+          {
+            "text": "Poblacin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de los siguientes no es un elemento constitutivo del municipio?:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Soberana....'",
+        "Distractor muy corto: 'Poblacin....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "La creacin de reas Metropolitanas ha de hacerse:",
+        "options": [
+          {
+            "text": "Por la entidad local interesada, dando cuenta a la Comunidad Autnoma.",
+            "is_correct": false
+          },
+          {
+            "text": "Por la entidad local interesada, oda la Administracin del Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "Por ley de la Comunidad Autnoma previo informe de la Administracin del Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "Por ley de la Comunidad Autnoma, oda la Administracin del Estado y las Diputaciones y ayuntamientos afectados.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La creacin de reas Metropolitanas ha de hacerse:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En primera votacin, el Presidente de la Diputacin provincial es elegido por el Pleno:",
+        "options": [
+          {
+            "text": "Por mayora de 2/3.",
+            "is_correct": false
+          },
+          {
+            "text": "Por mayora absoluta.",
+            "is_correct": false
+          },
+          {
+            "text": "Por mayora simple.",
+            "is_correct": false
+          },
+          {
+            "text": "Por mayora de 3/5.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En primera votacin, el Presidente de la Diputacin provincial es elegido por el Pleno:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Si ninguno de los candidatos a Alcalde obtiene la mayora necesaria para ser proclamado Alcalde, qu ocurre?:",
+        "options": [
+          {
+            "text": "Es proclamado Alcalde el que obtuviere la mayora simple en segunda votacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Es proclamado Alcalde el que obtuviere un tercio de los votos en segunda votacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Es proclamado Alcalde el Concejal que encabece la lista que haya obtenido mayor nmero de votos populares en el correspondiente municipio.",
+            "is_correct": false
+          },
+          {
+            "text": "Es proclamado Alcalde el Concejal que elija el Presidente del Gobierno.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Si ninguno de los candidatos a Alcalde obtiene la mayora necesaria para ser proclamado Alcalde, qu ocurre?:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La disolucin de los rganos de las entidades locales:",
+        "options": [
+          {
+            "text": "Slo podr llevarse a cabo por el Gobierno mediante Real Decreto.",
+            "is_correct": false
+          },
+          {
+            "text": "Slo puede llevarse a cabo por las Cortes Generales mediante Ley orgnica.",
+            "is_correct": false
+          },
+          {
+            "text": "No puede llevarse a cabo en ningn caso.",
+            "is_correct": false
+          },
+          {
+            "text": "Es una competencia que corresponde en exclusiva al Consejo de Gobierno de la Comunidad Autnoma respectiva.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La disolucin de los rganos de las entidades locales:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En relacin con la mocin de censura al alcalde:",
+        "options": [
+          {
+            "text": "Deber ser propuesta al menos por la mayora de dos tercios de los miembros de la corporacin",
+            "is_correct": false
+          },
+          {
+            "text": "Habr de incluir un candidato a la alcalda.",
+            "is_correct": false
+          },
+          {
+            "text": "Deber ser aprobada por mayora de dos tercios.",
+            "is_correct": false
+          },
+          {
+            "text": "No es necesario que incluya un candidato a la alcalda.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En relacin con la mocin de censura al alcalde:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "No podr crearse una comarca si a ello se oponen:",
+        "options": [
+          {
+            "text": "Las 3/4 partes de los municipios que hubieran de agruparse en ella que representen al menos la mitad del censo electoral.",
+            "is_correct": false
+          },
+          {
+            "text": "Las 2/5 partes de los municipios que hubieran de agruparse en ella que representen al menos la mitad del censo electoral.",
+            "is_correct": false
+          },
+          {
+            "text": "Las 2/3 partes de los municipios que hubieran de agruparse en ella que representen al menos la mitad del censo electoral.",
+            "is_correct": false
+          },
+          {
+            "text": "Las 3/5 partes de los municipios que hubieran de agruparse en ella que representen al menos la mitad del censo electoral.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "No podr crearse una comarca si a ello se oponen:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Los municipios con poblacin superior a 5.000 habitantes e inferior a 20.000 habitantes, no estn obligados a prestar el servicio o los servicios de:",
+        "options": [
+          {
+            "text": "Tratamiento de residuos.",
+            "is_correct": false
+          },
+          {
+            "text": "Prevencin y extincin de incendios.",
+            "is_correct": false
+          },
+          {
+            "text": "Parque pblico.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los municipios con poblacin superior a 5.000 habitantes e inferior a 20.000 habitantes, no estn obligados a prestar el servicio o los servicios de:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Son rganos necesarios en todos los ayuntamientos:",
+        "options": [
+          {
+            "text": "El alcalde y los tenientes de alcalde.",
+            "is_correct": false
+          },
+          {
+            "text": "El alcalde, los tenientes de alcalde y la Junta de Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "El alcalde, los tenientes de alcalde y el Pleno.",
+            "is_correct": false
+          },
+          {
+            "text": "El alcalde, el Pleno y la Junta de Gobierno",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Son rganos necesarios en todos los ayuntamientos:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La definicin de Entidades Locales integradas por los municipios de grandes aglomeraciones urbanas entre cuyos ncleos de poblacin existen vinculaciones econmicas y sociales se corresponde con:",
+        "options": [
+          {
+            "text": "Las comarcas.",
+            "is_correct": false
+          },
+          {
+            "text": "Las reas metropolitanas.",
+            "is_correct": false
+          },
+          {
+            "text": "Las mancomunidades de municipios.",
+            "is_correct": false
+          },
+          {
+            "text": "Ninguna de las anteriores es correcta.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La definicin de Entidades Locales integradas por los municipios de grandes aglomeraciones urbanas entre cuyos ncleos de poblacin existen vinculaciones econmicas y sociales se corresponde con:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El rgimen de concejo abierto:",
+        "options": [
+          {
+            "text": "No est previsto en la Constitucin espaola.",
+            "is_correct": false
+          },
+          {
+            "text": "Su organizacin se basa en dos rganos: el Alcalde y el Consejo Vecinal.",
+            "is_correct": false
+          },
+          {
+            "text": "Podrn existir en aquellos municipios en los que su localizacin geogrfica, la mejor gestin de los intereses municipales u otras circunstancias lo hagan aconsejable.",
+            "is_correct": false
+          },
+          {
+            "text": "Se aplica a todos los municipios de menos de 100 habitantes.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El rgimen de concejo abierto:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Son Entidades Locales Territoriales:",
+        "options": [
+          {
+            "text": "El Municipio y la provincia.",
+            "is_correct": false
+          },
+          {
+            "text": "El municipio, la provincia y las islas en los archipilagos Balear y Canario.",
+            "is_correct": false
+          },
+          {
+            "text": "El Municipio, la provincia y la comarca.",
+            "is_correct": false
+          },
+          {
+            "text": "El municipio y la Comarca.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Son Entidades Locales Territoriales:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Los Vicepresidentes de la Diputacin Provincial son nombrados por:",
+        "options": [
+          {
+            "text": "Los Diputados, por mayora absoluta.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente de la Corporacin.",
+            "is_correct": false
+          },
+          {
+            "text": "El Pleno.",
+            "is_correct": false
+          },
+          {
+            "text": "La Junta de Gobierno.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los Vicepresidentes de la Diputacin Provincial son nombrados por:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'El Pleno....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn la Constitucin de 1978, el municipio tiene personalidad jurdica:",
+        "options": [
+          {
+            "text": "Plena.",
+            "is_correct": false
+          },
+          {
+            "text": "Propia.",
+            "is_correct": false
+          },
+          {
+            "text": "Derivada.",
+            "is_correct": false
+          },
+          {
+            "text": "Originaria.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn la Constitucin de 1978, el municipio tiene personalidad jurdica:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Plena....'",
+        "Distractor muy corto: 'Propia....'",
+        "Distractor muy corto: 'Derivada....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.25,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "La Comisin Especial de Sugerencias y Reclamaciones existe:",
+        "options": [
+          {
+            "text": "En los municipios de gran poblacin, y en aquellos otros en que el Pleno as lo acuerde, por mayora simple, o as lo disponga su Reglamento orgnico.",
+            "is_correct": false
+          },
+          {
+            "text": "En los municipios de ms de 5000 habitantes, y en aquellos otros en que el Pleno as lo acuerde, por el voto favorable de la mayora absoluta del nmero legal de sus miembros, o as lo disponga su Reglamento orgnico.",
+            "is_correct": false
+          },
+          {
+            "text": "En los municipios de gran poblacin, y en aquellos otros en que el Pleno as lo acuerde, por el voto favorable de la mayora absoluta del nmero legal de sus miembros, o as lo disponga su Reglamento orgnico.",
+            "is_correct": false
+          },
+          {
+            "text": "En los municipios de ms de 5000 habitantes, y en aquellos otros en que el Pleno as lo acuerde, por mayora simple, o as lo disponga su Reglamento orgnico.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La Comisin Especial de Sugerencias y Reclamaciones existe:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La Junta de Gobierno Local se integra por el Alcalde y un nmero de Concejales no superior a:",
+        "options": [
+          {
+            "text": "La mitad del nmero legal de los mismos.",
+            "is_correct": false
+          },
+          {
+            "text": "Dos tercios del nmero legal de los mismos.",
+            "is_correct": false
+          },
+          {
+            "text": "Tres quintas partes del nmero legal de los mismos.",
+            "is_correct": false
+          },
+          {
+            "text": "Un tercio del nmero legal de los mismos.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La Junta de Gobierno Local se integra por el Alcalde y un nmero de Concejales no superior a:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La Comisin Especial de Cuentas existe en:",
+        "options": [
+          {
+            "text": "Los municipios de gran poblacin, y en los dems cuando as lo acuerde el Pleno o lo establezca el Reglamento Orgnico.",
+            "is_correct": false
+          },
+          {
+            "text": "Todos los municipios.",
+            "is_correct": false
+          },
+          {
+            "text": "Los municipios con poblacin superior a 5000 habitantes, y en los dems cuando as lo acuerde el Pleno o lo establezca el Reglamento Orgnico.",
+            "is_correct": false
+          },
+          {
+            "text": "Los municipios con poblacin igual o inferior a 5000 habitantes.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La Comisin Especial de Cuentas existe en:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Son considerados municipios de gran poblacin:",
+        "options": [
+          {
+            "text": "Aquellos que tengan poblacin superior a 150.000 habitantes.",
+            "is_correct": false
+          },
+          {
+            "text": "Las capitales de provincia con poblacin superior a 100.000 habitantes.",
+            "is_correct": false
+          },
+          {
+            "text": "A los municipios que sean capitales de provincia, capitales autonmicas o sedes de las instituciones autonmicas cuando as lo decidan las Asambleas Legislativas correspondientes a iniciativa de los respectivos ayuntamientos.",
+            "is_correct": false
+          },
+          {
+            "text": "Los municipios capital de Comunidad Autnoma con ms de 70.000 habitantes.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Son considerados municipios de gran poblacin:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "No es un rgimen provincial especial:",
+        "options": [
+          {
+            "text": "Los Cabildos Insulares Canarios.",
+            "is_correct": false
+          },
+          {
+            "text": "Los Consejos Insulares de las Islas Baleares.",
+            "is_correct": false
+          },
+          {
+            "text": "El Rgimen de Concejo Abierto.",
+            "is_correct": false
+          },
+          {
+            "text": "Las Comunidades Autnomas uniprovinciales.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "No es un rgimen provincial especial:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En los municipios de ms de 5.000 habitantes, los Tenientes de Alcalde:",
+        "options": [
+          {
+            "text": "Son nombrados por el Alcalde libremente entre los concejales.",
+            "is_correct": false
+          },
+          {
+            "text": "No ser necesaria la existencia de la figura de los tenientes de alcalde en estos municipios.",
+            "is_correct": false
+          },
+          {
+            "text": "Son nombrados por el Alcalde entre los Concejales miembros de la Junta de Gobierno Local.",
+            "is_correct": false
+          },
+          {
+            "text": "Son nombrados por el Pleno entre los Concejales miembros de la Junta de Gobierno Local.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En los municipios de ms de 5.000 habitantes, los Tenientes de Alcalde:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El Estado se organiza territorialmente en:",
+        "options": [
+          {
+            "text": "Municipios.",
+            "is_correct": false
+          },
+          {
+            "text": "Municipios, provincias y comarcas.",
+            "is_correct": false
+          },
+          {
+            "text": "Comunidades Autnomas.",
+            "is_correct": false
+          },
+          {
+            "text": "Municipios, provincias y en las Comunidades Autnomas que se constituyan.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Estado se organiza territorialmente en:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El servicio municipal de transporte colectivo urbano de viajeros se prestar en los municipios:",
+        "options": [
+          {
+            "text": "En todos los municipios.",
+            "is_correct": false
+          },
+          {
+            "text": "En los de poblacin superior a 5.000 habitantes.",
+            "is_correct": false
+          },
+          {
+            "text": "En los de poblacin superior a 20.000 habitantes.",
+            "is_correct": false
+          },
+          {
+            "text": "En los de poblacin superior a 50.000 habitantes.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El servicio municipal de transporte colectivo urbano de viajeros se prestar en los municipios:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "De conformidad con la LBRL 7/85, los caseros, parroquias, aldeas, barrios, anteiglesias, concejos, pedanas, lugares anejos y otros anlogos:",
+        "options": [
+          {
+            "text": "Tienen personalidad jurdica.",
+            "is_correct": false
+          },
+          {
+            "text": "Son entidades locales territoriales.",
+            "is_correct": false
+          },
+          {
+            "text": "Son entidades locales.",
+            "is_correct": false
+          },
+          {
+            "text": "Son entes de mbito territorial inferior al municipio.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De conformidad con la LBRL 7/85, los caseros, parroquias, aldeas, barrios, anteiglesias, concejos, pedanas, lugares anejos y otros anlogos:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Corresponde en todo caso al pleno municipal, de conformidad con el artculo 22 LBRL:",
+        "options": [
+          {
+            "text": "La jefatura de la polica municipal.",
+            "is_correct": false
+          },
+          {
+            "text": "Aprobar la oferta de empleo pblico.",
+            "is_correct": false
+          },
+          {
+            "text": "La declaracin de lesividad de los actos del ayuntamiento.",
+            "is_correct": false
+          },
+          {
+            "text": "Dirigir, inspeccionar e impulsar servicios y obras municipales.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Corresponde en todo caso al pleno municipal, de conformidad con el artculo 22 LBRL:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Si una Entidad local adoptara actos o acuerdos que atenten gravemente al inters general de Espaa, el Delegado del Gobierno, previo requerimiento para su anulacin al Presidente de la Corporacin, podr suspenderlos y adoptar las medidas pertinentes para la proteccin de dicho inters. El plazo concedido al Presidente de la Corporacin en el requerimiento de anulacin no podr ser:",
+        "options": [
+          {
+            "text": "Superior a cinco das.",
+            "is_correct": false
+          },
+          {
+            "text": "Inferior a cinco das.",
+            "is_correct": false
+          },
+          {
+            "text": "Superior a diez das.",
+            "is_correct": false
+          },
+          {
+            "text": "Inferior a diez das.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Si una Entidad local adoptara actos o acuerdos que atenten gravemente al inters general de Espaa, el Delegado del Gobierno, previo requerimiento para su anulacin al Presidente de la Corporacin, podr suspenderlos y adoptar las medidas pertinentes para la proteccin de dicho inters. El plazo concedido al Presidente de la Corporacin en el requerimiento de anulacin no podr ser:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Los municipios se regirn por lo dispuesto en el ttulo X de la LBRL relativo a municipios de gran poblacin en todo caso cuando su poblacin sea superior a:",
+        "options": [
+          {
+            "text": "250.000 habitantes.",
+            "is_correct": false
+          },
+          {
+            "text": "200.000 habitantes.",
+            "is_correct": false
+          },
+          {
+            "text": "175.000 habitantes.",
+            "is_correct": false
+          },
+          {
+            "text": "150.000 habitantes.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los municipios se regirn por lo dispuesto en el ttulo X de la LBRL relativo a municipios de gran poblacin en todo caso cuando su poblacin sea superior a:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con lo previsto en la Constitucin, la alteracin de lmites provinciales corresponde a:",
+        "options": [
+          {
+            "text": "Las Comunidades Autnomas.",
+            "is_correct": false
+          },
+          {
+            "text": "El Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Las Cortes Generales.",
+            "is_correct": false
+          },
+          {
+            "text": "Las Diputaciones Provinciales.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con lo previsto en la Constitucin, la alteracin de lmites provinciales corresponde a:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La creacin de un nuevo municipio requiere de ncleo de poblacin territorialmente diferenciado de:",
+        "options": [
+          {
+            "text": "Ms de 10.000 habitantes.",
+            "is_correct": false
+          },
+          {
+            "text": "Al menos 10.000 habitantes.",
+            "is_correct": false
+          },
+          {
+            "text": "Ms de 4.000 habitantes.",
+            "is_correct": false
+          },
+          {
+            "text": "Al menos 4.000 habitantes.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La creacin de un nuevo municipio requiere de ncleo de poblacin territorialmente diferenciado de:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En caso de fusin de dos municipios, la LBRL no permite su segregacin hasta que hayan transcurrido:",
+        "options": [
+          {
+            "text": "cinco aos desde la adopcin del convenio de fusin.",
+            "is_correct": false
+          },
+          {
+            "text": "nueve aos desde la adopcin del convenio de fusin.",
+            "is_correct": false
+          },
+          {
+            "text": "quince aos desde la adopcin del convenio de fusin.",
+            "is_correct": false
+          },
+          {
+            "text": "diez aos desde la adopcin del convenio de fusin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En caso de fusin de dos municipios, la LBRL no permite su segregacin hasta que hayan transcurrido:",
+        "source": "12 TEST TEMA 11 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 11,
+        "materia": "funcion-publica",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:21.882657"
+}

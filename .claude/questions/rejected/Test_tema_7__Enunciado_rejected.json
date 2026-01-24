@@ -1,0 +1,217 @@
+{
+  "metadata": {
+    "source_file": "Test tema 7. Enunciado.pdf",
+    "source_path": "TEMA Iniciales Administrativo\\Test tema 7. Enunciado.pdf",
+    "tema": 7,
+    "categoria": "administrativo",
+    "extraction_date": "2026-01-15T23:40:43.265896",
+    "reformulation_date": "2026-01-15T23:47:35.794569",
+    "total_questions": 4,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:56.170334",
+    "completed_count": 0,
+    "failed_count": 4
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "Desde la perspectiva administrativa, las subvenciones son una tcnica de:",
+        "options": [
+          {
+            "text": "Limitacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Arbitral.",
+            "is_correct": false
+          },
+          {
+            "text": "De servicio pblico.",
+            "is_correct": false
+          },
+          {
+            "text": "Fomento.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Desde la perspectiva administrativa, las subvenciones son una tcnica de:",
+        "source": "Test tema 7. Enunciado.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Arbitral....'",
+        "Distractor muy corto: 'Fomento....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "La potestad sancionadora de las Administraciones Pblicas se ejercer:",
+        "options": [
+          {
+            "text": "Cuando haya sido expresamente reconocida por una norma con rango de Ley.",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando haya sido expresamente reconocida por una norma con rango de Ley o",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando haya sido expresamente reconocida por un acto administrativo.",
+            "is_correct": false
+          },
+          {
+            "text": "Siempre y en todo caso.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La potestad sancionadora de las Administraciones Pblicas se ejercer:",
+        "source": "Test tema 7. Enunciado.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Sern de aplicacin las disposiciones sancionadoras vigentes:",
+        "options": [
+          {
+            "text": "En el momento de producirse los hechos que constituyan infraccin administrativa, sin",
+            "is_correct": false
+          },
+          {
+            "text": "En el momento de dictar resolucin administrativa.",
+            "is_correct": false
+          },
+          {
+            "text": "En el momento de dictar el acuerdo de iniciacin del procedimiento sancionador.",
+            "is_correct": false
+          },
+          {
+            "text": "En el momento de producirse los hechos que constituyan infraccin administrativa.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Sern de aplicacin las disposiciones sancionadoras vigentes:",
+        "source": "Test tema 7. Enunciado.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En relacin con la potestad sancionadora, indique cul de las siguientes",
+        "options": [
+          {
+            "text": "firmaciones es correcta:",
+            "is_correct": false
+          },
+          {
+            "text": "La resolucin que ponga fin al procedimiento ser ejecutiva cuando no quepa contra",
+            "is_correct": false
+          },
+          {
+            "text": "La resolucin que ponga fin al procedimiento ser ejecutiva cuando ponga fin a la va",
+            "is_correct": false
+          },
+          {
+            "text": "dministrativa.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En relacin con la potestad sancionadora, indique cul de las siguientes",
+        "source": "Test tema 7. Enunciado.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "proc-administrativo",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:22.545373"
+}

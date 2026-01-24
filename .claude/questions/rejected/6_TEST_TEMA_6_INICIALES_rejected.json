@@ -1,0 +1,2018 @@
+{
+  "metadata": {
+    "source_file": "6 TEST TEMA 6 INICIALES.docx",
+    "source_path": "6 TEST TEMA 6 INICIALES.docx",
+    "tema": 6,
+    "categoria": "general",
+    "extraction_date": "2026-01-15T23:40:01.302828",
+    "reformulation_date": "2026-01-15T23:47:35.643167",
+    "total_questions": 40,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.691647",
+    "completed_count": 0,
+    "failed_count": 40
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "Qu nombre reciben las disposiciones legislativas provisionales emanadas del Gobierno?",
+        "options": [
+          {
+            "text": "Decreto Ley",
+            "is_correct": false
+          },
+          {
+            "text": "Decreto",
+            "is_correct": false
+          },
+          {
+            "text": "Decreto Legislativo",
+            "is_correct": false
+          },
+          {
+            "text": "Reglamento",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu nombre reciben las disposiciones legislativas provisionales emanadas del Gobierno?",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Decreto...'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Qu medio utilizan las Cortes Generales para delegar en el Gobierno la potestad de refundir varios textos legales en uno solo?",
+        "options": [
+          {
+            "text": "Ley de Bases.",
+            "is_correct": false
+          },
+          {
+            "text": "Ley ordinaria.",
+            "is_correct": false
+          },
+          {
+            "text": "Decreto Ley.",
+            "is_correct": false
+          },
+          {
+            "text": "Decreto Legislativo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu medio utilizan las Cortes Generales para delegar en el Gobierno la potestad de refundir varios textos legales en uno solo?",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El esquema bsico de la composicin del Gobierno ser, segn la Constitucin",
+        "options": [
+          {
+            "text": "El Presidente, el Vicepresidente, los Ministros y los dems miembros que establezca la ley.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente, los Vicepresidentes en su caso, los Ministros y los dems miembros que establezca la ley.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente, los Vicepresidentes, los Ministros, en su caso, y los dems miembros que establezca la ley.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente, los Ministros, y los dems miembros que establezca la ley.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El esquema bsico de la composicin del Gobierno ser, segn la Constitucin",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En caso de que existan Ministros sin cartera",
+        "options": [
+          {
+            "text": "Por Real Decreto se determinar el mbito de sus competencias, la estructura administrativa, as como los medios materiales y personales que queden adscritos al mismo.",
+            "is_correct": false
+          },
+          {
+            "text": "Por Orden del Ministro de Presidencia, Relaciones con las Cortes y memoria democrtica se determinar el mbito de sus competencias, la estructura administrativa, as como los medios materiales y personales que queden adscritos al mismo.",
+            "is_correct": false
+          },
+          {
+            "text": "Por Ley de las CCGG se determinar el mbito de sus competencias, la estructura administrativa, as como los medios materiales y personales que queden adscritos al mismo.",
+            "is_correct": false
+          },
+          {
+            "text": "Por Resolucin del Secretario de Estado del Ministerio de Presidencia, Relaciones con las Cortes y memoria democrtica se determinar el mbito de sus competencias, la estructura administrativa, as como los medios materiales y personales que queden adscritos al mismo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En caso de que existan Ministros sin cartera",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La acusacin a miembros del Gobierno por delitos de traicin o contra la seguridad del Estado slo podr ser planteada por iniciativa de",
+        "options": [
+          {
+            "text": "La tercera parte de los miembros del Congreso, y con aprobacin de la",
+            "is_correct": false
+          },
+          {
+            "text": "La cuarta parte de los miembros del Congreso, y con aprobacin de la mayora absoluta del mismo.",
+            "is_correct": false
+          },
+          {
+            "text": "La tercera parte de los miembros del Congreso, y con aprobacin de la mayora absoluta del Senado",
+            "is_correct": false
+          },
+          {
+            "text": "La cuarta parte de los miembros del Congreso, y con aprobacin de la mayora absoluta del Senado",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La acusacin a miembros del Gobierno por delitos de traicin o contra la seguridad del Estado slo podr ser planteada por iniciativa de",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La disolucin de las Cmaras, por transcurso de dos meses desde la primera votacin de investidura, sin obtencin de la confianza por los candidatos, se refrenda por",
+        "options": [
+          {
+            "text": "Presidente del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "El Rey.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Congreso.",
+            "is_correct": false
+          },
+          {
+            "text": "No necesita refrendo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La disolucin de las Cmaras, por transcurso de dos meses desde la primera votacin de investidura, sin obtencin de la confianza por los candidatos, se refrenda por",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'El Rey....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Cul de las siguientes competencias puede desempear un Presidente del Gobierno en funciones?",
+        "options": [
+          {
+            "text": "Resolver los conflictos de atribuciones entre los ministerios.",
+            "is_correct": false
+          },
+          {
+            "text": "Proponer al Rey la disolucin de las Cmaras.",
+            "is_correct": false
+          },
+          {
+            "text": "Proponer al Rey la convocatoria de referndum consultivo.",
+            "is_correct": false
+          },
+          {
+            "text": "Plantear la cuestin de confianza.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de las siguientes competencias puede desempear un Presidente del Gobierno en funciones?",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Segn la Ley 50/1997, de 27 de noviembre, a quin corresponde la secretara del Consejo de Ministros?",
+        "options": [
+          {
+            "text": "Al Presidente del Gobierno, en todo caso.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Ministro del Interior.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Ministro de la Presidencia, Justicia y Relaciones con las Cortes.",
+            "is_correct": false
+          },
+          {
+            "text": "A un Vicepresidente, y en su defecto, al Ministro de la Presidencia, Justicia y Relaciones con las Cortes.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn la Ley 50/1997, de 27 de noviembre, a quin corresponde la secretara del Consejo de Ministros?",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta falsa en relacin con la Comisin General de Secretarios de Estado y Subsecretarios",
+        "options": [
+          {
+            "text": "La Presidencia de la Comisin General de Secretarios de Estado y Subsecretarios corresponde a un Vicepresidente del Gobierno o, en su defecto, al Ministro de la Presidencia, Justicia y Relaciones con las Cortes.",
+            "is_correct": false
+          },
+          {
+            "text": "La Secretara de la Comisin General de Secretarios de Estado y Subsecretarios ser ejercida por el Subsecretario de la Presidencia, justicia y Relaciones con las Cortes.",
+            "is_correct": false
+          },
+          {
+            "text": "Las deliberaciones de la Comisin General de Secretarios de Estado y Subsecretarios sern reservadas",
+            "is_correct": false
+          },
+          {
+            "text": "La Comisin podr adoptar decisiones o acuerdos por delegacin del Gobierno.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta falsa en relacin con la Comisin General de Secretarios de Estado y Subsecretarios",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La cuestin de confianza prevista en el artculo 112 CE",
+        "options": [
+          {
+            "text": "Se presenta por el Presidente del Gobierno, previa deliberacin del Consejo de Ministros, ante las Cortes Generales.",
+            "is_correct": false
+          },
+          {
+            "text": "Se presentar por el Presidente del Gobierno sobre su programa o sobre una declaracin de poltica general.",
+            "is_correct": false
+          },
+          {
+            "text": "La confianza se entender otorgada cuando vote a favor de la misma la mayora absoluta de los Diputados.",
+            "is_correct": false
+          },
+          {
+            "text": "Podr ser planteada por el Presidente del Gobierno en funciones.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La cuestin de confianza prevista en el artculo 112 CE",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los Secretarios de Estado",
+        "options": [
+          {
+            "text": "Son miembros del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Son rganos de colaboracin y apoyo al Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Son rganos directivos de la Administracin.",
+            "is_correct": false
+          },
+          {
+            "text": "Son miembros del gobierno y rganos superiores de la AGE.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los Secretarios de Estado",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Secretariado de Gobierno",
+        "options": [
+          {
+            "text": "Se integra en la estructura orgnica del Ministerio de Hacienda.",
+            "is_correct": false
+          },
+          {
+            "text": "Se integra en la estructura orgnica del Ministerio de la Presidencia, Justicia y Relaciones con las Cortes.",
+            "is_correct": false
+          },
+          {
+            "text": "Se integra en la estructura orgnica de la Presidencia del Gobierno",
+            "is_correct": false
+          },
+          {
+            "text": "Se integra en la estructura orgnica del Ministerio Hacienda.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Secretariado de Gobierno",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con la Ley 50/1997, de 27 de noviembre, del Gobierno, seale qu competencia corresponde al Consejo de Ministros",
+        "options": [
+          {
+            "text": "Resolver los conflictos de atribuciones que puedan surgir entre los Ministerios",
+            "is_correct": false
+          },
+          {
+            "text": "Establecer el programa poltico del Gobierno y determinar las directrices de poltica interior y exterior y velar por su cumplimiento",
+            "is_correct": false
+          },
+          {
+            "text": "Adoptar programas, planes, y directrices vinculantes para todos los rganos de la AGE.",
+            "is_correct": false
+          },
+          {
+            "text": "Crear, modificar y suprimir los Departamentos Ministeriales y las Secretaras de Estado.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con la Ley 50/1997, de 27 de noviembre, del Gobierno, seale qu competencia corresponde al Consejo de Ministros",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Cul de las siguientes funciones no le corresponde ejercer al Presidente del Gobierno?",
+        "options": [
+          {
+            "text": "Interponer el recurso de inconstitucionalidad.",
+            "is_correct": false
+          },
+          {
+            "text": "Proponer al Rey la celebracin de referndum consultivo.",
+            "is_correct": false
+          },
+          {
+            "text": "Proponer la disolucin de las Cortes Generales.",
+            "is_correct": false
+          },
+          {
+            "text": "Aprobar proyectos de ley.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de las siguientes funciones no le corresponde ejercer al Presidente del Gobierno?",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Quin propone el candidato a la Presidencia del Gobierno",
+        "options": [
+          {
+            "text": "El pueblo espaol.",
+            "is_correct": false
+          },
+          {
+            "text": "El Congreso de los Diputados.",
+            "is_correct": false
+          },
+          {
+            "text": "El Rey.",
+            "is_correct": false
+          },
+          {
+            "text": "Las Cortes Generales.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Quin propone el candidato a la Presidencia del Gobierno",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'El Rey....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Cuntos das deben transcurrir al menos desde que se presente una mocin de censura hasta que pueda ser votada?",
+        "options": [
+          {
+            "text": "Dos das.",
+            "is_correct": false
+          },
+          {
+            "text": "Tres das.",
+            "is_correct": false
+          },
+          {
+            "text": "Cuatro das.",
+            "is_correct": false
+          },
+          {
+            "text": "Cinco das.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cuntos das deben transcurrir al menos desde que se presente una mocin de censura hasta que pueda ser votada?",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Dos das....'",
+        "Distractor muy corto: 'Tres das....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "A quin debe presentar el Gobierno su dimisin en el supuesto de que no obtenga la mayora necesaria en una votacin de cuestin de confianza?",
+        "options": [
+          {
+            "text": "Ante el Congreso de los Diputados.",
+            "is_correct": false
+          },
+          {
+            "text": "Ante el Rey.",
+            "is_correct": false
+          },
+          {
+            "text": "Ante las Cortes Generales.",
+            "is_correct": false
+          },
+          {
+            "text": "Ante el Consejo de Ministros.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "A quin debe presentar el Gobierno su dimisin en el supuesto de que no obtenga la mayora necesaria en una votacin de cuestin de confianza?",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Para ser nombrado Ministro es necesario ostentar los siguientes requisitos",
+        "options": [
+          {
+            "text": "Se requiere ser espaol, mayor de edad, disfrutar de los derechos de sufragio activo y pasivo, as como no estar inhabilitado para ejercer empleo o cargo pblico por sentencia judicial firme y reunir el resto de requisitos de idoneidad previstos en la Ley 3/2015, de 30 de marzo, reguladora del ejercicio del alto cargo de la Administracin General del Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "Mayor de edad, disfrutar de los derechos de sufragio activo y pasivo, as como no estar inhabilitado para ejercer empleo o cargo pblico por sentencia judicial firme y reunir el resto de requisitos de idoneidad previstos en la Ley 3/2015, de",
+            "is_correct": false
+          },
+          {
+            "text": "Espaol, mayor de edad y disfrutar de los derechos de sufragio activo y pasivo",
+            "is_correct": false
+          },
+          {
+            "text": "Espaol, mayor de edad, as como no estar inhabilitado para ejercer empleo o cargo pblico por sentencia judicial firme.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Para ser nombrado Ministro es necesario ostentar los siguientes requisitos",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En los casos de vacante, ausencia o enfermedad, las funciones del Presidente del Gobierno sern asumidas por",
+        "options": [
+          {
+            "text": "Los Vicepresidentes, de acuerdo con el correspondiente orden de prelacin, y, en defecto de ellos, por los Ministros, segn el orden de precedencia de los Departamentos.",
+            "is_correct": false
+          },
+          {
+            "text": "Los Ministros, segn el orden de precedencia de los Departamentos y, en defecto de ellos, por los Vicepresidentes, de acuerdo con el correspondiente orden de prelacin",
+            "is_correct": false
+          },
+          {
+            "text": "Los Vicepresidentes, de acuerdo con el correspondiente orden de prelacin, y, en defecto de ellos, por los Secretarios de Estado, segn el orden de precedencia de los Departamentos.",
+            "is_correct": false
+          },
+          {
+            "text": "Los Ministros, segn el orden de precedencia de los Departamentos y, en defecto de ellos, por los Secretarios de Estado, segn el orden de precedencia de los Departamentos.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En los casos de vacante, ausencia o enfermedad, las funciones del Presidente del Gobierno sern asumidas por",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La suplencia de los Ministros, para el despacho ordinario de los asuntos de su competencia, ser determinada por",
+        "options": [
+          {
+            "text": "Real Decreto del Consejo de Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "Orden del propio ministro.",
+            "is_correct": false
+          },
+          {
+            "text": "Real Decreto del Presidente del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Acuerdo del Consejo de Ministros.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La suplencia de los Ministros, para el despacho ordinario de los asuntos de su competencia, ser determinada por",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la falsa en relacin con los rganos de colaboracin y apoyo al Gobierno",
+        "options": [
+          {
+            "text": "Tienen esta consideracin los secretarios de Estado, la Comisin General de Secretarios de Estado y Subsecretarios, el Secretariado del Gobierno y los Gabinetes.",
+            "is_correct": false
+          },
+          {
+            "text": "El Secretariado del Gobierno se integra en la estructura orgnica del Ministerio de la Presidencia, Justicia y Relaciones con las Cortes.",
+            "is_correct": false
+          },
+          {
+            "text": "Los Gabinetes son rganos de apoyo poltico y tcnico del Presidente del Gobierno, de los Vicepresidentes, de los Ministros, de los Secretarios de Estado y de los subsecretarios.",
+            "is_correct": false
+          },
+          {
+            "text": "La Presidencia de la Comisin General de Secretarios de Estado y Subsecretarios corresponde a un Vicepresidente del Gobierno o, en su defecto, al Ministro de la Presidencia, Justicia y Relaciones con las Cortes.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la falsa en relacin con los rganos de colaboracin y apoyo al Gobierno",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Los Vicepresidentes son nombrados por",
+        "options": [
+          {
+            "text": "El presidente del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "El Rey.",
+            "is_correct": false
+          },
+          {
+            "text": "El Congreso.",
+            "is_correct": false
+          },
+          {
+            "text": "El Senado.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los Vicepresidentes son nombrados por",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'El Rey....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta en relacin con las reuniones del Consejo de Ministros",
+        "options": [
+          {
+            "text": "A las reuniones del Consejo de Ministros podrn asistir los Secretarios de Estado y excepcionalmente otros altos cargos, cuando sean convocados para ello.",
+            "is_correct": false
+          },
+          {
+            "text": "Acta como Secretario el Ministro de Hacienda.",
+            "is_correct": false
+          },
+          {
+            "text": "El orden del da de las reuniones del Consejo de Ministros se fijar por el Secretario.",
+            "is_correct": false
+          },
+          {
+            "text": "Las reuniones del Consejo de Ministros podrn tener carcter decisorio o consultivo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta en relacin con las reuniones del Consejo de Ministros",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Al Consejo de Ministros, como rgano colegiado del Gobierno, le corresponde",
+        "options": [
+          {
+            "text": "Declarar los estados de alarma, excepcin y sitio",
+            "is_correct": false
+          },
+          {
+            "text": "Crear, modificar y suprimir los rganos directivos de los Departamentos Ministeriales.",
+            "is_correct": false
+          },
+          {
+            "text": "Aprobar los Reales Decretos-Leyes y las leyes orgnicas",
+            "is_correct": false
+          },
+          {
+            "text": "Aprobar la Ley de Presupuestos Generales del Estado.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Al Consejo de Ministros, como rgano colegiado del Gobierno, le corresponde",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la afirmacin correcta sobre el Gobierno",
+        "options": [
+          {
+            "text": "Dirige la poltica interior y exterior, la Administracin civil y militar y la defensa del Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "Se compone del Presidente, los ministros, en su caso, y de los Vicepresidentes.",
+            "is_correct": false
+          },
+          {
+            "text": "Sus miembros se renen en Consejo de Ministros y en Comisin General de Secretarios de Estado y Subsecretarios.",
+            "is_correct": false
+          },
+          {
+            "text": "Responde solidariamente de su gestin poltica ante las CCGG.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la afirmacin correcta sobre el Gobierno",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con el artculo 103.1 de la Constitucin de 1978, La Administracin Pblica sirve con objetividad los intereses generales y acta de acuerdo con los principios de",
+        "options": [
+          {
+            "text": "Eficacia, eficiencia, descentralizacin, desconcentracin y cooperacin, con sometimiento pleno a la Ley y al Derecho.",
+            "is_correct": false
+          },
+          {
+            "text": "Eficacia, jerarqua, descentralizacin, desconcentracin y coordinacin, con sometimiento pleno a la Ley y al Derecho.",
+            "is_correct": false
+          },
+          {
+            "text": "Eficiencia, jerarqua, descentralizacin, desconcentracin y coordinacin, con sometimiento pleno a la Ley y al Derecho.",
+            "is_correct": false
+          },
+          {
+            "text": "Eficacia, objetividad, jerarqua, descentralizacin, desconcentracin y coordinacin, con sometimiento pleno al ordenamiento jurdico.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con el artculo 103.1 de la Constitucin de 1978, La Administracin Pblica sirve con objetividad los intereses generales y acta de acuerdo con los principios de",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Presidente del Gobierno en funciones no puede",
+        "options": [
+          {
+            "text": "Plantear la cuestin de confianza.",
+            "is_correct": false
+          },
+          {
+            "text": "Resolver los conflictos de atribuciones que puedan surgir entre distintos Ministerios.",
+            "is_correct": false
+          },
+          {
+            "text": "Plantear un recurso de inconstitucionalidad.",
+            "is_correct": false
+          },
+          {
+            "text": "Convocar al Consejo de Ministros.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Presidente del Gobierno en funciones no puede",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En la eleccin del Presidente del Gobierno, ser necesario que el Congreso de los Diputados otorgue su confianza",
+        "options": [
+          {
+            "text": "Por mayora absoluta de sus miembros, y de no alcanzarse dicha mayora, por las 2/3 partes 48 horas despus.",
+            "is_correct": false
+          },
+          {
+            "text": "Por mayora absoluta de sus miembros, y de no alcanzarse dicha mayora, por las 2/3 partes 72 horas despus.",
+            "is_correct": false
+          },
+          {
+            "text": "Por mayora absoluta de sus miembros, y de no alcanzarse dicha mayora, por mayora simple 48 horas despus.",
+            "is_correct": false
+          },
+          {
+            "text": "Por mayora absoluta de sus miembros, y de no alcanzarse dicha mayora, por mayora simple 72 horas despus.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En la eleccin del Presidente del Gobierno, ser necesario que el Congreso de los Diputados otorgue su confianza",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En cul de estos supuestos no se produce el cese del gobierno?",
+        "options": [
+          {
+            "text": "Por dimisin de su Presidente.",
+            "is_correct": false
+          },
+          {
+            "text": "Por prdida de la cuestin de confianza.",
+            "is_correct": false
+          },
+          {
+            "text": "Por fallecimiento de su Presidente.",
+            "is_correct": false
+          },
+          {
+            "text": "Por la convocatoria de elecciones generales.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En cul de estos supuestos no se produce el cese del gobierno?",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Segn la Constitucin, el Gobierno responder solidariamente de su gestin",
+        "options": [
+          {
+            "text": "Ante el Senado.",
+            "is_correct": false
+          },
+          {
+            "text": "Ante el Congreso de los Diputados.",
+            "is_correct": false
+          },
+          {
+            "text": "Ante el Senado y el Congreso de los Diputados.",
+            "is_correct": false
+          },
+          {
+            "text": "Ante el Rey y el Congreso de los Diputados.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn la Constitucin, el Gobierno responder solidariamente de su gestin",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 101.2 de la Constitucin, el Gobierno cesante continuar en funciones hasta",
+        "options": [
+          {
+            "text": "El nombramiento del nuevo Presidente del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "La eleccin del nuevo Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "El nombramiento de los Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "La toma de posesin del nuevo Gobierno.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 101.2 de la Constitucin, el Gobierno cesante continuar en funciones hasta",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Director de Gabinete de un Secretario de Estado ser nombrado por",
+        "options": [
+          {
+            "text": "RD del Consejo de Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "Orden Ministerial, previo conocimiento del Consejo de Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "Orden Ministerial, previa aprobacin del Consejo de Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "RD del Consejo de Ministros, a propuesta del Presidente del Gobierno.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Director de Gabinete de un Secretario de Estado ser nombrado por",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Gabinete de la Presidencia del Gobierno se regular por",
+        "options": [
+          {
+            "text": "Real Decreto del Presidente del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Real Decreto del Consejo de Ministros.",
+            "is_correct": false
+          },
+          {
+            "text": "Ley.",
+            "is_correct": false
+          },
+          {
+            "text": "Acuerdo del Consejo de Ministros.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Gabinete de la Presidencia del Gobierno se regular por",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Ley....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "El Subsecretario de la Presidencia",
+        "options": [
+          {
+            "text": "Ejerce la presidencia de la Comisin General de Secretarios de Estado y Subsecretarios.",
+            "is_correct": false
+          },
+          {
+            "text": "Ejerce la secretara de la Comisin General de Secretarios de Estado y Subsecretarios.",
+            "is_correct": false
+          },
+          {
+            "text": "Es el Director del Secretariado de Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Es el Secretario del Secretariado de Gobierno.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Subsecretario de la Presidencia",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Qu carcter tienen las deliberaciones del Consejo de Ministros?",
+        "options": [
+          {
+            "text": "Secretas.",
+            "is_correct": false
+          },
+          {
+            "text": "Pblicas.",
+            "is_correct": false
+          },
+          {
+            "text": "Reservadas.",
+            "is_correct": false
+          },
+          {
+            "text": "Solemnes y privadas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu carcter tienen las deliberaciones del Consejo de Ministros?",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Secretas....'",
+        "Distractor muy corto: 'Pblicas....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con el artculo 8 de la Ley Orgnica 3/1980, de 22 de abril, del Consejo de Estado, no tiene la condicin de Consejero nato no vitalicio",
+        "options": [
+          {
+            "text": "El Fiscal General del Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "El Gobernador del Banco de Espaa.",
+            "is_correct": false
+          },
+          {
+            "text": "El Defensor del Pueblo.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Consejo Econmico y Social.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con el artculo 8 de la Ley Orgnica 3/1980, de 22 de abril, del Consejo de Estado, no tiene la condicin de Consejero nato no vitalicio",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Las Secciones del Consejo de Estado sern",
+        "options": [
+          {
+            "text": "Ocho, como mnimo.",
+            "is_correct": false
+          },
+          {
+            "text": "Diez, en todo caso.",
+            "is_correct": false
+          },
+          {
+            "text": "Ocho, como mximo.",
+            "is_correct": false
+          },
+          {
+            "text": "Doce, como mnimo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las Secciones del Consejo de Estado sern",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Consejo de Estado en Pleno deber ser consultado en el siguiente asunto",
+        "options": [
+          {
+            "text": "Proyectos de Decretos legislativos.",
+            "is_correct": false
+          },
+          {
+            "text": "Anteproyectos de Ley Orgnica de transferencias o delegacin de competencias estatales a las Comunidades Autnomas.",
+            "is_correct": false
+          },
+          {
+            "text": "Reglamentos o disposiciones de carcter general que se dicten en ejecucin de las Leyes, as como sus modificaciones.",
+            "is_correct": false
+          },
+          {
+            "text": "Impugnacin de las disposiciones y resoluciones adoptadas por los rganos de las Comunidades Autnomas ante el Tribunal Constitucional, con carcter previo a la interposicin del recurso.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Consejo de Estado en Pleno deber ser consultado en el siguiente asunto",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "A la vista de lo establecido en el artculo 9 de la Ley Orgnica 3/1980, de 22 de abril, del Consejo de Estado, responda cul es la afirmacin correcta sobre los Consejeros electivos del Consejo de Estado",
+        "options": [
+          {
+            "text": "Sern nombrados por el Pleno del Consejo de Estado, a propuesta de su Presidente.",
+            "is_correct": false
+          },
+          {
+            "text": "Son un total de 8.",
+            "is_correct": false
+          },
+          {
+            "text": "De entre ellos, dos debern haber desempeado el cargo de Presidente del Consejo Ejecutivo de Comunidad Autnoma por un perodo mnimo de ocho aos.",
+            "is_correct": false
+          },
+          {
+            "text": "Su mandato es de 9 aos.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "A la vista de lo establecido en el artculo 9 de la Ley Orgnica 3/1980, de 22 de abril, del Consejo de Estado, responda cul es la afirmacin correcta sobre los Consejeros electivos del Consejo de Estado",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La Comisin de Estudios estar presidida por el Presidente del Consejo de Estado e integrada por",
+        "options": [
+          {
+            "text": "Dos Consejeros permanentes, dos natos y dos electivos, designados por el Pleno a propuesta del Presidente, as como por el Secretario General.",
+            "is_correct": false
+          },
+          {
+            "text": "Los Consejeros permanentes y el Secretario general.",
+            "is_correct": false
+          },
+          {
+            "text": "Los Consejeros permanentes, los Consejeros natos y el Secretario general.",
+            "is_correct": false
+          },
+          {
+            "text": "Un Consejero permanente, un Letrado Mayor y los Letrados que sean necesarios segn la importancia de los asuntos o el nmero de las consultas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La Comisin de Estudios estar presidida por el Presidente del Consejo de Estado e integrada por",
+        "source": "6 TEST TEMA 6 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 6,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:22.167128"
+}

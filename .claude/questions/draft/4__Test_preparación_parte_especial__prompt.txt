@@ -1,0 +1,270 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 4. Test preparación parte especial..pdf
+**Total preguntas:** 20
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** De acuerdo con la LCSP, se�ale la respuesta correcta:
+
+**Opciones:**
+  0. La adjudicaci�n de un contrato requerir� la previa elaboraci�n,
+  1. probaci�n, supervisi�n, y replanteo del correspondiente proyecto
+  2. La adjudicaci�n de un contrato de obras requerir� la previa
+  3. probaci�n,
+
+---
+
+### Pregunta 2
+
+**Texto:** Se consideran como obras de reparaci�n:
+
+**Opciones:**
+  0. Las necesarias para enmendar un menoscabo producido en un
+  1. ien inmueble por causas fortuitas o accidentales.
+  2. Las necesarias para enmendar un menoscabo producido en un
+  3. ien inmueble por el natural paso del tiempo, cuando �stas
+
+---
+
+### Pregunta 3
+
+**Texto:** Son obras de restauraci�n:
+
+**Opciones:**
+  0. Aquellas que
+  1. onservando su est�tica, respetando su valor hist�rico y
+  2. ARCELONA
+  3. Aquellas que
+
+---
+
+### Pregunta 4
+
+**Texto:** Se�ale la respuesta correcta, en relaci�n con el proyecto de las
+
+**Opciones:**
+  0. Los proyectos de obras de primer establecimiento, reforma o gran
+  1. Se podr� simplificar, refundir o incluso suprimir, alguno o algunos
+  2. e los documentos en todos los proyectos de obras, cualquiera
+  3. Se podr� simplificar, refundir o incluso suprimir, alguno o algunos
+
+---
+
+### Pregunta 5
+
+**Texto:** Se�ale la respuesta incorrecta:
+
+**Opciones:**
+  0. Los proyectos deber�n sujetarse a las instrucciones t�cnicas que
+  1. Salvo que ello resulte incompatible con la naturaleza de la obra, el
+  2. La contrataci�n conjunta de la elaboraci�n del proyecto y la
+  3. La contrataci�n conjunta de la elaboraci�n del proyecto y la
+
+---
+
+### Pregunta 6
+
+**Texto:** En el supuesto de contrataci�n conjunta de la elaboraci�n del
+
+**Opciones:**
+  0. El contratista ser� el encargado de la elaboraci�n, supervisi�n,
+  1. probaci�n y comprobaci�n del correspondiente replanteo del
+  2. El contratista presentar� el proyecto al �rgano de contrataci�n
+  3. El contratista ser� el encargado de la elaboraci�n y supervisi�n,
+
+---
+
+### Pregunta 7
+
+**Texto:** En cuanto a la supervisi�n del proyecto de obras:
+
+**Opciones:**
+  0. Antes de la aprobaci�n del proyecto, cuando el presupuesto base
+  1. e licitaci�n del contrato de obras sea igual o superior a 500.000
+  2. En los proyectos de presupuesto base de licitaci�n inferior al
+  3. Una vez aprobado el proyecto, cuando el presupuesto base de
+
+---
+
+### Pregunta 8
+
+**Texto:** Se�ale la respuesta incorrecta:
+
+**Opciones:**
+  0. Aprobado el proyecto y previamente a
+  1. El replanteo del proyecto de la obra consistir� en comprobar la
+  2. Los proyectos de obras deber�n comprender, entre otros
+  3. ocumentos una memoria en la que se describa el objeto de las
+
+---
+
+### Pregunta 9
+
+**Texto:** En el contrato de concesi�n de obra, el estudio de viabilidad de la
+
+**Opciones:**
+  0. Es siempre potestativo.
+  1. Es obligatorio para los contratos de obras de presupuesto base
+  2. e licitaci�n sin IVA, inferior a 50.000 euros.
+  3. Es obligatorio para los contratos de concesi�n obras de valor
+
+---
+
+### Pregunta 10
+
+**Texto:** Se�ale la respuesta correcta en relaci�n con el estudio de
+
+**Opciones:**
+  0. Con car�cter previo a la decisi�n de construir y explotar en
+  1. La Administraci�n concedente someter� el estudio de viabilidad a
+  2. Se admitir� la iniciativa privada en la presentaci�n de estudios de
+  3. La Administraci�n concedente podr� acordar motivadamente la
+
+---
+
+### Pregunta 11
+
+**Texto:** De acuerdo con la LCSP:
+
+**Opciones:**
+  0. Se admitir� la iniciativa privada en la presentaci�n de estudios de
+  1. Presentado el estudio de viabilidad, ser� elevado al �rgano
+  2. ompetente para que comunique al particular la decisi�n de
+  3. En las concesiones de servicios no es necesario estudio de
+
+---
+
+### Pregunta 12
+
+**Texto:** En cuanto al estudio de viabilidad, �Qu� plazo establece la LCSP
+
+**Opciones:**
+  0. Tres meses, no prorrogables.
+  1. Dos meses, no prorrogables.
+  2. Cuatro meses, no obstante, se puede fijar un plazo superior para
+  3. Tres meses, no obstante, se puede fijar un plazo superior para su
+
+---
+
+### Pregunta 13
+
+**Texto:** En cuanto a la iniciativa privada en la presentaci�n de los estudios
+
+**Opciones:**
+  0. e viabilidad:
+  1. El silencio de la Administraci�n o de la entidad que corresponda
+  2. El silencio de la Administraci�n o de la entidad que corresponda
+  3. La Administraci�n estar� obligada a contestar, en todo caso.
+
+---
+
+### Pregunta 14
+
+**Texto:** En cuanto a la concesi�n de servicios, se�ale la respuesta
+
+**Opciones:**
+  0. La tramitaci�n del expediente ir� precedida de la realizaci�n y
+  1. probaci�n de un estudio de viabilidad de los mismos o en su
+  2. aso, de un estudio de viabilidad econ�mico-financiera, que
+  3. Antes de proceder a la contrataci�n de una concesi�n de
+
+---
+
+### Pregunta 15
+
+**Texto:** En el supuesto de que el estudio de viabilidad culminara en el
+
+**Opciones:**
+  0. dicionales a los obtenidos por aplicaci�n de los criterios de
+  1. djudicaci�n.
+  2. A que se le adjudique el contrato a su favor.
+  3. Al resarcimiento de los gastos efectuados para su elaboraci�n,
+
+---
+
+### Pregunta 16
+
+**Texto:** Se�ale la respuesta correcta:
+
+**Opciones:**
+  0. En las concesiones de obras, en funci�n de la complejidad de las
+  1. dministraci�n concedente, aprobado el estudio de viabilidad,
+  2. En todo caso, se tendr� que elaborar anteproyecto por el
+  3. ontratista de la obra.
+
+---
+
+### Pregunta 17
+
+**Texto:** En cuanto a los contratos de fabricaci�n:
+
+**Opciones:**
+  0. El r�gimen jur�dico, en todo caso, ser� el de los contratos de
+  1. Se les aplicar�n directamente las normas generales y especiales
+  2. el contrato de suministros que el �rgano de contrataci�n
+  3. l�usulas
+
+---
+
+### Pregunta 18
+
+**Texto:** En relaci�n con los contratos de servicios:
+
+**Opciones:**
+  0. En ning�n caso la entidad contratante podr� instrumentar la
+  1. ontrataci�n de personal a trav�s del contrato de servicios,
+  2. ontratos menores.
+  3. La entidad contratante podr� instrumentar la contrataci�n de
+
+---
+
+### Pregunta 19
+
+**Texto:** De acuerdo con lo establecido en el art�culo 310 de la LCSP, en los
+
+**Opciones:**
+  0. ontratos que tengan por objeto la prestaci�n de actividades
+  1. ocentes:
+  2. Podr� establecerse el pago parcial anticipado, sin necesidad
+  3. La LCSP ser� de aplicaci�n a la preparaci�n y adjudicaci�n del
+
+---
+
+### Pregunta 20
+
+**Texto:** En cuanto al r�gimen de contrataci�n para actividades docentes:
+
+**Opciones:**
+  0. Para acreditar la existencia de estos contratos, bastar� la
+  1. esignaci�n o nombramiento por autoridad competente.
+  2. En esta clase de contratos no podr� establecerse el pago parcial
+  3. nticipado.
+
+---

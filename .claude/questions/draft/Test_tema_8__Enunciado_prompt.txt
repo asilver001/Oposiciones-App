@@ -1,0 +1,378 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** Test tema 8. Enunciado.pdf
+**Total preguntas:** 29
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** La competencia para establecer la legislaci�n sobre expropiaci�n
+
+**Opciones:**
+  0. En exclusiva al Estado.
+  1. Al Estado la legislaci�n b�sica y a las CCAA la legislaci�n de desarrollo.
+  2. En exclusiva a las CCAA.
+  3. Es una competencia concurrente.
+
+---
+
+### Pregunta 2
+
+**Texto:** En cuanto a la definici�n que el art�culo 1 LEF da sobre la expropiaci�n
+
+**Opciones:**
+  0. Cualquier forma de privaci�n consentida de la propiedad privada o de
+  1. erechos o intereses patrimoniales leg�timos, cualesquiera que fueren
+  2. Cualquier forma de privaci�n singular de la propiedad privada o de
+  3. erechos o intereses patrimoniales leg�timos, cualesquiera que fueren
+
+---
+
+### Pregunta 3
+
+**Texto:** Tendr�n la consideraci�n de expropiantes:
+
+**Opciones:**
+  0. El Estado, la Provincia o el Municipio.
+  1. El Estado, las CCAA, la Provincia o el Municipio.
+  2. El Estado, las CCAA, la Provincia, el Municipio y los Organismos
+  3. ut�nomos.
+
+---
+
+### Pregunta 4
+
+**Texto:** Las actuaciones del expediente expropiatorio se entender�n (se�ale la
+
+**Opciones:**
+  0. En primer lugar, con el propietario de la cosa o titular del derecho objeto
+  1. e la expropiaci�n.
+  2. Con los titulares de derechos reales e intereses econ�micos directos
+  3. ondici�n debidamente.
+
+---
+
+### Pregunta 5
+
+**Texto:** De acuerdo con el art�culo 3 LEF, indique a qui�n considera la
+
+**Opciones:**
+  0. dministraci�n como propietario de la cosa o titular del derecho objeto de
+  1. A qui�n con dicho car�cter conste en registros p�blicos que produzcan
+  2. A qui�n aparezca con tal car�cter en registros fiscales.
+  3. A qui�n lo sea p�blica y notoriamente.
+
+---
+
+### Pregunta 6
+
+**Texto:** �En qu� casos se entender�n las diligencias con el Ministerio Fiscal?
+
+**Opciones:**
+  0. En todo caso.
+  1. Cuando no comparecieren en el expediente los propietario o titulares.
+  2. Cuando no comparecieren en el expediente los propietario o titulares, o
+  3. Cuando no comparecieren en el expediente los propietario o titulares, o
+
+---
+
+### Pregunta 7
+
+**Texto:** A tenor del art�culo 7 LEF, las trasmisiones de dominio o cualesquiera
+
+**Opciones:**
+  0. No impedir�n la continuaci�n de los expedientes de expropiaci�n
+  1. Impedir�n la continuaci�n de los expedientes de expropiaci�n forzosa.
+  2. B es correcta y, adem�s, se considerar� subrogado el nuevo titular en
+  3. C es correcta y, adem�s, se considerar� subrogado el nuevo titular en
+
+---
+
+### Pregunta 8
+
+**Texto:** La cosa expropiada se adquirir� (art�culo 8 LEF):
+
+**Opciones:**
+  0. Con todas las cargas que la gravasen en el momento de iniciarse el
+  1. Libre de cargas, sin posibilidad de conservar ning�n derecho real sobre
+  2. Libre de cargas totalmente.
+  3. Libre de cargas, pudiendo conservarse alg�n derecho real sobre el
+
+---
+
+### Pregunta 9
+
+**Texto:** El procedimiento de expropiaci�n forzosa consta de:
+
+**Opciones:**
+  0. Un requisito previo y tres fases.
+  1. Un requisito previo y cuatro fases.
+  2. Cuatro fases.
+  3. Tres fases.
+
+---
+
+### Pregunta 10
+
+**Texto:** En relaci�n con la declaraci�n de utilidad p�blica, se�ale la respuesta
+
+**Opciones:**
+  0. orrecta:
+  1. Se entiende impl�cita, en relaci�n con la expropiaci�n de bienes
+  2. Como regla general, en los casos de bienes inmuebles, se har�
+  3. En los casos en que por Ley se haya declarado gen�ricamente la utilidad
+
+---
+
+### Pregunta 11
+
+**Texto:** En materia de expropiaci�n forzosa, el �rgano competente dentro de
+
+**Opciones:**
+  0. El Subdelegado del Gobierno.
+  1. El Delegado del Gobierno.
+  2. El Subsecretario.
+  3. El Ministro.
+
+---
+
+### Pregunta 12
+
+**Texto:** Indique cu�ndo se inicia el expediente expropiatorio:
+
+**Opciones:**
+  0. Con la relaci�n concreta e individualizada de bienes que realiza el
+  1. eneficiario.
+  2. Con la publicaci�n de la relaci�n mencionada en el apartado a).
+  3. Una vez finalizado el per�odo de informaci�n p�blica.
+
+---
+
+### Pregunta 13
+
+**Texto:** Indique qu� recurso o recursos caben contra el acuerdo de necesidad
+
+**Opciones:**
+  0. e ocupaci�n:
+  1. �nicamente recurso de alzada ante el Ministro.
+  2. �nicamente recurso de reposici�n ante el Ministro.
+  3. Recurso de alzada ante el Ministro y RCA ante el TSJ.
+
+---
+
+### Pregunta 14
+
+**Texto:** Cuando la expropiaci�n implique s�lo la necesidad de ocupaci�n de
+
+**Opciones:**
+  0. qu�lla resulte antiecon�mica para el propietario la conservaci�n de la
+  1. Podr� �ste solicitar de la Administraci�n que dicha expropiaci�n
+  2. omprenda la totalidad de la finca, debiendo decidirse sobre ello en el
+  3. Podr� �ste solicitar de la Administraci�n que dicha expropiaci�n
+
+---
+
+### Pregunta 15
+
+**Texto:** Se�ale de qu� forma o formas se puede fijar el justiprecio:
+
+**Opciones:**
+  0. Por mutuo acuerdo.
+  1. Por mutuo acuerdo y expediente ordinario.
+  2. Por expediente ordinario y Jurado Provincial de Expropiaci�n.
+  3. Por mutuo acuerdo, expediente ordinario y Jurado Provincial de
+
+---
+
+### Pregunta 16
+
+**Texto:** Se inicia el expediente de justiprecio (art. 25 LEF):
+
+**Opciones:**
+  0. Una vez publicado el acuerdo de necesidad de ocupaci�n.
+  1. Una vez firme el acuerdo de necesidad de ocupaci�n.
+  2. Una vez que se ha interpuesto RCA contra el acuerdo de necesidad de
+  3. Una vez desestimado el RCA interpuesto contra el acuerdo de
+
+---
+
+### Pregunta 17
+
+**Texto:** Se�ale la falsa en relaci�n con el justiprecio:
+
+**Opciones:**
+  0. A tal fin se abrir� un expediente conjunto para todos los propietarios de
+  1. ienes expropiables.
+  2. Si el objeto de la expropiaci�n forzosa estuviere constituido por valores
+  3. Cuando la Administraci�n rechace la expropiaci�n total, se incluir� en el
+
+---
+
+### Pregunta 18
+
+**Texto:** En lo que respecta al expediente ordinario de justiprecio:
+
+**Opciones:**
+  0. La Administraci�n requerir� a los propietarios para que en el plazo de
+  1. iez d�as, a contar desde el siguiente al de la notificaci�n, presenten
+  2. La valoraci�n habr� de ser forzosamente motivada y podr� estar avalada
+  3. La Administraci�n expropiante habr� de aceptar o rechazar la valoraci�n
+
+---
+
+### Pregunta 19
+
+**Texto:** Indique cu�l de los siguientes no es un vocal del Jurado Provincial de
+
+**Opciones:**
+  0. Un Abogado del Estado.
+  1. Un Notario.
+  2. Un Registrador Mercantil.
+  3. Un funcionario t�cnico.
+
+---
+
+### Pregunta 20
+
+**Texto:** Se�ale la correcta en relaci�n con las resoluciones adoptadas por el
+
+**Opciones:**
+  0. No habr�n de ser necesariamente motivadas.
+  1. Ultimar� la v�a gubernativa.
+  2. Contra la misma proceder� tan s�lo el RCA.
+  3. Contra la misma proceder� tan s�lo el recurso potestativo de reposici�n.
+
+---
+
+### Pregunta 21
+
+**Texto:** En lo que se refiere al pago del justiprecio (se�ale la falsa):
+
+**Opciones:**
+  0. Una vez determinado el justo precio, se proceder� al pago de la cantidad
+  1. Para el expropiado, el pago del precio estar� exento de toda clase de
+  2. Cuando el propietario rehusare recibir el precio o cuando existiere
+  3. ualquier litigio o cuesti�n entre el interesado y la Administraci�n, se
+
+---
+
+### Pregunta 22
+
+**Texto:** Se�ale la falsa en relaci�n con la expropiaci�n urgente (art. 52 LEF):
+
+**Opciones:**
+  0. Se declara mediante Real Decreto del Consejo de Ministros.
+  1. Se entender� cumplido el tr�mite de declaraci�n de necesidad de la
+  2. Se notificar� a los interesados afectados, seg�n los art�culos tercero y
+  3. uarto de esta Ley, el d�a y hora en que ha de levantarse el acta previa a
+
+---
+
+### Pregunta 23
+
+**Texto:** En la expropiaci�n urgente (art. 52 LEF):
+
+**Opciones:**
+  0. La indemnizaci�n por los perjuicios derivados de la r�pida ocupaci�n
+  1. Fijado el
+  2. Efectuada la ocupaci�n de las fincas se tramitar� el expediente de
+  3. No hay que declarar la utilidad p�blica o el inter�s social.
+
+---
+
+### Pregunta 24
+
+**Texto:** En relaci�n con el pago del justiprecio (indique la falsa):
+
+**Opciones:**
+  0. Una vez determinado el justo precio, se proceder� al pago de la cantidad
+  1. El pago se verificar� mediante tal�n nominativo al expropiado o por
+  2. El pago del precio estar� exento de toda clase de gastos, de impuestos y
+  3. Cuando el propietario rehusare recibir el precio o cuando existiere
+
+---
+
+### Pregunta 25
+
+**Texto:** Se�ale lo que proceda en relaci�n con el derecho de reversi�n (art. 54
+
+**Opciones:**
+  0. No habr� derecho de
+  1. esafectaci�n del
+  2. e utilidad p�blica o inter�s social.
+  3. Cuando de acuerdo con lo establecido en los apartados anteriores de
+
+---
+
+### Pregunta 26
+
+**Texto:** La responsabilidad por demora tendr� lugar:
+
+**Opciones:**
+  0. Cuando hayan transcurrido seis meses desde la iniciaci�n legal del
+  1. Cuando hayan transcurrido seis meses desde la iniciaci�n legal del
+  2. efinitiva el justo precio de las cosas o derechos.
+  3. La cantidad que se fije definitivamente como justo precio devengar� el
+
+---
+
+### Pregunta 27
+
+**Texto:** En cuanto a la retasaci�n (art. 58 LEF):
+
+**Opciones:**
+  0. Si transcurrieran cuatro a�os sin que el pago de la cantidad fijada como
+  1. Si transcurrieran cuatro a�os sin que el pago de la cantidad fijada como
+  2. osas o derechos objeto de expropiaci�n.
+  3. Si transcurrieran cuatro a�os sin que el pago de la cantidad fijada como
+
+---
+
+### Pregunta 28
+
+**Texto:** Se�ale cu�l de los siguientes no es un procedimiento especial de
+
+**Opciones:**
+  0. De la expropiaci�n por zonas o grupos de bienes.
+  1. De la expropiaci�n por incumplimiento de la funci�n social de la
+  2. De la expropiaci�n de bienes de valor intelectual.
+  3. De la expropiaci�n por Entidades locales o por raz�n de
+
+---
+
+### Pregunta 29
+
+**Texto:** En lo que respecta a las garant�as jurisdiccionales en la
+
+**Opciones:**
+  0. Siempre que sin haberse cumplido los requisitos sustanciales
+  1. e declaraci�n de utilidad p�blica o inter�s social, necesidad de
+  2. menazada o perdida.
+  3. Contra la resoluci�n administrativa que ponga fin al expediente
+
+---

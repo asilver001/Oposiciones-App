@@ -1,0 +1,498 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 6 TEST TEMAS   10 y 11 - copia.pdf
+**Total preguntas:** 39
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** Se�ale
+
+**Opciones:**
+  0. uton�micos:
+  1. La Asamblea legislativa es elegida por sufragio universal atendiendo a criterios
+  2. e representaci�n proporcional.
+  3. El Presidente ostenta la suprema representaci�n de la Comunidad aut�noma y la
+
+---
+
+### Pregunta 2
+
+**Texto:** �Cu�l de los siguientes extremos en relaci�n con las instituciones aut�nomas
+
+**Opciones:**
+  0. onformidad con la Constituci�n?:
+  1. La denominaci�n.
+  2. La sede.
+  3. La composici�n.
+
+---
+
+### Pregunta 3
+
+**Texto:** El art�culo 138.2 de la Constituci�n indica que las diferencias entre los Estatutos de
+
+**Opciones:**
+  0. Privilegios econ�micos o fiscales.
+  1. Privilegios fiscales o sociales.
+  2. Privilegios econ�micos o sociales.
+  3. Privilegios econ�micos, sociales o fiscales.
+
+---
+
+### Pregunta 4
+
+**Texto:** Seg�n el art�culo 148.1.1, las CCAA podr�n asumir competencias en la
+
+**Opciones:**
+  0. Pol�ticas.
+  1. Locales.
+  2. Judiciales.
+  3. De autogobierno.
+
+---
+
+### Pregunta 5
+
+**Texto:** Se podr� autorizar la constituci�n de una Comunidad Aut�noma cuyos l�mites no
+
+**Opciones:**
+  0. Mediante Ley org�nica de las CCGG por motivos de inter�s general.
+  1. Mediante Ley de las CCGG por motivos de inter�s general.
+  2. Mediante Ley org�nica de las CCGG por motivos de inter�s nacional.
+  3. Mediante Ley de las CCGG por motivos de inter�s nacional.
+
+---
+
+### Pregunta 6
+
+**Texto:** El Estado tiene competencia exclusiva sobre las siguientes materias:
+
+**Opciones:**
+  0. La pesca en aguas interiores, el marisqueo y la acuicultura, la caza y la pesca
+  1. La agricultura y ganader�a, de acuerdo con la ordenaci�n general de la
+  2. Legislaci�n sobre pesas y medidas, determinaci�n de la hora oficial.
+  3. Ferias interiores.
+
+---
+
+### Pregunta 7
+
+**Texto:** �Cu�l de las siguientes materias se atribuye en exclusiva al Estado en la
+
+**Opciones:**
+  0. onstituci�n?:
+  1. Marisqueo y acuicultura.
+  2. Caza.
+  3. Asistencia Social.
+
+---
+
+### Pregunta 8
+
+**Texto:** La elecci�n a trav�s de un sistema de representaci�n proporcional se aplica, de
+
+**Opciones:**
+  0. onformidad con la Constituci�n a los miembros de:
+  1. Congreso y Senado.
+  2. Congreso, Senado y Asambleas de CCAA.
+  3. Congreso y Asambleas de CCAA.
+
+---
+
+### Pregunta 9
+
+**Texto:** Se�ale la incorrecta en relaci�n con los Estatutos de Autonom�a:
+
+**Opciones:**
+  0. Son la norma institucional b�sica de cada comunidad aut�noma.
+  1. El Estado los reconoce y ampara como parte integrante de su ordenamiento
+  2. Se aprueban por ley org�nica.
+  3. El procedimiento para su reforma requerir� en todo caso la celebraci�n de
+
+---
+
+### Pregunta 10
+
+**Texto:** El Estatuto de autonom�a deber� comprender la denominaci�n de comunidad
+
+**Opciones:**
+  0. ut�noma:
+  1. Que ratifiquen sus ciudadanos en refer�ndum.
+  2. Que decida la Asamblea de la comunidad aut�noma a iniciativa de los
+  3. yuntamientos y diputaciones.
+
+---
+
+### Pregunta 11
+
+**Texto:** �Sobre qu� materia de las expuestas a continuaci�n tiene el Estado competencia
+
+**Opciones:**
+  0. Ordenaci�n del territorio, urbanismo y vivienda.
+  1. Montes y aprovechamientos forestales.
+  2. La gesti�n en materia de protecci�n del medio ambiente.
+  3. Legislaci�n sobre propiedad intelectual e industrial.
+
+---
+
+### Pregunta 12
+
+**Texto:** �Cu�ntos municipios deb�an formar parte de la iniciativa auton�mica en caso de
+
+**Opciones:**
+  0. 2/3 partes
+  1. 1/3 parte
+  2. 2/5 partes
+  3. 3/4 partes
+
+---
+
+### Pregunta 13
+
+**Texto:** Seg�n la Constituci�n Espa�ola, las CCAA podr�n asumir competencias en:
+
+**Opciones:**
+  0. Comercio exterior
+  1. Sanidad e higiene
+  2. Bases del r�gimen minero y energ�tico
+  3. Pesca mar�tima
+
+---
+
+### Pregunta 14
+
+**Texto:** De conformidad con el art�culo 138 CE, el Estado velando por el establecimiento
+
+**Opciones:**
+  0. e un equilibrio econ�mico adecuado y justo entre las diversas partes del territorio
+  1. La realizaci�n efectiva del principio de igualdad.
+  2. La realizaci�n efectiva del principio de solidaridad.
+  3. La realizaci�n efectiva del principio de libertad.
+
+---
+
+### Pregunta 15
+
+**Texto:** El control econ�mico y presupuestaria de los �rganos e instituciones de las CCAA,
+
+**Opciones:**
+  0. e acuerdo con la Constituci�n Espa�ola, lo ejerce:
+  1. El Gobierno.
+  2. El Tribunal Constitucional.
+  3. El Tribunal de Cuentas.
+
+---
+
+### Pregunta 16
+
+**Texto:** Es competencia estatal, en virtud de lo dispuesto en el art�culo 149.1 CE:
+
+**Opciones:**
+  0. Regulaci�n de las condiciones de obtenci�n, expedici�n y homologaci�n de
+  1. Patrimonio monumental de inter�s de la Comunidad Aut�noma.
+  2. Ferias interiores.
+  3. Aguas minerales y termales.
+
+---
+
+### Pregunta 17
+
+**Texto:** La representaci�n ordinaria del Estado en una Comunidad Aut�noma
+
+**Opciones:**
+  0. orresponde:
+  1. Al Presidente del Gobierno.
+  2. Al Delegado del Gobierno.
+  3. Al Presidente del Consejo de Gobierno de la Comunidad Aut�noma.
+
+---
+
+### Pregunta 18
+
+**Texto:** Los requisitos para la iniciativa del proceso auton�mico deben ser cumplidos en el
+
+**Opciones:**
+  0. 6 meses desde el primer acuerdo adoptado al respecto por alguna de las
+  1. orporaciones locales interesadas.
+  2. 5 a�os desde el primer acuerdo adoptado al respecto por alguna de las
+  3. orporaciones locales interesadas.
+
+---
+
+### Pregunta 19
+
+**Texto:** �Qu� mayor�a parlamentaria se precisa para apreciar la presencia de un inter�s
+
+**Opciones:**
+  0. Mayor�a absoluta del Congreso de los Diputados y simple en el Senado.
+  1. Mayor�a absoluta del Senado y simple en el Congreso de los Diputados
+  2. Dos tercios de los votos favorables del Congreso de los Diputados
+  3. Mayor�a absoluta de cada C�mara
+
+---
+
+### Pregunta 20
+
+**Texto:** En cu�l de las siguientes materias la Constituci�n atribuye la facultad de dictar las
+
+**Opciones:**
+  0. ases de conformidad con el art�culo 149:
+  1. R�gimen minero y energ�tico.
+  2. Productos farmac�uticos.
+  3. Propiedad intelectual e industrial.
+
+---
+
+### Pregunta 21
+
+**Texto:** Se�ale la respuesta correcta en relaci�n con los distritos:
+
+**Opciones:**
+  0. Corresponde al alcalde de la Corporaci�n la creaci�n de los distritos y su
+  1. Los ayuntamientos de los municipios de gran poblaci�n deber�n crear distritos,
+  2. omo divisiones
+  3. escentralizada.
+
+---
+
+### Pregunta 22
+
+**Texto:** Son �rganos superiores en los municipios de gran poblaci�n regulados en el t�tulo
+
+**Opciones:**
+  0. El Alcalde y los miembros de la Junta de Gobierno Local.
+  1. El Alcalde y los miembros del Pleno.
+  2. El Alcalde y los Tenientes de Alcalde.
+  3. El Alcalde y el Secretario General.
+
+---
+
+### Pregunta 23
+
+**Texto:** Si una Entidad local adoptara actos o acuerdos que atenten gravemente al inter�s
+
+**Opciones:**
+  0. El Consejo de Ministros.
+  1. El Presidente del Gobierno.
+  2. El Congreso.
+  3. El Delegado del Gobierno.
+
+---
+
+### Pregunta 24
+
+**Texto:** De conformidad con el art�culo 20 LBRL, la organizaci�n municipal responde a
+
+**Opciones:**
+  0. El Alcalde, los Tenientes de Alcalde y el Pleno existen en todos los
+  1. yuntamientos.
+  2. La Junta de Gobierno Local existe en todos los municipios con poblaci�n igual
+  3. La Comisi�n Especial de Sugerencias y Reclamaciones existe en los municipios
+
+---
+
+### Pregunta 25
+
+**Texto:** De acuerdo con el art�culo 140 de la Constituci�n, respecto de los municipios y su
+
+**Opciones:**
+  0. Una Ley Org�nica regular� las condiciones en las que proceda el r�gimen del
+  1. oncejo abierto.
+  2. Los Concejales ser�n elegidos por el Alcalde o por los vecinos del municipio
+  3. Los Alcaldes ser�n elegidos por los Concejales o por los vecinos.
+
+---
+
+### Pregunta 26
+
+**Texto:** En todos los municipios se deber� prestar el siguiente servicio:
+
+**Opciones:**
+  0. Tratamiento de residuos.
+  1. Biblioteca y parque p�blico.
+  2. Acceso a los n�cleos de poblaci�n.
+  3. Prevenci�n y extinci�n de incendios.
+
+---
+
+### Pregunta 27
+
+**Texto:** Como se crea un �rea Metropolitana:
+
+**Opciones:**
+  0. Real Decreto del Consejo de Ministros.
+  1. Ley de las Cortes Generales.
+  2. Norma Reglamentaria.
+  3. Por Ley de la Comunidad Aut�noma.
+
+---
+
+### Pregunta 28
+
+**Texto:** Responda cu�l de las siguientes no es una entidad local:
+
+**Opciones:**
+  0. Mancomunidades.
+  1. Consorcios.
+  2. �reas metropolitanas.
+  3. Comarcas
+
+---
+
+### Pregunta 29
+
+**Texto:** La modificaci�n de los l�mites de la provincia se realiza:
+
+**Opciones:**
+  0. De acuerdo con lo establecido en la legislaci�n auton�mica en materia de
+  1. Mediante Real Decreto del Consejo de Ministros.
+  2. A trav�s de Ley org�nica.
+  3. Por ley ordinaria de las Cortes Generales
+
+---
+
+### Pregunta 30
+
+**Texto:** La formaci�n, mantenimiento, revisi�n y custodia del Padr�n municipal
+
+**Opciones:**
+  0. orresponde:
+  1. Al Ministerio del Interior.
+  2. A los Ayuntamientos.
+  3. A las Diputaciones Provinciales.
+
+---
+
+### Pregunta 31
+
+**Texto:** Conforme al art�culo 20 de la Ley 7/1985, de 2 de abril, Reguladora de las Bases
+
+**Opciones:**
+  0. el R�gimen Local en un municipio de 7.587 habitantes, �cu�l de los siguientes
+  1. Junta de Gobierno Local.
+  2. Comisi�n Especial de Cuentas.
+  3. Tenientes de Alcalde.
+
+---
+
+### Pregunta 32
+
+**Texto:** En un municipio de 18.000 habitantes no es obligatorio el servicio siguiente:
+
+**Opciones:**
+  0. Prevenci�n y extinci�n de incendios.
+  1. Biblioteca p�blica.
+  2. Pavimentaci�n de las v�as p�blicas.
+  3. Tratamiento de residuos.
+
+---
+
+### Pregunta 33
+
+**Texto:** De acuerdo con el art�culo 29 de la Ley 7/1985, de 2 de abril, Reguladora de las
+
+**Opciones:**
+  0. ases del R�gimen Local pueden funcionar en r�gimen de Concejo abierto
+  1. qu�llos municipios que por su localizaci�n geogr�fica, la mejor gesti�n de los
+  2. Lo pidan la mayor�a de los vecinos y lo decidan por acuerdo favorable la
+  3. omunidad Aut�noma.
+
+---
+
+### Pregunta 34
+
+**Texto:** La provincia de Barcelona tiene una poblaci�n de 5.664.579 habitantes. A la vista
+
+**Opciones:**
+  0. e ello, la Diputaci�n de esa provincia cuenta con:
+  1. 25 diputados provinciales.
+  2. 51 diputados provinciales.
+  3. 31 diputados provinciales.
+
+---
+
+### Pregunta 35
+
+**Texto:** Conforme a los datos del Instituto Nacional de Estad�stica en 2022 el municipio de
+
+**Opciones:**
+  0. uenca ten�a una poblaci�n de 53.389 habitantes. Conforme a este dato se�ale si la
+  1. ases del R�gimen Local:
+  2. S�, en todo caso, por ser capital de provincia.
+  3. S�, siempre que a iniciativa del Ayuntamiento de Cuenca lo decida la Asamblea
+
+---
+
+### Pregunta 36
+
+**Texto:** Se�ale la respuesta falsa sobre el R�gimen de organizaci�n de los municipios de
+
+**Opciones:**
+  0. Deber�n crear distritos, como divisiones territoriales propias, dotadas de
+  1. Existir� un Consejo Social de la Ciudad.
+  2. Los miembros de la Junta de Gobierno Local son �rganos directivos.
+  3. El titular de la Intervenci�n general municipal tiene la consideraci�n de �rgano
+
+---
+
+### Pregunta 37
+
+**Texto:** En un municipio de 25.000 habitantes no es obligatorio el servicio siguiente:
+
+**Opciones:**
+  0. Transporte colectivo urbano de viajeros.
+  1. Protecci�n civil.
+  2. Biblioteca p�blica.
+  3. Instalaciones deportivas de uso p�blico
+
+---
+
+### Pregunta 38
+
+**Texto:** La jefatura superior de todo el personal en la organizaci�n provincial se atribuye
+
+**Opciones:**
+  0. El Pleno.
+  1. El Presidente de la Diputaci�n.
+  2. La Junta de Gobierno.
+  3. Los Vicepresidentes en su orden.
+
+---
+
+### Pregunta 39
+
+**Texto:** �Qu� mayor�a se precisa para ser elegido Alcalde por los Concejales?:
+
+**Opciones:**
+  0. Mayor�a absoluta.
+  1. Mayor�a de votos.
+  2. Mayor�a de 2/3.
+  3. Mayor�a de 3/5.
+
+---

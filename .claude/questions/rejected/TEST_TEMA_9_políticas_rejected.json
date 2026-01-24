@@ -1,0 +1,2019 @@
+{
+  "metadata": {
+    "source_file": "TEST TEMA 9 políticas.pdf",
+    "source_path": "TEST Iniciales políticas\\TEST TEMA 9 políticas.pdf",
+    "tema": 9,
+    "categoria": "general",
+    "extraction_date": "2026-01-15T23:41:59.913300",
+    "reformulation_date": "2026-01-15T23:47:35.810628",
+    "total_questions": 40,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:56.224123",
+    "completed_count": 0,
+    "failed_count": 40
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "La igualdad es considerada por la Constitucin Espaola de 1978:",
+        "options": [
+          {
+            "text": "Como un valor superior del ordenamiento jurdico.",
+            "is_correct": false
+          },
+          {
+            "text": "Un derecho fundamental.",
+            "is_correct": false
+          },
+          {
+            "text": "Un principio rector de la poltica social y econmica.",
+            "is_correct": false
+          },
+          {
+            "text": "Todas las respuestas son correctas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La igualdad es considerada por la Constitucin Espaola de 1978:",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En qu artculo constitucional se recoge la obligacin de los poderes pblicos de",
+        "options": [
+          {
+            "text": "Artculo 6.",
+            "is_correct": false
+          },
+          {
+            "text": "Artculo 9.",
+            "is_correct": false
+          },
+          {
+            "text": "Artculo 12.",
+            "is_correct": false
+          },
+          {
+            "text": "Artculo 14.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En qu artculo constitucional se recoge la obligacin de los poderes pblicos de",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con el mbito subjetivo de aplicacin de la Ley 15/2022, de 12 de julio,",
+        "options": [
+          {
+            "text": "Se reconoce el derecho a la igualdad de trato y no discriminacin a todos los",
+            "is_correct": false
+          },
+          {
+            "text": "Se reconoce el derecho de toda persona a la igualdad de trato y no",
+            "is_correct": false
+          },
+          {
+            "text": "iscriminacin con independencia de su nacionalidad, de si son menores o",
+            "is_correct": false
+          },
+          {
+            "text": "Se reconoce el derecho a la igualdad de trato y no discriminacin con",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con el mbito subjetivo de aplicacin de la Ley 15/2022, de 12 de julio,",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con las definiciones previstas en el artculo 6 de la Ley 15/2022, de 12 de",
+        "options": [
+          {
+            "text": "Existe cuando una persona o grupo en que se integra es discriminada debido a",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando una persona es discriminada de manera simultnea o consecutiva por",
+            "is_correct": false
+          },
+          {
+            "text": "os o ms causas de las previstas en esta ley.",
+            "is_correct": false
+          },
+          {
+            "text": "Atentar contra la dignidad de una persona o grupo en que se integra y de crear",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con las definiciones previstas en el artculo 6 de la Ley 15/2022, de 12 de",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Es un tipo de discriminacin definido en la Ley 15/2022, de 12 de julio:",
+        "options": [
+          {
+            "text": "Discriminacin de hecho.",
+            "is_correct": false
+          },
+          {
+            "text": "Discriminacin transversal.",
+            "is_correct": false
+          },
+          {
+            "text": "Discriminacin interseccional.",
+            "is_correct": false
+          },
+          {
+            "text": "Discriminacin acumulativa.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Es un tipo de discriminacin definido en la Ley 15/2022, de 12 de julio:",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Qu entidad encargada de proteger y promover la igualdad de trato y no",
+        "options": [
+          {
+            "text": "iscriminacin de las personas por razn de las causas y en los mbitos competencia",
+            "is_correct": false
+          },
+          {
+            "text": "el Estado crea la Ley 15/2022, de 12 de julio, integral para la igualdad de trato y la",
+            "is_correct": false
+          },
+          {
+            "text": "El Alto Comisionado para la Igualdad y No discriminacin.",
+            "is_correct": false
+          },
+          {
+            "text": "La Delegacin del Gobierno contra la Discriminacin, Odio e Intolerancia.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu entidad encargada de proteger y promover la igualdad de trato y no",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En relacin con el rgimen sancionador en materia de igualdad de trato y no",
+        "options": [
+          {
+            "text": "iscriminacin regulado en la Ley 15/2022, de 12 de julio, integral para la igualdad",
+            "is_correct": false
+          },
+          {
+            "text": "e trato y la no discriminacin, seale la respuesta correcta:",
+            "is_correct": false
+          },
+          {
+            "text": "Las infracciones se clasifican en graves o muy graves.",
+            "is_correct": false
+          },
+          {
+            "text": "En aquellas comunidades autnomas en las que existan regmenes especiales de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En relacin con el rgimen sancionador en materia de igualdad de trato y no",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con lo establecido en la LO 3/2007, de 22 de marzo, para la igualdad",
+        "options": [
+          {
+            "text": "irectivos impartidos en Centros de Formacin pertenecientes a la Administracin",
+            "is_correct": false
+          },
+          {
+            "text": "onvocatoria?",
+            "is_correct": false
+          },
+          {
+            "text": "Al menos el 10% de las plazas.",
+            "is_correct": false
+          },
+          {
+            "text": "Al menos el 20% de las plazas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con lo establecido en la LO 3/2007, de 22 de marzo, para la igualdad",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La LO 3/2007, de 22 de marzo, para la igualdad efectiva entre mujeres y hombres, ha",
+        "options": [
+          {
+            "text": "En todos los rdenes jurisdiccionales.",
+            "is_correct": false
+          },
+          {
+            "text": "nicamente en el orden civil.",
+            "is_correct": false
+          },
+          {
+            "text": "En todos los rdenes jurisdiccionales salvo que se trate de procesos penales.",
+            "is_correct": false
+          },
+          {
+            "text": "En los procesos civiles y laborales.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La LO 3/2007, de 22 de marzo, para la igualdad efectiva entre mujeres y hombres, ha",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con lo establecido en la Ley Orgnica 3/2007, de 22 de marzo, para la",
+        "options": [
+          {
+            "text": "ontra la mujer se considera:",
+            "is_correct": false
+          },
+          {
+            "text": "Ilcita",
+            "is_correct": false
+          },
+          {
+            "text": "Ilegal.",
+            "is_correct": false
+          },
+          {
+            "text": "Anulable.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con lo establecido en la Ley Orgnica 3/2007, de 22 de marzo, para la",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Ilcita...'",
+        "Distractor muy corto: 'Ilegal....'",
+        "Distractor muy corto: 'Anulable....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.25,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.48
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con lo establecido en la LO 3/2007, de 22 de marzo, para la igualdad",
+        "options": [
+          {
+            "text": "La maternidad.",
+            "is_correct": false
+          },
+          {
+            "text": "La asuncin de obligaciones profesionales.",
+            "is_correct": false
+          },
+          {
+            "text": "El compromiso civil.",
+            "is_correct": false
+          },
+          {
+            "text": "Todas las respuestas correctas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con lo establecido en la LO 3/2007, de 22 de marzo, para la igualdad",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En relacin con el principio de composicin o presencia equilibrada regulado en la",
+        "options": [
+          {
+            "text": "Significa que, en el conjunto a que se refiera, las personas de cada sexo no",
+            "is_correct": false
+          },
+          {
+            "text": "Deber respetarse en las listas electorales.",
+            "is_correct": false
+          },
+          {
+            "text": "El Gobierno atender a este principio en el nombramiento de las personas",
+            "is_correct": false
+          },
+          {
+            "text": "onjunto, cuya designacin le corresponda.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En relacin con el principio de composicin o presencia equilibrada regulado en la",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con lo establecido en la L0 3/2007, de 22 de marzo, para la igualdad",
+        "options": [
+          {
+            "text": "nicamente, en el caso de las empresas que tengan 50 o ms trabajadores.",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando as se establezca en el Convenio Colectivo que le sea aplicable a la",
+            "is_correct": false
+          },
+          {
+            "text": "En el caso de las empresas que tengan ms de 250 trabajadores.",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando as lo imponga la autoridad tributaria en el marco de un procedimiento",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con lo establecido en la L0 3/2007, de 22 de marzo, para la igualdad",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La LO 3/2007, de 22 de marzo, ha venido a recoger expresamente la prohibicin de",
+        "options": [
+          {
+            "text": "En todo caso.",
+            "is_correct": false
+          },
+          {
+            "text": "En todo caso salvo, por razones de proteccin de la salud.",
+            "is_correct": false
+          },
+          {
+            "text": "En todo caso salvo que reglamentariamente se establezca lo contrario.",
+            "is_correct": false
+          },
+          {
+            "text": "La Ley de Igualdad no establece nada al respecto.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La LO 3/2007, de 22 de marzo, ha venido a recoger expresamente la prohibicin de",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En lo referente al empleo pblico, y ms concretamente en el mbito de la AGE, la L0",
+        "options": [
+          {
+            "text": "La aprobacin por el Gobierno de un Plan de Igualdad en el mbito de la AGE",
+            "is_correct": false
+          },
+          {
+            "text": "La incorporacin de la igualdad en las pruebas de acceso al empleo pblico y en",
+            "is_correct": false
+          },
+          {
+            "text": "El cmputo de permisos, excedencias y reducciones de jornadas derivadas de la",
+            "is_correct": false
+          },
+          {
+            "text": "onciliacin a efectos de valoracin del tiempo de servicios en la provisin de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En lo referente al empleo pblico, y ms concretamente en el mbito de la AGE, la L0",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Dentro de las medidas de tutela institucional recogidas en la Ley Orgnica 1/2004, de",
+        "options": [
+          {
+            "text": "La creacin de la Delegacin del Gobierno contra la Violencia de Gnero.",
+            "is_correct": false
+          },
+          {
+            "text": "La creacin del Observatorio Estatal contra la Violencia sobre la Mujer.",
+            "is_correct": false
+          },
+          {
+            "text": "La creacin dentro de las Fuerzas Armadas de Unidades especializadas en la",
+            "is_correct": false
+          },
+          {
+            "text": "La elaboracin de Planes de colaboracin que garanticen la ordenacin y",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Dentro de las medidas de tutela institucional recogidas en la Ley Orgnica 1/2004, de",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La Delegacin del Gobierno contra la Violencia de Gnero tiene rango de:",
+        "options": [
+          {
+            "text": "Direccin General.",
+            "is_correct": false
+          },
+          {
+            "text": "Subdireccin General.",
+            "is_correct": false
+          },
+          {
+            "text": "Secretara General.",
+            "is_correct": false
+          },
+          {
+            "text": "Subsecretara.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La Delegacin del Gobierno contra la Violencia de Gnero tiene rango de:",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con lo establecido en la LO 1/2004, de 28 de diciembre, es un derecho de",
+        "options": [
+          {
+            "text": "La reordenacin de su tiempo de trabajo.",
+            "is_correct": false
+          },
+          {
+            "text": "La movilidad funcional.",
+            "is_correct": false
+          },
+          {
+            "text": "La extincin de la relacin laboral con derecho a cobrar una ayuda econmica",
+            "is_correct": false
+          },
+          {
+            "text": "Todos son derechos de la mujer trabajadora vctima de violencia de gnero.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con lo establecido en la LO 1/2004, de 28 de diciembre, es un derecho de",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Cmo se acreditar la situacin de vctima de violencia de gnero para poder",
+        "options": [
+          {
+            "text": "nicamente mediante sentencia condenatoria.",
+            "is_correct": false
+          },
+          {
+            "text": "Mediante el correspondiente Informe de la Guardia Civil.",
+            "is_correct": false
+          },
+          {
+            "text": "Mediante informe de los servicios sociales, de los servicios especializados, o de",
+            "is_correct": false
+          },
+          {
+            "text": "Todas las respuestas son correctas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cmo se acreditar la situacin de vctima de violencia de gnero para poder",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Tras la reforma realizada en la LO 1/2004 de 28 de diciembre por la LO 10/2022, de 6",
+        "options": [
+          {
+            "text": "e septiembre, de garanta integral de la libertad sexual, qu nuevo derecho se",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho a la restitucin.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho a la informacin.",
+            "is_correct": false
+          },
+          {
+            "text": "El derecho a la reparacin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Tras la reforma realizada en la LO 1/2004 de 28 de diciembre por la LO 10/2022, de 6",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "A quin le corresponde elaborar la Macroencuesta de violencia contra las mujeres:",
+        "options": [
+          {
+            "text": "Al Observatorio Estatal de Violencia sobre la Mujer.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Instituto de las Mujeres.",
+            "is_correct": false
+          },
+          {
+            "text": "A la Delegacin del Gobierno contra la Violencia de Gnero.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Consejo de Investigaciones Sociolgicas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "A quin le corresponde elaborar la Macroencuesta de violencia contra las mujeres:",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la definicin incorrecta de acuerdo con lo establecido en el artculo 3 de la",
+        "options": [
+          {
+            "text": "Discriminacin indirecta: Se produce cuando una disposicin, criterio o prctica",
+            "is_correct": false
+          },
+          {
+            "text": "parentemente neutros ocasiona o puede ocasionar a una o varias personas una",
+            "is_correct": false
+          },
+          {
+            "text": "esventaja particular con respecto a otras por razn de orientacin sexual, e",
+            "is_correct": false
+          },
+          {
+            "text": "Identidad sexual: Vivencia interna e individual del sexo tal y como cada persona",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la definicin incorrecta de acuerdo con lo establecido en el artculo 3 de la",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En relacin con la Ley 4/2023, de 28 de febrero, para la igualdad real y efectiva de las",
+        "options": [
+          {
+            "text": "firmacin incorrecta:",
+            "is_correct": false
+          },
+          {
+            "text": "Regula el Consejo de Participacin de las Personas LGTBI como rgano de",
+            "is_correct": false
+          },
+          {
+            "text": "Indica que corresponde al Ministerio de Igualdad la elaboracin de la Estrategia",
+            "is_correct": false
+          },
+          {
+            "text": "onsejo de ministros su aprobacin, previo informe favorable de la Conferencia",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En relacin con la Ley 4/2023, de 28 de febrero, para la igualdad real y efectiva de las",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con lo establecido en la Ley 4/2023, de 28 de febrero, qu empresas",
+        "options": [
+          {
+            "text": "ebern contar con un conjunto planificado de medidas y recursos para alcanzar la",
+            "is_correct": false
+          },
+          {
+            "text": "ctuacin para la atencin del acoso o la violencia contra las personas LGTBI:",
+            "is_correct": false
+          },
+          {
+            "text": "La Ley LGTBI slo impone esta obligacin a las Administraciones Pblicas.",
+            "is_correct": false
+          },
+          {
+            "text": "Las empresas con ms de 50 personas trabajadoras.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con lo establecido en la Ley 4/2023, de 28 de febrero, qu empresas",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En relacin con el artculo 49 de la Constitucin Espaola, seale la respuesta",
+        "options": [
+          {
+            "text": "Indica que los poderes pblicos atendern particularmente las necesidades",
+            "is_correct": false
+          },
+          {
+            "text": "Ha sido reformado en el ao 2024, entrando en vigor dicha reforma el 17 de",
+            "is_correct": false
+          },
+          {
+            "text": "Seala que los poderes pblicos realizarn una poltica de previsin,",
+            "is_correct": false
+          },
+          {
+            "text": "Establece que las personas con discapacidad ejercen los derechos previstos en",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En relacin con el artculo 49 de la Constitucin Espaola, seale la respuesta",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con el Real Decreto Legislativo 1/2013, de 29 de noviembre, por el que se",
+        "options": [
+          {
+            "text": "prueba el Texto Refundido de la Ley General de derechos de las personas con",
+            "is_correct": false
+          },
+          {
+            "text": "iscapacidad y de su inclusin social, tienen la consideracin de personas con",
+            "is_correct": false
+          },
+          {
+            "text": "iscapacidad:",
+            "is_correct": false
+          },
+          {
+            "text": "Slo aquellas personas a las que se haya reconocido un grado de discapacidad.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con el Real Decreto Legislativo 1/2013, de 29 de noviembre, por el que se",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con el Real Decreto Legislativo 1/2013, de 29 de noviembre, por el que se",
+        "options": [
+          {
+            "text": "prueba el Texto Refundido de la Ley General de derechos de las personas con",
+            "is_correct": false
+          },
+          {
+            "text": "iscapacidad y de su inclusin social, las medidas de defensa jurdica frente a la",
+            "is_correct": false
+          },
+          {
+            "text": "iscriminacin se aplicarn:",
+            "is_correct": false
+          },
+          {
+            "text": "Con independencia de la existencia de reconocimiento oficial de la situacin de",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con el Real Decreto Legislativo 1/2013, de 29 de noviembre, por el que se",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La vigente normativa sobre discapacidad define la discriminacin indirecta:",
+        "options": [
+          {
+            "text": "Como la situacin en la que se encuentra una persona con discapacidad cuando",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando una disposicin legal, clusula contractual, o bien, un entorno, producto",
+            "is_correct": false
+          },
+          {
+            "text": "Cuando una persona o grupo es objeto de trato discriminatorio por su relacin",
+            "is_correct": false
+          },
+          {
+            "text": "on una persona con discriminacin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La vigente normativa sobre discapacidad define la discriminacin indirecta:",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "A travs de qu rgano de carcter consultivo se institucionaliza la colaboracin del",
+        "options": [
+          {
+            "text": "El Comit Consultivo de la Discapacidad.",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo Interterritorial de la Discapacidad.",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo Nacional de la Discapacidad.",
+            "is_correct": false
+          },
+          {
+            "text": "El Comit Consultivo de la Discapacidad y la Dependencia.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "A travs de qu rgano de carcter consultivo se institucionaliza la colaboracin del",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con la clasificacin recogida en la normativa vigente, no es uno de los",
+        "options": [
+          {
+            "text": "Empleo ordinario.",
+            "is_correct": false
+          },
+          {
+            "text": "Empleo protegido.",
+            "is_correct": false
+          },
+          {
+            "text": "Empleo autnomo.",
+            "is_correct": false
+          },
+          {
+            "text": "Empleo asistencial.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con la clasificacin recogida en la normativa vigente, no es uno de los",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "No es uno de los mecanismos de empleo protegido previstos en la normativa vigente:",
+        "options": [
+          {
+            "text": "Los centros especiales de empleo.",
+            "is_correct": false
+          },
+          {
+            "text": "Los centros ocupacionales.",
+            "is_correct": false
+          },
+          {
+            "text": "Los enclaves laborales.",
+            "is_correct": false
+          },
+          {
+            "text": "Todos los indicados constituyen frmulas de empleo protegido.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "No es uno de los mecanismos de empleo protegido previstos en la normativa vigente:",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En el sistema de empleo ordinario la cuota de reserva a favor de las personas con",
+        "options": [
+          {
+            "text": "iscapacidad ha quedado fijada:",
+            "is_correct": false
+          },
+          {
+            "text": "En, al menos, el 5% para las empresas con 50 o ms empleados.",
+            "is_correct": false
+          },
+          {
+            "text": "En, al menos, el 2% para las empresas con 50 o ms empleados.",
+            "is_correct": false
+          },
+          {
+            "text": "En, al menos, el 5% para las empresas con ms de 75 empleados.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En el sistema de empleo ordinario la cuota de reserva a favor de las personas con",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En qu ttulo competencial se ha amparado el Estado para dictar la Ley 39/2006, de",
+        "options": [
+          {
+            "text": "Artculo 149.1.1",
+            "is_correct": false
+          },
+          {
+            "text": "Artculo 148.1.1",
+            "is_correct": false
+          },
+          {
+            "text": "Artculo 149.1.13",
+            "is_correct": false
+          },
+          {
+            "text": "Artculo 148.1.13",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En qu ttulo competencial se ha amparado el Estado para dictar la Ley 39/2006, de",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Cul es el rgano de cooperacin para la articulacin del Sistema de Autonoma y",
+        "options": [
+          {
+            "text": "tencin a la Dependencia (SAAD), en el que participa la AGE y las CCAA:",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo Territorial del SAAD.",
+            "is_correct": false
+          },
+          {
+            "text": "La Conferencia Interterritorial del SAAD.",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo Territorial de Servicios Sociales y del SAAD.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul es el rgano de cooperacin para la articulacin del Sistema de Autonoma y",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El nivel mnimo de proteccin del Sistema de Autonoma y Atencin a la",
+        "options": [
+          {
+            "text": "ependencia ser financiado:",
+            "is_correct": false
+          },
+          {
+            "text": "Por la AGE, exclusivamente.",
+            "is_correct": false
+          },
+          {
+            "text": "Por las Comunidades Autnomas.",
+            "is_correct": false
+          },
+          {
+            "text": "Por la AGE, si bien, excepcionalmente, podrn participar en su financiacin las",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El nivel mnimo de proteccin del Sistema de Autonoma y Atencin a la",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La situacin de dependencia se clasifica en:",
+        "options": [
+          {
+            "text": "Grados.",
+            "is_correct": false
+          },
+          {
+            "text": "Porcentajes.",
+            "is_correct": false
+          },
+          {
+            "text": "Grados y niveles.",
+            "is_correct": false
+          },
+          {
+            "text": "Intervalos",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La situacin de dependencia se clasifica en:",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Grados....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con lo establecido en la Ley de Dependencia, cuando la persona necesita",
+        "options": [
+          {
+            "text": "yuda para realizar varias actividades bsicas de la vida diaria dos o tres veces al da,",
+            "is_correct": false
+          },
+          {
+            "text": "Como Dependiente moderado.",
+            "is_correct": false
+          },
+          {
+            "text": "Como Dependiente severo.",
+            "is_correct": false
+          },
+          {
+            "text": "Como Gran Dependiente.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con lo establecido en la Ley de Dependencia, cuando la persona necesita",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En relacin con el procedimiento y resolucin de reconocimiento de la situacin de",
+        "options": [
+          {
+            "text": "ependencia, seale la respuesta incorrecta:",
+            "is_correct": false
+          },
+          {
+            "text": "Se iniciar de oficio por los Servicios sociales autonmicos correspondientes a",
+            "is_correct": false
+          },
+          {
+            "text": "El reconocimiento de la situacin de dependencia se efectuar mediante",
+            "is_correct": false
+          },
+          {
+            "text": "La resolucin tendr validez en todo el territorio del Estado.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En relacin con el procedimiento y resolucin de reconocimiento de la situacin de",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El plazo mximo, entre la fecha de entrada de la solicitud y la resolucin de",
+        "options": [
+          {
+            "text": "6 meses.",
+            "is_correct": false
+          },
+          {
+            "text": "3 meses.",
+            "is_correct": false
+          },
+          {
+            "text": "9 meses.",
+            "is_correct": false
+          },
+          {
+            "text": "1 ao.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El plazo mximo, entre la fecha de entrada de la solicitud y la resolucin de",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: '6 meses....'",
+        "Distractor muy corto: '3 meses....'",
+        "Distractor muy corto: '9 meses....'",
+        "Distractor muy corto: '1 ao....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.443
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con lo establecido en la Ley de Dependencia, que servicio y/o prestacin",
+        "options": [
+          {
+            "text": "Servicio de atencin residencial.",
+            "is_correct": false
+          },
+          {
+            "text": "Prestacin econmica de asistencia personal.",
+            "is_correct": false
+          },
+          {
+            "text": "Prestacin econmica por cuidados en el entorno familiar y apoyo a cuidadores",
+            "is_correct": false
+          },
+          {
+            "text": "Servicio de ayuda a domicilio.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con lo establecido en la Ley de Dependencia, que servicio y/o prestacin",
+        "source": "TEST TEMA 9 políticas.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 9,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:22.590644"
+}

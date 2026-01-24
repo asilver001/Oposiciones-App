@@ -1,0 +1,1961 @@
+{
+  "metadata": {
+    "source_file": "1 TEST TEMA 1.pdf",
+    "source_path": "1 TEST TEMA 1.pdf",
+    "tema": 1,
+    "categoria": "general",
+    "extraction_date": "2026-01-15T23:39:40.174567",
+    "reformulation_date": "2026-01-15T23:47:35.535559",
+    "total_questions": 40,
+    "status": "pending_ai_completion"
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "�Qu� d�a entr� en vigor la Constituci�n Espa�ola de 1978?:",
+        "options": [
+          {
+            "text": "El 6 de diciembre de 1978.",
+            "is_correct": false
+          },
+          {
+            "text": "El 27 de diciembre de 1978.",
+            "is_correct": false
+          },
+          {
+            "text": "El 31 de octubre de 1978.",
+            "is_correct": false
+          },
+          {
+            "text": "El 29 de diciembre de 1978.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "�Qu� d�a entr� en vigor la Constituci�n Espa�ola de 1978?:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seg�n la Constituci�n de 1978, la forma pol�tica del Estado espa�ol es:",
+        "options": [
+          {
+            "text": "La Monarqu�a.",
+            "is_correct": false
+          },
+          {
+            "text": "La Monarqu�a Limitada.",
+            "is_correct": false
+          },
+          {
+            "text": "La Monarqu�a Constitucional.",
+            "is_correct": false
+          },
+          {
+            "text": "La Monarqu�a Parlamentaria.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seg�n la Constituci�n de 1978, la forma pol�tica del Estado espa�ol es:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Las primeras elecciones democr�ticas celebradas en Espa�a tras la muerte de Franco tuvieron lugar",
+        "options": [
+          {
+            "text": "1977",
+            "is_correct": false
+          },
+          {
+            "text": "1975",
+            "is_correct": false
+          },
+          {
+            "text": "1976",
+            "is_correct": false
+          },
+          {
+            "text": "1978",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las primeras elecciones democr�ticas celebradas en Espa�a tras la muerte de Franco tuvieron lugar",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: '1977...'",
+        "Distractor muy corto: '1975...'",
+        "Distractor muy corto: '1976...'",
+        "Distractor muy corto: '1978...'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.443
+    },
+    {
+      "question": {
+        "question_text": "El refer�ndum en el que se aprob� popularmente la Constituci�n se llev� a efecto el:",
+        "options": [
+          {
+            "text": "27 de diciembre de 1978",
+            "is_correct": false
+          },
+          {
+            "text": "6 de diciembre de 1978",
+            "is_correct": false
+          },
+          {
+            "text": "31 de octubre de 1978",
+            "is_correct": false
+          },
+          {
+            "text": "29 de diciembre de 1979",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El refer�ndum en el que se aprob� popularmente la Constituci�n se llev� a efecto el:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La Constituci�n de 1978 consta de:",
+        "options": [
+          {
+            "text": "Un pre�mbulo, 169 art�culos, 4 disposiciones adicionales, 8 disposiciones transitorias, 1",
+            "is_correct": false
+          },
+          {
+            "text": "isposici�n derogatoria y disposici�n final.",
+            "is_correct": false
+          },
+          {
+            "text": "Un pre�mbulo, 169 art�culos, 4 disposiciones adicionales, 8 disposiciones",
+            "is_correct": false
+          },
+          {
+            "text": "isposiciones derogatorias y 1 disposici�n final.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La Constituci�n de 1978 consta de:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El T�tulo II de la Constituci�n de 1978 est� dedicado a:",
+        "options": [
+          {
+            "text": "Las Cortes Generales.",
+            "is_correct": false
+          },
+          {
+            "text": "La Corona.",
+            "is_correct": false
+          },
+          {
+            "text": "Los Derechos y Deberes Fundamentales.",
+            "is_correct": false
+          },
+          {
+            "text": "El Gobierno.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El T�tulo II de la Constituci�n de 1978 est� dedicado a:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La Constituci�n de 1978 se fundamenta:",
+        "options": [
+          {
+            "text": "En la indisoluble unidad de la Naci�n Espa�ola.",
+            "is_correct": false
+          },
+          {
+            "text": "En la solidaridad de todos los espa�oles.",
+            "is_correct": false
+          },
+          {
+            "text": "En la pluralidad de pueblos integrantes de la Naci�n Espa�ola.",
+            "is_correct": false
+          },
+          {
+            "text": "En el compromiso de unidad de todos los pueblos y nacionalidades integrantes de la Naci�n",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La Constituci�n de 1978 se fundamenta:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El T�tulo VII de la Constituci�n Espa�ola se denomina:",
+        "options": [
+          {
+            "text": "Econom�a y Hacienda.",
+            "is_correct": false
+          },
+          {
+            "text": "Organizaci�n Territorial del Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "Del Poder Judicial.",
+            "is_correct": false
+          },
+          {
+            "text": "Del Gobierno y de la Administraci�n.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El T�tulo VII de la Constituci�n Espa�ola se denomina:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Son valores superiores del ordenamiento, seg�n la Constituci�n Espa�ola de 1978:",
+        "options": [
+          {
+            "text": "Libertad, justicia, solidaridad, pluralismo pol�tico.",
+            "is_correct": false
+          },
+          {
+            "text": "Pluralismo pol�tico, solidaridad, igualdad y seguridad jur�dica.",
+            "is_correct": false
+          },
+          {
+            "text": "Legalidad, liberta, igualdad y justicia.",
+            "is_correct": false
+          },
+          {
+            "text": "Pluralismo pol�tico, justicia, libertad e igualdad.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Son valores superiores del ordenamiento, seg�n la Constituci�n Espa�ola de 1978:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "�Qu� denominaci�n recibe el Cap�tulo III del T�tulo I de la Constituci�n Espa�ola?:",
+        "options": [
+          {
+            "text": "�De los principios rectores de la pol�tica social y econ�mica�.",
+            "is_correct": false
+          },
+          {
+            "text": "�De los derechos fundamentales y de las libertades p�blicas�.",
+            "is_correct": false
+          },
+          {
+            "text": "�De los derechos y deberes de los ciudadanos�.",
+            "is_correct": false
+          },
+          {
+            "text": "�Derechos y libertades�.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "�Qu� denominaci�n recibe el Cap�tulo III del T�tulo I de la Constituci�n Espa�ola?:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "�Qu� art�culos de la Constituci�n Espa�ola han sido objeto de reforma?:",
+        "options": [
+          {
+            "text": "El 35.",
+            "is_correct": false
+          },
+          {
+            "text": "El 48",
+            "is_correct": false
+          },
+          {
+            "text": "El 13.1, el 137 y el 50",
+            "is_correct": false
+          },
+          {
+            "text": "El 13.2, el 135 y el 49",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "�Qu� art�culos de la Constituci�n Espa�ola han sido objeto de reforma?:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'El 35....'",
+        "Distractor muy corto: 'El 48...'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Conforme a lo establecido en el art�culo 116 de la Constituci�n, la declaraci�n del estado de",
+        "options": [
+          {
+            "text": "Al Presidente del Gobierno mediante Real Decreto, previa autorizaci�n de las Cortes Generales.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Congreso de los Diputados, a propuesta del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Gobierno mediante Real Decreto, previa autorizaci�n del Congreso.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Rey a propuesta del Presidente del Gobierno.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Conforme a lo establecido en el art�culo 116 de la Constituci�n, la declaraci�n del estado de",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seg�n el art�culo 1.2 de la Constituci�n, la Soberan�a Nacional reside:",
+        "options": [
+          {
+            "text": "En los poderes del Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "En el Rey como Monarca.",
+            "is_correct": false
+          },
+          {
+            "text": "En el pueblo espa�ol.",
+            "is_correct": false
+          },
+          {
+            "text": "En las Cortes Generales.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seg�n el art�culo 1.2 de la Constituci�n, la Soberan�a Nacional reside:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El T�tulo de la Constituci�n m�s extenso es:",
+        "options": [
+          {
+            "text": "El T�tulo VIII �De la organizaci�n territorial del Estado�.",
+            "is_correct": false
+          },
+          {
+            "text": "El T�tulo I �De los derechos y deberes fundamentales�.",
+            "is_correct": false
+          },
+          {
+            "text": "El T�tulo X �De la reforma constitucional�.",
+            "is_correct": false
+          },
+          {
+            "text": "El T�tulo IX �del Tribunal Constitucional�",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El T�tulo de la Constituci�n m�s extenso es:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "�Qu� d�a fue aprobada por las CCGG la Constituci�n Espa�ola de 1978:",
+        "options": [
+          {
+            "text": "El 6 de diciembre de 1978",
+            "is_correct": false
+          },
+          {
+            "text": "El 31 de octubre de 1978.",
+            "is_correct": false
+          },
+          {
+            "text": "El 27 de diciembre de 1978.",
+            "is_correct": false
+          },
+          {
+            "text": "El 29 de diciembre de 1978.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "�Qu� d�a fue aprobada por las CCGG la Constituci�n Espa�ola de 1978:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El art�culo 4 de la Constituci�n establece que:",
+        "options": [
+          {
+            "text": "El castellano es la lengua espa�ola oficial del Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "La capital del Estado es la villa de Madrid.",
+            "is_correct": false
+          },
+          {
+            "text": "La bandera de Espa�a est� formada por tres franjas horizontales, roja, amarilla y roja, siendo la",
+            "is_correct": false
+          },
+          {
+            "text": "marilla de doble anchura que cada una de las rojas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El art�culo 4 de la Constituci�n establece que:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "media",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En relaci�n con el T�tulo Preliminar de la Constituci�n Espa�ola indique cu�l de las siguientes",
+        "options": [
+          {
+            "text": "firmaciones es correcta:",
+            "is_correct": false
+          },
+          {
+            "text": "Se compone de diez art�culos.",
+            "is_correct": false
+          },
+          {
+            "text": "Su reforma de realiza por la v�a del art�culo 167.",
+            "is_correct": false
+          },
+          {
+            "text": "Reconoce que los Estatutos podr�n reconocer banderas y ense�as propias de las Comunidades",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En relaci�n con el T�tulo Preliminar de la Constituci�n Espa�ola indique cu�l de las siguientes",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La reforma constitucional del derecho a sindicarse libremente (art�culo 28.1 CE), requiere:",
+        "options": [
+          {
+            "text": "Aprobaci�n por mayor�a de tres quintos de cada una de las C�maras.",
+            "is_correct": false
+          },
+          {
+            "text": "Aprobaci�n por mayor�a de dos tercios de cada una de las C�maras.",
+            "is_correct": false
+          },
+          {
+            "text": "Aprobaci�n por mayor�a de tres quintos de cada una de las C�maras, y si no hay acuerdo,",
+            "is_correct": false
+          },
+          {
+            "text": "probaci�n por Comisi�n paritaria de Diputados y Senadores.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La reforma constitucional del derecho a sindicarse libremente (art�culo 28.1 CE), requiere:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Se�ale a qui�n corresponde la iniciativa para la reforma constitucional:",
+        "options": [
+          {
+            "text": "Al Presidente del Gobierno y al Congreso.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Gobierno y al Defensor del Pueblo.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Gobierno, al Congreso y al Senado y al pueblo.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Gobierno, al Congreso, al Senado ya las Asambleas Legislativas de las Comunidades",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Se�ale a qui�n corresponde la iniciativa para la reforma constitucional:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Se�ale la respuesta correcta en relaci�n con la reforma operada en el art�culo 13.2 de la Constituci�n",
+        "options": [
+          {
+            "text": "Supuso la ampliaci�n del sufragio pasivo a los extranjeros en las elecciones auton�micas, en virtud",
+            "is_correct": false
+          },
+          {
+            "text": "e lo que, atendiendo a criterios de reciprocidad, pueda establecerse por Tratado o ley.",
+            "is_correct": false
+          },
+          {
+            "text": "La citada reforma exigi� la celebraci�n de refer�ndum preceptivo y vinculante.",
+            "is_correct": false
+          },
+          {
+            "text": "Se tramit� por el procedimiento ordinario de reformar previsto en el art�culo 167 CE.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Se�ale la respuesta correcta en relaci�n con la reforma operada en el art�culo 13.2 de la Constituci�n",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Se pretende reformar el art�culo de la Constituci�n referido a la propiedad privada y a la",
+        "options": [
+          {
+            "text": "el citado art�culo:",
+            "is_correct": false
+          },
+          {
+            "text": "La reforma por iniciativa popular exigir� no menos de 500.000 firmas acreditadas.",
+            "is_correct": false
+          },
+          {
+            "text": "Se proceder� a la aprobaci�n del principio de reforma por mayor�a de dos tercios y a la disoluci�n",
+            "is_correct": false
+          },
+          {
+            "text": "Una vez disueltas las Cortes, las C�maras elegidas deber�n ratificar la decisi�n y proceder al",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Se pretende reformar el art�culo de la Constituci�n referido a la propiedad privada y a la",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con su Disposici�n Final, la Constituci�n entr� en vigor:",
+        "options": [
+          {
+            "text": "En el momento de la sanci�n real.",
+            "is_correct": false
+          },
+          {
+            "text": "Tras su aprobaci�n por refer�ndum.",
+            "is_correct": false
+          },
+          {
+            "text": "Una vez aprobada por las Cortes Generales.",
+            "is_correct": false
+          },
+          {
+            "text": "El d�a de su publicaci�n en el BOE.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con su Disposici�n Final, la Constituci�n entr� en vigor:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El castellano es la lengua oficial del Estado y, de acuerdo con el T�tulo Preliminar, todos los espa�oles",
+        "options": [
+          {
+            "text": "El derecho a conocerla.",
+            "is_correct": false
+          },
+          {
+            "text": "El deber de usarla.",
+            "is_correct": false
+          },
+          {
+            "text": "El deber de conocerla y el derecho a usarla.",
+            "is_correct": false
+          },
+          {
+            "text": "El deber de usarla y el derecho a conocerla.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El castellano es la lengua oficial del Estado y, de acuerdo con el T�tulo Preliminar, todos los espa�oles",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "media",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El art�culo 7 del T�tulo Preliminar de la Constituci�n Espa�ola regula:",
+        "options": [
+          {
+            "text": "Los sindicatos de trabajadores y asociaciones empresariales.",
+            "is_correct": false
+          },
+          {
+            "text": "Los partidos pol�ticos.",
+            "is_correct": false
+          },
+          {
+            "text": "Las Fuerzas Armadas.",
+            "is_correct": false
+          },
+          {
+            "text": "La capitalidad del Estado.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El art�culo 7 del T�tulo Preliminar de la Constituci�n Espa�ola regula:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cuando se propusiere la reforma constitucional del derecho de reuni�n reconocido en el art�culo 21,",
+        "options": [
+          {
+            "text": "Mayor�a de tres quintos del Congreso y mayor�a absoluta del Senado.",
+            "is_correct": false
+          },
+          {
+            "text": "Mayor�a absoluta de cada C�mara.",
+            "is_correct": false
+          },
+          {
+            "text": "Mayor�a de tres quintos de ambas C�maras.",
+            "is_correct": false
+          },
+          {
+            "text": "Mayor�a de dos tercios de ambas C�maras.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cuando se propusiere la reforma constitucional del derecho de reuni�n reconocido en el art�culo 21,",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El art�culo 166 CE remite el ejercicio de la iniciativa de reforma a los �rganos previstos en:",
+        "options": [
+          {
+            "text": "El art�culo 87 apartado 1 de la Constituci�n Espa�ola.",
+            "is_correct": false
+          },
+          {
+            "text": "El art�culo 87 apartados 1 y 2 de la Constituci�n Espa�ola.",
+            "is_correct": false
+          },
+          {
+            "text": "El art�culo 87 apartados 1, 2 y 3 de la Constituci�n Espa�ola.",
+            "is_correct": false
+          },
+          {
+            "text": "Los art�culos 86 y 87 de la Constituci�n Espa�ola.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El art�culo 166 CE remite el ejercicio de la iniciativa de reforma a los �rganos previstos en:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "En el procedimiento de reforma ordinaria de la Constituci�n de 1978, contemplado en el Art. 167 de",
+        "options": [
+          {
+            "text": "Por 3/5 de cada una de las C�maras y, si no hubiera acuerdo entre ambas, se intentar� obtenerlos",
+            "is_correct": false
+          },
+          {
+            "text": "Por 2/3 de cada una de las C�maras y, si no hubiera acuerdo entre ambas, se intentar� obtenerlo",
+            "is_correct": false
+          },
+          {
+            "text": "Por mayor�a absoluta de cada una de las C�maras y, si no hubiera acuerdo entre ambas, se intentar�",
+            "is_correct": false
+          },
+          {
+            "text": "Por acuerdo favorable del Congreso y mayor�a absoluta del Senado y, si no hubiera acuerdo entre",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En el procedimiento de reforma ordinaria de la Constituci�n de 1978, contemplado en el Art. 167 de",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En caso de procederse a la reforma del art�culo 18 de la CE que regula el derecho al honor, a la",
+        "options": [
+          {
+            "text": "Aprobaci�n del principio de reforma por mayor�a de 3/5 de cada C�mara.",
+            "is_correct": false
+          },
+          {
+            "text": "Refer�ndum facultativo y vinculante, que se celebrar� cuando as� lo soliciten una d�cima pate de",
+            "is_correct": false
+          },
+          {
+            "text": "Aprobaci�n del principio de reforma por mayor�a de 2/3 de cada C�mara y disoluci�n inmediata de",
+            "is_correct": false
+          },
+          {
+            "text": "ortes.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En caso de procederse a la reforma del art�culo 18 de la CE que regula el derecho al honor, a la",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'ortes....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "El refer�ndum en caso de reforma agravada de la Constituci�n de 1978:",
+        "options": [
+          {
+            "text": "Es facultativo y no vinculante.",
+            "is_correct": false
+          },
+          {
+            "text": "Es facultativo y vinculante.",
+            "is_correct": false
+          },
+          {
+            "text": "Es preceptivo y no vinculante.",
+            "is_correct": false
+          },
+          {
+            "text": "Es preceptivo y vinculante.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El refer�ndum en caso de reforma agravada de la Constituci�n de 1978:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "�Qui�n debe solicitar la celebraci�n de refer�ndum en caso de reforma ordinaria de la Constituci�n",
+        "options": [
+          {
+            "text": "e 1978?",
+            "is_correct": false
+          },
+          {
+            "text": "La mayor�a absoluta de miembros del Congreso y del Senado.",
+            "is_correct": false
+          },
+          {
+            "text": "1/10 parte de los miembros de cualquier de las C�maras.",
+            "is_correct": false
+          },
+          {
+            "text": "1/5 parte de los miembros de cada una de las C�maras.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "�Qui�n debe solicitar la celebraci�n de refer�ndum en caso de reforma ordinaria de la Constituci�n",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'e 1978?...'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "�Qu� plazo establece la Constituci�n de 1978 para solicitar la celebraci�n de refer�ndum en caso de",
+        "options": [
+          {
+            "text": "probaci�n de una reforma constitucional del art. 167?:",
+            "is_correct": false
+          },
+          {
+            "text": "Habr� de solicitarse dentro de los 5 d�as siguientes a su aprobaci�n.",
+            "is_correct": false
+          },
+          {
+            "text": "Habr� de solicitarse dentro de los 10 d�as siguientes a su aprobaci�n.",
+            "is_correct": false
+          },
+          {
+            "text": "Habr� de solicitarse dentro de los 15 d�as siguientes a su aprobaci�n.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "�Qu� plazo establece la Constituci�n de 1978 para solicitar la celebraci�n de refer�ndum en caso de",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "La iniciativa para la reforma constitucional debe ir suscrita, al menos, en el Congreso por:",
+        "options": [
+          {
+            "text": "Mayor�a absoluta de los Diputados.",
+            "is_correct": false
+          },
+          {
+            "text": "50 diputados que pertenezcan a 2 grupos parlamentarios.",
+            "is_correct": false
+          },
+          {
+            "text": "2 grupos parlamentarios o 1/5 de los diputados.",
+            "is_correct": false
+          },
+          {
+            "text": "1 grupo parlamentario o 15 Diputados.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La iniciativa para la reforma constitucional debe ir suscrita, al menos, en el Congreso por:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "�Cu�l/es de los siguientes estados de anomal�a pol�tica regulados en el art�culo 116 CE ser� declarado",
+        "options": [
+          {
+            "text": "Los estados de alarma y excepci�n.",
+            "is_correct": false
+          },
+          {
+            "text": "El estado de alarma.",
+            "is_correct": false
+          },
+          {
+            "text": "El estado de excepci�n.",
+            "is_correct": false
+          },
+          {
+            "text": "Los estados de excepci�n y sitio.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "�Cu�l/es de los siguientes estados de anomal�a pol�tica regulados en el art�culo 116 CE ser� declarado",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En caso de declaraci�n del estado de alarma, el Gobierno podr� prorrogar el mismo:",
+        "options": [
+          {
+            "text": "Previa autorizaci�n de las Cortes Generales.",
+            "is_correct": false
+          },
+          {
+            "text": "Previa autorizaci�n del Congreso.",
+            "is_correct": false
+          },
+          {
+            "text": "Dando cuenta a las Cortes Generales.",
+            "is_correct": false
+          },
+          {
+            "text": "Dando cuenta al Congreso.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En caso de declaraci�n del estado de alarma, el Gobierno podr� prorrogar el mismo:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El art�culo 169 de la Constituci�n Espa�ola dispone que:",
+        "options": [
+          {
+            "text": "No podr� iniciarse la reforma constitucional en tiempo de guerra o de vigencia de algunos de los",
+            "is_correct": false
+          },
+          {
+            "text": "No podr� iniciarse la reforma constitucional en tiempo de guerra o de vigencia de alguno de los",
+            "is_correct": false
+          },
+          {
+            "text": "No podr� aprobarse la reforma constitucional en tiempo de guerra o de vigencia de alguno de los",
+            "is_correct": false
+          },
+          {
+            "text": "No podr� aprobarse la reforma constitucional en tiempo de guerra o de vigencia de algunos de los",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El art�culo 169 de la Constituci�n Espa�ola dispone que:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "�Qui�n aprob� la Constituci�n Espa�ola de 1978:",
+        "options": [
+          {
+            "text": "El Rey.",
+            "is_correct": false
+          },
+          {
+            "text": "El pueblo espa�ol.",
+            "is_correct": false
+          },
+          {
+            "text": "Las Cortes Generales.",
+            "is_correct": false
+          },
+          {
+            "text": "El Congreso de los Diputados.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "�Qui�n aprob� la Constituci�n Espa�ola de 1978:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'El Rey....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "�Cu�les son los tres T�tulos de la Constituci�n Espa�ola que se subdividen en Cap�tulos?:",
+        "options": [
+          {
+            "text": "Preliminar, I y VIII",
+            "is_correct": false
+          },
+          {
+            "text": "I, III y VIII.",
+            "is_correct": false
+          },
+          {
+            "text": "I, V y VII.",
+            "is_correct": false
+          },
+          {
+            "text": "II, IV y VIII.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "�Cu�les son los tres T�tulos de la Constituci�n Espa�ola que se subdividen en Cap�tulos?:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "�De las garant�as de las libertades y derechos fundamentales� es el nombre de un Cap�tulo del T�tulo",
+        "options": [
+          {
+            "text": "Primero",
+            "is_correct": false
+          },
+          {
+            "text": "Segundo.",
+            "is_correct": false
+          },
+          {
+            "text": "Tercero",
+            "is_correct": false
+          },
+          {
+            "text": "Cuarto.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "�De las garant�as de las libertades y derechos fundamentales� es el nombre de un Cap�tulo del T�tulo",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Primero...'",
+        "Distractor muy corto: 'Segundo....'",
+        "Distractor muy corto: 'Tercero...'",
+        "Distractor muy corto: 'Cuarto....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.443
+    },
+    {
+      "question": {
+        "question_text": "El derecho a una vivienda digna (art�culo 47 CE), para la Constituci�n espa�ola:",
+        "options": [
+          {
+            "text": "Es un valor superior de nuestro ordenamiento",
+            "is_correct": false
+          },
+          {
+            "text": "Es un derecho fundamental.",
+            "is_correct": false
+          },
+          {
+            "text": "Es un principio rector de la pol�tica social y econ�mica.",
+            "is_correct": false
+          },
+          {
+            "text": "No est� regulado de manera expresa.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El derecho a una vivienda digna (art�culo 47 CE), para la Constituci�n espa�ola:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "media",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El art�culo 2 de la Constituci�n Espa�ola, establece que:",
+        "options": [
+          {
+            "text": "La capital del Estado es la villa de Madrid",
+            "is_correct": false
+          },
+          {
+            "text": "La bandera de Espa�a est� formada por tres franjas horizontales, roja, amarilla y roja, siendo la",
+            "is_correct": false
+          },
+          {
+            "text": "marilla de doble anchura que cada una de las rojas",
+            "is_correct": false
+          },
+          {
+            "text": "La Constituci�n se fundamenta en la indisoluble unidad de la Naci�n espa�ola, patria com�n e",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El art�culo 2 de la Constituci�n Espa�ola, establece que:",
+        "source": "1 TEST TEMA 1.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 1,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    }
+  ],
+  "rejected_date": "2026-01-15T23:47:43.858606"
+}

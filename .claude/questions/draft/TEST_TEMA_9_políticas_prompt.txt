@@ -1,0 +1,510 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** TEST TEMA 9 políticas.pdf
+**Total preguntas:** 40
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** La igualdad es considerada por la Constituci�n Espa�ola de 1978:
+
+**Opciones:**
+  0. Como un valor superior del ordenamiento jur�dico.
+  1. Un derecho fundamental.
+  2. Un principio rector de la pol�tica social y econ�mica.
+  3. Todas las respuestas son correctas.
+
+---
+
+### Pregunta 2
+
+**Texto:** �En qu� art�culo constitucional se recoge la obligaci�n de los poderes p�blicos de
+
+**Opciones:**
+  0. Art�culo 6.
+  1. Art�culo 9.
+  2. Art�culo 12.
+  3. Art�culo 14.
+
+---
+
+### Pregunta 3
+
+**Texto:** De acuerdo con el �mbito subjetivo de aplicaci�n de la Ley 15/2022, de 12 de julio,
+
+**Opciones:**
+  0. Se reconoce el derecho a la igualdad de trato y no discriminaci�n a todos los
+  1. Se reconoce el derecho de toda persona a la igualdad de trato y no
+  2. iscriminaci�n con independencia de su nacionalidad, de si son menores o
+  3. Se reconoce el derecho a la igualdad de trato y no discriminaci�n con
+
+---
+
+### Pregunta 4
+
+**Texto:** De acuerdo con las definiciones previstas en el art�culo 6 de la Ley 15/2022, de 12 de
+
+**Opciones:**
+  0. Existe cuando una persona o grupo en que se integra es discriminada debido a
+  1. Cuando una persona es discriminada de manera simult�nea o consecutiva por
+  2. os o m�s causas de las previstas en esta ley.
+  3. Atentar contra la dignidad de una persona o grupo en que se integra y de crear
+
+---
+
+### Pregunta 5
+
+**Texto:** Es un tipo de discriminaci�n definido en la Ley 15/2022, de 12 de julio:
+
+**Opciones:**
+  0. Discriminaci�n de hecho.
+  1. Discriminaci�n transversal.
+  2. Discriminaci�n interseccional.
+  3. Discriminaci�n acumulativa.
+
+---
+
+### Pregunta 6
+
+**Texto:** Qu� entidad encargada de proteger y promover la igualdad de trato y no
+
+**Opciones:**
+  0. iscriminaci�n de las personas por raz�n de las causas y en los �mbitos competencia
+  1. el Estado crea la Ley 15/2022, de 12 de julio, integral para la igualdad de trato y la
+  2. El Alto Comisionado para la Igualdad y No discriminaci�n.
+  3. La Delegaci�n del Gobierno contra la Discriminaci�n, Odio e Intolerancia.
+
+---
+
+### Pregunta 7
+
+**Texto:** En relaci�n con el r�gimen sancionador en materia de igualdad de trato y no
+
+**Opciones:**
+  0. iscriminaci�n regulado en la Ley 15/2022, de 12 de julio, integral para la igualdad
+  1. e trato y la no discriminaci�n, se�ale la respuesta correcta:
+  2. Las infracciones se clasifican en graves o muy graves.
+  3. En aquellas comunidades aut�nomas en las que existan reg�menes especiales de
+
+---
+
+### Pregunta 8
+
+**Texto:** De acuerdo con lo establecido en la LO 3/2007, de 22 de marzo, para la igualdad
+
+**Opciones:**
+  0. irectivos impartidos en Centros de Formaci�n pertenecientes a la Administraci�n
+  1. onvocatoria?
+  2. Al menos el 10% de las plazas.
+  3. Al menos el 20% de las plazas.
+
+---
+
+### Pregunta 9
+
+**Texto:** La LO 3/2007, de 22 de marzo, para la igualdad efectiva entre mujeres y hombres, ha
+
+**Opciones:**
+  0. En todos los �rdenes jurisdiccionales.
+  1. �nicamente en el orden civil.
+  2. En todos los �rdenes jurisdiccionales salvo que se trate de procesos penales.
+  3. En los procesos civiles y laborales.
+
+---
+
+### Pregunta 10
+
+**Texto:** De acuerdo con lo establecido en la Ley Org�nica 3/2007, de 22 de marzo, para la
+
+**Opciones:**
+  0. ontra la mujer se considera:
+  1. Il�cita
+  2. Ilegal.
+  3. Anulable.
+
+---
+
+### Pregunta 11
+
+**Texto:** De acuerdo con lo establecido en la LO 3/2007, de 22 de marzo, para la igualdad
+
+**Opciones:**
+  0. La maternidad.
+  1. La asunci�n de obligaciones profesionales.
+  2. El compromiso civil.
+  3. Todas las respuestas correctas.
+
+---
+
+### Pregunta 12
+
+**Texto:** En relaci�n con el principio de composici�n o presencia equilibrada regulado en la
+
+**Opciones:**
+  0. Significa que, en el conjunto a que se refiera, las personas de cada sexo no
+  1. Deber� respetarse en las listas electorales.
+  2. El Gobierno atender� a este principio en el nombramiento de las personas
+  3. onjunto, cuya designaci�n le corresponda.
+
+---
+
+### Pregunta 13
+
+**Texto:** De acuerdo con lo establecido en la L0 3/2007, de 22 de marzo, para la igualdad
+
+**Opciones:**
+  0. �nicamente, en el caso de las empresas que tengan 50 o m�s trabajadores.
+  1. Cuando as� se establezca en el Convenio Colectivo que le sea aplicable a la
+  2. En el caso de las empresas que tengan m�s de 250 trabajadores.
+  3. Cuando as� lo imponga la autoridad tributaria en el marco de un procedimiento
+
+---
+
+### Pregunta 14
+
+**Texto:** La LO 3/2007, de 22 de marzo, ha venido a recoger expresamente la prohibici�n de
+
+**Opciones:**
+  0. En todo caso.
+  1. En todo caso salvo, por razones de protecci�n de la salud.
+  2. En todo caso salvo que reglamentariamente se establezca lo contrario.
+  3. La Ley de Igualdad no establece nada al respecto.
+
+---
+
+### Pregunta 15
+
+**Texto:** En lo referente al empleo p�blico, y m�s concretamente en el �mbito de la AGE, la L0
+
+**Opciones:**
+  0. La aprobaci�n por el Gobierno de un Plan de Igualdad en el �mbito de la AGE
+  1. La incorporaci�n de la igualdad en las pruebas de acceso al empleo p�blico y en
+  2. El c�mputo de permisos, excedencias y reducciones de jornadas derivadas de la
+  3. onciliaci�n a efectos de valoraci�n del tiempo de servicios en la provisi�n de
+
+---
+
+### Pregunta 16
+
+**Texto:** Dentro de las medidas de tutela institucional recogidas en la Ley Org�nica 1/2004, de
+
+**Opciones:**
+  0. La creaci�n de la Delegaci�n del Gobierno contra la Violencia de G�nero.
+  1. La creaci�n del Observatorio Estatal contra la Violencia sobre la Mujer.
+  2. La creaci�n dentro de las Fuerzas Armadas de Unidades especializadas en la
+  3. La elaboraci�n de Planes de colaboraci�n que garanticen la ordenaci�n y
+
+---
+
+### Pregunta 17
+
+**Texto:** La Delegaci�n del Gobierno contra la Violencia de G�nero tiene rango de:
+
+**Opciones:**
+  0. Direcci�n General.
+  1. Subdirecci�n General.
+  2. Secretar�a General.
+  3. Subsecretar�a.
+
+---
+
+### Pregunta 18
+
+**Texto:** De acuerdo con lo establecido en la LO 1/2004, de 28 de diciembre, es un derecho de
+
+**Opciones:**
+  0. La reordenaci�n de su tiempo de trabajo.
+  1. La movilidad funcional.
+  2. La extinci�n de la relaci�n laboral con derecho a cobrar una ayuda econ�mica
+  3. Todos son derechos de la mujer trabajadora v�ctima de violencia de g�nero.
+
+---
+
+### Pregunta 19
+
+**Texto:** �C�mo se acreditar� la situaci�n de v�ctima de violencia de g�nero para poder
+
+**Opciones:**
+  0. �nicamente mediante sentencia condenatoria.
+  1. Mediante el correspondiente Informe de la Guardia Civil.
+  2. Mediante informe de los servicios sociales, de los servicios especializados, o de
+  3. Todas las respuestas son correctas.
+
+---
+
+### Pregunta 20
+
+**Texto:** Tras la reforma realizada en la LO 1/2004 de 28 de diciembre por la LO 10/2022, de 6
+
+**Opciones:**
+  0. e septiembre, de garant�a integral de la libertad sexual, �qu� nuevo derecho se
+  1. El derecho a la restituci�n.
+  2. El derecho a la informaci�n.
+  3. El derecho a la reparaci�n.
+
+---
+
+### Pregunta 21
+
+**Texto:** A qui�n le corresponde elaborar la Macroencuesta de violencia contra las mujeres:
+
+**Opciones:**
+  0. Al Observatorio Estatal de Violencia sobre la Mujer.
+  1. Al Instituto de las Mujeres.
+  2. A la Delegaci�n del Gobierno contra la Violencia de G�nero.
+  3. Al Consejo de Investigaciones Sociol�gicas.
+
+---
+
+### Pregunta 22
+
+**Texto:** Se�ale la definici�n incorrecta de acuerdo con lo establecido en el art�culo 3 de la
+
+**Opciones:**
+  0. Discriminaci�n indirecta: Se produce cuando una disposici�n, criterio o pr�ctica
+  1. parentemente neutros ocasiona o puede ocasionar a una o varias personas una
+  2. esventaja particular con respecto a otras por raz�n de orientaci�n sexual, e
+  3. Identidad sexual: Vivencia interna e individual del sexo tal y como cada persona
+
+---
+
+### Pregunta 23
+
+**Texto:** En relaci�n con la Ley 4/2023, de 28 de febrero, para la igualdad real y efectiva de las
+
+**Opciones:**
+  0. firmaci�n incorrecta:
+  1. Regula el Consejo de Participaci�n de las Personas LGTBI como �rgano de
+  2. Indica que corresponde al Ministerio de Igualdad la elaboraci�n de la Estrategia
+  3. onsejo de ministros su aprobaci�n, previo informe favorable de la Conferencia
+
+---
+
+### Pregunta 24
+
+**Texto:** De acuerdo con lo establecido en la Ley 4/2023, de 28 de febrero, qu� empresas
+
+**Opciones:**
+  0. eber�n contar con un conjunto planificado de medidas y recursos para alcanzar la
+  1. ctuaci�n para la atenci�n del acoso o la violencia contra las personas LGTBI:
+  2. La Ley LGTBI s�lo impone esta obligaci�n a las Administraciones P�blicas.
+  3. Las empresas con m�s de 50 personas trabajadoras.
+
+---
+
+### Pregunta 25
+
+**Texto:** En relaci�n con el art�culo 49 de la Constituci�n Espa�ola, se�ale la respuesta
+
+**Opciones:**
+  0. Indica que los poderes p�blicos atender�n particularmente las necesidades
+  1. Ha sido reformado en el a�o 2024, entrando en vigor dicha reforma el 17 de
+  2. Se�ala que los poderes p�blicos realizar�n una pol�tica de previsi�n,
+  3. Establece que las personas con discapacidad ejercen los derechos previstos en
+
+---
+
+### Pregunta 26
+
+**Texto:** De acuerdo con el Real Decreto Legislativo 1/2013, de 29 de noviembre, por el que se
+
+**Opciones:**
+  0. prueba el Texto Refundido de la Ley General de derechos de las personas con
+  1. iscapacidad y de su inclusi�n social, tienen la consideraci�n de personas con
+  2. iscapacidad:
+  3. S�lo aquellas personas a las que se haya reconocido un grado de discapacidad.
+
+---
+
+### Pregunta 27
+
+**Texto:** De acuerdo con el Real Decreto Legislativo 1/2013, de 29 de noviembre, por el que se
+
+**Opciones:**
+  0. prueba el Texto Refundido de la Ley General de derechos de las personas con
+  1. iscapacidad y de su inclusi�n social, las medidas de defensa jur�dica frente a la
+  2. iscriminaci�n se aplicar�n:
+  3. Con independencia de la existencia de reconocimiento oficial de la situaci�n de
+
+---
+
+### Pregunta 28
+
+**Texto:** La vigente normativa sobre discapacidad define la discriminaci�n indirecta:
+
+**Opciones:**
+  0. Como la situaci�n en la que se encuentra una persona con discapacidad cuando
+  1. Cuando una disposici�n legal, cl�usula contractual, o bien, un entorno, producto
+  2. Cuando una persona o grupo es objeto de trato discriminatorio por su relaci�n
+  3. on una persona con discriminaci�n.
+
+---
+
+### Pregunta 29
+
+**Texto:** A trav�s de qu� �rgano de car�cter consultivo se institucionaliza la colaboraci�n del
+
+**Opciones:**
+  0. El Comit� Consultivo de la Discapacidad.
+  1. El Consejo Interterritorial de la Discapacidad.
+  2. El Consejo Nacional de la Discapacidad.
+  3. El Comit� Consultivo de la Discapacidad y la Dependencia.
+
+---
+
+### Pregunta 30
+
+**Texto:** De acuerdo con la clasificaci�n recogida en la normativa vigente, no es uno de los
+
+**Opciones:**
+  0. Empleo ordinario.
+  1. Empleo protegido.
+  2. Empleo aut�nomo.
+  3. Empleo asistencial.
+
+---
+
+### Pregunta 31
+
+**Texto:** No es uno de los mecanismos de empleo protegido previstos en la normativa vigente:
+
+**Opciones:**
+  0. Los centros especiales de empleo.
+  1. Los centros ocupacionales.
+  2. Los enclaves laborales.
+  3. Todos los indicados constituyen f�rmulas de empleo protegido.
+
+---
+
+### Pregunta 32
+
+**Texto:** En el sistema de empleo ordinario la cuota de reserva a favor de las personas con
+
+**Opciones:**
+  0. iscapacidad ha quedado fijada:
+  1. En, al menos, el 5% para las empresas con 50 o m�s empleados.
+  2. En, al menos, el 2% para las empresas con 50 o m�s empleados.
+  3. En, al menos, el 5% para las empresas con m�s de 75 empleados.
+
+---
+
+### Pregunta 33
+
+**Texto:** En qu� t�tulo competencial se ha amparado el Estado para dictar la Ley 39/2006, de
+
+**Opciones:**
+  0. Art�culo 149.1.1
+  1. Art�culo 148.1.1
+  2. Art�culo 149.1.13
+  3. Art�culo 148.1.13
+
+---
+
+### Pregunta 34
+
+**Texto:** Cu�l es el �rgano de cooperaci�n para la articulaci�n del Sistema de Autonom�a y
+
+**Opciones:**
+  0. tenci�n a la Dependencia (SAAD), en el que participa la AGE y las CCAA:
+  1. El Consejo Territorial del SAAD.
+  2. La Conferencia Interterritorial del SAAD.
+  3. El Consejo Territorial de Servicios Sociales y del SAAD.
+
+---
+
+### Pregunta 35
+
+**Texto:** El nivel m�nimo de protecci�n del Sistema de Autonom�a y Atenci�n a la
+
+**Opciones:**
+  0. ependencia ser� financiado:
+  1. Por la AGE, exclusivamente.
+  2. Por las Comunidades Aut�nomas.
+  3. Por la AGE, si bien, excepcionalmente, podr�n participar en su financiaci�n las
+
+---
+
+### Pregunta 36
+
+**Texto:** La situaci�n de dependencia se clasifica en:
+
+**Opciones:**
+  0. Grados.
+  1. Porcentajes.
+  2. Grados y niveles.
+  3. Intervalos
+
+---
+
+### Pregunta 37
+
+**Texto:** De acuerdo con lo establecido en la Ley de Dependencia, cuando la persona necesita
+
+**Opciones:**
+  0. yuda para realizar varias actividades b�sicas de la vida diaria dos o tres veces al d�a,
+  1. Como Dependiente moderado.
+  2. Como Dependiente severo.
+  3. Como Gran Dependiente.
+
+---
+
+### Pregunta 38
+
+**Texto:** En relaci�n con el procedimiento y resoluci�n de reconocimiento de la situaci�n de
+
+**Opciones:**
+  0. ependencia, se�ale la respuesta incorrecta:
+  1. Se iniciar� de oficio por los Servicios sociales auton�micos correspondientes a
+  2. El reconocimiento de la situaci�n de dependencia se efectuar� mediante
+  3. La resoluci�n tendr� validez en todo el territorio del Estado.
+
+---
+
+### Pregunta 39
+
+**Texto:** El plazo m�ximo, entre la fecha de entrada de la solicitud y la resoluci�n de
+
+**Opciones:**
+  0. 6 meses.
+  1. 3 meses.
+  2. 9 meses.
+  3. 1 a�o.
+
+---
+
+### Pregunta 40
+
+**Texto:** De acuerdo con lo establecido en la Ley de Dependencia, que servicio y/o prestaci�n
+
+**Opciones:**
+  0. Servicio de atenci�n residencial.
+  1. Prestaci�n econ�mica de asistencia personal.
+  2. Prestaci�n econ�mica por cuidados en el entorno familiar y apoyo a cuidadores
+  3. Servicio de ayuda a domicilio.
+
+---

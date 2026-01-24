@@ -1,0 +1,974 @@
+{
+  "metadata": {
+    "source_file": "Test tema 8. Enunciado.pdf",
+    "source_path": "TEMA Iniciales Administrativo\\Test tema 8. Enunciado.pdf",
+    "tema": 8,
+    "categoria": "administrativo",
+    "extraction_date": "2026-01-15T23:40:45.316703",
+    "reformulation_date": "2026-01-15T23:47:35.800541",
+    "total_questions": 29,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:56.188865",
+    "completed_count": 0,
+    "failed_count": 29
+  },
+  "questions": [
+    {
+      "question_text": "La competencia para establecer la legislacin sobre expropiacin",
+      "options": [
+        {
+          "text": "En exclusiva al Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Estado la legislacin bsica y a las CCAA la legislacin de desarrollo.",
+          "is_correct": false
+        },
+        {
+          "text": "En exclusiva a las CCAA.",
+          "is_correct": false
+        },
+        {
+          "text": "Es una competencia concurrente.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La competencia para establecer la legislacin sobre expropiacin",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En cuanto a la definicin que el artculo 1 LEF da sobre la expropiacin",
+      "options": [
+        {
+          "text": "Cualquier forma de privacin consentida de la propiedad privada o de",
+          "is_correct": false
+        },
+        {
+          "text": "erechos o intereses patrimoniales legtimos, cualesquiera que fueren",
+          "is_correct": false
+        },
+        {
+          "text": "Cualquier forma de privacin singular de la propiedad privada o de",
+          "is_correct": false
+        },
+        {
+          "text": "erechos o intereses patrimoniales legtimos, cualesquiera que fueren",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En cuanto a la definicin que el artculo 1 LEF da sobre la expropiacin",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Tendrn la consideracin de expropiantes:",
+      "options": [
+        {
+          "text": "El Estado, la Provincia o el Municipio.",
+          "is_correct": false
+        },
+        {
+          "text": "El Estado, las CCAA, la Provincia o el Municipio.",
+          "is_correct": false
+        },
+        {
+          "text": "El Estado, las CCAA, la Provincia, el Municipio y los Organismos",
+          "is_correct": false
+        },
+        {
+          "text": "utnomos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Tendrn la consideracin de expropiantes:",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las actuaciones del expediente expropiatorio se entendern (seale la",
+      "options": [
+        {
+          "text": "En primer lugar, con el propietario de la cosa o titular del derecho objeto",
+          "is_correct": false
+        },
+        {
+          "text": "e la expropiacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Con los titulares de derechos reales e intereses econmicos directos",
+          "is_correct": false
+        },
+        {
+          "text": "ondicin debidamente.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las actuaciones del expediente expropiatorio se entendern (seale la",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con el artculo 3 LEF, indique a quin considera la",
+      "options": [
+        {
+          "text": "dministracin como propietario de la cosa o titular del derecho objeto de",
+          "is_correct": false
+        },
+        {
+          "text": "A quin con dicho carcter conste en registros pblicos que produzcan",
+          "is_correct": false
+        },
+        {
+          "text": "A quin aparezca con tal carcter en registros fiscales.",
+          "is_correct": false
+        },
+        {
+          "text": "A quin lo sea pblica y notoriamente.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con el artculo 3 LEF, indique a quin considera la",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En qu casos se entendern las diligencias con el Ministerio Fiscal?",
+      "options": [
+        {
+          "text": "En todo caso.",
+          "is_correct": false
+        },
+        {
+          "text": "Cuando no comparecieren en el expediente los propietario o titulares.",
+          "is_correct": false
+        },
+        {
+          "text": "Cuando no comparecieren en el expediente los propietario o titulares, o",
+          "is_correct": false
+        },
+        {
+          "text": "Cuando no comparecieren en el expediente los propietario o titulares, o",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En qu casos se entendern las diligencias con el Ministerio Fiscal?",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "A tenor del artculo 7 LEF, las trasmisiones de dominio o cualesquiera",
+      "options": [
+        {
+          "text": "No impedirn la continuacin de los expedientes de expropiacin",
+          "is_correct": false
+        },
+        {
+          "text": "Impedirn la continuacin de los expedientes de expropiacin forzosa.",
+          "is_correct": false
+        },
+        {
+          "text": "B es correcta y, adems, se considerar subrogado el nuevo titular en",
+          "is_correct": false
+        },
+        {
+          "text": "C es correcta y, adems, se considerar subrogado el nuevo titular en",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "A tenor del artculo 7 LEF, las trasmisiones de dominio o cualesquiera",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La cosa expropiada se adquirir (artculo 8 LEF):",
+      "options": [
+        {
+          "text": "Con todas las cargas que la gravasen en el momento de iniciarse el",
+          "is_correct": false
+        },
+        {
+          "text": "Libre de cargas, sin posibilidad de conservar ningn derecho real sobre",
+          "is_correct": false
+        },
+        {
+          "text": "Libre de cargas totalmente.",
+          "is_correct": false
+        },
+        {
+          "text": "Libre de cargas, pudiendo conservarse algn derecho real sobre el",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La cosa expropiada se adquirir (artculo 8 LEF):",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El procedimiento de expropiacin forzosa consta de:",
+      "options": [
+        {
+          "text": "Un requisito previo y tres fases.",
+          "is_correct": false
+        },
+        {
+          "text": "Un requisito previo y cuatro fases.",
+          "is_correct": false
+        },
+        {
+          "text": "Cuatro fases.",
+          "is_correct": false
+        },
+        {
+          "text": "Tres fases.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El procedimiento de expropiacin forzosa consta de:",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En relacin con la declaracin de utilidad pblica, seale la respuesta",
+      "options": [
+        {
+          "text": "orrecta:",
+          "is_correct": false
+        },
+        {
+          "text": "Se entiende implcita, en relacin con la expropiacin de bienes",
+          "is_correct": false
+        },
+        {
+          "text": "Como regla general, en los casos de bienes inmuebles, se har",
+          "is_correct": false
+        },
+        {
+          "text": "En los casos en que por Ley se haya declarado genricamente la utilidad",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En relacin con la declaracin de utilidad pblica, seale la respuesta",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En materia de expropiacin forzosa, el rgano competente dentro de",
+      "options": [
+        {
+          "text": "El Subdelegado del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "El Delegado del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "El Subsecretario.",
+          "is_correct": false
+        },
+        {
+          "text": "El Ministro.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En materia de expropiacin forzosa, el rgano competente dentro de",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Indique cundo se inicia el expediente expropiatorio:",
+      "options": [
+        {
+          "text": "Con la relacin concreta e individualizada de bienes que realiza el",
+          "is_correct": false
+        },
+        {
+          "text": "eneficiario.",
+          "is_correct": false
+        },
+        {
+          "text": "Con la publicacin de la relacin mencionada en el apartado a).",
+          "is_correct": false
+        },
+        {
+          "text": "Una vez finalizado el perodo de informacin pblica.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Indique cundo se inicia el expediente expropiatorio:",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Indique qu recurso o recursos caben contra el acuerdo de necesidad",
+      "options": [
+        {
+          "text": "e ocupacin:",
+          "is_correct": false
+        },
+        {
+          "text": "nicamente recurso de alzada ante el Ministro.",
+          "is_correct": false
+        },
+        {
+          "text": "nicamente recurso de reposicin ante el Ministro.",
+          "is_correct": false
+        },
+        {
+          "text": "Recurso de alzada ante el Ministro y RCA ante el TSJ.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Indique qu recurso o recursos caben contra el acuerdo de necesidad",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cuando la expropiacin implique slo la necesidad de ocupacin de",
+      "options": [
+        {
+          "text": "qulla resulte antieconmica para el propietario la conservacin de la",
+          "is_correct": false
+        },
+        {
+          "text": "Podr ste solicitar de la Administracin que dicha expropiacin",
+          "is_correct": false
+        },
+        {
+          "text": "omprenda la totalidad de la finca, debiendo decidirse sobre ello en el",
+          "is_correct": false
+        },
+        {
+          "text": "Podr ste solicitar de la Administracin que dicha expropiacin",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cuando la expropiacin implique slo la necesidad de ocupacin de",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale de qu forma o formas se puede fijar el justiprecio:",
+      "options": [
+        {
+          "text": "Por mutuo acuerdo.",
+          "is_correct": false
+        },
+        {
+          "text": "Por mutuo acuerdo y expediente ordinario.",
+          "is_correct": false
+        },
+        {
+          "text": "Por expediente ordinario y Jurado Provincial de Expropiacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Por mutuo acuerdo, expediente ordinario y Jurado Provincial de",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale de qu forma o formas se puede fijar el justiprecio:",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Se inicia el expediente de justiprecio (art. 25 LEF):",
+      "options": [
+        {
+          "text": "Una vez publicado el acuerdo de necesidad de ocupacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Una vez firme el acuerdo de necesidad de ocupacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Una vez que se ha interpuesto RCA contra el acuerdo de necesidad de",
+          "is_correct": false
+        },
+        {
+          "text": "Una vez desestimado el RCA interpuesto contra el acuerdo de",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Se inicia el expediente de justiprecio (art. 25 LEF):",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la falsa en relacin con el justiprecio:",
+      "options": [
+        {
+          "text": "A tal fin se abrir un expediente conjunto para todos los propietarios de",
+          "is_correct": false
+        },
+        {
+          "text": "ienes expropiables.",
+          "is_correct": false
+        },
+        {
+          "text": "Si el objeto de la expropiacin forzosa estuviere constituido por valores",
+          "is_correct": false
+        },
+        {
+          "text": "Cuando la Administracin rechace la expropiacin total, se incluir en el",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la falsa en relacin con el justiprecio:",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En lo que respecta al expediente ordinario de justiprecio:",
+      "options": [
+        {
+          "text": "La Administracin requerir a los propietarios para que en el plazo de",
+          "is_correct": false
+        },
+        {
+          "text": "iez das, a contar desde el siguiente al de la notificacin, presenten",
+          "is_correct": false
+        },
+        {
+          "text": "La valoracin habr de ser forzosamente motivada y podr estar avalada",
+          "is_correct": false
+        },
+        {
+          "text": "La Administracin expropiante habr de aceptar o rechazar la valoracin",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En lo que respecta al expediente ordinario de justiprecio:",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Indique cul de los siguientes no es un vocal del Jurado Provincial de",
+      "options": [
+        {
+          "text": "Un Abogado del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Un Notario.",
+          "is_correct": false
+        },
+        {
+          "text": "Un Registrador Mercantil.",
+          "is_correct": false
+        },
+        {
+          "text": "Un funcionario tcnico.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Indique cul de los siguientes no es un vocal del Jurado Provincial de",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la correcta en relacin con las resoluciones adoptadas por el",
+      "options": [
+        {
+          "text": "No habrn de ser necesariamente motivadas.",
+          "is_correct": false
+        },
+        {
+          "text": "Ultimar la va gubernativa.",
+          "is_correct": false
+        },
+        {
+          "text": "Contra la misma proceder tan slo el RCA.",
+          "is_correct": false
+        },
+        {
+          "text": "Contra la misma proceder tan slo el recurso potestativo de reposicin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la correcta en relacin con las resoluciones adoptadas por el",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En lo que se refiere al pago del justiprecio (seale la falsa):",
+      "options": [
+        {
+          "text": "Una vez determinado el justo precio, se proceder al pago de la cantidad",
+          "is_correct": false
+        },
+        {
+          "text": "Para el expropiado, el pago del precio estar exento de toda clase de",
+          "is_correct": false
+        },
+        {
+          "text": "Cuando el propietario rehusare recibir el precio o cuando existiere",
+          "is_correct": false
+        },
+        {
+          "text": "ualquier litigio o cuestin entre el interesado y la Administracin, se",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En lo que se refiere al pago del justiprecio (seale la falsa):",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la falsa en relacin con la expropiacin urgente (art. 52 LEF):",
+      "options": [
+        {
+          "text": "Se declara mediante Real Decreto del Consejo de Ministros.",
+          "is_correct": false
+        },
+        {
+          "text": "Se entender cumplido el trmite de declaracin de necesidad de la",
+          "is_correct": false
+        },
+        {
+          "text": "Se notificar a los interesados afectados, segn los artculos tercero y",
+          "is_correct": false
+        },
+        {
+          "text": "uarto de esta Ley, el da y hora en que ha de levantarse el acta previa a",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la falsa en relacin con la expropiacin urgente (art. 52 LEF):",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En la expropiacin urgente (art. 52 LEF):",
+      "options": [
+        {
+          "text": "La indemnizacin por los perjuicios derivados de la rpida ocupacin",
+          "is_correct": false
+        },
+        {
+          "text": "Fijado el",
+          "is_correct": false
+        },
+        {
+          "text": "Efectuada la ocupacin de las fincas se tramitar el expediente de",
+          "is_correct": false
+        },
+        {
+          "text": "No hay que declarar la utilidad pblica o el inters social.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En la expropiacin urgente (art. 52 LEF):",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En relacin con el pago del justiprecio (indique la falsa):",
+      "options": [
+        {
+          "text": "Una vez determinado el justo precio, se proceder al pago de la cantidad",
+          "is_correct": false
+        },
+        {
+          "text": "El pago se verificar mediante taln nominativo al expropiado o por",
+          "is_correct": false
+        },
+        {
+          "text": "El pago del precio estar exento de toda clase de gastos, de impuestos y",
+          "is_correct": false
+        },
+        {
+          "text": "Cuando el propietario rehusare recibir el precio o cuando existiere",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En relacin con el pago del justiprecio (indique la falsa):",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale lo que proceda en relacin con el derecho de reversin (art. 54",
+      "options": [
+        {
+          "text": "No habr derecho de",
+          "is_correct": false
+        },
+        {
+          "text": "esafectacin del",
+          "is_correct": false
+        },
+        {
+          "text": "e utilidad pblica o inters social.",
+          "is_correct": false
+        },
+        {
+          "text": "Cuando de acuerdo con lo establecido en los apartados anteriores de",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale lo que proceda en relacin con el derecho de reversin (art. 54",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La responsabilidad por demora tendr lugar:",
+      "options": [
+        {
+          "text": "Cuando hayan transcurrido seis meses desde la iniciacin legal del",
+          "is_correct": false
+        },
+        {
+          "text": "Cuando hayan transcurrido seis meses desde la iniciacin legal del",
+          "is_correct": false
+        },
+        {
+          "text": "efinitiva el justo precio de las cosas o derechos.",
+          "is_correct": false
+        },
+        {
+          "text": "La cantidad que se fije definitivamente como justo precio devengar el",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La responsabilidad por demora tendr lugar:",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En cuanto a la retasacin (art. 58 LEF):",
+      "options": [
+        {
+          "text": "Si transcurrieran cuatro aos sin que el pago de la cantidad fijada como",
+          "is_correct": false
+        },
+        {
+          "text": "Si transcurrieran cuatro aos sin que el pago de la cantidad fijada como",
+          "is_correct": false
+        },
+        {
+          "text": "osas o derechos objeto de expropiacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Si transcurrieran cuatro aos sin que el pago de la cantidad fijada como",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En cuanto a la retasacin (art. 58 LEF):",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale cul de los siguientes no es un procedimiento especial de",
+      "options": [
+        {
+          "text": "De la expropiacin por zonas o grupos de bienes.",
+          "is_correct": false
+        },
+        {
+          "text": "De la expropiacin por incumplimiento de la funcin social de la",
+          "is_correct": false
+        },
+        {
+          "text": "De la expropiacin de bienes de valor intelectual.",
+          "is_correct": false
+        },
+        {
+          "text": "De la expropiacin por Entidades locales o por razn de",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale cul de los siguientes no es un procedimiento especial de",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En lo que respecta a las garantas jurisdiccionales en la",
+      "options": [
+        {
+          "text": "Siempre que sin haberse cumplido los requisitos sustanciales",
+          "is_correct": false
+        },
+        {
+          "text": "e declaracin de utilidad pblica o inters social, necesidad de",
+          "is_correct": false
+        },
+        {
+          "text": "menazada o perdida.",
+          "is_correct": false
+        },
+        {
+          "text": "Contra la resolucin administrativa que ponga fin al expediente",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En lo que respecta a las garantas jurisdiccionales en la",
+      "source": "Test tema 8. Enunciado.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 8,
+      "materia": "proc-administrativo",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

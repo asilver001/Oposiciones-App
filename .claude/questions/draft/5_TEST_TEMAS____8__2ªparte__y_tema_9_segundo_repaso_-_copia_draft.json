@@ -1,0 +1,1337 @@
+{
+  "metadata": {
+    "source_file": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+    "source_path": "Segundo repaso\\5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+    "tema": 9,
+    "categoria": "repaso",
+    "extraction_date": "2026-01-15T23:40:24.467354",
+    "reformulation_date": "2026-01-15T23:47:35.624482",
+    "total_questions": 40,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.642661",
+    "completed_count": 0,
+    "failed_count": 40
+  },
+  "questions": [
+    {
+      "question_text": "El Director Insular de la Isla de Menorca depende:",
+      "options": [
+        {
+          "text": "Esa isla no tiene Director insular.",
+          "is_correct": false
+        },
+        {
+          "text": "Del Delegado del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Del Subdelegado del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Del Consejo Insular.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Director Insular de la Isla de Menorca depende:",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La organizacin de los servicios territoriales no integrados en las Delegaciones del",
+      "options": [
+        {
+          "text": "Real Decreto.",
+          "is_correct": false
+        },
+        {
+          "text": "Orden conjunta del Ministerio del que dependan y del titular del Ministerio que",
+          "is_correct": false
+        },
+        {
+          "text": "Orden del Ministerio del que dependan previa autorizacin del Ministerio de",
+          "is_correct": false
+        },
+        {
+          "text": "Resolucin del Subsecretario del Ministerio del que dependan.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La organizacin de los servicios territoriales no integrados en las Delegaciones del",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los Delegados del Gobierno:",
+      "options": [
+        {
+          "text": "Son rganos superiores.",
+          "is_correct": false
+        },
+        {
+          "text": "Son nombrados por el Presidente del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Orgnicamente dependen del Presidente del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Ostentan la representacin ordinaria del Estado en el territorio de la Comunidad",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los Delegados del Gobierno:",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con el artculo 73 de la Ley 40/2015, de 1 de octubre, de Rgimen",
+      "options": [
+        {
+          "text": "Elevan al Ministerio de Poltica Territorial, con carcter semestral, un informe",
+          "is_correct": false
+        },
+        {
+          "text": "utonmico.",
+          "is_correct": false
+        },
+        {
+          "text": "Resuelven",
+          "is_correct": false
+        },
+        {
+          "text": "Ejercern las potestades administrativas que le sean atribuidas excepto la",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con el artculo 73 de la Ley 40/2015, de 1 de octubre, de Rgimen",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los Subdelegados del Gobierno:",
+      "options": [
+        {
+          "text": "Se nombran mediante Real Decreto del Consejo de Ministros.",
+          "is_correct": false
+        },
+        {
+          "text": "No son altos cargos.",
+          "is_correct": false
+        },
+        {
+          "text": "Tiene el rango que se determine en la relacin de puestos de trabajo.",
+          "is_correct": false
+        },
+        {
+          "text": "Se encuentran bajo la inmediata dependencia del titular del Ministerio de",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los Subdelegados del Gobierno:",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las Delegaciones del Gobierno en las Comunidades Autnomas contarn con las",
+      "options": [
+        {
+          "text": "rea de Fomento.",
+          "is_correct": false
+        },
+        {
+          "text": "rea de Industria y Energa.",
+          "is_correct": false
+        },
+        {
+          "text": "rea de Agricultura, que se denominar de Agricultura y Pesca en las",
+          "is_correct": false
+        },
+        {
+          "text": "elegaciones del Gobierno con territorio litoral.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las Delegaciones del Gobierno en las Comunidades Autnomas contarn con las",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Si el Estatuto de Autonoma de una Comunidad Autnoma no hubiera sealado",
+      "options": [
+        {
+          "text": "nde se sita la sede de la Delegacin del Gobierno, sta radicar:",
+          "is_correct": false
+        },
+        {
+          "text": "En la localidad que determine el Presidente del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "En la localidad donde radique la Asamblea Legislativa de la Comunidad",
+          "is_correct": false
+        },
+        {
+          "text": "utnoma.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Si el Estatuto de Autonoma de una Comunidad Autnoma no hubiera sealado",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La gestin de los servicios comunes en las Delegaciones del Gobierno corresponde",
+      "options": [
+        {
+          "text": "La Secretaria General",
+          "is_correct": false
+        },
+        {
+          "text": "La Secretaria General Tcnica.",
+          "is_correct": false
+        },
+        {
+          "text": "La Subdelegacin del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Subsecretaria del Ministerio de Poltica Territorial",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La gestin de los servicios comunes en las Delegaciones del Gobierno corresponde",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los Directores Insulares de la Administracin General del Estado:",
+      "options": [
+        {
+          "text": "Tienen rango de Subdirector General.",
+          "is_correct": false
+        },
+        {
+          "text": "Existen en las islas que se determinen por norma con rango de ley.",
+          "is_correct": false
+        },
+        {
+          "text": "Se nombran a travs del procedimiento de libre designacin.",
+          "is_correct": false
+        },
+        {
+          "text": "En caso de vacante, ausencia o enfermedad sern suplidos por quien designe el",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los Directores Insulares de la Administracin General del Estado:",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de los siguientes cargos es nombrado por el Consejo de Ministros?:",
+      "options": [
+        {
+          "text": "Director Insular.",
+          "is_correct": false
+        },
+        {
+          "text": "Delegado del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Subdelegado del Gobierno",
+          "is_correct": false
+        },
+        {
+          "text": "Ministro de Poltica Territorial",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de los siguientes cargos es nombrado por el Consejo de Ministros?:",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con lo dispuesto en la Ley 40/2015, de 1 de octubre, del Rgimen",
+      "options": [
+        {
+          "text": "elegados del Gobierno en las comunidades autnomas es la correcta?:",
+          "is_correct": false
+        },
+        {
+          "text": "Son rganos superiores que dependen orgnicamente del Presidente del",
+          "is_correct": false
+        },
+        {
+          "text": "Son rganos superiores con rango de Director General que dependen",
+          "is_correct": false
+        },
+        {
+          "text": "ompetente por razn de la materia.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con lo dispuesto en la Ley 40/2015, de 1 de octubre, del Rgimen",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con el artculo 154 de la Constitucin Espaola, dirigir la",
+      "options": [
+        {
+          "text": "dministracin general del Estado en el territorio de la Comunidad autnoma un",
+          "is_correct": false
+        },
+        {
+          "text": "elegado nombrado por:",
+          "is_correct": false
+        },
+        {
+          "text": "El Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "El Presidente del Gobierno.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con el artculo 154 de la Constitucin Espaola, dirigir la",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con el artculo 71 LRJSP, los servicios territoriales no integrados",
+      "options": [
+        {
+          "text": "ependern:",
+          "is_correct": false
+        },
+        {
+          "text": "Del Delegado del Gobierno, o en su caso Subdelegado del Gobierno, a travs de",
+          "is_correct": false
+        },
+        {
+          "text": "Del rgano central competente sobre el sector de actividad en el que aqullos",
+          "is_correct": false
+        },
+        {
+          "text": "De la Presidencia del Gobierno.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con el artculo 71 LRJSP, los servicios territoriales no integrados",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Quin ejercer la suplencia de un director insular en primer trmino?:",
+      "options": [
+        {
+          "text": "La persona que designe el delegado del gobierno del que dependa.",
+          "is_correct": false
+        },
+        {
+          "text": "La persona que designe el subdelegado del gobierno del que dependa.",
+          "is_correct": false
+        },
+        {
+          "text": "El secretario general.",
+          "is_correct": false
+        },
+        {
+          "text": "La persona que designe el propio director insular.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Quin ejercer la suplencia de un director insular en primer trmino?:",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Corresponde a los Delegados del Gobierno proteger el libre ejercicio de los",
+      "options": [
+        {
+          "text": "erechos y libertades y garantizar la seguridad ciudadana, a travs de los",
+          "is_correct": false
+        },
+        {
+          "text": "uya jefatura corresponder al Delegado del Gobierno, quien ejercer las",
+          "is_correct": false
+        },
+        {
+          "text": "ompetencias del Estado en esta materia bajo la dependencia funcional:",
+          "is_correct": false
+        },
+        {
+          "text": "Del Ministerio del Interior.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Corresponde a los Delegados del Gobierno proteger el libre ejercicio de los",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las entidades integrantes del sector pblico institucional estatal estarn sometidas",
+      "options": [
+        {
+          "text": "l control de eficacia y supervisin continua. A la luz del artculo 85 de la Ley",
+          "is_correct": false
+        },
+        {
+          "text": "El control de eficacia ser ejercido por la Intervencin General de la",
+          "is_correct": false
+        },
+        {
+          "text": "dministracin del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Para el desarrollo de estas actuaciones de control todas las entidades integrantes",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las entidades integrantes del sector pblico institucional estatal estarn sometidas",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los Organismos Autnomos se regirn:",
+      "options": [
+        {
+          "text": "Por lo dispuesto en la Ley 40/2015, en su ley de creacin, sus estatutos, la Ley",
+          "is_correct": false
+        },
+        {
+          "text": "e Procedimiento Administrativo Comn de las Administraciones Pblicas, la",
+          "is_correct": false
+        },
+        {
+          "text": "e las normas de derecho administrativo general y especial que le sea de",
+          "is_correct": false
+        },
+        {
+          "text": "plicacin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los Organismos Autnomos se regirn:",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Sobre las sociedades mercantiles estatales responda cul de las siguientes",
+      "options": [
+        {
+          "text": "firmaciones es correcta:",
+          "is_correct": false
+        },
+        {
+          "text": "Se crean mediante ley.",
+          "is_correct": false
+        },
+        {
+          "text": "Se crean por normal reglamentaria",
+          "is_correct": false
+        },
+        {
+          "text": "Se crean por Acuerdo del Consejo de Ministros.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Sobre las sociedades mercantiles estatales responda cul de las siguientes",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El acuerdo de disolucin de un organismo pblico como consecuencia de la",
+      "options": [
+        {
+          "text": "suncin de sus fines por los servicios de la AGE se adoptar por:",
+          "is_correct": false
+        },
+        {
+          "text": "La Secretara de Estado de Funcin Pblica en el plazo de un mes desde la",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo de Ministros en el plazo de un mes desde la recepcin de la",
+          "is_correct": false
+        },
+        {
+          "text": "omunicacin de incurrir en la mencionada causa de disolucin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El acuerdo de disolucin de un organismo pblico como consecuencia de la",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de los siguientes entes integrantes del sector pblico institucional estatal no",
+      "options": [
+        {
+          "text": "Las Sociedades Mercantiles Estatales.",
+          "is_correct": false
+        },
+        {
+          "text": "Las Fundaciones del Sector Pblico Estatal.",
+          "is_correct": false
+        },
+        {
+          "text": "Las Autoridades Administrativas Independientes.",
+          "is_correct": false
+        },
+        {
+          "text": "Las Agencias Estatales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de los siguientes entes integrantes del sector pblico institucional estatal no",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn lo establecido en el artculo 95.2 de la Ley 40/2015, se consideran servicios",
+      "options": [
+        {
+          "text": "omunes de los organismos pblicos, al menos, los siguientes:",
+          "is_correct": false
+        },
+        {
+          "text": "Contratacin pblica.",
+          "is_correct": false
+        },
+        {
+          "text": "Gestin de bienes muebles.",
+          "is_correct": false
+        },
+        {
+          "text": "Organizacin y recursos humanos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn lo establecido en el artculo 95.2 de la Ley 40/2015, se consideran servicios",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las Entidades Pblicas empresariales Autnomos se regirn:",
+      "options": [
+        {
+          "text": "Por lo dispuesto en la Ley 40/2015, en su ley de creacin, sus estatutos, la Ley",
+          "is_correct": false
+        },
+        {
+          "text": "e Procedimiento Administrativo Comn de las Administraciones Pblicas, la",
+          "is_correct": false
+        },
+        {
+          "text": "e las normas de derecho administrativo general y especial que le sea de",
+          "is_correct": false
+        },
+        {
+          "text": "plicacin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las Entidades Pblicas empresariales Autnomos se regirn:",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la afirmacin correcta en relacin con los organismos pblicos:",
+      "options": [
+        {
+          "text": "Los organismos pblicos se estructuran en los rganos de gobierno, y ejecutivos",
+          "is_correct": false
+        },
+        {
+          "text": "Los organismos pblicos se estructuran en los rganos de gobierno, y de control",
+          "is_correct": false
+        },
+        {
+          "text": "Los organismos pblicos se estructuran en los rganos de gobierno, y ejecutivos",
+          "is_correct": false
+        },
+        {
+          "text": "Los organismos pblicos se estructuran en los rganos de gobierno, y de control",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la afirmacin correcta en relacin con los organismos pblicos:",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cuando una entidad pblica empresarial se transforme en una agencia estatal:",
+      "options": [
+        {
+          "text": "La ley mediante la que se lleve a cabo la transformacin deber ir acompaada",
+          "is_correct": false
+        },
+        {
+          "text": "La ley mediante la que se lleve a cabo la transformacin deber ir acompaada",
+          "is_correct": false
+        },
+        {
+          "text": "El Real Decreto mediante el que se lleve a cabo la transformacin deber ir",
+          "is_correct": false
+        },
+        {
+          "text": "compaado por una memoria y un informe preceptivo del Ministerio de",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cuando una entidad pblica empresarial se transforme en una agencia estatal:",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En los Consorcios en que participe la AGE, el convenio:",
+      "options": [
+        {
+          "text": "Precisar de autorizacin previa del Consejo de Ministros y la competencia para",
+          "is_correct": false
+        },
+        {
+          "text": "Precisar de autorizacin previa de la IGAE y la competencia para su",
+          "is_correct": false
+        },
+        {
+          "text": "Precisar de autorizacin previa del Consejo de Ministros y la competencia para",
+          "is_correct": false
+        },
+        {
+          "text": "Precisar de autorizacin previa de la IGAE y la competencia para su",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En los Consorcios en que participe la AGE, el convenio:",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los Estatutos de las Fundaciones se aprobarn:",
+      "options": [
+        {
+          "text": "Por ley.",
+          "is_correct": false
+        },
+        {
+          "text": "Por convenio.",
+          "is_correct": false
+        },
+        {
+          "text": "Por RD del Consejo de Ministros.",
+          "is_correct": false
+        },
+        {
+          "text": "Por Acuerdo del Consejo de Ministros.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los Estatutos de las Fundaciones se aprobarn:",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn el artculo 93.2 de la Ley 40/2015, de 1 de octubre, de Rgimen Jurdico del",
+      "options": [
+        {
+          "text": "De forma conjunta con la norma de creacin del propio Organismo.",
+          "is_correct": false
+        },
+        {
+          "text": "Por Orden ministerial conjunta del Ministerio de Hacienda y Administraciones",
+          "is_correct": false
+        },
+        {
+          "text": "Por Real Decreto del Consejo de Ministros a propuesta conjunta del Ministerio",
+          "is_correct": false
+        },
+        {
+          "text": "e Administraciones Pblicas (actualmente Transformacin Digital y Funcin",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el artculo 93.2 de la Ley 40/2015, de 1 de octubre, de Rgimen Jurdico del",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las Oficinas Consulares Honorarias se crearn mediante:",
+      "options": [
+        {
+          "text": "Real Decreto aprobado en Consejo de Ministros a propuesta del Ministro de",
+          "is_correct": false
+        },
+        {
+          "text": "suntos Exteriores y Cooperacin",
+          "is_correct": false
+        },
+        {
+          "text": "Acuerdo del Consejo de Ministros a propuesta del Ministro de Asuntos",
+          "is_correct": false
+        },
+        {
+          "text": "Orden de la Presidencia del Gobierno a propuesta del Ministro de Asuntos",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las Oficinas Consulares Honorarias se crearn mediante:",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De conformidad con lo establecido en la Ley 2/2014, de 25 de marzo de la Accin y",
+      "options": [
+        {
+          "text": "Accin exterior",
+          "is_correct": false
+        },
+        {
+          "text": "Servicio exterior",
+          "is_correct": false
+        },
+        {
+          "text": "Poltica exterior",
+          "is_correct": false
+        },
+        {
+          "text": "Relaciones internacionales",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De conformidad con lo establecido en la Ley 2/2014, de 25 de marzo de la Accin y",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Son sujetos de la accin exterior (seale la falsa):",
+      "options": [
+        {
+          "text": "La Corona",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo General del Poder Judicial",
+          "is_correct": false
+        },
+        {
+          "text": "Las Comunidades Autnomas y entidades que integran la Administracin Local",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo de Estado",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Son sujetos de la accin exterior (seale la falsa):",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La creacin y supresin de las Misiones Diplomticas Permanentes se realizar",
+      "options": [
+        {
+          "text": "Real decreto del Consejo de Ministros, a iniciativa del Ministerio de Asuntos",
+          "is_correct": false
+        },
+        {
+          "text": "dministraciones Pblicas, previo informe del Consejo Ejecutivo de Poltica",
+          "is_correct": false
+        },
+        {
+          "text": "Real decreto del Consejo de Ministros, a iniciativa del Ministerio de Hacienda y",
+          "is_correct": false
+        },
+        {
+          "text": "dministraciones Pblicas, y a propuesta del Ministerio de Asuntos Exteriores",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La creacin y supresin de las Misiones Diplomticas Permanentes se realizar",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La Jefatura de las Representaciones Permanentes, ser ejercida por:",
+      "options": [
+        {
+          "text": "Embajador Extraordinario y Plenipotenciario",
+          "is_correct": false
+        },
+        {
+          "text": "Encargado de Negocios",
+          "is_correct": false
+        },
+        {
+          "text": "Embajador Representante Permanente",
+          "is_correct": false
+        },
+        {
+          "text": "Cnsul",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La Jefatura de las Representaciones Permanentes, ser ejercida por:",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los Embajadores sern designados y cesarn por:",
+      "options": [
+        {
+          "text": "Real decreto acordado en Consejo de Ministros a propuesta del Ministro de",
+          "is_correct": false
+        },
+        {
+          "text": "suntos Exteriores y de Cooperacin",
+          "is_correct": false
+        },
+        {
+          "text": "Orden del Ministro de Asuntos Exteriores y de Cooperacin",
+          "is_correct": false
+        },
+        {
+          "text": "Real decreto acordado en Consejo de Ministros a propuesta del Presidente del",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los Embajadores sern designados y cesarn por:",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La Misin Diplomtica o Representacin Permanente se integra por (seale la",
+      "options": [
+        {
+          "text": "Jefatura",
+          "is_correct": false
+        },
+        {
+          "text": "La Cancillera Diplomtica",
+          "is_correct": false
+        },
+        {
+          "text": "Las Consejeras, Agregaduras, Oficinas sectoriales, Oficinas Econmicas y",
+          "is_correct": false
+        },
+        {
+          "text": "omerciales, Oficinas Tcnicas de Cooperacin, Centros Culturales, Centros de",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La Misin Diplomtica o Representacin Permanente se integra por (seale la",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las Misiones Diplomticas Especiales:",
+      "options": [
+        {
+          "text": "Representan con carcter permanente a Espaa ante uno o varios Estados con",
+          "is_correct": false
+        },
+        {
+          "text": "Representa con carcter permanente a Espaa ante la Unin Europea o una",
+          "is_correct": false
+        },
+        {
+          "text": "Representan temporalmente al Reino de Espaa ante uno o varios Estados, con",
+          "is_correct": false
+        },
+        {
+          "text": "onde no existe Misin Diplomtica permanente o ante el conjunto de Estados,",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las Misiones Diplomticas Especiales:",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La creacin y supresin de los rganos tcnicos especializados a que se refiere el",
+      "options": [
+        {
+          "text": "rtculo 45.3 de la Ley 2/2014, de 25 de marzo, se realizar:",
+          "is_correct": false
+        },
+        {
+          "text": "Real decreto del Consejo de Ministros, a iniciativa del Ministerio de Asuntos",
+          "is_correct": false
+        },
+        {
+          "text": "dministraciones Pblicas, previo informe del Consejo Ejecutivo de Poltica",
+          "is_correct": false
+        },
+        {
+          "text": "Real decreto, a iniciativa del Ministerio competente, previo informe del",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La creacin y supresin de los rganos tcnicos especializados a que se refiere el",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La Jefatura de la Cancillera Diplomtica ser ejercida por:",
+      "options": [
+        {
+          "text": "El Embajador extraordinario y plenipotenciario",
+          "is_correct": false
+        },
+        {
+          "text": "El Embajador representante permanente",
+          "is_correct": false
+        },
+        {
+          "text": "El funcionario de la Carrera Diplomtica que desempee la Segunda Jefatura de",
+          "is_correct": false
+        },
+        {
+          "text": "El Cnsul",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La Jefatura de la Cancillera Diplomtica ser ejercida por:",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Son rganos tcnicos especializados de la Misin Diplomtica o Representacin",
+      "options": [
+        {
+          "text": "Las Consejeras",
+          "is_correct": false
+        },
+        {
+          "text": "Las Agregaduras",
+          "is_correct": false
+        },
+        {
+          "text": "Cancillera Diplomtica",
+          "is_correct": false
+        },
+        {
+          "text": "El Instituto Cervantes",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Son rganos tcnicos especializados de la Misin Diplomtica o Representacin",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los representantes permanentes ante organizaciones internacionales son:",
+      "options": [
+        {
+          "text": "rganos superiores y alto cargo",
+          "is_correct": false
+        },
+        {
+          "text": "rganos superiores pero no alto cargo",
+          "is_correct": false
+        },
+        {
+          "text": "rganos directivos y alto cargo",
+          "is_correct": false
+        },
+        {
+          "text": "rganos directivos pero no alto cargo",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los representantes permanentes ante organizaciones internacionales son:",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La Jefatura de la Misin Diplomtica Permanente ser ejercida por:",
+      "options": [
+        {
+          "text": "Un Embajador Representante Permanente",
+          "is_correct": false
+        },
+        {
+          "text": "Un Embajador Extraordinario y Plenipotenciario",
+          "is_correct": false
+        },
+        {
+          "text": "Un Cnsul",
+          "is_correct": false
+        },
+        {
+          "text": "Un Canciller",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La Jefatura de la Misin Diplomtica Permanente ser ejercida por:",
+      "source": "5 TEST TEMAS    8 (2ªparte) y tema 9 segundo repaso - copia.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 9,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

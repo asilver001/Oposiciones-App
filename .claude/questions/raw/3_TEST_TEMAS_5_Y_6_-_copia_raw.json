@@ -1,0 +1,412 @@
+{
+  "metadata": {
+    "source_file": "3 TEST TEMAS 5 Y 6 - copia.pdf",
+    "source_path": "Segundo repaso\\3 TEST TEMAS 5 Y 6 - copia.pdf",
+    "extraction_date": "2026-01-15T23:40:16.523331",
+    "tema": 3,
+    "categoria": "repaso",
+    "total_questions": 40
+  },
+  "questions": [
+    {
+      "raw_text": "El  Congreso  y  el  Senado,  y,  en  su  caso,  ambas  C�maras  conjuntamente,  podr�n",
+      "raw_options": [
+        "Ser�n vinculantes para los Tribunales y afectar�n a las resoluciones judiciales,",
+        "Ser�n  vinculantes  para  los  Tribunales,  pero  no  afectar�n  a  las  resoluciones",
+        "l Ministerio Fiscal para su conocimiento.",
+        "No  ser�n  vinculantes  para  los  Tribunales,  ni  afectar�n  a  las  resoluciones"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De conformidad con el T�tulo III de la CE, se�ale la respuesta correcta:",
+      "raw_options": [
+        "La Sala de lo Penal de la Audiencia Nacional, ser� la competente para conocer",
+        "e las causas contra Diputados y Senadores.",
+        "El voto de los diputados y senadores es personal y delegable.",
+        "Los  Diputados  y  Senadores  gozar�n  de  inviolabilidad  por  las  opiniones"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n  el  art�culo  134  CE,  �a  qui�n  corresponde  aprobar  los  presupuestos",
+      "raw_options": [
+        "Al Gobierno.",
+        "Al Congreso.",
+        "Al Senado.",
+        "A las Cortes Generales."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n lo previsto en el art�culo 69 CE, las CCAA elegir�n:",
+      "raw_options": [
+        "Dos  senadores,  y  otro  m�s  por  cada  mill�n  de  habitantes  de  su  respectivo",
+        "Dos senadores.",
+        "Un senador, y otro m�s por cada mill�n de habitantes de su respectivo territorio.",
+        "Un senador, y dos m�s por cada mill�n de habitantes de su respectivo territorio."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De acuerdo con el art�culo 68 CE, el Congreso:",
+      "raw_options": [
+        "Est� formado por 350 diputados.",
+        "La elecci�n de sus miembros se verificar� en cada circunscripci�n, atendiendo a",
+        "riterios de representaci�n mayoritaria.",
+        "Ser�n electores y elegibles, los espa�oles y extranjeros mayores de edad, seg�n"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De acuerdo con lo dispuesto en el art�culo 66 de la Constituci�n Espa�ola:",
+      "raw_options": [
+        "La potestad legislativa del Estado la ejerce  exclusivamente  el  Congreso  de los",
+        "iputados.",
+        "La potestad legislativa del Estado la ejercen las Cortes Generales.",
+        "La  potestad  legislativa  del  Estado  la  ejercen  la  Cortes  Generales  y  las"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "No es una competencia de las CCGG:",
+      "raw_options": [
+        "La potestad legislativa.",
+        "El control de la acci�n del Gobierno.",
+        "La  convocatoria  de  refer�ndum  consultivo  a  propuesta  del  Presidente  del",
+        "La aprobaci�n de los Prepuestos Generales del Estado."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "La prestaci�n del consentimiento del Estado para obligarse por medio de tratados",
+      "raw_options": [
+        "Que  afecten  a  la  integridad  territorial  del  Estado  o  a  los  derechos  y  deberes",
+        "Que  afecten  a  la  integridad  territorial  del  Estado  o  a  los  derechos  y  deberes",
+        "Que  afecten  a  la  integridad  territorial  del  Estado  o  a  los  derechos  y  deberes",
+        "Que  afecten  a  la  integridad  territorial  del  Estado  o  a  los  derechos  y  deberes"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qu� materia no se encuentra reservada a ley org�nica?:",
+      "raw_options": [
+        "Las  formas  de  ejercicio  de  la  iniciativa  popular  para  la  presentaci�n  de",
+        "El estado de alarma.",
+        "La composici�n, organizaci�n y funciones del Ministerio Fiscal.",
+        "El Consejo de Estado."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "No proceder� la iniciativa popular para la presentaci�n de proposiciones de ley de",
+      "raw_options": [
+        "onformidad con el art�culo 87.3:",
+        "En materias propias de ley org�nica, tributarias o de car�cter internacional, ni en",
+        "En  materias  propias  de  ley  org�nica,  leyes  de  bases,  tributarias  o  de  car�cter",
+        "En  materias  propias  de  ley  org�nica,  de  car�cter  internacional,  derechos  y"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De  conformidad  con  el  art�culo  74  CE,  las  C�maras  se  reunir�n  en  sesi�n",
+      "raw_options": [
+        "onjunta:",
+        "Para ejercer las competencias legislativas que el T�tulo II atribuye expresamente",
+        "las Cortes Generales.",
+        "Para ejercer las competencias legislativas que el T�tulo V atribuye expresamente"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De conformidad con el art�culo 72.2 CE:",
+      "raw_options": [
+        "Las  sesiones  conjuntas  ser�n  presididas  por  el  Presidente  del  Congreso  y  se",
+        "bsoluta de cada C�mara.",
+        "Las  sesiones  conjuntas  de  las  CCGG,  ser�n  presididas  por  el  Presidente  del",
+        "ongreso y se regir�n por un Reglamento de las Cortes Generales aprobado por"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Las  competencias  relativas  al  nombramiento  y  separaci�n  de  altos  cargos",
+      "raw_options": [
+        "tribuidas al Consejo de Ministros:",
+        "Son  delegables,  a  propuesta  del  Presidente  del  Gobierno,  en  las  Comisiones",
+        "elegadas del Gobierno.",
+        "Son delegables en el Ministro correspondiente."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n lo establecido en la Ley  del Gobierno, el Real Decreto de creaci�n de  una",
+      "raw_options": [
+        "omisi�n Delegada del Gobierno, deber� especificar en todo caso:",
+        "El  miembro  del  Gobierno  o  subsecretario  que  asume  la  presidencia  de  la",
+        "omisi�n.",
+        "Los miembros del Gobierno y en su caso subsecretarios que la integran."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "En  los  casos  de  vacante,  ausencia  o  enfermedad,  las  funciones  del  Presidente  del",
+      "raw_options": [
+        "Por los Vicepresidentes, de acuerdo con su orden de prelaci�n, y en defecto de",
+        "Por quien �l mismo designe, siempre que sea miembro del Gobierno.",
+        "Por  quien  �l  mismo  designe,  siempre  que  sea  miembro  del  Gobierno  y  previo",
+        "e los Diputados."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "En  atenci�n  a  lo  establecido  en  el  art�culo  113  CE,  el  Congreso  de  los  Diputados",
+      "raw_options": [
+        "La moci�n de censura por mayor�a simple propuesta al menos por una d�cima",
+        "La  moci�n  de  censura  propuesta  al  menos  por  la  mayor�a  absoluta  de  los",
+        "iputados, y habr� de incluir un candidato a la Presidencia del Gobierno.",
+        "La moci�n de censura por mayor�a absoluta propuesta al menos por una d�cima"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Corresponde al Congreso (se�ale la falsa):",
+      "raw_options": [
+        "Adoptar una moci�n de censura que ser� aprobada por mayor�a absoluta.",
+        "Aprobar  la  cuesti�n  de  confianza  planteada  por  el  Presidente  del  Gobierno",
+        "Otorgar  la  confianza  al  candidato  a  Presidente  del  Gobierno  por  mayor�a",
+        "bsoluta en primera votaci�n y mayor�a simple en segunda votaci�n, 48 horas"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Todos los asuntos que vayan  a  someterse a  aprobaci�n  del  Consejo de  Ministros,",
+      "raw_options": [
+        "eben  ser  examinados  por  el  siguiente  �rgano  de  colaboraci�n  y  apoyo  al",
+        "Comisi�n General de Secretarios de Estado y Subsecretarios.",
+        "Secretariado de Gobierno.",
+        "Gabinete de la Presidencia del Gobierno."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale la respuesta correcta en relaci�n con los Gabinetes:",
+      "raw_options": [
+        "Prestan  su  apoyo  a  los  miembros  del  Gobierno  y  Secretarios  de  Estado  en  el",
+        "esarrollo  de  su  labor  pol�tica,  en  el  cumplimiento  de  las  tareas  de  car�cter",
+        "dministrativa.",
+        "El  Gabinete  de  la  Presidencia  del  Gobierno  se  regular�  por  Real  Decreto  del"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n el art�culo 108 de la Constituci�n Espa�ola, el Gobierno responde:",
+      "raw_options": [
+        "Solidariamente en su gesti�n pol�tica ante el Congreso de los Diputados.",
+        "Solidariamente en su gesti�n pol�tica ante las Cortes Generales.",
+        "Mancomunadamente en su gesti�n pol�tica ante el Congreso de los Diputados.",
+        "Mancomunadamente en su gesti�n pol�tica ante las Cortes Generales."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qu� meses abarca el segundo periodo de sesiones del Senado?",
+      "raw_options": [
+        "De febrero a junio.",
+        "De septiembre a diciembre.",
+        "De enero a julio.",
+        "De enero a mayo."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qu� mayor�a se necesita en el Senado para oponer un veto a una proposici�n de",
+      "raw_options": [
+        "Mayor�a absoluta.",
+        "Mayor�a de 2/3.",
+        "El Senado no puede vetar materias aprobadas por el Congreso.",
+        "Mayor�a de 2/3"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�ntos  componentes  puede  tener  como  m�ximo  la  delegaci�n  auton�mica",
+      "raw_options": [
+        "Dos.",
+        "Tres.",
+        "Cuatro.",
+        "No hay un n�mero m�ximo previsto"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Se�ale  la respuesta  correcta  en  relaci�n  con  los  requisitos  para el  nombramiento",
+      "raw_options": [
+        "e los Ministros y Secretarios de Estado:",
+        "En  ambos  supuestos  se  exige  ser  espa�ol,  mayor  de  edad,  disfrutar  de  los",
+        "erechos de sufragio activo y pasivo, as� como no estar inhabilitado para ejercer",
+        "el ejercicio del alto cargo de la Administraci�n General del Estado."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Las  delegaciones  legislativas  otorgadas  por  las  Cortes  Generales  quedar�n  en",
+      "raw_options": [
+        "onsecuencia de:",
+        "La celebraci�n de elecciones generales.",
+        "La p�rdida de confianza parlamentaria por aprobaci�n de la moci�n de censura",
+        "La dimisi�n o fallecimiento del presidente."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n  el  art�culo  24  de  la  Ley  50/1997,  de  27  de  noviembre,  del  Gobierno,  los",
+      "raw_options": [
+        "1�  Disposiciones  aprobadas  por  Real  Decreto  del  Presidente  del  Gobierno  o",
+        "cordado  en  el  Consejo  de  Ministros.  2�  Disposiciones  aprobadas  por  Orden",
+        "1�  Disposiciones  aprobadas  por  Real  Decreto  del  Presidente  del  Gobierno.  2�",
+        "isposiciones acordadas en el Consejo de Ministros."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De  acuerdo  con  los  art�culos  101  y  102  de  la  Constituci�n  Espa�ola,  �cu�l  de  las",
+      "raw_options": [
+        "El  Gobierno  cesa  tras  la  celebraci�n  de  elecciones  generales,  en  los  casos  de",
+        "imisi�n o fallecimiento de su Presidente.",
+        "La  responsabilidad  criminal  del  Presidente  del  Gobierno  ser�  exigible,  en  su",
+        "aso, ante la Sala de lo Penal del Tribunal Supremo."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n  lo  dispuesto  en  el  art�culo  8.3  de  la  Ley  50/1997,  de  27  de  noviembre,  del",
+      "raw_options": [
+        "Un  Vicepresidente  del  Gobierno  o,  en  su  defecto,  por  el  Ministro  que",
+        "orresponda seg�n el orden de precedencia de los Departamentos Ministeriales.",
+        "El Ministro de la Presidencia.",
+        "Un Secretario de Estado del Ministerio de Hacienda."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "De  acuerdo  con  la  Constituci�n  espa�ola  de  1978,  �en  cu�l  de  las  siguientes",
+      "raw_options": [
+        "Estatutos de autonom�a.",
+        "Regulaci�n de la tauromaquia como patrimonio cultural.",
+        "Reforma constitucional.",
+        "Lo relativo a la prerrogativa de gracia."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Seg�n lo dispuesto por el art�culo 13 de la Ley 50/1997, de 27 de noviembre, del",
+      "raw_options": [
+        "La  suplencia  de  los  Ministros  para el  despacho  ordinario  de  los  asuntos  de su",
+        "ompetencia se determina por Real Decreto del Consejo de Ministros, debiendo",
+        "En  los  casos  de  vacante,  ausencia  o  enfermedad,  las  funciones  del  Presidente",
+        "En caso de que la asistencia de un Ministro a la reuni�n de un �rgano colegiado"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qui�n representa al Consejo de Ministros?",
+      "raw_options": [
+        "El Ministro de la Presidencia.",
+        "El Ministro portavoz del Gobierno",
+        "Los ministros respectivos en el �mbito de su competencia",
+        "El Presidente del Gobierno."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Al Consejo de Ministros, le corresponde el ejercicio de las siguientes funciones:",
+      "raw_options": [
+        "Aprobar los anteproyectos de ley y su remisi�n al Congreso de los Diputados o,",
+        "Aprobar la Ley de Presupuestos Generales del Estado",
+        "Aprobar los Reales Decretos-leyes y los Reales Decretos legislativos.",
+        "Manifestar  el  consentimiento  a  los  tratados  internacionales  de  los  que  Espa�a"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qu�  art�culo  de  la  constituci�n  est�  dedicado  a  establecer  la  composici�n  del",
+      "raw_options": [
+        "El 105",
+        "El 98",
+        "El 102",
+        "El 101"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "El presidente del Gobierno en funciones no puede:",
+      "raw_options": [
+        "Proponer al Rey la disoluci�n de las Cortes",
+        "Platear la cuesti�n de confianza",
+        "Proponer al Rey la convocatoria de un refer�ndum consultivo",
+        "Todas son funciones que no puede realizar."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Los miembros de las Cortes Generales:",
+      "raw_options": [
+        "Est�n ligados por mandato imperativo mientras dure la legislatura.",
+        "Est�n ligados por mandato imperativo.",
+        "No est�n ligados por mandatos imperativo.",
+        "No  est�n  ligados  por  mandato  imperativo,  salvo  en  caso  de  alguno  de  los"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Por cu�ntos diputados est�n representadas Ceuta y Melilla?:",
+      "raw_options": [
+        "Por uno",
+        "Por dos",
+        "Por tres",
+        "Por cuatro"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Qui�nes son electores y elegibles al Congreso de los Diputados?",
+      "raw_options": [
+        "Todas las personas que est�n en pleno uso de sus derechos pol�ticos.",
+        "Todos los espa�oles que est�n en pleno uso de sus derechos pol�ticos.",
+        "Todas las personas mayores de edad no incapacitadas legalmente.",
+        "Los espa�oles en pleno uso de sus derechos administrativos."
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�l de las siguientes islas o agrupaciones de islas elegir�n tres Senadores?",
+      "raw_options": [
+        "Tenerife y la Palma",
+        "Tenerife, Hierro y Lanzarote",
+        "Gran Canaria y Mallorca.",
+        "Gran Canaria, Menorca y Tenerife"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "�Cu�l  de  las  siguientes  no  es  causa  de  inelegibilidad  e  incompatibilidad  de  los",
+      "raw_options": [
+        "iputados y Senadores?",
+        "Miembros de las Juntas electorales.",
+        "Magistrados, jueces y Fiscales en activo.",
+        "Militares  profesionales  y  miembros  de  las  Fuerzas  y  cuerpos  de  Seguridad  y"
+      ],
+      "correct_index": null
+    },
+    {
+      "raw_text": "Los Diputados y Senadores percibir�n una asignaci�n:",
+      "raw_options": [
+        "Que ser� fijada por el Presidente de la respectiva C�mara",
+        "Que ser� fijada por las C�maras en sesi�n conjunta.",
+        "Que ser� fijada por la respectiva C�mara.",
+        "Que ser� fijada por el Gobierno."
+      ],
+      "correct_index": null
+    }
+  ]
+}

@@ -113,3 +113,41 @@ VITE_SUPABASE_ANON_KEY=
 - **Usuarios**: Opositores españoles
 - **Modelo**: Freemium (no implementado aún)
 - **Estado actual**: ~34% completado, pre-beta
+
+## Sistema de Gobernanza (.claude/)
+
+El proyecto incluye un sistema de agentes y flujo de trabajo en `.claude/`:
+
+```
+.claude/
+├── PROJECT_STATUS.md      # Estado actual (leer al inicio de sesión)
+├── WORKFLOW.md            # Guía de decisiones
+├── MAINTENANCE.md         # Tareas periódicas de mantenimiento
+├── QUESTION_TRACKER.md    # Estado del banco de preguntas por tema
+├── agents/                # Agentes especializados
+├── questions/             # Pipeline de preguntas
+├── references/            # Documentos de apoyo (PDFs)
+└── oposiciones/
+    └── MASTER_OPOSICIONES.md  # ★ Temarios y tracking por oposición
+```
+
+### Pipeline de Preguntas
+
+```
+CREAR → REVISAR (IA) → PUBLICAR
+              │
+              ├─▶ ≥0.95 confidence → auto-aprobado
+              ├─▶ <0.95 + corrección clara → auto-corregido
+              └─▶ <0.80 sin corrección → rejected/ (humano)
+```
+
+### Comandos Útiles
+
+| Comando | Acción |
+|---------|--------|
+| `"status"` | Estado del proyecto |
+| `"crear preguntas tema X"` | Crear preguntas |
+| `"publicar aprobadas"` | Subir a Supabase |
+| `"revisar referencias"` | Escanear nuevos docs |
+| `"auditar preguntas"` | Revisar calidad en BD |
+| `"revisar arquitectura"` | Análisis de código |

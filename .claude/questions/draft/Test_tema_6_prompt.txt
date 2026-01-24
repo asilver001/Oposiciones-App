@@ -1,0 +1,506 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** Test tema 6.pdf
+**Total preguntas:** 40
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** La pol�tica agr�cola com�n y la de redes transeuropeas fueron introducidas respec-
+
+**Opciones:**
+  0. El Tratado de Maastricht y el Tratado de Lisboa.
+  1. El Tratado de la Comunidad Econ�mica Europea y el Tratado de Maastricht.
+  2. El Acta �nica Europea y el Tratado de Niza.
+  3. El Tratado de �msterdam y el Tratado de Lisboa.
+
+---
+
+### Pregunta 2
+
+**Texto:** �Cu�l de las siguientes es una competencia exclusiva de la Uni�n?
+
+**Opciones:**
+  0. El mercado interior.
+  1. La pol�tica social.
+  2. La cohesi�n econ�mica, social y territorial.
+  3. La conservaci�n de recursos biol�gicos marinos.
+
+---
+
+### Pregunta 3
+
+**Texto:** La delimitaci�n de las competencias de la Uni�n se rige por el principio de:
+
+**Opciones:**
+  0. Atribuci�n.
+  1. Subsidiariedad.
+  2. Proporcionalidad.
+  3. Cooperaci�n leal.
+
+---
+
+### Pregunta 4
+
+**Texto:** De acuerdo con el TFUE:
+
+**Opciones:**
+  0. Los Estados miembros considerar�n sus pol�ticas econ�micas como una cuesti�n de in-
+  1. La Uni�n desarrollar� una pol�tica que tendr� como objetivo garantizar la ausencia total
+  2. e controles de las personas, sea cual sea su nacionalidad cuando crucen las fronteras
+  3. El mercado interior abarcar� la agricultura, la pesca y el comercio de los productos agr�-
+
+---
+
+### Pregunta 5
+
+**Texto:** �Cu�l de los siguientes pa�ses NO forma parte del Espacio Econ�mico Europeo?
+
+**Opciones:**
+  0. Noruega.
+  1. Suiza.
+  2. Croacia.
+
+---
+
+### Pregunta 6
+
+**Texto:** La libre circulaci�n de mercanc�as implica:
+
+**Opciones:**
+  0. La supresi�n de derechos de aduana de importaci�n entre los Estados miembros y terce-
+  1. La adopci�n de un arancel aduanero com�n adoptado por la Comisi�n, a propuesta del
+  2. onsejo.
+  3. La supresi�n de restricciones cuantitativas a la importaci�n y exportaci�n, as� como to-
+
+---
+
+### Pregunta 7
+
+**Texto:** El Tribunal de Justicia en la Sentencia Casis de Dijon de 1979:
+
+**Opciones:**
+  0. Redefini� el concepto de medida de efecto equivalente, al no entender por la misma las
+  1. Estableci� que toda reglamentaci�n comercial de los Estados miembros susceptible de
+  2. Estableci� el principio de garant�a mutua que permite armonizar las legislaciones de los
+
+---
+
+### Pregunta 8
+
+**Texto:** �Cu�l de los siguientes NO es uno de los derechos que implica la libre circulaci�n de
+
+**Opciones:**
+  0. Responder a ofertas efectivas de trabajo.
+  1. Al reconocimiento autom�tico de sus titulaciones acad�micas.
+  2. Residir en uno de los Estados miembros con la finalidad de ejercer en �l un empleo.
+  3. Permanecer en el territorio de un Estado miembro despu�s de haber ejercido en �l un
+
+---
+
+### Pregunta 9
+
+**Texto:** �Cu�l de los siguientes es uno de los criterios de convergencia que deben reunir los
+
+**Opciones:**
+  0. La inflaci�n no podr� exceder de 2 puntos sobre el promedio de los 3 pa�ses con menor
+  1. El tipo de inter�s no podr� exceder de 4 puntos sobre la media del tipo de inter�s a largo
+  2. La deuda p�blica no podr� exceder del 60% del PIB o al menos registrar una tendencia
+  3. ecreciente hacia dicho porcentaje.
+
+---
+
+### Pregunta 10
+
+**Texto:** De acuerdo con el art�culo 40 del TFUE, para alcanzar los objetivos de la PAC se
+
+**Opciones:**
+  0. rea una organizaci�n com�n de los mercados agr�colas que, seg�n los productos,
+  1. doptar� una de las siguientes formas:
+  2. Normas comunes sobre competencia.
+  3. Una organizaci�n europea del mercado.
+
+---
+
+### Pregunta 11
+
+**Texto:** �C�mo se denomina el momento o proceso en el que se lleva a cabo la supervisi�n
+
+**Opciones:**
+  0. Evaluaci�n del plan fiscal-estructural a medio plazo.
+  1. Semestre Europeo.
+  2. Mecanismo de Estabilidad.
+  3. Consejo ECOFIN.
+
+---
+
+### Pregunta 12
+
+**Texto:** �Cu�l es la duraci�n de los planes fiscales-estructurales a medio plazo?
+
+**Opciones:**
+  0. Un a�o.
+  1. Tres a�os.
+  2. Un per�odo de cuatro o de cinco a�os, en funci�n de la duraci�n habitual de la legislatura
+  3. e ese Estado miembro.
+
+---
+
+### Pregunta 13
+
+**Texto:** �Qui�n decidir� qu� Estados miembros acogidos a una excepci�n cumplen los crite-
+
+**Opciones:**
+  0. El Consejo.
+  1. El Parlamento Europeo.
+  2. La a) es correcta, y lo har� a propuesta de la Comisi�n, tras consultar al Parlamento
+  3. La b) es correcta y lo har� a propuesta de la Comisi�n, debatida la cuesti�n en el Consejo
+
+---
+
+### Pregunta 14
+
+**Texto:** �Cu�l de los siguientes instrumentos supuso la reforma del art�culo 135 de la Cons-
+
+**Opciones:**
+  0. Mecanismo Europeo de Estabilidad.
+  1. Pacto por el Euro Plus.
+  2. Tratado de Estabilidad, Coordinaci�n y Gobernanza.
+  3. Pacto de Estabilidad y Crecimiento.
+
+---
+
+### Pregunta 15
+
+**Texto:** �Qui�n examina los reg�menes de ayuda existentes en los Estados miembros?
+
+**Opciones:**
+  0. El Consejo.
+  1. El Parlamento Europeo.
+  2. Los propios Estados miembros.
+  3. La Comisi�n Europea.
+
+---
+
+### Pregunta 16
+
+**Texto:** �Cu�l de los siguientes fondos financia programas para el desarrollo rural dentro
+
+**Opciones:**
+  0. e la PAC?
+  1. El FEMPA.
+  2. El FEADER.
+  3. El FEAGA.
+
+---
+
+### Pregunta 17
+
+**Texto:** �Cu�ndo se iniciar� el procedimiento de d�ficit excesivo?
+
+**Opciones:**
+  0. Si un Estado miembro incumple el criterio de d�ficit p�blico m�ximo fijado en el 3%
+  1. el PIB.
+  2. Si un Estado miembro incumple el criterio de deuda p�blica m�xima fijado en el 50%
+  3. el PIB.
+
+---
+
+### Pregunta 18
+
+**Texto:** Se entiende por establecimiento:
+
+**Opciones:**
+  0. El ejercicio de actividades econ�micas no asalariadas a partir de un establecimiento si-
+  1. Aquella instalaci�n material, estable y permanente de una persona f�sica o jur�dica na-
+  2. ional de un Estado europeo en el territorio de otro Estado europeo, con el fin de ejercer
+  3. El desplazamiento y residencia de un nacional de un Estado miembro a otro Estado
+
+---
+
+### Pregunta 19
+
+**Texto:** �A qui�n corresponde aprobar una cooperaci�n estructurada permanente dentro
+
+**Opciones:**
+  0. e la Pol�tica Com�n de Seguridad y Defensa?
+  1. Al Consejo, por unanimidad.
+  2. Al Parlamento Europeo, por mayor�a de sus miembros.
+  3. Al Consejo, por mayor�a cualificada.
+
+---
+
+### Pregunta 20
+
+**Texto:** De acuerdo con el art�culo 39 del TFUE, NO ser� uno de los objetivos de la PAC:
+
+**Opciones:**
+  0. Estabilizar los precios de los productos agr�colas.
+  1. Garantizar la seguridad de los abastecimientos.
+  2. Garantizar un nivel de vida equitativo a la poblaci�n agr�cola.
+
+---
+
+### Pregunta 21
+
+**Texto:** �Cu�l de las siguientes pr�cticas se considera incompatible con el mercado interior?
+
+**Opciones:**
+  0. Limitar la producci�n.
+  1. Repartirse los mercados.
+  2. Todas las anteriores son incompatibles.
+
+---
+
+### Pregunta 22
+
+**Texto:** Uno de los instrumentos de la Pol�tica Exterior y de Seguridad Com�n es:
+
+**Opciones:**
+  0. Las misiones reforzadas.
+  1. La definici�n de orientaciones generales e intereses estrat�gicos de la Uni�n.
+  2. Adopci�n de reglamentos por lo que se establecen acciones o posiciones que va a adoptar
+  3. Fortalecer la cooperaci�n sistem�tica entre las instituciones de la Uni�n Europea.
+
+---
+
+### Pregunta 23
+
+**Texto:** �Cu�l es el principal objetivo del Sistema Europeo de Bancos Centrales?
+
+**Opciones:**
+  0. Gestionar la pol�tica monetaria.
+  1. Mantener la estabilidad de los precios.
+  2. Lograr que todos los Estados miembros adopten el euro como moneda �nica.
+  3. Autorizar la emisi�n de billetes de banco en euros.
+
+---
+
+### Pregunta 24
+
+**Texto:** �Cu�l es la Agencia Europea de Cooperaci�n Judicial?
+
+**Opciones:**
+  0. Europol.
+  1. Eurojust.
+  2. Fiscal�a Europea.
+  3. FRONTEX.
+
+---
+
+### Pregunta 25
+
+**Texto:** Uno de los siguientes tratados permiti� incluir dos excepciones por las que Dina-
+
+**Opciones:**
+  0. Acta �nica Europea.
+  1. Tratado de Maastricht.
+  2. Tratado de �msterdam.
+  3. Tratado de Niza.
+
+---
+
+### Pregunta 26
+
+**Texto:** �Cu�l es el fondo con el que se financian los gastos operativos de la PESC derivados
+
+**Opciones:**
+  0. e operaciones militares o defensivas?
+  1. Fondo Athena.
+  2. Fondo Europeo de Defensa.
+  3. Fondo Europeo de Apoyo a la Paz.
+
+---
+
+### Pregunta 27
+
+**Texto:** Constituye la regla general para la adopci�n de decisiones en materia PESC:
+
+**Opciones:**
+  0. Unanimidad.
+  1. Mayor�a cualificada.
+  2. Consenso.
+  3. Mayor�a de miembros.
+
+---
+
+### Pregunta 28
+
+**Texto:** El Espacio de Libertad, Seguridad y Justicia se conoce con esta denominaci�n desde:
+
+**Opciones:**
+  0. El Tratado de Roma.
+  1. El Tratado de �msterdam.
+  2. El Tratado de Niza.
+  3. El Tratado de Lisboa.
+
+---
+
+### Pregunta 29
+
+**Texto:** �Cu�l es una competencia de apoyo, coordinaci�n o complemento?
+
+**Opciones:**
+  0. La defensa de la competencia.
+  1. El turismo.
+  2. La pol�tica social.
+  3. El medio ambiente.
+
+---
+
+### Pregunta 30
+
+**Texto:** De acuerdo con el art�culo 57 del TFUE, los servicios NO comprender�n:
+
+**Opciones:**
+  0. Actividades de car�cter industrial.
+  1. Actividades sociales.
+  2. Actividades artesanales.
+  3. Actividades propias de profesiones liberales.
+
+---
+
+### Pregunta 31
+
+**Texto:** �Cu�l de las siguientes ayudas podr� ser valorada como compatible con el mercado
+
+**Opciones:**
+  0. Ayudas de car�cter social concedidas a los consumidores individuales siempre y cuando
+  1. Ayudas destinadas a reparar los perjuicios causados por desastres naturales o por otros
+  2. contecimientos de car�cter excepcional.
+  3. Ayudas destinadas a promover la cultura y la conservaci�n del patrimonio, cuando no
+
+---
+
+### Pregunta 32
+
+**Texto:** La abstenci�n constructiva o positiva:
+
+**Opciones:**
+  0. Se introdujo por el Tratado de Lisboa.
+  1. Es un mecanismo seg�n el cual uno o varios Estados pueden en el momento de la abs-
+  2. Flexibiliz� la toma de decisiones por mayor�a cualificada en la pol�tica de cohesi�n.
+  3. Ninguna de las anteriores es correcta.
+
+---
+
+### Pregunta 33
+
+**Texto:** Se�ale la cierta respecto a las competencias de la UE:
+
+**Opciones:**
+  0. El ejercicio de las competencias se rige por los principios de proporcionalidad y coope-
+  1. Cuando los Tratados atribuyan a la Uni�n una competencia compartida con los Estados
+  2. icamente vinculantes.
+  3. Cuando los tratados atribuyan a la Uni�n una competencia exclusiva en un �mbito de-
+
+---
+
+### Pregunta 34
+
+**Texto:** Cuando en circunstancias excepcionales los movimientos de capitales con destinos a
+
+**Opciones:**
+  0. La Comisi�n.
+  1. El Consejo.
+  2. Los Estados miembros.
+  3. La b) es correcta, a propuesta de la Comisi�n, previa consulta al BCE.
+
+---
+
+### Pregunta 35
+
+**Texto:** En virtud del art�culo 36 del TFUE, NO es uno de los motivos para establecer limi-
+
+**Opciones:**
+  0. Moralidad.
+  1. Orden p�blico.
+  2. Protecci�n de la salud.
+  3. Todos son motivos en base a los cuales los Estados miembros pueden justificar prohibi-
+
+---
+
+### Pregunta 36
+
+**Texto:** �Cu�l de los siguientes pa�ses NO pertenece a la Eurozona?
+
+**Opciones:**
+  0. Croacia.
+  1. Estonia.
+  2. Hungr�a.
+  3. Finlandia.
+
+---
+
+### Pregunta 37
+
+**Texto:** Europol y Eurojust tienen su sede en:
+
+**Opciones:**
+  0. La Haya.
+  1. Estrasburgo.
+  2. Luxemburgo.
+  3. Bruselas.
+
+---
+
+### Pregunta 38
+
+**Texto:** �Qu� instituci�n adoptar� una recomendaci�n por la que se establezcan las orienta-
+
+**Opciones:**
+  0. iones generales de pol�tica econ�mica?
+  1. La Comisi�n.
+  2. El Consejo Europeo.
+  3. El Parlamento Europeo.
+
+---
+
+### Pregunta 39
+
+**Texto:** Se�ale la respuesta correcta:
+
+**Opciones:**
+  0. Con el Tratado de Niza la CAJI pas� a denominarse Cooperaci�n Policial y Judicial en
+  1. El Tratado de �msterdam introdujo la pol�tica de empleo.
+  2. El Tratado de la Comunidad Econ�mica Europea pas� a denominarse TFUE con el Tra-
+  3. El Tratado de Lisboa introdujo la pol�tica medioambiental.
+
+---
+
+### Pregunta 40
+
+**Texto:** De acuerdo con el art�culo 4 del TUE:
+
+**Opciones:**
+  0. Toda competencia no atribuida a los Estados miembros en los Tratados corresponde a
+  1. Los Estados miembros act�an dentro de los l�mites de las competencias que les atribuye
+  2. El contenido y la forma de la acci�n de los Estados no exceder�n de lo necesario para
+  3. lcanzar los objetivos de los Tratados.
+
+---

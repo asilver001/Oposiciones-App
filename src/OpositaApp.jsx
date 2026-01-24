@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Home, BookOpen, Trophy, Clock, TrendingUp, TrendingDown, ArrowLeft, CheckCircle, XCircle, Target, Flame, Zap, Star, Lock, Crown, BarChart3, Calendar, History, GraduationCap, Lightbulb, Info, Settings, ChevronRight, Instagram, Mail, Bell, User, LogOut, HelpCircle, FileText, Shield, ExternalLink, Minus } from 'lucide-react';
+import { Home, BookOpen, Trophy, Clock, TrendingUp, TrendingDown, ArrowLeft, CheckCircle, XCircle, Target, Flame, Zap, Star, Lock, Crown, BarChart3, Calendar, History, GraduationCap, Lightbulb, Info, Settings, ChevronRight, Instagram, Mail, Bell, User, LogOut, HelpCircle, FileText, Shield, ExternalLink, Minus, Code, Eye, ClipboardCheck } from 'lucide-react';
 import { allQuestions, topicsList, getRandomQuestions } from './data/questions';
 import { supabase } from './lib/supabase';
 import { useAuth } from './contexts/AuthContext';
@@ -14,50 +14,15 @@ import Fortaleza from './components/Fortaleza';
 import { WelcomeScreen, GoalStep, DateStep, IntroStep } from './components/onboarding';
 import { useAppNavigation } from './hooks/useAppNavigation';
 import { Button, Card, Modal, ProgressBar } from './components/ui';
-
-// ============ DEV PANEL COMPONENT ============
-
-function DevPanel({ onReset, onGoToOnboarding, onShowPremium, onShowAdminLogin, streakCount, testsCount }) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  if (!isOpen) {
-    return (
-      <button
-        onClick={() => setIsOpen(true)}
-        className="fixed bottom-24 left-4 z-50 w-10 h-10 bg-gray-900/80 hover:bg-gray-900 text-white rounded-full shadow-lg flex items-center justify-center text-xs font-bold"
-      >
-        DEV
-      </button>
-    );
-  }
-
-  return (
-    <div className="fixed bottom-24 left-4 z-50 bg-gray-900/95 rounded-2xl p-4 shadow-2xl min-w-[200px]">
-      <div className="flex items-center justify-between mb-3">
-        <span className="text-white font-semibold text-sm">🛠️ Dev Tools</span>
-        <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-white text-lg">×</button>
-      </div>
-      <div className="space-y-2">
-        <button onClick={onShowAdminLogin} className="w-full bg-indigo-500/90 hover:bg-indigo-600 text-white text-xs py-2 px-3 rounded-lg text-left">
-          🔐 Acceso Admin
-        </button>
-        <div className="border-t border-gray-700 my-2"></div>
-        <button onClick={onReset} className="w-full bg-red-500/90 hover:bg-red-600 text-white text-xs py-2 px-3 rounded-lg text-left">
-          🗑️ Reset TODO
-        </button>
-        <button onClick={onGoToOnboarding} className="w-full bg-purple-500/90 hover:bg-purple-600 text-white text-xs py-2 px-3 rounded-lg text-left">
-          🔄 Ir a Onboarding
-        </button>
-        <button onClick={onShowPremium} className="w-full bg-yellow-500/90 hover:bg-yellow-600 text-white text-xs py-2 px-3 rounded-lg text-left">
-          👑 Ver Premium Modal
-        </button>
-        <div className="pt-2 border-t border-gray-700 text-[10px] text-gray-500">
-          streak: {streakCount} · tests: {testsCount}
-        </div>
-      </div>
-    </div>
-  );
-}
+import AnimationPlayground from './components/playground/AnimationPlayground';
+import DraftFeatures from './components/playground/DraftFeatures';
+// Nuevos componentes extraídos (Fase 3 Refactor)
+import DevPanel from './components/dev/DevPanel';
+import { SoftFortHome } from './components/home';
+import TemasListView from './components/temas/TemasListView';
+import ActividadPage from './components/activity/ActividadPage';
+import RecursosPage from './components/recursos/RecursosPage';
+import { BottomTabBar } from './components/navigation';
 
 // ============ MAIN APP COMPONENT ============
 
@@ -73,12 +38,19 @@ export default function OpositaApp() {
     resetPassword,
     isAuthenticated,
     isAnonymous,
-    continueAsAnonymous
+    continueAsAnonymous,
+    // Role-based access from AuthContext
+    userRole,
+    isAdmin: isUserAdmin,
+    isReviewer: isUserReviewer
   } = useAuth();
 
   // Admin context
   const { adminUser, isAdmin, isReviewer, isLoggedIn: isAdminLoggedIn } = useAdmin();
   const [showAdminLoginModal, setShowAdminLoginModal] = useState(false);
+  const [showAnimationPlayground, setShowAnimationPlayground] = useState(false);
+  const [showDraftFeatures, setShowDraftFeatures] = useState(false);
+  const [premiumMode, setPremiumMode] = useState(false);
 
   const [currentPage, setCurrentPage] = useState('welcome');
   const [activeTab, setActiveTab] = useState('inicio');
@@ -718,57 +690,7 @@ export default function OpositaApp() {
     </div>
   );
 
-  // Bottom Tab Bar Component - Fase 1 floating style
-  const BottomTabBar = () => (
-    <div className="fixed bottom-0 left-0 right-0 z-40 px-4 pb-2">
-      {/* Contenedor floating con márgenes, sombra y bordes redondeados */}
-      <div className="max-w-md mx-auto">
-        <div className="bg-white rounded-[20px] shadow-[0_2px_24px_rgba(0,0,0,0.12)] border border-gray-100/80">
-          <div className="flex justify-around items-center h-[58px] px-1">
-            {[
-              { id: 'inicio', label: 'Inicio', icon: Home },
-              { id: 'actividad', label: 'Actividad', icon: History },
-              { id: 'temas', label: 'Temas', icon: BookOpen },
-              { id: 'recursos', label: 'Recursos', icon: GraduationCap }
-            ].map(tab => {
-              const isActive = activeTab === tab.id;
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className="flex flex-col items-center justify-center min-w-[4rem] py-1 px-2 rounded-xl transition-all duration-200 active:scale-95"
-                >
-                  <div className={`
-                    flex items-center justify-center w-9 h-9 rounded-full mb-0.5 transition-all duration-200
-                    ${isActive ? 'bg-gray-100' : ''}
-                  `}>
-                    <tab.icon
-                      className={`
-                        w-[22px] h-[22px] transition-all duration-200
-                        ${isActive
-                          ? 'text-gray-900 stroke-[2]'
-                          : 'text-gray-400 stroke-[1.5]'
-                        }
-                      `}
-                    />
-                  </div>
-                  <span className={`
-                    text-[10px] leading-tight transition-all duration-200
-                    ${isActive
-                      ? 'text-gray-900 font-semibold'
-                      : 'text-gray-400 font-medium'
-                    }
-                  `}>
-                    {tab.label}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  // NOTA: BottomTabBar extraído a src/components/navigation/BottomTabBar.jsx
 
   if (isLoading) {
     return (
@@ -795,11 +717,12 @@ export default function OpositaApp() {
   };
 
   // ADMIN PANELS (render before other pages)
-  if (currentPage === 'admin-panel' && isAdminLoggedIn) {
+  // Acceso via AdminContext (PIN) O via AuthContext (login normal con rol)
+  if (currentPage === 'admin-panel' && (isAdminLoggedIn || isUserAdmin)) {
     return <AdminPanel onBack={() => setCurrentPage('home')} />;
   }
 
-  if (currentPage === 'reviewer-panel' && isAdminLoggedIn) {
+  if (currentPage === 'reviewer-panel' && (isAdminLoggedIn || isUserReviewer)) {
     return <ReviewerPanel onBack={() => setCurrentPage('home')} />;
   }
 
@@ -1489,606 +1412,22 @@ export default function OpositaApp() {
   const daysUntilExam = getDaysUntilExam();
   const totalProgress = calculateTotalProgress();
 
-  // Contenido de Actividad
-  const ActividadContent = () => {
-    // Use real data from Supabase if available, fallback to local totalStats
-    const hasRealData = activityTotalStats.testsCompleted > 0;
-    const displayStats = hasRealData ? activityTotalStats : totalStats;
-    const displayWeeklyData = hasRealData ? activityWeeklyData : totalStats.weeklyProgress;
-    const maxWeeklyValue = Math.max(...displayWeeklyData, 1); // Avoid division by zero
+  // NOTA: Todos los componentes de contenido han sido extraídos a archivos separados
+  // - InicioContent → src/components/home/SoftFortHome.jsx
+  // - TemasContent → src/components/temas/TemasListView.jsx
+  // - ActividadContent → src/components/activity/ActividadPage.jsx
+  // - RecursosContent → src/components/recursos/RecursosPage.jsx
 
-    // Generate calendar for current month
-    const generateCalendar = () => {
-      const now = new Date();
-      const year = now.getFullYear();
-      const month = now.getMonth();
-      const firstDay = new Date(year, month, 1);
-      const lastDay = new Date(year, month + 1, 0);
-      const daysInMonth = lastDay.getDate();
-
-      // Get the day of week for the first day (0 = Sunday, adjust to Monday = 0)
-      let startDay = firstDay.getDay() - 1;
-      if (startDay === -1) startDay = 6;
-
-      const calendar = [];
-      // Add empty cells for days before the first of the month
-      for (let i = 0; i < startDay; i++) {
-        calendar.push({ day: null, practiced: false });
-      }
-      // Add days of the month
-      for (let day = 1; day <= daysInMonth; day++) {
-        calendar.push({
-          day,
-          practiced: calendarData.includes(day),
-          isToday: day === now.getDate()
-        });
-      }
-      return calendar;
-    };
-
-    const calendar = generateCalendar();
-
-    // Determine trend for session
-    const getTrend = (session, index) => {
-      if (index >= sessionHistory.length - 1) return 'neutral';
-      const prevSession = sessionHistory[index + 1];
-      if (!prevSession) return 'neutral';
-
-      const currentRate = session.porcentaje_acierto || 0;
-      const prevRate = prevSession.porcentaje_acierto || 0;
-
-      if (currentRate > prevRate + 5) return 'up';
-      if (currentRate < prevRate - 5) return 'down';
-      return 'neutral';
-    };
-
-    if (activityLoading) {
-      return (
-        <div className="space-y-6">
-          <h2 className="text-2xl font-bold text-gray-900">Tu actividad</h2>
-          <div className="flex items-center justify-center py-12">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600"></div>
-          </div>
-        </div>
-      );
-    }
-
-    return (
-      <div className="space-y-6">
-        <h2 className="text-2xl font-bold text-gray-900">Tu actividad</h2>
-
-        {displayStats.testsCompleted === 0 ? (
-          <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
-            <div className="text-6xl mb-4">📊</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">Aún no hay actividad</h3>
-            <p className="text-gray-600 mb-4">Completa tu primer test para ver tu progreso aquí</p>
-            <button
-              onClick={startTest}
-              className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition"
-            >
-              Hacer mi primer test
-            </button>
-          </div>
-        ) : (
-          <>
-            {/* Stats Cards */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white rounded-2xl p-5 shadow-lg">
-                <div className="flex items-center gap-3 mb-2">
-                  <Trophy className="w-6 h-6 text-purple-600" />
-                  <span className="text-gray-600 text-sm font-medium">Tests completados</span>
-                </div>
-                <div className="text-3xl font-bold text-gray-900">{displayStats.testsCompleted}</div>
-              </div>
-
-              <div className="bg-white rounded-2xl p-5 shadow-lg">
-                <div className="flex items-center gap-3 mb-2">
-                  <Target className="w-6 h-6 text-green-600" />
-                  <span className="text-gray-600 text-sm font-medium">Tasa de acierto</span>
-                </div>
-                <div className="text-3xl font-bold text-gray-900">{displayStats.accuracyRate}%</div>
-              </div>
-
-              <div className="bg-white rounded-2xl p-5 shadow-lg">
-                <div className="flex items-center gap-3 mb-2">
-                  <CheckCircle className="w-6 h-6 text-blue-600" />
-                  <span className="text-gray-600 text-sm font-medium">Preguntas correctas</span>
-                </div>
-                <div className="text-3xl font-bold text-gray-900">{displayStats.questionsCorrect}</div>
-              </div>
-
-              <div className="bg-white rounded-2xl p-5 shadow-lg">
-                <div className="flex items-center gap-3 mb-2">
-                  <Calendar className="w-6 h-6 text-orange-600" />
-                  <span className="text-gray-600 text-sm font-medium">Días estudiando</span>
-                </div>
-                <div className="text-3xl font-bold text-gray-900">{displayStats.daysStudied || displayStats.totalDaysStudied || 0}</div>
-              </div>
-            </div>
-
-            {/* Weekly Progress Chart */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <h3 className="font-bold text-gray-900 mb-4">Progreso semanal</h3>
-              {displayWeeklyData.every(v => v === 0) ? (
-                <div className="text-center py-8">
-                  <div className="text-4xl mb-2">📈</div>
-                  <p className="text-gray-500 text-sm">Completa tu primer test para ver tu progreso</p>
-                </div>
-              ) : (
-                <div className="flex items-end justify-between h-32 gap-2">
-                  {['L', 'M', 'X', 'J', 'V', 'S', 'D'].map((day, i) => {
-                    const value = displayWeeklyData[i] || 0;
-                    const height = maxWeeklyValue > 0 ? (value / maxWeeklyValue) * 100 : 0;
-                    const isToday = new Date().getDay() === (i === 6 ? 0 : i + 1);
-
-                    return (
-                      <div key={day} className="flex-1 flex flex-col items-center gap-2">
-                        <div className="w-full bg-gray-100 rounded-t-lg flex-1 relative min-h-[80px]">
-                          <div
-                            className={`absolute bottom-0 w-full rounded-t-lg transition-all duration-500 ${
-                              isToday
-                                ? 'bg-gradient-to-t from-orange-500 to-orange-400'
-                                : 'bg-gradient-to-t from-purple-500 to-purple-400'
-                            }`}
-                            style={{ height: `${Math.max(height, value > 0 ? 8 : 0)}%` }}
-                          ></div>
-                          {value > 0 && (
-                            <div className="absolute -top-5 left-1/2 -translate-x-1/2 text-xs font-medium text-gray-600">
-                              {value}
-                            </div>
-                          )}
-                        </div>
-                        <span className={`text-xs font-medium ${isToday ? 'text-orange-600' : 'text-gray-500'}`}>
-                          {day}
-                        </span>
-                      </div>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-
-            {/* Monthly Calendar */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <h3 className="font-bold text-gray-900 mb-4">
-                {new Date().toLocaleDateString('es-ES', { month: 'long', year: 'numeric' })}
-              </h3>
-              <div className="grid grid-cols-7 gap-1">
-                {['L', 'M', 'X', 'J', 'V', 'S', 'D'].map(day => (
-                  <div key={day} className="text-center text-xs font-medium text-gray-400 py-1">
-                    {day}
-                  </div>
-                ))}
-                {calendar.map((cell, idx) => (
-                  <div
-                    key={idx}
-                    className={`aspect-square flex items-center justify-center rounded-lg text-xs relative ${
-                      cell.day === null
-                        ? ''
-                        : cell.isToday
-                        ? 'bg-purple-100 font-bold text-purple-700'
-                        : cell.practiced
-                        ? 'bg-gray-50 text-gray-700'
-                        : 'text-gray-400'
-                    }`}
-                  >
-                    {cell.day}
-                    {cell.practiced && (
-                      <div className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                    )}
-                  </div>
-                ))}
-              </div>
-              <div className="flex items-center gap-4 mt-4 pt-3 border-t text-xs text-gray-500">
-                <div className="flex items-center gap-1">
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span>Día practicado</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <div className="w-4 h-4 bg-purple-100 rounded"></div>
-                  <span>Hoy</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Session History */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <h3 className="font-bold text-gray-900 mb-4">Últimas sesiones</h3>
-              {sessionHistory.length === 0 ? (
-                <div className="text-center py-6">
-                  <p className="text-gray-500 text-sm">Aún no has completado ningún test</p>
-                </div>
-              ) : (
-                <div className="space-y-3">
-                  {sessionHistory.slice(0, 7).map((session, idx) => {
-                    const trend = getTrend(session, idx);
-                    const temaName = session.tema_id ? `Tema ${session.tema_id}` : 'Mixto';
-
-                    return (
-                      <div
-                        key={session.id || idx}
-                        className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl"
-                      >
-                        <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-lg">
-                          {session.tema_id ? '📚' : '🎯'}
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center gap-2">
-                            <span className="font-medium text-gray-900 truncate">{temaName}</span>
-                            <span className="text-xs text-gray-400">
-                              {formatRelativeDate(session.created_at)}
-                            </span>
-                          </div>
-                          <div className="text-sm text-gray-500">
-                            {session.correctas}/{session.total_preguntas} correctas
-                            <span className="mx-1">·</span>
-                            <span className={
-                              session.porcentaje_acierto >= 70 ? 'text-green-600' :
-                              session.porcentaje_acierto >= 50 ? 'text-orange-600' : 'text-red-500'
-                            }>
-                              {session.porcentaje_acierto}%
-                            </span>
-                          </div>
-                        </div>
-                        <div className={`p-1 rounded-full ${
-                          trend === 'up' ? 'bg-green-100' :
-                          trend === 'down' ? 'bg-red-100' : 'bg-gray-100'
-                        }`}>
-                          {trend === 'up' ? (
-                            <TrendingUp className="w-4 h-4 text-green-600" />
-                          ) : trend === 'down' ? (
-                            <TrendingDown className="w-4 h-4 text-red-500" />
-                          ) : (
-                            <Minus className="w-4 h-4 text-gray-400" />
-                          )}
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-
-            {/* Motivational Message */}
-            {motivationalMessage && (
-              <div className={`rounded-2xl p-4 ${motivationalMessage.bg} border border-opacity-50`}>
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl">{motivationalMessage.emoji}</span>
-                  <p className={`font-medium ${motivationalMessage.color}`}>
-                    {motivationalMessage.message}
-                  </p>
-                </div>
-              </div>
-            )}
-          </>
-        )}
-      </div>
-    );
-  };
-
-  // Contenido de Temas
-  const TemasContent = () => (
-    <div className="space-y-6">
-      <h2 className="text-2xl font-bold text-gray-900">Tus temas</h2>
-
-      <div className="space-y-4">
-        {topicsList.map((topic) => {
-          const progress = topicsProgress[topic.id];
-          const percentage = Math.round((progress.completed / progress.total) * 100);
-          const isLocked = progress.locked;
-
-          return (
-            <div
-              key={topic.id}
-              className={`rounded-xl p-4 transition-all ${
-                isLocked
-                  ? 'bg-gray-50 border-2 border-gray-200'
-                  : 'bg-gradient-to-r from-purple-50 to-white border-2 border-purple-200 hover:border-purple-400 cursor-pointer'
-              }`}
-            >
-              <div className="flex items-start gap-4">
-                <div className="text-4xl">{topic.icon}</div>
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-1">
-                    <h4 className="font-bold text-gray-900">{topic.title}</h4>
-                    {isLocked && <Lock className="w-4 h-4 text-gray-400" />}
-                    {progress.streak > 0 && !isLocked && (
-                      <div className="flex items-center gap-1 bg-orange-100 px-2 py-1 rounded-full">
-                        <Flame className="w-3 h-3 text-orange-600" />
-                        <span className="text-xs font-bold text-orange-600">{progress.streak} días</span>
-                      </div>
-                    )}
-                  </div>
-
-                  {isLocked ? (
-                    <div>
-                      <p className="text-sm text-gray-500 mb-1">
-                        {progress.total} preguntas · Simulacros incluidos
-                      </p>
-                      <p className="text-xs text-purple-600 font-medium mb-2">Solo disponible en Premium</p>
-                      <button
-                        onClick={() => {
-                          setPremiumModalTrigger('locked-topic');
-                          setShowPremiumModal(true);
-                        }}
-                        className="flex items-center gap-2 bg-purple-100 text-purple-700 font-semibold text-sm px-3 py-1.5 rounded-lg hover:bg-purple-200 transition"
-                      >
-                        <Lock className="w-3 h-3" />
-                        Desbloquear con Premium
-                      </button>
-                    </div>
-                  ) : (
-                    <>
-                      <p className="text-sm text-gray-600 mb-2">
-                        {progress.completed} de {progress.total} preguntas completadas
-                      </p>
-                      <div className="flex items-center gap-3">
-                        <div className="flex-1 bg-gray-200 rounded-full h-2">
-                          <div
-                            className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-full h-2 transition-all duration-500"
-                            style={{ width: `${percentage}%` }}
-                          ></div>
-                        </div>
-                        <span className="text-sm font-bold text-gray-700">{percentage}%</span>
-                      </div>
-                      {topic.id === 1 && (
-                        <button
-                          onClick={startTest}
-                          className="mt-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg text-sm transition-all"
-                        >
-                          Continuar
-                        </button>
-                      )}
-                      {topic.id === 2 && progress.completed === 0 && (
-                        <button className="mt-3 bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded-lg text-sm transition-all flex items-center gap-2">
-                          <Star className="w-4 h-4" />
-                          Empezar tema
-                        </button>
-                      )}
-                    </>
-                  )}
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  );
-
-  // Contenido de Recursos
-  const RecursosContent = () => (
-    <div className="space-y-6">
-      <h2 className="text-2xl font-bold text-gray-900">Recursos para tu oposición</h2>
-
-      <div className="bg-white rounded-2xl p-6 shadow-lg">
-        <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
-          <Lightbulb className="w-5 h-5 text-yellow-500" />
-          Consejos de estudio
-        </h3>
-        <ul className="space-y-3 text-gray-700">
-          <li className="flex items-start gap-2">
-            <span className="text-purple-500">•</span>
-            <span>Estudia a la misma hora cada día para crear un hábito</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-purple-500">•</span>
-            <span>Repasa los errores del día anterior antes de empezar</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-purple-500">•</span>
-            <span>Haz descansos cortos cada 25-30 minutos</span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-purple-500">•</span>
-            <span>Practica con simulacros completos una vez por semana</span>
-          </li>
-        </ul>
-      </div>
-
-      <div className="bg-gray-100 rounded-2xl p-6 border-2 border-gray-200">
-        <div className="flex items-center gap-3 mb-3">
-          <div className="bg-gray-200 p-2 rounded-lg">
-            <BarChart3 className="w-6 h-6 text-gray-400" />
-          </div>
-          <div>
-            <h3 className="font-bold text-gray-500">Análisis con IA</h3>
-            <span className="text-xs bg-gray-300 text-gray-600 px-2 py-0.5 rounded">Próximamente</span>
-          </div>
-        </div>
-        <p className="text-gray-500 text-sm">
-          Pronto podrás recibir análisis personalizados de tu rendimiento y recomendaciones de estudio basadas en IA.
-        </p>
-      </div>
-
-      <div className="bg-white rounded-2xl p-6 shadow-lg">
-        <h3 className="font-bold text-gray-900 mb-4">Enlaces útiles</h3>
-        <div className="space-y-3">
-          <a
-            href="https://www.boe.es/buscar/boe.php"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium"
-          >
-            📄 BOE - Convocatorias oficiales
-            <ExternalLink className="w-3.5 h-3.5 opacity-60" />
-          </a>
-          <a
-            href="https://www.hacienda.gob.es/es-ES/Areas%20Tematicas/Funcion%20Publica/Paginas/Cuerpos%20y%20Escalas.aspx"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium"
-          >
-            📚 Información oficial de oposiciones
-            <ExternalLink className="w-3.5 h-3.5 opacity-60" />
-          </a>
-          <button
-            onClick={() => setCurrentPage('faq')}
-            className="block text-purple-600 hover:text-purple-700 font-medium text-left"
-          >
-            ❓ Preguntas frecuentes
-          </button>
-          <button
-            onClick={() => setCurrentPage('contact')}
-            className="block text-purple-600 hover:text-purple-700 font-medium text-left"
-          >
-            ✉️ Contacto
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-
-  // Contenido de Inicio - Rediseño UX (calma, continuidad, acompañamiento)
-  const InicioContent = () => {
-    const streakMessage = getStreakMessage();
-    const daysToNext = getDaysToNextBadge();
-
-    // Mock data for Fortaleza - TODO: Replace with real data from topicsProgress
-    const fortalezaTemas = [
-      { id: 1, nombre: 'Constitución Española', progreso: 4, estado: 'progresando' },
-      { id: 2, nombre: 'Organización del Estado', progreso: 2, estado: 'nuevo' },
-      { id: 3, nombre: 'Derecho Administrativo', progreso: 6, estado: 'solido' },
-      { id: 4, nombre: 'Administración Pública', progreso: 1, estado: 'peligro' },
-    ];
-
-    return (
-      <>
-        {/* Banner protege tu racha */}
-        {displayStreak >= 3 && !userData.accountCreated && showStreakBanner && (
-          <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-4 mb-6 shadow-lg">
-            <div className="flex items-start justify-between">
-              <div className="flex items-start gap-3">
-                <Flame className="w-6 h-6 text-yellow-300 flex-shrink-0" />
-                <div>
-                  <p className="text-white font-bold">Protege tu racha de {displayStreak} días</p>
-                  <p className="text-white/80 text-sm">Crea tu cuenta para no perder tu progreso.</p>
-                </div>
-              </div>
-              <button onClick={() => setShowStreakBanner(false)} className="text-white/60 hover:text-white">
-                <XCircle className="w-5 h-5" />
-              </button>
-            </div>
-            <button
-              onClick={() => setCurrentPage('signup')}
-              className="mt-3 w-full bg-white text-orange-600 font-bold py-2 px-4 rounded-xl hover:bg-orange-50 transition"
-            >
-              Crear cuenta gratis
-            </button>
-          </div>
-        )}
-
-        {/* FeedbackPanel - Insights de la última sesión */}
-        {showFeedbackPanel && lastSessionStats && (
-          <div className="mb-6">
-            <FeedbackPanel
-              insights={recentInsights}
-              sessionStats={{
-                correctas: lastSessionStats.correctas || 0,
-                incorrectas: lastSessionStats.incorrectas || 0,
-                en_blanco: lastSessionStats.en_blanco || 0,
-                porcentaje_acierto: lastSessionStats.porcentaje_acierto || 0
-              }}
-              sessionDate={lastSessionStats.created_at}
-              defaultExpanded={false}
-              onInsightAction={(insight) => {
-                // Mark insight as seen when user interacts
-                if (insight.id) {
-                  markInsightAsSeen(insight.id);
-                }
-              }}
-            />
-          </div>
-        )}
-
-        {/* Fortaleza - Progreso por tema */}
-        {fortalezaTemas.length > 0 && (
-          <div className="mb-6">
-            <Fortaleza
-              temas={fortalezaTemas}
-              onVerTodo={() => setActiveTab('temas')}
-              maxVisible={3}
-            />
-          </div>
-        )}
-
-        {/* Tu Sesión de Hoy */}
-        <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 mb-4">
-          {/* Header */}
-          <div className="flex justify-between items-center mb-4">
-            <span className="font-semibold text-gray-800 flex items-center gap-2">
-              🎯 Tu Sesión de Hoy
-            </span>
-            <span className="text-xs bg-purple-100 text-purple-600 px-2 py-1 rounded-full font-medium">
-              ~20 min
-            </span>
-          </div>
-
-          {/* Session Items */}
-          <div className="space-y-3 mb-4">
-            {/* Tema nuevo */}
-            <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl">
-              <div className="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center text-lg">
-                📗
-              </div>
-              <div>
-                <div className="font-medium text-gray-800">Tema 8 - AGE Central</div>
-                <div className="text-sm text-gray-500">Tema nuevo · 15 preguntas</div>
-              </div>
-            </div>
-
-            {/* Repaso */}
-            <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl">
-              <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center text-lg">
-                🔄
-              </div>
-              <div>
-                <div className="font-medium text-gray-800">Tema 4 - La Corona</div>
-                <div className="text-sm text-gray-500">Repaso · Art. 57 debil</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Botón Empezar */}
-          <button
-            onClick={startTest}
-            className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-purple-700 transition-all active:scale-[0.98]"
-          >
-            Empezar sesión →
-          </button>
-        </div>
-
-        {/* Ver más opciones */}
-        <button
-          onClick={() => console.log('TODO: Abrir modal de opciones')}
-          className="w-full text-center text-purple-600 font-medium hover:text-purple-700 mb-6"
-        >
-          Ver más opciones →
-        </button>
-
-        {/* Reto del día (opcional, discreto) */}
-        <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 bg-amber-50 rounded-lg flex items-center justify-center">
-                <Zap className="w-4 h-4 text-amber-500" />
-              </div>
-              <div>
-                <p className="text-sm font-medium text-gray-900">Reto del día</p>
-                <p className="text-xs text-gray-500">10 preguntas seguidas</p>
-              </div>
-            </div>
-            <button
-              onClick={startTest}
-              className="px-4 py-2 text-sm font-medium text-purple-600 hover:bg-purple-50 rounded-lg transition"
-            >
-              Intentar
-            </button>
-          </div>
-        </div>
-      </>
-    );
-  };
+  // Datos para Fortaleza - mapear desde topicsProgress real
+  const fortalezaData = (topicsWithQuestions || dbTopics || []).slice(0, 6).map(topic => ({
+    id: topic.id || topic.numero,
+    name: topic.titulo || topic.name || `Tema ${topic.numero}`,
+    status: topic.mastery >= 80 ? 'dominado' :
+            topic.mastery >= 50 ? 'progreso' :
+            topic.mastery >= 20 ? 'nuevo' :
+            topic.attempts > 0 ? 'riesgo' : 'nuevo',
+    progress: topic.mastery || Math.floor(Math.random() * 100) // fallback for demo
+  }));
 
   // Calcular porcentaje de progreso diario para el mini indicador de la TopBar
   const dailyProgressPercent = Math.min(Math.round((totalStats.todayQuestions / userData.dailyGoal) * 100), 100);
@@ -2182,6 +1521,37 @@ export default function OpositaApp() {
               />
             )}
           </div>
+
+          {/* Sección: Administración (solo para admin/reviewer) */}
+          {(isUserAdmin || isUserReviewer) && (
+            <>
+              <SectionTitle>Administración</SectionTitle>
+              <div className="bg-white rounded-xl border border-gray-100 divide-y divide-gray-100 overflow-hidden">
+                {isUserAdmin && (
+                  <>
+                    <SettingsRow
+                      icon={Shield}
+                      label="Panel de Administrador"
+                      onClick={() => { setShowSettingsModal(false); setCurrentPage('admin-panel'); }}
+                      rightText="Admin"
+                    />
+                    <SettingsRow
+                      icon={Code}
+                      label="Draft Features"
+                      onClick={() => { setShowSettingsModal(false); setShowDraftFeatures(true); }}
+                      rightText="Dev"
+                    />
+                  </>
+                )}
+                <SettingsRow
+                  icon={Eye}
+                  label="Panel de Revisor"
+                  onClick={() => { setShowSettingsModal(false); setCurrentPage('reviewer-panel'); }}
+                  rightText={isUserAdmin ? 'Admin' : 'Revisor'}
+                />
+              </div>
+            </>
+          )}
 
           {/* Sección: Otros */}
           <SectionTitle>Otros</SectionTitle>
@@ -2374,91 +1744,116 @@ export default function OpositaApp() {
 
       <div className="max-w-4xl mx-auto px-4 pt-16">
         <div className="pt-4 mb-6">
-          {/* Área de saludo - Fase 1 rediseñada */}
-          {activeTab === 'inicio' && (
-            <div className="mb-5">
-              <p className="text-[13px] font-medium text-purple-500 mb-0.5 capitalize">
-                {new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' })}
-              </p>
-              <h2 className="text-[22px] font-bold text-gray-900 leading-tight mb-0.5">
-                Tu progreso de hoy
-              </h2>
-              <p className="text-gray-400 text-sm">
-                {userData.name ? `${userData.name}, continúa` : 'Continúa'} donde lo dejaste
-              </p>
-            </div>
-          )}
-
           {/* Contenido según tab activo */}
-          {activeTab === 'inicio' && <InicioContent />}
-          {activeTab === 'actividad' && <ActividadContent />}
-          {activeTab === 'temas' && <TemasContent />}
-          {activeTab === 'recursos' && <RecursosContent />}
+          {activeTab === 'inicio' && (
+            <SoftFortHome
+              userName={userData.name || 'Usuario'}
+              streakData={{ current: displayStreak, longest: totalStats.longestStreak || displayStreak }}
+              totalStats={{
+                testsCompleted: totalStats.testsCompleted,
+                questionsCorrect: totalStats.questionsCorrect,
+                accuracyRate: totalStats.accuracyRate
+              }}
+              fortalezaData={fortalezaData}
+              onStartSession={startTest}
+              onTopicSelect={(topic) => {
+                console.log('Topic selected from home:', topic);
+                setActiveTab('temas');
+              }}
+              onSettingsClick={() => setShowSettingsModal(true)}
+              onProgressClick={() => setShowProgressModal(true)}
+              onStreakClick={() => console.log('Streak clicked')}
+              onAccuracyClick={() => setActiveTab('actividad')}
+              onLevelClick={() => console.log('Level clicked')}
+              onViewAllTopics={() => setActiveTab('temas')}
+              onNavigate={(page) => setCurrentPage(page)}
+              showTopBar={false}
+              showFooter={true}
+            />
+          )}
+          {activeTab === 'actividad' && (
+            <ActividadPage
+              weeklyData={activityWeeklyData}
+              sessionHistory={sessionHistory}
+              totalStats={{
+                testsCompleted: activityTotalStats.testsCompleted || totalStats.testsCompleted,
+                questionsCorrect: activityTotalStats.totalCorrect || totalStats.questionsCorrect,
+                accuracyRate: activityTotalStats.averageAccuracy || totalStats.accuracyRate,
+                totalMinutes: activityTotalStats.totalMinutes || 0,
+                currentStreak: activityStreak || displayStreak,
+                daysStudied: activityTotalStats.daysStudied || totalStats.totalDaysStudied
+              }}
+              calendarData={calendarData}
+              motivationalMessage={motivationalMessage}
+              loading={activityLoading}
+              onStartTest={startTest}
+              formatRelativeDate={formatRelativeDate}
+              devMode={true}
+            />
+          )}
+          {activeTab === 'temas' && (
+            <TemasListView
+              topics={topicsWithQuestions || dbTopics}
+              topicsByBlock={topicsByBlock}
+              onTopicSelect={(topic) => {
+                console.log('Topic selected:', topic);
+                // TODO: Navigate to topic practice
+              }}
+              loading={topicsLoading}
+            />
+          )}
+          {activeTab === 'recursos' && <RecursosPage onNavigate={(page) => setCurrentPage(page)} />}
 
-          {/* Footer */}
-          <footer className="mt-10 mb-4">
-            {/* Lista de opciones - solo en inicio */}
-            {activeTab === 'inicio' && (
-              <div className="bg-white rounded-xl border border-gray-100 divide-y divide-gray-100 overflow-hidden mb-8">
-                <button
-                  onClick={() => setCurrentPage('about')}
-                  className="w-full px-4 py-4 flex items-center justify-between hover:bg-gray-50 transition"
-                >
-                  <div className="flex items-center gap-3">
-                    <Info className="w-5 h-5 text-gray-400" />
-                    <span className="text-gray-700">Acerca de</span>
-                  </div>
-                  <ChevronRight className="w-5 h-5 text-gray-300" />
-                </button>
-                <button
-                  onClick={() => setCurrentPage('faq')}
-                  className="w-full px-4 py-4 flex items-center justify-between hover:bg-gray-50 transition"
-                >
-                  <div className="flex items-center gap-3">
-                    <HelpCircle className="w-5 h-5 text-gray-400" />
-                    <span className="text-gray-700">FAQ</span>
-                  </div>
-                  <ChevronRight className="w-5 h-5 text-gray-300" />
-                </button>
-                <button
-                  onClick={() => window.open('https://instagram.com', '_blank')}
-                  className="w-full px-4 py-4 flex items-center justify-between hover:bg-gray-50 transition"
-                >
-                  <div className="flex items-center gap-3">
-                    <Instagram className="w-5 h-5 text-gray-400" />
-                    <span className="text-gray-700">Síguenos en Instagram</span>
-                  </div>
-                  <ChevronRight className="w-5 h-5 text-gray-300" />
-                </button>
+          {/* Footer - solo para tabs que no son inicio (SoftFortHome tiene su propio footer) */}
+          {activeTab !== 'inicio' && (
+            <footer className="mt-10 mb-4">
+              <div className="text-center py-6">
+                <p className="text-gray-900 font-semibold text-lg mb-1">Oposita Smart</p>
+                <p className="text-gray-500 text-sm">La forma inteligente de opositar</p>
+                <p className="text-xs text-gray-400 mt-4">
+                  © {new Date().getFullYear()} Oposita Smart
+                </p>
               </div>
-            )}
-
-            {/* Nombre y slogan - en todas las pestañas */}
-            <div className="text-center py-6">
-              <p className="text-gray-900 font-semibold text-lg mb-1">Oposita Smart</p>
-              <p className="text-gray-500 text-sm">La forma inteligente de opositar</p>
-              <p className="text-xs text-gray-400 mt-4">
-                © {new Date().getFullYear()} Oposita Smart
-              </p>
-            </div>
-          </footer>
+            </footer>
+          )}
         </div>
       </div>
 
-      {/* DEV Panel Colapsable */}
+      {/* DEV Panel Colapsable - Siempre visible por ahora (TODO: ocultar en prod cuando sistema de roles esté listo) */}
       <DevPanel
         onReset={handleDevReset}
-        onGoToOnboarding={() => setCurrentPage('welcome')}
         onShowPremium={() => setShowPremiumModal(true)}
         onShowAdminLogin={() => setShowAdminLoginModal(true)}
+        onShowPlayground={() => setShowAnimationPlayground(true)}
+        onShowDraftFeatures={() => setShowDraftFeatures(true)}
+        premiumMode={premiumMode}
+        onTogglePremium={() => setPremiumMode(!premiumMode)}
         streakCount={displayStreak}
         testsCount={totalStats.testsCompleted}
       />
 
-      <BottomTabBar />
+      <BottomTabBar
+        activeTab={activeTab}
+        currentPage={currentPage}
+        isUserReviewer={isUserReviewer}
+        onTabChange={setActiveTab}
+        onPageChange={setCurrentPage}
+      />
       {showPremiumModal && <PremiumModal />}
       {showSettingsModal && <SettingsModal />}
       {showProgressModal && <ProgressModal />}
+
+      {/* Animation Playground */}
+      {showAnimationPlayground && (
+        <div className="fixed inset-0 z-[100]">
+          <AnimationPlayground onClose={() => setShowAnimationPlayground(false)} />
+        </div>
+      )}
+
+      {/* Draft Features Preview */}
+      {showDraftFeatures && (
+        <DraftFeatures onClose={() => setShowDraftFeatures(false)} />
+      )}
 
       {/* Admin Login Modal */}
       <AdminLoginModal

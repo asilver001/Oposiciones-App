@@ -1,0 +1,270 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 4 TEST TEMA 4 INICIALES.docx
+**Total preguntas:** 20
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** �Qu� T�tulo de la Constituci�n regula la Corona?:
+
+**Opciones:**
+  0. El T�tulo I.
+  1. El T�tulo II.
+  2. El T�tulo IV.
+  3. El T�tulo III.
+
+---
+
+### Pregunta 2
+
+**Texto:** El nombramiento y relevo de los miembros Civiles y Militares de la Casa Real:
+
+**Opciones:**
+  0. Ser� refrendado por el Presidente del Gobierno.
+  1. Ser� refrendado por el Ministro de Presidencia o por el Ministro de Defensa, seg�n los casos.
+  2. Ser� refrendado por el Presidente del Congreso.
+  3. No est� sujeto a refrendo.
+
+---
+
+### Pregunta 3
+
+**Texto:** �A qui�n corresponde, seg�n la C.E. de 1978, declarar la Guerra y hacer la Paz?:
+
+**Opciones:**
+  0. A las CCGG, a propuesta del Rey.
+  1. Al Congreso, a propuesta del Rey.
+  2. Al Presidente del Gobierno, previa deliberaci�n en Consejo de Ministros.
+  3. Al Rey, previa autorizaci�n de las CCGG.
+
+---
+
+### Pregunta 4
+
+**Texto:** De acuerdo con la Constituci�n, al Rey le corresponde:
+
+**Opciones:**
+  0. Previa autorizaci�n del presidente del Gobierno, declarar la guerra y hacer la paz.
+  1. Previo refer�ndum consultivo, declarar la guerra y hacer la paz.
+  2. Previa autorizaci�n del Consejo de Ministros, declarar la guerra y hacer la paz.
+  3. Previa autorizaci�n de las Cortes Generales, declarar la guerra y hacer la paz.
+
+---
+
+### Pregunta 5
+
+**Texto:** Si no hubiere ninguna persona a quien corresponda la Regencia:
+
+**Opciones:**
+  0. �sta ser� nombrada por las Cortes Generales, y se compondr� de una, tres o cinco personas.
+  1. �sta ser� nombrada por las Cortes Generales, y se compondr� de tres o cinco personas.
+  2. �sta ser� nombrada por el Gobierno, y se compondr� de una, tres o cinco personas.
+  3. �sta ser� nombrada por el Gobierno, y se compondr� de tres o cinco personas.
+
+---
+
+### Pregunta 6
+
+**Texto:** No podr�n acumularse los cargos de Regente y de tutor sino en:
+
+**Opciones:**
+  0. el padre, madre o descendientes directos del Rey.
+  1. la madre o descendientes directos del Rey.
+  2. el padre, madre o ascendientes directos del Rey.
+  3. la madre o ascendientes directos del Rey.
+
+---
+
+### Pregunta 7
+
+**Texto:** Aquellas personas que teniendo derecho a la sucesi�n en el trono contrajeren matrimonio contra la expresa prohibici�n del Rey y de las Cortes Generales, quedar�n excluidas en la sucesi�n a la Corona:
+
+**Opciones:**
+  0. Por s� y por sus descendientes.
+  1. Por s� y por sus ascendientes.
+  2. Por s� y por sus ascendientes y descendientes.
+  3. Por s�, pero no por sus ascendientes y descendientes.
+
+---
+
+### Pregunta 8
+
+**Texto:** El Rey asume la m�s alta representaci�n del Estado en las relaciones internacionales, pero la Constituci�n matiza que dicha representaci�n ser� especialmente con:
+
+**Opciones:**
+  0. Con las naciones integrantes de la Uni�n Europea.
+  1. Con las naciones Iberoamericanas.
+  2. Con las naciones de su comunidad hist�rica.
+  3. Con las naciones de su entorno cultural y geogr�fico.
+
+---
+
+### Pregunta 9
+
+**Texto:** �Cu�l de los siguientes actos del Rey ser� refrendado por el Presidente del Congreso?:
+
+**Opciones:**
+  0. Acreditaci�n de embajadores.
+  1. Propuesta de candidato a Presidente del Gobierno.
+  2. Convocatoria de refer�ndum.
+  3. Declaraci�n de guerra.
+
+---
+
+### Pregunta 10
+
+**Texto:** �Qui�n prestar�, de conformidad con el art�culo 61 de la Constituci�n Espa�ola, juramento de fidelidad al Rey?:
+
+**Opciones:**
+  0. El Pr�ncipe heredero, al alcanzar la mayor�a de edad, y el Regente o Regentes al hacerse cargo de sus funciones.
+  1. El Pr�ncipe heredero, al alcanzar la mayor�a de edad, y el Tutor o Tutores al hacerse cargo de sus funciones.
+  2. El Pr�ncipe heredero, cuando se produzca el hecho que origine su llamamiento, y el Regente o Regentes al hacerse cargo de sus funciones.
+  3. El Pr�ncipe heredero, cuando se produzca el hecho que origine su llamamiento, y el Tutor o Tutores al hacerse cargo de sus funciones.
+
+---
+
+### Pregunta 11
+
+**Texto:** Se�ale la falsa:
+
+**Opciones:**
+  0. La justicia se administra en nombre del Rey.
+  1. El Rey ostenta la m�s alta representaci�n del Estado Espa�ol en las relaciones internacionales.
+  2. El Rey es el Jefe del Estado.
+  3. La soberan�a nacional reside en el Rey, del que emanan los poderes del Estado.
+
+---
+
+### Pregunta 12
+
+**Texto:** El Rey es:
+
+**Opciones:**
+  0. el Jefe del Estado, s�mbolo de su integridad y permanencia.
+  1. el Jefe del Gobierno, s�mbolo de su integridad y permanencia.
+  2. el Jefe del Estado, s�mbolo de su unidad y permanencia.
+  3. el Jefe del Gobierno, s�mbolo de su unidad y permanencia.
+
+---
+
+### Pregunta 13
+
+**Texto:** El Rey, al ser proclamado ante las Cortes Generales, prestar� juramento. Se�ale cu�l de las siguientes afirmaciones se recoge en el art�culo 61 CE como parte de ese juramento regio:
+
+**Opciones:**
+  0. respetar los derechos de las Comunidades Aut�nomas.
+  1. ejercer fielmente su autoridad.
+  2. respetar los derechos de los partidos pol�ticos.
+  3. guardar y hacer guardar la Constituci�n y los tratados y convenios que Espa�a suscriba, especialmente con las naciones de su comunidad hist�rica.
+
+---
+
+### Pregunta 14
+
+**Texto:** La renuncia al trono requerir�:
+
+**Opciones:**
+  0. Ley Org�nica.
+  1. Acuerdo de las CCGG.
+  2. Previa autorizaci�n del Consejo de Ministros.
+  3. Dictamen del Consejo de Estado.
+
+---
+
+### Pregunta 15
+
+**Texto:** Seg�n la Constituci�n Espa�ola, es competencia del Rey:
+
+**Opciones:**
+  0. Refrendar los actos del Presidente de Gobierno.
+  1. Previa autorizaci�n del Presidente de Gobierno, declarar la guerra y hacer la paz.
+  2. El Alto Patronazgo de las Fuerzas Armadas.
+  3. Sancionar, en el plazo de 15 d�as, las leyes aprobadas por las CCGG.
+
+---
+
+### Pregunta 16
+
+**Texto:** Se�ale la respuesta correcta en relaci�n al Jefe del Estado:
+
+**Opciones:**
+  0. Su t�tulo es el de Rey de Espa�a y podr� utilizar los dem�s que correspondan a la Corona.
+  1. Nombra y releva libremente a los miembros civiles y militares de su Casa con el refrendo del Presidente del Gobierno.
+  2. Recibe de los Presupuestos del Estado una cantidad global para el sostenimiento de su Familia y Casa, que es distribuida por las Cortes Generales.
+  3. Su persona es inviolable, por lo que est� sujeta a responsabilidad.
+
+---
+
+### Pregunta 17
+
+**Texto:** La sucesi�n en el trono:
+
+**Opciones:**
+  0. Seguir� el orden regular de primogenitura y representaci�n, siendo preferida siempre la l�nea anterior a las posteriores; en la misma l�nea, el grado m�s pr�ximo al m�s remoto; en el mismo grado, la persona de m�s edad a la de menos y en el mismo sexo, el var�n a la mujer.
+  1. Seguir� el orden regular de primogenitura y prelaci�n, siendo preferida siempre la l�nea anterior a las posteriores; en la misma l�nea, el grado m�s pr�ximo al m�s remoto; en el mismo grado, la persona de m�s edad a la de menos y en el mismo sexo, el var�n a la mujer.
+  2. Seguir� el orden regular de primogenitura y representaci�n, siendo preferida siempre la l�nea anterior a las posteriores; en la misma l�nea, el grado m�s pr�ximo al m�s remoto; en el mismo grado, el var�n a la mujer, y en el mismo sexo, la persona de m�s edad a la de menos.
+  3. Seguir� el orden regular de primogenitura y prelaci�n, siendo preferida siempre la l�nea anterior a las posteriores; en la misma l�nea, el grado m�s pr�ximo al m�s remoto; en el mismo grado, el var�n a la mujer, y en el mismo sexo, la persona de m�s edad a la de menos.
+
+---
+
+### Pregunta 18
+
+**Texto:** De conformidad con el art�culo 60 de la Constituci�n Espa�ola:
+
+**Opciones:**
+  0. El ejercicio de la tutela es compatible con todo cargo o representaci�n pol�tica
+  1. En ning�n caso podr�n acumularse los cargos de Regente y tutor
+  2. Ser� tutor del Rey menor la persona que en su testamento hubiese nombrado el Rey difunto, siempre que sea mayor de edad y espa�ol de nacimiento.
+  3. Si el Rey difunto no hubiese nombrado tutor en su testamento, ser� tutor el padre o la madre aunque contraigan nuevas nupcias.
+
+---
+
+### Pregunta 19
+
+**Texto:** �En qu� supuestos procede el ejercicio de la Regencia?:
+
+**Opciones:**
+  0. Cuando el Rey fuere menor de edad y si el Rey se inhabilitare para el ejercicio de su autoridad y la imposibilidad fuere reconocida por el Gobierno.
+  1. Cuando el Rey fuere menor de edad y si el Rey se inhabilitare para el ejercicio de su autoridad y la imposibilidad fuere reconocida por las Cortes Generales.
+  2. En caso de fallecimiento del Rey, cuando el Rey fuere menor de edad y si el Rey se inhabilitare para el ejercicio de su autoridad y la imposibilidad fuere reconocida por el Gobierno.
+  3. En caso de fallecimiento del Rey, cuando el Rey fuere menor de edad y si el Rey se inhabilitare para el ejercicio de su autoridad y la imposibilidad fuere reconocida por las Cortes Generales.
+
+---
+
+### Pregunta 20
+
+**Texto:** Si el Rey se inhabilitara para el ejercicio de su autoridad y la imposibilidad fuere reconocida por las CCGG, �qui�n entrar�a a ejercer la Regencia en primer t�rmino?:
+
+**Opciones:**
+  0. El Pr�ncipe Heredero si fuera mayor de edad.
+  1. El padre o la madre del Rey.
+  2. La persona que designe el Rey siempre que sea espa�ol de nacimiento y mayor de edad.
+  3. El pariente mayor de edad m�s pr�ximo a suceder en el trono.
+
+---

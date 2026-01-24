@@ -1,0 +1,1990 @@
+{
+  "metadata": {
+    "source_file": "7 TEST TEMA 7 INICIALES.docx",
+    "source_path": "7 TEST TEMA 7 INICIALES.docx",
+    "tema": 7,
+    "categoria": "general",
+    "extraction_date": "2026-01-15T23:40:03.112799",
+    "reformulation_date": "2026-01-15T23:47:35.674848",
+    "total_questions": 40,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.782582",
+    "completed_count": 0,
+    "failed_count": 40
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "De conformidad con el artculo 117.1 de la Constitucin Espaola, en nombre de quin se administra la Justicia?",
+        "options": [
+          {
+            "text": "En nombre del pueblo espaol.",
+            "is_correct": false
+          },
+          {
+            "text": "En nombre de la Constitucin y las leyes.",
+            "is_correct": false
+          },
+          {
+            "text": "En nombre del Rey.",
+            "is_correct": false
+          },
+          {
+            "text": "En nombre de Espaa.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De conformidad con el artculo 117.1 de la Constitucin Espaola, en nombre de quin se administra la Justicia?",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cunto tiempo dura el mandato de los vocales del Consejo General del Poder Judicial?",
+        "options": [
+          {
+            "text": "Tres aos.",
+            "is_correct": false
+          },
+          {
+            "text": "Cuatro aos.",
+            "is_correct": false
+          },
+          {
+            "text": "Cinco aos.",
+            "is_correct": false
+          },
+          {
+            "text": "Seis aos.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cunto tiempo dura el mandato de los vocales del Consejo General del Poder Judicial?",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Tres aos....'",
+        "Distractor muy corto: 'Seis aos....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Cuntos miembros del Consejo General del Poder Judicial son propuestos de entre Jueces y Magistrados de todas las categoras judiciales?",
+        "options": [
+          {
+            "text": "Seis.",
+            "is_correct": false
+          },
+          {
+            "text": "Diez.",
+            "is_correct": false
+          },
+          {
+            "text": "Todos.",
+            "is_correct": false
+          },
+          {
+            "text": "Doce.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cuntos miembros del Consejo General del Poder Judicial son propuestos de entre Jueces y Magistrados de todas las categoras judiciales?",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Seis....'",
+        "Distractor muy corto: 'Diez....'",
+        "Distractor muy corto: 'Todos....'",
+        "Distractor muy corto: 'Doce....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.48
+    },
+    {
+      "question": {
+        "question_text": "Quin nombra al Presidente del Consejo General del Poder Judicial?:",
+        "options": [
+          {
+            "text": "El Jefe del Estado.",
+            "is_correct": false
+          },
+          {
+            "text": "El Jefe de Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "El Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "Las Cortes Generales.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Quin nombra al Presidente del Consejo General del Poder Judicial?:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Quin debe refrendar el nombramiento del Presidente del Consejo General del Poder Judicial?:",
+        "options": [
+          {
+            "text": "No es un acto Real, por tanto, no conlleva refrendo.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente de las Cortes Generales.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Senado.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Quin debe refrendar el nombramiento del Presidente del Consejo General del Poder Judicial?:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 64.1 de la Ley Orgnica 6/1985, de 1 de julio, del Poder Judicial, la Audiencia Nacional estar integrada por las siguientes salas:",
+        "options": [
+          {
+            "text": "Sala de lo Civil, de lo Contencioso Administrativo y de lo Social.",
+            "is_correct": false
+          },
+          {
+            "text": "Sala de Apelacin, de lo Penal, de lo Contencioso Administrativo y de lo Social.",
+            "is_correct": false
+          },
+          {
+            "text": "Sala de lo Penal, de lo Contencioso Administrativo, de lo Social y de lo Militar.",
+            "is_correct": false
+          },
+          {
+            "text": "Sala de Apelacin, de lo Penal, de lo Contencioso Administrativo, de lo Social y de lo Militar.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 64.1 de la Ley Orgnica 6/1985, de 1 de julio, del Poder Judicial, la Audiencia Nacional estar integrada por las siguientes salas:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 124.4 de la Constitucin Espaola, el Fiscal General del Estado:",
+        "options": [
+          {
+            "text": "Ser nombrado por el Rey, a propuesta del Tribunal Constitucional, odo el Consejo General del Poder Judicial.",
+            "is_correct": false
+          },
+          {
+            "text": "Ser nombrado por el Rey, a propuesta del Presidente del Gobierno, de acuerdo con el Consejo General del Poder Judicial.",
+            "is_correct": false
+          },
+          {
+            "text": "Ser nombrado por el Rey, a propuesta conjunta del Gobierno y el Congreso de los Diputados, odo el Consejo General del Poder Judicial.",
+            "is_correct": false
+          },
+          {
+            "text": "Ser nombrado por el Rey, a propuesta del Gobierno, odo el Consejo General del Poder Judicial.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 124.4 de la Constitucin Espaola, el Fiscal General del Estado:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Los Juzgados de Paz existen:",
+        "options": [
+          {
+            "text": "En todos los Municipios",
+            "is_correct": false
+          },
+          {
+            "text": "En todos los Municipios que sean cabeza de partido judicial.",
+            "is_correct": false
+          },
+          {
+            "text": "En todos los Municipios donde no exista Juzgado de Primera Instancia e Instruccin.",
+            "is_correct": false
+          },
+          {
+            "text": "En todos los Municipios donde no exista Juzgado de Distrito.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los Juzgados de Paz existen:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Los Jueces de Paz son elegidos por:",
+        "options": [
+          {
+            "text": "El Consejo General del Poder Judicial.",
+            "is_correct": false
+          },
+          {
+            "text": "El Alcalde, odo el Pleno del Ayuntamiento.",
+            "is_correct": false
+          },
+          {
+            "text": "El Pleno del Ayuntamiento, por mayora simple.",
+            "is_correct": false
+          },
+          {
+            "text": "El Pleno del Ayuntamiento, por mayora absoluta.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los Jueces de Paz son elegidos por:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "No es un rgano unipersonal del poder judicial:",
+        "options": [
+          {
+            "text": "La Audiencia Provincial.",
+            "is_correct": false
+          },
+          {
+            "text": "El Juzgado de lo Contencioso administrativo.",
+            "is_correct": false
+          },
+          {
+            "text": "El Juzgado de lo Mercantil.",
+            "is_correct": false
+          },
+          {
+            "text": "El Juzgado de lo Social.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "No es un rgano unipersonal del poder judicial:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "De conformidad con el artculo 26 LOPJ, ejercen la potestad jurisdiccional en nuestro Estado, los siguientes juzgados y tribunales integrantes del poder judicial:",
+        "options": [
+          {
+            "text": "El Tribunal de Cuentas.",
+            "is_correct": false
+          },
+          {
+            "text": "El Tribunal Constitucional.",
+            "is_correct": false
+          },
+          {
+            "text": "El Tribunal Supremo.",
+            "is_correct": false
+          },
+          {
+            "text": "El Tribunal de las Aguas de la Vega de Valencia.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De conformidad con el artculo 26 LOPJ, ejercen la potestad jurisdiccional en nuestro Estado, los siguientes juzgados y tribunales integrantes del poder judicial:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El Tribunal Supremo (seale la falsa):",
+        "options": [
+          {
+            "text": "Tiene su sede en la Villa de Madrid.",
+            "is_correct": false
+          },
+          {
+            "text": "Tiene jurisdiccin en toda Espaa.",
+            "is_correct": false
+          },
+          {
+            "text": "Su Presidente lo es tambin de la Audiencia Nacional.",
+            "is_correct": false
+          },
+          {
+            "text": "Tiene 5 Salas: Civil, Penal, Contencioso administrativo, Social y Militar.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Tribunal Supremo (seale la falsa):",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Para ser elegido Presidente del Tribunal Supremo, la LOPJ establece como requisitos que:",
+        "options": [
+          {
+            "text": "Ser necesario ser miembro de la carrera judicial con la categora de Magistrado del Tribunal Supremo y reunir las condiciones exigidas para ser Presidente de Sala del mismo, o bien ser un jurista de reconocida competencia con ms de 20 aos de antigedad en el ejercicio de su profesin.",
+            "is_correct": false
+          },
+          {
+            "text": "Ser necesario ser Magistrado o Fiscal, Profesor de Universidad, funcionario pblico o Abogado, todos ellos juristas de reconocida competencia con ms de 25 aos de ejercicio profesional.",
+            "is_correct": false
+          },
+          {
+            "text": "Ser necesario ser miembro de la carrera judicial con la categora de Magistrado del Tribunal Supremo y reunir las condiciones exigidas para ser Presidente de Sala del mismo, o bien ser un jurista de reconocida competencia con ms de 25 aos de antigedad en el ejercicio de su profesin.",
+            "is_correct": false
+          },
+          {
+            "text": "Ser necesario ser Magistrado o Fiscal, Profesor de Universidad, funcionario pblico o Abogado, todos ellos juristas de reconocida competencia con ms de 20 aos de ejercicio profesional.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Para ser elegido Presidente del Tribunal Supremo, la LOPJ establece como requisitos que:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El mandato del Fiscal General del Estado, de conformidad con el artculo 31 del Estatuto Orgnico del Ministerio Fiscal, tendr una duracin de:",
+        "options": [
+          {
+            "text": "4 aos y no podr ser renovado excepto en los supuestos en que el titular hubiera ostentado el cargo durante un perodo inferior a 2 aos.",
+            "is_correct": false
+          },
+          {
+            "text": "4 aos y no podr ser renovado excepto en los supuestos en que el titular hubiera ostentado el cargo durante un perodo inferior a 1 ao.",
+            "is_correct": false
+          },
+          {
+            "text": "5 aos y no podr ser renovado excepto en los supuestos en que el titular hubiera ostentado el cargo durante un perodo inferior a 2 aos.",
+            "is_correct": false
+          },
+          {
+            "text": "5 aos y no podr ser renovado excepto en los supuestos en que el titular hubiera ostentado el cargo durante un perodo inferior a 3 aos.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El mandato del Fiscal General del Estado, de conformidad con el artculo 31 del Estatuto Orgnico del Ministerio Fiscal, tendr una duracin de:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con la Constitucin Espaola:",
+        "options": [
+          {
+            "text": "El procedimiento ser predominantemente oral, sobre todo en materia criminal.",
+            "is_correct": false
+          },
+          {
+            "text": "La justicia emana del Rey y se administra en nombre del pueblo",
+            "is_correct": false
+          },
+          {
+            "text": "El ejercicio de la jurisdiccin militar se limitar mbito estrictamente castrense y a los supuestos de estados de excepcin y de sitio",
+            "is_correct": false
+          },
+          {
+            "text": "Se prohben los Tribunales de excepcin en el mbito de la Administracin Civil y de las organizaciones profesionales",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con la Constitucin Espaola:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Los Jueces y Magistrados, conforme a la que dispone la Constitucin, son:",
+        "options": [
+          {
+            "text": "Independientes, inviolables, responsables y sometidos nicamente al imperio de la Ley.",
+            "is_correct": false
+          },
+          {
+            "text": "Independientes, inamovibles, invulnerables y sometidos nicamente al imperio de la Ley.",
+            "is_correct": false
+          },
+          {
+            "text": "Independientes, neutrales, inamovibles, responsables y sometidos nicamente al imperio de la Ley.",
+            "is_correct": false
+          },
+          {
+            "text": "Independientes, inamovibles, responsables y sometidos nicamente al imperio de la Ley.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Los Jueces y Magistrados, conforme a la que dispone la Constitucin, son:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 122 de la Constitucin Espaola, el Consejo General del Poder Judicial se configura como el rgano:",
+        "options": [
+          {
+            "text": "Consultivo del Poder Judicial.",
+            "is_correct": false
+          },
+          {
+            "text": "De gobierno del Poder Judicial.",
+            "is_correct": false
+          },
+          {
+            "text": "Representativo del Poder Judicial.",
+            "is_correct": false
+          },
+          {
+            "text": "Jurisdiccional superior en todos los rdenes.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 122 de la Constitucin Espaola, el Consejo General del Poder Judicial se configura como el rgano:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El Consejo General del Poder Judicial:",
+        "options": [
+          {
+            "text": "Estar integrado por el Presidente del Tribunal Supremo, que lo presidir, y por 20 miembros.",
+            "is_correct": false
+          },
+          {
+            "text": "Estar integrado por el Presidente del Tribunal Supremo, que lo presidir, y por 21 miembros.",
+            "is_correct": false
+          },
+          {
+            "text": "Estar integrado por un total de 20 miembros.",
+            "is_correct": false
+          },
+          {
+            "text": "Estar integrado por el Presidente de la Audiencia Nacional, que lo presidir, y por 20 miembros.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Consejo General del Poder Judicial:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La responsabilidad de los jueces por los daos que puedan cometer en el ejercicio de su funcin jurisdiccional, puede ser:",
+        "options": [
+          {
+            "text": "Civil o Penal.",
+            "is_correct": false
+          },
+          {
+            "text": "Civil exclusivamente.",
+            "is_correct": false
+          },
+          {
+            "text": "Civil, Penal o Disciplinaria.",
+            "is_correct": false
+          },
+          {
+            "text": "Penal o Disciplinaria.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La responsabilidad de los jueces por los daos que puedan cometer en el ejercicio de su funcin jurisdiccional, puede ser:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cules son los principios que rigen el ejercicio de las funciones del Ministerio Fiscal de acuerdo con el artculo 124.2 de la Constitucin Espaola?:",
+        "options": [
+          {
+            "text": "Independencia, inamovilidad, legalidad e imparcialidad",
+            "is_correct": false
+          },
+          {
+            "text": "Oportunidad, autonoma, unidad jurisdiccional y legalidad.",
+            "is_correct": false
+          },
+          {
+            "text": "Autonoma, unidad jurisdiccional, legalidad y oportunidad",
+            "is_correct": false
+          },
+          {
+            "text": "Unidad de actuacin, dependencia jerrquica, legalidad e imparcialidad.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cules son los principios que rigen el ejercicio de las funciones del Ministerio Fiscal de acuerdo con el artculo 124.2 de la Constitucin Espaola?:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La justicia ser gratuita cuando as lo disponga una ley, y:",
+        "options": [
+          {
+            "text": "Segn los casos, respecto de quienes acrediten insuficiencia de recursos para litigar.",
+            "is_correct": false
+          },
+          {
+            "text": "Segn los casos, respecto de quienes parezcan manifestar insuficiencia de recursos para litigar.",
+            "is_correct": false
+          },
+          {
+            "text": "En todo caso, respecto de quienes parezcan manifestar insuficiencia de recursos para litigar.",
+            "is_correct": false
+          },
+          {
+            "text": "En todo caso, respecto de quienes acrediten insuficiencia de recursos para litigar.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La justicia ser gratuita cuando as lo disponga una ley, y:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Las actuaciones judiciales sern pblicas:",
+        "options": [
+          {
+            "text": "Siempre.",
+            "is_correct": false
+          },
+          {
+            "text": "Siempre que lo prevea una norma con rango de ley.",
+            "is_correct": false
+          },
+          {
+            "text": "En ningn caso.",
+            "is_correct": false
+          },
+          {
+            "text": "Con las excepciones que prevean las leyes de procedimiento.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Las actuaciones judiciales sern pblicas:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Siempre....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "A efectos judiciales, el Estado se organiza territorialmente en:",
+        "options": [
+          {
+            "text": "Municipios, Provincias, Comarcas y Comunidades Autnomas.",
+            "is_correct": false
+          },
+          {
+            "text": "Municipios, Provincias y Comunidades Autnomas.",
+            "is_correct": false
+          },
+          {
+            "text": "Municipios, Partidos, Provincias y Comunidades Autnomas.",
+            "is_correct": false
+          },
+          {
+            "text": "Municipios, Partidos y Comunidades Autnomas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "A efectos judiciales, el Estado se organiza territorialmente en:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Segn la Constitucin, la justicia:",
+        "options": [
+          {
+            "text": "Se administra en nombre del pueblo por Jueces y Magistrados.",
+            "is_correct": false
+          },
+          {
+            "text": "Emana del pueblo",
+            "is_correct": false
+          },
+          {
+            "text": "Emana del Rey",
+            "is_correct": false
+          },
+          {
+            "text": "Emana de los Jueces y Magistrados integrantes del poder judicial.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn la Constitucin, la justicia:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La competencia sobre la Administracin de Justicia, de acuerdo con el artculo 149.1.5 de la Constitucin:",
+        "options": [
+          {
+            "text": "Se atribuye en exclusiva al Estado",
+            "is_correct": false
+          },
+          {
+            "text": "Podr ser asumida como exclusiva por las Comunidades autnomas en sus respectivos estatutos",
+            "is_correct": false
+          },
+          {
+            "text": "Le corresponde la legislacin al Estado y la ejecucin puede corresponder a las Comunidades autnomas segn sus respectivos estatutos",
+            "is_correct": false
+          },
+          {
+            "text": "No aparece regulada esta cuestin en el texto constitucional.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La competencia sobre la Administracin de Justicia, de acuerdo con el artculo 149.1.5 de la Constitucin:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La competencia de la jurisdiccin militar:",
+        "options": [
+          {
+            "text": "No tiene lmites",
+            "is_correct": false
+          },
+          {
+            "text": "Quedar limitada al mbito estrictamente castrense y a los supuestos de estado de alarma",
+            "is_correct": false
+          },
+          {
+            "text": "Quedar limitada al mbito estrictamente castrense y a los supuestos de estado de excepcin",
+            "is_correct": false
+          },
+          {
+            "text": "Quedar limitada al mbito estrictamente castrense y a los supuestos de estado de sitio",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La competencia de la jurisdiccin militar:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "De conformidad con la LOPJ:",
+        "options": [
+          {
+            "text": "La demarcacin judicial, que determinar la circunscripcin territorial de los rganos judiciales, se establecer por ley.",
+            "is_correct": false
+          },
+          {
+            "text": "La demarcacin judicial, que determinar la circunscripcin territorial de los rganos judiciales, se establecer por ley o, en los casos expresamente contemplados en esta norma, por real decreto.",
+            "is_correct": false
+          },
+          {
+            "text": "La demarcacin judicial, que determinar la circunscripcin territorial de los rganos judiciales, se establecer por ley orgnica.",
+            "is_correct": false
+          },
+          {
+            "text": "La demarcacin judicial, que determinar la circunscripcin territorial de los rganos judiciales, se establecer por ley orgnica o, en los casos expresamente contemplados en esta norma, por ley ordinaria.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De conformidad con la LOPJ:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la falsa en relacin con el mandato y renovacin de los miembros del CGPJ:",
+        "options": [
+          {
+            "text": "El CGPJ se renovar en su totalidad cada 5 aos, contados desde la fecha de su constitucin.",
+            "is_correct": false
+          },
+          {
+            "text": "Las Cmaras debern comenzar el proceso de renovacin 4 meses antes de que expire el mandato.",
+            "is_correct": false
+          },
+          {
+            "text": "La toma de posesin y la sesin constitutiva tendrn lugar dentro de los 15 das posteriores a la expiracin del anterior Consejo.",
+            "is_correct": false
+          },
+          {
+            "text": "En ningn caso podr recaer la designacin de Vocales del Consejo General del Poder Judicial en Vocales del Consejo saliente.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la falsa en relacin con el mandato y renovacin de los miembros del CGPJ:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Ser nombrado Presidente del Tribunal Supremo y del CGPJ la persona que alcance las siguientes mayoras en el Pleno:",
+        "options": [
+          {
+            "text": "Mayora absoluta.",
+            "is_correct": false
+          },
+          {
+            "text": "Mayora de 2/3.",
+            "is_correct": false
+          },
+          {
+            "text": "Mayora de 3/5.",
+            "is_correct": false
+          },
+          {
+            "text": "Mayora de votos.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Ser nombrado Presidente del Tribunal Supremo y del CGPJ la persona que alcance las siguientes mayoras en el Pleno:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la composicin de la Comisin Permanente del CGPJ:",
+        "options": [
+          {
+            "text": "Presidente, que la preside, y 4 vocales, 2 del turno judicial y dos juristas.",
+            "is_correct": false
+          },
+          {
+            "text": "Presidente, que la preside, y 7 vocales, 4 del turno judicial y tres juristas.",
+            "is_correct": false
+          },
+          {
+            "text": "Presidente, que la preside, y 6 vocales, 3 del turno judicial y tres juristas.",
+            "is_correct": false
+          },
+          {
+            "text": "Presidente, que la preside, y 5 vocales, 2 del turno judicial y tres juristas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la composicin de la Comisin Permanente del CGPJ:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El Promotor de la Accin Disciplinaria (seale la falsa):",
+        "options": [
+          {
+            "text": "Tiene un mandato de 5 aos.",
+            "is_correct": false
+          },
+          {
+            "text": "Ser elegido por mayora absoluta del Pleno.",
+            "is_correct": false
+          },
+          {
+            "text": "Ser elegido entre magistrados del Tribunal Supremo y magistrados con ms de 25 aos de antigedad en la carrera judicial.",
+            "is_correct": false
+          },
+          {
+            "text": "Mientras desempee el cargo tendr la consideracin honorfica de Magistrado de la Audiencia Nacional.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Promotor de la Accin Disciplinaria (seale la falsa):",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Cul de los siguientes no es un rgano del CGPJ? :",
+        "options": [
+          {
+            "text": "Comisin de Asuntos Econmicos.",
+            "is_correct": false
+          },
+          {
+            "text": "Promotor de la Accin Disciplinaria.",
+            "is_correct": false
+          },
+          {
+            "text": "Comisin Disciplinaria.",
+            "is_correct": false
+          },
+          {
+            "text": "Comisin de personal judicial.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul de los siguientes no es un rgano del CGPJ? :",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El Presidente del Tribunal Superior de Justicia ser nombrado por:",
+        "options": [
+          {
+            "text": "El Consejo General del Poder Judicial.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente de Tribunal Supremo.",
+            "is_correct": false
+          },
+          {
+            "text": "El Rey.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente de la Comunidad Autnoma.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Presidente del Tribunal Superior de Justicia ser nombrado por:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'El Rey....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El Presidente del Tribunal Superior de Justicia tiene adems la condicin de:",
+        "options": [
+          {
+            "text": "Presidente de la Sala de lo Contencioso Administrativo del propio Tribunal Superior de Justicia.",
+            "is_correct": false
+          },
+          {
+            "text": "Presidente de la Sala de lo Civil y lo Penal del propio Tribunal Superior de Justicia.",
+            "is_correct": false
+          },
+          {
+            "text": "Miembro del Consejo General del Poder Judicial.",
+            "is_correct": false
+          },
+          {
+            "text": "Magistrado de la Audiencia Nacional.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El Presidente del Tribunal Superior de Justicia tiene adems la condicin de:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La Sala Especial del Tribunal Supremo regulada en el artculo 61 de la LOPJ est compuesta por:",
+        "options": [
+          {
+            "text": "El Presidente del Tribunal Supremo y el Magistrado ms antiguo y ms moderno de cada una de las Salas.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Tribunal Constitucional y el Magistrado ms antiguo y ms moderno de cada una de las Salas.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Tribunal Supremo, los Presidentes de Sala y el Magistrado ms antiguo y ms moderno de cada una de ellas.",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Tribunal Constitucional, los Presidentes de Sala y el Magistrado ms antiguo y ms moderno de cada una de ellas.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La Sala Especial del Tribunal Supremo regulada en el artculo 61 de la LOPJ est compuesta por:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Segn la Constitucin el Jurado popular se limita a los procesos:",
+        "options": [
+          {
+            "text": "Civiles.",
+            "is_correct": false
+          },
+          {
+            "text": "Penales.",
+            "is_correct": false
+          },
+          {
+            "text": "Civiles y penales.",
+            "is_correct": false
+          },
+          {
+            "text": "Penales y sociales.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn la Constitucin el Jurado popular se limita a los procesos:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Civiles....'",
+        "Distractor muy corto: 'Penales....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Qu Comisiones del CGPJ estn integradas por tres vocales?:",
+        "options": [
+          {
+            "text": "La Comisin Disciplinaria y la Comisin de Asuntos Econmicos.",
+            "is_correct": false
+          },
+          {
+            "text": "La Comisin Disciplinaria y la Comisin de Igualdad.",
+            "is_correct": false
+          },
+          {
+            "text": "La Comisin de Asuntos Econmicos y la Comisin de Igualdad.",
+            "is_correct": false
+          },
+          {
+            "text": "La Comisin Disciplinaria, la Comisin de Igualdad y la Comisin de Asuntos Econmicos.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Qu Comisiones del CGPJ estn integradas por tres vocales?:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La eleccin del Presidente de la Audiencia Nacional corresponde:",
+        "options": [
+          {
+            "text": "Al Pleno del CGPJ por mayora absoluta de miembros presentes.",
+            "is_correct": false
+          },
+          {
+            "text": "Al Pleno del CGPJ por mayora de 3/5 de miembros presentes.",
+            "is_correct": false
+          },
+          {
+            "text": "A la Comisin Permanente del CGPJ por mayora absoluta de miembros presentes.",
+            "is_correct": false
+          },
+          {
+            "text": "A la Comisin Permanente del CGPJ por mayora de 3/5 de miembros presentes.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La eleccin del Presidente de la Audiencia Nacional corresponde:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El mandato de la Comisin Permanente ser:",
+        "options": [
+          {
+            "text": "Rotacin bianual.",
+            "is_correct": false
+          },
+          {
+            "text": "Rotacin anual.",
+            "is_correct": false
+          },
+          {
+            "text": "De 5 aos.",
+            "is_correct": false
+          },
+          {
+            "text": "De 3 aos.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El mandato de la Comisin Permanente ser:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'De 5 aos....'",
+        "Distractor muy corto: 'De 3 aos....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "En cada provincia existirn:",
+        "options": [
+          {
+            "text": "Uno o varios juzgados de primera instancia e instruccin.",
+            "is_correct": false
+          },
+          {
+            "text": "Uno o varios juzgados de Violencia sobre la mujer.",
+            "is_correct": false
+          },
+          {
+            "text": "Uno o varios Juzgados de lo Mercantil.",
+            "is_correct": false
+          },
+          {
+            "text": "Un juzgado de Paz.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En cada provincia existirn:",
+        "source": "7 TEST TEMA 7 INICIALES.docx",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 7,
+        "materia": "org-administrativa",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:22.237666"
+}

@@ -1,0 +1,1007 @@
+{
+  "metadata": {
+    "source_file": "5. Test Libro II Adjudicación.pdf",
+    "source_path": "Test contratos\\5. Test Libro II Adjudicación.pdf",
+    "tema": 0,
+    "categoria": "contratos",
+    "extraction_date": "2026-01-15T23:41:07.249430",
+    "reformulation_date": "2026-01-15T23:47:35.610451",
+    "total_questions": 20,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.602982",
+    "completed_count": 0,
+    "failed_count": 20
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "De acuerdo con lo dispuesto en la Disposicin adicional 15 de la",
+        "options": [
+          {
+            "text": "Los plazos a contar desde la notificacin se computarn desde la",
+            "is_correct": false
+          },
+          {
+            "text": "La a) pero siempre que el acto objeto de notificacin se haya",
+            "is_correct": false
+          },
+          {
+            "text": "ontratacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Los plazos se computarn desde la recepcin de la notificacin",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con lo dispuesto en la Disposicin adicional 15 de la",
+        "source": "5. Test Libro II Adjudicación.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El procedimiento abierto simplificado est previsto para:",
+        "options": [
+          {
+            "text": "Contratos de obra cuyo valor estimado sea igual o superior a 2",
+            "is_correct": false
+          },
+          {
+            "text": "Contratos de suministro cuyo valor estimado sea igual o inferior a",
+            "is_correct": false
+          },
+          {
+            "text": "Contratos de servicios cuyo valor estimado sea inferior a",
+            "is_correct": false
+          },
+          {
+            "text": "Ninguna es correcta.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El procedimiento abierto simplificado est previsto para:",
+        "source": "5. Test Libro II Adjudicación.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Al licitar los contratos que se vayan a financiar con fondos",
+        "options": [
+          {
+            "text": "breviado (art. 159.6) en:",
+            "is_correct": false
+          },
+          {
+            "text": "Contratos de obras de valor estimado inferior a 200.000 euros.",
+            "is_correct": false
+          },
+          {
+            "text": "Contratos de suministros de valor estimado inferior a 100.000",
+            "is_correct": false
+          },
+          {
+            "text": "Contratos de servicios (excepto los que tengan por objeto",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Al licitar los contratos que se vayan a financiar con fondos",
+        "source": "5. Test Libro II Adjudicación.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "El procedimiento abierto simplificado sumario se caracteriza por:",
+        "options": [
+          {
+            "text": "Se eximir de acreditar de solvencia pero no de acreditar",
+            "is_correct": false
+          },
+          {
+            "text": "lasificacin.",
+            "is_correct": false
+          },
+          {
+            "text": "No se exige garanta provisional pero si definitiva.",
+            "is_correct": false
+          },
+          {
+            "text": "No se exige garanta definitiva pero si provisional.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El procedimiento abierto simplificado sumario se caracteriza por:",
+        "source": "5. Test Libro II Adjudicación.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El procedimiento restringido:",
+        "options": [
+          {
+            "text": "Tiene carcter ordinario, al igual que el abierto.",
+            "is_correct": false
+          },
+          {
+            "text": "Es obligatoria su utilizacin en servicios intelectuales de especial",
+            "is_correct": false
+          },
+          {
+            "text": "omplejidad.",
+            "is_correct": false
+          },
+          {
+            "text": "Es especialmente adecuado en concesiones de servicios",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El procedimiento restringido:",
+        "source": "5. Test Libro II Adjudicación.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La Documentacin Acreditativa del cumplimiento de los requisitos",
+        "options": [
+          {
+            "text": "Junto con la solicitud en el caso de los procedimientos abiertos.",
+            "is_correct": false
+          },
+          {
+            "text": "Junto con la proposicin en el caso de los procedimientos",
+            "is_correct": false
+          },
+          {
+            "text": "Junto con la solicitud en el caso de los procedimientos de dilogo",
+            "is_correct": false
+          },
+          {
+            "text": "ompetitivo.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La Documentacin Acreditativa del cumplimiento de los requisitos",
+        "source": "5. Test Libro II Adjudicación.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la correcta en relacin a los plazos de presentacin de las",
+        "options": [
+          {
+            "text": "Si no se da acceso electrnico a",
+            "is_correct": false
+          },
+          {
+            "text": "ocumentacin complementaria a travs del perfil de contratante,",
+            "is_correct": false
+          },
+          {
+            "text": "La a), salvo en el supuesto de tramitacin de emergencia.",
+            "is_correct": false
+          },
+          {
+            "text": "Los establece la mesa de contratacin, respetando, en todo caso,",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la correcta en relacin a los plazos de presentacin de las",
+        "source": "5. Test Libro II Adjudicación.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la correcta en relacin a los criterios de adjudicacin:",
+        "options": [
+          {
+            "text": "Se podrn tener en cuenta varios criterios, siendo posible que",
+            "is_correct": false
+          },
+          {
+            "text": "En los contratos que tengan por objeto prestaciones de carcter",
+            "is_correct": false
+          },
+          {
+            "text": "Es obligatorio incluir el precio como criterio de adjudicacin.",
+            "is_correct": false
+          },
+          {
+            "text": "En los servicios relacionados en el Anexo IV no se podr tener en",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la correcta en relacin a los criterios de adjudicacin:",
+        "source": "5. Test Libro II Adjudicación.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la incorrecta en relacin a los criterios de adjudicacin:",
+        "options": [
+          {
+            "text": "En los contratos de concesin de obra se podr utilizar un nico",
+            "is_correct": false
+          },
+          {
+            "text": "riterio de adjudicacin.",
+            "is_correct": false
+          },
+          {
+            "text": "En los contratos de servicios que tengan por objeto prestaciones",
+            "is_correct": false
+          },
+          {
+            "text": "e carcter intelectual debern tenerse en cuenta varios criterios",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la incorrecta en relacin a los criterios de adjudicacin:",
+        "source": "5. Test Libro II Adjudicación.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La aplicacin de los criterios de adjudicacin se efectuar por los",
+        "options": [
+          {
+            "text": "En los procedimientos abierto o restringido, la valoracin de los",
+            "is_correct": false
+          },
+          {
+            "text": "riterios cuya cuantificacin dependa de un juicio de valor",
+            "is_correct": false
+          },
+          {
+            "text": "orresponder, en los casos en que proceda por tener atribuida",
+            "is_correct": false
+          },
+          {
+            "text": "La a), y en los restantes supuestos, solo la valoracin de los",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La aplicacin de los criterios de adjudicacin se efectuar por los",
+        "source": "5. Test Libro II Adjudicación.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En los casos en que el rgano de contratacin presuma que una",
+        "options": [
+          {
+            "text": "La mesa de contratacin, o en su defecto, el rgano de",
+            "is_correct": false
+          },
+          {
+            "text": "ontratacin deber identificar las ofertas que se encuentran",
+            "is_correct": false
+          },
+          {
+            "text": "Deber requerirse al licitador o licitadores que las hubieren",
+            "is_correct": false
+          },
+          {
+            "text": "esglosen razonada y detalladamente el bajo nivel de los precios,",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En los casos en que el rgano de contratacin presuma que una",
+        "source": "5. Test Libro II Adjudicación.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Una vez aceptada la propuesta de la mesa por el rgano de",
+        "options": [
+          {
+            "text": "ontratacin, los servicios correspondientes requerirn al licitador",
+            "is_correct": false
+          },
+          {
+            "text": "Documentacin justificativa de disponer efectivamente de los",
+            "is_correct": false
+          },
+          {
+            "text": "Documentacin justificativa de haber constituido la garanta",
+            "is_correct": false
+          },
+          {
+            "text": "La a), y se le otorgar con carcter general un plazo de 10 das",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Una vez aceptada la propuesta de la mesa por el rgano de",
+        "source": "5. Test Libro II Adjudicación.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la respuesta correcta:",
+        "options": [
+          {
+            "text": "La mesa de contratacin adjudicar el contrato dentro de los cinco",
+            "is_correct": false
+          },
+          {
+            "text": "as hbiles siguientes a la recepcin de la documentacin.",
+            "is_correct": false
+          },
+          {
+            "text": "No podr declararse desierta una licitacin cuando exista alguna",
+            "is_correct": false
+          },
+          {
+            "text": "riterios que figuren en el pliego.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la respuesta correcta:",
+        "source": "5. Test Libro II Adjudicación.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "La resolucin de adjudicacin:",
+        "options": [
+          {
+            "text": "Deber ser motivada y se notificar a los candidatos y licitadores,",
+            "is_correct": false
+          },
+          {
+            "text": "ebiendo ser publicada en el perfil de contratante en el plazo de",
+            "is_correct": false
+          },
+          {
+            "text": "La a), pero adems, con carcter general debe publicarse en el",
+            "is_correct": false
+          },
+          {
+            "text": "OE.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "La resolucin de adjudicacin:",
+        "source": "5. Test Libro II Adjudicación.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'OE....'",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la correcta en relacin a la decisin de no adjudicar o",
+        "options": [
+          {
+            "text": "elebrar el contrato y desistimiento del procedimiento de",
+            "is_correct": false
+          },
+          {
+            "text": "djudicacin por la Administracin:",
+            "is_correct": false
+          },
+          {
+            "text": "Solo podr adoptarse la decisin de no adjudicar o celebrar el",
+            "is_correct": false
+          },
+          {
+            "text": "ontrato fundada en una infraccin no subsanable de las normas",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la correcta en relacin a la decisin de no adjudicar o",
+        "source": "5. Test Libro II Adjudicación.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Seale la correcta en relacin a la formalizacin de los contratos:",
+        "options": [
+          {
+            "text": "Los contratos que celebren las Administraciones Pblicas debern",
+            "is_correct": false
+          },
+          {
+            "text": "ocumento ttulo suficiente para acceder a cualquier registro",
+            "is_correct": false
+          },
+          {
+            "text": "El contratista no podr solicitar que el contrato se eleve a escritura",
+            "is_correct": false
+          },
+          {
+            "text": "En los contratos basados en un acuerdo marco o en los contratos",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la correcta en relacin a la formalizacin de los contratos:",
+        "source": "5. Test Libro II Adjudicación.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "media",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la correcta en relacin a la formalizacin de los contratos:",
+        "options": [
+          {
+            "text": "Si el contrato es susceptible de recurso especial en materia de",
+            "is_correct": false
+          },
+          {
+            "text": "ontratacin conforme al artculo 44, la formalizacin no podr",
+            "is_correct": false
+          },
+          {
+            "text": "andidatos.",
+            "is_correct": false
+          },
+          {
+            "text": "La a), y los servicios dependientes del rgano de contratacin",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la correcta en relacin a la formalizacin de los contratos:",
+        "source": "5. Test Libro II Adjudicación.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "El procedimiento abierto simplificado se caracteriza por:",
+        "options": [
+          {
+            "text": "Todos los licitadores que se presenten a licitaciones realizadas a",
+            "is_correct": false
+          },
+          {
+            "text": "No proceder la constitucin de garanta definitiva por parte de los",
+            "is_correct": false
+          },
+          {
+            "text": "En los supuestos en que en el procedimiento se contemplen",
+            "is_correct": false
+          },
+          {
+            "text": "riterios de adjudicacin cuya cuantificacin dependa de un juicio",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "El procedimiento abierto simplificado se caracteriza por:",
+        "source": "5. Test Libro II Adjudicación.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la correcta en relacin a los acuerdos marco:",
+        "options": [
+          {
+            "text": "Los celebra un nico rgano de contratacin con una o varias",
+            "is_correct": false
+          },
+          {
+            "text": "justarse los contratos que pretendan adjudicar durante un",
+            "is_correct": false
+          },
+          {
+            "text": "La duracin de un acuerdo marco no podr exceder de cinco",
+            "is_correct": false
+          },
+          {
+            "text": "os, salvo en casos excepcionales, debidamente justificados.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la correcta en relacin a los acuerdos marco:",
+        "source": "5. Test Libro II Adjudicación.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "Seale la correcta en relacin a la contratacin centralizada:",
+        "options": [
+          {
+            "text": "Las entidades del sector pblico podrn centralizar la contratacin",
+            "is_correct": false
+          },
+          {
+            "text": "e obras, servicios, suministros y concesiones de obra y servicios",
+            "is_correct": false
+          },
+          {
+            "text": "tribuyndola a servicios especializados.",
+            "is_correct": false
+          },
+          {
+            "text": "Corresponde, segn la LCSP, al Ministro de Hacienda y Funcin",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Seale la correcta en relacin a la contratacin centralizada:",
+        "source": "5. Test Libro II Adjudicación.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "contratos-publicos",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:22.101251"
+}

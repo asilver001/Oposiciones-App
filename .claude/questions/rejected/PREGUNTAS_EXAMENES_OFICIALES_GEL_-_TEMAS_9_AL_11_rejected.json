@@ -1,0 +1,516 @@
+{
+  "metadata": {
+    "source_file": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 9 AL 11.pdf",
+    "source_path": "Segundo repaso\\PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 9 AL 11.pdf",
+    "tema": 0,
+    "categoria": "repaso",
+    "extraction_date": "2026-01-15T23:40:39.118406",
+    "reformulation_date": "2026-01-15T23:47:35.720068",
+    "total_questions": 10,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.924599",
+    "completed_count": 0,
+    "failed_count": 10
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "De acuerdo con la Ley 40/2015, de 1 de octubre, de Rgimen Jurdico del Sector",
+        "options": [
+          {
+            "text": "Son entidades de derecho pblico, con personalidad jurdica propia, tesorera y",
+            "is_correct": false
+          },
+          {
+            "text": "iferenciadas y dependientes de sta.",
+            "is_correct": false
+          },
+          {
+            "text": "Son entidades de derecho pblico, con personalidad jurdica propia, patrimonio",
+            "is_correct": false
+          },
+          {
+            "text": "esarrollan actividades prestacionales",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con la Ley 40/2015, de 1 de octubre, de Rgimen Jurdico del Sector",
+        "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 9 AL 11.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 84 de la ley 40/2015, de 1 de octubre, el sector pblico institucional",
+        "options": [
+          {
+            "text": "Los fondos con personalidad jurdica.",
+            "is_correct": false
+          },
+          {
+            "text": "Las universidades pblicas transferidas y no transferidas.",
+            "is_correct": false
+          },
+          {
+            "text": "Las fundaciones privadas.",
+            "is_correct": false
+          },
+          {
+            "text": "Las sociedades mercantiles estatales.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 84 de la ley 40/2015, de 1 de octubre, el sector pblico institucional",
+        "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 9 AL 11.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Dentro del sector pblico institucional estatal, los organismos pblicos vinculados o",
+        "options": [
+          {
+            "text": "ependientes de la Administracin General del Estado se clasifican en:",
+            "is_correct": false
+          },
+          {
+            "text": "Organismos autnomos, Entidades Pblicas Empresariales, autoridades",
+            "is_correct": false
+          },
+          {
+            "text": "dministrativas independientes, sociedades mercantiles estatales, consorcios y",
+            "is_correct": false
+          },
+          {
+            "text": "Organismos autnomos, Entidades Pblicas Empresariales, autoridades",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Dentro del sector pblico institucional estatal, los organismos pblicos vinculados o",
+        "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 9 AL 11.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Hay opciones duplicadas",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.5,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.517
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 89 de la ley 40/2015, de 1 de octubre, los Organismos Pblicos",
+        "options": [
+          {
+            "text": "La potestad expropiatoria.",
+            "is_correct": false
+          },
+          {
+            "text": "La potestad normativa.",
+            "is_correct": false
+          },
+          {
+            "text": "La potestad de autoorganizacin.",
+            "is_correct": false
+          },
+          {
+            "text": "La potestad de deslinde.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 89 de la ley 40/2015, de 1 de octubre, los Organismos Pblicos",
+        "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 9 AL 11.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn la Ley 40/2015, de 1 de octubre, de Rgimen Jurdico del Sector Pblico, la",
+        "options": [
+          {
+            "text": "Mediante Real Decreto, aunque suponga modificacin de la Ley de creacin.",
+            "is_correct": false
+          },
+          {
+            "text": "Por Orden Ministerial.",
+            "is_correct": false
+          },
+          {
+            "text": "Por Ley.",
+            "is_correct": false
+          },
+          {
+            "text": "Mediante Decreto, aunque suponga modificacin de la Ley de creacin.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn la Ley 40/2015, de 1 de octubre, de Rgimen Jurdico del Sector Pblico, la",
+        "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 9 AL 11.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Distractor muy corto: 'Por Ley....'",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 0.75,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.555
+    },
+    {
+      "question": {
+        "question_text": "Segn la Ley 40/2015, de 1 de octubre, de Rgimen Jurdico del Sector Pblico,",
+        "options": [
+          {
+            "text": "arecen de personalidad jurdica propia aunque gozan de poderes especiales",
+            "is_correct": false
+          },
+          {
+            "text": "eterminado sector o actividad econmica.",
+            "is_correct": false
+          },
+          {
+            "text": "ctuarn en el desarrollo de su actividad para el cumplimiento de sus fines con",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn la Ley 40/2015, de 1 de octubre, de Rgimen Jurdico del Sector Pblico,",
+        "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 9 AL 11.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De conformidad con el artculo 84 de la Ley 40/2015, de 1 de octubre, de Rgimen",
+        "options": [
+          {
+            "text": "Las fundaciones del sector pblico.",
+            "is_correct": false
+          },
+          {
+            "text": "Los consorcios.",
+            "is_correct": false
+          },
+          {
+            "text": "Las universidades pblicas no transferidas.",
+            "is_correct": false
+          },
+          {
+            "text": "Las sociedades administrativas independientes.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De conformidad con el artculo 84 de la Ley 40/2015, de 1 de octubre, de Rgimen",
+        "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 9 AL 11.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn la Constitucin Espaola de 1978, en los Estatutos aprobados por el",
+        "options": [
+          {
+            "text": "utonmica contar con un Presidente elegido por:",
+            "is_correct": false
+          },
+          {
+            "text": "La Asamblea, de entre sus miembros.",
+            "is_correct": false
+          },
+          {
+            "text": "El Consejo de Gobierno, de entre los miembros de la Asamblea.",
+            "is_correct": false
+          },
+          {
+            "text": "La Asamblea, de entre los miembros del Consejo de Gobierno.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn la Constitucin Espaola de 1978, en los Estatutos aprobados por el",
+        "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 9 AL 11.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Segn el artculo 149.1 de la Constitucin Espaola de 1978, qu competencias de",
+        "options": [
+          {
+            "text": "Defensa y Fuerzas Armadas.",
+            "is_correct": false
+          },
+          {
+            "text": "Los montes y aprovechamientos forestales.",
+            "is_correct": false
+          },
+          {
+            "text": "Administracin de Justicia.",
+            "is_correct": false
+          },
+          {
+            "text": "Legislacin sobre la propiedad intelectual e industrial.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn el artculo 149.1 de la Constitucin Espaola de 1978, qu competencias de",
+        "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 9 AL 11.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con el artculo 44 de la Ley 7/1985, de 2 de abril, Reguladora de las",
+        "options": [
+          {
+            "text": "ases del Rgimen Local, en una mancomunidad de municipios podrn integrarse:",
+            "is_correct": false
+          },
+          {
+            "text": "Slo municipios limtrofes.",
+            "is_correct": false
+          },
+          {
+            "text": "Slo municipios pertenecientes a la misma provincia.",
+            "is_correct": false
+          },
+          {
+            "text": "Slo municipios pertenecientes a la misma Comunidad Autnoma, siempre que lo",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con el artculo 44 de la Ley 7/1985, de 2 de abril, Reguladora de las",
+        "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 9 AL 11.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:22.361236"
+}

@@ -1,0 +1,1370 @@
+{
+  "metadata": {
+    "source_file": "TEST TEMA 10 Políticas.pdf",
+    "source_path": "TEST Iniciales políticas\\TEST TEMA 10 Políticas.pdf",
+    "tema": 10,
+    "categoria": "general",
+    "extraction_date": "2026-01-15T23:41:38.070796",
+    "reformulation_date": "2026-01-15T23:47:35.727556",
+    "total_questions": 41,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.952605",
+    "completed_count": 0,
+    "failed_count": 41
+  },
+  "questions": [
+    {
+      "question_text": "El derecho a la proteccin de la salud:",
+      "options": [
+        {
+          "text": "Es un derecho fundamental.",
+          "is_correct": false
+        },
+        {
+          "text": "Cabe recabar su tutela ante el Tribunal Constitucional mediante el recurso de amparo.",
+          "is_correct": false
+        },
+        {
+          "text": "Se encuentra regulado en el Captulo III del Ttulo I de la Constitucin Espaola.",
+          "is_correct": false
+        },
+        {
+          "text": "Todas las respuestas son correctas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El derecho a la proteccin de la salud:",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con lo establecido en el artculo 149.1.16 de la Constitucin, es una",
+      "options": [
+        {
+          "text": "ompetencia atribuida al Estado en materia sanitaria:",
+          "is_correct": false
+        },
+        {
+          "text": "Todas las competencias legislativas.",
+          "is_correct": false
+        },
+        {
+          "text": "Las funciones de inspeccin sanitaria.",
+          "is_correct": false
+        },
+        {
+          "text": "Las competencias sobre la sanidad interior.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con lo establecido en el artculo 149.1.16 de la Constitucin, es una",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En relacin con las reas de Salud, la Ley General de Sanidad (Ley 14/1986, de 25",
+      "options": [
+        {
+          "text": "e abril), indica que:",
+          "is_correct": false
+        },
+        {
+          "text": "En todo caso cubrirn una poblacin no superior a 250.000 habitantes.",
+          "is_correct": false
+        },
+        {
+          "text": "Existir al menos una por Comunidad Autnoma.",
+          "is_correct": false
+        },
+        {
+          "text": "Tendrn como mnimo un hospital adscrito.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En relacin con las reas de Salud, la Ley General de Sanidad (Ley 14/1986, de 25",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu prestaciones de la cartera comn del Sistema Nacional de Salud tendrn",
+      "options": [
+        {
+          "text": "arcter gratuito:",
+          "is_correct": false
+        },
+        {
+          "text": "Todas las incluidas en la cartera comn.",
+          "is_correct": false
+        },
+        {
+          "text": "Las incluidas en la cartera comn bsica de servicios asistenciales.",
+          "is_correct": false
+        },
+        {
+          "text": "Las incluidas en la cartera comn mnima de servicios asistenciales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu prestaciones de la cartera comn del Sistema Nacional de Salud tendrn",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El rgano permanente de coordinacin, cooperacin, comunicacin e informacin de",
+      "options": [
+        {
+          "text": "El Consejo Interterritorial del Sistema Nacional de Salud.",
+          "is_correct": false
+        },
+        {
+          "text": "El Comit territorial del Sistema Nacional de Salud.",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo General de la Salud.",
+          "is_correct": false
+        },
+        {
+          "text": "La Conferencia Sectorial de Sanidad.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El rgano permanente de coordinacin, cooperacin, comunicacin e informacin de",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con lo establecido en la Ley 16/2003, de 28 de mayo, de cohesin y",
+      "options": [
+        {
+          "text": "alidad del Sistema Nacional de Salud para hacer efectivo el derecho a la proteccin",
+          "is_correct": false
+        },
+        {
+          "text": "e la salud y a la atencin sanitaria con cargo a los fondos pblicos de las",
+          "is_correct": false
+        },
+        {
+          "text": "dministraciones competentes, las personas titulares de los citados derechos debern",
+          "is_correct": false
+        },
+        {
+          "text": "Tener nacionalidad espaola.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con lo establecido en la Ley 16/2003, de 28 de mayo, de cohesin y",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con lo establecido en el artculo 79 de la Ley 14/1986 (Ley General de",
+      "options": [
+        {
+          "text": "Las tasas por la prestacin de determinados servicios.",
+          "is_correct": false
+        },
+        {
+          "text": "Las cotizaciones sociales.",
+          "is_correct": false
+        },
+        {
+          "text": "Las transferencias del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Los rendimientos de capital.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con lo establecido en el artculo 79 de la Ley 14/1986 (Ley General de",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con lo establecido en el artculo 149.1.3 de la Constitucin, el Estado",
+      "options": [
+        {
+          "text": "La competencia legislativa exclusiva en materia de relaciones internaciones,",
+          "is_correct": false
+        },
+        {
+          "text": "orrespondiendo a las CCAA su ejecucin.",
+          "is_correct": false
+        },
+        {
+          "text": "Las bases y la coordinacin general de la poltica exterior.",
+          "is_correct": false
+        },
+        {
+          "text": "La competencia exclusiva en materia de relaciones internacionales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con lo establecido en el artculo 149.1.3 de la Constitucin, el Estado",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El conjunto de decisiones y acciones del Gobierno en sus relaciones con otros actores",
+      "options": [
+        {
+          "text": "e la escena internacional con objeto de definir, promover y defender los valores e",
+          "is_correct": false
+        },
+        {
+          "text": "Accin Exterior del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Servicio Exterior del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Poltica Exterior.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El conjunto de decisiones y acciones del Gobierno en sus relaciones con otros actores",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con lo establecido en la Ley de Accin y Servicio Exterior, no es un",
+      "options": [
+        {
+          "text": "La defensa del medio ambiente y la proteccin de la biodiversidad.",
+          "is_correct": false
+        },
+        {
+          "text": "El fortalecimiento de la Comunidad Iberoamericana de Naciones.",
+          "is_correct": false
+        },
+        {
+          "text": "El fomento de instituciones multiculturales fuertes y legtimas.",
+          "is_correct": false
+        },
+        {
+          "text": "La seguridad y bienestar de Espaa y sus ciudadanos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con lo establecido en la Ley de Accin y Servicio Exterior, no es un",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Quin dirige la Poltica Exterior?:",
+      "options": [
+        {
+          "text": "El Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "El Ministro de Defensa junto con el de Exteriores y Cooperacin (en la actualidad,",
+          "is_correct": false
+        },
+        {
+          "text": "suntos Exteriores, Unin Europea y Cooperacin).",
+          "is_correct": false
+        },
+        {
+          "text": "El Secretario de Estado de Asuntos Exteriores, con carcter general.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Quin dirige la Poltica Exterior?:",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No tiene la consideracin de sujeto de la Accin Exterior del Estado:",
+      "options": [
+        {
+          "text": "La Corona.",
+          "is_correct": false
+        },
+        {
+          "text": "Las Fuerzas y Cuerpos de Seguridad del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Las Organizaciones no Gubernamentales de Desarrollo (ONGD).",
+          "is_correct": false
+        },
+        {
+          "text": "Las Cortes Generales.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No tiene la consideracin de sujeto de la Accin Exterior del Estado:",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "A quin le corresponde la iniciativa para la elaboracin de los instrumentos de",
+      "options": [
+        {
+          "text": "Al Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Ministerio de Asuntos Exteriores y de Cooperacin (en la actualidad, Ministerio",
+          "is_correct": false
+        },
+        {
+          "text": "e Asuntos Exteriores, Unin Europa y Cooperacin).",
+          "is_correct": false
+        },
+        {
+          "text": "A cada Departamento ministerial.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "A quin le corresponde la iniciativa para la elaboracin de los instrumentos de",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Qu rgano colegiado se encarga del apoyo y asesoramiento al Presidente del",
+      "options": [
+        {
+          "text": "El Ministerio de Asuntos Exteriores y de Cooperacin (Ministerio de Asuntos",
+          "is_correct": false
+        },
+        {
+          "text": "EL Secretario de Estado de Asuntos Exteriores.",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo de Poltica Exterior.",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo Ejecutivo de Poltica Exterior.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Qu rgano colegiado se encarga del apoyo y asesoramiento al Presidente del",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La poltica de cooperacin para el desarrollo sostenible:",
+      "options": [
+        {
+          "text": "Es un elemento integral, pero no definitorio de la Accin Exterior del Estado.",
+          "is_correct": false
+        },
+        {
+          "text": "Est sujeta al cumplimiento de los objetivos, fines y directrices de Poltica de",
+          "is_correct": false
+        },
+        {
+          "text": "Es un elemento integral, pero no definitorio de la Poltica de Internacionalizacin de",
+          "is_correct": false
+        },
+        {
+          "text": "Est sujeta al cumplimiento de los objetivos, fines y directrices de Poltica de la",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La poltica de cooperacin para el desarrollo sostenible:",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con lo establecido en la Ley 1/2023, de 20 de febrero, de cooperacin para",
+      "options": [
+        {
+          "text": "ruta habr que destinar a la Ayuda Oficial al Desarrollo (AOD) en el horizontes de",
+          "is_correct": false
+        },
+        {
+          "text": "El 0,5%.",
+          "is_correct": false
+        },
+        {
+          "text": "El 0,7%.",
+          "is_correct": false
+        },
+        {
+          "text": "El 5%.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con lo establecido en la Ley 1/2023, de 20 de febrero, de cooperacin para",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No es un principio bsico de la cooperacin espaola para el desarrollo sostenible:",
+      "options": [
+        {
+          "text": "Los derechos de las personas mayores como elemento transversal de la cooperacin",
+          "is_correct": false
+        },
+        {
+          "text": "La defensa y el respeto a la diversidad en todas sus manifestaciones.",
+          "is_correct": false
+        },
+        {
+          "text": "La solidaridad con las personas ms desfavorecidas y con las generaciones futuras",
+          "is_correct": false
+        },
+        {
+          "text": "El reconocimiento del ser humano, en su dimensin individual y colectiva, como",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No es un principio bsico de la cooperacin espaola para el desarrollo sostenible:",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Es un instrumento de planificacin estratgica de la poltica de cooperacin espaola",
+      "options": [
+        {
+          "text": "Los Marcos de Asociacin Humanitaria.",
+          "is_correct": false
+        },
+        {
+          "text": "Las Comisiones Mixtas de Desarrollo.",
+          "is_correct": false
+        },
+        {
+          "text": "La Asociacin Estratgica Bilateral.",
+          "is_correct": false
+        },
+        {
+          "text": "La Comunicacin Anual.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Es un instrumento de planificacin estratgica de la poltica de cooperacin espaola",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "A quin le corresponde aprobar el Plan Director?:",
+      "options": [
+        {
+          "text": "Al Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Congreso de los Diputados.",
+          "is_correct": false
+        },
+        {
+          "text": "A las Cortes Generales.",
+          "is_correct": false
+        },
+        {
+          "text": "A la Agencia Espaola de Cooperacin Internacional para el Desarrollo (AECID).",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "A quin le corresponde aprobar el Plan Director?:",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los acuerdos internacionales, de naturaleza administrativa, que establecen el marco",
+      "options": [
+        {
+          "text": "Los Marcos de Asociacin y las Asociaciones Estratgica Pas.",
+          "is_correct": false
+        },
+        {
+          "text": "Las Alianzas Pas y las Asociaciones Estratgicas Pas.",
+          "is_correct": false
+        },
+        {
+          "text": "Los Marcos de Asociacin y las Alianzas Pas.",
+          "is_correct": false
+        },
+        {
+          "text": "Los Marcos de Asociacin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los acuerdos internacionales, de naturaleza administrativa, que establecen el marco",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con lo establecido en la Ley 1/2023, de 20 de febrero, quin es responsable",
+      "options": [
+        {
+          "text": "e la evaluacin de la poltica de cooperacin para el desarrollo sostenible de la",
+          "is_correct": false
+        },
+        {
+          "text": "dministracin General del Estado y organismos dependientes?:",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo Superior de Cooperacin para el Desarrollo Sostenible y la Solidaridad",
+          "is_correct": false
+        },
+        {
+          "text": "La Secretara de Estado de Cooperacin Internacional (SECI), a travs de la",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con lo establecido en la Ley 1/2023, de 20 de febrero, quin es responsable",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "A quin le corresponde establecer las lneas generales y directrices bsicas de la poltica",
+      "options": [
+        {
+          "text": "Al Congreso a propuesta e iniciativa del Gobierno.",
+          "is_correct": false
+        },
+        {
+          "text": "Al Gobierno, a propuesta e iniciativa del Ministro de Asuntos Exteriores, Unin",
+          "is_correct": false
+        },
+        {
+          "text": "Al Consejo Superior de Cooperacin para el Desarrollo Sostenible y la Solidaridad",
+          "is_correct": false
+        },
+        {
+          "text": "A las Cortes Generales a propuesta e iniciativa del Gobierno.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "A quin le corresponde establecer las lneas generales y directrices bsicas de la poltica",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No es un rgano de coordinacin y consulta de la cooperacin espaola para el",
+      "options": [
+        {
+          "text": "esarrollo sostenible:",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo Superior de Cooperacin para el Desarrollo Sostenible y la Solidaridad",
+          "is_correct": false
+        },
+        {
+          "text": "La Comisin Interministerial de Cooperacin para el Desarrollo Sostenible y la",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo Territorial de Cooperacin para el Desarrollo Sostenible y la Solidaridad",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No es un rgano de coordinacin y consulta de la cooperacin espaola para el",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En qu rgano de coordinacin y consulta participan, entre otros, los agentes sociales,",
+      "options": [
+        {
+          "text": "El Consejo Superior de Cooperacin para el Desarrollo Sostenible y la Solidaridad",
+          "is_correct": false
+        },
+        {
+          "text": "La Comisin Interministerial de Cooperacin para el Desarrollo Sostenible y la",
+          "is_correct": false
+        },
+        {
+          "text": "El Consejo Territorial de Cooperacin para el Desarrollo Sostenible y la Solidaridad",
+          "is_correct": false
+        },
+        {
+          "text": "La Conferencia Sectorial de Cooperacin para el Desarrollo Sostenible y la",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En qu rgano de coordinacin y consulta participan, entre otros, los agentes sociales,",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En el mbito de la AGE cul de los siguientes no tiene la consideracin de rgano",
+      "options": [
+        {
+          "text": "ompetente en la ejecucin de la poltica espaola de cooperacin para el desarrollo",
+          "is_correct": false
+        },
+        {
+          "text": "Las OCE (Oficinas de la Cooperacin Espaola).",
+          "is_correct": false
+        },
+        {
+          "text": "La Fundacin Internacional y para Iberoamrica de Administracin y Polticas",
+          "is_correct": false
+        },
+        {
+          "text": "La AECID",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En el mbito de la AGE cul de los siguientes no tiene la consideracin de rgano",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No es un instrumento o modalidad de la cooperacin espaola para el desarrollo",
+      "options": [
+        {
+          "text": "Accin descentralizada.",
+          "is_correct": false
+        },
+        {
+          "text": "Cooperacin tcnica.",
+          "is_correct": false
+        },
+        {
+          "text": "Alivio de deuda.",
+          "is_correct": false
+        },
+        {
+          "text": "Cooperacin triangular",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No es un instrumento o modalidad de la cooperacin espaola para el desarrollo",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las actividades dirigidas al fortalecimiento de capacidades institucionales y de recursos",
+      "options": [
+        {
+          "text": "Cooperacin tcnica.",
+          "is_correct": false
+        },
+        {
+          "text": "Cooperacin triangular.",
+          "is_correct": false
+        },
+        {
+          "text": "Cooperacin bilateral.",
+          "is_correct": false
+        },
+        {
+          "text": "Cooperacin multilateral.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las actividades dirigidas al fortalecimiento de capacidades institucionales y de recursos",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En relacin con la cooperacin financiera para el desarrollo sostenible, qu fondo crea",
+      "options": [
+        {
+          "text": "El Fondo para la Promocin del Desarrollo (FONPRODE).",
+          "is_correct": false
+        },
+        {
+          "text": "El Fondo de Ayuda al Desarrollo (FAD).",
+          "is_correct": false
+        },
+        {
+          "text": "El Fondo Espaol de Desarrollo Sostenible (FEDES)",
+          "is_correct": false
+        },
+        {
+          "text": "El Fondo para la Solidaridad Global (FONSO)",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En relacin con la cooperacin financiera para el desarrollo sostenible, qu fondo crea",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con lo establecido en la Ley 1/2023, de 20 de febrero, qu porcentaje de la",
+      "options": [
+        {
+          "text": "yuda Oficial al Desarrollo (AOD) habr que destinar a la accin humanitaria?:",
+          "is_correct": false
+        },
+        {
+          "text": "El 0,5%.",
+          "is_correct": false
+        },
+        {
+          "text": "El 0,7%",
+          "is_correct": false
+        },
+        {
+          "text": "El 10%",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con lo establecido en la Ley 1/2023, de 20 de febrero, qu porcentaje de la",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La Agenda 2030:",
+      "options": [
+        {
+          "text": "Establece 17 objetivos, los conocidos como Objetivos de Desarrollo Sostenible, a",
+          "is_correct": false
+        },
+        {
+          "text": "lcanzar en 2030.",
+          "is_correct": false
+        },
+        {
+          "text": "Los Objetivos de Desarrollo Sostenible se concretan en 179 metas.",
+          "is_correct": false
+        },
+        {
+          "text": "Los ODS estn dirigidos nicamente a los pases en vas de desarrollo.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La Agenda 2030:",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Se centra alguno de los ODS en lograr la igualdad entre los gneros y empoderar a",
+      "options": [
+        {
+          "text": "S, el ODS 5.",
+          "is_correct": false
+        },
+        {
+          "text": "S, el ODS 16.",
+          "is_correct": false
+        },
+        {
+          "text": "S, el ODS 24.",
+          "is_correct": false
+        },
+        {
+          "text": "No.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Se centra alguno de los ODS en lograr la igualdad entre los gneros y empoderar a",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "No es uno de los Objetivos de Desarrollo Sostenible:",
+      "options": [
+        {
+          "text": "Garantizar una vida sana y promover el bienestar en todas las edades.",
+          "is_correct": false
+        },
+        {
+          "text": "Garantizar modalidades de consumo y produccin sostenibles.",
+          "is_correct": false
+        },
+        {
+          "text": "Combatir el VIH/SIDA, el paludismo y otras enfermedades.",
+          "is_correct": false
+        },
+        {
+          "text": "Conservar y utilizar en forma sostenible los ocanos, los mares y los recursos",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "No es uno de los Objetivos de Desarrollo Sostenible:",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En relacin con la gobernanza de la Agenda, indique cul de los siguientes no es un",
+      "options": [
+        {
+          "text": "El Ministerio de Derechos Sociales, Consumo y Agenda 2030.",
+          "is_correct": false
+        },
+        {
+          "text": "El Alto Comisionado para la Agenda 2030.",
+          "is_correct": false
+        },
+        {
+          "text": "La Comisin Delegada del Gobierno para la Agenda 2030.",
+          "is_correct": false
+        },
+        {
+          "text": "Comisin mixta (Congreso  Senado) para la coordinacin y seguimiento de la",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En relacin con la gobernanza de la Agenda, indique cul de los siguientes no es un",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El Consejo de Desarrollo Sostenible es:",
+      "options": [
+        {
+          "text": "El rgano integrado por representantes de los diferentes Ministerios le corresponde,",
+          "is_correct": false
+        },
+        {
+          "text": "genda 2030 e impulsar la integracin de los ODS y sus metas en los respectivos",
+          "is_correct": false
+        },
+        {
+          "text": "El rgano integrado por representantes de la AGE, CCAA y EELL encargado de",
+          "is_correct": false
+        },
+        {
+          "text": "El rgano a travs del cual se canaliza la participacin de la sociedad civil en la",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El Consejo de Desarrollo Sostenible es:",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La Estrategia de Desarrollo Sostenible 2030:",
+      "options": [
+        {
+          "text": "Identifica 17 retos pas.",
+          "is_correct": false
+        },
+        {
+          "text": "Para dar respuesta a los retos pas, identifica las denominadas polticas palanca, en",
+          "is_correct": false
+        },
+        {
+          "text": "Uno de los retos pas es garantizar la paz y la estabilidad.",
+          "is_correct": false
+        },
+        {
+          "text": "Poner fin a la precariedad laboral es uno de los retos pas identificado en la",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La Estrategia de Desarrollo Sostenible 2030:",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con lo establecido en la Ley General de Telecomunicaciones, los servicios",
+      "options": [
+        {
+          "text": "e telecomunicaciones tienen la consideracin de:",
+          "is_correct": false
+        },
+        {
+          "text": "Servicio pblico.",
+          "is_correct": false
+        },
+        {
+          "text": "Servicio de inters general.",
+          "is_correct": false
+        },
+        {
+          "text": "a) es correcta, salvo los servicios de telecomunicaciones para la seguridad nacional,",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con lo establecido en la Ley General de Telecomunicaciones, los servicios",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En relacin con el servicio universal de telecomunicaciones, seale la respuesta",
+      "options": [
+        {
+          "text": "orrecta:",
+          "is_correct": false
+        },
+        {
+          "text": "Es el conjunto de obligaciones de servicio pblico que el Gobierno, por necesidades",
+          "is_correct": false
+        },
+        {
+          "text": "e la seguridad nacional, de la defensa nacional, de la seguridad pblica, de la",
+          "is_correct": false
+        },
+        {
+          "text": "Es el conjunto de derechos reconocidos a los operadores de telecomunicaciones.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En relacin con el servicio universal de telecomunicaciones, seale la respuesta",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En el marco del servicio universal se ha de garantizar un servicio de acceso adecuado",
+      "options": [
+        {
+          "text": "GPS.",
+          "is_correct": false
+        },
+        {
+          "text": "Bsqueda de empleo y herramientas para la bsqueda de empleo;",
+          "is_correct": false
+        },
+        {
+          "text": "Correo electrnico;",
+          "is_correct": false
+        },
+        {
+          "text": "Prensa o noticias en lnea.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En el marco del servicio universal se ha de garantizar un servicio de acceso adecuado",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El espectro radioelctrico, tiene la consideracin de:",
+      "options": [
+        {
+          "text": "Bien pblico esencial.",
+          "is_correct": false
+        },
+        {
+          "text": "Bien de dominio pblico.",
+          "is_correct": false
+        },
+        {
+          "text": "Bien privativo.",
+          "is_correct": false
+        },
+        {
+          "text": "Bien patrimonial.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El espectro radioelctrico, tiene la consideracin de:",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En relacin con la celebracin de contratos por va electrnica, seale la respuesta",
+      "options": [
+        {
+          "text": "Para que sea vlida su celebracin no se requiere el previo acuerdo de las partes",
+          "is_correct": false
+        },
+        {
+          "text": "Establece la equivalencia entre los documentos en soporte papel y los documentos",
+          "is_correct": false
+        },
+        {
+          "text": "La prueba de la celebracin del contrato por va electrnica se sujetar a las reglas",
+          "is_correct": false
+        },
+        {
+          "text": "omercio Electrnico.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En relacin con la celebracin de contratos por va electrnica, seale la respuesta",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn el Reglamento eIDAS, la firma electrnica avanzada debe cumplir los",
+      "options": [
+        {
+          "text": "Estar vinculada al firmante de manera nica.",
+          "is_correct": false
+        },
+        {
+          "text": "Permitir la identificacin del firmante.",
+          "is_correct": false
+        },
+        {
+          "text": "Haber sido creada mediante un dispositivo cualificado de creacin de firmas",
+          "is_correct": false
+        },
+        {
+          "text": "Estar vinculada con los datos firmados por la misma de tal modo que cualquier",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el Reglamento eIDAS, la firma electrnica avanzada debe cumplir los",
+      "source": "TEST TEMA 10 Políticas.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 10,
+      "materia": "org-administrativa",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

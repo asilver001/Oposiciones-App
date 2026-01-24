@@ -1,0 +1,267 @@
+{
+  "metadata": {
+    "source_file": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 1 AL 4.pdf",
+    "source_path": "Segundo repaso\\PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 1 AL 4.pdf",
+    "tema": 0,
+    "categoria": "repaso",
+    "extraction_date": "2026-01-15T23:40:35.312857",
+    "reformulation_date": "2026-01-15T23:47:35.715175",
+    "total_questions": 5,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.912371",
+    "completed_count": 0,
+    "failed_count": 5
+  },
+  "questions": [
+    {
+      "question": {
+        "question_text": "Segn la Ley Orgnica 2/1979, de 3 de octubre, del Tribunal Constitucional, en caso",
+        "options": [
+          {
+            "text": "e cese en el cargo de Magistrado del Tribunal Constitucional, por haber sido",
+            "is_correct": false
+          },
+          {
+            "text": "eclarado responsable civilmente por dolo:",
+            "is_correct": false
+          },
+          {
+            "text": "Decidir el Tribunal en Pleno, por mayora simple.",
+            "is_correct": false
+          },
+          {
+            "text": "Decidir el Tribunal en Pleno, por mayora de las tres cuartas partes de sus",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Segn la Ley Orgnica 2/1979, de 3 de octubre, del Tribunal Constitucional, en caso",
+        "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 1 AL 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "En el Ttulo II de la CE, referido a la Corona, se establece que:",
+        "options": [
+          {
+            "text": "Aquellas personas que, teniendo derecho a la sucesin en el trono, contrajeren",
+            "is_correct": false
+          },
+          {
+            "text": "La sucesin en el trono seguir el orden regular de primogenitura y",
+            "is_correct": false
+          },
+          {
+            "text": "la mujer, y, en el mismo sexo, la persona de ms edad a la de menos.",
+            "is_correct": false
+          },
+          {
+            "text": "Corresponde al Rey ser informado de los asuntos de Estado y presidir, a estos",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "En el Ttulo II de la CE, referido a la Corona, se establece que:",
+        "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 1 AL 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 1.0,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.63
+    },
+    {
+      "question": {
+        "question_text": "De conformidad con el artculo 64 de la CE, quin refrenda la disolucin de las",
+        "options": [
+          {
+            "text": "maras prevista en el artculo 99?",
+            "is_correct": false
+          },
+          {
+            "text": "El Presidente del Gobierno.",
+            "is_correct": false
+          },
+          {
+            "text": "La Ministra de Justicia.",
+            "is_correct": false
+          },
+          {
+            "text": "El Jefe de la Casa Real.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De conformidad con el artculo 64 de la CE, quin refrenda la disolucin de las",
+        "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 1 AL 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "Cul es la respuesta correcta respecto al orden de sucesin a la Corona de Espaa",
+        "options": [
+          {
+            "text": "Primogenitura con preferencia de la lnea posterior a la anterior.",
+            "is_correct": false
+          },
+          {
+            "text": "Primogenitura con preferencia de la persona de menor edad.",
+            "is_correct": false
+          },
+          {
+            "text": "Primogenitura con preferencia del varn sobre la mujer.",
+            "is_correct": false
+          },
+          {
+            "text": "Sucesin determinada por el Consejo de Ministros.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "Cul es la respuesta correcta respecto al orden de sucesin a la Corona de Espaa",
+        "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 1 AL 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    },
+    {
+      "question": {
+        "question_text": "De acuerdo con el artculo 59.4 de la Constitucin Espaola de 1978, para ejercer la",
+        "options": [
+          {
+            "text": "nicamente espaol.",
+            "is_correct": false
+          },
+          {
+            "text": "Espaol y mayor de edad.",
+            "is_correct": false
+          },
+          {
+            "text": "Espaol de nacimiento y mayor de edad.",
+            "is_correct": false
+          },
+          {
+            "text": "Espaol, mayor de edad y miembro de la Familia Real.",
+            "is_correct": false
+          }
+        ],
+        "explanation": "",
+        "legal_reference": "",
+        "origin_type": "reformulated",
+        "original_text": "De acuerdo con el artculo 59.4 de la Constitucin Espaola de 1978, para ejercer la",
+        "source": "PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 1 AL 4.pdf",
+        "reformulation_type": "clarificacion",
+        "confidence_score": 0.0,
+        "tema": 0,
+        "materia": "ce-constitucion",
+        "difficulty": "facil",
+        "needs_ai_completion": true,
+        "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+      },
+      "errors": [
+        "No hay respuesta correcta marcada",
+        "Pregunta no termina correctamente",
+        "Sin referencia legal"
+      ],
+      "scores": {
+        "formato": 1.0,
+        "respuesta_unica": 0.0,
+        "distractores": 1.0,
+        "claridad": 0.75,
+        "precision_legal": 0.6,
+        "actualizacion": 1.0,
+        "dificultad": 1.0
+      },
+      "weighted_score": 0.593
+    }
+  ],
+  "rejected_date": "2026-01-15T23:55:22.338587"
+}

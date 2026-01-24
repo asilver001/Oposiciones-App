@@ -1,0 +1,1007 @@
+{
+  "metadata": {
+    "source_file": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+    "source_path": "Test financiero\\3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+    "tema": 0,
+    "categoria": "financiero",
+    "extraction_date": "2026-01-15T23:41:20.062068",
+    "reformulation_date": "2026-01-15T23:47:35.568585",
+    "total_questions": 30,
+    "status": "partial_completion",
+    "ai_completion_date": "2026-01-15T23:50:55.481479",
+    "completed_count": 0,
+    "failed_count": 30
+  },
+  "questions": [
+    {
+      "question_text": "Segn el artculo 32 de la LGP, los Presupuestos Generales del Estado:",
+      "options": [
+        {
+          "text": "Tienen carcter anual e incluyen la totalidad de los gastos e ingresos del sector pblico",
+          "is_correct": false
+        },
+        {
+          "text": "Constituyen la programacin de la actividad del sector pblico estatal.",
+          "is_correct": false
+        },
+        {
+          "text": "Constituyen la expresin cifrada, conjunta y sistemtica de los derechos y obligaciones a",
+          "is_correct": false
+        },
+        {
+          "text": "Se componen de los ingresos que prevn realizar los rganos y entidades que forman",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el artculo 32 de la LGP, los Presupuestos Generales del Estado:",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El procedimiento por el cual se regir la elaboracin de los Presupuestos Generales del",
+      "options": [
+        {
+          "text": "Orden ministerial.",
+          "is_correct": false
+        },
+        {
+          "text": "Ley orgnica.",
+          "is_correct": false
+        },
+        {
+          "text": "Ley ordinaria.",
+          "is_correct": false
+        },
+        {
+          "text": "Real decreto-ley.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El procedimiento por el cual se regir la elaboracin de los Presupuestos Generales del",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La Ley General Presupuestaria establece que la estructura de los Presupuestos",
+      "options": [
+        {
+          "text": "Se determinar por el Gobierno teniendo en cuenta la organizacin del sector pblico",
+          "is_correct": false
+        },
+        {
+          "text": "Se determinar por el Ministerio de Hacienda teniendo en cuenta la organizacin del",
+          "is_correct": false
+        },
+        {
+          "text": "Se determinar por la Cortes teniendo en cuenta la organizacin del sector pblico, la",
+          "is_correct": false
+        },
+        {
+          "text": "Se determinar por el Ministerio de Hacienda teniendo en cuenta la organizacin del",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La Ley General Presupuestaria establece que la estructura de los Presupuestos",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los PGE no incluirn el presupuesto de:",
+      "options": [
+        {
+          "text": "Las Universidades Pblicas transferidas.",
+          "is_correct": false
+        },
+        {
+          "text": "Los Fondos sin personalidad jurdica.",
+          "is_correct": false
+        },
+        {
+          "text": "Las sociedades mercantiles estatales.",
+          "is_correct": false
+        },
+        {
+          "text": "Todos los anteriores se incluyen en los PGE.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los PGE no incluirn el presupuesto de:",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los ingresos tienen una estructura:",
+      "options": [
+        {
+          "text": "Orgnica y por programas.",
+          "is_correct": false
+        },
+        {
+          "text": "Orgnica y econmica.",
+          "is_correct": false
+        },
+        {
+          "text": "Orgnica, por programas, econmica y territorial.",
+          "is_correct": false
+        },
+        {
+          "text": "Orgnica, por programas y econmica.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los ingresos tienen una estructura:",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Las enmiendas al Proyecto de la Ley de PGE que supongan aumento de gastos o",
+      "options": [
+        {
+          "text": "isminucin de los ingresos estn sujetas a:",
+          "is_correct": false
+        },
+        {
+          "text": "Conformidad del Ministro de Hacienda para su tramitacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Conformidad de las Cortes Generales para su tramitacin.",
+          "is_correct": false
+        },
+        {
+          "text": "Conformidad del Gobierno para su tramitacin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Las enmiendas al Proyecto de la Ley de PGE que supongan aumento de gastos o",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Si en la estructura por programas, el cuarto carcter es la letra N, el programa ser:",
+      "options": [
+        {
+          "text": "Finalista.",
+          "is_correct": false
+        },
+        {
+          "text": "Instrumental y finalista.",
+          "is_correct": false
+        },
+        {
+          "text": "Instrumental y de gestin.",
+          "is_correct": false
+        },
+        {
+          "text": "Finalista y de gestin.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Si en la estructura por programas, el cuarto carcter es la letra N, el programa ser:",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Dada la aplicacin presupuestaria 21.101 412M 202, se puede afirmar que:",
+      "options": [
+        {
+          "text": "El crdito asignado es vinculante a nivel de captulo.",
+          "is_correct": false
+        },
+        {
+          "text": "Corresponde a una Agencia Estatal.",
+          "is_correct": false
+        },
+        {
+          "text": "El programa es instrumental y de gestin.",
+          "is_correct": false
+        },
+        {
+          "text": "Todas son correctas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Dada la aplicacin presupuestaria 21.101 412M 202, se puede afirmar que:",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los escenarios presupuestarios plurianuales:",
+      "options": [
+        {
+          "text": "Sern confeccionados por el Consejo de Ministros, que dar cuenta de los mismos al",
+          "is_correct": false
+        },
+        {
+          "text": "Se desarrollarn en programas anuales referidos a los tres ejercicios siguientes.",
+          "is_correct": false
+        },
+        {
+          "text": "Constituyen la programacin de la actividad del sector pblico estatal con presupuesto",
+          "is_correct": false
+        },
+        {
+          "text": "Estarn integrados por un escenario de ingresos y un escenario de gastos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los escenarios presupuestarios plurianuales:",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Los Presupuestos Generales del Estado determinarn:",
+      "options": [
+        {
+          "text": "Las obligaciones econmicas que, como mnimo, pueden reconocer los sujetos del sector",
+          "is_correct": false
+        },
+        {
+          "text": "Las operaciones no financieras y financieras a realizar por las entidades de los sectores",
+          "is_correct": false
+        },
+        {
+          "text": "La estimacin de los beneficios fiscales que afecten a los tributos del Sector Pblico.",
+          "is_correct": false
+        },
+        {
+          "text": "Los derechos a reconocer por las entidades del sector pblico empresarial y fundacional.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Los Presupuestos Generales del Estado determinarn:",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Si en el debate de los PGE se produce el veto del Senado:",
+      "options": [
+        {
+          "text": "Se devuelve el texto al Gobierno quien deber presentar un nuevo proyecto de Ley de",
+          "is_correct": false
+        },
+        {
+          "text": "Se devuelve el texto al Congreso que deber levantarlo, en todo caso, por mayora",
+          "is_correct": false
+        },
+        {
+          "text": "bsoluta.",
+          "is_correct": false
+        },
+        {
+          "text": "Se devuelve el texto al Congreso y deber levantarlo por mayora absoluta, o transcurrido",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Si en el debate de los PGE se produce el veto del Senado:",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn el artculo 134 de la Constitucin Espaola:",
+      "options": [
+        {
+          "text": "Los Presupuestos Generales del Estado tendrn carcter anual, incluirn la totalidad de",
+          "is_correct": false
+        },
+        {
+          "text": "La Ley de Presupuestos no puede crear tributos. Podr modificarlos cuando una ley",
+          "is_correct": false
+        },
+        {
+          "text": "El Gobierno deber presentar ante el Congreso de los Diputados los Presupuestos",
+          "is_correct": false
+        },
+        {
+          "text": "Todas son correctas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el artculo 134 de la Constitucin Espaola:",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Con carcter general, los Presupuestos Generales del Estado de cada ao entran en",
+      "options": [
+        {
+          "text": "El primer da hbil de enero.",
+          "is_correct": false
+        },
+        {
+          "text": "Al da siguiente de su publicacin en el BOE.",
+          "is_correct": false
+        },
+        {
+          "text": "El da 1 de enero.",
+          "is_correct": false
+        },
+        {
+          "text": "A los 10 das a contar desde el da siguiente al de su publicacin en el BOE.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Con carcter general, los Presupuestos Generales del Estado de cada ao entran en",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La Ley de PGE es:",
+      "options": [
+        {
+          "text": "Una Ley ordinaria, de tramitacin preferente y no es una ley de Pleno.",
+          "is_correct": false
+        },
+        {
+          "text": "Una Ley ordinaria, de tramitacin preferente y es una Ley de Pleno.",
+          "is_correct": false
+        },
+        {
+          "text": "Una Ley ordinaria, de tramitacin urgente y es una ley de Pleno.",
+          "is_correct": false
+        },
+        {
+          "text": "Una Ley orgnica, de tramitacin preferente y es una Ley de Pleno.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La Ley de PGE es:",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En la aplicacin presupuestaria 13.101 111Q 126.01, los dgitos 101, representan:",
+      "options": [
+        {
+          "text": "Un organismo autnomo.",
+          "is_correct": false
+        },
+        {
+          "text": "El concepto.",
+          "is_correct": false
+        },
+        {
+          "text": "El grupo de programas.",
+          "is_correct": false
+        },
+        {
+          "text": "La clasificacin orgnica.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En la aplicacin presupuestaria 13.101 111Q 126.01, los dgitos 101, representan:",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn la estructura de programas vigente, stos se agregarn en:",
+      "options": [
+        {
+          "text": "reas de Gasto, Polticas de Gasto, Grupos de Programas y Programas.",
+          "is_correct": false
+        },
+        {
+          "text": "Captulos, artculos, conceptos y subconceptos.",
+          "is_correct": false
+        },
+        {
+          "text": "reas de Gasto, Polticas de Gasto, Conceptos y Programas.",
+          "is_correct": false
+        },
+        {
+          "text": "Polticas de Gasto, reas de gasto, Grupos de Programas y Programas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn la estructura de programas vigente, stos se agregarn en:",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cada una de las asignaciones individuales de gasto que figuran en los presupuestos,",
+      "options": [
+        {
+          "text": "cuerdo con la agrupacin orgnica, por programas y econmica a nivel de vinculacin",
+          "is_correct": false
+        },
+        {
+          "text": "Aplicacin presupuestaria.",
+          "is_correct": false
+        },
+        {
+          "text": "Crdito presupuesto.",
+          "is_correct": false
+        },
+        {
+          "text": "Programa presupuestario.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cada una de las asignaciones individuales de gasto que figuran en los presupuestos,",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El proyecto de Ley de Presupuestos Generales del Estado, integrado por el articulado",
+      "options": [
+        {
+          "text": "on sus anexos y los estados de ingresos y gastos:",
+          "is_correct": false
+        },
+        {
+          "text": "Se acompaar de un informe de impacto de gnero, informe de impacto en la infancia,",
+          "is_correct": false
+        },
+        {
+          "text": "dolescencia y la familia, y de un informe de alineamiento de los PGE con los Objetivos",
+          "is_correct": false
+        },
+        {
+          "text": "e Desarrollo Sostenible de la Agenda 2030.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El proyecto de Ley de Presupuestos Generales del Estado, integrado por el articulado",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn lo establecido en la LGP:",
+      "options": [
+        {
+          "text": "La estructura econmica del presupuesto prorrogado se adaptar sin alteracin de la",
+          "is_correct": false
+        },
+        {
+          "text": "uanta total, a la organizacin administrativa en vigor en el ejercicio en que el",
+          "is_correct": false
+        },
+        {
+          "text": "La prrroga afectar a los crditos por gastos correspondientes a programas que terminen",
+          "is_correct": false
+        },
+        {
+          "text": "Si la LPGE no se aprobara antes del primer da del ejercicio econmico correspondiente",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn lo establecido en la LGP:",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "De acuerdo con la LGP, se especificarn conforme a su concreta clasificacin econmica:",
+      "options": [
+        {
+          "text": "Los crditos que no establezcan asignaciones identificando perceptor o beneficiario.",
+          "is_correct": false
+        },
+        {
+          "text": "Los crditos extraordinarios que se concedan durante el ejercicio.",
+          "is_correct": false
+        },
+        {
+          "text": "Los crditos suplementados durante el ejercicio.",
+          "is_correct": false
+        },
+        {
+          "text": "b) y c) son correctas.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "De acuerdo con la LGP, se especificarn conforme a su concreta clasificacin econmica:",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "media",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Durante el ejercicio actual, cul de los siguientes crditos se especificarn conforme a",
+      "options": [
+        {
+          "text": "221.09, Labores de la Fbrica Nacional de Moneda y Timbre.",
+          "is_correct": false
+        },
+        {
+          "text": "221.00, Energa elctrica.",
+          "is_correct": false
+        },
+        {
+          "text": "225.00, Tributos Estatales.",
+          "is_correct": false
+        },
+        {
+          "text": "200, Arrendamientos de terrenos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Durante el ejercicio actual, cul de los siguientes crditos se especificarn conforme a",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Con cuntos dgitos se identifica la clasificacin orgnica en un OA?:",
+      "options": [
+        {
+          "text": "Con 2 dgitos.",
+          "is_correct": false
+        },
+        {
+          "text": "Con 3 dgitos.",
+          "is_correct": false
+        },
+        {
+          "text": "Con 4 dgitos.",
+          "is_correct": false
+        },
+        {
+          "text": "Con 5 dgitos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Con cuntos dgitos se identifica la clasificacin orgnica en un OA?:",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de los siguientes, es un gasto por operaciones corrientes?",
+      "options": [
+        {
+          "text": "La adquisicin de acciones.",
+          "is_correct": false
+        },
+        {
+          "text": "La compra de mobiliario.",
+          "is_correct": false
+        },
+        {
+          "text": "Los intereses de deuda emitida.",
+          "is_correct": false
+        },
+        {
+          "text": "La adquisicin de libros para formar parte del fondo de biblioteca.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de los siguientes, es un gasto por operaciones corrientes?",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "El captulo de Gastos financieros se incluye en:",
+      "options": [
+        {
+          "text": "Las operaciones financieras.",
+          "is_correct": false
+        },
+        {
+          "text": "Las operaciones de capital.",
+          "is_correct": false
+        },
+        {
+          "text": "Las operaciones corrientes.",
+          "is_correct": false
+        },
+        {
+          "text": "El captulo 8 o en el captulo 9 por ser una operacin financiera.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "El captulo de Gastos financieros se incluye en:",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Segn el artculo 43 de la Ley General Presupuestaria, a qu nivel vincularn los",
+      "options": [
+        {
+          "text": "rditos suplementados?:",
+          "is_correct": false
+        },
+        {
+          "text": "Al nivel que corresponda conforme a su concreta clasificacin econmica.",
+          "is_correct": false
+        },
+        {
+          "text": "A nivel de subconcepto.",
+          "is_correct": false
+        },
+        {
+          "text": "A nivel de concepto, como regla general.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Segn el artculo 43 de la Ley General Presupuestaria, a qu nivel vincularn los",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "La adquisicin de deuda del sector pblico se imputa al:",
+      "options": [
+        {
+          "text": "Captulo 8 del estado de ingresos.",
+          "is_correct": false
+        },
+        {
+          "text": "Captulo 3 del estado de gastos.",
+          "is_correct": false
+        },
+        {
+          "text": "Captulo 9 del estado de gastos.",
+          "is_correct": false
+        },
+        {
+          "text": "Captulo 8 del estado de gastos.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "La adquisicin de deuda del sector pblico se imputa al:",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Cul de los siguientes crditos se especificarn a nivel de artculo en el Estado?",
+      "options": [
+        {
+          "text": "El subconcepto 226.01.",
+          "is_correct": false
+        },
+        {
+          "text": "El subconcepto 610.01.",
+          "is_correct": false
+        },
+        {
+          "text": "El subconcepto 120.03.",
+          "is_correct": false
+        },
+        {
+          "text": "El subconcepto 202.00.",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Cul de los siguientes crditos se especificarn a nivel de artculo en el Estado?",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En los crditos para operaciones corrientes se distinguirn:",
+      "options": [
+        {
+          "text": "Las inversiones reales y las transferencias corrientes.",
+          "is_correct": false
+        },
+        {
+          "text": "Las inversiones reales y las transferencias de capital.",
+          "is_correct": false
+        },
+        {
+          "text": "Los gastos de personal, los gastos corrientes en bienes y servicios, los gastos financieros",
+          "is_correct": false
+        },
+        {
+          "text": "Los gastos de personal, los gastos corrientes en bienes y servicios, los gastos financieros,",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En los crditos para operaciones corrientes se distinguirn:",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "Seale la afirmacin correcta:",
+      "options": [
+        {
+          "text": "La amortizacin de deuda pblica por parte del Estado se clasifica dentro del captulo 9,",
+          "is_correct": false
+        },
+        {
+          "text": "Las ayudas de accin social de tipo educativo, cultural o de transporte que recibe el",
+          "is_correct": false
+        },
+        {
+          "text": "Los gastos derivados de la realizacin de pruebas selectivas son vinculantes a nivel de",
+          "is_correct": false
+        },
+        {
+          "text": "rtculo, tanto en el Estado como en Organismo Autnomos, dado que pertenecen al",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "Seale la afirmacin correcta:",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    },
+    {
+      "question_text": "En la clasificacin econmica del presupuesto:",
+      "options": [
+        {
+          "text": "Los intereses de los activos financieros se reflejan en el Captulo 5 del presupuesto de",
+          "is_correct": false
+        },
+        {
+          "text": "Los intereses de la Deuda Pblica se registran en el Captulo 9 del presupuesto de gastos.",
+          "is_correct": false
+        },
+        {
+          "text": "Los prstamos concedidos por el Estado se reflejan en el Captulo 9 del presupuesto de",
+          "is_correct": false
+        },
+        {
+          "text": "Los prstamos recibidos por el Estado se anotan en el Captulo 8 del presupuesto de",
+          "is_correct": false
+        }
+      ],
+      "explanation": "",
+      "legal_reference": "",
+      "origin_type": "reformulated",
+      "original_text": "En la clasificacin econmica del presupuesto:",
+      "source": "3.- TEST GF 24-25 Ciclo y esctructura presupuestaria.pdf",
+      "reformulation_type": "clarificacion",
+      "confidence_score": 0.0,
+      "tema": 0,
+      "materia": "gestion-financiera",
+      "difficulty": "facil",
+      "needs_ai_completion": true,
+      "review_note": "No se pudo identificar la respuesta correcta automáticamente"
+    }
+  ]
+}

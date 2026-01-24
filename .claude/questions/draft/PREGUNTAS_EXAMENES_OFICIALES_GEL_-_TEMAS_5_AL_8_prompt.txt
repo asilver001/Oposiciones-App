@@ -1,0 +1,186 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** PREGUNTAS_EXAMENES_OFICIALES GEL - TEMAS 5 AL 8.pdf
+**Total preguntas:** 13
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** De acuerdo con el art�culo 90 de la CE, en los proyectos de ley declarados urgentes
+
+**Opciones:**
+  0. Dos meses.
+  1. Veinte d�as naturales.
+  2. Un mes.
+  3. Quince d�as naturales.
+
+---
+
+### Pregunta 2
+
+**Texto:** De conformidad con el art�culo 91 de la CE, �en qu� plazo debe sancionar el Rey
+
+**Opciones:**
+  0. En un plazo de quince d�as.
+  1. En un plazo de veinte
+  2. �as.
+  3. En un plazo de un mes.
+
+---
+
+### Pregunta 3
+
+**Texto:** De conformidad con la Ley 50/1997, de 27 de noviembre, del Gobierno,
+
+**Opciones:**
+  0. orresponde al Consejo de Ministros:
+  1. Proponer al Rey la convocatoria de un refer�ndum consultivo, previa autorizaci�n
+  2. el Congreso de los Diputados.
+  3. Declarar el estado de sitio, as� como proponer al Congreso de los Diputados la
+
+---
+
+### Pregunta 4
+
+**Texto:** De conformidad con el art�culo 99 de la CE, el candidato propuesto por el Rey a
+
+**Opciones:**
+  0. El Rey.
+  1. El Congreso de los Diputados.
+  2. El Senado.
+  3. Las Cortes Generales.
+
+---
+
+### Pregunta 5
+
+**Texto:** Seg�n lo que se dispone en la Ley Org�nica 3/1980, de 22 de abril, del Consejo de
+
+**Opciones:**
+  0. El Presidente del Consejo de Estado.
+  1. El Presidente del Gobierno.
+  2. El Consejo de Ministros.
+  3. La Comisi�n Permanente del Consejo de Estado.
+
+---
+
+### Pregunta 6
+
+**Texto:** Seg�n el art�culo 115 de la Constituci�n Espa�ola, la disoluci�n de las Cortes ha de
+
+**Opciones:**
+  0. La mayor�a absoluta del Congreso.
+  1. La mayor�a absoluta de las dos C�maras.
+  2. El presidente del Gobierno.
+  3. El Rey.
+
+---
+
+### Pregunta 7
+
+**Texto:** Seg�n la Ley Org�nica 3/1980, de 22 de abril, del Consejo de Estado, se�ale la
+
+**Opciones:**
+  0. firmaci�n correcta:
+  1. El Consejo de Estado emitir� dictamen sobre cuantos asuntos sometan a su
+  2. onsulta el Gobierno o sus miembros.
+  3. La consulta al Consejo de Estado ser� facultativa cuando as� lo establezcan las
+
+---
+
+### Pregunta 8
+
+**Texto:** De conformidad con el art�culo 26 de la Ley Org�nica 6/1985, de 1 de julio, del
+
+**Opciones:**
+  0. Habr�n de ser nombrados entre personas con cualificaci�n y experiencia en
+  1. Tendr�n las competencias sobre servicios comunes que les atribuya el Real
+  2. ecreto de estructura del Departamento y, en todo caso, las relativas a
+  3. Tendr�n a todos los efectos la categor�a de Director General.
+
+---
+
+### Pregunta 9
+
+**Texto:** Seg�n el art�culo 76 de la Ley 40/2015, la estructura de las Delegaciones del
+
+**Opciones:**
+  0. Ley.
+  1. Orden del Ministerio de Hacienda y Funci�n P�blica.
+  2. Real Decreto-Ley.
+  3. Real Decreto del Consejo de Ministros.
+
+---
+
+### Pregunta 10
+
+**Texto:** Conforme a la Ley 40/2015, la norma de creaci�n de un �rgano colegiado
+
+**Opciones:**
+  0. Orden del Ministerio de Presidencia.
+  1. Real decreto.
+  2. Orden ministerial conjunta.
+  3. Acuerdo de Consejo de Ministros.
+
+---
+
+### Pregunta 11
+
+**Texto:** De acuerdo con el art�culo 70 de la ley 40/2015, de 1 de octubre, los Directores
+
+**Opciones:**
+  0. Del Ministro de Pol�tica Territorial y Funci�n P�blica.
+  1. Del Delegado del Gobierno en la Comunidad Aut�noma o del Subdelegado del
+  2. De Subsecretario del Ministerio de Pol�tica Territorial y Funci�n P�blica.
+  3. Del Ministro de Presidencia.
+
+---
+
+### Pregunta 12
+
+**Texto:** Seg�n lo dispuesto en el art�culo 57 de la Ley 40/2015, de 1 de octubre, de R�gimen
+
+**Opciones:**
+  0. Acuerdo del Consejo de Ministros.
+  1. Real Decreto del Consejo de Ministros.
+  2. Real Decreto del Presidente del Gobierno.
+  3. Orden Ministerial.
+
+---
+
+### Pregunta 13
+
+**Texto:** De conformidad con la Ley 2/2014, de 25 de marzo, de la Acci�n y del Servicio
+
+**Opciones:**
+  0. Real decreto del Consejo de Ministros, a iniciativa del Ministerio de Asuntos
+  1. dministraciones P�blicas, previo informe del Consejo Ejecutivo de Pol�tica
+  2. Ley de las Cortes Generales, previo informe del Consejo de Pol�tica Exterior.
+  3. Orden del Ministro de Asuntos Exteriores.
+
+---

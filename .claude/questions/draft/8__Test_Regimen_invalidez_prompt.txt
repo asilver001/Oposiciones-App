@@ -1,0 +1,245 @@
+# Reformulación de Preguntas de Examen
+
+**Archivo fuente:** 8. Test Regimen invalidez.pdf
+**Total preguntas:** 18
+
+## Instrucciones
+
+Para cada pregunta, debes:
+
+1. **Identificar la respuesta correcta** (índice 0-3)
+2. **Añadir explicación** (2-3 oraciones con fundamento legal)
+3. **Añadir referencia legal** (artículo/ley específica)
+4. **Asignar confidence_score** (0.70-0.99 según certeza)
+
+## Formato de Respuesta
+
+Responde en JSON con este formato para cada pregunta:
+
+```json
+{
+  "question_index": 0,
+  "correct_option_index": 0,
+  "explanation": "Explicación detallada...",
+  "legal_reference": "Art. X de la Ley Y",
+  "confidence_score": 0.95
+}
+```
+
+## Preguntas a Procesar
+
+
+### Pregunta 1
+
+**Texto:** Con car�cter general durante la preparaci�n de los contratos se emitir�:
+
+**Opciones:**
+  0. Un RC por el precio de licitaci�n IVA excluido
+  1. Un documento contable A por el precio de adjudicaci�n, IVA excluido
+  2. Un documento contable OK por el precio de licitaci�n, IVA incluido
+  3. Un documento contable RC por el precio de licitaci�n, IVA incluido
+
+---
+
+### Pregunta 2
+
+**Texto:** Ser�n susceptibles de recurso especial:
+
+**Opciones:**
+  0. Los contratos de obras con valor estimado igual o superior a 3 millones
+  1. e euros, cuando se cumplan los dem�s requisitos del art. 44.
+  2. Los contratos de obras con valor estimado superior a 3 millones de euros,
+  3. uando se cumplan los dem�s requisitos del art. 44.
+
+---
+
+### Pregunta 3
+
+**Texto:** Podr�n ser objeto de recurso especial:
+
+**Opciones:**
+  0. La adjudicaci�n
+  1. Los actos de tr�mite cualificados
+  2. Los pliegos de cl�usulas administrativas particulares.
+  3. Todos los anteriores
+
+---
+
+### Pregunta 4
+
+**Texto:** �Cu�l es el plazo general de interposici�n del recurso especial?
+
+**Opciones:**
+  0. 15 d�as h�biles
+  1. 15 d�as naturales
+  2. 2 meses
+  3. 3 meses
+
+---
+
+### Pregunta 5
+
+**Texto:** Se�ale la respuesta correcta:
+
+**Opciones:**
+  0. Frente a la resoluci�n de un recurso especial, cabe recurso de alzada
+  1. Frente a la resoluci�n de un recurso especial, cabe recurso potestativo
+  2. e reposici�n
+  3. Frente a la resoluci�n de un recurso especial, no cabe ning�n otro
+
+---
+
+### Pregunta 6
+
+**Texto:** �C�mo afecta la cesi�n de un contrato a los documentos contables?
+
+**Opciones:**
+  0. De ninguna manera, ya que el gasto sigue siendo el mismo.
+  1. Ser� necesario un documento contable D/ a nombre del cesionario por el
+  2. Ser� necesario un documento D/ a nombre del cedente por el importe
+  3. Ser� necesario un documento contable D/ a nombre del cesionario por el
+
+---
+
+### Pregunta 7
+
+**Texto:** Son causas de nulidad, de acuerdo con el art. 39:
+
+**Opciones:**
+  0. La falta de capacidad de obrar del contratista.
+  1. La insuficiencia de cr�dito
+  2. La falta de publicidad del anuncio en el perfil y en los medios de
+  3. Todas son correctas.
+
+---
+
+### Pregunta 8
+
+**Texto:** Son causas de anulabilidad, de acuerdo con el art. 40 (se�ale la incorrecta):
+
+**Opciones:**
+  0. La falta de menci�n de los pliegos a cuestiones relativas a la protecci�n
+  1. e datos de car�cter personal a que se refiere el art. 122.2
+  2. El incumplimiento de los requisitos exigidos para la modificaci�n
+  3. Todas las disposiciones, resoluciones, cl�usulas o actos emanados de
+
+---
+
+### Pregunta 9
+
+**Texto:** Un contrato ser� inv�lido:
+
+**Opciones:**
+  0. Cuando lo sea alguno de sus actos de ejecuci�n
+  1. Cuando su contenido sea ilegal
+  2. Un contrato adjudicado nunca puede considerarse inv�lido.
+  3. Siempre que no se d� alguna de las causas que lo invalidan en el derecho
+
+---
+
+### Pregunta 10
+
+**Texto:** Se�ale la correcta en relaci�n con los documentos contables:
+
+**Opciones:**
+  0. Nunca deben reflejar IVA
+  1. Pueden incluir IVA o no, seg�n decida el �rgano de contrataci�n
+  2. S�lo incluyen IVA los OK
+
+---
+
+### Pregunta 11
+
+**Texto:** En caso de que el �rgano de contrataci�n aprecie temeridad o mala fe en
+
+**Opciones:**
+  0. Entre 1.000 y 30.000 euros
+  1. Entre 10.000 y 30.000 euros
+  2. Entre 5.000 y 30.000 euros
+  3. No est� prevista multa.
+
+---
+
+### Pregunta 12
+
+**Texto:** �Qu� efectos tiene la interposici�n de un recurso especial?
+
+**Opciones:**
+  0. La paralizaci�n del procedimiento en todo caso
+  1. La paralizaci�n del procedimiento si se recurre la adjudicaci�n
+  2. La paralizaci�n del procedimiento si se recurren los pliegos
+  3. Nunca paraliza el procedimiento salvo que se solicite como medida
+
+---
+
+### Pregunta 13
+
+**Texto:** �Qu� plazo hay para presentar el escrito de interposici�n del recurso
+
+**Opciones:**
+  0. 15 d�as h�biles
+  1. 15 d�as naturales
+  2. 1 mes
+  3. 2 meses
+
+---
+
+### Pregunta 14
+
+**Texto:** �Cu�nto dura el nombramiento de
+
+**Opciones:**
+  0. dministrativo Central de Recursos Contractuales?
+  1. 6 a�os improrrogables
+  2. 6 a�os con posibilidad de pr�rroga
+  3. 4 a�os improrrogables
+
+---
+
+### Pregunta 15
+
+**Texto:** Son causa de inadmisi�n del recurso especial:
+
+**Opciones:**
+  0. La incompetencia del �rgano para conocer el recurso
+  1. La falta de legitimaci�n del recurrente
+  2. La interposici�n del recurso de manera extempor�nea
+  3. Todos las anteriores son causa de inadmisi�n
+
+---
+
+### Pregunta 16
+
+**Texto:** Si un contrato tiene un precio de licitaci�n de 100.000 euros, se adjudica
+
+**Opciones:**
+  0. 100.000 euros
+  1. 80.000 euros
+  2. 100.000 euros, pero habr� que detraer el IVA que corresponda
+  3. 80.000 euros, pero habr� que detraer el IVA que corresponda
+
+---
+
+### Pregunta 17
+
+**Texto:** Se�ale la correcta de acuerdo con el art. 49 LCSP:
+
+**Opciones:**
+  0. El �rgano competente para resolver deber� adoptar decisi�n motivada
+  1. El �rgano competente para resolver deber� adoptar decisi�n motivada
+  2. el escrito en que se soliciten
+  3. El �rgano competente para resolver deber� adoptar decisi�n motivada
+
+---
+
+### Pregunta 18
+
+**Texto:** Los miembros del Tribunal Administrativo Central de Recursos
+
+**Opciones:**
+  0. ontractuales podr�n ser removidos de sus puestos por:
+  1. Expiraci�n del mandato
+  2. Renuncia aceptada por el Gobierno
+  3. P�rdida de la nacionalidad espa�ola
+
+---
