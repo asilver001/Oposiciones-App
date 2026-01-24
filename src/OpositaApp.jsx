@@ -732,47 +732,55 @@ export default function OpositaApp() {
   if (currentPage === 'welcome') {
     return (
       <WelcomeScreen
-        onStart={() => setCurrentPage('onboarding1')}
-        onSkip={() => { completeOnboarding(); setCurrentPage('home'); }}
-        onReset={handleDevReset}
+        onStart={() => setCurrentPage('goal-oposicion')}
+        onLogin={() => setCurrentPage('login')}
       />
     );
   }
 
-  if (currentPage === 'onboarding1') {
-    return <OnboardingOposicion onSelect={() => setCurrentPage('onboarding2')} />;
+  if (currentPage === 'goal-oposicion') {
+    return (
+      <GoalStep
+        step="oposicion"
+        onSelect={(oposicionId) => {
+          setUserData({ ...userData, oposicion: oposicionId });
+          setCurrentPage('goal-tiempo');
+        }}
+      />
+    );
   }
 
-  if (currentPage === 'onboarding2') {
+  if (currentPage === 'goal-tiempo') {
     return (
-      <OnboardingTiempo
+      <GoalStep
+        step="tiempo"
         onSelect={(option) => {
           setUserData({ ...userData, dailyGoal: option.questions, dailyGoalMinutes: parseInt(option.id) });
-          setCurrentPage('onboarding3');
+          setCurrentPage('date');
         }}
-        onBack={() => setCurrentPage('onboarding1')}
+        onBack={() => setCurrentPage('goal-oposicion')}
       />
     );
   }
 
-  if (currentPage === 'onboarding3') {
+  if (currentPage === 'date') {
     return (
-      <OnboardingFecha
+      <DateStep
         onSelect={(label) => {
           setUserData({ ...userData, examDate: label });
-          setCurrentPage('onboarding4');
+          setCurrentPage('intro');
         }}
-        onBack={() => setCurrentPage('onboarding2')}
+        onBack={() => setCurrentPage('goal-tiempo')}
       />
     );
   }
 
-  if (currentPage === 'onboarding4') {
+  if (currentPage === 'intro') {
     return (
-      <OnboardingIntro
+      <IntroStep
         onStart={() => { completeOnboarding(); startTest(); }}
         onSkip={() => { completeOnboarding(); setCurrentPage('home'); }}
-        onBack={() => setCurrentPage('onboarding3')}
+        onBack={() => setCurrentPage('date')}
       />
     );
   }

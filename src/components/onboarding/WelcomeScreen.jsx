@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { LogIn } from 'lucide-react';
 
-function WelcomeScreen({ onStart, onSkip, onReset }) {
+function WelcomeScreen({ onStart, onLogin }) {
   const [float, setFloat] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => setFloat(f => f === 0 ? -10 : 0), 1500);
@@ -18,18 +19,26 @@ function WelcomeScreen({ onStart, onSkip, onReset }) {
         </div>
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Oposita Smart</h1>
         <p className="text-xl text-purple-600 font-semibold mb-2">Tu plaza, paso a paso</p>
-        <p className="text-gray-500 mb-12">Unos minutos al día, a tu ritmo. Sin agobios.</p>
+        <p className="text-gray-500 mb-8">Unos minutos al día, a tu ritmo. Sin agobios.</p>
+
+        {/* Botón principal: Empezar */}
         <button
           onClick={onStart}
-          className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-5 px-8 rounded-2xl text-lg shadow-lg shadow-purple-600/30 transition-all active:scale-[0.98]"
+          className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-5 px-8 rounded-2xl text-lg shadow-lg shadow-purple-600/30 transition-all active:scale-[0.98] mb-4"
         >
           Empezar
         </button>
-        <div className="flex items-center justify-center gap-2 mt-12 pt-6 border-t border-gray-200">
-          <button onClick={onSkip} className="text-gray-400 text-xs hover:text-gray-600">[DEV] Saltar</button>
-          <span className="text-gray-300">·</span>
-          <button onClick={onReset} className="text-red-300 text-xs hover:text-red-500">[DEV] Reset</button>
-        </div>
+
+        {/* Botón secundario: Iniciar sesión */}
+        {onLogin && (
+          <button
+            onClick={onLogin}
+            className="w-full bg-white hover:bg-gray-50 text-purple-600 font-semibold py-4 px-8 rounded-2xl border-2 border-purple-200 hover:border-purple-300 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
+          >
+            <LogIn className="w-5 h-5" />
+            Ya tengo cuenta
+          </button>
+        )}
       </div>
     </div>
   );
