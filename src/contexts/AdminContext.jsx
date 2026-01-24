@@ -38,10 +38,8 @@ export function AdminProvider({ children }) {
       // STEP 1: Check rate limiting BEFORE attempting login
       const { data: rateLimitData, error: rateLimitError } = await supabase
         .rpc('check_admin_rate_limit', {
-          p_email: normalizedEmail,
-          p_ip_address: null, // Could add IP detection via external service
-          p_window_minutes: 15,
-          p_max_attempts: 5
+          p_email: normalizedEmail
+          // Uses defaults: 15 min window, 5 max attempts
         });
 
       if (rateLimitError) {
