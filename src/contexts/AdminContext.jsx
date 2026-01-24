@@ -31,11 +31,38 @@ export function AdminProvider({ children }) {
     setLoading(true);
     setError(null);
 
+    const normalizedEmail = email.toLowerCase().trim();
+    let rateLimitCheck = null;
+
     try {
-      // Call the verify_admin_login function in Supabase
+      // STEP 1: Check rate limiting BEFORE attempting login
+      const { data: rateLimitData, error: rateLimitError } = await supabase
+        .rpc('check_admin_rate_limit', {
+          p_email: normalizedEmail,
+          p_ip_address: null, // Could add IP detection via external service
+          p_window_minutes: 15,
+          p_max_attempts: 5
+        });
+
+      if (rateLimitError) {
+        console.error('Rate limit check error:', rateLimitError);
+        // Continue anyway - don't block login if rate limit check fails
+      } else if (rateLimitData && rateLimitData.length > 0) {
+        rateLimitCheck = rateLimitData[0];
+
+        // If rate limited, reject immediately
+        if (rateLimitCheck.is_rate_limited) {
+          const minutes = Math.ceil(rateLimitCheck.retry_after_seconds / 60);
+          throw new Error(
+            `Demasiados intentos fallidos. Inténtalo de nuevo en ${minutes} minuto${minutes !== 1 ? 's' : ''}.`
+          );
+        }
+      }
+
+      // STEP 2: Attempt login
       const { data, error: rpcError } = await supabase
         .rpc('verify_admin_login', {
-          p_email: email.toLowerCase().trim(),
+          p_email: normalizedEmail,
           p_pin: pin
         });
 
@@ -44,10 +71,28 @@ export function AdminProvider({ children }) {
       }
 
       if (!data || data.length === 0) {
+        // Record failed attempt
+        await supabase.rpc('record_admin_login_attempt', {
+          p_email: normalizedEmail,
+          p_ip_address: null,
+          p_user_agent: navigator?.userAgent || null,
+          p_was_successful: false,
+          p_failure_reason: 'invalid_credentials'
+        });
+
         throw new Error('Credenciales incorrectas');
       }
 
       const admin = data[0];
+
+      // STEP 3: Record successful login
+      await supabase.rpc('record_admin_login_attempt', {
+        p_email: normalizedEmail,
+        p_ip_address: null,
+        p_user_agent: navigator?.userAgent || null,
+        p_was_successful: true,
+        p_failure_reason: null
+      });
 
       // Create session with 24h expiry
       const session = {
@@ -66,6 +111,22 @@ export function AdminProvider({ children }) {
     } catch (err) {
       const message = err.message || 'Error al iniciar sesión';
       setError(message);
+
+      // Record failed attempt if not already rate limited
+      if (!message.includes('Demasiados intentos')) {
+        try {
+          await supabase.rpc('record_admin_login_attempt', {
+            p_email: normalizedEmail,
+            p_ip_address: null,
+            p_user_agent: navigator?.userAgent || null,
+            p_was_successful: false,
+            p_failure_reason: 'error'
+          });
+        } catch (recordError) {
+          console.error('Failed to record login attempt:', recordError);
+        }
+      }
+
       return { success: false, error: message };
     } finally {
       setLoading(false);

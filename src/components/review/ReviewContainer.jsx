@@ -9,6 +9,7 @@ import StatsFilter from './StatsFilter';
 import ViewModeSelector from './ViewModeSelector';
 import QuestionCardCompact from './QuestionCardCompact';
 import QuestionDetailModal from './QuestionDetailModal';
+import EmptyState from '../common/EmptyState';
 
 // Reformulation type labels
 const reformulationLabels = {
@@ -336,15 +337,14 @@ export default function ReviewContainer({ showHeader = false }) {
           <RefreshCw className="w-8 h-8 animate-spin text-purple-600" />
         </div>
       ) : questions.length === 0 ? (
-        <div className="bg-white rounded-2xl border border-gray-200 p-8 text-center">
-          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-          <h2 className="text-xl font-semibold text-gray-900 mb-2">
-            No hay preguntas
-          </h2>
-          <p className="text-gray-600">
-            No hay preguntas con el filtro seleccionado.
-          </p>
-        </div>
+        <EmptyState
+          icon={CheckCircle}
+          title="No tienes preguntas para repasar"
+          description="No hay preguntas pendientes con el filtro seleccionado. ¡Buen trabajo!"
+          actionLabel={activeFilter === 'pending' ? 'Hacer un test' : null}
+          onAction={activeFilter === 'pending' ? () => window.location.reload() : null}
+          variant="green"
+        />
       ) : (
         <>
           {/* Individual View */}

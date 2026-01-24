@@ -12,6 +12,7 @@ import {
   Filter,
   Play
 } from 'lucide-react';
+import EmptyState from '../common/EmptyState';
 
 /**
  * TemasListView - Topic list page with filtering and progress tracking
@@ -231,9 +232,9 @@ function FilterChip({ label, isActive, onClick }) {
 }
 
 /**
- * EmptyState - Shown when no topics match filter
+ * NoSearchResults - Shown when no topics match filter
  */
-function EmptyState({ searchQuery, onClear }) {
+function NoSearchResults({ searchQuery, onClear }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -384,6 +385,25 @@ export default function TemasListView({
     );
   }
 
+  // Check if there are no topics at all
+  const hasNoTopics = topics.length === 0;
+
+  if (hasNoTopics) {
+    return (
+      <div className="space-y-6">
+        <h2 className="text-2xl font-bold text-gray-900">Tus temas</h2>
+        <EmptyState
+          icon={BookOpen}
+          title="No hay temas disponibles"
+          description="Aún no hay temas cargados en el sistema. Los temas estarán disponibles pronto."
+          actionLabel="Explorar contenido"
+          onAction={() => onTopicSelect?.(null)}
+          variant="purple"
+        />
+      </div>
+    );
+  }
+
   const hasResults = Object.keys(filteredTopicsByBlock).length > 0;
 
   return (
@@ -459,7 +479,7 @@ export default function TemasListView({
           ))}
         </div>
       ) : (
-        <EmptyState
+        <NoSearchResults
           searchQuery={searchQuery}
           onClear={() => {
             setSearchQuery('');

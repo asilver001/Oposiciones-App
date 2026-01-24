@@ -9,10 +9,11 @@
 import { motion } from 'framer-motion';
 import {
   Zap, Flame, Target, Trophy, ChevronRight,
-  Info, HelpCircle, Instagram
+  Info, HelpCircle, Instagram, Sparkles
 } from 'lucide-react';
 import TopBar from './TopBar';
 import FortalezaVisual, { statusConfig } from './FortalezaVisual';
+import EmptyState from '../common/EmptyState';
 
 // Animation presets
 const spring = {
@@ -280,6 +281,12 @@ export default function SoftFortHome({
   showTopBar = true,
   showFooter = true
 }) {
+  // Check if user is completely new (no activity at all)
+  const isNewUser = totalStats.testsCompleted === 0 &&
+                    totalStats.questionsCorrect === 0 &&
+                    streakData.current === 0 &&
+                    fortalezaData.length === 0;
+
   // Calculate daily progress (simplified - can be enhanced)
   const dailyProgress = Math.min(100, totalStats.testsCompleted * 10);
 
@@ -336,8 +343,20 @@ export default function SoftFortHome({
         </h2>
       </div>
 
-      {/* Bento Grid */}
-      <div className="grid grid-cols-2 gap-3">
+      {/* Empty State for New Users */}
+      {isNewUser && (
+        <EmptyState
+          icon={Sparkles}
+          title="¡Bienvenido! Comienza tu preparación"
+          description="Da el primer paso en tu camino hacia la oposición. Empieza con un test rápido para evaluar tu nivel actual."
+          actionLabel="Hacer primer test"
+          onAction={onStartSession}
+          variant="purple"
+        />
+      )}
+
+      {/* Bento Grid - Only show if user has activity */}
+      {!isNewUser && <div className="grid grid-cols-2 gap-3">
         {/* Session CTA - spans 2 columns */}
         <SessionCard
           nextTopic={nextTopic}
@@ -383,7 +402,7 @@ export default function SoftFortHome({
           percentile={percentile}
           onClick={onLevelClick}
         />
-      </div>
+      </div>}
 
       {/* Footer - optional */}
       {showFooter && <Footer onNavigate={onNavigate} />}

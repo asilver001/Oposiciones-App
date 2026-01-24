@@ -59,7 +59,9 @@ function calculateSimilarity(str1, str2) {
 export async function importQuestions(questions, options = {}) {
   const {
     skipDuplicates = true,
-    validateBeforeImport = true
+    validateBeforeImport = true,
+    batchSize = 50, // Process in batches of 50 questions
+    onProgress = null // Callback for progress updates: (imported, total) => {}
   } = options;
 
   const result = {
@@ -79,67 +81,220 @@ export async function importQuestions(questions, options = {}) {
     questions = validation.validQuestions;
   }
 
-  // Process each question
-  for (let i = 0; i < questions.length; i++) {
-    // Remove id field if present (Supabase auto-generates it)
-    const { id, ...question } = questions[i];
+  // If skip duplicates is enabled, we need to check each question individually
+  // Otherwise, we can use bulk insert for better performance
+  if (skipDuplicates) {
+    // Process in batches but check duplicates
+    const batches = [];
+    for (let i = 0; i < questions.length; i += batchSize) {
+      batches.push(questions.slice(i, i + batchSize));
+    }
 
-    try {
-      // Get the main question text (prefer reformulated_text)
-      const mainQuestionText = question.reformulated_text || question.question_text;
+    for (let batchIndex = 0; batchIndex < batches.length; batchIndex++) {
+      const batch = batches[batchIndex];
+      const questionsToInsert = [];
+      const batchOffset = batchIndex * batchSize;
 
-      // Check for duplicates
-      if (skipDuplicates) {
-        const isDuplicate = await checkDuplicate(mainQuestionText);
-        if (isDuplicate) {
-          result.duplicates++;
+      // Check duplicates for this batch
+      for (let i = 0; i < batch.length; i++) {
+        const { id, ...question } = batch[i];
+        const globalIndex = batchOffset + i;
+        const mainQuestionText = question.reformulated_text || question.question_text;
+
+        try {
+          const isDuplicate = await checkDuplicate(mainQuestionText);
+          if (isDuplicate) {
+            result.duplicates++;
+            result.details.push({
+              index: globalIndex,
+              status: 'duplicate',
+              question: mainQuestionText.substring(0, 50) + '...'
+            });
+          } else {
+            const supabaseQuestion = transformQuestionForSupabase(question);
+            delete supabaseQuestion.id;
+            questionsToInsert.push({
+              data: supabaseQuestion,
+              index: globalIndex,
+              questionText: mainQuestionText
+            });
+          }
+        } catch (err) {
+          result.errors.push(`Pregunta ${globalIndex + 1}: ${err.message}`);
           result.details.push({
-            index: i,
-            status: 'duplicate',
+            index: globalIndex,
+            status: 'error',
+            error: err.message,
             question: mainQuestionText.substring(0, 50) + '...'
           });
-          continue;
         }
       }
 
-      // Transform to Supabase format
-      const supabaseQuestion = transformQuestionForSupabase(question);
-      
-      // IMPORTANT: Remove id field again in case transformQuestionForSupabase added it
-      delete supabaseQuestion.id;
+      // Bulk insert non-duplicate questions
+      if (questionsToInsert.length > 0) {
+        try {
+          const { data, error } = await supabase
+            .from('questions')
+            .insert(questionsToInsert.map(q => q.data))
+            .select('id');
 
-      // Insert directly into the questions table (instead of RPC)
-      const { data, error } = await supabase
-        .from('questions')
-        .insert(supabaseQuestion)
-        .select('id')
-        .single();
+          if (error) {
+            // If bulk insert fails, fall back to individual inserts
+            console.warn('Bulk insert failed, falling back to individual inserts:', error);
+            for (const q of questionsToInsert) {
+              try {
+                const { data: singleData, error: singleError } = await supabase
+                  .from('questions')
+                  .insert(q.data)
+                  .select('id')
+                  .single();
 
-      if (error) {
-        result.errors.push(`Pregunta ${i + 1}: ${error.message}`);
-        result.details.push({
-          index: i,
-          status: 'error',
-          error: error.message,
-          question: mainQuestionText.substring(0, 50) + '...'
-        });
-      } else {
-        result.imported++;
-        result.details.push({
-          index: i,
-          status: 'imported',
-          id: data?.id,
-          question: mainQuestionText.substring(0, 50) + '...'
-        });
+                if (singleError) {
+                  result.errors.push(`Pregunta ${q.index + 1}: ${singleError.message}`);
+                  result.details.push({
+                    index: q.index,
+                    status: 'error',
+                    error: singleError.message,
+                    question: q.questionText.substring(0, 50) + '...'
+                  });
+                } else {
+                  result.imported++;
+                  result.details.push({
+                    index: q.index,
+                    status: 'imported',
+                    id: singleData?.id,
+                    question: q.questionText.substring(0, 50) + '...'
+                  });
+                }
+              } catch (singleErr) {
+                result.errors.push(`Pregunta ${q.index + 1}: ${singleErr.message}`);
+                result.details.push({
+                  index: q.index,
+                  status: 'error',
+                  error: singleErr.message,
+                  question: q.questionText.substring(0, 50) + '...'
+                });
+              }
+            }
+          } else {
+            // Success: record all imported questions
+            data.forEach((item, idx) => {
+              const q = questionsToInsert[idx];
+              result.imported++;
+              result.details.push({
+                index: q.index,
+                status: 'imported',
+                id: item.id,
+                question: q.questionText.substring(0, 50) + '...'
+              });
+            });
+          }
+        } catch (err) {
+          // Unexpected error, try individual inserts
+          console.error('Batch insert error:', err);
+          for (const q of questionsToInsert) {
+            try {
+              const { data: singleData, error: singleError } = await supabase
+                .from('questions')
+                .insert(q.data)
+                .select('id')
+                .single();
+
+              if (singleError) {
+                result.errors.push(`Pregunta ${q.index + 1}: ${singleError.message}`);
+                result.details.push({
+                  index: q.index,
+                  status: 'error',
+                  error: singleError.message,
+                  question: q.questionText.substring(0, 50) + '...'
+                });
+              } else {
+                result.imported++;
+                result.details.push({
+                  index: q.index,
+                  status: 'imported',
+                  id: singleData?.id,
+                  question: q.questionText.substring(0, 50) + '...'
+                });
+              }
+            } catch (singleErr) {
+              result.errors.push(`Pregunta ${q.index + 1}: ${singleErr.message}`);
+              result.details.push({
+                index: q.index,
+                status: 'error',
+                error: singleErr.message,
+                question: q.questionText.substring(0, 50) + '...'
+              });
+            }
+          }
+        }
       }
-    } catch (err) {
-      result.errors.push(`Pregunta ${i + 1}: ${err.message}`);
-      result.details.push({
-        index: i,
-        status: 'error',
-        error: err.message,
-        question: (question.reformulated_text || question.question_text)?.substring(0, 50) + '...'
-      });
+
+      // Call progress callback
+      if (onProgress) {
+        onProgress(result.imported, questions.length);
+      }
+    }
+  } else {
+    // No duplicate checking - pure bulk insert for maximum performance
+    const batches = [];
+    for (let i = 0; i < questions.length; i += batchSize) {
+      batches.push(questions.slice(i, i + batchSize));
+    }
+
+    for (let batchIndex = 0; batchIndex < batches.length; batchIndex++) {
+      const batch = batches[batchIndex];
+      const batchOffset = batchIndex * batchSize;
+
+      try {
+        // Transform all questions in batch
+        const supabaseQuestions = batch.map((question, i) => {
+          const { id, ...questionWithoutId } = question;
+          const transformed = transformQuestionForSupabase(questionWithoutId);
+          delete transformed.id;
+          return {
+            data: transformed,
+            index: batchOffset + i,
+            questionText: question.reformulated_text || question.question_text
+          };
+        });
+
+        // Bulk insert entire batch
+        const { data, error } = await supabase
+          .from('questions')
+          .insert(supabaseQuestions.map(q => q.data))
+          .select('id');
+
+        if (error) {
+          result.errors.push(`Batch ${batchIndex + 1}: ${error.message}`);
+          supabaseQuestions.forEach(q => {
+            result.details.push({
+              index: q.index,
+              status: 'error',
+              error: error.message,
+              question: q.questionText.substring(0, 50) + '...'
+            });
+          });
+        } else {
+          data.forEach((item, idx) => {
+            const q = supabaseQuestions[idx];
+            result.imported++;
+            result.details.push({
+              index: q.index,
+              status: 'imported',
+              id: item.id,
+              question: q.questionText.substring(0, 50) + '...'
+            });
+          });
+        }
+      } catch (err) {
+        result.errors.push(`Batch ${batchIndex + 1}: ${err.message}`);
+      }
+
+      // Call progress callback
+      if (onProgress) {
+        onProgress(result.imported, questions.length);
+      }
     }
   }
 

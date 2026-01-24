@@ -25,6 +25,7 @@ import {
   Eye,
   Check
 } from 'lucide-react';
+import EmptyState from '../common/EmptyState';
 
 /**
  * ActividadPage - Activity page with swipeable tabs
@@ -379,17 +380,14 @@ function ProgressTab({ data, onSwipeLeft, onStartTest, formatRelativeDate }) {
           if (offset.x > 100 || velocity.x > 500) onSwipeLeft();
         }}
       >
-        <div className="text-center py-12">
-          <div className="text-6xl mb-4">📊</div>
-          <h3 className="text-xl font-bold text-gray-900 mb-2">Aún no hay actividad</h3>
-          <p className="text-gray-500 mb-6">Completa tu primer test para ver tu progreso</p>
-          <button
-            onClick={onStartTest}
-            className="bg-purple-600 text-white px-6 py-3 rounded-xl font-semibold"
-          >
-            Empezar a estudiar →
-          </button>
-        </div>
+        <EmptyState
+          icon={BarChart3}
+          title="Sin actividad todavía"
+          description="Completa tu primer test para ver tu progreso y estadísticas de estudio."
+          actionLabel="Empezar a estudiar"
+          onAction={onStartTest}
+          variant="purple"
+        />
         <p className="text-center text-xs text-gray-400 py-2">
           Desliza para ver modos de estudio →
         </p>

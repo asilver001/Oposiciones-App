@@ -1,6 +1,7 @@
 import React from 'react';
 import { Brain, Flame, Target, BookOpen, TrendingUp, Play, Calendar, Award } from 'lucide-react';
 import { useStudyStats } from '../../hooks/useSpacedRepetition';
+import EmptyState from '../common/EmptyState';
 
 export default function StudyDashboard({ onStartSession }) {
   const { stats, weeklyProgress, isLoading } = useStudyStats();
@@ -19,6 +20,22 @@ export default function StudyDashboard({ onStartSession }) {
         <Brain className="w-12 h-12 mx-auto mb-4 opacity-50" />
         <p>Inicia sesión para ver tu progreso</p>
       </div>
+    );
+  }
+
+  // Check if user has no study activity yet
+  const hasNoActivity = stats.totalStudied === 0 && stats.streak === 0;
+
+  if (hasNoActivity) {
+    return (
+      <EmptyState
+        icon={Play}
+        title="Aún no has comenzado ninguna sesión"
+        description="Empieza tu primera sesión de estudio y comienza a construir tu racha de aprendizaje."
+        actionLabel="Comenzar primera sesión"
+        onAction={onStartSession}
+        variant="purple"
+      />
     );
   }
 

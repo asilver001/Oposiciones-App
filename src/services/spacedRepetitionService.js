@@ -100,8 +100,9 @@ export async function getNewQuestions(userId, options = {}) {
   }
 
   // Exclude seen questions (only if there are some)
+  // FIX: Use Supabase native API instead of string interpolation to prevent SQL injection
   if (seenIds.length > 0) {
-    query = query.not('id', 'in', `(${seenIds.join(',')})`);
+    query = query.not('id', 'in', seenIds);
   }
 
   const { data, error } = await query;
@@ -249,15 +250,12 @@ export async function updateProgress(userId, questionId, wasCorrect) {
     return null;
   }
 
-  // Also update question stats
-  await supabase
-    .from('questions')
-    .update({
-      times_shown: supabase.raw('times_shown + 1'),
-      times_correct: wasCorrect ? supabase.raw('times_correct + 1') : undefined,
-      last_shown_at: new Date().toISOString()
-    })
-    .eq('id', questionId);
+  // Also update question stats using RPC function (safer than raw SQL)
+  // Call the existing update_question_stats function from the database
+  await supabase.rpc('update_question_stats', {
+    p_question_id: questionId,
+    p_was_correct: wasCorrect
+  });
 
   return data;
 }
@@ -347,14 +345,26 @@ export async function getStudyStats(userId) {
 export async function recordDailyStudy(userId, questionsAnswered, correctAnswers) {
   const today = new Date().toISOString().split('T')[0];
 
-  // Upsert daily record
+  // First, try to get existing record
+  const { data: existing } = await supabase
+    .from('study_history')
+    .select('questions_answered, correct_answers')
+    .eq('user_id', userId)
+    .eq('date', today)
+    .single();
+
+  // Calculate new totals
+  const newQuestionsAnswered = (existing?.questions_answered || 0) + questionsAnswered;
+  const newCorrectAnswers = (existing?.correct_answers || 0) + correctAnswers;
+
+  // Upsert with calculated values (no SQL injection risk)
   const { error } = await supabase
     .from('study_history')
     .upsert({
       user_id: userId,
       date: today,
-      questions_answered: supabase.raw(`questions_answered + ${questionsAnswered}`),
-      correct_answers: supabase.raw(`correct_answers + ${correctAnswers}`)
+      questions_answered: newQuestionsAnswered,
+      correct_answers: newCorrectAnswers
     }, {
       onConflict: 'user_id,date'
     });
