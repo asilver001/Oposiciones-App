@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useAdmin } from '../../contexts/AdminContext';
+import { useAuth } from '../../contexts/AuthContext';
 
 export default function DevPanel({
   onReset,
@@ -13,19 +13,22 @@ export default function DevPanel({
   testsCount
 }) {
   const [isOpen, setIsOpen] = useState(false);
-  const { isAdmin, adminUser } = useAdmin();
+  const { isAdmin, userRole, user } = useAuth();
 
   // 🔐 CRITICAL: Only render DevPanel if user is logged in as admin
   if (!isAdmin) {
     return null;
   }
 
+  // Get admin email from user or userRole
+  const adminEmail = userRole?.email || user?.email;
+
   if (!isOpen) {
     return (
       <button
         onClick={() => setIsOpen(true)}
         className="fixed bottom-24 left-4 z-50 w-10 h-10 bg-gray-900/80 hover:bg-gray-900 text-white rounded-full shadow-lg flex items-center justify-center text-xs font-bold"
-        title={`Dev Mode - ${adminUser?.email}`}
+        title={`Dev Mode - ${adminEmail}`}
       >
         DEV
       </button>
@@ -37,7 +40,7 @@ export default function DevPanel({
       <div className="flex items-center justify-between mb-3">
         <div>
           <span className="text-white font-semibold text-sm">🛠️ Dev Tools</span>
-          <div className="text-[9px] text-gray-400 mt-0.5">{adminUser?.email}</div>
+          <div className="text-[9px] text-gray-400 mt-0.5">{adminEmail}</div>
         </div>
         <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-white text-lg">×</button>
       </div>
