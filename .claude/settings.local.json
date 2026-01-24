@@ -48,7 +48,8 @@
       "Bash(curl:*)",
       "Bash(bash)",
       "Bash(vercel:*)",
-      "Bash(npx supabase:*)"
+      "Bash(npx supabase:*)",
+      "Bash(export SUPABASE_ACCESS_TOKEN:*)"
     ]
   }
 }

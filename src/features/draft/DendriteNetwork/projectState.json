@@ -1,0 +1,652 @@
+{
+  "metadata": {
+    "lastUpdated": "2026-01-24T20:00:00Z",
+    "totalPhases": 5,
+    "totalTasks": 47,
+    "completedTasks": 13,
+    "projectName": "OpositaSmart MVP Roadmap",
+    "currentPhase": "phase-1"
+  },
+  "phases": [
+    {
+      "id": "phase-0",
+      "name": "Fase 0: Críticos Pre-Deploy",
+      "status": "completed",
+      "progress": 100,
+      "color": "#10b981",
+      "estimatedHours": 14,
+      "actualHours": 12,
+      "duration": "2 días",
+      "tasks": ["task-1", "task-2", "task-3", "task-4", "task-5", "task-6", "task-7", "task-8"]
+    },
+    {
+      "id": "phase-1",
+      "name": "Fase 1: Refactor Arquitectónico",
+      "status": "in-progress",
+      "progress": 15,
+      "color": "#3b82f6",
+      "estimatedHours": 84,
+      "duration": "10 días",
+      "tasks": ["task-9", "task-10", "task-11", "task-12", "task-13", "task-14"]
+    },
+    {
+      "id": "phase-2",
+      "name": "Fase 2: UI/UX Polish",
+      "status": "pending",
+      "progress": 0,
+      "color": "#a855f7",
+      "estimatedHours": 39,
+      "duration": "5 días",
+      "tasks": ["task-15", "task-16", "task-17", "task-18", "task-19", "task-20", "task-21", "task-22", "task-23", "task-24", "task-25"]
+    },
+    {
+      "id": "phase-3",
+      "name": "Fase 3: Features MVP",
+      "status": "pending",
+      "progress": 0,
+      "color": "#f59e0b",
+      "estimatedHours": 68,
+      "duration": "8 días",
+      "tasks": ["task-26", "task-27", "task-28", "task-29", "task-30", "task-31", "task-32", "task-33", "task-34", "task-35", "task-36", "task-37"]
+    },
+    {
+      "id": "phase-4",
+      "name": "Fase 4: Testing & QA",
+      "status": "pending",
+      "progress": 0,
+      "color": "#ec4899",
+      "estimatedHours": 74,
+      "duration": "9 días",
+      "tasks": ["task-38", "task-39", "task-40", "task-41", "task-42", "task-43", "task-44", "task-45", "task-46"]
+    },
+    {
+      "id": "phase-5",
+      "name": "Fase 5: Pre-Launch",
+      "status": "pending",
+      "progress": 0,
+      "color": "#8b5cf6",
+      "estimatedHours": 49,
+      "duration": "6 días",
+      "tasks": ["task-47", "task-48", "task-49", "task-50", "task-51", "task-52", "task-53", "task-54", "task-55", "task-56"]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task-1",
+      "label": "Habilitar RLS en BD",
+      "description": "Enable Row Level Security en questions, badges, waitlist",
+      "status": "completed",
+      "priority": "P0",
+      "estimatedHours": 1,
+      "actualHours": 1.5,
+      "completedAt": "2026-01-24T18:00:00Z",
+      "dependencies": [],
+      "phase": "phase-0"
+    },
+    {
+      "id": "task-2",
+      "label": "Corregir SQL Injection",
+      "description": "Fix SQL injection en spacedRepetitionService.js:104",
+      "status": "completed",
+      "priority": "P0",
+      "estimatedHours": 0.5,
+      "actualHours": 0.5,
+      "completedAt": "2026-01-24T18:00:00Z",
+      "dependencies": [],
+      "phase": "phase-0"
+    },
+    {
+      "id": "task-3",
+      "label": "Crear índices en BD",
+      "description": "Crear índices para mejorar performance 10x",
+      "status": "completed",
+      "priority": "P0",
+      "estimatedHours": 2,
+      "actualHours": 2,
+      "completedAt": "2026-01-24T19:00:00Z",
+      "dependencies": [],
+      "phase": "phase-0"
+    },
+    {
+      "id": "task-4",
+      "label": "Bulk import questions",
+      "description": "Reducir 263 HTTP calls a una sola operación bulk",
+      "status": "completed",
+      "priority": "P0",
+      "estimatedHours": 1,
+      "actualHours": 1,
+      "completedAt": "2026-01-24T19:30:00Z",
+      "dependencies": [],
+      "phase": "phase-0"
+    },
+    {
+      "id": "task-5",
+      "label": "Rate limiting admin login",
+      "description": "Prevenir brute-force en PIN de admin",
+      "status": "completed",
+      "priority": "P0",
+      "estimatedHours": 2,
+      "actualHours": 2,
+      "completedAt": "2026-01-24T20:00:00Z",
+      "dependencies": [],
+      "phase": "phase-0"
+    },
+    {
+      "id": "task-6",
+      "label": "Empty States en 5 pantallas",
+      "description": "Crear EmptyState reutilizable y aplicar en StudyDashboard, ActividadPage, etc",
+      "status": "completed",
+      "priority": "P0",
+      "estimatedHours": 4,
+      "actualHours": 4,
+      "completedAt": "2026-01-24T21:00:00Z",
+      "dependencies": [],
+      "phase": "phase-0"
+    },
+    {
+      "id": "task-7",
+      "label": "Eliminar DraftFeatures",
+      "description": "Mover DraftFeatures.jsx (8,713 líneas) a archived/",
+      "status": "completed",
+      "priority": "P1",
+      "estimatedHours": 0.5,
+      "actualHours": 0.5,
+      "completedAt": "2026-01-24T21:30:00Z",
+      "dependencies": [],
+      "phase": "phase-0"
+    },
+    {
+      "id": "task-8",
+      "label": "Testing básico de seguridad",
+      "description": "Verificar RLS, SQL injection fixes, rate limiting",
+      "status": "completed",
+      "priority": "P0",
+      "estimatedHours": 3,
+      "actualHours": 3,
+      "completedAt": "2026-01-24T22:00:00Z",
+      "dependencies": ["task-1", "task-2", "task-5"],
+      "phase": "phase-0"
+    },
+    {
+      "id": "task-9",
+      "label": "Crear estructura /pages, /layouts, /theme",
+      "description": "Crear nueva estructura de carpetas para feature-based architecture",
+      "status": "in-progress",
+      "priority": "P0",
+      "estimatedHours": 2,
+      "dependencies": [],
+      "phase": "phase-1"
+    },
+    {
+      "id": "task-10",
+      "label": "Crear AppRouter.jsx",
+      "description": "Implementar React Router v6 con rutas principales",
+      "status": "pending",
+      "priority": "P0",
+      "estimatedHours": 4,
+      "dependencies": ["task-9"],
+      "phase": "phase-1"
+    },
+    {
+      "id": "task-11",
+      "label": "Extraer HomePage de OpositaApp",
+      "description": "Mover lógica de home page a componente separado",
+      "status": "pending",
+      "priority": "P0",
+      "estimatedHours": 6,
+      "dependencies": ["task-9", "task-10"],
+      "phase": "phase-1"
+    },
+    {
+      "id": "task-12",
+      "label": "Extraer StudyPage de OpositaApp",
+      "description": "Mover lógica de study page a componente separado",
+      "status": "pending",
+      "priority": "P0",
+      "estimatedHours": 8,
+      "dependencies": ["task-9", "task-10"],
+      "phase": "phase-1"
+    },
+    {
+      "id": "task-13",
+      "label": "Crear MainLayout con TopBar + BottomTabBar",
+      "description": "Layout principal con navegación compartida",
+      "status": "pending",
+      "priority": "P0",
+      "estimatedHours": 4,
+      "dependencies": ["task-9"],
+      "phase": "phase-1"
+    },
+    {
+      "id": "task-14",
+      "label": "Extraer ActividadPage, RecursosPage, AdminPage",
+      "description": "Separar páginas restantes del monolito",
+      "status": "pending",
+      "priority": "P0",
+      "estimatedHours": 12,
+      "dependencies": ["task-10", "task-13"],
+      "phase": "phase-1"
+    },
+    {
+      "id": "task-15",
+      "label": "Implementar Toast notifications",
+      "description": "Sistema de notificaciones toast para feedback visual",
+      "status": "pending",
+      "priority": "P1",
+      "estimatedHours": 3,
+      "dependencies": [],
+      "phase": "phase-2"
+    },
+    {
+      "id": "task-16",
+      "label": "Loading skeletons en 5 pantallas",
+      "description": "Skeletons para mejor UX durante carga",
+      "status": "pending",
+      "priority": "P1",
+      "estimatedHours": 4,
+      "dependencies": [],
+      "phase": "phase-2"
+    },
+    {
+      "id": "task-17",
+      "label": "Mejorar WelcomeScreen",
+      "description": "Pulir onboarding inicial",
+      "status": "pending",
+      "priority": "P1",
+      "estimatedHours": 1,
+      "dependencies": [],
+      "phase": "phase-2"
+    },
+    {
+      "id": "task-18",
+      "label": "Consistencia de micro-interactions",
+      "description": "Unificar animaciones y transiciones",
+      "status": "pending",
+      "priority": "P2",
+      "estimatedHours": 2,
+      "dependencies": [],
+      "phase": "phase-2"
+    },
+    {
+      "id": "task-19",
+      "label": "Fix responsive en mobile",
+      "description": "Corregir issues de responsive design",
+      "status": "pending",
+      "priority": "P1",
+      "estimatedHours": 6,
+      "dependencies": [],
+      "phase": "phase-2"
+    },
+    {
+      "id": "task-20",
+      "label": "Typography hierarchy",
+      "description": "Definir jerarquía tipográfica consistente",
+      "status": "pending",
+      "priority": "P2",
+      "estimatedHours": 2,
+      "dependencies": [],
+      "phase": "phase-2"
+    },
+    {
+      "id": "task-21",
+      "label": "Accessibility audit + fixes",
+      "description": "Audit de accesibilidad y correcciones WCAG AA",
+      "status": "pending",
+      "priority": "P1",
+      "estimatedHours": 4,
+      "dependencies": [],
+      "phase": "phase-2"
+    },
+    {
+      "id": "task-22",
+      "label": "Confirmación de acciones destructivas",
+      "description": "Modales de confirmación para acciones críticas",
+      "status": "pending",
+      "priority": "P1",
+      "estimatedHours": 2,
+      "dependencies": [],
+      "phase": "phase-2"
+    },
+    {
+      "id": "task-23",
+      "label": "Contextual help/tooltips",
+      "description": "Agregar tooltips y ayuda contextual",
+      "status": "pending",
+      "priority": "P2",
+      "estimatedHours": 6,
+      "dependencies": [],
+      "phase": "phase-2"
+    },
+    {
+      "id": "task-24",
+      "label": "Pull-to-refresh en mobile",
+      "description": "Implementar pull-to-refresh pattern",
+      "status": "pending",
+      "priority": "P2",
+      "estimatedHours": 3,
+      "dependencies": [],
+      "phase": "phase-2"
+    },
+    {
+      "id": "task-25",
+      "label": "Testing UI completo",
+      "description": "Testing de todas las mejoras de UI/UX",
+      "status": "pending",
+      "priority": "P1",
+      "estimatedHours": 6,
+      "dependencies": ["task-15", "task-16", "task-17", "task-18", "task-19", "task-20", "task-21", "task-22", "task-23", "task-24"],
+      "phase": "phase-2"
+    },
+    {
+      "id": "task-26",
+      "label": "Simulacros - Crear tablas BD",
+      "description": "Schema de base de datos para simulacros",
+      "status": "pending",
+      "priority": "P0",
+      "estimatedHours": 4,
+      "dependencies": [],
+      "phase": "phase-3"
+    },
+    {
+      "id": "task-27",
+      "label": "Simulacros - UI página simulacros",
+      "description": "Interfaz principal de simulacros",
+      "status": "pending",
+      "priority": "P0",
+      "estimatedHours": 8,
+      "dependencies": ["task-26"],
+      "phase": "phase-3"
+    },
+    {
+      "id": "task-28",
+      "label": "Simulacros - Timer + scoring",
+      "description": "Sistema de cronómetro y puntuación",
+      "status": "pending",
+      "priority": "P0",
+      "estimatedHours": 6,
+      "dependencies": ["task-27"],
+      "phase": "phase-3"
+    },
+    {
+      "id": "task-29",
+      "label": "Simulacros - Resultados detallados",
+      "description": "Página de resultados con análisis",
+      "status": "pending",
+      "priority": "P0",
+      "estimatedHours": 4,
+      "dependencies": ["task-28"],
+      "phase": "phase-3"
+    },
+    {
+      "id": "task-30",
+      "label": "Sistema de reportes UI",
+      "description": "Modal para reportar preguntas incorrectas",
+      "status": "pending",
+      "priority": "P1",
+      "estimatedHours": 4,
+      "dependencies": [],
+      "phase": "phase-3"
+    },
+    {
+      "id": "task-31",
+      "label": "Filtros avanzados en ReviewContainer",
+      "description": "Filtros por tema, dificultad, estado",
+      "status": "pending",
+      "priority": "P1",
+      "estimatedHours": 6,
+      "dependencies": [],
+      "phase": "phase-3"
+    },
+    {
+      "id": "task-32",
+      "label": "Export de progreso (PDF/CSV)",
+      "description": "Exportar estadísticas y progreso",
+      "status": "pending",
+      "priority": "P1",
+      "estimatedHours": 6,
+      "dependencies": [],
+      "phase": "phase-3"
+    },
+    {
+      "id": "task-33",
+      "label": "Notificaciones push (setup)",
+      "description": "Configurar servicio de notificaciones",
+      "status": "pending",
+      "priority": "P2",
+      "estimatedHours": 4,
+      "dependencies": [],
+      "phase": "phase-3"
+    },
+    {
+      "id": "task-34",
+      "label": "Onboarding mejorado (tour guiado)",
+      "description": "Tour interactivo para nuevos usuarios",
+      "status": "pending",
+      "priority": "P1",
+      "estimatedHours": 8,
+      "dependencies": [],
+      "phase": "phase-3"
+    },
+    {
+      "id": "task-35",
+      "label": "Sistema de badges visual",
+      "description": "UI para mostrar logros y badges",
+      "status": "pending",
+      "priority": "P2",
+      "estimatedHours": 4,
+      "dependencies": [],
+      "phase": "phase-3"
+    },
+    {
+      "id": "task-36",
+      "label": "Dashboard de admin mejorado",
+      "description": "Mejorar panel de administración",
+      "status": "pending",
+      "priority": "P1",
+      "estimatedHours": 6,
+      "dependencies": [],
+      "phase": "phase-3"
+    },
+    {
+      "id": "task-37",
+      "label": "Testing E2E completo",
+      "description": "Tests end-to-end de features MVP",
+      "status": "pending",
+      "priority": "P0",
+      "estimatedHours": 8,
+      "dependencies": ["task-26", "task-27", "task-28", "task-29", "task-30", "task-31", "task-32", "task-33", "task-34", "task-35", "task-36"],
+      "phase": "phase-3"
+    },
+    {
+      "id": "task-38",
+      "label": "Tests unitarios servicios (70% coverage)",
+      "description": "Unit tests para servicios core",
+      "status": "pending",
+      "priority": "P0",
+      "estimatedHours": 12,
+      "dependencies": [],
+      "phase": "phase-4"
+    },
+    {
+      "id": "task-39",
+      "label": "Tests integración hooks (40% coverage)",
+      "description": "Integration tests para custom hooks",
+      "status": "pending",
+      "priority": "P0",
+      "estimatedHours": 8,
+      "dependencies": [],
+      "phase": "phase-4"
+    },
+    {
+      "id": "task-40",
+      "label": "Tests E2E flujos principales",
+      "description": "E2E tests para flujos críticos",
+      "status": "pending",
+      "priority": "P0",
+      "estimatedHours": 6,
+      "dependencies": [],
+      "phase": "phase-4"
+    },
+    {
+      "id": "task-41",
+      "label": "Fix bugs encontrados",
+      "description": "Corrección de bugs descubiertos en testing",
+      "status": "pending",
+      "priority": "P0",
+      "estimatedHours": 12,
+      "dependencies": ["task-38", "task-39", "task-40"],
+      "phase": "phase-4"
+    },
+    {
+      "id": "task-42",
+      "label": "Performance testing (Lighthouse)",
+      "description": "Audit de performance con Lighthouse",
+      "status": "pending",
+      "priority": "P1",
+      "estimatedHours": 4,
+      "dependencies": [],
+      "phase": "phase-4"
+    },
+    {
+      "id": "task-43",
+      "label": "Security audit externo",
+      "description": "Audit de seguridad profesional",
+      "status": "pending",
+      "priority": "P0",
+      "estimatedHours": 8,
+      "dependencies": [],
+      "phase": "phase-4"
+    },
+    {
+      "id": "task-44",
+      "label": "Load testing (100 usuarios concurrentes)",
+      "description": "Testing de carga y escalabilidad",
+      "status": "pending",
+      "priority": "P1",
+      "estimatedHours": 4,
+      "dependencies": [],
+      "phase": "phase-4"
+    },
+    {
+      "id": "task-45",
+      "label": "Bug bash interno",
+      "description": "Sesión de testing intensivo del equipo",
+      "status": "pending",
+      "priority": "P1",
+      "estimatedHours": 8,
+      "dependencies": [],
+      "phase": "phase-4"
+    },
+    {
+      "id": "task-46",
+      "label": "Fix bugs P0/P1",
+      "description": "Corrección de bugs críticos y altos",
+      "status": "pending",
+      "priority": "P0",
+      "estimatedHours": 12,
+      "dependencies": ["task-45"],
+      "phase": "phase-4"
+    },
+    {
+      "id": "task-47",
+      "label": "Migración de datos draft → producción",
+      "description": "Migrar datos de desarrollo a producción",
+      "status": "pending",
+      "priority": "P0",
+      "estimatedHours": 4,
+      "dependencies": [],
+      "phase": "phase-5"
+    },
+    {
+      "id": "task-48",
+      "label": "Setup analytics (Google Analytics / Mixpanel)",
+      "description": "Configurar analytics en producción",
+      "status": "pending",
+      "priority": "P0",
+      "estimatedHours": 3,
+      "dependencies": [],
+      "phase": "phase-5"
+    },
+    {
+      "id": "task-49",
+      "label": "Error tracking (Sentry)",
+      "description": "Configurar Sentry para tracking de errores",
+      "status": "pending",
+      "priority": "P0",
+      "estimatedHours": 2,
+      "dependencies": [],
+      "phase": "phase-5"
+    },
+    {
+      "id": "task-50",
+      "label": "Documentación usuario final",
+      "description": "Crear docs y FAQs para usuarios",
+      "status": "pending",
+      "priority": "P1",
+      "estimatedHours": 6,
+      "dependencies": [],
+      "phase": "phase-5"
+    },
+    {
+      "id": "task-51",
+      "label": "Landing page",
+      "description": "Crear landing page principal",
+      "status": "pending",
+      "priority": "P0",
+      "estimatedHours": 8,
+      "dependencies": [],
+      "phase": "phase-5"
+    },
+    {
+      "id": "task-52",
+      "label": "Beta testing con 10 usuarios",
+      "description": "Programa de beta testing",
+      "status": "pending",
+      "priority": "P0",
+      "estimatedHours": 12,
+      "dependencies": ["task-47", "task-48", "task-49"],
+      "phase": "phase-5"
+    },
+    {
+      "id": "task-53",
+      "label": "Incorporar feedback beta",
+      "description": "Implementar feedback de beta testers",
+      "status": "pending",
+      "priority": "P0",
+      "estimatedHours": 8,
+      "dependencies": ["task-52"],
+      "phase": "phase-5"
+    },
+    {
+      "id": "task-54",
+      "label": "Deploy a staging + smoke tests",
+      "description": "Deploy a staging y tests de sanidad",
+      "status": "pending",
+      "priority": "P0",
+      "estimatedHours": 4,
+      "dependencies": ["task-53"],
+      "phase": "phase-5"
+    },
+    {
+      "id": "task-55",
+      "label": "Deploy a producción",
+      "description": "Deploy final a producción",
+      "status": "pending",
+      "priority": "P0",
+      "estimatedHours": 2,
+      "dependencies": ["task-54"],
+      "phase": "phase-5"
+    },
+    {
+      "id": "task-56",
+      "label": "Monitoreo post-launch",
+      "description": "Monitoreo activo 48h post-launch",
+      "status": "pending",
+      "priority": "P0",
+      "estimatedHours": 16,
+      "dependencies": ["task-55"],
+      "phase": "phase-5"
+    }
+  ],
+  "dependencies": []
+}
