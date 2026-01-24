@@ -151,3 +151,28 @@ CREAR → REVISAR (IA) → PUBLICAR
 | `"revisar referencias"` | Escanear nuevos docs |
 | `"auditar preguntas"` | Revisar calidad en BD |
 | `"revisar arquitectura"` | Análisis de código |
+
+---
+
+## Acceso a Servicios
+
+**Claude tiene acceso directo a:**
+
+### Supabase
+- **Proyecto:** Oposita Smart (`yutfgmiyndmhsjhzxkdr`)
+- **Capacidades:**
+  - Ejecutar migraciones SQL directamente
+  - Consultar y modificar base de datos
+  - Gestionar tablas, políticas RLS, funciones
+  - Verificar índices y performance
+- **Uso:** Claude puede ejecutar migraciones SQL sin intervención manual del usuario
+
+### Vercel
+- **Token de acceso:** Configurado
+- **Capacidades:**
+  - Deploy de builds
+  - Gestionar deployments
+  - Ver logs y analytics
+- **Uso:** Claude puede hacer deploys cuando sea necesario
+
+**Importante:** No es necesario pedirle al usuario que ejecute migraciones SQL o deploys manualmente - Claude puede hacerlo directamente.
