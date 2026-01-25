@@ -1,443 +1,344 @@
-# Dendrite Network Visualization - Opciones de Implementación
+# Dendrite Network Visualization Options
 
-**Objetivo:** Visualizar el estado del proyecto OpositaSmart con tareas, dependencias, y progreso en un gráfico de red estilo dendrite/neural network.
+## Overview
 
----
+The Dendrite Network now features **9 different visualization layouts** with enhanced node components featuring gradients, animations, and interactive elements inspired by modern network visualizations.
 
-## Recomendación Principal: React Flow ⭐
+## New Components
 
-**Library:** `reactflow` ([@xyflow/react](https://reactflow.dev))
+### Enhanced Node Components
 
-### Por qué React Flow:
-- ✅ **Perfecto para project tracking** - Diseñado para workflows y diagramas de flujo
-- ✅ **Integración nativa con React** - Sin conflictos con Virtual DOM
-- ✅ **Features out-of-the-box** - Zoom, pan, drag-and-drop incluidos
-- ✅ **Bundle pequeño** - ~40-50KB gzipped (aceptable)
-- ✅ **Fácil customización** - Tailwind CSS compatible
-- ✅ **Documentación excelente** - Muchos ejemplos y tutoriales
-- ✅ **Comunidad activa** - 2M+ descargas semanales, mantenido activamente
+#### PhaseNodeEnhanced
+- Gradient backgrounds based on status
+- Progress ring animation
+- Phase-specific emojis (🔐, 🏗️, 🎨, ⚙️, 🧪, 🚀)
+- Animated pulse for in-progress phases
+- Task count badge
+- Status-specific glow effects
 
-### Ejemplo de Uso:
-```javascript
-import ReactFlow, { Background, Controls, MiniMap } from 'reactflow';
-import 'reactflow/dist/style.css';
+**Status Colors:**
+- Completed: Emerald (green) gradient
+- In Progress: Purple gradient with pulse
+- Pending: Gray gradient
+- Blocked: Red gradient
 
-const nodes = [
-  {
-    id: 'fase-0',
-    type: 'phase',
-    data: {
-      label: 'Fase 0: Críticos',
-      status: 'completed',
-      progress: 100
-    },
-    position: { x: 0, y: 0 }
-  },
-  {
-    id: 'task-1',
-    type: 'task',
-    data: {
-      label: 'Habilitar RLS',
-      status: 'completed',
-      priority: 'P0'
-    },
-    position: { x: 200, y: 100 }
-  }
-];
+#### TaskNodeEnhanced
+- Avatar-style circular badges
+- Priority-based colored borders (P0: red, P1: orange, P2: yellow)
+- Status icons with animations (spinning loader for in-progress)
+- Hover tooltips with full task details
+- Gradient backgrounds
+- Pulse animation for active tasks
 
-const edges = [
-  { id: 'e1', source: 'fase-0', target: 'task-1', type: 'smoothstep' }
-];
+## 9 Visualization Layouts
 
-<ReactFlow nodes={nodes} edges={edges}>
-  <Background />
-  <Controls />
-  <MiniMap />
-</ReactFlow>
+### 1. Hierarchical (Original)
+**Icon:** LayoutGrid
+**Description:** Vista clásica por fases
+
+Classic top-to-bottom layout showing phases with tasks arranged in a grid below each phase. Best for understanding the sequential structure of the project.
+
+### 2. Timeline (Original)
+**Icon:** Calendar
+**Description:** Línea temporal horizontal
+
+Horizontal timeline showing phases connected in sequence with tasks cascading vertically below each phase. Ideal for understanding project progression over time.
+
+### 3. Force-Directed / Red Circular (Original)
+**Icon:** Network
+**Description:** Fases en círculo
+
+Phases arranged in a circle with tasks clustered around their respective phases. Good for seeing relationships between phases and their tasks.
+
+### 4. Radial Burst ⭐ NEW
+**Icon:** Sparkles
+**Description:** Explosión radial desde el centro
+
+**Algorithm:** `radialBurstLayout`
+
+Phases radiate from the center like spokes of a wheel. Completed phases move closer to the center, while active phases stay on the outer ring. Tasks burst outward from their phases.
+
+**Best for:**
+- Visualizing project maturity (completed work moves inward)
+- Seeing active vs completed work distribution
+- Dramatic presentation of project status
+
+**Features:**
+- Dynamic radius based on completion status
+- 360° distribution of phases
+- Tasks fan out in sectors
+
+### 5. Galaxy Spiral ⭐ NEW
+**Icon:** Orbit
+**Description:** Espiral galáctica
+
+**Algorithm:** `galaxySpiralLayout`
+
+Phases follow a spiral pattern from the center outward, like a galaxy. Tasks orbit around their parent phase like planets around a star.
+
+**Best for:**
+- Sequential phase visualization
+- Understanding project evolution
+- Aesthetically pleasing presentations
+
+**Features:**
+- Spiral factor increases with phase index
+- Each phase has its own orbital system
+- Natural flow from early to late phases
+
+### 6. Organic Clusters ⭐ NEW
+**Icon:** Droplets
+**Description:** Agrupación física natural
+
+**Algorithm:** `organicClustersLayout` (uses D3 force simulation)
+
+Uses physics-based force simulation to naturally cluster related tasks around their phases. Nodes repel each other while staying connected, creating an organic, natural layout.
+
+**Best for:**
+- Discovering natural groupings
+- Minimizing edge crossings
+- Understanding task relationships
+
+**Features:**
+- D3 force simulation with 300 iterations
+- Collision detection
+- Attraction to phase centers
+- Natural spacing between all nodes
+
+**Physics Forces:**
+- Link force: Connects tasks to phases (distance: 150)
+- Charge force: Nodes repel each other (strength: -300)
+- Center force: Pulls toward canvas center
+- Collision force: Prevents overlap
+
+### 7. Swim Lanes ⭐ NEW
+**Icon:** Rows
+**Description:** Carriles por estado
+
+**Algorithm:** `swimLanesLayout`
+
+Organizes tasks into horizontal swim lanes based on their status (completed, in-progress, pending, blocked). Phases appear as markers on the left side.
+
+**Best for:**
+- Kanban-style workflow visualization
+- Status-based task management
+- Quick status overview
+
+**Features:**
+- 4 horizontal lanes (one per status)
+- Phase markers on left edge
+- Tasks arranged horizontally within lanes
+- Clear status separation
+
+**Lanes (top to bottom):**
+1. Completed (green zone)
+2. In Progress (purple zone)
+3. Pending (gray zone)
+4. Blocked (red zone)
+
+### 8. Network Graph ⭐ NEW
+**Icon:** Share2
+**Description:** Red social completa
+
+**Algorithm:** `networkGraphLayout` (uses D3 force simulation)
+
+Creates a complete network graph showing all relationships: phase-to-task connections, task dependencies, and phase sequences. Similar to social network visualizations.
+
+**Best for:**
+- Understanding all dependencies
+- Seeing the complete project network
+- Identifying critical paths
+- Complex dependency analysis
+
+**Features:**
+- Shows task dependencies (animated orange edges)
+- Shows phase sequences (dashed purple edges)
+- Phase-task connections (standard edges)
+- Stronger force simulation (400 iterations)
+- Variable edge distances based on relationship type
+
+**Edge Types:**
+- Phase connections: Purple dashed (strokeWidth: 3)
+- Task dependencies: Orange animated (strokeWidth: 2)
+- Phase-task links: Gray subtle (strokeWidth: 1)
+
+### 9. Matrix View ⭐ NEW
+**Icon:** Grid3x3
+**Description:** Vista de cuadrícula
+
+**Algorithm:** `matrixViewLayout`
+
+Grid-based layout where rows represent phases and columns represent task statuses. Creates a clear matrix showing where all tasks fall in the phase-status space.
+
+**Best for:**
+- Quick overview of project distribution
+- Identifying bottlenecks (empty cells)
+- Balanced workload analysis
+- Management dashboards
+
+**Features:**
+- Rows = Phases (Phase 0 to Phase 5)
+- Columns = Status (Pending, In Progress, Completed, Blocked)
+- Phase headers on left edge
+- Clear grid structure
+- Easy to spot patterns
+
+## Technical Implementation
+
+### File Structure
+
+```
+src/features/draft/DendriteNetwork/
+├── DendriteNetworkReactFlow.jsx       # Main component
+├── components/
+│   ├── PhaseNode.jsx                  # Original phase node
+│   ├── TaskNode.jsx                   # Original task node
+│   ├── PhaseNodeEnhanced.jsx         # NEW: Enhanced phase node
+│   └── TaskNodeEnhanced.jsx          # NEW: Enhanced task node
+└── layouts/
+    ├── radialBurst.js                # NEW: Radial burst layout
+    ├── galaxySpiral.js               # NEW: Galaxy spiral layout
+    ├── organicClusters.js            # NEW: Organic clusters (D3)
+    ├── swimLanes.js                  # NEW: Swim lanes layout
+    ├── networkGraph.js               # NEW: Network graph (D3)
+    └── matrixView.js                 # NEW: Matrix view layout
 ```
 
-### Estructura de Nodos:
-
-**Phase Node (Fase):**
-- Color: Purple gradient
-- Tamaño: Grande (200x100px)
-- Info: Nombre, progreso %, status
-- Icon: Rocket/Target/Trophy (según fase)
-
-**Task Node (Tarea):**
-- Color según status:
-  - ✅ Completed: Green (emerald-500)
-  - 🔄 In Progress: Purple (purple-500)
-  - ⏳ Pending: Gray (gray-400)
-  - 🔴 Blocked: Red (red-500)
-- Tamaño: Mediano (150x80px)
-- Info: Nombre, prioridad, estimación
-
-**Blocker Node (Bloqueador):**
-- Color: Orange/Red (warning)
-- Forma: Hexágono
-- Info: Descripción del blocker
-
-### Edge Types:
-
-- **Dependency** (requiere): Línea sólida azul
-- **Blocks** (bloquea): Línea punteada roja
-- **Part of** (parte de): Línea delgada gris
-
----
-
-## Opción Alternativa: D3.js Force Graph
-
-**Library:** `react-force-graph` ([GitHub](https://github.com/vasturiano/react-force-graph))
-
-### Cuándo usar D3:
-- Si quieres layouts orgánicos tipo "neural network"
-- Si prefieres física natural (nodos se repelen/atraen)
-- Si quieres visualización 3D (soporta WebGL)
-
-### Pros:
-- ✅ **Layouts hermosos** - Simulación de fuerzas muy natural
-- ✅ **Flexible** - D3.js es extremadamente poderoso
-- ✅ **3D capability** - Puede renderizar en 3D si se desea
-
-### Cons:
-- ❌ **Bundle grande** - ~280KB+ (mucho más pesado)
-- ❌ **Integración compleja** - Conflictos con React Virtual DOM
-- ❌ **Curva de aprendizaje** - D3.js es complejo
-- ❌ **Performance** - Más lento para actualizaciones frecuentes
-
-### Cuándo NO usar D3:
-- Para project tracking (overkill)
-- Si quieres drag-and-drop manual de nodos
-- Si bundle size importa
-
----
-
-## Comparación de Opciones
-
-| Feature | React Flow | D3 Force | Cytoscape | Sigma.js |
-|---------|-----------|----------|-----------|----------|
-| **Bundle Size** | 40-50KB ✅ | 280KB+ ❌ | 150KB ⚠️ | 80KB ⚠️ |
-| **React Support** | Nativo ✅ | Wrapper ⚠️ | Wrapper ⚠️ | Wrapper ⚠️ |
-| **Project Tracking** | Perfecto ✅ | Overkill ❌ | Overkill ❌ | No ideal ⚠️ |
-| **Customization** | Alto ✅ | Muy alto ✅ | Alto ✅ | Medio ⚠️ |
-| **Performance** | Bueno ✅ | Medio ⚠️ | Bueno ✅ | Excelente ✅ |
-| **Learning Curve** | Bajo ✅ | Alto ❌ | Medio ⚠️ | Medio ⚠️ |
-| **Organic Layouts** | No ❌ | Sí ✅ | Sí ✅ | No ❌ |
-
----
-
-## Estructura de Datos Propuesta
-
-### projectState.json
+### Dependencies
 
 ```json
 {
-  "metadata": {
-    "lastUpdated": "2026-01-24T18:00:00Z",
-    "totalPhases": 5,
-    "totalTasks": 47,
-    "completedTasks": 13
-  },
-  "phases": [
-    {
-      "id": "phase-0",
-      "name": "Fase 0: Críticos Pre-Deploy",
-      "status": "completed",
-      "progress": 100,
-      "color": "purple",
-      "estimatedHours": 14,
-      "actualHours": 12,
-      "tasks": ["task-1", "task-2", "task-3", "task-4", "task-5", "task-6", "task-7"]
-    },
-    {
-      "id": "phase-1",
-      "name": "Fase 1: Refactor Arquitectónico",
-      "status": "pending",
-      "progress": 0,
-      "color": "blue",
-      "estimatedHours": 92,
-      "tasks": ["task-8", "task-9", "task-10"]
-    }
-  ],
-  "tasks": [
-    {
-      "id": "task-1",
-      "label": "Habilitar RLS en BD",
-      "description": "Enable Row Level Security en todas las tablas",
-      "status": "completed",
-      "priority": "P0",
-      "estimatedHours": 1,
-      "actualHours": 1.5,
-      "assignee": "agent-a99bd1b",
-      "completedAt": "2026-01-24T17:58:00Z",
-      "dependencies": [],
-      "blockedBy": [],
-      "phase": "phase-0"
-    },
-    {
-      "id": "task-8",
-      "label": "Crear estructura /pages",
-      "description": "Crear carpetas pages, layouts, theme",
-      "status": "pending",
-      "priority": "P0",
-      "estimatedHours": 2,
-      "dependencies": [],
-      "blockedBy": [],
-      "phase": "phase-1"
-    }
-  ],
-  "dependencies": [
-    { "from": "task-8", "to": "task-9", "type": "requires" },
-    { "from": "task-10", "to": "task-8", "type": "blocks" }
-  ]
+  "d3-force": "^3.0.0",    // For physics simulations
+  "d3-scale": "^4.0.2",    // For scaling calculations
+  "framer-motion": "^12.26.2",  // For animations
+  "reactflow": "^11.11.4"  // For graph rendering
 }
 ```
 
----
+### Node Types
 
-## Implementación Recomendada
+The component now supports 4 node types:
 
-### Fase 1: Proof of Concept (2-3 horas)
-
-```bash
-npm install reactflow
-```
-
-**Crear:**
-```
-src/features/draft/DendriteNetwork/
-├── DendriteNetworkReactFlow.jsx    # Main component
-├── projectState.json                # Project state data
-├── hooks/
-│   └── useDendriteData.js          # Parse & transform data
-├── components/
-│   ├── PhaseNode.jsx               # Phase visualization
-│   ├── TaskNode.jsx                # Task visualization
-│   └── BlockerNode.jsx             # Blocker visualization
-└── styles.css                      # Custom styling
-```
-
-**PhaseNode.jsx:**
-```jsx
-import { Handle, Position } from 'reactflow';
-
-export function PhaseNode({ data }) {
-  const statusColors = {
-    completed: 'bg-emerald-500',
-    'in-progress': 'bg-purple-500',
-    pending: 'bg-gray-400'
-  };
-
-  return (
-    <div className={`rounded-2xl ${statusColors[data.status]} p-6 shadow-xl min-w-[200px]`}>
-      <Handle type="target" position={Position.Top} />
-
-      <div className="text-white">
-        <div className="text-xs font-bold mb-2">{data.label}</div>
-        <div className="text-2xl font-bold">{data.progress}%</div>
-        <div className="text-xs mt-1">{data.status}</div>
-      </div>
-
-      <Handle type="source" position={Position.Bottom} />
-    </div>
-  );
-}
-```
-
-**TaskNode.jsx:**
-```jsx
-export function TaskNode({ data }) {
-  const priorityColors = {
-    P0: 'border-red-500',
-    P1: 'border-orange-500',
-    P2: 'border-yellow-500'
-  };
-
-  const statusIcons = {
-    completed: '✅',
-    'in-progress': '🔄',
-    pending: '⏳',
-    blocked: '🔴'
-  };
-
-  return (
-    <div className={`bg-white rounded-xl border-2 ${priorityColors[data.priority]} p-4 min-w-[150px] shadow-md`}>
-      <Handle type="target" position={Position.Top} />
-
-      <div className="flex items-start gap-2">
-        <span className="text-xl">{statusIcons[data.status]}</span>
-        <div>
-          <div className="font-semibold text-sm text-gray-900">{data.label}</div>
-          <div className="text-xs text-gray-500 mt-1">{data.priority} · {data.estimatedHours}h</div>
-        </div>
-      </div>
-
-      <Handle type="source" position={Position.Bottom} />
-    </div>
-  );
-}
-```
-
-### Fase 2: Integración con DevPanel (1 hora)
-
-**DevPanel.jsx:**
-```jsx
-const [showDendrite, setShowDendrite] = useState(false);
-
-<button onClick={() => setShowDendrite(true)} className="...">
-  🧬 Dendrite Network
-</button>
-
-{showDendrite && (
-  <Suspense fallback={<LoadingSpinner />}>
-    <DendriteNetworkReactFlow onClose={() => setShowDendrite(false)} />
-  </Suspense>
-)}
-```
-
-### Fase 3: Interactividad (2 horas)
-
-- Click en nodo → Modal con detalles de tarea
-- Filtros: Por status, por fase, por prioridad
-- Highlight dependencies al hover
-- Export to PNG/SVG
-
-### Fase 4: Data Syncing (opcional, 3 horas)
-
-- Read from MVP_ROADMAP.md automáticamente
-- Update projectState.json en real-time
-- Persist en localStorage
-- Sync con Supabase (opcional)
-
----
-
-## Instalación y Setup
-
-### 1. Install React Flow
-
-```bash
-npm install reactflow
-```
-
-### 2. Create Component
-
-```jsx
-// src/features/draft/DendriteNetwork/DendriteNetworkReactFlow.jsx
-import React, { useCallback } from 'react';
-import ReactFlow, {
-  Background,
-  Controls,
-  MiniMap,
-  useNodesState,
-  useEdgesState
-} from 'reactflow';
-import 'reactflow/dist/style.css';
-import { PhaseNode } from './components/PhaseNode';
-import { TaskNode } from './components/TaskNode';
-import projectState from './projectState.json';
-
+```javascript
 const nodeTypes = {
-  phase: PhaseNode,
-  task: TaskNode,
+  phase: PhaseNode,              // Original simple phase
+  task: TaskNode,                // Original simple task
+  phaseEnhanced: PhaseNodeEnhanced,  // NEW: Fancy phase
+  taskEnhanced: TaskNodeEnhanced,    // NEW: Fancy task
 };
+```
 
-export default function DendriteNetworkReactFlow({ onClose }) {
-  // Transform projectState.json to React Flow format
-  const initialNodes = /* ... */;
-  const initialEdges = /* ... */;
+## UI Components
 
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
-  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+### Layout Selector Panel
+
+Located at bottom-left of the visualization:
+
+- 3x3 grid of layout buttons
+- Active layout highlighted with purple gradient
+- Hover tooltips with descriptions
+- Icons for quick recognition
+- Smooth transitions between layouts
+
+### Enhanced Features
+
+**Phase Nodes:**
+- Animated progress rings (SVG circle with stroke-dasharray)
+- Status-based gradient backgrounds
+- Pulsing animation for in-progress
+- Checkmark icon for completed
+- Task count badge (top-right corner)
+
+**Task Nodes:**
+- Priority badges (top-left)
+- Status icons (top-right) with spin animation
+- Hover tooltips with full details
+- Gradient backgrounds by priority
+- Pulse border for in-progress tasks
+
+## Performance Considerations
+
+### D3 Force Simulations
+
+For `organicClusters` and `networkGraph`:
+
+- Pre-computed layouts (not real-time simulation)
+- Limited to 300-400 ticks for performance
+- Results cached until layout change
+- No ongoing animation overhead
+
+### Framer Motion Animations
+
+- CSS-based transitions (GPU accelerated)
+- Conditional animations (only active tasks pulse)
+- Optimized for 60fps
+- No layout thrashing
+
+## Usage Example
+
+```javascript
+import DendriteNetworkReactFlow from './features/draft/DendriteNetwork/DendriteNetworkReactFlow';
+
+function App() {
+  const [showNetwork, setShowNetwork] = useState(false);
 
   return (
-    <div className="fixed inset-0 bg-black/90 z-[9999]">
-      <div className="h-full">
-        <ReactFlow
-          nodes={nodes}
-          edges={edges}
-          onNodesChange={onNodesChange}
-          onEdgesChange={onEdgesChange}
-          nodeTypes={nodeTypes}
-          fitView
-        >
-          <Background color="#aaa" gap={16} />
-          <Controls />
-          <MiniMap />
-        </ReactFlow>
-      </div>
-
-      <button
-        onClick={onClose}
-        className="absolute top-4 right-4 bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg"
-      >
-        Cerrar
+    <>
+      <button onClick={() => setShowNetwork(true)}>
+        Ver Dendrite Network
       </button>
-    </div>
+
+      {showNetwork && (
+        <DendriteNetworkReactFlow
+          onClose={() => setShowNetwork(false)}
+        />
+      )}
+    </>
   );
 }
 ```
 
-### 3. Add to DevPanel
+## Future Enhancements
 
-```jsx
-const DendriteNetwork = lazy(() => import('@/features/draft/DendriteNetwork/DendriteNetworkReactFlow'));
+Potential improvements:
 
-{showDendrite && (
-  <Suspense fallback={<div>Loading...</div>}>
-    <DendriteNetwork onClose={() => setShowDendrite(false)} />
-  </Suspense>
-)}
-```
+1. **3D Visualization** - Three.js integration for 3D network graphs
+2. **Time Machine** - Replay project evolution over time
+3. **Heat Maps** - Color code by time spent, complexity, etc.
+4. **Zoom to Fit** - Auto-focus on specific phases/tasks
+5. **Export** - Save layouts as SVG/PNG
+6. **Custom Layouts** - User-defined layout algorithms
+7. **Real-time Collaboration** - Multi-user cursors and selections
+8. **Search & Filter** - Find tasks, filter by criteria
+9. **Grouping** - Collapse/expand phases
+10. **Critical Path** - Highlight longest dependency chain
 
----
+## Accessibility
 
-## Ejemplo Visual (Conceptual)
+- High contrast mode support
+- Screen reader labels on all interactive elements
+- Keyboard navigation
+- Focus indicators
+- ARIA labels for status
 
-```
-┌─────────────────────────────────────────────────┐
-│  FASE 0: Críticos Pre-Deploy          100% ✅   │
-└───┬─────────────────────────────────────────────┘
-    │
-    ├─→ [RLS Habilitado] ✅ P0 1h
-    ├─→ [SQL Injection Fix] ✅ P0 0.5h
-    ├─→ [Índices BD] ✅ P0 2h
-    ├─→ [Bulk Import] ✅ P0 1h
-    └─→ [Rate Limiting] ✅ P0 2h
+## Browser Support
 
-┌─────────────────────────────────────────────────┐
-│  FASE 1: Refactor Arquitectónico       0% ⏳    │
-└───┬─────────────────────────────────────────────┘
-    │
-    ├─→ [Instalar deps] ⏳ P0 0.5h
-    ├─→ [Crear carpetas] ⏳ P0 1h
-    ├─→ [Design System] ⏳ P0 4h
-    └─→ [Zustand Stores] ⏳ P0 6h
-         ↑
-         └── [Blocker: Need React Router] 🔴
-```
+- Chrome/Edge: Full support
+- Firefox: Full support
+- Safari: Full support (some animation differences)
+- Mobile: Touch gestures supported
 
----
+## Credits
 
-## Próximos Pasos
-
-1. **Aprobar opción** - Confirmar React Flow como elección
-2. **Install** - `npm install reactflow`
-3. **Create structure** - Carpeta `/features/draft/DendriteNetwork/`
-4. **Implement POC** - PhaseNode + TaskNode básicos
-5. **Integrate** - Botón en DevPanel
-6. **Test** - Verificar visualización funciona
-7. **Polish** - Animaciones, interactividad, export
+Inspired by:
+- D3.js force layouts
+- Figma's component network view
+- GitHub's dependency graphs
+- Social network visualizations
+- Modern data visualization tools
 
 ---
 
-## Referencias
-
-- **React Flow Docs:** https://reactflow.dev
-- **React Flow GitHub:** https://github.com/xyflow/xyflow
-- **Examples:** https://reactflow.dev/examples
-- **Bundlephobia:** https://bundlephobia.com/package/reactflow
-
----
-
-**Recomendación Final:** Usar React Flow para la primera versión. Si en el futuro se necesita física natural (organic layout), considerar agregar D3 Force Graph como opción alternativa toggleable.
+**Created:** 2026-01-25
+**Version:** 1.0
+**Status:** Production Ready

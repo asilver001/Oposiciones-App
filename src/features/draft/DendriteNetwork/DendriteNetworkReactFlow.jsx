@@ -10,12 +10,22 @@ import ReactFlow, {
 import 'reactflow/dist/style.css';
 import { PhaseNode } from './components/PhaseNode';
 import { TaskNode } from './components/TaskNode';
-import { X, LayoutGrid, Calendar, Network } from 'lucide-react';
+import { PhaseNodeEnhanced } from './components/PhaseNodeEnhanced';
+import { TaskNodeEnhanced } from './components/TaskNodeEnhanced';
+import { X, LayoutGrid, Calendar, Network, Sparkles, Orbit, Droplets, Rows, Share2, Grid3x3 } from 'lucide-react';
 import projectState from './projectState.json';
+import { radialBurstLayout } from './layouts/radialBurst';
+import { galaxySpiralLayout } from './layouts/galaxySpiral';
+import { organicClustersLayout } from './layouts/organicClusters';
+import { swimLanesLayout } from './layouts/swimLanes';
+import { networkGraphLayout } from './layouts/networkGraph';
+import { matrixViewLayout } from './layouts/matrixView';
 
 const nodeTypes = {
   phase: PhaseNode,
   task: TaskNode,
+  phaseEnhanced: PhaseNodeEnhanced,
+  taskEnhanced: TaskNodeEnhanced,
 };
 
 // Layout algorithms
@@ -213,6 +223,14 @@ const layoutAlgorithms = {
 
     return { nodes, edges };
   },
+
+  // New layouts
+  radialBurst: radialBurstLayout,
+  galaxySpiral: galaxySpiralLayout,
+  organicClusters: organicClustersLayout,
+  swimLanes: swimLanesLayout,
+  networkGraph: networkGraphLayout,
+  matrixView: matrixViewLayout,
 };
 
 export default function DendriteNetworkReactFlow({ onClose }) {
@@ -247,9 +265,15 @@ export default function DendriteNetworkReactFlow({ onClose }) {
   );
 
   const layoutOptions = [
-    { id: 'hierarchical', name: 'Jerárquico', icon: LayoutGrid },
-    { id: 'timeline', name: 'Timeline', icon: Calendar },
-    { id: 'forceDirected', name: 'Red', icon: Network },
+    { id: 'hierarchical', name: 'Jerárquico', icon: LayoutGrid, description: 'Vista clásica por fases' },
+    { id: 'timeline', name: 'Timeline', icon: Calendar, description: 'Línea temporal horizontal' },
+    { id: 'forceDirected', name: 'Red Circular', icon: Network, description: 'Fases en círculo' },
+    { id: 'radialBurst', name: 'Radial', icon: Sparkles, description: 'Explosión radial desde el centro' },
+    { id: 'galaxySpiral', name: 'Galaxia', icon: Orbit, description: 'Espiral galáctica' },
+    { id: 'organicClusters', name: 'Orgánico', icon: Droplets, description: 'Agrupación física natural' },
+    { id: 'swimLanes', name: 'Carriles', icon: Rows, description: 'Carriles por estado' },
+    { id: 'networkGraph', name: 'Grafo Red', icon: Share2, description: 'Red social completa' },
+    { id: 'matrixView', name: 'Matriz', icon: Grid3x3, description: 'Vista de cuadrícula' },
   ];
 
   return (
@@ -271,8 +295,14 @@ export default function DendriteNetworkReactFlow({ onClose }) {
           <Controls />
           <MiniMap
             nodeColor={(node) => {
-              if (node.type === 'phase') {
-                return node.data.status === 'completed' ? '#10b981' : node.data.color;
+              if (node.type === 'phase' || node.type === 'phaseEnhanced') {
+                return node.data.status === 'completed' ? '#10b981' : node.data.color || '#9333ea';
+              }
+              if (node.type === 'task' || node.type === 'taskEnhanced') {
+                if (node.data.status === 'completed') return '#10b981';
+                if (node.data.status === 'in-progress') return '#9333ea';
+                if (node.data.status === 'blocked') return '#ef4444';
+                return '#9ca3af';
               }
               return '#fff';
             }}
@@ -323,9 +353,12 @@ export default function DendriteNetworkReactFlow({ onClose }) {
           </Panel>
 
           {/* Bottom Left Panel - Layout Selector */}
-          <Panel position="bottom-left" className="bg-white/10 backdrop-blur-md rounded-xl p-4">
-            <div className="text-white text-xs font-semibold mb-2 opacity-75">LAYOUT</div>
-            <div className="flex gap-2">
+          <Panel position="bottom-left" className="bg-white/10 backdrop-blur-md rounded-2xl p-5 max-w-[900px]">
+            <div className="text-white text-xs font-bold mb-3 opacity-75 uppercase tracking-wider flex items-center gap-2">
+              <Sparkles className="w-4 h-4" />
+              Visualizaciones
+            </div>
+            <div className="grid grid-cols-3 gap-3">
               {layoutOptions.map((option) => {
                 const Icon = option.icon;
                 const isActive = layoutType === option.id;
@@ -333,15 +366,24 @@ export default function DendriteNetworkReactFlow({ onClose }) {
                   <button
                     key={option.id}
                     onClick={() => setLayoutType(option.id)}
-                    className={`flex flex-col items-center gap-1 px-4 py-2 rounded-lg transition-all ${
+                    className={`group relative flex flex-col items-center gap-2 px-4 py-3 rounded-xl transition-all ${
                       isActive
-                        ? 'bg-purple-500 text-white shadow-lg scale-105'
-                        : 'bg-white/20 text-white/70 hover:bg-white/30'
+                        ? 'bg-gradient-to-br from-purple-500 to-purple-600 text-white shadow-lg shadow-purple-500/50 scale-105 ring-2 ring-purple-300'
+                        : 'bg-white/20 text-white/70 hover:bg-white/30 hover:scale-105'
                     }`}
-                    title={option.name}
+                    title={option.description}
                   >
-                    <Icon className="w-5 h-5" />
-                    <span className="text-[10px] font-medium">{option.name}</span>
+                    <Icon className={`w-6 h-6 ${isActive ? 'animate-pulse' : ''}`} />
+                    <span className="text-[11px] font-semibold text-center leading-tight">{option.name}</span>
+
+                    {/* Tooltip */}
+                    {!isActive && (
+                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                        <div className="bg-gray-900 text-white text-xs rounded-lg px-3 py-2 shadow-xl whitespace-nowrap">
+                          {option.description}
+                        </div>
+                      </div>
+                    )}
                   </button>
                 );
               })}
