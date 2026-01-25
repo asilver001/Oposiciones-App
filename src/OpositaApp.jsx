@@ -854,11 +854,29 @@ export default function OpositaApp() {
   // ADMIN PANELS (render before other pages)
   // Acceso via AdminContext (PIN) O via AuthContext (login normal con rol)
   if (currentPage === 'admin-panel' && (isAdminLoggedIn || isUserAdmin)) {
-    return <AdminPanel onBack={() => setCurrentPage('home')} />;
+    return (
+      <AdminPanel
+        onBack={() => setCurrentPage('home')}
+        onTabChange={(tab) => { setActiveTab(tab); setCurrentPage('home'); }}
+        onPageChange={setCurrentPage}
+        activeTab={activeTab}
+        currentPage={currentPage}
+        isUserReviewer={isUserReviewer}
+      />
+    );
   }
 
   if (currentPage === 'reviewer-panel' && (isAdminLoggedIn || isUserReviewer)) {
-    return <ReviewerPanel onBack={() => setCurrentPage('home')} />;
+    return (
+      <ReviewerPanel
+        onBack={() => setCurrentPage('home')}
+        onTabChange={(tab) => { setActiveTab(tab); setCurrentPage('home'); }}
+        onPageChange={setCurrentPage}
+        activeTab={activeTab}
+        currentPage={currentPage}
+        isUserReviewer={isUserReviewer}
+      />
+    );
   }
 
   // ONBOARDING SCREENS (using simple purple-50 components)
@@ -1741,19 +1759,18 @@ export default function OpositaApp() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50"
+        className="fixed inset-0 bg-black/30 z-50"
         onClick={() => setShowProgressModal(false)}
       />
 
-      {/* Bottom Sheet */}
+      {/* Side Panel - slides from left */}
       <motion.div
-        initial={{ y: '100%' }}
-        animate={{ y: 0 }}
-        exit={{ y: '100%' }}
+        initial={{ x: '-100%' }}
+        animate={{ x: 0 }}
+        exit={{ x: '-100%' }}
         transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-        className="fixed inset-x-0 bottom-0 z-50 flex justify-center"
+        className="fixed inset-y-0 left-0 w-full sm:w-96 bg-white z-50 shadow-2xl overflow-y-auto"
       >
-        <div className="bg-white rounded-t-3xl w-full max-w-2xl max-h-[85vh] overflow-y-auto shadow-2xl">
         {/* Header */}
         <div className="sticky top-0 bg-white px-5 py-4 border-b border-gray-100 flex items-center justify-between">
           <h3 className="text-lg font-bold text-gray-900">Tu progreso de hoy</h3>
@@ -1846,7 +1863,6 @@ export default function OpositaApp() {
               Continuar estudiando →
             </button>
           )}
-        </div>
         </div>
       </motion.div>
     </>
@@ -1998,6 +2014,7 @@ export default function OpositaApp() {
         onShowAdminLogin={() => setShowAdminLoginModal(true)}
         onShowPlayground={() => setShowAnimationPlayground(true)}
         onShowDraftFeatures={() => setShowDraftFeatures(true)}
+        onGoToOnboarding={() => setCurrentPage('welcome')}
         premiumMode={premiumMode}
         onTogglePremium={() => setPremiumMode(!premiumMode)}
         streakCount={displayStreak}

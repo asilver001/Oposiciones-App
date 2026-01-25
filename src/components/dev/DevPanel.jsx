@@ -9,6 +9,7 @@ export default function DevPanel({
   onShowAdminLogin,
   onShowPlayground,
   onShowDraftFeatures,
+  onGoToOnboarding,
   premiumMode,
   onTogglePremium,
   streakCount,
@@ -86,6 +87,16 @@ export default function DevPanel({
         <button onClick={onShowPremium} className="w-full bg-yellow-500/90 hover:bg-yellow-600 text-white text-xs py-2 px-3 rounded-lg text-left">
           👀 Ver Premium Modal
         </button>
+        {onShowAdminLogin && (
+          <button onClick={onShowAdminLogin} className="w-full bg-purple-600/90 hover:bg-purple-700 text-white text-xs py-2 px-3 rounded-lg text-left">
+            🔐 Admin Login
+          </button>
+        )}
+        {onGoToOnboarding && (
+          <button onClick={onGoToOnboarding} className="w-full bg-blue-500/90 hover:bg-blue-600 text-white text-xs py-2 px-3 rounded-lg text-left">
+            🎓 Ir a Onboarding
+          </button>
+        )}
         <div className="pt-2 border-t border-gray-700 text-[10px] text-gray-500">
           streak: {streakCount} · tests: {testsCount}
         </div>

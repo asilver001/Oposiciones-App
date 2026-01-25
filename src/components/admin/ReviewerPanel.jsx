@@ -22,7 +22,14 @@ const reformulationLabels = {
   'actualizacion': 'Actualización - Datos o normativa actualizada'
 };
 
-export default function ReviewerPanel({ onBack }) {
+export default function ReviewerPanel({
+  onBack,
+  onTabChange,
+  onPageChange,
+  activeTab,
+  currentPage,
+  isUserReviewer
+}) {
   // Support both AdminContext (PIN login) and AuthContext (normal login with role)
   const { adminUser, logoutAdmin, reviewQuestion, markForRefresh } = useAdmin();
   const { user: authUser, userRole, isReviewer: isReviewerFromAuth } = useAuth();
@@ -882,10 +889,22 @@ export default function ReviewerPanel({ onBack }) {
 
       {/* Bottom Navigation */}
       <BottomTabBar
-        activeTab="reviewer"
-        onTabChange={() => {}}
+        activeTab={activeTab || 'inicio'}
+        currentPage={currentPage || 'reviewer-panel'}
+        isUserReviewer={isUserReviewer}
+        onTabChange={(tab) => {
+          if (onTabChange) {
+            onTabChange(tab);
+          } else {
+            onBack?.();
+          }
+        }}
         onPageChange={(page) => {
-          if (page === 'home') onBack?.();
+          if (onPageChange) {
+            onPageChange(page);
+          } else if (page === 'home') {
+            onBack?.();
+          }
         }}
       />
     </div>

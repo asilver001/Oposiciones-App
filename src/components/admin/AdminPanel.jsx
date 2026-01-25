@@ -18,7 +18,14 @@ import InsightsTab from './InsightsTab';
 import { ReviewContainer } from '../review';
 import { BottomTabBar } from '../navigation';
 
-export default function AdminPanel({ onBack }) {
+export default function AdminPanel({
+  onBack,
+  onTabChange: onGlobalTabChange,
+  onPageChange: onGlobalPageChange,
+  activeTab: globalActiveTab,
+  currentPage,
+  isUserReviewer
+}) {
   // Support both AdminContext (PIN login) and AuthContext (normal login with role)
   const { adminUser, logoutAdmin, isAdmin: isAdminFromPin } = useAdmin();
   const { user: authUser, userRole, signOut, isAdmin: isAdminFromAuth } = useAuth();
@@ -222,10 +229,22 @@ export default function AdminPanel({ onBack }) {
 
       {/* Bottom Navigation */}
       <BottomTabBar
-        activeTab="admin"
-        onTabChange={() => {}}
+        activeTab={globalActiveTab || 'inicio'}
+        currentPage={currentPage || 'admin-panel'}
+        isUserReviewer={isUserReviewer}
+        onTabChange={(tab) => {
+          if (onGlobalTabChange) {
+            onGlobalTabChange(tab);
+          } else {
+            onBack?.();
+          }
+        }}
         onPageChange={(page) => {
-          if (page === 'home') onBack?.();
+          if (onGlobalPageChange) {
+            onGlobalPageChange(page);
+          } else if (page === 'home') {
+            onBack?.();
+          }
         }}
       />
     </div>
