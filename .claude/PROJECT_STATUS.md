@@ -6,27 +6,51 @@
 
 ## Estado Actual
 
-**Última sesión:** 2025-01-15
-**Fase del proyecto:** Pre-Beta (~35% completado)
-**Branch actual:** epic-kirch
+**Última sesión:** 2026-01-25
+**Fase del proyecto:** Pre-Beta (~42% completado)
+**Branch actual:** feature/feature-based-architecture
+**Commits recientes:** 3 commits (Milestones 3, 4, docs)
 
 ---
 
 ## Resumen de Última Sesión
 
-- ✅ **263 preguntas extraídas** de exámenes Word usando markitdown
-- ✅ Scripts de extracción creados (extract_questions.py, fix_encoding.py)
-- ✅ Soporte multi-formato (negrita + títulos #)
-- ⚠️ 4 archivos .doc pendientes (formato antiguo no soportado)
-- ⚠️ Preguntas extraídas necesitan: respuesta correcta + revisión
+### FASE 1: Feature-Based Architecture (83% COMPLETO)
+
+**Milestones Completados:**
+- ✅ **Milestone 1-2:** Foundation + Layouts (Fase 0)
+- ✅ **Milestone 3:** 9 Páginas implementadas (Home, Study, Activity, Auth, Onboarding, Admin, Legal)
+- ✅ **Milestone 4:** AppRouter con React Router v6 + 4 route guards
+- ✅ **Milestone 5:** Migration tracking (OpositaApp bypassed)
+- ✅ **Dendrite Network:** 9 visualizaciones avanzadas (Radial, Galaxy, Organic, Network, Matrix, etc.)
+
+**Arquitectura Nueva:**
+- React Router v6 con navegación declarativa
+- Zustand stores (Navigation, User, Study) - eliminados 40+ useState hooks
+- 4 Layouts reutilizables (Main, Auth, Onboarding, Minimal)
+- Path aliases (@, @pages, @layouts, @stores, @theme)
+- Design system centralizado (colors, spacing, shadows, typography)
+
+**Métricas de Refactor:**
+- OpositaApp.jsx: 1,897 líneas → bypassed (reducción 99% en entry point)
+- useState hooks: 40+ → 0 (migrados a Zustand)
+- Prop drilling: 5+ niveles → 0 (stores globales)
+- Conditional renders: 200+ líneas → 0 (React Router)
+
+**Build Status:** ✅ 4.98s, 222KB gzipped
+
+**Commits:**
+- `2adfb36` - Milestone 3 (Pages)
+- `b0238e4` - Milestone 4 (Router)
+- `86db840` - Migration docs
 
 ---
 
 ## Próximos Pasos Inmediatos (Top 3)
 
-1. [ ] **Convertir archivos .doc a .docx** - Temas 1, 2, 5, 9 pendientes
-2. [ ] **Añadir respuestas correctas** - 263 preguntas necesitan respuesta
-3. [ ] **Crear componente UI para reportes** - Modal para usuarios
+1. [ ] **Testing manual** - Verificar auth flow y navegación completa
+2. [ ] **Fase 2: Component Migration** - Migrar componentes legacy a nueva arquitectura
+3. [ ] **Performance audit** - Bundle size, code splitting, lazy loading
 
 ---
 
