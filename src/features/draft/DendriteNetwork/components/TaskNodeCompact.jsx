@@ -9,6 +9,7 @@ import { ChevronUp, Clock, Link } from 'lucide-react';
  */
 export function TaskNodeCompact({ data }) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(false);
 
   // Status-based main colors (primary visual indicator)
   const statusColors = {
@@ -38,7 +39,11 @@ export function TaskNodeCompact({ data }) {
   const isActive = data.status === 'in-progress';
 
   return (
-    <div className="relative">
+    <div
+      className="relative"
+      onMouseEnter={() => !isExpanded && setShowTooltip(true)}
+      onMouseLeave={() => setShowTooltip(false)}
+    >
       <Handle type="target" position={Position.Top} className="w-1 h-1 !bg-gray-400" />
 
       {/* Main Circle Node */}
@@ -81,6 +86,22 @@ export function TaskNodeCompact({ data }) {
           {data.priority?.slice(1) || '?'}
         </div>
       </div>
+
+      {/* Hover Tooltip - Quick preview without click */}
+      {showTooltip && !isExpanded && (
+        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-40 pointer-events-none">
+          <div className="bg-gray-900 text-white text-xs rounded-lg px-3 py-2 shadow-xl max-w-[180px]">
+            <p className="font-semibold truncate">{data.label}</p>
+            <div className="flex items-center gap-2 mt-1 text-[10px] opacity-75">
+              <span>{data.priority}</span>
+              <span>•</span>
+              <span>{data.estimatedHours}h</span>
+            </div>
+          </div>
+          {/* Arrow */}
+          <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900" />
+        </div>
+      )}
 
       {/* Expandable Info Panel */}
       {isExpanded && (

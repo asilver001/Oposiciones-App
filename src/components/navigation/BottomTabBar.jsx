@@ -1,3 +1,5 @@
+import { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 import { Home, History, BookOpen, GraduationCap, ClipboardCheck } from 'lucide-react';
 
 /**
@@ -11,6 +13,32 @@ export default function BottomTabBar({
   onTabChange,
   onPageChange
 }) {
+  // State for scroll-based visibility
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const scrollDiff = currentScrollY - lastScrollY.current;
+
+      // Only trigger if scroll is significant (> 5px)
+      if (Math.abs(scrollDiff) < 5) return;
+
+      // Hide on scroll down (when past 100px), show on scroll up
+      if (scrollDiff > 0 && currentScrollY > 100) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   // Tabs base para todos los usuarios
   const baseTabs = [
     { id: 'inicio', label: 'Inicio', icon: Home },
@@ -25,7 +53,12 @@ export default function BottomTabBar({
     : baseTabs;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 px-4 pb-2">
+    <motion.div
+      className="fixed bottom-0 left-0 right-0 z-40 px-4 pb-2"
+      initial={{ y: 0 }}
+      animate={{ y: isVisible ? 0 : 100 }}
+      transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+    >
       {/* Contenedor floating con márgenes, sombra y bordes redondeados */}
       <div className="max-w-md mx-auto">
         <div className="bg-white rounded-[20px] shadow-[0_2px_24px_rgba(0,0,0,0.12)] border border-gray-100/80">
@@ -79,6 +112,6 @@ export default function BottomTabBar({
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

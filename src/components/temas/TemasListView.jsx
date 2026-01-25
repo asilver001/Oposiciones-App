@@ -13,6 +13,7 @@ import {
   Play
 } from 'lucide-react';
 import EmptyState from '../common/EmptyState';
+import DevModeRandomizer from '../dev/DevModeRandomizer';
 
 /**
  * TemasListView - Topic list page with filtering and progress tracking
@@ -296,6 +297,7 @@ export default function TemasListView({
   loading = false
 }) {
   const [searchQuery, setSearchQuery] = useState('');
+  const [simulationMode, setSimulationMode] = useState(null);
   const [selectedBlock, setSelectedBlock] = useState(null);
   const [expandedBlocks, setExpandedBlocks] = useState(new Set());
 
@@ -379,7 +381,6 @@ export default function TemasListView({
   if (loading) {
     return (
       <div className="space-y-6">
-        <h2 className="text-2xl font-bold text-gray-900">Tus temas</h2>
         <LoadingState />
       </div>
     );
@@ -391,7 +392,6 @@ export default function TemasListView({
   if (hasNoTopics) {
     return (
       <div className="space-y-6">
-        <h2 className="text-2xl font-bold text-gray-900">Tus temas</h2>
         <EmptyState
           icon={BookOpen}
           title="No hay temas disponibles"
@@ -408,9 +408,8 @@ export default function TemasListView({
 
   return (
     <div className="space-y-6">
-      {/* Header */}
-      <div className="flex items-center justify-between">
-        <h2 className="text-2xl font-bold text-gray-900">Tus temas</h2>
+      {/* Progress Summary */}
+      <div className="flex items-center justify-end">
         <div className="text-right">
           <p className="text-2xl font-bold text-purple-600">{overallStats.avgProgress}%</p>
           <p className="text-xs text-gray-500">progreso total</p>
@@ -485,6 +484,15 @@ export default function TemasListView({
             setSearchQuery('');
             setSelectedBlock(null);
           }}
+        />
+      )}
+
+      {/* DevMode Randomizer - development only */}
+      {import.meta.env.DEV && (
+        <DevModeRandomizer
+          activeMode={simulationMode}
+          onSelectMode={setSimulationMode}
+          onClear={() => setSimulationMode(null)}
         />
       )}
     </div>

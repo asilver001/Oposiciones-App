@@ -6,6 +6,7 @@
  * Philosophy: "Bienestar primero" - calming design without anxiety-inducing elements.
  */
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   Zap, Flame, Target, Trophy, ChevronRight,
@@ -14,6 +15,8 @@ import {
 import TopBar from './TopBar';
 import FortalezaVisual, { statusConfig } from './FortalezaVisual';
 import EmptyState from '../common/EmptyState';
+import { StatsFlipCard } from '../common/FlipCard';
+import DevModeRandomizer from '../dev/DevModeRandomizer';
 
 // Animation presets
 const spring = {
@@ -281,6 +284,8 @@ export default function SoftFortHome({
   showTopBar = true,
   showFooter = true
 }) {
+  const [simulationMode, setSimulationMode] = useState(null);
+
   // Check if user is completely new (no activity at all)
   const isNewUser = totalStats.testsCompleted === 0 &&
                     totalStats.questionsCorrect === 0 &&
@@ -364,10 +369,11 @@ export default function SoftFortHome({
         />
 
         {/* Streak card */}
-        <StatCard
+        <StatsFlipCard
           icon={Flame}
           value={streakData.current}
-          label="dias consecutivos"
+          label="días consecutivos"
+          detail={`Tu mejor racha fue de ${streakData.longest} días. ¡Sigue así para superarla!`}
           colorScheme="amber"
           onClick={onStreakClick}
           badge={streakBadge}
@@ -375,10 +381,11 @@ export default function SoftFortHome({
         />
 
         {/* Accuracy card */}
-        <StatCard
+        <StatsFlipCard
           icon={Target}
           value={`${totalStats.accuracyRate}%`}
-          label="precision media"
+          label="precisión media"
+          detail={`Has acertado ${totalStats.questionsCorrect} preguntas en total. ¡Cada día mejor!`}
           colorScheme="purple"
           onClick={onAccuracyClick}
           badge={accuracyBadge}
@@ -406,6 +413,15 @@ export default function SoftFortHome({
 
       {/* Footer - optional */}
       {showFooter && <Footer onNavigate={onNavigate} />}
+
+      {/* DevMode Randomizer - development only */}
+      {import.meta.env.DEV && (
+        <DevModeRandomizer
+          activeMode={simulationMode}
+          onSelectMode={setSimulationMode}
+          onClear={() => setSimulationMode(null)}
+        />
+      )}
     </motion.div>
   );
 }

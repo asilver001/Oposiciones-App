@@ -430,7 +430,7 @@ export default function ReviewerPanel({ onBack }) {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
+    <div className="min-h-screen bg-gray-50 flex flex-col pb-24">
       {/* Header */}
       <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-4 py-4">
         <div className="max-w-2xl mx-auto">

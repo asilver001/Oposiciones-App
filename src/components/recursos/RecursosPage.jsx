@@ -16,6 +16,7 @@ import {
   Scale, BookOpen, Target, Lightbulb, BookMarked, ExternalLink,
   ChevronDown, ChevronRight, Heart, Search, X, Sparkles, Clock
 } from 'lucide-react';
+import DevModeRandomizer from '../dev/DevModeRandomizer';
 
 // Spring presets
 const spring = {
@@ -273,6 +274,7 @@ function CategoryCard({ categoria, isExpanded, onToggle, onResourceClick, favori
 // Main RecursosPage component
 export default function RecursosPage({ onNavigate }) {
   const [searchQuery, setSearchQuery] = useState('');
+  const [simulationMode, setSimulationMode] = useState(null);
   const [expandedCategories, setExpandedCategories] = useState(['legislacion']);
   const [favoriteIds, setFavoriteIds] = useState(['ce', 'ley39', 'tip-fsrs']);
 
@@ -330,8 +332,7 @@ export default function RecursosPage({ onNavigate }) {
             <BookMarked className="w-6 h-6 text-white" />
           </div>
           <div>
-            <h2 className="font-bold text-gray-900 text-lg">Recursos</h2>
-            <p className="text-sm text-gray-500">Tu biblioteca de preparacion</p>
+            <p className="font-medium text-gray-700">Tu biblioteca de preparacion</p>
           </div>
         </div>
 
@@ -433,6 +434,15 @@ export default function RecursosPage({ onNavigate }) {
           </div>
         </div>
       </motion.div>
+
+      {/* DevMode Randomizer - development only */}
+      {import.meta.env.DEV && (
+        <DevModeRandomizer
+          activeMode={simulationMode}
+          onSelectMode={setSimulationMode}
+          onClear={() => setSimulationMode(null)}
+        />
+      )}
     </div>
   );
 }

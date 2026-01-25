@@ -1,24 +1,13 @@
-import React, { useMemo, useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Trophy,
   Target,
-  CheckCircle,
   Calendar,
   Flame,
-  TrendingUp,
-  TrendingDown,
-  Minus,
   Clock,
   BarChart3,
-  Sparkles,
-  Play,
   Dices,
-  User,
-  Activity,
-  Crown,
-  Shuffle,
-  X,
   Zap,
   AlertTriangle,
   BookMarked,
@@ -26,6 +15,7 @@ import {
   Check
 } from 'lucide-react';
 import EmptyState from '../common/EmptyState';
+import DevModeRandomizer, { userStates } from '../dev/DevModeRandomizer';
 
 /**
  * ActividadPage - Activity page with swipeable tabs
@@ -34,119 +24,6 @@ import EmptyState from '../common/EmptyState';
  * 1. Modos (left) - Study mode selection
  * 2. Progreso (right) - Statistics and history
  */
-
-// Simulated user states for dev mode
-const generateSessionHistory = (count, baseAccuracy) => {
-  const sessions = [];
-  const now = new Date();
-  for (let i = 0; i < count; i++) {
-    const daysAgo = Math.floor(i * 1.5);
-    const date = new Date(now);
-    date.setDate(date.getDate() - daysAgo);
-    const accuracy = Math.max(30, Math.min(100, baseAccuracy + (Math.random() * 20 - 10)));
-    const total = Math.floor(Math.random() * 15) + 5;
-    const correct = Math.round(total * (accuracy / 100));
-    sessions.push({
-      id: `sim-${i}`,
-      created_at: date.toISOString(),
-      tema_id: Math.random() > 0.3 ? Math.floor(Math.random() * 10) + 1 : null,
-      tema: ['Constitución', 'La Corona', 'Derechos', 'Gobierno'][Math.floor(Math.random() * 4)],
-      correctas: correct,
-      total_preguntas: total,
-      porcentaje_acierto: Math.round(accuracy)
-    });
-  }
-  return sessions;
-};
-
-const generateCalendarData = (daysCount) => {
-  const days = [];
-  const now = new Date();
-  const currentDay = now.getDate();
-  for (let i = 0; i < daysCount && i < currentDay; i++) {
-    const day = currentDay - Math.floor(Math.random() * currentDay);
-    if (!days.includes(day)) {
-      days.push(day);
-    }
-  }
-  return days.sort((a, b) => a - b);
-};
-
-const userStates = {
-  nuevo: {
-    label: 'Usuario Nuevo',
-    emoji: '👤',
-    icon: User,
-    totalStats: {
-      testsCompleted: 0,
-      questionsCorrect: 0,
-      accuracyRate: 0,
-      totalMinutes: 0,
-      currentStreak: 0,
-      daysStudied: 0
-    },
-    weeklyData: [0, 0, 0, 0, 0, 0, 0],
-    sessionHistory: [],
-    calendarData: []
-  },
-  activo: {
-    label: 'Usuario Activo',
-    emoji: '📊',
-    icon: Activity,
-    totalStats: {
-      testsCompleted: 15,
-      questionsCorrect: 87,
-      accuracyRate: 68,
-      totalMinutes: 145,
-      currentStreak: 5,
-      daysStudied: 12
-    },
-    weeklyData: [3, 5, 2, 4, 6, 0, 2],
-    sessionHistory: generateSessionHistory(5, 68),
-    calendarData: generateCalendarData(12)
-  },
-  veterano: {
-    label: 'Usuario Veterano',
-    emoji: '🏆',
-    icon: Crown,
-    totalStats: {
-      testsCompleted: 89,
-      questionsCorrect: 534,
-      accuracyRate: 82,
-      totalMinutes: 890,
-      currentStreak: 23,
-      daysStudied: 45
-    },
-    weeklyData: [8, 12, 10, 15, 9, 6, 11],
-    sessionHistory: generateSessionHistory(15, 82),
-    calendarData: generateCalendarData(20)
-  },
-  aleatorio: {
-    label: 'Aleatorio',
-    emoji: '🎲',
-    icon: Shuffle,
-    generate: () => {
-      const testsCompleted = Math.floor(Math.random() * 100);
-      const accuracyRate = Math.floor(Math.random() * 60) + 40;
-      const questionsCorrect = Math.floor(testsCompleted * 8 * (accuracyRate / 100));
-      const currentStreak = Math.floor(Math.random() * 30);
-      const daysStudied = Math.floor(Math.random() * 60) + 1;
-      return {
-        totalStats: {
-          testsCompleted,
-          questionsCorrect,
-          accuracyRate,
-          totalMinutes: testsCompleted * 10,
-          currentStreak,
-          daysStudied
-        },
-        weeklyData: Array(7).fill(0).map(() => Math.floor(Math.random() * 20)),
-        sessionHistory: generateSessionHistory(Math.floor(Math.random() * 15) + 1, accuracyRate),
-        calendarData: generateCalendarData(daysStudied)
-      };
-    }
-  }
-};
 
 // Study modes configuration
 const studyModes = [
@@ -157,110 +34,6 @@ const studyModes = [
   { id: 'simulacro', icon: Clock, title: 'Simulacro', desc: '100 preguntas', time: '60 min', gradient: 'from-rose-500 to-pink-600', status: 'proximamente' },
   { id: 'lectura', icon: Eye, title: 'Solo Lectura', desc: 'Sin contestar', time: 'Libre', gradient: 'from-gray-500 to-slate-600', status: 'premium' },
 ];
-
-/**
- * DevModeRandomizer - Floating button with dropdown for simulating user states
- */
-function DevModeRandomizer({ activeMode, onSelectMode, onClear }) {
-  const [isOpen, setIsOpen] = useState(false);
-  const menuRef = useRef(null);
-
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    }
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
-  const modes = ['nuevo', 'activo', 'veterano', 'aleatorio'];
-
-  return (
-    <div ref={menuRef} className="fixed bottom-24 right-4 z-50">
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 10, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 10, scale: 0.95 }}
-            transition={{ duration: 0.15 }}
-            className="absolute bottom-16 right-0 bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden min-w-[180px]"
-          >
-            <div className="p-2 border-b bg-gray-50">
-              <p className="text-xs font-semibold text-gray-600 px-2">Simular Usuario</p>
-            </div>
-            <div className="p-1">
-              {modes.map((mode) => {
-                const state = userStates[mode];
-                const Icon = state.icon;
-                const isActive = activeMode === mode;
-                return (
-                  <button
-                    key={mode}
-                    onClick={() => {
-                      onSelectMode(mode);
-                      setIsOpen(false);
-                    }}
-                    className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-left transition-colors ${
-                      isActive
-                        ? 'bg-purple-100 text-purple-700'
-                        : 'hover:bg-gray-100 text-gray-700'
-                    }`}
-                  >
-                    <Icon className="w-4 h-4" />
-                    <span className="text-sm font-medium">{state.emoji} {state.label}</span>
-                  </button>
-                );
-              })}
-              {activeMode && (
-                <>
-                  <div className="border-t my-1" />
-                  <button
-                    onClick={() => {
-                      onClear();
-                      setIsOpen(false);
-                    }}
-                    className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-left transition-colors hover:bg-red-50 text-red-600"
-                  >
-                    <X className="w-4 h-4" />
-                    <span className="text-sm font-medium">Datos reales</span>
-                  </button>
-                </>
-              )}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <motion.button
-        onClick={() => setIsOpen(!isOpen)}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        animate={activeMode ? { rotate: [0, 10, -10, 0] } : {}}
-        transition={{ duration: 0.5, repeat: activeMode ? Infinity : 0, repeatDelay: 3 }}
-        className={`w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-colors ${
-          activeMode
-            ? 'bg-purple-600 text-white'
-            : 'bg-white text-gray-700 border border-gray-200'
-        }`}
-      >
-        <Dices className="w-6 h-6" />
-      </motion.button>
-
-      {activeMode && (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="absolute -top-2 -left-2 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow-md"
-        >
-          {userStates[activeMode].emoji}
-        </motion.div>
-      )}
-    </div>
-  );
-}
 
 /**
  * StudyModesTab - Study mode selection view
@@ -581,7 +354,6 @@ export default function ActividadPage({
   if (loading) {
     return (
       <div className="space-y-6">
-        <h2 className="text-2xl font-bold text-gray-900">Actividad</h2>
         <div className="flex items-center justify-center py-12">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600" />
         </div>
@@ -592,10 +364,9 @@ export default function ActividadPage({
   return (
     <>
       <div className="space-y-4">
-        {/* Header */}
-        <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-bold text-gray-900">Actividad</h2>
-          {simulationMode && (
+        {/* Simulation Mode Indicator */}
+        {simulationMode && (
+          <div className="flex items-center justify-end">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -604,8 +375,8 @@ export default function ActividadPage({
               <Dices className="w-4 h-4" />
               <span>{userStates[simulationMode].emoji}</span>
             </motion.div>
-          )}
-        </div>
+          </div>
+        )}
 
         {/* Tab Headers */}
         <div className="bg-white rounded-xl p-1.5 shadow-sm border border-gray-100">

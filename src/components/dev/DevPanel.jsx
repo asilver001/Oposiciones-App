@@ -18,8 +18,9 @@ export default function DevPanel({
   const [showDendrite, setShowDendrite] = useState(false);
   const { isAdmin, userRole, user } = useAuth();
 
-  // 🔐 CRITICAL: Only render DevPanel if user is logged in as admin
-  if (!isAdmin) {
+  // Show DevPanel if user is admin OR in development mode
+  const isDev = import.meta.env.DEV;
+  if (!isAdmin && !isDev) {
     return null;
   }
 

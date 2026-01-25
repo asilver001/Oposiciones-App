@@ -10,7 +10,7 @@ import ReactFlow, {
 import 'reactflow/dist/style.css';
 import { TaskNodeCompact } from './components/TaskNodeCompact';
 import { PhaseNodeCompact } from './components/PhaseNodeCompact';
-import { X, Sparkles, Orbit, Stars, Brain, TrainFront } from 'lucide-react';
+import { X, Sparkles, Orbit, Stars, Brain, TrainFront, Filter } from 'lucide-react';
 import projectState from './projectState.json';
 import { constellationLayout } from './layouts/constellation';
 import { mindMapLayout } from './layouts/mindMap';
@@ -32,6 +32,11 @@ const layoutAlgorithms = {
 
 export default function DendriteNetworkReactFlow({ onClose }) {
   const [layoutType, setLayoutType] = useState('constellation');
+  const [filters, setFilters] = useState({
+    completed: true,
+    inProgress: true,
+    pending: true
+  });
 
   // Generate initial layout
   const { initialNodes, initialEdges } = useMemo(() => {
@@ -57,6 +62,22 @@ export default function DendriteNetworkReactFlow({ onClose }) {
     console.log('Node clicked:', node.data);
   }, []);
 
+  // Filter nodes based on status filters
+  const filteredNodes = nodes.filter(node => {
+    if (node.type === 'phaseCompact') return true; // Always show phases
+    const status = node.data?.status;
+    if (status === 'completed' && !filters.completed) return false;
+    if (status === 'in-progress' && !filters.inProgress) return false;
+    if ((!status || status === 'pending') && !filters.pending) return false;
+    return true;
+  });
+
+  // Filter edges to only show connections to visible nodes
+  const visibleNodeIds = new Set(filteredNodes.map(n => n.id));
+  const filteredEdges = edges.filter(edge =>
+    visibleNodeIds.has(edge.source) && visibleNodeIds.has(edge.target)
+  );
+
   const completionPercentage = Math.round(
     (projectState.metadata.completedTasks / projectState.metadata.totalTasks) * 100
   );
@@ -72,8 +93,8 @@ export default function DendriteNetworkReactFlow({ onClose }) {
     <div className="fixed inset-0 bg-black/95 z-[9999]">
       <div className="h-full">
         <ReactFlow
-          nodes={nodes}
-          edges={edges}
+          nodes={filteredNodes}
+          edges={filteredEdges}
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
           onNodeClick={onNodeClick}
@@ -224,6 +245,52 @@ export default function DendriteNetworkReactFlow({ onClose }) {
                   </div>
                 </div>
               </div>
+            </div>
+          </Panel>
+
+          {/* Filters Panel */}
+          <Panel position="bottom-right" className="bg-white/10 backdrop-blur-md rounded-xl p-3 text-white mb-20">
+            <div className="text-xs font-semibold mb-2 opacity-75 flex items-center gap-1">
+              <Filter className="w-3 h-3" />
+              FILTROS
+            </div>
+            <div className="space-y-2">
+              <label className="flex items-center gap-2 text-xs cursor-pointer hover:bg-white/10 p-1 rounded">
+                <input
+                  type="checkbox"
+                  checked={filters.completed}
+                  onChange={() => setFilters(f => ({ ...f, completed: !f.completed }))}
+                  className="rounded border-white/30 bg-white/10 text-emerald-500"
+                />
+                <span className="flex items-center gap-1">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                  Completado
+                </span>
+              </label>
+              <label className="flex items-center gap-2 text-xs cursor-pointer hover:bg-white/10 p-1 rounded">
+                <input
+                  type="checkbox"
+                  checked={filters.inProgress}
+                  onChange={() => setFilters(f => ({ ...f, inProgress: !f.inProgress }))}
+                  className="rounded border-white/30 bg-white/10 text-purple-500"
+                />
+                <span className="flex items-center gap-1">
+                  <span className="w-2 h-2 rounded-full bg-purple-500" />
+                  En progreso
+                </span>
+              </label>
+              <label className="flex items-center gap-2 text-xs cursor-pointer hover:bg-white/10 p-1 rounded">
+                <input
+                  type="checkbox"
+                  checked={filters.pending}
+                  onChange={() => setFilters(f => ({ ...f, pending: !f.pending }))}
+                  className="rounded border-white/30 bg-white/10 text-gray-400"
+                />
+                <span className="flex items-center gap-1">
+                  <span className="w-2 h-2 rounded-full bg-gray-400" />
+                  Pendiente
+                </span>
+              </label>
             </div>
           </Panel>
         </ReactFlow>
