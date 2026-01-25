@@ -176,3 +176,54 @@ CREAR → REVISAR (IA) → PUBLICAR
 - **Uso:** Claude puede hacer deploys cuando sea necesario
 
 **Importante:** No es necesario pedirle al usuario que ejecute migraciones SQL o deploys manualmente - Claude puede hacerlo directamente.
+
+---
+
+## Lecciones Aprendidas - Refactoring
+
+### Incidente: Componentes Inline Perdidos (Enero 2026)
+
+**Problema:** Durante un refactor para extraer componentes a archivos separados, se eliminaron componentes inline (`OnboardingOposicion`, `OnboardingTiempo`, `OnboardingFecha`, `OnboardingIntro`) del archivo principal sin crear los archivos correspondientes.
+
+**Síntoma:** `ReferenceError: OnboardingOposicion is not defined`
+
+**Causa raíz:**
+1. Extraer componentes del archivo principal
+2. NO crear los archivos nuevos con esos componentes
+3. El archivo principal sigue referenciando componentes que ya no existen
+
+### Reglas de Refactoring Seguro
+
+1. **NUNCA eliminar código sin verificar destino**
+   - Antes de borrar un componente inline, confirmar que existe el archivo destino
+   - Usar `git diff` para revisar qué se está eliminando
+
+2. **Refactor en pasos atómicos**
+   - Paso 1: CREAR archivo nuevo con el componente
+   - Paso 2: AGREGAR import al archivo principal
+   - Paso 3: VERIFICAR build
+   - Paso 4: Solo entonces, ELIMINAR código inline duplicado
+
+3. **Build después de cada cambio**
+   - No acumular cambios sin verificar
+   - Un build roto = revertir inmediatamente
+
+4. **Verificación visual obligatoria**
+   - Sin acceso al navegador, Claude NO puede garantizar que los cambios visuales estén correctos
+   - Siempre pedir al usuario que verifique después de cambios de UI
+
+### Checklist Pre-Refactor
+
+```
+[ ] ¿Existe el archivo destino para cada componente a extraer?
+[ ] ¿Los imports están actualizados?
+[ ] ¿El build pasa?
+[ ] ¿El usuario verificó visualmente?
+```
+
+### Estrategia de Migración Gradual
+
+Para evitar estos problemas, la migración de OpositaApp.jsx debe ser:
+- **Incremental**: Un componente a la vez
+- **Verificable**: Testing visual después de cada paso
+- **Reversible**: Commits pequeños, fácil rollback

@@ -49,7 +49,8 @@
       "Bash(bash)",
       "Bash(vercel:*)",
       "Bash(npx supabase:*)",
-      "Bash(export SUPABASE_ACCESS_TOKEN:*)"
+      "Bash(export SUPABASE_ACCESS_TOKEN:*)",
+      "Bash(git ls-tree:*)"
     ]
   }
 }

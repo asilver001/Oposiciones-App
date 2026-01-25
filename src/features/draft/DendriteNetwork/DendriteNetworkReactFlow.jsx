@@ -12,7 +12,9 @@ import { PhaseNode } from './components/PhaseNode';
 import { TaskNode } from './components/TaskNode';
 import { PhaseNodeEnhanced } from './components/PhaseNodeEnhanced';
 import { TaskNodeEnhanced } from './components/TaskNodeEnhanced';
-import { X, LayoutGrid, Calendar, Network, Sparkles, Orbit, Droplets, Rows, Share2, Grid3x3 } from 'lucide-react';
+import { TaskNodeCompact } from './components/TaskNodeCompact';
+import { PhaseNodeCompact } from './components/PhaseNodeCompact';
+import { X, LayoutGrid, Calendar, Network, Sparkles, Orbit, Droplets, Rows, Share2, Grid3x3, Stars, Brain, TrainFront } from 'lucide-react';
 import projectState from './projectState.json';
 import { radialBurstLayout } from './layouts/radialBurst';
 import { galaxySpiralLayout } from './layouts/galaxySpiral';
@@ -20,12 +22,18 @@ import { organicClustersLayout } from './layouts/organicClusters';
 import { swimLanesLayout } from './layouts/swimLanes';
 import { networkGraphLayout } from './layouts/networkGraph';
 import { matrixViewLayout } from './layouts/matrixView';
+import { constellationLayout } from './layouts/constellation';
+import { mindMapLayout } from './layouts/mindMap';
+import { metroMapLayout } from './layouts/metroMap';
+import { galaxySpiralCompactLayout } from './layouts/galaxySpiralCompact';
 
 const nodeTypes = {
   phase: PhaseNode,
   task: TaskNode,
   phaseEnhanced: PhaseNodeEnhanced,
   taskEnhanced: TaskNodeEnhanced,
+  taskCompact: TaskNodeCompact,
+  phaseCompact: PhaseNodeCompact,
 };
 
 // Layout algorithms
@@ -231,6 +239,11 @@ const layoutAlgorithms = {
   swimLanes: swimLanesLayout,
   networkGraph: networkGraphLayout,
   matrixView: matrixViewLayout,
+  // Compact node layouts
+  constellation: constellationLayout,
+  mindMap: mindMapLayout,
+  metroMap: metroMapLayout,
+  galaxyCompact: galaxySpiralCompactLayout,
 };
 
 export default function DendriteNetworkReactFlow({ onClose }) {
@@ -274,6 +287,11 @@ export default function DendriteNetworkReactFlow({ onClose }) {
     { id: 'swimLanes', name: 'Carriles', icon: Rows, description: 'Carriles por estado' },
     { id: 'networkGraph', name: 'Grafo Red', icon: Share2, description: 'Red social completa' },
     { id: 'matrixView', name: 'Matriz', icon: Grid3x3, description: 'Vista de cuadrícula' },
+    // New compact layouts
+    { id: 'constellation', name: 'Constelación', icon: Stars, description: 'Nodos compactos en forma de estrellas' },
+    { id: 'mindMap', name: 'MindMap', icon: Brain, description: 'Mapa mental radial desde el centro' },
+    { id: 'metroMap', name: 'Metro', icon: TrainFront, description: 'Estilo mapa de metro/subway' },
+    { id: 'galaxyCompact', name: 'Galaxia Pro', icon: Orbit, description: 'Galaxia mejorada con nodos compactos' },
   ];
 
   return (
@@ -295,10 +313,10 @@ export default function DendriteNetworkReactFlow({ onClose }) {
           <Controls />
           <MiniMap
             nodeColor={(node) => {
-              if (node.type === 'phase' || node.type === 'phaseEnhanced') {
+              if (node.type === 'phase' || node.type === 'phaseEnhanced' || node.type === 'phaseCompact') {
                 return node.data.status === 'completed' ? '#10b981' : node.data.color || '#9333ea';
               }
-              if (node.type === 'task' || node.type === 'taskEnhanced') {
+              if (node.type === 'task' || node.type === 'taskEnhanced' || node.type === 'taskCompact') {
                 if (node.data.status === 'completed') return '#10b981';
                 if (node.data.status === 'in-progress') return '#9333ea';
                 if (node.data.status === 'blocked') return '#ef4444';
@@ -353,12 +371,12 @@ export default function DendriteNetworkReactFlow({ onClose }) {
           </Panel>
 
           {/* Bottom Left Panel - Layout Selector */}
-          <Panel position="bottom-left" className="bg-white/10 backdrop-blur-md rounded-2xl p-5 max-w-[900px]">
+          <Panel position="bottom-left" className="bg-white/10 backdrop-blur-md rounded-2xl p-4 max-w-[800px]">
             <div className="text-white text-xs font-bold mb-3 opacity-75 uppercase tracking-wider flex items-center gap-2">
               <Sparkles className="w-4 h-4" />
               Visualizaciones
             </div>
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-4 gap-2">
               {layoutOptions.map((option) => {
                 const Icon = option.icon;
                 const isActive = layoutType === option.id;
