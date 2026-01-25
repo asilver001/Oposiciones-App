@@ -17,9 +17,8 @@ export default function LoginPage() {
 
     setLoading(false);
 
-    if (result && !result.error) {
-      navigate('/');
-    }
+    // Don't manually navigate - let AuthRoute handle redirect automatically
+    // when user state updates, AuthRoute will redirect to /onboarding or /
 
     return result;
   };
