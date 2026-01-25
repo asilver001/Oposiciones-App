@@ -866,6 +866,7 @@ export default function OpositaApp() {
       <WelcomeScreen
         onStart={() => setCurrentPage('onboarding1')}
         onSkip={() => { completeOnboarding(); setCurrentPage('home'); }}
+        onLogin={() => setCurrentPage('login')}
         onReset={handleDevReset}
       />
     );

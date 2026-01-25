@@ -17,6 +17,7 @@ import FortalezaVisual, { statusConfig } from './FortalezaVisual';
 import EmptyState from '../common/EmptyState';
 import { StatsFlipCard } from '../common/FlipCard';
 import DevModeRandomizer from '../dev/DevModeRandomizer';
+import DevPanel from '../dev/DevPanel';
 
 // Animation presets
 const spring = {
@@ -422,6 +423,9 @@ export default function SoftFortHome({
           onClear={() => setSimulationMode(null)}
         />
       )}
+
+      {/* DevPanel - development only */}
+      <DevPanel />
     </motion.div>
   );
 }

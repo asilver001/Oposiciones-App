@@ -6,19 +6,19 @@ const spring = { snappy: { type: "spring", stiffness: 400, damping: 25 } };
 
 const colorSchemes = {
   amber: {
-    gradient: 'from-amber-500 to-orange-600',
+    gradient: 'from-amber-400 to-orange-400',
     bg: 'bg-amber-50',
     text: 'text-amber-600',
     border: 'border-amber-100'
   },
   purple: {
-    gradient: 'from-purple-500 to-violet-600',
+    gradient: 'from-purple-400 to-indigo-400',
     bg: 'bg-purple-50',
     text: 'text-purple-600',
     border: 'border-purple-100'
   },
   emerald: {
-    gradient: 'from-emerald-500 to-teal-600',
+    gradient: 'from-emerald-400 to-teal-400',
     bg: 'bg-emerald-50',
     text: 'text-emerald-600',
     border: 'border-emerald-100'

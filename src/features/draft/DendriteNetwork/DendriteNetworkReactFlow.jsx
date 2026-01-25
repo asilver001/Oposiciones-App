@@ -10,12 +10,14 @@ import ReactFlow, {
 import 'reactflow/dist/style.css';
 import { TaskNodeCompact } from './components/TaskNodeCompact';
 import { PhaseNodeCompact } from './components/PhaseNodeCompact';
-import { X, Sparkles, Orbit, Stars, Brain, TrainFront, Filter } from 'lucide-react';
+import { X, Sparkles, Orbit, Stars, Brain, TrainFront, Filter, Globe, FolderKanban } from 'lucide-react';
 import projectState from './projectState.json';
+import oposicionesWorld from './oposicionesWorld.json';
 import { constellationLayout } from './layouts/constellation';
 import { mindMapLayout } from './layouts/mindMap';
 import { metroMapLayout } from './layouts/metroMap';
 import { galaxySpiralCompactLayout } from './layouts/galaxySpiralCompact';
+import { oposicionesHorizontalLayout } from './layouts/oposicionesWorld';
 
 const nodeTypes = {
   taskCompact: TaskNodeCompact,
@@ -31,6 +33,7 @@ const layoutAlgorithms = {
 };
 
 export default function DendriteNetworkReactFlow({ onClose }) {
+  const [viewMode, setViewMode] = useState('project'); // 'project' | 'oposiciones'
   const [layoutType, setLayoutType] = useState('constellation');
   const [filters, setFilters] = useState({
     completed: true,
@@ -38,25 +41,34 @@ export default function DendriteNetworkReactFlow({ onClose }) {
     pending: true
   });
 
-  // Generate initial layout
-  const { initialNodes, initialEdges } = useMemo(() => {
+  // Generate initial layout based on view mode
+  const { nodes: initialNodes, edges: initialEdges } = useMemo(() => {
+    if (viewMode === 'oposiciones') {
+      return oposicionesHorizontalLayout(oposicionesWorld);
+    }
     const layout = layoutAlgorithms[layoutType];
     return layout(projectState.phases, projectState.tasks);
-  }, [layoutType]);
+  }, [layoutType, viewMode]);
 
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 
-  // Update nodes and edges when layout changes
+  // Update nodes and edges when layout or view mode changes
   React.useEffect(() => {
-    const layout = layoutAlgorithms[layoutType];
-    const { nodes: newNodes, edges: newEdges } = layout(
-      projectState.phases,
-      projectState.tasks
-    );
+    let newNodes, newEdges;
+    if (viewMode === 'oposiciones') {
+      const result = oposicionesHorizontalLayout(oposicionesWorld);
+      newNodes = result.nodes;
+      newEdges = result.edges;
+    } else {
+      const layout = layoutAlgorithms[layoutType];
+      const result = layout(projectState.phases, projectState.tasks);
+      newNodes = result.nodes;
+      newEdges = result.edges;
+    }
     setNodes(newNodes);
     setEdges(newEdges);
-  }, [layoutType, setNodes, setEdges]);
+  }, [layoutType, viewMode, setNodes, setEdges]);
 
   const onNodeClick = useCallback((event, node) => {
     console.log('Node clicked:', node.data);
@@ -122,86 +134,178 @@ export default function DendriteNetworkReactFlow({ onClose }) {
             className="bg-white/10 backdrop-blur-sm"
           />
 
-          {/* Top Left Panel - Project Info */}
+          {/* View Mode Toggle */}
+          <Panel position="top-center" className="bg-white/10 backdrop-blur-md rounded-xl p-2">
+            <div className="flex gap-1">
+              <button
+                onClick={() => setViewMode('project')}
+                className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${
+                  viewMode === 'project'
+                    ? 'bg-purple-500 text-white shadow-lg'
+                    : 'text-white/70 hover:bg-white/10'
+                }`}
+              >
+                <FolderKanban className="w-4 h-4" />
+                <span className="text-sm font-medium">Mi Proyecto</span>
+              </button>
+              <button
+                onClick={() => setViewMode('oposiciones')}
+                className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${
+                  viewMode === 'oposiciones'
+                    ? 'bg-amber-500 text-white shadow-lg'
+                    : 'text-white/70 hover:bg-white/10'
+                }`}
+              >
+                <Globe className="w-4 h-4" />
+                <span className="text-sm font-medium">Mundo Oposiciones</span>
+              </button>
+            </div>
+          </Panel>
+
+          {/* Top Left Panel - Info */}
           <Panel position="top-left" className="bg-white/10 backdrop-blur-md rounded-xl p-5 text-white min-w-[280px]">
-            <h2 className="text-xl font-bold mb-3 flex items-center gap-2">
-              <span className="text-2xl">🧬</span>
-              {projectState.metadata.projectName}
-            </h2>
+            {viewMode === 'project' ? (
+              <>
+                <h2 className="text-xl font-bold mb-3 flex items-center gap-2">
+                  <span className="text-2xl">🧬</span>
+                  {projectState.metadata.projectName}
+                </h2>
 
-            <div className="space-y-2 text-sm">
-              <div className="flex justify-between">
-                <span className="opacity-75">Fases totales:</span>
-                <span className="font-semibold">{projectState.metadata.totalPhases}</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="opacity-75">Tareas totales:</span>
-                <span className="font-semibold">{projectState.metadata.totalTasks}</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="opacity-75">Completadas:</span>
-                <span className="font-semibold text-emerald-300">
-                  {projectState.metadata.completedTasks}
-                </span>
-              </div>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="opacity-75">Fases totales:</span>
+                    <span className="font-semibold">{projectState.metadata.totalPhases}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="opacity-75">Tareas totales:</span>
+                    <span className="font-semibold">{projectState.metadata.totalTasks}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="opacity-75">Completadas:</span>
+                    <span className="font-semibold text-emerald-300">
+                      {projectState.metadata.completedTasks}
+                    </span>
+                  </div>
 
-              {/* Progress Bar */}
-              <div className="pt-3">
-                <div className="flex justify-between mb-1 text-xs">
-                  <span>Progreso</span>
-                  <span className="font-bold">{completionPercentage}%</span>
+                  {/* Progress Bar */}
+                  <div className="pt-3">
+                    <div className="flex justify-between mb-1 text-xs">
+                      <span>Progreso</span>
+                      <span className="font-bold">{completionPercentage}%</span>
+                    </div>
+                    <div className="h-3 bg-white/20 rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-gradient-to-r from-emerald-400 to-emerald-600 transition-all duration-500"
+                        style={{ width: `${completionPercentage}%` }}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="text-xs opacity-60 pt-2">
+                    Actualizado: {new Date(projectState.metadata.lastUpdated).toLocaleDateString('es-ES')}
+                  </div>
                 </div>
-                <div className="h-3 bg-white/20 rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-gradient-to-r from-emerald-400 to-emerald-600 transition-all duration-500"
-                    style={{ width: `${completionPercentage}%` }}
-                  />
-                </div>
-              </div>
+              </>
+            ) : (
+              <>
+                <h2 className="text-xl font-bold mb-3 flex items-center gap-2">
+                  <span className="text-2xl">🌍</span>
+                  {oposicionesWorld.metadata.name}
+                </h2>
 
-              <div className="text-xs opacity-60 pt-2">
-                Actualizado: {new Date(projectState.metadata.lastUpdated).toLocaleDateString('es-ES')}
-              </div>
-            </div>
-          </Panel>
+                <div className="space-y-2 text-sm">
+                  <p className="text-white/80 text-xs mb-3">
+                    {oposicionesWorld.metadata.description}
+                  </p>
 
-          {/* Bottom Left Panel - Layout Selector */}
-          <Panel position="bottom-left" className="bg-white/10 backdrop-blur-md rounded-2xl p-4">
-            <div className="text-white text-xs font-bold mb-3 opacity-75 uppercase tracking-wider flex items-center gap-2">
-              <Sparkles className="w-4 h-4" />
-              Visualizaciones
-            </div>
-            <div className="grid grid-cols-2 gap-2">
-              {layoutOptions.map((option) => {
-                const Icon = option.icon;
-                const isActive = layoutType === option.id;
-                return (
-                  <button
-                    key={option.id}
-                    onClick={() => setLayoutType(option.id)}
-                    className={`group relative flex flex-col items-center gap-2 px-4 py-3 rounded-xl transition-all ${
-                      isActive
-                        ? 'bg-gradient-to-br from-purple-500 to-purple-600 text-white shadow-lg shadow-purple-500/50 scale-105 ring-2 ring-purple-300'
-                        : 'bg-white/20 text-white/70 hover:bg-white/30 hover:scale-105'
-                    }`}
-                    title={option.description}
-                  >
-                    <Icon className={`w-6 h-6 ${isActive ? 'animate-pulse' : ''}`} />
-                    <span className="text-[11px] font-semibold text-center leading-tight">{option.name}</span>
+                  <div className="flex justify-between">
+                    <span className="opacity-75">Áreas:</span>
+                    <span className="font-semibold">{oposicionesWorld.areas.length}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="opacity-75">Posiciones:</span>
+                    <span className="font-semibold">{oposicionesWorld.positions.length}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="opacity-75">Niveles:</span>
+                    <span className="font-semibold">C2 → A1</span>
+                  </div>
 
-                    {/* Tooltip */}
-                    {!isActive && (
-                      <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                        <div className="bg-gray-900 text-white text-xs rounded-lg px-3 py-2 shadow-xl whitespace-nowrap">
-                          {option.description}
-                        </div>
+                  {/* Level legend */}
+                  <div className="pt-3 space-y-1">
+                    {oposicionesWorld.levels.map(level => (
+                      <div key={level.id} className="flex items-center gap-2 text-xs">
+                        <span
+                          className="w-3 h-3 rounded-full"
+                          style={{ backgroundColor: level.color }}
+                        />
+                        <span className="font-medium">{level.id}</span>
+                        <span className="opacity-60">{level.description}</span>
                       </div>
-                    )}
-                  </button>
-                );
-              })}
-            </div>
+                    ))}
+                  </div>
+                </div>
+              </>
+            )}
           </Panel>
+
+          {/* Bottom Left Panel - Layout Selector (only for project view) */}
+          {viewMode === 'project' && (
+            <Panel position="bottom-left" className="bg-white/10 backdrop-blur-md rounded-2xl p-4">
+              <div className="text-white text-xs font-bold mb-3 opacity-75 uppercase tracking-wider flex items-center gap-2">
+                <Sparkles className="w-4 h-4" />
+                Visualizaciones
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                {layoutOptions.map((option) => {
+                  const Icon = option.icon;
+                  const isActive = layoutType === option.id;
+                  return (
+                    <button
+                      key={option.id}
+                      onClick={() => setLayoutType(option.id)}
+                      className={`group relative flex flex-col items-center gap-2 px-4 py-3 rounded-xl transition-all ${
+                        isActive
+                          ? 'bg-gradient-to-br from-purple-500 to-purple-600 text-white shadow-lg shadow-purple-500/50 scale-105 ring-2 ring-purple-300'
+                          : 'bg-white/20 text-white/70 hover:bg-white/30 hover:scale-105'
+                      }`}
+                      title={option.description}
+                    >
+                      <Icon className={`w-6 h-6 ${isActive ? 'animate-pulse' : ''}`} />
+                      <span className="text-[11px] font-semibold text-center leading-tight">{option.name}</span>
+
+                      {/* Tooltip */}
+                      {!isActive && (
+                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                          <div className="bg-gray-900 text-white text-xs rounded-lg px-3 py-2 shadow-xl whitespace-nowrap">
+                            {option.description}
+                          </div>
+                        </div>
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
+            </Panel>
+          )}
+
+          {/* Bottom Left Panel - Areas (for oposiciones view) */}
+          {viewMode === 'oposiciones' && (
+            <Panel position="bottom-left" className="bg-white/10 backdrop-blur-md rounded-2xl p-4">
+              <div className="text-white text-xs font-bold mb-3 opacity-75 uppercase tracking-wider flex items-center gap-2">
+                <Globe className="w-4 h-4" />
+                Áreas
+              </div>
+              <div className="space-y-2">
+                {oposicionesWorld.areas.map((area) => (
+                  <div key={area.id} className="flex items-center gap-2 text-white/80 text-xs">
+                    <span className="w-2 h-2 rounded-full bg-purple-400" />
+                    <span>{area.name}</span>
+                  </div>
+                ))}
+              </div>
+            </Panel>
+          )}
 
           {/* Legend Panel */}
           <Panel position="top-right" className="bg-white/10 backdrop-blur-md rounded-xl p-4 text-white">
