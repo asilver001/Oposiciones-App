@@ -422,6 +422,7 @@ export default function SoftFortHome({
           activeMode={simulationMode}
           onSelectMode={setSimulationMode}
           onClear={() => setSimulationMode(null)}
+          pageContext="home"
         />
       )}
 

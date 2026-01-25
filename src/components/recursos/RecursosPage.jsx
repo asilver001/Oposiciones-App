@@ -443,6 +443,7 @@ export default function RecursosPage({ onNavigate }) {
           activeMode={simulationMode}
           onSelectMode={setSimulationMode}
           onClear={() => setSimulationMode(null)}
+          pageContext="recursos"
         />
       )}
     </div>

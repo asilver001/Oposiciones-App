@@ -495,6 +495,7 @@ export default function TemasListView({
           activeMode={simulationMode}
           onSelectMode={setSimulationMode}
           onClear={() => setSimulationMode(null)}
+          pageContext="temas"
         />
       )}
     </div>

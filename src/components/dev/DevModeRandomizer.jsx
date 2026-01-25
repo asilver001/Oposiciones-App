@@ -123,14 +123,43 @@ export const userStates = {
   }
 };
 
+// Context-specific descriptions for each page
+const pageContexts = {
+  home: {
+    nuevo: 'Sin tests, sin racha, fortaleza vacía',
+    activo: '15 tests, 68% aciertos, racha de 5 días',
+    veterano: '89 tests, 82% aciertos, racha de 23 días',
+    aleatorio: 'Estadísticas aleatorias'
+  },
+  actividad: {
+    nuevo: 'Historial vacío, gráficas en cero',
+    activo: '5 sesiones recientes, progreso visible',
+    veterano: 'Historial completo, calendario lleno',
+    aleatorio: 'Datos aleatorios de actividad'
+  },
+  temas: {
+    nuevo: 'Todos los temas sin empezar',
+    activo: 'Algunos temas en progreso',
+    veterano: 'Mayoría de temas dominados',
+    aleatorio: 'Progreso aleatorio por tema'
+  },
+  recursos: {
+    nuevo: 'Sin favoritos guardados',
+    activo: 'Algunos recursos marcados',
+    veterano: 'Colección de recursos favoritos',
+    aleatorio: 'Favoritos aleatorios'
+  }
+};
+
 /**
  * DevModeRandomizer - Floating button with dropdown for simulating user states
  *
  * @param {string} activeMode - Currently selected simulation mode ('nuevo', 'activo', 'veterano', 'aleatorio', or null)
  * @param {function} onSelectMode - Callback when a mode is selected
  * @param {function} onClear - Callback when returning to real data
+ * @param {string} pageContext - Current page context ('home', 'actividad', 'temas', 'recursos')
  */
-export default function DevModeRandomizer({ activeMode, onSelectMode, onClear }) {
+export default function DevModeRandomizer({ activeMode, onSelectMode, onClear, pageContext = 'home' }) {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
 
@@ -155,7 +184,7 @@ export default function DevModeRandomizer({ activeMode, onSelectMode, onClear })
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.95 }}
             transition={{ duration: 0.15 }}
-            className="absolute bottom-16 right-0 bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden min-w-[180px]"
+            className="absolute bottom-16 right-0 bg-white rounded-xl shadow-xl border border-gray-200 overflow-hidden min-w-[220px]"
           >
             <div className="p-2 border-b bg-gray-50">
               <p className="text-xs font-semibold text-gray-600 px-2">Simular Usuario</p>
@@ -165,6 +194,7 @@ export default function DevModeRandomizer({ activeMode, onSelectMode, onClear })
                 const state = userStates[mode];
                 const Icon = state.icon;
                 const isActive = activeMode === mode;
+                const contextDesc = pageContexts[pageContext]?.[mode] || '';
                 return (
                   <button
                     key={mode}
@@ -172,14 +202,19 @@ export default function DevModeRandomizer({ activeMode, onSelectMode, onClear })
                       onSelectMode(mode);
                       setIsOpen(false);
                     }}
-                    className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-left transition-colors ${
+                    className={`w-full flex flex-col items-start px-3 py-2 rounded-lg text-left transition-colors ${
                       isActive
                         ? 'bg-purple-100 text-purple-700'
                         : 'hover:bg-gray-100 text-gray-700'
                     }`}
                   >
-                    <Icon className="w-4 h-4" />
-                    <span className="text-sm font-medium">{state.emoji} {state.label}</span>
+                    <div className="flex items-center gap-2">
+                      <Icon className="w-4 h-4" />
+                      <span className="text-sm font-medium">{state.emoji} {state.label}</span>
+                    </div>
+                    {contextDesc && (
+                      <span className="text-[10px] text-gray-500 mt-0.5 ml-6">{contextDesc}</span>
+                    )}
                   </button>
                 );
               })}

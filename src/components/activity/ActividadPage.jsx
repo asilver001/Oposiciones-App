@@ -436,6 +436,7 @@ export default function ActividadPage({
           activeMode={simulationMode}
           onSelectMode={handleSelectMode}
           onClear={handleClear}
+          pageContext="actividad"
         />
       )}
     </>

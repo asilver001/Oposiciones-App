@@ -692,6 +692,13 @@ export default function OpositaApp() {
     loadData();
   }, []);
 
+  // Redirect authenticated users to home (session persistence)
+  useEffect(() => {
+    if (!authLoading && isAuthenticated && currentPage === 'welcome') {
+      setCurrentPage('home');
+    }
+  }, [authLoading, isAuthenticated, currentPage]);
+
   useEffect(() => {
     if (!isLoading && currentPage === 'home') {
       const saveStats = async () => {
