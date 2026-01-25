@@ -230,6 +230,48 @@ Para evitar estos problemas, la migración de OpositaApp.jsx debe ser:
 
 ---
 
+### Incidente: Feature UI sin Lógica de Datos (Enero 2026)
+
+**Problema:** Al implementar DevModeRandomizer en múltiples páginas, se añadió el componente UI (botón flotante) pero NO se implementó la transformación de datos en todas las páginas.
+
+**Síntoma:** El botón aparece y se puede seleccionar un modo, pero los datos mostrados no cambian.
+
+**Causa raíz:**
+1. Añadir componente UI a la página ✅
+2. Añadir estado `simulationMode` ✅
+3. **OLVIDAR** implementar la lógica que transforma los datos usando ese estado ❌
+4. Marcar la tarea como "completada" sin verificar funcionalmente ❌
+
+**Páginas afectadas:**
+- ✅ SoftFortHome - Implementado correctamente (usa `effectiveStats`, `effectiveStreak`)
+- ✅ ActividadPage - Implementado correctamente (usa `simulatedData`)
+- ❌ TemasListView - Solo UI, sin transformación de datos de topics
+- ❌ RecursosPage - Solo UI, sin transformación de favoritos
+
+### Regla: "UI + Estado + Transformación = Feature Completa"
+
+**Checklist para features con datos simulados/mock:**
+```
+[ ] ¿El componente UI se renderiza? (botón, dropdown, etc.)
+[ ] ¿El estado se actualiza al interactuar? (useState funciona)
+[ ] ¿Los datos mostrados CAMBIAN cuando el estado cambia? ← CRÍTICO
+[ ] ¿Se probó visualmente cada modo/estado?
+```
+
+**Anti-patrón a evitar:**
+```jsx
+// ❌ MAL: Estado existe pero no se usa
+const [simulationMode, setSimulationMode] = useState(null);
+// ... render usa props originales, ignora simulationMode
+
+// ✅ BIEN: Estado transforma los datos
+const [simulationMode, setSimulationMode] = useState(null);
+const effectiveData = simulationMode ? getSimulatedData(simulationMode) : realData;
+// ... render usa effectiveData
+```
+
+---
+
 ## Tareas Periódicas
 
 ### Dendrite Network (Visualización de Progreso)

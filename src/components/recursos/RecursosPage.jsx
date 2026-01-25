@@ -10,13 +10,13 @@
  * 6. Enlaces Utiles - Recursos externos
  */
 
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Scale, BookOpen, Target, Lightbulb, BookMarked, ExternalLink,
   ChevronDown, ChevronRight, Heart, Search, X, Sparkles, Clock
 } from 'lucide-react';
-import DevModeRandomizer from '../dev/DevModeRandomizer';
+import DevModeRandomizer, { userStates } from '../dev/DevModeRandomizer';
 import { useAuth } from '../../contexts/AuthContext';
 
 // Spring presets
@@ -280,6 +280,41 @@ export default function RecursosPage({ onNavigate }) {
   const [expandedCategories, setExpandedCategories] = useState(['legislacion']);
   const [favoriteIds, setFavoriteIds] = useState(['ce', 'ley39', 'tip-fsrs']);
 
+  // Get all resource IDs for simulation
+  const allResourceIds = useMemo(() => {
+    return categorias.flatMap((cat) => cat.recursos.map((r) => r.id));
+  }, []);
+
+  // Generate simulated favorites based on simulation mode
+  const simulatedFavorites = useMemo(() => {
+    if (!simulationMode) return null;
+
+    switch (simulationMode) {
+      case 'nuevo':
+        // No favorites
+        return [];
+      case 'activo':
+        // Some favorites (3-5 items)
+        const activoCount = Math.floor(Math.random() * 3) + 3; // 3-5 items
+        const shuffledActivo = [...allResourceIds].sort(() => Math.random() - 0.5);
+        return shuffledActivo.slice(0, activoCount);
+      case 'veterano':
+        // Many favorites (8-12 items)
+        const veteranoCount = Math.floor(Math.random() * 5) + 8; // 8-12 items
+        const shuffledVeterano = [...allResourceIds].sort(() => Math.random() - 0.5);
+        return shuffledVeterano.slice(0, Math.min(veteranoCount, allResourceIds.length));
+      case 'aleatorio':
+      default:
+        // Random selection (0 to all)
+        const randomCount = Math.floor(Math.random() * (allResourceIds.length + 1));
+        const shuffledRandom = [...allResourceIds].sort(() => Math.random() - 0.5);
+        return shuffledRandom.slice(0, randomCount);
+    }
+  }, [simulationMode, allResourceIds]);
+
+  // Use simulated or real favorites
+  const effectiveFavoriteIds = simulatedFavorites ?? favoriteIds;
+
   // Toggle category expansion
   const toggleCategory = (categoryId) => {
     setExpandedCategories(prev =>
@@ -399,7 +434,7 @@ export default function RecursosPage({ onNavigate }) {
                 isExpanded={expandedCategories.includes(categoria.id)}
                 onToggle={() => toggleCategory(categoria.id)}
                 onResourceClick={handleResourceClick}
-                favoriteIds={favoriteIds}
+                favoriteIds={effectiveFavoriteIds}
                 onToggleFavorite={toggleFavorite}
               />
             </motion.div>

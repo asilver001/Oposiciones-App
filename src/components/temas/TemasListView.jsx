@@ -13,7 +13,7 @@ import {
   Play
 } from 'lucide-react';
 import EmptyState from '../common/EmptyState';
-import DevModeRandomizer from '../dev/DevModeRandomizer';
+import DevModeRandomizer, { userStates } from '../dev/DevModeRandomizer';
 import { useAuth } from '../../contexts/AuthContext';
 
 /**
@@ -303,25 +303,92 @@ export default function TemasListView({
   const [selectedBlock, setSelectedBlock] = useState(null);
   const [expandedBlocks, setExpandedBlocks] = useState(new Set());
 
+  // Generate simulated topic progress based on simulation mode
+  const generateSimulatedTopics = useMemo(() => {
+    if (!simulationMode || topics.length === 0) return null;
+
+    const state = userStates[simulationMode];
+
+    // For 'aleatorio' mode, generate random values
+    const isRandom = simulationMode === 'aleatorio';
+
+    return topics.map((topic) => {
+      let progress, status, questionsAnswered;
+      const questionsTotal = topic.questionsTotal || 20;
+
+      switch (simulationMode) {
+        case 'nuevo':
+          progress = 0;
+          status = 'nuevo';
+          questionsAnswered = 0;
+          break;
+        case 'activo':
+          // Some topics in progress (30-60%), mixed statuses
+          progress = Math.floor(Math.random() * 31) + 30; // 30-60%
+          status = Math.random() > 0.5 ? 'avanzando' : 'nuevo';
+          questionsAnswered = Math.floor(questionsTotal * (progress / 100));
+          break;
+        case 'veterano':
+          // Most topics at 70-100%, many 'dominado'
+          progress = Math.floor(Math.random() * 31) + 70; // 70-100%
+          status = progress >= 85 ? 'dominado' : 'avanzando';
+          questionsAnswered = Math.floor(questionsTotal * (progress / 100));
+          break;
+        case 'aleatorio':
+        default:
+          progress = Math.floor(Math.random() * 101); // 0-100%
+          if (progress < 20) status = 'nuevo';
+          else if (progress < 60) status = 'avanzando';
+          else if (progress >= 85) status = 'dominado';
+          else status = Math.random() > 0.7 ? 'en_riesgo' : 'avanzando';
+          questionsAnswered = Math.floor(questionsTotal * (progress / 100));
+          break;
+      }
+
+      return {
+        ...topic,
+        progress,
+        status,
+        questionsAnswered,
+        questionsTotal
+      };
+    });
+  }, [simulationMode, topics]);
+
+  // Use simulated or real topics
+  const effectiveTopics = generateSimulatedTopics || topics;
+
   // Normalize topicsByBlock structure from useTopics hook
   // Hook returns: { blockId: { id, name, number, code, topics: [...] } }
   // We need: { blockName: { id, name, topics: [...] } }
+  // When simulation mode is active, apply simulated progress to topics
   const normalizedBlocks = useMemo(() => {
     const result = {};
 
+    // Create a map of simulated topics by id for quick lookup
+    const simulatedTopicsMap = new Map();
+    if (generateSimulatedTopics) {
+      generateSimulatedTopics.forEach((t) => simulatedTopicsMap.set(t.id, t));
+    }
+
     Object.values(topicsByBlock).forEach((block) => {
       if (block && block.name && block.topics) {
+        // Apply simulated data to topics if in simulation mode
+        const blockTopics = generateSimulatedTopics
+          ? block.topics.map((topic) => simulatedTopicsMap.get(topic.id) || topic)
+          : block.topics;
+
         result[block.name] = {
           id: block.id,
           name: block.name,
           number: block.number,
-          topics: block.topics
+          topics: blockTopics
         };
       }
     });
 
     return result;
-  }, [topicsByBlock]);
+  }, [topicsByBlock, generateSimulatedTopics]);
 
   // Initialize expanded blocks with first block
   React.useEffect(() => {
@@ -368,17 +435,17 @@ export default function TemasListView({
     });
   };
 
-  // Calculate overall stats
+  // Calculate overall stats (using effectiveTopics for simulation support)
   const overallStats = useMemo(() => {
-    const total = topics.length;
-    const dominados = topics.filter((t) => t.status === 'dominado').length;
-    const enRiesgo = topics.filter((t) => t.status === 'en_riesgo').length;
+    const total = effectiveTopics.length;
+    const dominados = effectiveTopics.filter((t) => t.status === 'dominado').length;
+    const enRiesgo = effectiveTopics.filter((t) => t.status === 'en_riesgo').length;
     const avgProgress = total > 0
-      ? Math.round(topics.reduce((sum, t) => sum + (t.progress || 0), 0) / total)
+      ? Math.round(effectiveTopics.reduce((sum, t) => sum + (t.progress || 0), 0) / total)
       : 0;
 
     return { total, dominados, enRiesgo, avgProgress };
-  }, [topics]);
+  }, [effectiveTopics]);
 
   if (loading) {
     return (
