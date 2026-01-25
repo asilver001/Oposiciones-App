@@ -16,6 +16,7 @@ import TemasTab from './TemasTab';
 import PreguntasTab from './PreguntasTab';
 import InsightsTab from './InsightsTab';
 import { ReviewContainer } from '../review';
+import { BottomTabBar } from '../navigation';
 
 export default function AdminPanel({ onBack }) {
   // Support both AdminContext (PIN login) and AuthContext (normal login with role)
@@ -138,7 +139,7 @@ export default function AdminPanel({ onBack }) {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-24">
       {/* Header */}
       <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div className="max-w-5xl mx-auto px-4 py-4">
@@ -218,6 +219,15 @@ export default function AdminPanel({ onBack }) {
           <QuestionTierManager />
         )}
       </div>
+
+      {/* Bottom Navigation */}
+      <BottomTabBar
+        activeTab="admin"
+        onTabChange={() => {}}
+        onPageChange={(page) => {
+          if (page === 'home') onBack?.();
+        }}
+      />
     </div>
   );
 }

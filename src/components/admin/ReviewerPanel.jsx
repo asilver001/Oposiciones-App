@@ -9,6 +9,7 @@ import { useAdmin } from '../../contexts/AdminContext';
 import { useAuth } from '../../contexts/AuthContext';
 import { supabase } from '../../lib/supabase';
 import { ViewModeSelector, QuestionCardCompact, QuestionDetailModal } from '../review';
+import { BottomTabBar } from '../navigation';
 
 // Reformulation type labels
 const reformulationLabels = {
@@ -878,6 +879,15 @@ export default function ReviewerPanel({ onBack }) {
           />
         )}
       </div>
+
+      {/* Bottom Navigation */}
+      <BottomTabBar
+        activeTab="reviewer"
+        onTabChange={() => {}}
+        onPageChange={(page) => {
+          if (page === 'home') onBack?.();
+        }}
+      />
     </div>
   );
 }

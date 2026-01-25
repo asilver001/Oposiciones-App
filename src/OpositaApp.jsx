@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Home, BookOpen, Trophy, Clock, TrendingUp, TrendingDown, ArrowLeft, CheckCircle, XCircle, Target, Flame, Zap, Star, Lock, Crown, BarChart3, Calendar, History, GraduationCap, Lightbulb, Info, Settings, ChevronRight, Instagram, Mail, Bell, User, LogOut, HelpCircle, FileText, Shield, ExternalLink, Minus, Code, Eye, ClipboardCheck } from 'lucide-react';
 import { allQuestions, topicsList, getRandomQuestions } from './data/questions';
 import { supabase } from './lib/supabase';
@@ -1597,20 +1598,37 @@ export default function OpositaApp() {
     );
 
     return (
-      <div className="fixed inset-0 bg-white z-50 overflow-y-auto">
-        {/* Header */}
-        <div className="sticky top-0 bg-white/95 backdrop-blur-lg border-b border-gray-100 z-10">
-          <div className="flex items-center h-14 px-4">
-            <button
-              onClick={() => setShowSettingsModal(false)}
-              className="w-10 h-10 -ml-2 flex items-center justify-center rounded-full hover:bg-gray-100 transition"
-            >
-              <ArrowLeft className="w-5 h-5 text-gray-700" />
-            </button>
-          </div>
-        </div>
+      <>
+        {/* Backdrop */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black/30 z-50"
+          onClick={() => setShowSettingsModal(false)}
+        />
 
-        <div className="px-4 pb-8">
+        {/* Sliding Panel */}
+        <motion.div
+          initial={{ x: '100%' }}
+          animate={{ x: 0 }}
+          exit={{ x: '100%' }}
+          transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+          className="fixed inset-y-0 right-0 w-full sm:w-96 bg-white z-50 shadow-2xl overflow-y-auto"
+        >
+          {/* Header */}
+          <div className="sticky top-0 bg-white/95 backdrop-blur-lg border-b border-gray-100 z-10">
+            <div className="flex items-center h-14 px-4">
+              <button
+                onClick={() => setShowSettingsModal(false)}
+                className="w-10 h-10 -ml-2 flex items-center justify-center rounded-full hover:bg-gray-100 transition"
+              >
+                <ArrowLeft className="w-5 h-5 text-gray-700" />
+              </button>
+            </div>
+          </div>
+
+          <div className="px-4 pb-8">
           {/* Título */}
           <div className="flex items-center gap-3 mb-6">
             <Settings className="w-7 h-7 text-gray-700" />
@@ -1710,14 +1728,32 @@ export default function OpositaApp() {
             )}
           </div>
         </div>
-      </div>
+      </motion.div>
+      </>
     );
   };
 
   // Modal de Progreso Diario
   const ProgressModal = () => (
-    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center">
-      <div className="bg-white rounded-t-3xl sm:rounded-2xl w-full sm:max-w-md max-h-[85vh] overflow-y-auto shadow-2xl">
+    <>
+      {/* Backdrop */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50"
+        onClick={() => setShowProgressModal(false)}
+      />
+
+      {/* Bottom Sheet */}
+      <motion.div
+        initial={{ y: '100%' }}
+        animate={{ y: 0 }}
+        exit={{ y: '100%' }}
+        transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+        className="fixed inset-x-0 bottom-0 z-50 flex justify-center"
+      >
+        <div className="bg-white rounded-t-3xl w-full max-w-2xl max-h-[85vh] overflow-y-auto shadow-2xl">
         {/* Header */}
         <div className="sticky top-0 bg-white px-5 py-4 border-b border-gray-100 flex items-center justify-between">
           <h3 className="text-lg font-bold text-gray-900">Tu progreso de hoy</h3>
@@ -1811,8 +1847,9 @@ export default function OpositaApp() {
             </button>
           )}
         </div>
-      </div>
-    </div>
+        </div>
+      </motion.div>
+    </>
   );
 
   // Nueva TopBar fija - Fase 1
@@ -1975,8 +2012,12 @@ export default function OpositaApp() {
         onPageChange={setCurrentPage}
       />
       {showPremiumModal && <PremiumModal />}
-      {showSettingsModal && <SettingsModal />}
-      {showProgressModal && <ProgressModal />}
+      <AnimatePresence>
+        {showSettingsModal && <SettingsModal />}
+      </AnimatePresence>
+      <AnimatePresence>
+        {showProgressModal && <ProgressModal />}
+      </AnimatePresence>
 
       {/* Animation Playground */}
       {showAnimationPlayground && (

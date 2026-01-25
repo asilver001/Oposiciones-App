@@ -8156,6 +8156,321 @@ function ActividadV2Demo() {
 }
 
 // ============================================
+// COLOR PALETTE DEMO - Inventario de colores
+// ============================================
+
+function ColorPaletteDemo() {
+  // Current color inventory
+  const primaryColors = [
+    { name: 'purple-50', value: '#faf5ff', textColor: 'text-purple-900' },
+    { name: 'purple-100', value: '#f3e8ff', textColor: 'text-purple-900' },
+    { name: 'purple-200', value: '#e9d5ff', textColor: 'text-purple-900' },
+    { name: 'purple-300', value: '#d8b4fe', textColor: 'text-purple-900' },
+    { name: 'purple-400', value: '#c084fc', textColor: 'text-white' },
+    { name: 'purple-500', value: '#a855f7', textColor: 'text-white' },
+    { name: 'purple-600', value: '#9333ea', textColor: 'text-white' },
+    { name: 'purple-700', value: '#7e22ce', textColor: 'text-white' },
+  ];
+
+  const statusColors = {
+    dominado: { bg: 'bg-emerald-500', gradient: 'from-emerald-400 to-emerald-500', label: 'Dominado' },
+    avanzando: { bg: 'bg-purple-500', gradient: 'from-purple-400 to-purple-500', label: 'Avanzando' },
+    progreso: { bg: 'bg-blue-500', gradient: 'from-blue-400 to-blue-500', label: 'En Progreso' },
+    riesgo: { bg: 'bg-amber-500', gradient: 'from-amber-400 to-orange-500', label: 'Necesita Repaso' },
+    nuevo: { bg: 'bg-gray-400', gradient: 'from-gray-300 to-gray-400', label: 'Nuevo' },
+  };
+
+  const currentGradients = [
+    { name: 'Purple Principal', classes: 'from-purple-600 to-indigo-600' },
+    { name: 'Amber/Orange', classes: 'from-amber-400 to-orange-400' },
+    { name: 'Emerald/Teal', classes: 'from-emerald-400 to-teal-400' },
+    { name: 'Purple/Violet', classes: 'from-purple-400 to-indigo-400' },
+  ];
+
+  // Propuesta: Paleta reducida para app ganadora
+  const proposedPalette = {
+    primary: { name: 'Purple', values: ['purple-500', 'purple-600'] },
+    success: { name: 'Emerald', values: ['emerald-400', 'emerald-500'] },
+    warning: { name: 'Amber', values: ['amber-400', 'amber-500'] },
+    neutral: { name: 'Gray', values: ['gray-100', 'gray-500', 'gray-900'] },
+    accent: { name: 'Indigo', values: ['indigo-400', 'indigo-500'] },
+  };
+
+  return (
+    <div className="p-4 space-y-8">
+      <div className="text-center mb-8">
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">🎨 Paleta de Colores</h2>
+        <p className="text-gray-500">Inventario completo y propuesta optimizada</p>
+      </div>
+
+      {/* Colores Primarios Actuales */}
+      <section>
+        <h3 className="text-lg font-semibold text-gray-800 mb-4">Escala Purple (Principal)</h3>
+        <div className="grid grid-cols-4 gap-2">
+          {primaryColors.map((color) => (
+            <div key={color.name} className="text-center">
+              <div
+                className={`h-16 rounded-lg mb-2 shadow-sm ${color.textColor} flex items-center justify-center text-xs font-medium`}
+                style={{ backgroundColor: color.value }}
+              >
+                {color.name}
+              </div>
+              <span className="text-xs text-gray-500">{color.value}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Colores de Estado */}
+      <section>
+        <h3 className="text-lg font-semibold text-gray-800 mb-4">Colores de Estado</h3>
+        <div className="grid grid-cols-5 gap-3">
+          {Object.entries(statusColors).map(([key, status]) => (
+            <div key={key} className="text-center">
+              <div className={`h-12 ${status.bg} rounded-lg mb-2 shadow-sm`} />
+              <span className="text-xs font-medium text-gray-700">{status.label}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Gradientes en Uso */}
+      <section>
+        <h3 className="text-lg font-semibold text-gray-800 mb-4">Gradientes Actuales ({currentGradients.length})</h3>
+        <div className="grid grid-cols-2 gap-3">
+          {currentGradients.map((grad) => (
+            <div key={grad.name}>
+              <div className={`h-20 rounded-xl bg-gradient-to-r ${grad.classes} shadow-md mb-2`} />
+              <span className="text-xs text-gray-600">{grad.name}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Componentes de Muestra */}
+      <section>
+        <h3 className="text-lg font-semibold text-gray-800 mb-4">Componentes de Muestra</h3>
+        <div className="space-y-4">
+          {/* Botones */}
+          <div>
+            <span className="text-sm text-gray-500 block mb-2">Botones:</span>
+            <div className="flex gap-2 flex-wrap">
+              <button className="px-4 py-2 bg-purple-600 text-white rounded-xl font-medium">Primario</button>
+              <button className="px-4 py-2 bg-emerald-500 text-white rounded-xl font-medium">Éxito</button>
+              <button className="px-4 py-2 bg-amber-500 text-white rounded-xl font-medium">Warning</button>
+              <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-xl font-medium">Secundario</button>
+            </div>
+          </div>
+
+          {/* Cards */}
+          <div>
+            <span className="text-sm text-gray-500 block mb-2">Cards con gradiente:</span>
+            <div className="grid grid-cols-2 gap-3">
+              <div className="p-4 bg-gradient-to-br from-purple-100 to-violet-100 rounded-xl border border-purple-200">
+                <span className="text-purple-700 font-semibold">Card Pastel</span>
+              </div>
+              <div className="p-4 bg-gradient-to-br from-amber-100 to-orange-100 rounded-xl border border-amber-200">
+                <span className="text-amber-700 font-semibold">Card Amber</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Propuesta App Ganadora */}
+      <section className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-6">
+        <h3 className="text-lg font-semibold text-purple-900 mb-4">🏆 Propuesta: Paleta Optimizada</h3>
+        <p className="text-sm text-purple-700 mb-4">
+          Reducir a 5 colores principales para consistencia visual y mejor UX.
+        </p>
+
+        <div className="grid grid-cols-5 gap-3 mb-4">
+          {Object.entries(proposedPalette).map(([key, color]) => (
+            <div key={key} className="text-center">
+              <div className={`h-12 bg-${color.values[0]} rounded-lg mb-2`} />
+              <span className="text-xs font-medium text-purple-800">{color.name}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="bg-white/60 rounded-xl p-4">
+          <h4 className="font-semibold text-purple-900 mb-2">Reglas de uso:</h4>
+          <ul className="text-sm text-purple-700 space-y-1">
+            <li>• <strong>Purple:</strong> CTAs, elementos interactivos, marca</li>
+            <li>• <strong>Emerald:</strong> Éxito, completado, positivo</li>
+            <li>• <strong>Amber:</strong> Alertas, rachas, atención</li>
+            <li>• <strong>Gray:</strong> Textos, fondos, bordes</li>
+            <li>• <strong>Indigo:</strong> Acentos secundarios, links</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+// ============================================
+// PANEL ANIMATIONS DEMO - Ejemplos de animaciones
+// ============================================
+
+function PanelAnimationsDemo() {
+  const [showSlideRight, setShowSlideRight] = useState(false);
+  const [showSlideBottom, setShowSlideBottom] = useState(false);
+  const [showSheet, setShowSheet] = useState(false);
+
+  return (
+    <div className="p-4 space-y-8">
+      <div className="text-center mb-8">
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">✨ Animaciones de Paneles</h2>
+        <p className="text-gray-500">Demos para Settings y Progress panels</p>
+      </div>
+
+      {/* Demo Buttons */}
+      <section className="space-y-4">
+        <h3 className="text-lg font-semibold text-gray-800 mb-4">Prueba las animaciones:</h3>
+
+        <div className="grid grid-cols-1 gap-3">
+          <button
+            onClick={() => setShowSlideRight(true)}
+            className="p-4 bg-purple-100 text-purple-700 rounded-xl font-medium text-left hover:bg-purple-200 transition-colors"
+          >
+            <span className="text-lg">→ Slide Right Panel</span>
+            <p className="text-sm opacity-70">Para Settings - desliza desde la derecha</p>
+          </button>
+
+          <button
+            onClick={() => setShowSlideBottom(true)}
+            className="p-4 bg-emerald-100 text-emerald-700 rounded-xl font-medium text-left hover:bg-emerald-200 transition-colors"
+          >
+            <span className="text-lg">↑ Slide Bottom Panel</span>
+            <p className="text-sm opacity-70">Para Progress - desliza desde abajo</p>
+          </button>
+
+          <button
+            onClick={() => setShowSheet(true)}
+            className="p-4 bg-amber-100 text-amber-700 rounded-xl font-medium text-left hover:bg-amber-200 transition-colors"
+          >
+            <span className="text-lg">📋 Sheet con Backdrop</span>
+            <p className="text-sm opacity-70">Modal con fondo semi-transparente</p>
+          </button>
+        </div>
+      </section>
+
+      {/* Spring Variants Info */}
+      <section>
+        <h3 className="text-lg font-semibold text-gray-800 mb-4">Configuración de Springs:</h3>
+        <div className="bg-gray-50 rounded-xl p-4 font-mono text-sm">
+          <pre className="text-gray-700">{`// Suave y natural
+{ type: 'spring', damping: 25, stiffness: 300 }
+
+// Más bouncy
+{ type: 'spring', damping: 15, stiffness: 400 }
+
+// Muy suave
+{ type: 'spring', damping: 30, stiffness: 200 }`}</pre>
+        </div>
+      </section>
+
+      {/* Slide Right Panel */}
+      <AnimatePresence>
+        {showSlideRight && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black/30 z-[300]"
+              onClick={() => setShowSlideRight(false)}
+            />
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+              className="fixed inset-y-0 right-0 w-80 bg-white shadow-2xl z-[301] p-6"
+            >
+              <h3 className="text-lg font-bold mb-4">Settings Panel</h3>
+              <p className="text-gray-600 mb-4">Este panel desliza desde la derecha y deja ver la página detrás.</p>
+              <button
+                onClick={() => setShowSlideRight(false)}
+                className="w-full py-3 bg-purple-600 text-white rounded-xl font-medium"
+              >
+                Cerrar
+              </button>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+
+      {/* Slide Bottom Panel */}
+      <AnimatePresence>
+        {showSlideBottom && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black/30 z-[300]"
+              onClick={() => setShowSlideBottom(false)}
+            />
+            <motion.div
+              initial={{ y: '100%' }}
+              animate={{ y: 0 }}
+              exit={{ y: '100%' }}
+              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+              className="fixed inset-x-0 bottom-0 bg-white rounded-t-3xl shadow-2xl z-[301] p-6 max-h-[85vh]"
+            >
+              <div className="w-12 h-1.5 bg-gray-300 rounded-full mx-auto mb-4" />
+              <h3 className="text-lg font-bold mb-4">Progress Panel</h3>
+              <p className="text-gray-600 mb-4">Este panel desliza desde abajo, ideal para mostrar progreso o detalles.</p>
+              <button
+                onClick={() => setShowSlideBottom(false)}
+                className="w-full py-3 bg-emerald-500 text-white rounded-xl font-medium"
+              >
+                Cerrar
+              </button>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+
+      {/* Sheet Panel */}
+      <AnimatePresence>
+        {showSheet && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[300] flex items-end justify-center"
+              onClick={() => setShowSheet(false)}
+            >
+              <motion.div
+                initial={{ y: 50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: 50, opacity: 0 }}
+                transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+                className="bg-white rounded-t-3xl w-full max-w-lg p-6"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="w-12 h-1.5 bg-gray-300 rounded-full mx-auto mb-4" />
+                <h3 className="text-lg font-bold mb-4">Sheet Modal</h3>
+                <p className="text-gray-600 mb-4">Sheet con backdrop blur, perfecto para acciones rápidas.</p>
+                <button
+                  onClick={() => setShowSheet(false)}
+                  className="w-full py-3 bg-amber-500 text-white rounded-xl font-medium"
+                >
+                  Cerrar
+                </button>
+              </motion.div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
+// ============================================
 // MAIN DRAFT FEATURES COMPONENT
 // ============================================
 
@@ -8186,7 +8501,8 @@ export default function DraftFeatures({ onClose }) {
 
   const tabs = [
     // Active drafts - New proposals based on assessment
-    { id: 'actividad-v2', label: '📱 Actividad v2' },
+    { id: 'color-palette', label: '🎨 Paleta' },
+    { id: 'panel-animations', label: '✨ Animaciones' },
     { id: 'flipcards', label: '🃏 FlipCards' },
     { id: 'flipcards-actividad', label: '📱 FC+Actividad' },
     { id: 'flipcards-temas', label: '📚 FC+Temas' },
@@ -8623,15 +8939,27 @@ export default function DraftFeatures({ onClose }) {
             </motion.div>
           )}
 
-          {/* ACTIVIDAD V2 - Tabs deslizantes */}
-          {activeTab === 'actividad-v2' && (
+          {/* COLOR PALETTE - Inventario de colores */}
+          {activeTab === 'color-palette' && (
             <motion.div
-              key="actividad-v2"
+              key="color-palette"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
             >
-              <ActividadV2Demo />
+              <ColorPaletteDemo />
+            </motion.div>
+          )}
+
+          {/* PANEL ANIMATIONS - Demos de animaciones */}
+          {activeTab === 'panel-animations' && (
+            <motion.div
+              key="panel-animations"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <PanelAnimationsDemo />
             </motion.div>
           )}
         </AnimatePresence>
