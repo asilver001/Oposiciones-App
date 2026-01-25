@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useUserStore } from '../../stores';
+import { useAuth } from '../../hooks/useAuth';
 import { WelcomeScreen, GoalStep, DateStep, IntroStep } from '../../components/onboarding';
 
 export default function OnboardingPage() {
   const navigate = useNavigate();
+  const { signOut } = useAuth();
   const [step, setStep] = useState('welcome'); // welcome, goal-oposicion, goal-tiempo, date, intro
   const { setUserData, completeOnboarding } = useUserStore();
   const [tempData, setTempData] = useState({});
@@ -21,12 +23,19 @@ export default function OnboardingPage() {
     navigate('/');
   };
 
+  const handleGoToLogin = async () => {
+    // Sign out first to clear any existing session
+    await signOut();
+    // Then navigate to login
+    navigate('/login');
+  };
+
   // Welcome Screen
   if (step === 'welcome') {
     return (
       <WelcomeScreen
         onStart={() => setStep('goal-oposicion')}
-        onLogin={() => navigate('/login')}
+        onLogin={handleGoToLogin}
       />
     );
   }
