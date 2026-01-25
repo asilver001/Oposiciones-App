@@ -227,3 +227,28 @@ Para evitar estos problemas, la migración de OpositaApp.jsx debe ser:
 - **Incremental**: Un componente a la vez
 - **Verificable**: Testing visual después de cada paso
 - **Reversible**: Commits pequeños, fácil rollback
+
+---
+
+## Tareas Periódicas
+
+### Dendrite Network (Visualización de Progreso)
+
+El **Dendrite Network** es una visualización interactiva del progreso del proyecto ubicada en `src/features/draft/DendriteNetwork/`.
+
+**Cuándo actualizar:**
+- Al completar una fase importante del proyecto
+- Después de varios commits con cambios significativos
+- Cuando el usuario lo solicite
+- Periódicamente para reflejar el estado actual
+
+**Cómo acceder:**
+- DevPanel → botón "🧬 Dendrite Network"
+- Solo visible para admins o en modo desarrollo
+
+**Qué actualizar:**
+- Nodos completados vs pendientes
+- Conexiones entre features
+- Estado de cada componente (nuevo, en progreso, completado)
+
+**Archivo principal:** `src/features/draft/DendriteNetwork/DendriteNetworkReactFlow.jsx`

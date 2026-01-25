@@ -16,7 +16,7 @@ import TopBar from './TopBar';
 import FortalezaVisual, { statusConfig } from './FortalezaVisual';
 import EmptyState from '../common/EmptyState';
 import { StatsFlipCard } from '../common/FlipCard';
-import DevModeRandomizer from '../dev/DevModeRandomizer';
+import DevModeRandomizer, { userStates } from '../dev/DevModeRandomizer';
 import { useAuth } from '../../contexts/AuthContext';
 
 // Animation presets
@@ -288,14 +288,32 @@ export default function SoftFortHome({
   const { isAdmin } = useAuth();
   const [simulationMode, setSimulationMode] = useState(null);
 
+  // Get simulated data when in simulation mode
+  const getSimulatedData = () => {
+    if (!simulationMode) return null;
+    const state = userStates[simulationMode];
+    if (state.generate) {
+      return state.generate(); // For 'aleatorio' mode
+    }
+    return state;
+  };
+
+  const simulatedData = getSimulatedData();
+
+  // Use simulated or real data
+  const effectiveStats = simulatedData?.totalStats || totalStats;
+  const effectiveStreak = simulatedData
+    ? { current: simulatedData.totalStats.currentStreak, longest: simulatedData.totalStats.currentStreak + 5 }
+    : streakData;
+
   // Check if user is completely new (no activity at all)
-  const isNewUser = totalStats.testsCompleted === 0 &&
-                    totalStats.questionsCorrect === 0 &&
-                    streakData.current === 0 &&
+  const isNewUser = effectiveStats.testsCompleted === 0 &&
+                    effectiveStats.questionsCorrect === 0 &&
+                    effectiveStreak.current === 0 &&
                     fortalezaData.length === 0;
 
   // Calculate daily progress (simplified - can be enhanced)
-  const dailyProgress = Math.min(100, totalStats.testsCompleted * 10);
+  const dailyProgress = Math.min(100, effectiveStats.testsCompleted * 10);
 
   // Get next topic to study (prioritize riesgo, then progreso)
   const sortedTopics = [...fortalezaData].sort((a, b) => {
@@ -313,13 +331,13 @@ export default function SoftFortHome({
   };
 
   // Get motivational badge for streak
-  const streakBadge = streakData.current > 0 ? `🔥 ${getMotivationalMessage(streakData.current)}` : null;
+  const streakBadge = effectiveStreak.current > 0 ? `🔥 ${getMotivationalMessage(effectiveStreak.current)}` : null;
 
   // Get accuracy trend badge
-  const accuracyBadge = totalStats.accuracyRate > 0 ? '↑ +5%' : null;
+  const accuracyBadge = effectiveStats.accuracyRate > 0 ? '↑ +5%' : null;
 
   // Calculate level and XP (simplified)
-  const xp = totalStats.questionsCorrect * 10;
+  const xp = effectiveStats.questionsCorrect * 10;
   const level = Math.floor(xp / 100) + 1;
   const percentile = Math.max(1, 100 - Math.floor(level * 5));
 
@@ -373,9 +391,9 @@ export default function SoftFortHome({
         {/* Streak card */}
         <StatsFlipCard
           icon={Flame}
-          value={streakData.current}
+          value={effectiveStreak.current}
           label="días consecutivos"
-          detail={`Tu mejor racha fue de ${streakData.longest} días. ¡Sigue así para superarla!`}
+          detail={`Tu mejor racha fue de ${effectiveStreak.longest} días. ¡Sigue así para superarla!`}
           colorScheme="amber"
           onClick={onStreakClick}
           badge={streakBadge}
@@ -385,9 +403,9 @@ export default function SoftFortHome({
         {/* Accuracy card */}
         <StatsFlipCard
           icon={Target}
-          value={`${totalStats.accuracyRate}%`}
+          value={`${effectiveStats.accuracyRate}%`}
           label="precisión media"
-          detail={`Has acertado ${totalStats.questionsCorrect} preguntas en total. ¡Cada día mejor!`}
+          detail={`Has acertado ${effectiveStats.questionsCorrect} preguntas en total. ¡Cada día mejor!`}
           colorScheme="purple"
           onClick={onAccuracyClick}
           badge={accuracyBadge}
