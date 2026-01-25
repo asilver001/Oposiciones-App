@@ -154,6 +154,13 @@ export default function ReviewerPanel({
 
   // Handle stat card click
   const handleStatClick = useCallback((status) => {
+    // Pending just shows the normal review workflow
+    if (status === 'pending') {
+      setStatsView(null);
+      setFilteredQuestions([]);
+      return;
+    }
+
     if (statsView === status) {
       setStatsView(null);
       setFilteredQuestions([]);
@@ -532,12 +539,13 @@ export default function ReviewerPanel({
             </button>
             <button
               onClick={() => handleStatClick('pending')}
-              className={`bg-white/10 backdrop-blur rounded-xl p-3 text-center transition-all duration-300 hover:bg-white/20 ${
-                statsView === 'pending' ? 'ring-2 ring-white' : ''
+              className={`bg-amber-500/20 backdrop-blur rounded-xl p-3 text-center transition-all duration-300 hover:bg-amber-500/30 ${
+                !statsView ? 'ring-2 ring-amber-300' : ''
               }`}
+              title="Ver panel de revisión"
             >
               <div className="text-2xl font-bold tabular-nums">{stats.pending}</div>
-              <div className="text-xs text-purple-200 flex items-center justify-center gap-1">
+              <div className="text-xs text-amber-200 flex items-center justify-center gap-1">
                 <Clock className="w-3 h-3" />
                 Pendientes
               </div>
@@ -583,24 +591,28 @@ export default function ReviewerPanel({
 
       {/* Stats View - Shows filtered questions when stat is clicked */}
       {statsView && (
-        <div className="max-w-2xl mx-auto w-full px-4 py-4">
-          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
-            <div className="px-4 py-3 bg-gray-50 border-b border-gray-200 flex items-center justify-between">
+        <div className="flex-1 max-w-2xl mx-auto w-full px-4 py-4">
+          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden h-full flex flex-col">
+            <div className="px-4 py-3 bg-gray-50 border-b border-gray-200 flex items-center justify-between flex-shrink-0">
               <h3 className="font-semibold text-gray-900 flex items-center gap-2">
                 {statsView === 'total' && <><FileText className="w-4 h-4" /> Todas las preguntas</>}
-                {statsView === 'pending' && <><Clock className="w-4 h-4 text-amber-500" /> Pendientes de revisión</>}
                 {statsView === 'approved' && <><CheckCircle className="w-4 h-4 text-green-500" /> Preguntas aprobadas</>}
                 {statsView === 'rejected' && <><XCircle className="w-4 h-4 text-red-500" /> Preguntas rechazadas</>}
-                <span className="text-sm text-gray-500 font-normal">({filteredQuestions.length})</span>
+                <span className="text-sm text-gray-500 font-normal">({filteredQuestions.length} de {
+                  statsView === 'total' ? stats.total :
+                  statsView === 'approved' ? stats.approved :
+                  stats.rejected
+                })</span>
               </h3>
               <button
                 onClick={() => { setStatsView(null); setFilteredQuestions([]); }}
-                className="text-gray-400 hover:text-gray-600 p-1"
+                className="text-gray-400 hover:text-gray-600 p-1 hover:bg-gray-100 rounded-lg"
+                title="Cerrar y volver a revisión"
               >
                 <XCircle className="w-5 h-5" />
               </button>
             </div>
-            <div className="max-h-80 overflow-y-auto divide-y divide-gray-100">
+            <div className="flex-1 overflow-y-auto divide-y divide-gray-100">
               {filteredQuestions.length === 0 ? (
                 <div className="p-8 text-center text-gray-500">
                   No hay preguntas en esta categoría
