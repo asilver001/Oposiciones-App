@@ -1,4 +1,4 @@
-import React, { useState, useEffect, lazy, Suspense } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Home, BookOpen, Trophy, Clock, TrendingUp, TrendingDown, ArrowLeft, CheckCircle, XCircle, Target, Flame, Zap, Star, Lock, Crown, BarChart3, Calendar, History, GraduationCap, Lightbulb, Info, Settings, ChevronRight, Instagram, Mail, Bell, User, LogOut, HelpCircle, FileText, Shield, ExternalLink, Minus, Code, Eye, ClipboardCheck } from 'lucide-react';
 import { allQuestions, topicsList, getRandomQuestions } from './data/questions';
 import { supabase } from './lib/supabase';
@@ -14,10 +14,8 @@ import Fortaleza from './components/Fortaleza';
 import { WelcomeScreen, GoalStep, DateStep, IntroStep } from './components/onboarding';
 import { useAppNavigation } from './hooks/useAppNavigation';
 import { Button, Card, Modal, ProgressBar } from './components/ui';
-// Lazy load AnimationPlayground (dev-only, 50KB)
-const AnimationPlayground = lazy(() => import('./components/dev/AnimationPlayground'));
-// Lazy load DraftFeatures (admin-only, 381KB)
-const DraftFeatures = lazy(() => import('./components/dev/DraftFeatures'));
+import AnimationPlayground from './components/dev/AnimationPlayground';
+import DraftFeatures from './components/dev/DraftFeatures';
 // Nuevos componentes extraídos (Fase 3 Refactor)
 import DevPanel from './components/dev/DevPanel';
 import { SoftFortHome } from './components/home';
@@ -732,55 +730,47 @@ export default function OpositaApp() {
   if (currentPage === 'welcome') {
     return (
       <WelcomeScreen
-        onStart={() => setCurrentPage('goal-oposicion')}
-        onLogin={() => setCurrentPage('login')}
+        onStart={() => setCurrentPage('onboarding1')}
+        onSkip={() => { completeOnboarding(); setCurrentPage('home'); }}
+        onReset={handleDevReset}
       />
     );
   }
 
-  if (currentPage === 'goal-oposicion') {
-    return (
-      <GoalStep
-        step="oposicion"
-        onSelect={(oposicionId) => {
-          setUserData({ ...userData, oposicion: oposicionId });
-          setCurrentPage('goal-tiempo');
-        }}
-      />
-    );
+  if (currentPage === 'onboarding1') {
+    return <OnboardingOposicion onSelect={() => setCurrentPage('onboarding2')} />;
   }
 
-  if (currentPage === 'goal-tiempo') {
+  if (currentPage === 'onboarding2') {
     return (
-      <GoalStep
-        step="tiempo"
+      <OnboardingTiempo
         onSelect={(option) => {
           setUserData({ ...userData, dailyGoal: option.questions, dailyGoalMinutes: parseInt(option.id) });
-          setCurrentPage('date');
+          setCurrentPage('onboarding3');
         }}
-        onBack={() => setCurrentPage('goal-oposicion')}
+        onBack={() => setCurrentPage('onboarding1')}
       />
     );
   }
 
-  if (currentPage === 'date') {
+  if (currentPage === 'onboarding3') {
     return (
-      <DateStep
+      <OnboardingFecha
         onSelect={(label) => {
           setUserData({ ...userData, examDate: label });
-          setCurrentPage('intro');
+          setCurrentPage('onboarding4');
         }}
-        onBack={() => setCurrentPage('goal-tiempo')}
+        onBack={() => setCurrentPage('onboarding2')}
       />
     );
   }
 
-  if (currentPage === 'intro') {
+  if (currentPage === 'onboarding4') {
     return (
-      <IntroStep
+      <OnboardingIntro
         onStart={() => { completeOnboarding(); startTest(); }}
         onSkip={() => { completeOnboarding(); setCurrentPage('home'); }}
-        onBack={() => setCurrentPage('date')}
+        onBack={() => setCurrentPage('onboarding3')}
       />
     );
   }
@@ -1855,32 +1845,14 @@ export default function OpositaApp() {
 
       {/* Animation Playground */}
       {showAnimationPlayground && (
-        <Suspense fallback={
-          <div className="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center">
-            <div className="text-white text-center">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
-              <p className="text-sm">Cargando Animation Playground...</p>
-            </div>
-          </div>
-        }>
-          <div className="fixed inset-0 z-[100]">
-            <AnimationPlayground onClose={() => setShowAnimationPlayground(false)} />
-          </div>
-        </Suspense>
+        <div className="fixed inset-0 z-[100]">
+          <AnimationPlayground onClose={() => setShowAnimationPlayground(false)} />
+        </div>
       )}
 
       {/* Draft Features Preview */}
       {showDraftFeatures && (
-        <Suspense fallback={
-          <div className="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center">
-            <div className="text-white text-center">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
-              <p className="text-sm">Cargando Draft Features...</p>
-            </div>
-          </div>
-        }>
-          <DraftFeatures onClose={() => setShowDraftFeatures(false)} />
-        </Suspense>
+        <DraftFeatures onClose={() => setShowDraftFeatures(false)} />
       )}
 
       {/* Admin Login Modal */}
