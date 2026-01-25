@@ -107,8 +107,12 @@ function AuthRoute({ children }) {
 }
 
 export default function AppRouter() {
+  // Use basename only for GitHub Pages deployment
+  const isGitHubPages = window.location.hostname.includes('github.io');
+  const basename = isGitHubPages ? '/Oposiciones-App' : '';
+
   return (
-    <BrowserRouter basename="/Oposiciones-App">
+    <BrowserRouter basename={basename}>
       <Routes>
         {/* Auth Routes (AuthLayout) */}
         <Route element={<AuthLayout />}>
