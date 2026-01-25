@@ -17,6 +17,7 @@ import FortalezaVisual, { statusConfig } from './FortalezaVisual';
 import EmptyState from '../common/EmptyState';
 import { StatsFlipCard } from '../common/FlipCard';
 import DevModeRandomizer from '../dev/DevModeRandomizer';
+import { useAuth } from '../../contexts/AuthContext';
 
 // Animation presets
 const spring = {
@@ -284,6 +285,7 @@ export default function SoftFortHome({
   showTopBar = true,
   showFooter = true
 }) {
+  const { isAdmin } = useAuth();
   const [simulationMode, setSimulationMode] = useState(null);
 
   // Check if user is completely new (no activity at all)
@@ -414,8 +416,8 @@ export default function SoftFortHome({
       {/* Footer - optional */}
       {showFooter && <Footer onNavigate={onNavigate} />}
 
-      {/* DevMode Randomizer - development only */}
-      {import.meta.env.DEV && (
+      {/* DevMode Randomizer - development or admin */}
+      {(import.meta.env.DEV || isAdmin) && (
         <DevModeRandomizer
           activeMode={simulationMode}
           onSelectMode={setSimulationMode}

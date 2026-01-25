@@ -17,6 +17,7 @@ import {
   ChevronDown, ChevronRight, Heart, Search, X, Sparkles, Clock
 } from 'lucide-react';
 import DevModeRandomizer from '../dev/DevModeRandomizer';
+import { useAuth } from '../../contexts/AuthContext';
 
 // Spring presets
 const spring = {
@@ -273,6 +274,7 @@ function CategoryCard({ categoria, isExpanded, onToggle, onResourceClick, favori
 
 // Main RecursosPage component
 export default function RecursosPage({ onNavigate }) {
+  const { isAdmin } = useAuth();
   const [searchQuery, setSearchQuery] = useState('');
   const [simulationMode, setSimulationMode] = useState(null);
   const [expandedCategories, setExpandedCategories] = useState(['legislacion']);
@@ -435,8 +437,8 @@ export default function RecursosPage({ onNavigate }) {
         </div>
       </motion.div>
 
-      {/* DevMode Randomizer - development only */}
-      {import.meta.env.DEV && (
+      {/* DevMode Randomizer - development or admin */}
+      {(import.meta.env.DEV || isAdmin) && (
         <DevModeRandomizer
           activeMode={simulationMode}
           onSelectMode={setSimulationMode}

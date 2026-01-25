@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import EmptyState from '../common/EmptyState';
 import DevModeRandomizer, { userStates } from '../dev/DevModeRandomizer';
+import { useAuth } from '../../contexts/AuthContext';
 
 /**
  * ActividadPage - Activity page with swipeable tabs
@@ -298,6 +299,7 @@ export default function ActividadPage({
   formatRelativeDate,
   devMode = false
 }) {
+  const { isAdmin } = useAuth();
   // Tab state: 0 = Modos (left), 1 = Progreso (right)
   const [activeTab, setActiveTab] = useState(0);
   const [selectedMode, setSelectedMode] = useState(null);
@@ -428,8 +430,8 @@ export default function ActividadPage({
         </AnimatePresence>
       </div>
 
-      {/* Dev Mode Randomizer Button */}
-      {devMode && (
+      {/* Dev Mode Randomizer Button - development, admin, or devMode prop */}
+      {(import.meta.env.DEV || isAdmin || devMode) && (
         <DevModeRandomizer
           activeMode={simulationMode}
           onSelectMode={handleSelectMode}

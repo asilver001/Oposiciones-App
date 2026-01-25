@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import EmptyState from '../common/EmptyState';
 import DevModeRandomizer from '../dev/DevModeRandomizer';
+import { useAuth } from '../../contexts/AuthContext';
 
 /**
  * TemasListView - Topic list page with filtering and progress tracking
@@ -296,6 +297,7 @@ export default function TemasListView({
   onTopicSelect,
   loading = false
 }) {
+  const { isAdmin } = useAuth();
   const [searchQuery, setSearchQuery] = useState('');
   const [simulationMode, setSimulationMode] = useState(null);
   const [selectedBlock, setSelectedBlock] = useState(null);
@@ -487,8 +489,8 @@ export default function TemasListView({
         />
       )}
 
-      {/* DevMode Randomizer - development only */}
-      {import.meta.env.DEV && (
+      {/* DevMode Randomizer - development or admin */}
+      {(import.meta.env.DEV || isAdmin) && (
         <DevModeRandomizer
           activeMode={simulationMode}
           onSelectMode={setSimulationMode}
