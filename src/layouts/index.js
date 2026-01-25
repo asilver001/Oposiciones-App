@@ -18,5 +18,5 @@
  *   ...
  */
 
-// Layouts will be exported here as they are migrated
-// Example: export { default as MainLayout } from './MainLayout';
+// Layout components
+export * from './MainLayout';

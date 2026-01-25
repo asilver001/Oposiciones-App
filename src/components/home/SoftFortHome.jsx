@@ -12,7 +12,7 @@ import {
   Zap, Flame, Target, Trophy, ChevronRight,
   Info, HelpCircle, Instagram, Sparkles
 } from 'lucide-react';
-import TopBar from './TopBar';
+import { TopBar } from '@layouts/MainLayout';
 import FortalezaVisual, { statusConfig } from './FortalezaVisual';
 import EmptyState from '../common/EmptyState';
 import { StatsFlipCard } from '../common/FlipCard';

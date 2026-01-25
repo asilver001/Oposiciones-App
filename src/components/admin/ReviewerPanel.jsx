@@ -45,7 +45,9 @@ export default function ReviewerPanel({
   const [loading, setLoading] = useState(true);
   const [actionLoading, setActionLoading] = useState(false);
   const [reviewComment, setReviewComment] = useState('');
-  const [stats, setStats] = useState({ pending: 0, approved: 0, rejected: 0 });
+  const [stats, setStats] = useState({ pending: 0, approved: 0, rejected: 0, total: 0 });
+  const [statsView, setStatsView] = useState(null); // null | 'pending' | 'approved' | 'rejected' | 'total'
+  const [filteredQuestions, setFilteredQuestions] = useState([]);
 
   // View mode: 'individual', 'grid', 'list'
   const [viewMode, setViewMode] = useState('individual');
@@ -89,7 +91,7 @@ export default function ReviewerPanel({
   // Load stats separately (for auto-refresh)
   const loadStats = useCallback(async () => {
     try {
-      const [pendingRes, approvedRes, rejectedRes] = await Promise.all([
+      const [pendingRes, approvedRes, rejectedRes, totalRes] = await Promise.all([
         supabase
           .from('questions')
           .select('*', { count: 'exact', head: true })
@@ -104,18 +106,62 @@ export default function ReviewerPanel({
           .from('questions')
           .select('*', { count: 'exact', head: true })
           .eq('is_active', true)
-          .eq('validation_status', 'rejected')
+          .eq('validation_status', 'rejected'),
+        supabase
+          .from('questions')
+          .select('*', { count: 'exact', head: true })
+          .eq('is_active', true)
       ]);
 
       setStats({
         pending: pendingRes.count || 0,
         approved: approvedRes.count || 0,
-        rejected: rejectedRes.count || 0
+        rejected: rejectedRes.count || 0,
+        total: totalRes.count || 0
       });
     } catch (err) {
       console.error('Error loading stats:', err);
     }
   }, []);
+
+  // Load questions by status for stats view
+  const loadQuestionsByStatus = useCallback(async (status) => {
+    try {
+      let query = supabase
+        .from('questions')
+        .select('*')
+        .eq('is_active', true)
+        .order('created_at', { ascending: false })
+        .limit(50);
+
+      if (status === 'pending') {
+        query = query.eq('validation_status', 'human_pending');
+      } else if (status === 'approved') {
+        query = query.eq('validation_status', 'human_approved');
+      } else if (status === 'rejected') {
+        query = query.eq('validation_status', 'rejected');
+      }
+      // 'total' shows all
+
+      const { data, error } = await query;
+      if (error) throw error;
+      setFilteredQuestions(data || []);
+    } catch (err) {
+      console.error('Error loading questions by status:', err);
+      setFilteredQuestions([]);
+    }
+  }, []);
+
+  // Handle stat card click
+  const handleStatClick = useCallback((status) => {
+    if (statsView === status) {
+      setStatsView(null);
+      setFilteredQuestions([]);
+    } else {
+      setStatsView(status);
+      loadQuestionsByStatus(status);
+    }
+  }, [statsView, loadQuestionsByStatus]);
 
   useEffect(() => {
     loadQuestions();
@@ -470,29 +516,56 @@ export default function ReviewerPanel({
             </button>
           </div>
 
-          {/* Stats Cards */}
-          <div className="flex gap-3 mt-4">
-            <div className="flex-1 bg-white/10 backdrop-blur rounded-xl p-3 text-center transition-all duration-300">
+          {/* Stats Cards - Clickable */}
+          <div className="grid grid-cols-4 gap-2 mt-4">
+            <button
+              onClick={() => handleStatClick('total')}
+              className={`bg-white/10 backdrop-blur rounded-xl p-3 text-center transition-all duration-300 hover:bg-white/20 ${
+                statsView === 'total' ? 'ring-2 ring-white' : ''
+              }`}
+            >
+              <div className="text-2xl font-bold tabular-nums">{stats.total}</div>
+              <div className="text-xs text-purple-200 flex items-center justify-center gap-1">
+                <FileText className="w-3 h-3" />
+                Total
+              </div>
+            </button>
+            <button
+              onClick={() => handleStatClick('pending')}
+              className={`bg-white/10 backdrop-blur rounded-xl p-3 text-center transition-all duration-300 hover:bg-white/20 ${
+                statsView === 'pending' ? 'ring-2 ring-white' : ''
+              }`}
+            >
               <div className="text-2xl font-bold tabular-nums">{stats.pending}</div>
               <div className="text-xs text-purple-200 flex items-center justify-center gap-1">
                 <Clock className="w-3 h-3" />
                 Pendientes
               </div>
-            </div>
-            <div className="flex-1 bg-green-500/20 backdrop-blur rounded-xl p-3 text-center transition-all duration-300">
+            </button>
+            <button
+              onClick={() => handleStatClick('approved')}
+              className={`bg-green-500/20 backdrop-blur rounded-xl p-3 text-center transition-all duration-300 hover:bg-green-500/30 ${
+                statsView === 'approved' ? 'ring-2 ring-green-300' : ''
+              }`}
+            >
               <div className="text-2xl font-bold tabular-nums">{stats.approved}</div>
               <div className="text-xs text-green-200 flex items-center justify-center gap-1">
                 <CheckCircle className="w-3 h-3" />
                 Aprobadas
               </div>
-            </div>
-            <div className="flex-1 bg-red-500/20 backdrop-blur rounded-xl p-3 text-center transition-all duration-300">
+            </button>
+            <button
+              onClick={() => handleStatClick('rejected')}
+              className={`bg-red-500/20 backdrop-blur rounded-xl p-3 text-center transition-all duration-300 hover:bg-red-500/30 ${
+                statsView === 'rejected' ? 'ring-2 ring-red-300' : ''
+              }`}
+            >
               <div className="text-2xl font-bold tabular-nums">{stats.rejected}</div>
               <div className="text-xs text-red-200 flex items-center justify-center gap-1">
                 <XCircle className="w-3 h-3" />
                 Rechazadas
               </div>
-            </div>
+            </button>
           </div>
 
           {/* View Mode Selector */}
@@ -507,6 +580,82 @@ export default function ReviewerPanel({
           </div>
         </div>
       </div>
+
+      {/* Stats View - Shows filtered questions when stat is clicked */}
+      {statsView && (
+        <div className="max-w-2xl mx-auto w-full px-4 py-4">
+          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+            <div className="px-4 py-3 bg-gray-50 border-b border-gray-200 flex items-center justify-between">
+              <h3 className="font-semibold text-gray-900 flex items-center gap-2">
+                {statsView === 'total' && <><FileText className="w-4 h-4" /> Todas las preguntas</>}
+                {statsView === 'pending' && <><Clock className="w-4 h-4 text-amber-500" /> Pendientes de revisión</>}
+                {statsView === 'approved' && <><CheckCircle className="w-4 h-4 text-green-500" /> Preguntas aprobadas</>}
+                {statsView === 'rejected' && <><XCircle className="w-4 h-4 text-red-500" /> Preguntas rechazadas</>}
+                <span className="text-sm text-gray-500 font-normal">({filteredQuestions.length})</span>
+              </h3>
+              <button
+                onClick={() => { setStatsView(null); setFilteredQuestions([]); }}
+                className="text-gray-400 hover:text-gray-600 p-1"
+              >
+                <XCircle className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="max-h-80 overflow-y-auto divide-y divide-gray-100">
+              {filteredQuestions.length === 0 ? (
+                <div className="p-8 text-center text-gray-500">
+                  No hay preguntas en esta categoría
+                </div>
+              ) : (
+                filteredQuestions.map((q) => {
+                  const correctOpt = q.options?.find(opt => opt.is_correct);
+                  return (
+                    <div key={q.id} className="p-4 hover:bg-gray-50">
+                      <div className="flex items-start gap-3">
+                        <div className="flex-1 min-w-0">
+                          <div className="flex flex-wrap gap-2 mb-2">
+                            <span className="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full font-medium">
+                              T{q.tema || '?'}
+                            </span>
+                            <span className={`text-xs px-2 py-0.5 rounded-full ${
+                              q.validation_status === 'human_approved' ? 'bg-green-100 text-green-700' :
+                              q.validation_status === 'rejected' ? 'bg-red-100 text-red-700' :
+                              q.validation_status === 'human_pending' ? 'bg-amber-100 text-amber-700' :
+                              'bg-gray-100 text-gray-600'
+                            }`}>
+                              {q.validation_status === 'human_approved' ? 'Aprobada' :
+                               q.validation_status === 'rejected' ? 'Rechazada' :
+                               q.validation_status === 'human_pending' ? 'Pendiente' :
+                               q.validation_status}
+                            </span>
+                          </div>
+                          <p className="text-sm text-gray-900 line-clamp-2 mb-1">
+                            {q.question_text}
+                          </p>
+                          {correctOpt && (
+                            <p className="text-xs text-green-700 truncate">
+                              ✓ {correctOpt.id?.toUpperCase()}. {correctOpt.text}
+                            </p>
+                          )}
+                          <p className="text-xs text-gray-400 mt-1">
+                            {new Date(q.created_at).toLocaleDateString('es-ES')}
+                          </p>
+                        </div>
+                        <button
+                          onClick={() => setSelectedQuestion(q)}
+                          className="p-2 text-gray-400 hover:text-purple-600 hover:bg-purple-50 rounded-lg"
+                          title="Ver detalle"
+                        >
+                          <Eye className="w-4 h-4" />
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Content */}
       <div className="flex-1 max-w-2xl mx-auto w-full px-4 py-6">
