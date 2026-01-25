@@ -25,11 +25,11 @@ export default function LoginPage() {
   };
 
   const handleNavigateToSignup = () => {
-    navigate('/auth/signup');
+    navigate('/signup');
   };
 
   const handleNavigateToForgot = () => {
-    navigate('/auth/forgot-password');
+    navigate('/forgot-password');
   };
 
   return (

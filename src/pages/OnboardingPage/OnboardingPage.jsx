@@ -26,7 +26,7 @@ export default function OnboardingPage() {
     return (
       <WelcomeScreen
         onStart={() => setStep('goal-oposicion')}
-        onLogin={() => navigate('/auth/login')}
+        onLogin={() => navigate('/login')}
       />
     );
   }

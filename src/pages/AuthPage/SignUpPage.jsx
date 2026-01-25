@@ -22,7 +22,7 @@ export default function SignUpPage() {
   };
 
   const handleNavigateToLogin = () => {
-    navigate('/auth/login');
+    navigate('/login');
   };
 
   const handleShowPrivacy = (type) => {

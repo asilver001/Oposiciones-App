@@ -22,7 +22,7 @@ export default function ForgotPasswordPage() {
   };
 
   const handleGoToLogin = () => {
-    navigate('/auth/login');
+    navigate('/login');
   };
 
   return (
