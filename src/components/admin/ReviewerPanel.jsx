@@ -657,7 +657,8 @@ export default function ReviewerPanel({
         </div>
       )}
 
-      {/* Content */}
+      {/* Content - Only show when not viewing stats */}
+      {!statsView && (
       <div className="flex-1 max-w-2xl mx-auto w-full px-4 py-6">
         {questions.length === 0 ? (
           <div className="bg-white rounded-2xl border border-gray-200 p-8 text-center shadow-sm">
@@ -1023,18 +1024,20 @@ export default function ReviewerPanel({
           </>
         )}
 
-        {/* Question Detail Modal */}
-        {selectedQuestion && (
-          <QuestionDetailModal
-            question={selectedQuestion}
-            onClose={() => setSelectedQuestion(null)}
-            onApprove={handleApproveById}
-            onReject={handleRejectById}
-            onMarkRefresh={handleMarkRefreshById}
-            disabled={actionLoading}
-          />
-        )}
       </div>
+      )}
+
+      {/* Question Detail Modal - Outside content section so it works with statsView */}
+      {selectedQuestion && (
+        <QuestionDetailModal
+          question={selectedQuestion}
+          onClose={() => setSelectedQuestion(null)}
+          onApprove={handleApproveById}
+          onReject={handleRejectById}
+          onMarkRefresh={handleMarkRefreshById}
+          disabled={actionLoading}
+        />
+      )}
 
       {/* Bottom Navigation */}
       <BottomTabBar
