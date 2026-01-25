@@ -103,7 +103,11 @@ export function PhaseNodeCompact({ data }) {
             </div>
             <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
               <div
-                className="h-full bg-gradient-to-r from-purple-500 to-purple-600 transition-all"
+                className={`h-full transition-all ${
+                  progress === 100
+                    ? 'bg-gradient-to-r from-emerald-400 to-emerald-600'
+                    : 'bg-gradient-to-r from-purple-500 to-purple-600'
+                }`}
                 style={{ width: `${progress}%` }}
               />
             </div>

@@ -8,238 +8,22 @@ import ReactFlow, {
   Panel,
 } from 'reactflow';
 import 'reactflow/dist/style.css';
-import { PhaseNode } from './components/PhaseNode';
-import { TaskNode } from './components/TaskNode';
-import { PhaseNodeEnhanced } from './components/PhaseNodeEnhanced';
-import { TaskNodeEnhanced } from './components/TaskNodeEnhanced';
 import { TaskNodeCompact } from './components/TaskNodeCompact';
 import { PhaseNodeCompact } from './components/PhaseNodeCompact';
-import { X, LayoutGrid, Calendar, Network, Sparkles, Orbit, Droplets, Rows, Share2, Grid3x3, Stars, Brain, TrainFront } from 'lucide-react';
+import { X, Sparkles, Orbit, Stars, Brain, TrainFront } from 'lucide-react';
 import projectState from './projectState.json';
-import { radialBurstLayout } from './layouts/radialBurst';
-import { galaxySpiralLayout } from './layouts/galaxySpiral';
-import { organicClustersLayout } from './layouts/organicClusters';
-import { swimLanesLayout } from './layouts/swimLanes';
-import { networkGraphLayout } from './layouts/networkGraph';
-import { matrixViewLayout } from './layouts/matrixView';
 import { constellationLayout } from './layouts/constellation';
 import { mindMapLayout } from './layouts/mindMap';
 import { metroMapLayout } from './layouts/metroMap';
 import { galaxySpiralCompactLayout } from './layouts/galaxySpiralCompact';
 
 const nodeTypes = {
-  phase: PhaseNode,
-  task: TaskNode,
-  phaseEnhanced: PhaseNodeEnhanced,
-  taskEnhanced: TaskNodeEnhanced,
   taskCompact: TaskNodeCompact,
   phaseCompact: PhaseNodeCompact,
 };
 
-// Layout algorithms
+// Layout algorithms - Only compact node layouts
 const layoutAlgorithms = {
-  hierarchical: (phases, tasks) => {
-    const nodes = [];
-    const edges = [];
-
-    let yOffset = 0;
-    const xPhaseSpacing = 450;
-    const yPhaseSpacing = 400;
-
-    phases.forEach((phase, phaseIndex) => {
-      // Add phase node
-      nodes.push({
-        id: phase.id,
-        type: 'phase',
-        data: phase,
-        position: { x: phaseIndex * xPhaseSpacing, y: yOffset },
-      });
-
-      // Add task nodes for this phase
-      const tasksInPhase = tasks.filter((t) => t.phase === phase.id);
-      const taskYStart = yOffset + 150;
-
-      tasksInPhase.forEach((task, taskIndex) => {
-        const tasksPerRow = 3;
-        const taskXOffset = (taskIndex % tasksPerRow) * 280;
-        const taskYOffset = Math.floor(taskIndex / tasksPerRow) * 180;
-        const taskX = phaseIndex * xPhaseSpacing - 280 + taskXOffset;
-        const taskY = taskYStart + taskYOffset;
-
-        nodes.push({
-          id: task.id,
-          type: 'task',
-          data: task,
-          position: { x: taskX, y: taskY },
-        });
-
-        // Connect task to phase
-        edges.push({
-          id: `${phase.id}-${task.id}`,
-          source: phase.id,
-          target: task.id,
-          type: 'smoothstep',
-          animated: task.status === 'in-progress',
-          style: {
-            stroke: task.status === 'completed' ? '#10b981' : phase.color,
-            strokeWidth: 2,
-          },
-        });
-      });
-
-      yOffset += yPhaseSpacing + Math.ceil(tasksInPhase.length / 3) * 180;
-    });
-
-    return { nodes, edges };
-  },
-
-  timeline: (phases, tasks) => {
-    const nodes = [];
-    const edges = [];
-
-    const xPhaseSpacing = 600;
-    const yPhaseY = 200;
-    const yTasksStart = 400;
-
-    phases.forEach((phase, phaseIndex) => {
-      const phaseX = phaseIndex * xPhaseSpacing + 300;
-
-      // Add phase node
-      nodes.push({
-        id: phase.id,
-        type: 'phase',
-        data: phase,
-        position: { x: phaseX, y: yPhaseY },
-      });
-
-      // Add task nodes vertically below phase
-      const tasksInPhase = tasks.filter((t) => t.phase === phase.id);
-
-      tasksInPhase.forEach((task, taskIndex) => {
-        const taskY = yTasksStart + taskIndex * 160;
-
-        nodes.push({
-          id: task.id,
-          type: 'task',
-          data: task,
-          position: { x: phaseX - 100, y: taskY },
-        });
-
-        // Connect task to phase
-        edges.push({
-          id: `${phase.id}-${task.id}`,
-          source: phase.id,
-          target: task.id,
-          type: 'smoothstep',
-          animated: task.status === 'in-progress',
-          style: {
-            stroke: task.status === 'completed' ? '#10b981' : phase.color,
-            strokeWidth: 2,
-          },
-        });
-      });
-
-      // Connect phases horizontally
-      if (phaseIndex > 0) {
-        edges.push({
-          id: `phase-${phaseIndex - 1}-${phaseIndex}`,
-          source: phases[phaseIndex - 1].id,
-          target: phase.id,
-          type: 'smoothstep',
-          animated: phase.status === 'in-progress',
-          style: {
-            stroke: '#9333ea',
-            strokeWidth: 3,
-            strokeDasharray: '5,5',
-          },
-        });
-      }
-    });
-
-    return { nodes, edges };
-  },
-
-  forceDirected: (phases, tasks) => {
-    const nodes = [];
-    const edges = [];
-
-    // Center point
-    const centerX = 800;
-    const centerY = 400;
-    const phaseRadius = 400;
-
-    phases.forEach((phase, phaseIndex) => {
-      const angle = (phaseIndex / phases.length) * 2 * Math.PI;
-      const phaseX = centerX + Math.cos(angle) * phaseRadius;
-      const phaseY = centerY + Math.sin(angle) * phaseRadius;
-
-      // Add phase node
-      nodes.push({
-        id: phase.id,
-        type: 'phase',
-        data: phase,
-        position: { x: phaseX, y: phaseY },
-      });
-
-      // Add task nodes in a cluster around phase
-      const tasksInPhase = tasks.filter((t) => t.phase === phase.id);
-      const taskRadius = 250;
-
-      tasksInPhase.forEach((task, taskIndex) => {
-        const taskAngle = (taskIndex / tasksInPhase.length) * 2 * Math.PI;
-        const taskX = phaseX + Math.cos(taskAngle) * taskRadius;
-        const taskY = phaseY + Math.sin(taskAngle) * taskRadius;
-
-        nodes.push({
-          id: task.id,
-          type: 'task',
-          data: task,
-          position: { x: taskX, y: taskY },
-        });
-
-        // Connect task to phase
-        edges.push({
-          id: `${phase.id}-${task.id}`,
-          source: phase.id,
-          target: task.id,
-          type: 'straight',
-          animated: task.status === 'in-progress',
-          style: {
-            stroke: task.status === 'completed' ? '#10b981' : phase.color,
-            strokeWidth: 2,
-            opacity: 0.6,
-          },
-        });
-      });
-
-      // Connect phases in a circle
-      const nextPhaseIndex = (phaseIndex + 1) % phases.length;
-      edges.push({
-        id: `phase-${phaseIndex}-${nextPhaseIndex}`,
-        source: phase.id,
-        target: phases[nextPhaseIndex].id,
-        type: 'smoothstep',
-        animated: phases[nextPhaseIndex].status === 'in-progress',
-        style: {
-          stroke: '#9333ea',
-          strokeWidth: 3,
-          strokeDasharray: '5,5',
-          opacity: 0.4,
-        },
-      });
-    });
-
-    return { nodes, edges };
-  },
-
-  // New layouts
-  radialBurst: radialBurstLayout,
-  galaxySpiral: galaxySpiralLayout,
-  organicClusters: organicClustersLayout,
-  swimLanes: swimLanesLayout,
-  networkGraph: networkGraphLayout,
-  matrixView: matrixViewLayout,
-  // Compact node layouts
   constellation: constellationLayout,
   mindMap: mindMapLayout,
   metroMap: metroMapLayout,
@@ -247,7 +31,7 @@ const layoutAlgorithms = {
 };
 
 export default function DendriteNetworkReactFlow({ onClose }) {
-  const [layoutType, setLayoutType] = useState('hierarchical');
+  const [layoutType, setLayoutType] = useState('constellation');
 
   // Generate initial layout
   const { initialNodes, initialEdges } = useMemo(() => {
@@ -278,20 +62,10 @@ export default function DendriteNetworkReactFlow({ onClose }) {
   );
 
   const layoutOptions = [
-    { id: 'hierarchical', name: 'Jerárquico', icon: LayoutGrid, description: 'Vista clásica por fases' },
-    { id: 'timeline', name: 'Timeline', icon: Calendar, description: 'Línea temporal horizontal' },
-    { id: 'forceDirected', name: 'Red Circular', icon: Network, description: 'Fases en círculo' },
-    { id: 'radialBurst', name: 'Radial', icon: Sparkles, description: 'Explosión radial desde el centro' },
-    { id: 'galaxySpiral', name: 'Galaxia', icon: Orbit, description: 'Espiral galáctica' },
-    { id: 'organicClusters', name: 'Orgánico', icon: Droplets, description: 'Agrupación física natural' },
-    { id: 'swimLanes', name: 'Carriles', icon: Rows, description: 'Carriles por estado' },
-    { id: 'networkGraph', name: 'Grafo Red', icon: Share2, description: 'Red social completa' },
-    { id: 'matrixView', name: 'Matriz', icon: Grid3x3, description: 'Vista de cuadrícula' },
-    // New compact layouts
-    { id: 'constellation', name: 'Constelación', icon: Stars, description: 'Nodos compactos en forma de estrellas' },
+    { id: 'constellation', name: 'Constelación', icon: Stars, description: 'Nodos compactos formando constelaciones' },
     { id: 'mindMap', name: 'MindMap', icon: Brain, description: 'Mapa mental radial desde el centro' },
-    { id: 'metroMap', name: 'Metro', icon: TrainFront, description: 'Estilo mapa de metro/subway' },
-    { id: 'galaxyCompact', name: 'Galaxia Pro', icon: Orbit, description: 'Galaxia mejorada con nodos compactos' },
+    { id: 'metroMap', name: 'Metro', icon: TrainFront, description: 'Estilo mapa de metro con estaciones' },
+    { id: 'galaxyCompact', name: 'Galaxia', icon: Orbit, description: 'Espiral galáctica con órbitas' },
   ];
 
   return (
@@ -313,10 +87,10 @@ export default function DendriteNetworkReactFlow({ onClose }) {
           <Controls />
           <MiniMap
             nodeColor={(node) => {
-              if (node.type === 'phase' || node.type === 'phaseEnhanced' || node.type === 'phaseCompact') {
+              if (node.type === 'phaseCompact') {
                 return node.data.status === 'completed' ? '#10b981' : node.data.color || '#9333ea';
               }
-              if (node.type === 'task' || node.type === 'taskEnhanced' || node.type === 'taskCompact') {
+              if (node.type === 'taskCompact') {
                 if (node.data.status === 'completed') return '#10b981';
                 if (node.data.status === 'in-progress') return '#9333ea';
                 if (node.data.status === 'blocked') return '#ef4444';
@@ -371,12 +145,12 @@ export default function DendriteNetworkReactFlow({ onClose }) {
           </Panel>
 
           {/* Bottom Left Panel - Layout Selector */}
-          <Panel position="bottom-left" className="bg-white/10 backdrop-blur-md rounded-2xl p-4 max-w-[800px]">
+          <Panel position="bottom-left" className="bg-white/10 backdrop-blur-md rounded-2xl p-4">
             <div className="text-white text-xs font-bold mb-3 opacity-75 uppercase tracking-wider flex items-center gap-2">
               <Sparkles className="w-4 h-4" />
               Visualizaciones
             </div>
-            <div className="grid grid-cols-4 gap-2">
+            <div className="grid grid-cols-2 gap-2">
               {layoutOptions.map((option) => {
                 const Icon = option.icon;
                 const isActive = layoutType === option.id;
