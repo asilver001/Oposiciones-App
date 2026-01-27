@@ -10,6 +10,7 @@
 
 import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence, Reorder, useMotionValue, useTransform } from 'framer-motion';
+import { DevRoadmap, OpositaUniverse } from '@/features/draft/DendriteViz';
 import {
   ArrowLeft, Check, X, ChevronRight, ChevronDown, ChevronUp, ChevronLeft,
   BookOpen, Target, Flame, Trophy, Clock, TrendingUp,
@@ -8501,6 +8502,8 @@ export default function DraftFeatures({ onClose }) {
 
   const tabs = [
     // Active drafts - New proposals based on assessment
+    { id: 'dendrite-roadmap', label: '🧬 DevRoadmap' },
+    { id: 'dendrite-universe', label: '🌌 Universo' },
     { id: 'color-palette', label: '🎨 Paleta' },
     { id: 'panel-animations', label: '✨ Animaciones' },
     { id: 'flipcards', label: '🃏 FlipCards' },
@@ -8948,6 +8951,46 @@ export default function DraftFeatures({ onClose }) {
               exit={{ opacity: 0, y: -20 }}
             >
               <ColorPaletteDemo />
+            </motion.div>
+          )}
+
+          {/* DENDRITE ROADMAP - Development progress visualization */}
+          {activeTab === 'dendrite-roadmap' && (
+            <motion.div
+              key="dendrite-roadmap"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              className="-mx-4 -mt-6"
+            >
+              <div className="bg-purple-50 border border-purple-200 rounded-xl p-3 text-sm text-purple-800 mx-4 mt-6 mb-4">
+                <strong>🧬 DevRoadmap:</strong> Visualización del progreso de desarrollo con efecto 3D falso, física de fuerzas y parallax con mouse.
+              </div>
+              <div className="h-[600px] bg-gray-950 rounded-2xl overflow-hidden mx-4">
+                <DevRoadmap />
+              </div>
+            </motion.div>
+          )}
+
+          {/* DENDRITE UNIVERSE - User study progress visualization */}
+          {activeTab === 'dendrite-universe' && (
+            <motion.div
+              key="dendrite-universe"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              className="-mx-4 -mt-6"
+            >
+              <div className="bg-purple-50 border border-purple-200 rounded-xl p-3 text-sm text-purple-800 mx-4 mt-6 mb-4">
+                <strong>🌌 Universo del Opositor:</strong> Mapa visual del progreso de estudio del usuario. Click en nodos para ver detalles.
+              </div>
+              <div className="h-[600px] bg-gray-950 rounded-2xl overflow-hidden mx-4">
+                <OpositaUniverse
+                  onTopicClick={(topicId) => {
+                    console.log('Topic clicked:', topicId);
+                  }}
+                />
+              </div>
             </motion.div>
           )}
 
