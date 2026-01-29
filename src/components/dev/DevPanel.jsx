@@ -1,7 +1,5 @@
-import { useState, lazy, Suspense } from 'react';
+import { useState } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
-
-const DendriteNetworkReactFlow = lazy(() => import('../../features/draft/DendriteNetwork/DendriteNetworkReactFlow'));
 
 export default function DevPanel({
   onReset,
@@ -16,7 +14,6 @@ export default function DevPanel({
   testsCount
 }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [showDendrite, setShowDendrite] = useState(false);
   const { isAdmin, userRole, user } = useAuth();
 
   // Show DevPanel if user is admin OR in development mode
@@ -50,13 +47,6 @@ export default function DevPanel({
         <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-white text-lg">×</button>
       </div>
       <div className="space-y-2">
-        <button
-          onClick={() => setShowDendrite(true)}
-          className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white text-xs py-2 px-3 rounded-lg text-left font-medium shadow-lg"
-        >
-          🧬 Dendrite Network
-        </button>
-
         <button onClick={onShowPlayground} className="w-full bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white text-xs py-2 px-3 rounded-lg text-left font-medium">
           ✨ Animation Playground
         </button>
@@ -102,16 +92,6 @@ export default function DevPanel({
         </div>
       </div>
 
-      {/* Dendrite Network Visualization */}
-      {showDendrite && (
-        <Suspense fallback={
-          <div className="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center">
-            <div className="text-white text-xl">Cargando visualización...</div>
-          </div>
-        }>
-          <DendriteNetworkReactFlow onClose={() => setShowDendrite(false)} />
-        </Suspense>
-      )}
     </div>
   );
 }
