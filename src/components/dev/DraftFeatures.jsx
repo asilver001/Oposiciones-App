@@ -10,7 +10,6 @@
 
 import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence, Reorder, useMotionValue, useTransform } from 'framer-motion';
-import { RoadmapBasic, RoadmapDAG, RoadmapTree } from '@/features/draft/ForceGraph';
 import {
   ArrowLeft, Check, X, ChevronRight, ChevronDown, ChevronUp, ChevronLeft,
   BookOpen, Target, Flame, Trophy, Clock, TrendingUp,
@@ -8502,9 +8501,6 @@ export default function DraftFeatures({ onClose }) {
 
   const tabs = [
     // Active drafts - New proposals based on assessment
-    { id: 'roadmap-basic', label: '🌐 Roadmap Basic' },
-    { id: 'roadmap-dag', label: '➡️ Roadmap DAG' },
-    { id: 'roadmap-tree', label: '🌲 Roadmap Tree' },
     { id: 'color-palette', label: '🎨 Paleta' },
     { id: 'panel-animations', label: '✨ Animaciones' },
     { id: 'flipcards', label: '🃏 FlipCards' },
@@ -8940,66 +8936,6 @@ export default function DraftFeatures({ onClose }) {
               exit={{ opacity: 0, y: -20 }}
             >
               <QuickWinsPreview />
-            </motion.div>
-          )}
-
-          {/* ROADMAP BASIC - Force-directed organic layout */}
-          {activeTab === 'roadmap-basic' && (
-            <motion.div
-              key="roadmap-basic"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="-mx-4 -mt-6"
-            >
-              <div className="bg-blue-50 border border-blue-200 rounded-xl p-3 text-sm text-blue-800 mx-4 mt-6 mb-4">
-                <strong>🌐 Roadmap Basic:</strong> Vista orgánica con física de fuerzas. Los nodos se posicionan naturalmente mostrando relaciones. Ideal para exploración.
-              </div>
-              <div className="h-[600px] bg-gray-950 rounded-2xl overflow-hidden mx-4">
-                <RoadmapBasic
-                  onTaskClick={(task) => console.log('Task clicked:', task)}
-                />
-              </div>
-            </motion.div>
-          )}
-
-          {/* ROADMAP DAG - Left-to-right timeline */}
-          {activeTab === 'roadmap-dag' && (
-            <motion.div
-              key="roadmap-dag"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="-mx-4 -mt-6"
-            >
-              <div className="bg-purple-50 border border-purple-200 rounded-xl p-3 text-sm text-purple-800 mx-4 mt-6 mb-4">
-                <strong>➡️ Roadmap DAG:</strong> Vista horizontal de izquierda a derecha. Muestra el flujo de tareas con flechas direccionales. Ideal para timelines.
-              </div>
-              <div className="h-[600px] bg-gray-950 rounded-2xl overflow-hidden mx-4">
-                <RoadmapDAG
-                  onTaskClick={(task) => console.log('Task clicked:', task)}
-                />
-              </div>
-            </motion.div>
-          )}
-
-          {/* ROADMAP TREE - Top-down hierarchy */}
-          {activeTab === 'roadmap-tree' && (
-            <motion.div
-              key="roadmap-tree"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="-mx-4 -mt-6"
-            >
-              <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-3 text-sm text-emerald-800 mx-4 mt-6 mb-4">
-                <strong>🌲 Roadmap Tree:</strong> Vista jerárquica de arriba a abajo. Doble-click para colapsar/expandir ramas. Ideal para ver estructura del proyecto.
-              </div>
-              <div className="h-[600px] bg-gray-950 rounded-2xl overflow-hidden mx-4">
-                <RoadmapTree
-                  onTaskClick={(task) => console.log('Task clicked:', task)}
-                />
-              </div>
             </motion.div>
           )}
 
