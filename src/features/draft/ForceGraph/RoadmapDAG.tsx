@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useRef, useCallback, useEffect } from 'react';
-import { ForceGraph2D, ForceGraphMethods } from 'react-force-graph';
+import { ForceGraph2D } from 'react-force-graph';
 import { RoadmapGraphProps, GraphNode, STATUS_COLORS, PHASE_COLORS } from './types';
 import { roadmapTasks, tasksToGraphData } from './data';
 
@@ -16,7 +16,7 @@ export default function RoadmapDAG({
   width,
   height,
 }: RoadmapGraphProps) {
-  const graphRef = useRef<ForceGraphMethods>();
+  const graphRef = useRef<any>();
   const containerRef = useRef<HTMLDivElement>(null);
   const [hoverNode, setHoverNode] = useState<GraphNode | null>(null);
   const [highlightLinks, setHighlightLinks] = useState<Set<string>>(new Set());
