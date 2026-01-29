@@ -272,25 +272,71 @@ const effectiveData = simulationMode ? getSimulatedData(simulationMode) : realDa
 
 ---
 
+### Incidente: Import de Tipos No Exportados (Enero 2026)
+
+**Problema:** Al usar una librería npm (`react-force-graph`), se importaron tipos TypeScript que NO están exportados por el paquete, causando que la app no se visualice en producción.
+
+**Síntoma:** Build pasa localmente pero la webapp no carga en Vercel (pantalla en blanco, errores en consola).
+
+**Causa raíz:**
+1. Asumir que un tipo mencionado en la documentación está exportado
+2. No verificar los exports reales del paquete
+3. El build de TypeScript no falla porque el tipo existe internamente, pero no es accesible
+
+**Código problemático:**
+```typescript
+// ❌ MAL: ForceGraphMethods no está exportado
+import { ForceGraph2D, ForceGraphMethods } from 'react-force-graph';
+const graphRef = useRef<ForceGraphMethods>();
+
+// ✅ BIEN: Verificar exports o usar any
+import { ForceGraph2D } from 'react-force-graph';
+const graphRef = useRef<any>();
+```
+
+### Regla: "Verificar Exports de Paquetes npm"
+
+**Checklist al usar librerías npm:**
+```
+[ ] ¿Revisé el archivo .d.ts del paquete para ver qué está exportado?
+[ ] ¿Los tipos que importo aparecen en la línea "export { ... }"?
+[ ] ¿Probé el build Y la app carga en el navegador?
+[ ] Si no hay tipo exportado, ¿usé 'any' o definí el tipo localmente?
+```
+
+**Cómo verificar exports de un paquete:**
+```bash
+# Ver los exports de tipos
+tail -10 node_modules/PAQUETE/dist/*.d.ts
+
+# Buscar export específico
+grep "export.*NombreTipo" node_modules/PAQUETE/dist/*.d.ts
+```
+
+---
+
 ## Tareas Periódicas
 
-### Dendrite Network (Visualización de Progreso)
+### ForceGraph Roadmap (Visualización de Progreso)
 
-El **Dendrite Network** es una visualización interactiva del progreso del proyecto ubicada en `src/features/draft/DendriteNetwork/`.
+El **ForceGraph Roadmap** es una visualización interactiva del progreso del proyecto usando `react-force-graph`, ubicada en `src/features/draft/ForceGraph/`.
 
-**Cuándo actualizar:**
-- Al completar una fase importante del proyecto
-- Después de varios commits con cambios significativos
-- Cuando el usuario lo solicite
-- Periódicamente para reflejar el estado actual
+**Variantes disponibles:**
+- 🌐 **RoadmapBasic**: Vista orgánica con física de fuerzas
+- ➡️ **RoadmapDAG**: Timeline horizontal izquierda→derecha
+- 🌲 **RoadmapTree**: Jerarquía de arriba→abajo (colapsable)
 
 **Cómo acceder:**
-- DevPanel → botón "🧬 Dendrite Network"
+- DevPanel → Draft Features → tabs 🌐, ➡️, 🌲
 - Solo visible para admins o en modo desarrollo
 
 **Qué actualizar:**
-- Nodos completados vs pendientes
-- Conexiones entre features
-- Estado de cada componente (nuevo, en progreso, completado)
+- Archivo de datos: `src/features/draft/ForceGraph/data.ts`
+- Estados: completed, in_progress, pending, blocked
+- Dependencias entre tareas
 
-**Archivo principal:** `src/features/draft/DendriteNetwork/DendriteNetworkReactFlow.jsx`
+**Archivos principales:**
+- `src/features/draft/ForceGraph/RoadmapBasic.tsx`
+- `src/features/draft/ForceGraph/RoadmapDAG.tsx`
+- `src/features/draft/ForceGraph/RoadmapTree.tsx`
+- `src/features/draft/ForceGraph/data.ts` (datos del roadmap)
