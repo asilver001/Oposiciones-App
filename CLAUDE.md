@@ -340,11 +340,68 @@ export class ErrorBoundary extends React.Component {
 
 ---
 
+### Incidente: Dependencia con Sub-dependencias No Deseadas (Enero 2026)
+
+**Problema:** Al usar `react-force-graph` para visualización de grafos, el componente fallaba en producción con el error "AFRAME is not defined".
+
+**Síntoma:**
+- Build local pasa ✅
+- Build en Vercel pasa ✅
+- Runtime en producción falla ❌ con `ReferenceError: AFRAME is not defined`
+
+**Causa raíz:**
+El paquete `react-force-graph` incluye soporte para:
+- `ForceGraph2D` (2D canvas)
+- `ForceGraph3D` (3D con three.js)
+- `ForceGraphVR` (VR con A-Frame) ← Requiere AFRAME
+- `ForceGraphAR` (AR)
+
+Aunque solo importamos `ForceGraph2D`, el bundler incluye código que referencia AFRAME, causando el error en runtime.
+
+**Solución:**
+Usar el paquete específico `react-force-graph-2d` en lugar del paquete completo:
+
+```json
+// ❌ MAL: Incluye dependencias VR/AR innecesarias (1,767 KB)
+"react-force-graph": "^1.48.1"
+
+// ✅ BIEN: Solo 2D, sin AFRAME (197 KB)
+"react-force-graph-2d": "^1.28.0"
+```
+
+```jsx
+// ❌ MAL: Import del paquete completo
+import { ForceGraph2D } from 'react-force-graph';
+
+// ✅ BIEN: Import del paquete específico
+import ForceGraph2D from 'react-force-graph-2d';
+```
+
+### Regla: "Verificar Sub-dependencias de Paquetes Grandes"
+
+**Antes de usar una librería de visualización/gráficos:**
+```
+[ ] ¿El paquete tiene variantes más específicas? (ej: -2d, -lite, -core)
+[ ] ¿Qué sub-dependencias trae? (revisar package.json del paquete)
+[ ] ¿Hay dependencias opcionales que pueden causar errores?
+[ ] ¿El tamaño del bundle es razonable para lo que necesito?
+```
+
+**Paquetes comunes con este patrón:**
+- `react-force-graph` → usar `react-force-graph-2d` o `react-force-graph-3d`
+- `three` → usar imports específicos de submódulos
+- `d3` → usar `d3-force`, `d3-selection`, etc. por separado
+- `lodash` → usar `lodash-es` o imports específicos
+
+**Lección clave:** Un paquete puede compilar correctamente pero fallar en runtime si tiene dependencias opcionales que no están instaladas. Preferir siempre el paquete más específico para el caso de uso.
+
+---
+
 ## Tareas Periódicas
 
-### Dendrite Network (Visualización de Progreso)
+### Roadmap ForceGraph (Visualización de Progreso)
 
-El **Dendrite Network** es una visualización interactiva del progreso del proyecto ubicada en `src/features/draft/DendriteNetwork/`.
+El **Roadmap** es una visualización interactiva del progreso del proyecto ubicada en `src/features/draft/ForceGraph/`.
 
 **Cuándo actualizar:**
 - Al completar una fase importante del proyecto
@@ -353,12 +410,16 @@ El **Dendrite Network** es una visualización interactiva del progreso del proye
 - Periódicamente para reflejar el estado actual
 
 **Cómo acceder:**
-- DevPanel → botón "🧬 Dendrite Network"
+- DevPanel → DraftFeatures → Tab "🌐 Roadmap"
 - Solo visible para admins o en modo desarrollo
 
-**Qué actualizar:**
-- Nodos completados vs pendientes
-- Conexiones entre features
-- Estado de cada componente (nuevo, en progreso, completado)
+**Qué actualizar en `data.ts`:**
+- Nodos completados vs pendientes (cambiar `status`)
+- Conexiones entre features (`dependencies`)
+- Estado de cada componente: `completed`, `in_progress`, `pending`, `blocked`
+
+**Modos de layout:**
+- `queue`: Topológico en columnas por nivel de dependencia (default)
+- `force`: Orgánico con física (nodos se mueven libremente)
 
 **Archivo principal:** `src/features/draft/DendriteNetwork/DendriteNetworkReactFlow.jsx`
