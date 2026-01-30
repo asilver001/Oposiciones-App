@@ -11,6 +11,7 @@
 import React, { useState, useRef, Suspense } from 'react';
 import { motion, AnimatePresence, Reorder, useMotionValue, useTransform } from 'framer-motion';
 import { RoadmapBasic } from '@/features/draft/ForceGraph';
+import { ErrorBoundary } from '../common/ErrorBoundary';
 import {
   ArrowLeft, Check, X, ChevronRight, ChevronDown, ChevronUp, ChevronLeft,
   BookOpen, Target, Flame, Trophy, Clock, TrendingUp,
@@ -8954,9 +8955,11 @@ export default function DraftFeatures({ onClose }) {
                 <strong>🌐 Roadmap:</strong> Visualización del progreso del proyecto.
               </div>
               <div className="h-[600px] bg-gray-950 rounded-2xl overflow-hidden mx-4">
-                <Suspense fallback={<div className="w-full h-full flex items-center justify-center text-white">Cargando...</div>}>
-                  <RoadmapBasic />
-                </Suspense>
+                <ErrorBoundary>
+                  <Suspense fallback={<div className="w-full h-full flex items-center justify-center text-white">Cargando grafo...</div>}>
+                    <RoadmapBasic />
+                  </Suspense>
+                </ErrorBoundary>
               </div>
             </motion.div>
           )}
