@@ -15,15 +15,16 @@ export default function RoadmapBasic({
   width,
   height,
 }: RoadmapGraphProps) {
-  // SSR check - ForceGraph requires window
-  if (typeof window === 'undefined') {
-    return <div style={{ width: '100%', height: '100%', background: '#0a0a0f' }} />;
-  }
-
   const graphRef = useRef<any>();
   const containerRef = useRef<HTMLDivElement>(null);
   const [hoverNode, setHoverNode] = useState<GraphNode | null>(null);
   const [dimensions, setDimensions] = useState({ width: width || 800, height: height || 600 });
+  const [isClient, setIsClient] = useState(false);
+
+  // SSR check - ForceGraph requires window
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   useEffect(() => {
     if (!containerRef.current || width || height) return;
@@ -110,27 +111,29 @@ export default function RoadmapBasic({
         overflow: 'hidden',
       }}
     >
-      <ForceGraph2D
-        ref={graphRef}
-        graphData={graphData}
-        width={dimensions.width}
-        height={dimensions.height}
-        backgroundColor="#0a0a0f"
-        d3VelocityDecay={0.4}
-        d3AlphaDecay={0.02}
-        warmupTicks={100}
-        cooldownTicks={200}
-        nodeCanvasObject={paintNode}
-        nodeCanvasObjectMode={() => 'replace'}
-        linkColor={() => 'rgba(100, 116, 139, 0.4)'}
-        linkWidth={1.5}
-        linkDirectionalArrowLength={6}
-        linkDirectionalArrowRelPos={1}
-        onNodeClick={handleNodeClick}
-        onNodeHover={setHoverNode}
-        enableNodeDrag={true}
-        onEngineStop={handleEngineStop}
-      />
+      {isClient && (
+        <ForceGraph2D
+          ref={graphRef}
+          graphData={graphData}
+          width={dimensions.width}
+          height={dimensions.height}
+          backgroundColor="#0a0a0f"
+          d3VelocityDecay={0.4}
+          d3AlphaDecay={0.02}
+          warmupTicks={100}
+          cooldownTicks={200}
+          nodeCanvasObject={paintNode}
+          nodeCanvasObjectMode={() => 'replace'}
+          linkColor={() => 'rgba(100, 116, 139, 0.4)'}
+          linkWidth={1.5}
+          linkDirectionalArrowLength={6}
+          linkDirectionalArrowRelPos={1}
+          onNodeClick={handleNodeClick}
+          onNodeHover={setHoverNode}
+          enableNodeDrag={true}
+          onEngineStop={handleEngineStop}
+        />
+      )}
     </div>
   );
 }
