@@ -272,6 +272,74 @@ const effectiveData = simulationMode ? getSimulatedData(simulationMode) : realDa
 
 ---
 
+### Incidente: Lazy Loading sin ErrorBoundary (Enero 2026)
+
+**Problema:** Al implementar ForceGraph con React.lazy(), el componente fallaba silenciosamente sin mostrar ningún error al usuario.
+
+**Síntoma:** El tab "Roadmap" mostraba solo "Cargando..." indefinidamente o un espacio vacío, sin indicación de error.
+
+**Causa raíz:**
+1. `React.lazy()` carga el componente dinámicamente
+2. `<Suspense>` solo maneja el estado de "cargando", NO los errores
+3. Si el módulo falla al cargar o el componente lanza error, NO hay feedback
+4. El error se "traga" silenciosamente
+
+**Diagnóstico dificultado por:**
+- Build local pasa correctamente
+- No hay errores en consola visibles sin DevTools
+- El usuario solo ve "no funciona" sin detalles
+
+### Regla: "Lazy Loading SIEMPRE con ErrorBoundary"
+
+**Patrón obligatorio para componentes lazy:**
+```jsx
+// ❌ MAL: Solo Suspense
+<Suspense fallback={<Loading />}>
+  <LazyComponent />
+</Suspense>
+
+// ✅ BIEN: ErrorBoundary + Suspense
+<ErrorBoundary>
+  <Suspense fallback={<Loading />}>
+    <LazyComponent />
+  </Suspense>
+</ErrorBoundary>
+```
+
+**ErrorBoundary mínimo:**
+```jsx
+// src/components/common/ErrorBoundary.jsx
+export class ErrorBoundary extends React.Component {
+  state = { hasError: false, error: null };
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error };
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <div className="error">{this.state.error?.message}</div>;
+    }
+    return this.props.children;
+  }
+}
+```
+
+**Checklist para componentes lazy:**
+```
+[ ] ¿Tiene ErrorBoundary envolviendo el Suspense?
+[ ] ¿El ErrorBoundary muestra el mensaje de error?
+[ ] ¿La dependencia está en package.json?
+[ ] ¿Se verificó en Vercel (no solo build local)?
+```
+
+**Lección clave:** El build puede pasar localmente pero fallar en producción si:
+- Falta una dependencia en package.json
+- La dependencia no se instala correctamente en Vercel
+- El componente tiene errores de runtime que solo aparecen al ejecutar
+
+---
+
 ## Tareas Periódicas
 
 ### Dendrite Network (Visualización de Progreso)
