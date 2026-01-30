@@ -8,8 +8,9 @@
  * 4. Expandable cards demo
  */
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, Suspense } from 'react';
 import { motion, AnimatePresence, Reorder, useMotionValue, useTransform } from 'framer-motion';
+import { RoadmapBasic } from '@/features/draft/ForceGraph';
 import {
   ArrowLeft, Check, X, ChevronRight, ChevronDown, ChevronUp, ChevronLeft,
   BookOpen, Target, Flame, Trophy, Clock, TrendingUp,
@@ -8501,6 +8502,7 @@ export default function DraftFeatures({ onClose }) {
 
   const tabs = [
     // Active drafts - New proposals based on assessment
+    { id: 'roadmap-basic', label: '🌐 Roadmap' },
     { id: 'color-palette', label: '🎨 Paleta' },
     { id: 'panel-animations', label: '✨ Animaciones' },
     { id: 'flipcards', label: '🃏 FlipCards' },
@@ -8936,6 +8938,30 @@ export default function DraftFeatures({ onClose }) {
               exit={{ opacity: 0, y: -20 }}
             >
               <QuickWinsPreview />
+            </motion.div>
+          )}
+
+          {/* ROADMAP BASIC - Force-directed graph visualization */}
+          {activeTab === 'roadmap-basic' && (
+            <motion.div
+              key="roadmap-basic"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              className="-mx-4 -mt-6"
+            >
+              <div className="bg-blue-50 border border-blue-200 rounded-xl p-3 text-sm text-blue-800 mx-4 mt-6 mb-4">
+                <strong>🌐 Roadmap:</strong> Visualización del progreso del proyecto con física de fuerzas. Lazy-loaded.
+              </div>
+              <div className="h-[600px] bg-gray-950 rounded-2xl overflow-hidden mx-4">
+                <Suspense fallback={
+                  <div className="w-full h-full flex items-center justify-center text-white">
+                    Cargando visualización...
+                  </div>
+                }>
+                  <RoadmapBasic onTaskClick={(task) => console.log('Task:', task)} />
+                </Suspense>
+              </div>
             </motion.div>
           )}
 
