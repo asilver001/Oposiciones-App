@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import './lib/storage.js'
-import OpositaApp from './OpositaApp.jsx'
+import { AppRouter } from './router'
 import { AuthProvider } from './contexts/AuthContext.jsx'
 import { AdminProvider } from './contexts/AdminContext.jsx'
 
@@ -10,7 +10,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider>
       <AdminProvider>
-        <OpositaApp />
+        <AppRouter />
       </AdminProvider>
     </AuthProvider>
   </StrictMode>,

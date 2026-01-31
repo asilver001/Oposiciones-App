@@ -38,11 +38,19 @@ const statusConfig = {
   },
   avanzando: {
     label: 'Avanzando',
-    color: 'text-amber-600',
-    bgColor: 'bg-amber-100',
-    borderColor: 'border-amber-200',
+    color: 'text-blue-600',
+    bgColor: 'bg-blue-100',
+    borderColor: 'border-blue-200',
     icon: Clock,
-    iconColor: 'text-amber-500'
+    iconColor: 'text-blue-500'
+  },
+  progreso: {
+    label: 'En progreso',
+    color: 'text-purple-600',
+    bgColor: 'bg-purple-100',
+    borderColor: 'border-purple-200',
+    icon: BookOpen,
+    iconColor: 'text-purple-500'
   },
   nuevo: {
     label: 'Nuevo',
@@ -51,6 +59,14 @@ const statusConfig = {
     borderColor: 'border-gray-200',
     icon: Sparkles,
     iconColor: 'text-gray-400'
+  },
+  riesgo: {
+    label: 'Repasar',
+    color: 'text-amber-600',
+    bgColor: 'bg-amber-100',
+    borderColor: 'border-amber-200',
+    icon: AlertCircle,
+    iconColor: 'text-amber-500'
   },
   en_riesgo: {
     label: 'En riesgo',
@@ -294,6 +310,7 @@ function LoadingState() {
 export default function TemasListView({
   topics = [],
   topicsByBlock = {},
+  userProgress = {},
   onTopicSelect,
   loading = false
 }) {
@@ -302,6 +319,54 @@ export default function TemasListView({
   const [simulationMode, setSimulationMode] = useState(null);
   const [selectedBlock, setSelectedBlock] = useState(null);
   const [expandedBlocks, setExpandedBlocks] = useState(new Set());
+
+  // Calculate real topic progress from userProgress
+  const realTopicProgress = useMemo(() => {
+    if (!userProgress || Object.keys(userProgress).length === 0) return null;
+
+    return topics.map((topic) => {
+      const progress = userProgress[topic.id] || {
+        answered: 0, correct: 0, accuracy: 0,
+        new: 0, learning: 0, review: 0, relearning: 0, mastered: 0, masteryRate: 0
+      };
+
+      const totalCards = progress.new + progress.learning + progress.review + progress.relearning;
+      const questionsTotal = topic.questionCount || 20;
+
+      // Calculate progress percentage based on mastery
+      const progressPercent = progress.masteryRate || 0;
+
+      // Determine status based on FSRS data
+      let status = 'nuevo';
+      if (totalCards === 0) {
+        status = 'nuevo';
+      } else if (progress.masteryRate >= 80 && progress.accuracy >= 75) {
+        status = 'dominado';
+      } else if (progress.masteryRate >= 50 || progress.accuracy >= 65) {
+        status = 'avanzando';
+      } else if (progress.relearning > 0 || progress.accuracy < 50) {
+        status = 'riesgo';
+      } else {
+        status = 'progreso';
+      }
+
+      return {
+        ...topic,
+        progress: progressPercent,
+        status,
+        questionsAnswered: totalCards,
+        questionsTotal,
+        accuracy: progress.accuracy || 0,
+        fsrs: {
+          new: progress.new,
+          learning: progress.learning,
+          review: progress.review,
+          relearning: progress.relearning,
+          mastered: progress.mastered
+        }
+      };
+    });
+  }, [topics, userProgress]);
 
   // Generate simulated topic progress based on simulation mode
   const generateSimulatedTopics = useMemo(() => {
@@ -355,8 +420,8 @@ export default function TemasListView({
     });
   }, [simulationMode, topics]);
 
-  // Use simulated or real topics
-  const effectiveTopics = generateSimulatedTopics || topics;
+  // Use simulated, real progress, or raw topics (in that priority order)
+  const effectiveTopics = generateSimulatedTopics || realTopicProgress || topics;
 
   // Normalize topicsByBlock structure from useTopics hook
   // Hook returns: { blockId: { id, name, number, code, topics: [...] } }

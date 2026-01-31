@@ -1,8 +1,49 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { RotateCcw } from 'lucide-react';
 
 const spring = { snappy: { type: "spring", stiffness: 400, damping: 25 } };
+
+/**
+ * AnimatedCounter - Anima el valor numerico cuando aparece
+ * Importado de DraftFeatures/AnimationPlayground
+ */
+function AnimatedCounter({ value, duration = 0.8, suffix = "", className = "" }) {
+  const [displayValue, setDisplayValue] = useState(0);
+  const numericValue = typeof value === 'string' ? parseFloat(value) : value;
+  const isNumeric = !isNaN(numericValue);
+
+  useEffect(() => {
+    if (!isNumeric) {
+      setDisplayValue(value);
+      return;
+    }
+
+    let start = 0;
+    const end = numericValue;
+    const increment = end / (duration * 60);
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= end) {
+        setDisplayValue(end);
+        clearInterval(timer);
+      } else {
+        setDisplayValue(Math.floor(start));
+      }
+    }, 1000 / 60);
+    return () => clearInterval(timer);
+  }, [numericValue, duration, isNumeric, value]);
+
+  if (!isNumeric) {
+    return <span className={className}>{value}</span>;
+  }
+
+  return (
+    <motion.span className={className} key={value}>
+      {displayValue.toLocaleString()}{suffix}
+    </motion.span>
+  );
+}
 
 // Propuesta 2 style: Pastel front, solid back
 const colorSchemes = {
@@ -43,10 +84,32 @@ export default function StatsFlipCard({
   badge,
   colorScheme = 'purple',
   onClick,
-  delay = 0
+  delay = 0,
+  animateValue = true
 }) {
   const [isFlipped, setIsFlipped] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
   const colors = colorSchemes[colorScheme] || colorSchemes.purple;
+
+  // Parse value to extract number and suffix (e.g., "87%" -> 87, "%")
+  const parseValue = (val) => {
+    if (typeof val === 'number') return { num: val, suffix: '' };
+    const match = String(val).match(/^(\d+(?:\.\d+)?)\s*(.*)$/);
+    if (match) {
+      return { num: parseFloat(match[1]), suffix: match[2] };
+    }
+    return { num: null, suffix: val };
+  };
+
+  const { num: numericValue, suffix } = parseValue(value);
+
+  // Trigger animation after delay
+  useEffect(() => {
+    if (animateValue && numericValue !== null) {
+      const timer = setTimeout(() => setHasAnimated(true), delay * 1000 + 100);
+      return () => clearTimeout(timer);
+    }
+  }, [animateValue, numericValue, delay]);
 
   return (
     <motion.div
@@ -81,7 +144,13 @@ export default function StatsFlipCard({
               </span>
             )}
           </div>
-          <p className={`text-3xl font-bold ${colors.textFront} mb-0.5`}>{value}</p>
+          <p className={`text-3xl font-bold ${colors.textFront} mb-0.5`}>
+            {animateValue && numericValue !== null && hasAnimated ? (
+              <AnimatedCounter value={numericValue} suffix={suffix} duration={0.8} />
+            ) : (
+              value
+            )}
+          </p>
           <p className={`text-xs ${colors.textFront} opacity-70`}>{label}</p>
         </div>
 

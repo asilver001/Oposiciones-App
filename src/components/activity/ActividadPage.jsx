@@ -124,9 +124,63 @@ function StudyModesTab({ onSelectMode, selectedMode, onStartSession, onSwipeRigh
 }
 
 /**
+ * FsrsBreakdown - Visual breakdown of FSRS learning states
+ */
+function FsrsBreakdown({ stats }) {
+  if (!stats || stats.total === 0) return null;
+
+  const segments = [
+    { key: 'mastered', label: 'Dominadas', count: stats.mastered || 0, color: 'bg-green-500' },
+    { key: 'review', label: 'En repaso', count: (stats.review || 0) - (stats.mastered || 0), color: 'bg-blue-500' },
+    { key: 'learning', label: 'Aprendiendo', count: stats.learning || 0, color: 'bg-purple-500' },
+    { key: 'relearning', label: 'Repasando', count: stats.relearning || 0, color: 'bg-amber-500' },
+    { key: 'unseen', label: 'Sin ver', count: stats.unseen || 0, color: 'bg-gray-300' },
+  ];
+
+  const seenCount = stats.total - (stats.unseen || 0);
+  const progressPercent = stats.total > 0 ? Math.round((seenCount / stats.total) * 100) : 0;
+
+  return (
+    <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+      <div className="flex items-center justify-between mb-3">
+        <h4 className="font-semibold text-gray-900">Estado de aprendizaje</h4>
+        <span className="text-sm text-purple-600 font-medium">{progressPercent}% visto</span>
+      </div>
+
+      {/* Progress bar with segments */}
+      <div className="h-3 bg-gray-100 rounded-full overflow-hidden flex mb-3">
+        {segments.map(seg => {
+          const width = stats.total > 0 ? (seg.count / stats.total) * 100 : 0;
+          if (width === 0) return null;
+          return (
+            <div
+              key={seg.key}
+              className={`${seg.color} transition-all`}
+              style={{ width: `${width}%` }}
+              title={`${seg.label}: ${seg.count}`}
+            />
+          );
+        })}
+      </div>
+
+      {/* Legend */}
+      <div className="grid grid-cols-3 gap-2 text-xs">
+        {segments.filter(s => s.count > 0).map(seg => (
+          <div key={seg.key} className="flex items-center gap-1.5">
+            <div className={`w-2.5 h-2.5 rounded-full ${seg.color}`} />
+            <span className="text-gray-600">{seg.label}</span>
+            <span className="text-gray-900 font-medium">{seg.count}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/**
  * ProgressTab - Statistics and history view
  */
-function ProgressTab({ data, onSwipeLeft, onStartTest, formatRelativeDate }) {
+function ProgressTab({ data, fsrsStats, onSwipeLeft, onStartTest, formatRelativeDate }) {
   const formatDate = formatRelativeDate || ((date) => {
     const d = new Date(date);
     const now = new Date();
@@ -215,6 +269,9 @@ function ProgressTab({ data, onSwipeLeft, onStartTest, formatRelativeDate }) {
         </div>
       </div>
 
+      {/* FSRS Learning States Breakdown */}
+      {fsrsStats && <FsrsBreakdown stats={fsrsStats} />}
+
       {/* Weekly Chart */}
       <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
         <h4 className="font-semibold text-gray-900 mb-3">Esta semana</h4>
@@ -294,6 +351,7 @@ export default function ActividadPage({
   },
   calendarData = [],
   motivationalMessage = null,
+  fsrsStats = null,
   loading = false,
   onStartTest,
   formatRelativeDate,
@@ -422,6 +480,7 @@ export default function ActividadPage({
           ) : (
             <ProgressTab
               data={progressData}
+              fsrsStats={fsrsStats}
               onSwipeLeft={() => setActiveTab(0)}
               onStartTest={() => setActiveTab(0)}
               formatRelativeDate={formatRelativeDate}

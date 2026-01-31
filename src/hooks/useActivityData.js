@@ -32,6 +32,16 @@ export function useActivityData() {
   const [weeklyImprovement, setWeeklyImprovement] = useState(0);
   const [leastPracticedTema, setLeastPracticedTema] = useState(null);
 
+  // FSRS states breakdown
+  const [fsrsStats, setFsrsStats] = useState({
+    new: 0,        // Never seen questions
+    learning: 0,   // Currently learning
+    review: 0,     // In review cycle
+    relearning: 0, // Failed and relearning
+    mastered: 0,   // High ease_factor
+    total: 0       // Total questions in database
+  });
+
   /**
    * Get the Monday of the current week
    */
@@ -242,10 +252,63 @@ export function useActivityData() {
 
       setLoading(false);
 
+      // Fetch FSRS stats in parallel
+      fetchFsrsStats();
+
     } catch (err) {
       console.error('Error in fetchActivityData:', err);
       setError(err.message);
       setLoading(false);
+    }
+  }, [user?.id]);
+
+  /**
+   * Fetch FSRS breakdown stats
+   */
+  const fetchFsrsStats = useCallback(async () => {
+    if (!user?.id) return;
+
+    try {
+      // Get total questions count
+      const { count: totalQuestions } = await supabase
+        .from('questions')
+        .select('*', { count: 'exact', head: true })
+        .eq('is_active', true);
+
+      // Get user progress with FSRS states
+      const { data: progressData } = await supabase
+        .from('user_question_progress')
+        .select('state, ease_factor')
+        .eq('user_id', user.id);
+
+      // Count by state
+      const stats = {
+        new: 0,
+        learning: 0,
+        review: 0,
+        relearning: 0,
+        mastered: 0,
+        total: totalQuestions || 0
+      };
+
+      (progressData || []).forEach(p => {
+        const state = p.state || 0;
+        if (state === 0) stats.new++;
+        else if (state === 1) stats.learning++;
+        else if (state === 2) {
+          stats.review++;
+          if (p.ease_factor >= 2.5) stats.mastered++;
+        }
+        else if (state === 3) stats.relearning++;
+      });
+
+      // Add unseen questions count (total - seen)
+      const seenCount = stats.new + stats.learning + stats.review + stats.relearning;
+      stats.unseen = stats.total - seenCount;
+
+      setFsrsStats(stats);
+    } catch (err) {
+      console.error('Error fetching FSRS stats:', err);
     }
   }, [user?.id]);
 
@@ -357,9 +420,11 @@ export function useActivityData() {
     weeklyImprovement,
     leastPracticedTema,
     motivationalMessage,
+    fsrsStats,
 
     // Functions
     fetchActivityData,
+    fetchFsrsStats,
     formatRelativeDate
   };
 }

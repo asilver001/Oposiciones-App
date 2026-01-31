@@ -246,8 +246,107 @@ export function groupQuestionsByTema(sessionResults) {
   return grouped;
 }
 
+/**
+ * Detect typical trap patterns from failed questions
+ * Uses the trampa_tipica field from questions to identify common mistakes
+ * @param {Object[]} sessionResults - Array of question results
+ * @param {Object[]} questions - Full question objects with trampa_tipica field
+ * @returns {Object[]} Array of detected trap patterns
+ */
+export function detectTypicalTraps(sessionResults, questions) {
+  if (!sessionResults || !questions) return [];
+
+  // Create a map of questions by ID for quick lookup
+  const questionMap = new Map();
+  questions.forEach(q => questionMap.set(q.id, q));
+
+  // Find failed questions that have trampa_tipica
+  const trapsDetected = [];
+  const trapPatterns = {}; // Group by similar trap patterns
+
+  sessionResults
+    .filter(r => !r.es_correcta && r.respuesta_usuario != null)
+    .forEach(result => {
+      const question = questionMap.get(result.question_id);
+      if (!question || !question.trampa_tipica) return;
+
+      const trap = question.trampa_tipica;
+
+      // Normalize trap pattern for grouping
+      const normalizedTrap = trap.toLowerCase().trim();
+
+      if (!trapPatterns[normalizedTrap]) {
+        trapPatterns[normalizedTrap] = {
+          trap: trap,
+          questions: [],
+          count: 0,
+          tema: question.tema || 'general'
+        };
+      }
+      trapPatterns[normalizedTrap].questions.push(question.id);
+      trapPatterns[normalizedTrap].count++;
+    });
+
+  // Convert patterns to insights (only if count >= 2 or it's a notable trap)
+  Object.values(trapPatterns).forEach(pattern => {
+    if (pattern.count >= 1) { // Show even single traps for awareness
+      trapsDetected.push({
+        type: 'trampa_tipica',
+        emoji: '⚠️',
+        titulo: 'Patrón de error detectado',
+        descripcion: pattern.trap,
+        tema: pattern.tema,
+        questionsAffected: pattern.questions,
+        occurrences: pattern.count,
+        severity: pattern.count >= 3 ? 'high' : pattern.count >= 2 ? 'medium' : 'low'
+      });
+    }
+  });
+
+  // Sort by occurrences (most common first)
+  trapsDetected.sort((a, b) => b.occurrences - a.occurrences);
+
+  return trapsDetected;
+}
+
+/**
+ * Generate a comprehensive insight report combining DB insights and trap detection
+ * @param {Object[]} sessionResults - Session results
+ * @param {Object[]} questions - Full question objects
+ * @param {string} userId - User ID
+ * @param {Object} supabase - Supabase client
+ * @returns {Promise<Object>} Comprehensive insight report
+ */
+export async function generateInsightReport(sessionResults, questions, userId, supabase) {
+  // Detect DB-based insights
+  const dbInsights = await detectTriggeredInsights(sessionResults, userId, supabase);
+
+  // Detect typical trap patterns
+  const trapInsights = detectTypicalTraps(sessionResults, questions);
+
+  // Calculate stats
+  const stats = calculateSessionStats(sessionResults);
+
+  // Group by tema
+  const byTema = groupQuestionsByTema(sessionResults);
+
+  return {
+    stats,
+    dbInsights,
+    trapInsights,
+    byTema,
+    summary: {
+      totalInsights: dbInsights.length + trapInsights.length,
+      hasTraps: trapInsights.length > 0,
+      topTrap: trapInsights.length > 0 ? trapInsights[0] : null
+    }
+  };
+}
+
 export default {
   detectTriggeredInsights,
+  detectTypicalTraps,
   calculateSessionStats,
-  groupQuestionsByTema
+  groupQuestionsByTema,
+  generateInsightReport
 };

@@ -2,17 +2,20 @@
  * Pages - Page-level components
  *
  * Each page represents a full screen/route in the application.
- * Pages should be thin wrappers that compose components and handle page-level logic.
- *
- * Structure:
- * /pages
- *   /HomePage
- *     index.jsx
- *     HomePage.jsx
- *   /TemasPage
- *     index.jsx
- *   ...
+ * Pages are thin wrappers that compose components and handle page-level logic.
  */
 
-// Pages will be exported here as they are migrated
-// Example: export { default as HomePage } from './HomePage';
+// Onboarding pages
+export * from './onboarding';
+
+// Auth pages
+export * from './auth';
+
+// Main app pages
+export * from './app';
+
+// Admin pages
+export * from './admin';
+
+// Legal pages
+export * from './legal';

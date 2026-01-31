@@ -13,6 +13,89 @@ import {
 } from '../lib/fsrs';
 
 /**
+ * Calculate adaptive difficulty level for a user
+ * Based on recent performance and FSRS ease_factor
+ * @param {string} userId
+ * @returns {Promise<Object>} Difficulty stats and recommended level
+ */
+export async function calculateAdaptiveDifficulty(userId) {
+  try {
+    // Get user's recent progress
+    const { data: progressData } = await supabase
+      .from('user_question_progress')
+      .select('ease_factor, times_correct, times_seen, lapses')
+      .eq('user_id', userId)
+      .gt('times_seen', 0);
+
+    if (!progressData || progressData.length === 0) {
+      // New user - start with medium difficulty
+      return {
+        recommendedLevel: 2,
+        avgEaseFactor: 2.5,
+        accuracy: 0,
+        confidence: 'low',
+        adjustmentReason: 'new_user'
+      };
+    }
+
+    // Calculate average ease factor
+    const totalEase = progressData.reduce((sum, p) => sum + (p.ease_factor || 2.5), 0);
+    const avgEaseFactor = totalEase / progressData.length;
+
+    // Calculate accuracy
+    const totalSeen = progressData.reduce((sum, p) => sum + (p.times_seen || 0), 0);
+    const totalCorrect = progressData.reduce((sum, p) => sum + (p.times_correct || 0), 0);
+    const accuracy = totalSeen > 0 ? (totalCorrect / totalSeen) * 100 : 0;
+
+    // Calculate lapses (failed reviews)
+    const totalLapses = progressData.reduce((sum, p) => sum + (p.lapses || 0), 0);
+    const lapseRate = totalSeen > 0 ? (totalLapses / totalSeen) * 100 : 0;
+
+    // Determine recommended difficulty level (1-3)
+    // 1 = Fácil, 2 = Media, 3 = Difícil
+    let recommendedLevel = 2; // Default to medium
+    let adjustmentReason = 'balanced';
+
+    if (accuracy >= 85 && avgEaseFactor >= 2.5) {
+      // User is doing great - increase difficulty
+      recommendedLevel = 3;
+      adjustmentReason = 'high_performance';
+    } else if (accuracy >= 70 && avgEaseFactor >= 2.3) {
+      // Good performance - slight increase
+      recommendedLevel = 2.5; // Will round to medium-hard mix
+      adjustmentReason = 'good_performance';
+    } else if (accuracy < 50 || avgEaseFactor < 1.8) {
+      // Struggling - decrease difficulty
+      recommendedLevel = 1;
+      adjustmentReason = 'struggling';
+    } else if (lapseRate > 30) {
+      // High lapse rate - focus on easier questions
+      recommendedLevel = 1.5;
+      adjustmentReason = 'high_lapse_rate';
+    }
+
+    return {
+      recommendedLevel: Math.round(recommendedLevel),
+      avgEaseFactor: Math.round(avgEaseFactor * 100) / 100,
+      accuracy: Math.round(accuracy),
+      lapseRate: Math.round(lapseRate),
+      confidence: progressData.length >= 20 ? 'high' : progressData.length >= 10 ? 'medium' : 'low',
+      adjustmentReason,
+      totalQuestionsSeen: progressData.length
+    };
+  } catch (error) {
+    console.error('Error calculating adaptive difficulty:', error);
+    return {
+      recommendedLevel: 2,
+      avgEaseFactor: 2.5,
+      accuracy: 0,
+      confidence: 'error',
+      adjustmentReason: 'error_fallback'
+    };
+  }
+}
+
+/**
  * Get user's progress for all questions
  * @param {string} userId
  * @returns {Promise<Array>}
@@ -67,13 +150,64 @@ export async function getDueReviews(userId, options = {}) {
 }
 
 /**
+ * Get failed questions (questions user has answered incorrectly)
+ * For "Repaso de Errores" mode
+ * @param {string} userId
+ * @param {Object} options - { tema, limit }
+ * @returns {Promise<Array>}
+ */
+export async function getFailedQuestions(userId, options = {}) {
+  const { tema, limit = 50 } = options;
+
+  // Get questions where user has failed at least once
+  // Priority: low ease_factor, high lapses, or recent failures
+  let query = supabase
+    .from('user_question_progress')
+    .select(`
+      *,
+      questions (*)
+    `)
+    .eq('user_id', userId)
+    .gt('times_seen', 0) // Has been seen
+    .or('lapses.gt.0,ease_factor.lt.2.0') // Has lapses OR low ease_factor
+    .order('ease_factor', { ascending: true }) // Hardest first
+    .limit(limit);
+
+  const { data, error } = await query;
+
+  if (error) {
+    console.error('Error fetching failed questions:', error);
+    return [];
+  }
+
+  // Filter out null questions and optionally by tema
+  let results = (data || []).filter(p => p.questions);
+
+  if (tema) {
+    results = results.filter(p => p.questions.tema === tema);
+  }
+
+  // Return in question format with progress attached
+  return results.map(p => ({
+    ...p.questions,
+    isReview: true,
+    progress: {
+      times_seen: p.times_seen,
+      times_correct: p.times_correct,
+      lapses: p.lapses,
+      ease_factor: p.ease_factor
+    }
+  }));
+}
+
+/**
  * Get new questions (never seen by user)
  * @param {string} userId
- * @param {Object} options - { tema, limit, tier }
+ * @param {Object} options - { tema, limit, tier, difficulty }
  * @returns {Promise<Array>}
  */
 export async function getNewQuestions(userId, options = {}) {
-  const { tema, limit = 50, tier } = options;
+  const { tema, limit = 50, tier, difficulty = null } = options;
 
   // Get IDs of questions the user has seen
   const { data: seenData } = await supabase
@@ -89,7 +223,7 @@ export async function getNewQuestions(userId, options = {}) {
     .select('*')
     .eq('is_active', true)
     .order('times_shown', { ascending: true }) // Prefer less shown questions
-    .limit(limit);
+    .limit(limit * 2); // Fetch more to allow filtering by difficulty
 
   if (tema) {
     query = query.eq('tema', tema);
@@ -100,7 +234,6 @@ export async function getNewQuestions(userId, options = {}) {
   }
 
   // Exclude seen questions (only if there are some)
-  // FIX: Use Supabase native API instead of string interpolation to prevent SQL injection
   if (seenIds.length > 0) {
     query = query.not('id', 'in', seenIds);
   }
@@ -112,7 +245,21 @@ export async function getNewQuestions(userId, options = {}) {
     return [];
   }
 
-  return data || [];
+  let questions = data || [];
+
+  // Apply adaptive difficulty filtering if specified
+  if (difficulty && questions.length > 0) {
+    // Sort by how close they are to the target difficulty
+    // Questions have dificultad field (1-3 typically)
+    questions = questions.sort((a, b) => {
+      const diffA = Math.abs((a.dificultad || 2) - difficulty);
+      const diffB = Math.abs((b.dificultad || 2) - difficulty);
+      return diffA - diffB;
+    });
+  }
+
+  // Return requested limit
+  return questions.slice(0, limit);
 }
 
 /**
@@ -126,8 +273,35 @@ export async function generateHybridSession(userId, config = {}) {
     totalQuestions = 20,
     reviewRatio = 0.25,
     tema = null,
-    tier = null
+    tier = null,
+    failedOnly = false,
+    adaptiveDifficulty = true // Enable adaptive difficulty by default
   } = config;
+
+  // Calculate adaptive difficulty if enabled
+  let difficultyConfig = null;
+  if (adaptiveDifficulty) {
+    difficultyConfig = await calculateAdaptiveDifficulty(userId);
+  }
+
+  // Special mode: only failed questions (for "Repaso de Errores")
+  if (failedOnly) {
+    const failedQuestions = await getFailedQuestions(userId, { tema, limit: totalQuestions });
+    if (failedQuestions.length === 0) {
+      // If no failed questions, fall back to due reviews
+      const dueReviews = await getDueReviews(userId, { tema, limit: totalQuestions });
+      return dueReviews.slice(0, totalQuestions).map(p => ({
+        ...p.questions,
+        isReview: true,
+        progress: {
+          times_seen: p.times_seen,
+          times_correct: p.times_correct,
+          ease_factor: p.ease_factor
+        }
+      }));
+    }
+    return failedQuestions.slice(0, totalQuestions);
+  }
 
   const reviewCount = Math.floor(totalQuestions * reviewRatio);
   const newCount = totalQuestions - reviewCount;
@@ -135,8 +309,13 @@ export async function generateHybridSession(userId, config = {}) {
   // Get due reviews
   const dueReviews = await getDueReviews(userId, { tema, limit: reviewCount + 5 });
 
-  // Get new questions
-  const newQuestions = await getNewQuestions(userId, { tema, limit: newCount + 5, tier });
+  // Get new questions with adaptive difficulty
+  const newQuestions = await getNewQuestions(userId, {
+    tema,
+    limit: newCount + 5,
+    tier,
+    difficulty: difficultyConfig?.recommendedLevel
+  });
 
   // Take the required number
   const selectedReviews = dueReviews.slice(0, reviewCount);
@@ -420,6 +599,7 @@ export async function getWeeklyProgress(userId) {
 export default {
   getUserProgress,
   getDueReviews,
+  getFailedQuestions,
   getNewQuestions,
   generateHybridSession,
   updateProgress,

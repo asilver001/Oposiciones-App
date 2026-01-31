@@ -24,6 +24,8 @@ import TemasListView from './components/temas/TemasListView';
 import ActividadPage from './components/activity/ActividadPage';
 import RecursosPage from './components/recursos/RecursosPage';
 import { BottomTabBar } from './components/navigation';
+// Sesión de estudio con FSRS
+import HybridSession from './components/study/HybridSession';
 
 // ============ ONBOARDING COMPONENTS ============
 
@@ -230,6 +232,9 @@ export default function OpositaApp() {
   const [recentInsights, setRecentInsights] = useState([]);
   const [lastSessionStats, setLastSessionStats] = useState(null);
   const [showFeedbackPanel, setShowFeedbackPanel] = useState(false);
+
+  // Hybrid Study Session state
+  const [studySessionConfig, setStudySessionConfig] = useState(null);
 
   // Activity data hook
   const {
@@ -585,7 +590,7 @@ export default function OpositaApp() {
   };
 
   const startTest = (mode = 'test-rapido') => {
-    // Handle different study modes
+    // Handle different study modes with HybridSession
     switch (mode) {
       case 'practica-tema':
         // Navigate to topics tab to select a topic
@@ -593,34 +598,68 @@ export default function OpositaApp() {
         return;
 
       case 'repaso-errores':
-        // TODO: Load failed questions when error tracking is implemented
-        // For now, use random questions
-        setQuestions(selectRandomQuestions(10));
-        break;
+        // Load failed questions - uses FSRS to find weak areas
+        setStudySessionConfig({
+          mode: 'repaso-errores',
+          totalQuestions: 10,
+          reviewRatio: 1.0, // All reviews (failed questions)
+          failedOnly: true
+        });
+        setCurrentPage('study-session');
+        return;
 
       case 'flashcards':
-        // Flashcard mode - same questions, different UI (to be implemented)
-        setQuestions(selectRandomQuestions(10));
-        break;
+        // Flashcard mode - for now use regular session
+        // TODO: Add flashcard UI mode
+        setStudySessionConfig({
+          mode: 'flashcards',
+          totalQuestions: 10,
+          reviewRatio: 0.5
+        });
+        setCurrentPage('study-session');
+        return;
 
       case 'simulacro':
-        // Full exam simulation - 100 questions
-        setQuestions(selectRandomQuestions(Math.min(100, allQuestions.length)));
-        break;
+        // Full exam simulation - 100 questions, no review ratio
+        setStudySessionConfig({
+          mode: 'simulacro',
+          totalQuestions: Math.min(100, allQuestions.length),
+          reviewRatio: 0.2
+        });
+        setCurrentPage('study-session');
+        return;
 
       case 'test-rapido':
       default:
-        // Quick test - 10 random questions
-        setQuestions(selectRandomQuestions(10));
-        break;
+        // Quick test - 10 questions with FSRS
+        setStudySessionConfig({
+          mode: 'test-rapido',
+          totalQuestions: 10,
+          reviewRatio: 0.25
+        });
+        setCurrentPage('study-session');
+        return;
     }
+  };
 
-    setCurrentPage('first-test');
-    setCurrentQuestion(0);
-    setSelectedAnswer(null);
-    setAnswers({});
-    setShowExplanation(false);
-    setTimeElapsed(0);
+  // Start study session with a specific topic
+  const startTopicStudy = (topic) => {
+    setStudySessionConfig({
+      mode: 'practica-tema',
+      totalQuestions: 10,
+      reviewRatio: 0.25,
+      tema: topic.id || topic.name,
+      temaId: topic.id
+    });
+    setCurrentPage('study-session');
+  };
+
+  // Handle session completion
+  const handleSessionComplete = () => {
+    setStudySessionConfig(null);
+    setCurrentPage('home');
+    // Refresh activity data
+    fetchActivityData();
   };
 
   useEffect(() => {
@@ -965,7 +1004,21 @@ export default function OpositaApp() {
     );
   }
 
-  // PANTALLA TEST
+  // SESIÓN DE ESTUDIO CON FSRS (HybridSession)
+  if (currentPage === 'study-session' && studySessionConfig) {
+    return (
+      <HybridSession
+        config={studySessionConfig}
+        onClose={() => {
+          setStudySessionConfig(null);
+          setCurrentPage('home');
+        }}
+        onComplete={handleSessionComplete}
+      />
+    );
+  }
+
+  // PANTALLA TEST (legacy - será reemplazada por HybridSession)
   if (currentPage === 'first-test') {
     const question = questions[currentQuestion];
     const answeredCount = Object.keys(answers).length;
@@ -2019,9 +2072,9 @@ export default function OpositaApp() {
             <TemasListView
               topics={topicsWithQuestions || dbTopics}
               topicsByBlock={topicsByBlock}
+              userProgress={topicUserProgress}
               onTopicSelect={(topic) => {
-                console.log('Topic selected:', topic);
-                // TODO: Navigate to topic practice
+                startTopicStudy(topic);
               }}
               loading={topicsLoading}
             />
