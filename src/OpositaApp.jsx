@@ -644,12 +644,15 @@ export default function OpositaApp() {
 
   // Start study session with a specific topic
   const startTopicStudy = (topic) => {
+    // Use topic.number because questions table uses 'tema' field which stores the topic number
+    const temaValue = topic.number ?? topic.id;
     setStudySessionConfig({
       mode: 'practica-tema',
       totalQuestions: 10,
       reviewRatio: 0.25,
-      tema: topic.id || topic.name,
-      temaId: topic.id
+      tema: temaValue,
+      temaId: topic.id,
+      temaName: topic.name || topic.code
     });
     setCurrentPage('study-session');
   };

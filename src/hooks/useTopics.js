@@ -36,19 +36,19 @@ export function useTopics() {
 
         if (fetchError) throw fetchError;
 
-        // Fetch question counts
+        // Fetch question counts (using 'tema' column which stores topic number)
         const { data: questionCounts, error: countError } = await supabase
           .from('questions')
-          .select('topic_id')
+          .select('tema')
           .eq('is_active', true);
 
         if (countError) throw countError;
 
-        // Count questions per topic
-        const countsByTopic = {};
+        // Count questions per topic number (tema field stores the topic number)
+        const countsByTema = {};
         (questionCounts || []).forEach(q => {
-          if (q.topic_id) {
-            countsByTopic[q.topic_id] = (countsByTopic[q.topic_id] || 0) + 1;
+          if (q.tema != null) {
+            countsByTema[q.tema] = (countsByTema[q.tema] || 0) + 1;
           }
         });
 
@@ -58,7 +58,7 @@ export function useTopics() {
           blockNumber: topic.blocks?.number || 0,
           blockName: topic.blocks?.name || 'Sin clasificar',
           blockCode: topic.blocks?.code || '',
-          questionCount: countsByTopic[topic.id] || 0
+          questionCount: countsByTema[topic.number] || 0
         }));
 
         setTopics(enrichedTopics);
@@ -112,20 +112,21 @@ export function useTopics() {
           state,
           ease_factor,
           lapses,
-          questions!inner (topic_id)
+          questions!inner (tema)
         `)
         .eq('user_id', user.id);
 
       if (error) throw error;
 
       // Calculate progress per topic with FSRS data
+      // Note: 'tema' in questions table stores the topic number
       const progress = {};
       (data || []).forEach(p => {
-        const topicId = p.questions?.topic_id;
-        if (!topicId) return;
+        const topicNumber = p.questions?.tema;
+        if (topicNumber == null) return;
 
-        if (!progress[topicId]) {
-          progress[topicId] = {
+        if (!progress[topicNumber]) {
+          progress[topicNumber] = {
             answered: 0,
             correct: 0,
             // FSRS states: 0=New, 1=Learning, 2=Review, 3=Relearning
@@ -139,17 +140,17 @@ export function useTopics() {
 
         // Count by state
         const state = p.state || 0;
-        if (state === 0) progress[topicId].new++;
-        else if (state === 1) progress[topicId].learning++;
+        if (state === 0) progress[topicNumber].new++;
+        else if (state === 1) progress[topicNumber].learning++;
         else if (state === 2) {
-          progress[topicId].review++;
+          progress[topicNumber].review++;
           // Consider mastered if high ease_factor
-          if (p.ease_factor >= 2.5) progress[topicId].mastered++;
+          if (p.ease_factor >= 2.5) progress[topicNumber].mastered++;
         }
-        else if (state === 3) progress[topicId].relearning++;
+        else if (state === 3) progress[topicNumber].relearning++;
 
-        progress[topicId].answered += p.times_seen || 0;
-        progress[topicId].correct += p.times_correct || 0;
+        progress[topicNumber].answered += p.times_seen || 0;
+        progress[topicNumber].correct += p.times_correct || 0;
       });
 
       // Add accuracy and mastery rate
@@ -171,12 +172,12 @@ export function useTopics() {
     }
   }, [user, fetchUserProgress]);
 
-  const getQuestionsForTopic = useCallback(async (topicId, limit = 20) => {
+  const getQuestionsForTopic = useCallback(async (topicNumber, limit = 20) => {
     try {
       const { data, error } = await supabase
         .from('questions')
         .select('*')
-        .eq('topic_id', topicId)
+        .eq('tema', topicNumber)
         .eq('is_active', true)
         .limit(limit);
 
@@ -196,7 +197,8 @@ export function useTopics() {
     return topics
       .filter(t => t.is_available && t.questionCount > 0)
       .map(topic => {
-        const progress = userProgress[topic.id] || {
+        // Use topic.number to match progress indexed by tema
+        const progress = userProgress[topic.number] || {
           answered: 0, correct: 0, accuracy: 0,
           new: 0, learning: 0, review: 0, relearning: 0, mastered: 0, masteryRate: 0
         };

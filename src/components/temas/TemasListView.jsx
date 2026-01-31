@@ -325,7 +325,9 @@ export default function TemasListView({
     if (!userProgress || Object.keys(userProgress).length === 0) return null;
 
     return topics.map((topic) => {
-      const progress = userProgress[topic.id] || {
+      // Progress is indexed by topic.number (tema field in questions table)
+      const progressKey = topic.number ?? topic.id;
+      const progress = userProgress[progressKey] || {
         answered: 0, correct: 0, accuracy: 0,
         new: 0, learning: 0, review: 0, relearning: 0, mastered: 0, masteryRate: 0
       };
