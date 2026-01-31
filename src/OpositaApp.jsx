@@ -584,8 +584,37 @@ export default function OpositaApp() {
     return nextBadge ? nextBadge.days - displayStreak : null;
   };
 
-  const startTest = () => {
-    setQuestions(selectRandomQuestions(5));
+  const startTest = (mode = 'test-rapido') => {
+    // Handle different study modes
+    switch (mode) {
+      case 'practica-tema':
+        // Navigate to topics tab to select a topic
+        setActiveTab('temas');
+        return;
+
+      case 'repaso-errores':
+        // TODO: Load failed questions when error tracking is implemented
+        // For now, use random questions
+        setQuestions(selectRandomQuestions(10));
+        break;
+
+      case 'flashcards':
+        // Flashcard mode - same questions, different UI (to be implemented)
+        setQuestions(selectRandomQuestions(10));
+        break;
+
+      case 'simulacro':
+        // Full exam simulation - 100 questions
+        setQuestions(selectRandomQuestions(Math.min(100, allQuestions.length)));
+        break;
+
+      case 'test-rapido':
+      default:
+        // Quick test - 10 random questions
+        setQuestions(selectRandomQuestions(10));
+        break;
+    }
+
     setCurrentPage('first-test');
     setCurrentQuestion(0);
     setSelectedAnswer(null);
