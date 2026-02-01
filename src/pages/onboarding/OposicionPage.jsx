@@ -24,7 +24,8 @@ export default function OposicionPage() {
 
   return (
     <GoalStep
-      onNext={handleNext}
+      step="oposicion"
+      onSelect={handleNext}
       onBack={handleBack}
     />
   );

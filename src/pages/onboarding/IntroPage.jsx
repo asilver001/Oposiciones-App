@@ -11,8 +11,12 @@ import { ROUTES } from '../../router/routes';
 export default function IntroPage() {
   const navigate = useNavigate();
 
-  const handleNext = () => {
+  const handleStart = () => {
     navigate(ROUTES.ONBOARDING_RESULTS);
+  };
+
+  const handleSkip = () => {
+    navigate(ROUTES.HOME);
   };
 
   const handleBack = () => {
@@ -21,7 +25,8 @@ export default function IntroPage() {
 
   return (
     <IntroStep
-      onNext={handleNext}
+      onStart={handleStart}
+      onSkip={handleSkip}
       onBack={handleBack}
     />
   );

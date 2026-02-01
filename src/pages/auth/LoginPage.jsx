@@ -6,20 +6,26 @@
 
 import { useNavigate, useLocation } from 'react-router-dom';
 import LoginForm from '../../components/auth/LoginForm';
+import { useAuth } from '../../contexts/AuthContext';
 import { ROUTES } from '../../router/routes';
 
 export default function LoginPage() {
   const navigate = useNavigate();
   const location = useLocation();
+  const { signIn } = useAuth();
 
   // Get the page user was trying to access
   const from = location.state?.from?.pathname || ROUTES.HOME;
 
-  const handleSuccess = () => {
-    navigate(from, { replace: true });
+  const handleLogin = async (email, password) => {
+    const result = await signIn(email, password);
+    if (!result.error) {
+      navigate(from, { replace: true });
+    }
+    return result;
   };
 
-  const handleSignup = () => {
+  const handleGoToSignUp = () => {
     navigate(ROUTES.SIGNUP);
   };
 
@@ -33,8 +39,8 @@ export default function LoginPage() {
 
   return (
     <LoginForm
-      onSuccess={handleSuccess}
-      onSignup={handleSignup}
+      onLogin={handleLogin}
+      onGoToSignUp={handleGoToSignUp}
       onForgotPassword={handleForgotPassword}
       onBack={handleBack}
     />

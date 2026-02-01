@@ -24,7 +24,7 @@ export default function FechaPage() {
 
   return (
     <DateStep
-      onNext={handleNext}
+      onSelect={handleNext}
       onBack={handleBack}
     />
   );
