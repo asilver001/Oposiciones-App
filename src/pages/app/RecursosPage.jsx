@@ -11,13 +11,19 @@ import { ROUTES } from '../../router/routes';
 export default function RecursosPageWrapper() {
   const navigate = useNavigate();
 
-  const handleBack = () => {
-    navigate(ROUTES.HOME);
+  const handleNavigate = (page) => {
+    const routeMap = {
+      home: ROUTES.HOME,
+      temas: ROUTES.TEMAS,
+      actividad: ROUTES.ACTIVIDAD,
+      study: ROUTES.STUDY,
+    };
+    navigate(routeMap[page] || ROUTES.HOME);
   };
 
   return (
     <RecursosPage
-      onBack={handleBack}
+      onNavigate={handleNavigate}
     />
   );
 }

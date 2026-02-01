@@ -17,17 +17,12 @@ export default function TemasPage() {
     navigate(ROUTES.STUDY, { state: { topic } });
   };
 
-  const handleBack = () => {
-    navigate(ROUTES.HOME);
-  };
-
   return (
     <TemasListView
       topics={topics}
       topicsByBlock={topicsByBlock}
       loading={loading}
       onTopicSelect={handleTopicSelect}
-      onBack={handleBack}
     />
   );
 }

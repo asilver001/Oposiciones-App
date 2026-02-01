@@ -6,16 +6,22 @@
 
 import { useNavigate } from 'react-router-dom';
 import SignUpForm from '../../components/auth/SignUpForm';
+import { useAuth } from '../../contexts/AuthContext';
 import { ROUTES } from '../../router/routes';
 
 export default function SignupPage() {
   const navigate = useNavigate();
+  const { signUp } = useAuth();
 
-  const handleSuccess = () => {
-    navigate(ROUTES.HOME, { replace: true });
+  const handleSignUp = async (email, password, metadata) => {
+    const result = await signUp(email, password, metadata);
+    if (!result.error) {
+      navigate(ROUTES.HOME, { replace: true });
+    }
+    return result;
   };
 
-  const handleLogin = () => {
+  const handleGoToLogin = () => {
     navigate(ROUTES.LOGIN);
   };
 
@@ -25,8 +31,8 @@ export default function SignupPage() {
 
   return (
     <SignUpForm
-      onSuccess={handleSuccess}
-      onLogin={handleLogin}
+      onSignUp={handleSignUp}
+      onGoToLogin={handleGoToLogin}
       onBack={handleBack}
     />
   );

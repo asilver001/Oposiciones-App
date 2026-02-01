@@ -11,10 +11,10 @@ import { CheckCircle, Calendar, Clock, Sparkles } from 'lucide-react';
 
 export default function ResultsPage() {
   const navigate = useNavigate();
-  const { userData, setOnboardingComplete } = useUserStore();
+  const { userData, completeOnboarding } = useUserStore();
 
   const handleStart = () => {
-    setOnboardingComplete(true);
+    completeOnboarding();
     navigate(ROUTES.FIRST_TEST);
   };
 

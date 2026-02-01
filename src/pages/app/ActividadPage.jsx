@@ -31,10 +31,6 @@ export default function ActividadPageWrapper() {
     fetchActivityData();
   }, [fetchActivityData]);
 
-  const handleBack = () => {
-    navigate(ROUTES.HOME);
-  };
-
   /**
    * Handle starting a study session based on selected mode
    * @param {string} mode - The study mode ID
@@ -124,7 +120,6 @@ export default function ActividadPageWrapper() {
       calendarData={calendarData}
       motivationalMessage={motivationalMessage}
       fsrsStats={fsrsStats}
-      onBack={handleBack}
       onStartTest={handleStartTest}
       formatRelativeDate={formatRelativeDate}
     />
