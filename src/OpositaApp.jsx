@@ -631,6 +631,17 @@ export default function OpositaApp() {
         setCurrentPage('study-session');
         return;
 
+      case 'lectura':
+        // Read-only mode - show questions and answers without interaction
+        setStudySessionConfig({
+          mode: 'lectura',
+          totalQuestions: 20,
+          reviewRatio: 0.25,
+          readOnly: true
+        });
+        setCurrentPage('study-session');
+        return;
+
       case 'test-rapido':
       default:
         // Quick test - 10 questions with FSRS

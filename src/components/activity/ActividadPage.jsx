@@ -11,7 +11,7 @@ import {
   Zap,
   AlertTriangle,
   BookMarked,
-  Eye,
+  BookOpen,
   Check
 } from 'lucide-react';
 import EmptyState from '../common/EmptyState';
@@ -32,8 +32,8 @@ const studyModes = [
   { id: 'practica-tema', icon: Target, title: 'Por Tema', desc: 'Elige tema', time: '~15 min', gradient: 'from-blue-500 to-cyan-600', status: 'disponible' },
   { id: 'repaso-errores', icon: AlertTriangle, title: 'Errores', desc: 'Pendientes', time: 'Variable', gradient: 'from-amber-500 to-orange-600', status: 'disponible', badge: '12' },
   { id: 'flashcards', icon: BookMarked, title: 'Flashcards', desc: 'Memorización', time: '~10 min', gradient: 'from-emerald-500 to-teal-600', status: 'disponible' },
-  { id: 'simulacro', icon: Clock, title: 'Simulacro', desc: '100 preguntas', time: '60 min', gradient: 'from-rose-500 to-pink-600', status: 'proximamente' },
-  { id: 'lectura', icon: Eye, title: 'Solo Lectura', desc: 'Sin contestar', time: 'Libre', gradient: 'from-gray-500 to-slate-600', status: 'premium' },
+  { id: 'simulacro', icon: Clock, title: 'Simulacro', desc: '100 preguntas', time: '60 min', gradient: 'from-rose-500 to-pink-600', status: 'disponible' },
+  { id: 'lectura', icon: BookOpen, title: 'Solo Lectura', desc: 'Sin contestar', time: 'Libre', gradient: 'from-indigo-500 to-purple-600', status: 'disponible' },
 ];
 
 /**
