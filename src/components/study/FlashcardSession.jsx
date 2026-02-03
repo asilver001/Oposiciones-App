@@ -58,11 +58,11 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
           setError('No hay preguntas disponibles');
           setCards([]);
         } else {
-          // Transform questions to flashcard format using correct DB field names
+          // Transform questions to flashcard format using options JSONB array
           const flashcards = questions.map(q => {
-            // Get correct answer text from option_a/b/c/d fields
-            const optionKey = `option_${q.correct_answer}`;
-            const correctAnswerText = q[optionKey] || q.correct_answer;
+            // Get correct answer text from options array
+            const correctOption = q.options?.find(opt => opt.is_correct === true);
+            const correctAnswerText = correctOption?.text || 'Respuesta no disponible';
 
             return {
               id: q.id,

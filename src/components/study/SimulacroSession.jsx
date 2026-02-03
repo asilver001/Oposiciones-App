@@ -80,12 +80,19 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
 
   const currentQuestion = questions[currentIndex];
 
+  // Helper to get correct answer from options array
+  const getCorrectAnswer = (question) => {
+    if (!question?.options) return null;
+    const correctOption = question.options.find(opt => opt.is_correct === true);
+    return correctOption?.id || null;
+  };
+
   // Calculate stats
   const stats = useMemo(() => {
     const answered = Object.keys(answers).length;
     const correct = Object.entries(answers).filter(([qId, ans]) => {
       const q = questions.find(q => q.id === qId);
-      return q && ans === q.correct_answer;
+      return q && ans === getCorrectAnswer(q);
     }).length;
     const incorrect = answered - correct;
 
@@ -161,7 +168,8 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
       for (const [questionId, answer] of Object.entries(answers)) {
         const question = questions.find(q => q.id === questionId);
         if (question) {
-          const wasCorrect = answer === question.correct_answer;
+          const correctOpt = question.options?.find(opt => opt.is_correct === true);
+          const wasCorrect = answer === correctOpt?.id;
           await updateProgress(user.id, questionId, wasCorrect);
         }
       }
@@ -512,10 +520,11 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
         )}
 
         {/* Answer options */}
-        {currentQuestion && (
+        {currentQuestion && currentQuestion.options && (
           <div className="space-y-3">
-            {['a', 'b', 'c', 'd'].map((key) => {
-              const optionText = currentQuestion[`option_${key}`];
+            {currentQuestion.options.map((opt) => {
+              const key = opt.id; // 'a', 'b', 'c', 'd'
+              const optionText = opt.text;
               if (!optionText) return null;
 
               const isSelected = answers[currentQuestion.id] === key;

@@ -7,14 +7,16 @@ export default function QuestionCard({
   showResult,
   onSelectAnswer
 }) {
-  const options = [
-    { key: 'a', text: question.option_a },
-    { key: 'b', text: question.option_b },
-    { key: 'c', text: question.option_c },
-    { key: 'd', text: question.option_d }
-  ];
+  // Transform options from JSONB array format
+  const options = (question.options || []).map(opt => ({
+    key: opt.id,
+    text: opt.text,
+    isCorrect: opt.is_correct
+  }));
 
-  const correctAnswer = question.correct_answer;
+  // Get correct answer from options array
+  const correctOption = options.find(opt => opt.isCorrect);
+  const correctAnswer = correctOption?.key;
 
   return (
     <div className="flex-1 p-4 overflow-y-auto">
