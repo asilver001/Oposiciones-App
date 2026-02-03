@@ -26,6 +26,8 @@ import RecursosPage from './components/recursos/RecursosPage';
 import { BottomTabBar } from './components/navigation';
 // Sesión de estudio con FSRS
 import HybridSession from './components/study/HybridSession';
+import FlashcardSession from './components/study/FlashcardSession';
+import SimulacroSession from './components/study/SimulacroSession';
 
 // ============ ONBOARDING COMPONENTS ============
 
@@ -1007,18 +1009,26 @@ export default function OpositaApp() {
     );
   }
 
-  // SESIÓN DE ESTUDIO CON FSRS (HybridSession)
+  // SESIÓN DE ESTUDIO CON FSRS (HybridSession, FlashcardSession, SimulacroSession)
   if (currentPage === 'study-session' && studySessionConfig) {
-    return (
-      <HybridSession
-        config={studySessionConfig}
-        onClose={() => {
-          setStudySessionConfig(null);
-          setCurrentPage('home');
-        }}
-        onComplete={handleSessionComplete}
-      />
-    );
+    const sessionProps = {
+      config: studySessionConfig,
+      onClose: () => {
+        setStudySessionConfig(null);
+        setCurrentPage('home');
+      },
+      onComplete: handleSessionComplete
+    };
+
+    // Render the appropriate session component based on mode
+    switch (studySessionConfig.mode) {
+      case 'flashcards':
+        return <FlashcardSession {...sessionProps} />;
+      case 'simulacro':
+        return <SimulacroSession {...sessionProps} />;
+      default:
+        return <HybridSession {...sessionProps} />;
+    }
   }
 
   // PANTALLA TEST (legacy - será reemplazada por HybridSession)
