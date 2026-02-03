@@ -55,7 +55,7 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
       try {
         // Get 100 random questions (no review priority - simulate real exam)
         const sessionConfig = {
-          totalQuestions: config.questionCount || EXAM_CONFIG.totalQuestions,
+          totalQuestions: config.totalQuestions || EXAM_CONFIG.totalQuestions,
           reviewRatio: 0, // No reviews - fresh random questions
           adaptiveDifficulty: false // No adaptation - real exam conditions
         };
@@ -506,7 +506,7 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
         {currentQuestion && (
           <div className="bg-white rounded-2xl shadow-sm border p-6 mb-4">
             <p className="text-gray-800 text-lg leading-relaxed">
-              {currentQuestion.pregunta}
+              {currentQuestion.question_text}
             </p>
           </div>
         )}
@@ -514,7 +514,10 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
         {/* Answer options */}
         {currentQuestion && (
           <div className="space-y-3">
-            {Object.entries(currentQuestion.opciones || {}).map(([key, text]) => {
+            {['a', 'b', 'c', 'd'].map((key) => {
+              const optionText = currentQuestion[`option_${key}`];
+              if (!optionText) return null;
+
               const isSelected = answers[currentQuestion.id] === key;
 
               return (
@@ -536,7 +539,7 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
                     `}>
                       {key.toUpperCase()}
                     </span>
-                    <span className="flex-1">{text}</span>
+                    <span className="flex-1">{optionText}</span>
                   </div>
                 </button>
               );

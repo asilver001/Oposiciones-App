@@ -47,8 +47,8 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
 
       try {
         const sessionConfig = {
-          totalQuestions: config.questionCount || 20,
-          tema: config.temaId || null,
+          totalQuestions: config.totalQuestions || 20,
+          tema: config.tema || config.temaId || null,
           reviewRatio: 0.3 // More review for memorization
         };
 
@@ -58,15 +58,21 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
           setError('No hay preguntas disponibles');
           setCards([]);
         } else {
-          // Transform questions to flashcard format
-          const flashcards = questions.map(q => ({
-            id: q.id,
-            front: q.pregunta,
-            back: q.opciones?.[q.correct_answer] || q.correct_answer,
-            topic: q.tema,
-            explanation: q.explicacion,
-            isReview: q.isReview
-          }));
+          // Transform questions to flashcard format using correct DB field names
+          const flashcards = questions.map(q => {
+            // Get correct answer text from option_a/b/c/d fields
+            const optionKey = `option_${q.correct_answer}`;
+            const correctAnswerText = q[optionKey] || q.correct_answer;
+
+            return {
+              id: q.id,
+              front: q.question_text,
+              back: correctAnswerText,
+              topic: q.tema,
+              explanation: q.explanation,
+              isReview: q.isReview
+            };
+          });
           setCards(flashcards);
         }
       } catch (err) {

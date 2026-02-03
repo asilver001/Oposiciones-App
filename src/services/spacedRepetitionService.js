@@ -160,16 +160,17 @@ export async function getFailedQuestions(userId, options = {}) {
   const { tema, limit = 50 } = options;
 
   // Get questions where user has failed at least once
-  // Priority: low ease_factor, high lapses, or recent failures
+  // Use ease_factor < 2.0 as primary indicator (works regardless of lapses column)
   let query = supabase
     .from('user_question_progress')
     .select(`
       *,
-      questions (*)
+      questions!inner (*)
     `)
     .eq('user_id', userId)
+    .eq('questions.is_active', true) // Only active questions
     .gt('times_seen', 0) // Has been seen
-    .or('lapses.gt.0,ease_factor.lt.2.0') // Has lapses OR low ease_factor
+    .lt('ease_factor', 2.0) // Low ease_factor indicates difficulty
     .order('ease_factor', { ascending: true }) // Hardest first
     .limit(limit);
 
@@ -177,6 +178,35 @@ export async function getFailedQuestions(userId, options = {}) {
 
   if (error) {
     console.error('Error fetching failed questions:', error);
+    // Fallback: get questions where user has incorrect answers
+    try {
+      const fallbackQuery = await supabase
+        .from('user_question_progress')
+        .select(`*, questions!inner (*)`)
+        .eq('user_id', userId)
+        .eq('questions.is_active', true)
+        .gt('times_seen', 0)
+        .order('times_correct', { ascending: true })
+        .limit(limit);
+
+      if (fallbackQuery.data) {
+        // Filter to questions with some failures (times_correct < times_seen)
+        const failedData = fallbackQuery.data.filter(p =>
+          p.questions && p.times_correct < p.times_seen
+        );
+        return failedData.map(p => ({
+          ...p.questions,
+          isReview: true,
+          progress: {
+            times_seen: p.times_seen,
+            times_correct: p.times_correct,
+            ease_factor: p.ease_factor
+          }
+        }));
+      }
+    } catch (fallbackErr) {
+      console.error('Fallback query also failed:', fallbackErr);
+    }
     return [];
   }
 
@@ -250,10 +280,10 @@ export async function getNewQuestions(userId, options = {}) {
   // Apply adaptive difficulty filtering if specified
   if (difficulty && questions.length > 0) {
     // Sort by how close they are to the target difficulty
-    // Questions have dificultad field (1-3 typically)
+    // Questions have difficulty field (1-5 typically, default 3)
     questions = questions.sort((a, b) => {
-      const diffA = Math.abs((a.dificultad || 2) - difficulty);
-      const diffB = Math.abs((b.dificultad || 2) - difficulty);
+      const diffA = Math.abs((a.difficulty || 3) - difficulty);
+      const diffB = Math.abs((b.difficulty || 3) - difficulty);
       return diffA - diffB;
     });
   }
