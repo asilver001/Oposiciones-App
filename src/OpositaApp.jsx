@@ -2090,6 +2090,7 @@ export default function OpositaApp() {
               onStartTest={startTest}
               formatRelativeDate={formatRelativeDate}
               devMode={true}
+              premiumMode={premiumMode}
             />
           )}
           {activeTab === 'temas' && (

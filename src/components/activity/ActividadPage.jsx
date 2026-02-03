@@ -26,20 +26,22 @@ import { useAuth } from '../../contexts/AuthContext';
  * 2. Progreso (right) - Statistics and history
  */
 
-// Study modes configuration
-const studyModes = [
+// Study modes configuration - simulacro and lectura require premium
+const getStudyModes = (premiumMode) => [
   { id: 'test-rapido', icon: Zap, title: 'Test Rápido', desc: '5-10 preguntas', time: '~5 min', gradient: 'from-purple-500 to-violet-600', status: 'disponible' },
   { id: 'practica-tema', icon: Target, title: 'Por Tema', desc: 'Elige tema', time: '~15 min', gradient: 'from-blue-500 to-cyan-600', status: 'disponible' },
   { id: 'repaso-errores', icon: AlertTriangle, title: 'Errores', desc: 'Pendientes', time: 'Variable', gradient: 'from-amber-500 to-orange-600', status: 'disponible', badge: '12' },
   { id: 'flashcards', icon: BookMarked, title: 'Flashcards', desc: 'Memorización', time: '~10 min', gradient: 'from-emerald-500 to-teal-600', status: 'disponible' },
-  { id: 'simulacro', icon: Clock, title: 'Simulacro', desc: '100 preguntas', time: '60 min', gradient: 'from-rose-500 to-pink-600', status: 'disponible' },
-  { id: 'lectura', icon: BookOpen, title: 'Solo Lectura', desc: 'Sin contestar', time: 'Libre', gradient: 'from-indigo-500 to-purple-600', status: 'disponible' },
+  { id: 'simulacro', icon: Clock, title: 'Simulacro', desc: '100 preguntas', time: '60 min', gradient: 'from-rose-500 to-pink-600', status: premiumMode ? 'disponible' : 'premium' },
+  { id: 'lectura', icon: BookOpen, title: 'Solo Lectura', desc: 'Sin contestar', time: 'Libre', gradient: 'from-indigo-500 to-purple-600', status: premiumMode ? 'disponible' : 'premium' },
 ];
 
 /**
  * StudyModesTab - Study mode selection view
  */
-function StudyModesTab({ onSelectMode, selectedMode, onStartSession, onSwipeRight }) {
+function StudyModesTab({ onSelectMode, selectedMode, onStartSession, onSwipeRight, premiumMode }) {
+  const studyModes = getStudyModes(premiumMode);
+
   return (
     <motion.div
       key="modos"
@@ -355,7 +357,8 @@ export default function ActividadPage({
   loading = false,
   onStartTest,
   formatRelativeDate,
-  devMode = false
+  devMode = false,
+  premiumMode = false
 }) {
   const { isAdmin } = useAuth();
   // Tab state: 0 = Modos (left), 1 = Progreso (right)
@@ -476,6 +479,7 @@ export default function ActividadPage({
               onSelectMode={setSelectedMode}
               onStartSession={onStartTest}
               onSwipeRight={() => setActiveTab(1)}
+              premiumMode={premiumMode}
             />
           ) : (
             <ProgressTab
