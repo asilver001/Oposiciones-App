@@ -62,6 +62,13 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
 
         const loadedQuestions = await generateHybridSession(user.id, sessionConfig);
 
+        // Debug: Log question count and check for missing options
+        console.log(`SimulacroSession: Loaded ${loadedQuestions.length} questions`);
+        const questionsWithoutOptions = loadedQuestions.filter(q => !q.options || !Array.isArray(q.options) || q.options.length === 0);
+        if (questionsWithoutOptions.length > 0) {
+          console.warn(`SimulacroSession: ${questionsWithoutOptions.length} questions have no options:`, questionsWithoutOptions.map(q => q.id));
+        }
+
         if (loadedQuestions.length === 0) {
           setError('No hay suficientes preguntas para el simulacro');
         } else {
@@ -520,11 +527,11 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
         )}
 
         {/* Answer options */}
-        {currentQuestion && currentQuestion.options && (
+        {currentQuestion && Array.isArray(currentQuestion.options) && currentQuestion.options.length > 0 ? (
           <div className="space-y-3">
-            {currentQuestion.options.map((opt) => {
-              const key = opt.id; // 'a', 'b', 'c', 'd'
-              const optionText = opt.text;
+            {currentQuestion.options.map((opt, idx) => {
+              const key = opt?.id || ['a', 'b', 'c', 'd'][idx] || `opt-${idx}`;
+              const optionText = opt?.text;
               if (!optionText) return null;
 
               const isSelected = answers[currentQuestion.id] === key;
@@ -554,7 +561,12 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
               );
             })}
           </div>
-        )}
+        ) : currentQuestion ? (
+          <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-amber-700">
+            <p className="font-medium">Pregunta sin opciones disponibles</p>
+            <p className="text-sm mt-1">Esta pregunta no tiene opciones de respuesta. Usa los botones de navegación para continuar.</p>
+          </div>
+        ) : null}
 
         {/* Navigation buttons */}
         <div className="mt-auto pt-6 flex justify-between items-center">
