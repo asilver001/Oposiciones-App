@@ -87,12 +87,28 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
 
   const currentQuestion = questions[currentIndex];
 
+  // Helper to normalize options (handle JSON string or array)
+  const getOptions = useCallback((question) => {
+    if (!question?.options) return [];
+    let opts = question.options;
+    if (typeof opts === 'string') {
+      try {
+        opts = JSON.parse(opts);
+      } catch (e) {
+        console.error('Failed to parse options:', e);
+        return [];
+      }
+    }
+    if (!Array.isArray(opts)) return [];
+    return opts;
+  }, []);
+
   // Helper to get correct answer from options array
-  const getCorrectAnswer = (question) => {
-    if (!question?.options) return null;
-    const correctOption = question.options.find(opt => opt.is_correct === true);
+  const getCorrectAnswer = useCallback((question) => {
+    const opts = getOptions(question);
+    const correctOption = opts.find(opt => opt.is_correct === true);
     return correctOption?.id || null;
-  };
+  }, [getOptions]);
 
   // Calculate stats
   const stats = useMemo(() => {
@@ -110,7 +126,7 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
     const passed = percentage >= EXAM_CONFIG.passingScore;
 
     return { answered, correct, incorrect, rawScore, maxScore, percentage, passed };
-  }, [answers, questions]);
+  }, [answers, questions, getCorrectAnswer]);
 
   // Handle answer selection
   const handleAnswer = useCallback((answer) => {
@@ -527,46 +543,56 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
         )}
 
         {/* Answer options */}
-        {currentQuestion && Array.isArray(currentQuestion.options) && currentQuestion.options.length > 0 ? (
-          <div className="space-y-3">
-            {currentQuestion.options.map((opt, idx) => {
-              const key = opt?.id || ['a', 'b', 'c', 'd'][idx] || `opt-${idx}`;
-              const optionText = opt?.text;
-              if (!optionText) return null;
+        {(() => {
+          const opts = currentQuestion ? getOptions(currentQuestion) : [];
+          if (opts.length > 0) {
+            return (
+              <div className="space-y-3">
+                {opts.map((opt, idx) => {
+                  const key = opt?.id || ['a', 'b', 'c', 'd'][idx] || `opt-${idx}`;
+                  const optionText = opt?.text;
+                  if (!optionText) return null;
 
-              const isSelected = answers[currentQuestion.id] === key;
+                  const isSelected = answers[currentQuestion.id] === key;
 
-              return (
-                <button
-                  key={key}
-                  onClick={() => handleAnswer(key)}
-                  className={`
-                    w-full p-4 rounded-xl text-left transition-all
-                    ${isSelected
-                      ? 'bg-rose-100 border-2 border-rose-500 text-rose-700'
-                      : 'bg-white border-2 border-gray-100 text-gray-700 hover:border-gray-200 hover:bg-gray-50'
-                    }
-                  `}
-                >
-                  <div className="flex items-start gap-3">
-                    <span className={`
-                      w-7 h-7 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0
-                      ${isSelected ? 'bg-rose-500 text-white' : 'bg-gray-100 text-gray-600'}
-                    `}>
-                      {key.toUpperCase()}
-                    </span>
-                    <span className="flex-1">{optionText}</span>
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-        ) : currentQuestion ? (
-          <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-amber-700">
-            <p className="font-medium">Pregunta sin opciones disponibles</p>
-            <p className="text-sm mt-1">Esta pregunta no tiene opciones de respuesta. Usa los botones de navegación para continuar.</p>
-          </div>
-        ) : null}
+                  return (
+                    <button
+                      key={key}
+                      onClick={() => handleAnswer(key)}
+                      className={`
+                        w-full p-4 rounded-xl text-left transition-all
+                        ${isSelected
+                          ? 'bg-rose-100 border-2 border-rose-500 text-rose-700'
+                          : 'bg-white border-2 border-gray-100 text-gray-700 hover:border-gray-200 hover:bg-gray-50'
+                        }
+                      `}
+                    >
+                      <div className="flex items-start gap-3">
+                        <span className={`
+                          w-7 h-7 rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0
+                          ${isSelected ? 'bg-rose-500 text-white' : 'bg-gray-100 text-gray-600'}
+                        `}>
+                          {key.toUpperCase()}
+                        </span>
+                        <span className="flex-1">{optionText}</span>
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+            );
+          }
+          // Show warning if question exists but has no options
+          if (currentQuestion) {
+            return (
+              <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-amber-700">
+                <p className="font-medium">Pregunta sin opciones disponibles</p>
+                <p className="text-sm mt-1">Esta pregunta no tiene opciones de respuesta. Usa los botones de navegación para continuar.</p>
+              </div>
+            );
+          }
+          return null;
+        })()}
 
         {/* Navigation buttons */}
         <div className="mt-auto pt-6 flex justify-between items-center">
