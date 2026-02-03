@@ -127,9 +127,10 @@ export async function getDueReviews(userId, options = {}) {
     .from('user_question_progress')
     .select(`
       *,
-      questions (*)
+      questions!inner (*)
     `)
     .eq('user_id', userId)
+    .eq('questions.is_active', true)
     .lte('next_review', new Date().toISOString())
     .order('next_review', { ascending: true })
     .limit(limit);
@@ -438,10 +439,11 @@ export async function updateProgress(userId, questionId, wasCorrect) {
     question_id: questionId,
     times_seen: (existing?.times_seen || 0) + 1,
     times_correct: (existing?.times_correct || 0) + (wasCorrect ? 1 : 0),
+    lapses: wasCorrect ? (existing?.lapses || 0) : ((existing?.lapses || 0) + 1),
     interval: fsrsResult.interval,
     ease_factor: fsrsResult.ease,
     next_review: fsrsResult.nextReview.toISOString(),
-    last_reviewed: new Date().toISOString(),
+    last_review: new Date().toISOString(),
     state: fsrsResult.state
   };
 

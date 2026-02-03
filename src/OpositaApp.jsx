@@ -247,6 +247,7 @@ export default function OpositaApp() {
     streak: activityStreak,
     totalStats: activityTotalStats,
     motivationalMessage,
+    fsrsStats,
     fetchActivityData,
     formatRelativeDate
   } = useActivityData();
@@ -671,11 +672,12 @@ export default function OpositaApp() {
   };
 
   // Handle session completion
-  const handleSessionComplete = () => {
+  const handleSessionComplete = async () => {
     setStudySessionConfig(null);
     setCurrentPage('home');
-    // Refresh activity data
-    fetchActivityData();
+    setActiveTab('actividad'); // Switch to actividad tab to show updated progress
+    // Refresh activity data and wait for it to complete
+    await fetchActivityData();
   };
 
   useEffect(() => {
@@ -2086,6 +2088,7 @@ export default function OpositaApp() {
               }}
               calendarData={calendarData}
               motivationalMessage={motivationalMessage}
+              fsrsStats={fsrsStats}
               loading={activityLoading}
               onStartTest={startTest}
               formatRelativeDate={formatRelativeDate}
