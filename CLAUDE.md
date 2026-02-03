@@ -397,6 +397,108 @@ import ForceGraph2D from 'react-force-graph-2d';
 
 ---
 
+### Incidente: Nombres de Campos DB vs Código (Febrero 2026)
+
+**Problema:** Los componentes de estudio (FlashcardSession, SimulacroSession) no mostraban datos porque usaban nombres de campos incorrectos.
+
+**Síntoma:**
+- Flashcards mostraban tarjetas vacías
+- Simulacro mostraba preguntas sin texto
+- "No hay preguntas disponibles" cuando sí había datos
+
+**Causa raíz:**
+El código usaba nombres de campos en español (de datos locales legacy) pero la base de datos usa nombres en inglés:
+
+| Código (incorrecto) | Base de Datos (correcto) |
+|---------------------|--------------------------|
+| `q.pregunta` | `q.question_text` |
+| `q.opciones` | `q.option_a`, `q.option_b`, `q.option_c`, `q.option_d` |
+| `q.explicacion` | `q.explanation` |
+| `a.dificultad` | `a.difficulty` |
+
+**Archivos afectados:**
+- `src/components/study/FlashcardSession.jsx` - líneas 62-74
+- `src/components/study/SimulacroSession.jsx` - líneas 509, 517
+- `src/services/spacedRepetitionService.js` - líneas 253-258
+
+### Regla: "Verificar Esquema de DB Antes de Crear Componentes"
+
+**Checklist para componentes que consumen datos de Supabase:**
+```
+[ ] ¿Revisé el esquema de la tabla en las migraciones SQL?
+[ ] ¿Los nombres de campos coinciden exactamente con la DB?
+[ ] ¿Consulté QuestionCard.jsx u otro componente que YA funciona para ver los nombres correctos?
+[ ] ¿Probé con console.log(data) para ver la estructura real?
+```
+
+**Referencia de campos de `questions` table:**
+```javascript
+// Campos correctos de la base de datos:
+{
+  id: "uuid",
+  question_text: "¿Cuál es...?",      // NO: pregunta
+  option_a: "Primera opción",          // NO: opciones.a
+  option_b: "Segunda opción",
+  option_c: "Tercera opción",
+  option_d: "Cuarta opción",
+  correct_answer: "b",                 // Letra de la opción correcta
+  explanation: "Porque...",            // NO: explicacion
+  tema: 1,                             // Número de tema
+  difficulty: 3,                       // NO: dificultad (1-5)
+  is_active: true
+}
+```
+
+**Anti-patrón a evitar:**
+```jsx
+// ❌ MAL: Nombres de campos legacy/español
+const flashcards = questions.map(q => ({
+  front: q.pregunta,
+  back: q.opciones?.[q.correct_answer]
+}));
+
+// ✅ BIEN: Nombres de campos reales de la DB
+const flashcards = questions.map(q => ({
+  front: q.question_text,
+  back: q[`option_${q.correct_answer}`]
+}));
+```
+
+**Lección clave:** Siempre verificar el componente `QuestionCard.jsx` como referencia canónica de los nombres de campos correctos, ya que es el que funciona con HybridSession.
+
+---
+
+### Incidente: Config Props Mismatch (Febrero 2026)
+
+**Problema:** Componentes de sesión recibían config pero usaban nombres de propiedades diferentes.
+
+**Síntoma:** Sesiones cargaban número incorrecto de preguntas (defaults en vez de config).
+
+**Causa raíz:**
+- OpositaApp enviaba: `{ totalQuestions: 10, ... }`
+- Componentes buscaban: `config.questionCount`
+- Resultado: siempre usaba el default (20 o 100)
+
+### Regla: "Consistencia en Nombres de Props de Config"
+
+**Props estándar para sesiones de estudio:**
+```javascript
+// Config que envía OpositaApp:
+{
+  mode: 'flashcards',           // Tipo de sesión
+  totalQuestions: 10,           // NO: questionCount
+  reviewRatio: 0.25,            // Ratio de preguntas de repaso
+  tema: 1,                      // Número de tema (para filtrar)
+  temaId: 'uuid',               // ID del tema (legacy, evitar)
+  failedOnly: false             // Solo preguntas falladas
+}
+
+// Los componentes DEBEN usar estos mismos nombres:
+const count = config.totalQuestions || 20;  // NO: config.questionCount
+```
+
+---
+
 ## Tareas Periódicas
 
 ### Roadmap ForceGraph (Visualización de Progreso)
