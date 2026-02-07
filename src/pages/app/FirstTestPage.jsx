@@ -1,24 +1,25 @@
-/**
- * FirstTestPage
- *
- * Initial diagnostic test for new users after onboarding.
- */
-
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import HybridSession from '../../components/study/HybridSession';
 import { ROUTES } from '../../router/routes';
 
-// Placeholder until first test flow is properly integrated
 export default function FirstTestPage() {
   const navigate = useNavigate();
+  const [started, setStarted] = useState(false);
 
-  const handleSkip = () => {
+  const handleComplete = () => {
     navigate(ROUTES.HOME, { replace: true });
   };
 
-  const handleStart = () => {
-    // TODO: Start actual first test
-    navigate(ROUTES.HOME, { replace: true });
-  };
+  if (started) {
+    return (
+      <HybridSession
+        config={{ mode: 'first-test', totalQuestions: 10, reviewRatio: 0 }}
+        onComplete={handleComplete}
+        onBack={() => setStarted(false)}
+      />
+    );
+  }
 
   return (
     <div className="min-h-screen bg-purple-50 flex flex-col items-center justify-center p-6">
@@ -30,17 +31,17 @@ export default function FirstTestPage() {
           Test inicial
         </h2>
         <p className="text-gray-500 mb-8">
-          Haremos un pequeño test para conocer tu nivel actual y personalizar tu experiencia.
+          Haremos un pequeno test para conocer tu nivel actual y personalizar tu experiencia.
         </p>
         <div className="space-y-3">
           <button
-            onClick={handleStart}
+            onClick={() => setStarted(true)}
             className="w-full py-4 bg-purple-600 text-white font-semibold rounded-2xl hover:bg-purple-700 transition-colors"
           >
             Empezar test
           </button>
           <button
-            onClick={handleSkip}
+            onClick={() => navigate(ROUTES.HOME, { replace: true })}
             className="w-full py-3 text-purple-600 font-medium"
           >
             Saltar por ahora

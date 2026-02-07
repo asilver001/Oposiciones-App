@@ -5,14 +5,18 @@
  * Matches the visual layout from OpositaApp.jsx (fixed TopBar, floating BottomTabBar).
  */
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { Settings } from 'lucide-react';
 import BottomTabBar from './BottomTabBar';
 import SettingsModal from './SettingsModal';
+import ProgressModal from './ProgressModal';
+import DevPanel from '../../components/dev/DevPanel';
 import { useAuth } from '../../contexts/AuthContext';
 import { useAdmin } from '../../contexts/AdminContext';
+import { useUserStore } from '../../stores/useUserStore';
+import { useActivityData } from '../../hooks/useActivityData';
 import { ROUTES } from '../../router/paths';
 
 // Map route paths to tab IDs
@@ -43,11 +47,27 @@ const TAB_TO_ROUTE = {
 export default function MainLayout() {
   const location = useLocation();
   const navigate = useNavigate();
-  const { isReviewer: authIsReviewer } = useAuth();
+  const { isReviewer: authIsReviewer, user } = useAuth();
   const { isReviewer } = useAdmin();
+  const { userData, streakData } = useUserStore();
+  const {
+    totalStats: activityStats,
+    streak: activityStreak,
+    fetchActivityData,
+  } = useActivityData();
+
   const [showSettings, setShowSettings] = useState(false);
+  const [showProgress, setShowProgress] = useState(false);
+  const [premiumMode, setPremiumMode] = useState(false);
 
   const isUserReviewer = isReviewer || authIsReviewer;
+
+  // Fetch activity data on mount
+  useEffect(() => {
+    if (user?.id) {
+      fetchActivityData();
+    }
+  }, [user?.id, fetchActivityData]);
 
   // Determine active tab from current route
   const activeTab = ROUTE_TO_TAB[location.pathname] || 'inicio';
@@ -57,6 +77,17 @@ export default function MainLayout() {
 
   // Hide navigation on study/test pages (full-screen experiences)
   const hideNav = location.pathname.includes('/study') || location.pathname.includes('/first-test');
+
+  // Daily progress data
+  const dailyGoal = userData.dailyGoal || 15;
+  const todayQuestions = activityStats.totalQuestions || 0;
+  const dailyProgressPercent = Math.min(Math.round((todayQuestions / dailyGoal) * 100), 100);
+  const displayStreak = activityStats.testsCompleted > 0 ? activityStreak : (streakData.current || 0);
+
+  // Days until exam
+  const daysUntilExam = userData.examDate
+    ? Math.max(0, Math.ceil((new Date(userData.examDate) - new Date()) / (1000 * 60 * 60 * 24)))
+    : null;
 
   const handleTabChange = (tabId) => {
     const route = TAB_TO_ROUTE[tabId];
@@ -81,6 +112,7 @@ export default function MainLayout() {
             <div className="flex items-center justify-between h-14">
               {/* Left - Daily progress circle */}
               <button
+                onClick={() => setShowProgress(true)}
                 className="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-purple-50 active:scale-95 transition-all duration-200"
               >
                 <svg className="w-9 h-9 transform -rotate-90">
@@ -91,11 +123,14 @@ export default function MainLayout() {
                   <circle
                     cx="18" cy="18" r="14"
                     fill="none" stroke="#8B5CF6" strokeWidth="3"
-                    strokeDasharray="0 88" strokeLinecap="round"
+                    strokeDasharray={`${(dailyProgressPercent / 100) * 88} 88`}
+                    strokeLinecap="round"
                     className="transition-all duration-500"
                   />
                 </svg>
-                <span className="absolute text-[10px] font-bold text-purple-600">0</span>
+                <span className="absolute text-[10px] font-bold text-purple-600">
+                  {dailyProgressPercent}
+                </span>
               </button>
 
               {/* Center - Contextual title */}
@@ -122,6 +157,22 @@ export default function MainLayout() {
         </div>
       </div>
 
+      {/* DevPanel - visible for admins and dev mode */}
+      {!hideNav && (
+        <DevPanel
+          onReset={() => {}}
+          onShowPremium={() => {}}
+          onShowAdminLogin={() => navigate(ROUTES.ADMIN)}
+          onShowPlayground={() => {}}
+          onShowDraftFeatures={() => {}}
+          onGoToOnboarding={() => navigate(ROUTES.WELCOME)}
+          premiumMode={premiumMode}
+          onTogglePremium={() => setPremiumMode(!premiumMode)}
+          streakCount={displayStreak}
+          testsCount={activityStats.testsCompleted || 0}
+        />
+      )}
+
       {/* Floating BottomTabBar */}
       {!hideNav && (
         <BottomTabBar
@@ -133,10 +184,26 @@ export default function MainLayout() {
         />
       )}
 
-      {/* Settings modal */}
+      {/* Settings panel - slides from right */}
       <AnimatePresence>
         {showSettings && (
           <SettingsModal onClose={() => setShowSettings(false)} />
+        )}
+      </AnimatePresence>
+
+      {/* Progress panel - slides from left */}
+      <AnimatePresence>
+        {showProgress && (
+          <ProgressModal
+            onClose={() => setShowProgress(false)}
+            todayQuestions={todayQuestions}
+            dailyGoal={dailyGoal}
+            testsCompleted={activityStats.testsCompleted || 0}
+            accuracyRate={activityStats.accuracyRate || 0}
+            daysUntilExam={daysUntilExam}
+            totalProgress={0}
+            onContinueStudying={() => navigate(ROUTES.STUDY)}
+          />
         )}
       </AnimatePresence>
     </div>
