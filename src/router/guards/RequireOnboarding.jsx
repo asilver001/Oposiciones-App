@@ -6,14 +6,21 @@
  */
 
 import { Navigate, useLocation } from 'react-router-dom';
+import { useAuth } from '../../contexts/AuthContext';
 import { useUserStore } from '../../stores/useUserStore';
 import { ROUTES } from '../routes';
 
 export default function RequireOnboarding({ children }) {
+  const { user } = useAuth();
   const { onboardingComplete } = useUserStore();
   const location = useLocation();
 
-  // Redirect to welcome if onboarding not complete
+  // Authenticated users skip onboarding check (they already have an account)
+  if (user) {
+    return children;
+  }
+
+  // Anonymous users need onboarding
   if (!onboardingComplete) {
     return <Navigate to={ROUTES.WELCOME} state={{ from: location }} replace />;
   }
