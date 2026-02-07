@@ -37,6 +37,7 @@ const ReviewerPage = lazy(() => import('../pages/admin/ReviewerPage'));
 
 const TermsPage = lazy(() => import('../pages/legal/TermsPage'));
 const PrivacyPage = lazy(() => import('../pages/legal/PrivacyPage'));
+const NotFoundPage = lazy(() => import('../pages/NotFoundPage'));
 
 // Re-export route path constants from paths.js (separate file to avoid circular imports)
 export { ROUTES } from './paths';
@@ -150,10 +151,10 @@ export const routeConfig = [
     element: <PrivacyPage />,
   },
 
-  // Fallback - redirect unknown routes
+  // 404 - Page not found
   {
     path: '*',
-    element: <Navigate to={ROUTES.WELCOME} replace />,
+    element: <ErrorBoundary><NotFoundPage /></ErrorBoundary>,
   },
 ];
 

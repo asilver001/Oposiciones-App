@@ -14,7 +14,7 @@ export default function TemasPage() {
   const { topics, topicsByBlock, loading } = useTopics();
 
   const handleTopicSelect = (topic) => {
-    navigate(ROUTES.STUDY, { state: { topic } });
+    navigate(ROUTES.STUDY, { state: { topic, mode: 'practica-tema' } });
   };
 
   return (

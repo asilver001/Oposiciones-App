@@ -16,14 +16,14 @@ export default function RequireAdmin({ children }) {
   // Show nothing while checking auth status
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 to-violet-100">
-        <div className="animate-pulse text-purple-600">Verificando permisos...</div>
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="animate-pulse text-brand-600">Verificando permisos...</div>
       </div>
     );
   }
 
   // Redirect if not authenticated or not admin
-  if (!user || userRole !== 'admin') {
+  if (!user || !userRole?.isAdmin) {
     return <Navigate to={ROUTES.HOME} state={{ from: location }} replace />;
   }
 

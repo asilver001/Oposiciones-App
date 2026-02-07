@@ -91,7 +91,7 @@ export default function StudyPage() {
     ...config.defaultConfig,
     ...(questionCount && { totalQuestions: questionCount, questionCount }),
     ...(timeLimit && { timeLimit }),
-    ...(topic && { tema: topic.id || topic.name, temaId: topic.id }),
+    ...(topic && { tema: topic.number, temaId: topic.id }),
     ...(temaId && { temaId }),
     mode: mode || 'default'
   };

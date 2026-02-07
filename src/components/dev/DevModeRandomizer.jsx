@@ -1,6 +1,6 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Dices, User, Activity, Crown, Shuffle, X } from 'lucide-react';
+import { Dices, User, Activity, Crown, Shuffle, UserCheck } from 'lucide-react';
 
 /**
  * DevModeRandomizer - Shared component for simulating different user states
@@ -46,8 +46,43 @@ const generateCalendarData = (daysCount) => {
   return days.sort((a, b) => a - b);
 };
 
+// LocalStorage key for persisting selected mode
+const STORAGE_KEY = 'dev-simulation-mode';
+
+/**
+ * Get the persisted simulation mode from localStorage
+ */
+export function getPersistedMode() {
+  try {
+    return localStorage.getItem(STORAGE_KEY) || null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Persist the simulation mode to localStorage
+ */
+function persistMode(mode) {
+  try {
+    if (mode) {
+      localStorage.setItem(STORAGE_KEY, mode);
+    } else {
+      localStorage.removeItem(STORAGE_KEY);
+    }
+  } catch {
+    // Ignore storage errors
+  }
+}
+
 // User state configurations for simulation
 export const userStates = {
+  real: {
+    label: 'Mi datos reales',
+    emoji: '\u{1F464}',
+    icon: UserCheck,
+    isReal: true // Flag: use actual Supabase data, no mock
+  },
   nuevo: {
     label: 'Usuario Nuevo',
     emoji: '\u{1F464}',
@@ -126,24 +161,28 @@ export const userStates = {
 // Context-specific descriptions for each page
 const pageContexts = {
   home: {
+    real: 'Tu progreso real desde Supabase',
     nuevo: 'Sin tests, sin racha, fortaleza vacía',
     activo: '15 tests, 68% aciertos, racha de 5 días',
     veterano: '89 tests, 82% aciertos, racha de 23 días',
     aleatorio: 'Estadísticas aleatorias'
   },
   actividad: {
+    real: 'Tu actividad real desde Supabase',
     nuevo: 'Historial vacío, gráficas en cero',
     activo: '5 sesiones recientes, progreso visible',
     veterano: 'Historial completo, calendario lleno',
     aleatorio: 'Datos aleatorios de actividad'
   },
   temas: {
+    real: 'Tu progreso real por tema',
     nuevo: 'Todos los temas sin empezar',
     activo: 'Algunos temas en progreso',
     veterano: 'Mayoría de temas dominados',
     aleatorio: 'Progreso aleatorio por tema'
   },
   recursos: {
+    real: 'Tus recursos reales',
     nuevo: 'Sin favoritos guardados',
     activo: 'Algunos recursos marcados',
     veterano: 'Colección de recursos favoritos',
@@ -163,6 +202,14 @@ export default function DevModeRandomizer({ activeMode, onSelectMode, onClear, p
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
 
+  // On mount, restore persisted mode
+  useEffect(() => {
+    const persisted = getPersistedMode();
+    if (persisted && persisted !== activeMode) {
+      onSelectMode(persisted);
+    }
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   useEffect(() => {
     function handleClickOutside(event) {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -173,7 +220,23 @@ export default function DevModeRandomizer({ activeMode, onSelectMode, onClear, p
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const modes = ['nuevo', 'activo', 'veterano', 'aleatorio'];
+  const handleSelect = useCallback((mode) => {
+    persistMode(mode === 'real' ? null : mode);
+    if (mode === 'real') {
+      onClear();
+    } else {
+      onSelectMode(mode);
+    }
+    setIsOpen(false);
+  }, [onSelectMode, onClear]);
+
+  const handleClear = useCallback(() => {
+    persistMode(null);
+    onClear();
+    setIsOpen(false);
+  }, [onClear]);
+
+  const modes = ['real', 'nuevo', 'activo', 'veterano', 'aleatorio'];
 
   return (
     <div ref={menuRef} className="fixed bottom-24 right-4 z-50">
@@ -193,18 +256,15 @@ export default function DevModeRandomizer({ activeMode, onSelectMode, onClear, p
               {modes.map((mode) => {
                 const state = userStates[mode];
                 const Icon = state.icon;
-                const isActive = activeMode === mode;
+                const isActive = mode === 'real' ? !activeMode : activeMode === mode;
                 const contextDesc = pageContexts[pageContext]?.[mode] || '';
                 return (
                   <button
                     key={mode}
-                    onClick={() => {
-                      onSelectMode(mode);
-                      setIsOpen(false);
-                    }}
+                    onClick={() => handleSelect(mode)}
                     className={`w-full flex flex-col items-start px-3 py-2 rounded-lg text-left transition-colors ${
                       isActive
-                        ? 'bg-purple-100 text-purple-700'
+                        ? 'bg-brand-100 text-brand-700'
                         : 'hover:bg-gray-100 text-gray-700'
                     }`}
                   >
@@ -218,21 +278,6 @@ export default function DevModeRandomizer({ activeMode, onSelectMode, onClear, p
                   </button>
                 );
               })}
-              {activeMode && (
-                <>
-                  <div className="border-t my-1" />
-                  <button
-                    onClick={() => {
-                      onClear();
-                      setIsOpen(false);
-                    }}
-                    className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-left transition-colors hover:bg-red-50 text-red-600"
-                  >
-                    <X className="w-4 h-4" />
-                    <span className="text-sm font-medium">Datos reales</span>
-                  </button>
-                </>
-              )}
             </div>
           </motion.div>
         )}
@@ -246,7 +291,7 @@ export default function DevModeRandomizer({ activeMode, onSelectMode, onClear, p
         transition={{ duration: 0.5, repeat: activeMode ? Infinity : 0, repeatDelay: 3 }}
         className={`w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-colors ${
           activeMode
-            ? 'bg-purple-600 text-white'
+            ? 'bg-brand-600 text-white'
             : 'bg-white text-gray-700 border border-gray-200'
         }`}
       >
