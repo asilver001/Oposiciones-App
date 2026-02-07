@@ -23,12 +23,12 @@ export default function EmptyState({
   // Color variants matching OpositaSmart's purple theme
   const variants = {
     purple: {
-      iconBg: 'bg-purple-100',
-      iconColor: 'text-purple-500',
+      iconBg: 'bg-brand-100',
+      iconColor: 'text-brand-500',
       titleColor: 'text-gray-900',
       descColor: 'text-gray-500',
-      buttonBg: 'bg-purple-600',
-      buttonHover: 'hover:bg-purple-700',
+      buttonBg: 'bg-brand-600',
+      buttonHover: 'hover:bg-brand-700',
       buttonText: 'text-white'
     },
     blue: {

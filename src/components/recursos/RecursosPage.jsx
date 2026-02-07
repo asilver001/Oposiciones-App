@@ -35,7 +35,7 @@ const categorias = [
     icon: Scale,
     emoji: '📚',
     description: 'BOE, leyes y reglamentos oficiales',
-    gradient: 'from-rose-500 to-pink-600',
+    gradient: 'bg-rose-600',
     bg: 'bg-rose-50',
     text: 'text-rose-700',
     border: 'border-rose-200',
@@ -53,10 +53,10 @@ const categorias = [
     icon: BookOpen,
     emoji: '📝',
     description: 'Resumenes visuales y mapas mentales',
-    gradient: 'from-violet-500 to-purple-600',
-    bg: 'bg-violet-50',
-    text: 'text-violet-700',
-    border: 'border-violet-200',
+    gradient: 'bg-brand-600',
+    bg: 'bg-brand-50',
+    text: 'text-brand-700',
+    border: 'border-brand-200',
     recursos: [
       { id: 'esq-ce', title: 'Estructura de la Constitucion', subtitle: 'Preambulo, Titulo Preliminar, 10 Titulos', isNew: true },
       { id: 'esq-derechos', title: 'Derechos Fundamentales', subtitle: 'Arts. 14-29 - Seccion 1a Capitulo II', isNew: true },
@@ -71,7 +71,7 @@ const categorias = [
     icon: Target,
     emoji: '🎯',
     description: 'Examenes de practica completos',
-    gradient: 'from-emerald-500 to-teal-600',
+    gradient: 'bg-emerald-600',
     bg: 'bg-emerald-50',
     text: 'text-emerald-700',
     border: 'border-emerald-200',
@@ -88,7 +88,7 @@ const categorias = [
     icon: Lightbulb,
     emoji: '💡',
     description: 'Tecnicas y consejos de estudio',
-    gradient: 'from-amber-500 to-orange-600',
+    gradient: 'bg-amber-600',
     bg: 'bg-amber-50',
     text: 'text-amber-700',
     border: 'border-amber-200',
@@ -106,7 +106,7 @@ const categorias = [
     icon: BookMarked,
     emoji: '📖',
     description: 'Terminos y definiciones clave',
-    gradient: 'from-sky-500 to-blue-600',
+    gradient: 'bg-sky-600',
     bg: 'bg-sky-50',
     text: 'text-sky-700',
     border: 'border-sky-200',
@@ -123,7 +123,7 @@ const categorias = [
     icon: ExternalLink,
     emoji: '🔗',
     description: 'Recursos externos de interes',
-    gradient: 'from-fuchsia-500 to-pink-600',
+    gradient: 'bg-fuchsia-600',
     bg: 'bg-fuchsia-50',
     text: 'text-fuchsia-700',
     border: 'border-fuchsia-200',
@@ -208,7 +208,7 @@ function CategoryCard({ categoria, isExpanded, onToggle, onResourceClick, favori
         whileTap={{ scale: 0.99 }}
       >
         {/* Icon */}
-        <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${categoria.gradient} flex items-center justify-center flex-shrink-0 shadow-lg shadow-${categoria.gradient.split('-')[1]}-500/20`}>
+        <div className={`w-12 h-12 rounded-xl ${categoria.gradient} flex items-center justify-center flex-shrink-0 shadow-sm`}>
           <span className="text-2xl">{categoria.emoji}</span>
         </div>
 
@@ -359,13 +359,13 @@ export default function RecursosPage({ onNavigate }) {
     <div className="space-y-4">
       {/* Header */}
       <motion.div
-        className="bg-gradient-to-br from-purple-50 via-violet-50 to-fuchsia-50 rounded-2xl p-4 border border-purple-100"
+        className="bg-brand-50 rounded-2xl p-4 border border-brand-100"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={spring.gentle}
       >
         <div className="flex items-center gap-3 mb-3">
-          <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl flex items-center justify-center shadow-lg shadow-purple-500/25">
+          <div className="w-12 h-12 bg-brand-600 rounded-xl flex items-center justify-center shadow-sm">
             <BookMarked className="w-6 h-6 text-white" />
           </div>
           <div>
@@ -375,11 +375,11 @@ export default function RecursosPage({ onNavigate }) {
 
         <div className="grid grid-cols-3 gap-2">
           <div className="bg-white/60 backdrop-blur rounded-xl p-2.5 text-center">
-            <p className="text-lg font-bold text-purple-600">{categorias.length}</p>
+            <p className="text-lg font-bold text-brand-600">{categorias.length}</p>
             <p className="text-xs text-gray-500">Categorias</p>
           </div>
           <div className="bg-white/60 backdrop-blur rounded-xl p-2.5 text-center">
-            <p className="text-lg font-bold text-violet-600">{totalRecursos}</p>
+            <p className="text-lg font-bold text-brand-600">{totalRecursos}</p>
             <p className="text-xs text-gray-500">Recursos</p>
           </div>
           <div className="bg-white/60 backdrop-blur rounded-xl p-2.5 text-center">
@@ -402,7 +402,7 @@ export default function RecursosPage({ onNavigate }) {
           placeholder="Buscar recursos..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full pl-10 pr-10 py-3 bg-white rounded-xl border border-gray-200 focus:border-purple-300 focus:ring-2 focus:ring-purple-100 outline-none transition-all text-sm"
+          className="w-full pl-10 pr-10 py-3 bg-white rounded-xl border border-gray-200 focus:border-brand-300 focus:ring-2 focus:ring-brand-100 outline-none transition-all text-sm"
         />
         {searchQuery && (
           <button
@@ -454,18 +454,18 @@ export default function RecursosPage({ onNavigate }) {
 
       {/* Quick tips */}
       <motion.div
-        className="bg-purple-50 border border-purple-100 rounded-xl p-4"
+        className="bg-brand-50 border border-brand-100 rounded-xl p-4"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ ...spring.gentle, delay: 0.3 }}
       >
         <div className="flex items-start gap-3">
-          <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
-            <Lightbulb className="w-4 h-4 text-purple-600" />
+          <div className="w-8 h-8 bg-brand-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <Lightbulb className="w-4 h-4 text-brand-600" />
           </div>
           <div>
-            <p className="font-medium text-purple-800 text-sm">Consejo del dia</p>
-            <p className="text-sm text-purple-600 mt-0.5">
+            <p className="font-medium text-brand-800 text-sm">Consejo del dia</p>
+            <p className="text-sm text-brand-600 mt-0.5">
               Guarda tus recursos favoritos con el corazon para acceder mas rapido.
             </p>
           </div>

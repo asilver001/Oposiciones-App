@@ -1,5 +1,6 @@
 import { StrictMode, lazy, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
+import '@fontsource-variable/inter'
 import './index.css'
 import './lib/storage.js'
 import { AppRouter } from './router'
@@ -15,7 +16,7 @@ createRoot(document.getElementById('root')).render(
     <AuthProvider>
       <AdminProvider>
         {USE_LEGACY ? (
-          <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 to-violet-100"><div className="animate-pulse text-purple-600">Cargando...</div></div>}>
+          <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-gray-50"><div className="animate-pulse text-brand-600">Cargando...</div></div>}>
             <OpositaApp />
           </Suspense>
         ) : (

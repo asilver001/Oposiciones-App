@@ -9,7 +9,7 @@ export default function StudyDashboard({ onStartSession }) {
   if (isLoading) {
     return (
       <div className="flex items-center justify-center py-12">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600" />
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-brand-600" />
       </div>
     );
   }
@@ -44,12 +44,12 @@ export default function StudyDashboard({ onStartSession }) {
   return (
     <div className="space-y-6">
       {/* Header Card */}
-      <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-6 text-white">
+      <div className="bg-brand-600 rounded-2xl p-6 text-white">
         <h2 className="text-xl font-bold mb-2 flex items-center gap-2">
           <Brain className="w-6 h-6" />
           Tu Sesión de Estudio
         </h2>
-        <p className="text-purple-100 text-sm mb-4">
+        <p className="text-brand-100 text-sm mb-4">
           Repaso espaciado + preguntas nuevas mezcladas inteligentemente
         </p>
 
@@ -60,7 +60,7 @@ export default function StudyDashboard({ onStartSession }) {
               <Calendar className="w-8 h-8 text-yellow-300" />
               <div>
                 <p className="font-semibold text-lg">{stats.dueToday} preguntas para repasar hoy</p>
-                <p className="text-purple-200 text-sm">No pierdas tu racha de estudio</p>
+                <p className="text-brand-200 text-sm">No pierdas tu racha de estudio</p>
               </div>
             </div>
           </div>
@@ -69,7 +69,7 @@ export default function StudyDashboard({ onStartSession }) {
         {/* Start Button */}
         <button
           onClick={() => onStartSession?.()}
-          className="w-full bg-white text-purple-700 font-bold py-3 px-6 rounded-xl flex items-center justify-center gap-2 hover:bg-purple-50 transition shadow-lg"
+          className="w-full bg-white text-brand-700 font-bold py-3 px-6 rounded-xl flex items-center justify-center gap-2 hover:bg-brand-50 transition shadow-sm"
         >
           <Play className="w-5 h-5" />
           Empezar sesión de estudio
@@ -99,13 +99,13 @@ export default function StudyDashboard({ onStartSession }) {
         </div>
 
         {/* Mastered */}
-        <div className="bg-purple-50 rounded-xl p-4">
+        <div className="bg-brand-50 rounded-xl p-4">
           <div className="flex items-center gap-2 mb-1">
-            <Award className="w-5 h-5 text-purple-500" />
-            <span className="text-sm font-medium text-purple-700">Dominadas</span>
+            <Award className="w-5 h-5 text-brand-500" />
+            <span className="text-sm font-medium text-brand-700">Dominadas</span>
           </div>
-          <p className="text-3xl font-bold text-purple-600">{stats.mastered}</p>
-          <p className="text-xs text-purple-500">preguntas</p>
+          <p className="text-3xl font-bold text-brand-600">{stats.mastered}</p>
+          <p className="text-xs text-brand-500">preguntas</p>
         </div>
 
         {/* Total Studied */}
@@ -132,7 +132,7 @@ export default function StudyDashboard({ onStartSession }) {
               <div className="w-full flex flex-col items-center justify-end h-24">
                 {/* Bar */}
                 <div
-                  className="w-full bg-purple-500 rounded-t-lg transition-all duration-300"
+                  className="w-full bg-brand-500 rounded-t-lg transition-all duration-300"
                   style={{
                     height: `${(day.questions / maxQuestions) * 100}%`,
                     minHeight: day.questions > 0 ? '8px' : '0px',
@@ -145,7 +145,7 @@ export default function StudyDashboard({ onStartSession }) {
               <p className="text-xs text-gray-500 mt-2">{day.day}</p>
               {/* Count */}
               {day.questions > 0 && (
-                <p className="text-xs font-medium text-purple-600">{day.questions}</p>
+                <p className="text-xs font-medium text-brand-600">{day.questions}</p>
               )}
             </div>
           ))}

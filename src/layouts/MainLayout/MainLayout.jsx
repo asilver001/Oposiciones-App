@@ -104,7 +104,7 @@ export default function MainLayout() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-indigo-50 pb-32">
+    <div className="min-h-screen bg-gray-50 pb-32">
       {/* Fixed TopBar - matches OpositaApp.jsx style */}
       {!hideNav && (
         <div className="fixed top-0 left-0 right-0 z-40 bg-white/98 backdrop-blur-lg shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
@@ -113,7 +113,7 @@ export default function MainLayout() {
               {/* Left - Daily progress circle */}
               <button
                 onClick={() => setShowProgress(true)}
-                className="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-purple-50 active:scale-95 transition-all duration-200"
+                className="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-brand-50 active:scale-95 transition-all duration-200"
               >
                 <svg className="w-9 h-9 transform -rotate-90">
                   <circle
@@ -128,7 +128,7 @@ export default function MainLayout() {
                     className="transition-all duration-500"
                   />
                 </svg>
-                <span className="absolute text-[10px] font-bold text-purple-600">
+                <span className="absolute text-[10px] font-bold text-brand-600">
                   {dailyProgressPercent}
                 </span>
               </button>

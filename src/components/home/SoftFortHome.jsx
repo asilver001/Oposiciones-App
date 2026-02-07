@@ -29,14 +29,14 @@ const spring = {
 
 // Soft theme configuration
 const themeConfig = {
-  heroClass: 'bg-gradient-to-br from-rose-100 via-purple-100 to-violet-100',
+  heroClass: 'bg-gray-100',
   textClass: 'text-gray-800',
   subtextClass: 'text-gray-500',
-  badgeClass: 'bg-purple-200/50 text-purple-700',
-  buttonClass: 'bg-purple-600 text-white',
-  progressStroke: '#8B5CF6',
-  progressBg: 'rgba(139,92,246,0.15)',
-  decorationClass: 'bg-purple-300/30',
+  badgeClass: 'bg-brand-100 text-brand-700',
+  buttonClass: 'bg-brand-600 text-white',
+  progressStroke: '#7c3aed',
+  progressBg: 'rgba(124,58,237,0.12)',
+  decorationClass: 'bg-brand-200/30',
 };
 
 /**
@@ -88,7 +88,7 @@ function SessionCard({ nextTopic, onStartSession }) {
           </p>
           <motion.button
             onClick={onStartSession}
-            className={`px-5 py-2.5 ${themeConfig.buttonClass} font-semibold rounded-xl text-sm flex items-center gap-2 shadow-lg shadow-purple-500/25`}
+            className={`px-5 py-2.5 ${themeConfig.buttonClass} font-semibold rounded-xl text-sm flex items-center gap-2 shadow-sm`}
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
           >
@@ -131,15 +131,15 @@ function SessionCard({ nextTopic, onStartSession }) {
 function StatCard({ icon: Icon, value, label, colorScheme, onClick, badge, delay = 0 }) {
   const colorClasses = {
     amber: {
-      bg: 'bg-gradient-to-br from-amber-50 to-orange-50',
+      bg: 'bg-amber-50',
       border: 'border-amber-100',
       icon: 'text-amber-500',
       badge: 'text-amber-600 bg-amber-100',
     },
     purple: {
-      bg: 'bg-gradient-to-br from-purple-50 to-violet-50',
-      border: 'border-purple-100',
-      icon: 'text-purple-500',
+      bg: 'bg-brand-50',
+      border: 'border-brand-100',
+      icon: 'text-brand-500',
       badge: 'text-emerald-600 bg-emerald-50',
     },
   };
@@ -177,7 +177,7 @@ function LevelCard({ level, xp, percentile, onClick }) {
   return (
     <motion.button
       onClick={onClick}
-      className="col-span-2 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-2xl p-4 text-white flex items-center justify-between"
+      className="col-span-2 bg-brand-600 rounded-2xl p-4 text-white flex items-center justify-between"
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.35 }}
@@ -360,7 +360,7 @@ export default function SoftFortHome({
 
       {/* Greeting section */}
       <div>
-        <p className="text-xs text-purple-500 font-medium uppercase tracking-wider">
+        <p className="text-xs text-brand-500 font-medium uppercase tracking-wider">
           {new Date().toLocaleDateString('es-ES', { weekday: 'long' })}
         </p>
         <h2 className="text-xl font-bold text-gray-900">

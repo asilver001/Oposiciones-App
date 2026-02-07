@@ -334,7 +334,7 @@ export default function ReviewContainer({ showHeader = false }) {
       {/* Content */}
       {loading ? (
         <div className="flex items-center justify-center py-12">
-          <RefreshCw className="w-8 h-8 animate-spin text-purple-600" />
+          <RefreshCw className="w-8 h-8 animate-spin text-brand-600" />
         </div>
       ) : questions.length === 0 ? (
         <EmptyState
@@ -499,7 +499,7 @@ function IndividualView({
       {/* Navigation */}
       <div className="flex items-center justify-between">
         <span className="text-sm text-gray-600 font-medium">
-          Pregunta <span className="text-purple-600">{currentIndex + 1}</span> de {totalQuestions}
+          Pregunta <span className="text-brand-600">{currentIndex + 1}</span> de {totalQuestions}
         </span>
         <div className="flex gap-2">
           <button
@@ -525,7 +525,7 @@ function IndividualView({
       <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
         {/* Meta tags */}
         <div className="px-4 py-3 bg-gray-50 border-b border-gray-200 flex items-center gap-2 flex-wrap">
-          <span className="px-3 py-1 bg-purple-100 text-purple-700 text-sm font-medium rounded-full">
+          <span className="px-3 py-1 bg-brand-100 text-brand-700 text-sm font-medium rounded-full">
             Tema {question.tema || '?'}
           </span>
           {question.materia && (
@@ -671,7 +671,7 @@ function IndividualView({
               value={reviewComment}
               onChange={(e) => setReviewComment(e.target.value)}
               placeholder="Escribe un comentario si lo deseas..."
-              className="w-full px-4 py-3 border border-gray-300 rounded-xl text-sm resize-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-shadow"
+              className="w-full px-4 py-3 border border-gray-300 rounded-xl text-sm resize-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow"
               rows={2}
             />
           </div>
@@ -684,7 +684,7 @@ function IndividualView({
               <button
                 onClick={() => onApprove(question.id, reviewComment)}
                 disabled={disabled}
-                className="flex-1 flex items-center justify-center gap-2 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all disabled:opacity-50 font-semibold shadow-lg shadow-green-500/25 active:scale-[0.98]"
+                className="flex-1 flex items-center justify-center gap-2 py-4 bg-green-600 text-white rounded-xl hover:bg-green-700 transition-all disabled:opacity-50 font-semibold shadow-sm active:scale-[0.98]"
               >
                 <CheckCircle className="w-5 h-5" />
                 Aprobar
@@ -693,7 +693,7 @@ function IndividualView({
               <button
                 onClick={() => onReject(question.id, reviewComment)}
                 disabled={disabled}
-                className="flex-1 flex items-center justify-center gap-2 py-4 bg-gradient-to-r from-red-500 to-rose-500 text-white rounded-xl hover:from-red-600 hover:to-rose-600 transition-all disabled:opacity-50 font-semibold shadow-lg shadow-red-500/25 active:scale-[0.98]"
+                className="flex-1 flex items-center justify-center gap-2 py-4 bg-red-600 text-white rounded-xl hover:bg-red-700 transition-all disabled:opacity-50 font-semibold shadow-sm active:scale-[0.98]"
               >
                 <XCircle className="w-5 h-5" />
                 Rechazar
@@ -736,7 +736,7 @@ function ListRow({ question, index, onApprove, onReject, onView, onUndo, disable
     <tr className="hover:bg-gray-50">
       <td className="px-4 py-3 text-sm text-gray-500">{index}</td>
       <td className="px-4 py-3 text-sm">
-        <span className="px-2 py-0.5 bg-purple-100 text-purple-700 text-xs font-medium rounded">
+        <span className="px-2 py-0.5 bg-brand-100 text-brand-700 text-xs font-medium rounded">
           T{question.tema || '?'}
         </span>
       </td>
@@ -750,7 +750,7 @@ function ListRow({ question, index, onApprove, onReject, onView, onUndo, disable
         <div className="flex justify-center gap-1">
           <button
             onClick={() => onView(question)}
-            className="p-1.5 text-gray-400 hover:text-purple-600 hover:bg-purple-50 rounded transition-colors"
+            className="p-1.5 text-gray-400 hover:text-brand-600 hover:bg-brand-50 rounded transition-colors"
             title="Ver detalle"
           >
             <Eye className="w-4 h-4" />

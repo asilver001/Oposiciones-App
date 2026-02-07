@@ -28,12 +28,12 @@ import { useAuth } from '../../contexts/AuthContext';
 
 // Study modes configuration - all modes available for beta
 const getStudyModes = (premiumMode) => [
-  { id: 'test-rapido', icon: Zap, title: 'Test Rápido', desc: '5-10 preguntas', time: '~5 min', gradient: 'from-purple-500 to-violet-600', status: 'disponible' },
-  { id: 'practica-tema', icon: Target, title: 'Por Tema', desc: 'Elige tema', time: '~15 min', gradient: 'from-blue-500 to-cyan-600', status: 'disponible' },
-  { id: 'repaso-errores', icon: AlertTriangle, title: 'Errores', desc: 'Pendientes', time: 'Variable', gradient: 'from-amber-500 to-orange-600', status: 'disponible', badge: '12' },
-  { id: 'flashcards', icon: BookMarked, title: 'Flashcards', desc: 'Memorización', time: '~10 min', gradient: 'from-emerald-500 to-teal-600', status: 'disponible' },
-  { id: 'simulacro', icon: Clock, title: 'Simulacro', desc: '100 preguntas', time: '60 min', gradient: 'from-rose-500 to-pink-600', status: 'disponible' },
-  { id: 'lectura', icon: BookOpen, title: 'Solo Lectura', desc: 'Sin contestar', time: 'Libre', gradient: 'from-indigo-500 to-purple-600', status: 'disponible' },
+  { id: 'test-rapido', icon: Zap, title: 'Test Rápido', desc: '5-10 preguntas', time: '~5 min', gradient: 'bg-brand-600', status: 'disponible' },
+  { id: 'practica-tema', icon: Target, title: 'Por Tema', desc: 'Elige tema', time: '~15 min', gradient: 'bg-blue-600', status: 'disponible' },
+  { id: 'repaso-errores', icon: AlertTriangle, title: 'Errores', desc: 'Pendientes', time: 'Variable', gradient: 'bg-amber-600', status: 'disponible', badge: '12' },
+  { id: 'flashcards', icon: BookMarked, title: 'Flashcards', desc: 'Memorización', time: '~10 min', gradient: 'bg-emerald-600', status: 'disponible' },
+  { id: 'simulacro', icon: Clock, title: 'Simulacro', desc: '100 preguntas', time: '60 min', gradient: 'bg-rose-600', status: 'disponible' },
+  { id: 'lectura', icon: BookOpen, title: 'Solo Lectura', desc: 'Sin contestar', time: 'Libre', gradient: 'bg-indigo-600', status: 'disponible' },
 ];
 
 /**
@@ -72,10 +72,10 @@ function StudyModesTab({ onSelectMode, selectedMode, onStartSession, onSwipeRigh
             disabled={isDisabled}
           >
             <div className={`bg-white rounded-xl p-3 border-2 transition-all ${
-              isSelected ? 'border-purple-400 shadow-md' : 'border-gray-100'
+              isSelected ? 'border-brand-400 shadow-md' : 'border-gray-100'
             }`}>
               <div className="flex items-center gap-3">
-                <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${mode.gradient} flex items-center justify-center`}>
+                <div className={`w-11 h-11 rounded-xl ${mode.gradient} flex items-center justify-center`}>
                   <Icon className="w-5 h-5 text-white" />
                 </div>
                 <div className="flex-1">
@@ -88,13 +88,13 @@ function StudyModesTab({ onSelectMode, selectedMode, onStartSession, onSwipeRigh
                       <span className="text-xs bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded-full">Próximo</span>
                     )}
                     {mode.status === 'premium' && (
-                      <span className="text-xs bg-purple-100 text-purple-600 px-1.5 py-0.5 rounded-full">★</span>
+                      <span className="text-xs bg-brand-100 text-brand-600 px-1.5 py-0.5 rounded-full">★</span>
                     )}
                   </div>
                   <p className="text-xs text-gray-500">{mode.desc} · {mode.time}</p>
                 </div>
                 <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${
-                  isSelected ? 'border-purple-500 bg-purple-500' : 'border-gray-300'
+                  isSelected ? 'border-brand-500 bg-brand-500' : 'border-gray-300'
                 }`}>
                   {isSelected && <Check className="w-3 h-3 text-white" />}
                 </div>
@@ -111,7 +111,7 @@ function StudyModesTab({ onSelectMode, selectedMode, onStartSession, onSwipeRigh
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
             onClick={() => onStartSession(selectedMode)}
-            className="w-full mt-4 bg-purple-600 text-white py-3 rounded-xl font-semibold"
+            className="w-full mt-4 bg-brand-600 text-white py-3 rounded-xl font-semibold"
           >
             Comenzar →
           </motion.button>
@@ -134,7 +134,7 @@ function FsrsBreakdown({ stats }) {
   const segments = [
     { key: 'mastered', label: 'Dominadas', count: stats.mastered || 0, color: 'bg-green-500' },
     { key: 'review', label: 'En repaso', count: (stats.review || 0) - (stats.mastered || 0), color: 'bg-blue-500' },
-    { key: 'learning', label: 'Aprendiendo', count: stats.learning || 0, color: 'bg-purple-500' },
+    { key: 'learning', label: 'Aprendiendo', count: stats.learning || 0, color: 'bg-brand-500' },
     { key: 'relearning', label: 'Repasando', count: stats.relearning || 0, color: 'bg-amber-500' },
     { key: 'unseen', label: 'Sin ver', count: stats.unseen || 0, color: 'bg-gray-300' },
   ];
@@ -146,7 +146,7 @@ function FsrsBreakdown({ stats }) {
     <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
       <div className="flex items-center justify-between mb-3">
         <h4 className="font-semibold text-gray-900">Estado de aprendizaje</h4>
-        <span className="text-sm text-purple-600 font-medium">{progressPercent}% visto</span>
+        <span className="text-sm text-brand-600 font-medium">{progressPercent}% visto</span>
       </div>
 
       {/* Progress bar with segments */}
@@ -243,7 +243,7 @@ function ProgressTab({ data, fsrsStats, onSwipeLeft, onStartTest, formatRelative
       <div className="grid grid-cols-2 gap-3">
         <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
           <div className="flex items-center gap-2 mb-1">
-            <Trophy className="w-5 h-5 text-purple-500" />
+            <Trophy className="w-5 h-5 text-brand-500" />
             <span className="text-xs text-gray-500">Tests</span>
           </div>
           <p className="text-2xl font-bold text-gray-900">{data.testsCompleted}</p>
@@ -287,7 +287,7 @@ function ProgressTab({ data, fsrsStats, onSwipeLeft, onStartTest, formatRelative
               <div key={day} className="flex-1 flex flex-col items-center gap-1">
                 <div className="w-full bg-gray-100 rounded-t-lg flex-1 relative" style={{ minHeight: 60 }}>
                   <motion.div
-                    className={`absolute bottom-0 w-full rounded-t-lg ${isToday ? 'bg-orange-400' : 'bg-purple-400'}`}
+                    className={`absolute bottom-0 w-full rounded-t-lg ${isToday ? 'bg-orange-400' : 'bg-brand-400'}`}
                     initial={{ height: 0 }}
                     animate={{ height: `${Math.max(height, value > 0 ? 10 : 0)}%` }}
                     transition={{ duration: 0.5, delay: i * 0.05 }}
@@ -313,7 +313,7 @@ function ProgressTab({ data, fsrsStats, onSwipeLeft, onStartTest, formatRelative
 
               return (
                 <div key={session.id || idx} className="flex items-center gap-3 p-2 bg-gray-50 rounded-lg">
-                  <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center">
                     📚
                   </div>
                   <div className="flex-1 min-w-0">
@@ -418,7 +418,7 @@ export default function ActividadPage({
     return (
       <div className="space-y-6">
         <div className="flex items-center justify-center py-12">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600" />
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-brand-600" />
         </div>
       </div>
     );
@@ -433,7 +433,7 @@ export default function ActividadPage({
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="flex items-center gap-2 bg-purple-100 text-purple-700 px-3 py-1.5 rounded-full text-sm font-medium"
+              className="flex items-center gap-2 bg-brand-100 text-brand-700 px-3 py-1.5 rounded-full text-sm font-medium"
             >
               <Dices className="w-4 h-4" />
               <span>{userStates[simulationMode].emoji}</span>
@@ -453,7 +453,7 @@ export default function ActividadPage({
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex-1 py-2.5 px-3 rounded-lg flex items-center justify-center gap-2 transition-all ${
                     isActive
-                      ? 'bg-purple-100 text-purple-700'
+                      ? 'bg-brand-100 text-brand-700'
                       : 'text-gray-500 hover:bg-gray-50'
                   }`}
                 >
@@ -465,7 +465,7 @@ export default function ActividadPage({
           </div>
           {/* Animated indicator */}
           <motion.div
-            className="h-0.5 bg-purple-500 rounded-full mt-1.5"
+            className="h-0.5 bg-brand-500 rounded-full mt-1.5"
             animate={{ x: activeTab === 0 ? '0%' : '100%', width: '50%' }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
           />

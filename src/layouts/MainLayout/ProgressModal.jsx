@@ -78,7 +78,7 @@ export default function ProgressModal({
           <div className="grid grid-cols-2 gap-3">
             <div className="bg-gray-50 rounded-xl p-4">
               <div className="flex items-center gap-2 mb-1">
-                <Trophy className="w-4 h-4 text-purple-500" />
+                <Trophy className="w-4 h-4 text-brand-500" />
                 <span className="text-xs text-gray-500 font-medium">Tests completados</span>
               </div>
               <p className="text-2xl font-bold text-gray-900">{testsCompleted}</p>
@@ -93,10 +93,10 @@ export default function ProgressModal({
           </div>
 
           {/* Exam info */}
-          <div className="bg-purple-50 rounded-xl p-4">
+          <div className="bg-brand-50 rounded-xl p-4">
             {daysUntilExam ? (
               <p className="text-gray-700 text-sm">
-                Te quedan <span className="font-bold text-purple-600">{daysUntilExam} dias</span> para tu examen
+                Te quedan <span className="font-bold text-brand-600">{daysUntilExam} dias</span> para tu examen
               </p>
             ) : (
               <p className="text-gray-600 text-sm">
@@ -115,7 +115,7 @@ export default function ProgressModal({
                 onClose();
                 onContinueStudying();
               }}
-              className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 rounded-xl transition-all active:scale-[0.98]"
+              className="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-4 rounded-xl transition-all active:scale-[0.98]"
             >
               Continuar estudiando
             </button>

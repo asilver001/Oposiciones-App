@@ -246,7 +246,7 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
   // Results screen
   if (isFinished) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-rose-50 to-white flex flex-col">
+      <div className="min-h-screen bg-gray-50 flex flex-col">
         {/* Header */}
         <div className="bg-white/80 backdrop-blur-sm border-b px-4 py-3">
           <div className="max-w-lg mx-auto text-center">
@@ -259,9 +259,9 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
           <motion.div
             className={`w-24 h-24 rounded-full flex items-center justify-center mb-6 ${
               stats.passed
-                ? 'bg-gradient-to-br from-emerald-400 to-emerald-600'
-                : 'bg-gradient-to-br from-rose-400 to-rose-600'
-            } shadow-lg`}
+                ? 'bg-emerald-500'
+                : 'bg-rose-500'
+            } shadow-md`}
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ type: 'spring', stiffness: 300, damping: 20 }}
@@ -333,7 +333,7 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
                 onComplete?.(stats);
                 onClose?.();
               }}
-              className="w-full py-4 bg-rose-600 text-white font-semibold rounded-xl shadow-lg shadow-rose-600/30 hover:bg-rose-700 transition-colors"
+              className="w-full py-4 bg-rose-600 text-white font-semibold rounded-xl shadow-sm hover:bg-rose-700 transition-colors"
             >
               Finalizar
             </button>

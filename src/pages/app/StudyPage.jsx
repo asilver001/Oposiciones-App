@@ -19,7 +19,7 @@ const modeConfig = {
     icon: Zap,
     title: 'Test Rápido',
     description: 'Un test rápido de 10 preguntas aleatorias para practicar.',
-    gradient: 'from-purple-500 to-violet-600',
+    color: 'bg-brand-600',
     sessionType: 'hybrid',
     defaultConfig: { totalQuestions: 10, reviewRatio: 0.2 }
   },
@@ -27,7 +27,7 @@ const modeConfig = {
     icon: Target,
     title: 'Práctica por Tema',
     description: 'Practica preguntas de un tema específico.',
-    gradient: 'from-blue-500 to-cyan-600',
+    color: 'bg-blue-600',
     sessionType: 'hybrid',
     defaultConfig: { totalQuestions: 20, reviewRatio: 0.25 }
   },
@@ -35,7 +35,7 @@ const modeConfig = {
     icon: AlertTriangle,
     title: 'Repaso de Errores',
     description: 'Repasa las preguntas que has fallado anteriormente.',
-    gradient: 'from-amber-500 to-orange-600',
+    color: 'bg-amber-600',
     sessionType: 'hybrid',
     defaultConfig: { totalQuestions: 20, failedOnly: true }
   },
@@ -43,7 +43,7 @@ const modeConfig = {
     icon: BookMarked,
     title: 'Flashcards',
     description: 'Modo memorización con tarjetas de estudio interactivas.',
-    gradient: 'from-emerald-500 to-teal-600',
+    color: 'bg-emerald-600',
     sessionType: 'flashcard',
     defaultConfig: { questionCount: 20 }
   },
@@ -51,7 +51,7 @@ const modeConfig = {
     icon: Clock,
     title: 'Simulacro de Examen',
     description: '100 preguntas en 60 minutos, como el examen real.',
-    gradient: 'from-rose-500 to-pink-600',
+    color: 'bg-rose-600',
     sessionType: 'simulacro',
     defaultConfig: { questionCount: 100, timeLimit: 60 }
   },
@@ -59,7 +59,7 @@ const modeConfig = {
     icon: BookOpen,
     title: 'Modo Lectura',
     description: 'Lee las preguntas y respuestas sin presión.',
-    gradient: 'from-indigo-500 to-purple-600',
+    color: 'bg-indigo-600',
     sessionType: 'hybrid',
     defaultConfig: { totalQuestions: 20, readOnly: true }
   },
@@ -67,7 +67,7 @@ const modeConfig = {
     icon: Target,
     title: 'Sesión de Estudio',
     description: 'Practica con preguntas de tu temario usando repetición espaciada.',
-    gradient: 'from-purple-500 to-violet-600',
+    color: 'bg-brand-600',
     sessionType: 'hybrid',
     defaultConfig: { totalQuestions: 20, reviewRatio: 0.25 }
   }
@@ -152,7 +152,7 @@ export default function StudyPage() {
 
   // Pre-session preview screen
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white flex flex-col">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Header */}
       <div className="bg-white/80 backdrop-blur-sm border-b px-4 py-3">
         <div className="max-w-lg mx-auto flex items-center">
@@ -169,7 +169,7 @@ export default function StudyPage() {
       <div className="flex-1 flex flex-col items-center justify-center p-6">
         <div className="text-center max-w-md w-full">
           {/* Mode Icon */}
-          <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${config.gradient} flex items-center justify-center mx-auto mb-6 shadow-lg`}>
+          <div className={`w-20 h-20 rounded-2xl ${config.color} flex items-center justify-center mx-auto mb-6 shadow-md`}>
             <Icon className="w-10 h-10 text-white" />
           </div>
 
@@ -186,7 +186,7 @@ export default function StudyPage() {
             {/* Show specific mode parameters */}
             <div className="flex justify-center gap-3 flex-wrap mt-4">
               {(questionCount || config.defaultConfig.totalQuestions || config.defaultConfig.questionCount) && (
-                <span className="bg-purple-100 text-purple-700 px-3 py-1.5 rounded-full text-sm font-medium">
+                <span className="bg-brand-100 text-brand-700 px-3 py-1.5 rounded-full text-sm font-medium">
                   {questionCount || config.defaultConfig.totalQuestions || config.defaultConfig.questionCount} preguntas
                 </span>
               )}
@@ -242,7 +242,7 @@ export default function StudyPage() {
           <div className="space-y-3">
             <button
               onClick={handleStart}
-              className={`w-full py-4 bg-gradient-to-r ${config.gradient} text-white font-semibold rounded-2xl shadow-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2`}
+              className={`w-full py-4 ${config.color} text-white font-semibold rounded-2xl shadow-sm hover:opacity-90 transition-opacity flex items-center justify-center gap-2`}
             >
               <Play className="w-5 h-5" />
               Comenzar sesión

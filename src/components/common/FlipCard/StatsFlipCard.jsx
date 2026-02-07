@@ -48,29 +48,29 @@ function AnimatedCounter({ value, duration = 0.8, suffix = "", className = "" })
 // Propuesta 2 style: Pastel front, solid back
 const colorSchemes = {
   amber: {
-    gradientFront: 'from-amber-100 to-orange-100',  // Pastel suave
-    bgBack: 'bg-amber-500',                          // Sólido vibrante
+    bgFront: 'bg-amber-50',
+    bgBack: 'bg-amber-500',
     textFront: 'text-amber-700',
     textBack: 'text-white',
-    border: 'border-amber-200',
+    border: 'border-amber-100',
     iconFront: 'text-amber-500',
     iconBack: 'text-white/80'
   },
   purple: {
-    gradientFront: 'from-purple-100 to-violet-100',
-    bgBack: 'bg-purple-600',
-    textFront: 'text-purple-700',
+    bgFront: 'bg-brand-50',
+    bgBack: 'bg-brand-600',
+    textFront: 'text-brand-700',
     textBack: 'text-white',
-    border: 'border-purple-200',
-    iconFront: 'text-purple-500',
+    border: 'border-brand-100',
+    iconFront: 'text-brand-500',
     iconBack: 'text-white/80'
   },
   emerald: {
-    gradientFront: 'from-emerald-100 to-teal-100',
+    bgFront: 'bg-emerald-50',
     bgBack: 'bg-emerald-500',
     textFront: 'text-emerald-700',
     textBack: 'text-white',
-    border: 'border-emerald-200',
+    border: 'border-emerald-100',
     iconFront: 'text-emerald-500',
     iconBack: 'text-white/80'
   }
@@ -133,7 +133,7 @@ export default function StatsFlipCard({
       >
         {/* Front - Pastel card with stat (Propuesta 2 style) */}
         <div
-          className={`absolute inset-0 bg-gradient-to-br ${colors.gradientFront} rounded-2xl p-4 flex flex-col border ${colors.border} shadow-sm`}
+          className={`absolute inset-0 ${colors.bgFront} rounded-2xl p-4 flex flex-col border ${colors.border} shadow-sm`}
           style={{ backfaceVisibility: 'hidden' }}
         >
           <div className="flex items-center justify-between mb-auto">
@@ -156,7 +156,7 @@ export default function StatsFlipCard({
 
         {/* Back - Solid color with details (Propuesta 2 style) */}
         <div
-          className={`absolute inset-0 ${colors.bgBack} rounded-2xl p-4 shadow-lg flex flex-col`}
+          className={`absolute inset-0 ${colors.bgBack} rounded-2xl p-4 shadow-sm flex flex-col`}
           style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
         >
           <span className={`text-xs font-semibold ${colors.textBack} mb-2 uppercase tracking-wide opacity-80`}>{label}</span>

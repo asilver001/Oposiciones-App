@@ -18,7 +18,7 @@ const spring = {
 const statusConfig = {
   dominado: {
     label: 'Dominado',
-    gradient: 'from-emerald-400 to-emerald-500',
+    solid: 'bg-emerald-500',
     bg: 'bg-emerald-50',
     text: 'text-emerald-700',
     icon: Check,
@@ -26,15 +26,15 @@ const statusConfig = {
   },
   avanzando: {
     label: 'Avanzando',
-    gradient: 'from-purple-400 to-purple-500',
-    bg: 'bg-purple-50',
-    text: 'text-purple-700',
+    solid: 'bg-brand-500',
+    bg: 'bg-brand-50',
+    text: 'text-brand-700',
     icon: TrendingUp,
     priority: 3,
   },
   progreso: {
     label: 'En progreso',
-    gradient: 'from-blue-400 to-blue-500',
+    solid: 'bg-blue-500',
     bg: 'bg-blue-50',
     text: 'text-blue-700',
     icon: BookOpen,
@@ -42,7 +42,7 @@ const statusConfig = {
   },
   riesgo: {
     label: 'Repasar',
-    gradient: 'from-amber-400 to-orange-500',
+    solid: 'bg-amber-500',
     bg: 'bg-amber-50',
     text: 'text-amber-700',
     icon: AlertTriangle,
@@ -51,7 +51,7 @@ const statusConfig = {
   },
   nuevo: {
     label: 'Nuevo',
-    gradient: 'from-gray-300 to-gray-400',
+    solid: 'bg-gray-300',
     bg: 'bg-gray-50',
     text: 'text-gray-600',
     icon: Plus,
@@ -71,7 +71,7 @@ function AnimatedProgressBar({ value, max = 100, status = 'progreso', size = 'md
     <div className="w-full">
       <div className={`w-full bg-gray-100 rounded-full overflow-hidden ${sizes[size]}`}>
         <motion.div
-          className={`h-full bg-gradient-to-r ${config.gradient} rounded-full relative`}
+          className={`h-full ${config.solid} rounded-full relative`}
           initial={{ width: 0 }}
           animate={{ width: `${percentage}%` }}
           transition={spring.smooth}
@@ -186,7 +186,7 @@ export default function FortalezaVisual({
         {onViewAll && (
           <motion.button
             onClick={onViewAll}
-            className="text-xs text-purple-600 font-medium flex items-center gap-1"
+            className="text-xs text-brand-600 font-medium flex items-center gap-1"
             whileHover={{ x: 2 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -211,7 +211,7 @@ export default function FortalezaVisual({
       {hasMore && (
         <motion.button
           onClick={onViewAll}
-          className="w-full px-4 py-3 text-sm text-purple-600 font-medium hover:bg-purple-50/50 transition-colors border-t border-gray-100 flex items-center justify-center gap-1"
+          className="w-full px-4 py-3 text-sm text-brand-600 font-medium hover:bg-brand-50/50 transition-colors border-t border-gray-100 flex items-center justify-center gap-1"
           whileHover={{ backgroundColor: 'rgba(147, 51, 234, 0.05)' }}
           whileTap={{ scale: 0.98 }}
         >
@@ -225,7 +225,7 @@ export default function FortalezaVisual({
           const config = statusConfig[status];
           return (
             <span key={status} className="flex items-center gap-1.5 text-xs text-gray-500">
-              <span className={`w-2.5 h-2.5 rounded-full bg-gradient-to-r ${config.gradient}`} />
+              <span className={`w-2.5 h-2.5 rounded-full ${config.solid}`} />
               {config.label}
             </span>
           );

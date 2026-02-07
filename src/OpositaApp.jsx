@@ -2041,7 +2041,7 @@ export default function OpositaApp() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-indigo-50 pb-32">
+    <div className="min-h-screen bg-gray-50 pb-32">
       {/* Nueva TopBar fija */}
       <TopBar />
 

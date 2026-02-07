@@ -46,11 +46,11 @@ const statusConfig = {
   },
   progreso: {
     label: 'En progreso',
-    color: 'text-purple-600',
-    bgColor: 'bg-purple-100',
-    borderColor: 'border-purple-200',
+    color: 'text-brand-600',
+    bgColor: 'bg-brand-100',
+    borderColor: 'border-brand-200',
     icon: BookOpen,
-    iconColor: 'text-purple-500'
+    iconColor: 'text-brand-500'
   },
   nuevo: {
     label: 'Nuevo',
@@ -102,20 +102,20 @@ function ProgressBar({ percentage, status }) {
   const getGradient = () => {
     switch (status) {
       case 'dominado':
-        return 'from-green-500 to-green-400';
+        return 'bg-green-500';
       case 'avanzando':
-        return 'from-amber-500 to-amber-400';
+        return 'bg-amber-500';
       case 'en_riesgo':
-        return 'from-red-500 to-red-400';
+        return 'bg-red-500';
       default:
-        return 'from-purple-500 to-purple-400';
+        return 'bg-brand-500';
     }
   };
 
   return (
     <div className="w-full bg-gray-100 rounded-full h-2 overflow-hidden">
       <motion.div
-        className={`h-full bg-gradient-to-r ${getGradient()} rounded-full`}
+        className={`h-full ${getGradient()} rounded-full`}
         initial={{ width: 0 }}
         animate={{ width: `${percentage}%` }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
@@ -134,7 +134,7 @@ function TopicCard({ topic, onSelect }) {
     <motion.button
       onClick={() => onSelect(topic)}
       className={`w-full text-left p-4 rounded-xl border-2 transition-colors
-        ${config.borderColor} bg-white hover:border-purple-400 hover:shadow-md
+        ${config.borderColor} bg-white hover:border-brand-400 hover:shadow-md
         active:scale-[0.98]`}
       whileHover={{ y: -2 }}
       whileTap={{ scale: 0.98 }}
@@ -184,8 +184,8 @@ function BlockSection({ blockName, topics, isExpanded, onToggle, onTopicSelect }
         className="w-full px-4 py-3 flex items-center justify-between hover:bg-gray-50 transition-colors"
       >
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center">
-            <BookOpen className="w-5 h-5 text-purple-600" />
+          <div className="w-10 h-10 bg-brand-100 rounded-xl flex items-center justify-center">
+            <BookOpen className="w-5 h-5 text-brand-600" />
           </div>
           <div className="text-left">
             <h3 className="font-semibold text-gray-900">{blockName}</h3>
@@ -195,7 +195,7 @@ function BlockSection({ blockName, topics, isExpanded, onToggle, onTopicSelect }
 
         <div className="flex items-center gap-3">
           <div className="text-right">
-            <span className="text-sm font-bold text-purple-600">{totalProgress}%</span>
+            <span className="text-sm font-bold text-brand-600">{totalProgress}%</span>
           </div>
           <motion.div
             animate={{ rotate: isExpanded ? 180 : 0 }}
@@ -240,7 +240,7 @@ function FilterChip({ label, isActive, onClick }) {
       onClick={onClick}
       className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all whitespace-nowrap
         ${isActive
-          ? 'bg-purple-600 text-white shadow-md'
+          ? 'bg-brand-600 text-white shadow-sm'
           : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
         }`}
     >
@@ -270,7 +270,7 @@ function NoSearchResults({ searchQuery, onClear }) {
       </p>
       <button
         onClick={onClear}
-        className="text-purple-600 font-medium hover:text-purple-700"
+        className="text-brand-600 font-medium hover:text-brand-700"
       >
         Limpiar busqueda
       </button>
@@ -547,7 +547,7 @@ export default function TemasListView({
       {/* Progress Summary */}
       <div className="flex items-center justify-end">
         <div className="text-right">
-          <p className="text-2xl font-bold text-purple-600">{overallStats.avgProgress}%</p>
+          <p className="text-2xl font-bold text-brand-600">{overallStats.avgProgress}%</p>
           <p className="text-xs text-gray-500">progreso total</p>
         </div>
       </div>
@@ -577,7 +577,7 @@ export default function TemasListView({
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="Buscar tema..."
           className="w-full pl-12 pr-4 py-3 bg-white rounded-xl border border-gray-200
-            focus:border-purple-400 focus:ring-2 focus:ring-purple-100
+            focus:border-brand-400 focus:ring-2 focus:ring-brand-100
             outline-none transition-all text-gray-900 placeholder-gray-400"
         />
       </div>

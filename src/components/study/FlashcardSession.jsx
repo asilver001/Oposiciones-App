@@ -156,7 +156,7 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <Loader2 className="w-12 h-12 animate-spin text-purple-600 mx-auto mb-4" />
+          <Loader2 className="w-12 h-12 animate-spin text-brand-600 mx-auto mb-4" />
           <p className="text-gray-600">Preparando flashcards...</p>
         </div>
       </div>
@@ -190,7 +190,7 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
     const accuracy = totalAnswered > 0 ? Math.round((results.known.length / totalAnswered) * 100) : 0;
 
     return (
-      <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white flex flex-col">
+      <div className="min-h-screen bg-gray-50 flex flex-col">
         {/* Header */}
         <div className="bg-white/80 backdrop-blur-sm border-b px-4 py-3">
           <div className="max-w-lg mx-auto flex items-center justify-between">
@@ -211,7 +211,7 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
           animate={{ opacity: 1, scale: 1 }}
           transition={spring.bouncy}
         >
-          <div className="w-20 h-20 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-full flex items-center justify-center mb-4 shadow-lg shadow-emerald-500/30">
+          <div className="w-20 h-20 bg-emerald-500 rounded-full flex items-center justify-center mb-4 shadow-md">
             <Trophy className="w-10 h-10 text-white" />
           </div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">¡Sesión completada!</h2>
@@ -248,7 +248,7 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
             {/* Accuracy */}
             <div className="text-center py-2">
               <span className="text-gray-500">Tasa de acierto: </span>
-              <span className="font-bold text-purple-600">{accuracy}%</span>
+              <span className="font-bold text-brand-600">{accuracy}%</span>
             </div>
           </div>
 
@@ -257,7 +257,7 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
             {results.review.length > 0 && (
               <motion.button
                 onClick={studyReviewCards}
-                className="w-full py-3 bg-amber-500 text-white font-semibold rounded-xl shadow-lg shadow-amber-500/30"
+                className="w-full py-3 bg-amber-500 text-white font-semibold rounded-xl shadow-sm"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -273,7 +273,7 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
                 });
                 onClose?.();
               }}
-              className="w-full py-3 bg-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-purple-600/30"
+              className="w-full py-3 bg-brand-600 text-white font-semibold rounded-xl shadow-sm"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -294,7 +294,7 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
 
   // Active session
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white flex flex-col">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Header */}
       <div className="bg-white/80 backdrop-blur-sm border-b px-4 py-3">
         <div className="max-w-lg mx-auto flex items-center justify-between">
@@ -316,7 +316,7 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
         <div className="mb-6">
           <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
             <motion.div
-              className="h-full bg-gradient-to-r from-purple-500 to-violet-600 rounded-full"
+              className="h-full bg-brand-600 rounded-full"
               initial={{ width: 0 }}
               animate={{ width: `${((currentIndex) / cards.length) * 100}%` }}
               transition={spring.smooth}
@@ -380,7 +380,7 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
                   style={{ backfaceVisibility: 'hidden' }}
                 >
                   {currentCard.topic && (
-                    <span className="text-xs text-purple-500 font-medium mb-3 px-2 py-1 bg-purple-50 rounded-full">
+                    <span className="text-xs text-brand-500 font-medium mb-3 px-2 py-1 bg-brand-50 rounded-full">
                       {currentCard.topic}
                     </span>
                   )}
@@ -397,7 +397,7 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
 
                 {/* Back - Answer */}
                 <div
-                  className="absolute inset-0 bg-gradient-to-br from-purple-600 to-violet-700 rounded-2xl shadow-xl p-6 flex flex-col items-center justify-center text-white"
+                  className="absolute inset-0 bg-brand-600 rounded-2xl shadow-xl p-6 flex flex-col items-center justify-center text-white"
                   style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
                 >
                   <Brain className="w-8 h-8 mb-3 opacity-50" />
@@ -405,11 +405,11 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
                     {currentCard.back}
                   </p>
                   {currentCard.explanation && (
-                    <p className="text-center text-purple-200 text-sm mt-2 line-clamp-3">
+                    <p className="text-center text-brand-200 text-sm mt-2 line-clamp-3">
                       {currentCard.explanation}
                     </p>
                   )}
-                  <p className="text-xs text-purple-200 mt-4">Desliza para continuar</p>
+                  <p className="text-xs text-brand-200 mt-4">Desliza para continuar</p>
                 </div>
               </motion.div>
             </motion.div>

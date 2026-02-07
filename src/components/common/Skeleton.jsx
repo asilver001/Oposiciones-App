@@ -17,7 +17,7 @@ export function Skeleton({ className = '' }) {
  */
 export default function PageSkeleton() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
+    <div className="min-h-screen bg-gray-50">
       {/* Header bar */}
       <div className="bg-white/80 border-b px-4 py-3">
         <div className="max-w-lg mx-auto flex items-center justify-between">

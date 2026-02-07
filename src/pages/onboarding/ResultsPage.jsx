@@ -25,7 +25,7 @@ export default function ResultsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-purple-50 flex flex-col p-6">
+    <div className="min-h-screen bg-gray-50 flex flex-col p-6">
       <div className="flex-1 flex flex-col justify-center max-w-md mx-auto w-full">
         <div className="text-center mb-8">
           <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -42,8 +42,8 @@ export default function ResultsPage() {
         <div className="bg-white rounded-2xl p-6 mb-8 space-y-4">
           {features.map((feature, i) => (
             <div key={i} className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center">
-                <feature.icon className="w-5 h-5 text-purple-600" />
+              <div className="w-10 h-10 bg-brand-100 rounded-xl flex items-center justify-center">
+                <feature.icon className="w-5 h-5 text-brand-600" />
               </div>
               <span className="text-gray-700">{feature.text}</span>
             </div>
@@ -52,7 +52,7 @@ export default function ResultsPage() {
 
         <button
           onClick={handleStart}
-          className="w-full py-4 bg-purple-600 text-white font-semibold rounded-2xl hover:bg-purple-700 transition-colors"
+          className="w-full py-4 bg-brand-600 text-white font-semibold rounded-2xl hover:bg-brand-700 transition-colors"
         >
           Comenzar ahora
         </button>
