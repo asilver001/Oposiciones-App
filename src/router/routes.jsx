@@ -7,6 +7,11 @@
 
 import { Navigate } from 'react-router-dom';
 import { lazy } from 'react';
+import RequireAuth from './guards/RequireAuth';
+import RequireOnboarding from './guards/RequireOnboarding';
+import RequireAdmin from './guards/RequireAdmin';
+import { ErrorBoundary } from '../components/common/ErrorBoundary';
+import { MainLayout } from '../layouts/MainLayout';
 
 // Lazy load pages for code splitting
 const WelcomePage = lazy(() => import('../pages/onboarding/WelcomePage'));
@@ -33,38 +38,9 @@ const ReviewerPage = lazy(() => import('../pages/admin/ReviewerPage'));
 const TermsPage = lazy(() => import('../pages/legal/TermsPage'));
 const PrivacyPage = lazy(() => import('../pages/legal/PrivacyPage'));
 
-// Route path constants for type-safe navigation
-export const ROUTES = {
-  // Onboarding
-  WELCOME: '/welcome',
-  ONBOARDING_OPOSICION: '/onboarding/oposicion',
-  ONBOARDING_TIEMPO: '/onboarding/tiempo',
-  ONBOARDING_FECHA: '/onboarding/fecha',
-  ONBOARDING_INTRO: '/onboarding/intro',
-  ONBOARDING_RESULTS: '/onboarding/results',
-
-  // Auth
-  LOGIN: '/login',
-  SIGNUP: '/signup',
-  FORGOT_PASSWORD: '/forgot-password',
-
-  // Main App
-  APP: '/app',
-  HOME: '/app/inicio',
-  TEMAS: '/app/temas',
-  ACTIVIDAD: '/app/actividad',
-  RECURSOS: '/app/recursos',
-  STUDY: '/app/study',
-  FIRST_TEST: '/app/first-test',
-
-  // Admin
-  ADMIN: '/admin',
-  REVIEWER: '/reviewer',
-
-  // Legal
-  TERMS: '/terms',
-  PRIVACY: '/privacy',
-};
+// Re-export route path constants from paths.js (separate file to avoid circular imports)
+export { ROUTES } from './paths';
+import { ROUTES } from './paths';
 
 /**
  * Route configuration array
@@ -80,81 +56,88 @@ export const routeConfig = [
   // Onboarding flow
   {
     path: ROUTES.WELCOME,
-    element: <WelcomePage />,
+    element: <ErrorBoundary><WelcomePage /></ErrorBoundary>,
   },
   {
     path: ROUTES.ONBOARDING_OPOSICION,
-    element: <OposicionPage />,
+    element: <ErrorBoundary><OposicionPage /></ErrorBoundary>,
   },
   {
     path: ROUTES.ONBOARDING_TIEMPO,
-    element: <TiempoPage />,
+    element: <ErrorBoundary><TiempoPage /></ErrorBoundary>,
   },
   {
     path: ROUTES.ONBOARDING_FECHA,
-    element: <FechaPage />,
+    element: <ErrorBoundary><FechaPage /></ErrorBoundary>,
   },
   {
     path: ROUTES.ONBOARDING_INTRO,
-    element: <IntroPage />,
+    element: <ErrorBoundary><IntroPage /></ErrorBoundary>,
   },
   {
     path: ROUTES.ONBOARDING_RESULTS,
-    element: <ResultsPage />,
+    element: <ErrorBoundary><ResultsPage /></ErrorBoundary>,
   },
 
   // Auth pages
   {
     path: ROUTES.LOGIN,
-    element: <LoginPage />,
+    element: <ErrorBoundary><LoginPage /></ErrorBoundary>,
   },
   {
     path: ROUTES.SIGNUP,
-    element: <SignupPage />,
+    element: <ErrorBoundary><SignupPage /></ErrorBoundary>,
   },
   {
     path: ROUTES.FORGOT_PASSWORD,
-    element: <ForgotPasswordPage />,
+    element: <ErrorBoundary><ForgotPasswordPage /></ErrorBoundary>,
   },
 
-  // Main app routes
+  // Main app routes (protected: require auth + onboarding)
+  // Wrapped in MainLayout for TopBar + BottomTabBar
   {
     path: ROUTES.APP,
-    element: <Navigate to={ROUTES.HOME} replace />,
-  },
-  {
-    path: ROUTES.HOME,
-    element: <HomePage />,
-  },
-  {
-    path: ROUTES.TEMAS,
-    element: <TemasPage />,
-  },
-  {
-    path: ROUTES.ACTIVIDAD,
-    element: <ActividadPage />,
-  },
-  {
-    path: ROUTES.RECURSOS,
-    element: <RecursosPage />,
-  },
-  {
-    path: ROUTES.STUDY,
-    element: <StudyPage />,
-  },
-  {
-    path: ROUTES.FIRST_TEST,
-    element: <FirstTestPage />,
+    element: <RequireAuth><RequireOnboarding><MainLayout /></RequireOnboarding></RequireAuth>,
+    children: [
+      {
+        index: true,
+        element: <Navigate to={ROUTES.HOME} replace />,
+      },
+      {
+        path: 'inicio',
+        element: <ErrorBoundary><HomePage /></ErrorBoundary>,
+      },
+      {
+        path: 'temas',
+        element: <ErrorBoundary><TemasPage /></ErrorBoundary>,
+      },
+      {
+        path: 'actividad',
+        element: <ErrorBoundary><ActividadPage /></ErrorBoundary>,
+      },
+      {
+        path: 'recursos',
+        element: <ErrorBoundary><RecursosPage /></ErrorBoundary>,
+      },
+      {
+        path: 'study',
+        element: <ErrorBoundary><StudyPage /></ErrorBoundary>,
+      },
+      {
+        path: 'first-test',
+        element: <ErrorBoundary><FirstTestPage /></ErrorBoundary>,
+      },
+    ],
   },
 
-  // Admin routes
+  // Admin routes (protected: require admin role)
   {
     path: ROUTES.ADMIN,
-    element: <AdminPage />,
+    element: <RequireAdmin><ErrorBoundary><AdminPage /></ErrorBoundary></RequireAdmin>,
   },
   {
     path: ROUTES.REVIEWER,
-    element: <ReviewerPage />,
+    element: <RequireAdmin><ErrorBoundary><ReviewerPage /></ErrorBoundary></RequireAdmin>,
   },
 
   // Legal pages

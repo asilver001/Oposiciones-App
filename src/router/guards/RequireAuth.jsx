@@ -10,7 +10,7 @@ import { useAuth } from '../../contexts/AuthContext';
 import { ROUTES } from '../routes';
 
 export default function RequireAuth({ children }) {
-  const { user, loading } = useAuth();
+  const { user, loading, isAnonymous } = useAuth();
   const location = useLocation();
 
   // Show nothing while checking auth status
@@ -22,8 +22,8 @@ export default function RequireAuth({ children }) {
     );
   }
 
-  // Redirect to login if not authenticated
-  if (!user) {
+  // Allow authenticated users and anonymous users through
+  if (!user && !isAnonymous) {
     return <Navigate to={ROUTES.LOGIN} state={{ from: location }} replace />;
   }
 

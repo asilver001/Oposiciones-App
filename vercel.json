@@ -4,7 +4,7 @@
   "framework": null,
   "rewrites": [
     {
-      "source": "/((?!assets|favicon.ico).*)",
+      "source": "/((?!assets|favicon.ico|manifest.json|sw.js|icons|robots.txt).*)",
       "destination": "/index.html"
     }
   ]

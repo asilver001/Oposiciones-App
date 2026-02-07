@@ -37,6 +37,7 @@ export default function HomePage() {
 
   return (
     <SoftFortHome
+      showTopBar={false}
       onStartSession={handleStartSession}
       onTopicSelect={handleTopicSelect}
       onViewAllTopics={handleViewAllTopics}

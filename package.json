@@ -10,7 +10,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "screenshot": "node e2e/take-screenshots.js",
+    "test:e2e": "npx playwright test"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.87.3",
@@ -29,6 +31,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
+    "@playwright/test": "^1.58.2",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",

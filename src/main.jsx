@@ -1,20 +1,26 @@
-import { StrictMode } from 'react'
+import { StrictMode, lazy, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import './lib/storage.js'
-import OpositaApp from './OpositaApp.jsx'
 import { AppRouter } from './router'
 import { AuthProvider } from './contexts/AuthContext.jsx'
 import { AdminProvider } from './contexts/AdminContext.jsx'
 
-// Feature flag: set localStorage.setItem('USE_APP_ROUTER', 'true') to test new router
-const USE_APP_ROUTER = localStorage.getItem('USE_APP_ROUTER') === 'true'
+// Legacy fallback: set localStorage.setItem('USE_LEGACY_ROUTER', 'true') to use old OpositaApp
+const USE_LEGACY = localStorage.getItem('USE_LEGACY_ROUTER') === 'true'
+const OpositaApp = lazy(() => import('./OpositaApp.jsx'))
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider>
       <AdminProvider>
-        {USE_APP_ROUTER ? <AppRouter /> : <OpositaApp />}
+        {USE_LEGACY ? (
+          <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 to-violet-100"><div className="animate-pulse text-purple-600">Cargando...</div></div>}>
+            <OpositaApp />
+          </Suspense>
+        ) : (
+          <AppRouter />
+        )}
       </AdminProvider>
     </AuthProvider>
   </StrictMode>,

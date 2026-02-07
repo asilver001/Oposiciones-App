@@ -38,3 +38,8 @@ dist-ssr
 .env.local
 .env.*.local
 supabase/.temp/
+
+# Playwright
+e2e/screenshots/
+e2e/results/
+test-results/
