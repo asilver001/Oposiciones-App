@@ -21,14 +21,14 @@ export function AuthProvider({ children }) {
       const { data, error } = await supabase.rpc('check_user_role', { p_email: email });
       if (error) {
         console.error('Error checking user role:', error);
-        setUserRole(null);
+        setUserRole({ isAdmin: false, isReviewer: false, role: null, name: null });
         return null;
       }
       setUserRole(data);
       return data;
     } catch (err) {
       console.error('Error checking user role:', err);
-      setUserRole(null);
+      setUserRole({ isAdmin: false, isReviewer: false, role: null, name: null });
       return null;
     }
   };
