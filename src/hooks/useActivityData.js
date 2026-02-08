@@ -29,6 +29,12 @@ export function useActivityData() {
     accuracyRate: 0,
     daysStudied: 0
   });
+  const [todayStats, setTodayStats] = useState({
+    questionsAnswered: 0,
+    questionsCorrect: 0,
+    testsCompleted: 0,
+    accuracyRate: 0
+  });
   const [weeklyImprovement, setWeeklyImprovement] = useState(0);
   const [leastPracticedTema, setLeastPracticedTema] = useState(null);
 
@@ -202,6 +208,19 @@ export function useActivityData() {
         totalQuestions: totalQuestions,
         accuracyRate: avgAccuracy,
         daysStudied: studyDays.size
+      });
+
+      // Calculate today's stats
+      const todayStart = new Date();
+      todayStart.setHours(0, 0, 0, 0);
+      const todaySessions = allSessions.filter(s => new Date(s.started_at) >= todayStart);
+      const todayCorrect = todaySessions.reduce((sum, s) => sum + (s.correct_count || 0), 0);
+      const todayTotal = todaySessions.reduce((sum, s) => sum + (s.total_questions || 0), 0);
+      setTodayStats({
+        questionsAnswered: todayTotal,
+        questionsCorrect: todayCorrect,
+        testsCompleted: todaySessions.length,
+        accuracyRate: todayTotal > 0 ? Math.round((todayCorrect / todayTotal) * 100) : 0
       });
 
       // Calculate streak (consecutive days)
@@ -416,6 +435,7 @@ export function useActivityData() {
     calendarData,
     streak,
     totalStats,
+    todayStats,
     weeklyImprovement,
     leastPracticedTema,
     motivationalMessage,

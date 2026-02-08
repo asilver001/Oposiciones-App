@@ -9,7 +9,6 @@ import {
   AlertCircle,
   Clock,
   Sparkles,
-  Filter,
   Play,
   Lock,
   Unlock
@@ -18,9 +17,6 @@ import EmptyState from '../common/EmptyState';
 import DevModeRandomizer from '../dev/DevModeRandomizer';
 import { useAuth } from '../../contexts/AuthContext';
 import {
-  isTopicUnlocked,
-  getUnlockMessage,
-  getPrerequisites,
   getRecommendedOrder
 } from '../../data/topicPrerequisites';
 
@@ -245,19 +241,14 @@ function BlockSection({ blockName, topics, isExpanded, onToggle, onTopicSelect, 
           >
             <div className="px-4 pb-4 space-y-3">
               {topics.map((topic) => {
-                const topicNum = topic.number ?? topic.id;
-                const prereqs = getPrerequisites(topicNum);
-                const unlocked = isTopicUnlocked(topicNum, userProgress);
-                const lockMsg = getUnlockMessage(topicNum, userProgress);
-
                 return (
                   <TopicCard
                     key={topic.id}
                     topic={topic}
                     onSelect={onTopicSelect}
-                    locked={!unlocked}
-                    lockMessage={lockMsg}
-                    hasPrereqs={prereqs.length > 0}
+                    locked={false}
+                    lockMessage={null}
+                    hasPrereqs={false}
                   />
                 );
               })}
@@ -616,7 +607,7 @@ export default function TemasListView({
         <div className="bg-brand-50 rounded-2xl p-4 border border-brand-100">
           <h3 className="text-sm font-semibold text-brand-700 mb-3 flex items-center gap-2">
             <Play className="w-4 h-4" />
-            Orden recomendado
+            Te sugerimos continuar con
           </h3>
           <div className="space-y-2">
             {recommendedTopics.map((topic, idx) => (
@@ -632,7 +623,7 @@ export default function TemasListView({
                   {idx + 1}
                 </span>
                 <span className="text-sm font-medium text-gray-800 truncate flex-1">
-                  {topic.name}
+                  T{topic.number ?? topic.id}. {topic.name}
                 </span>
                 <ChevronRight className="w-4 h-4 text-brand-400 shrink-0" />
               </button>

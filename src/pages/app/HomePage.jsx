@@ -16,7 +16,7 @@ import { useAuth } from '../../hooks/useAuth';
 export default function HomePage() {
   const navigate = useNavigate();
   const { user } = useAuth();
-  const { totalStats, streak, fetchActivityData } = useActivityData();
+  const { totalStats, streak, weeklyImprovement, fetchActivityData } = useActivityData();
   const { getFortalezaData } = useTopics();
 
   // Fetch activity data on mount
@@ -53,6 +53,7 @@ export default function HomePage() {
       showTopBar={false}
       userName={user?.user_metadata?.name || user?.email?.split('@')[0] || 'Usuario'}
       totalStats={totalStats}
+      weeklyImprovement={weeklyImprovement}
       streakData={{ current: streak, longest: streak }}
       fortalezaData={fortalezaData}
       onStartSession={handleStartSession}

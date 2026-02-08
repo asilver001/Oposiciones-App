@@ -173,7 +173,7 @@ function StatCard({ icon: Icon, value, label, colorScheme, onClick, badge, delay
 /**
  * LevelCard - XP/Level display
  */
-function LevelCard({ level, xp, percentile, onClick }) {
+function LevelCard({ level, xp, description, onClick }) {
   return (
     <motion.button
       onClick={onClick}
@@ -190,12 +190,12 @@ function LevelCard({ level, xp, percentile, onClick }) {
         </div>
         <div>
           <p className="font-bold text-lg">Nivel {level}</p>
-          <p className="text-sm text-white/80">Top {percentile}% de opositores</p>
+          <p className="text-sm text-white/80">{description}</p>
         </div>
       </div>
       <div className="text-right">
         <p className="text-2xl font-bold">{xp}</p>
-        <p className="text-xs text-white/70">XP totales</p>
+        <p className="text-xs text-white/70">preguntas</p>
       </div>
     </motion.button>
   );
@@ -271,7 +271,8 @@ function Footer({ onNavigate }) {
 export default function SoftFortHome({
   userName = 'Usuario',
   streakData = { current: 0, longest: 0 },
-  totalStats = { testsCompleted: 0, questionsCorrect: 0, accuracyRate: 0 },
+  totalStats = { testsCompleted: 0, questionsCorrect: 0, accuracyRate: 0, totalQuestions: 0 },
+  weeklyImprovement = 0,
   fortalezaData = [],
   onStartSession,
   onTopicSelect,
@@ -333,13 +334,34 @@ export default function SoftFortHome({
   // Get motivational badge for streak
   const streakBadge = effectiveStreak.current > 0 ? `🔥 ${getMotivationalMessage(effectiveStreak.current)}` : null;
 
-  // Get accuracy trend badge
-  const accuracyBadge = effectiveStats.accuracyRate > 0 ? '↑ +5%' : null;
+  // Get accuracy trend badge — use real weekly improvement if available
+  const accuracyBadge = weeklyImprovement > 0
+    ? `↑ +${weeklyImprovement}%`
+    : weeklyImprovement < 0
+      ? `↓ ${weeklyImprovement}%`
+      : null;
 
-  // Calculate level and XP (simplified)
-  const xp = effectiveStats.questionsCorrect * 10;
-  const level = Math.floor(xp / 100) + 1;
-  const percentile = Math.max(1, 100 - Math.floor(level * 5));
+  // Calculate level based on real milestones (questions answered)
+  // Levels: 1 (0-49), 2 (50-149), 3 (150-299), 4 (300-499), 5 (500-749), etc.
+  const totalAnswered = effectiveStats.totalQuestions || 0;
+  const levelThresholds = [0, 50, 150, 300, 500, 750, 1000, 1500, 2000, 3000];
+  const level = levelThresholds.filter(t => totalAnswered >= t).length;
+  const xp = totalAnswered;
+
+  // Progress description instead of fake percentile
+  const levelDescriptions = [
+    'Empezando',
+    'Primeros pasos',
+    'Cogiendo ritmo',
+    'En progreso',
+    'Constante',
+    'Avanzado',
+    'Experto',
+    'Veterano',
+    'Maestro',
+    'Leyenda'
+  ];
+  const levelDescription = levelDescriptions[Math.min(level, levelDescriptions.length) - 1] || 'Empezando';
 
   return (
     <motion.div
@@ -426,7 +448,7 @@ export default function SoftFortHome({
         <LevelCard
           level={level}
           xp={xp}
-          percentile={percentile}
+          description={levelDescription}
           onClick={onLevelClick}
         />
       </div>}

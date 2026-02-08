@@ -53,7 +53,9 @@ export default function MainLayout() {
   const { userData, streakData } = useUserStore();
   const {
     totalStats: activityStats,
+    todayStats,
     streak: activityStreak,
+    weeklyImprovement,
     fetchActivityData,
   } = useActivityData();
 
@@ -81,9 +83,9 @@ export default function MainLayout() {
   // Hide navigation on study/test pages (full-screen experiences)
   const hideNav = location.pathname.includes('/study') || location.pathname.includes('/first-test');
 
-  // Daily progress data
+  // Daily progress data — use TODAY's questions, not lifetime
   const dailyGoal = userData.dailyGoal || 15;
-  const todayQuestions = activityStats.totalQuestions || 0;
+  const todayQuestions = todayStats.questionsAnswered || 0;
   const dailyProgressPercent = Math.min(Math.round((todayQuestions / dailyGoal) * 100), 100);
   const displayStreak = activityStats.testsCompleted > 0 ? activityStreak : (streakData.current || 0);
 

@@ -743,6 +743,44 @@ WHERE legal_reference ILIKE '%art. 8%' AND legal_reference ILIKE '%50/1997%';
 
 ---
 
+### Incidente: Sesión Completada No Actualiza Inicio (Febrero 2026)
+
+**Problema:** Después de completar una sesión de estudio, los stats del home page (precisión, etc.) no cambiaban.
+
+**Síntoma:** Usuario completa sesión → vuelve a inicio → mismos números que antes.
+
+**Causa raíz:**
+- `completeSession()` escribía a `study_history` (tabla de actividad diaria)
+- El home page lee de `test_sessions` (tabla de sesiones individuales)
+- **Nadie escribía a `test_sessions`** → datos siempre stale
+
+**Fix:**
+1. Crear `recordTestSession()` en `spacedRepetitionService.js` que inserta en `test_sessions`
+2. Actualizar `completeSession()` para llamar AMBAS: `recordTestSession` + `recordDailyStudy`
+3. Agregar `sessionStartRef` para tracking de duración
+
+### Regla: "Verificar Flujo Completo de Datos: Escritura → Lectura"
+
+**Antes de marcar una feature de datos como completa:**
+```
+[ ] ¿El componente que ESCRIBE datos usa la misma tabla que el componente que LEE?
+[ ] ¿Las columnas escritas coinciden con las columnas leídas?
+[ ] ¿Se verificó con Playwright el flujo completo (acción → resultado visible)?
+```
+
+**Anti-patrón:**
+```
+// ❌ Escribir a tabla A, leer desde tabla B
+completeSession → study_history    // escribe aquí
+useActivityData → test_sessions     // lee de aquí (¡diferente!)
+
+// ✅ Escribir y leer la misma tabla
+completeSession → test_sessions + study_history
+useActivityData → test_sessions     // lee correctamente
+```
+
+---
+
 ## Tareas Periódicas
 
 ### Roadmap ForceGraph (Visualización de Progreso)
