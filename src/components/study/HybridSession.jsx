@@ -42,14 +42,18 @@ export default function HybridSession({ config = {}, onClose, onComplete }) {
     setSelectedAnswer(answer);
     setShowResult(true);
 
-    const isCorrect = answer === currentQuestion.correct_answer;
+    // Determine correct answer from options array (no correct_answer column in DB)
+    const correctOpt = (Array.isArray(currentQuestion.options) ? currentQuestion.options : [])
+      .find(o => o.is_correct === true);
+    const correctKey = correctOpt?.id || currentQuestion.correct_answer;
+    const isCorrect = answer === correctKey;
 
     // Track this answer for insights
     answersHistoryRef.current.push({
       question_id: currentQuestion.id,
       es_correcta: isCorrect,
       respuesta_usuario: answer,
-      respuesta_correcta: currentQuestion.correct_answer,
+      respuesta_correcta: correctKey,
       tema: currentQuestion.tema
     });
 

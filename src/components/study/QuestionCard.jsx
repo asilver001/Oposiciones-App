@@ -6,28 +6,19 @@ export default function QuestionCard({
   showResult,
   onSelectAnswer
 }) {
-  // Transform options - support both JSONB array and individual columns
-  let options;
-  if (Array.isArray(question.options) && question.options.length > 0 && question.options[0]?.id) {
-    // JSONB array format: [{id, text, is_correct}, ...]
-    options = question.options.map(opt => ({
-      key: opt.id,
-      text: opt.text,
-      isCorrect: opt.is_correct
-    }));
-  } else {
-    // Individual columns format: option_a, option_b, option_c, option_d
-    const keys = ['a', 'b', 'c', 'd'];
-    options = keys
-      .filter(k => question[`option_${k}`])
-      .map(k => ({
-        key: k,
-        text: question[`option_${k}`],
-        isCorrect: question.correct_answer === k
-      }));
+  // Normalize options from JSONB (may arrive as string or array)
+  let rawOpts = question.options;
+  if (typeof rawOpts === 'string') {
+    try { rawOpts = JSON.parse(rawOpts); } catch { rawOpts = []; }
   }
+  if (!Array.isArray(rawOpts)) rawOpts = [];
 
-  // Get correct answer key
+  const options = rawOpts.map((opt, idx) => ({
+    key: opt.id || ['a', 'b', 'c', 'd'][idx] || `${idx}`,
+    text: opt.text || '',
+    isCorrect: Boolean(opt.is_correct)
+  }));
+
   const correctOption = options.find(opt => opt.isCorrect);
   const correctAnswer = correctOption?.key;
 
