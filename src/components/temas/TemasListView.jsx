@@ -320,9 +320,9 @@ export default function TemasListView({
   const [selectedBlock, setSelectedBlock] = useState(null);
   const [expandedBlocks, setExpandedBlocks] = useState(new Set());
 
-  // Calculate real topic progress from userProgress
+  // Calculate real topic progress from userProgress (always enrich with questionCount)
   const realTopicProgress = useMemo(() => {
-    if (!userProgress || Object.keys(userProgress).length === 0) return null;
+    if (topics.length === 0) return null;
 
     return topics.map((topic) => {
       // Progress is indexed by topic.number (tema field in questions table)
@@ -425,25 +425,23 @@ export default function TemasListView({
   // Use simulated, real progress, or raw topics (in that priority order)
   const effectiveTopics = generateSimulatedTopics || realTopicProgress || topics;
 
-  // Normalize topicsByBlock structure from useTopics hook
-  // Hook returns: { blockId: { id, name, number, code, topics: [...] } }
-  // We need: { blockName: { id, name, topics: [...] } }
-  // When simulation mode is active, apply simulated progress to topics
+  // Normalize topicsByBlock: enrich block topics with progress data
+  // Uses effectiveTopics (simulated > realProgress > raw) as the source of truth
   const normalizedBlocks = useMemo(() => {
     const result = {};
 
-    // Create a map of simulated topics by id for quick lookup
-    const simulatedTopicsMap = new Map();
-    if (generateSimulatedTopics) {
-      generateSimulatedTopics.forEach((t) => simulatedTopicsMap.set(t.id, t));
-    }
+    // Build lookup map from effectiveTopics (already has progress/status/counts)
+    const enrichedMap = new Map();
+    effectiveTopics.forEach((t) => enrichedMap.set(t.id, t));
 
     Object.values(topicsByBlock).forEach((block) => {
       if (block && block.name && block.topics) {
-        // Apply simulated data to topics if in simulation mode
-        const blockTopics = generateSimulatedTopics
-          ? block.topics.map((topic) => simulatedTopicsMap.get(topic.id) || topic)
-          : block.topics;
+        const blockTopics = block.topics.map((topic) => {
+          const enriched = enrichedMap.get(topic.id);
+          if (enriched) return enriched;
+          // Fallback: at minimum set questionsTotal from questionCount
+          return { ...topic, questionsTotal: topic.questionCount || 0, questionsAnswered: 0 };
+        });
 
         result[block.name] = {
           id: block.id,
@@ -455,7 +453,7 @@ export default function TemasListView({
     });
 
     return result;
-  }, [topicsByBlock, generateSimulatedTopics]);
+  }, [topicsByBlock, effectiveTopics]);
 
   // Initialize expanded blocks with first block
   React.useEffect(() => {

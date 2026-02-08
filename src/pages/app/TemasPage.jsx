@@ -11,7 +11,7 @@ import { useTopics } from '../../hooks/useTopics';
 
 export default function TemasPage() {
   const navigate = useNavigate();
-  const { topics, topicsByBlock, loading } = useTopics();
+  const { topics, topicsByBlock, userProgress, loading } = useTopics();
 
   const handleTopicSelect = (topic) => {
     navigate(ROUTES.STUDY, { state: { topic, mode: 'practica-tema' } });
@@ -21,6 +21,7 @@ export default function TemasPage() {
     <TemasListView
       topics={topics}
       topicsByBlock={topicsByBlock}
+      userProgress={userProgress}
       loading={loading}
       onTopicSelect={handleTopicSelect}
     />
