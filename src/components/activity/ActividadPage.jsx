@@ -12,22 +12,32 @@ import {
   AlertTriangle,
   BookMarked,
   BookOpen,
-  Check
+  Check,
+  Brain
 } from 'lucide-react';
 import EmptyState from '../common/EmptyState';
 import DevModeRandomizer, { userStates } from '../dev/DevModeRandomizer';
 import { useAuth } from '../../contexts/AuthContext';
+import { useAnalytics } from '../../hooks/useAnalytics';
+import {
+  ReadinessGauge,
+  VelocityCard,
+  TopicStrengthBars,
+  ReadinessPrediction,
+  AnalyticsEmptyState
+} from './AnalyticsWidgets';
 
 /**
  * ActividadPage - Activity page with swipeable tabs
  *
- * Two tabs:
+ * Three tabs:
  * 1. Modos (left) - Study mode selection
- * 2. Progreso (right) - Statistics and history
+ * 2. Progreso (center) - Statistics and history
+ * 3. Analytics (right) - Advanced learning analytics
  */
 
 // Study modes configuration - all modes available for beta
-const getStudyModes = (premiumMode) => [
+const getStudyModes = (_premiumMode) => [
   { id: 'test-rapido', icon: Zap, title: 'Test Rápido', desc: '5-10 preguntas', time: '~5 min', gradient: 'bg-brand-600', status: 'disponible' },
   { id: 'practica-tema', icon: Target, title: 'Por Tema', desc: 'Elige tema', time: '~15 min', gradient: 'bg-blue-600', status: 'disponible' },
   { id: 'repaso-errores', icon: AlertTriangle, title: 'Errores', desc: 'Pendientes', time: 'Variable', gradient: 'bg-amber-600', status: 'disponible', badge: '12' },
@@ -338,6 +348,46 @@ function ProgressTab({ data, fsrsStats, onSwipeLeft, onStartTest, formatRelative
 }
 
 /**
+ * AnalyticsTab - Advanced learning analytics view
+ */
+function AnalyticsTab({ analytics }) {
+  const { hasEnoughData, readiness, velocity, topicStrength, prediction } = analytics;
+
+  if (!hasEnoughData) {
+    return (
+      <motion.div
+        key="analytics-empty"
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: 20 }}
+        className="space-y-4"
+      >
+        <AnalyticsEmptyState />
+      </motion.div>
+    );
+  }
+
+  return (
+    <motion.div
+      key="analytics"
+      initial={{ opacity: 0, x: 20 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: 20 }}
+      className="space-y-4"
+    >
+      <ReadinessGauge readiness={readiness} />
+
+      <div className="flex gap-3">
+        <VelocityCard velocity={velocity} />
+        <ReadinessPrediction prediction={prediction} />
+      </div>
+
+      <TopicStrengthBars topicStrength={topicStrength} />
+    </motion.div>
+  );
+}
+
+/**
  * Main ActividadPage component
  */
 export default function ActividadPage({
@@ -352,7 +402,7 @@ export default function ActividadPage({
     daysStudied: 0
   },
   calendarData = [],
-  motivationalMessage = null,
+  motivationalMessage: _motivationalMessage = null,
   fsrsStats = null,
   loading = false,
   onStartTest,
@@ -369,10 +419,11 @@ export default function ActividadPage({
   const [simulationMode, setSimulationMode] = useState(null);
   const [simulatedData, setSimulatedData] = useState(null);
 
-  // Tab configuration - Modos first (left), Progreso second (right)
+  // Tab configuration
   const tabs = [
     { id: 0, icon: Target, label: 'Modos' },
-    { id: 1, icon: BarChart3, label: 'Progreso' }
+    { id: 1, icon: BarChart3, label: 'Progreso' },
+    { id: 2, icon: Brain, label: 'Analytics' }
   ];
 
   // Handle mode selection
@@ -413,6 +464,14 @@ export default function ActividadPage({
     weeklyData: displayData.weeklyData,
     sessionHistory: displayData.sessionHistory
   };
+
+  // Advanced analytics
+  const analytics = useAnalytics({
+    totalStats: displayData.totalStats,
+    sessionHistory: displayData.sessionHistory,
+    fsrsStats,
+    streak: displayData.totalStats.currentStreak
+  });
 
   if (loading) {
     return (
@@ -466,14 +525,14 @@ export default function ActividadPage({
           {/* Animated indicator */}
           <motion.div
             className="h-0.5 bg-brand-500 rounded-full mt-1.5"
-            animate={{ x: activeTab === 0 ? '0%' : '100%', width: '50%' }}
+            animate={{ x: `${activeTab * 100}%`, width: `${100 / tabs.length}%` }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
           />
         </div>
 
         {/* Swipeable content */}
         <AnimatePresence mode="wait">
-          {activeTab === 0 ? (
+          {activeTab === 0 && (
             <StudyModesTab
               selectedMode={selectedMode}
               onSelectMode={setSelectedMode}
@@ -481,7 +540,8 @@ export default function ActividadPage({
               onSwipeRight={() => setActiveTab(1)}
               premiumMode={premiumMode}
             />
-          ) : (
+          )}
+          {activeTab === 1 && (
             <ProgressTab
               data={progressData}
               fsrsStats={fsrsStats}
@@ -489,6 +549,9 @@ export default function ActividadPage({
               onStartTest={() => setActiveTab(0)}
               formatRelativeDate={formatRelativeDate}
             />
+          )}
+          {activeTab === 2 && (
+            <AnalyticsTab analytics={analytics} />
           )}
         </AnimatePresence>
       </div>

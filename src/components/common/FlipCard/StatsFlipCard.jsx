@@ -9,15 +9,12 @@ const spring = { snappy: { type: "spring", stiffness: 400, damping: 25 } };
  * Importado de DraftFeatures/AnimationPlayground
  */
 function AnimatedCounter({ value, duration = 0.8, suffix = "", className = "" }) {
-  const [displayValue, setDisplayValue] = useState(0);
   const numericValue = typeof value === 'string' ? parseFloat(value) : value;
   const isNumeric = !isNaN(numericValue);
+  const [displayValue, setDisplayValue] = useState(isNumeric ? 0 : value);
 
   useEffect(() => {
-    if (!isNumeric) {
-      setDisplayValue(value);
-      return;
-    }
+    if (!isNumeric) return;
 
     let start = 0;
     const end = numericValue;
@@ -32,7 +29,7 @@ function AnimatedCounter({ value, duration = 0.8, suffix = "", className = "" })
       }
     }, 1000 / 60);
     return () => clearInterval(timer);
-  }, [numericValue, duration, isNumeric, value]);
+  }, [numericValue, duration, isNumeric]);
 
   if (!isNumeric) {
     return <span className={className}>{value}</span>;

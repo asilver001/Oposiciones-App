@@ -50,7 +50,7 @@ export default function TopBar({
         {/* Left - Progress circle button */}
         <motion.button
           onClick={onProgressClick}
-          className="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-purple-50 active:scale-95 transition-all duration-200"
+          className="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-brand-50 active:scale-95 transition-all duration-200"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           aria-label={`Progreso diario: ${Math.round(progressPercent)}%`}
@@ -62,7 +62,7 @@ export default function TopBar({
               cy="18"
               r={radius}
               fill="none"
-              stroke="#F3E8FF"
+              stroke="var(--color-brand-100)"
               strokeWidth="3"
             />
             {/* Progress circle */}
@@ -71,7 +71,7 @@ export default function TopBar({
               cy="18"
               r={radius}
               fill="none"
-              stroke="#8B5CF6"
+              stroke="var(--color-brand-500)"
               strokeWidth="3"
               strokeLinecap="round"
               strokeDasharray={strokeDasharray}
@@ -80,7 +80,7 @@ export default function TopBar({
               transition={{ duration: 0.8, ease: "easeOut" }}
             />
           </svg>
-          <span className="absolute inset-0 flex items-center justify-center text-[10px] font-bold text-purple-600">
+          <span className="absolute inset-0 flex items-center justify-center text-[10px] font-bold text-brand-600">
             {Math.round(progressPercent)}
           </span>
         </motion.button>

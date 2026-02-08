@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 /**
  * EmptyState - Reusable empty state component for improved UX
@@ -63,58 +62,33 @@ export default function EmptyState({
   const colors = variants[variant] || variants.purple;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, ease: 'easeOut' }}
-      className="flex flex-col items-center justify-center py-12 px-6 text-center bg-white rounded-2xl border border-gray-100 shadow-sm"
-    >
+    <div className="flex flex-col items-center justify-center py-12 px-6 text-center bg-white rounded-2xl border border-gray-100 shadow-sm animate-fade-in">
       {/* Icon */}
       {Icon && (
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.1, duration: 0.3 }}
-          className={`w-16 h-16 rounded-2xl ${colors.iconBg} flex items-center justify-center mb-4`}
-        >
+        <div className={`w-16 h-16 rounded-2xl ${colors.iconBg} flex items-center justify-center mb-4`}>
           <Icon className={`w-8 h-8 ${colors.iconColor}`} />
-        </motion.div>
+        </div>
       )}
 
       {/* Title */}
-      <motion.h3
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.2, duration: 0.3 }}
-        className={`text-xl font-bold ${colors.titleColor} mb-2`}
-      >
+      <h3 className={`text-xl font-bold ${colors.titleColor} mb-2`}>
         {title}
-      </motion.h3>
+      </h3>
 
       {/* Description */}
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.3 }}
-        className={`${colors.descColor} mb-6 max-w-sm text-sm leading-relaxed`}
-      >
+      <p className={`${colors.descColor} mb-6 max-w-sm text-sm leading-relaxed`}>
         {description}
-      </motion.p>
+      </p>
 
       {/* Action Button */}
       {actionLabel && onAction && (
-        <motion.button
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.3 }}
+        <button
           onClick={onAction}
           className={`${colors.buttonBg} ${colors.buttonHover} ${colors.buttonText} px-6 py-3 rounded-xl font-semibold shadow-lg transition-all active:scale-[0.98]`}
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
         >
           {actionLabel}
-        </motion.button>
+        </button>
       )}
-    </motion.div>
+    </div>
   );
 }

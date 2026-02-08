@@ -52,6 +52,7 @@ const STORAGE_KEY = 'dev-simulation-mode';
 /**
  * Get the persisted simulation mode from localStorage
  */
+// eslint-disable-next-line react-refresh/only-export-components
 export function getPersistedMode() {
   try {
     return localStorage.getItem(STORAGE_KEY) || null;
@@ -76,6 +77,7 @@ function persistMode(mode) {
 }
 
 // User state configurations for simulation
+// eslint-disable-next-line react-refresh/only-export-components
 export const userStates = {
   real: {
     label: 'Mi datos reales',
@@ -230,7 +232,7 @@ export default function DevModeRandomizer({ activeMode, onSelectMode, onClear, p
     setIsOpen(false);
   }, [onSelectMode, onClear]);
 
-  const handleClear = useCallback(() => {
+  const _handleClear = useCallback(() => {
     persistMode(null);
     onClear();
     setIsOpen(false);

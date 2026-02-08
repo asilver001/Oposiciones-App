@@ -6,18 +6,32 @@ export default function QuestionCard({
   showResult,
   onSelectAnswer
 }) {
-  // Normalize options from JSONB (may arrive as string or array)
+  // Normalize options: support both JSONB array and individual columns (option_a/b/c/d)
+  let options = [];
+
+  // Try JSONB options array first
   let rawOpts = question.options;
   if (typeof rawOpts === 'string') {
-    try { rawOpts = JSON.parse(rawOpts); } catch { rawOpts = []; }
+    try { rawOpts = JSON.parse(rawOpts); } catch { rawOpts = null; }
   }
-  if (!Array.isArray(rawOpts)) rawOpts = [];
 
-  const options = rawOpts.map((opt, idx) => ({
-    key: opt.id || ['a', 'b', 'c', 'd'][idx] || `${idx}`,
-    text: opt.text || '',
-    isCorrect: Boolean(opt.is_correct)
-  }));
+  if (Array.isArray(rawOpts) && rawOpts.length > 0) {
+    options = rawOpts.map((opt, idx) => ({
+      key: opt.id || ['a', 'b', 'c', 'd'][idx] || `${idx}`,
+      text: opt.text || '',
+      isCorrect: Boolean(opt.is_correct)
+    }));
+  } else {
+    // Fallback: individual columns (option_a, option_b, option_c, option_d)
+    const keys = ['a', 'b', 'c', 'd'];
+    options = keys
+      .filter(k => question[`option_${k}`])
+      .map(k => ({
+        key: k,
+        text: question[`option_${k}`],
+        isCorrect: question.correct_answer === k
+      }));
+  }
 
   const correctOption = options.find(opt => opt.isCorrect);
   const correctAnswer = correctOption?.key;
@@ -59,8 +73,8 @@ export default function QuestionCard({
                 textColor = 'text-red-800';
               }
             } else if (isSelected) {
-              borderColor = 'border-purple-500';
-              bgColor = 'bg-purple-50';
+              borderColor = 'border-brand-500';
+              bgColor = 'bg-brand-50';
             }
 
             return (

@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Loader2, XCircle } from 'lucide-react';
+import { Loader2, XCircle, RefreshCw, Clock, BookOpen } from 'lucide-react';
 import { useStudySession } from '../../hooks/useSpacedRepetition';
 import { useUserInsights } from '../../hooks/useUserInsights';
+import EmptyState from '../common/EmptyState/EmptyState';
 import SessionComplete from './SessionComplete';
 import SessionHeader from './SessionHeader';
 import QuestionCard from './QuestionCard';
@@ -31,10 +32,35 @@ export default function HybridSession({ config = {}, onClose, onComplete }) {
   const [triggeredInsights, setTriggeredInsights] = useState([]);
   const [insightsProcessed, setInsightsProcessed] = useState(false);
 
+  // Loading timeout and retry
+  const [loadingTimedOut, setLoadingTimedOut] = useState(false);
+  const [retryCount, setRetryCount] = useState(0);
+  const MAX_RETRIES = 3;
+  const LOADING_TIMEOUT_MS = 15000;
+
   // Load session on mount
   useEffect(() => {
     loadSession(config);
   }, []);
+
+  // Loading timeout
+  useEffect(() => {
+    if (!isLoading) return;
+    const timer = setTimeout(() => {
+      if (isLoading) setLoadingTimedOut(true);
+    }, LOADING_TIMEOUT_MS);
+    return () => clearTimeout(timer);
+  }, [isLoading]);
+
+  // Retry handler
+  const handleRetry = () => {
+    setRetryCount(c => c + 1);
+    setLoadingTimedOut(false);
+    answersHistoryRef.current = [];
+    setTriggeredInsights([]);
+    setInsightsProcessed(false);
+    loadSession(config);
+  };
 
   // Handle answer selection
   const handleSelect = (answer) => {
@@ -48,8 +74,11 @@ export default function HybridSession({ config = {}, onClose, onComplete }) {
       try { opts = JSON.parse(opts); } catch { opts = []; }
     }
     if (!Array.isArray(opts)) opts = [];
-    const correctOpt = opts.find(o => Boolean(o.is_correct));
-    const correctKey = correctOpt?.id;
+    const keys = ['a', 'b', 'c', 'd'];
+    const correctIdx = opts.findIndex(o => Boolean(o.is_correct));
+    const correctKey = correctIdx >= 0
+      ? (opts[correctIdx]?.id || keys[correctIdx] || `${correctIdx}`)
+      : null;
     const isCorrect = answer === correctKey;
 
     // Track this answer for insights
@@ -102,8 +131,8 @@ export default function HybridSession({ config = {}, onClose, onComplete }) {
     loadSession(config);
   };
 
-  // Loading state
-  if (isLoading) {
+  // Loading state (with timeout)
+  if (isLoading && !loadingTimedOut) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
@@ -114,22 +143,63 @@ export default function HybridSession({ config = {}, onClose, onComplete }) {
     );
   }
 
-  // Error state
-  if (error) {
+  // Loading timed out or error state
+  if (loadingTimedOut || error) {
+    const hasRetriesLeft = retryCount < MAX_RETRIES;
+    const isTimeout = loadingTimedOut && !error;
+
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
         <div className="text-center max-w-sm">
-          <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <XCircle className="w-8 h-8 text-red-500" />
+          <div className={`w-16 h-16 ${isTimeout ? 'bg-amber-100' : 'bg-red-100'} rounded-full flex items-center justify-center mx-auto mb-4`}>
+            {isTimeout
+              ? <Clock className="w-8 h-8 text-amber-500" />
+              : <XCircle className="w-8 h-8 text-red-500" />
+            }
           </div>
-          <h2 className="text-xl font-bold text-gray-800 mb-2">Error</h2>
-          <p className="text-gray-600 mb-4">{error}</p>
-          <button
-            onClick={onClose}
-            className="px-6 py-2 bg-gray-200 rounded-lg hover:bg-gray-300"
-          >
-            Volver
-          </button>
+          <h2 className="text-xl font-bold text-gray-800 mb-2">
+            {isTimeout ? 'Carga lenta' : 'Error'}
+          </h2>
+          <p className="text-gray-600 mb-4">
+            {isTimeout
+              ? 'La sesión está tardando más de lo esperado.'
+              : error
+            }
+          </p>
+          {hasRetriesLeft ? (
+            <>
+              <p className="text-sm text-gray-400 mb-4">
+                Intento {retryCount + 1} de {MAX_RETRIES}
+              </p>
+              <div className="flex gap-3 justify-center">
+                <button
+                  onClick={onClose}
+                  className="px-6 py-2 bg-gray-200 rounded-lg hover:bg-gray-300"
+                >
+                  Volver
+                </button>
+                <button
+                  onClick={handleRetry}
+                  className="px-6 py-2 bg-brand-600 text-white rounded-lg hover:bg-brand-700 flex items-center gap-2"
+                >
+                  <RefreshCw className="w-4 h-4" />
+                  Reintentar
+                </button>
+              </div>
+            </>
+          ) : (
+            <>
+              <p className="text-sm text-gray-500 mb-4">
+                No se pudo cargar tras {MAX_RETRIES} intentos. Vuelve a intentarlo más tarde.
+              </p>
+              <button
+                onClick={onClose}
+                className="px-6 py-2 bg-gray-200 rounded-lg hover:bg-gray-300"
+              >
+                Volver
+              </button>
+            </>
+          )}
         </div>
       </div>
     );
@@ -155,8 +225,14 @@ export default function HybridSession({ config = {}, onClose, onComplete }) {
   // No question available
   if (!currentQuestion) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <p className="text-gray-500">No hay preguntas</p>
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+        <EmptyState
+          icon={BookOpen}
+          title="No hay preguntas disponibles"
+          description="Selecciona otro tema o modo de estudio"
+          actionLabel="Volver"
+          onAction={onClose}
+        />
       </div>
     );
   }

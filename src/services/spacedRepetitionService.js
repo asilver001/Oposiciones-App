@@ -6,9 +6,7 @@
 import { supabase } from '../lib/supabase';
 import {
   calculateNextReview,
-  isDue,
   calculateState,
-  calculatePriority,
   QuestionState
 } from '../lib/fsrs';
 
@@ -423,52 +421,52 @@ export async function generateHybridSession(userId, config = {}) {
  * @returns {Promise<Object>}
  */
 export async function updateProgress(userId, questionId, wasCorrect) {
-  // Get existing progress
-  const { data: existing } = await supabase
-    .from('user_question_progress')
-    .select('*')
-    .eq('user_id', userId)
-    .eq('question_id', questionId)
-    .single();
+  try {
+    // Get existing progress (maybeSingle to avoid throw on no rows)
+    const { data: existing } = await supabase
+      .from('user_question_progress')
+      .select('*')
+      .eq('user_id', userId)
+      .eq('question_id', questionId)
+      .maybeSingle();
 
-  // Calculate new FSRS values
-  const fsrsResult = calculateNextReview(existing, wasCorrect);
+    // Calculate new FSRS values
+    const fsrsResult = calculateNextReview(existing, wasCorrect);
 
-  const progressData = {
-    user_id: userId,
-    question_id: questionId,
-    times_seen: (existing?.times_seen || 0) + 1,
-    times_correct: (existing?.times_correct || 0) + (wasCorrect ? 1 : 0),
-    lapses: wasCorrect ? (existing?.lapses || 0) : ((existing?.lapses || 0) + 1),
-    interval: fsrsResult.interval,
-    ease_factor: fsrsResult.ease,
-    next_review: fsrsResult.nextReview.toISOString(),
-    last_review: new Date().toISOString(),
-    state: fsrsResult.state
-  };
+    const progressData = {
+      user_id: userId,
+      question_id: questionId,
+      times_seen: (existing?.times_seen || 0) + 1,
+      times_correct: (existing?.times_correct || 0) + (wasCorrect ? 1 : 0),
+      lapses: wasCorrect ? (existing?.lapses || 0) : ((existing?.lapses || 0) + 1),
+      stability: fsrsResult.stability || 1.0,
+      difficulty: fsrsResult.ease || 2.5,
+      scheduled_days: fsrsResult.interval || 1,
+      next_review: fsrsResult.nextReview.toISOString(),
+      last_review: new Date().toISOString(),
+      state: fsrsResult.state
+    };
 
-  // Upsert progress
-  const { data, error } = await supabase
-    .from('user_question_progress')
-    .upsert(progressData, {
-      onConflict: 'user_id,question_id'
-    })
-    .select()
-    .single();
+    // Upsert progress
+    const { data, error } = await supabase
+      .from('user_question_progress')
+      .upsert(progressData, {
+        onConflict: 'user_id,question_id'
+      })
+      .select()
+      .maybeSingle();
 
-  if (error) {
-    console.error('Error updating progress:', error);
+    if (error) {
+      console.error('Error updating progress:', error);
+      return null;
+    }
+
+    return data;
+  } catch (err) {
+    // Never throw - session stats should update regardless
+    console.error('Error in updateProgress:', err);
     return null;
   }
-
-  // Also update question stats using RPC function (safer than raw SQL)
-  // Call the existing update_question_stats function from the database
-  await supabase.rpc('update_question_stats', {
-    p_question_id: questionId,
-    p_was_correct: wasCorrect
-  });
-
-  return data;
 }
 
 /**

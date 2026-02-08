@@ -70,19 +70,17 @@ export function useStudySession(config = {}) {
 
     const currentQuestion = questions[currentIndex];
 
+    // Always update session stats and advance, regardless of DB result
+    setSessionStats(prev => ({
+      ...prev,
+      answered: prev.answered + 1,
+      correct: prev.correct + (wasCorrect ? 1 : 0)
+    }));
+    setCurrentIndex(prev => prev + 1);
+
+    // Update progress in database (fire-and-forget, don't block session)
     try {
-      // Update progress in database
       await updateProgress(user.id, currentQuestion.id, wasCorrect);
-
-      // Update session stats
-      setSessionStats(prev => ({
-        ...prev,
-        answered: prev.answered + 1,
-        correct: prev.correct + (wasCorrect ? 1 : 0)
-      }));
-
-      // Move to next question
-      setCurrentIndex(prev => prev + 1);
     } catch (err) {
       console.error('Error updating progress:', err);
     }

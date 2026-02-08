@@ -63,6 +63,56 @@ export function useActivityData() {
   };
 
   /**
+   * Fetch FSRS breakdown stats
+   */
+  const fetchFsrsStats = useCallback(async () => {
+    if (!user?.id) return;
+
+    try {
+      // Get total questions count
+      const { count: totalQuestions } = await supabase
+        .from('questions')
+        .select('*', { count: 'exact', head: true })
+        .eq('is_active', true);
+
+      // Get user progress with FSRS states
+      const { data: progressData } = await supabase
+        .from('user_question_progress')
+        .select('state, ease_factor')
+        .eq('user_id', user.id);
+
+      // Count by state
+      const stats = {
+        new: 0,
+        learning: 0,
+        review: 0,
+        relearning: 0,
+        mastered: 0,
+        total: totalQuestions || 0
+      };
+
+      (progressData || []).forEach(p => {
+        const state = p.state || 0;
+        if (state === 0) stats.new++;
+        else if (state === 1) stats.learning++;
+        else if (state === 2) {
+          stats.review++;
+          if (p.ease_factor >= 2.5) stats.mastered++;
+        }
+        else if (state === 3) stats.relearning++;
+      });
+
+      // Add unseen questions count (total - seen)
+      const seenCount = stats.new + stats.learning + stats.review + stats.relearning;
+      stats.unseen = stats.total - seenCount;
+
+      setFsrsStats(stats);
+    } catch (err) {
+      console.error('Error fetching FSRS stats:', err);
+    }
+  }, [user]);
+
+  /**
    * Fetch all activity data from quiz_sessions table
    */
   const fetchActivityData = useCallback(async () => {
@@ -77,16 +127,15 @@ export function useActivityData() {
       const weekStart = getWeekStart();
       const monthStart = getMonthStart();
 
-      // Fetch all sessions for this user from quiz_sessions table
-      // Columns: id, user_id, tema_id, correct_count, total_questions, created_at, duration_seconds
+      // Fetch all sessions for this user from test_sessions table
       const { data: sessions, error: sessionsError } = await supabase
-        .from('quiz_sessions')
-        .select('id, user_id, tema_id, correct_count, total_questions, created_at, duration_seconds')
+        .from('test_sessions')
+        .select('id, user_id, topic_id, correct_count, total_questions, started_at, completed_at, time_seconds, percentage')
         .eq('user_id', user.id)
-        .order('created_at', { ascending: false });
+        .order('started_at', { ascending: false });
 
       if (sessionsError) {
-        console.error('Error fetching quiz_sessions:', sessionsError);
+        console.error('Error fetching test_sessions:', sessionsError);
         setError(sessionsError.message);
         setLoading(false);
         return;
@@ -97,12 +146,12 @@ export function useActivityData() {
       // Process weekly data (correct answers per day)
       const weeklyCorrect = [0, 0, 0, 0, 0, 0, 0]; // L, M, X, J, V, S, D
       const thisWeekSessions = allSessions.filter(s => {
-        const sessionDate = new Date(s.created_at);
+        const sessionDate = new Date(s.started_at);
         return sessionDate >= weekStart;
       });
 
       thisWeekSessions.forEach(session => {
-        const sessionDate = new Date(session.created_at);
+        const sessionDate = new Date(session.started_at);
         let dayIndex = sessionDate.getDay() - 1; // Monday = 0
         if (dayIndex === -1) dayIndex = 6; // Sunday = 6
         weeklyCorrect[dayIndex] += session.correct_count || 0;
@@ -125,7 +174,7 @@ export function useActivityData() {
       // Calendar data (days practiced this month)
       const monthDays = new Set();
       allSessions.forEach(session => {
-        const sessionDate = new Date(session.created_at);
+        const sessionDate = new Date(session.started_at);
         if (sessionDate >= monthStart) {
           monthDays.add(sessionDate.getDate());
         }
@@ -143,7 +192,7 @@ export function useActivityData() {
       // Calculate days studied (unique days with sessions)
       const studyDays = new Set();
       allSessions.forEach(session => {
-        const d = new Date(session.created_at);
+        const d = new Date(session.started_at);
         studyDays.add(`${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`);
       });
 
@@ -199,7 +248,7 @@ export function useActivityData() {
       lastWeekStart.setDate(lastWeekStart.getDate() - 7);
 
       const lastWeekSessions = allSessions.filter(s => {
-        const d = new Date(s.created_at);
+        const d = new Date(s.started_at);
         return d >= lastWeekStart && d < weekStart;
       });
 
@@ -223,7 +272,7 @@ export function useActivityData() {
       allSessions.forEach(session => {
         if (session.tema_id) {
           const existing = temaLastPracticed[session.tema_id];
-          const sessionDate = new Date(session.created_at);
+          const sessionDate = new Date(session.started_at);
           if (!existing || sessionDate > existing) {
             temaLastPracticed[session.tema_id] = sessionDate;
           }
@@ -260,57 +309,7 @@ export function useActivityData() {
       setError(err.message);
       setLoading(false);
     }
-  }, [user?.id]);
-
-  /**
-   * Fetch FSRS breakdown stats
-   */
-  const fetchFsrsStats = useCallback(async () => {
-    if (!user?.id) return;
-
-    try {
-      // Get total questions count
-      const { count: totalQuestions } = await supabase
-        .from('questions')
-        .select('*', { count: 'exact', head: true })
-        .eq('is_active', true);
-
-      // Get user progress with FSRS states
-      const { data: progressData } = await supabase
-        .from('user_question_progress')
-        .select('state, ease_factor')
-        .eq('user_id', user.id);
-
-      // Count by state
-      const stats = {
-        new: 0,
-        learning: 0,
-        review: 0,
-        relearning: 0,
-        mastered: 0,
-        total: totalQuestions || 0
-      };
-
-      (progressData || []).forEach(p => {
-        const state = p.state || 0;
-        if (state === 0) stats.new++;
-        else if (state === 1) stats.learning++;
-        else if (state === 2) {
-          stats.review++;
-          if (p.ease_factor >= 2.5) stats.mastered++;
-        }
-        else if (state === 3) stats.relearning++;
-      });
-
-      // Add unseen questions count (total - seen)
-      const seenCount = stats.new + stats.learning + stats.review + stats.relearning;
-      stats.unseen = stats.total - seenCount;
-
-      setFsrsStats(stats);
-    } catch (err) {
-      console.error('Error fetching FSRS stats:', err);
-    }
-  }, [user?.id]);
+  }, [user, fetchFsrsStats]);
 
   /**
    * Generate motivational message based on data
@@ -359,8 +358,8 @@ export function useActivityData() {
         type: 'streak',
         emoji: '✨',
         message: `¡${streak} días consecutivos! Cada día cuenta`,
-        color: 'text-purple-600',
-        bg: 'bg-purple-50'
+        color: 'text-brand-600',
+        bg: 'bg-brand-50'
       };
     }
 
@@ -370,8 +369,8 @@ export function useActivityData() {
         type: 'milestone',
         emoji: '🎯',
         message: `¡${totalStats.testsCompleted} tests completados! Vas por buen camino`,
-        color: 'text-purple-600',
-        bg: 'bg-purple-50'
+        color: 'text-brand-600',
+        bg: 'bg-brand-50'
       };
     }
 
