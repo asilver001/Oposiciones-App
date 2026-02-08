@@ -3,13 +3,14 @@
  * React hook for managing spaced repetition study sessions
  */
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import {
   generateHybridSession,
   updateProgress,
   getStudyStats,
   getDueReviews,
   recordDailyStudy,
+  recordTestSession,
   getWeeklyProgress
 } from '../services/spacedRepetitionService';
 import { useAuth } from '../contexts/AuthContext';
@@ -29,6 +30,7 @@ export function useStudySession(config = {}) {
     reviews: 0
   });
   const [error, setError] = useState(null);
+  const sessionStartRef = useRef(null);
 
   // Load session
   const loadSession = useCallback(async (sessionConfig = config) => {
@@ -55,6 +57,7 @@ export function useStudySession(config = {}) {
           correct: 0,
           reviews: sessionQuestions.filter(q => q.isReview).length
         });
+        sessionStartRef.current = new Date().toISOString();
       }
     } catch (err) {
       console.error('Error loading session:', err);
@@ -86,16 +89,31 @@ export function useStudySession(config = {}) {
     }
   }, [user?.id, currentIndex, questions]);
 
-  // Complete session
+  // Complete session - save to both test_sessions and study_history
   const completeSession = useCallback(async () => {
     if (!user?.id) return;
 
+    const now = new Date().toISOString();
+    const startedAt = sessionStartRef.current || now;
+    const timeSeconds = Math.round((new Date(now) - new Date(startedAt)) / 1000);
+
     try {
+      // Save individual session to test_sessions (read by home page)
+      await recordTestSession(user.id, {
+        correctCount: sessionStats.correct,
+        totalQuestions: sessionStats.answered,
+        startedAt,
+        completedAt: now,
+        timeSeconds,
+        testType: config.mode || 'practice'
+      });
+
+      // Also save daily aggregate to study_history
       await recordDailyStudy(user.id, sessionStats.answered, sessionStats.correct);
     } catch (err) {
       console.error('Error recording session:', err);
     }
-  }, [user?.id, sessionStats]);
+  }, [user?.id, sessionStats, config.mode]);
 
   // Get current question
   const currentQuestion = questions[currentIndex] || null;

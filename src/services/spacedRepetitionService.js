@@ -546,6 +546,58 @@ export async function getStudyStats(userId) {
 }
 
 /**
+ * Record a completed test session to test_sessions table
+ * This is what the home page reads to show stats
+ * @param {string} userId
+ * @param {Object} sessionData
+ * @returns {Promise<Object|null>}
+ */
+export async function recordTestSession(userId, sessionData) {
+  try {
+    const {
+      topicId = null,
+      correctCount = 0,
+      totalQuestions = 0,
+      startedAt,
+      completedAt = new Date().toISOString(),
+      timeSeconds = 0,
+      testType = 'practice'
+    } = sessionData;
+
+    const percentage = totalQuestions > 0
+      ? Math.round((correctCount / totalQuestions) * 100)
+      : 0;
+
+    const { data, error } = await supabase
+      .from('test_sessions')
+      .insert({
+        user_id: userId,
+        topic_id: topicId,
+        correct_count: correctCount,
+        incorrect_count: totalQuestions - correctCount,
+        total_questions: totalQuestions,
+        percentage,
+        started_at: startedAt || new Date().toISOString(),
+        completed_at: completedAt,
+        time_seconds: timeSeconds,
+        test_type: testType,
+        status: 'completed'
+      })
+      .select()
+      .maybeSingle();
+
+    if (error) {
+      console.error('Error recording test session:', error);
+      return null;
+    }
+    return data;
+  } catch (err) {
+    console.error('Error in recordTestSession:', err);
+    return null;
+  }
+}
+
+/**
  * Record daily study activity
  * @param {string} userId
  * @param {number} questionsAnswered

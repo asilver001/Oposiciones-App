@@ -711,6 +711,38 @@ WHERE legal_reference ILIKE '%art. 8%' AND legal_reference ILIKE '%50/1997%';
 
 ---
 
+### Incidente: Sesión de Estudio No Registra Respuestas (Febrero 2026)
+
+**Problema:** Todas las respuestas se contaban como incorrectas (0 correctas siempre).
+
+**Síntomas:**
+- Al completar 20 preguntas, los stats mostraban 0 correctas
+- Algunas preguntas no mostraban opciones
+- La página de estudio a veces mostraba error "motion is not defined"
+
+**Causas raíz (múltiples bugs simultáneos):**
+
+1. **`motion` no importado** en 6 componentes: `DevModeRandomizer`, `Toast`, `FlipCard`, `StatsFlipCard`, `ActividadPage`, `TopBar` — importaban `AnimatePresence` pero no `motion` de framer-motion. `EmptyState` usaba `motion.div` sin tenerlo. Causaba crash del ErrorBoundary.
+
+2. **Opciones sin `id`**: 107/1000 preguntas tienen `options: [{text, is_correct}]` sin campo `id`. QuestionCard verificaba `rawOpts[0]?.id` y al ser undefined, no renderizaba opciones.
+
+3. **`answerQuestion` bloqueado por DB**: `setSessionStats` y `setCurrentIndex` estaban DESPUÉS de `await updateProgress()` dentro del `try`. Como `updateProgress` fallaba (schema mismatch), los stats nunca se actualizaban.
+
+4. **Schema mismatch**: Código usaba `ease_factor` e `interval`, pero la DB tiene `difficulty` y `scheduled_days`. Además `user_question_progress.question_id` es UUID pero `questions.id` es INTEGER.
+
+5. **Service Worker cache-first para JS**: Bundles viejos se servían desde cache en vez de red.
+
+6. **Tabla inexistente**: `useActivityData` consultaba `quiz_sessions` (no existe) en vez de `test_sessions`.
+
+### Reglas Aprendidas:
+
+1. **"Nunca bloquear la UI por escrituras a DB"**: Actualizar estado local PRIMERO, luego fire-and-forget al DB.
+2. **"Al parsear opciones JSONB, no verificar `[0]?.id`"**: Solo verificar `Array.isArray()`. Generar `id` desde índice si falta.
+3. **"Buscar TODOS los componentes con el mismo patrón"**: Si un componente tiene un import roto, buscar el mismo pattern en todo el codebase.
+4. **"Verificar con Playwright después de cambios funcionales"**: Los bugs de lógica (no solo UI) se detectan con tests E2E automatizados.
+
+---
+
 ## Tareas Periódicas
 
 ### Roadmap ForceGraph (Visualización de Progreso)
