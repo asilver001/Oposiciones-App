@@ -57,7 +57,7 @@ export const useStudyStore = create((set, get) => ({
 
   // Test completion
   completeTest: () => {
-    const { answers, questions, timeElapsed } = get();
+    const { answers, timeElapsed } = get();
     const total = Object.keys(answers).length;
     const correct = Object.values(answers).filter(a => a.correct).length;
 

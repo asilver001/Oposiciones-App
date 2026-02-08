@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // Simulamos Framer Motion con CSS transitions para este demo
-const MotionDiv = ({ children, className, style, onClick, animate, whileHover, whileTap }) => {
+const MotionDiv = ({ children, className, style, onClick, animate: _animate, whileHover: _whileHover, whileTap: _whileTap }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isTapped, setIsTapped] = useState(false);
   

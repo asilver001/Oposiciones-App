@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import {
   X, CheckCircle, XCircle, RefreshCw, ChevronDown, ChevronUp,
+  ChevronLeft, ChevronRight,
   FileText, GitCompare, Eye, EyeOff
 } from 'lucide-react';
 
@@ -24,11 +25,23 @@ export default function QuestionDetailModal({
   onApprove,
   onReject,
   onMarkRefresh,
+  onPrev,
+  onNext,
+  hasPrev = false,
+  hasNext = false,
   disabled
 }) {
   const [showOtherOptions, setShowOtherOptions] = useState(false);
   const [showOriginal, setShowOriginal] = useState(false);
   const [comment, setComment] = useState('');
+
+  // Reset state when question changes - keep showOriginal persistent for comparing originals
+  /* eslint-disable react-hooks/set-state-in-effect */
+  useEffect(() => {
+    setShowOtherOptions(false);
+    setComment('');
+  }, [question?.id]);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   // Keyboard shortcuts
   useEffect(() => {
@@ -54,12 +67,32 @@ export default function QuestionDetailModal({
         case 'f':
           if (!disabled) {
             e.preventDefault();
-            onMarkRefresh(question.id, comment || 'Necesita reformulación');
+            let reason = comment;
+            if (!reason) {
+              const artRef = question.legal_reference || '';
+              reason = window.prompt(
+                `Razón para reformular (Art: ${artRef || 'sin referencia'}):\n` +
+                'Incluye qué mejorar: enunciado, opciones, explicación, artículo...'
+              );
+            }
+            if (reason) onMarkRefresh(question.id, reason);
           }
           break;
         case 'o':
           e.preventDefault();
           setShowOriginal(prev => !prev);
+          break;
+        case 'arrowleft':
+          if (hasPrev && onPrev) {
+            e.preventDefault();
+            onPrev();
+          }
+          break;
+        case 'arrowright':
+          if (hasNext && onNext) {
+            e.preventDefault();
+            onNext();
+          }
           break;
         default:
           break;
@@ -68,7 +101,7 @@ export default function QuestionDetailModal({
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [question, comment, disabled, onClose, onApprove, onReject, onMarkRefresh]);
+  }, [question, comment, disabled, onClose, onApprove, onReject, onMarkRefresh, onPrev, onNext, hasPrev, hasNext]);
 
   if (!question) return null;
 
@@ -106,19 +139,41 @@ export default function QuestionDetailModal({
                 {status.icon} {status.label}
               </span>
             </div>
-            <button
-              onClick={onClose}
-              className="p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-200 rounded-lg transition-colors"
-            >
-              <X className="w-5 h-5" />
-            </button>
+            <div className="flex items-center gap-1">
+              {(hasPrev || hasNext) && (
+                <>
+                  <button
+                    onClick={onPrev}
+                    disabled={!hasPrev}
+                    className="p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-200 rounded-lg transition-colors disabled:opacity-30 disabled:hover:bg-transparent"
+                    title="Anterior [←]"
+                  >
+                    <ChevronLeft className="w-5 h-5" />
+                  </button>
+                  <button
+                    onClick={onNext}
+                    disabled={!hasNext}
+                    className="p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-200 rounded-lg transition-colors disabled:opacity-30 disabled:hover:bg-transparent"
+                    title="Siguiente [→]"
+                  >
+                    <ChevronRight className="w-5 h-5" />
+                  </button>
+                </>
+              )}
+              <button
+                onClick={onClose}
+                className="p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-200 rounded-lg transition-colors"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
           </div>
 
           {/* Content */}
           <div className="p-6 max-h-[70vh] overflow-y-auto">
             {/* Meta tags */}
             <div className="flex flex-wrap gap-2 mb-4">
-              <span className="px-3 py-1 bg-purple-100 text-purple-700 text-sm font-medium rounded-full">
+              <span className="px-3 py-1 bg-brand-100 text-brand-700 text-sm font-medium rounded-full">
                 Tema {question.tema || '?'}
               </span>
               {question.materia && (
@@ -138,6 +193,13 @@ export default function QuestionDetailModal({
               <p className="text-gray-900 text-lg leading-relaxed">
                 {question.question_text}
               </p>
+              {/* Legal reference - always visible */}
+              {question.legal_reference && (
+                <div className="mt-3 px-3 py-2 bg-amber-50 border border-amber-200 rounded-lg inline-flex items-center gap-2">
+                  <span className="text-xs font-semibold text-amber-700">Art.</span>
+                  <span className="text-sm text-amber-800">{question.legal_reference}</span>
+                </div>
+              )}
             </div>
 
             {/* Correct Answer */}
@@ -186,19 +248,11 @@ export default function QuestionDetailModal({
               )}
             </div>
 
-            {/* Explanation */}
-            {question.explanation && showOtherOptions && (
+            {/* Explanation - always visible */}
+            {question.explanation && (
               <div className="mb-4 p-4 bg-blue-50 border border-blue-200 rounded-xl">
                 <p className="text-xs font-semibold text-blue-800 mb-1">📚 Explicación:</p>
                 <p className="text-sm text-blue-700">{question.explanation}</p>
-              </div>
-            )}
-
-            {/* Legal reference */}
-            {question.legal_reference && showOtherOptions && (
-              <div className="mb-4 p-3 bg-amber-50 border border-amber-200 rounded-lg">
-                <p className="text-xs font-semibold text-amber-800 mb-1">📜 Referencia legal:</p>
-                <p className="text-sm text-amber-700">{question.legal_reference}</p>
               </div>
             )}
 
@@ -261,7 +315,7 @@ export default function QuestionDetailModal({
                 value={comment}
                 onChange={(e) => setComment(e.target.value)}
                 placeholder="Escribe un comentario si lo deseas..."
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl text-sm resize-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-shadow"
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl text-sm resize-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow"
                 rows={2}
               />
             </div>
@@ -290,7 +344,17 @@ export default function QuestionDetailModal({
                   <kbd className="ml-1 px-1.5 py-0.5 text-xs bg-white/20 rounded">R</kbd>
                 </button>
                 <button
-                  onClick={() => onMarkRefresh(question.id, comment || 'Necesita reformulación')}
+                  onClick={() => {
+                    let reason = comment;
+                    if (!reason) {
+                      const artRef = question.legal_reference || '';
+                      reason = window.prompt(
+                        `Razón para reformular (Art: ${artRef || 'sin referencia'}):\n` +
+                        'Incluye qué mejorar: enunciado, opciones, explicación, artículo...'
+                      );
+                    }
+                    if (reason) onMarkRefresh(question.id, reason);
+                  }}
                   disabled={disabled}
                   className="flex items-center justify-center gap-2 py-3 px-4 text-orange-600 bg-orange-50 border border-orange-200 rounded-xl hover:bg-orange-100 transition-colors font-medium"
                 >

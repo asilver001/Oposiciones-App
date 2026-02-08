@@ -52,7 +52,7 @@ export const STATUS_COLORS = {
 
 // Phase color palette for visual differentiation
 export const PHASE_COLORS = {
-  'Phase 1: Auth': '#8b5cf6',
+  'Phase 1: Auth': 'var(--color-brand-500)',
   'Phase 2: Onboarding': '#06b6d4',
   'Phase 3: Study System': '#f59e0b',
   'Phase 4: Questions Bank': '#ec4899',

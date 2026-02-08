@@ -153,7 +153,7 @@ export default function StudyDashboard({ onStartSession }) {
       </div>
 
       {/* Learning Status */}
-      <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-4">
+      <div className="bg-gray-50 rounded-xl p-4">
         <h3 className="font-semibold text-gray-700 mb-3">Estado de aprendizaje</h3>
         <div className="space-y-2">
           {/* Learning */}

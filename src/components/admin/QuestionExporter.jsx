@@ -45,7 +45,7 @@ export default function QuestionExporter() {
     setIsExporting(true);
     try {
       const cleanFilters = Object.fromEntries(
-        Object.entries(filters).filter(([_, v]) => v !== '')
+        Object.entries(filters).filter(([, v]) => v !== '')
       );
       // Parse numeric values
       if (cleanFilters.tema) cleanFilters.tema = parseInt(cleanFilters.tema);
@@ -70,7 +70,7 @@ export default function QuestionExporter() {
     setIsExporting(true);
     try {
       const cleanFilters = Object.fromEntries(
-        Object.entries(filters).filter(([_, v]) => v !== '')
+        Object.entries(filters).filter(([, v]) => v !== '')
       );
       // Parse numeric values
       if (cleanFilters.tema) cleanFilters.tema = parseInt(cleanFilters.tema);
@@ -116,7 +116,7 @@ export default function QuestionExporter() {
     <div className="max-w-4xl mx-auto p-6">
       <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
         {/* Header */}
-        <div className="bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-4">
+        <div className="bg-emerald-600 px-6 py-4">
           <h2 className="text-xl font-bold text-white flex items-center gap-2">
             <Download className="w-6 h-6" />
             Exportar Preguntas
@@ -134,19 +134,19 @@ export default function QuestionExporter() {
             </div>
           ) : stats ? (
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-4 text-center">
-                <p className="text-3xl font-bold text-purple-700">{stats.total}</p>
-                <p className="text-sm text-purple-600">Total</p>
+              <div className="bg-brand-50 rounded-xl p-4 text-center">
+                <p className="text-3xl font-bold text-brand-700">{stats.total}</p>
+                <p className="text-sm text-brand-600">Total</p>
               </div>
-              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-4 text-center">
+              <div className="bg-green-50 rounded-xl p-4 text-center">
                 <p className="text-3xl font-bold text-green-700">{stats.byTier?.free || 0}</p>
                 <p className="text-sm text-green-600">Free</p>
               </div>
-              <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 text-center">
+              <div className="bg-amber-50 rounded-xl p-4 text-center">
                 <p className="text-3xl font-bold text-amber-700">{stats.byTier?.premium || 0}</p>
                 <p className="text-sm text-amber-600">Premium</p>
               </div>
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 text-center">
+              <div className="bg-blue-50 rounded-xl p-4 text-center">
                 <p className="text-3xl font-bold text-blue-700">{Object.keys(stats.byTema || {}).length}</p>
                 <p className="text-sm text-blue-600">Temas</p>
               </div>
@@ -327,7 +327,7 @@ export default function QuestionExporter() {
                       ))}
                     </div>
                     <div className="flex gap-2 mt-2 flex-wrap">
-                      <span className="text-xs px-2 py-0.5 bg-purple-100 text-purple-700 rounded">
+                      <span className="text-xs px-2 py-0.5 bg-brand-100 text-brand-700 rounded">
                         Tema {q.tema}
                       </span>
                       <span className={`text-xs px-2 py-0.5 rounded ${q.tier === 'premium' ? 'bg-amber-100 text-amber-700' : 'bg-green-100 text-green-700'}`}>

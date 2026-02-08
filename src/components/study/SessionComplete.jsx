@@ -9,6 +9,7 @@ import {
   Loader2
 } from 'lucide-react';
 import InsightCard from '../InsightCard';
+import SessionSummary from './SessionSummary';
 
 /**
  * Map insight type to severity level for styling
@@ -27,6 +28,7 @@ function getSeverityFromType(tipo) {
 
 export default function SessionComplete({
   sessionStats,
+  answersHistory = [],
   triggeredInsights = [],
   insightsLoading = false,
   onNewSession,
@@ -37,7 +39,7 @@ export default function SessionComplete({
     : 0;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white flex items-center justify-center p-4">
+    <div className="min-h-screen bg-brand-50 dark:bg-gray-950 flex items-center justify-center p-4">
       <div className="text-center max-w-sm w-full">
         {/* Trophy */}
         <div className="relative mb-6">
@@ -74,7 +76,7 @@ export default function SessionComplete({
             <p className="text-xs text-gray-500">Correctas</p>
           </div>
           <div className="bg-white rounded-xl p-4 shadow-sm">
-            <RotateCcw className="w-6 h-6 text-purple-500 mx-auto mb-1" />
+            <RotateCcw className="w-6 h-6 text-brand-500 mx-auto mb-1" />
             <p className="text-2xl font-bold text-gray-800">{sessionStats.reviews}</p>
             <p className="text-xs text-gray-500">Repasos</p>
           </div>
@@ -84,7 +86,7 @@ export default function SessionComplete({
         <div className="bg-white rounded-xl p-4 mb-6 shadow-sm">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-600">Precisión</span>
-            <span className="font-bold text-purple-600">{accuracy}%</span>
+            <span className="font-bold text-brand-600">{accuracy}%</span>
           </div>
           <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
             <div
@@ -127,11 +129,21 @@ export default function SessionComplete({
           </div>
         )}
 
+        {/* Session Summary - Topic Analysis */}
+        {answersHistory.length > 0 && (
+          <div className="mb-6 text-left">
+            <SessionSummary
+              answers={answersHistory}
+              totalQuestions={sessionStats.total || sessionStats.answered}
+            />
+          </div>
+        )}
+
         {/* Buttons */}
         <div className="space-y-3">
           <button
             onClick={onNewSession}
-            className="w-full py-3 bg-purple-600 text-white rounded-xl font-semibold hover:bg-purple-700 flex items-center justify-center gap-2"
+            className="w-full py-3 bg-brand-600 text-white rounded-xl font-semibold hover:bg-brand-700 flex items-center justify-center gap-2"
           >
             <RotateCcw className="w-5 h-5" />
             Nueva sesión

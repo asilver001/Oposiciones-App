@@ -1,4 +1,7 @@
 {
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
   "permissions": {
     "allow": [
       "Bash(git worktree:*)",
@@ -50,7 +53,21 @@
       "Bash(vercel:*)",
       "Bash(npx supabase:*)",
       "Bash(export SUPABASE_ACCESS_TOKEN:*)",
-      "Bash(git ls-tree:*)"
+      "Bash(git ls-tree:*)",
+      "Bash(npm root:*)",
+      "Bash(npx vercel logs:*)",
+      "WebSearch",
+      "Bash(claude:*)",
+      "Bash(echo:*)",
+      "WebFetch(domain:www.npmjs.com)",
+      "Bash(npm show:*)",
+      "Bash(lsof:*)",
+      "Bash(pkill:*)",
+      "Bash(git checkout:*)",
+      "Bash(git merge:*)",
+      "Bash(npm audit:*)",
+      "Bash(npx npm-check:*)"
     ]
-  }
+  },
+  "enableAllProjectMcpServers": true
 }

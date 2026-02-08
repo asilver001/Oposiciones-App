@@ -34,8 +34,8 @@ const themeConfig = {
   subtextClass: 'text-gray-500',
   badgeClass: 'bg-brand-100 text-brand-700',
   buttonClass: 'bg-brand-600 text-white',
-  progressStroke: '#7c3aed',
-  progressBg: 'rgba(124,58,237,0.12)',
+  progressStroke: 'var(--color-brand-600)',
+  progressBg: 'color-mix(in srgb, var(--color-brand-600) 12%, transparent)',
   decorationClass: 'bg-brand-200/30',
 };
 

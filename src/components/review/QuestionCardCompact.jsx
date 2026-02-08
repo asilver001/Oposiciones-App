@@ -5,7 +5,7 @@ import { Eye, CheckCircle, XCircle, RotateCcw } from 'lucide-react';
  */
 export default function QuestionCardCompact({
   question,
-  index,
+  index: _index,
   onApprove,
   onReject,
   onView,
@@ -52,7 +52,7 @@ export default function QuestionCardCompact({
       {/* Header */}
       <div className="flex justify-between items-start mb-2">
         <div className="flex flex-wrap gap-1">
-          <span className="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full font-medium">
+          <span className="text-xs bg-brand-100 text-brand-700 px-2 py-0.5 rounded-full font-medium">
             T{question.tema || '?'}
           </span>
           {question.materia && (
@@ -83,7 +83,7 @@ export default function QuestionCardCompact({
       <div className="flex justify-between items-center pt-2 border-t border-gray-200/50">
         <button
           onClick={() => onView(question)}
-          className="flex items-center gap-1 text-gray-500 hover:text-purple-600 text-sm transition-colors"
+          className="flex items-center gap-1 text-gray-500 hover:text-brand-600 text-sm transition-colors"
         >
           <Eye className="w-4 h-4" />
           <span className="hidden sm:inline">Ver</span>

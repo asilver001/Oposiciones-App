@@ -17,6 +17,42 @@
 - **Iconos**: Lucide React
 - **Deploy**: GitHub Pages (gh-pages)
 
+## Estrategia de Modelos (Ahorro de Tokens)
+
+**Modelo por defecto: Sonnet 4.5** — usar SIEMPRE a menos que la tarea lo requiera.
+
+### Cuándo usar cada modelo (3 niveles)
+
+| Nivel | Modelo | Cuándo usar | Ejemplos |
+|-------|--------|-------------|----------|
+| 1 | **Sonnet 4.5** (default) | 80% del trabajo diario | Edits, componentes, fix bugs, refactors, wiring, tests |
+| 2 | **Opus 4.6 sin thinking** | Tareas complejas | Arquitectura multi-archivo, debugging difícil, swarm lead |
+| 3 | **Opus 4.6 con thinking** | Ultimo recurso | Problemas donde Opus sin thinking falla, lógica muy compleja |
+
+> **Haiku** para agentes de búsqueda/exploración y comandos git triviales (merge, deploy).
+
+### Regla de escalado automático
+
+Escalar progresivamente. Volver a Sonnet después de resolver.
+
+```
+Sonnet → falla 2x → Opus sin thinking → falla → Opus con thinking
+```
+
+### Para agentes (Task tool)
+
+- Agentes de búsqueda/exploración: `model: "haiku"`
+- Agentes de implementación: `model: "sonnet"`
+- Team lead en swarm: `model: "sonnet"` (Opus solo si coordina >4 agentes)
+- Agentes individuales complejos: `model: "sonnet"`, escalar si fallan
+
+### Anti-patrones de consumo
+
+- **NO** usar Opus para lint fixes, rename variables, o edits mecánicos
+- **NO** usar swarm team para <3 tareas independientes (el overhead no vale)
+- **NO** lanzar agentes de exploración cuando un Grep/Glob directo basta
+- **NO** releer archivos completos que ya están en contexto
+
 ## Estructura del Proyecto
 
 ```
@@ -66,6 +102,8 @@ npm run build    # Build producción
 npm run preview  # Preview build local
 npm run deploy   # Deploy a GitHub Pages
 npm run lint     # ESLint
+npm run screenshot  # Capturas de pantalla (Playwright)
+npm run test:e2e    # Tests E2E completos
 ```
 
 ## Convenciones de Código
@@ -176,6 +214,43 @@ CREAR → REVISAR (IA) → PUBLICAR
 - **Uso:** Claude puede hacer deploys cuando sea necesario
 
 **Importante:** No es necesario pedirle al usuario que ejecute migraciones SQL o deploys manualmente - Claude puede hacerlo directamente.
+
+---
+
+## Verificación Visual con Playwright
+
+Claude puede tomar capturas de pantalla de la app para verificar cambios de UI sin depender del usuario.
+
+### Setup
+
+- **Config:** `playwright.config.js` (mobile 390x844 + desktop 1280x720)
+- **Script:** `e2e/take-screenshots.js` (standalone, rápido)
+- **Tests:** `e2e/screenshots.spec.js` (Playwright Test formal)
+- **Capturas:** `e2e/screenshots/` (gitignored)
+
+### Flujo de Verificación Visual
+
+**Después de cambios de UI, seguir este flujo:**
+
+1. Asegurarse de que el dev server está corriendo (`npm run dev`)
+2. Ejecutar `npm run screenshot` (o `node e2e/take-screenshots.js`)
+3. Leer las capturas con el Read tool para verificar visualmente
+4. Si algo no se ve bien, corregir y repetir
+
+### Cuándo usarlo
+
+- **Siempre** después de cambios de estilos, layout o componentes visuales
+- Después de refactors que afectan la UI
+- Para verificar que un bugfix visual realmente arregló el problema
+- Antes de marcar tareas de UI como completadas
+
+### Notas técnicas
+
+- El base URL en desarrollo es `http://localhost:5173/Oposiciones-App/` (por el `base` de Vite para GitHub Pages)
+- En Vercel el base es `/` (controlado por `process.env.VERCEL`)
+- El script captura mobile y desktop automáticamente
+- Requiere `.env` con `VITE_SUPABASE_URL` y `VITE_SUPABASE_ANON_KEY` para que la app renderice
+- Las dependencias de sistema de Chromium deben estar instaladas (`npx playwright install-deps chromium`)
 
 ---
 
@@ -496,6 +571,143 @@ const flashcards = questions.map(q => ({
 // Los componentes DEBEN usar estos mismos nombres:
 const count = config.totalQuestions || 20;  // NO: config.questionCount
 ```
+
+---
+
+### Incidente: Login No Redirige al Inicio (Febrero 2026)
+
+**Problema:** Después de login exitoso, el usuario se quedaba en la página de bienvenida en vez de ir al inicio.
+
+**Síntoma:** Login completa sin errores pero el usuario vuelve a `/welcome` en loop.
+
+**Causa raíz:**
+1. `RequireOnboarding` guard verifica `onboardingComplete` del zustand store (`user-storage` en localStorage)
+2. Usuarios que completaron onboarding en la versión vieja (OpositaApp) NO tienen este flag en el nuevo store
+3. El guard redirige a `/welcome`, y WelcomePage no redirige al inicio porque `onboardingComplete` es `false`
+4. Resultado: loop infinito login → /app → /welcome → login
+
+**Solución:**
+Los usuarios autenticados (con cuenta Supabase) ya completaron onboarding por definición. El guard debe saltarse la verificación para ellos:
+
+```jsx
+// ✅ BIEN: Usuarios autenticados saltan onboarding
+if (user) {
+  return children;
+}
+// Solo usuarios anónimos necesitan onboarding
+if (!onboardingComplete) {
+  return <Navigate to={ROUTES.WELCOME} />;
+}
+```
+
+### Regla: "Migración de Estado entre Arquitecturas"
+
+**Al migrar de una arquitectura a otra (ej: OpositaApp → AppRouter):**
+```
+[ ] ¿Los stores de zustand/localStorage tienen las mismas keys?
+[ ] ¿Los usuarios existentes tienen los flags necesarios en el nuevo store?
+[ ] ¿Los guards de ruta manejan usuarios que migraron sin datos locales?
+[ ] ¿Se probó el flujo con un usuario existente (no solo nuevo)?
+```
+
+**Anti-patrón a evitar:**
+```jsx
+// ❌ MAL: Bloquear acceso basándose solo en estado local
+if (!onboardingComplete) redirect('/welcome');
+
+// ✅ BIEN: Considerar fuentes de verdad múltiples
+if (user) return children; // Auth = ya onboarded
+if (!onboardingComplete) redirect('/welcome');
+```
+
+**Lección clave:** Al migrar arquitectura, los usuarios existentes pueden no tener el estado local que el nuevo código espera. Siempre usar la fuente de verdad más fiable (autenticación > localStorage).
+
+---
+
+### Incidente: Contradicciones Entre Preguntas del Mismo Artículo (Febrero 2026)
+
+**Problema:** Dos preguntas sobre el mismo artículo legal (Art. 8.1 Ley 50/1997) tenían respuestas que se contradecían mutuamente.
+
+**Síntoma:** ID 765 dice que "Ministro de la Presidencia" es FALSO; ID 1007 dice que es VERDADERO. Ambas sobre la presidencia de la Comisión General de Secretarios de Estado y Subsecretarios.
+
+**Causa raíz:**
+1. Las preguntas se crearon independientemente sin cruzar con preguntas existentes sobre el mismo artículo
+2. Una versión de la ley dice "Ministro de la Presidencia" y otra (tras reforma) dice "Ministro que determine el Presidente del Gobierno"
+3. No había verificación cruzada entre preguntas
+
+### Regla: "Verificar Coherencia Inter-Preguntas"
+
+**Antes de crear/aprobar una pregunta sobre un artículo legal:**
+```
+[ ] ¿Hay otras preguntas en el banco sobre el mismo artículo?
+[ ] ¿Las respuestas son coherentes entre sí?
+[ ] ¿Se está usando la versión vigente de la ley?
+```
+
+**Query útil:**
+```sql
+SELECT id, question_text, legal_reference
+FROM questions
+WHERE legal_reference ILIKE '%art. 8%' AND legal_reference ILIKE '%50/1997%';
+```
+
+---
+
+### Incidente: Asignación Masiva de Temas Incorrectos (Febrero 2026)
+
+**Problema:** En el piloto de calidad, 12 de 15 preguntas del batch 5 tenían el tema mal asignado.
+
+**Síntoma:** Preguntas sobre Tribunal Constitucional (Tema 4) aparecían en Tema 9 (LPAC). Preguntas de LBRL aparecían en Tema 11 (LRJSP).
+
+**Causa raíz:**
+1. Al importar preguntas masivamente, el tema se asignó por lote/archivo, no por contenido
+2. No había validación automática tema-vs-contenido
+
+### Regla: "Validar Tema vs Contenido Legal"
+
+**Mapeo obligatorio Tema → Leyes:**
+- Tema 1-2: CE (Preliminar, Título I)
+- Tema 3: CE (Corona, Cortes)
+- Tema 4: CE (Gobierno, Poder Judicial, TC)
+- Tema 5-6: Ley 50/1997, Ley 40/2015 Título II
+- Tema 7-8: Ley 40/2015 LRJSP
+- Tema 9: Ley 39/2015 LPAC
+- Tema 10: TREBEP/EBEP
+- Tema 11: Ley 40/2015 (sector público institucional)
+
+**Si `legal_reference` cita una ley que no corresponde al tema asignado → flag.**
+
+---
+
+### Incidente: Respuestas Desactualizadas por Reformas Legales (Febrero 2026)
+
+**Problema:** La pregunta ID 488 sobre cuántas veces se ha reformado la CE tenía respuesta "2", pero la reforma del Art. 49 en 2024 hace que la respuesta correcta sea "3".
+
+**Regla:** Al verificar preguntas, considerar reformas legales recientes:
+- Art. 49 CE reformado en 2024 (discapacidad)
+- Art. 135 CE reformado en 2011 (estabilidad presupuestaria)
+- Art. 13.2 CE reformado en 1992 (Maastricht)
+
+---
+
+### Lección: Pipeline de Calidad de Preguntas (Febrero 2026)
+
+**Piloto de 55 preguntas** reveló distribución real: S:22%, A:35%, B:33%, C:11%.
+
+**Hallazgos sistémicos:**
+1. `legal_reference` con texto explicativo en vez de cita limpia (~30%)
+2. Enunciados cortos sin contexto (<80 chars, ~25%)
+3. Abreviaturas sin expandir (~20%)
+4. Temas mal asignados (~15-20%)
+5. Contradicciones entre preguntas sobre mismo artículo (detectado 1 par)
+6. Respuestas incorrectas por reformas legales (~2-3%)
+
+**Pipeline diseñado (3 agentes):**
+1. Reformulador: limpia legal_reference, expande abreviaturas, enriquece enunciados
+2. Verificador Lógico: verifica lógica pregunta-respuesta, confianza <0.90 → flag
+3. Cazador de Discrepancias: contradicciones inter-preguntas, temas incorrectos, reformas
+
+**Referencia completa:** `.claude/questions/QUALITY_STANDARDS.md`
 
 ---
 

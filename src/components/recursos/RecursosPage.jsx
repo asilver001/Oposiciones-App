@@ -16,7 +16,8 @@ import {
   Scale, BookOpen, Target, Lightbulb, BookMarked, ExternalLink,
   ChevronDown, ChevronRight, Heart, Search, X, Sparkles, Clock
 } from 'lucide-react';
-import DevModeRandomizer, { userStates } from '../dev/DevModeRandomizer';
+import DevModeRandomizer from '../dev/DevModeRandomizer';
+import EmptyState from '../common/EmptyState/EmptyState';
 import { useAuth } from '../../contexts/AuthContext';
 
 // Spring presets
@@ -286,6 +287,7 @@ export default function RecursosPage({ onNavigate }) {
   }, []);
 
   // Generate simulated favorites based on simulation mode
+  /* eslint-disable react-hooks/purity */
   const simulatedFavorites = useMemo(() => {
     if (!simulationMode) return null;
 
@@ -293,24 +295,28 @@ export default function RecursosPage({ onNavigate }) {
       case 'nuevo':
         // No favorites
         return [];
-      case 'activo':
+      case 'activo': {
         // Some favorites (3-5 items)
-        const activoCount = Math.floor(Math.random() * 3) + 3; // 3-5 items
+        const activoCount = Math.floor(Math.random() * 3) + 3;
         const shuffledActivo = [...allResourceIds].sort(() => Math.random() - 0.5);
         return shuffledActivo.slice(0, activoCount);
-      case 'veterano':
+      }
+      case 'veterano': {
         // Many favorites (8-12 items)
-        const veteranoCount = Math.floor(Math.random() * 5) + 8; // 8-12 items
+        const veteranoCount = Math.floor(Math.random() * 5) + 8;
         const shuffledVeterano = [...allResourceIds].sort(() => Math.random() - 0.5);
         return shuffledVeterano.slice(0, Math.min(veteranoCount, allResourceIds.length));
+      }
       case 'aleatorio':
-      default:
+      default: {
         // Random selection (0 to all)
         const randomCount = Math.floor(Math.random() * (allResourceIds.length + 1));
         const shuffledRandom = [...allResourceIds].sort(() => Math.random() - 0.5);
         return shuffledRandom.slice(0, randomCount);
+      }
     }
   }, [simulationMode, allResourceIds]);
+  /* eslint-enable react-hooks/purity */
 
   // Use simulated or real favorites
   const effectiveFavoriteIds = simulatedFavorites ?? favoriteIds;
@@ -440,15 +446,14 @@ export default function RecursosPage({ onNavigate }) {
             </motion.div>
           ))
         ) : (
-          <motion.div
-            className="text-center py-12"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-          >
-            <Search className="w-12 h-12 text-gray-300 mx-auto mb-3" />
-            <p className="text-gray-500 font-medium">No se encontraron recursos</p>
-            <p className="text-sm text-gray-400">Prueba con otra busqueda</p>
-          </motion.div>
+          <EmptyState
+            icon={Search}
+            title="No se encontraron recursos"
+            description="Prueba con otra busqueda"
+            actionLabel="Limpiar busqueda"
+            onAction={() => setSearchQuery('')}
+            variant="blue"
+          />
         )}
       </motion.div>
 

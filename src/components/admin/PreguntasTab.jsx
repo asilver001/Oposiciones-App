@@ -80,7 +80,7 @@ export default function PreguntasTab() {
       'human_approved': { icon: CheckCircle, class: 'bg-green-100 text-green-700', label: 'Aprobada' },
       'human_pending': { icon: Clock, class: 'bg-yellow-100 text-yellow-700', label: 'Pendiente' },
       'rejected': { icon: XCircle, class: 'bg-red-100 text-red-700', label: 'Rechazada' },
-      'auto_validated': { icon: CheckCircle, class: 'bg-purple-100 text-purple-700', label: 'Auto' }
+      'auto_validated': { icon: CheckCircle, class: 'bg-brand-100 text-brand-700', label: 'Auto' }
     };
     const badge = badges[status] || badges['human_pending'];
     const Icon = badge.icon;
@@ -97,12 +97,12 @@ export default function PreguntasTab() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <FileText className="w-5 h-5 text-purple-600" />
+          <FileText className="w-5 h-5 text-brand-600" />
           <h2 className="text-lg font-semibold text-gray-900">Gestión de Preguntas</h2>
         </div>
         <button
           onClick={loadQuestions}
-          className="p-2 text-gray-500 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+          className="p-2 text-gray-500 hover:text-brand-600 hover:bg-brand-50 rounded-lg transition-colors"
         >
           <RefreshCw className="w-4 h-4" />
         </button>
@@ -119,14 +119,14 @@ export default function PreguntasTab() {
                 value={filters.search}
                 onChange={(e) => handleFilterChange('search', e.target.value)}
                 placeholder="Buscar pregunta..."
-                className="w-full pl-9 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-sm"
+                className="w-full pl-9 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-sm"
               />
             </div>
           </div>
           <select
             value={filters.tema}
             onChange={(e) => handleFilterChange('tema', e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-sm bg-white"
+            className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-sm bg-white"
           >
             <option value="">Todos los temas</option>
             {[...Array(30)].map((_, i) => (
@@ -136,7 +136,7 @@ export default function PreguntasTab() {
           <select
             value={filters.status}
             onChange={(e) => handleFilterChange('status', e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-sm bg-white"
+            className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-sm bg-white"
           >
             <option value="">Todos los estados</option>
             <option value="human_approved">Aprobadas</option>
@@ -147,7 +147,7 @@ export default function PreguntasTab() {
           <select
             value={filters.tier}
             onChange={(e) => handleFilterChange('tier', e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-sm bg-white"
+            className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-sm bg-white"
           >
             <option value="">Todos los tiers</option>
             <option value="free">Free</option>
@@ -185,7 +185,7 @@ export default function PreguntasTab() {
       {/* Questions Table */}
       {loading ? (
         <div className="flex items-center justify-center py-12">
-          <RefreshCw className="w-6 h-6 animate-spin text-purple-600" />
+          <RefreshCw className="w-6 h-6 animate-spin text-brand-600" />
         </div>
       ) : questions.length === 0 ? (
         <div className="bg-white rounded-xl border border-gray-200 p-8 text-center">
@@ -210,7 +210,7 @@ export default function PreguntasTab() {
               {questions.map(q => (
                 <tr key={q.id} className="hover:bg-gray-50">
                   <td className="px-4 py-3">
-                    <span className="inline-flex items-center justify-center w-8 h-6 bg-purple-100 text-purple-700 text-xs font-semibold rounded">
+                    <span className="inline-flex items-center justify-center w-8 h-6 bg-brand-100 text-brand-700 text-xs font-semibold rounded">
                       {q.tema || '?'}
                     </span>
                   </td>
@@ -224,7 +224,7 @@ export default function PreguntasTab() {
                   </td>
                   <td className="px-4 py-3 text-center">
                     <span className={`text-xs font-medium ${
-                      q.tier === 'free' ? 'text-green-600' : 'text-purple-600'
+                      q.tier === 'free' ? 'text-green-600' : 'text-brand-600'
                     }`}>
                       {q.tier === 'free' ? 'Free' : 'Premium'}
                     </span>
@@ -246,7 +246,7 @@ export default function PreguntasTab() {
                       </button>
                       <button
                         onClick={() => handleViewDetail(q)}
-                        className="p-2 text-gray-400 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+                        className="p-2 text-gray-400 hover:text-brand-600 hover:bg-brand-50 rounded-lg transition-colors"
                         title="Editar"
                       >
                         <Edit2 className="w-4 h-4" />
@@ -388,7 +388,7 @@ function QuestionDetailModal({ question, onClose, onSave }) {
                 key={m.id}
                 onClick={() => setMode(m.id)}
                 className={`flex-1 py-2 text-sm font-medium rounded-md transition-colors ${
-                  mode === m.id ? 'bg-white text-purple-700 shadow-sm' : 'text-gray-600 hover:text-gray-900'
+                  mode === m.id ? 'bg-white text-brand-700 shadow-sm' : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
                 {m.label}
@@ -414,7 +414,7 @@ function QuestionDetailModal({ question, onClose, onSave }) {
               ✏️ Texto de la Pregunta:
             </label>
             {mode === 'view' ? (
-              <div className="p-3 bg-purple-50 rounded-lg text-sm text-gray-900 border border-purple-200">
+              <div className="p-3 bg-brand-50 rounded-lg text-sm text-gray-900 border border-brand-200">
                 {formData.question_text}
               </div>
             ) : (
@@ -422,7 +422,7 @@ function QuestionDetailModal({ question, onClose, onSave }) {
                 value={formData.question_text}
                 onChange={(e) => setFormData({ ...formData, question_text: e.target.value })}
                 rows={3}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 resize-none"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 resize-none"
               />
             )}
           </div>
@@ -457,7 +457,7 @@ function QuestionDetailModal({ question, onClose, onSave }) {
                       type="text"
                       value={opt.text}
                       onChange={(e) => handleOptionChange(idx, 'text', e.target.value)}
-                      className="flex-1 px-2 py-1 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-purple-500"
+                      className="flex-1 px-2 py-1 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-brand-500"
                     />
                   )}
                   {opt.is_correct && (
@@ -480,7 +480,7 @@ function QuestionDetailModal({ question, onClose, onSave }) {
                 value={formData.explanation}
                 onChange={(e) => setFormData({ ...formData, explanation: e.target.value })}
                 rows={2}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 resize-none"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 resize-none"
               />
             )}
           </div>
@@ -494,7 +494,7 @@ function QuestionDetailModal({ question, onClose, onSave }) {
                   type="number"
                   value={formData.tema}
                   onChange={(e) => setFormData({ ...formData, tema: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500"
                 />
               </div>
               <div>
@@ -502,7 +502,7 @@ function QuestionDetailModal({ question, onClose, onSave }) {
                 <select
                   value={formData.tier}
                   onChange={(e) => setFormData({ ...formData, tier: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 bg-white"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 bg-white"
                 >
                   <option value="free">Free</option>
                   <option value="premium">Premium</option>
@@ -513,7 +513,7 @@ function QuestionDetailModal({ question, onClose, onSave }) {
                 <select
                   value={formData.validation_status}
                   onChange={(e) => setFormData({ ...formData, validation_status: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 bg-white"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 bg-white"
                   disabled={mode === 'new_version'}
                 >
                   <option value="human_pending">Pendiente</option>
@@ -537,7 +537,7 @@ function QuestionDetailModal({ question, onClose, onSave }) {
             <button
               onClick={handleSave}
               disabled={saving}
-              className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors disabled:opacity-50"
+              className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-brand-600 text-white rounded-lg hover:bg-brand-700 transition-colors disabled:opacity-50"
             >
               {saving ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
               {mode === 'new_version' ? 'Crear Nueva Versión' : 'Guardar Cambios'}
@@ -587,7 +587,7 @@ function VersionHistoryModal({ questionId, onClose }) {
       <div className="bg-white rounded-2xl shadow-xl w-full max-w-xl max-h-[80vh] overflow-hidden flex flex-col">
         <div className="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <History className="w-5 h-5 text-purple-600" />
+            <History className="w-5 h-5 text-brand-600" />
             <h2 className="font-semibold text-gray-900">Historial de Versiones</h2>
           </div>
           <button onClick={onClose} className="text-gray-400 hover:text-gray-600">
@@ -598,7 +598,7 @@ function VersionHistoryModal({ questionId, onClose }) {
         <div className="p-6 overflow-y-auto flex-1">
           {loading ? (
             <div className="flex items-center justify-center py-8">
-              <RefreshCw className="w-6 h-6 animate-spin text-purple-600" />
+              <RefreshCw className="w-6 h-6 animate-spin text-brand-600" />
             </div>
           ) : versions.length === 0 ? (
             <p className="text-center text-gray-500 py-8">No hay versiones disponibles</p>
@@ -609,7 +609,7 @@ function VersionHistoryModal({ questionId, onClose }) {
                   key={v.id}
                   className={`p-4 rounded-xl border-2 ${
                     v.is_current_version
-                      ? 'border-purple-300 bg-purple-50'
+                      ? 'border-brand-300 bg-brand-50'
                       : 'border-gray-200 bg-gray-50'
                   }`}
                 >
@@ -617,7 +617,7 @@ function VersionHistoryModal({ questionId, onClose }) {
                     <div className="flex items-center gap-2">
                       <span className="font-semibold text-gray-900">v{v.version}</span>
                       {v.is_current_version && (
-                        <span className="px-2 py-0.5 bg-purple-600 text-white text-xs rounded-full">
+                        <span className="px-2 py-0.5 bg-brand-600 text-white text-xs rounded-full">
                           ACTUAL
                         </span>
                       )}

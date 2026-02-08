@@ -145,7 +145,7 @@ export default function QuestionTierManager() {
     <div className="max-w-6xl mx-auto p-6">
       <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
         {/* Header */}
-        <div className="bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-4">
+        <div className="bg-amber-500 px-6 py-4">
           <h2 className="text-xl font-bold text-white flex items-center gap-2">
             <Crown className="w-6 h-6" />
             Gestión de Tiers
@@ -159,22 +159,22 @@ export default function QuestionTierManager() {
           {/* Stats Summary */}
           {stats && (
             <div className="grid grid-cols-3 gap-4">
-              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-4 text-center">
+              <div className="bg-green-50 rounded-xl p-4 text-center">
                 <Gift className="w-8 h-8 text-green-600 mx-auto mb-2" />
                 <p className="text-3xl font-bold text-green-700">{stats.free}</p>
                 <p className="text-sm text-green-600">Free</p>
               </div>
-              <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-4 text-center">
+              <div className="bg-amber-50 rounded-xl p-4 text-center">
                 <Crown className="w-8 h-8 text-amber-600 mx-auto mb-2" />
                 <p className="text-3xl font-bold text-amber-700">{stats.premium}</p>
                 <p className="text-sm text-amber-600">Premium</p>
               </div>
-              <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-4 text-center">
-                <div className="w-8 h-8 bg-purple-200 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <span className="text-purple-700 font-bold">=</span>
+              <div className="bg-brand-50 rounded-xl p-4 text-center">
+                <div className="w-8 h-8 bg-brand-200 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <span className="text-brand-700 font-bold">=</span>
                 </div>
-                <p className="text-3xl font-bold text-purple-700">{stats.total}</p>
-                <p className="text-sm text-purple-600">Total</p>
+                <p className="text-3xl font-bold text-brand-700">{stats.total}</p>
+                <p className="text-sm text-brand-600">Total</p>
               </div>
             </div>
           )}
@@ -335,7 +335,7 @@ export default function QuestionTierManager() {
                           </p>
                         </td>
                         <td className="px-4 py-3 text-center">
-                          <span className="text-xs px-2 py-1 bg-purple-100 text-purple-700 rounded">
+                          <span className="text-xs px-2 py-1 bg-brand-100 text-brand-700 rounded">
                             {q.tema}
                           </span>
                         </td>

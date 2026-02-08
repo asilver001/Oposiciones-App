@@ -113,12 +113,12 @@ export default function QuestionImporter({ onImportComplete }) {
     <div className="max-w-4xl mx-auto p-6">
       <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
         {/* Header */}
-        <div className="bg-gradient-to-r from-purple-600 to-indigo-600 px-6 py-4">
+        <div className="bg-brand-600 px-6 py-4">
           <h2 className="text-xl font-bold text-white flex items-center gap-2">
             <Upload className="w-6 h-6" />
             Importar Preguntas
           </h2>
-          <p className="text-purple-100 text-sm mt-1">
+          <p className="text-brand-100 text-sm mt-1">
             Importa preguntas en formato JSON a Supabase
           </p>
         </div>
@@ -133,7 +133,7 @@ export default function QuestionImporter({ onImportComplete }) {
               <div className="flex gap-2">
                 <button
                   onClick={loadExample}
-                  className="text-xs text-purple-600 hover:underline"
+                  className="text-xs text-brand-600 hover:underline"
                 >
                   Cargar ejemplo
                 </button>
@@ -154,7 +154,7 @@ export default function QuestionImporter({ onImportComplete }) {
                 setImportResult(null);
               }}
               placeholder='{"questions": [...]}'
-              className="w-full h-64 p-4 border-2 border-gray-200 rounded-xl font-mono text-sm focus:border-purple-500 focus:outline-none resize-y"
+              className="w-full h-64 p-4 border-2 border-gray-200 rounded-xl font-mono text-sm focus:border-brand-500 focus:outline-none resize-y"
             />
 
             {/* File Upload */}
@@ -290,7 +290,7 @@ export default function QuestionImporter({ onImportComplete }) {
             <div>
               <button
                 onClick={() => setShowPreview(!showPreview)}
-                className="flex items-center gap-2 text-sm text-purple-600 hover:underline"
+                className="flex items-center gap-2 text-sm text-brand-600 hover:underline"
               >
                 {showPreview ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                 {showPreview ? 'Ocultar' : 'Ver'} preview de preguntas
@@ -320,7 +320,7 @@ export default function QuestionImporter({ onImportComplete }) {
                         </p>
                       )}
                       <div className="flex gap-2 mt-2">
-                        <span className="text-xs px-2 py-0.5 bg-purple-100 text-purple-700 rounded">
+                        <span className="text-xs px-2 py-0.5 bg-brand-100 text-brand-700 rounded">
                           Tema {q.tema}
                         </span>
                         <span className="text-xs px-2 py-0.5 bg-blue-100 text-blue-700 rounded">

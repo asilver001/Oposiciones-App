@@ -99,7 +99,7 @@ export default function TemasTab() {
   if (loading) {
     return (
       <div className="flex items-center justify-center py-12">
-        <RefreshCw className="w-6 h-6 animate-spin text-purple-600" />
+        <RefreshCw className="w-6 h-6 animate-spin text-brand-600" />
       </div>
     );
   }
@@ -116,19 +116,19 @@ export default function TemasTab() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <BookOpen className="w-5 h-5 text-purple-600" />
+          <BookOpen className="w-5 h-5 text-brand-600" />
           <h2 className="text-lg font-semibold text-gray-900">Gestión de Temas y Materias</h2>
         </div>
         <div className="flex gap-2">
           <button
             onClick={loadMaterias}
-            className="p-2 text-gray-500 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+            className="p-2 text-gray-500 hover:text-brand-600 hover:bg-brand-50 rounded-lg transition-colors"
           >
             <RefreshCw className="w-4 h-4" />
           </button>
           <button
             onClick={handleAdd}
-            className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm font-medium"
+            className="flex items-center gap-2 px-4 py-2 bg-brand-600 text-white rounded-lg hover:bg-brand-700 transition-colors text-sm font-medium"
           >
             <Plus className="w-4 h-4" />
             Añadir Materia
@@ -150,8 +150,8 @@ export default function TemasTab() {
 
         return (
           <div key={bloque} className="bg-white rounded-xl border border-gray-200 overflow-hidden">
-            <div className="px-4 py-3 bg-purple-50 border-b border-purple-100">
-              <h3 className="font-semibold text-purple-900">Bloque {bloque}</h3>
+            <div className="px-4 py-3 bg-brand-50 border-b border-brand-100">
+              <h3 className="font-semibold text-brand-900">Bloque {bloque}</h3>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -169,7 +169,7 @@ export default function TemasTab() {
                   {bloqueMaterias.map(materia => (
                     <tr key={materia.id} className="hover:bg-gray-50">
                       <td className="px-4 py-3">
-                        <span className="inline-flex items-center justify-center w-10 h-8 bg-purple-100 text-purple-700 text-sm font-semibold rounded">
+                        <span className="inline-flex items-center justify-center w-10 h-8 bg-brand-100 text-brand-700 text-sm font-semibold rounded">
                           {materia.tema_numero % 1 === 0 ? Math.floor(materia.tema_numero) : materia.tema_numero}
                         </span>
                       </td>
@@ -204,7 +204,7 @@ export default function TemasTab() {
                         <div className="flex items-center justify-end gap-1">
                           <button
                             onClick={() => handleEdit(materia)}
-                            className="p-2 text-gray-400 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+                            className="p-2 text-gray-400 hover:text-brand-600 hover:bg-brand-50 rounded-lg transition-colors"
                           >
                             <Edit2 className="w-4 h-4" />
                           </button>
@@ -293,7 +293,7 @@ function MateriaModal({ materia, onSave, onClose, saving }) {
                 value={formData.tema_numero}
                 onChange={(e) => setFormData({ ...formData, tema_numero: e.target.value })}
                 placeholder="8.1"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
               />
               <p className="text-xs text-gray-500 mt-1">Puede ser decimal: 8.1, 8.2</p>
             </div>
@@ -304,7 +304,7 @@ function MateriaModal({ materia, onSave, onClose, saving }) {
               <select
                 value={formData.bloque}
                 onChange={(e) => setFormData({ ...formData, bloque: e.target.value })}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
               >
                 <option value="I">Bloque I</option>
                 <option value="II">Bloque II</option>
@@ -323,7 +323,7 @@ function MateriaModal({ materia, onSave, onClose, saving }) {
               value={formData.codigo}
               onChange={(e) => setFormData({ ...formData, codigo: e.target.value.toLowerCase().replace(/\s+/g, '_') })}
               placeholder="tribunal_constitucional"
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
             />
           </div>
 
@@ -336,7 +336,7 @@ function MateriaModal({ materia, onSave, onClose, saving }) {
               value={formData.nombre}
               onChange={(e) => setFormData({ ...formData, nombre: e.target.value })}
               placeholder="Tribunal Constitucional"
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
             />
           </div>
 
@@ -349,7 +349,7 @@ function MateriaModal({ materia, onSave, onClose, saving }) {
               onChange={(e) => setFormData({ ...formData, descripcion: e.target.value })}
               placeholder="Breve descripción del tema..."
               rows={2}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 resize-none"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 resize-none"
             />
           </div>
 
@@ -361,7 +361,7 @@ function MateriaModal({ materia, onSave, onClose, saving }) {
               type="number"
               value={formData.orden}
               onChange={(e) => setFormData({ ...formData, orden: parseInt(e.target.value) || 0 })}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
             />
           </div>
 
@@ -376,7 +376,7 @@ function MateriaModal({ materia, onSave, onClose, saving }) {
             <button
               type="submit"
               disabled={saving}
-              className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors disabled:opacity-50"
+              className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-brand-600 text-white rounded-lg hover:bg-brand-700 transition-colors disabled:opacity-50"
             >
               {saving ? (
                 <RefreshCw className="w-4 h-4 animate-spin" />

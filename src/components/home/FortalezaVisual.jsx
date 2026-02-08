@@ -235,5 +235,5 @@ export default function FortalezaVisual({
   );
 }
 
-// Export status config for external use
+// eslint-disable-next-line react-refresh/only-export-components
 export { statusConfig };

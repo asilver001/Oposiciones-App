@@ -17,7 +17,7 @@ export function ProgressBar({
   };
 
   const colors = {
-    purple: 'from-purple-400 to-purple-600',
+    purple: 'from-brand-400 to-brand-600',
     green: 'from-green-400 to-green-600',
     red: 'from-red-400 to-red-600',
     yellow: 'from-yellow-400 to-yellow-600',

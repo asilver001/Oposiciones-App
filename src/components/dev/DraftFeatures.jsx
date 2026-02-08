@@ -51,9 +51,9 @@ const estadoConfig = {
   avanzando: {
     label: 'Avanzando',
     color: 'purple',
-    gradient: 'from-purple-400 to-purple-500',
-    bg: 'bg-purple-50',
-    text: 'text-purple-700',
+    gradient: 'from-brand-400 to-brand-500',
+    bg: 'bg-brand-50',
+    text: 'text-brand-700',
     icon: TrendingUp,
     priority: 3,
   },
@@ -194,7 +194,7 @@ function FortalezaWithBars({ temas, onVerTodo, onTemaClick, maxVisible = 3 }) {
       {hasMore && (
         <motion.button
           onClick={onVerTodo}
-          className="w-full px-4 py-3 text-sm text-purple-600 font-medium hover:bg-purple-50/50 transition-colors border-t border-gray-100 flex items-center justify-center gap-1"
+          className="w-full px-4 py-3 text-sm text-brand-600 font-medium hover:bg-brand-50/50 transition-colors border-t border-gray-100 flex items-center justify-center gap-1"
           whileHover={{ backgroundColor: 'rgba(147, 51, 234, 0.05)' }}
           whileTap={{ scale: 0.98 }}
         >
@@ -224,7 +224,7 @@ function FortalezaWithBars({ temas, onVerTodo, onTemaClick, maxVisible = 3 }) {
 
 function StatCard({ icon: Icon, label, value, color = 'purple', trend }) {
   const colors = {
-    purple: 'from-purple-500 to-violet-600',
+    purple: 'from-brand-500 to-violet-600',
     emerald: 'from-emerald-500 to-teal-600',
     amber: 'from-amber-500 to-orange-600',
     pink: 'from-pink-500 to-rose-600',
@@ -275,7 +275,7 @@ function CircularProgress({ value, max = 100, size = 56, strokeWidth = 5, color 
   const offset = circumference - (percentage / 100) * circumference;
 
   const colors = {
-    purple: { stroke: '#8b5cf6', bg: 'text-purple-600' },
+    purple: { stroke: 'var(--color-brand-500)', bg: 'text-brand-600' },
     emerald: { stroke: '#10b981', bg: 'text-emerald-600' },
     amber: { stroke: '#f59e0b', bg: 'text-amber-600' },
   };
@@ -303,7 +303,7 @@ function CircularProgress({ value, max = 100, size = 56, strokeWidth = 5, color 
   );
 }
 
-function ProgressModal({ isOpen, onClose, progressData }) {
+function ProgressModal({ isOpen, onClose, progressData: _progressData }) {
   if (!isOpen) return null;
 
   const areas = [
@@ -338,8 +338,8 @@ function ProgressModal({ isOpen, onClose, progressData }) {
             {/* Header */}
             <div className="px-5 py-4 border-b border-gray-100 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center">
-                  <BarChart3 className="w-5 h-5 text-purple-600" />
+                <div className="w-10 h-10 bg-brand-100 rounded-xl flex items-center justify-center">
+                  <BarChart3 className="w-5 h-5 text-brand-600" />
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900">Tu Progreso</h3>
@@ -362,7 +362,7 @@ function ProgressModal({ isOpen, onClose, progressData }) {
                 <div className="relative">
                   <CircularProgress value={45} size={120} strokeWidth={10} />
                   <motion.div
-                    className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-purple-600 text-white text-xs font-medium px-3 py-1 rounded-full"
+                    className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-brand-600 text-white text-xs font-medium px-3 py-1 rounded-full"
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ ...spring.bouncy, delay: 0.3 }}
@@ -391,7 +391,7 @@ function ProgressModal({ isOpen, onClose, progressData }) {
                           <motion.div
                             className={`h-full rounded-full ${
                               area.color === 'emerald' ? 'bg-emerald-500' :
-                              area.color === 'amber' ? 'bg-amber-500' : 'bg-purple-500'
+                              area.color === 'amber' ? 'bg-amber-500' : 'bg-brand-500'
                             }`}
                             initial={{ width: 0 }}
                             animate={{ width: `${area.value}%` }}
@@ -401,7 +401,7 @@ function ProgressModal({ isOpen, onClose, progressData }) {
                       </div>
                       <Icon className={`w-5 h-5 ${
                         area.color === 'emerald' ? 'text-emerald-500' :
-                        area.color === 'amber' ? 'text-amber-500' : 'text-purple-500'
+                        area.color === 'amber' ? 'text-amber-500' : 'text-brand-500'
                       }`} />
                     </motion.div>
                   );
@@ -413,7 +413,7 @@ function ProgressModal({ isOpen, onClose, progressData }) {
             <div className="px-5 py-4 bg-gray-50 border-t border-gray-100">
               <motion.button
                 onClick={onClose}
-                className="w-full py-3 bg-purple-600 text-white font-semibold rounded-xl"
+                className="w-full py-3 bg-brand-600 text-white font-semibold rounded-xl"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -455,7 +455,7 @@ function SessionCardWithProgress({ onStartSession }) {
           >
             <CircularProgress value={globalProgress} size={48} strokeWidth={4} />
             <motion.div
-              className="absolute -top-1 -right-1 w-4 h-4 bg-purple-600 rounded-full flex items-center justify-center"
+              className="absolute -top-1 -right-1 w-4 h-4 bg-brand-600 rounded-full flex items-center justify-center"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ ...spring.bouncy, delay: 0.5 }}
@@ -495,7 +495,7 @@ function SessionCardWithProgress({ onStartSession }) {
         {/* Start button */}
         <motion.button
           onClick={onStartSession}
-          className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-3 rounded-xl font-semibold"
+          className="w-full bg-gradient-to-r from-brand-500 to-brand-600 text-white py-3 rounded-xl font-semibold"
           whileHover={{ scale: 1.02, y: -2 }}
           whileTap={{ scale: 0.98 }}
           transition={spring.snappy}
@@ -525,7 +525,7 @@ function FortalezaGrid({ temas }) {
       <div className="px-4 py-3 border-b border-gray-100 flex items-center gap-2">
         <span className="text-xl">🏰</span>
         <h3 className="font-semibold text-gray-900">Tu Fortaleza</h3>
-        <span className="ml-auto text-xs bg-purple-100 text-purple-600 px-2 py-1 rounded-full">
+        <span className="ml-auto text-xs bg-brand-100 text-brand-600 px-2 py-1 rounded-full">
           {temas.filter(t => t.estado === 'dominado').length}/{temas.length} dominados
         </span>
       </div>
@@ -568,7 +568,7 @@ function FortalezaGrid({ temas }) {
           <p className="text-xs text-gray-500">Dominados</p>
         </div>
         <div>
-          <p className="text-lg font-bold text-purple-600">{temas.filter(t => t.estado === 'avanzando' || t.estado === 'progreso').length}</p>
+          <p className="text-lg font-bold text-brand-600">{temas.filter(t => t.estado === 'avanzando' || t.estado === 'progreso').length}</p>
           <p className="text-xs text-gray-500">En progreso</p>
         </div>
         <div>
@@ -597,8 +597,8 @@ function ExpandableCard({ title, subtitle, icon: Icon, children, defaultOpen = f
         onClick={() => setIsExpanded(!isExpanded)}
       >
         {Icon && (
-          <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
-            <Icon className="w-5 h-5 text-purple-600" />
+          <div className="w-10 h-10 bg-brand-100 rounded-xl flex items-center justify-center flex-shrink-0">
+            <Icon className="w-5 h-5 text-brand-600" />
           </div>
         )}
         <div className="flex-1 min-w-0">
@@ -643,11 +643,11 @@ function ExpandableCardsDemo() {
         <div className="pt-3 space-y-3">
           <div className="flex justify-between items-center">
             <span className="text-sm text-gray-600">Precisión media</span>
-            <span className="font-semibold text-purple-600">78%</span>
+            <span className="font-semibold text-brand-600">78%</span>
           </div>
           <div className="flex justify-between items-center">
             <span className="text-sm text-gray-600">Tiempo medio/pregunta</span>
-            <span className="font-semibold text-purple-600">45s</span>
+            <span className="font-semibold text-brand-600">45s</span>
           </div>
           <div className="flex justify-between items-center">
             <span className="text-sm text-gray-600">Mejor tema</span>
@@ -689,11 +689,11 @@ function ExpandableCardsDemo() {
             { icon: '🔥', title: 'Racha de 7 días', date: 'Hoy' },
             { icon: '🎯', title: '100 preguntas', date: 'Ayer' },
           ].map((logro, i) => (
-            <div key={i} className="flex items-center gap-3 p-2 bg-purple-50 rounded-lg">
+            <div key={i} className="flex items-center gap-3 p-2 bg-brand-50 rounded-lg">
               <span className="text-xl">{logro.icon}</span>
               <div className="flex-1">
-                <p className="text-sm font-medium text-purple-800">{logro.title}</p>
-                <p className="text-xs text-purple-600">{logro.date}</p>
+                <p className="text-sm font-medium text-brand-800">{logro.title}</p>
+                <p className="text-xs text-brand-600">{logro.date}</p>
               </div>
             </div>
           ))}
@@ -707,7 +707,7 @@ function ExpandableCardsDemo() {
 // SWIPEABLE TEMA ITEM - Swipe to reveal actions
 // ============================================
 
-function SwipeableTemaItem({ tema, onAction, onDragEnd }) {
+function SwipeableTemaItem({ tema, onAction, onDragEnd: _onDragEnd }) {
   const x = useMotionValue(0);
   const config = estadoConfig[tema.estado] || estadoConfig.nuevo;
   const Icon = config.icon;
@@ -726,7 +726,7 @@ function SwipeableTemaItem({ tema, onAction, onDragEnd }) {
     <div className="relative overflow-hidden rounded-xl mb-2">
       {/* Action revealed on swipe */}
       <motion.div
-        className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-purple-500 to-purple-600 flex items-center justify-end pr-4"
+        className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-brand-500 to-brand-600 flex items-center justify-end pr-4"
         style={{ opacity: actionOpacity }}
       >
         <motion.div style={{ scale: actionScale }}>
@@ -825,7 +825,7 @@ function FortalezaInteractive({ temas: initialTemas, onVerTodos, onTemaAction, m
       {hasMore && (
         <motion.button
           onClick={onVerTodos}
-          className="w-full px-4 py-3 text-sm text-purple-600 font-medium hover:bg-purple-50/50 transition-colors border-t border-gray-100 flex items-center justify-center gap-1"
+          className="w-full px-4 py-3 text-sm text-brand-600 font-medium hover:bg-brand-50/50 transition-colors border-t border-gray-100 flex items-center justify-center gap-1"
           whileTap={{ scale: 0.98 }}
         >
           Ver todos los temas <ChevronRight className="w-4 h-4" />
@@ -909,7 +909,7 @@ function AllTemasModal({ isOpen, onClose, temas, onTemaAction }) {
         {/* En progreso */}
         {grouped.progreso.length > 0 && (
           <div>
-            <h3 className="text-sm font-semibold text-purple-600 mb-2 flex items-center gap-2">
+            <h3 className="text-sm font-semibold text-brand-600 mb-2 flex items-center gap-2">
               <TrendingUp className="w-4 h-4" /> En progreso
             </h3>
             <div className="space-y-2">
@@ -988,7 +988,7 @@ function TemaListItem({ tema, onAction }) {
 
 function InteractiveStatCard({ icon: Icon, label, value, color = 'purple', trend, onClick, badge }) {
   const colors = {
-    purple: 'from-purple-500 to-violet-600',
+    purple: 'from-brand-500 to-violet-600',
     emerald: 'from-emerald-500 to-teal-600',
     amber: 'from-amber-500 to-orange-600',
     pink: 'from-pink-500 to-rose-600',
@@ -1003,7 +1003,7 @@ function InteractiveStatCard({ icon: Icon, label, value, color = 'purple', trend
       transition={spring.snappy}
     >
       {badge && (
-        <span className="absolute top-2 right-2 px-2 py-0.5 bg-purple-100 text-purple-600 text-[10px] font-medium rounded-full">
+        <span className="absolute top-2 right-2 px-2 py-0.5 bg-brand-100 text-brand-600 text-[10px] font-medium rounded-full">
           {badge}
         </span>
       )}
@@ -1020,7 +1020,7 @@ function InteractiveStatCard({ icon: Icon, label, value, color = 'purple', trend
           </span>
         )}
       </div>
-      <div className="mt-2 flex items-center gap-1 text-xs text-purple-500">
+      <div className="mt-2 flex items-center gap-1 text-xs text-brand-500">
         <span>Ver detalles</span>
         <ChevronRight className="w-3 h-3" />
       </div>
@@ -1061,7 +1061,7 @@ function PrecisionModal({ isOpen, onClose }) {
             {/* Header */}
             <div className="px-5 py-4 border-b border-gray-100 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-brand-500 to-violet-600 rounded-xl flex items-center justify-center">
                   <Target className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -1075,11 +1075,11 @@ function PrecisionModal({ isOpen, onClose }) {
             </div>
 
             {/* Main stat */}
-            <div className="px-5 py-4 bg-gradient-to-br from-purple-50 to-violet-50">
+            <div className="px-5 py-4 bg-gradient-to-br from-brand-50 to-violet-50">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-4xl font-bold text-purple-600">87%</p>
-                  <p className="text-sm text-purple-500">Precisión global</p>
+                  <p className="text-4xl font-bold text-brand-600">87%</p>
+                  <p className="text-sm text-brand-500">Precisión global</p>
                 </div>
                 <div className="text-right">
                   <p className="text-lg font-semibold text-gray-700">135</p>
@@ -1123,7 +1123,7 @@ function PrecisionModal({ isOpen, onClose }) {
             <div className="px-5 py-4 bg-gray-50 border-t border-gray-100">
               <motion.button
                 onClick={onClose}
-                className="w-full py-3 bg-purple-600 text-white font-semibold rounded-xl"
+                className="w-full py-3 bg-brand-600 text-white font-semibold rounded-xl"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -1322,9 +1322,9 @@ function LevelModal({ isOpen, onClose }) {
               </h4>
 
               {/* Position */}
-              <div className="bg-purple-50 rounded-xl p-4 text-center">
-                <p className="text-3xl font-bold text-purple-600">Top 15%</p>
-                <p className="text-sm text-purple-500">Estás por encima del 85% de usuarios</p>
+              <div className="bg-brand-50 rounded-xl p-4 text-center">
+                <p className="text-3xl font-bold text-brand-600">Top 15%</p>
+                <p className="text-sm text-brand-500">Estás por encima del 85% de usuarios</p>
               </div>
 
               {/* Stats comparison */}
@@ -1403,7 +1403,7 @@ function FocusModeSwipeable({
           onClick={() => setCurrentPage(0)}
           className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
             currentPage === 0
-              ? 'bg-purple-600 text-white'
+              ? 'bg-brand-600 text-white'
               : 'bg-gray-100 text-gray-500'
           }`}
           whileTap={{ scale: 0.95 }}
@@ -1414,7 +1414,7 @@ function FocusModeSwipeable({
           onClick={() => setCurrentPage(1)}
           className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
             currentPage === 1
-              ? 'bg-purple-600 text-white'
+              ? 'bg-brand-600 text-white'
               : 'bg-gray-100 text-gray-500'
           }`}
           whileTap={{ scale: 0.95 }}
@@ -1441,16 +1441,16 @@ function FocusModeSwipeable({
             style={{ minWidth: '100%' }}
           >
             <motion.div
-              className="bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-700 rounded-3xl p-6 text-white relative overflow-hidden"
+              className="bg-gradient-to-br from-brand-600 via-violet-600 to-indigo-700 rounded-3xl p-6 text-white relative overflow-hidden"
             >
               {/* Background decoration */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
 
               <div className="relative">
-                <p className="text-purple-200 text-sm mb-2">Tu enfoque de hoy</p>
+                <p className="text-brand-200 text-sm mb-2">Tu enfoque de hoy</p>
                 <h2 className="text-2xl font-bold mb-1">T{nextTema?.id} {nextTema?.nombre}</h2>
-                <p className="text-purple-200 text-sm mb-4">{config.label} · {nextTema?.progreso}% completado</p>
+                <p className="text-brand-200 text-sm mb-4">{config.label} · {nextTema?.progreso}% completado</p>
 
                 {/* Progress ring */}
                 <div className="flex items-center gap-4 mb-4">
@@ -1470,13 +1470,13 @@ function FocusModeSwipeable({
                   </div>
                   <div>
                     <p className="font-medium">15 preguntas restantes</p>
-                    <p className="text-sm text-purple-200">~10 min estimado</p>
+                    <p className="text-sm text-brand-200">~10 min estimado</p>
                   </div>
                 </div>
 
                 <motion.button
                   onClick={onStartSession}
-                  className="w-full py-4 bg-white text-purple-600 font-bold rounded-2xl flex items-center justify-center gap-2"
+                  className="w-full py-4 bg-white text-brand-600 font-bold rounded-2xl flex items-center justify-center gap-2"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -1487,7 +1487,7 @@ function FocusModeSwipeable({
 
               {/* Swipe hint */}
               <motion.div
-                className="absolute bottom-2 right-4 text-purple-200/50 text-xs flex items-center gap-1"
+                className="absolute bottom-2 right-4 text-brand-200/50 text-xs flex items-center gap-1"
                 animate={{ x: [0, 5, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
               >
@@ -1518,7 +1518,7 @@ function FocusModeSwipeable({
 
               {/* Tema rows - only 2 visible */}
               <div className="p-3 space-y-2">
-                {temas.slice(0, 2).map((tema, i) => {
+                {temas.slice(0, 2).map((tema, idx) => {
                   const temaConfig = estadoConfig[tema.estado] || estadoConfig.nuevo;
                   const TemaIcon = temaConfig.icon;
                   return (
@@ -1528,7 +1528,7 @@ function FocusModeSwipeable({
                       className="w-full bg-white border border-gray-100 rounded-xl p-3 flex items-center gap-3 text-left"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: i * 0.05 }}
+                      transition={{ delay: idx * 0.05 }}
                       whileHover={{ x: 4 }}
                       whileTap={{ scale: 0.98 }}
                     >
@@ -1564,7 +1564,7 @@ function FocusModeSwipeable({
               {/* Ver todos */}
               <motion.button
                 onClick={onVerTodos}
-                className="w-full px-4 py-3 text-sm text-purple-600 font-medium hover:bg-purple-50/50 transition-colors border-t border-gray-100 flex items-center justify-center gap-1"
+                className="w-full px-4 py-3 text-sm text-brand-600 font-medium hover:bg-brand-50/50 transition-colors border-t border-gray-100 flex items-center justify-center gap-1"
                 whileTap={{ scale: 0.98 }}
               >
                 Ver todos los temas <ChevronRight className="w-4 h-4" />
@@ -1599,7 +1599,7 @@ function FocusModeSwipeable({
           whileHover={{ y: -2, scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >
-          <Target className="w-6 h-6 text-purple-500 mx-auto mb-2" />
+          <Target className="w-6 h-6 text-brand-500 mx-auto mb-2" />
           <p className="text-xl font-bold text-gray-900">87%</p>
           <p className="text-xs text-gray-500">Precisión</p>
         </motion.button>
@@ -1675,7 +1675,7 @@ function FocusModeView({ temas, onStartSession }) {
     >
       {/* Hero card - What to focus on */}
       <motion.div
-        className="bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-700 rounded-3xl p-6 text-white relative overflow-hidden"
+        className="bg-gradient-to-br from-brand-600 via-violet-600 to-indigo-700 rounded-3xl p-6 text-white relative overflow-hidden"
         initial={{ y: 20 }}
         animate={{ y: 0 }}
       >
@@ -1684,9 +1684,9 @@ function FocusModeView({ temas, onStartSession }) {
         <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
 
         <div className="relative">
-          <p className="text-purple-200 text-sm mb-2">Tu enfoque de hoy</p>
+          <p className="text-brand-200 text-sm mb-2">Tu enfoque de hoy</p>
           <h2 className="text-2xl font-bold mb-1">T{nextTema?.id} {nextTema?.nombre}</h2>
-          <p className="text-purple-200 text-sm mb-4">{config.label} · {nextTema?.progreso}% completado</p>
+          <p className="text-brand-200 text-sm mb-4">{config.label} · {nextTema?.progreso}% completado</p>
 
           {/* Progress ring */}
           <div className="flex items-center gap-4 mb-4">
@@ -1706,13 +1706,13 @@ function FocusModeView({ temas, onStartSession }) {
             </div>
             <div>
               <p className="font-medium">15 preguntas restantes</p>
-              <p className="text-sm text-purple-200">~10 min estimado</p>
+              <p className="text-sm text-brand-200">~10 min estimado</p>
             </div>
           </div>
 
           <motion.button
             onClick={onStartSession}
-            className="w-full py-4 bg-white text-purple-600 font-bold rounded-2xl flex items-center justify-center gap-2"
+            className="w-full py-4 bg-white text-brand-600 font-bold rounded-2xl flex items-center justify-center gap-2"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -1740,7 +1740,7 @@ function FocusModeView({ temas, onStartSession }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15 }}
         >
-          <Target className="w-6 h-6 text-purple-500 mx-auto mb-2" />
+          <Target className="w-6 h-6 text-brand-500 mx-auto mb-2" />
           <p className="text-xl font-bold text-gray-900">87%</p>
           <p className="text-xs text-gray-500">Precisión</p>
         </motion.div>
@@ -1781,7 +1781,7 @@ function FocusModeView({ temas, onStartSession }) {
                 <p className={`text-sm ${goal.done ? 'text-gray-400 line-through' : 'text-gray-700'}`}>{goal.label}</p>
                 {!goal.done && goal.progress > 0 && (
                   <div className="h-1 bg-gray-100 rounded-full mt-1 overflow-hidden">
-                    <div className="h-full bg-purple-500 rounded-full" style={{ width: `${goal.progress}%` }} />
+                    <div className="h-full bg-brand-500 rounded-full" style={{ width: `${goal.progress}%` }} />
                   </div>
                 )}
               </div>
@@ -1825,7 +1825,7 @@ function DashboardView({ temas, onTemaAction, onStartSession }) {
 
         <motion.button
           onClick={onStartSession}
-          className="w-full py-4 bg-gradient-to-r from-purple-500 to-violet-600 text-white font-semibold rounded-xl flex items-center justify-center gap-2"
+          className="w-full py-4 bg-gradient-to-r from-brand-500 to-violet-600 text-white font-semibold rounded-xl flex items-center justify-center gap-2"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >
@@ -1885,7 +1885,7 @@ function DashboardView({ temas, onTemaAction, onStartSession }) {
             {[40, 65, 45, 80, 55, 90, 70].map((h, i) => (
               <motion.div
                 key={i}
-                className={`flex-1 rounded-t ${i === 6 ? 'bg-purple-500' : 'bg-purple-200'}`}
+                className={`flex-1 rounded-t ${i === 6 ? 'bg-brand-500' : 'bg-brand-200'}`}
                 initial={{ height: 0 }}
                 animate={{ height: `${h}%` }}
                 transition={{ delay: 0.3 + i * 0.05 }}
@@ -1893,12 +1893,12 @@ function DashboardView({ temas, onTemaAction, onStartSession }) {
             ))}
           </div>
           <div className="flex justify-between mt-2 text-xs text-gray-400">
-            <span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span className="text-purple-600 font-medium">D</span>
+            <span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span className="text-brand-600 font-medium">D</span>
           </div>
         </motion.div>
 
         <motion.button
-          className="bg-gradient-to-br from-purple-500 to-violet-600 rounded-2xl p-4 text-white text-left"
+          className="bg-gradient-to-br from-brand-500 to-violet-600 rounded-2xl p-4 text-white text-left"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3 }}
@@ -1907,7 +1907,7 @@ function DashboardView({ temas, onTemaAction, onStartSession }) {
         >
           <Target className="w-6 h-6 mb-2" />
           <p className="text-2xl font-bold">87%</p>
-          <p className="text-sm text-purple-200">Precisión</p>
+          <p className="text-sm text-brand-200">Precisión</p>
         </motion.button>
 
         <motion.button
@@ -1967,9 +1967,9 @@ function TemaOptionsModal({ isOpen, onClose, tema }) {
   const Icon = config.icon;
 
   const options = [
-    { id: 'test', icon: Zap, label: 'Test rápido', desc: '10 preguntas aleatorias', gradient: 'from-purple-500 to-violet-600' },
-    { id: 'exam', icon: Clock, label: 'Simulacro', desc: 'Examen completo cronometrado', gradient: 'from-violet-500 to-purple-600' },
-    { id: 'review', icon: BookOpen, label: 'Repasar teoría', desc: 'Material de estudio', gradient: 'from-purple-400 to-violet-500' },
+    { id: 'test', icon: Zap, label: 'Test rápido', desc: '10 preguntas aleatorias', gradient: 'from-brand-500 to-violet-600' },
+    { id: 'exam', icon: Clock, label: 'Simulacro', desc: 'Examen completo cronometrado', gradient: 'from-violet-500 to-brand-600' },
+    { id: 'review', icon: BookOpen, label: 'Repasar teoría', desc: 'Material de estudio', gradient: 'from-brand-400 to-violet-500' },
     { id: 'weak', icon: AlertTriangle, label: 'Puntos débiles', desc: 'Preguntas falladas', gradient: 'from-amber-400 to-orange-500' },
   ];
 
@@ -2016,7 +2016,7 @@ function TemaOptionsModal({ isOpen, onClose, tema }) {
               </div>
 
               {/* Progress section */}
-              <div className="px-5 py-5 bg-gradient-to-br from-purple-50 to-violet-50">
+              <div className="px-5 py-5 bg-gradient-to-br from-brand-50 to-violet-50">
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-sm font-medium text-gray-700">Tu progreso</span>
                   <span className={`text-sm font-bold ${config.text}`}>{tema.progreso}%</span>
@@ -2044,7 +2044,7 @@ function TemaOptionsModal({ isOpen, onClose, tema }) {
                   return (
                     <motion.button
                       key={option.id}
-                      className="w-full p-4 bg-gray-50 hover:bg-purple-50 rounded-xl flex items-center gap-4 text-left transition-all"
+                      className="w-full p-4 bg-gray-50 hover:bg-brand-50 rounded-xl flex items-center gap-4 text-left transition-all"
                       whileTap={{ scale: 0.98 }}
                       onClick={() => {
                         console.log(`Selected: ${option.id} for tema ${tema.id}`);
@@ -2068,7 +2068,7 @@ function TemaOptionsModal({ isOpen, onClose, tema }) {
               <div className="px-5 pb-8 pt-2">
                 <motion.button
                   onClick={onClose}
-                  className="w-full py-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-all"
+                  className="w-full py-4 bg-brand-600 hover:bg-brand-700 text-white font-semibold rounded-xl transition-all"
                   whileTap={{ scale: 0.98 }}
                 >
                   Empezar sesión completa
@@ -2103,8 +2103,8 @@ function FullHomePage({
 
   // Demo data
   const dailyProgressPercent = 40;
-  const todayQuestions = 6;
-  const dailyGoal = 15;
+  const _todayQuestions = 6;
+  const _dailyGoal = 15;
 
   return (
     <motion.div
@@ -2123,16 +2123,16 @@ function FullHomePage({
             whileTap={{ scale: 0.95 }}
           >
             <svg className="w-9 h-9 transform -rotate-90">
-              <circle cx="18" cy="18" r="14" fill="none" stroke="#F3E8FF" strokeWidth="3" />
+              <circle cx="18" cy="18" r="14" fill="none" stroke="var(--color-brand-100)" strokeWidth="3" />
               <motion.circle
-                cx="18" cy="18" r="14" fill="none" stroke="#8B5CF6" strokeWidth="3"
+                cx="18" cy="18" r="14" fill="none" stroke="var(--color-brand-500)" strokeWidth="3"
                 strokeLinecap="round"
                 initial={{ strokeDasharray: "0 88" }}
                 animate={{ strokeDasharray: `${(dailyProgressPercent / 100) * 88} 88` }}
                 transition={spring.smooth}
               />
             </svg>
-            <span className="absolute text-[10px] font-bold text-purple-600">{dailyProgressPercent}</span>
+            <span className="absolute text-[10px] font-bold text-brand-600">{dailyProgressPercent}</span>
           </motion.button>
 
           {/* Center - Title */}
@@ -2151,7 +2151,7 @@ function FullHomePage({
 
       {/* Greeting area */}
       <div className="px-1">
-        <p className="text-[13px] font-medium text-purple-500 mb-0.5 capitalize">
+        <p className="text-[13px] font-medium text-brand-500 mb-0.5 capitalize">
           {new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' })}
         </p>
         <h2 className="text-[22px] font-bold text-gray-900 leading-tight mb-0.5">
@@ -2165,7 +2165,7 @@ function FullHomePage({
         <motion.button
           onClick={() => setCurrentPage(0)}
           className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
-            currentPage === 0 ? 'bg-purple-600 text-white' : 'bg-gray-100 text-gray-500'
+            currentPage === 0 ? 'bg-brand-600 text-white' : 'bg-gray-100 text-gray-500'
           }`}
           whileTap={{ scale: 0.95 }}
         >
@@ -2174,7 +2174,7 @@ function FullHomePage({
         <motion.button
           onClick={() => setCurrentPage(1)}
           className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
-            currentPage === 1 ? 'bg-purple-600 text-white' : 'bg-gray-100 text-gray-500'
+            currentPage === 1 ? 'bg-brand-600 text-white' : 'bg-gray-100 text-gray-500'
           }`}
           whileTap={{ scale: 0.95 }}
         >
@@ -2202,14 +2202,14 @@ function FullHomePage({
         >
           {/* Page 1: Focus */}
           <div className="w-full flex-shrink-0 px-1" style={{ minWidth: '100%' }}>
-            <motion.div className="bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-700 rounded-3xl p-6 text-white relative overflow-hidden">
+            <motion.div className="bg-gradient-to-br from-brand-600 via-violet-600 to-indigo-700 rounded-3xl p-6 text-white relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
 
               <div className="relative">
-                <p className="text-purple-200 text-sm mb-2">Tu enfoque de hoy</p>
+                <p className="text-brand-200 text-sm mb-2">Tu enfoque de hoy</p>
                 <h2 className="text-2xl font-bold mb-1">T{nextTema?.id} {nextTema?.nombre}</h2>
-                <p className="text-purple-200 text-sm mb-4">{config.label} · {nextTema?.progreso}% completado</p>
+                <p className="text-brand-200 text-sm mb-4">{config.label} · {nextTema?.progreso}% completado</p>
 
                 <div className="flex items-center gap-4 mb-4">
                   <div className="relative w-16 h-16">
@@ -2227,13 +2227,13 @@ function FullHomePage({
                   </div>
                   <div>
                     <p className="font-medium">15 preguntas restantes</p>
-                    <p className="text-sm text-purple-200">~10 min estimado</p>
+                    <p className="text-sm text-brand-200">~10 min estimado</p>
                   </div>
                 </div>
 
                 <motion.button
                   onClick={onStartSession}
-                  className="w-full py-4 bg-white text-purple-600 font-bold rounded-2xl flex items-center justify-center gap-2"
+                  className="w-full py-4 bg-white text-brand-600 font-bold rounded-2xl flex items-center justify-center gap-2"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -2243,7 +2243,7 @@ function FullHomePage({
               </div>
 
               <motion.div
-                className="absolute bottom-2 right-4 text-purple-200/50 text-xs flex items-center gap-1"
+                className="absolute bottom-2 right-4 text-brand-200/50 text-xs flex items-center gap-1"
                 animate={{ x: [0, 5, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
               >
@@ -2263,7 +2263,7 @@ function FullHomePage({
                 </div>
               </div>
               <div className="p-3 space-y-2">
-                {temas.slice(0, 2).map((tema, i) => {
+                {temas.slice(0, 2).map((tema) => {
                   const temaConfig = estadoConfig[tema.estado] || estadoConfig.nuevo;
                   const TemaIcon = temaConfig.icon;
                   return (
@@ -2295,7 +2295,7 @@ function FullHomePage({
               </div>
               <motion.button
                 onClick={onVerTodos}
-                className="w-full px-4 py-3 text-sm text-purple-600 font-medium hover:bg-purple-50/50 transition-colors border-t border-gray-100 flex items-center justify-center gap-1"
+                className="w-full px-4 py-3 text-sm text-brand-600 font-medium hover:bg-brand-50/50 transition-colors border-t border-gray-100 flex items-center justify-center gap-1"
                 whileTap={{ scale: 0.98 }}
               >
                 Ver todos los temas <ChevronRight className="w-4 h-4" />
@@ -2313,7 +2313,7 @@ function FullHomePage({
           <p className="text-xs text-gray-500">Racha</p>
         </motion.button>
         <motion.button onClick={onPrecisionClick} className="bg-white rounded-2xl p-4 text-center border border-gray-100" whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}>
-          <Target className="w-6 h-6 text-purple-500 mx-auto mb-2" />
+          <Target className="w-6 h-6 text-brand-500 mx-auto mb-2" />
           <p className="text-xl font-bold text-gray-900">87%</p>
           <p className="text-xs text-gray-500">Precisión</p>
         </motion.button>
@@ -2399,11 +2399,11 @@ function FullHomePage({
       {/* Legal links */}
       <div className="text-center space-y-2 py-4">
         <div className="flex justify-center gap-4 text-xs text-gray-400">
-          <button className="hover:text-purple-600 transition">Privacidad</button>
+          <button className="hover:text-brand-600 transition">Privacidad</button>
           <span>·</span>
-          <button className="hover:text-purple-600 transition">Términos</button>
+          <button className="hover:text-brand-600 transition">Términos</button>
           <span>·</span>
-          <button className="hover:text-purple-600 transition">Legal</button>
+          <button className="hover:text-brand-600 transition">Legal</button>
         </div>
         <p className="text-xs text-gray-300">Oposita Smart v1.0 · Hecho con 💜</p>
       </div>
@@ -2422,46 +2422,46 @@ const momentumThemes = {
     subtextClass: 'text-gray-400',
     badgeClass: 'bg-white/10 text-gray-400',
     buttonClass: 'bg-white text-gray-900',
-    progressStroke: '#8B5CF6',
+    progressStroke: 'var(--color-brand-500)',
     progressBg: 'rgba(255,255,255,0.1)',
-    decorationClass: 'bg-purple-500/20',
+    decorationClass: 'bg-brand-500/20',
   },
   purple: {
-    heroClass: 'bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-700',
+    heroClass: 'bg-gradient-to-br from-brand-600 via-violet-600 to-indigo-700',
     textClass: 'text-white',
-    subtextClass: 'text-purple-200',
-    badgeClass: 'bg-white/20 text-purple-100',
-    buttonClass: 'bg-white text-purple-600',
+    subtextClass: 'text-brand-200',
+    badgeClass: 'bg-white/20 text-brand-100',
+    buttonClass: 'bg-white text-brand-600',
     progressStroke: '#ffffff',
     progressBg: 'rgba(255,255,255,0.2)',
     decorationClass: 'bg-white/10',
   },
   soft: {
-    heroClass: 'bg-gradient-to-br from-rose-100 via-purple-100 to-violet-100',
+    heroClass: 'bg-gradient-to-br from-rose-100 via-brand-100 to-violet-100',
     textClass: 'text-gray-800',
     subtextClass: 'text-gray-500',
-    badgeClass: 'bg-purple-200/50 text-purple-700',
-    buttonClass: 'bg-purple-600 text-white',
-    progressStroke: '#8B5CF6',
-    progressBg: 'rgba(139,92,246,0.15)',
-    decorationClass: 'bg-purple-300/30',
+    badgeClass: 'bg-brand-200/50 text-brand-700',
+    buttonClass: 'bg-brand-600 text-white',
+    progressStroke: 'var(--color-brand-500)',
+    progressBg: 'color-mix(in srgb, var(--color-brand-500) 15%, transparent)',
+    decorationClass: 'bg-brand-300/30',
   },
   white: {
     heroClass: 'bg-white border-2 border-gray-100',
     textClass: 'text-gray-900',
     subtextClass: 'text-gray-500',
     badgeClass: 'bg-gray-100 text-gray-600',
-    buttonClass: 'bg-purple-600 text-white',
-    progressStroke: '#8B5CF6',
+    buttonClass: 'bg-brand-600 text-white',
+    progressStroke: 'var(--color-brand-500)',
     progressBg: 'rgba(0,0,0,0.05)',
-    decorationClass: 'bg-purple-100',
+    decorationClass: 'bg-brand-100',
   },
   gradient: {
-    heroClass: 'bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400',
+    heroClass: 'bg-gradient-to-br from-brand-500 via-pink-500 to-orange-400',
     textClass: 'text-white',
     subtextClass: 'text-white/80',
     badgeClass: 'bg-white/20 text-white',
-    buttonClass: 'bg-white text-purple-600',
+    buttonClass: 'bg-white text-brand-600',
     progressStroke: '#ffffff',
     progressBg: 'rgba(255,255,255,0.2)',
     decorationClass: 'bg-white/20',
@@ -2477,7 +2477,7 @@ function HomeMomentum({
   temas,
   theme = 'dark',
   onStartSession,
-  onTemaAction,
+  onTemaAction: _onTemaAction,
   onVerTodos,
   onRachaClick,
   onPrecisionClick,
@@ -2501,7 +2501,7 @@ function HomeMomentum({
       {/* Compact header */}
       <div className="flex items-center justify-between">
         <div>
-          <p className="text-xs text-purple-500 font-medium uppercase tracking-wider">
+          <p className="text-xs text-brand-500 font-medium uppercase tracking-wider">
             {new Date().toLocaleDateString('es-ES', { weekday: 'long' })}
           </p>
           <h1 className="text-xl font-bold text-gray-900">Tu Momentum</h1>
@@ -2509,11 +2509,11 @@ function HomeMomentum({
         <div className="flex items-center gap-2">
           <motion.button
             onClick={onShowProgress}
-            className="relative w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center"
+            className="relative w-10 h-10 bg-brand-50 rounded-xl flex items-center justify-center"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="text-sm font-bold text-purple-600">{dailyProgressPercent}%</span>
+            <span className="text-sm font-bold text-brand-600">{dailyProgressPercent}%</span>
           </motion.button>
           <motion.button
             onClick={onSettingsClick}
@@ -2593,7 +2593,7 @@ function HomeMomentum({
         {/* Precision card */}
         <motion.button
           onClick={onPrecisionClick}
-          className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-4 text-left border border-purple-100"
+          className="bg-gradient-to-br from-brand-50 to-violet-50 rounded-2xl p-4 text-left border border-brand-100"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
@@ -2601,7 +2601,7 @@ function HomeMomentum({
           whileTap={{ scale: 0.98 }}
         >
           <div className="flex items-center justify-between mb-3">
-            <Target className="w-6 h-6 text-purple-500" />
+            <Target className="w-6 h-6 text-brand-500" />
             <span className="text-xs text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">↑ +5%</span>
           </div>
           <p className="text-3xl font-bold text-gray-900 mb-0.5">87%</p>
@@ -2627,7 +2627,7 @@ function HomeMomentum({
                   style={{ height: '48px' }}
                 >
                   <motion.div
-                    className={`w-full ${weekProgress[i] > 0 ? 'bg-purple-500' : 'bg-gray-200'} rounded-t-sm`}
+                    className={`w-full ${weekProgress[i] > 0 ? 'bg-brand-500' : 'bg-gray-200'} rounded-t-sm`}
                     initial={{ height: 0 }}
                     animate={{ height: `${weekProgress[i]}%` }}
                     transition={{ delay: 0.3 + i * 0.05, ...spring.bouncy }}
@@ -2647,12 +2647,12 @@ function HomeMomentum({
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3 }}
-          whileHover={{ backgroundColor: '#F3E8FF' }}
+          whileHover={{ backgroundColor: 'var(--color-brand-100)' }}
           whileTap={{ scale: 0.98 }}
         >
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-sm">
-              <BookOpen className="w-5 h-5 text-purple-500" />
+              <BookOpen className="w-5 h-5 text-brand-500" />
             </div>
             <div className="text-left">
               <p className="font-medium text-gray-900">Todos los temas</p>
@@ -2665,7 +2665,7 @@ function HomeMomentum({
         {/* Level/Ranking */}
         <motion.button
           onClick={onLevelClick}
-          className="col-span-2 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-2xl p-4 text-white flex items-center justify-between"
+          className="col-span-2 bg-gradient-to-r from-pink-500 via-brand-500 to-indigo-500 rounded-2xl p-4 text-white flex items-center justify-between"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.35 }}
@@ -2737,27 +2737,27 @@ function HomeMomentumFortaleza({
           {/* Left - Progress circle button */}
           <motion.button
             onClick={onShowProgress}
-            className="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-purple-50 active:scale-95 transition-all duration-200"
+            className="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-brand-50 active:scale-95 transition-all duration-200"
             whileTap={{ scale: 0.95 }}
           >
             <svg className="w-9 h-9 transform -rotate-90">
               <circle
                 cx="18" cy="18" r="14"
                 fill="none"
-                stroke="#F3E8FF"
+                stroke="var(--color-brand-100)"
                 strokeWidth="3"
               />
               <circle
                 cx="18" cy="18" r="14"
                 fill="none"
-                stroke="#8B5CF6"
+                stroke="var(--color-brand-500)"
                 strokeWidth="3"
                 strokeLinecap="round"
                 strokeDasharray={`${(dailyProgressPercent / 100) * 88} 88`}
                 className="transition-all duration-500"
               />
             </svg>
-            <span className="absolute inset-0 flex items-center justify-center text-[10px] font-bold text-purple-600">
+            <span className="absolute inset-0 flex items-center justify-center text-[10px] font-bold text-brand-600">
               {dailyProgressPercent}
             </span>
           </motion.button>
@@ -2778,7 +2778,7 @@ function HomeMomentumFortaleza({
 
       {/* Greeting section */}
       <div>
-        <p className="text-xs text-purple-500 font-medium uppercase tracking-wider">
+        <p className="text-xs text-brand-500 font-medium uppercase tracking-wider">
           {new Date().toLocaleDateString('es-ES', { weekday: 'long' })}
         </p>
         <h2 className="text-xl font-bold text-gray-900">Tu Momentum</h2>
@@ -2852,7 +2852,7 @@ function HomeMomentumFortaleza({
         {/* Precision card */}
         <motion.button
           onClick={onPrecisionClick}
-          className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-4 text-left border border-purple-100"
+          className="bg-gradient-to-br from-brand-50 to-violet-50 rounded-2xl p-4 text-left border border-brand-100"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
@@ -2860,7 +2860,7 @@ function HomeMomentumFortaleza({
           whileTap={{ scale: 0.98 }}
         >
           <div className="flex items-center justify-between mb-3">
-            <Target className="w-6 h-6 text-purple-500" />
+            <Target className="w-6 h-6 text-brand-500" />
             <span className="text-xs text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">↑ +5%</span>
           </div>
           <p className="text-3xl font-bold text-gray-900 mb-0.5">87%</p>
@@ -2882,7 +2882,7 @@ function HomeMomentumFortaleza({
             </div>
             <motion.button
               onClick={onVerTodos}
-              className="text-xs text-purple-600 font-medium flex items-center gap-1"
+              className="text-xs text-brand-600 font-medium flex items-center gap-1"
               whileHover={{ x: 2 }}
             >
               Ver todo <ChevronRight className="w-3 h-3" />
@@ -2933,7 +2933,7 @@ function HomeMomentumFortaleza({
         {/* Level/Ranking */}
         <motion.button
           onClick={onLevelClick}
-          className="col-span-2 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-2xl p-4 text-white flex items-center justify-between"
+          className="col-span-2 bg-gradient-to-r from-pink-500 via-brand-500 to-indigo-500 rounded-2xl p-4 text-white flex items-center justify-between"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.35 }}
@@ -3018,7 +3018,7 @@ function HomeMomentumFortaleza({
 // ACTIVITIES PAGE - with weekly progress
 // ============================================
 
-function ActivitiesPage({ onClose }) {
+function ActivitiesPage({ onClose: _onClose }) {
   // Helper to generate random stats
   const generateRandomStats = () => ({
     weekProgress: Array.from({ length: 7 }, () => Math.floor(Math.random() * 100)),
@@ -3065,7 +3065,7 @@ function ActivitiesPage({ onClose }) {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <p className="text-xs text-purple-500 font-medium uppercase tracking-wider">Actividad</p>
+          <p className="text-xs text-brand-500 font-medium uppercase tracking-wider">Actividad</p>
           <h1 className="text-xl font-bold text-gray-900">Tu Progreso</h1>
         </div>
         <motion.button
@@ -3090,7 +3090,7 @@ function ActivitiesPage({ onClose }) {
             <p className="text-xs text-gray-500">Lun 13 - Dom 19 Enero</p>
           </div>
           <div className="text-right">
-            <p className="text-2xl font-bold text-purple-600">{stats.weeklyQuestions}</p>
+            <p className="text-2xl font-bold text-brand-600">{stats.weeklyQuestions}</p>
             <p className="text-xs text-gray-500">preguntas</p>
           </div>
         </div>
@@ -3100,19 +3100,19 @@ function ActivitiesPage({ onClose }) {
             return (
               <div key={day} className="flex-1 flex flex-col items-center gap-1.5">
                 <motion.div
-                  className={`w-full rounded-lg overflow-hidden ${isToday ? 'ring-2 ring-purple-400 ring-offset-2' : ''}`}
+                  className={`w-full rounded-lg overflow-hidden ${isToday ? 'ring-2 ring-brand-400 ring-offset-2' : ''}`}
                   style={{ height: '72px' }}
                 >
                   <div className="w-full h-full bg-gray-100 flex items-end">
                     <motion.div
-                      className={`w-full ${stats.weekProgress[i] > 0 ? 'bg-gradient-to-t from-purple-600 to-purple-400' : 'bg-gray-200'} rounded-t-lg`}
+                      className={`w-full ${stats.weekProgress[i] > 0 ? 'bg-gradient-to-t from-brand-600 to-brand-400' : 'bg-gray-200'} rounded-t-lg`}
                       initial={{ height: 0 }}
                       animate={{ height: `${stats.weekProgress[i]}%` }}
                       transition={{ delay: 0.2 + i * 0.05, ...spring.bouncy }}
                     />
                   </div>
                 </motion.div>
-                <span className={`text-xs font-medium ${isToday ? 'text-purple-600' : i < 5 ? 'text-gray-600' : 'text-gray-300'}`}>
+                <span className={`text-xs font-medium ${isToday ? 'text-brand-600' : i < 5 ? 'text-gray-600' : 'text-gray-300'}`}>
                   {day}
                 </span>
               </div>
@@ -3122,7 +3122,7 @@ function ActivitiesPage({ onClose }) {
         {/* Legend */}
         <div className="flex items-center justify-center gap-4 mt-4 pt-3 border-t border-gray-100">
           <div className="flex items-center gap-1.5">
-            <div className="w-3 h-3 rounded-full bg-purple-500" />
+            <div className="w-3 h-3 rounded-full bg-brand-500" />
             <span className="text-xs text-gray-500">Completado</span>
           </div>
           <div className="flex items-center gap-1.5">
@@ -3156,7 +3156,7 @@ function ActivitiesPage({ onClose }) {
               <span className="text-xs text-gray-500 w-12">{week.week}</span>
               <div className="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden">
                 <motion.div
-                  className="h-full bg-purple-500 rounded-full"
+                  className="h-full bg-brand-500 rounded-full"
                   initial={{ width: 0 }}
                   animate={{ width: `${(week.questions / 70) * 100}%` }}
                   transition={{ delay: 0.4 + i * 0.05, ...spring.smooth }}
@@ -3207,14 +3207,14 @@ function ActivitiesPage({ onClose }) {
       {/* Accuracy trend */}
       <motion.div
         key={`accuracy-${randomKey}`}
-        className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-5 border border-purple-100"
+        className="bg-gradient-to-br from-brand-50 to-violet-50 rounded-2xl p-5 border border-brand-100"
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.4 }}
       >
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
-            <Target className="w-5 h-5 text-purple-500" />
+            <Target className="w-5 h-5 text-brand-500" />
             <h3 className="font-semibold text-gray-900">Precisión media</h3>
           </div>
           <span className={`text-xs ${stats.accuracyChange >= 0 ? 'text-emerald-600 bg-emerald-50' : 'text-red-600 bg-red-50'} px-2 py-0.5 rounded-full`}>
@@ -3222,7 +3222,7 @@ function ActivitiesPage({ onClose }) {
           </span>
         </div>
         <div className="flex items-end gap-2">
-          <span className="text-4xl font-bold text-purple-600">{stats.accuracy}%</span>
+          <span className="text-4xl font-bold text-brand-600">{stats.accuracy}%</span>
           <span className="text-sm text-gray-500 mb-1">este mes</span>
         </div>
       </motion.div>
@@ -3230,7 +3230,7 @@ function ActivitiesPage({ onClose }) {
       {/* Dev Mode Randomizer Button - Floating */}
       <motion.button
         onClick={handleRandomize}
-        className="fixed bottom-24 right-4 w-14 h-14 bg-gradient-to-br from-purple-500 to-violet-600 text-white rounded-full shadow-lg shadow-purple-500/30 flex items-center justify-center z-50"
+        className="fixed bottom-24 right-4 w-14 h-14 bg-gradient-to-br from-brand-500 to-violet-600 text-white rounded-full shadow-lg shadow-brand-500/30 flex items-center justify-center z-50"
         whileHover={{ scale: 1.1, rotate: 180 }}
         whileTap={{ scale: 0.9 }}
         initial={{ scale: 0, rotate: -180 }}
@@ -3301,6 +3301,7 @@ function ActivitiesPage({ onClose }) {
 // ADMIN FLOW PAGE - Role-based access mockups
 // ============================================
 
+/* eslint-disable react-hooks/static-components */
 function AdminFlowPage() {
   const [activeView, setActiveView] = useState('login');
 
@@ -3324,7 +3325,7 @@ function AdminFlowPage() {
         </div>
       </div>
       {/* Title badge */}
-      <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-purple-600 text-white px-4 py-1.5 rounded-full text-xs font-medium shadow-lg whitespace-nowrap">
+      <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-brand-600 text-white px-4 py-1.5 rounded-full text-xs font-medium shadow-lg whitespace-nowrap">
         {title}
       </div>
     </div>
@@ -3335,7 +3336,7 @@ function AdminFlowPage() {
     <div className="flex flex-col h-[420px]">
       {/* Logo */}
       <div className="flex-1 flex flex-col items-center justify-center">
-        <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl flex items-center justify-center mb-4 shadow-lg">
+        <div className="w-20 h-20 bg-gradient-to-br from-brand-500 to-brand-700 rounded-2xl flex items-center justify-center mb-4 shadow-lg">
           <span className="text-4xl">📚</span>
         </div>
         <h2 className="text-xl font-bold text-gray-900 mb-1">Oposita Smart</h2>
@@ -3355,14 +3356,14 @@ function AdminFlowPage() {
         </motion.button>
 
         <motion.button
-          className="w-full py-3.5 bg-purple-600 text-white font-semibold rounded-xl"
+          className="w-full py-3.5 bg-brand-600 text-white font-semibold rounded-xl"
           whileTap={{ scale: 0.98 }}
         >
           Iniciar sesión con email
         </motion.button>
 
         <p className="text-center text-sm text-gray-500">
-          ¿No tienes cuenta? <span className="text-purple-600 font-medium">Regístrate</span>
+          ¿No tienes cuenta? <span className="text-brand-600 font-medium">Regístrate</span>
         </p>
       </div>
     </div>
@@ -3373,12 +3374,12 @@ function AdminFlowPage() {
     <div className="py-2 space-y-4">
       {/* Header */}
       <div className="flex items-center gap-3 mb-4">
-        <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+        <div className="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center">
           <span className="text-lg">👤</span>
         </div>
         <div>
           <p className="font-semibold text-gray-900 text-sm">Alberto Silverio</p>
-          <p className="text-xs text-purple-600 font-medium">Administrador</p>
+          <p className="text-xs text-brand-600 font-medium">Administrador</p>
         </div>
       </div>
 
@@ -3403,22 +3404,22 @@ function AdminFlowPage() {
 
       {/* Admin section - highlighted */}
       <div>
-        <p className="text-[10px] text-purple-500 font-semibold uppercase tracking-wide px-1 mb-2">Administración</p>
-        <div className="bg-purple-50 rounded-xl overflow-hidden text-xs border border-purple-100">
-          <div className="px-3 py-2.5 border-b border-purple-100 flex items-center gap-2">
-            <Shield className="w-4 h-4 text-purple-500" />
-            <span className="text-purple-700 font-medium">Panel de Administrador</span>
-            <span className="ml-auto text-[10px] bg-purple-200 text-purple-700 px-1.5 py-0.5 rounded">Admin</span>
+        <p className="text-[10px] text-brand-500 font-semibold uppercase tracking-wide px-1 mb-2">Administración</p>
+        <div className="bg-brand-50 rounded-xl overflow-hidden text-xs border border-brand-100">
+          <div className="px-3 py-2.5 border-b border-brand-100 flex items-center gap-2">
+            <Shield className="w-4 h-4 text-brand-500" />
+            <span className="text-brand-700 font-medium">Panel de Administrador</span>
+            <span className="ml-auto text-[10px] bg-brand-200 text-brand-700 px-1.5 py-0.5 rounded">Admin</span>
           </div>
-          <div className="px-3 py-2.5 border-b border-purple-100 flex items-center gap-2">
-            <Code className="w-4 h-4 text-purple-500" />
-            <span className="text-purple-700 font-medium">Draft Features</span>
-            <span className="ml-auto text-[10px] bg-purple-200 text-purple-700 px-1.5 py-0.5 rounded">Dev</span>
+          <div className="px-3 py-2.5 border-b border-brand-100 flex items-center gap-2">
+            <Code className="w-4 h-4 text-brand-500" />
+            <span className="text-brand-700 font-medium">Draft Features</span>
+            <span className="ml-auto text-[10px] bg-brand-200 text-brand-700 px-1.5 py-0.5 rounded">Dev</span>
           </div>
           <div className="px-3 py-2.5 flex items-center gap-2">
-            <Eye className="w-4 h-4 text-purple-500" />
-            <span className="text-purple-700 font-medium">Panel de Revisor</span>
-            <span className="ml-auto text-[10px] bg-purple-200 text-purple-700 px-1.5 py-0.5 rounded">Admin</span>
+            <Eye className="w-4 h-4 text-brand-500" />
+            <span className="text-brand-700 font-medium">Panel de Revisor</span>
+            <span className="ml-auto text-[10px] bg-brand-200 text-brand-700 px-1.5 py-0.5 rounded">Admin</span>
           </div>
         </div>
       </div>
@@ -3532,11 +3533,11 @@ function AdminFlowPage() {
       animate={{ opacity: 1 }}
     >
       {/* Header */}
-      <div className="bg-gradient-to-br from-purple-50 to-violet-50 border border-purple-200 rounded-xl p-4">
-        <h2 className="font-bold text-purple-800 text-lg mb-2 flex items-center gap-2">
+      <div className="bg-gradient-to-br from-brand-50 to-violet-50 border border-brand-200 rounded-xl p-4">
+        <h2 className="font-bold text-brand-800 text-lg mb-2 flex items-center gap-2">
           🔐 Sistema de Roles
         </h2>
-        <p className="text-sm text-purple-700">
+        <p className="text-sm text-brand-700">
           Visualización del flujo de acceso para Admin y Reviewer. El DevPanel solo aparece para admins autenticados.
         </p>
       </div>
@@ -3554,7 +3555,7 @@ function AdminFlowPage() {
             onClick={() => setActiveView(view.id)}
             className={`px-4 py-2 rounded-xl font-medium whitespace-nowrap text-sm transition-all ${
               activeView === view.id
-                ? 'bg-purple-600 text-white shadow-lg shadow-purple-200'
+                ? 'bg-brand-600 text-white shadow-lg shadow-brand-200'
                 : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
             }`}
             whileTap={{ scale: 0.97 }}
@@ -3599,7 +3600,7 @@ function AdminFlowPage() {
             <MockPhone title="Settings - Admin">
               <SettingsAdmin />
             </MockPhone>
-            <div className="mt-6 p-4 bg-purple-50 rounded-xl text-sm text-purple-800 space-y-2">
+            <div className="mt-6 p-4 bg-brand-50 rounded-xl text-sm text-brand-800 space-y-2">
               <p><strong>Admin ve:</strong></p>
               <ul className="list-disc pl-5 space-y-1 text-xs">
                 <li>Sección "Administración" con 3 opciones</li>
@@ -3803,7 +3804,7 @@ function DailyProgressModal({ isOpen, onClose }) {
             {/* Header */}
             <div className="px-5 py-4 border-b border-gray-100 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-brand-500 to-violet-600 rounded-xl flex items-center justify-center">
                   <Target className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -3817,7 +3818,7 @@ function DailyProgressModal({ isOpen, onClose }) {
             </div>
 
             {/* Main progress */}
-            <div className="px-5 py-6 bg-gradient-to-br from-purple-50 to-violet-50 text-center">
+            <div className="px-5 py-6 bg-gradient-to-br from-brand-50 to-violet-50 text-center">
               <motion.div
                 className="relative w-32 h-32 mx-auto mb-4"
                 initial={{ scale: 0 }}
@@ -3827,7 +3828,7 @@ function DailyProgressModal({ isOpen, onClose }) {
                 <svg className="w-32 h-32 transform -rotate-90">
                   <circle cx="64" cy="64" r="56" fill="none" stroke="#E9D5FF" strokeWidth="12" />
                   <motion.circle
-                    cx="64" cy="64" r="56" fill="none" stroke="#8B5CF6" strokeWidth="12"
+                    cx="64" cy="64" r="56" fill="none" stroke="var(--color-brand-500)" strokeWidth="12"
                     strokeLinecap="round"
                     initial={{ strokeDasharray: "0 352" }}
                     animate={{ strokeDasharray: `${(40 / 100) * 352} 352` }}
@@ -3835,7 +3836,7 @@ function DailyProgressModal({ isOpen, onClose }) {
                   />
                 </svg>
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <span className="text-3xl font-bold text-purple-600">6</span>
+                  <span className="text-3xl font-bold text-brand-600">6</span>
                   <span className="text-sm text-gray-500">de 15</span>
                 </div>
               </motion.div>
@@ -3863,7 +3864,7 @@ function DailyProgressModal({ isOpen, onClose }) {
             <div className="px-5 py-4 bg-gray-50 border-t border-gray-100">
               <motion.button
                 onClick={onClose}
-                className="w-full py-3 bg-purple-600 text-white font-semibold rounded-xl"
+                className="w-full py-3 bg-brand-600 text-white font-semibold rounded-xl"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -3893,7 +3894,7 @@ function FocusModeOriginal({ temas, onStartSession }) {
     >
       {/* Hero card - What to focus on */}
       <motion.div
-        className="bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-700 rounded-3xl p-6 text-white relative overflow-hidden"
+        className="bg-gradient-to-br from-brand-600 via-violet-600 to-indigo-700 rounded-3xl p-6 text-white relative overflow-hidden"
         initial={{ y: 20 }}
         animate={{ y: 0 }}
       >
@@ -3901,9 +3902,9 @@ function FocusModeOriginal({ temas, onStartSession }) {
         <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
 
         <div className="relative">
-          <p className="text-purple-200 text-sm mb-2">Tu enfoque de hoy</p>
+          <p className="text-brand-200 text-sm mb-2">Tu enfoque de hoy</p>
           <h2 className="text-2xl font-bold mb-1">T{nextTema?.id} {nextTema?.nombre}</h2>
-          <p className="text-purple-200 text-sm mb-4">{config.label} · {nextTema?.progreso}% completado</p>
+          <p className="text-brand-200 text-sm mb-4">{config.label} · {nextTema?.progreso}% completado</p>
 
           <div className="flex items-center gap-4 mb-4">
             <div className="relative w-16 h-16">
@@ -3921,13 +3922,13 @@ function FocusModeOriginal({ temas, onStartSession }) {
             </div>
             <div>
               <p className="font-medium">15 preguntas restantes</p>
-              <p className="text-sm text-purple-200">~10 min estimado</p>
+              <p className="text-sm text-brand-200">~10 min estimado</p>
             </div>
           </div>
 
           <motion.button
             onClick={onStartSession}
-            className="w-full py-4 bg-white text-purple-600 font-bold rounded-2xl flex items-center justify-center gap-2"
+            className="w-full py-4 bg-white text-brand-600 font-bold rounded-2xl flex items-center justify-center gap-2"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -3945,7 +3946,7 @@ function FocusModeOriginal({ temas, onStartSession }) {
           <p className="text-xs text-gray-500">Racha</p>
         </motion.div>
         <motion.div className="bg-white rounded-2xl p-4 text-center border border-gray-100" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }}>
-          <Target className="w-6 h-6 text-purple-500 mx-auto mb-2" />
+          <Target className="w-6 h-6 text-brand-500 mx-auto mb-2" />
           <p className="text-xl font-bold text-gray-900">87%</p>
           <p className="text-xs text-gray-500">Precisión</p>
         </motion.div>
@@ -3981,7 +3982,7 @@ function FocusModeOriginal({ temas, onStartSession }) {
                 <p className={`text-sm ${goal.done ? 'text-gray-400 line-through' : 'text-gray-700'}`}>{goal.label}</p>
                 {!goal.done && goal.progress > 0 && (
                   <div className="h-1 bg-gray-100 rounded-full mt-1 overflow-hidden">
-                    <div className="h-full bg-purple-500 rounded-full" style={{ width: `${goal.progress}%` }} />
+                    <div className="h-full bg-brand-500 rounded-full" style={{ width: `${goal.progress}%` }} />
                   </div>
                 )}
               </div>
@@ -4021,7 +4022,7 @@ const recursosCategorias = [
     title: 'Esquemas y Mapas',
     icon: MapPin,
     description: 'Visualiza conceptos clave',
-    gradient: 'from-violet-500 to-purple-600',
+    gradient: 'from-violet-500 to-brand-600',
     bg: 'bg-violet-50',
     text: 'text-violet-700',
     border: 'border-violet-200',
@@ -4279,13 +4280,13 @@ function RecursosPage() {
     <div className="space-y-4">
       {/* Header stats */}
       <motion.div
-        className="bg-gradient-to-br from-rose-50 via-purple-50 to-violet-50 rounded-2xl p-4 border border-rose-100"
+        className="bg-gradient-to-br from-rose-50 via-brand-50 to-violet-50 rounded-2xl p-4 border border-rose-100"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={spring.gentle}
       >
         <div className="flex items-center gap-3 mb-3">
-          <div className="w-10 h-10 bg-gradient-to-br from-rose-500 to-purple-600 rounded-xl flex items-center justify-center">
+          <div className="w-10 h-10 bg-gradient-to-br from-rose-500 to-brand-600 rounded-xl flex items-center justify-center">
             <BookMarked className="w-5 h-5 text-white" />
           </div>
           <div>
@@ -4295,7 +4296,7 @@ function RecursosPage() {
         </div>
         <div className="grid grid-cols-3 gap-2">
           <div className="bg-white/60 backdrop-blur rounded-xl p-2 text-center">
-            <p className="text-lg font-bold text-purple-600">{recursosCategorias.length}</p>
+            <p className="text-lg font-bold text-brand-600">{recursosCategorias.length}</p>
             <p className="text-xs text-gray-500">Categorias</p>
           </div>
           <div className="bg-white/60 backdrop-blur rounded-xl p-2 text-center">
@@ -4322,7 +4323,7 @@ function RecursosPage() {
           placeholder="Buscar recursos..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full pl-10 pr-4 py-3 bg-white rounded-xl border border-gray-200 focus:border-purple-300 focus:ring-2 focus:ring-purple-100 outline-none transition-all text-sm"
+          className="w-full pl-10 pr-4 py-3 bg-white rounded-xl border border-gray-200 focus:border-brand-300 focus:ring-2 focus:ring-brand-100 outline-none transition-all text-sm"
         />
         {searchQuery && (
           <button
@@ -4350,7 +4351,7 @@ function RecursosPage() {
               onClick={() => setActiveFilter(filter.id)}
               className={`flex items-center gap-1.5 px-3 py-2 rounded-xl font-medium text-sm whitespace-nowrap transition-colors
                 ${isActive
-                  ? 'bg-purple-600 text-white shadow-lg shadow-purple-600/25'
+                  ? 'bg-brand-600 text-white shadow-lg shadow-brand-600/25'
                   : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
               whileTap={{ scale: 0.97 }}
             >
@@ -4522,7 +4523,7 @@ function FeatureProposalsPage() {
   return (
     <div className="space-y-6">
       {/* Intro */}
-      <div className="bg-gradient-to-r from-violet-50 to-purple-50 border border-violet-200 rounded-xl p-4">
+      <div className="bg-gradient-to-r from-violet-50 to-brand-50 border border-violet-200 rounded-xl p-4">
         <h3 className="font-bold text-violet-800 mb-1">Propuestas de Integracion</h3>
         <p className="text-sm text-violet-600">
           Mockups interactivos de features del Animation Playground. Click en cada propuesta para probar.
@@ -4537,7 +4538,7 @@ function FeatureProposalsPage() {
             onClick={() => setActiveProposal(p.id)}
             className={`px-4 py-2 rounded-xl font-medium text-sm flex items-center gap-2
               ${activeProposal === p.id
-                ? 'bg-purple-600 text-white shadow-lg shadow-purple-500/25'
+                ? 'bg-brand-600 text-white shadow-lg shadow-brand-500/25'
                 : 'bg-white border border-gray-200 text-gray-700'}`}
             whileTap={{ scale: 0.97 }}
           >
@@ -4577,7 +4578,7 @@ function FeatureProposalsPage() {
                       key={card.id}
                       className="w-48 h-32 flex-shrink-0"
                       front={
-                        <div className="w-full h-full bg-gradient-to-br from-rose-400 to-purple-500 rounded-2xl p-4 flex flex-col justify-between text-white shadow-lg">
+                        <div className="w-full h-full bg-gradient-to-br from-rose-400 to-brand-500 rounded-2xl p-4 flex flex-col justify-between text-white shadow-lg">
                           <span className="text-xs font-medium opacity-80">{card.tema}</span>
                           <p className="text-sm font-medium">{card.pregunta}</p>
                           <span className="text-xs opacity-60">Tap para ver</span>
@@ -4614,16 +4615,16 @@ function FeatureProposalsPage() {
                   <FlipCard
                     className="h-28"
                     front={
-                      <div className="w-full h-full bg-gradient-to-br from-purple-100 to-violet-100 rounded-xl p-4 flex flex-col justify-between border border-purple-200">
-                        <Target className="w-5 h-5 text-purple-600" />
+                      <div className="w-full h-full bg-gradient-to-br from-brand-100 to-violet-100 rounded-xl p-4 flex flex-col justify-between border border-brand-200">
+                        <Target className="w-5 h-5 text-brand-600" />
                         <div>
-                          <p className="text-2xl font-bold text-purple-700">87%</p>
-                          <p className="text-xs text-purple-500">Precision</p>
+                          <p className="text-2xl font-bold text-brand-700">87%</p>
+                          <p className="text-xs text-brand-500">Precision</p>
                         </div>
                       </div>
                     }
                     back={
-                      <div className="w-full h-full bg-purple-600 rounded-xl p-4 flex flex-col justify-center text-white">
+                      <div className="w-full h-full bg-brand-600 rounded-xl p-4 flex flex-col justify-center text-white">
                         <p className="text-xs opacity-80">Ultimas 50 preguntas</p>
                         <p className="text-sm font-medium mt-1">43 correctas, 7 fallidas</p>
                         <p className="text-xs mt-2 opacity-60">Tendencia: +5% esta semana</p>
@@ -4739,8 +4740,8 @@ function FeatureProposalsPage() {
                   back={
                     <div className="w-full h-full bg-white border-2 border-gray-200 rounded-2xl p-4 flex flex-col">
                       <div className="flex items-center gap-2 mb-2">
-                        <BookOpen className="w-5 h-5 text-purple-600" />
-                        <span className="text-sm font-medium text-purple-700">Explicacion</span>
+                        <BookOpen className="w-5 h-5 text-brand-600" />
+                        <span className="text-sm font-medium text-brand-700">Explicacion</span>
                       </div>
                       <p className="text-sm text-gray-700 flex-1">
                         Segun el Art. 66.1 CE, las Cortes Generales representan al pueblo espanol y estan formadas por el Congreso y el Senado.
@@ -4765,7 +4766,7 @@ function FeatureProposalsPage() {
           >
             {/* Proposal 1: Total preguntas respondidas */}
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-              <div className="px-4 py-3 border-b border-gray-100 bg-purple-50/50">
+              <div className="px-4 py-3 border-b border-gray-100 bg-brand-50/50">
                 <div className="flex items-center gap-2">
                   <span className="text-lg">📝</span>
                   <div>
@@ -4778,17 +4779,17 @@ function FeatureProposalsPage() {
                 <p className="text-sm text-gray-600 mb-4">
                   <strong>Ubicacion:</strong> Dashboard principal, estadisticas generales
                 </p>
-                <div className="bg-gradient-to-br from-purple-50 to-violet-100 rounded-xl p-6 text-center border border-purple-200">
-                  <BookOpen className="w-8 h-8 text-purple-500 mx-auto mb-2" />
+                <div className="bg-gradient-to-br from-brand-50 to-violet-100 rounded-xl p-6 text-center border border-brand-200">
+                  <BookOpen className="w-8 h-8 text-brand-500 mx-auto mb-2" />
                   <AnimatedCounter
                     value={demoQuestions}
                     duration={1.5}
-                    className="text-4xl font-bold text-purple-700 tabular-nums"
+                    className="text-4xl font-bold text-brand-700 tabular-nums"
                   />
-                  <p className="text-sm text-purple-600 mt-1">preguntas respondidas</p>
+                  <p className="text-sm text-brand-600 mt-1">preguntas respondidas</p>
                   <motion.button
                     onClick={() => setDemoQuestions(q => q + Math.floor(Math.random() * 50) + 10)}
-                    className="mt-4 px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-medium"
+                    className="mt-4 px-4 py-2 bg-brand-600 text-white rounded-lg text-sm font-medium"
                     whileTap={{ scale: 0.95 }}
                   >
                     Simular +preguntas
@@ -5004,11 +5005,11 @@ function TemasListaClasica({ temas = temasAGECompleto, onTemaClick }) {
   const bloques = [...new Set(temasFiltrados.map(t => t.bloque))];
 
   return (
-    <motion.div className="min-h-screen bg-gradient-to-b from-rose-50/50 via-purple-50/30 to-violet-50/50" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-      <div className="bg-white/80 backdrop-blur-lg border-b border-purple-100 sticky top-0 z-10">
+    <motion.div className="min-h-screen bg-gradient-to-b from-rose-50/50 via-brand-50/30 to-violet-50/50" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      <div className="bg-white/80 backdrop-blur-lg border-b border-brand-100 sticky top-0 z-10">
         <div className="px-4 py-4">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-violet-600 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-violet-600 flex items-center justify-center">
               <BookOpen className="w-5 h-5 text-white" />
             </div>
             <div>
@@ -5018,14 +5019,14 @@ function TemasListaClasica({ temas = temasAGECompleto, onTemaClick }) {
           </div>
           <div className="relative mb-3">
             <input type="text" placeholder="Buscar tema..." value={busqueda} onChange={(e) => setBusqueda(e.target.value)}
-              className="w-full px-4 py-2.5 pl-10 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-purple-500/20 focus:border-purple-300" />
+              className="w-full px-4 py-2.5 pl-10 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-300" />
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
           </div>
           <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
             {filtros.map((filtro) => (
               <motion.button key={filtro.id} onClick={() => setFiltroEstado(filtro.id)}
                 className={`px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap flex items-center gap-1.5 transition-all
-                  ${filtroEstado === filtro.id ? 'bg-purple-600 text-white shadow-lg shadow-purple-600/25' : 'bg-white text-gray-600 border border-gray-200'}`}
+                  ${filtroEstado === filtro.id ? 'bg-brand-600 text-white shadow-lg shadow-brand-600/25' : 'bg-white text-gray-600 border border-gray-200'}`}
                 whileTap={{ scale: 0.95 }}>
                 {filtro.label}
                 <span className={`px-1.5 py-0.5 rounded-full text-[10px] ${filtroEstado === filtro.id ? 'bg-white/20' : 'bg-gray-100'}`}>{filtro.count}</span>
@@ -5041,8 +5042,8 @@ function TemasListaClasica({ temas = temasAGECompleto, onTemaClick }) {
           return (
             <motion.div key={bloque} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
               <div className="flex items-center gap-2 mb-3">
-                <span className="text-xs font-semibold text-purple-600 uppercase tracking-wider">{bloque}</span>
-                <div className="flex-1 h-px bg-purple-200" />
+                <span className="text-xs font-semibold text-brand-600 uppercase tracking-wider">{bloque}</span>
+                <div className="flex-1 h-px bg-brand-200" />
                 <span className="text-xs text-gray-400">{temasBloque.length} temas</span>
               </div>
               <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
@@ -5051,7 +5052,7 @@ function TemasListaClasica({ temas = temasAGECompleto, onTemaClick }) {
                   const Icon = config.icon;
                   return (
                     <motion.button key={tema.id} onClick={() => onTemaClick?.(tema)}
-                      className="w-full px-4 py-3.5 flex items-center gap-3 border-b border-gray-50 last:border-b-0 hover:bg-purple-50/50 transition-colors text-left"
+                      className="w-full px-4 py-3.5 flex items-center gap-3 border-b border-gray-50 last:border-b-0 hover:bg-brand-50/50 transition-colors text-left"
                       initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: index * 0.03 }} whileTap={{ scale: 0.99 }}>
                       <div className={`w-10 h-10 rounded-xl ${config.bg} flex items-center justify-center flex-shrink-0`}>
                         <Icon className={`w-5 h-5 ${config.text}`} />
@@ -5091,14 +5092,14 @@ function TemasListaClasica({ temas = temasAGECompleto, onTemaClick }) {
         )}
       </div>
       <div className="px-4 pb-6">
-        <div className="bg-gradient-to-r from-purple-500 to-violet-600 rounded-2xl p-4 text-white">
+        <div className="bg-gradient-to-r from-brand-500 to-violet-600 rounded-2xl p-4 text-white">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-purple-200 text-xs">Progreso global</p>
+              <p className="text-brand-200 text-xs">Progreso global</p>
               <p className="text-2xl font-bold">{Math.round(temas.reduce((acc, t) => acc + t.progreso, 0) / temas.length)}%</p>
             </div>
             <div className="text-right">
-              <p className="text-purple-200 text-xs">Total preguntas</p>
+              <p className="text-brand-200 text-xs">Total preguntas</p>
               <p className="text-2xl font-bold">{temas.reduce((acc, t) => acc + t.preguntas, 0)}</p>
             </div>
           </div>
@@ -5124,16 +5125,16 @@ function TemasGridBloques({ temas = temasAGECompleto, onTemaClick }) {
   const temasFiltrados = filtroBloque === 'todos' ? temas : temas.filter(t => t.bloque === filtroBloque);
 
   const getEstadoBgColor = (estado) => {
-    const colors = { dominado: 'bg-emerald-50', avanzando: 'bg-purple-50', progreso: 'bg-blue-50', riesgo: 'bg-amber-50', nuevo: 'bg-gray-50' };
+    const colors = { dominado: 'bg-emerald-50', avanzando: 'bg-brand-50', progreso: 'bg-blue-50', riesgo: 'bg-amber-50', nuevo: 'bg-gray-50' };
     return colors[estado] || colors.nuevo;
   };
 
   return (
-    <motion.div className="min-h-screen bg-gradient-to-b from-rose-50/50 via-purple-50/30 to-violet-50/50" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-      <div className="bg-white/80 backdrop-blur-lg border-b border-purple-100 sticky top-0 z-10 px-4 py-4">
+    <motion.div className="min-h-screen bg-gradient-to-b from-rose-50/50 via-brand-50/30 to-violet-50/50" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      <div className="bg-white/80 backdrop-blur-lg border-b border-brand-100 sticky top-0 z-10 px-4 py-4">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-brand-600 flex items-center justify-center">
               <PieChart className="w-5 h-5 text-white" />
             </div>
             <div>
@@ -5142,7 +5143,7 @@ function TemasGridBloques({ temas = temasAGECompleto, onTemaClick }) {
             </div>
           </div>
           <div className="text-right">
-            <p className="text-2xl font-bold text-purple-600">{Math.round(temas.reduce((acc, t) => acc + t.progreso, 0) / temas.length)}%</p>
+            <p className="text-2xl font-bold text-brand-600">{Math.round(temas.reduce((acc, t) => acc + t.progreso, 0) / temas.length)}%</p>
             <p className="text-xs text-gray-500">completado</p>
           </div>
         </div>
@@ -5150,7 +5151,7 @@ function TemasGridBloques({ temas = temasAGECompleto, onTemaClick }) {
           {bloques.map((bloque) => (
             <motion.button key={bloque} onClick={() => setFiltroBloque(bloque)}
               className={`px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-all
-                ${filtroBloque === bloque ? 'bg-purple-600 text-white shadow-lg shadow-purple-600/25' : 'bg-white text-gray-600 border border-gray-200'}`}
+                ${filtroBloque === bloque ? 'bg-brand-600 text-white shadow-lg shadow-brand-600/25' : 'bg-white text-gray-600 border border-gray-200'}`}
               whileTap={{ scale: 0.95 }}>
               {bloque === 'todos' ? 'Todos' : bloque}
             </motion.button>
@@ -5190,7 +5191,7 @@ function TemasGridBloques({ temas = temasAGECompleto, onTemaClick }) {
                         <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }}
                           className="mt-4 pt-4 border-t border-gray-200 space-y-2">
                           <motion.button onClick={(e) => { e.stopPropagation(); onTemaClick?.(tema); }}
-                            className="w-full py-2.5 bg-purple-600 text-white rounded-xl text-sm font-medium flex items-center justify-center gap-2" whileTap={{ scale: 0.98 }}>
+                            className="w-full py-2.5 bg-brand-600 text-white rounded-xl text-sm font-medium flex items-center justify-center gap-2" whileTap={{ scale: 0.98 }}>
                             <Zap className="w-4 h-4" /> Test rapido
                           </motion.button>
                           <div className="grid grid-cols-2 gap-2">
@@ -5250,7 +5251,7 @@ function TemasFortalezaExpandida({ temas = temasAGECompleto, onTemaClick }) {
   const getTorreLevel = (progreso) => {
     if (progreso >= 90) return { level: 5, label: 'Maestro', color: 'from-amber-400 to-yellow-500' };
     if (progreso >= 70) return { level: 4, label: 'Avanzado', color: 'from-emerald-400 to-emerald-500' };
-    if (progreso >= 50) return { level: 3, label: 'Intermedio', color: 'from-purple-400 to-purple-500' };
+    if (progreso >= 50) return { level: 3, label: 'Intermedio', color: 'from-brand-400 to-brand-500' };
     if (progreso >= 25) return { level: 2, label: 'Aprendiz', color: 'from-blue-400 to-blue-500' };
     return { level: 1, label: 'Iniciado', color: 'from-gray-400 to-gray-500' };
   };
@@ -5261,8 +5262,8 @@ function TemasFortalezaExpandida({ temas = temasAGECompleto, onTemaClick }) {
   const temasEnRiesgo = temas.filter(t => t.estado === 'riesgo').length;
 
   return (
-    <motion.div className="min-h-screen bg-gradient-to-b from-rose-50/50 via-purple-50/30 to-violet-50/50" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-      <div className="bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-700 px-4 pt-6 pb-8 relative overflow-hidden">
+    <motion.div className="min-h-screen bg-gradient-to-b from-rose-50/50 via-brand-50/30 to-violet-50/50" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      <div className="bg-gradient-to-br from-brand-600 via-violet-600 to-indigo-700 px-4 pt-6 pb-8 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl" />
         <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-xl" />
         <div className="relative">
@@ -5270,7 +5271,7 @@ function TemasFortalezaExpandida({ temas = temasAGECompleto, onTemaClick }) {
             <span className="text-4xl">🏰</span>
             <div>
               <h1 className="text-xl font-bold text-white">Tu Fortaleza</h1>
-              <p className="text-purple-200 text-sm">Construye tu conocimiento</p>
+              <p className="text-brand-200 text-sm">Construye tu conocimiento</p>
             </div>
           </div>
           <div className="flex items-center gap-6 bg-white/10 backdrop-blur-sm rounded-2xl p-4">
@@ -5283,10 +5284,10 @@ function TemasFortalezaExpandida({ temas = temasAGECompleto, onTemaClick }) {
               <span className="absolute inset-0 flex items-center justify-center text-xl font-bold text-white">{globalProgreso}%</span>
             </div>
             <div className="flex-1 grid grid-cols-2 gap-3">
-              <div><p className="text-2xl font-bold text-white">{temasDominados}</p><p className="text-xs text-purple-200">Temas dominados</p></div>
-              <div><p className="text-2xl font-bold text-amber-300">{temasEnRiesgo}</p><p className="text-xs text-purple-200">Necesitan atencion</p></div>
-              <div><p className="text-2xl font-bold text-white">{totalPreguntas}</p><p className="text-xs text-purple-200">Preguntas totales</p></div>
-              <div><p className="text-2xl font-bold text-white">{temas.length}</p><p className="text-xs text-purple-200">Temas en total</p></div>
+              <div><p className="text-2xl font-bold text-white">{temasDominados}</p><p className="text-xs text-brand-200">Temas dominados</p></div>
+              <div><p className="text-2xl font-bold text-amber-300">{temasEnRiesgo}</p><p className="text-xs text-brand-200">Necesitan atencion</p></div>
+              <div><p className="text-2xl font-bold text-white">{totalPreguntas}</p><p className="text-xs text-brand-200">Preguntas totales</p></div>
+              <div><p className="text-2xl font-bold text-white">{temas.length}</p><p className="text-xs text-brand-200">Temas en total</p></div>
             </div>
           </div>
         </div>
@@ -5370,7 +5371,7 @@ function TemasFortalezaExpandida({ temas = temasAGECompleto, onTemaClick }) {
         })}
       </div>
       <div className="px-4 pb-6">
-        <motion.button className="w-full bg-gradient-to-r from-purple-500 to-violet-600 text-white py-4 rounded-2xl font-semibold flex items-center justify-center gap-2 shadow-lg shadow-purple-500/25"
+        <motion.button className="w-full bg-gradient-to-r from-brand-500 to-violet-600 text-white py-4 rounded-2xl font-semibold flex items-center justify-center gap-2 shadow-lg shadow-brand-500/25"
           whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
           <Sparkles className="w-5 h-5" /> Continuar donde lo dejaste
         </motion.button>
@@ -5446,14 +5447,14 @@ function QuickWinsPreview() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
       >
-        <div className="px-4 py-3 bg-purple-50 border-b border-purple-100">
+        <div className="px-4 py-3 bg-brand-50 border-b border-brand-100">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">1</span>
             </div>
             <div>
-              <h3 className="font-semibold text-purple-900">Focus States</h3>
-              <p className="text-xs text-purple-600">Mejora la navegacion con teclado</p>
+              <h3 className="font-semibold text-brand-900">Focus States</h3>
+              <p className="text-xs text-brand-600">Mejora la navegacion con teclado</p>
             </div>
           </div>
         </div>
@@ -5469,7 +5470,7 @@ function QuickWinsPreview() {
                 <X className="w-3 h-3" /> Sin focus-visible
               </p>
               <button
-                className="w-full py-2 px-4 bg-purple-600 text-white rounded-lg font-medium transition-colors hover:bg-purple-700"
+                className="w-full py-2 px-4 bg-brand-600 text-white rounded-lg font-medium transition-colors hover:bg-brand-700"
                 style={{ outline: 'none' }}
               >
                 Boton A
@@ -5486,12 +5487,12 @@ function QuickWinsPreview() {
                 <Check className="w-3 h-3" /> Con focus-visible
               </p>
               <button
-                className="w-full py-2 px-4 bg-purple-600 text-white rounded-lg font-medium transition-colors hover:bg-purple-700 focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2"
+                className="w-full py-2 px-4 bg-brand-600 text-white rounded-lg font-medium transition-colors hover:bg-brand-700 focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2"
               >
                 Boton A
               </button>
               <button
-                className="w-full py-2 px-4 bg-gray-100 text-gray-700 rounded-lg font-medium transition-colors hover:bg-gray-200 focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2"
+                className="w-full py-2 px-4 bg-gray-100 text-gray-700 rounded-lg font-medium transition-colors hover:bg-gray-200 focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2"
               >
                 Boton B
               </button>
@@ -5504,7 +5505,7 @@ function QuickWinsPreview() {
             </p>
           </div>
 
-          <CodeSnippet code="focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2" />
+          <CodeSnippet code="focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2" />
         </div>
       </motion.div>
 
@@ -5558,11 +5559,11 @@ function QuickWinsPreview() {
           <div className="space-y-3">
             <p className="text-xs font-semibold text-gray-800">Sobre fondo coloreado:</p>
             <div className="grid grid-cols-2 gap-2">
-              <div className="p-3 bg-purple-600 rounded-lg">
-                <p className="text-purple-200 text-sm mb-1">purple-200</p>
+              <div className="p-3 bg-brand-600 rounded-lg">
+                <p className="text-brand-200 text-sm mb-1">brand-200</p>
                 <p className="text-xs text-red-300">Bajo contraste</p>
               </div>
-              <div className="p-3 bg-purple-600 rounded-lg">
+              <div className="p-3 bg-brand-600 rounded-lg">
                 <p className="text-white text-sm mb-1">white</p>
                 <p className="text-xs text-green-300">Recomendado</p>
               </div>
@@ -5813,7 +5814,7 @@ function QuickWinsPreview() {
 
       {/* Summary Card */}
       <motion.div
-        className="bg-gradient-to-br from-purple-600 to-violet-700 rounded-2xl p-5 text-white"
+        className="bg-gradient-to-br from-brand-600 to-violet-700 rounded-2xl p-5 text-white"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
@@ -5822,7 +5823,7 @@ function QuickWinsPreview() {
           <Sparkles className="w-5 h-5" />
           Resumen de Quick Wins
         </h3>
-        <div className="space-y-2 text-sm text-purple-100">
+        <div className="space-y-2 text-sm text-brand-100">
           <div className="flex items-start gap-2">
             <Check className="w-4 h-4 text-emerald-300 mt-0.5 flex-shrink-0" />
             <span><strong>Focus states:</strong> Accesibilidad para navegacion con teclado</span>
@@ -5840,8 +5841,8 @@ function QuickWinsPreview() {
             <span><strong>Timer opcional:</strong> Modo Tranquilo sin presion temporal</span>
           </div>
         </div>
-        <div className="mt-4 pt-4 border-t border-purple-400/30">
-          <p className="text-xs text-purple-200">
+        <div className="mt-4 pt-4 border-t border-brand-400/30">
+          <p className="text-xs text-brand-200">
             Estas mejoras son de bajo esfuerzo pero alto impacto en la experiencia de usuario.
           </p>
         </div>
@@ -5874,7 +5875,7 @@ function FlashcardRepaso({ pregunta, respuesta, explicacion }) {
       >
         {/* Front - Pregunta */}
         <div
-          className="absolute inset-0 bg-gradient-to-br from-rose-500 to-purple-600 rounded-2xl p-5 flex flex-col justify-center shadow-lg shadow-purple-500/25"
+          className="absolute inset-0 bg-gradient-to-br from-rose-500 to-brand-600 rounded-2xl p-5 flex flex-col justify-center shadow-lg shadow-brand-500/25"
           style={{ backfaceVisibility: 'hidden' }}
         >
           <div className="text-white/80 text-xs font-medium mb-2">Pregunta</div>
@@ -5910,7 +5911,7 @@ function FlashcardRepaso({ pregunta, respuesta, explicacion }) {
 function StatsFlipCard({ value, label, detail, color = 'purple' }) {
   const [isFlipped, setIsFlipped] = useState(false);
   const colors = {
-    purple: { gradient: 'from-purple-500 to-violet-600', bg: 'bg-purple-50', text: 'text-purple-600' },
+    purple: { gradient: 'from-brand-500 to-violet-600', bg: 'bg-brand-50', text: 'text-brand-600' },
     emerald: { gradient: 'from-emerald-500 to-teal-600', bg: 'bg-emerald-50', text: 'text-emerald-600' },
     amber: { gradient: 'from-amber-500 to-orange-600', bg: 'bg-amber-50', text: 'text-amber-600' },
   };
@@ -6142,7 +6143,7 @@ function FlipCardModoRapido({ onBack }) {
           </motion.button>
           <motion.button
             onClick={resetStudy}
-            className="flex-1 py-3 bg-purple-600 text-white font-semibold rounded-xl"
+            className="flex-1 py-3 bg-brand-600 text-white font-semibold rounded-xl"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -6163,7 +6164,7 @@ function FlipCardModoRapido({ onBack }) {
         </div>
         <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
           <motion.div
-            className="h-full bg-gradient-to-r from-purple-500 to-violet-600 rounded-full"
+            className="h-full bg-gradient-to-r from-brand-500 to-violet-600 rounded-full"
             initial={{ width: 0 }}
             animate={{ width: `${((currentIndex) / cards.length) * 100}%` }}
             transition={spring.smooth}
@@ -6227,7 +6228,7 @@ function FlipCardModoRapido({ onBack }) {
                 className="absolute inset-0 bg-white rounded-2xl shadow-xl border border-gray-100 p-6 flex flex-col items-center justify-center"
                 style={{ backfaceVisibility: 'hidden' }}
               >
-                <span className="text-xs text-purple-500 font-medium mb-3 px-2 py-1 bg-purple-50 rounded-full">
+                <span className="text-xs text-brand-500 font-medium mb-3 px-2 py-1 bg-brand-50 rounded-full">
                   {currentCard.topic}
                 </span>
                 <p className="text-center text-gray-800 font-medium leading-relaxed">
@@ -6238,14 +6239,14 @@ function FlipCardModoRapido({ onBack }) {
 
               {/* Back */}
               <div
-                className="absolute inset-0 bg-gradient-to-br from-purple-600 to-violet-700 rounded-2xl shadow-xl p-6 flex flex-col items-center justify-center text-white"
+                className="absolute inset-0 bg-gradient-to-br from-brand-600 to-violet-700 rounded-2xl shadow-xl p-6 flex flex-col items-center justify-center text-white"
                 style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
               >
                 <Brain className="w-8 h-8 mb-3 opacity-50" />
                 <p className="text-center text-xl font-bold leading-relaxed">
                   {currentCard.back}
                 </p>
-                <p className="text-xs text-purple-200 mt-4">Desliza para continuar</p>
+                <p className="text-xs text-brand-200 mt-4">Desliza para continuar</p>
               </div>
             </motion.div>
           </motion.div>
@@ -6321,12 +6322,12 @@ function FlipCardModoZen({ onBack }) {
         transition={{ duration: 0.5 }}
       >
         <motion.div
-          className="w-24 h-24 bg-gradient-to-br from-purple-100 to-violet-100 rounded-full flex items-center justify-center mb-6"
+          className="w-24 h-24 bg-gradient-to-br from-brand-100 to-violet-100 rounded-full flex items-center justify-center mb-6"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={spring.bouncy}
         >
-          <Sparkles className="w-12 h-12 text-purple-500" />
+          <Sparkles className="w-12 h-12 text-brand-500" />
         </motion.div>
 
         <h2 className="text-xl font-semibold text-gray-800 mb-2">Sesión completada</h2>
@@ -6337,7 +6338,7 @@ function FlipCardModoZen({ onBack }) {
         <div className="flex flex-col gap-3 w-full max-w-[200px]">
           <motion.button
             onClick={resetStudy}
-            className="py-3 bg-purple-600 text-white font-medium rounded-xl"
+            className="py-3 bg-brand-600 text-white font-medium rounded-xl"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -6379,8 +6380,8 @@ function FlipCardModoZen({ onBack }) {
               className="absolute inset-0 bg-white rounded-3xl shadow-lg border border-gray-100 p-8 flex flex-col items-center justify-center"
               style={{ backfaceVisibility: 'hidden' }}
             >
-              <div className="w-12 h-12 bg-purple-50 rounded-full flex items-center justify-center mb-4">
-                <BookOpen className="w-6 h-6 text-purple-500" />
+              <div className="w-12 h-12 bg-brand-50 rounded-full flex items-center justify-center mb-4">
+                <BookOpen className="w-6 h-6 text-brand-500" />
               </div>
               <p className="text-center text-gray-700 text-lg leading-relaxed">
                 {currentCard.front}
@@ -6389,13 +6390,13 @@ function FlipCardModoZen({ onBack }) {
 
             {/* Back - Answer */}
             <div
-              className="absolute inset-0 bg-gradient-to-br from-purple-50 to-violet-50 rounded-3xl shadow-lg border border-purple-100 p-8 flex flex-col items-center justify-center"
+              className="absolute inset-0 bg-gradient-to-br from-brand-50 to-violet-50 rounded-3xl shadow-lg border border-brand-100 p-8 flex flex-col items-center justify-center"
               style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
             >
-              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
-                <Lightbulb className="w-6 h-6 text-purple-600" />
+              <div className="w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center mb-4">
+                <Lightbulb className="w-6 h-6 text-brand-600" />
               </div>
-              <p className="text-center text-purple-800 text-xl font-semibold leading-relaxed">
+              <p className="text-center text-brand-800 text-xl font-semibold leading-relaxed">
                 {currentCard.back}
               </p>
             </div>
@@ -6424,7 +6425,7 @@ function FlipCardModoZen({ onBack }) {
             </motion.button>
             <motion.button
               onClick={handleNext}
-              className="px-6 py-3 bg-purple-600 text-white font-medium rounded-xl flex items-center gap-2"
+              className="px-6 py-3 bg-brand-600 text-white font-medium rounded-xl flex items-center gap-2"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -6440,7 +6441,7 @@ function FlipCardModoZen({ onBack }) {
         {cards.map((_, i) => (
           <motion.div
             key={i}
-            className={`w-2 h-2 rounded-full ${i === currentIndex ? 'bg-purple-500' : i < currentIndex ? 'bg-purple-200' : 'bg-gray-200'}`}
+            className={`w-2 h-2 rounded-full ${i === currentIndex ? 'bg-brand-500' : i < currentIndex ? 'bg-brand-200' : 'bg-gray-200'}`}
             animate={{ scale: i === currentIndex ? 1.2 : 1 }}
           />
         ))}
@@ -6466,7 +6467,7 @@ function FlipCardDemos() {
         {/* Mode Selection Cards */}
         <motion.button
           onClick={() => setActiveMode('rapido')}
-          className="w-full bg-gradient-to-br from-purple-500 to-violet-600 rounded-2xl p-6 text-left text-white shadow-lg shadow-purple-500/20"
+          className="w-full bg-gradient-to-br from-brand-500 to-violet-600 rounded-2xl p-6 text-left text-white shadow-lg shadow-brand-500/20"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           whileHover={{ scale: 1.02, y: -4 }}
@@ -6479,10 +6480,10 @@ function FlipCardDemos() {
             </div>
             <div className="flex-1">
               <h3 className="text-xl font-bold mb-1">Modo Estudio Rápido</h3>
-              <p className="text-purple-100 text-sm mb-3">
+              <p className="text-brand-100 text-sm mb-3">
                 Cards apiladas con swipe. Desliza a la derecha si lo sabes, a la izquierda si necesitas repasar.
               </p>
-              <div className="flex items-center gap-2 text-xs text-purple-200">
+              <div className="flex items-center gap-2 text-xs text-brand-200">
                 <span className="px-2 py-0.5 bg-white/20 rounded-full">Swipe</span>
                 <span className="px-2 py-0.5 bg-white/20 rounded-full">Progreso visible</span>
                 <span className="px-2 py-0.5 bg-white/20 rounded-full">Resumen final</span>
@@ -6502,8 +6503,8 @@ function FlipCardDemos() {
           whileTap={{ scale: 0.98 }}
         >
           <div className="flex items-start gap-4">
-            <div className="w-14 h-14 bg-purple-50 rounded-xl flex items-center justify-center flex-shrink-0">
-              <Sparkles className="w-7 h-7 text-purple-500" />
+            <div className="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center flex-shrink-0">
+              <Sparkles className="w-7 h-7 text-brand-500" />
             </div>
             <div className="flex-1">
               <h3 className="text-xl font-bold text-gray-900 mb-1">Modo Zen</h3>
@@ -6522,7 +6523,7 @@ function FlipCardDemos() {
 
         {/* Info card */}
         <motion.div
-          className="bg-purple-50 border border-purple-100 rounded-xl p-4 text-sm text-purple-700"
+          className="bg-brand-50 border border-brand-100 rounded-xl p-4 text-sm text-brand-700"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
@@ -6531,7 +6532,7 @@ function FlipCardDemos() {
             <Info className="w-4 h-4 mt-0.5 flex-shrink-0" />
             <div>
               <p className="font-medium mb-1">Draft de FlipCards interactivas</p>
-              <p className="text-purple-600">
+              <p className="text-brand-600">
                 Estas son propuestas de interfaz para el sistema de flashcards.
                 Prueba ambos modos para comparar la experiencia.
               </p>
@@ -6653,7 +6654,7 @@ function ContadorSimple({ target, label }) {
 function ContadorPorcentaje({ target, label, color = 'purple' }) {
   const value = useAnimatedNumber(target, 1000);
   const colors = {
-    purple: 'text-purple-600',
+    purple: 'text-brand-600',
     emerald: 'text-emerald-600',
     amber: 'text-amber-600',
   };
@@ -6687,7 +6688,7 @@ function ContadorPorcentaje({ target, label, color = 'purple' }) {
 function ContadorConIcono({ target, label, icon: Icon, color = 'purple' }) {
   const value = useAnimatedNumber(target, 800);
   const colors = {
-    purple: { gradient: 'from-purple-500 to-violet-600', text: 'text-purple-600' },
+    purple: { gradient: 'from-brand-500 to-violet-600', text: 'text-brand-600' },
     emerald: { gradient: 'from-emerald-500 to-teal-600', text: 'text-emerald-600' },
     amber: { gradient: 'from-amber-500 to-orange-600', text: 'text-amber-600' },
     pink: { gradient: 'from-pink-500 to-rose-600', text: 'text-pink-600' },
@@ -6727,7 +6728,7 @@ function ContadorXP({ current, max, label }) {
   const percentage = (current / max) * 100;
 
   return (
-    <div className="bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl p-4 shadow-lg shadow-purple-500/25">
+    <div className="bg-gradient-to-br from-violet-500 to-brand-600 rounded-xl p-4 shadow-lg shadow-brand-500/25">
       <div className="flex items-center justify-between mb-2">
         <span className="text-white/80 text-sm font-medium">{label}</span>
         <motion.span
@@ -6784,16 +6785,16 @@ function ContadorAnimadoDemos() {
     <div className="space-y-6">
       {/* Controls */}
       <motion.div
-        className="bg-purple-50 border border-purple-200 rounded-xl p-4"
+        className="bg-brand-50 border border-brand-200 rounded-xl p-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={spring.gentle}
       >
         <div className="flex items-center justify-between mb-3">
-          <span className="font-medium text-purple-800">Controles de Demo</span>
+          <span className="font-medium text-brand-800">Controles de Demo</span>
           <motion.button
             onClick={randomize}
-            className="px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-medium flex items-center gap-2"
+            className="px-4 py-2 bg-brand-600 text-white rounded-lg text-sm font-medium flex items-center gap-2"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -6801,7 +6802,7 @@ function ContadorAnimadoDemos() {
             Randomizar valores
           </motion.button>
         </div>
-        <p className="text-sm text-purple-600">Haz click en "Randomizar valores" para ver las animaciones en accion</p>
+        <p className="text-sm text-brand-600">Haz click en "Randomizar valores" para ver las animaciones en accion</p>
       </motion.div>
 
       {/* Variante 1 - Simple */}
@@ -6918,9 +6919,9 @@ function FlipCardsActividadDemo() {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="bg-gradient-to-r from-purple-50 to-violet-50 border border-purple-200 rounded-xl p-4">
-        <h3 className="font-bold text-purple-800 mb-1">FlipCards + Actividad</h3>
-        <p className="text-sm text-purple-600">
+      <div className="bg-gradient-to-r from-brand-50 to-violet-50 border border-brand-200 rounded-xl p-4">
+        <h3 className="font-bold text-brand-800 mb-1">FlipCards + Actividad</h3>
+        <p className="text-sm text-brand-600">
           Integracion de flashcards en la pagina de Actividad. Las flashcards aparecen ANTES de las estadisticas.
         </p>
       </div>
@@ -6975,7 +6976,7 @@ function FlipCardsActividadDemo() {
                 >
                   {/* Front */}
                   <div
-                    className="absolute inset-0 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl p-4 flex flex-col justify-between text-white shadow-md"
+                    className="absolute inset-0 bg-gradient-to-br from-brand-500 to-violet-600 rounded-xl p-4 flex flex-col justify-between text-white shadow-md"
                     style={{ backfaceVisibility: 'hidden' }}
                   >
                     <div className="flex items-start justify-between">
@@ -7007,7 +7008,7 @@ function FlipCardsActividadDemo() {
           {/* Ver todas button */}
           <motion.button
             onClick={() => setExpandedFlashcards(!expandedFlashcards)}
-            className="w-full mt-3 py-3 text-sm text-purple-600 font-medium hover:bg-purple-50 rounded-xl transition-colors flex items-center justify-center gap-2"
+            className="w-full mt-3 py-3 text-sm text-brand-600 font-medium hover:bg-brand-50 rounded-xl transition-colors flex items-center justify-center gap-2"
             whileTap={{ scale: 0.98 }}
           >
             {expandedFlashcards ? (
@@ -7034,8 +7035,8 @@ function FlipCardsActividadDemo() {
           transition={{ delay: 0.2 }}
         >
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center">
-              <BookOpen className="w-5 h-5 text-purple-600" />
+            <div className="w-10 h-10 bg-brand-100 rounded-xl flex items-center justify-center">
+              <BookOpen className="w-5 h-5 text-brand-600" />
             </div>
             <div>
               <p className="text-2xl font-bold text-gray-900">12</p>
@@ -7100,7 +7101,7 @@ function FlipCardsTemasDemo() {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-xl p-4">
+      <div className="bg-gradient-to-r from-indigo-50 to-brand-50 border border-indigo-200 rounded-xl p-4">
         <h3 className="font-bold text-indigo-800 mb-1">FlipCards + Temas</h3>
         <p className="text-sm text-indigo-600">
           Integracion de flashcards en la pagina de Temas. Al seleccionar un tema, opciones: Test | Flashcards | Solo lectura
@@ -7124,7 +7125,7 @@ function FlipCardsTemasDemo() {
               <motion.button
                 onClick={() => setSelectedTema(isSelected ? null : tema)}
                 className={`w-full bg-white rounded-xl p-4 border transition-all text-left ${
-                  isSelected ? 'border-purple-300 shadow-md' : 'border-gray-100'
+                  isSelected ? 'border-brand-300 shadow-md' : 'border-gray-100'
                 }`}
                 whileTap={{ scale: 0.99 }}
               >
@@ -7138,7 +7139,7 @@ function FlipCardsTemasDemo() {
                         <span className="text-gray-400">T{tema.id}</span> {tema.nombre}
                       </p>
                       {/* Flashcard badge */}
-                      <span className="text-xs bg-purple-100 text-purple-600 px-2 py-0.5 rounded-full font-medium flex items-center gap-1">
+                      <span className="text-xs bg-brand-100 text-brand-600 px-2 py-0.5 rounded-full font-medium flex items-center gap-1">
                         <BookMarked className="w-3 h-3" />
                         {tema.flashcards}
                       </span>
@@ -7181,7 +7182,7 @@ function FlipCardsTemasDemo() {
                             onClick={() => setSelectedMode(mode.id)}
                             className={`flex-1 py-2 rounded-lg text-sm font-medium flex items-center justify-center gap-1.5 transition-all ${
                               selectedMode === mode.id
-                                ? mode.color === 'purple' ? 'bg-purple-600 text-white' :
+                                ? mode.color === 'purple' ? 'bg-brand-600 text-white' :
                                   mode.color === 'amber' ? 'bg-amber-500 text-white' :
                                   'bg-gray-600 text-white'
                                 : 'bg-white border border-gray-200 text-gray-600'
@@ -7206,7 +7207,7 @@ function FlipCardsTemasDemo() {
                             {previewFlashcards.map((card, i) => (
                               <div
                                 key={i}
-                                className="flex-shrink-0 w-40 bg-gradient-to-br from-purple-500 to-violet-600 rounded-lg p-3 text-white"
+                                className="flex-shrink-0 w-40 bg-gradient-to-br from-brand-500 to-violet-600 rounded-lg p-3 text-white"
                               >
                                 <p className="text-xs opacity-80 mb-1">Pregunta</p>
                                 <p className="text-xs font-medium line-clamp-2">{card.front}</p>
@@ -7218,7 +7219,7 @@ function FlipCardsTemasDemo() {
 
                       {/* Start button */}
                       <motion.button
-                        className="w-full py-3 bg-purple-600 text-white font-semibold rounded-xl flex items-center justify-center gap-2"
+                        className="w-full py-3 bg-brand-600 text-white font-semibold rounded-xl flex items-center justify-center gap-2"
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                       >
@@ -7252,7 +7253,7 @@ function StudyModeSelector() {
       description: '5-10 preguntas aleatorias',
       time: '~5 min',
       color: 'purple',
-      gradient: 'from-purple-500 to-violet-600',
+      gradient: 'from-brand-500 to-violet-600',
       status: 'disponible',
     },
     {
@@ -7311,7 +7312,7 @@ function StudyModeSelector() {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="bg-gradient-to-r from-violet-50 to-purple-50 border border-violet-200 rounded-xl p-4">
+      <div className="bg-gradient-to-r from-violet-50 to-brand-50 border border-violet-200 rounded-xl p-4">
         <h3 className="font-bold text-violet-800 mb-1">Selector de Modo de Estudio</h3>
         <p className="text-sm text-violet-600">
           Basado en el assessment USER_JOURNEY_STUDY_MODES. Modal/pagina de seleccion de modo antes de comenzar.
@@ -7339,7 +7340,7 @@ function StudyModeSelector() {
               disabled={isDisabled}
             >
               <div className={`bg-white rounded-xl p-4 border-2 transition-all ${
-                isSelected ? 'border-purple-400 shadow-md' : 'border-gray-100 hover:border-gray-200'
+                isSelected ? 'border-brand-400 shadow-md' : 'border-gray-100 hover:border-gray-200'
               }`}>
                 <div className="flex items-start gap-4">
                   {/* Icon */}
@@ -7362,7 +7363,7 @@ function StudyModeSelector() {
                         </span>
                       )}
                       {mode.status === 'premium' && (
-                        <span className="text-xs bg-purple-100 text-purple-600 px-2 py-0.5 rounded-full flex items-center gap-1">
+                        <span className="text-xs bg-brand-100 text-brand-600 px-2 py-0.5 rounded-full flex items-center gap-1">
                           <Star className="w-3 h-3" /> Premium
                         </span>
                       )}
@@ -7376,7 +7377,7 @@ function StudyModeSelector() {
 
                   {/* Selection indicator */}
                   <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0 ${
-                    isSelected ? 'border-purple-500 bg-purple-500' : 'border-gray-300'
+                    isSelected ? 'border-brand-500 bg-brand-500' : 'border-gray-300'
                   }`}>
                     {isSelected && <Check className="w-4 h-4 text-white" />}
                   </div>
@@ -7397,7 +7398,7 @@ function StudyModeSelector() {
             className="sticky bottom-4"
           >
             <motion.button
-              className="w-full py-4 bg-purple-600 text-white font-bold rounded-xl shadow-lg shadow-purple-500/25 flex items-center justify-center gap-2"
+              className="w-full py-4 bg-brand-600 text-white font-bold rounded-xl shadow-lg shadow-brand-500/25 flex items-center justify-center gap-2"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -7465,7 +7466,7 @@ function FSRSDebugPanel() {
         animate={{ opacity: 1, y: 0 }}
       >
         <div className="flex items-center gap-2 mb-4">
-          <Clock className="w-5 h-5 text-purple-600" />
+          <Clock className="w-5 h-5 text-brand-600" />
           <h4 className="font-semibold text-gray-900">Simulador de Tiempo</h4>
         </div>
 
@@ -7476,7 +7477,7 @@ function FSRSDebugPanel() {
           </div>
           <div className="flex items-center justify-between text-sm">
             <span className="text-gray-500">Fecha simulada:</span>
-            <span className="font-mono text-purple-600 font-bold">{simulatedDate.toISOString().split('T')[0]}</span>
+            <span className="font-mono text-brand-600 font-bold">{simulatedDate.toISOString().split('T')[0]}</span>
           </div>
 
           {/* Slider */}
@@ -7487,7 +7488,7 @@ function FSRSDebugPanel() {
               max="30"
               value={simulatedDays}
               onChange={(e) => setSimulatedDays(parseInt(e.target.value))}
-              className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-purple-600"
+              className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-brand-600"
             />
             <div className="flex justify-between text-xs text-gray-400 mt-1">
               <span>Hoy</span>
@@ -7505,7 +7506,7 @@ function FSRSDebugPanel() {
             </button>
             <button
               onClick={() => setSimulatedDays(7)}
-              className="flex-1 py-2 text-sm bg-purple-100 text-purple-700 rounded-lg font-medium"
+              className="flex-1 py-2 text-sm bg-brand-100 text-brand-700 rounded-lg font-medium"
             >
               +7 dias
             </button>
@@ -7558,7 +7559,7 @@ function FSRSDebugPanel() {
                 return (
                   <tr
                     key={q.id}
-                    className={`border-b border-gray-50 cursor-pointer hover:bg-gray-50 ${selectedQuestion?.id === q.id ? 'bg-purple-50' : ''}`}
+                    className={`border-b border-gray-50 cursor-pointer hover:bg-gray-50 ${selectedQuestion?.id === q.id ? 'bg-brand-50' : ''}`}
                     onClick={() => setSelectedQuestion(q)}
                   >
                     <td className="py-2 font-mono text-gray-700">{q.id}</td>
@@ -7760,7 +7761,8 @@ function ActividadV2Demo() {
     }
   };
 
-  // Generate random stats
+  // Generate random stats (dev playground - purity not critical)
+  /* eslint-disable react-hooks/purity */
   const generateRandom = () => ({
     testsCompleted: Math.floor(Math.random() * 100),
     questionsCorrect: Math.floor(Math.random() * 600),
@@ -7778,6 +7780,7 @@ function ActividadV2Demo() {
     })),
     calendarData: Array(Math.floor(Math.random() * 15)).fill(0).map(() => Math.floor(Math.random() * 18) + 1)
   });
+  /* eslint-enable react-hooks/purity */
 
   // Get current display data
   const getDisplayData = () => {
@@ -7790,7 +7793,7 @@ function ActividadV2Demo() {
 
   // Study modes
   const studyModes = [
-    { id: 'test-rapido', icon: Zap, title: 'Test Rápido', desc: '5-10 preguntas', time: '~5 min', gradient: 'from-purple-500 to-violet-600', status: 'disponible' },
+    { id: 'test-rapido', icon: Zap, title: 'Test Rápido', desc: '5-10 preguntas', time: '~5 min', gradient: 'from-brand-500 to-violet-600', status: 'disponible' },
     { id: 'practica-tema', icon: Target, title: 'Por Tema', desc: 'Elige tema', time: '~15 min', gradient: 'from-blue-500 to-cyan-600', status: 'disponible' },
     { id: 'repaso-errores', icon: AlertTriangle, title: 'Errores', desc: '12 pendientes', time: 'Variable', gradient: 'from-amber-500 to-orange-600', status: 'disponible', badge: '12' },
     { id: 'flashcards', icon: BookMarked, title: 'Flashcards', desc: 'Memorización', time: '~10 min', gradient: 'from-emerald-500 to-teal-600', status: 'disponible' },
@@ -7806,7 +7809,7 @@ function ActividadV2Demo() {
   return (
     <div className="space-y-4">
       {/* Header info */}
-      <div className="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-xl p-4">
+      <div className="bg-gradient-to-r from-indigo-50 to-brand-50 border border-indigo-200 rounded-xl p-4">
         <h3 className="font-bold text-indigo-800 mb-1">Actividad v2 - Tabs Deslizantes</h3>
         <p className="text-sm text-indigo-600">
           Página de Actividad con dos subpáginas: Mi Progreso + Modos de Estudio. Swipe o click para cambiar.
@@ -7863,7 +7866,7 @@ function ActividadV2Demo() {
                       onClick={() => setActiveSubTab(tab.id)}
                       className={`flex-1 py-2.5 px-3 rounded-xl flex items-center justify-center gap-2 transition-all ${
                         isActive
-                          ? 'bg-purple-100 text-purple-700'
+                          ? 'bg-brand-100 text-brand-700'
                           : 'text-gray-500 hover:bg-gray-50'
                       }`}
                     >
@@ -7875,7 +7878,7 @@ function ActividadV2Demo() {
               </div>
               {/* Animated indicator */}
               <motion.div
-                className="h-0.5 bg-purple-500 rounded-full mt-2"
+                className="h-0.5 bg-brand-500 rounded-full mt-2"
                 animate={{ x: activeSubTab === 0 ? '0%' : '100%', width: '50%' }}
                 transition={{ type: 'spring', stiffness: 300, damping: 30 }}
               />
@@ -7905,7 +7908,7 @@ function ActividadV2Demo() {
                       <p className="text-gray-500 mb-6">Completa tu primer test para ver tu progreso</p>
                       <button
                         onClick={() => setActiveSubTab(1)}
-                        className="bg-purple-600 text-white px-6 py-3 rounded-xl font-semibold"
+                        className="bg-brand-600 text-white px-6 py-3 rounded-xl font-semibold"
                       >
                         Empezar a estudiar →
                       </button>
@@ -7916,7 +7919,7 @@ function ActividadV2Demo() {
                       <div className="grid grid-cols-2 gap-3">
                         <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
                           <div className="flex items-center gap-2 mb-1">
-                            <Trophy className="w-5 h-5 text-purple-500" />
+                            <Trophy className="w-5 h-5 text-brand-500" />
                             <span className="text-xs text-gray-500">Tests</span>
                           </div>
                           <p className="text-2xl font-bold text-gray-900">{data.testsCompleted}</p>
@@ -7957,7 +7960,7 @@ function ActividadV2Demo() {
                               <div key={day} className="flex-1 flex flex-col items-center gap-1">
                                 <div className="w-full bg-gray-100 rounded-t-lg flex-1 relative" style={{ minHeight: 60 }}>
                                   <motion.div
-                                    className={`absolute bottom-0 w-full rounded-t-lg ${isToday ? 'bg-orange-400' : 'bg-purple-400'}`}
+                                    className={`absolute bottom-0 w-full rounded-t-lg ${isToday ? 'bg-orange-400' : 'bg-brand-400'}`}
                                     initial={{ height: 0 }}
                                     animate={{ height: `${Math.max(height, value > 0 ? 10 : 0)}%` }}
                                   />
@@ -7975,7 +7978,7 @@ function ActividadV2Demo() {
                         <div className="space-y-2">
                           {data.sessionHistory.slice(0, 3).map((session) => (
                             <div key={session.id} className="flex items-center gap-3 p-2 bg-gray-50 rounded-lg">
-                              <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                              <div className="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center">
                                 📚
                               </div>
                               <div className="flex-1">
@@ -8027,7 +8030,7 @@ function ActividadV2Demo() {
                         disabled={isDisabled}
                       >
                         <div className={`bg-white rounded-xl p-3 border-2 transition-all ${
-                          isSelected ? 'border-purple-400 shadow-md' : 'border-gray-100'
+                          isSelected ? 'border-brand-400 shadow-md' : 'border-gray-100'
                         }`}>
                           <div className="flex items-center gap-3">
                             <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${mode.gradient} flex items-center justify-center`}>
@@ -8043,13 +8046,13 @@ function ActividadV2Demo() {
                                   <span className="text-xs bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded-full">Próximo</span>
                                 )}
                                 {mode.status === 'premium' && (
-                                  <span className="text-xs bg-purple-100 text-purple-600 px-1.5 py-0.5 rounded-full">★</span>
+                                  <span className="text-xs bg-brand-100 text-brand-600 px-1.5 py-0.5 rounded-full">★</span>
                                 )}
                               </div>
                               <p className="text-xs text-gray-500">{mode.desc} · {mode.time}</p>
                             </div>
                             <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${
-                              isSelected ? 'border-purple-500 bg-purple-500' : 'border-gray-300'
+                              isSelected ? 'border-brand-500 bg-brand-500' : 'border-gray-300'
                             }`}>
                               {isSelected && <Check className="w-3 h-3 text-white" />}
                             </div>
@@ -8066,7 +8069,7 @@ function ActividadV2Demo() {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
-                        className="w-full mt-4 bg-purple-600 text-white py-3 rounded-xl font-semibold"
+                        className="w-full mt-4 bg-brand-600 text-white py-3 rounded-xl font-semibold"
                       >
                         Comenzar →
                       </motion.button>
@@ -8086,7 +8089,7 @@ function ActividadV2Demo() {
           <div className="bg-white border-t border-gray-100 px-4 py-2">
             <div className="flex justify-around">
               {['Inicio', 'Actividad', 'Temas', 'Recursos'].map((tab, i) => (
-                <div key={tab} className={`text-xs ${i === 1 ? 'text-purple-600 font-semibold' : 'text-gray-400'}`}>
+                <div key={tab} className={`text-xs ${i === 1 ? 'text-brand-600 font-semibold' : 'text-gray-400'}`}>
                   {tab}
                 </div>
               ))}
@@ -8099,7 +8102,7 @@ function ActividadV2Demo() {
       <div className="relative">
         <motion.button
           onClick={() => setShowRandomizerMenu(!showRandomizerMenu)}
-          className="fixed bottom-24 right-4 z-50 w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full shadow-lg flex items-center justify-center"
+          className="fixed bottom-24 right-4 z-50 w-12 h-12 bg-gradient-to-br from-brand-500 to-indigo-600 rounded-full shadow-lg flex items-center justify-center"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           animate={simulationMode ? { rotate: [0, 10, -10, 0] } : {}}
@@ -8125,7 +8128,7 @@ function ActividadV2Demo() {
                   key={key}
                   onClick={() => { setSimulationMode(key); setShowRandomizerMenu(false); }}
                   className={`w-full px-3 py-2.5 text-left text-sm hover:bg-gray-50 flex items-center gap-2 ${
-                    simulationMode === key ? 'bg-purple-50 text-purple-700' : 'text-gray-700'
+                    simulationMode === key ? 'bg-brand-50 text-brand-700' : 'text-gray-700'
                   }`}
                 >
                   <span>{state.emoji}</span>
@@ -8135,7 +8138,7 @@ function ActividadV2Demo() {
               <button
                 onClick={() => { setSimulationMode('aleatorio'); setShowRandomizerMenu(false); }}
                 className={`w-full px-3 py-2.5 text-left text-sm hover:bg-gray-50 flex items-center gap-2 border-t border-gray-100 ${
-                  simulationMode === 'aleatorio' ? 'bg-purple-50 text-purple-700' : 'text-gray-700'
+                  simulationMode === 'aleatorio' ? 'bg-brand-50 text-brand-700' : 'text-gray-700'
                 }`}
               >
                 <span>🎲</span>
@@ -8164,34 +8167,34 @@ function ActividadV2Demo() {
 function ColorPaletteDemo() {
   // Current color inventory
   const primaryColors = [
-    { name: 'purple-50', value: '#faf5ff', textColor: 'text-purple-900' },
-    { name: 'purple-100', value: '#f3e8ff', textColor: 'text-purple-900' },
-    { name: 'purple-200', value: '#e9d5ff', textColor: 'text-purple-900' },
-    { name: 'purple-300', value: '#d8b4fe', textColor: 'text-purple-900' },
-    { name: 'purple-400', value: '#c084fc', textColor: 'text-white' },
-    { name: 'purple-500', value: '#a855f7', textColor: 'text-white' },
-    { name: 'purple-600', value: '#9333ea', textColor: 'text-white' },
-    { name: 'purple-700', value: '#7e22ce', textColor: 'text-white' },
+    { name: 'brand-50', value: '#faf5ff', textColor: 'text-brand-900' },
+    { name: 'brand-100', value: '#f3e8ff', textColor: 'text-brand-900' },
+    { name: 'brand-200', value: '#e9d5ff', textColor: 'text-brand-900' },
+    { name: 'brand-300', value: '#d8b4fe', textColor: 'text-brand-900' },
+    { name: 'brand-400', value: '#c084fc', textColor: 'text-white' },
+    { name: 'brand-500', value: '#a855f7', textColor: 'text-white' },
+    { name: 'brand-600', value: '#9333ea', textColor: 'text-white' },
+    { name: 'brand-700', value: '#7e22ce', textColor: 'text-white' },
   ];
 
   const statusColors = {
     dominado: { bg: 'bg-emerald-500', gradient: 'from-emerald-400 to-emerald-500', label: 'Dominado' },
-    avanzando: { bg: 'bg-purple-500', gradient: 'from-purple-400 to-purple-500', label: 'Avanzando' },
+    avanzando: { bg: 'bg-brand-500', gradient: 'from-brand-400 to-brand-500', label: 'Avanzando' },
     progreso: { bg: 'bg-blue-500', gradient: 'from-blue-400 to-blue-500', label: 'En Progreso' },
     riesgo: { bg: 'bg-amber-500', gradient: 'from-amber-400 to-orange-500', label: 'Necesita Repaso' },
     nuevo: { bg: 'bg-gray-400', gradient: 'from-gray-300 to-gray-400', label: 'Nuevo' },
   };
 
   const currentGradients = [
-    { name: 'Purple Principal', classes: 'from-purple-600 to-indigo-600' },
+    { name: 'Purple Principal', classes: 'from-brand-600 to-indigo-600' },
     { name: 'Amber/Orange', classes: 'from-amber-400 to-orange-400' },
     { name: 'Emerald/Teal', classes: 'from-emerald-400 to-teal-400' },
-    { name: 'Purple/Violet', classes: 'from-purple-400 to-indigo-400' },
+    { name: 'Purple/Violet', classes: 'from-brand-400 to-indigo-400' },
   ];
 
   // Propuesta: Paleta reducida para app ganadora
   const proposedPalette = {
-    primary: { name: 'Purple', values: ['purple-500', 'purple-600'] },
+    primary: { name: 'Purple', values: ['brand-500', 'brand-600'] },
     success: { name: 'Emerald', values: ['emerald-400', 'emerald-500'] },
     warning: { name: 'Amber', values: ['amber-400', 'amber-500'] },
     neutral: { name: 'Gray', values: ['gray-100', 'gray-500', 'gray-900'] },
@@ -8257,7 +8260,7 @@ function ColorPaletteDemo() {
           <div>
             <span className="text-sm text-gray-500 block mb-2">Botones:</span>
             <div className="flex gap-2 flex-wrap">
-              <button className="px-4 py-2 bg-purple-600 text-white rounded-xl font-medium">Primario</button>
+              <button className="px-4 py-2 bg-brand-600 text-white rounded-xl font-medium">Primario</button>
               <button className="px-4 py-2 bg-emerald-500 text-white rounded-xl font-medium">Éxito</button>
               <button className="px-4 py-2 bg-amber-500 text-white rounded-xl font-medium">Warning</button>
               <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-xl font-medium">Secundario</button>
@@ -8268,8 +8271,8 @@ function ColorPaletteDemo() {
           <div>
             <span className="text-sm text-gray-500 block mb-2">Cards con gradiente:</span>
             <div className="grid grid-cols-2 gap-3">
-              <div className="p-4 bg-gradient-to-br from-purple-100 to-violet-100 rounded-xl border border-purple-200">
-                <span className="text-purple-700 font-semibold">Card Pastel</span>
+              <div className="p-4 bg-gradient-to-br from-brand-100 to-violet-100 rounded-xl border border-brand-200">
+                <span className="text-brand-700 font-semibold">Card Pastel</span>
               </div>
               <div className="p-4 bg-gradient-to-br from-amber-100 to-orange-100 rounded-xl border border-amber-200">
                 <span className="text-amber-700 font-semibold">Card Amber</span>
@@ -8280,9 +8283,9 @@ function ColorPaletteDemo() {
       </section>
 
       {/* Propuesta App Ganadora */}
-      <section className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-6">
-        <h3 className="text-lg font-semibold text-purple-900 mb-4">🏆 Propuesta: Paleta Optimizada</h3>
-        <p className="text-sm text-purple-700 mb-4">
+      <section className="bg-gradient-to-br from-brand-50 to-indigo-50 rounded-2xl p-6">
+        <h3 className="text-lg font-semibold text-brand-900 mb-4">🏆 Propuesta: Paleta Optimizada</h3>
+        <p className="text-sm text-brand-700 mb-4">
           Reducir a 5 colores principales para consistencia visual y mejor UX.
         </p>
 
@@ -8290,14 +8293,14 @@ function ColorPaletteDemo() {
           {Object.entries(proposedPalette).map(([key, color]) => (
             <div key={key} className="text-center">
               <div className={`h-12 bg-${color.values[0]} rounded-lg mb-2`} />
-              <span className="text-xs font-medium text-purple-800">{color.name}</span>
+              <span className="text-xs font-medium text-brand-800">{color.name}</span>
             </div>
           ))}
         </div>
 
         <div className="bg-white/60 rounded-xl p-4">
-          <h4 className="font-semibold text-purple-900 mb-2">Reglas de uso:</h4>
-          <ul className="text-sm text-purple-700 space-y-1">
+          <h4 className="font-semibold text-brand-900 mb-2">Reglas de uso:</h4>
+          <ul className="text-sm text-brand-700 space-y-1">
             <li>• <strong>Purple:</strong> CTAs, elementos interactivos, marca</li>
             <li>• <strong>Emerald:</strong> Éxito, completado, positivo</li>
             <li>• <strong>Amber:</strong> Alertas, rachas, atención</li>
@@ -8333,7 +8336,7 @@ function PanelAnimationsDemo() {
         <div className="grid grid-cols-1 gap-3">
           <button
             onClick={() => setShowSlideRight(true)}
-            className="p-4 bg-purple-100 text-purple-700 rounded-xl font-medium text-left hover:bg-purple-200 transition-colors"
+            className="p-4 bg-brand-100 text-brand-700 rounded-xl font-medium text-left hover:bg-brand-200 transition-colors"
           >
             <span className="text-lg">→ Slide Right Panel</span>
             <p className="text-sm opacity-70">Para Settings - desliza desde la derecha</p>
@@ -8394,7 +8397,7 @@ function PanelAnimationsDemo() {
               <p className="text-gray-600 mb-4">Este panel desliza desde la derecha y deja ver la página detrás.</p>
               <button
                 onClick={() => setShowSlideRight(false)}
-                className="w-full py-3 bg-purple-600 text-white rounded-xl font-medium"
+                className="w-full py-3 bg-brand-600 text-white rounded-xl font-medium"
               >
                 Cerrar
               </button>
@@ -8570,7 +8573,7 @@ export default function DraftFeatures({ onClose }) {
                 onClick={() => setActiveTab(tab.id)}
                 className={`px-3 py-1.5 rounded-lg font-medium whitespace-nowrap text-sm
                   ${activeTab === tab.id
-                    ? 'bg-purple-600 text-white'
+                    ? 'bg-brand-600 text-white'
                     : 'bg-gray-100 text-gray-600'}`}
                 whileTap={{ scale: 0.97 }}
               >
@@ -8593,7 +8596,7 @@ export default function DraftFeatures({ onClose }) {
               exit={{ opacity: 0, y: -20 }}
               className="space-y-4"
             >
-              <div className="bg-purple-50 border border-purple-200 rounded-xl p-3 text-sm text-purple-800">
+              <div className="bg-brand-50 border border-brand-200 rounded-xl p-3 text-sm text-brand-800">
                 <strong>🆕 Fortaleza Interactiva:</strong> Arrastra para reordenar · Desliza ← para practicar
               </div>
 
@@ -8629,7 +8632,7 @@ export default function DraftFeatures({ onClose }) {
 
               {/* Start Session Button */}
               <motion.button
-                className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-4 rounded-2xl font-semibold text-lg shadow-lg shadow-purple-500/25"
+                className="w-full bg-gradient-to-r from-brand-500 to-brand-600 text-white py-4 rounded-2xl font-semibold text-lg shadow-lg shadow-brand-500/25"
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 transition={spring.snappy}
@@ -8698,7 +8701,7 @@ export default function DraftFeatures({ onClose }) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
             >
-              <div className="bg-purple-50 border border-purple-200 rounded-xl p-3 text-sm text-purple-800 mb-4">
+              <div className="bg-brand-50 border border-brand-200 rounded-xl p-3 text-sm text-brand-800 mb-4">
                 <strong>📚 Propuesta A - Lista Clasica Mejorada:</strong> Lista vertical con busqueda, filtros por estado, agrupacion por bloques y contador de preguntas
               </div>
               <TemasListaClasica onTemaClick={(tema) => setSelectedTema(tema)} />
@@ -8758,7 +8761,7 @@ export default function DraftFeatures({ onClose }) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
             >
-              <div className="bg-purple-50 border border-purple-200 rounded-xl p-3 text-sm text-purple-800 mb-4">
+              <div className="bg-brand-50 border border-brand-200 rounded-xl p-3 text-sm text-brand-800 mb-4">
                 <strong>📈 Actividad:</strong> Página de actividades con "Esta semana" y estadísticas mensuales
               </div>
               <ActivitiesPage />
@@ -8857,7 +8860,7 @@ export default function DraftFeatures({ onClose }) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
             >
-              <div className="bg-purple-50 border border-purple-200 rounded-xl p-3 text-sm text-purple-800 mb-4">
+              <div className="bg-brand-50 border border-brand-200 rounded-xl p-3 text-sm text-brand-800 mb-4">
                 <strong>💜 Purple:</strong> Gradiente púrpura · Cohesivo con la app
               </div>
               <HomeMomentum
@@ -9002,7 +9005,7 @@ export default function DraftFeatures({ onClose }) {
             Volver
           </motion.button>
           <motion.button
-            className="flex-1 py-3 bg-purple-600 text-white font-semibold rounded-xl flex items-center justify-center gap-2"
+            className="flex-1 py-3 bg-brand-600 text-white font-semibold rounded-xl flex items-center justify-center gap-2"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >

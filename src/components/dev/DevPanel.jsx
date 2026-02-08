@@ -47,7 +47,7 @@ export default function DevPanel({
         <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-white text-lg">×</button>
       </div>
       <div className="space-y-2">
-        <button onClick={onShowPlayground} className="w-full bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white text-xs py-2 px-3 rounded-lg text-left font-medium">
+        <button onClick={onShowPlayground} className="w-full bg-gradient-to-r from-pink-500 to-brand-500 hover:from-pink-600 hover:to-brand-600 text-white text-xs py-2 px-3 rounded-lg text-left font-medium">
           ✨ Animation Playground
         </button>
 
@@ -78,7 +78,7 @@ export default function DevPanel({
           👀 Ver Premium Modal
         </button>
         {onShowAdminLogin && (
-          <button onClick={onShowAdminLogin} className="w-full bg-purple-600/90 hover:bg-purple-700 text-white text-xs py-2 px-3 rounded-lg text-left">
+          <button onClick={onShowAdminLogin} className="w-full bg-brand-600/90 hover:bg-brand-700 text-white text-xs py-2 px-3 rounded-lg text-left">
             🔐 Admin Login
           </button>
         )}

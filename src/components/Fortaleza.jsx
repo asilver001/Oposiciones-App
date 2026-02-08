@@ -10,12 +10,12 @@ const estadoConfig = {
   nuevo: {
     label: 'Nuevo',
     textColor: 'text-gray-500',
-    dotColor: 'bg-purple-500'
+    dotColor: 'bg-brand-500'
   },
   progresando: {
     label: 'Progresando',
-    textColor: 'text-purple-600',
-    dotColor: 'bg-purple-500'
+    textColor: 'text-brand-600',
+    dotColor: 'bg-brand-500'
   },
   solido: {
     label: 'Sólido',
@@ -123,7 +123,7 @@ export default function Fortaleza({
         {onVerTodo && (
           <button
             onClick={onVerTodo}
-            className="flex items-center gap-1 text-sm text-purple-600 font-medium hover:text-purple-700 transition-colors"
+            className="flex items-center gap-1 text-sm text-brand-600 font-medium hover:text-brand-700 transition-colors"
           >
             Ver todo
             <ChevronRight className="w-4 h-4" />
@@ -142,7 +142,7 @@ export default function Fortaleza({
       {remainingCount > 0 && (
         <button
           onClick={onVerTodo}
-          className="w-full px-4 py-2.5 text-sm text-gray-500 hover:text-purple-600 hover:bg-gray-50 transition-colors border-t border-gray-100"
+          className="w-full px-4 py-2.5 text-sm text-gray-500 hover:text-brand-600 hover:bg-gray-50 transition-colors border-t border-gray-100"
         >
           +{remainingCount} tema{remainingCount !== 1 ? 's' : ''} más
         </button>

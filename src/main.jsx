@@ -3,9 +3,13 @@ import { createRoot } from 'react-dom/client'
 import '@fontsource-variable/inter'
 import './index.css'
 import './lib/storage.js'
+import { initErrorTracking } from './lib/errorTracking.js'
 import { AppRouter } from './router'
 import { AuthProvider } from './contexts/AuthContext.jsx'
 import { AdminProvider } from './contexts/AdminContext.jsx'
+
+// Initialize global error tracking
+initErrorTracking()
 
 // Legacy fallback: set localStorage.setItem('USE_LEGACY_ROUTER', 'true') to use old OpositaApp
 const USE_LEGACY = localStorage.getItem('USE_LEGACY_ROUTER') === 'true'

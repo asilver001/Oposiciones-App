@@ -1,139 +1,80 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import { supabase } from '../lib/supabase';
+import { useAuth } from './AuthContext';
 
 const AdminContext = createContext(null);
 
 export function AdminProvider({ children }) {
+  const { user, userRole } = useAuth();
   const [adminUser, setAdminUser] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // Check for existing admin session on mount
+  // Sync admin state from AuthContext's userRole
   useEffect(() => {
-    const savedAdmin = localStorage.getItem('adminSession');
-    if (savedAdmin) {
-      try {
-        const parsed = JSON.parse(savedAdmin);
-        // Session expires after 24 hours
-        if (parsed.expiresAt && new Date(parsed.expiresAt) > new Date()) {
-          setAdminUser(parsed);
-        } else {
-          localStorage.removeItem('adminSession');
-        }
-      } catch (e) {
-        localStorage.removeItem('adminSession');
-      }
+    if (user && userRole?.isAdmin) {
+      setAdminUser({
+        id: userRole.id,
+        email: user.email,
+        role: userRole.role,
+        name: userRole.name,
+      });
+    } else if (user && userRole?.isReviewer) {
+      setAdminUser({
+        id: userRole.id,
+        email: user.email,
+        role: userRole.role,
+        name: userRole.name,
+      });
+    } else {
+      setAdminUser(null);
     }
-  }, []);
+  }, [user, userRole]);
 
-  // Login with email and PIN
-  const loginAdmin = async (email, pin) => {
+  // Login admin - verifies that the currently authenticated user has admin/reviewer role
+  const loginAdmin = async () => {
+    if (!user) {
+      const msg = 'Debes iniciar sesion primero';
+      setError(msg);
+      return { success: false, error: msg };
+    }
+
     setLoading(true);
     setError(null);
 
-    const normalizedEmail = email.toLowerCase().trim();
-    let rateLimitCheck = null;
-
     try {
-      // STEP 1: Check rate limiting BEFORE attempting login
-      const { data: rateLimitData, error: rateLimitError } = await supabase
-        .rpc('check_admin_rate_limit', {
-          p_email: normalizedEmail
-          // Uses defaults: 15 min window, 5 max attempts
-        });
-
-      if (rateLimitError) {
-        console.error('Rate limit check error:', rateLimitError);
-        // Continue anyway - don't block login if rate limit check fails
-      } else if (rateLimitData && rateLimitData.length > 0) {
-        rateLimitCheck = rateLimitData[0];
-
-        // If rate limited, reject immediately
-        if (rateLimitCheck.is_rate_limited) {
-          const minutes = Math.ceil(rateLimitCheck.retry_after_seconds / 60);
-          throw new Error(
-            `Demasiados intentos fallidos. Inténtalo de nuevo en ${minutes} minuto${minutes !== 1 ? 's' : ''}.`
-          );
-        }
-      }
-
-      // STEP 2: Attempt login
-      const { data, error: rpcError } = await supabase
-        .rpc('verify_admin_login', {
-          p_email: normalizedEmail,
-          p_pin: pin
-        });
-
-      if (rpcError) {
-        throw new Error(rpcError.message);
-      }
-
-      if (!data || data.length === 0) {
-        // Record failed attempt
-        await supabase.rpc('record_admin_login_attempt', {
-          p_email: normalizedEmail,
-          p_ip_address: null,
-          p_user_agent: navigator?.userAgent || null,
-          p_was_successful: false,
-          p_failure_reason: 'invalid_credentials'
-        });
-
-        throw new Error('Credenciales incorrectas');
-      }
-
-      const admin = data[0];
-
-      // STEP 3: Record successful login
-      await supabase.rpc('record_admin_login_attempt', {
-        p_email: normalizedEmail,
-        p_ip_address: null,
-        p_user_agent: navigator?.userAgent || null,
-        p_was_successful: true,
-        p_failure_reason: null
+      const { data, error: rpcError } = await supabase.rpc('check_user_role', {
+        p_email: user.email,
       });
 
-      // Create session with 24h expiry
-      const session = {
-        id: admin.id,
-        email: admin.email,
-        role: admin.role,
-        name: admin.name,
-        expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString()
-      };
+      if (rpcError) throw new Error(rpcError.message);
 
-      // Save to localStorage
-      localStorage.setItem('adminSession', JSON.stringify(session));
-      setAdminUser(session);
+      const roleData = Array.isArray(data) ? data[0] : data;
 
-      return { success: true, role: admin.role };
-    } catch (err) {
-      const message = err.message || 'Error al iniciar sesión';
-      setError(message);
-
-      // Record failed attempt if not already rate limited
-      if (!message.includes('Demasiados intentos')) {
-        try {
-          await supabase.rpc('record_admin_login_attempt', {
-            p_email: normalizedEmail,
-            p_ip_address: null,
-            p_user_agent: navigator?.userAgent || null,
-            p_was_successful: false,
-            p_failure_reason: 'error'
-          });
-        } catch (recordError) {
-          console.error('Failed to record login attempt:', recordError);
-        }
+      if (!roleData || (!roleData.isAdmin && !roleData.isReviewer)) {
+        throw new Error('Tu cuenta no tiene permisos de administrador');
       }
 
+      const admin = {
+        id: roleData.id,
+        email: user.email,
+        role: roleData.role,
+        name: roleData.name,
+      };
+
+      setAdminUser(admin);
+      return { success: true, role: roleData.role };
+    } catch (err) {
+      const message = err.message || 'Error al verificar permisos';
+      setError(message);
       return { success: false, error: message };
     } finally {
       setLoading(false);
     }
   };
 
-  // Logout
+  // Logout admin (just clear admin state, don't sign out from Supabase)
   const logoutAdmin = () => {
-    localStorage.removeItem('adminSession');
     setAdminUser(null);
     setError(null);
   };
@@ -151,7 +92,7 @@ export function AdminProvider({ children }) {
     }
 
     try {
-      const { data, error: rpcError } = await supabase
+      const { error: rpcError } = await supabase
         .rpc('review_question', {
           p_question_id: questionId,
           p_admin_id: adminUser.id,
@@ -174,7 +115,7 @@ export function AdminProvider({ children }) {
     }
 
     try {
-      const { data, error: rpcError } = await supabase
+      const { error: rpcError } = await supabase
         .rpc('mark_question_for_refresh', {
           p_question_id: questionId,
           p_reason: reason,
@@ -236,6 +177,7 @@ export function AdminProvider({ children }) {
   );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useAdmin() {
   const context = useContext(AdminContext);
   if (!context) {

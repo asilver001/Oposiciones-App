@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 /**
  * Motion Components - Oposita Smart
  *
@@ -33,7 +34,7 @@ export const useCountUp = (end, { duration: dur = 600, start = 0, enabled = true
   useEffect(() => {
     // Skip animation if reduced motion preferred or disabled
     if (prefersReducedMotion() || !enabled) {
-      setValue(end);
+      setValue(end); // eslint-disable-line react-hooks/set-state-in-effect
       return;
     }
 
@@ -177,7 +178,7 @@ export const Sheet = ({
         setIsVisible(true);
       });
     } else {
-      setIsVisible(false);
+      setIsVisible(false); // eslint-disable-line react-hooks/set-state-in-effect -- sync with isOpen prop
     }
   }, [isOpen]);
 
@@ -221,7 +222,7 @@ export const Sheet = ({
  * @param {string} props.type - Button type
  *
  * @example
- * <AnimatedButton onClick={handleSubmit} className="bg-purple-600 text-white">
+ * <AnimatedButton onClick={handleSubmit} className="bg-brand-600 text-white">
  *   Continuar
  * </AnimatedButton>
  */
@@ -288,8 +289,8 @@ export const OptionCard = ({
 
   const baseClasses = 'w-full text-left p-4 rounded-xl border transition-colors';
   const stateClasses = selected
-    ? 'border-purple-500 bg-purple-50'
-    : 'border-gray-200 bg-white hover:border-purple-300 hover:bg-gray-50';
+    ? 'border-brand-500 bg-brand-50'
+    : 'border-gray-200 bg-white hover:border-brand-300 hover:bg-gray-50';
   const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer';
 
   return (

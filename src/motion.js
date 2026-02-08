@@ -186,7 +186,7 @@ export const getEntranceStyle = (isVisible, {
  * const { pressHandlers, pressStyle } = usePress({ onPress: () => doSomething() });
  * <button {...pressHandlers} style={pressStyle}>Click me</button>
  */
-export const createPressHandlers = (onPress, { scale = 0.98, opacity = 0.92 } = {}) => {
+export const createPressHandlers = (onPress, { scale: _scale = 0.98, opacity: _opacity = 0.92 } = {}) => {
   let isPressed = false;
 
   const setPressed = (pressed) => {

@@ -5,14 +5,16 @@
  * Based on FSRS algorithm for spaced repetition tracking.
  */
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 import {
   Trophy, ThumbsUp, ThumbsDown, RotateCcw,
-  Check, X, Brain, ArrowLeft, Loader2, XCircle
+  Check, X, Brain, ArrowLeft, Loader2, XCircle,
+  RefreshCw, Clock, BookOpen
 } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import { generateHybridSession, updateProgress, recordDailyStudy } from '../../services/spacedRepetitionService';
+import EmptyState from '../common/EmptyState/EmptyState';
 
 // Spring animation configs
 const spring = {
@@ -30,6 +32,13 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
   const [isFinished, setIsFinished] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [noQuestions, setNoQuestions] = useState(false);
+
+  // Loading timeout and retry
+  const [loadingTimedOut, setLoadingTimedOut] = useState(false);
+  const retryCountRef = useRef(0);
+  const MAX_RETRIES = 3;
+  const LOADING_TIMEOUT_MS = 15000;
 
   // Motion values for swipe
   const x = useMotionValue(0);
@@ -37,54 +46,78 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
   const opacity = useTransform(x, [-200, -100, 0, 100, 200], [0.5, 1, 1, 1, 0.5]);
 
   // Load questions for flashcards
-  useEffect(() => {
-    async function loadCards() {
-      if (!user?.id) {
-        setError('Inicia sesión para usar las flashcards');
-        setIsLoading(false);
-        return;
-      }
-
-      try {
-        const sessionConfig = {
-          totalQuestions: config.totalQuestions || 20,
-          tema: config.tema || config.temaId || null,
-          reviewRatio: 0.3 // More review for memorization
-        };
-
-        const questions = await generateHybridSession(user.id, sessionConfig);
-
-        if (questions.length === 0) {
-          setError('No hay preguntas disponibles');
-          setCards([]);
-        } else {
-          // Transform questions to flashcard format using options JSONB array
-          const flashcards = questions.map(q => {
-            // Get correct answer text from options array
-            const correctOption = q.options?.find(opt => opt.is_correct === true);
-            const correctAnswerText = correctOption?.text || 'Respuesta no disponible';
-
-            return {
-              id: q.id,
-              front: q.question_text,
-              back: correctAnswerText,
-              topic: q.tema,
-              explanation: q.explanation,
-              isReview: q.isReview
-            };
-          });
-          setCards(flashcards);
-        }
-      } catch (err) {
-        console.error('Error loading flashcards:', err);
-        setError('Error al cargar las flashcards');
-      } finally {
-        setIsLoading(false);
-      }
+  const loadCards = useCallback(async () => {
+    if (!user?.id) {
+      setError('Inicia sesión para usar las flashcards');
+      setIsLoading(false);
+      return;
     }
 
-    loadCards();
+    setIsLoading(true);
+    setError(null);
+    setNoQuestions(false);
+    setLoadingTimedOut(false);
+
+    try {
+      const sessionConfig = {
+        totalQuestions: config.totalQuestions || 20,
+        tema: config.tema || config.temaId || null,
+        reviewRatio: 0.3
+      };
+
+      const questions = await generateHybridSession(user.id, sessionConfig);
+
+      if (questions.length === 0) {
+        setNoQuestions(true);
+        setCards([]);
+      } else {
+        const flashcards = questions.map(q => {
+          const correctAnswerText = q.correct_answer
+            ? q[`option_${q.correct_answer}`] || 'Respuesta no disponible'
+            : 'Respuesta no disponible';
+
+          return {
+            id: q.id,
+            front: q.question_text,
+            back: correctAnswerText,
+            topic: q.tema,
+            explanation: q.explanation,
+            isReview: q.isReview
+          };
+        });
+        setCards(flashcards);
+      }
+    } catch (err) {
+      console.error('Error loading flashcards:', err);
+      setError('Error al cargar las flashcards');
+    } finally {
+      setIsLoading(false);
+    }
   }, [user?.id, config]);
+
+  useEffect(() => {
+    loadCards();
+  }, [loadCards]);
+
+  // Loading timeout
+  useEffect(() => {
+    if (!isLoading) return;
+    const timer = setTimeout(() => {
+      if (isLoading) setLoadingTimedOut(true);
+    }, LOADING_TIMEOUT_MS);
+    return () => clearTimeout(timer);
+  }, [isLoading]);
+
+  // Retry handler
+  const handleRetry = () => {
+    retryCountRef.current += 1;
+    setLoadingTimedOut(false);
+    setCurrentIndex(0);
+    setIsFlipped(false);
+    setResults({ known: [], review: [] });
+    setIsFinished(false);
+    loadCards();
+  };
 
   const currentCard = cards[currentIndex];
 
@@ -151,8 +184,8 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
     }
   }, [results.review, resetStudy]);
 
-  // Loading state
-  if (isLoading) {
+  // Loading state (with timeout)
+  if (isLoading && !loadingTimedOut) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
@@ -163,22 +196,78 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
     );
   }
 
-  // Error state
-  if (error) {
+  // No questions available (empty state, not an error)
+  if (noQuestions) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+        <EmptyState
+          icon={BookOpen}
+          title="No hay preguntas disponibles"
+          description="Selecciona otro tema o modo de estudio"
+          actionLabel="Volver"
+          onAction={onClose}
+        />
+      </div>
+    );
+  }
+
+  // Loading timed out or error state
+  if (loadingTimedOut || error) {
+    const hasRetriesLeft = retryCountRef.current < MAX_RETRIES;
+    const isTimeout = loadingTimedOut && !error;
+
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
         <div className="text-center max-w-sm">
-          <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <XCircle className="w-8 h-8 text-red-500" />
+          <div className={`w-16 h-16 ${isTimeout ? 'bg-amber-100' : 'bg-red-100'} rounded-full flex items-center justify-center mx-auto mb-4`}>
+            {isTimeout
+              ? <Clock className="w-8 h-8 text-amber-500" />
+              : <XCircle className="w-8 h-8 text-red-500" />
+            }
           </div>
-          <h2 className="text-xl font-bold text-gray-800 mb-2">Error</h2>
-          <p className="text-gray-600 mb-4">{error}</p>
-          <button
-            onClick={onClose}
-            className="px-6 py-2 bg-gray-200 rounded-lg hover:bg-gray-300"
-          >
-            Volver
-          </button>
+          <h2 className="text-xl font-bold text-gray-800 mb-2">
+            {isTimeout ? 'Carga lenta' : 'Error'}
+          </h2>
+          <p className="text-gray-600 mb-4">
+            {isTimeout
+              ? 'Las flashcards están tardando más de lo esperado.'
+              : error
+            }
+          </p>
+          {hasRetriesLeft ? (
+            <>
+              <p className="text-sm text-gray-400 mb-4">
+                Intento {retryCountRef.current + 1} de {MAX_RETRIES}
+              </p>
+              <div className="flex gap-3 justify-center">
+                <button
+                  onClick={onClose}
+                  className="px-6 py-2 bg-gray-200 rounded-lg hover:bg-gray-300"
+                >
+                  Volver
+                </button>
+                <button
+                  onClick={handleRetry}
+                  className="px-6 py-2 bg-brand-600 text-white rounded-lg hover:bg-brand-700 flex items-center gap-2"
+                >
+                  <RefreshCw className="w-4 h-4" />
+                  Reintentar
+                </button>
+              </div>
+            </>
+          ) : (
+            <>
+              <p className="text-sm text-gray-500 mb-4">
+                No se pudo cargar tras {MAX_RETRIES} intentos. Vuelve a intentarlo más tarde.
+              </p>
+              <button
+                onClick={onClose}
+                className="px-6 py-2 bg-gray-200 rounded-lg hover:bg-gray-300"
+              >
+                Volver
+              </button>
+            </>
+          )}
         </div>
       </div>
     );

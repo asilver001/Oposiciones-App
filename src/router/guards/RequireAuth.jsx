@@ -16,8 +16,8 @@ export default function RequireAuth({ children }) {
   // Show nothing while checking auth status
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 to-violet-100">
-        <div className="animate-pulse text-purple-600">Cargando...</div>
+      <div className="min-h-screen flex items-center justify-center bg-brand-50 dark:bg-gray-950">
+        <div className="animate-pulse text-brand-600">Cargando...</div>
       </div>
     );
   }

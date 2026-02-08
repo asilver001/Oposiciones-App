@@ -65,7 +65,7 @@ export default function ExamTimer({
   // Determine color based on remaining time
   let colorClass = 'text-gray-700';
   let bgClass = 'bg-gray-100';
-  let progressClass = 'bg-purple-500';
+  let progressClass = 'bg-brand-500';
 
   if (isCritical) {
     colorClass = 'text-red-600';
@@ -114,7 +114,7 @@ export default function ExamTimer({
 /**
  * Compact timer for header display
  */
-export function CompactTimer({ remainingSeconds, totalMinutes = 60 }) {
+export function CompactTimer({ remainingSeconds, totalMinutes: _totalMinutes = 60 }) {
   const mins = Math.floor(remainingSeconds / 60);
   const secs = remainingSeconds % 60;
   const formatted = `${mins}:${secs.toString().padStart(2, '0')}`;

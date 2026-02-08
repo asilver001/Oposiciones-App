@@ -47,6 +47,7 @@ import { ROUTES } from './paths';
  * Route configuration array
  * Used by createBrowserRouter or useRoutes
  */
+// eslint-disable-next-line react-refresh/only-export-components
 export const routeConfig = [
   // Root redirect
   {
@@ -158,4 +159,5 @@ export const routeConfig = [
   },
 ];
 
+// eslint-disable-next-line react-refresh/only-export-components
 export default routeConfig;

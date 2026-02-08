@@ -6,7 +6,7 @@
  */
 
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence, useMotionValue, useTransform, useSpring, useScroll, useInView } from 'framer-motion';
+import { motion, AnimatePresence, useMotionValue, useSpring, useInView } from 'framer-motion';
 import {
   ArrowLeft, Check, X, Sparkles, Zap, Trophy, Flame,
   Star, Heart, ChevronRight, Play, Pause, RotateCcw,
@@ -49,10 +49,10 @@ const staggerItem = {
 
 function PremiumButton({ children, variant = 'primary', onClick, disabled = false, icon: Icon }) {
   const variants = {
-    primary: 'bg-gradient-to-r from-purple-600 to-purple-700 text-white shadow-lg shadow-purple-500/30',
-    secondary: 'bg-white border-2 border-purple-200 text-purple-700',
+    primary: 'bg-gradient-to-r from-brand-600 to-brand-700 text-white shadow-lg shadow-brand-500/30',
+    secondary: 'bg-white border-2 border-brand-200 text-brand-700',
     success: 'bg-gradient-to-r from-emerald-500 to-emerald-600 text-white shadow-lg shadow-emerald-500/30',
-    ghost: 'bg-purple-50 text-purple-700',
+    ghost: 'bg-brand-50 text-brand-700',
     amber: 'bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-lg shadow-amber-500/30',
   };
 
@@ -96,7 +96,7 @@ function MagneticButton({ children, onClick }) {
       onMouseLeave={() => { x.set(0); y.set(0); }}
       style={{ x: springX, y: springY }}
       whileTap={{ scale: 0.95 }}
-      className="px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-2xl font-bold text-lg shadow-xl shadow-purple-500/25 hover:shadow-2xl hover:shadow-purple-500/40 transition-shadow"
+      className="px-8 py-4 bg-gradient-to-r from-violet-600 to-brand-600 text-white rounded-2xl font-bold text-lg shadow-xl shadow-brand-500/25 hover:shadow-2xl hover:shadow-brand-500/40 transition-shadow"
     >
       {children}
     </motion.button>
@@ -113,7 +113,7 @@ function GlowButton({ children, onClick }) {
       whileTap={{ scale: 0.98 }}
     >
       <motion.div
-        className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 opacity-75"
+        className="absolute inset-0 bg-gradient-to-r from-brand-500 via-pink-500 to-brand-500 opacity-75"
         animate={{ x: ['-100%', '100%'] }}
         transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
         style={{ filter: 'blur(20px)' }}
@@ -140,7 +140,7 @@ function RippleButton({ children, onClick }) {
   return (
     <motion.button
       onClick={handleClick}
-      className="relative px-8 py-4 bg-purple-600 text-white rounded-2xl font-bold overflow-hidden"
+      className="relative px-8 py-4 bg-brand-600 text-white rounded-2xl font-bold overflow-hidden"
       whileTap={{ scale: 0.98 }}
     >
       {ripples.map(ripple => (
@@ -175,7 +175,7 @@ function QuizAnswerOption({ text, index, isSelected, isCorrect, isRevealed, onSe
 
   const stateStyles = {
     default: { bg: 'bg-white', border: 'border-gray-200', text: 'text-gray-800', badge: 'bg-gray-100 text-gray-600' },
-    selected: { bg: 'bg-purple-50', border: 'border-purple-400', text: 'text-purple-900', badge: 'bg-purple-500 text-white' },
+    selected: { bg: 'bg-brand-50', border: 'border-brand-400', text: 'text-brand-900', badge: 'bg-brand-500 text-white' },
     correct: { bg: 'bg-emerald-50', border: 'border-emerald-400', text: 'text-emerald-900', badge: 'bg-emerald-500 text-white' },
     incorrect: { bg: 'bg-amber-50', border: 'border-amber-400', text: 'text-amber-900', badge: 'bg-amber-500 text-white' },
   };
@@ -242,14 +242,14 @@ function QuizCard({ question, questionNumber, totalQuestions, onAnswer, onReset 
       animate={{ opacity: 1, y: 0, rotateX: 0 }}
       exit={{ opacity: 0, y: -30, rotateX: 5 }}
       transition={springPresets.gentle}
-      className="bg-white rounded-3xl shadow-xl shadow-purple-500/10 p-6 w-full max-w-lg"
+      className="bg-white rounded-3xl shadow-xl shadow-brand-500/10 p-6 w-full max-w-lg"
     >
       <div className="flex items-center justify-between mb-4">
         <span className="text-sm text-gray-500 font-medium">Pregunta {questionNumber}/{totalQuestions}</span>
         <div className="flex items-center gap-2">
           <motion.div className="h-2 w-24 bg-gray-100 rounded-full overflow-hidden">
             <motion.div
-              className="h-full bg-gradient-to-r from-purple-500 to-violet-600 rounded-full"
+              className="h-full bg-gradient-to-r from-brand-500 to-violet-600 rounded-full"
               initial={{ width: 0 }}
               animate={{ width: `${(questionNumber / totalQuestions) * 100}%` }}
               transition={springPresets.smooth}
@@ -292,7 +292,7 @@ function QuizCard({ question, questionNumber, totalQuestions, onAnswer, onReset 
               onClick={handleConfirm}
               disabled={selected === null}
               className={`flex-1 py-3 rounded-xl font-semibold flex items-center justify-center gap-2
-                ${selected !== null ? 'bg-purple-600 text-white' : 'bg-gray-100 text-gray-400 cursor-not-allowed'}`}
+                ${selected !== null ? 'bg-brand-600 text-white' : 'bg-gray-100 text-gray-400 cursor-not-allowed'}`}
               whileHover={selected !== null ? { scale: 1.02 } : {}}
               whileTap={selected !== null ? { scale: 0.98 } : {}}
               initial={{ opacity: 0 }}
@@ -330,7 +330,7 @@ function QuizCard({ question, questionNumber, totalQuestions, onAnswer, onReset 
 function AnimatedProgressBar({ value, max = 100, color = 'purple', showLabel = true, size = 'md' }) {
   const percentage = Math.min(100, Math.max(0, (value / max) * 100));
   const colors = {
-    purple: 'from-purple-500 to-violet-600',
+    purple: 'from-brand-500 to-violet-600',
     emerald: 'from-emerald-500 to-teal-600',
     amber: 'from-amber-500 to-orange-600',
     pink: 'from-pink-500 to-rose-600',
@@ -343,7 +343,7 @@ function AnimatedProgressBar({ value, max = 100, color = 'purple', showLabel = t
         <div className="flex justify-between mb-2">
           <span className="text-sm font-medium text-gray-600">Progreso</span>
           <motion.span
-            className="text-sm font-bold text-purple-600"
+            className="text-sm font-bold text-brand-600"
             key={value}
             initial={{ scale: 1.3, y: -5 }}
             animate={{ scale: 1, y: 0 }}
@@ -392,13 +392,13 @@ function CircularProgress({ value, max = 100, size = 100, strokeWidth = 8, showI
         />
         <defs>
           <linearGradient id="circleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#8b5cf6" />
+            <stop offset="0%" stopColor="var(--color-brand-500)" />
             <stop offset="100%" stopColor="#6366f1" />
           </linearGradient>
         </defs>
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
-        {showIcon && <Star className="w-5 h-5 text-purple-500 mb-1" />}
+        {showIcon && <Star className="w-5 h-5 text-brand-500 mb-1" />}
         <motion.span
           className="text-xl font-bold text-gray-800"
           key={value}
@@ -435,7 +435,7 @@ function AnimatedCounter({ value, duration = 1 }) {
 
   return (
     <motion.span
-      className="text-4xl font-bold text-purple-600 tabular-nums"
+      className="text-4xl font-bold text-brand-600 tabular-nums"
       key={value}
     >
       {displayValue.toLocaleString()}
@@ -477,14 +477,17 @@ function StreakCounter({ count, isAnimating = false }) {
   );
 }
 
+// Pre-compute particles outside render to avoid impure Math.random during render
+const CELEBRATION_PARTICLES = Array.from({ length: 24 }, (_, i) => ({
+  id: i,
+  emoji: ['🎉', '✨', '⭐', '🌟', '💫', '🎊'][i % 6],
+  angle: (i / 24) * 360,
+  distance: 80 + ((i * 7 + 3) % 60),
+  delay: (i * 0.008),
+}));
+
 function CelebrationBurst({ show }) {
-  const particles = Array.from({ length: 24 }, (_, i) => ({
-    id: i,
-    emoji: ['🎉', '✨', '⭐', '🌟', '💫', '🎊'][i % 6],
-    angle: (i / 24) * 360,
-    distance: 80 + Math.random() * 60,
-    delay: Math.random() * 0.2,
-  }));
+  const particles = CELEBRATION_PARTICLES;
 
   return (
     <AnimatePresence>
@@ -593,10 +596,10 @@ function AchievementUnlock({ show, title, description, icon: Icon = Trophy }) {
 // 5. FORTALEZA ENHANCED
 // ============================================
 
-function FortalezaBlock({ estado, progreso, tema, delay = 0 }) {
+function FortalezaBlock({ estado, progreso, tema: _tema, delay = 0 }) {
   const config = {
     dominado: { bg: 'from-emerald-400 to-emerald-500', icon: Check, shadow: 'shadow-emerald-500/40' },
-    avanzando: { bg: 'from-purple-400 to-purple-500', icon: TrendingUp, shadow: 'shadow-purple-500/40' },
+    avanzando: { bg: 'from-brand-400 to-brand-500', icon: TrendingUp, shadow: 'shadow-brand-500/40' },
     progreso: { bg: 'from-blue-400 to-blue-500', icon: BookOpen, shadow: 'shadow-blue-500/40' },
     riesgo: { bg: 'from-amber-400 to-amber-500', icon: Clock, shadow: 'shadow-amber-500/40', pulse: true },
     nuevo: { bg: 'from-gray-300 to-gray-400', icon: Plus, shadow: 'shadow-gray-400/40' },
@@ -659,7 +662,7 @@ function FortalezaEnhanced({ temas }) {
       </div>
       <div className="mt-4 flex justify-center gap-4 text-xs text-gray-500">
         <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-emerald-500" /> Dominado</span>
-        <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-purple-500" /> Avanzando</span>
+        <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-brand-500" /> Avanzando</span>
         <span className="flex items-center gap-1"><span className="w-3 h-3 rounded bg-amber-500" /> En riesgo</span>
       </div>
     </motion.div>
@@ -711,7 +714,7 @@ function FlipCard({ front, back }) {
         transition={springPresets.gentle}
         style={{ transformStyle: 'preserve-3d' }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-violet-600 rounded-2xl flex items-center justify-center text-white font-bold shadow-xl backface-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-500 to-violet-600 rounded-2xl flex items-center justify-center text-white font-bold shadow-xl backface-hidden">
           {front}
         </div>
         <div
@@ -751,7 +754,7 @@ function AnimatedToggle({ isOn, onToggle, label }) {
   return (
     <button onClick={onToggle} className="flex items-center gap-3">
       <motion.div
-        className={`w-14 h-8 rounded-full p-1 cursor-pointer ${isOn ? 'bg-purple-600' : 'bg-gray-300'}`}
+        className={`w-14 h-8 rounded-full p-1 cursor-pointer ${isOn ? 'bg-brand-600' : 'bg-gray-300'}`}
         animate={{ backgroundColor: isOn ? '#9333ea' : '#d1d5db' }}
       >
         <motion.div
@@ -807,7 +810,7 @@ function FloatingActionButton({ icon: Icon = Plus, onClick }) {
   return (
     <motion.button
       onClick={onClick}
-      className="w-14 h-14 rounded-full bg-gradient-to-r from-purple-600 to-violet-600 text-white shadow-xl shadow-purple-500/40 flex items-center justify-center"
+      className="w-14 h-14 rounded-full bg-gradient-to-r from-brand-600 to-violet-600 text-white shadow-xl shadow-brand-500/40 flex items-center justify-center"
       whileHover={{ scale: 1.1, y: -4 }}
       whileTap={{ scale: 0.9 }}
       initial={{ scale: 0 }}
@@ -844,7 +847,7 @@ function NotificationBadge({ count }) {
 
 function StatCard({ icon: Icon, label, value, color = 'purple', trend }) {
   const colors = {
-    purple: 'from-purple-500 to-violet-600',
+    purple: 'from-brand-500 to-violet-600',
     emerald: 'from-emerald-500 to-teal-600',
     amber: 'from-amber-500 to-orange-600',
     pink: 'from-pink-500 to-rose-600',
@@ -896,10 +899,10 @@ function AnimatedList({ items }) {
         <motion.li
           key={i}
           variants={staggerItem}
-          className="bg-white p-4 rounded-xl border flex items-center gap-3 cursor-pointer hover:border-purple-300 transition-colors"
+          className="bg-white p-4 rounded-xl border flex items-center gap-3 cursor-pointer hover:border-brand-300 transition-colors"
           whileHover={{ x: 4 }}
         >
-          <span className="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold text-sm">
+          <span className="w-8 h-8 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 font-bold text-sm">
             {i + 1}
           </span>
           <span className="flex-1 font-medium text-gray-800">{item}</span>
@@ -965,7 +968,7 @@ export default function AnimationPlayground({ onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 z-[200] bg-gradient-to-br from-slate-50 via-purple-50/30 to-indigo-50/50 overflow-y-auto">
+    <div className="fixed inset-0 z-[200] bg-gradient-to-br from-slate-50 via-brand-50/30 to-indigo-50/50 overflow-y-auto">
       {/* Header */}
       <motion.header
         className="sticky top-0 bg-white/90 backdrop-blur-lg border-b border-gray-100 z-50"
@@ -988,12 +991,12 @@ export default function AnimationPlayground({ onClose }) {
             </div>
           </div>
           <motion.div
-            className="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full"
+            className="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-brand-100 to-pink-100 rounded-full"
             animate={{ scale: [1, 1.02, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            <Sparkles className="w-4 h-4 text-purple-600" />
-            <span className="text-sm font-medium text-purple-700">framer-motion</span>
+            <Sparkles className="w-4 h-4 text-brand-600" />
+            <span className="text-sm font-medium text-brand-700">framer-motion</span>
           </motion.div>
         </div>
       </motion.header>
@@ -1008,7 +1011,7 @@ export default function AnimationPlayground({ onClose }) {
                 onClick={() => setActiveSection(section.id)}
                 className={`px-4 py-2 rounded-xl font-medium whitespace-nowrap text-sm
                   ${activeSection === section.id
-                    ? 'bg-purple-600 text-white shadow-lg shadow-purple-500/30'
+                    ? 'bg-brand-600 text-white shadow-lg shadow-brand-500/30'
                     : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200'}`}
                 whileTap={{ scale: 0.97 }}
                 transition={springPresets.snappy}
@@ -1088,7 +1091,7 @@ export default function AnimationPlayground({ onClose }) {
                         key={p}
                         onClick={() => setProgress(p)}
                         className={`px-3 py-1.5 rounded-lg text-sm font-medium
-                          ${progress === p ? 'bg-purple-600 text-white' : 'bg-gray-100 text-gray-600'}`}
+                          ${progress === p ? 'bg-brand-600 text-white' : 'bg-gray-100 text-gray-600'}`}
                         whileTap={{ scale: 0.95 }}
                       >
                         {p}%
@@ -1263,9 +1266,9 @@ export default function AnimationPlayground({ onClose }) {
                 <div className="space-y-4 w-full">
                   {[1, 2, 3].map(i => (
                     <ScrollReveal key={i}>
-                      <div className="p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl border border-purple-100">
-                        <p className="font-medium text-purple-800">Elemento {i} con scroll reveal</p>
-                        <p className="text-sm text-purple-600">Aparece cuando entra en viewport</p>
+                      <div className="p-4 bg-gradient-to-r from-brand-50 to-pink-50 rounded-xl border border-brand-100">
+                        <p className="font-medium text-brand-800">Elemento {i} con scroll reveal</p>
+                        <p className="text-sm text-brand-600">Aparece cuando entra en viewport</p>
                       </div>
                     </ScrollReveal>
                   ))}

@@ -19,12 +19,12 @@ export default function SessionHeader({
         </button>
 
         <div className="flex items-center gap-2">
-          <Brain className="w-5 h-5 text-purple-600" />
+          <Brain className="w-5 h-5 text-brand-600" />
           <span className="font-semibold text-gray-800">
             {currentIndex + 1} / {total}
           </span>
           {isReview && (
-            <span className="text-xs px-2 py-0.5 bg-purple-100 text-purple-700 rounded-full">
+            <span className="text-xs px-2 py-0.5 bg-brand-100 text-brand-700 rounded-full">
               <RotateCcw className="w-3 h-3 inline mr-1" />
               Repaso
             </span>
@@ -37,7 +37,7 @@ export default function SessionHeader({
       {/* Progress bar */}
       <div className="mt-3 h-1.5 bg-gray-200 rounded-full overflow-hidden">
         <div
-          className="h-full bg-purple-600 rounded-full transition-all duration-300"
+          className="h-full bg-brand-600 rounded-full transition-all duration-300"
           style={{ width: `${progress}%` }}
         />
       </div>

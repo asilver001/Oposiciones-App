@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { Home, BookOpen, Trophy, Clock, TrendingUp, TrendingDown, ArrowLeft, CheckCircle, XCircle, Target, Flame, Zap, Star, Lock, Crown, BarChart3, Calendar, History, GraduationCap, Lightbulb, Info, Settings, ChevronRight, Instagram, Mail, Bell, User, LogOut, HelpCircle, FileText, Shield, ExternalLink, Minus, Code, Eye, ClipboardCheck } from 'lucide-react';
-import { allQuestions, topicsList, getRandomQuestions } from './data/questions';
+import { allQuestions } from './data/questions';
 import { supabase } from './lib/supabase';
 import { useAuth } from './contexts/AuthContext';
 import { useAdmin } from './contexts/AdminContext';
@@ -13,7 +13,7 @@ import { useTopics } from './hooks/useTopics';
 import FeedbackPanel from './components/FeedbackPanel';
 import Fortaleza from './components/Fortaleza';
 import { WelcomeScreen, GoalStep, DateStep, IntroStep } from './components/onboarding';
-import { useAppNavigation } from './hooks/useAppNavigation';
+// useAppNavigation unused in legacy OpositaApp
 import { Button, Card, Modal, ProgressBar } from './components/ui';
 import AnimationPlayground from './components/dev/AnimationPlayground';
 import DraftFeatures from './components/dev/DraftFeatures';
@@ -39,9 +39,9 @@ function OnboardingOposicion({ onSelect }) {
     { id: 'otra', label: 'Otra oposición', icon: '📝' }
   ];
   return (
-    <div className="min-h-screen bg-purple-50 px-6 pt-16">
+    <div className="min-h-screen bg-brand-50 px-6 pt-16">
       <div className="flex justify-center gap-2 mb-8">
-        <div className="w-6 h-2 rounded-full bg-purple-600"></div>
+        <div className="w-6 h-2 rounded-full bg-brand-600"></div>
         <div className="w-2 h-2 rounded-full bg-gray-300"></div>
         <div className="w-2 h-2 rounded-full bg-gray-300"></div>
         <div className="w-2 h-2 rounded-full bg-gray-300"></div>
@@ -52,9 +52,9 @@ function OnboardingOposicion({ onSelect }) {
         <button
           key={o.id}
           onClick={() => onSelect(o.id)}
-          className="w-full bg-white rounded-2xl p-4 flex items-center mb-3 border-2 border-gray-100 hover:border-purple-600 focus:border-gray-100 focus:outline-none active:scale-[0.98] transition-all"
+          className="w-full bg-white rounded-2xl p-4 flex items-center mb-3 border-2 border-gray-100 hover:border-brand-600 focus:border-gray-100 focus:outline-none active:scale-[0.98] transition-all"
         >
-          <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mr-4">
+          <div className="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center mr-4">
             <span className="text-2xl">{o.icon}</span>
           </div>
           <span className="flex-1 text-left font-medium text-gray-800">{o.label}</span>
@@ -72,13 +72,13 @@ function OnboardingTiempo({ onSelect, onBack }) {
     { id: '60', label: '1 hora o más', desc: 'Máximo rendimiento', questions: 40 }
   ];
   return (
-    <div className="min-h-screen bg-purple-50 px-6 pt-16">
+    <div className="min-h-screen bg-brand-50 px-6 pt-16">
       <button onClick={onBack} className="mb-6 text-gray-700 flex items-center gap-2">
         <ArrowLeft className="w-5 h-5" /> Atrás
       </button>
       <div className="flex justify-center gap-2 mb-8">
-        <div className="w-2 h-2 rounded-full bg-purple-600"></div>
-        <div className="w-6 h-2 rounded-full bg-purple-600"></div>
+        <div className="w-2 h-2 rounded-full bg-brand-600"></div>
+        <div className="w-6 h-2 rounded-full bg-brand-600"></div>
         <div className="w-2 h-2 rounded-full bg-gray-300"></div>
         <div className="w-2 h-2 rounded-full bg-gray-300"></div>
       </div>
@@ -88,7 +88,7 @@ function OnboardingTiempo({ onSelect, onBack }) {
         <button
           key={t.id}
           onClick={() => onSelect(t)}
-          className="w-full bg-white rounded-2xl p-5 mb-3 border-2 border-gray-100 hover:border-purple-600 text-left transition-all"
+          className="w-full bg-white rounded-2xl p-5 mb-3 border-2 border-gray-100 hover:border-brand-600 text-left transition-all"
         >
           <p className="font-semibold text-gray-800 text-lg">{t.label}</p>
           <p className="text-gray-500 text-sm mt-1">{t.desc}</p>
@@ -106,14 +106,14 @@ function OnboardingFecha({ onSelect, onBack }) {
     { id: 'ns', label: 'Todavía no lo sé' }
   ];
   return (
-    <div className="min-h-screen bg-purple-50 px-6 pt-16">
+    <div className="min-h-screen bg-brand-50 px-6 pt-16">
       <button onClick={onBack} className="mb-6 text-gray-700 flex items-center gap-2">
         <ArrowLeft className="w-5 h-5" /> Atrás
       </button>
       <div className="flex justify-center gap-2 mb-8">
-        <div className="w-2 h-2 rounded-full bg-purple-600"></div>
-        <div className="w-2 h-2 rounded-full bg-purple-600"></div>
-        <div className="w-6 h-2 rounded-full bg-purple-600"></div>
+        <div className="w-2 h-2 rounded-full bg-brand-600"></div>
+        <div className="w-2 h-2 rounded-full bg-brand-600"></div>
+        <div className="w-6 h-2 rounded-full bg-brand-600"></div>
         <div className="w-2 h-2 rounded-full bg-gray-300"></div>
       </div>
       <h1 className="text-2xl font-bold text-gray-900 mb-2">¿Cuándo es tu examen?</h1>
@@ -122,7 +122,7 @@ function OnboardingFecha({ onSelect, onBack }) {
         <button
           key={f.id}
           onClick={() => onSelect(f.label)}
-          className="w-full bg-white rounded-2xl p-5 mb-3 border-2 border-gray-100 hover:border-purple-600 text-left transition-all"
+          className="w-full bg-white rounded-2xl p-5 mb-3 border-2 border-gray-100 hover:border-brand-600 text-left transition-all"
         >
           <p className="font-medium text-gray-800">{f.label}</p>
         </button>
@@ -133,25 +133,25 @@ function OnboardingFecha({ onSelect, onBack }) {
 
 function OnboardingIntro({ onStart, onSkip, onBack }) {
   return (
-    <div className="min-h-screen bg-purple-50 px-6 pt-16">
+    <div className="min-h-screen bg-brand-50 px-6 pt-16">
       <button onClick={onBack} className="mb-6 text-gray-700 flex items-center gap-2">
         <ArrowLeft className="w-5 h-5" /> Atrás
       </button>
       <div className="flex justify-center gap-2 mb-12">
-        <div className="w-2 h-2 rounded-full bg-purple-600"></div>
-        <div className="w-2 h-2 rounded-full bg-purple-600"></div>
-        <div className="w-2 h-2 rounded-full bg-purple-600"></div>
-        <div className="w-6 h-2 rounded-full bg-purple-600"></div>
+        <div className="w-2 h-2 rounded-full bg-brand-600"></div>
+        <div className="w-2 h-2 rounded-full bg-brand-600"></div>
+        <div className="w-2 h-2 rounded-full bg-brand-600"></div>
+        <div className="w-6 h-2 rounded-full bg-brand-600"></div>
       </div>
       <div className="text-center">
-        <div className="w-20 h-20 bg-purple-100 rounded-3xl flex items-center justify-center mx-auto mb-8">
+        <div className="w-20 h-20 bg-brand-100 rounded-3xl flex items-center justify-center mx-auto mb-8">
           <span className="text-4xl">🚀</span>
         </div>
         <h1 className="text-2xl font-bold text-gray-900 mb-4">¡Vamos a hacer tu primer test!</h1>
         <p className="text-gray-500 mb-12">5 preguntas para conocer tu nivel. Sin presión, es solo para personalizar tu experiencia.</p>
         <button
           onClick={onStart}
-          className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-5 px-8 rounded-2xl text-lg shadow-lg shadow-purple-600/30 transition-all active:scale-[0.98]"
+          className="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-5 px-8 rounded-2xl text-lg shadow-lg shadow-brand-600/30 transition-all active:scale-[0.98]"
         >
           Empezar test
         </button>
@@ -176,16 +176,16 @@ export default function OpositaApp() {
     signOut,
     resetPassword,
     isAuthenticated,
-    isAnonymous,
+    isAnonymous: _isAnonymous,
     continueAsAnonymous,
     // Role-based access from AuthContext
-    userRole,
+    userRole: _userRole,
     isAdmin: isUserAdmin,
     isReviewer: isUserReviewer
   } = useAuth();
 
   // Admin context
-  const { adminUser, isAdmin, isReviewer, isLoggedIn: isAdminLoggedIn } = useAdmin();
+  const { adminUser: _adminUser, isAdmin: _isAdmin, isReviewer: _isReviewer, isLoggedIn: isAdminLoggedIn } = useAdmin();
   const [showAdminLoginModal, setShowAdminLoginModal] = useState(false);
   const [showAnimationPlayground, setShowAnimationPlayground] = useState(false);
   const [showDraftFeatures, setShowDraftFeatures] = useState(false);
@@ -212,28 +212,28 @@ export default function OpositaApp() {
   const [showPremiumModal, setShowPremiumModal] = useState(false);
   const [showSettingsModal, setShowSettingsModal] = useState(false);
   const [showProgressModal, setShowProgressModal] = useState(false);
-  const [premiumModalTrigger, setPremiumModalTrigger] = useState('general');
+  const [_premiumModalTrigger, _setPremiumModalTrigger] = useState('general');
   const [dailyTestsCount, setDailyTestsCount] = useState(0);
-  const [isPremium, setIsPremium] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState('annual');
-  const [lastStudyDate, setLastStudyDate] = useState(null);
+  const [_isPremium, setIsPremium] = useState(false);
+  const [_selectedPlan, _setSelectedPlan] = useState('annual');
+  const [_lastStudyDate, _setLastStudyDate] = useState(null);
   const [streakData, setStreakData] = useState({
     current: 0,
     longest: 0,
     lastCompletedDate: null
   });
-  const [showStreakCelebration, setShowStreakCelebration] = useState(false);
-  const [earnedBadge, setEarnedBadge] = useState(null);
+  const [_showStreakCelebration, setShowStreakCelebration] = useState(false);
+  const [_earnedBadge, setEarnedBadge] = useState(null);
   const [signupFormShownCount, setSignupFormShownCount] = useState(0);
-  const [privacyAccepted, setPrivacyAccepted] = useState(false);
+  const [_privacyAccepted, _setPrivacyAccepted] = useState(false);
   const [formName, setFormName] = useState('');
-  const [formEmail, setFormEmail] = useState('');
-  const [showStreakBanner, setShowStreakBanner] = useState(true);
+  const [_formEmail, _setFormEmail] = useState('');
+  const [_showStreakBanner, _setShowStreakBanner] = useState(true);
 
   // Insights state
-  const [recentInsights, setRecentInsights] = useState([]);
-  const [lastSessionStats, setLastSessionStats] = useState(null);
-  const [showFeedbackPanel, setShowFeedbackPanel] = useState(false);
+  const [_recentInsights, setRecentInsights] = useState([]);
+  const [_lastSessionStats, setLastSessionStats] = useState(null);
+  const [_showFeedbackPanel, setShowFeedbackPanel] = useState(false);
 
   // Hybrid Study Session state
   const [studySessionConfig, setStudySessionConfig] = useState(null);
@@ -258,9 +258,9 @@ export default function OpositaApp() {
     topicsByBlock,
     userProgress: topicUserProgress,
     loading: topicsLoading,
-    error: topicsError,
-    getQuestionsForTopic,
-    getFortalezaData,
+    error: _topicsError,
+    getQuestionsForTopic: _getQuestionsForTopic,
+    getFortalezaData: _getFortalezaData,
     refreshUserProgress,
     topicsWithQuestions
   } = useTopics();
@@ -533,13 +533,13 @@ export default function OpositaApp() {
     }
   };
 
-  const handleCreateAccount = async () => {
-    if (!privacyAccepted) return;
+  const _handleCreateAccount = async () => {
+    if (!_privacyAccepted) return;
 
     const newUserData = {
       ...userData,
       name: formName || userData.name,
-      email: formEmail,
+      email: _formEmail,
       accountCreated: true
     };
 
@@ -576,7 +576,7 @@ export default function OpositaApp() {
   };
 
   // Mensaje empático según racha (tono sobrio)
-  const getStreakMessage = () => {
+  const _getStreakMessage = () => {
     const days = displayStreak;
     if (days === 0) return { main: "Hoy es un buen día para empezar", sub: null };
     if (days === 1) return { main: "Llevas 1 día", sub: "Un paso cada vez" };
@@ -587,7 +587,7 @@ export default function OpositaApp() {
   };
 
   // Días para próximo logro
-  const getDaysToNextBadge = () => {
+  const _getDaysToNextBadge = () => {
     const nextBadge = badges.find(b => b.days > displayStreak);
     return nextBadge ? nextBadge.days - displayStreak : null;
   };
@@ -769,7 +769,7 @@ export default function OpositaApp() {
         if (onboardingResult && onboardingResult.value === 'true') {
           setCurrentPage('home');
         }
-      } catch (error) {
+      } catch {
         console.log('Primera vez usando la app');
       } finally {
         setIsLoading(false);
@@ -812,7 +812,7 @@ export default function OpositaApp() {
   }, [topicsProgress, isLoading, currentPage]);
 
   // Load insights data when on home page
-  const { getRecentInsights, getLastSessionStats, markInsightAsSeen } = useUserInsights();
+  const { getRecentInsights, getLastSessionStats, markInsightAsSeen: _markInsightAsSeen } = useUserInsights();
 
   useEffect(() => {
     if (!isLoading && currentPage === 'home' && isAuthenticated) {
@@ -862,8 +862,8 @@ export default function OpositaApp() {
 
         <div className="p-6">
           {/* Mensaje próximamente */}
-          <div className="bg-purple-50 border-2 border-purple-200 rounded-xl p-4 mb-6">
-            <p className="text-purple-800 text-center font-medium">
+          <div className="bg-brand-50 border-2 border-brand-200 rounded-xl p-4 mb-6">
+            <p className="text-brand-800 text-center font-medium">
               La suscripción premium estará disponible próximamente con acceso a todas las preguntas y funciones avanzadas.
             </p>
           </div>
@@ -905,7 +905,7 @@ export default function OpositaApp() {
 
           <button
             onClick={() => setShowPremiumModal(false)}
-            className="w-full text-purple-600 font-semibold py-3 hover:text-purple-800"
+            className="w-full text-brand-600 font-semibold py-3 hover:text-brand-800"
           >
             Continuar con plan gratuito
           </button>
@@ -924,7 +924,7 @@ export default function OpositaApp() {
     return (
       <div className="min-h-screen bg-gradient-to-br from-orange-400 via-orange-300 to-yellow-400 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-purple-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-brand-600 mx-auto mb-4"></div>
           <p className="text-gray-800 font-semibold">Cargando...</p>
         </div>
       </div>
@@ -972,7 +972,7 @@ export default function OpositaApp() {
     );
   }
 
-  // ONBOARDING SCREENS (using simple purple-50 components)
+  // ONBOARDING SCREENS (using simple brand-50 components)
   if (currentPage === 'welcome') {
     return (
       <WelcomeScreen
@@ -1050,7 +1050,7 @@ export default function OpositaApp() {
     const answeredCount = Object.keys(answers).length;
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-500 to-purple-700 p-4">
+      <div className="min-h-screen bg-gradient-to-br from-brand-500 to-brand-700 p-4">
         {/* Exit Confirmation Modal */}
         {showExitConfirm && (
           <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
@@ -1082,7 +1082,7 @@ export default function OpositaApp() {
           <div className="flex items-center justify-between mb-6 pt-4">
             <button
               onClick={() => setShowExitConfirm(true)}
-              className="flex items-center gap-2 text-white hover:text-purple-200 transition"
+              className="flex items-center gap-2 text-white hover:text-brand-200 transition"
             >
               <ArrowLeft className="w-6 h-6" />
               <span className="font-semibold">Salir</span>
@@ -1110,7 +1110,7 @@ export default function OpositaApp() {
           <div className="bg-white rounded-3xl shadow-2xl overflow-hidden mb-6">
             <div className="p-8">
               <div className="flex items-start gap-4 mb-6">
-                <div className="bg-purple-100 text-purple-600 font-bold rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 text-lg">
+                <div className="bg-brand-100 text-brand-600 font-bold rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 text-lg">
                   {currentQuestion + 1}
                 </div>
                 <h2 className="text-xl font-bold text-gray-900 leading-relaxed">
@@ -1132,9 +1132,9 @@ export default function OpositaApp() {
                   let buttonClass = "w-full text-left p-4 rounded-xl border-2 transition-all ";
 
                   if (isSelected) {
-                    buttonClass += "border-purple-500 bg-purple-50 ";
+                    buttonClass += "border-brand-500 bg-brand-50 ";
                   } else {
-                    buttonClass += "border-gray-200 hover:border-purple-300 hover:bg-purple-50 ";
+                    buttonClass += "border-gray-200 hover:border-brand-300 hover:bg-brand-50 ";
                   }
 
                   return (
@@ -1146,7 +1146,7 @@ export default function OpositaApp() {
                     >
                       <div className="flex items-center gap-3">
                         <div className={`w-10 h-10 rounded-full border-2 flex items-center justify-center font-bold ${
-                          isSelected ? 'border-purple-500 bg-purple-500 text-white' :
+                          isSelected ? 'border-brand-500 bg-brand-500 text-white' :
                           'border-gray-300 text-gray-600'
                         }`}>
                           {option.id.toUpperCase()}
@@ -1159,6 +1159,7 @@ export default function OpositaApp() {
               </div>
 
               {/* Explanation hidden during practice - shown in results */}
+              {/* eslint-disable-next-line no-constant-binary-expression */}
               {false && showExplanation && (
                 <div className={`mt-6 p-4 rounded-xl ${
                   selectedAnswer === question.correct ? 'bg-green-50 border-2 border-green-200' : 'bg-blue-50 border-2 border-blue-200'
@@ -1182,7 +1183,7 @@ export default function OpositaApp() {
               {currentQuestion < questions.length - 1 ? (
                 <button
                   onClick={handleNextQuestion}
-                  className="flex-1 bg-white/90 hover:bg-white text-purple-600 font-bold py-4 px-6 rounded-2xl transition shadow-lg"
+                  className="flex-1 bg-white/90 hover:bg-white text-brand-600 font-bold py-4 px-6 rounded-2xl transition shadow-lg"
                 >
                   {selectedAnswer ? 'Siguiente →' : 'Saltar →'}
                 </button>
@@ -1209,7 +1210,7 @@ export default function OpositaApp() {
     const isGoodScore = testResults?.percentage >= 60;
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-500 to-indigo-600 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-br from-brand-600 via-brand-500 to-indigo-600 flex items-center justify-center p-4">
         <div className="max-w-md w-full">
           {isGoodScore && (
             <div className="text-center mb-6 animate-bounce">
@@ -1219,7 +1220,7 @@ export default function OpositaApp() {
 
           <div className="bg-white rounded-3xl p-8 shadow-2xl mb-6">
             <div className="text-center mb-6">
-              <h2 className="text-3xl font-bold text-purple-600 mb-3">
+              <h2 className="text-3xl font-bold text-brand-600 mb-3">
                 ¡{testResults?.correct} de {testResults?.total} correctas! {isGoodScore ? '🎉' : '💪'}
               </h2>
               <div className="text-6xl font-bold text-gray-800 mb-2">
@@ -1228,31 +1229,31 @@ export default function OpositaApp() {
               <p className="text-gray-600 text-lg">de acierto</p>
             </div>
 
-            <div className="bg-purple-50 rounded-xl p-4 mb-6 border-2 border-purple-100">
+            <div className="bg-brand-50 rounded-xl p-4 mb-6 border-2 border-brand-100">
               <div className="flex items-center gap-3 justify-center">
-                <BarChart3 className="w-6 h-6 text-purple-600" />
-                <p className="text-purple-900 font-bold">
+                <BarChart3 className="w-6 h-6 text-brand-600" />
+                <p className="text-brand-900 font-bold">
                   Estás en el TOP 45% de nuevos usuarios
                 </p>
               </div>
             </div>
 
-            <div className="border-2 border-purple-200 rounded-xl p-5 bg-gradient-to-br from-purple-50 to-white">
+            <div className="border-2 border-brand-200 rounded-xl p-5 bg-gradient-to-br from-brand-50 to-white">
               <div className="flex items-center gap-2 mb-4">
-                <Crown className="w-6 h-6 text-purple-600" />
-                <span className="font-bold text-purple-900 text-lg">Los usuarios Premium tienen:</span>
+                <Crown className="w-6 h-6 text-brand-600" />
+                <span className="font-bold text-brand-900 text-lg">Los usuarios Premium tienen:</span>
               </div>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                  <div className="w-2 h-2 rounded-full bg-brand-500"></div>
                   <span><strong>127% más</strong> preguntas acertadas</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                  <div className="w-2 h-2 rounded-full bg-brand-500"></div>
                   <span>Acceso a <strong>15.000+ preguntas</strong></span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-purple-500"></div>
+                  <div className="w-2 h-2 rounded-full bg-brand-500"></div>
                   <span>Simulacros de <strong>examen real</strong></span>
                 </li>
               </ul>
@@ -1276,7 +1277,7 @@ export default function OpositaApp() {
           {/* DEV: Skip to home */}
           <button
             onClick={() => setCurrentPage('home')}
-            className="w-full mt-4 text-purple-300 text-xs underline hover:text-white"
+            className="w-full mt-4 text-brand-300 text-xs underline hover:text-white"
           >
             [DEV] Saltar al Home directamente
           </button>
@@ -1371,7 +1372,7 @@ export default function OpositaApp() {
         <div className="max-w-2xl mx-auto">
           <button
             onClick={() => setCurrentPage('home')}
-            className="flex items-center gap-2 text-purple-600 font-medium mb-6 hover:text-purple-800"
+            className="flex items-center gap-2 text-brand-600 font-medium mb-6 hover:text-brand-800"
           >
             <ArrowLeft className="w-5 h-5" />
             Volver
@@ -1422,7 +1423,7 @@ export default function OpositaApp() {
         <div className="max-w-2xl mx-auto">
           <button
             onClick={() => setCurrentPage('home')}
-            className="flex items-center gap-2 text-purple-600 font-medium mb-6 hover:text-purple-800"
+            className="flex items-center gap-2 text-brand-600 font-medium mb-6 hover:text-brand-800"
           >
             <ArrowLeft className="w-5 h-5" />
             Volver
@@ -1468,7 +1469,7 @@ export default function OpositaApp() {
         <div className="max-w-2xl mx-auto">
           <button
             onClick={() => setCurrentPage('home')}
-            className="flex items-center gap-2 text-purple-600 font-medium mb-6 hover:text-purple-800"
+            className="flex items-center gap-2 text-brand-600 font-medium mb-6 hover:text-brand-800"
           >
             <ArrowLeft className="w-5 h-5" />
             Volver
@@ -1507,18 +1508,18 @@ export default function OpositaApp() {
         <div className="max-w-2xl mx-auto">
           <button
             onClick={() => setCurrentPage('home')}
-            className="flex items-center gap-2 text-purple-600 font-medium mb-6 hover:text-purple-800"
+            className="flex items-center gap-2 text-brand-600 font-medium mb-6 hover:text-brand-800"
           >
             <ArrowLeft className="w-5 h-5" />
             Volver
           </button>
           <div className="bg-white rounded-2xl p-6 shadow-lg">
             <div className="text-center mb-6">
-              <div className="inline-block bg-purple-100 rounded-full p-4 mb-4">
-                <Trophy className="w-12 h-12 text-purple-600" />
+              <div className="inline-block bg-brand-100 rounded-full p-4 mb-4">
+                <Trophy className="w-12 h-12 text-brand-600" />
               </div>
               <h1 className="text-2xl font-bold text-gray-900">Oposita Smart</h1>
-              <p className="text-purple-600 font-medium">La forma inteligente de opositar</p>
+              <p className="text-brand-600 font-medium">La forma inteligente de opositar</p>
             </div>
 
             <div className="prose prose-sm text-gray-600 space-y-4">
@@ -1587,7 +1588,7 @@ export default function OpositaApp() {
         <div className="max-w-2xl mx-auto">
           <button
             onClick={() => setCurrentPage('home')}
-            className="flex items-center gap-2 text-purple-600 font-medium mb-6 hover:text-purple-800"
+            className="flex items-center gap-2 text-brand-600 font-medium mb-6 hover:text-brand-800"
           >
             <ArrowLeft className="w-5 h-5" />
             Volver
@@ -1615,7 +1616,7 @@ export default function OpositaApp() {
         <div className="max-w-2xl mx-auto">
           <button
             onClick={() => setCurrentPage('home')}
-            className="flex items-center gap-2 text-purple-600 font-medium mb-6 hover:text-purple-800"
+            className="flex items-center gap-2 text-brand-600 font-medium mb-6 hover:text-brand-800"
           >
             <ArrowLeft className="w-5 h-5" />
             Volver
@@ -1632,7 +1633,7 @@ export default function OpositaApp() {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
                 <input
                   type="text"
-                  className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-brand-500 focus:border-transparent"
                   placeholder="Tu nombre"
                   required
                 />
@@ -1641,14 +1642,14 @@ export default function OpositaApp() {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
                 <input
                   type="email"
-                  className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-brand-500 focus:border-transparent"
                   placeholder="tu@email.com"
                   required
                 />
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Asunto</label>
-                <select className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                <select className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-brand-500 focus:border-transparent">
                   <option>Sugerencia</option>
                   <option>Reportar error</option>
                   <option>Pregunta general</option>
@@ -1658,7 +1659,7 @@ export default function OpositaApp() {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
                 <textarea
-                  className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-brand-500 focus:border-transparent"
                   rows="4"
                   placeholder="Escribe tu mensaje aquí..."
                   required
@@ -1666,7 +1667,7 @@ export default function OpositaApp() {
               </div>
               <button
                 type="submit"
-                className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-xl transition"
+                className="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3 px-6 rounded-xl transition"
               >
                 Enviar mensaje
               </button>
@@ -1902,13 +1903,13 @@ export default function OpositaApp() {
           <div className="flex flex-col items-center py-4">
             <div className="relative w-32 h-32 mb-4">
               <svg className="w-full h-full transform -rotate-90">
-                <circle cx="64" cy="64" r="56" fill="none" stroke="#F3E8FF" strokeWidth="12" />
+                <circle cx="64" cy="64" r="56" fill="none" stroke="var(--color-brand-100)" strokeWidth="12" />
                 <circle
                   cx="64"
                   cy="64"
                   r="56"
                   fill="none"
-                  stroke="#8B5CF6"
+                  stroke="var(--color-brand-500)"
                   strokeWidth="12"
                   strokeDasharray={`${Math.min((totalStats.todayQuestions / userData.dailyGoal) * 352, 352)} 352`}
                   strokeLinecap="round"
@@ -1936,7 +1937,7 @@ export default function OpositaApp() {
           <div className="grid grid-cols-2 gap-3">
             <div className="bg-gray-50 rounded-xl p-4">
               <div className="flex items-center gap-2 mb-1">
-                <Trophy className="w-4 h-4 text-purple-500" />
+                <Trophy className="w-4 h-4 text-brand-500" />
                 <span className="text-xs text-gray-500 font-medium">Tests completados</span>
               </div>
               <p className="text-2xl font-bold text-gray-900">{totalStats.testsCompleted}</p>
@@ -1951,10 +1952,10 @@ export default function OpositaApp() {
           </div>
 
           {/* Info examen */}
-          <div className="bg-purple-50 rounded-xl p-4">
+          <div className="bg-brand-50 rounded-xl p-4">
             {daysUntilExam ? (
               <p className="text-gray-700 text-sm">
-                📅 Te quedan <span className="font-bold text-purple-600">{daysUntilExam} días</span> para tu examen
+                📅 Te quedan <span className="font-bold text-brand-600">{daysUntilExam} días</span> para tu examen
               </p>
             ) : (
               <p className="text-gray-600 text-sm">
@@ -1973,7 +1974,7 @@ export default function OpositaApp() {
                 setShowProgressModal(false);
                 startTest();
               }}
-              className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 rounded-xl transition-all active:scale-[0.98]"
+              className="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-4 rounded-xl transition-all active:scale-[0.98]"
             >
               Continuar estudiando →
             </button>
@@ -1991,7 +1992,7 @@ export default function OpositaApp() {
           {/* Izquierda - Botón de progreso diario */}
           <button
             onClick={() => setShowProgressModal(true)}
-            className="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-purple-50 active:scale-95 transition-all duration-200"
+            className="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-brand-50 active:scale-95 transition-all duration-200"
           >
             {/* Mini anillo de progreso */}
             <svg className="w-9 h-9 transform -rotate-90">
@@ -2000,7 +2001,7 @@ export default function OpositaApp() {
                 cy="18"
                 r="14"
                 fill="none"
-                stroke="#F3E8FF"
+                stroke="var(--color-brand-100)"
                 strokeWidth="3"
               />
               <circle
@@ -2008,14 +2009,14 @@ export default function OpositaApp() {
                 cy="18"
                 r="14"
                 fill="none"
-                stroke="#8B5CF6"
+                stroke="var(--color-brand-500)"
                 strokeWidth="3"
                 strokeDasharray={`${(dailyProgressPercent / 100) * 88} 88`}
                 strokeLinecap="round"
                 className="transition-all duration-500"
               />
             </svg>
-            <span className="absolute text-[10px] font-bold text-purple-600">
+            <span className="absolute text-[10px] font-bold text-brand-600">
               {dailyProgressPercent}
             </span>
           </button>

@@ -3,8 +3,8 @@ import React from 'react';
 const variants = {
   default: 'bg-white border border-gray-100',
   elevated: 'bg-white shadow-lg',
-  interactive: 'bg-white border-2 border-gray-100 hover:border-purple-300 cursor-pointer',
-  gradient: 'bg-gradient-to-br from-purple-500 to-purple-700 text-white',
+  interactive: 'bg-white border-2 border-gray-100 hover:border-brand-300 cursor-pointer',
+  gradient: 'bg-brand-600 text-white',
 };
 
 export function Card({

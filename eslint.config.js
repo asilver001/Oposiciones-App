@@ -23,7 +23,24 @@ export default defineConfig([
       },
     },
     rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      'no-unused-vars': ['error', {
+        varsIgnorePattern: '^[A-Z_]|^motion$',
+        argsIgnorePattern: '^_|^[A-Z]',
+        destructuredArrayIgnorePattern: '^_',
+        ignoreRestSiblings: true,
+      }],
+    },
+  },
+  // Node.js environment for config files, scripts, and service worker
+  {
+    files: ['vite.config.js', 'e2e/**/*.js', 'storage.js', 'public/sw.js'],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        // Service worker globals
+        self: 'readonly',
+        caches: 'readonly',
+      },
     },
   },
 ])

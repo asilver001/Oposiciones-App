@@ -10,11 +10,19 @@ import {
   Clock,
   Sparkles,
   Filter,
-  Play
+  Play,
+  Lock,
+  Unlock
 } from 'lucide-react';
 import EmptyState from '../common/EmptyState';
-import DevModeRandomizer, { userStates } from '../dev/DevModeRandomizer';
+import DevModeRandomizer from '../dev/DevModeRandomizer';
 import { useAuth } from '../../contexts/AuthContext';
+import {
+  isTopicUnlocked,
+  getUnlockMessage,
+  getPrerequisites,
+  getRecommendedOrder
+} from '../../data/topicPrerequisites';
 
 /**
  * TemasListView - Topic list page with filtering and progress tracking
@@ -127,40 +135,60 @@ function ProgressBar({ percentage, status }) {
 /**
  * TopicCard - Individual topic card
  */
-function TopicCard({ topic, onSelect }) {
+function TopicCard({ topic, onSelect, locked, lockMessage, hasPrereqs }) {
   const config = statusConfig[topic.status] || statusConfig.nuevo;
 
   return (
     <motion.button
-      onClick={() => onSelect(topic)}
-      className={`w-full text-left p-4 rounded-xl border-2 transition-colors
-        ${config.borderColor} bg-white hover:border-brand-400 hover:shadow-md
-        active:scale-[0.98]`}
-      whileHover={{ y: -2 }}
-      whileTap={{ scale: 0.98 }}
+      onClick={() => !locked && onSelect(topic)}
+      className={`w-full text-left p-4 rounded-xl border-2 transition-colors relative
+        ${locked
+          ? 'border-gray-200 bg-gray-50 opacity-60 cursor-not-allowed'
+          : `${config.borderColor} bg-white hover:border-brand-400 hover:shadow-md active:scale-[0.98]`
+        }`}
+      whileHover={locked ? {} : { y: -2 }}
+      whileTap={locked ? {} : { scale: 0.98 }}
     >
+      {locked && (
+        <div className="absolute top-3 right-3 w-7 h-7 bg-gray-200 rounded-full flex items-center justify-center">
+          <Lock className="w-4 h-4 text-gray-500" />
+        </div>
+      )}
+
       <div className="flex items-start justify-between gap-3 mb-3">
         <div className="flex-1 min-w-0">
-          <h4 className="font-semibold text-gray-900 truncate">
+          <h4 className={`font-semibold truncate ${locked ? 'text-gray-500' : 'text-gray-900'}`}>
             {topic.name}
           </h4>
-          <p className="text-xs text-gray-500 mt-0.5">
-            {topic.questionsAnswered || 0} de {topic.questionsTotal || 0} preguntas
-          </p>
+          {locked && lockMessage ? (
+            <p className="text-xs text-gray-400 mt-0.5">
+              {lockMessage}
+            </p>
+          ) : (
+            <p className="text-xs text-gray-500 mt-0.5">
+              {topic.questionsAnswered || 0} de {topic.questionsTotal || 0} preguntas
+            </p>
+          )}
         </div>
-        <StatusBadge status={topic.status} />
+        {!locked && <StatusBadge status={topic.status} />}
       </div>
 
       <div className="flex items-center gap-3">
         <div className="flex-1">
-          <ProgressBar percentage={topic.progress || 0} status={topic.status} />
+          <ProgressBar percentage={locked ? 0 : (topic.progress || 0)} status={locked ? 'nuevo' : topic.status} />
         </div>
-        <span className="text-sm font-bold text-gray-700 min-w-[40px] text-right">
-          {topic.progress || 0}%
+        <span className={`text-sm font-bold min-w-[40px] text-right ${locked ? 'text-gray-400' : 'text-gray-700'}`}>
+          {locked ? '--' : `${topic.progress || 0}%`}
         </span>
       </div>
 
-      {topic.lastPracticed && (
+      {!locked && hasPrereqs && topic.progress > 0 && (
+        <p className="text-xs text-green-500 mt-2 flex items-center gap-1">
+          <Unlock className="w-3 h-3" /> Desbloqueado
+        </p>
+      )}
+
+      {!locked && topic.lastPracticed && (
         <p className="text-xs text-gray-400 mt-2">
           Ultima practica: {topic.lastPracticed}
         </p>
@@ -172,7 +200,7 @@ function TopicCard({ topic, onSelect }) {
 /**
  * BlockSection - Collapsible block section
  */
-function BlockSection({ blockName, topics, isExpanded, onToggle, onTopicSelect }) {
+function BlockSection({ blockName, topics, isExpanded, onToggle, onTopicSelect, userProgress }) {
   const totalProgress = topics.length > 0
     ? Math.round(topics.reduce((sum, t) => sum + (t.progress || 0), 0) / topics.length)
     : 0;
@@ -216,13 +244,23 @@ function BlockSection({ blockName, topics, isExpanded, onToggle, onTopicSelect }
             className="overflow-hidden"
           >
             <div className="px-4 pb-4 space-y-3">
-              {topics.map((topic) => (
-                <TopicCard
-                  key={topic.id}
-                  topic={topic}
-                  onSelect={onTopicSelect}
-                />
-              ))}
+              {topics.map((topic) => {
+                const topicNum = topic.number ?? topic.id;
+                const prereqs = getPrerequisites(topicNum);
+                const unlocked = isTopicUnlocked(topicNum, userProgress);
+                const lockMsg = getUnlockMessage(topicNum, userProgress);
+
+                return (
+                  <TopicCard
+                    key={topic.id}
+                    topic={topic}
+                    onSelect={onTopicSelect}
+                    locked={!unlocked}
+                    lockMessage={lockMsg}
+                    hasPrereqs={prereqs.length > 0}
+                  />
+                );
+              })}
             </div>
           </motion.div>
         )}
@@ -371,13 +409,9 @@ export default function TemasListView({
   }, [topics, userProgress]);
 
   // Generate simulated topic progress based on simulation mode
+  /* eslint-disable react-hooks/purity */
   const generateSimulatedTopics = useMemo(() => {
     if (!simulationMode || topics.length === 0) return null;
-
-    const state = userStates[simulationMode];
-
-    // For 'aleatorio' mode, generate random values
-    const isRandom = simulationMode === 'aleatorio';
 
     return topics.map((topic) => {
       let progress, status, questionsAnswered;
@@ -391,19 +425,19 @@ export default function TemasListView({
           break;
         case 'activo':
           // Some topics in progress (30-60%), mixed statuses
-          progress = Math.floor(Math.random() * 31) + 30; // 30-60%
+          progress = Math.floor(Math.random() * 31) + 30;
           status = Math.random() > 0.5 ? 'avanzando' : 'nuevo';
           questionsAnswered = Math.floor(questionsTotal * (progress / 100));
           break;
         case 'veterano':
           // Most topics at 70-100%, many 'dominado'
-          progress = Math.floor(Math.random() * 31) + 70; // 70-100%
+          progress = Math.floor(Math.random() * 31) + 70;
           status = progress >= 85 ? 'dominado' : 'avanzando';
           questionsAnswered = Math.floor(questionsTotal * (progress / 100));
           break;
         case 'aleatorio':
         default:
-          progress = Math.floor(Math.random() * 101); // 0-100%
+          progress = Math.floor(Math.random() * 101);
           if (progress < 20) status = 'nuevo';
           else if (progress < 60) status = 'avanzando';
           else if (progress >= 85) status = 'dominado';
@@ -421,6 +455,7 @@ export default function TemasListView({
       };
     });
   }, [simulationMode, topics]);
+  /* eslint-enable react-hooks/purity */
 
   // Use simulated, real progress, or raw topics (in that priority order)
   const effectiveTopics = generateSimulatedTopics || realTopicProgress || topics;
@@ -461,7 +496,7 @@ export default function TemasListView({
     if (blockNames.length > 0 && expandedBlocks.size === 0) {
       setExpandedBlocks(new Set([blockNames[0]]));
     }
-  }, [normalizedBlocks]);
+  }, [normalizedBlocks]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Filter topics based on search and block
   const filteredTopicsByBlock = useMemo(() => {
@@ -511,6 +546,16 @@ export default function TemasListView({
 
     return { total, dominados, enRiesgo, avgProgress };
   }, [effectiveTopics]);
+
+  // Recommended topics to study next
+  const recommendedTopics = useMemo(() => {
+    const recommended = getRecommendedOrder(userProgress);
+    // Map topic numbers to their enriched data
+    return recommended
+      .map((num) => effectiveTopics.find((t) => (t.number ?? t.id) === num))
+      .filter(Boolean)
+      .slice(0, 3);
+  }, [userProgress, effectiveTopics]);
 
   if (loading) {
     return (
@@ -566,6 +611,36 @@ export default function TemasListView({
         </div>
       </div>
 
+      {/* Recommended Next Topics */}
+      {recommendedTopics.length > 0 && (
+        <div className="bg-brand-50 rounded-2xl p-4 border border-brand-100">
+          <h3 className="text-sm font-semibold text-brand-700 mb-3 flex items-center gap-2">
+            <Play className="w-4 h-4" />
+            Orden recomendado
+          </h3>
+          <div className="space-y-2">
+            {recommendedTopics.map((topic, idx) => (
+              <button
+                key={topic.id}
+                onClick={() => onTopicSelect(topic)}
+                className="w-full flex items-center gap-3 p-2.5 bg-white rounded-xl
+                  hover:shadow-sm hover:border-brand-300 border border-brand-100
+                  transition-all text-left"
+              >
+                <span className="w-6 h-6 bg-brand-100 rounded-full flex items-center justify-center
+                  text-xs font-bold text-brand-600 shrink-0">
+                  {idx + 1}
+                </span>
+                <span className="text-sm font-medium text-gray-800 truncate flex-1">
+                  {topic.name}
+                </span>
+                <ChevronRight className="w-4 h-4 text-brand-400 shrink-0" />
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* Search Bar */}
       <div className="relative">
         <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -608,6 +683,7 @@ export default function TemasListView({
               isExpanded={expandedBlocks.has(blockName)}
               onToggle={() => toggleBlock(blockName)}
               onTopicSelect={onTopicSelect}
+              userProgress={userProgress}
             />
           ))}
         </div>

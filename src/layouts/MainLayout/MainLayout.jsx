@@ -17,6 +17,7 @@ import { useAuth } from '../../contexts/AuthContext';
 import { useAdmin } from '../../contexts/AdminContext';
 import { useUserStore } from '../../stores/useUserStore';
 import { useActivityData } from '../../hooks/useActivityData';
+import { useDarkMode } from '../../hooks/useDarkMode';
 import { ROUTES } from '../../router/paths';
 
 // Map route paths to tab IDs
@@ -55,6 +56,8 @@ export default function MainLayout() {
     streak: activityStreak,
     fetchActivityData,
   } = useActivityData();
+
+  useDarkMode();
 
   const [showSettings, setShowSettings] = useState(false);
   const [showProgress, setShowProgress] = useState(false);
@@ -104,58 +107,71 @@ export default function MainLayout() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-32">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 pb-32">
+      {/* Skip to content link - visible on focus for keyboard users */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:bg-brand-600 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:text-sm focus:font-medium"
+      >
+        Saltar al contenido
+      </a>
+
       {/* Fixed TopBar - matches OpositaApp.jsx style */}
       {!hideNav && (
-        <div className="fixed top-0 left-0 right-0 z-40 bg-white/98 backdrop-blur-lg shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
+        <header className="fixed top-0 left-0 right-0 z-40 bg-white/98 dark:bg-gray-900/98 backdrop-blur-lg shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
           <div className="max-w-4xl mx-auto px-4">
             <div className="flex items-center justify-between h-14">
               {/* Left - Daily progress circle */}
               <button
                 onClick={() => setShowProgress(true)}
-                className="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-brand-50 active:scale-95 transition-all duration-200"
+                aria-label={`Progreso diario: ${dailyProgressPercent}% completado`}
+                className="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-brand-50 active:scale-95 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-brand-500 focus-visible:outline-offset-2"
               >
-                <svg className="w-9 h-9 transform -rotate-90">
+                <svg className="w-9 h-9 transform -rotate-90" aria-hidden="true">
                   <circle
                     cx="18" cy="18" r="14"
-                    fill="none" stroke="#F3E8FF" strokeWidth="3"
+                    fill="none" stroke="var(--color-brand-100)" strokeWidth="3"
                   />
                   <circle
                     cx="18" cy="18" r="14"
-                    fill="none" stroke="#8B5CF6" strokeWidth="3"
+                    fill="none" stroke="var(--color-brand-500)" strokeWidth="3"
                     strokeDasharray={`${(dailyProgressPercent / 100) * 88} 88`}
                     strokeLinecap="round"
                     className="transition-all duration-500"
                   />
                 </svg>
-                <span className="absolute text-[10px] font-bold text-brand-600">
+                <span className="absolute text-[10px] font-bold text-brand-600" aria-hidden="true">
                   {dailyProgressPercent}
                 </span>
               </button>
 
               {/* Center - Contextual title */}
-              <h1 className="text-[15px] font-semibold text-gray-800 tracking-tight">
+              <h1 className="text-[15px] font-semibold text-gray-800 dark:text-gray-200 tracking-tight">
                 {TAB_TITLES[activeTab] || 'Oposita Smart'}
               </h1>
 
               {/* Right - Settings button */}
               <button
                 onClick={() => setShowSettings(true)}
-                className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 active:scale-95 transition-all duration-200"
+                aria-label="Abrir ajustes"
+                className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 active:scale-95 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-brand-500 focus-visible:outline-offset-2"
               >
                 <Settings className="w-[18px] h-[18px] text-gray-500" />
               </button>
             </div>
           </div>
-        </div>
+        </header>
       )}
 
       {/* Page content - pt-16 to account for fixed TopBar */}
-      <div className={hideNav ? '' : 'max-w-4xl mx-auto px-4 pt-16'}>
+      <main id="main-content" className={hideNav ? '' : 'max-w-4xl mx-auto px-4 pt-16'}>
         <div className={hideNav ? '' : 'pt-4 mb-6'}>
           <Outlet />
         </div>
-      </div>
+      </main>
+
+      {/* Aria-live region for session progress announcements */}
+      <div aria-live="polite" aria-atomic="true" className="sr-only" id="progress-announcer" />
 
       {/* DevPanel - visible for admins and dev mode */}
       {!hideNav && (

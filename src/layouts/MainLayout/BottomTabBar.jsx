@@ -61,8 +61,8 @@ export default function BottomTabBar({
     >
       {/* Contenedor floating con márgenes, sombra y bordes redondeados */}
       <div className="max-w-md mx-auto">
-        <div className="bg-white rounded-[20px] shadow-[0_2px_24px_rgba(0,0,0,0.12)] border border-gray-100/80">
-          <div className="flex justify-around items-center h-[58px] px-1">
+        <nav className="bg-white dark:bg-gray-900 rounded-[20px] shadow-[0_2px_24px_rgba(0,0,0,0.12)] border border-gray-100/80 dark:border-gray-700/80" aria-label="Navegacion principal">
+          <div className="flex justify-around items-center h-[58px] px-1" role="tablist">
             {tabs.map(tab => {
               // Para el tab "Revisar" usamos currentPage en lugar de activeTab
               const isActive = tab.id === 'reviewer-panel'
@@ -71,6 +71,9 @@ export default function BottomTabBar({
               return (
                 <button
                   key={tab.id}
+                  role="tab"
+                  aria-selected={isActive}
+                  aria-label={`${tab.label}${isActive ? ' (activo)' : ''}`}
                   onClick={() => {
                     if (tab.id === 'reviewer-panel') {
                       onPageChange('reviewer-panel');
@@ -81,7 +84,7 @@ export default function BottomTabBar({
                       }
                     }
                   }}
-                  className="flex flex-col items-center justify-center min-w-[3.5rem] py-1 px-1.5 rounded-xl transition-all duration-200 active:scale-95"
+                  className="flex flex-col items-center justify-center min-w-[3.5rem] py-1 px-1.5 rounded-xl transition-all duration-200 active:scale-95 focus-visible:outline-2 focus-visible:outline-brand-500 focus-visible:outline-offset-2"
                 >
                   <div className={`
                     flex items-center justify-center w-9 h-9 rounded-full mb-0.5 transition-all duration-200
@@ -110,7 +113,7 @@ export default function BottomTabBar({
               );
             })}
           </div>
-        </div>
+        </nav>
       </div>
     </motion.div>
   );

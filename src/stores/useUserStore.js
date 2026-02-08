@@ -3,7 +3,7 @@ import { persist } from 'zustand/middleware';
 
 export const useUserStore = create(
   persist(
-    (set, get) => ({
+    (set) => ({
       // User profile data
       userData: {
         name: '',
@@ -48,6 +48,10 @@ export const useUserStore = create(
       updateTotalStats: (stats) => set((state) => ({
         totalStats: { ...state.totalStats, ...stats }
       })),
+
+      // Dark mode preference: 'system' | 'light' | 'dark'
+      darkMode: 'system',
+      setDarkMode: (mode) => set({ darkMode: mode }),
 
       // Onboarding completion
       onboardingComplete: false,

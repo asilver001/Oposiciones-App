@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 import { useAuth } from '../../contexts/AuthContext';
-import { checkInsightsStatus, testInsightSystem, createSampleInsights } from '../../utils/testInsights';
+import { testInsightSystem, createSampleInsights } from '../../utils/testInsights';
 
 // Tipos de insight
 const INSIGHT_TIPOS = [
@@ -147,7 +147,7 @@ export default function InsightsTab() {
   if (loading) {
     return (
       <div className="flex items-center justify-center py-12">
-        <RefreshCw className="w-6 h-6 animate-spin text-purple-600" />
+        <RefreshCw className="w-6 h-6 animate-spin text-brand-600" />
       </div>
     );
   }
@@ -186,7 +186,7 @@ export default function InsightsTab() {
               setEditingInsight(null);
               setShowCreateModal(true);
             }}
-            className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition"
+            className="flex items-center gap-2 px-4 py-2 bg-brand-600 text-white rounded-lg hover:bg-brand-700 transition"
           >
             <Plus className="w-4 h-4" />
             Nuevo Insight
@@ -203,13 +203,13 @@ export default function InsightsTab() {
             placeholder="Buscar insights..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+            className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-transparent"
           />
         </div>
         <select
           value={filterTipo}
           onChange={(e) => setFilterTipo(e.target.value)}
-          className="px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500"
+          className="px-4 py-2 border rounded-lg focus:ring-2 focus:ring-brand-500"
         >
           <option value="">Todos los tipos</option>
           {INSIGHT_TIPOS.map(tipo => (
@@ -221,7 +221,7 @@ export default function InsightsTab() {
         <select
           value={filterActivo}
           onChange={(e) => setFilterActivo(e.target.value)}
-          className="px-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500"
+          className="px-4 py-2 border rounded-lg focus:ring-2 focus:ring-brand-500"
         >
           <option value="todos">Todos</option>
           <option value="activos">Solo activos</option>
@@ -263,7 +263,7 @@ export default function InsightsTab() {
                       {insight.severidad}
                     </span>
                     {insight.tema_id && (
-                      <span className="text-xs px-2 py-0.5 bg-purple-100 text-purple-700 rounded-full">
+                      <span className="text-xs px-2 py-0.5 bg-brand-100 text-brand-700 rounded-full">
                         Tema {insight.tema_id}
                       </span>
                     )}
@@ -290,7 +290,7 @@ export default function InsightsTab() {
                       setSelectedInsight(insight);
                       setShowLinkModal(true);
                     }}
-                    className="p-2 text-gray-400 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition"
+                    className="p-2 text-gray-400 hover:text-brand-600 hover:bg-brand-50 rounded-lg transition"
                     title="Vincular preguntas"
                   >
                     <Link className="w-4 h-4" />
@@ -500,7 +500,7 @@ function InsightFormModal({ insight, onClose, onSave }) {
                 type="text"
                 value={formData.titulo}
                 onChange={(e) => setFormData({ ...formData, titulo: e.target.value })}
-                className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500"
+                className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-brand-500"
                 required
               />
             </div>
@@ -512,7 +512,7 @@ function InsightFormModal({ insight, onClose, onSave }) {
             <textarea
               value={formData.descripcion}
               onChange={(e) => setFormData({ ...formData, descripcion: e.target.value })}
-              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500"
+              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-brand-500"
               rows={3}
               required
             />
@@ -525,7 +525,7 @@ function InsightFormModal({ insight, onClose, onSave }) {
               <select
                 value={formData.tipo}
                 onChange={(e) => setFormData({ ...formData, tipo: e.target.value })}
-                className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500"
+                className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-brand-500"
               >
                 {INSIGHT_TIPOS.map(tipo => (
                   <option key={tipo.value} value={tipo.value}>
@@ -539,7 +539,7 @@ function InsightFormModal({ insight, onClose, onSave }) {
               <select
                 value={formData.severidad}
                 onChange={(e) => setFormData({ ...formData, severidad: e.target.value })}
-                className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500"
+                className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-brand-500"
               >
                 {SEVERIDADES.map(sev => (
                   <option key={sev.value} value={sev.value}>
@@ -560,7 +560,7 @@ function InsightFormModal({ insight, onClose, onSave }) {
                 type="number"
                 value={formData.min_fallos_para_activar}
                 onChange={(e) => setFormData({ ...formData, min_fallos_para_activar: parseInt(e.target.value) || 2 })}
-                className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500"
+                className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-brand-500"
                 min={1}
                 max={10}
               />
@@ -573,7 +573,7 @@ function InsightFormModal({ insight, onClose, onSave }) {
                 type="number"
                 value={formData.tema_id}
                 onChange={(e) => setFormData({ ...formData, tema_id: e.target.value })}
-                className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500"
+                className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-brand-500"
                 placeholder="Ej: 1"
               />
             </div>
@@ -588,7 +588,7 @@ function InsightFormModal({ insight, onClose, onSave }) {
               type="text"
               value={formData.mensaje_accion}
               onChange={(e) => setFormData({ ...formData, mensaje_accion: e.target.value })}
-              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500"
+              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-brand-500"
               placeholder="Ej: Repasa el artículo 14 CE"
             />
           </div>
@@ -602,7 +602,7 @@ function InsightFormModal({ insight, onClose, onSave }) {
               type="text"
               value={formData.tags}
               onChange={(e) => setFormData({ ...formData, tags: e.target.value })}
-              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500"
+              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-brand-500"
               placeholder="constitución, derechos, artículo 14"
             />
           </div>
@@ -614,7 +614,7 @@ function InsightFormModal({ insight, onClose, onSave }) {
                 type="checkbox"
                 checked={formData.es_accionable}
                 onChange={(e) => setFormData({ ...formData, es_accionable: e.target.checked })}
-                className="w-4 h-4 text-purple-600 rounded"
+                className="w-4 h-4 text-brand-600 rounded"
               />
               <span className="text-sm text-gray-700">Es accionable</span>
             </label>
@@ -623,7 +623,7 @@ function InsightFormModal({ insight, onClose, onSave }) {
                 type="checkbox"
                 checked={formData.activo}
                 onChange={(e) => setFormData({ ...formData, activo: e.target.checked })}
-                className="w-4 h-4 text-purple-600 rounded"
+                className="w-4 h-4 text-brand-600 rounded"
               />
               <span className="text-sm text-gray-700">Activo</span>
             </label>
@@ -641,7 +641,7 @@ function InsightFormModal({ insight, onClose, onSave }) {
             <button
               type="submit"
               disabled={saving}
-              className="flex-1 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition disabled:opacity-50 flex items-center justify-center gap-2"
+              className="flex-1 px-4 py-2 bg-brand-600 text-white rounded-lg hover:bg-brand-700 transition disabled:opacity-50 flex items-center justify-center gap-2"
             >
               {saving ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
               {insight ? 'Guardar' : 'Crear'}
@@ -777,7 +777,7 @@ function LinkQuestionsModal({ insight, questions, onClose, onSave }) {
         <div className="flex-1 overflow-y-auto p-4">
           {loading ? (
             <div className="flex items-center justify-center py-8">
-              <RefreshCw className="w-6 h-6 animate-spin text-purple-600" />
+              <RefreshCw className="w-6 h-6 animate-spin text-brand-600" />
             </div>
           ) : (
             <div className="space-y-2">
@@ -786,7 +786,7 @@ function LinkQuestionsModal({ insight, questions, onClose, onSave }) {
                   key={q.id}
                   className={`flex items-start gap-3 p-3 rounded-lg border cursor-pointer transition ${
                     linkedIds.includes(q.id)
-                      ? 'bg-purple-50 border-purple-300'
+                      ? 'bg-brand-50 border-brand-300'
                       : 'hover:bg-gray-50 border-gray-200'
                   }`}
                 >
@@ -794,7 +794,7 @@ function LinkQuestionsModal({ insight, questions, onClose, onSave }) {
                     type="checkbox"
                     checked={linkedIds.includes(q.id)}
                     onChange={() => toggleQuestion(q.id)}
-                    className="w-4 h-4 mt-1 text-purple-600 rounded"
+                    className="w-4 h-4 mt-1 text-brand-600 rounded"
                   />
                   <div className="flex-1 min-w-0">
                     <p className="text-sm text-gray-900 line-clamp-2">
@@ -826,7 +826,7 @@ function LinkQuestionsModal({ insight, questions, onClose, onSave }) {
           <button
             onClick={handleSave}
             disabled={saving}
-            className="flex-1 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition disabled:opacity-50 flex items-center justify-center gap-2"
+            className="flex-1 px-4 py-2 bg-brand-600 text-white rounded-lg hover:bg-brand-700 transition disabled:opacity-50 flex items-center justify-center gap-2"
           >
             {saving ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
             Guardar ({linkedIds.length})

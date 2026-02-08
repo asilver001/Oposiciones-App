@@ -130,7 +130,7 @@ export default function FeedbackPanel({
           {insights.length > 0 && (
             <span className={`
               text-xs font-medium px-2 py-1 rounded-full
-              ${hasDangerInsights ? 'bg-orange-100 text-orange-700' : 'bg-purple-100 text-purple-700'}
+              ${hasDangerInsights ? 'bg-orange-100 text-orange-700' : 'bg-brand-100 text-brand-700'}
             `}>
               {insights.length} insight{insights.length !== 1 ? 's' : ''}
             </span>

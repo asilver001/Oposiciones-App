@@ -4,7 +4,7 @@ const storage = {
     try {
       const value = localStorage.getItem(key);
       return { value };
-    } catch (e) {
+    } catch {
       return { value: null };
     }
   },
@@ -12,7 +12,7 @@ const storage = {
     try {
       localStorage.setItem(key, value);
       return true;
-    } catch (e) {
+    } catch {
       return false;
     }
   },
@@ -20,7 +20,7 @@ const storage = {
     try {
       localStorage.removeItem(key);
       return true;
-    } catch (e) {
+    } catch {
       return false;
     }
   }

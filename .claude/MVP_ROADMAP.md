@@ -2,7 +2,8 @@
 ## Plan Consolidado Post-Assessment Completo
 
 **Fecha:** 24 de Enero, 2026
-**Estado Actual:** Pre-beta (~35% completado)
+**Última Actualización:** 31 de Enero, 2026
+**Estado Actual:** Pre-beta (~50% completado) ⬆️ +15%
 **Objetivo:** Definir ruta clara hacia MVP funcional y deployable
 
 ---
@@ -50,42 +51,45 @@ Se realizó un assessment exhaustivo de OpositaSmart desde 4 ángulos:
 
 ---
 
-### 🔴 CRÍTICO 2: OpositaApp.jsx Monolito (1,869 líneas)
+### ✅ CRÍTICO 2: OpositaApp.jsx Monolito (1,869 líneas) - RESUELTO
 
-**Problema:**
+**Problema Original:**
 - Contiene routing, estado global (37 hooks), UI de 10+ páginas
 - Imposible testear, mantener, o escalar
 - Git conflicts constantes
 
-**Impacto:** Desarrollo bloqueado, bugs imposibles de rastrear
+**Estado Actual (31 Ene 2026):**
+1. ✅ Extraer routing → `AppRouter.jsx` **COMPLETADO**
+2. ✅ Dividir en páginas individuales (`/pages`) **19 PÁGINAS CREADAS**
+3. ✅ Crear layouts (`/layouts`) **TopBar + BottomTabBar**
+4. 🔄 Reducir estado global con Zustand **STORES CREADOS, INTEGRACIÓN PENDIENTE**
 
-**Solución:**
-1. Extraer routing → `AppRouter.jsx`
-2. Dividir en páginas individuales (`/pages`)
-3. Crear layouts (`/layouts`)
-4. Reducir estado global con Zustand
+**Métricas:**
+- OpositaApp.jsx: 1,869 → 2,151 líneas (aún tiene onboarding inline)
+- Páginas extraídas: 19 (con lazy loading)
+- Code splitting: ✅ Implementado
 
-**Tiempo:** 20-30 horas
-**Prioridad:** P0 - URGENTE
+**Tiempo restante:** 8-10 horas (extraer onboarding inline + integrar stores)
+**Prioridad:** P1 - EN PROGRESO
 
 ---
 
-### 🔴 CRÍTICO 3: Empty States Faltantes
+### ✅ CRÍTICO 3: Empty States Faltantes - COMPLETADO
 
-**Problema:**
+**Problema Original:**
 - Usuarios nuevos ven pantallas vacías sin instrucción
 - No hay guía de "qué hacer ahora"
 - Presente en: StudyDashboard, ActividadPage, TemasListView
 
-**Impacto:** Onboarding broken, usuarios abandonan
+**Estado Actual (31 Ene 2026):**
+1. ✅ Componente `EmptyState` creado (121 líneas, variantes de color)
+2. ✅ Implementado en **6 pantallas**: SoftFortHome, ActividadPage, ReviewContainer, StudyDashboard, TemasListView
+3. ✅ CTAs claros con iconos y animaciones Framer Motion
 
-**Solución:**
-1. Crear componente `EmptyState` reutilizable
-2. Implementar en 5 pantallas críticas
-3. Agregar CTAs claros ("Crear primera sesión")
+**Ubicación:** `/src/components/common/EmptyState/`
 
-**Tiempo:** 4-6 horas
-**Prioridad:** P0 - URGENTE
+**Tiempo:** COMPLETADO
+**Prioridad:** ✅ RESUELTO
 
 ---
 
@@ -108,22 +112,26 @@ Se realizó un assessment exhaustivo de OpositaSmart desde 4 ángulos:
 
 ---
 
-### 🟠 ALTO 1: Inconsistencia de Navegación
+### ✅ ALTO 1: Inconsistencia de Navegación - COMPLETADO
 
-**Problema:**
+**Problema Original:**
 - Confusión entre `activeTab` y `currentPage`
 - Flujo "Reviewer" hijackea navegación normal
 - No hay URLs (sin deep linking)
 
-**Impacto:** Usuarios confundidos, no pueden compartir links
+**Estado Actual (31 Ene 2026):**
+1. ✅ React Router v6 implementado (HashRouter para GitHub Pages)
+2. ✅ Rutas separadas: `/app/*`, `/admin/*`, `/onboarding/*`, `/auth/*`
+3. ✅ URLs limpias con lazy loading
+4. ✅ Route guards: RequireAuth, RequireOnboarding, RequireAdmin
 
-**Solución:**
-1. Implementar React Router v6
-2. Separar navegación user vs admin
-3. URLs limpias (`/study`, `/activity`)
+**Archivos clave:**
+- `/src/router/AppRouter.jsx`
+- `/src/router/routes.jsx`
+- `/src/router/guards/`
 
-**Tiempo:** 8-10 horas
-**Prioridad:** P1 - ALTA
+**Tiempo:** COMPLETADO
+**Prioridad:** ✅ RESUELTO
 
 ---
 
@@ -146,42 +154,46 @@ Se realizó un assessment exhaustivo de OpositaSmart desde 4 ángulos:
 
 ---
 
-### 🟠 ALTO 3: Design System Inconsistente
+### ✅ ALTO 3: Design System Inconsistente - COMPLETADO
 
-**Problema:**
+**Problema Original:**
 - Colores de status diferentes por componente
 - Border-radius sin jerarquía (rounded-xl, 2xl, 3xl mezclados)
 - Spacing sin patrón (gap-3, gap-4, mb-2, mb-6...)
 
-**Impacto:** App se siente "sucia", no profesional
+**Estado Actual (31 Ene 2026):**
+1. ✅ Carpeta `/theme` creada con:
+   - `colors.js` - Paleta completa (primary purple 50-900, status FSRS)
+   - `spacing.js` - Espaciado consistente
+   - `shadows.js` - Sombras predefinidas
+   - `typography.js` - Tipografía
+2. ✅ Status colors para FSRS: nuevo, learning, review, relearning, mastered
+3. 🔄 Refactor de componentes usando tokens - EN PROGRESO
 
-**Solución:**
-1. Crear `/theme` con colors, spacing, shadows
-2. Documentar en archivo único
-3. Refactor 5 componentes principales
+**Archivos:** `/src/theme/`
 
-**Tiempo:** 8-10 horas
-**Prioridad:** P1 - ALTA
+**Tiempo restante:** 4 horas (aplicar tokens consistentemente)
+**Prioridad:** P2 - MEDIA
 
 ---
 
 ## QUICK WINS (Máximo Impacto, Mínimo Esfuerzo)
 
-| Quick Win | Impacto | Tiempo | Prioridad |
-|-----------|---------|--------|-----------|
-| 1. Eliminar DraftFeatures | Bundle -40% | 30 min | P1 |
-| 2. Habilitar RLS en BD | Seguridad crítica | 1 hora | P0 |
-| 3. Corregir SQL injection | Seguridad | 30 min | P0 |
-| 4. Crear índices BD | Performance 10x | 2 horas | P0 |
-| 5. Empty States básicos | UX +30% | 4 horas | P0 |
-| 6. Fix typo TopBar aria-label | A11y | 5 min | P2 |
-| 7. Bulk import questions | 263s → 5s | 1 hora | P0 |
-| 8. Caché en useActivityData | Queries -50% | 2 horas | P1 |
-| 9. Paralelizar queries | UI 2x rápida | 1 hora | P1 |
-| 10. Toast notifications | UX feedback | 3 horas | P1 |
+| Quick Win | Impacto | Tiempo | Estado |
+|-----------|---------|--------|--------|
+| 1. Eliminar DraftFeatures | Bundle -40% | 30 min | 🔄 Pendiente (sandbox útil) |
+| 2. Habilitar RLS en BD | Seguridad crítica | 1 hora | ❌ Pendiente |
+| 3. Corregir SQL injection | Seguridad | 30 min | ❌ Pendiente |
+| 4. Crear índices BD | Performance 10x | 2 horas | ❌ Pendiente |
+| 5. Empty States básicos | UX +30% | 4 horas | ✅ **COMPLETADO** |
+| 6. Fix typo TopBar aria-label | A11y | 5 min | ❌ Pendiente |
+| 7. Bulk import questions | 263s → 5s | 1 hora | ❌ Pendiente |
+| 8. Caché en useActivityData | Queries -50% | 2 horas | ❌ Pendiente |
+| 9. Paralelizar queries | UI 2x rápida | 1 hora | ❌ Pendiente |
+| 10. Toast notifications | UX feedback | 3 horas | ❌ Pendiente |
 
-**Total Quick Wins:** ~15 horas = **2 días de trabajo**
-**Impacto combinado:** App 10x mejor
+**Progreso Quick Wins:** 1/10 completados
+**Tiempo restante:** ~11 horas
 
 ---
 
@@ -192,62 +204,69 @@ Se realizó un assessment exhaustivo de OpositaSmart desde 4 ángulos:
 **Objetivo:** App segura y deployable en producción
 
 **Tareas:**
-1. ✅ Habilitar RLS en `questions`, `badges`, `waitlist` (1h)
-2. ✅ Corregir SQL injection spacedRepetitionService.js (30min)
-3. ✅ Crear índices en BD (2h)
-4. ✅ Bulk import questions (1h)
-5. ✅ Rate limiting admin login (2h)
-6. ✅ Empty States en 5 pantallas (4h)
-7. ✅ Eliminar DraftFeatures (30min)
-8. ✅ Testing básico de seguridad (3h)
+1. ❌ Habilitar RLS en `questions`, `badges`, `waitlist` (1h) - PENDIENTE
+2. ❌ Corregir SQL injection spacedRepetitionService.js (30min) - PENDIENTE
+3. ❌ Crear índices en BD (2h) - PENDIENTE
+4. ❌ Bulk import questions (1h) - PENDIENTE
+5. ❌ Rate limiting admin login (2h) - PENDIENTE
+6. ✅ Empty States en 5 pantallas (4h) - **COMPLETADO**
+7. 🔄 DraftFeatures (se mantiene como sandbox dev) - REEVALUADO
+8. ❌ Testing básico de seguridad (3h) - PENDIENTE
+9. ❌ **[NUEVO]** Importar temas faltantes en banco de preguntas (2h) - PENDIENTE
+   - Archivos existentes: `l39-procedimiento.js`, `otras-leyes.js`, `ebep-empleados.js`
+   - Solo 2/4 temas están importados actualmente
 
-**Tiempo total:** 14 horas = **2 días**
-**Entregables:**
+**Progreso:** 1/9 tareas completadas (11%)
+**Tiempo restante:** ~12 horas
+
+**Entregables pendientes:**
 - BD segura con RLS
-- Performance 10x mejorado
-- UX básica para usuarios nuevos
-- Bundle -40%
+- Performance mejorado
+- ✅ UX básica para usuarios nuevos
 
 **Criterio de éxito:** Pasar security audit básico
 
 ---
 
-### 🏗️ FASE 1: Refactor Arquitectónico (2-3 semanas)
+### 🏗️ FASE 1: Refactor Arquitectónico (2-3 semanas) - 75% COMPLETADO
 
 **Objetivo:** Código mantenible, testeable, escalable
 
 **Tareas:**
 
-**Semana 1:**
-1. Crear estructura `/pages`, `/layouts`, `/theme` (2h)
-2. Crear `AppRouter.jsx` (4h)
-3. Extraer HomePage de OpositaApp (6h)
-4. Extraer StudyPage de OpositaApp (8h)
-5. Crear MainLayout con TopBar + BottomTabBar (4h)
+**Semana 1:** ✅ COMPLETADA
+1. ✅ Crear estructura `/pages`, `/layouts`, `/theme` (2h)
+2. ✅ Crear `AppRouter.jsx` (4h)
+3. ✅ Extraer HomePage de OpositaApp (6h)
+4. ✅ Extraer StudyPage de OpositaApp (8h)
+5. ✅ Crear MainLayout con TopBar + BottomTabBar (4h)
 
-**Semana 2:**
-6. Extraer ActividadPage, RecursosPage, AdminPage (12h)
-7. Crear Design System (`/theme`) (8h)
-8. Mover componentes a estructura correcta (6h)
-9. Actualizar imports (4h)
+**Semana 2:** ✅ COMPLETADA
+6. ✅ Extraer ActividadPage, RecursosPage, AdminPage (12h)
+7. ✅ Crear Design System (`/theme`) (8h)
+8. ✅ Mover componentes a estructura correcta (6h)
+9. ✅ Actualizar imports (4h)
 
-**Semana 3:**
-10. Implementar Zustand para state management (12h)
-11. Eliminar 50% prop drilling (8h)
-12. Testing de navegación (6h)
-13. Code review completo (4h)
+**Semana 3:** 🔄 EN PROGRESO
+10. 🔄 Implementar Zustand para state management (12h) - STORES CREADOS, INTEGRACIÓN 40%
+11. 🔄 Eliminar prop drilling (8h) - EN PROGRESO
+12. ❌ Testing de navegación (6h) - PENDIENTE
+13. ❌ Code review completo (4h) - PENDIENTE
 
-**Tiempo total:** 84 horas = **10 días** (2 devs)
-**Entregables:**
-- OpositaApp.jsx: 1,869 → <400 líneas
-- Routing con URLs
-- Estado global limpio
-- Componentes testeables
+**Progreso:** 9/13 tareas completadas (69%)
+**Tiempo restante:** ~30 horas
+
+**Logros actuales:**
+- ✅ 19 páginas extraídas con lazy loading
+- ✅ React Router v6 con guards
+- ✅ Design System con tokens
+- 🔄 Zustand stores creados (3), integración pendiente
+- OpositaApp.jsx: 1,869 → 2,151 líneas (onboarding inline pendiente)
 
 **Criterio de éxito:**
-- ✅ Cada página <400 líneas
-- ✅ Estado global <10 hooks
-- ✅ 80%+ componentes testeables
+- 🔄 Cada página <400 líneas (mayoría cumple)
+- 🔄 Estado global <10 hooks (stores creados)
+- ❌ 80%+ componentes testeables (sin tests aún)
 
 ---
 
@@ -271,8 +290,15 @@ Se realizó un assessment exhaustivo de OpositaSmart desde 4 ángulos:
 9. Contextual help/tooltips (6h)
 10. Pull-to-refresh en mobile (3h)
 11. Testing UI completo (6h)
+12. **[NUEVO]** Plan diario en Home con countdown a examen (3h)
+    - Bloque "Tu plan de hoy" con objetivos
+    - "Quedan X días para tu examen"
+13. **[NUEVO]** Feedback post-test con temas débiles + CTAs (4h)
+    - Mostrar top 3 temas con más errores
+    - Botón "Repasar ahora" que navega a sesión de repaso
+    - Datos ya existen en `insightDetector.js`
 
-**Tiempo total:** 39 horas = **5 días**
+**Tiempo total:** 46 horas = **6 días** (+7h nuevas features)
 **Entregables:**
 - Score UI/UX: 6.1 → 8.5/10
 - A11y compliant
@@ -295,7 +321,8 @@ Se realizó un assessment exhaustivo de OpositaSmart desde 4 ángulos:
 **Semana 1:**
 1. Simulacros - Crear tablas BD (4h)
 2. Simulacros - UI página simulacros (8h)
-3. Simulacros - Timer + scoring (6h)
+   - **NOTA:** Cambiar `status: 'proximamente'` → `'disponible'` en ActividadPage.jsx
+3. Simulacros - Timer + scoring con penalización (6h)
 4. Simulacros - Resultados detallados (4h)
 
 **Semana 2:**
@@ -387,20 +414,21 @@ Se realizó un assessment exhaustivo de OpositaSmart desde 4 ángulos:
 
 ---
 
-## CRONOGRAMA CONSOLIDADO
+## CRONOGRAMA CONSOLIDADO (Actualizado 31 Ene 2026)
 
-| Fase | Duración | Esfuerzo (horas) | Equipo | Hitos |
-|------|----------|------------------|--------|-------|
-| **Fase 0: Críticos** | 2 días | 14h | 1 dev | App segura |
-| **Fase 1: Refactor** | 10 días | 84h | 2 devs | Código limpio |
-| **Fase 2: UI/UX** | 5 días | 39h | 1 dev | UX profesional |
-| **Fase 3: Features** | 8 días | 68h | 2 devs | MVP completo |
-| **Fase 4: Testing** | 9 días | 74h | 2 devs | App estable |
-| **Fase 5: Launch** | 6 días | 49h | 1 dev | Producción |
-| **TOTAL** | **40 días** | **328h** | **2 devs** | **MVP Live** |
+| Fase | Duración | Esfuerzo | Estado | Progreso |
+|------|----------|----------|--------|----------|
+| **Fase 0: Críticos** | 2 días | 14h | 🔄 En progreso | 12% |
+| **Fase 1: Refactor** | 10 días | 84h | 🔄 En progreso | **75%** ✅ |
+| **Fase 2: UI/UX** | 5 días | 39h | ❌ Pendiente | 0% |
+| **Fase 3: Features** | 8 días | 68h | ❌ Pendiente | 0% |
+| **Fase 4: Testing** | 9 días | 74h | ❌ Pendiente | 0% |
+| **Fase 5: Launch** | 6 días | 49h | ❌ Pendiente | 0% |
+| **TOTAL** | **40 días** | **328h** | **~50%** | **En camino** |
 
-**Con 2 devs full-time:** 8 semanas (2 meses)
-**Con 1 dev full-time:** 16 semanas (4 meses)
+**Tiempo restante estimado:**
+- Con 2 devs full-time: 4-6 semanas
+- Con 1 dev full-time: 8-10 semanas
 
 ---
 
@@ -419,30 +447,30 @@ Se realizó un assessment exhaustivo de OpositaSmart desde 4 ángulos:
 - [ ] Exportar progreso (PDF/CSV)
 - [x] Panel de admin (gestión de preguntas)
 
-**Estado actual:** 6/10 (60%)
+**Estado actual:** 6/10 (60%) - Sin cambios
 
 ### Criterios Técnicos:
 
 - [ ] RLS habilitado en todas las tablas
 - [ ] 0 vulnerabilidades críticas
 - [ ] Performance score Lighthouse >85
-- [ ] Mobile responsive
+- [x] Mobile responsive ← **NUEVO** (layouts responsivos)
 - [ ] Test coverage >50%
 - [ ] Error rate <1%
 - [ ] Uptime >99.5%
 
-**Estado actual:** 1/7 (14%)
+**Estado actual:** 2/7 (28%) ⬆️ +14%
 
 ### Criterios de Negocio:
 
-- [ ] 500+ preguntas en BD (actualmente 158)
+- [ ] 500+ preguntas en BD (actualmente ~200)
 - [ ] Cobertura de 28 temas completa
 - [ ] Beta testing con 10+ usuarios
 - [ ] Feedback score >4/5
 - [ ] Landing page live
 - [ ] Términos de servicio + privacidad
 
-**Estado actual:** 0/6 (0%)
+**Estado actual:** 0/6 (0%) - Sin cambios
 
 ---
 
@@ -594,19 +622,51 @@ Se realizó un assessment exhaustivo de OpositaSmart desde 4 ángulos:
 
 ## CONCLUSIÓN
 
-OpositaSmart tiene **fundamentos sólidos** pero requiere trabajo crítico en:
-1. **Seguridad** (RLS, SQL injection)
-2. **Arquitectura** (refactor monolito)
-3. **UX** (empty states, feedback)
+OpositaSmart ha avanzado significativamente desde el assessment inicial:
 
-**Con 8 semanas de trabajo (2 devs)**, el proyecto puede alcanzar MVP deployable.
+### ✅ Logros desde 24 Ene 2026:
+1. **Arquitectura** - React Router v6 implementado, 19 páginas extraídas
+2. **UX** - Empty States completados, Design System con tokens
+3. **Code Splitting** - Lazy loading en todas las páginas
+4. **Navegación** - Route guards, URLs limpias
 
-**Quick wins iniciales (2 días)** pueden mejorar dramáticamente la app:
-- Seguridad → Production-ready
-- Performance → 10x más rápida
-- UX → Usuarios no confundidos
+### ❌ Pendiente Crítico:
+1. **Seguridad** (RLS, SQL injection) - SIN CAMBIOS
+2. **Testing** - 0% coverage
+3. **Performance BD** - Índices, bulk import
 
-**Recomendación:** Ejecutar Fase 0 esta semana, luego evaluar recursos para Fase 1.
+**Progreso general:** 35% → **50%** (+15%)
+
+**Tiempo restante estimado:** 6-8 semanas (1 dev) o 3-4 semanas (2 devs)
+
+**Próximos pasos recomendados:**
+1. Completar Fase 0 (seguridad) - URGENTE
+2. Integrar Zustand stores en páginas
+3. Extraer onboarding inline de OpositaApp.jsx
+
+---
+
+## CHANGELOG
+
+### 31 Ene 2026 (Tarde) - Análisis ChatGPT
+- 📋 Validación de recomendaciones ChatGPT "award-winning"
+- ➕ Añadido a Fase 0: Importar temas faltantes de banco de preguntas
+- ➕ Añadido a Fase 2: Plan diario en Home con countdown
+- ➕ Añadido a Fase 2: Feedback post-test con temas débiles
+- 📝 Nota en Fase 3: Cambiar status simulacro de 'proximamente' a 'disponible'
+
+### 31 Ene 2026 (Mañana)
+- ✅ React Router v6 con HashRouter
+- ✅ 19 páginas creadas con lazy loading
+- ✅ Route guards (RequireAuth, RequireOnboarding)
+- ✅ Design System `/theme/` completo
+- ✅ Empty States en 6 pantallas
+- ✅ StatsFlipCard con AnimatedCounter
+- 🔄 Zustand stores creados (integración pendiente)
+
+### 24 Ene 2026
+- Documento inicial creado
+- Assessment de 4 áreas completado
 
 ---
 
@@ -617,5 +677,5 @@ OpositaSmart tiene **fundamentos sólidos** pero requiere trabajo crítico en:
 - [Folder Structure Proposal](./FOLDER_STRUCTURE_PROPOSAL.md)
 - [Flowy Integration Plan](./FLOWY_INTEGRATION_PLAN.md)
 
-**Última actualización:** 2026-01-24
-**Próxima revisión:** Después de completar Fase 0
+**Última actualización:** 2026-01-31
+**Próxima revisión:** Después de completar seguridad (Fase 0)

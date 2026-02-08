@@ -98,7 +98,7 @@ export function useUserInsights() {
       setLoading(false);
       return { sessionStats: null, triggeredInsights: [], sessionId: null };
     }
-  }, [user?.id]);
+  }, [user]);
 
   /**
    * Get recent triggered insights for the current user
@@ -172,7 +172,7 @@ export function useUserInsights() {
       setLoading(false);
       return [];
     }
-  }, [user?.id]);
+  }, [user]);
 
   /**
    * Get the last session statistics for the current user
@@ -214,7 +214,7 @@ export function useUserInsights() {
       setLoading(false);
       return null;
     }
-  }, [user?.id]);
+  }, [user]);
 
   /**
    * Get session history for the current user
@@ -253,7 +253,7 @@ export function useUserInsights() {
       setLoading(false);
       return [];
     }
-  }, [user?.id]);
+  }, [user]);
 
   /**
    * Mark an insight as seen
@@ -286,7 +286,7 @@ export function useUserInsights() {
       console.error('Error in markInsightAsSeen:', err);
       return false;
     }
-  }, [user?.id]);
+  }, [user]);
 
   /**
    * Mark all unseen insights as seen
@@ -319,7 +319,7 @@ export function useUserInsights() {
       console.error('Error in markAllInsightsAsSeen:', err);
       return 0;
     }
-  }, [user?.id]);
+  }, [user]);
 
   /**
    * Get count of unseen insights
@@ -348,7 +348,7 @@ export function useUserInsights() {
       console.error('Error in getUnseenInsightsCount:', err);
       return 0;
     }
-  }, [user?.id]);
+  }, [user]);
 
   return {
     // State

@@ -64,7 +64,7 @@ export default function SignUpForm({
 
   if (success) {
     return (
-      <div className="min-h-screen bg-purple-50 flex items-center justify-center p-6">
+      <div className="min-h-screen bg-brand-50 flex items-center justify-center p-6">
         <div className="bg-white rounded-3xl p-8 shadow-xl max-w-md w-full text-center">
           <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-8 h-8 text-green-600" />
@@ -78,7 +78,7 @@ export default function SignUpForm({
           </p>
           <button
             onClick={onGoToLogin}
-            className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 rounded-2xl transition-all"
+            className="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-4 rounded-2xl transition-all"
           >
             Ir a iniciar sesión
           </button>
@@ -88,7 +88,7 @@ export default function SignUpForm({
   }
 
   return (
-    <div className="min-h-screen bg-purple-50 flex items-center justify-center p-6">
+    <div className="min-h-screen bg-brand-50 flex items-center justify-center p-6">
       <div className="bg-white rounded-3xl p-8 shadow-xl max-w-md w-full">
         {onBack && (
           <button onClick={onBack} className="mb-4 text-gray-600 flex items-center gap-2 hover:text-gray-800">
@@ -97,7 +97,7 @@ export default function SignUpForm({
         )}
 
         <div className="text-center mb-6">
-          <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-brand-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
             <span className="text-3xl">🎓</span>
           </div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Crear cuenta</h2>
@@ -115,7 +115,7 @@ export default function SignUpForm({
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Tu nombre"
-                className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition"
+                className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-brand-500 focus:outline-none transition"
               />
             </div>
           </div>
@@ -131,7 +131,7 @@ export default function SignUpForm({
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="tu@email.com"
                 required
-                className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition"
+                className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-brand-500 focus:outline-none transition"
               />
             </div>
           </div>
@@ -148,7 +148,7 @@ export default function SignUpForm({
                 placeholder="Mínimo 6 caracteres"
                 required
                 minLength={6}
-                className="w-full pl-12 pr-12 py-3 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition"
+                className="w-full pl-12 pr-12 py-3 border-2 border-gray-200 rounded-xl focus:border-brand-500 focus:outline-none transition"
               />
               <button
                 type="button"
@@ -171,7 +171,7 @@ export default function SignUpForm({
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 placeholder="Repite tu contraseña"
                 required
-                className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition"
+                className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-brand-500 focus:outline-none transition"
               />
             </div>
           </div>
@@ -183,14 +183,14 @@ export default function SignUpForm({
               id="terms"
               checked={acceptTerms}
               onChange={(e) => setAcceptTerms(e.target.checked)}
-              className="mt-1 w-5 h-5 text-purple-600 border-gray-300 rounded focus:ring-purple-500"
+              className="mt-1 w-5 h-5 text-brand-600 border-gray-300 rounded focus:ring-brand-500"
             />
             <label htmlFor="terms" className="text-sm text-gray-600">
               Acepto los{' '}
               <button
                 type="button"
                 onClick={() => onShowPrivacy?.('terms')}
-                className="text-purple-600 underline hover:text-purple-700"
+                className="text-brand-600 underline hover:text-brand-700"
               >
                 términos y condiciones
               </button>
@@ -198,7 +198,7 @@ export default function SignUpForm({
               <button
                 type="button"
                 onClick={() => onShowPrivacy?.('privacy')}
-                className="text-purple-600 underline hover:text-purple-700"
+                className="text-brand-600 underline hover:text-brand-700"
               >
                 política de privacidad
               </button>
@@ -217,7 +217,7 @@ export default function SignUpForm({
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white font-bold py-4 rounded-2xl transition-all disabled:cursor-not-allowed"
+            className="w-full bg-brand-600 hover:bg-brand-700 disabled:bg-gray-400 text-white font-bold py-4 rounded-2xl transition-all disabled:cursor-not-allowed"
           >
             {loading ? 'Creando cuenta...' : 'Crear cuenta'}
           </button>
@@ -227,7 +227,7 @@ export default function SignUpForm({
         <div className="mt-6 space-y-3">
           <p className="text-center text-gray-600">
             ¿Ya tienes cuenta?{' '}
-            <button onClick={onGoToLogin} className="text-purple-600 font-semibold hover:underline">
+            <button onClick={onGoToLogin} className="text-brand-600 font-semibold hover:underline">
               Inicia sesión
             </button>
           </p>

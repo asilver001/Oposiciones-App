@@ -25,7 +25,7 @@ const reformulationLabels = {
 /**
  * ReviewContainer - Main review interface with multiple view modes
  */
-export default function ReviewContainer({ showHeader = false }) {
+export default function ReviewContainer({ showHeader: _showHeader = false }) {
   const { reviewQuestion, markForRefresh } = useAdmin();
 
   // State

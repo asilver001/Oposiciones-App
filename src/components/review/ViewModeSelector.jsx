@@ -30,7 +30,7 @@ export default function ViewModeSelector({ viewMode, onViewModeChange, totalItem
                   flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium
                   transition-all duration-150
                   ${isActive
-                    ? 'bg-white text-purple-700 shadow-sm'
+                    ? 'bg-white text-brand-700 shadow-sm'
                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-200'
                   }
                 `}

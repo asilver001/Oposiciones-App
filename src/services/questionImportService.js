@@ -97,7 +97,7 @@ export async function importQuestions(questions, options = {}) {
 
       // Check duplicates for this batch
       for (let i = 0; i < batch.length; i++) {
-        const { id, ...question } = batch[i];
+        const { id: _id, ...question } = batch[i];
         const globalIndex = batchOffset + i;
         const mainQuestionText = question.reformulated_text || question.question_text;
 
@@ -249,7 +249,7 @@ export async function importQuestions(questions, options = {}) {
       try {
         // Transform all questions in batch
         const supabaseQuestions = batch.map((question, i) => {
-          const { id, ...questionWithoutId } = question;
+          const { id: _qId, ...questionWithoutId } = question;
           const transformed = transformQuestionForSupabase(questionWithoutId);
           delete transformed.id;
           return {

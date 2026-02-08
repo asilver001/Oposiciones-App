@@ -92,6 +92,8 @@ export function AuthProvider({ children }) {
             id: user.id,
             email: user.email,
             display_name: user.user_metadata?.display_name || user.email?.split('@')[0],
+            consent_accepted_at: new Date().toISOString(),
+            consent_version: '1.0',
           });
 
         if (insertError && insertError.code !== '23505') {
@@ -254,6 +256,35 @@ export function AuthProvider({ children }) {
     }
   };
 
+  // Delete account and all user data (GDPR compliance)
+  const deleteAccount = async () => {
+    if (!user) return { error: new Error('No user logged in') };
+
+    setError(null);
+    setLoading(true);
+
+    try {
+      const { error: rpcError } = await supabase.rpc('delete_own_account');
+
+      if (rpcError) throw rpcError;
+
+      // Clear local state
+      setUser(null);
+      setSession(null);
+      setUserRole(null);
+
+      // Sign out from Supabase client
+      await supabase.auth.signOut();
+
+      return { error: null };
+    } catch (err) {
+      setError(err.message);
+      return { error: err };
+    } finally {
+      setLoading(false);
+    }
+  };
+
   // Continue as anonymous (without account)
   const continueAsAnonymous = () => {
     setIsAnonymous(true);
@@ -291,6 +322,7 @@ export function AuthProvider({ children }) {
     signUp,
     signIn,
     signOut,
+    deleteAccount,
     resetPassword,
     updatePassword,
     getUserProfile,
@@ -313,6 +345,7 @@ export function AuthProvider({ children }) {
   );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useAuth() {
   const context = useContext(AuthContext);
   if (context === undefined) {

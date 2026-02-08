@@ -1,3 +1,4 @@
+import { useEffect, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Trophy, Target, XCircle } from 'lucide-react';
 
@@ -11,9 +12,39 @@ export default function ProgressModal({
   totalProgress = 0,
   onContinueStudying,
 }) {
+  const panelRef = useRef(null);
+  const closeButtonRef = useRef(null);
   const progressPercent = Math.min(Math.round((todayQuestions / dailyGoal) * 100), 100);
   const circumference = 352; // 2 * PI * 56
   const strokeDasharray = `${Math.min((todayQuestions / dailyGoal) * circumference, circumference)} ${circumference}`;
+
+  const handleKeyDown = useCallback((e) => {
+    if (e.key === 'Escape') {
+      onClose();
+      return;
+    }
+    if (e.key === 'Tab' && panelRef.current) {
+      const focusable = panelRef.current.querySelectorAll(
+        'button:not([disabled]), [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  }, [onClose]);
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown);
+    closeButtonRef.current?.focus();
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [handleKeyDown]);
 
   return (
     <>
@@ -24,22 +55,29 @@ export default function ProgressModal({
         exit={{ opacity: 0 }}
         className="fixed inset-0 bg-black/30 z-50"
         onClick={onClose}
+        aria-hidden="true"
       />
 
       {/* Side Panel - slides from left */}
       <motion.div
+        ref={panelRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Tu progreso de hoy"
         initial={{ x: '-100%' }}
         animate={{ x: 0 }}
         exit={{ x: '-100%' }}
         transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-        className="fixed inset-y-0 left-0 w-80 sm:w-96 bg-white z-50 shadow-2xl overflow-y-auto"
+        className="fixed inset-y-0 left-0 w-80 sm:w-96 bg-white dark:bg-gray-900 z-50 shadow-2xl overflow-y-auto"
       >
         {/* Header */}
-        <div className="sticky top-0 bg-white px-5 py-4 border-b border-gray-100 flex items-center justify-between">
-          <h3 className="text-lg font-bold text-gray-900">Tu progreso de hoy</h3>
+        <div className="sticky top-0 bg-white dark:bg-gray-900 px-5 py-4 border-b border-gray-100 dark:border-gray-700 flex items-center justify-between">
+          <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">Tu progreso de hoy</h3>
           <button
+            ref={closeButtonRef}
             onClick={onClose}
-            className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition"
+            aria-label="Cerrar progreso"
+            className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition focus-visible:outline-2 focus-visible:outline-brand-500 focus-visible:outline-offset-2"
           >
             <XCircle className="w-5 h-5 text-gray-500" />
           </button>
@@ -50,10 +88,10 @@ export default function ProgressModal({
           <div className="flex flex-col items-center py-4">
             <div className="relative w-32 h-32 mb-4">
               <svg className="w-full h-full transform -rotate-90">
-                <circle cx="64" cy="64" r="56" fill="none" stroke="#F3E8FF" strokeWidth="12" />
+                <circle cx="64" cy="64" r="56" fill="none" stroke="var(--color-brand-100)" strokeWidth="12" />
                 <circle
                   cx="64" cy="64" r="56"
-                  fill="none" stroke="#8B5CF6" strokeWidth="12"
+                  fill="none" stroke="var(--color-brand-500)" strokeWidth="12"
                   strokeDasharray={strokeDasharray}
                   strokeLinecap="round"
                   className="transition-all duration-500"

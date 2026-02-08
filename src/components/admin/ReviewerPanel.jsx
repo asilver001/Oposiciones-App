@@ -6,7 +6,6 @@ import {
   Keyboard, GitCompare, LayoutGrid, List, RotateCcw
 } from 'lucide-react';
 import { useAdmin } from '../../contexts/AdminContext';
-import { useAuth } from '../../contexts/AuthContext';
 import { supabase } from '../../lib/supabase';
 import { ViewModeSelector, QuestionCardCompact, QuestionDetailModal } from '../review';
 import { BottomTabBar } from '../navigation';
@@ -30,28 +29,47 @@ export default function ReviewerPanel({
   currentPage,
   isUserReviewer
 }) {
-  // Support both AdminContext (PIN login) and AuthContext (normal login with role)
   const { adminUser, logoutAdmin, reviewQuestion, markForRefresh } = useAdmin();
-  const { user: authUser, userRole, isReviewer: isReviewerFromAuth } = useAuth();
 
-  // Use whichever user is available
-  const currentUser = adminUser || (isReviewerFromAuth ? {
-    name: userRole?.name || authUser?.user_metadata?.display_name || authUser?.email,
-    email: authUser?.email,
-    role: userRole?.role || 'reviewer'
-  } : null);
+  const currentUser = adminUser;
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(true);
   const [actionLoading, setActionLoading] = useState(false);
   const [reviewComment, setReviewComment] = useState('');
-  const [stats, setStats] = useState({ pending: 0, approved: 0, rejected: 0, total: 0 });
-  const [statsView, setStatsView] = useState(null); // null | 'pending' | 'approved' | 'rejected' | 'total'
+  const [stats, setStats] = useState({ pending: 0, approved: 0, rejected: 0, total: 0, pilot: 0 });
+  const [statsView, setStatsView] = useState(null); // null | 'pending' | 'approved' | 'rejected' | 'total' | 'pilot'
+  const [pilotMode, setPilotMode] = useState(false);
   const [filteredQuestions, setFilteredQuestions] = useState([]);
 
   // View mode: 'individual', 'grid', 'list'
   const [viewMode, setViewMode] = useState('individual');
   const [selectedQuestion, setSelectedQuestion] = useState(null);
+  const [selectedQuestionIndex, setSelectedQuestionIndex] = useState(-1);
+
+  // Get the active question list for modal navigation (statsView uses filteredQuestions, otherwise uses questions)
+  const modalQuestionList = statsView ? filteredQuestions : questions;
+
+  const selectQuestion = useCallback((question, index) => {
+    setSelectedQuestion(question);
+    setSelectedQuestionIndex(index);
+  }, []);
+
+  const handleModalPrev = useCallback(() => {
+    if (selectedQuestionIndex > 0) {
+      const prevQ = modalQuestionList[selectedQuestionIndex - 1];
+      setSelectedQuestion(prevQ);
+      setSelectedQuestionIndex(selectedQuestionIndex - 1);
+    }
+  }, [selectedQuestionIndex, modalQuestionList]);
+
+  const handleModalNext = useCallback(() => {
+    if (selectedQuestionIndex < modalQuestionList.length - 1) {
+      const nextQ = modalQuestionList[selectedQuestionIndex + 1];
+      setSelectedQuestion(nextQ);
+      setSelectedQuestionIndex(selectedQuestionIndex + 1);
+    }
+  }, [selectedQuestionIndex, modalQuestionList]);
 
   // Collapsible states
   const [showOtherOptions, setShowOtherOptions] = useState(false);
@@ -65,13 +83,12 @@ export default function ReviewerPanel({
   const loadQuestions = useCallback(async () => {
     setLoading(true);
     try {
-      // Get pending questions with original_text
+      const status = pilotMode ? 'pilot_pending' : 'human_pending';
       const { data, error } = await supabase
         .from('questions')
         .select('*')
         .eq('is_active', true)
-        .eq('is_current_version', true)
-        .eq('validation_status', 'human_pending')
+        .eq('validation_status', status)
         .order('created_at', { ascending: true })
         .limit(100);
 
@@ -80,18 +97,18 @@ export default function ReviewerPanel({
       setQuestions(data || []);
       setCurrentIndex(0);
       setShowOtherOptions(false);
-      setShowOriginal(false);
+      setShowOriginal(pilotMode); // Auto-show original in pilot mode
     } catch (err) {
       console.error('Error loading questions:', err);
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [pilotMode]);
 
   // Load stats separately (for auto-refresh)
   const loadStats = useCallback(async () => {
     try {
-      const [pendingRes, approvedRes, rejectedRes, totalRes] = await Promise.all([
+      const [pendingRes, approvedRes, rejectedRes, totalRes, pilotRes] = await Promise.all([
         supabase
           .from('questions')
           .select('*', { count: 'exact', head: true })
@@ -110,14 +127,20 @@ export default function ReviewerPanel({
         supabase
           .from('questions')
           .select('*', { count: 'exact', head: true })
+          .eq('is_active', true),
+        supabase
+          .from('questions')
+          .select('*', { count: 'exact', head: true })
           .eq('is_active', true)
+          .eq('validation_status', 'pilot_pending')
       ]);
 
       setStats({
         pending: pendingRes.count || 0,
         approved: approvedRes.count || 0,
         rejected: rejectedRes.count || 0,
-        total: totalRes.count || 0
+        total: totalRes.count || 0,
+        pilot: pilotRes.count || 0
       });
     } catch (err) {
       console.error('Error loading stats:', err);
@@ -140,6 +163,8 @@ export default function ReviewerPanel({
         query = query.eq('validation_status', 'human_approved');
       } else if (status === 'rejected') {
         query = query.eq('validation_status', 'rejected');
+      } else if (status === 'pilot') {
+        query = query.eq('validation_status', 'pilot_pending');
       }
       // 'total' shows all
 
@@ -156,6 +181,15 @@ export default function ReviewerPanel({
   const handleStatClick = useCallback((status) => {
     // Pending just shows the normal review workflow
     if (status === 'pending') {
+      setPilotMode(false);
+      setStatsView(null);
+      setFilteredQuestions([]);
+      return;
+    }
+
+    // Pilot toggles the main review workflow to pilot mode
+    if (status === 'pilot') {
+      setPilotMode(prev => !prev);
       setStatsView(null);
       setFilteredQuestions([]);
       return;
@@ -173,7 +207,7 @@ export default function ReviewerPanel({
   useEffect(() => {
     loadQuestions();
     loadStats();
-  }, [loadQuestions, loadStats]);
+  }, [loadQuestions, loadStats, pilotMode]);
 
   const currentQuestion = questions[currentIndex];
 
@@ -181,7 +215,7 @@ export default function ReviewerPanel({
   const correctOption = currentQuestion?.options?.find(opt => opt.is_correct);
   const incorrectOptions = currentQuestion?.options?.filter(opt => !opt.is_correct) || [];
 
-  // Navigation functions
+  // Navigation functions - keep showOriginal persistent across questions
   const goToNext = useCallback(() => {
     if (currentIndex < questions.length - 1) {
       setAnimationDirection('left');
@@ -189,7 +223,6 @@ export default function ReviewerPanel({
       setTimeout(() => {
         setCurrentIndex(prev => prev + 1);
         setShowOtherOptions(false);
-        setShowOriginal(false);
         setReviewComment('');
         setIsAnimating(false);
       }, 150);
@@ -203,7 +236,6 @@ export default function ReviewerPanel({
       setTimeout(() => {
         setCurrentIndex(prev => prev - 1);
         setShowOtherOptions(false);
-        setShowOriginal(false);
         setReviewComment('');
         setIsAnimating(false);
       }, 150);
@@ -236,7 +268,6 @@ export default function ReviewerPanel({
             setCurrentIndex(newQuestions.length - 1);
           }
           setShowOtherOptions(false);
-          setShowOriginal(false);
           setIsAnimating(false);
 
           // Auto-refresh stats
@@ -275,7 +306,6 @@ export default function ReviewerPanel({
             setCurrentIndex(newQuestions.length - 1);
           }
           setShowOtherOptions(false);
-          setShowOriginal(false);
           setIsAnimating(false);
 
           // Auto-refresh stats
@@ -293,7 +323,14 @@ export default function ReviewerPanel({
   const handleMarkRefresh = useCallback(async () => {
     if (!currentQuestion || actionLoading) return;
 
-    const reason = reviewComment || prompt('Razón para reformular esta pregunta:');
+    let reason = reviewComment;
+    if (!reason) {
+      const artRef = currentQuestion.legal_reference || '';
+      reason = window.prompt(
+        `Razón para reformular (Art: ${artRef || 'sin referencia'}):\n` +
+        'Incluye qué mejorar: enunciado, opciones, explicación, artículo...'
+      );
+    }
     if (!reason) return;
 
     setActionLoading(true);
@@ -312,7 +349,6 @@ export default function ReviewerPanel({
             setCurrentIndex(newQuestions.length - 1);
           }
           setShowOtherOptions(false);
-          setShowOriginal(false);
           setIsAnimating(false);
           loadStats();
         }, 200);
@@ -485,7 +521,7 @@ export default function ReviewerPanel({
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <RefreshCw className="w-8 h-8 animate-spin text-purple-600" />
+        <RefreshCw className="w-8 h-8 animate-spin text-brand-600" />
       </div>
     );
   }
@@ -493,7 +529,7 @@ export default function ReviewerPanel({
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col pb-24">
       {/* Header */}
-      <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-4 py-4">
+      <div className="bg-brand-600 text-white px-4 py-4">
         <div className="max-w-2xl mx-auto">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -509,7 +545,7 @@ export default function ReviewerPanel({
                   <UserCheck className="w-5 h-5" />
                   Panel de Revisión
                 </h1>
-                <p className="text-purple-200 text-sm">
+                <p className="text-brand-200 text-sm">
                   {currentUser?.name || 'Revisor'}
                 </p>
               </div>
@@ -532,7 +568,7 @@ export default function ReviewerPanel({
               }`}
             >
               <div className="text-2xl font-bold tabular-nums">{stats.total}</div>
-              <div className="text-xs text-purple-200 flex items-center justify-center gap-1">
+              <div className="text-xs text-brand-200 flex items-center justify-center gap-1">
                 <FileText className="w-3 h-3" />
                 Total
               </div>
@@ -540,7 +576,7 @@ export default function ReviewerPanel({
             <button
               onClick={() => handleStatClick('pending')}
               className={`bg-amber-500/20 backdrop-blur rounded-xl p-3 text-center transition-all duration-300 hover:bg-amber-500/30 ${
-                !statsView ? 'ring-2 ring-amber-300' : ''
+                !statsView && !pilotMode ? 'ring-2 ring-amber-300' : ''
               }`}
               title="Ver panel de revisión"
             >
@@ -576,6 +612,27 @@ export default function ReviewerPanel({
             </button>
           </div>
 
+          {/* Pilot Mode Toggle */}
+          {stats.pilot > 0 && (
+            <button
+              onClick={() => handleStatClick('pilot')}
+              className={`mt-2 w-full flex items-center justify-between px-4 py-2.5 rounded-xl transition-all duration-300 ${
+                pilotMode
+                  ? 'bg-cyan-500/30 ring-2 ring-cyan-300 text-white'
+                  : 'bg-white/10 hover:bg-white/20 text-brand-200'
+              }`}
+            >
+              <span className="flex items-center gap-2 text-sm font-medium">
+                <AlertTriangle className="w-4 h-4" />
+                Piloto de Calidad
+              </span>
+              <span className="flex items-center gap-2">
+                <span className="text-lg font-bold tabular-nums">{stats.pilot}</span>
+                <span className="text-xs opacity-70">pendientes</span>
+              </span>
+            </button>
+          )}
+
           {/* View Mode Selector */}
           <div className="mt-4">
             <ViewModeSelector
@@ -598,6 +655,7 @@ export default function ReviewerPanel({
                 {statsView === 'total' && <><FileText className="w-4 h-4" /> Todas las preguntas</>}
                 {statsView === 'approved' && <><CheckCircle className="w-4 h-4 text-green-500" /> Preguntas aprobadas</>}
                 {statsView === 'rejected' && <><XCircle className="w-4 h-4 text-red-500" /> Preguntas rechazadas</>}
+                {statsView === 'pilot' && <><AlertTriangle className="w-4 h-4 text-cyan-500" /> Piloto de calidad</>}
                 <span className="text-sm text-gray-500 font-normal">({filteredQuestions.length} de {
                   statsView === 'total' ? stats.total :
                   statsView === 'approved' ? stats.approved :
@@ -618,25 +676,27 @@ export default function ReviewerPanel({
                   No hay preguntas en esta categoría
                 </div>
               ) : (
-                filteredQuestions.map((q) => {
+                filteredQuestions.map((q, idx) => {
                   const correctOpt = q.options?.find(opt => opt.is_correct);
                   return (
                     <div key={q.id} className="p-4 hover:bg-gray-50">
                       <div className="flex items-start gap-3">
                         <div className="flex-1 min-w-0">
                           <div className="flex flex-wrap gap-2 mb-2">
-                            <span className="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full font-medium">
+                            <span className="text-xs bg-brand-100 text-brand-700 px-2 py-0.5 rounded-full font-medium">
                               T{q.tema || '?'}
                             </span>
                             <span className={`text-xs px-2 py-0.5 rounded-full ${
                               q.validation_status === 'human_approved' ? 'bg-green-100 text-green-700' :
                               q.validation_status === 'rejected' ? 'bg-red-100 text-red-700' :
                               q.validation_status === 'human_pending' ? 'bg-amber-100 text-amber-700' :
+                              q.validation_status === 'pilot_pending' ? 'bg-cyan-100 text-cyan-700' :
                               'bg-gray-100 text-gray-600'
                             }`}>
                               {q.validation_status === 'human_approved' ? 'Aprobada' :
                                q.validation_status === 'rejected' ? 'Rechazada' :
                                q.validation_status === 'human_pending' ? 'Pendiente' :
+                               q.validation_status === 'pilot_pending' ? 'Piloto' :
                                q.validation_status}
                             </span>
                           </div>
@@ -653,8 +713,8 @@ export default function ReviewerPanel({
                           </p>
                         </div>
                         <button
-                          onClick={() => setSelectedQuestion(q)}
-                          className="p-2 text-gray-400 hover:text-purple-600 hover:bg-purple-50 rounded-lg"
+                          onClick={() => selectQuestion(q, idx)}
+                          className="p-2 text-gray-400 hover:text-brand-600 hover:bg-brand-50 rounded-lg"
                           title="Ver detalle"
                         >
                           <Eye className="w-4 h-4" />
@@ -683,7 +743,7 @@ export default function ReviewerPanel({
             </p>
             <button
               onClick={() => { loadQuestions(); loadStats(); }}
-              className="px-4 py-2 bg-purple-100 text-purple-700 rounded-lg hover:bg-purple-200 transition-colors inline-flex items-center gap-2"
+              className="px-4 py-2 bg-brand-100 text-brand-700 rounded-lg hover:bg-brand-200 transition-colors inline-flex items-center gap-2"
             >
               <RefreshCw className="w-4 h-4" />
               Recargar
@@ -694,10 +754,18 @@ export default function ReviewerPanel({
             {/* Individual View */}
             {viewMode === 'individual' && (
               <>
+                {/* Pilot Mode Banner */}
+                {pilotMode && (
+                  <div className="mb-4 px-4 py-2.5 bg-cyan-50 border border-cyan-200 rounded-xl flex items-center gap-2 text-sm text-cyan-800">
+                    <AlertTriangle className="w-4 h-4 text-cyan-600 flex-shrink-0" />
+                    <span><strong>Modo Piloto</strong> &mdash; Revisa las mejoras. Compara con el original abajo.</span>
+                  </div>
+                )}
+
                 {/* Progress & Navigation */}
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-sm text-gray-600 font-medium">
-                    Pregunta <span className="text-purple-600">{currentIndex + 1}</span> de {questions.length}
+                    Pregunta <span className="text-brand-600">{currentIndex + 1}</span> de {questions.length}
                   </span>
                   <div className="flex gap-2">
                     <button
@@ -731,7 +799,7 @@ export default function ReviewerPanel({
                 >
                   {/* Meta tags */}
                   <div className="px-4 py-3 bg-gray-50 border-b border-gray-200 flex items-center gap-2 flex-wrap">
-                    <span className="px-3 py-1 bg-purple-100 text-purple-700 text-sm font-medium rounded-full">
+                    <span className="px-3 py-1 bg-brand-100 text-brand-700 text-sm font-medium rounded-full">
                       Tema {currentQuestion?.tema || '?'}
                     </span>
                     {currentQuestion?.materia && (
@@ -751,6 +819,13 @@ export default function ReviewerPanel({
                     <p className="text-gray-900 text-lg leading-relaxed">
                       {currentQuestion?.question_text}
                     </p>
+                    {/* Legal reference - always visible */}
+                    {currentQuestion?.legal_reference && (
+                      <div className="mt-3 px-3 py-2 bg-amber-50 border border-amber-200 rounded-lg inline-flex items-center gap-2">
+                        <span className="text-xs font-semibold text-amber-700">Art.</span>
+                        <span className="text-sm text-amber-800">{currentQuestion.legal_reference}</span>
+                      </div>
+                    )}
                   </div>
 
                   {/* Correct Answer - Always visible and highlighted */}
@@ -809,22 +884,12 @@ export default function ReviewerPanel({
                     )}
                   </div>
 
-                  {/* Explanation if available */}
-                  {currentQuestion?.explanation && showOtherOptions && (
+                  {/* Explanation - always visible */}
+                  {currentQuestion?.explanation && (
                     <div className="px-5 pb-4">
                       <div className="p-4 bg-blue-50 border border-blue-200 rounded-xl">
                         <p className="text-xs font-semibold text-blue-800 mb-1">📚 Explicación:</p>
                         <p className="text-sm text-blue-700">{currentQuestion.explanation}</p>
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Legal reference if available */}
-                  {currentQuestion?.legal_reference && showOtherOptions && (
-                    <div className="px-5 pb-4">
-                      <div className="p-3 bg-amber-50 border border-amber-200 rounded-lg">
-                        <p className="text-xs font-semibold text-amber-800 mb-1">📜 Referencia legal:</p>
-                        <p className="text-sm text-amber-700">{currentQuestion.legal_reference}</p>
                       </div>
                     </div>
                   )}
@@ -849,21 +914,41 @@ export default function ReviewerPanel({
                           <div className="p-4 rounded-xl bg-amber-50 border border-amber-300">
                             <p className="text-xs font-semibold text-amber-700 mb-2 flex items-center gap-1">
                               <FileText className="w-3 h-3" />
-                              ORIGINAL (PDF)
+                              ORIGINAL
                             </p>
-                            <p className="text-sm text-amber-900 leading-relaxed">
+                            <p className="text-sm text-amber-900 leading-relaxed mb-2">
                               {currentQuestion.original_text}
                             </p>
+                            {/* Original options for pilot comparison */}
+                            {pilotMode && currentQuestion.original_options && (
+                              <div className="mt-2 space-y-1 border-t border-amber-200 pt-2">
+                                {(Array.isArray(currentQuestion.original_options) ? currentQuestion.original_options : []).map((opt, i) => (
+                                  <p key={i} className={`text-xs ${opt.is_correct ? 'text-green-700 font-semibold' : 'text-amber-700'}`}>
+                                    {opt.id?.toUpperCase() || String.fromCharCode(65 + i)}. {opt.text} {opt.is_correct ? '(correcta)' : ''}
+                                  </p>
+                                ))}
+                              </div>
+                            )}
                           </div>
-                          {/* Reformulated */}
+                          {/* Current/Improved */}
                           <div className="p-4 rounded-xl bg-cyan-50 border border-cyan-300">
                             <p className="text-xs font-semibold text-cyan-700 mb-2 flex items-center gap-1">
                               <FileText className="w-3 h-3" />
-                              REFORMULADA
+                              {pilotMode ? 'MEJORADA' : 'REFORMULADA'}
                             </p>
-                            <p className="text-sm text-cyan-900 leading-relaxed">
+                            <p className="text-sm text-cyan-900 leading-relaxed mb-2">
                               {currentQuestion.question_text}
                             </p>
+                            {/* Current options for pilot comparison */}
+                            {pilotMode && currentQuestion.options && (
+                              <div className="mt-2 space-y-1 border-t border-cyan-200 pt-2">
+                                {currentQuestion.options.map((opt, i) => (
+                                  <p key={i} className={`text-xs ${opt.is_correct ? 'text-green-700 font-semibold' : 'text-cyan-700'}`}>
+                                    {opt.id?.toUpperCase() || String.fromCharCode(65 + i)}. {opt.text} {opt.is_correct ? '(correcta)' : ''}
+                                  </p>
+                                ))}
+                              </div>
+                            )}
                           </div>
                         </div>
                       )}
@@ -888,7 +973,7 @@ export default function ReviewerPanel({
                       value={reviewComment}
                       onChange={(e) => setReviewComment(e.target.value)}
                       placeholder="Escribe un comentario si lo deseas..."
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl text-sm resize-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-shadow"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl text-sm resize-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow"
                       rows={2}
                     />
                   </div>
@@ -956,7 +1041,7 @@ export default function ReviewerPanel({
                     index={idx}
                     onApprove={handleApproveById}
                     onReject={handleRejectById}
-                    onView={setSelectedQuestion}
+                    onView={(q) => selectQuestion(q, idx)}
                     onUndo={handleUndo}
                     disabled={actionLoading}
                   />
@@ -978,7 +1063,7 @@ export default function ReviewerPanel({
                         <div className="flex-1 min-w-0">
                           {/* Meta */}
                           <div className="flex flex-wrap gap-2 mb-2">
-                            <span className="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full font-medium">
+                            <span className="text-xs bg-brand-100 text-brand-700 px-2 py-0.5 rounded-full font-medium">
                               T{question.tema || '?'}
                             </span>
                             {question.materia && (
@@ -1004,8 +1089,8 @@ export default function ReviewerPanel({
                         {/* Actions */}
                         <div className="flex items-center gap-2 flex-shrink-0">
                           <button
-                            onClick={() => setSelectedQuestion(question)}
-                            className="p-2 text-gray-400 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+                            onClick={() => selectQuestion(question, idx)}
+                            className="p-2 text-gray-400 hover:text-brand-600 hover:bg-brand-50 rounded-lg transition-colors"
                             title="Ver detalle"
                           >
                             <Eye className="w-4 h-4" />
@@ -1043,10 +1128,14 @@ export default function ReviewerPanel({
       {selectedQuestion && (
         <QuestionDetailModal
           question={selectedQuestion}
-          onClose={() => setSelectedQuestion(null)}
+          onClose={() => { setSelectedQuestion(null); setSelectedQuestionIndex(-1); }}
           onApprove={handleApproveById}
           onReject={handleRejectById}
           onMarkRefresh={handleMarkRefreshById}
+          onPrev={handleModalPrev}
+          onNext={handleModalNext}
+          hasPrev={selectedQuestionIndex > 0}
+          hasNext={selectedQuestionIndex < modalQuestionList.length - 1}
           disabled={actionLoading}
         />
       )}

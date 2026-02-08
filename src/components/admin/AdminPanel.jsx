@@ -7,7 +7,6 @@ import {
   BookOpen, List, TrendingUp, Plus, Lightbulb
 } from 'lucide-react';
 import { useAdmin } from '../../contexts/AdminContext';
-import { useAuth } from '../../contexts/AuthContext';
 import { supabase } from '../../lib/supabase';
 import QuestionImporter from './QuestionImporter';
 import QuestionExporter from './QuestionExporter';
@@ -26,17 +25,8 @@ export default function AdminPanel({
   currentPage,
   isUserReviewer
 }) {
-  // Support both AdminContext (PIN login) and AuthContext (normal login with role)
-  const { adminUser, logoutAdmin, isAdmin: isAdminFromPin } = useAdmin();
-  const { user: authUser, userRole, signOut, isAdmin: isAdminFromAuth } = useAuth();
-
-  // Use whichever user is available (prioritize AdminContext for backwards compatibility)
-  const currentUser = adminUser || (isAdminFromAuth ? {
-    name: userRole?.name || authUser?.user_metadata?.display_name || authUser?.email,
-    email: authUser?.email,
-    role: 'admin'
-  } : null);
-  const isAdmin = isAdminFromPin || isAdminFromAuth;
+  const { adminUser, logoutAdmin } = useAdmin();
+  const currentUser = adminUser;
   const [activeTab, setActiveTab] = useState('overview');
   const [stats, setStats] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -90,7 +80,7 @@ export default function AdminPanel({
         if (!aError && adminsData) {
           admins = adminsData;
         }
-      } catch (rpcErr) {
+      } catch {
         console.warn('RPC get_admin_users not available, trying direct query');
         // Fallback: direct query (might fail due to RLS)
         const { data: directAdmins } = await supabase
@@ -124,13 +114,8 @@ export default function AdminPanel({
     }
   }, [activeTab, loadStats]);
 
-  const handleLogout = async () => {
-    // Logout from whichever context is active
-    if (adminUser) {
-      logoutAdmin();
-    }
-    // Don't sign out from AuthContext - just go back to home
-    // User stays logged in to the app, just exits admin panel
+  const handleLogout = () => {
+    logoutAdmin();
     onBack();
   };
 
@@ -148,7 +133,7 @@ export default function AdminPanel({
   return (
     <div className="min-h-screen bg-gray-50 pb-24">
       {/* Header */}
-      <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+      <div className="bg-brand-600 text-white">
         <div className="max-w-5xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -163,7 +148,7 @@ export default function AdminPanel({
                   <Shield className="w-5 h-5" />
                   Panel de Admin
                 </h1>
-                <p className="text-purple-200 text-sm">
+                <p className="text-brand-200 text-sm">
                   {currentUser?.name || currentUser?.email}
                 </p>
               </div>
@@ -188,7 +173,7 @@ export default function AdminPanel({
                 className={`flex items-center gap-2 px-4 py-3 text-sm font-medium whitespace-nowrap transition-colors border-b-2 ${
                   activeTab === tab.id
                     ? 'border-white text-white'
-                    : 'border-transparent text-purple-200 hover:text-white'
+                    : 'border-transparent text-brand-200 hover:text-white'
                 }`}
               >
                 <tab.icon className="w-4 h-4" />
@@ -256,7 +241,7 @@ function OverviewTab({ stats, loading, onRefresh }) {
   if (loading) {
     return (
       <div className="flex items-center justify-center py-12">
-        <RefreshCw className="w-6 h-6 animate-spin text-purple-600" />
+        <RefreshCw className="w-6 h-6 animate-spin text-brand-600" />
       </div>
     );
   }
@@ -274,7 +259,7 @@ function OverviewTab({ stats, loading, onRefresh }) {
     blue: 'bg-blue-50 text-blue-600 border-blue-200',
     green: 'bg-green-50 text-green-600 border-green-200',
     yellow: 'bg-yellow-50 text-yellow-600 border-yellow-200',
-    purple: 'bg-purple-50 text-purple-600 border-purple-200',
+    purple: 'bg-brand-50 text-brand-600 border-brand-200',
     red: 'bg-red-50 text-red-600 border-red-200',
     orange: 'bg-orange-50 text-orange-600 border-orange-200',
   };
@@ -295,7 +280,7 @@ function OverviewTab({ stats, loading, onRefresh }) {
       <div className="flex justify-end">
         <button
           onClick={onRefresh}
-          className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+          className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 hover:text-brand-600 hover:bg-brand-50 rounded-lg transition-colors"
         >
           <RefreshCw className="w-4 h-4" />
           Actualizar
@@ -324,7 +309,7 @@ function OverviewTab({ stats, loading, onRefresh }) {
       {temaData.length > 0 && (
         <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
           <div className="px-4 py-3 border-b border-gray-200 flex items-center gap-2">
-            <BarChart3 className="w-5 h-5 text-purple-500" />
+            <BarChart3 className="w-5 h-5 text-brand-500" />
             <h3 className="font-medium">Distribución por Tema</h3>
           </div>
           <div className="p-4 space-y-3">
@@ -333,7 +318,7 @@ function OverviewTab({ stats, loading, onRefresh }) {
                 <span className="w-16 text-sm text-gray-600 font-medium">Tema {item.tema}</span>
                 <div className="flex-1 h-6 bg-gray-100 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full transition-all"
+                    className="h-full bg-gradient-to-r from-brand-500 to-indigo-500 rounded-full transition-all"
                     style={{ width: `${item.percentage}%` }}
                   />
                 </div>
@@ -403,7 +388,7 @@ function OverviewTab({ stats, loading, onRefresh }) {
               </div>
               <span className={`px-2 py-1 text-xs font-medium rounded-full ${
                 admin.role === 'admin'
-                  ? 'bg-purple-100 text-purple-700'
+                  ? 'bg-brand-100 text-brand-700'
                   : 'bg-blue-100 text-blue-700'
               }`}>
                 {admin.role === 'admin' ? 'Admin' : 'Revisor'}

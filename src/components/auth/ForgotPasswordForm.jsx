@@ -44,7 +44,7 @@ export default function ForgotPasswordForm({
 
   if (success) {
     return (
-      <div className="min-h-screen bg-purple-50 flex items-center justify-center p-6">
+      <div className="min-h-screen bg-brand-50 flex items-center justify-center p-6">
         <div className="bg-white rounded-3xl p-8 shadow-xl max-w-md w-full text-center">
           <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-8 h-8 text-green-600" />
@@ -58,7 +58,7 @@ export default function ForgotPasswordForm({
           </p>
           <button
             onClick={onGoToLogin}
-            className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 rounded-2xl transition-all"
+            className="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-4 rounded-2xl transition-all"
           >
             Volver a iniciar sesión
           </button>
@@ -68,7 +68,7 @@ export default function ForgotPasswordForm({
   }
 
   return (
-    <div className="min-h-screen bg-purple-50 flex items-center justify-center p-6">
+    <div className="min-h-screen bg-brand-50 flex items-center justify-center p-6">
       <div className="bg-white rounded-3xl p-8 shadow-xl max-w-md w-full">
         {onBack && (
           <button onClick={onBack} className="mb-4 text-gray-600 flex items-center gap-2 hover:text-gray-800">
@@ -77,8 +77,8 @@ export default function ForgotPasswordForm({
         )}
 
         <div className="text-center mb-6">
-          <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <Mail className="w-8 h-8 text-purple-600" />
+          <div className="w-16 h-16 bg-brand-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <Mail className="w-8 h-8 text-brand-600" />
           </div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Recuperar contraseña</h2>
           <p className="text-gray-500">Te enviaremos un enlace para restablecer tu contraseña</p>
@@ -96,7 +96,7 @@ export default function ForgotPasswordForm({
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="tu@email.com"
                 required
-                className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none transition"
+                className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-brand-500 focus:outline-none transition"
               />
             </div>
           </div>
@@ -113,7 +113,7 @@ export default function ForgotPasswordForm({
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white font-bold py-4 rounded-2xl transition-all disabled:cursor-not-allowed"
+            className="w-full bg-brand-600 hover:bg-brand-700 disabled:bg-gray-400 text-white font-bold py-4 rounded-2xl transition-all disabled:cursor-not-allowed"
           >
             {loading ? 'Enviando...' : 'Enviar enlace de recuperación'}
           </button>
@@ -123,7 +123,7 @@ export default function ForgotPasswordForm({
         <div className="mt-6">
           <p className="text-center text-gray-600">
             ¿Recordaste tu contraseña?{' '}
-            <button onClick={onGoToLogin} className="text-purple-600 font-semibold hover:underline">
+            <button onClick={onGoToLogin} className="text-brand-600 font-semibold hover:underline">
               Iniciar sesión
             </button>
           </p>

@@ -5,16 +5,18 @@
  * Includes timer, question navigation, and results summary.
  */
 
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Clock, Check, X, AlertTriangle, Trophy, ArrowLeft,
   ArrowRight, ChevronLeft, ChevronRight, Loader2, XCircle,
-  Flag, ListOrdered, BarChart3
+  Flag, ListOrdered, BarChart3, RefreshCw, BookOpen
 } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import { generateHybridSession, updateProgress, recordDailyStudy } from '../../services/spacedRepetitionService';
+import EmptyState from '../common/EmptyState/EmptyState';
 import ExamTimer from './ExamTimer';
+import SessionSummary from './SessionSummary';
 
 // Exam configuration
 const EXAM_CONFIG = {
@@ -38,52 +40,75 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
   // UI state
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [noQuestions, setNoQuestions] = useState(false);
   const [showNavigation, setShowNavigation] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
   const [showConfirmEnd, setShowConfirmEnd] = useState(false);
   const [remainingTime, setRemainingTime] = useState(EXAM_CONFIG.timeMinutes * 60);
 
+  // Loading timeout and retry
+  const [loadingTimedOut, setLoadingTimedOut] = useState(false);
+  const retryCountRef = useRef(0);
+  const MAX_RETRIES = 3;
+  const LOADING_TIMEOUT_MS = 15000;
+
   // Load questions
-  useEffect(() => {
-    async function loadExam() {
-      if (!user?.id) {
-        setError('Inicia sesión para realizar el simulacro');
-        setIsLoading(false);
-        return;
-      }
-
-      try {
-        // Get 100 random questions (no review priority - simulate real exam)
-        const sessionConfig = {
-          totalQuestions: config.totalQuestions || EXAM_CONFIG.totalQuestions,
-          reviewRatio: 0, // No reviews - fresh random questions
-          adaptiveDifficulty: false // No adaptation - real exam conditions
-        };
-
-        const loadedQuestions = await generateHybridSession(user.id, sessionConfig);
-
-        // Debug: Log question count and check for missing options
-        console.log(`SimulacroSession: Loaded ${loadedQuestions.length} questions`);
-        const questionsWithoutOptions = loadedQuestions.filter(q => !q.options || !Array.isArray(q.options) || q.options.length === 0);
-        if (questionsWithoutOptions.length > 0) {
-          console.warn(`SimulacroSession: ${questionsWithoutOptions.length} questions have no options:`, questionsWithoutOptions.map(q => q.id));
-        }
-
-        if (loadedQuestions.length === 0) {
-          setError('No hay suficientes preguntas para el simulacro');
-        } else {
-          setQuestions(loadedQuestions);
-        }
-      } catch (err) {
-        console.error('Error loading exam:', err);
-        setError('Error al cargar el simulacro');
-      } finally {
-        setIsLoading(false);
-      }
+  const loadExam = useCallback(async () => {
+    if (!user?.id) {
+      setError('Inicia sesión para realizar el simulacro');
+      setIsLoading(false);
+      return;
     }
 
-    loadExam();
+    setIsLoading(true);
+    setError(null);
+    setNoQuestions(false);
+    setLoadingTimedOut(false);
+
+    try {
+      const sessionConfig = {
+        totalQuestions: config.totalQuestions || EXAM_CONFIG.totalQuestions,
+        reviewRatio: 0,
+        adaptiveDifficulty: true
+      };
+
+      const loadedQuestions = await generateHybridSession(user.id, sessionConfig);
+
+      if (loadedQuestions.length === 0) {
+        setNoQuestions(true);
+      } else {
+        setQuestions(loadedQuestions);
+      }
+    } catch (err) {
+      console.error('Error loading exam:', err);
+      setError('Error al cargar el simulacro');
+    } finally {
+      setIsLoading(false);
+    }
   }, [user?.id, config]);
+
+  useEffect(() => {
+    loadExam();
+  }, [loadExam]);
+
+  // Loading timeout
+  useEffect(() => {
+    if (!isLoading) return;
+    const timer = setTimeout(() => {
+      if (isLoading) setLoadingTimedOut(true);
+    }, LOADING_TIMEOUT_MS);
+    return () => clearTimeout(timer);
+  }, [isLoading]);
+
+  // Retry handler
+  const handleRetry = () => {
+    retryCountRef.current += 1;
+    setLoadingTimedOut(false);
+    setAnswers({});
+    setFlagged(new Set());
+    setCurrentIndex(0);
+    loadExam();
+  };
 
   const currentQuestion = questions[currentIndex];
 
@@ -121,6 +146,21 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
     const correctOption = opts.find(opt => opt.is_correct === true);
     return correctOption?.id || null;
   }, [getOptions]);
+
+  // Build answers history for SessionSummary topic analysis
+  const answersHistory = useMemo(() => {
+    return Object.entries(answers).map(([qId, ans]) => {
+      const q = questions.find(q => q.id === qId);
+      const correctAns = q ? getCorrectAnswer(q) : null;
+      return {
+        question_id: qId,
+        tema: q?.tema,
+        es_correcta: ans === correctAns,
+        respuesta_usuario: ans,
+        respuesta_correcta: correctAns
+      };
+    });
+  }, [answers, questions, getCorrectAnswer]);
 
   // Calculate stats
   const stats = useMemo(() => {
@@ -221,35 +261,91 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
     endExam();
   }, [endExam]);
 
-  // Loading state
-  if (isLoading) {
+  // Loading state (with timeout)
+  if (isLoading && !loadingTimedOut) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <Loader2 className="w-12 h-12 animate-spin text-rose-600 mx-auto mb-4" />
           <p className="text-gray-600">Preparando simulacro...</p>
-          <p className="text-sm text-gray-400 mt-2">Cargando {EXAM_CONFIG.totalQuestions} preguntas</p>
+          <p className="text-sm text-gray-400 mt-2">Cargando {config.totalQuestions || EXAM_CONFIG.totalQuestions} preguntas</p>
         </div>
       </div>
     );
   }
 
-  // Error state
-  if (error) {
+  // No questions available (empty state, not an error)
+  if (noQuestions) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+        <EmptyState
+          icon={BookOpen}
+          title="No hay preguntas disponibles"
+          description="No hay suficientes preguntas para el simulacro. Selecciona otro tema o modo de estudio."
+          actionLabel="Volver"
+          onAction={onClose}
+        />
+      </div>
+    );
+  }
+
+  // Loading timed out or error state
+  if (loadingTimedOut || error) {
+    const hasRetriesLeft = retryCountRef.current < MAX_RETRIES;
+    const isTimeout = loadingTimedOut && !error;
+
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
         <div className="text-center max-w-sm">
-          <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <XCircle className="w-8 h-8 text-red-500" />
+          <div className={`w-16 h-16 ${isTimeout ? 'bg-amber-100' : 'bg-red-100'} rounded-full flex items-center justify-center mx-auto mb-4`}>
+            {isTimeout
+              ? <Clock className="w-8 h-8 text-amber-500" />
+              : <XCircle className="w-8 h-8 text-red-500" />
+            }
           </div>
-          <h2 className="text-xl font-bold text-gray-800 mb-2">Error</h2>
-          <p className="text-gray-600 mb-4">{error}</p>
-          <button
-            onClick={onClose}
-            className="px-6 py-2 bg-gray-200 rounded-lg hover:bg-gray-300"
-          >
-            Volver
-          </button>
+          <h2 className="text-xl font-bold text-gray-800 mb-2">
+            {isTimeout ? 'Carga lenta' : 'Error'}
+          </h2>
+          <p className="text-gray-600 mb-4">
+            {isTimeout
+              ? 'El simulacro está tardando más de lo esperado.'
+              : error
+            }
+          </p>
+          {hasRetriesLeft ? (
+            <>
+              <p className="text-sm text-gray-400 mb-4">
+                Intento {retryCountRef.current + 1} de {MAX_RETRIES}
+              </p>
+              <div className="flex gap-3 justify-center">
+                <button
+                  onClick={onClose}
+                  className="px-6 py-2 bg-gray-200 rounded-lg hover:bg-gray-300"
+                >
+                  Volver
+                </button>
+                <button
+                  onClick={handleRetry}
+                  className="px-6 py-2 bg-rose-600 text-white rounded-lg hover:bg-rose-700 flex items-center gap-2"
+                >
+                  <RefreshCw className="w-4 h-4" />
+                  Reintentar
+                </button>
+              </div>
+            </>
+          ) : (
+            <>
+              <p className="text-sm text-gray-500 mb-4">
+                No se pudo cargar tras {MAX_RETRIES} intentos. Vuelve a intentarlo más tarde.
+              </p>
+              <button
+                onClick={onClose}
+                className="px-6 py-2 bg-gray-200 rounded-lg hover:bg-gray-300"
+              >
+                Volver
+              </button>
+            </>
+          )}
         </div>
       </div>
     );
@@ -337,6 +433,17 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
               </div>
             </div>
           </div>
+
+          {/* Topic Analysis */}
+          {answersHistory.length > 0 && (
+            <div className="w-full mb-6">
+              <SessionSummary
+                answers={answersHistory}
+                totalQuestions={questions.length}
+                timeSpentSeconds={((config.timeLimit || EXAM_CONFIG.timeMinutes) * 60) - remainingTime}
+              />
+            </div>
+          )}
 
           {/* Actions */}
           <div className="flex flex-col gap-3 w-full">
