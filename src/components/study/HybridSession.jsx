@@ -42,10 +42,14 @@ export default function HybridSession({ config = {}, onClose, onComplete }) {
     setSelectedAnswer(answer);
     setShowResult(true);
 
-    // Determine correct answer from options array (no correct_answer column in DB)
-    const correctOpt = (Array.isArray(currentQuestion.options) ? currentQuestion.options : [])
-      .find(o => o.is_correct === true);
-    const correctKey = correctOpt?.id || currentQuestion.correct_answer;
+    // Determine correct answer from options (JSONB array or JSON string)
+    let opts = currentQuestion.options;
+    if (typeof opts === 'string') {
+      try { opts = JSON.parse(opts); } catch { opts = []; }
+    }
+    if (!Array.isArray(opts)) opts = [];
+    const correctOpt = opts.find(o => o.is_correct === true);
+    const correctKey = correctOpt?.id;
     const isCorrect = answer === correctKey;
 
     // Track this answer for insights
@@ -103,7 +107,7 @@ export default function HybridSession({ config = {}, onClose, onComplete }) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <Loader2 className="w-12 h-12 animate-spin text-purple-600 mx-auto mb-4" />
+          <Loader2 className="w-12 h-12 animate-spin text-brand-600 mx-auto mb-4" />
           <p className="text-gray-600">Preparando sesión de estudio...</p>
         </div>
       </div>
@@ -136,6 +140,7 @@ export default function HybridSession({ config = {}, onClose, onComplete }) {
     return (
       <SessionComplete
         sessionStats={sessionStats}
+        answersHistory={answersHistoryRef.current} // eslint-disable-line react-hooks/refs
         triggeredInsights={triggeredInsights}
         insightsLoading={insightsLoading}
         onNewSession={handleNewSession}
@@ -215,7 +220,7 @@ export default function HybridSession({ config = {}, onClose, onComplete }) {
             <p className="text-xs text-gray-500">Incorrectas</p>
           </div>
           <div>
-            <p className="text-lg font-bold text-purple-600">{sessionStats.total - sessionStats.answered}</p>
+            <p className="text-lg font-bold text-brand-600">{sessionStats.total - sessionStats.answered}</p>
             <p className="text-xs text-gray-500">Restantes</p>
           </div>
         </div>

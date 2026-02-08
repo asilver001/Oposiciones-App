@@ -2,22 +2,36 @@
  * HomePage
  *
  * Main dashboard page showing stats, streak, and session CTA.
+ * Fetches real user data from Supabase via hooks.
  */
 
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import SoftFortHome from '../../components/home/SoftFortHome';
 import { ROUTES } from '../../router/routes';
+import { useActivityData } from '../../hooks/useActivityData';
+import { useTopics } from '../../hooks/useTopics';
+import { useAuth } from '../../hooks/useAuth';
 
 export default function HomePage() {
   const navigate = useNavigate();
+  const { user } = useAuth();
+  const { totalStats, streak, fetchActivityData } = useActivityData();
+  const { getFortalezaData } = useTopics();
+
+  // Fetch activity data on mount
+  useEffect(() => {
+    fetchActivityData();
+  }, [fetchActivityData]);
+
+  const fortalezaData = getFortalezaData();
 
   const handleStartSession = () => {
     navigate(ROUTES.STUDY);
   };
 
   const handleTopicSelect = (topic) => {
-    // Navigate to study with topic context
-    navigate(ROUTES.STUDY, { state: { topic } });
+    navigate(ROUTES.STUDY, { state: { topic, mode: 'practica-tema' } });
   };
 
   const handleViewAllTopics = () => {
@@ -25,7 +39,6 @@ export default function HomePage() {
   };
 
   const handleNavigate = (page) => {
-    // Map old page names to routes
     const routeMap = {
       temas: ROUTES.TEMAS,
       actividad: ROUTES.ACTIVIDAD,
@@ -38,6 +51,10 @@ export default function HomePage() {
   return (
     <SoftFortHome
       showTopBar={false}
+      userName={user?.user_metadata?.name || user?.email?.split('@')[0] || 'Usuario'}
+      totalStats={totalStats}
+      streakData={{ current: streak, longest: streak }}
+      fortalezaData={fortalezaData}
       onStartSession={handleStartSession}
       onTopicSelect={handleTopicSelect}
       onViewAllTopics={handleViewAllTopics}
