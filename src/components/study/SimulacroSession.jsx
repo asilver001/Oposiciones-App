@@ -87,24 +87,36 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
 
   const currentQuestion = questions[currentIndex];
 
-  // Helper to normalize options (handle JSON string or array)
+  // Helper to normalize options (handle JSONB array, JSON string, or individual columns)
   const getOptions = useCallback((question) => {
-    if (!question?.options) return [];
+    if (!question) return [];
+
+    // Try JSONB array or JSON string first
     let opts = question.options;
     if (typeof opts === 'string') {
-      try {
-        opts = JSON.parse(opts);
-      } catch (e) {
-        console.error('Failed to parse options:', e);
-        return [];
-      }
+      try { opts = JSON.parse(opts); } catch { opts = null; }
     }
-    if (!Array.isArray(opts)) return [];
-    return opts;
+    if (Array.isArray(opts) && opts.length > 0 && opts[0]?.id) {
+      return opts;
+    }
+
+    // Fallback: individual columns (option_a, option_b, option_c, option_d)
+    const keys = ['a', 'b', 'c', 'd'];
+    const fromColumns = keys
+      .filter(k => question[`option_${k}`])
+      .map(k => ({
+        id: k,
+        text: question[`option_${k}`],
+        is_correct: question.correct_answer === k
+      }));
+    return fromColumns.length > 0 ? fromColumns : [];
   }, []);
 
   // Helper to get correct answer from options array
   const getCorrectAnswer = useCallback((question) => {
+    if (!question) return null;
+    // Direct correct_answer field takes priority
+    if (question.correct_answer) return question.correct_answer;
     const opts = getOptions(question);
     const correctOption = opts.find(opt => opt.is_correct === true);
     return correctOption?.id || null;
@@ -191,8 +203,8 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
       for (const [questionId, answer] of Object.entries(answers)) {
         const question = questions.find(q => q.id === questionId);
         if (question) {
-          const correctOpt = question.options?.find(opt => opt.is_correct === true);
-          const wasCorrect = answer === correctOpt?.id;
+          const correctAns = getCorrectAnswer(question);
+          const wasCorrect = answer === correctAns;
           await updateProgress(user.id, questionId, wasCorrect);
         }
       }

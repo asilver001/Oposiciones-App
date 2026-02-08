@@ -1,4 +1,3 @@
-import React from 'react';
 import { BookOpen, CheckCircle2, XCircle } from 'lucide-react';
 
 export default function QuestionCard({
@@ -7,14 +6,28 @@ export default function QuestionCard({
   showResult,
   onSelectAnswer
 }) {
-  // Transform options from JSONB array format
-  const options = (question.options || []).map(opt => ({
-    key: opt.id,
-    text: opt.text,
-    isCorrect: opt.is_correct
-  }));
+  // Transform options - support both JSONB array and individual columns
+  let options;
+  if (Array.isArray(question.options) && question.options.length > 0 && question.options[0]?.id) {
+    // JSONB array format: [{id, text, is_correct}, ...]
+    options = question.options.map(opt => ({
+      key: opt.id,
+      text: opt.text,
+      isCorrect: opt.is_correct
+    }));
+  } else {
+    // Individual columns format: option_a, option_b, option_c, option_d
+    const keys = ['a', 'b', 'c', 'd'];
+    options = keys
+      .filter(k => question[`option_${k}`])
+      .map(k => ({
+        key: k,
+        text: question[`option_${k}`],
+        isCorrect: question.correct_answer === k
+      }));
+  }
 
-  // Get correct answer from options array
+  // Get correct answer key
   const correctOption = options.find(opt => opt.isCorrect);
   const correctAnswer = correctOption?.key;
 
