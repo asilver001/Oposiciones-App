@@ -48,7 +48,7 @@ export default function HybridSession({ config = {}, onClose, onComplete }) {
       try { opts = JSON.parse(opts); } catch { opts = []; }
     }
     if (!Array.isArray(opts)) opts = [];
-    const correctOpt = opts.find(o => o.is_correct === true);
+    const correctOpt = opts.find(o => Boolean(o.is_correct));
     const correctKey = correctOpt?.id;
     const isCorrect = answer === correctKey;
 

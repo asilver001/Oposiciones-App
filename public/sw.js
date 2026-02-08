@@ -1,7 +1,7 @@
-// Oposita Smart Service Worker v3.0.0
-const CACHE_NAME = 'opositasmart-cache-v3';
-const STATIC_CACHE = 'opositasmart-static-v3';
-const DYNAMIC_CACHE = 'opositasmart-dynamic-v3';
+// Oposita Smart Service Worker v4.0.0
+const CACHE_NAME = 'opositasmart-cache-v4';
+const STATIC_CACHE = 'opositasmart-static-v4';
+const DYNAMIC_CACHE = 'opositasmart-dynamic-v4';
 
 // Assets to cache immediately on install
 const STATIC_ASSETS = [
@@ -64,9 +64,9 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(networkFirst(request));
 });
 
-// Check if URL is a static asset
+// Check if URL is a static asset (images/fonts only - NOT JS/CSS which use Vite hashed names)
 function isStaticAsset(url) {
-  const staticExtensions = ['.js', '.css', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.woff', '.woff2', '.ttf'];
+  const staticExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.woff', '.woff2', '.ttf', '.ico'];
   return staticExtensions.some(ext => url.pathname.endsWith(ext));
 }
 
@@ -124,7 +124,7 @@ async function updateCache(request) {
       const cache = await caches.open(STATIC_CACHE);
       cache.put(request, networkResponse.clone());
     }
-  } catch (error) {
+  } catch {
     // Silently fail - we already have cached version
   }
 }
