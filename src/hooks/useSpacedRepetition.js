@@ -105,7 +105,8 @@ export function useStudySession(config = {}) {
         startedAt,
         completedAt: now,
         timeSeconds,
-        testType: config.mode || 'practice'
+        testType: config.mode || 'practice',
+        temaFilter: config.tema || null
       });
 
       // Also save daily aggregate to study_history
@@ -113,7 +114,7 @@ export function useStudySession(config = {}) {
     } catch (err) {
       console.error('Error recording session:', err);
     }
-  }, [user?.id, sessionStats, config.mode]);
+  }, [user?.id, sessionStats, config.mode, config.tema]);
 
   // Get current question
   const currentQuestion = questions[currentIndex] || null;

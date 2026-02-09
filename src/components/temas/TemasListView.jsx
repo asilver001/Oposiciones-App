@@ -11,7 +11,10 @@ import {
   Sparkles,
   Play,
   Lock,
-  Unlock
+  Unlock,
+  Target,
+  TrendingUp,
+  BarChart3
 } from 'lucide-react';
 import EmptyState from '../common/EmptyState';
 import DevModeRandomizer from '../dev/DevModeRandomizer';
@@ -20,15 +23,20 @@ import {
   getRecommendedOrder
 } from '../../data/topicPrerequisites';
 
-/**
- * TemasListView - Topic list page with filtering and progress tracking
- *
- * Props:
- * - topics: array of topic objects
- * - topicsByBlock: object mapping block names to topic arrays
- * - onTopicSelect: function called when a topic is selected
- * - loading: boolean indicating loading state
- */
+// Thematic sub-groupings for Auxiliar Administrativo AGE
+// Maps topic numbers to their thematic sub-group within a block
+const SUBGROUPS = {
+  'Constitucion Espanola': [1, 2, 3, 4, 5],
+  'Organizacion y Gobierno': [6, 7, 8, 9, 10],
+  'Empleo Publico y Procedimiento': [11, 12, 13, 14, 15, 16]
+};
+
+// Icons for sub-groups
+const SUBGROUP_ICONS = {
+  'Constitucion Espanola': '📜',
+  'Organizacion y Gobierno': '🏛️',
+  'Empleo Publico y Procedimiento': '👥'
+};
 
 // Status configuration with colors and labels
 const statusConfig = {
@@ -38,15 +46,19 @@ const statusConfig = {
     bgColor: 'bg-green-100',
     borderColor: 'border-green-200',
     icon: CheckCircle,
-    iconColor: 'text-green-500'
+    iconColor: 'text-green-500',
+    ctaLabel: 'Repasar',
+    ctaColor: 'bg-green-600'
   },
   avanzando: {
     label: 'Avanzando',
     color: 'text-blue-600',
     bgColor: 'bg-blue-100',
     borderColor: 'border-blue-200',
-    icon: Clock,
-    iconColor: 'text-blue-500'
+    icon: TrendingUp,
+    iconColor: 'text-blue-500',
+    ctaLabel: 'Continuar',
+    ctaColor: 'bg-blue-600'
   },
   progreso: {
     label: 'En progreso',
@@ -54,7 +66,9 @@ const statusConfig = {
     bgColor: 'bg-brand-100',
     borderColor: 'border-brand-200',
     icon: BookOpen,
-    iconColor: 'text-brand-500'
+    iconColor: 'text-brand-500',
+    ctaLabel: 'Continuar',
+    ctaColor: 'bg-brand-600'
   },
   nuevo: {
     label: 'Nuevo',
@@ -62,7 +76,9 @@ const statusConfig = {
     bgColor: 'bg-gray-100',
     borderColor: 'border-gray-200',
     icon: Sparkles,
-    iconColor: 'text-gray-400'
+    iconColor: 'text-gray-400',
+    ctaLabel: 'Empezar',
+    ctaColor: 'bg-brand-600'
   },
   riesgo: {
     label: 'Repasar',
@@ -70,7 +86,9 @@ const statusConfig = {
     bgColor: 'bg-amber-100',
     borderColor: 'border-amber-200',
     icon: AlertCircle,
-    iconColor: 'text-amber-500'
+    iconColor: 'text-amber-500',
+    ctaLabel: 'Repasar',
+    ctaColor: 'bg-amber-600'
   },
   en_riesgo: {
     label: 'En riesgo',
@@ -78,11 +96,11 @@ const statusConfig = {
     bgColor: 'bg-red-100',
     borderColor: 'border-red-200',
     icon: AlertCircle,
-    iconColor: 'text-red-500'
+    iconColor: 'text-red-500',
+    ctaLabel: 'Repasar',
+    ctaColor: 'bg-red-600'
   }
 };
-
-// Block names are now dynamic from the data
 
 /**
  * StatusBadge - Displays status with icon and color
@@ -100,28 +118,43 @@ function StatusBadge({ status }) {
 }
 
 /**
+ * AccuracyBadge - Color-coded accuracy percentage
+ */
+function AccuracyBadge({ accuracy }) {
+  if (accuracy === 0) return null;
+
+  let colorClass = 'text-green-600 bg-green-50';
+  if (accuracy < 60) colorClass = 'text-red-600 bg-red-50';
+  else if (accuracy < 80) colorClass = 'text-amber-600 bg-amber-50';
+
+  return (
+    <span className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-xs font-medium ${colorClass}`}>
+      <Target className="w-3 h-3" />
+      {accuracy}%
+    </span>
+  );
+}
+
+/**
  * ProgressBar - Visual progress indicator
  */
 function ProgressBar({ percentage, status }) {
-  const getGradient = () => {
+  const getColor = () => {
     switch (status) {
-      case 'dominado':
-        return 'bg-green-500';
-      case 'avanzando':
-        return 'bg-amber-500';
-      case 'en_riesgo':
-        return 'bg-red-500';
-      default:
-        return 'bg-brand-500';
+      case 'dominado': return 'bg-green-500';
+      case 'avanzando': return 'bg-blue-500';
+      case 'en_riesgo': return 'bg-red-500';
+      case 'riesgo': return 'bg-amber-500';
+      default: return 'bg-brand-500';
     }
   };
 
   return (
     <div className="w-full bg-gray-100 rounded-full h-2 overflow-hidden">
       <motion.div
-        className={`h-full ${getGradient()} rounded-full`}
+        className={`h-full ${getColor()} rounded-full`}
         initial={{ width: 0 }}
-        animate={{ width: `${percentage}%` }}
+        animate={{ width: `${Math.min(percentage, 100)}%` }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
       />
     </div>
@@ -129,10 +162,14 @@ function ProgressBar({ percentage, status }) {
 }
 
 /**
- * TopicCard - Individual topic card
+ * TopicCard - Enhanced individual topic card with session stats
  */
 function TopicCard({ topic, onSelect, locked, lockMessage, hasPrereqs }) {
   const config = statusConfig[topic.status] || statusConfig.nuevo;
+
+  const sessionQuestions = topic.sessionQuestions || 0;
+  const sessionAccuracy = topic.sessionAccuracy || 0;
+  const sessionsCount = topic.sessionsCompleted || 0;
 
   return (
     <motion.button
@@ -151,55 +188,124 @@ function TopicCard({ topic, onSelect, locked, lockMessage, hasPrereqs }) {
         </div>
       )}
 
-      <div className="flex items-start justify-between gap-3 mb-3">
+      <div className="flex items-start justify-between gap-3 mb-2">
         <div className="flex-1 min-w-0">
-          <h4 className={`font-semibold truncate ${locked ? 'text-gray-500' : 'text-gray-900'}`}>
-            {topic.name}
-          </h4>
+          <div className="flex items-center gap-2">
+            <span className="text-xs font-bold text-gray-400 shrink-0">T{topic.number}</span>
+            <h4 className={`font-semibold truncate text-sm ${locked ? 'text-gray-500' : 'text-gray-900'}`}>
+              {topic.name}
+            </h4>
+          </div>
           {locked && lockMessage ? (
-            <p className="text-xs text-gray-400 mt-0.5">
-              {lockMessage}
-            </p>
+            <p className="text-xs text-gray-400 mt-0.5">{lockMessage}</p>
           ) : (
-            <p className="text-xs text-gray-500 mt-0.5">
-              {topic.questionsAnswered || 0} de {topic.questionsTotal || 0} preguntas
-            </p>
+            <div className="flex items-center gap-2 mt-1">
+              <p className="text-xs text-gray-500">
+                {topic.questionsAnswered || 0}/{topic.questionsTotal || 0} preguntas
+              </p>
+              {sessionQuestions > 0 && (
+                <span className="text-xs text-gray-400">
+                  · {sessionsCount} {sessionsCount === 1 ? 'sesion' : 'sesiones'}
+                </span>
+              )}
+            </div>
           )}
         </div>
-        {!locked && <StatusBadge status={topic.status} />}
+        <div className="flex items-center gap-1.5 shrink-0">
+          {!locked && <AccuracyBadge accuracy={topic.accuracy || sessionAccuracy} />}
+          {!locked && <StatusBadge status={topic.status} />}
+        </div>
       </div>
 
       <div className="flex items-center gap-3">
         <div className="flex-1">
-          <ProgressBar percentage={locked ? 0 : (topic.progress || 0)} status={locked ? 'nuevo' : topic.status} />
+          <ProgressBar
+            percentage={locked ? 0 : (topic.progress || 0)}
+            status={locked ? 'nuevo' : topic.status}
+          />
         </div>
         <span className={`text-sm font-bold min-w-[40px] text-right ${locked ? 'text-gray-400' : 'text-gray-700'}`}>
           {locked ? '--' : `${topic.progress || 0}%`}
         </span>
       </div>
 
-      {!locked && hasPrereqs && topic.progress > 0 && (
-        <p className="text-xs text-green-500 mt-2 flex items-center gap-1">
-          <Unlock className="w-3 h-3" /> Desbloqueado
-        </p>
-      )}
-
-      {!locked && topic.lastPracticed && (
-        <p className="text-xs text-gray-400 mt-2">
-          Ultima practica: {topic.lastPracticed}
-        </p>
-      )}
+      {/* Bottom row: unlock badge + CTA */}
+      <div className="flex items-center justify-between mt-2">
+        <div>
+          {!locked && hasPrereqs && topic.progress > 0 && (
+            <p className="text-xs text-green-500 flex items-center gap-1">
+              <Unlock className="w-3 h-3" /> Desbloqueado
+            </p>
+          )}
+          {!locked && topic.lastPracticed && (
+            <p className="text-xs text-gray-400">
+              Ultima: {topic.lastPracticed}
+            </p>
+          )}
+        </div>
+        {!locked && (
+          <span className={`text-xs font-semibold text-white px-3 py-1 rounded-full ${config.ctaColor}`}>
+            {config.ctaLabel}
+          </span>
+        )}
+      </div>
     </motion.button>
   );
 }
 
 /**
- * BlockSection - Collapsible block section
+ * SubgroupHeader - Thematic sub-group label
  */
-function BlockSection({ blockName, topics, isExpanded, onToggle, onTopicSelect, userProgress }) {
+function SubgroupHeader({ name, icon, topicCount }) {
+  return (
+    <div className="flex items-center gap-2 pt-2 pb-1">
+      <span className="text-sm">{icon}</span>
+      <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">{name}</span>
+      <span className="text-xs text-gray-400">({topicCount})</span>
+    </div>
+  );
+}
+
+/**
+ * BlockSection - Collapsible block section with sub-groups
+ */
+function BlockSection({ blockName, topics, isExpanded, onToggle, onTopicSelect }) {
   const totalProgress = topics.length > 0
     ? Math.round(topics.reduce((sum, t) => sum + (t.progress || 0), 0) / topics.length)
     : 0;
+
+  const dominadosCount = topics.filter(t => t.status === 'dominado').length;
+  const totalQuestionsPracticed = topics.reduce((sum, t) => sum + (t.sessionQuestions || 0), 0);
+
+  // Group topics into sub-groups
+  const subgroupedTopics = useMemo(() => {
+    const groups = [];
+    const assigned = new Set();
+
+    // Check each subgroup
+    Object.entries(SUBGROUPS).forEach(([sgName, sgTopicNums]) => {
+      const sgTopics = topics.filter(t => sgTopicNums.includes(t.number));
+      if (sgTopics.length > 0) {
+        groups.push({
+          name: sgName,
+          icon: SUBGROUP_ICONS[sgName] || '📚',
+          topics: sgTopics
+        });
+        sgTopics.forEach(t => assigned.add(t.id));
+      }
+    });
+
+    // Any topics not in a subgroup
+    const unassigned = topics.filter(t => !assigned.has(t.id));
+    if (unassigned.length > 0 && groups.length > 0) {
+      groups.push({ name: 'Otros', icon: '📚', topics: unassigned });
+    } else if (groups.length === 0) {
+      // No subgroups match — render flat
+      groups.push({ name: null, icon: null, topics });
+    }
+
+    return groups;
+  }, [topics]);
 
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
@@ -212,8 +318,11 @@ function BlockSection({ blockName, topics, isExpanded, onToggle, onTopicSelect, 
             <BookOpen className="w-5 h-5 text-brand-600" />
           </div>
           <div className="text-left">
-            <h3 className="font-semibold text-gray-900">{blockName}</h3>
-            <p className="text-xs text-gray-500">{topics.length} temas</p>
+            <h3 className="font-semibold text-gray-900 text-sm">{blockName}</h3>
+            <p className="text-xs text-gray-500">
+              {topics.length} temas · {dominadosCount} dominados
+              {totalQuestionsPracticed > 0 && ` · ${totalQuestionsPracticed} practicadas`}
+            </p>
           </div>
         </div>
 
@@ -239,19 +348,30 @@ function BlockSection({ blockName, topics, isExpanded, onToggle, onTopicSelect, 
             transition={{ duration: 0.3, ease: 'easeInOut' }}
             className="overflow-hidden"
           >
-            <div className="px-4 pb-4 space-y-3">
-              {topics.map((topic) => {
-                return (
-                  <TopicCard
-                    key={topic.id}
-                    topic={topic}
-                    onSelect={onTopicSelect}
-                    locked={false}
-                    lockMessage={null}
-                    hasPrereqs={false}
-                  />
-                );
-              })}
+            <div className="px-4 pb-4">
+              {subgroupedTopics.map((sg, sgIdx) => (
+                <div key={sg.name || sgIdx}>
+                  {sg.name && (
+                    <SubgroupHeader
+                      name={sg.name}
+                      icon={sg.icon}
+                      topicCount={sg.topics.length}
+                    />
+                  )}
+                  <div className="space-y-3 mb-2">
+                    {sg.topics.map((topic) => (
+                      <TopicCard
+                        key={topic.id}
+                        topic={topic}
+                        onSelect={onTopicSelect}
+                        locked={false}
+                        lockMessage={null}
+                        hasPrereqs={false}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </motion.div>
         )}
@@ -295,7 +415,7 @@ function NoSearchResults({ searchQuery, onClear }) {
         No se encontraron temas
       </h3>
       <p className="text-gray-500 mb-4">
-        No hay temas que coincidan con "{searchQuery}"
+        No hay temas que coincidan con &quot;{searchQuery}&quot;
       </p>
       <button
         onClick={onClear}
@@ -354,32 +474,34 @@ export default function TemasListView({
     if (topics.length === 0) return null;
 
     return topics.map((topic) => {
-      // Progress is indexed by topic.number (tema field in questions table)
       const progressKey = topic.number ?? topic.id;
       const progress = userProgress[progressKey] || {
         answered: 0, correct: 0, accuracy: 0,
-        new: 0, learning: 0, review: 0, relearning: 0, mastered: 0, masteryRate: 0
+        new: 0, learning: 0, review: 0, relearning: 0, mastered: 0, masteryRate: 0,
+        sessionsCompleted: 0, sessionQuestions: 0, sessionCorrect: 0, sessionTime: 0
       };
 
       const totalCards = progress.new + progress.learning + progress.review + progress.relearning;
       const questionsTotal = topic.questionCount || 20;
-
-      // Calculate progress percentage based on mastery
       const progressPercent = progress.masteryRate || 0;
 
-      // Determine status based on FSRS data
       let status = 'nuevo';
-      if (totalCards === 0) {
+      if (totalCards === 0 && !progress.sessionsCompleted) {
         status = 'nuevo';
       } else if (progress.masteryRate >= 80 && progress.accuracy >= 75) {
         status = 'dominado';
       } else if (progress.masteryRate >= 50 || progress.accuracy >= 65) {
         status = 'avanzando';
       } else if (progress.relearning > 0 || progress.accuracy < 50) {
-        status = 'riesgo';
+        status = totalCards > 0 ? 'riesgo' : 'progreso';
       } else {
         status = 'progreso';
       }
+
+      // Session-based accuracy
+      const sessionAccuracy = progress.sessionQuestions > 0
+        ? Math.round((progress.sessionCorrect / progress.sessionQuestions) * 100)
+        : 0;
 
       return {
         ...topic,
@@ -388,6 +510,9 @@ export default function TemasListView({
         questionsAnswered: totalCards,
         questionsTotal,
         accuracy: progress.accuracy || 0,
+        sessionsCompleted: progress.sessionsCompleted || 0,
+        sessionQuestions: progress.sessionQuestions || 0,
+        sessionAccuracy,
         fsrs: {
           new: progress.new,
           learning: progress.learning,
@@ -405,35 +530,38 @@ export default function TemasListView({
     if (!simulationMode || topics.length === 0) return null;
 
     return topics.map((topic) => {
-      let progress, status, questionsAnswered;
+      let progress, status, questionsAnswered, sessionsCompleted, sessionQuestions;
       const questionsTotal = topic.questionsTotal || 20;
 
       switch (simulationMode) {
         case 'nuevo':
-          progress = 0;
-          status = 'nuevo';
-          questionsAnswered = 0;
+          progress = 0; status = 'nuevo'; questionsAnswered = 0;
+          sessionsCompleted = 0; sessionQuestions = 0;
           break;
         case 'activo':
-          // Some topics in progress (30-60%), mixed statuses
           progress = Math.floor(Math.random() * 31) + 30;
-          status = Math.random() > 0.5 ? 'avanzando' : 'nuevo';
+          status = Math.random() > 0.5 ? 'avanzando' : 'progreso';
           questionsAnswered = Math.floor(questionsTotal * (progress / 100));
+          sessionsCompleted = Math.floor(Math.random() * 5) + 1;
+          sessionQuestions = questionsAnswered * 2;
           break;
         case 'veterano':
-          // Most topics at 70-100%, many 'dominado'
           progress = Math.floor(Math.random() * 31) + 70;
           status = progress >= 85 ? 'dominado' : 'avanzando';
           questionsAnswered = Math.floor(questionsTotal * (progress / 100));
+          sessionsCompleted = Math.floor(Math.random() * 10) + 5;
+          sessionQuestions = questionsAnswered * 3;
           break;
         case 'aleatorio':
         default:
           progress = Math.floor(Math.random() * 101);
           if (progress < 20) status = 'nuevo';
-          else if (progress < 60) status = 'avanzando';
+          else if (progress < 60) status = 'progreso';
           else if (progress >= 85) status = 'dominado';
-          else status = Math.random() > 0.7 ? 'en_riesgo' : 'avanzando';
+          else status = Math.random() > 0.7 ? 'riesgo' : 'avanzando';
           questionsAnswered = Math.floor(questionsTotal * (progress / 100));
+          sessionsCompleted = progress > 0 ? Math.floor(Math.random() * 8) + 1 : 0;
+          sessionQuestions = questionsAnswered * 2;
           break;
       }
 
@@ -442,7 +570,11 @@ export default function TemasListView({
         progress,
         status,
         questionsAnswered,
-        questionsTotal
+        questionsTotal,
+        accuracy: progress > 0 ? Math.floor(Math.random() * 41) + 60 : 0,
+        sessionsCompleted,
+        sessionQuestions,
+        sessionAccuracy: progress > 0 ? Math.floor(Math.random() * 41) + 60 : 0
       };
     });
   }, [simulationMode, topics]);
@@ -452,11 +584,8 @@ export default function TemasListView({
   const effectiveTopics = generateSimulatedTopics || realTopicProgress || topics;
 
   // Normalize topicsByBlock: enrich block topics with progress data
-  // Uses effectiveTopics (simulated > realProgress > raw) as the source of truth
   const normalizedBlocks = useMemo(() => {
     const result = {};
-
-    // Build lookup map from effectiveTopics (already has progress/status/counts)
     const enrichedMap = new Map();
     effectiveTopics.forEach((t) => enrichedMap.set(t.id, t));
 
@@ -465,7 +594,6 @@ export default function TemasListView({
         const blockTopics = block.topics.map((topic) => {
           const enriched = enrichedMap.get(topic.id);
           if (enriched) return enriched;
-          // Fallback: at minimum set questionsTotal from questionCount
           return { ...topic, questionsTotal: topic.questionCount || 0, questionsAnswered: 0 };
         });
 
@@ -494,19 +622,16 @@ export default function TemasListView({
     const result = {};
 
     Object.entries(normalizedBlocks).forEach(([blockName, block]) => {
-      // Filter by selected block
       if (selectedBlock && blockName !== selectedBlock) return;
 
-      // Filter by search query
       const filtered = (block.topics || []).filter((topic) =>
-        topic.name.toLowerCase().includes(searchQuery.toLowerCase())
+        topic.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        `tema ${topic.number}`.includes(searchQuery.toLowerCase()) ||
+        `t${topic.number}`.includes(searchQuery.toLowerCase())
       );
 
       if (filtered.length > 0) {
-        result[blockName] = {
-          ...block,
-          topics: filtered
-        };
+        result[blockName] = { ...block, topics: filtered };
       }
     });
 
@@ -517,31 +642,29 @@ export default function TemasListView({
   const toggleBlock = (blockName) => {
     setExpandedBlocks((prev) => {
       const next = new Set(prev);
-      if (next.has(blockName)) {
-        next.delete(blockName);
-      } else {
-        next.add(blockName);
-      }
+      if (next.has(blockName)) next.delete(blockName);
+      else next.add(blockName);
       return next;
     });
   };
 
-  // Calculate overall stats (using effectiveTopics for simulation support)
+  // Calculate overall stats
   const overallStats = useMemo(() => {
     const total = effectiveTopics.length;
     const dominados = effectiveTopics.filter((t) => t.status === 'dominado').length;
-    const enRiesgo = effectiveTopics.filter((t) => t.status === 'en_riesgo').length;
+    const enRiesgo = effectiveTopics.filter((t) => t.status === 'riesgo' || t.status === 'en_riesgo').length;
     const avgProgress = total > 0
       ? Math.round(effectiveTopics.reduce((sum, t) => sum + (t.progress || 0), 0) / total)
       : 0;
+    const totalPracticed = effectiveTopics.reduce((sum, t) => sum + (t.sessionQuestions || 0), 0);
+    const totalSessions = effectiveTopics.reduce((sum, t) => sum + (t.sessionsCompleted || 0), 0);
 
-    return { total, dominados, enRiesgo, avgProgress };
+    return { total, dominados, enRiesgo, avgProgress, totalPracticed, totalSessions };
   }, [effectiveTopics]);
 
   // Recommended topics to study next
   const recommendedTopics = useMemo(() => {
     const recommended = getRecommendedOrder(userProgress);
-    // Map topic numbers to their enriched data
     return recommended
       .map((num) => effectiveTopics.find((t) => (t.number ?? t.id) === num))
       .filter(Boolean)
@@ -549,25 +672,16 @@ export default function TemasListView({
   }, [userProgress, effectiveTopics]);
 
   if (loading) {
-    return (
-      <div className="space-y-6">
-        <LoadingState />
-      </div>
-    );
+    return <div className="space-y-6"><LoadingState /></div>;
   }
 
-  // Check if there are no topics at all
-  const hasNoTopics = topics.length === 0;
-
-  if (hasNoTopics) {
+  if (topics.length === 0) {
     return (
       <div className="space-y-6">
         <EmptyState
           icon={BookOpen}
           title="No hay temas disponibles"
-          description="Aún no hay temas cargados en el sistema. Los temas estarán disponibles pronto."
-          actionLabel="Explorar contenido"
-          onAction={() => onTopicSelect?.(null)}
+          description="Los temas estaran disponibles pronto."
           variant="purple"
         />
       </div>
@@ -577,28 +691,31 @@ export default function TemasListView({
   const hasResults = Object.keys(filteredTopicsByBlock).length > 0;
 
   return (
-    <div className="space-y-6">
-      {/* Progress Summary */}
-      <div className="flex items-center justify-end">
-        <div className="text-right">
-          <p className="text-2xl font-bold text-brand-600">{overallStats.avgProgress}%</p>
-          <p className="text-xs text-gray-500">progreso total</p>
+    <div className="space-y-5">
+      {/* Progress Header */}
+      <div className="bg-gradient-to-br from-brand-50 to-purple-50 rounded-2xl p-4 border border-brand-100">
+        <div className="flex items-center justify-between mb-3">
+          <h2 className="text-base font-bold text-gray-900">Tu progreso</h2>
+          <span className="text-2xl font-bold text-brand-600">{overallStats.avgProgress}%</span>
         </div>
-      </div>
-
-      {/* Quick Stats */}
-      <div className="grid grid-cols-3 gap-3">
-        <div className="bg-white rounded-xl p-3 shadow-sm text-center">
-          <p className="text-xl font-bold text-gray-900">{overallStats.total}</p>
-          <p className="text-xs text-gray-500">Total</p>
-        </div>
-        <div className="bg-green-50 rounded-xl p-3 shadow-sm text-center">
-          <p className="text-xl font-bold text-green-600">{overallStats.dominados}</p>
-          <p className="text-xs text-green-600">Dominados</p>
-        </div>
-        <div className="bg-red-50 rounded-xl p-3 shadow-sm text-center">
-          <p className="text-xl font-bold text-red-600">{overallStats.enRiesgo}</p>
-          <p className="text-xs text-red-600">En riesgo</p>
+        <ProgressBar percentage={overallStats.avgProgress} status="progreso" />
+        <div className="grid grid-cols-4 gap-2 mt-3">
+          <div className="text-center">
+            <p className="text-lg font-bold text-gray-900">{overallStats.total}</p>
+            <p className="text-[10px] text-gray-500">Temas</p>
+          </div>
+          <div className="text-center">
+            <p className="text-lg font-bold text-green-600">{overallStats.dominados}</p>
+            <p className="text-[10px] text-green-600">Dominados</p>
+          </div>
+          <div className="text-center">
+            <p className="text-lg font-bold text-amber-600">{overallStats.enRiesgo}</p>
+            <p className="text-[10px] text-amber-600">Repasar</p>
+          </div>
+          <div className="text-center">
+            <p className="text-lg font-bold text-brand-600">{overallStats.totalPracticed}</p>
+            <p className="text-[10px] text-brand-600">Practicadas</p>
+          </div>
         </div>
       </div>
 
@@ -674,7 +791,6 @@ export default function TemasListView({
               isExpanded={expandedBlocks.has(blockName)}
               onToggle={() => toggleBlock(blockName)}
               onTopicSelect={onTopicSelect}
-              userProgress={userProgress}
             />
           ))}
         </div>

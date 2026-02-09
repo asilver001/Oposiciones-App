@@ -6,8 +6,8 @@
 
 ## Estado Actual
 
-**Ultima actualizacion:** 2026-02-08
-**Fase del proyecto:** Beta-Ready (~85% completado)
+**Ultima actualizacion:** 2026-02-09
+**Fase del proyecto:** Beta-Ready (~88% completado)
 **Branch actual:** feature/feature-based-architecture
 **Publish readiness:** SI beta cerrada / Produccion tras testing manual
 
@@ -50,6 +50,11 @@
 | 9 | [x] Loading timeouts + retry buttons en sesiones | Sonnet | 15s timeout + 3 retries en 3 sesiones |
 | 10 | [x] Estados vacios consistentes en todas las paginas | Sonnet | EmptyState en RecursosPage + 3 study sessions |
 | 11 | [x] Topic prerequisite mapping | Sonnet | topicPrerequisites.js + locked cards en TemasListView |
+| 12 | [x] Temas UI mejorada con sub-agrupaciones | Opus | TemasListView rewrite, bloques tematicos, cards mejoradas |
+| 13 | [x] Roadmap interactivo de temas | Opus | TopicRoadmap canvas-based, layout top-to-bottom con bezier curves |
+| 14 | [x] Metas semanales configurables | Opus | WeeklyGoalCard en home, GoalsConfig en settings, zustand store |
+| 15 | [x] Nivel/Ranking con progreso | Opus | LevelCard mejorada con progress-to-next-level bar |
+| 16 | [x] Fix tracking progreso por tema | Opus | Schema mismatch test_sessions, column names, temaFilter wiring |
 
 ---
 
@@ -119,6 +124,41 @@
 ---
 
 ## COMPLETADO
+
+### Temas Sprint Feb 9, 2026 (Opus)
+
+**Tracking Fix:**
+- [x] Fix schema mismatch: `correct_count`→`correct_answers`, `time_seconds`→`time_spent_seconds`, etc. en `recordTestSession`
+- [x] Fix `topicId: null` → `temaFilter` ahora se pasa correctamente desde `completeSession`
+- [x] Fix `useActivityData` consultaba `quiz_sessions` (no existe) → `test_sessions`
+- [x] Fix `useAnalytics` usaba `topic_id` (single) → `tema_filter` (array)
+- [x] Fix `useTopics` ahora tambien fetch session-based stats per tema
+
+**Temas UI Mejorada:**
+- [x] TemasListView rewrite: sub-agrupaciones por bloque tematico (Constitucion, Organizacion, Empleo)
+- [x] Cards mejoradas con: badge de accuracy, sessions completadas, CTA contextual
+- [x] Progress header con 4-column stats (Temas, Dominados, Repasar, Practicadas)
+- [x] Busqueda mejorada (soporta "tema N" y "tN" patterns)
+- [x] Filtro por bloque tematico (Todos, Org. Publica, Act. Administrativa)
+
+**Roadmap Interactivo:**
+- [x] TopicRoadmap.jsx: canvas-based dependency graph
+- [x] Layout top-to-bottom (Sugiyama BFS) con bezier curves
+- [x] Progress arcs, status colors, lock icons, hover tooltips
+- [x] Touch support para mobile
+- [x] View toggle (List/Network) en TemasPage
+- [x] Fix node duplication bug (dedup por topic.number)
+
+**Metas Semanales:**
+- [x] `weeklyGoalQuestions` en useUserStore (default: 75)
+- [x] WeeklyGoalCard en SoftFortHome: progress bar + day-of-week bar chart
+- [x] GoalsConfig panel en SettingsModal: daily (10/15/20/30) + weekly (50/75/100/150)
+- [x] Filosofia "sin presion" con mensaje orientativo
+
+**Nivel/Ranking:**
+- [x] LevelCard mejorada con progress-to-next-level bar
+- [x] 10 niveles con nombres y emojis (Principiante → Leyenda)
+- [x] Muestra preguntas restantes para siguiente nivel
 
 ### Nice-to-Have Sprint Feb 8, 2026 (Swarm Team - 4 agentes Sonnet)
 
@@ -231,6 +271,7 @@
 
 | Fecha | Resumen |
 |-------|---------|
+| 2026-02-09 | TEMAS SPRINT: Fix tracking progreso (schema mismatch), TemasListView rewrite con sub-agrupaciones, TopicRoadmap canvas interactivo, metas semanales configurables, nivel/ranking con progress bar |
 | 2026-02-08 | NICE-TO-HAVE SPRINT: 4-agent Sonnet swarm. Analytics, timeouts, empty states, prerequisites |
 | 2026-02-08 | MEGA SPRINT: 4-agent swarm team. 16 items P0/P1/P2 completados. Score 6.3→8.2/10 |
 | 2026-02-08 | Full assessment (UI, UX, Backend, Edu, Code). Score 6.3/10. Roadmap definido |

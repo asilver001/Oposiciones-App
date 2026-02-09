@@ -160,6 +160,34 @@ export function useTopics() {
         p.masteryRate = totalCards > 0 ? Math.round((p.mastered / totalCards) * 100) : 0;
       });
 
+      // Also fetch session-based stats per tema from test_sessions
+      const { data: sessions } = await supabase
+        .from('test_sessions')
+        .select('tema_filter, total_questions, correct_answers, time_spent_seconds')
+        .eq('user_id', user.id)
+        .eq('is_completed', true);
+
+      if (sessions) {
+        sessions.forEach(s => {
+          const temas = s.tema_filter;
+          if (!temas || temas.length === 0) return;
+          temas.forEach(temaNum => {
+            if (!progress[temaNum]) {
+              progress[temaNum] = {
+                answered: 0, correct: 0, accuracy: 0,
+                new: 0, learning: 0, review: 0, relearning: 0, mastered: 0, masteryRate: 0,
+                sessionsCompleted: 0, sessionQuestions: 0, sessionCorrect: 0, sessionTime: 0
+              };
+            }
+            const p = progress[temaNum];
+            p.sessionsCompleted = (p.sessionsCompleted || 0) + 1;
+            p.sessionQuestions = (p.sessionQuestions || 0) + (s.total_questions || 0);
+            p.sessionCorrect = (p.sessionCorrect || 0) + (s.correct_answers || 0);
+            p.sessionTime = (p.sessionTime || 0) + (s.time_spent_seconds || 0);
+          });
+        });
+      }
+
       setUserProgress(progress);
     } catch (err) {
       console.error('Error fetching user progress:', err);

@@ -16,7 +16,12 @@ export const TOPIC_PREREQUISITES = {
   8: [3],
   9: [3, 8],
   10: [3, 8],
-  11: [3]
+  11: [3],
+  12: [],
+  13: [],
+  14: [],
+  15: [],
+  16: []
 };
 
 const TOPIC_SHORT_NAMES = {
@@ -30,7 +35,12 @@ const TOPIC_SHORT_NAMES = {
   8: 'Acto Administrativo',
   9: 'Procedimiento administrativo',
   10: 'Contratos del sector publico',
-  11: 'Funcion publica'
+  11: 'Funcion publica',
+  12: 'Proteccion de Datos',
+  13: 'Personal al Servicio AAPP',
+  14: 'Presupuestos Generales',
+  15: 'Prevencion de Riesgos',
+  16: 'Politicas de Igualdad'
 };
 
 /**

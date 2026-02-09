@@ -32,7 +32,7 @@ function computeVelocity(sessionHistory) {
     const weekStart = getMonday(date);
     const key = weekStart.toISOString().slice(0, 10);
     if (!weekMap[key]) weekMap[key] = { correct: 0, total: 0 };
-    weekMap[key].correct += (s.correctas || s.correct_count || 0);
+    weekMap[key].correct += (s.correctas || s.correct_answers || 0);
     weekMap[key].total += (s.total_preguntas || s.total_questions || 0);
   });
 
@@ -70,8 +70,8 @@ function computeReadiness(totalStats, fsrsStats, sessionHistory, streak) {
   // Topic coverage: count unique topics from session history
   const topicsStudied = new Set();
   (sessionHistory || []).forEach(s => {
-    const tema = s.tema || s.topic_id || s.tema_id;
-    if (tema) topicsStudied.add(tema);
+    const temas = s.tema_filter || (s.tema ? [s.tema] : []);
+    temas.forEach(t => topicsStudied.add(t));
   });
   const coverageRatio = Math.min(topicsStudied.size / TOTAL_TOPICS, 1);
 
@@ -113,20 +113,23 @@ function computeTopicStrength(sessionHistory) {
 
   const topicMap = {};
   sessionHistory.forEach(s => {
-    const tema = s.tema || s.topic_id || s.tema_id;
-    if (!tema) return;
+    const temas = s.tema_filter || (s.tema ? [s.tema] : []);
+    if (temas.length === 0) return;
 
-    if (!topicMap[tema]) {
-      topicMap[tema] = { correct: 0, total: 0, sessions: 0, recentAccuracies: [] };
-    }
-    const correct = s.correctas || s.correct_count || 0;
+    const correct = s.correctas || s.correct_answers || 0;
     const total = s.total_preguntas || s.total_questions || 0;
-    topicMap[tema].correct += correct;
-    topicMap[tema].total += total;
-    topicMap[tema].sessions += 1;
-    if (total > 0) {
-      topicMap[tema].recentAccuracies.push(Math.round((correct / total) * 100));
-    }
+
+    temas.forEach(tema => {
+      if (!topicMap[tema]) {
+        topicMap[tema] = { correct: 0, total: 0, sessions: 0, recentAccuracies: [] };
+      }
+      topicMap[tema].correct += correct;
+      topicMap[tema].total += total;
+      topicMap[tema].sessions += 1;
+      if (total > 0) {
+        topicMap[tema].recentAccuracies.push(Math.round((correct / total) * 100));
+      }
+    });
   });
 
   const topics = Object.entries(topicMap).map(([tema, data]) => {

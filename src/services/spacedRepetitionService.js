@@ -555,7 +555,7 @@ export async function getStudyStats(userId) {
 export async function recordTestSession(userId, sessionData) {
   try {
     const {
-      topicId = null,
+      temaFilter = null,
       correctCount = 0,
       totalQuestions = 0,
       startedAt,
@@ -564,25 +564,33 @@ export async function recordTestSession(userId, sessionData) {
       testType = 'practice'
     } = sessionData;
 
-    const percentage = totalQuestions > 0
+    const scoreRaw = totalQuestions > 0
       ? Math.round((correctCount / totalQuestions) * 100)
       : 0;
 
+    const insertData = {
+      user_id: userId,
+      session_type: testType,
+      question_count_requested: totalQuestions,
+      total_questions: totalQuestions,
+      correct_answers: correctCount,
+      wrong_answers: totalQuestions - correctCount,
+      blank_answers: 0,
+      score_raw: scoreRaw,
+      started_at: startedAt || new Date().toISOString(),
+      completed_at: completedAt,
+      time_spent_seconds: timeSeconds,
+      is_completed: true
+    };
+
+    // tema_filter is INTEGER[] in DB
+    if (temaFilter != null) {
+      insertData.tema_filter = Array.isArray(temaFilter) ? temaFilter : [temaFilter];
+    }
+
     const { data, error } = await supabase
       .from('test_sessions')
-      .insert({
-        user_id: userId,
-        topic_id: topicId,
-        correct_count: correctCount,
-        incorrect_count: totalQuestions - correctCount,
-        total_questions: totalQuestions,
-        percentage,
-        started_at: startedAt || new Date().toISOString(),
-        completed_at: completedAt,
-        time_seconds: timeSeconds,
-        test_type: testType,
-        status: 'completed'
-      })
+      .insert(insertData)
       .select()
       .maybeSingle();
 

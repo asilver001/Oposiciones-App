@@ -136,8 +136,9 @@ export function useActivityData() {
       // Fetch all sessions for this user from test_sessions table
       const { data: sessions, error: sessionsError } = await supabase
         .from('test_sessions')
-        .select('id, user_id, topic_id, correct_count, total_questions, started_at, completed_at, time_seconds, percentage')
+        .select('id, user_id, tema_filter, correct_answers, total_questions, started_at, completed_at, time_spent_seconds, score_raw')
         .eq('user_id', user.id)
+        .eq('is_completed', true)
         .order('started_at', { ascending: false });
 
       if (sessionsError) {
@@ -160,7 +161,7 @@ export function useActivityData() {
         const sessionDate = new Date(session.started_at);
         let dayIndex = sessionDate.getDay() - 1; // Monday = 0
         if (dayIndex === -1) dayIndex = 6; // Sunday = 6
-        weeklyCorrect[dayIndex] += session.correct_count || 0;
+        weeklyCorrect[dayIndex] += session.correct_answers || 0;
       });
 
       setWeeklyData(weeklyCorrect);
@@ -169,10 +170,10 @@ export function useActivityData() {
       const normalizedSessions = allSessions.slice(0, 10).map(s => ({
         ...s,
         // Add normalized names for backward compatibility with ActividadContent
-        correctas: s.correct_count,
+        correctas: s.correct_answers,
         total_preguntas: s.total_questions,
         porcentaje_acierto: s.total_questions > 0
-          ? Math.round((s.correct_count / s.total_questions) * 100)
+          ? Math.round((s.correct_answers / s.total_questions) * 100)
           : 0
       }));
       setSessionHistory(normalizedSessions);
@@ -189,7 +190,7 @@ export function useActivityData() {
 
       // Calculate total stats
       const totalTests = allSessions.length;
-      const totalCorrect = allSessions.reduce((sum, s) => sum + (s.correct_count || 0), 0);
+      const totalCorrect = allSessions.reduce((sum, s) => sum + (s.correct_answers || 0), 0);
       const totalQuestions = allSessions.reduce((sum, s) => sum + (s.total_questions || 0), 0);
       const avgAccuracy = totalQuestions > 0
         ? Math.round((totalCorrect / totalQuestions) * 100)
@@ -214,7 +215,7 @@ export function useActivityData() {
       const todayStart = new Date();
       todayStart.setHours(0, 0, 0, 0);
       const todaySessions = allSessions.filter(s => new Date(s.started_at) >= todayStart);
-      const todayCorrect = todaySessions.reduce((sum, s) => sum + (s.correct_count || 0), 0);
+      const todayCorrect = todaySessions.reduce((sum, s) => sum + (s.correct_answers || 0), 0);
       const todayTotal = todaySessions.reduce((sum, s) => sum + (s.total_questions || 0), 0);
       setTodayStats({
         questionsAnswered: todayTotal,
@@ -272,12 +273,12 @@ export function useActivityData() {
       });
 
       // Calculate accuracy for this week
-      const thisWeekCorrect = thisWeekSessions.reduce((sum, s) => sum + (s.correct_count || 0), 0);
+      const thisWeekCorrect = thisWeekSessions.reduce((sum, s) => sum + (s.correct_answers || 0), 0);
       const thisWeekTotal = thisWeekSessions.reduce((sum, s) => sum + (s.total_questions || 0), 0);
       const thisWeekAvg = thisWeekTotal > 0 ? (thisWeekCorrect / thisWeekTotal) * 100 : 0;
 
       // Calculate accuracy for last week
-      const lastWeekCorrect = lastWeekSessions.reduce((sum, s) => sum + (s.correct_count || 0), 0);
+      const lastWeekCorrect = lastWeekSessions.reduce((sum, s) => sum + (s.correct_answers || 0), 0);
       const lastWeekTotal = lastWeekSessions.reduce((sum, s) => sum + (s.total_questions || 0), 0);
       const lastWeekAvg = lastWeekTotal > 0 ? (lastWeekCorrect / lastWeekTotal) * 100 : 0;
 
@@ -289,12 +290,15 @@ export function useActivityData() {
       // Find least practiced tema
       const temaLastPracticed = {};
       allSessions.forEach(session => {
-        if (session.tema_id) {
-          const existing = temaLastPracticed[session.tema_id];
-          const sessionDate = new Date(session.started_at);
-          if (!existing || sessionDate > existing) {
-            temaLastPracticed[session.tema_id] = sessionDate;
-          }
+        const temas = session.tema_filter; // INTEGER[] in DB
+        if (temas && temas.length > 0) {
+          temas.forEach(temaNum => {
+            const existing = temaLastPracticed[temaNum];
+            const sessionDate = new Date(session.started_at);
+            if (!existing || sessionDate > existing) {
+              temaLastPracticed[temaNum] = sessionDate;
+            }
+          });
         }
       });
 

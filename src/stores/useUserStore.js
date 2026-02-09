@@ -11,6 +11,7 @@ export const useUserStore = create(
         examDate: '',
         dailyGoal: 15,
         dailyGoalMinutes: 15,
+        weeklyGoalQuestions: 75,
         accountCreated: false,
         oposicion: '',
       },
@@ -59,7 +60,7 @@ export const useUserStore = create(
 
       // Reset all user data
       resetUserData: () => set({
-        userData: { name: '', email: '', examDate: '', dailyGoal: 15, dailyGoalMinutes: 15, accountCreated: false, oposicion: '' },
+        userData: { name: '', email: '', examDate: '', dailyGoal: 15, dailyGoalMinutes: 15, weeklyGoalQuestions: 75, accountCreated: false, oposicion: '' },
         streakData: { current: 0, longest: 0, lastCompletedDate: null },
         dailyTestsCount: 0,
         isPremium: false,

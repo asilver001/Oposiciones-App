@@ -10,7 +10,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   Zap, Flame, Target, Trophy, ChevronRight,
-  Info, HelpCircle, Instagram, Sparkles
+  Info, HelpCircle, Instagram, Sparkles, CalendarCheck
 } from 'lucide-react';
 import { TopBar } from '@layouts/MainLayout';
 import FortalezaVisual, { statusConfig } from './FortalezaVisual';
@@ -18,6 +18,7 @@ import EmptyState from '../common/EmptyState';
 import { StatsFlipCard } from '../common/FlipCard';
 import DevModeRandomizer, { userStates } from '../dev/DevModeRandomizer';
 import { useAuth } from '../../contexts/AuthContext';
+import { useUserStore } from '../../stores/useUserStore';
 
 // Animation presets
 const spring = {
@@ -171,33 +172,134 @@ function StatCard({ icon: Icon, value, label, colorScheme, onClick, badge, delay
 }
 
 /**
- * LevelCard - XP/Level display
+ * LevelCard - XP/Level display with progress to next level
  */
+const LEVEL_THRESHOLDS = [0, 50, 150, 300, 500, 750, 1000, 1500, 2000, 3000];
+const LEVEL_NAMES = ['Principiante', 'Iniciado', 'Estudiante', 'Avanzado', 'Constante', 'Experto', 'Veterano', 'Maestro', 'Erudito', 'Leyenda'];
+const LEVEL_EMOJIS = ['🌱', '📖', '📝', '💪', '🔥', '⭐', '🏅', '🎓', '👑', '🏆'];
+
 function LevelCard({ level, xp, description, onClick }) {
+  const currentThreshold = LEVEL_THRESHOLDS[Math.min(level - 1, LEVEL_THRESHOLDS.length - 1)] || 0;
+  const nextThreshold = LEVEL_THRESHOLDS[Math.min(level, LEVEL_THRESHOLDS.length - 1)] || currentThreshold + 100;
+  const progressToNext = nextThreshold > currentThreshold
+    ? Math.min(Math.round(((xp - currentThreshold) / (nextThreshold - currentThreshold)) * 100), 100)
+    : 100;
+  const emoji = LEVEL_EMOJIS[Math.min(level - 1, LEVEL_EMOJIS.length - 1)] || '🌱';
+  const remaining = Math.max(nextThreshold - xp, 0);
+
   return (
     <motion.button
       onClick={onClick}
-      className="col-span-2 bg-brand-600 rounded-2xl p-4 text-white flex items-center justify-between"
+      className="col-span-2 bg-brand-600 rounded-2xl p-4 text-white"
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.35 }}
       whileHover={{ scale: 1.01 }}
       whileTap={{ scale: 0.99 }}
     >
-      <div className="flex items-center gap-3">
-        <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-          <Trophy className="w-6 h-6 text-white" />
+      <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center gap-3">
+          <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl">
+            {emoji}
+          </div>
+          <div>
+            <p className="font-bold text-lg">Nivel {level}</p>
+            <p className="text-sm text-white/80">{description}</p>
+          </div>
         </div>
-        <div>
-          <p className="font-bold text-lg">Nivel {level}</p>
-          <p className="text-sm text-white/80">{description}</p>
+        <div className="text-right">
+          <p className="text-2xl font-bold">{xp}</p>
+          <p className="text-xs text-white/70">preguntas</p>
         </div>
       </div>
-      <div className="text-right">
-        <p className="text-2xl font-bold">{xp}</p>
-        <p className="text-xs text-white/70">preguntas</p>
+
+      {/* Progress to next level */}
+      <div className="w-full h-1.5 bg-white/20 rounded-full overflow-hidden">
+        <motion.div
+          className="h-full bg-white/70 rounded-full"
+          initial={{ width: 0 }}
+          animate={{ width: `${progressToNext}%` }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+        />
       </div>
+      <p className="text-xs text-white/60 mt-1.5">
+        {remaining > 0
+          ? `${remaining} preguntas para Nivel ${level + 1}`
+          : 'Nivel maximo alcanzado'}
+      </p>
     </motion.button>
+  );
+}
+
+/**
+ * WeeklyGoalCard - Shows weekly progress toward user's goal
+ */
+const DAY_LABELS = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
+
+function WeeklyGoalCard({ weeklyData = [0, 0, 0, 0, 0, 0, 0], todayStats, goal = 75 }) {
+  const weeklyTotal = weeklyData.reduce((s, d) => s + d, 0);
+  const percent = Math.min(Math.round((weeklyTotal / goal) * 100), 100);
+  const maxDay = Math.max(...weeklyData, 1);
+  const todayIdx = (() => {
+    const d = new Date().getDay();
+    return d === 0 ? 6 : d - 1; // Monday=0, Sunday=6
+  })();
+
+  return (
+    <motion.div
+      className="col-span-2 bg-white rounded-2xl p-4 border border-gray-100"
+      initial={{ y: 20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.25 }}
+    >
+      <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center gap-2">
+          <CalendarCheck className="w-5 h-5 text-brand-500" />
+          <span className="text-sm font-semibold text-gray-900">Meta semanal</span>
+        </div>
+        <span className="text-xs text-gray-500">{weeklyTotal}/{goal} preguntas</span>
+      </div>
+
+      {/* Progress bar */}
+      <div className="w-full h-2 bg-gray-100 rounded-full mb-3 overflow-hidden">
+        <motion.div
+          className="h-full rounded-full"
+          style={{ backgroundColor: percent >= 100 ? '#10b981' : 'var(--color-brand-500)' }}
+          initial={{ width: 0 }}
+          animate={{ width: `${percent}%` }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+        />
+      </div>
+
+      {/* Day bars */}
+      <div className="flex items-end gap-1 h-12">
+        {weeklyData.map((count, idx) => {
+          const barH = maxDay > 0 ? Math.max(4, (count / maxDay) * 44) : 4;
+          const isToday = idx === todayIdx;
+          return (
+            <div key={idx} className="flex-1 flex flex-col items-center gap-1">
+              <div
+                className="w-full rounded-sm transition-all"
+                style={{
+                  height: barH,
+                  backgroundColor: isToday
+                    ? 'var(--color-brand-500)'
+                    : count > 0 ? 'var(--color-brand-200)' : '#f3f4f6'
+                }}
+              />
+              <span className={`text-[10px] ${isToday ? 'font-bold text-brand-600' : 'text-gray-400'}`}>
+                {DAY_LABELS[idx]}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Motivation */}
+      {percent >= 100 && (
+        <p className="text-xs text-emerald-600 mt-2 font-medium">Meta cumplida esta semana</p>
+      )}
+    </motion.div>
   );
 }
 
@@ -273,6 +375,8 @@ export default function SoftFortHome({
   streakData = { current: 0, longest: 0 },
   totalStats = { testsCompleted: 0, questionsCorrect: 0, accuracyRate: 0, totalQuestions: 0 },
   weeklyImprovement = 0,
+  weeklyData = [0, 0, 0, 0, 0, 0, 0],
+  todayStats = { questionsAnswered: 0 },
   fortalezaData = [],
   onStartSession,
   onTopicSelect,
@@ -287,6 +391,7 @@ export default function SoftFortHome({
   showFooter = true
 }) {
   const { isAdmin } = useAuth();
+  const weeklyGoalQuestions = useUserStore((s) => s.userData.weeklyGoalQuestions) || 75;
   const [simulationMode, setSimulationMode] = useState(null);
 
   // Get simulated data when in simulation mode
@@ -432,6 +537,13 @@ export default function SoftFortHome({
           onClick={onAccuracyClick}
           badge={accuracyBadge}
           delay={0.2}
+        />
+
+        {/* Weekly Goal Card - spans 2 columns */}
+        <WeeklyGoalCard
+          weeklyData={weeklyData}
+          todayStats={todayStats}
+          goal={weeklyGoalQuestions}
         />
 
         {/* Fortaleza Visual - spans 2 columns */}

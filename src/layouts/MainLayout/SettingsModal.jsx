@@ -59,6 +59,9 @@ export default function SettingsModal({ onClose }) {
 
   const darkMode = useUserStore((s) => s.darkMode);
   const setDarkMode = useUserStore((s) => s.setDarkMode);
+  const userData = useUserStore((s) => s.userData);
+  const setUserData = useUserStore((s) => s.setUserData);
+  const [showGoalsConfig, setShowGoalsConfig] = useState(false);
 
   const isUserAdmin = isAdmin || authIsAdmin;
   const isUserReviewer = isReviewer || authIsReviewer;
@@ -198,8 +201,64 @@ export default function SettingsModal({ onClose }) {
               </div>
             </div>
             <SettingsRow icon={Bell} label="Notificaciones" onClick={() => {}} rightText="Proximamente" locked />
-            <SettingsRow icon={Calendar} label="Meta diaria" onClick={() => {}} rightText="10 preguntas" locked />
+            <SettingsRow
+              icon={Calendar}
+              label="Metas de estudio"
+              onClick={() => setShowGoalsConfig(!showGoalsConfig)}
+              rightText={`${userData.weeklyGoalQuestions || 75}/sem`}
+            />
           </div>
+
+          {/* Goals Configuration Panel */}
+          {showGoalsConfig && (
+            <div className="mt-3 bg-white rounded-xl border border-brand-200 p-4 space-y-4">
+              <h4 className="text-sm font-semibold text-gray-900">Configura tus metas</h4>
+
+              {/* Daily goal */}
+              <div>
+                <label className="block text-xs text-gray-500 mb-2">Meta diaria (preguntas)</label>
+                <div className="flex gap-2">
+                  {[10, 15, 20, 30].map(val => (
+                    <button
+                      key={val}
+                      onClick={() => setUserData({ dailyGoal: val })}
+                      className={`flex-1 py-2 text-sm font-medium rounded-lg transition ${
+                        (userData.dailyGoal || 15) === val
+                          ? 'bg-brand-600 text-white'
+                          : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                      }`}
+                    >
+                      {val}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Weekly goal */}
+              <div>
+                <label className="block text-xs text-gray-500 mb-2">Meta semanal (preguntas)</label>
+                <div className="flex gap-2">
+                  {[50, 75, 100, 150].map(val => (
+                    <button
+                      key={val}
+                      onClick={() => setUserData({ weeklyGoalQuestions: val })}
+                      className={`flex-1 py-2 text-sm font-medium rounded-lg transition ${
+                        (userData.weeklyGoalQuestions || 75) === val
+                          ? 'bg-brand-600 text-white'
+                          : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                      }`}
+                    >
+                      {val}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <p className="text-xs text-gray-400">
+                Sin presion. Estas metas son orientativas para ayudarte a mantener la constancia.
+              </p>
+            </div>
+          )}
 
           {/* Profile */}
           <SectionTitle>Perfil</SectionTitle>
