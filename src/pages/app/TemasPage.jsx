@@ -21,34 +21,35 @@ export default function TemasPage() {
     navigate(ROUTES.STUDY, { state: { topic, mode: 'practica-tema' } });
   };
 
-  // Enrich topics with progress for roadmap
+  // Enrich topics with progress for roadmap (session-based)
   const enrichedTopics = useMemo(() => {
     return topics.map(topic => {
       const progressKey = topic.number ?? topic.id;
       const progress = userProgress[progressKey] || {};
-      const totalCards = (progress.new || 0) + (progress.learning || 0) +
-        (progress.review || 0) + (progress.relearning || 0);
+      const questionsAnswered = progress.answered || progress.sessionQuestions || 0;
 
+      // Status based on session accuracy
       let status = 'nuevo';
-      if (totalCards === 0 && !progress.sessionsCompleted) {
+      if (questionsAnswered === 0 && !progress.sessionsCompleted) {
         status = 'nuevo';
-      } else if (progress.masteryRate >= 80 && progress.accuracy >= 75) {
+      } else if (progress.accuracy >= 80) {
         status = 'dominado';
-      } else if (progress.masteryRate >= 50 || progress.accuracy >= 65) {
+      } else if (progress.accuracy >= 60) {
         status = 'avanzando';
-      } else if (progress.relearning > 0 || progress.accuracy < 50) {
-        status = totalCards > 0 ? 'riesgo' : 'progreso';
+      } else if (progress.accuracy < 50 && questionsAnswered > 0) {
+        status = 'riesgo';
       } else {
         status = 'progreso';
       }
 
       return {
         ...topic,
-        progress: progress.masteryRate || 0,
+        progress: progress.accuracy || 0,
         status,
         accuracy: progress.accuracy || 0,
-        questionsAnswered: totalCards,
-        questionsTotal: topic.questionCount || 20
+        questionsAnswered,
+        questionsTotal: topic.questionCount || 20,
+        sessionsCompleted: progress.sessionsCompleted || 0
       };
     });
   }, [topics, userProgress]);

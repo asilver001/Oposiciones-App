@@ -469,7 +469,7 @@ export default function TemasListView({
   const [selectedBlock, setSelectedBlock] = useState(null);
   const [expandedBlocks, setExpandedBlocks] = useState(new Set());
 
-  // Calculate real topic progress from userProgress (always enrich with questionCount)
+  // Calculate real topic progress from userProgress (session-based data)
   const realTopicProgress = useMemo(() => {
     if (topics.length === 0) return null;
 
@@ -477,49 +477,39 @@ export default function TemasListView({
       const progressKey = topic.number ?? topic.id;
       const progress = userProgress[progressKey] || {
         answered: 0, correct: 0, accuracy: 0,
-        new: 0, learning: 0, review: 0, relearning: 0, mastered: 0, masteryRate: 0,
-        sessionsCompleted: 0, sessionQuestions: 0, sessionCorrect: 0, sessionTime: 0
+        sessionsCompleted: 0, sessionQuestions: 0, sessionCorrect: 0, sessionTime: 0,
+        masteryRate: 0
       };
 
-      const totalCards = progress.new + progress.learning + progress.review + progress.relearning;
       const questionsTotal = topic.questionCount || 20;
-      const progressPercent = progress.masteryRate || 0;
+      const questionsAnswered = progress.answered || progress.sessionQuestions || 0;
+      const progressPercent = progress.accuracy || 0;
 
+      // Status based on session accuracy (no FSRS card states)
       let status = 'nuevo';
-      if (totalCards === 0 && !progress.sessionsCompleted) {
+      if (questionsAnswered === 0 && !progress.sessionsCompleted) {
         status = 'nuevo';
-      } else if (progress.masteryRate >= 80 && progress.accuracy >= 75) {
+      } else if (progress.accuracy >= 80) {
         status = 'dominado';
-      } else if (progress.masteryRate >= 50 || progress.accuracy >= 65) {
+      } else if (progress.accuracy >= 60) {
         status = 'avanzando';
-      } else if (progress.relearning > 0 || progress.accuracy < 50) {
-        status = totalCards > 0 ? 'riesgo' : 'progreso';
+      } else if (progress.accuracy < 50 && questionsAnswered > 0) {
+        status = 'riesgo';
       } else {
         status = 'progreso';
       }
-
-      // Session-based accuracy
-      const sessionAccuracy = progress.sessionQuestions > 0
-        ? Math.round((progress.sessionCorrect / progress.sessionQuestions) * 100)
-        : 0;
 
       return {
         ...topic,
         progress: progressPercent,
         status,
-        questionsAnswered: totalCards,
+        questionsAnswered,
         questionsTotal,
         accuracy: progress.accuracy || 0,
         sessionsCompleted: progress.sessionsCompleted || 0,
         sessionQuestions: progress.sessionQuestions || 0,
-        sessionAccuracy,
-        fsrs: {
-          new: progress.new,
-          learning: progress.learning,
-          review: progress.review,
-          relearning: progress.relearning,
-          mastered: progress.mastered
-        }
+        sessionAccuracy: progress.accuracy || 0,
+        lastPracticed: progress.lastPracticed || null
       };
     });
   }, [topics, userProgress]);

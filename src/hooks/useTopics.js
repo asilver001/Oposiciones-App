@@ -103,90 +103,30 @@ export function useTopics() {
     }
 
     try {
+      // Read from user_topic_progress (aggregated per topic by RPC)
       const { data, error } = await supabase
-        .from('user_question_progress')
-        .select(`
-          question_id,
-          times_seen,
-          times_correct,
-          state,
-          ease_factor,
-          lapses,
-          questions!inner (tema)
-        `)
+        .from('user_topic_progress')
+        .select('*')
         .eq('user_id', user.id);
 
       if (error) throw error;
 
-      // Calculate progress per topic with FSRS data
-      // Note: 'tema' in questions table stores the topic number
       const progress = {};
       (data || []).forEach(p => {
-        const topicNumber = p.questions?.tema;
-        if (topicNumber == null) return;
-
-        if (!progress[topicNumber]) {
-          progress[topicNumber] = {
-            answered: 0,
-            correct: 0,
-            // FSRS states: 0=New, 1=Learning, 2=Review, 3=Relearning
-            new: 0,
-            learning: 0,
-            review: 0,
-            relearning: 0,
-            mastered: 0 // ease_factor >= 2.5 and state === 2
-          };
-        }
-
-        // Count by state
-        const state = p.state || 0;
-        if (state === 0) progress[topicNumber].new++;
-        else if (state === 1) progress[topicNumber].learning++;
-        else if (state === 2) {
-          progress[topicNumber].review++;
-          // Consider mastered if high ease_factor
-          if (p.ease_factor >= 2.5) progress[topicNumber].mastered++;
-        }
-        else if (state === 3) progress[topicNumber].relearning++;
-
-        progress[topicNumber].answered += p.times_seen || 0;
-        progress[topicNumber].correct += p.times_correct || 0;
+        progress[p.topic_number] = {
+          answered: p.questions_seen || 0,
+          correct: p.questions_correct || 0,
+          accuracy: p.overall_accuracy_percent || 0,
+          sessionsCompleted: p.sessions_completed || 0,
+          sessionQuestions: p.questions_seen || 0,
+          sessionCorrect: p.questions_correct || 0,
+          sessionTime: p.total_time_seconds || 0,
+          lastPracticed: p.last_session_at,
+          // Use accuracy as mastery proxy (no per-card FSRS states)
+          masteryRate: p.overall_accuracy_percent || 0,
+          new: 0, learning: 0, review: 0, relearning: 0, mastered: 0
+        };
       });
-
-      // Add accuracy and mastery rate
-      Object.values(progress).forEach(p => {
-        p.accuracy = p.answered > 0 ? Math.round((p.correct / p.answered) * 100) : 0;
-        const totalCards = p.new + p.learning + p.review + p.relearning;
-        p.masteryRate = totalCards > 0 ? Math.round((p.mastered / totalCards) * 100) : 0;
-      });
-
-      // Also fetch session-based stats per tema from test_sessions
-      const { data: sessions } = await supabase
-        .from('test_sessions')
-        .select('tema_filter, total_questions, correct_answers, time_spent_seconds')
-        .eq('user_id', user.id)
-        .eq('is_completed', true);
-
-      if (sessions) {
-        sessions.forEach(s => {
-          const temas = s.tema_filter;
-          if (!temas || temas.length === 0) return;
-          temas.forEach(temaNum => {
-            if (!progress[temaNum]) {
-              progress[temaNum] = {
-                answered: 0, correct: 0, accuracy: 0,
-                new: 0, learning: 0, review: 0, relearning: 0, mastered: 0, masteryRate: 0,
-                sessionsCompleted: 0, sessionQuestions: 0, sessionCorrect: 0, sessionTime: 0
-              };
-            }
-            const p = progress[temaNum];
-            p.sessionsCompleted = (p.sessionsCompleted || 0) + 1;
-            p.sessionQuestions = (p.sessionQuestions || 0) + (s.total_questions || 0);
-            p.sessionCorrect = (p.sessionCorrect || 0) + (s.correct_answers || 0);
-            p.sessionTime = (p.sessionTime || 0) + (s.time_spent_seconds || 0);
-          });
-        });
-      }
 
       setUserProgress(progress);
     } catch (err) {
@@ -225,32 +165,30 @@ export function useTopics() {
     return topics
       .filter(t => t.is_available && t.questionCount > 0)
       .map(topic => {
-        // Use topic.number to match progress indexed by tema
         const progress = userProgress[topic.number] || {
           answered: 0, correct: 0, accuracy: 0,
-          new: 0, learning: 0, review: 0, relearning: 0, mastered: 0, masteryRate: 0
+          sessionsCompleted: 0, sessionQuestions: 0, masteryRate: 0
         };
 
-        // Calculate completion based on cards seen vs total questions
-        const totalCards = progress.new + progress.learning + progress.review + progress.relearning;
-        const unseenCount = topic.questionCount - totalCards;
+        const questionsAnswered = progress.answered || progress.sessionQuestions || 0;
+        const unseenCount = Math.max(0, topic.questionCount - questionsAnswered);
 
-        // Progress: based on mastery rate and accuracy
+        // Status based on session accuracy
         let estado = 'nuevo';
-        if (totalCards === 0) {
+        if (questionsAnswered === 0 && !progress.sessionsCompleted) {
           estado = 'nuevo';
-        } else if (progress.masteryRate >= 80 && progress.accuracy >= 75) {
+        } else if (progress.accuracy >= 80) {
           estado = 'dominado';
-        } else if (progress.masteryRate >= 50 || progress.accuracy >= 65) {
+        } else if (progress.accuracy >= 60) {
           estado = 'avanzando';
-        } else if (progress.relearning > 0 || progress.accuracy < 50) {
+        } else if (progress.accuracy < 50 && questionsAnswered > 0) {
           estado = 'riesgo';
         } else {
           estado = 'progreso';
         }
 
-        // Progress level (0-6) based on mastery
-        const progressLevel = Math.min(6, Math.round(progress.masteryRate / 100 * 6));
+        // Progress level (0-6) based on accuracy
+        const progressLevel = Math.min(6, Math.round((progress.accuracy || 0) / 100 * 6));
 
         return {
           id: topic.id,
@@ -259,17 +197,10 @@ export function useTopics() {
           estado,
           accuracy: progress.accuracy || 0,
           masteryRate: progress.masteryRate || 0,
-          answered: progress.answered,
+          answered: questionsAnswered,
           total: topic.questionCount,
           unseenCount,
-          // FSRS breakdown
-          fsrs: {
-            new: progress.new,
-            learning: progress.learning,
-            review: progress.review,
-            relearning: progress.relearning,
-            mastered: progress.mastered
-          }
+          sessionsCompleted: progress.sessionsCompleted || 0
         };
       });
   }, [topics, userProgress]);

@@ -547,7 +547,14 @@ export async function getStudyStats(userId) {
 
 /**
  * Record a completed test session to test_sessions table
- * This is what the home page reads to show stats
+ * This is what the home page reads to show stats.
+ *
+ * ACTUAL test_sessions columns (verified Feb 2026):
+ *   topic_id INTEGER, total_questions INTEGER, correct_count INTEGER,
+ *   incorrect_count INTEGER, blank_count INTEGER, raw_score NUMERIC,
+ *   final_score NUMERIC, percentage INTEGER, time_seconds INTEGER,
+ *   test_type TEXT, status TEXT, started_at TIMESTAMPTZ, completed_at TIMESTAMPTZ
+ *
  * @param {string} userId
  * @param {Object} sessionData
  * @returns {Promise<Object|null>}
@@ -564,28 +571,33 @@ export async function recordTestSession(userId, sessionData) {
       testType = 'practice'
     } = sessionData;
 
-    const scoreRaw = totalQuestions > 0
+    const incorrectCount = totalQuestions - correctCount;
+    const percentage = totalQuestions > 0
       ? Math.round((correctCount / totalQuestions) * 100)
       : 0;
 
     const insertData = {
       user_id: userId,
-      session_type: testType,
-      question_count_requested: totalQuestions,
+      test_type: testType,
       total_questions: totalQuestions,
-      correct_answers: correctCount,
-      wrong_answers: totalQuestions - correctCount,
-      blank_answers: 0,
-      score_raw: scoreRaw,
+      correct_count: correctCount,
+      incorrect_count: incorrectCount,
+      blank_count: 0,
+      raw_score: percentage,
+      final_score: percentage,
+      percentage,
       started_at: startedAt || new Date().toISOString(),
       completed_at: completedAt,
-      time_spent_seconds: timeSeconds,
-      is_completed: true
+      time_seconds: timeSeconds,
+      status: 'completed'
     };
 
-    // tema_filter is INTEGER[] in DB
-    if (temaFilter != null) {
-      insertData.tema_filter = Array.isArray(temaFilter) ? temaFilter : [temaFilter];
+    // topic_id is INTEGER in DB (single topic, not array)
+    const topicNumber = temaFilter != null
+      ? (Array.isArray(temaFilter) ? temaFilter[0] : temaFilter)
+      : null;
+    if (topicNumber != null) {
+      insertData.topic_id = topicNumber;
     }
 
     const { data, error } = await supabase
@@ -598,6 +610,22 @@ export async function recordTestSession(userId, sessionData) {
       console.error('Error recording test session:', error);
       return null;
     }
+
+    // Update topic-level progress aggregation via RPC
+    if (topicNumber != null) {
+      try {
+        await supabase.rpc('update_topic_progress', {
+          p_user_id: userId,
+          p_topic_number: topicNumber,
+          p_questions_seen: totalQuestions,
+          p_questions_correct: correctCount,
+          p_time_seconds: timeSeconds
+        });
+      } catch (rpcErr) {
+        console.error('Error updating topic progress:', rpcErr);
+      }
+    }
+
     return data;
   } catch (err) {
     console.error('Error in recordTestSession:', err);
