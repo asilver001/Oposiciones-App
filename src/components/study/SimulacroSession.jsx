@@ -13,7 +13,7 @@ import {
   Flag, ListOrdered, BarChart3, RefreshCw, BookOpen
 } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
-import { generateHybridSession, updateProgress, recordDailyStudy } from '../../services/spacedRepetitionService';
+import { generateHybridSession, updateProgress, recordDailyStudy, recordTestSession } from '../../services/spacedRepetitionService';
 import EmptyState from '../common/EmptyState/EmptyState';
 import ExamTimer from './ExamTimer';
 import SessionSummary from './SessionSummary';
@@ -43,6 +43,7 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
   const [noQuestions, setNoQuestions] = useState(false);
   const [showNavigation, setShowNavigation] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
+  const sessionStartRef = useRef(new Date().toISOString());
   const [showConfirmEnd, setShowConfirmEnd] = useState(false);
   const [remainingTime, setRemainingTime] = useState(EXAM_CONFIG.timeMinutes * 60);
 
@@ -249,12 +250,23 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
         }
       }
 
-      // Record session
+      // Record session to test_sessions + update topic progress
+      const now = new Date().toISOString();
+      const timeSeconds = Math.round((new Date(now) - new Date(sessionStartRef.current)) / 1000);
+      await recordTestSession(user.id, {
+        correctCount: stats.correct,
+        totalQuestions: questions.length,
+        startedAt: sessionStartRef.current,
+        completedAt: now,
+        timeSeconds,
+        testType: 'simulacro',
+        temaFilter: config.tema || null
+      });
       await recordDailyStudy(user.id, questions.length, stats.correct);
     } catch (err) {
       console.error('Error saving exam results:', err);
     }
-  }, [answers, questions, stats.correct, user?.id]);
+  }, [answers, questions, stats.correct, user?.id, config.tema]);
 
   // Time's up handler
   const handleTimeUp = useCallback(() => {

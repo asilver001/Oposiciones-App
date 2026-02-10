@@ -13,7 +13,7 @@ import {
   RefreshCw, Clock, BookOpen
 } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
-import { generateHybridSession, updateProgress, recordDailyStudy } from '../../services/spacedRepetitionService';
+import { generateHybridSession, updateProgress, recordDailyStudy, recordTestSession } from '../../services/spacedRepetitionService';
 import EmptyState from '../common/EmptyState/EmptyState';
 
 // Spring animation configs
@@ -33,6 +33,7 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [noQuestions, setNoQuestions] = useState(false);
+  const sessionStartRef = useRef(new Date().toISOString());
 
   // Loading timeout and retry
   const [loadingTimedOut, setLoadingTimedOut] = useState(false);
@@ -148,8 +149,20 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
       x.set(0); // Reset position
     } else {
       // Session complete
+      const correctCount = results.known.length + (wasCorrect ? 1 : 0);
       try {
-        await recordDailyStudy(user.id, cards.length, results.known.length + (wasCorrect ? 1 : 0));
+        const now = new Date().toISOString();
+        const timeSeconds = Math.round((new Date(now) - new Date(sessionStartRef.current)) / 1000);
+        await recordTestSession(user.id, {
+          correctCount,
+          totalQuestions: cards.length,
+          startedAt: sessionStartRef.current,
+          completedAt: now,
+          timeSeconds,
+          testType: 'flashcards',
+          temaFilter: config.tema || null
+        });
+        await recordDailyStudy(user.id, cards.length, correctCount);
       } catch (err) {
         console.error('Error recording session:', err);
       }

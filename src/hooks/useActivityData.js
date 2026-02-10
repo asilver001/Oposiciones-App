@@ -81,36 +81,25 @@ export function useActivityData() {
         .select('*', { count: 'exact', head: true })
         .eq('is_active', true);
 
-      // Get user progress with FSRS states
-      const { data: progressData } = await supabase
-        .from('user_question_progress')
-        .select('state, ease_factor')
+      // Get per-topic progress from user_topic_progress
+      const { data: topicData } = await supabase
+        .from('user_topic_progress')
+        .select('questions_seen, questions_correct, overall_accuracy_percent')
         .eq('user_id', user.id);
 
-      // Count by state
+      const totalSeen = (topicData || []).reduce((sum, t) => sum + (t.questions_seen || 0), 0);
+      const totalCorrect = (topicData || []).reduce((sum, t) => sum + (t.questions_correct || 0), 0);
+      const avgAccuracy = totalSeen > 0 ? Math.round((totalCorrect / totalSeen) * 100) : 0;
+
       const stats = {
         new: 0,
-        learning: 0,
+        learning: totalSeen,
         review: 0,
         relearning: 0,
-        mastered: 0,
-        total: totalQuestions || 0
+        mastered: avgAccuracy >= 80 ? totalSeen : 0,
+        total: totalQuestions || 0,
+        unseen: Math.max(0, (totalQuestions || 0) - totalSeen)
       };
-
-      (progressData || []).forEach(p => {
-        const state = p.state || 0;
-        if (state === 0) stats.new++;
-        else if (state === 1) stats.learning++;
-        else if (state === 2) {
-          stats.review++;
-          if (p.ease_factor >= 2.5) stats.mastered++;
-        }
-        else if (state === 3) stats.relearning++;
-      });
-
-      // Add unseen questions count (total - seen)
-      const seenCount = stats.new + stats.learning + stats.review + stats.relearning;
-      stats.unseen = stats.total - seenCount;
 
       setFsrsStats(stats);
     } catch (err) {
