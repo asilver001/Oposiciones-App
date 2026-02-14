@@ -6,41 +6,70 @@
  */
 
 export const TOPIC_PREREQUISITES = {
-  1: [],
-  2: [1],
-  3: [1],
-  4: [1, 3],
-  5: [1],
-  6: [1, 2, 5],
-  7: [1],
-  8: [3],
-  9: [3, 8],
-  10: [3, 8],
-  11: [3],
-  12: [],
-  13: [],
-  14: [],
-  15: [],
-  16: []
+  // Bloque I: Constitución Española
+  1: [],           // CE: Principios generales
+  2: [1],          // Derechos y deberes fundamentales
+  3: [1],          // Corona, Cortes Generales
+  4: [1, 3],       // Gobierno, Poder Judicial, TC
+  5: [1],          // Organización territorial
+  // Bloque I: Organización Administrativa
+  6: [1, 5],       // AGE central
+  7: [1],          // AGE territorial
+  8: [3],          // Comunidades Autónomas
+  9: [3, 8],       // Administración Local
+  10: [3, 8],      // Unión Europea
+  // Bloque I: Función Pública
+  11: [6],         // EBEP - Personal AAPP
+  12: [11],        // Derechos y deberes empleados
+  13: [11],        // Régimen disciplinario
+  // Bloque I: Procedimiento Administrativo
+  14: [6],         // Ley 39/2015 disposiciones generales
+  15: [14],        // Acto administrativo
+  16: [14, 15],    // Procedimiento administrativo común
+  17: [15, 16],    // Revisión de actos, recursos
+  18: [14],        // Ley 40/2015 LRJSP
+  // Bloque II: Ofimática
+  19: [],          // Informática básica
+  20: [19],        // Windows 11
+  21: [19],        // Word 2019
+  22: [19],        // Excel 2019
+  23: [19],        // Access 2019
+  24: [19],        // PowerPoint 2019
+  25: [19],        // Outlook 2019
+  26: [19],        // Internet y navegadores
+  27: [14, 18],    // Administración electrónica
+  28: []           // Protección de datos RGPD
 };
 
-const TOPIC_SHORT_NAMES = {
-  1: 'La Constitucion',
+export const TOPIC_SHORT_NAMES = {
+  1: 'La Constitución',
   2: 'Derechos fundamentales',
-  3: 'Gobierno y Administracion',
-  4: 'Organizacion territorial',
-  5: 'Cortes Generales',
-  6: 'Tribunal Constitucional',
-  7: 'Union Europea',
-  8: 'Acto Administrativo',
-  9: 'Procedimiento administrativo',
-  10: 'Contratos del sector publico',
-  11: 'Funcion publica',
-  12: 'Proteccion de Datos',
-  13: 'Personal al Servicio AAPP',
-  14: 'Presupuestos Generales',
-  15: 'Prevencion de Riesgos',
-  16: 'Politicas de Igualdad'
+  3: 'Corona y Cortes',
+  4: 'Gobierno y Poder Judicial',
+  5: 'Organización territorial',
+  6: 'AGE Central',
+  7: 'AGE Territorial',
+  8: 'Comunidades Autónomas',
+  9: 'Administración Local',
+  10: 'Unión Europea',
+  11: 'EBEP',
+  12: 'Derechos empleados',
+  13: 'Régimen disciplinario',
+  14: 'Ley 39/2015',
+  15: 'Acto administrativo',
+  16: 'Procedimiento común',
+  17: 'Recursos administrativos',
+  18: 'Ley 40/2015 LRJSP',
+  19: 'Informática básica',
+  20: 'Windows 11',
+  21: 'Word 2019',
+  22: 'Excel 2019',
+  23: 'Access 2019',
+  24: 'PowerPoint 2019',
+  25: 'Outlook 2019',
+  26: 'Internet',
+  27: 'Admin. electrónica',
+  28: 'Protección de datos'
 };
 
 /**

@@ -11,6 +11,7 @@
 import React, { useState, useRef, Suspense } from 'react';
 import { motion, AnimatePresence, Reorder, useMotionValue, useTransform } from 'framer-motion';
 import { RoadmapBasic } from '@/features/draft/ForceGraph';
+import { TemarioDendrite, TemarioHexMap } from '@/features/draft/TemarioGraph';
 import RoadmapErrorBoundary from './RoadmapErrorBoundary';
 import {
   ArrowLeft, Check, X, ChevronRight, ChevronDown, ChevronUp, ChevronLeft,
@@ -8479,6 +8480,48 @@ function PanelAnimationsDemo() {
 // MAIN DRAFT FEATURES COMPONENT
 // ============================================
 
+// Temario Graph tab with toggle between Dendrite and HexMap
+function TemarioGraphTab() {
+  const [style, setStyle] = useState('dendrite');
+  return (
+    <motion.div
+      key="temario-graph"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      className="-mx-4 -mt-6"
+    >
+      <div className="mx-4 mt-6 mb-3 flex items-center gap-3">
+        <span className="text-sm font-medium text-gray-600">Estilo:</span>
+        <div className="flex bg-gray-100 rounded-lg p-0.5">
+          <button
+            onClick={() => setStyle('dendrite')}
+            className={`px-3 py-1 text-xs font-medium rounded-md transition-all ${
+              style === 'dendrite' ? 'bg-white shadow text-purple-700' : 'text-gray-500'
+            }`}
+          >
+            Dendrite
+          </button>
+          <button
+            onClick={() => setStyle('hexmap')}
+            className={`px-3 py-1 text-xs font-medium rounded-md transition-all ${
+              style === 'hexmap' ? 'bg-white shadow text-pink-700' : 'text-gray-500'
+            }`}
+          >
+            HexMap
+          </button>
+        </div>
+        <span className="text-xs text-gray-400 ml-auto">28 temas C2 AGE</span>
+      </div>
+      <div className="h-[600px] bg-gray-950 rounded-2xl overflow-hidden mx-4">
+        <RoadmapErrorBoundary>
+          {style === 'dendrite' ? <TemarioDendrite /> : <TemarioHexMap />}
+        </RoadmapErrorBoundary>
+      </div>
+    </motion.div>
+  );
+}
+
 export default function DraftFeatures({ onClose }) {
   const [activeTab, setActiveTab] = useState('full-home'); // Default to full home page
   const [selectedTema, setSelectedTema] = useState(null);
@@ -8507,6 +8550,7 @@ export default function DraftFeatures({ onClose }) {
   const tabs = [
     // Assessment Playground - Feature selection
     // Active drafts
+    { id: 'temario-graph', label: '📚 Temario' },
     { id: 'roadmap', label: '🌐 Roadmap' },
     { id: 'color-palette', label: '🎨 Paleta' },
     { id: 'panel-animations', label: '✨ Animaciones' },
@@ -8944,6 +8988,11 @@ export default function DraftFeatures({ onClose }) {
             >
               <QuickWinsPreview />
             </motion.div>
+          )}
+
+          {/* TEMARIO GRAPH - Dendrite + HexMap visualization */}
+          {activeTab === 'temario-graph' && (
+            <TemarioGraphTab />
           )}
 
           {/* ROADMAP - Force Graph visualization */}
