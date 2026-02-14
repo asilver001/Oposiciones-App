@@ -316,7 +316,7 @@ function ProgressTab({ data, fsrsStats, onSwipeLeft, onStartTest, formatRelative
           <h4 className="font-semibold text-gray-900 mb-3">Últimas sesiones</h4>
           <div className="space-y-2">
             {data.sessionHistory.slice(0, 5).map((session, idx) => {
-              const temaName = session.tema || (session.tema_id ? `Tema ${session.tema_id}` : 'Mixto');
+              const temaName = session.tema || (session.topic_id ? `Tema ${session.topic_id}` : 'General');
               const correct = session.correctas || 0;
               const total = session.total_preguntas || 0;
               const accuracy = session.porcentaje_acierto || 0;

@@ -596,9 +596,44 @@ Preguntas cuya respuesta era correcta cuando se crearon pero ya no lo es por ref
 - Art. 135 CE (reforma 2011 - estabilidad presupuestaria)
 - Art. 13.2 CE (reforma 1992 - Maastricht)
 
-### Criterio Adicional para Tier S: Coherencia Inter-Preguntas
+### Anti-Patrón 15: Reformulación Idéntica al Original (Copia)
 
-Una pregunta no puede ser Tier S si contradice otra pregunta del banco sobre el mismo artículo legal. La coherencia entre preguntas es obligatoria.
+La pregunta "mejorada" es idéntica o casi idéntica al original. Esto indica que el pipeline no reformuló el contenido, solo limpió metadatos.
+
+**Frecuencia detectada (piloto):** 48/55 (87%) texto idéntico, 42/55 (76%) texto + opciones idénticos.
+
+**Niveles de similitud:**
+| Nivel | Definición | Acción |
+|-------|-----------|--------|
+| Copia total | Texto + opciones idénticos | Reformular enunciado + reescribir ≥2 distractores |
+| Copia parcial | Texto idéntico, opciones distintas | Reformular enunciado (cambiar enfoque/ángulo) |
+| Similar | Texto parecido (>80% overlap) | Reescribir para que parezca pregunta nueva |
+| Original | Enfoque claramente distinto | OK - aprobar |
+
+**Técnicas de reformulación que SÍ funcionan:**
+```
+Original: "¿Quién propone el candidato a la Presidencia del Gobierno?"
+✅ Inversión: "¿Cuál de los siguientes órganos NO interviene en la propuesta del candidato a Presidente?"
+✅ Caso práctico: "Tras las elecciones generales, ¿a quién corresponde proponer al candidato a la investidura?"
+✅ Comparativa: "En el proceso de investidura, el candidato es propuesto por:"
+❌ Solo añadir contexto: "Según el art. 99 CE, ¿quién propone el candidato a la Presidencia del Gobierno?"
+```
+
+**Técnicas para opciones/distractores:**
+```
+Original: "a) El Rey  b) El Congreso  c) El Senado  d) El Gobierno"
+✅ Reordenar + reescribir: "a) Las Cortes Generales  b) El Presidente saliente  c) El Rey  d) El Congreso"
+✅ Añadir matiz: "a) El Rey, a propuesta del Congreso  b) El Rey, por iniciativa propia  c) El Presidente del Congreso  d) El Gobierno en funciones"
+❌ Copiar literal: "a) El Rey  b) El Congreso  c) El Senado  d) El Gobierno"
+```
+
+**Regla:** Una pregunta reformulada debe ser reconocible como nueva por un opositor que ya vio la original. Si se ponen lado a lado y parecen la misma pregunta, NO está reformulada.
+
+### Criterio Adicional para Tier S: Coherencia + Originalidad
+
+Una pregunta no puede ser Tier S si:
+- Contradice otra pregunta del banco sobre el mismo artículo legal
+- Es idéntica o casi idéntica a su versión original (si existe `original_text`)
 
 ```
 Checklist ampliado Tier S:
@@ -606,39 +641,193 @@ Checklist ampliado Tier S:
 [ ] No contradice ninguna otra pregunta sobre el mismo artículo
 [ ] La ley citada no ha sido reformada después de la creación de la pregunta
 [ ] El tema asignado corresponde con la materia legal de la pregunta
+[ ] Si tiene original_text: enunciado cambia enfoque/ángulo
+[ ] Si tiene original_options: ≥2 distractores reescritos o reordenados
 ```
 
 ---
 
-## Pipeline de Calidad Multi-Agente (diseñado Feb 2026)
+## Pipeline de Calidad Multi-Agente (diseñado Feb 2026, rev. 3)
 
-### Agente 1: Reformulador/Limpiador (automático)
-- Limpiar `legal_reference` (solo cita, sin explicación)
+### Asignación de Modelos
+
+| Agente | Modelo | Razón |
+|--------|--------|-------|
+| 1. Reformulador | **Sonnet** | Tarea mecánica/creativa con reglas claras. Workflow bien definido. Coste-eficiente para ~950 preguntas |
+| 2. Verificador Lógico | **Opus** | Requiere razonamiento profundo: verificar que distractores reformulados sigan siendo incorrectos, detectar drift lógico sutil, validar precisión jurídica |
+| 3. Cazador de Discrepancias | **Sonnet** | Comparaciones SQL y búsquedas entre preguntas son mecánicas |
+
+### Agente 1: Reformulador de Contenido (Sonnet, automático)
+- **PRIMERO:** Reformular enunciado con técnica diferente (inversión, caso práctico, comparativa)
+- Reescribir al menos 2 distractores (mantener respuesta correcta precisa)
+- Reordenar opciones (la correcta no siempre en la misma posición)
 - Expandir abreviaturas en primera mención
-- Enriquecer enunciados cortos (<80 chars) con contexto
-- Normalizar formato de opciones
-- **Resuelve:** ~55% de issues (Tier A → S)
+- Limpiar `legal_reference` (solo cita, sin explicación)
+- **Verificación de similitud:** comparar resultado con original, rechazar si >80% igual
+- **Resuelve:** copias, enunciados pobres, opciones repetitivas
+- **Guardar:** `original_text` y `original_options` ANTES de modificar (si no existen ya)
 
-### Agente 2: Verificador Lógico (automático, flagea dudas)
-- Verificar que la "incorrecta" sea realmente incorrecta
-- Detectar inversiones de lógica en reformulaciones
+### Agente 2: Verificador Lógico (Opus, automático, flagea dudas)
+- Verificar que la respuesta correcta sigue siendo jurídicamente correcta tras reformulación
+- Verificar que cada distractor sigue siendo jurídicamente incorrecto (no "suena mal" sino que ES incorrecto)
+- Detectar inversiones de lógica: si original preguntaba "señale la FALSA" y reformulada pregunta en positivo, ¿se invirtió correctamente qué es correcto/incorrecto?
 - Verificar artículos legales citados contra fuentes
-- Si confianza < 0.90 → flag para humano
-- **Resuelve:** errores lógicos silenciosos
+- Si confianza < 0.90 → flag para humano con `needs_refresh = true` y razón específica
+- **Resuelve:** errores lógicos silenciosos, distractores que dejaron de ser incorrectos
 
-### Agente 3: Cazador de Discrepancias (automático, flagea todo)
+### Agente 3: Cazador de Discrepancias (Sonnet, automático, flagea todo)
 - Buscar contradicciones entre preguntas sobre mismo artículo
 - Verificar asignación de tema vs contenido real
 - Detectar preguntas afectadas por reformas legales recientes
 - Todo lo que encuentre → flag para humano
 - **Resuelve:** problemas sistémicos inter-preguntas
 
+### Flujo de ejecución
+
+```
+1. Cambiar modelo a Sonnet
+2. Ejecutar Agente 1 (Reformulador) por tema o batch
+3. Cambiar modelo a Opus
+4. Ejecutar Agente 2 (Verificador) sobre las preguntas reformuladas
+5. Cambiar modelo a Sonnet
+6. Ejecutar Agente 3 (Cazador) sobre todo el banco
+7. Revisión humana de flags
+```
+
 ### Resultado esperado
 - ~55-60% arreglable automáticamente (Agente 1)
 - ~30% revisión rápida humana (Agentes 2-3 flagean)
 - ~10% decisión humana (contradicciones, reformas, ambigüedades legales)
 
+### Lecciones de la ejecución del pipeline (Feb 2026)
+
+**Ejecución real: 994 preguntas procesadas en ~2 horas**
+
+1. **Sonnet funciona bien como Reformulador** pero comete errores de coherencia:
+   - TOPIC_CHANGE: cambia el enunciado pero olvida actualizar la explicación (24 casos)
+   - CRITICAL MISMATCH: enunciado reformulado no corresponde a las opciones (36 casos)
+   - **Lección:** El Agente 1 DEBE verificar que question_text, options y explanation hablen del mismo artículo legal
+
+2. **Opus como Verificador Lógico detecta errores sutiles** que Sonnet no ve:
+   - DOUBLE_CORRECT: dos opciones que son ambas correctas (2 casos)
+   - LOGIC_ERROR: inversión incorrecta de lógica al cambiar de negativa a positiva (1 caso)
+   - AMBIGUOUS_DISTRACTOR: distractores con verdades parciales (2 casos)
+   - **Lección:** Opus es esencial para la verificación, no sustituible por Sonnet
+
+3. **El Cazador de Discrepancias revela problemas masivos de asignación de tema:**
+   - Tema 9 completo (89 preguntas) estaba mal asignado — ninguna citaba LPAC
+   - 75 preguntas de Tema 1 pertenecían a Temas 2, 3 o 4
+   - 28 preguntas de Tema 4 pertenecían a Tema 3
+   - **Lección:** La asignación de tema original (importación) NO es confiable. Siempre verificar tema vs legal_reference
+
+4. **Los agentes background pueden detenerse silenciosamente:**
+   - 3 de 11 agentes se detuvieron sin completar (Temas 1, 3, 7 — los más grandes)
+   - **Lección:** Monitorear progreso con queries a Supabase, no solo con output files. Relanzar agentes estancados con IDs específicos.
+
+5. **Falsos positivos en limpieza automática:**
+   - Un UPDATE con ILIKE demasiado amplio limpió 91 flags legítimos (Tema 9)
+   - **Lección:** Siempre verificar los resultados del UPDATE antes de continuar. Usar queries más específicas.
+
+---
+
+## Pipeline de Creación de Preguntas Nuevas (Rev. 1)
+
+### Cuándo usar este pipeline
+
+Cuando se necesitan preguntas nuevas para temas con cobertura insuficiente.
+A diferencia del pipeline de reformulación (arriba), aquí NO hay pregunta original.
+
+**Distribución actual (post-reasignación Feb 2026):**
+```
+T1:257, T2:98, T3:234, T4:23, T5:146, T6:44, T7:190, T8:142, T9:5, T10:75, T11:151
+```
+Temas prioritarios: T9 (5), T4 (23), T6 (44), T10 (75).
+
+### Asignación de Modelos
+
+| Agente | Modelo | Razón |
+|--------|--------|-------|
+| 1. Creador | **Sonnet** | Creación estructurada con reglas claras y ejemplos |
+| 2. Verificador Lógico | **Opus** | Verificar precisión jurídica, distractores creíbles |
+| 3. Cazador de Discrepancias | **Sonnet** | Comparar con preguntas existentes del mismo artículo |
+
+### Campo `origin` en DB
+
+Cada pregunta tiene un campo `origin` que indica su origen (nota: `source` ya existía para el nombre del archivo fuente):
+- `'imported'` — importada desde archivos Word/PDF (existentes)
+- `'reformulated'` — reformulada por el pipeline de calidad
+- `'ai_created'` — creada desde cero por IA
+
+En el ReviewerPanel, el usuario puede filtrar por `origin` y por tema para revisar subconjuntos específicos.
+
+### Agente 1: Creador de Preguntas (Sonnet)
+
+**Input:** Tema + artículos de ley a cubrir
+**Output:** Preguntas con `validation_status = 'ai_created_pending'` y `origin = 'ai_created'`
+
+Para CADA pregunta nueva:
+1. **Seleccionar artículo específico** de la ley del tema
+2. **Verificar preguntas existentes** sobre ese artículo para no duplicar
+3. **Redactar enunciado** siguiendo el Workflow de Creación Tier S (Fases 1-4)
+4. **Crear 4 opciones** con distractores basados en errores reales de opositores
+5. **Escribir explicación** citando artículo específico + por qué incorrectas son incorrectas
+6. **Asignar metadatos:**
+   - `tema`: número correcto verificado contra mapeo tema-ley
+   - `difficulty`: 1-5 calibrado (no todo nivel 2)
+   - `legal_reference`: cita limpia ("Art. X.Y Ley")
+   - `origin`: `'ai_created'`
+   - `validation_status`: `'ai_created_pending'`
+   - `explanation`: obligatoria, con referencia legal
+7. **Guardar rational en `review_comment`:** Explicar de dónde sale la pregunta:
+   - Qué artículo/apartado se está cubriendo
+   - Por qué se eligió esa pregunta (laguna detectada, artículo sin cobertura, etc.)
+   - Qué tipo de error de opositor explota
+
+**Batches:** 10-15 preguntas por artículo, variando técnicas (directa, inversión, caso práctico).
+
+### Agente 2: Verificador Lógico (Opus)
+
+Igual que en el pipeline de reformulación, pero con foco extra en:
+- **¿La respuesta correcta es jurídicamente precisa?** (No hay original para comparar)
+- **¿Los distractores son plausibles pero definitivamente incorrectos?**
+- **¿La explicación es precisa y educativa?**
+- **¿La dificultad está bien calibrada?**
+- Si confianza < 0.90 → flag con `needs_refresh = true`
+
+### Agente 3: Cazador de Discrepancias (Sonnet)
+
+Igual que en el pipeline de reformulación:
+- Buscar contradicciones con preguntas existentes sobre el mismo artículo
+- Verificar tema vs legal_reference
+- Detectar duplicados (pregunta nueva que ya existe reformulada)
+
+### Flujo de ejecución
+
+```
+1. Identificar temas con poca cobertura
+2. Listar artículos de ley sin preguntas para cada tema
+3. Cambiar modelo a Sonnet
+4. Ejecutar Agente 1 (Creador) por tema — genera preguntas con source='ai_created'
+5. Cambiar modelo a Opus
+6. Ejecutar Agente 2 (Verificador) sobre preguntas ai_created_pending
+7. Cambiar modelo a Sonnet
+8. Ejecutar Agente 3 (Cazador) sobre todo el banco
+9. Revisión humana en ReviewerPanel → filtro "Creadas desde cero"
+```
+
+### ReviewerPanel — Filtros para creación
+
+El ReviewerPanel soporta los siguientes filtros:
+- **Por origen:** "Todas" | "Importadas" | "Reformuladas" | "Creadas desde cero"
+- **Por tema:** Selector de tema (1-11)
+- **Por estado:** "Pendientes" | "Aprobadas" | "Rechazadas"
+
+Para preguntas `ai_created`, el panel muestra:
+- El `review_comment` con el rational de por qué se creó esa pregunta
+- El `legal_reference` con la ley/artículo de referencia
+- La explicación completa
+
 ---
 
 *Documento creado: 2026-02-07*
-*Última actualización: 2026-02-08*
+*Última actualización: 2026-02-11*

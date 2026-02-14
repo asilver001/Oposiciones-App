@@ -3,7 +3,7 @@ import {
   ArrowLeft, UserCheck, CheckCircle, XCircle, Clock,
   RefreshCw, Eye, EyeOff, LogOut, AlertTriangle, FileText,
   ChevronLeft, ChevronRight, ChevronDown, ChevronUp,
-  Keyboard, GitCompare, LayoutGrid, List, RotateCcw
+  Keyboard, GitCompare, LayoutGrid, List, RotateCcw, Filter
 } from 'lucide-react';
 import { useAdmin } from '../../contexts/AdminContext';
 import { supabase } from '../../lib/supabase';
@@ -41,6 +41,10 @@ export default function ReviewerPanel({
   const [statsView, setStatsView] = useState(null); // null | 'pending' | 'approved' | 'rejected' | 'total' | 'pilot'
   const [pilotMode, setPilotMode] = useState(false);
   const [filteredQuestions, setFilteredQuestions] = useState([]);
+
+  // Filters
+  const [filterOrigin, setFilterOrigin] = useState('all'); // 'all' | 'imported' | 'reformulated' | 'ai_created'
+  const [filterTema, setFilterTema] = useState('all'); // 'all' | '1'-'11'
 
   // View mode: 'individual', 'grid', 'list'
   const [viewMode, setViewMode] = useState('individual');
@@ -84,7 +88,7 @@ export default function ReviewerPanel({
     setLoading(true);
     try {
       const status = pilotMode ? 'pilot_pending' : 'human_pending';
-      const { data, error } = await supabase
+      let query = supabase
         .from('questions')
         .select('*')
         .eq('is_active', true)
@@ -92,6 +96,14 @@ export default function ReviewerPanel({
         .order('created_at', { ascending: true })
         .limit(100);
 
+      if (filterOrigin !== 'all') {
+        query = query.eq('origin', filterOrigin);
+      }
+      if (filterTema !== 'all') {
+        query = query.eq('tema', parseInt(filterTema));
+      }
+
+      const { data, error } = await query;
       if (error) throw error;
 
       setQuestions(data || []);
@@ -103,7 +115,7 @@ export default function ReviewerPanel({
     } finally {
       setLoading(false);
     }
-  }, [pilotMode]);
+  }, [pilotMode, filterOrigin, filterTema]);
 
   // Load stats separately (for auto-refresh)
   const loadStats = useCallback(async () => {
@@ -166,7 +178,13 @@ export default function ReviewerPanel({
       } else if (status === 'pilot') {
         query = query.eq('validation_status', 'pilot_pending');
       }
-      // 'total' shows all
+
+      if (filterOrigin !== 'all') {
+        query = query.eq('origin', filterOrigin);
+      }
+      if (filterTema !== 'all') {
+        query = query.eq('tema', parseInt(filterTema));
+      }
 
       const { data, error } = await query;
       if (error) throw error;
@@ -175,7 +193,7 @@ export default function ReviewerPanel({
       console.error('Error loading questions by status:', err);
       setFilteredQuestions([]);
     }
-  }, []);
+  }, [filterOrigin, filterTema]);
 
   // Handle stat card click
   const handleStatClick = useCallback((status) => {
@@ -208,6 +226,13 @@ export default function ReviewerPanel({
     loadQuestions();
     loadStats();
   }, [loadQuestions, loadStats, pilotMode]);
+
+  // Re-load stats view when filters change
+  useEffect(() => {
+    if (statsView) {
+      loadQuestionsByStatus(statsView);
+    }
+  }, [filterOrigin, filterTema, statsView, loadQuestionsByStatus]);
 
   const currentQuestion = questions[currentIndex];
 
@@ -633,8 +658,60 @@ export default function ReviewerPanel({
             </button>
           )}
 
+          {/* Filters Row */}
+          <div className="mt-3 flex gap-2">
+            <div className="flex-1">
+              <select
+                value={filterOrigin}
+                onChange={(e) => setFilterOrigin(e.target.value)}
+                className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-sm text-white appearance-none cursor-pointer focus:ring-2 focus:ring-white/30 focus:outline-none"
+              >
+                <option value="all" className="text-gray-900">Todas las fuentes</option>
+                <option value="imported" className="text-gray-900">Importadas</option>
+                <option value="reformulated" className="text-gray-900">Reformuladas</option>
+                <option value="ai_created" className="text-gray-900">Creadas desde cero</option>
+              </select>
+            </div>
+            <div className="flex-1">
+              <select
+                value={filterTema}
+                onChange={(e) => setFilterTema(e.target.value)}
+                className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-sm text-white appearance-none cursor-pointer focus:ring-2 focus:ring-white/30 focus:outline-none"
+              >
+                <option value="all" className="text-gray-900">Todos los temas</option>
+                {[1,2,3,4,5,6,7,8,9,10,11].map(t => (
+                  <option key={t} value={String(t)} className="text-gray-900">Tema {t}</option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          {/* Active filters indicator */}
+          {(filterOrigin !== 'all' || filterTema !== 'all') && (
+            <div className="mt-2 flex items-center gap-2">
+              <Filter className="w-3 h-3 text-brand-200" />
+              <span className="text-xs text-brand-200">
+                Filtros activos:
+                {filterOrigin !== 'all' && (
+                  <span className="ml-1 px-2 py-0.5 bg-white/15 rounded-full">
+                    {filterOrigin === 'imported' ? 'Importadas' : filterOrigin === 'reformulated' ? 'Reformuladas' : 'Creadas'}
+                  </span>
+                )}
+                {filterTema !== 'all' && (
+                  <span className="ml-1 px-2 py-0.5 bg-white/15 rounded-full">Tema {filterTema}</span>
+                )}
+              </span>
+              <button
+                onClick={() => { setFilterOrigin('all'); setFilterTema('all'); }}
+                className="text-xs text-brand-300 hover:text-white underline ml-auto"
+              >
+                Limpiar
+              </button>
+            </div>
+          )}
+
           {/* View Mode Selector */}
-          <div className="mt-4">
+          <div className="mt-3">
             <ViewModeSelector
               viewMode={viewMode}
               onViewModeChange={setViewMode}
@@ -686,6 +763,13 @@ export default function ReviewerPanel({
                             <span className="text-xs bg-brand-100 text-brand-700 px-2 py-0.5 rounded-full font-medium">
                               T{q.tema || '?'}
                             </span>
+                            {q.origin && q.origin !== 'imported' && (
+                              <span className={`text-xs px-2 py-0.5 rounded-full ${
+                                q.origin === 'reformulated' ? 'bg-cyan-100 text-cyan-700' : 'bg-violet-100 text-violet-700'
+                              }`}>
+                                {q.origin === 'reformulated' ? 'Reformulada' : 'Creada IA'}
+                              </span>
+                            )}
                             <span className={`text-xs px-2 py-0.5 rounded-full ${
                               q.validation_status === 'human_approved' ? 'bg-green-100 text-green-700' :
                               q.validation_status === 'rejected' ? 'bg-red-100 text-red-700' :
@@ -802,6 +886,16 @@ export default function ReviewerPanel({
                     <span className="px-3 py-1 bg-brand-100 text-brand-700 text-sm font-medium rounded-full">
                       Tema {currentQuestion?.tema || '?'}
                     </span>
+                    {currentQuestion?.origin && (
+                      <span className={`px-3 py-1 text-sm rounded-full ${
+                        currentQuestion.origin === 'imported' ? 'bg-gray-100 text-gray-600' :
+                        currentQuestion.origin === 'reformulated' ? 'bg-cyan-100 text-cyan-700' :
+                        'bg-violet-100 text-violet-700'
+                      }`}>
+                        {currentQuestion.origin === 'imported' ? 'Importada' :
+                         currentQuestion.origin === 'reformulated' ? 'Reformulada' : 'Creada IA'}
+                      </span>
+                    )}
                     {currentQuestion?.materia && (
                       <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full">
                         {currentQuestion.materia}
@@ -890,6 +984,16 @@ export default function ReviewerPanel({
                       <div className="p-4 bg-blue-50 border border-blue-200 rounded-xl">
                         <p className="text-xs font-semibold text-blue-800 mb-1">📚 Explicación:</p>
                         <p className="text-sm text-blue-700">{currentQuestion.explanation}</p>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* AI Creation Rationale - for ai_created questions */}
+                  {currentQuestion?.origin === 'ai_created' && currentQuestion?.review_comment && (
+                    <div className="px-5 pb-4">
+                      <div className="p-4 bg-violet-50 border border-violet-200 rounded-xl">
+                        <p className="text-xs font-semibold text-violet-800 mb-1">Rationale de creación:</p>
+                        <p className="text-sm text-violet-700">{currentQuestion.review_comment}</p>
                       </div>
                     </div>
                   )}
@@ -1066,6 +1170,13 @@ export default function ReviewerPanel({
                             <span className="text-xs bg-brand-100 text-brand-700 px-2 py-0.5 rounded-full font-medium">
                               T{question.tema || '?'}
                             </span>
+                            {question.origin && question.origin !== 'imported' && (
+                              <span className={`text-xs px-2 py-0.5 rounded-full ${
+                                question.origin === 'reformulated' ? 'bg-cyan-100 text-cyan-700' : 'bg-violet-100 text-violet-700'
+                              }`}>
+                                {question.origin === 'reformulated' ? 'Reformulada' : 'Creada IA'}
+                              </span>
+                            )}
                             {question.materia && (
                               <span className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">
                                 {question.materia}

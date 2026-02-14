@@ -1,7 +1,7 @@
 /**
  * Activity Data Hook
  * Fetches and processes activity data for the Activity tab
- * Uses quiz_sessions table from Supabase
+ * Uses test_sessions table from Supabase
  */
 
 import { useState, useCallback, useMemo } from 'react';
@@ -21,7 +21,7 @@ export function useActivityData() {
   const [weeklyData, setWeeklyData] = useState([0, 0, 0, 0, 0, 0, 0]); // L-D
   const [sessionHistory, setSessionHistory] = useState([]);
   const [calendarData, setCalendarData] = useState([]); // Days practiced this month
-  const [streak, setStreak] = useState(0);
+  const [streak, setStreak] = useState({ current: 0, longest: 0 });
   const [totalStats, setTotalStats] = useState({
     testsCompleted: 0,
     questionsCorrect: 0,
@@ -44,7 +44,7 @@ export function useActivityData() {
     learning: 0,   // Currently learning
     review: 0,     // In review cycle
     relearning: 0, // Failed and relearning
-    mastered: 0,   // High ease_factor
+    mastered: 0,   // High accuracy
     total: 0       // Total questions in database
   });
 
@@ -87,16 +87,21 @@ export function useActivityData() {
         .select('questions_seen, questions_correct, overall_accuracy_percent')
         .eq('user_id', user.id);
 
-      const totalSeen = (topicData || []).reduce((sum, t) => sum + (t.questions_seen || 0), 0);
-      const totalCorrect = (topicData || []).reduce((sum, t) => sum + (t.questions_correct || 0), 0);
-      const avgAccuracy = totalSeen > 0 ? Math.round((totalCorrect / totalSeen) * 100) : 0;
+      const topics = topicData || [];
+      const totalSeen = topics.reduce((sum, t) => sum + (t.questions_seen || 0), 0);
+
+      // Per-topic mastery: count questions from topics with >=80% accuracy
+      const masteredCount = topics
+        .filter(t => (t.overall_accuracy_percent || 0) >= 80)
+        .reduce((sum, t) => sum + (t.questions_seen || 0), 0);
+      const learningCount = totalSeen - masteredCount;
 
       const stats = {
         new: 0,
-        learning: totalSeen,
+        learning: learningCount,
         review: 0,
         relearning: 0,
-        mastered: avgAccuracy >= 80 ? totalSeen : 0,
+        mastered: masteredCount,
         total: totalQuestions || 0,
         unseen: Math.max(0, (totalQuestions || 0) - totalSeen)
       };
@@ -108,7 +113,7 @@ export function useActivityData() {
   }, [user]);
 
   /**
-   * Fetch all activity data from quiz_sessions table
+   * Fetch all activity data from test_sessions table
    */
   const fetchActivityData = useCallback(async () => {
     if (!user?.id) {
@@ -226,16 +231,36 @@ export function useActivityData() {
         .sort((a, b) => b - a); // Most recent first
 
       let currentStreak = 0;
+      let longestStreak = 0;
       const today = new Date();
       today.setHours(0, 0, 0, 0);
       const yesterday = new Date(today);
       yesterday.setDate(yesterday.getDate() - 1);
 
+      // Calculate longest streak from all study days
       if (sortedDays.length > 0) {
+        // Sort ascending for longest streak calculation
+        const ascending = [...sortedDays].sort((a, b) => a - b);
+        let tempStreak = 1;
+        for (let i = 1; i < ascending.length; i++) {
+          const prev = new Date(ascending[i - 1]);
+          const curr = new Date(ascending[i]);
+          prev.setHours(0, 0, 0, 0);
+          curr.setHours(0, 0, 0, 0);
+          const diffDays = Math.round((curr - prev) / (1000 * 60 * 60 * 24));
+          if (diffDays === 1) {
+            tempStreak++;
+          } else if (diffDays > 1) {
+            longestStreak = Math.max(longestStreak, tempStreak);
+            tempStreak = 1;
+          }
+        }
+        longestStreak = Math.max(longestStreak, tempStreak);
+
+        // Calculate current streak (must include today or yesterday)
         const lastStudyDay = new Date(sortedDays[0]);
         lastStudyDay.setHours(0, 0, 0, 0);
 
-        // Check if last study was today or yesterday
         if (lastStudyDay.getTime() === today.getTime() ||
             lastStudyDay.getTime() === yesterday.getTime()) {
           currentStreak = 1;
@@ -254,7 +279,7 @@ export function useActivityData() {
           }
         }
       }
-      setStreak(currentStreak);
+      setStreak({ current: currentStreak, longest: longestStreak });
 
       // Calculate weekly improvement (compare this week vs last week)
       const lastWeekStart = new Date(weekStart);
@@ -334,11 +359,11 @@ export function useActivityData() {
     }
 
     // Priority 1: Streak
-    if (streak >= 5) {
+    if (streak.current >= 5) {
       return {
         type: 'streak',
         emoji: '🔥',
-        message: `¡Llevas ${streak} días seguidos! Sigue así`,
+        message: `¡Llevas ${streak.current} días seguidos! Sigue así`,
         color: 'text-orange-600',
         bg: 'bg-orange-50'
       };
@@ -367,11 +392,11 @@ export function useActivityData() {
     }
 
     // Priority 4: Small streak
-    if (streak >= 2) {
+    if (streak.current >= 2) {
       return {
         type: 'streak',
         emoji: '✨',
-        message: `¡${streak} días consecutivos! Cada día cuenta`,
+        message: `¡${streak.current} días consecutivos! Cada día cuenta`,
         color: 'text-brand-600',
         bg: 'bg-brand-50'
       };

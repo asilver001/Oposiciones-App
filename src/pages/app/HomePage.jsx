@@ -56,7 +56,7 @@ export default function HomePage() {
       weeklyImprovement={weeklyImprovement}
       weeklyData={weeklyData}
       todayStats={todayStats}
-      streakData={{ current: streak, longest: streak }}
+      streakData={streak}
       fortalezaData={fortalezaData}
       onStartSession={handleStartSession}
       onTopicSelect={handleTopicSelect}

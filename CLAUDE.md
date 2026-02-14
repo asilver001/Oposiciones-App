@@ -781,6 +781,54 @@ useActivityData → test_sessions     // lee correctamente
 
 ---
 
+### Incidente: Pipeline de Calidad Masivo — Agentes Estancados y Falsos Positivos (Febrero 2026)
+
+**Problema 1:** Al lanzar 11 agentes Sonnet en paralelo (uno por tema), 3 se detuvieron silenciosamente sin completar (Temas 1, 3, 7 — los más grandes con >120 preguntas cada uno).
+
+**Lección:** No confiar en que los agentes background terminen. Monitorear progreso con queries directas a Supabase (`SELECT COUNT(*) WHERE original_text IS NOT NULL`), no solo con output files. Relanzar agentes estancados con IDs específicos pendientes.
+
+**Problema 2:** El Reformulador (Sonnet) cambió el enunciado pero olvidó actualizar la explicación en 60+ casos. La pregunta hablaba de un artículo y la explicación de otro completamente distinto (TOPIC_CHANGE).
+
+**Lección:** El Agente 1 (Reformulador) DEBE verificar coherencia entre question_text, options y explanation. Todos deben referirse al mismo artículo legal. Agregar esta verificación explícita al prompt del agente.
+
+**Problema 3:** Un `UPDATE` con `ILIKE '%Tema 9%'` para limpiar falsos positivos eliminó 91 flags legítimos porque la razón contenía "está en Tema 9" (el tema actual) aunque sugerían mover a otro tema.
+
+**Lección:** Al hacer limpieza de flags con SQL, siempre usar condiciones más específicas. Verificar el COUNT antes del UPDATE. Preferir UPDATE con RETURNING para ver exactamente qué se modificó.
+
+### Regla: "Pipeline Multi-Agente — Verificación Cruzada"
+
+**Al ejecutar pipelines con múltiples agentes en secuencia:**
+```
+[ ] ¿Cada agente verifica que su output es coherente internamente?
+[ ] ¿Se monitorea progreso con queries a la DB, no solo con logs?
+[ ] ¿Los agentes grandes (>100 items) tienen mecanismo de relanzamiento?
+[ ] ¿Las limpiezas automáticas de flags usan condiciones específicas?
+[ ] ¿Se hace snapshot del estado antes de UPDATEs masivos?
+```
+
+### Pipeline de Preguntas — Referencia Rápida
+
+**Dos pipelines disponibles en `.claude/questions/QUALITY_STANDARDS.md`:**
+
+| Pipeline | Cuándo usar | Agentes |
+|----------|-------------|---------|
+| Reformulación (Rev. 3) | Mejorar preguntas importadas existentes | Reformulador(Sonnet) → Verificador(Opus) → Cazador(Sonnet) |
+| Creación (Rev. 1) | Crear preguntas nuevas para temas con poca cobertura | Creador(Sonnet) → Verificador(Opus) → Cazador(Sonnet) |
+
+**Campo `origin` en `questions` table** (nota: `source` almacena el nombre de archivo fuente):
+- `'imported'` — de archivos Word/PDF
+- `'reformulated'` — mejorada por pipeline
+- `'ai_created'` — creada desde cero por IA
+
+**Campo `validation_status`:**
+- `'ai_created_pending'` — creada por IA, pendiente de revisión humana
+- `'auto_validated'` — pasó pipeline automático
+- `'human_approved'` — aprobada por revisor humano
+- `'human_pending'` — pendiente de revisión
+- `'rejected'` — rechazada
+
+---
+
 ## Tareas Periódicas
 
 ### Roadmap ForceGraph (Visualización de Progreso)

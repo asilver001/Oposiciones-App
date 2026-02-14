@@ -267,7 +267,7 @@ export default function OpositaApp() {
 
   // Use real streak from Supabase when authenticated, fallback to local storage
   const displayStreak = isAuthenticated && activityTotalStats.testsCompleted > 0
-    ? activityStreak
+    ? (activityStreak.current || 0)
     : streakData.current;
 
   const badges = [
@@ -2084,7 +2084,7 @@ export default function OpositaApp() {
                 questionsCorrect: activityTotalStats.totalCorrect || totalStats.questionsCorrect,
                 accuracyRate: activityTotalStats.averageAccuracy || totalStats.accuracyRate,
                 totalMinutes: activityTotalStats.totalMinutes || 0,
-                currentStreak: activityStreak || displayStreak,
+                currentStreak: activityStreak.current || displayStreak,
                 daysStudied: activityTotalStats.daysStudied || totalStats.totalDaysStudied
               }}
               calendarData={calendarData}

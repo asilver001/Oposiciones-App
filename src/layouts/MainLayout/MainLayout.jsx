@@ -87,7 +87,7 @@ export default function MainLayout() {
   const dailyGoal = userData.dailyGoal || 15;
   const todayQuestions = todayStats.questionsAnswered || 0;
   const dailyProgressPercent = Math.min(Math.round((todayQuestions / dailyGoal) * 100), 100);
-  const displayStreak = activityStats.testsCompleted > 0 ? activityStreak : (streakData.current || 0);
+  const displayStreak = activityStats.testsCompleted > 0 ? (activityStreak.current || 0) : (streakData.current || 0);
 
   // Days until exam
   const daysUntilExam = userData.examDate

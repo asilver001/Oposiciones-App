@@ -12,7 +12,7 @@ import {
 
 /**
  * Calculate adaptive difficulty level for a user
- * Based on recent performance and FSRS ease_factor
+ * Based on recent performance and FSRS difficulty
  * @param {string} userId
  * @returns {Promise<Object>} Difficulty stats and recommended level
  */
@@ -21,7 +21,7 @@ export async function calculateAdaptiveDifficulty(userId) {
     // Get user's recent progress
     const { data: progressData } = await supabase
       .from('user_question_progress')
-      .select('ease_factor, times_correct, times_seen, lapses')
+      .select('difficulty, times_correct, times_seen, state')
       .eq('user_id', userId)
       .gt('times_seen', 0);
 
@@ -29,54 +29,54 @@ export async function calculateAdaptiveDifficulty(userId) {
       // New user - start with medium difficulty
       return {
         recommendedLevel: 2,
-        avgEaseFactor: 2.5,
+        avgDifficulty: 5.0,
         accuracy: 0,
         confidence: 'low',
         adjustmentReason: 'new_user'
       };
     }
 
-    // Calculate average ease factor
-    const totalEase = progressData.reduce((sum, p) => sum + (p.ease_factor || 2.5), 0);
-    const avgEaseFactor = totalEase / progressData.length;
+    // Calculate average FSRS difficulty (0-10 scale, 5.0 = default)
+    const totalDiff = progressData.reduce((sum, p) => sum + (p.difficulty || 5.0), 0);
+    const avgDifficulty = totalDiff / progressData.length;
 
     // Calculate accuracy
     const totalSeen = progressData.reduce((sum, p) => sum + (p.times_seen || 0), 0);
     const totalCorrect = progressData.reduce((sum, p) => sum + (p.times_correct || 0), 0);
     const accuracy = totalSeen > 0 ? (totalCorrect / totalSeen) * 100 : 0;
 
-    // Calculate lapses (failed reviews)
-    const totalLapses = progressData.reduce((sum, p) => sum + (p.lapses || 0), 0);
-    const lapseRate = totalSeen > 0 ? (totalLapses / totalSeen) * 100 : 0;
+    // Calculate relearning rate (state=3 means relearning in FSRS)
+    const relearningCount = progressData.filter(p => p.state === 3).length;
+    const relearningRate = progressData.length > 0 ? (relearningCount / progressData.length) * 100 : 0;
 
     // Determine recommended difficulty level (1-3)
     // 1 = Fácil, 2 = Media, 3 = Difícil
     let recommendedLevel = 2; // Default to medium
     let adjustmentReason = 'balanced';
 
-    if (accuracy >= 85 && avgEaseFactor >= 2.5) {
+    if (accuracy >= 85 && avgDifficulty <= 4.0) {
       // User is doing great - increase difficulty
       recommendedLevel = 3;
       adjustmentReason = 'high_performance';
-    } else if (accuracy >= 70 && avgEaseFactor >= 2.3) {
+    } else if (accuracy >= 70 && avgDifficulty <= 5.0) {
       // Good performance - slight increase
-      recommendedLevel = 2.5; // Will round to medium-hard mix
+      recommendedLevel = 2.5;
       adjustmentReason = 'good_performance';
-    } else if (accuracy < 50 || avgEaseFactor < 1.8) {
+    } else if (accuracy < 50 || avgDifficulty > 7.0) {
       // Struggling - decrease difficulty
       recommendedLevel = 1;
       adjustmentReason = 'struggling';
-    } else if (lapseRate > 30) {
-      // High lapse rate - focus on easier questions
+    } else if (relearningRate > 30) {
+      // High relearning rate - focus on easier questions
       recommendedLevel = 1.5;
-      adjustmentReason = 'high_lapse_rate';
+      adjustmentReason = 'high_relearning_rate';
     }
 
     return {
       recommendedLevel: Math.round(recommendedLevel),
-      avgEaseFactor: Math.round(avgEaseFactor * 100) / 100,
+      avgDifficulty: Math.round(avgDifficulty * 100) / 100,
       accuracy: Math.round(accuracy),
-      lapseRate: Math.round(lapseRate),
+      relearningRate: Math.round(relearningRate),
       confidence: progressData.length >= 20 ? 'high' : progressData.length >= 10 ? 'medium' : 'low',
       adjustmentReason,
       totalQuestionsSeen: progressData.length
@@ -85,7 +85,7 @@ export async function calculateAdaptiveDifficulty(userId) {
     console.error('Error calculating adaptive difficulty:', error);
     return {
       recommendedLevel: 2,
-      avgEaseFactor: 2.5,
+      avgDifficulty: 5.0,
       accuracy: 0,
       confidence: 'error',
       adjustmentReason: 'error_fallback'
@@ -158,8 +158,8 @@ export async function getDueReviews(userId, options = {}) {
 export async function getFailedQuestions(userId, options = {}) {
   const { tema, limit = 50 } = options;
 
-  // Get questions where user has failed at least once
-  // Use ease_factor < 2.0 as primary indicator (works regardless of lapses column)
+  // Get questions where user has struggled
+  // Use FSRS difficulty > 7.0 or state=3 (relearning) as indicators
   let query = supabase
     .from('user_question_progress')
     .select(`
@@ -167,10 +167,9 @@ export async function getFailedQuestions(userId, options = {}) {
       questions!inner (*)
     `)
     .eq('user_id', userId)
-    .eq('questions.is_active', true) // Only active questions
-    .gt('times_seen', 0) // Has been seen
-    .lt('ease_factor', 2.0) // Low ease_factor indicates difficulty
-    .order('ease_factor', { ascending: true }) // Hardest first
+    .eq('questions.is_active', true)
+    .gt('times_seen', 0)
+    .order('difficulty', { ascending: false }) // Hardest first
     .limit(limit);
 
   const { data, error } = await query;
@@ -189,7 +188,6 @@ export async function getFailedQuestions(userId, options = {}) {
         .limit(limit);
 
       if (fallbackQuery.data) {
-        // Filter to questions with some failures (times_correct < times_seen)
         const failedData = fallbackQuery.data.filter(p =>
           p.questions && p.times_correct < p.times_seen
         );
@@ -199,7 +197,7 @@ export async function getFailedQuestions(userId, options = {}) {
           progress: {
             times_seen: p.times_seen,
             times_correct: p.times_correct,
-            ease_factor: p.ease_factor
+            difficulty: p.difficulty
           }
         }));
       }
@@ -209,22 +207,23 @@ export async function getFailedQuestions(userId, options = {}) {
     return [];
   }
 
-  // Filter out null questions and optionally by tema
-  let results = (data || []).filter(p => p.questions);
+  // Filter to questions with failures or high difficulty
+  let results = (data || []).filter(p =>
+    p.questions && (p.times_correct < p.times_seen || p.difficulty > 7.0 || p.state === 3)
+  );
 
   if (tema) {
     results = results.filter(p => p.questions.tema === tema);
   }
 
-  // Return in question format with progress attached
   return results.map(p => ({
     ...p.questions,
     isReview: true,
     progress: {
       times_seen: p.times_seen,
       times_correct: p.times_correct,
-      lapses: p.lapses,
-      ease_factor: p.ease_factor
+      difficulty: p.difficulty,
+      state: p.state
     }
   }));
 }
@@ -325,7 +324,7 @@ export async function generateHybridSession(userId, config = {}) {
         progress: {
           times_seen: p.times_seen,
           times_correct: p.times_correct,
-          ease_factor: p.ease_factor
+          difficulty: p.difficulty
         }
       }));
     }
@@ -376,8 +375,8 @@ export async function generateHybridSession(userId, config = {}) {
     progress: {
       times_seen: r.times_seen,
       times_correct: r.times_correct,
-      interval: r.interval,
-      ease_factor: r.ease_factor
+      scheduled_days: r.scheduled_days,
+      difficulty: r.difficulty
     }
   }));
 
@@ -438,9 +437,8 @@ export async function updateProgress(userId, questionId, wasCorrect) {
       question_id: questionId,
       times_seen: (existing?.times_seen || 0) + 1,
       times_correct: (existing?.times_correct || 0) + (wasCorrect ? 1 : 0),
-      lapses: wasCorrect ? (existing?.lapses || 0) : ((existing?.lapses || 0) + 1),
       stability: fsrsResult.stability || 1.0,
-      difficulty: fsrsResult.ease || 2.5,
+      difficulty: fsrsResult.difficulty || 5.0,
       scheduled_days: fsrsResult.interval || 1,
       next_review: fsrsResult.nextReview.toISOString(),
       last_review: new Date().toISOString(),
@@ -648,7 +646,7 @@ export async function recordDailyStudy(userId, questionsAnswered, correctAnswers
     .select('questions_answered, correct_answers')
     .eq('user_id', userId)
     .eq('date', today)
-    .single();
+    .maybeSingle();
 
   // Calculate new totals
   const newQuestionsAnswered = (existing?.questions_answered || 0) + questionsAnswered;

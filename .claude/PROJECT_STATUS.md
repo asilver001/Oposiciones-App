@@ -6,10 +6,10 @@
 
 ## Estado Actual
 
-**Ultima actualizacion:** 2026-02-09
-**Fase del proyecto:** Beta-Ready (~88% completado)
+**Ultima actualizacion:** 2026-02-11
+**Fase del proyecto:** Beta-Ready (~88% completado) — Data integrity audit in progress
 **Branch actual:** feature/feature-based-architecture
-**Publish readiness:** SI beta cerrada / Produccion tras testing manual
+**Publish readiness:** 1 CRITICAL pendiente (FK roto, inerte) — resto resuelto
 
 ---
 
@@ -26,35 +26,42 @@
 
 ---
 
-## PENDIENTE - Remaining Items
+## PENDIENTE - Data Integrity Audit (Feb 11, 2026)
 
-> **Modelo por defecto: Sonnet 4.5.** Ver CLAUDE.md para regla de escalado.
+> Assessment encontro 13 issues. 10 resueltos, 3 pendientes.
 
-### Para produccion publica
+### Pendientes
 
-| # | Tarea | Modelo | Notas |
-|---|-------|--------|-------|
-| 1 | [ ] Testing manual flujo auth → study → results | Sonnet | E2E scripting + verificacion |
-| 2 | [ ] Auditar 50 preguntas random (calidad) | Sonnet | Lectura + SQL queries |
-| 3 | [ ] Data export endpoint GDPR | Sonnet | 1 RPC function + 1 boton UI |
-| 4 | [ ] IP address hashing en admin_login_attempts | Haiku | Edit puntual en 1 archivo |
-| 5 | [ ] Merge a `main` y deploy a Vercel | Haiku | Comandos git |
-| 6 | [ ] Eliminar OpositaApp.jsx legacy del bundle | Sonnet | Verificar imports + borrar |
+| # | Issue | Severidad | Descripcion |
+|---|-------|-----------|-------------|
+| 2 | [ ] user_question_progress FK roto | CRITICAL | `question_id` UUID vs `questions.id` INTEGER. 0 rows. FSRS per-question inerte. Opcion C: dejar inerte hasta migration futura |
+| 4 | [~] test-rapido sin tema | ~~HIGH~~ | Reclasificado: BY DESIGN — quick tests consultan todas las materias |
+| 7 | [ ] Dual session recording | MEDIUM | HybridSession escribe a `test_sessions` Y `session_stats`. Duplicado pero no rompe |
+| 12 | [ ] Aliases redundantes en sessions | LOW | `correctas`, `correct_answers` duplican datos. Cosmético |
 
-### Nice to have (post-launch)
+### Resueltos (Feb 11)
 
-| # | Tarea | Modelo | Notas |
-|---|-------|--------|-------|
-| 7 | [x] Analytics avanzados (learning velocity, readiness prediction) | Sonnet | useAnalytics hook + AnalyticsWidgets + 3rd tab en ActividadPage |
-| 8 | [ ] Native mobile wrapper (Capacitor) | Opus | Config compleja, multi-plataforma |
-| 9 | [x] Loading timeouts + retry buttons en sesiones | Sonnet | 15s timeout + 3 retries en 3 sesiones |
-| 10 | [x] Estados vacios consistentes en todas las paginas | Sonnet | EmptyState en RecursosPage + 3 study sessions |
-| 11 | [x] Topic prerequisite mapping | Sonnet | topicPrerequisites.js + locked cards en TemasListView |
-| 12 | [x] Temas UI mejorada con sub-agrupaciones | Opus | TemasListView rewrite, bloques tematicos, cards mejoradas |
-| 13 | [x] Roadmap interactivo de temas | Opus | TopicRoadmap canvas-based, layout top-to-bottom con bezier curves |
-| 14 | [x] Metas semanales configurables | Opus | WeeklyGoalCard en home, GoalsConfig en settings, zustand store |
-| 15 | [x] Nivel/Ranking con progreso | Opus | LevelCard mejorada con progress-to-next-level bar |
-| 16 | [x] Fix tracking progreso por tema | Opus | Schema mismatch test_sessions, column names, temaFilter wiring |
+| # | Issue | Fix |
+|---|-------|-----|
+| 1 | FortalezaVisual field mismatch | `nombre→name`, `progreso→progress`, `estado→status` en getFortalezaData |
+| 3 | FSRS column names | `ease_factor→difficulty`, `interval→scheduled_days`, `lapses` eliminado (10+ refs) |
+| 5 | Legacy no graba sesiones | FALSE POSITIVE — recording pasa dentro del session component via hook |
+| 6 | recordDailyStudy .single() | Cambiado a `.maybeSingle()` |
+| 8 | fetchFsrsStats semantica | Mastered ahora es per-topic (accuracy >=80%), no global |
+| 9 | SW paths | Usa `self.registration.scope` para detectar base path |
+| 10 | Comentarios quiz_sessions | Actualizado a `test_sessions` |
+| 11 | Streak solo current | Ahora calcula `longestStreak` desde historial completo |
+| 13 | Label "Mixto" | Cambiado a "General" para `topic_id=null` |
+
+### Para produccion (pre-existentes)
+
+| # | Tarea | Notas |
+|---|-------|-------|
+| P1 | [ ] Testing manual flujo auth → study → results | E2E scripting |
+| P2 | [ ] Data export endpoint GDPR | 1 RPC + 1 boton |
+| P3 | [ ] IP address hashing en admin_login_attempts | Edit puntual |
+| P4 | [ ] Merge a `main` y deploy a Vercel | git commands |
+| P5 | [ ] Eliminar OpositaApp.jsx legacy del bundle | Verificar imports + borrar |
 
 ---
 
@@ -106,7 +113,35 @@
 **Temas cubiertos:** 1-11 (de 28 total para C2 Auxiliar)
 **Formato:** Multiple choice (4 opciones), con explicacion y referencia legal
 
-### Pipeline de Preguntas
+### Pipeline de Calidad (Rev. 3) — COMPLETADO Feb 10, 2026
+
+#### Pipeline ejecutado:
+- [x] **Agente 1 (Reformulador - Sonnet):** 994+54 preguntas reformuladas (100%)
+- [x] **Agente 2 (Verificador Lógico - Opus):** 994 verificadas, 143 flags corregidos
+- [x] **Agente 3 (Cazador de Discrepancias - Sonnet):** 204 flags encontrados, todos resueltos:
+  - 199 tema misassignment → reasignados al tema correcto
+  - 91 falsos positivos descartados
+  - 3 duplicados desactivados (IDs 107, 668, 1323)
+  - 1 legal_reference corregida (ID 676)
+  - 1 distractores corregidos (ID 1188)
+- [x] **Validación:** 1,363 `auto_validated` + 2 `human_approved` = 0 flags pendientes
+
+#### Reasignaciones de tema importantes:
+- Tema 9 vaciado (89 preguntas): 63 LRJSP → Tema 11, 18 CE Título VIII → Tema 2, 2 CE TC → Tema 3, 4 LRJSP → Tema 11, 1 CE → Tema 1, 1 RD → Tema 11
+- Tema 1 reducido (75 preguntas): 51 → Tema 3, 15 → Tema 2, 9 → Tema 4
+- Tema 4 reducido (28 preguntas): → Tema 3
+- Tema 11 (5 preguntas): → Tema 9
+
+#### Snapshot final (Feb 10):
+```
+total_active: 1,365 (3 duplicados desactivados)
+auto_validated: 1,363
+human_approved: 2
+needs_refresh: 0
+Distribución: T1:257, T2:98, T3:234, T4:23, T5:146, T6:44, T7:190, T8:142, T9:5, T10:75, T11:151
+```
+
+### Archivos de referencia
 - 263 preguntas adicionales en `draft/` (extraidas de examenes Word)
 - 4 archivos .doc pendientes de conversion
 - Sistema de reportes en Supabase (`question_reports` table)
@@ -271,6 +306,8 @@
 
 | Fecha | Resumen |
 |-------|---------|
+| 2026-02-11 | DATA INTEGRITY AUDIT: Full assessment 2-pass. 13 issues encontrados (3 CRITICAL, 3 HIGH, 3 MEDIUM, 4 LOW). FortalezaVisual field mismatch, FSRS FK roto, column names incorrectos. Nav/auth/guards sin issues. Plan de implementacion creado |
+| 2026-02-10 | PIPELINE CALIDAD: Agente 1 (Sonnet) reformuló 994 preguntas, Agente 2 (Opus) verificó lógica y corrigió 143 flags, Agente 3 (Sonnet) cazó 204 discrepancias — pendiente resolver |
 | 2026-02-09 | TEMAS SPRINT: Fix tracking progreso (schema mismatch), TemasListView rewrite con sub-agrupaciones, TopicRoadmap canvas interactivo, metas semanales configurables, nivel/ranking con progress bar |
 | 2026-02-08 | NICE-TO-HAVE SPRINT: 4-agent Sonnet swarm. Analytics, timeouts, empty states, prerequisites |
 | 2026-02-08 | MEGA SPRINT: 4-agent swarm team. 16 items P0/P1/P2 completados. Score 6.3→8.2/10 |

@@ -4,11 +4,13 @@ const STATIC_CACHE = 'opositasmart-static-v4';
 const DYNAMIC_CACHE = 'opositasmart-dynamic-v4';
 
 // Assets to cache immediately on install
+// Use self.registration.scope to handle both '/' (Vercel) and '/Oposiciones-App/' (GH Pages)
+const BASE = self.registration?.scope ? new URL(self.registration.scope).pathname : '/';
 const STATIC_ASSETS = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/icons/icon.svg'
+  BASE,
+  `${BASE}index.html`,
+  `${BASE}manifest.json`,
+  `${BASE}icons/icon.svg`
 ];
 
 // Install event - cache static assets
@@ -89,7 +91,7 @@ async function cacheFirst(request) {
     return networkResponse;
   } catch (error) {
     console.log('[SW] Cache-first failed:', error);
-    return caches.match('/');
+    return caches.match(BASE);
   }
 }
 
@@ -110,7 +112,7 @@ async function networkFirst(request) {
     }
     // Return offline page for navigation requests
     if (request.mode === 'navigate') {
-      return caches.match('/');
+      return caches.match(BASE);
     }
     throw error;
   }

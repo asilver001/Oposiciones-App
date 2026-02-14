@@ -192,9 +192,9 @@ export function useTopics() {
 
         return {
           id: topic.id,
-          nombre: topic.code || topic.name,
-          progreso: progressLevel,
-          estado,
+          name: topic.code || topic.name,
+          progress: progressLevel,
+          status: estado,
           accuracy: progress.accuracy || 0,
           masteryRate: progress.masteryRate || 0,
           answered: questionsAnswered,
