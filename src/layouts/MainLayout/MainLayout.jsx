@@ -13,6 +13,7 @@ import BottomTabBar from './BottomTabBar';
 import SettingsModal from './SettingsModal';
 import ProgressModal from './ProgressModal';
 import DevPanel from '../../components/dev/DevPanel';
+import DraftFeatures from '../../components/dev/DraftFeatures';
 import { useAuth } from '../../contexts/AuthContext';
 import { useAdmin } from '../../contexts/AdminContext';
 import { useUserStore } from '../../stores/useUserStore';
@@ -63,6 +64,7 @@ export default function MainLayout() {
 
   const [showSettings, setShowSettings] = useState(false);
   const [showProgress, setShowProgress] = useState(false);
+  const [showDraftFeatures, setShowDraftFeatures] = useState(false);
   const [premiumMode, setPremiumMode] = useState(false);
 
   const isUserReviewer = isReviewer || authIsReviewer;
@@ -182,7 +184,7 @@ export default function MainLayout() {
           onShowPremium={() => {}}
           onShowAdminLogin={() => navigate(ROUTES.ADMIN)}
           onShowPlayground={() => {}}
-          onShowDraftFeatures={() => {}}
+          onShowDraftFeatures={() => setShowDraftFeatures(true)}
           onGoToOnboarding={() => navigate(ROUTES.WELCOME)}
           premiumMode={premiumMode}
           onTogglePremium={() => setPremiumMode(!premiumMode)}
@@ -224,6 +226,13 @@ export default function MainLayout() {
           />
         )}
       </AnimatePresence>
+
+      {/* DraftFeatures - full screen overlay */}
+      {showDraftFeatures && (
+        <div className="fixed inset-0 z-50 bg-white dark:bg-gray-950 overflow-y-auto">
+          <DraftFeatures onClose={() => setShowDraftFeatures(false)} />
+        </div>
+      )}
     </div>
   );
 }
