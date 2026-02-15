@@ -108,7 +108,7 @@ export default function ActividadPageWrapper() {
   // Combine streak into totalStats for the component
   const enrichedStats = {
     ...totalStats,
-    currentStreak: streak
+    currentStreak: streak.current || 0
   };
 
   return (

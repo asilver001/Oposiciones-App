@@ -8,11 +8,12 @@
  * 4. Expandable cards demo
  */
 
-import React, { useState, useRef, Suspense } from 'react';
+import React, { useState, useRef, Suspense, useMemo } from 'react';
 import { motion, AnimatePresence, Reorder, useMotionValue, useTransform } from 'framer-motion';
 import { RoadmapBasic } from '@/features/draft/ForceGraph';
 import { TemarioDendrite, TemarioHexMap } from '@/features/draft/TemarioGraph';
 import RoadmapErrorBoundary from './RoadmapErrorBoundary';
+import { useTopics } from '@/hooks/useTopics';
 import {
   ArrowLeft, Check, X, ChevronRight, ChevronDown, ChevronUp, ChevronLeft,
   BookOpen, Target, Flame, Trophy, Clock, TrendingUp,
@@ -8481,8 +8482,27 @@ function PanelAnimationsDemo() {
 // ============================================
 
 // Temario Graph tab with toggle between Dendrite and HexMap
-function TemarioGraphTab() {
+function TemarioGraphTab({ onStartTopicStudy }) {
   const [style, setStyle] = useState('dendrite');
+  const { topics, userProgress, loading } = useTopics();
+
+  const questionCounts = useMemo(() => {
+    return (topics || []).reduce((acc, topic) => {
+      const topicNumber = topic.number ?? topic.id;
+      acc[topicNumber] = topic.questionCount || 0;
+      return acc;
+    }, {});
+  }, [topics]);
+
+  const graphProps = useMemo(() => ({
+    userProgress,
+    questionCounts
+  }), [questionCounts, userProgress]);
+
+  const handleStartTopic = (topic) => {
+    onStartTopicStudy?.(topic);
+  };
+
   return (
     <motion.div
       key="temario-graph"
@@ -8511,18 +8531,21 @@ function TemarioGraphTab() {
             HexMap
           </button>
         </div>
-        <span className="text-xs text-gray-400 ml-auto">28 temas C2 AGE</span>
+        <span className="text-xs text-gray-400 ml-auto">
+          {loading ? 'Cargando datos...' : '28 temas C2 AGE'}
+        </span>
       </div>
-      <div className="h-[600px] bg-gray-950 rounded-2xl overflow-hidden mx-4">
+      <div className="h-[600px] bg-slate-50 rounded-2xl overflow-hidden mx-4 border border-gray-200">
         <RoadmapErrorBoundary>
-          {style === 'dendrite' ? <TemarioDendrite /> : <TemarioHexMap />}
+          {style === 'dendrite' && <TemarioDendrite {...graphProps} onStudy={handleStartTopic} />}
+          {style === 'hexmap' && <TemarioHexMap {...graphProps} onStudy={handleStartTopic} />}
         </RoadmapErrorBoundary>
       </div>
     </motion.div>
   );
 }
 
-export default function DraftFeatures({ onClose }) {
+export default function DraftFeatures({ onClose, onStartTopicStudy }) {
   const [activeTab, setActiveTab] = useState('full-home'); // Default to full home page
   const [selectedTema, setSelectedTema] = useState(null);
   const [showAllTemas, setShowAllTemas] = useState(false);
@@ -8992,7 +9015,7 @@ export default function DraftFeatures({ onClose }) {
 
           {/* TEMARIO GRAPH - Dendrite + HexMap visualization */}
           {activeTab === 'temario-graph' && (
-            <TemarioGraphTab />
+            <TemarioGraphTab onStartTopicStudy={onStartTopicStudy} />
           )}
 
           {/* ROADMAP - Force Graph visualization */}

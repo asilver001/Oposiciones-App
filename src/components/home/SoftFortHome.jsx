@@ -236,7 +236,7 @@ function LevelCard({ level, xp, description, onClick }) {
  */
 const DAY_LABELS = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
 
-function WeeklyGoalCard({ weeklyData = [0, 0, 0, 0, 0, 0, 0], todayStats, goal = 75 }) {
+function WeeklyGoalCard({ weeklyData = [0, 0, 0, 0, 0, 0, 0], todayStats: _todayStats, goal = 75 }) {
   const weeklyTotal = weeklyData.reduce((s, d) => s + d, 0);
   const percent = Math.min(Math.round((weeklyTotal / goal) * 100), 100);
   const maxDay = Math.max(...weeklyData, 1);

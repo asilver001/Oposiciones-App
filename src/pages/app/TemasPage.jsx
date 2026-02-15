@@ -6,19 +6,36 @@
 
 import { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { List, Network } from 'lucide-react';
+import { List, Network, Hexagon } from 'lucide-react';
 import TemasListView from '../../components/temas/TemasListView';
 import TopicRoadmap from '../../components/temas/TopicRoadmap';
+import { TemarioDendrite } from '../../features/draft/TemarioGraph';
 import { ROUTES } from '../../router/routes';
 import { useTopics } from '../../hooks/useTopics';
 
 export default function TemasPage() {
   const navigate = useNavigate();
   const { topics, topicsByBlock, userProgress, loading } = useTopics();
-  const [viewMode, setViewMode] = useState('list'); // 'list' | 'roadmap'
+  const [viewMode, setViewMode] = useState('list'); // 'list' | 'roadmap' | 'dendrite'
 
   const handleTopicSelect = (topic) => {
     navigate(ROUTES.STUDY, { state: { topic, mode: 'practica-tema' } });
+  };
+
+  // Question counts for the dendrite view (topicNumber -> count)
+  const questionCounts = useMemo(() => {
+    const counts = {};
+    topics.forEach(t => {
+      if (t.number != null) {
+        counts[t.number] = (counts[t.number] || 0) + (t.questionCount || 0);
+      }
+    });
+    return counts;
+  }, [topics]);
+
+  const handleDendriteStudy = (node) => {
+    const topic = topics.find(t => t.number === node.id);
+    if (topic) handleTopicSelect(topic);
   };
 
   // Enrich topics with progress for roadmap (session-based)
@@ -80,9 +97,20 @@ export default function TemasPage() {
         >
           <Network className="w-5 h-5" />
         </button>
+        <button
+          onClick={() => setViewMode('dendrite')}
+          className={`p-2 rounded-lg transition-colors ${
+            viewMode === 'dendrite'
+              ? 'bg-brand-100 text-brand-700'
+              : 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'
+          }`}
+          title="Vista mapa"
+        >
+          <Hexagon className="w-5 h-5" />
+        </button>
       </div>
 
-      {viewMode === 'list' ? (
+      {viewMode === 'list' && (
         <TemasListView
           topics={topics}
           topicsByBlock={topicsByBlock}
@@ -90,12 +118,22 @@ export default function TemasPage() {
           loading={loading}
           onTopicSelect={handleTopicSelect}
         />
-      ) : (
+      )}
+      {viewMode === 'roadmap' && (
         <TopicRoadmap
           topics={enrichedTopics}
           userProgress={userProgress}
           onTopicSelect={handleTopicSelect}
         />
+      )}
+      {viewMode === 'dendrite' && (
+        <div className="h-[650px] bg-slate-50 rounded-2xl overflow-hidden border border-gray-200">
+          <TemarioDendrite
+            userProgress={userProgress}
+            questionCounts={questionCounts}
+            onStudy={handleDendriteStudy}
+          />
+        </div>
       )}
     </div>
   );

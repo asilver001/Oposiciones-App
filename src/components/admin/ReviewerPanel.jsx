@@ -3,12 +3,48 @@ import {
   ArrowLeft, UserCheck, CheckCircle, XCircle, Clock,
   RefreshCw, Eye, EyeOff, LogOut, AlertTriangle, FileText,
   ChevronLeft, ChevronRight, ChevronDown, ChevronUp,
-  Keyboard, GitCompare, LayoutGrid, List, RotateCcw, Filter
+  Keyboard, GitCompare, LayoutGrid, List, RotateCcw, Filter, Search
 } from 'lucide-react';
 import { useAdmin } from '../../contexts/AdminContext';
 import { supabase } from '../../lib/supabase';
 import { ViewModeSelector, QuestionCardCompact, QuestionDetailModal } from '../review';
 import { BottomTabBar } from '../navigation';
+
+// Official tema names from BOE-435 (Resolución 18/12/2025)
+const TEMA_NAMES = {
+  1: 'CE: Principios, derechos, garantías',
+  2: 'TC, Reforma CE, Corona',
+  3: 'Cortes Generales, Defensor del Pueblo',
+  4: 'Poder Judicial, CGPJ, TS',
+  5: 'Gobierno, Presidente, Consejo Ministros',
+  6: 'Gobierno Abierto, Agenda 2030',
+  7: 'Transparencia (Ley 19/2013)',
+  8: 'AGE: órganos centrales y territoriales',
+  9: 'CCAA, Administración local',
+  10: 'Unión Europea',
+  11: 'LPAC + LRJSP, procedimiento, recursos',
+  12: 'Protección de datos (LOPDGDD)',
+  13: 'Personal funcionario',
+  14: 'Derechos y deberes funcionarios',
+  15: 'Presupuestos del Estado',
+  16: 'Igualdad, género, LGTBI, discapacidad',
+};
+const TOTAL_TEMAS = 16;
+
+// Parse review_comment for BOE verification status
+function parseVerification(reviewComment) {
+  if (!reviewComment) return null;
+  const match = reviewComment.match(/^\[(VERIFIED|ERROR|AMBIGUOUS)\]/);
+  if (!match) return null;
+  const type = match[1];
+  const boeMatch = reviewComment.match(/«([^»]+)»/);
+  const configs = {
+    VERIFIED: { label: 'Verificada BOE', bg: 'bg-green-50', border: 'border-green-400', text: 'text-green-800', icon: '✓' },
+    ERROR: { label: 'Error detectado', bg: 'bg-red-50', border: 'border-red-400', text: 'text-red-800', icon: '✗' },
+    AMBIGUOUS: { label: 'Requiere revisión', bg: 'bg-amber-50', border: 'border-amber-400', text: 'text-amber-800', icon: '⚠' },
+  };
+  return { type, ...configs[type], boeText: boeMatch?.[1] || null, detail: reviewComment.replace(/^\[.*?\]\s*/, '') };
+}
 
 // Reformulation type labels
 const reformulationLabels = {
@@ -44,7 +80,12 @@ export default function ReviewerPanel({
 
   // Filters
   const [filterOrigin, setFilterOrigin] = useState('all'); // 'all' | 'imported' | 'reformulated' | 'ai_created'
-  const [filterTema, setFilterTema] = useState('all'); // 'all' | '1'-'11'
+  const [filterTema, setFilterTema] = useState('all'); // 'all' | '1'-'16'
+  const [filterSpecial, setFilterSpecial] = useState('all'); // 'all' | 'cultura_general' | 'sin_referencia' | 'needs_refresh'
+
+  // Search
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchLoading, setSearchLoading] = useState(false);
 
   // View mode: 'individual', 'grid', 'list'
   const [viewMode, setViewMode] = useState('individual');
@@ -87,20 +128,31 @@ export default function ReviewerPanel({
   const loadQuestions = useCallback(async () => {
     setLoading(true);
     try {
-      const status = pilotMode ? 'pilot_pending' : 'human_pending';
       let query = supabase
         .from('questions')
         .select('*')
         .eq('is_active', true)
-        .eq('validation_status', status)
         .order('created_at', { ascending: true })
         .limit(100);
+
+      if (pilotMode) {
+        query = query.eq('validation_status', 'pilot_pending');
+      } else {
+        query = query.in('validation_status', ['human_pending', 'ai_created_pending']);
+      }
 
       if (filterOrigin !== 'all') {
         query = query.eq('origin', filterOrigin);
       }
       if (filterTema !== 'all') {
         query = query.eq('tema', parseInt(filterTema));
+      }
+      if (filterSpecial === 'cultura_general') {
+        query = query.like('review_comment', '[FUENTE_EXTERNA]%');
+      } else if (filterSpecial === 'sin_referencia') {
+        query = query.or('legal_reference.is.null,legal_reference.eq.');
+      } else if (filterSpecial === 'needs_refresh') {
+        query = query.eq('needs_refresh', true);
       }
 
       const { data, error } = await query;
@@ -115,17 +167,17 @@ export default function ReviewerPanel({
     } finally {
       setLoading(false);
     }
-  }, [pilotMode, filterOrigin, filterTema]);
+  }, [pilotMode, filterOrigin, filterTema, filterSpecial]);
 
   // Load stats separately (for auto-refresh)
   const loadStats = useCallback(async () => {
     try {
-      const [pendingRes, approvedRes, rejectedRes, totalRes, pilotRes] = await Promise.all([
+      const [pendingRes, approvedRes, rejectedRes, totalRes, pilotRes, culturaRes] = await Promise.all([
         supabase
           .from('questions')
           .select('*', { count: 'exact', head: true })
           .eq('is_active', true)
-          .eq('validation_status', 'human_pending'),
+          .in('validation_status', ['human_pending', 'ai_created_pending']),
         supabase
           .from('questions')
           .select('*', { count: 'exact', head: true })
@@ -144,7 +196,12 @@ export default function ReviewerPanel({
           .from('questions')
           .select('*', { count: 'exact', head: true })
           .eq('is_active', true)
-          .eq('validation_status', 'pilot_pending')
+          .eq('validation_status', 'pilot_pending'),
+        supabase
+          .from('questions')
+          .select('*', { count: 'exact', head: true })
+          .eq('is_active', true)
+          .like('review_comment', '[FUENTE_EXTERNA]%')
       ]);
 
       setStats({
@@ -152,7 +209,8 @@ export default function ReviewerPanel({
         approved: approvedRes.count || 0,
         rejected: rejectedRes.count || 0,
         total: totalRes.count || 0,
-        pilot: pilotRes.count || 0
+        pilot: pilotRes.count || 0,
+        cultura_general: culturaRes.count || 0
       });
     } catch (err) {
       console.error('Error loading stats:', err);
@@ -170,13 +228,15 @@ export default function ReviewerPanel({
         .limit(50);
 
       if (status === 'pending') {
-        query = query.eq('validation_status', 'human_pending');
+        query = query.in('validation_status', ['human_pending', 'ai_created_pending']);
       } else if (status === 'approved') {
         query = query.eq('validation_status', 'human_approved');
       } else if (status === 'rejected') {
         query = query.eq('validation_status', 'rejected');
       } else if (status === 'pilot') {
         query = query.eq('validation_status', 'pilot_pending');
+      } else if (status === 'cultura_general') {
+        query = query.like('review_comment', '[FUENTE_EXTERNA]%');
       }
 
       if (filterOrigin !== 'all') {
@@ -185,6 +245,13 @@ export default function ReviewerPanel({
       if (filterTema !== 'all') {
         query = query.eq('tema', parseInt(filterTema));
       }
+      if (filterSpecial === 'cultura_general') {
+        query = query.like('review_comment', '[FUENTE_EXTERNA]%');
+      } else if (filterSpecial === 'sin_referencia') {
+        query = query.or('legal_reference.is.null,legal_reference.eq.');
+      } else if (filterSpecial === 'needs_refresh') {
+        query = query.eq('needs_refresh', true);
+      }
 
       const { data, error } = await query;
       if (error) throw error;
@@ -192,6 +259,77 @@ export default function ReviewerPanel({
     } catch (err) {
       console.error('Error loading questions by status:', err);
       setFilteredQuestions([]);
+    }
+  }, [filterOrigin, filterTema, filterSpecial]);
+
+  // Search questions by keyword (question_text or options text)
+  const searchQuestions = useCallback(async (query) => {
+    if (!query || query.trim().length < 1) {
+      setStatsView(null);
+      setFilteredQuestions([]);
+      return;
+    }
+    setSearchLoading(true);
+    try {
+      const trimmed = query.trim();
+
+      // If query is a number, search by ID directly
+      if (/^\d+$/.test(trimmed)) {
+        const { data, error } = await supabase
+          .from('questions')
+          .select('id,question_text,options,explanation,legal_reference,tema,difficulty,validation_status,origin,review_comment,needs_refresh,refresh_reason,is_active,source,original_text,original_options')
+          .eq('id', parseInt(trimmed));
+        if (error) throw error;
+        setFilteredQuestions(data || []);
+        setStatsView('search');
+        return;
+      }
+
+      // Text search needs at least 2 chars
+      if (trimmed.length < 2) {
+        setStatsView(null);
+        setFilteredQuestions([]);
+        return;
+      }
+
+      const lowerQuery = trimmed.toLowerCase();
+
+      // Fetch all active questions (with optional filters), then search client-side
+      // This enables searching in JSONB options text which PostgREST can't filter with ilike
+      let dbQuery = supabase
+        .from('questions')
+        .select('id,question_text,options,explanation,legal_reference,tema,difficulty,validation_status,origin,review_comment,needs_refresh,refresh_reason,is_active,source,original_text,original_options')
+        .eq('is_active', true)
+        .order('tema', { ascending: true });
+
+      if (filterOrigin !== 'all') {
+        dbQuery = dbQuery.eq('origin', filterOrigin);
+      }
+      if (filterTema !== 'all') {
+        dbQuery = dbQuery.eq('tema', parseInt(filterTema));
+      }
+
+      const { data, error } = await dbQuery;
+      if (error) throw error;
+
+      // Client-side search across all text fields including originals
+      const results = (data || []).filter(q => {
+        if (q.question_text?.toLowerCase().includes(lowerQuery)) return true;
+        if (q.explanation?.toLowerCase().includes(lowerQuery)) return true;
+        if (q.legal_reference?.toLowerCase().includes(lowerQuery)) return true;
+        if (q.options?.some(opt => opt.text?.toLowerCase().includes(lowerQuery))) return true;
+        if (q.original_text?.toLowerCase().includes(lowerQuery)) return true;
+        if (q.original_options?.some(opt => opt.text?.toLowerCase().includes(lowerQuery))) return true;
+        return false;
+      });
+
+      setFilteredQuestions(results.slice(0, 100));
+      setStatsView('search');
+    } catch (err) {
+      console.error('Error searching questions:', err);
+      setFilteredQuestions([]);
+    } finally {
+      setSearchLoading(false);
     }
   }, [filterOrigin, filterTema]);
 
@@ -229,10 +367,12 @@ export default function ReviewerPanel({
 
   // Re-load stats view when filters change
   useEffect(() => {
-    if (statsView) {
+    if (statsView === 'search') {
+      if (searchQuery.trim().length >= 2) searchQuestions(searchQuery);
+    } else if (statsView) {
       loadQuestionsByStatus(statsView);
     }
-  }, [filterOrigin, filterTema, statsView, loadQuestionsByStatus]);
+  }, [filterOrigin, filterTema, filterSpecial, statsView, loadQuestionsByStatus, searchQuestions, searchQuery]);
 
   const currentQuestion = questions[currentIndex];
 
@@ -674,20 +814,73 @@ export default function ReviewerPanel({
             </div>
             <div className="flex-1">
               <select
-                value={filterTema}
-                onChange={(e) => setFilterTema(e.target.value)}
+                value={filterSpecial === 'cultura_general' ? 'cultura_general' : filterTema}
+                onChange={(e) => {
+                  const v = e.target.value;
+                  if (v === 'cultura_general') {
+                    setFilterTema('all');
+                    setFilterSpecial('cultura_general');
+                  } else {
+                    setFilterTema(v);
+                    setFilterSpecial('all');
+                  }
+                }}
                 className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-sm text-white appearance-none cursor-pointer focus:ring-2 focus:ring-white/30 focus:outline-none"
               >
                 <option value="all" className="text-gray-900">Todos los temas</option>
-                {[1,2,3,4,5,6,7,8,9,10,11].map(t => (
-                  <option key={t} value={String(t)} className="text-gray-900">Tema {t}</option>
+                {Array.from({length: TOTAL_TEMAS}, (_, i) => i + 1).map(t => (
+                  <option key={t} value={String(t)} className="text-gray-900">T{t}: {TEMA_NAMES[t]}</option>
                 ))}
+                {stats.cultura_general > 0 && (
+                  <option value="cultura_general" className="text-gray-900">📚 Cultura General ({stats.cultura_general})</option>
+                )}
               </select>
             </div>
           </div>
 
+          {/* Search Bar */}
+          <div className="mt-2 relative">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-300 pointer-events-none" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && searchQuery.trim().length >= 1) {
+                  searchQuestions(searchQuery);
+                }
+              }}
+              placeholder="Buscar por ID (ej: 1369) o texto..."
+              className="w-full pl-9 pr-20 py-2 bg-white/10 border border-white/20 rounded-lg text-sm text-white placeholder-brand-300 focus:ring-2 focus:ring-white/30 focus:outline-none"
+            />
+            <div className="absolute right-1.5 top-1/2 -translate-y-1/2 flex gap-1">
+              {searchQuery && (
+                <button
+                  onClick={() => {
+                    setSearchQuery('');
+                    if (statsView === 'search') {
+                      setStatsView(null);
+                      setFilteredQuestions([]);
+                    }
+                  }}
+                  className="px-2 py-1 text-xs text-brand-300 hover:text-white rounded"
+                  title="Limpiar búsqueda"
+                >
+                  <XCircle className="w-3.5 h-3.5" />
+                </button>
+              )}
+              <button
+                onClick={() => searchQuestions(searchQuery)}
+                disabled={searchQuery.trim().length < 1 || searchLoading}
+                className="px-3 py-1 bg-white/20 hover:bg-white/30 text-xs text-white rounded-md disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+              >
+                {searchLoading ? '...' : 'Buscar'}
+              </button>
+            </div>
+          </div>
+
           {/* Active filters indicator */}
-          {(filterOrigin !== 'all' || filterTema !== 'all') && (
+          {(filterOrigin !== 'all' || filterTema !== 'all' || filterSpecial !== 'all' || statsView === 'search') && (
             <div className="mt-2 flex items-center gap-2">
               <Filter className="w-3 h-3 text-brand-200" />
               <span className="text-xs text-brand-200">
@@ -700,9 +893,24 @@ export default function ReviewerPanel({
                 {filterTema !== 'all' && (
                   <span className="ml-1 px-2 py-0.5 bg-white/15 rounded-full">Tema {filterTema}</span>
                 )}
+                {filterSpecial === 'cultura_general' && (
+                  <span className="ml-1 px-2 py-0.5 bg-amber-400/30 rounded-full">📚 Cultura General</span>
+                )}
+                {statsView === 'search' && (
+                  <span className="ml-1 px-2 py-0.5 bg-blue-400/30 rounded-full">🔍 &quot;{searchQuery}&quot; ({filteredQuestions.length})</span>
+                )}
               </span>
               <button
-                onClick={() => { setFilterOrigin('all'); setFilterTema('all'); }}
+                onClick={() => {
+                  setFilterOrigin('all');
+                  setFilterTema('all');
+                  setFilterSpecial('all');
+                  setSearchQuery('');
+                  if (statsView === 'search') {
+                    setStatsView(null);
+                    setFilteredQuestions([]);
+                  }
+                }}
                 className="text-xs text-brand-300 hover:text-white underline ml-auto"
               >
                 Limpiar
@@ -710,16 +918,18 @@ export default function ReviewerPanel({
             </div>
           )}
 
-          {/* View Mode Selector */}
-          <div className="mt-3">
-            <ViewModeSelector
-              viewMode={viewMode}
-              onViewModeChange={setViewMode}
-              totalItems={questions.length}
-              currentPage={1}
-              itemsPerPage={questions.length}
-            />
-          </div>
+          {/* View Mode Selector - hidden during stats view */}
+          {!statsView && (
+            <div className="mt-3">
+              <ViewModeSelector
+                viewMode={viewMode}
+                onViewModeChange={setViewMode}
+                totalItems={questions.length}
+                currentPage={1}
+                itemsPerPage={questions.length}
+              />
+            </div>
+          )}
         </div>
       </div>
 
@@ -730,17 +940,27 @@ export default function ReviewerPanel({
             <div className="px-4 py-3 bg-gray-50 border-b border-gray-200 flex items-center justify-between flex-shrink-0">
               <h3 className="font-semibold text-gray-900 flex items-center gap-2">
                 {statsView === 'total' && <><FileText className="w-4 h-4" /> Todas las preguntas</>}
+                {statsView === 'pending' && <><Clock className="w-4 h-4 text-amber-500" /> Pendientes de revisión</>}
                 {statsView === 'approved' && <><CheckCircle className="w-4 h-4 text-green-500" /> Preguntas aprobadas</>}
                 {statsView === 'rejected' && <><XCircle className="w-4 h-4 text-red-500" /> Preguntas rechazadas</>}
                 {statsView === 'pilot' && <><AlertTriangle className="w-4 h-4 text-cyan-500" /> Piloto de calidad</>}
-                <span className="text-sm text-gray-500 font-normal">({filteredQuestions.length} de {
+                {statsView === 'cultura_general' && <><FileText className="w-4 h-4 text-amber-500" /> Cultura General — sin fuente BOE</>}
+                {statsView === 'search' && <><Search className="w-4 h-4 text-blue-500" /> Resultados de búsqueda</>}
+                <span className="text-sm text-gray-500 font-normal">({filteredQuestions.length}{statsView !== 'search' ? ` de ${
                   statsView === 'total' ? stats.total :
+                  statsView === 'pending' ? stats.pending :
                   statsView === 'approved' ? stats.approved :
+                  statsView === 'pilot' ? stats.pilot :
+                  statsView === 'cultura_general' ? stats.cultura_general :
                   stats.rejected
-                })</span>
+                }` : ''})</span>
               </h3>
               <button
-                onClick={() => { setStatsView(null); setFilteredQuestions([]); }}
+                onClick={() => {
+                  if (statsView === 'search') setSearchQuery('');
+                  setStatsView(null);
+                  setFilteredQuestions([]);
+                }}
                 className="text-gray-400 hover:text-gray-600 p-1 hover:bg-gray-100 rounded-lg"
                 title="Cerrar y volver a revisión"
               >
@@ -796,13 +1016,69 @@ export default function ReviewerPanel({
                             {new Date(q.created_at).toLocaleDateString('es-ES')}
                           </p>
                         </div>
-                        <button
-                          onClick={() => selectQuestion(q, idx)}
-                          className="p-2 text-gray-400 hover:text-brand-600 hover:bg-brand-50 rounded-lg"
-                          title="Ver detalle"
-                        >
-                          <Eye className="w-4 h-4" />
-                        </button>
+                        <div className="flex flex-col gap-1">
+                          {(() => {
+                            if (q.review_comment?.startsWith('[FUENTE_EXTERNA]')) {
+                              return (
+                                <span className="text-xs px-2 py-0.5 rounded-full bg-amber-50 border border-amber-300 text-amber-700 font-medium">
+                                  📚 Cultura General
+                                </span>
+                              );
+                            }
+                            const v = parseVerification(q.review_comment);
+                            if (v) return (
+                              <span className={`text-xs px-2 py-0.5 rounded-full ${v.bg} ${v.border} border ${v.text} font-medium`}>
+                                {v.icon} {v.label}
+                              </span>
+                            );
+                            return null;
+                          })()}
+                          <div className="flex gap-1">
+                            <button
+                              onClick={async (e) => {
+                                e.stopPropagation();
+                                const prev = q.validation_status;
+                                await reviewQuestion(q.id, 'human_approved', currentUser?.email || 'reviewer', '');
+                                setFilteredQuestions(fqs => fqs.map(fq => fq.id === q.id ? { ...fq, validation_status: 'human_approved' } : fq));
+                                setStats(s => ({
+                                  ...s,
+                                  approved: s.approved + 1,
+                                  ...(prev === 'rejected' ? { rejected: Math.max(0, s.rejected - 1) } : {}),
+                                  ...(['human_pending', 'ai_created_pending'].includes(prev) ? { pending: Math.max(0, s.pending - 1) } : {}),
+                                }));
+                              }}
+                              className={`p-1.5 rounded-lg ${q.validation_status === 'human_approved' ? 'text-green-600 bg-green-50' : 'text-gray-400 hover:text-green-600 hover:bg-green-50'}`}
+                              title="Aprobar"
+                            >
+                              <CheckCircle className="w-4 h-4" />
+                            </button>
+                            <button
+                              onClick={async (e) => {
+                                e.stopPropagation();
+                                const prev = q.validation_status;
+                                await reviewQuestion(q.id, 'rejected', currentUser?.email || 'reviewer', '');
+                                setFilteredQuestions(fqs => fqs.map(fq => fq.id === q.id ? { ...fq, validation_status: 'rejected' } : fq));
+                                setStats(s => ({
+                                  ...s,
+                                  rejected: s.rejected + 1,
+                                  ...(prev === 'human_approved' ? { approved: Math.max(0, s.approved - 1) } : {}),
+                                  ...(['human_pending', 'ai_created_pending'].includes(prev) ? { pending: Math.max(0, s.pending - 1) } : {}),
+                                }));
+                              }}
+                              className={`p-1.5 rounded-lg ${q.validation_status === 'rejected' ? 'text-red-600 bg-red-50' : 'text-gray-400 hover:text-red-600 hover:bg-red-50'}`}
+                              title="Rechazar"
+                            >
+                              <XCircle className="w-4 h-4" />
+                            </button>
+                            <button
+                              onClick={() => selectQuestion(q, idx)}
+                              className="p-1.5 text-gray-400 hover:text-brand-600 hover:bg-brand-50 rounded-lg"
+                              title="Ver detalle"
+                            >
+                              <Eye className="w-4 h-4" />
+                            </button>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   );
@@ -988,8 +1264,8 @@ export default function ReviewerPanel({
                     </div>
                   )}
 
-                  {/* AI Creation Rationale - for ai_created questions */}
-                  {currentQuestion?.origin === 'ai_created' && currentQuestion?.review_comment && (
+                  {/* AI Creation Rationale - for ai_created questions (only if not a verification comment) */}
+                  {currentQuestion?.origin === 'ai_created' && currentQuestion?.review_comment && !currentQuestion.review_comment.match(/^\[(VERIFIED|ERROR|AMBIGUOUS)/) && (
                     <div className="px-5 pb-4">
                       <div className="p-4 bg-violet-50 border border-violet-200 rounded-xl">
                         <p className="text-xs font-semibold text-violet-800 mb-1">Rationale de creación:</p>

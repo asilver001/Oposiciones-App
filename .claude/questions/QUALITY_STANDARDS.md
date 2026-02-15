@@ -730,6 +730,188 @@ Checklist ampliado Tier S:
 
 ---
 
+## Pipeline de Verificación por Capítulo (Rev. 2 — Feb 2026)
+
+### Objetivo
+
+Verificar y enriquecer preguntas leyendo el **capítulo completo** de la ley correspondiente,
+no solo el artículo suelto. Esto permite detectar:
+- **Drift semántico**: calificadores perdidos en la reformulación (ej: "a efectos judiciales")
+- **Citas inexactas**: palabras añadidas/cambiadas dentro de «guillemets»
+- **Contexto faltante**: matices de artículos adyacentes que afectan la pregunta
+- **Distractores ambiguos**: opciones que podrían ser correctas según artículos cercanos
+
+### Problema que resuelve
+
+**Caso real (ID 1369, Art. 32 LOPJ):**
+- **Original:** "**A efectos judiciales**, el partido judicial es una unidad territorial integrada por:"
+- **Reformulada:** "¿qué unidad territorial constituye el partido judicial?" — perdió "a efectos judiciales"
+- **Verificación anterior:** Marcó `[VERIFIED] Coherent` — no detectó el drift porque la respuesta era técnicamente correcta
+- **Con verificación por capítulo:** El agente lee Arts. 30-36 (capítulo completo de demarcación judicial), ve que el Art. 32 dice literalmente "A efectos judiciales, el partido es la unidad territorial..." y detecta que falta el calificador
+
+### Principio clave: Agrupar preguntas por capítulo
+
+**De un mismo capítulo de ley salen múltiples preguntas.** El agente debe ser consciente
+de TODAS las preguntas que salen de cada capítulo para:
+
+1. **Leer el capítulo UNA SOLA VEZ** y procesar todas sus preguntas juntas
+2. **Detectar contradicciones** entre preguntas del mismo capítulo
+3. **Evitar redundancia** — dos preguntas sobre el mismo artículo deben complementarse, no repetirse
+4. **Aprovechar el contexto** — al tener todas las preguntas del capítulo a la vista, es más fácil detectar drift
+
+**Ejemplo concreto:**
+```
+LOPJ Libro I, Título III "De la demarcación y planta judicial" (Arts. 30-36)
+├── ID 1369: Art. 32 (partido judicial)
+├── ID 1370: Art. 33 (capitalidad del partido)
+├── ID 845: Art. 30 (territorio nacional)
+└── ID 912: Art. 35 (modificación demarcación)
+
+El agente lee Arts. 30-36 UNA VEZ → verifica las 4 preguntas en secuencia
+→ detecta que ID 1369 perdió "a efectos judiciales"
+→ verifica que IDs 1369 y 1370 no se contradigan entre sí
+```
+
+### Estructura de agrupación: LEY → CAPÍTULO → PREGUNTAS
+
+```
+POR CADA LEY:
+  1. Leer el texto legal completo (archivo en leyes/)
+  2. Agrupar preguntas por capítulo/título/sección de la ley
+     - Extraer número de artículo de legal_reference
+     - Mapear artículo → capítulo según estructura de la ley
+  3. POR CADA CAPÍTULO (con preguntas):
+     a. Leer el capítulo completo (arts adyacentes incluidos)
+     b. Cargar TODAS las preguntas de ese capítulo
+     c. Para CADA pregunta del capítulo:
+        i.   Comparar original_text vs question_text → detectar calificadores perdidos
+        ii.  Verificar que la «cita» es LITERAL del artículo (no paráfrasis)
+        iii. Verificar que NINGÚN distractor podría ser correcto según el contexto
+        iv.  Verificar coherencia con las otras preguntas del mismo capítulo
+     d. Actualizar review_comment con tag apropiado
+  4. Siguiente capítulo (SIN releer el archivo de ley)
+```
+
+### Formato de output por pregunta
+
+```sql
+-- Si todo correcto:
+UPDATE questions SET
+  review_comment = '[CHAPTER_VERIFIED] Cap. III LOPJ (Arts. 30-36). Cita literal ok. Sin drift.'
+WHERE id = 845;
+
+-- Si hay drift detectado y corregido:
+UPDATE questions SET
+  question_text = 'A efectos judiciales y conforme al artículo 32 LOPJ, ¿qué unidad territorial constituye el partido judicial?',
+  explanation = '...explicación corregida con «cita» literal...',
+  review_comment = '[DRIFT_FIXED] Restaurado "a efectos judiciales" perdido en reformulación. Cap. III LOPJ.'
+WHERE id = 1369;
+
+-- Si hay error en la cita:
+UPDATE questions SET
+  explanation = '...explicación con cita corregida...',
+  review_comment = '[QUOTE_FIXED] Cita decía "partido judicial" pero ley dice "partido". Cap. III LOPJ.'
+WHERE id = 1369;
+```
+
+### Tags de review_comment
+
+| Tag | Significado |
+|-----|-------------|
+| `[CHAPTER_VERIFIED]` | Verificada contra capítulo completo, todo correcto |
+| `[DRIFT_FIXED]` | Calificador/contexto perdido en reformulación, restaurado |
+| `[QUOTE_FIXED]` | «Cita» corregida para ser literal |
+| `[CHAPTER_CONTRADICTION]` | Contradicción detectada con otra pregunta del mismo capítulo |
+| `[TOO_SIMILAR]` | Reformulación demasiado parecida al original, necesita reescritura |
+
+### Regla de diferenciación: Original vs Reformulada
+
+**La reformulación debe parecer escrita por una persona diferente.** No basta con reorganizar
+las mismas palabras o añadir "conforme al artículo X". El usuario ve ambas versiones (original
+y reformulada) en el ReviewerPanel — si se parecen demasiado, pierde el valor pedagógico.
+
+**3 reglas INVIOLABLES de la reformulación:**
+
+1. **NUNCA perder calificadores legales del original.** Si el original dice "a efectos judiciales",
+   "en todo caso", "salvo lo dispuesto", "sin perjuicio de" → DEBE aparecer en la reformulación.
+   No importa cuánto cambie la estructura; los calificadores legales son intocables.
+
+2. **NUNCA usar abreviaturas de leyes.** Siempre escribir el nombre completo:
+   - "Ley Orgánica del Poder Judicial" (no "LOPJ")
+   - "Constitución Española" (no "CE")
+   - "Ley Orgánica del Tribunal Constitucional" (no "LOTC")
+   - Las abreviaturas son aceptables SOLO entre paréntesis después del nombre completo,
+     o en campos internos como `legal_reference` y `review_comment`.
+
+3. **NUNCA producir un calco del original.** Cambiar estructura, vocabulario y enfoque.
+   Si >60% de las palabras coinciden en el mismo orden → tag `[TOO_SIMILAR]`.
+
+**Técnicas de diferenciación:**
+
+| Técnica | Original | Reformulada (BIEN) |
+|---------|----------|-------------------|
+| Cambiar enfoque | "El partido judicial es una unidad integrada por:" | "¿Cómo define la Ley Orgánica del Poder Judicial la demarcación territorial del partido, a efectos judiciales?" |
+| Caso práctico | "Según el Art. X, el plazo es:" | "Un ciudadano presenta recurso el día 15. ¿Hasta qué fecha tiene plazo según...?" |
+| Inversión | "¿Quién tiene derecho a...?" | "¿Cuál de los siguientes NO está legitimado para...?" |
+| Contexto narrativo | "El Gobierno cesa por:" | "Tras unas elecciones generales, ¿en qué supuestos previstos en el artículo 101 de la Constitución Española cesa el Gobierno?" |
+
+**Anti-patrones a detectar:**
+```
+❌ MAL (calco — solo añadió referencia legal):
+Original:    "A efectos judiciales, el partido judicial es una unidad territorial integrada por:"
+Reformulada: "A efectos judiciales, conforme a los artículos 30 y 32, el partido es una unidad territorial integrada por:"
+
+❌ MAL (perdió calificador + abreviatura):
+Original:    "A efectos judiciales, el partido judicial es una unidad territorial integrada por:"
+Reformulada: "Según la LOPJ, ¿cómo se define la demarcación territorial conocida como «partido»?"
+→ Perdió "a efectos judiciales" y usó "LOPJ" en vez del nombre completo
+
+✅ BIEN (diferente estructura + preserva calificadores + sin abreviaturas):
+Original:    "A efectos judiciales, el partido judicial es una unidad territorial integrada por:"
+Reformulada: "¿Cómo define la Ley Orgánica del Poder Judicial la demarcación territorial denominada
+              «partido», a efectos judiciales, y por qué tipo de municipios está integrada?"
+→ Estructura diferente, sin abreviaturas, preserva "a efectos judiciales"
+```
+
+**Checklist del agente verificador (OBLIGATORIO por cada pregunta):**
+```
+[ ] ¿Todos los calificadores legales del original están en la reformulación?
+[ ] ¿El enunciado usa nombres completos de leyes (sin abreviaturas)?
+[ ] ¿La estructura es suficientemente diferente del original (no es un calco)?
+[ ] ¿La «cita» entre guillemets es literal del artículo?
+[ ] ¿La respuesta correcta coincide con el texto legal?
+```
+
+### Reglas anti-redundancia (OBLIGATORIAS)
+
+| Recurso | Correcto | Incorrecto |
+|---------|----------|------------|
+| Archivo de ley | 1 agente lee CE, procesa 531 qs | 4 agentes leen CE cada uno |
+| Capítulo | Leer capítulo 1 vez, verificar N preguntas | Releer capítulo por cada pregunta |
+| Modelo | Sonnet genera citas, Opus verifica por capítulo | Opus para ambos pasos |
+| Agrupación | Ley → Capítulo → Preguntas | Pregunta → buscar artículo → leer |
+
+### Archivos de ley disponibles (`.claude/questions/Temario/leyes/`)
+
+| Ley | Archivo | Arts | Tamaño | Preguntas |
+|-----|---------|------|--------|-----------|
+| CE | `CE_Constitucion_Espanola.md` | 131 | 81KB | ~531 |
+| LOTC | `LOTC.md` | 106 | 91KB | ~76 |
+| LOPJ | `LOPJ.md` | 96 | 87KB | ~65 |
+| Ley 50/1997 | `Ley_50_1997_Gobierno.md` | 24 | 60KB | ~42 |
+| Ley 40/2015 | `Ley_40_2015_LRJSP.md` | 158 | 379KB | ~218 |
+| Ley 39/2015 | `Ley_39_2015_LPAC.md` | 133 | 220KB | ~7 |
+| LBRL | `LBRL.md` | 15 | 20KB | ~22 |
+| TREBEP | `TREBEP.md` | 686 | 1.3MB | (T10/T13/T14) |
+| LOPDGDD | `LOPDGDD.md` | 94 | 237KB | (T12) |
+| Ley 19/2013 | `Ley_19_2013_Transparencia.md` | 73 | 235KB | (T7) |
+| LGP | `Ley_47_2003_LGP.md` | 713 | 1.5MB | (T15) |
+
+> **Nota v2 (Feb 15):** Todas las leyes del temario BOE-435 extraídas y disponibles.
+> LOTC corregida. CE ampliada 61→131 arts. Ley 40/2015, 39/2015 y LBRL nuevas.
+
+---
+
 ## Pipeline de Creación de Preguntas Nuevas (Rev. 1)
 
 ### Cuándo usar este pipeline
@@ -829,5 +1011,275 @@ Para preguntas `ai_created`, el panel muestra:
 
 ---
 
+## Pipeline de Verificación contra BOE-435 (Feb 2026)
+
+**Workflow completo:** [`BOE_VERIFICATION_WORKFLOW.md`](BOE_VERIFICATION_WORKFLOW.md)
+
+**Resumen:** Verificación sistemática de las 1,365 preguntas activas contra el texto legal oficial del BOE-435 (Resolución 18/12/2025). Usa el documento como ÚNICA fuente de verdad (no búsquedas online).
+
+**4 pasos:**
+1. **Alineación de temas** (PRIORITARIO): Reasignar las 1,365 preguntas de 11 temas antiguos → 16 temas oficiales según `legal_reference`. 7 temas nuevos sin cobertura (6, 7, 9, 10, 12, 15, 16)
+2. **Extracción + Verificación:** Extraer texto legal del docx → archivos .md. Cada pregunta se cruza con el artículo citado. Explicación enriquecida con cita textual entre «»
+3. **Discrepancias:** Pasada global para contradicciones y duplicados
+4. **Creación de preguntas:** ~280 preguntas nuevas para temas vacíos
+
+**Resultado:** `review_comment` con `[VERIFIED]`/`[ERROR]`/`[AMBIGUOUS]` + cita BOE. Todos los temas 1-16 con ≥30 preguntas verificadas.
+
+---
+
+## Pipeline de Variantes Adaptativas (Rev. 1 — Feb 2026)
+
+### Objetivo
+
+Multiplicar el banco de preguntas generando variantes de cada pregunta existente, de modo que el opositor nunca vea exactamente la misma pregunta dos veces. Esto combate la memorización mecánica de respuestas y refuerza el aprendizaje real.
+
+### Estructura de Variantes
+
+Cada pregunta "semilla" (original) puede tener hasta 3 variantes. Todas comparten el mismo artículo legal y tema, pero difieren en enfoque:
+
+```
+Pregunta Semilla (ID 123)
+├── Variante L1: Reformulación cosmética (reorden opciones, rephrase enunciado)
+├── Variante L2: Inversión lógica (correcta→incorrecta, positiva→negativa)
+└── Variante L3: Generación desde artículo legal (ángulo nuevo)
+```
+
+**DB Schema — tabla `question_variants`:**
+```sql
+CREATE TABLE question_variants (
+  id SERIAL PRIMARY KEY,
+  parent_id INTEGER REFERENCES questions(id) NOT NULL,
+  variant_level INTEGER NOT NULL CHECK (variant_level IN (1, 2, 3)),
+  question_text TEXT NOT NULL,
+  options JSONB NOT NULL,
+  explanation TEXT NOT NULL,
+  legal_reference TEXT,
+  difficulty INTEGER DEFAULT 3,
+  validation_status TEXT DEFAULT 'variant_pending',
+  reviewed_by UUID REFERENCES auth.users(id),
+  reviewed_at TIMESTAMPTZ,
+  review_comment TEXT,
+  created_at TIMESTAMPTZ DEFAULT now()
+);
+-- Índice para lookup rápido de variantes de una pregunta
+CREATE INDEX idx_variants_parent ON question_variants(parent_id);
+```
+
+**Relación con FSRS:** El sistema FSRS trackea progreso por `question_id` (semilla). Al servir una sesión, `generateHybridSession` selecciona la semilla y luego elige aleatoriamente entre la original y sus variantes validadas. El progreso FSRS se acumula en la semilla.
+
+### Nivel 1: Reformulación Cosmética
+
+**Qué cambia:** Orden de opciones, fraseo del enunciado, sinónimos en distractores.
+**Qué NO cambia:** Respuesta correcta, artículo legal, lógica de la pregunta.
+
+```
+Original: "Según el Art. 56.1 CE, ¿cuál define correctamente la figura del Rey?"
+  a) Jefe del Estado, símbolo de su unidad ✅
+  b) Jefe del Estado, símbolo de su integridad
+  c) Jefe del Gobierno, símbolo de su unidad
+  d) Jefe del Estado, garante de su soberanía
+
+L1: "El artículo 56 de la Constitución Española define al Rey como:"
+  a) Jefe del Gobierno, representante de la unidad nacional
+  b) Jefe del Estado, garante de su soberanía y permanencia
+  c) Jefe del Estado, símbolo de su unidad y permanencia ✅
+  d) Jefe del Estado, símbolo de su integridad y continuidad
+```
+
+**Modelo:** Haiku (tarea mecánica, ~$0.0003/variante)
+**Coste estimado:** ~$1.23 para ~4,100 variantes (todo el banco)
+
+### Nivel 2: Inversión Lógica
+
+**Qué cambia:** La pregunta se invierte (de "señale la correcta" a "señale la INCORRECTA" o viceversa). Las opciones se reescriben para que la respuesta correcta cambie.
+
+```
+Original: "¿Cuál es la función del Defensor del Pueblo?" (señale correcta)
+  a) Supervisar la actividad de la Administración ✅
+  b) Nombrar a los jueces del TS
+  c) Aprobar los presupuestos generales
+  d) Disolver las Cortes Generales
+
+L2: "¿Cuál NO es función del Defensor del Pueblo?"
+  a) La defensa de los derechos del Título I CE
+  b) La supervisión de la actividad de la Administración
+  c) La presentación de recursos de inconstitucionalidad
+  d) La aprobación de los presupuestos del Estado ✅
+```
+
+**Modelo:** Sonnet (requiere razonamiento para invertir correctamente)
+**Verificación:** OBLIGATORIA por Opus (riesgo de inversión incorrecta)
+
+### Nivel 3: Generación desde Artículo Legal
+
+**Qué cambia:** Pregunta completamente nueva sobre el mismo artículo, con ángulo diferente.
+
+```
+Original (Art. 66.2 CE): "¿Cuáles son las funciones de las Cortes Generales?"
+  a) Legislativa, presupuestaria y control del Gobierno ✅
+  ...
+
+L3 (mismo Art. 66.2 CE): "El control de la acción del Gobierno corresponde a:"
+  a) El Tribunal Constitucional
+  b) Las Cortes Generales ✅
+  c) El Consejo de Estado
+  d) El Defensor del Pueblo
+```
+
+**Modelo:** Sonnet (creación con reglas claras)
+**Requiere:** Texto legal del artículo (disponible en `.claude/questions/Temario/leyes/`)
+**Verificación:** OBLIGATORIA por Opus
+
+### Asignación de Modelos (REGLA ESTRICTA)
+
+| Fase | Modelo | Justificación |
+|------|--------|---------------|
+| Generación L1 | **Haiku** | Tarea mecánica (reorden, sinónimos) |
+| Generación L2 | **Sonnet** | Requiere razonamiento para inversión |
+| Generación L3 | **Sonnet** | Creación estructurada |
+| **Verificación (TODOS los niveles)** | **Opus 4.6** | **OBLIGATORIO** — verificar precisión jurídica, lógica de distractores |
+| Cascading review | **Opus 4.6** | **OBLIGATORIO** — revisar siblings cuando uno falla |
+
+> **REGLA:** La generación puede usar modelos económicos. La verificación SIEMPRE usa Opus.
+> No hay excepciones. Una variante no verificada por Opus no puede pasar a `validated`.
+
+### Proceso de Revisión en Cascada (Cascading Review)
+
+Cuando UNA pregunta (semilla o variante) se marca como incorrecta:
+
+```
+                    ┌─────────────────────┐
+                    │ Pregunta flaggeada   │
+                    │ como incorrecta      │
+                    └─────────┬───────────┘
+                              │
+                    ┌─────────▼───────────┐
+                    │ ¿Es semilla o        │
+                    │ variante?            │
+                    └─────────┬───────────┘
+                              │
+              ┌───────────────┼───────────────┐
+              │               │               │
+        ┌─────▼─────┐  ┌─────▼─────┐  ┌─────▼─────┐
+        │ Semilla    │  │ Variante  │  │           │
+        │ flaggeada  │  │ flaggeada │  │           │
+        └─────┬─────┘  └─────┬─────┘  │           │
+              │               │        │           │
+              ▼               ▼        │           │
+        ┌─────────────────────────────────────────┐
+        │ TODAS las variantes + semilla            │
+        │ entran en revisión Opus                  │
+        │                                          │
+        │ • Semilla → Opus re-verifica             │
+        │ • Variante L1 → Opus re-verifica         │
+        │ • Variante L2 → Opus re-verifica         │
+        │ • Variante L3 → Opus re-verifica         │
+        └─────────────────────────────────────────┘
+```
+
+**Regla:** Si el error está en el artículo legal citado (no en la redacción), TODAS las variantes basadas en ese artículo son potencialmente incorrectas. Opus debe verificar cada una contra el texto legal actual.
+
+**Implementación en DB:**
+```sql
+-- Al flaggear una pregunta, marcar sus siblings:
+UPDATE question_variants
+SET validation_status = 'cascade_review_pending',
+    review_comment = CONCAT(review_comment, ' | [CASCADE] Triggered by parent/sibling flag')
+WHERE parent_id = :flagged_parent_id
+  AND validation_status = 'validated';
+
+-- También marcar la semilla si fue una variante la flaggeada:
+UPDATE questions
+SET needs_refresh = true,
+    refresh_reason = CONCAT(refresh_reason, ' | [CASCADE] Variant flagged: ', :variant_id)
+WHERE id = :parent_id;
+```
+
+**Estados de validación para variantes:**
+| Estado | Significado |
+|--------|-------------|
+| `variant_pending` | Recién generada, sin verificar |
+| `variant_verified` | Verificada por Opus, correcta |
+| `cascade_review_pending` | En revisión por cascada (sibling flaggeado) |
+| `variant_rejected` | Rechazada por Opus o por revisión cascada |
+
+### Plan Piloto (10 preguntas × tema)
+
+**Fase 1: Selección de semillas (10/tema)**
+```sql
+-- Seleccionar las 10 mejores preguntas por tema (Tier S/A preferidas)
+SELECT id, question_text, legal_reference, tema
+FROM questions
+WHERE is_active = true
+  AND validation_status IN ('auto_validated', 'human_approved')
+  AND explanation IS NOT NULL AND explanation != ''
+  AND legal_reference IS NOT NULL AND legal_reference != ''
+ORDER BY tema, difficulty
+LIMIT 10; -- por tema
+```
+
+Criterios de selección:
+1. Tienen explicación completa
+2. Tienen `legal_reference` limpia
+3. Cubren artículos diferentes dentro del tema
+4. Preferir preguntas ya verificadas por Opus
+
+**Fase 2: Generación (Sonnet/Haiku)**
+- Para cada semilla: generar 1 variante de cada nivel (L1 + L2 + L3 = 3 variantes)
+- Total piloto: 10 semillas × 16 temas × 3 variantes = **480 variantes**
+- Coste estimado: ~$2.50 (Haiku L1 + Sonnet L2/L3)
+
+**Fase 3: Verificación Opus (OBLIGATORIA)**
+- Cada variante pasa por Opus 4.6 para verificación
+- Checklist Opus por variante:
+  ```
+  [ ] ¿La respuesta correcta es jurídicamente precisa?
+  [ ] ¿Los distractores son definitivamente incorrectos?
+  [ ] ¿La explicación es coherente con el enunciado reformulado?
+  [ ] ¿El nivel de dificultad es apropiado?
+  [ ] ¿No contradice la pregunta semilla ni otras variantes?
+  ```
+- Si confianza < 0.95 → `variant_rejected` con razón
+- Coste estimado: ~$4.00 (480 variantes × Opus)
+
+**Fase 4: Confirmación Tier S**
+- Las variantes que pasan Opus se marcan `variant_verified`
+- Revisión humana de un sample (10-20%) en ReviewerPanel
+- Si ≥90% del sample es Tier S → pipeline validado → escalar
+
+**Fase 5: Escalado (post-piloto)**
+- Aplicar a las ~1,400 preguntas restantes
+- Total potencial: ~1,400 × 3 = **4,200 variantes nuevas**
+- Banco final: ~5,600 preguntas+variantes (4× el banco actual)
+- Coste total estimado: ~$25 (generación) + ~$35 (verificación Opus) = **~$60**
+
+### Integración con `generateHybridSession`
+
+```javascript
+// En spacedRepetitionService.js → generateHybridSession
+// Después de seleccionar las preguntas semilla:
+
+async function getVariantForSession(questionId) {
+  // 1. Buscar variantes validadas
+  const { data: variants } = await supabase
+    .from('question_variants')
+    .select('*')
+    .eq('parent_id', questionId)
+    .eq('validation_status', 'variant_verified');
+
+  if (!variants?.length) return null; // sin variantes, usar original
+
+  // 2. Elegir aleatoriamente entre original + variantes
+  const allVersions = [null, ...variants]; // null = usar original
+  const chosen = allVersions[Math.floor(Math.random() * allVersions.length)];
+
+  return chosen; // null = original, object = variante
+}
+```
+
+**Nota:** El progreso FSRS se acumula siempre en la pregunta semilla (`questions.id`), no en la variante. Las variantes son "vistas" diferentes del mismo concepto.
+
+---
+
 *Documento creado: 2026-02-07*
-*Última actualización: 2026-02-11*
+*Última actualización: 2026-02-15*

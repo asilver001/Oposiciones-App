@@ -6,70 +6,67 @@
  */
 
 export const TOPIC_PREREQUISITES = {
-  // Bloque I: Constitución Española
-  1: [],           // CE: Principios generales
-  2: [1],          // Derechos y deberes fundamentales
-  3: [1],          // Corona, Cortes Generales
-  4: [1, 3],       // Gobierno, Poder Judicial, TC
-  5: [1],          // Organización territorial
-  // Bloque I: Organización Administrativa
-  6: [1, 5],       // AGE central
-  7: [1],          // AGE territorial
-  8: [3],          // Comunidades Autónomas
-  9: [3, 8],       // Administración Local
-  10: [3, 8],      // Unión Europea
-  // Bloque I: Función Pública
-  11: [6],         // EBEP - Personal AAPP
-  12: [11],        // Derechos y deberes empleados
-  13: [11],        // Régimen disciplinario
-  // Bloque I: Procedimiento Administrativo
-  14: [6],         // Ley 39/2015 disposiciones generales
-  15: [14],        // Acto administrativo
-  16: [14, 15],    // Procedimiento administrativo común
-  17: [15, 16],    // Revisión de actos, recursos
-  18: [14],        // Ley 40/2015 LRJSP
-  // Bloque II: Ofimática
-  19: [],          // Informática básica
-  20: [19],        // Windows 11
-  21: [19],        // Word 2019
-  22: [19],        // Excel 2019
-  23: [19],        // Access 2019
-  24: [19],        // PowerPoint 2019
-  25: [19],        // Outlook 2019
-  26: [19],        // Internet y navegadores
-  27: [14, 18],    // Administración electrónica
-  28: []           // Protección de datos RGPD
+  // Bloque I: Organización Pública (T1-T16)
+  1: [],           // La Constitución Española
+  2: [1],          // Transparencia (requiere CE base)
+  3: [1],          // AGE (requiere CE base)
+  4: [1],          // CCAA y Administración local
+  5: [1],          // Unión Europea
+  6: [3],          // Procedimiento LPAC+LRJSP (requiere AGE)
+  7: [],           // Protección de datos (independiente)
+  8: [1],          // Cortes Generales (requiere CE base)
+  9: [3],          // Personal funcionario (requiere AGE)
+  10: [9],         // Derechos empleados (requiere EBEP)
+  11: [1, 8],      // Poder Judicial (requiere CE + Cortes)
+  12: [8],         // Presupuestos (requiere Cortes)
+  13: [],          // Igualdad (independiente)
+  14: [1, 8],      // Tribunal Constitucional (requiere CE + Cortes)
+  15: [1],         // Gobierno y Administración (requiere CE)
+  16: [15],        // Gobierno Abierto (requiere Gobierno)
+  // Bloque II: Actividad Administrativa y Ofimática (T17-T28)
+  17: [],          // Atención al público
+  18: [17],        // Servicios de información
+  19: [],          // Documentos, registro y archivo
+  20: [19],        // Administración electrónica
+  21: [],          // Informática básica
+  22: [21],        // Windows
+  23: [22],        // Explorador Windows
+  24: [21],        // Word
+  25: [21],        // Excel
+  26: [21],        // Access
+  27: [21],        // Outlook
+  28: [21]         // Internet
 };
 
 export const TOPIC_SHORT_NAMES = {
-  1: 'La Constitución',
-  2: 'Derechos fundamentales',
-  3: 'Corona y Cortes',
-  4: 'Gobierno y Poder Judicial',
-  5: 'Organización territorial',
-  6: 'AGE Central',
-  7: 'AGE Territorial',
-  8: 'Comunidades Autónomas',
-  9: 'Administración Local',
-  10: 'Unión Europea',
-  11: 'EBEP',
-  12: 'Derechos empleados',
-  13: 'Régimen disciplinario',
-  14: 'Ley 39/2015',
-  15: 'Acto administrativo',
-  16: 'Procedimiento común',
-  17: 'Recursos administrativos',
-  18: 'Ley 40/2015 LRJSP',
-  19: 'Informática básica',
-  20: 'Windows 11',
-  21: 'Word 2019',
-  22: 'Excel 2019',
-  23: 'Access 2019',
-  24: 'PowerPoint 2019',
-  25: 'Outlook 2019',
-  26: 'Internet',
-  27: 'Admin. electrónica',
-  28: 'Protección de datos'
+  1: 'Constitución',
+  2: 'Transparencia',
+  3: 'AGE',
+  4: 'CCAA y Admin. local',
+  5: 'Unión Europea',
+  6: 'LPAC + LRJSP',
+  7: 'Protección datos',
+  8: 'Cortes Generales',
+  9: 'Personal AAPP',
+  10: 'Derechos empleados',
+  11: 'Poder Judicial',
+  12: 'Presupuestos',
+  13: 'Igualdad',
+  14: 'Tribunal Constitucional',
+  15: 'Gobierno',
+  16: 'Gobierno Abierto',
+  17: 'Atención al público',
+  18: 'Servicios info.',
+  19: 'Documentos y archivo',
+  20: 'Admin. electrónica',
+  21: 'Informática básica',
+  22: 'Windows',
+  23: 'Explorador Windows',
+  24: 'Word',
+  25: 'Excel',
+  26: 'Access',
+  27: 'Outlook',
+  28: 'Internet'
 };
 
 /**

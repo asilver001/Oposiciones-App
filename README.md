@@ -1,16 +1,59 @@
-# React + Vite
+# OpositaSmart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicacion web de preparacion para oposiciones espanolas, actualmente enfocada en **Auxiliar Administrativo del Estado (AGE)**.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend:** React 19 + Vite 7 + Tailwind CSS 4
+- **Backend:** Supabase (auth + PostgreSQL)
+- **Deploy:** Vercel (produccion) + GitHub Pages (preview)
 
-## React Compiler
+## Desarrollo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install          # Instalar dependencias
+npm run dev          # Servidor de desarrollo
+npm run build        # Build de produccion
+npm run lint         # ESLint
+npm run screenshot   # Capturas Playwright (mobile + desktop)
+npm run test:e2e     # Tests E2E
+```
 
-## Expanding the ESLint configuration
+Requiere `.env` con:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+VITE_SUPABASE_URL=
+VITE_SUPABASE_ANON_KEY=
+```
+
+## Estructura
+
+```
+src/
+  router/          # AppRouter (React Router v6, rutas lazy)
+  pages/           # Paginas por ruta
+  components/      # Componentes por dominio (study, review, admin, auth, temas)
+  features/draft/  # Features experimentales (solo admin)
+  hooks/           # Custom hooks (useSpacedRepetition, useActivityData)
+  contexts/        # AuthContext, AdminContext
+  lib/             # Supabase client, FSRS, error tracking
+  data/            # Datos estaticos (prerequisites, topics)
+```
+
+## Modos de estudio
+
+| Modo | Preguntas | Duracion |
+|------|-----------|----------|
+| Test Rapido | 10 | ~5 min |
+| Practica Tema | 20 | ~15 min |
+| Repaso Errores | 20 | ~15 min |
+| Flashcards | 20 | ~10 min |
+| Simulacro | 100 | 60 min |
+| Lectura | 20 | Libre |
+
+## Temario
+
+28 temas organizados en 2 bloques segun BOE (Orden HFP/435):
+
+- **Bloque I** (T1-T16): Organizacion Publica
+- **Bloque II** (T17-T28): Actividad Administrativa y Ofimatica

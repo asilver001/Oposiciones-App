@@ -256,6 +256,19 @@ export default function QuestionDetailModal({
               </div>
             )}
 
+            {/* Cultura General Badge */}
+            {question.review_comment?.startsWith('[FUENTE_EXTERNA]') && (
+              <div className="mb-4 p-4 bg-amber-50 border border-amber-400 rounded-xl">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-lg">📚</span>
+                  <span className="text-xs font-semibold text-amber-800">Cultura General — Sin fuente BOE</span>
+                </div>
+                <p className="text-sm text-amber-700 mt-2">
+                  {question.review_comment.replace('[FUENTE_EXTERNA] ', '')}
+                </p>
+              </div>
+            )}
+
             {/* Compare with Original */}
             {question.original_text && (
               <div className="mb-4 border-t border-gray-100 pt-4">

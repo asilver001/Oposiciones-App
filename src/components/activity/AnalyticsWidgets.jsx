@@ -27,18 +27,24 @@ const LEVEL_LABELS = {
   preparado: 'Preparado'
 };
 
+// Topic names aligned with DB continuous numbering (T1-T28)
 const TOPIC_NAMES = {
-  1: 'Tema 1 - Constitución',
-  2: 'Tema 2 - Corona y Cortes',
-  3: 'Tema 3 - Gobierno y Administración',
-  4: 'Tema 4 - Organización territorial',
-  5: 'Tema 5 - UE y políticas',
-  6: 'Tema 6 - Leyes del Gobierno',
-  7: 'Tema 7 - EBEP',
-  8: 'Tema 8 - Procedimiento administrativo',
-  9: 'Tema 9 - Contratos del SP',
-  10: 'Tema 10 - Presupuestos generales',
-  11: 'Tema 11 - Igualdad y violencia'
+  1: 'T1 - Constitución Española',
+  2: 'T2 - Transparencia',
+  3: 'T3 - AGE',
+  4: 'T4 - CCAA y Adm. Local',
+  5: 'T5 - Unión Europea',
+  6: 'T6 - LPAC + LRJSP',
+  7: 'T7 - Protección de Datos',
+  8: 'T8 - Cortes Generales',
+  9: 'T9 - Personal funcionario',
+  10: 'T10 - Derechos funcionarios',
+  11: 'T11 - Poder Judicial',
+  12: 'T12 - Presupuestos del Estado',
+  13: 'T13 - Igualdad y derechos',
+  14: 'T14 - Tribunal Constitucional',
+  15: 'T15 - Gobierno',
+  16: 'T16 - Gobierno Abierto',
 };
 
 /**

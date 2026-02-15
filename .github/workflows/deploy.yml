@@ -30,6 +30,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Lint
+        run: npx eslint src/ --max-warnings 20
+
       - name: Build
         run: npm run build
 

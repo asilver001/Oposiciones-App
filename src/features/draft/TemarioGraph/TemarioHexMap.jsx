@@ -1,34 +1,47 @@
 /**
- * TemarioHexMap — Canvas 2D hex grid visualization inspired by Gradient Bang
- * Pure Canvas API, no external dependencies
+ * TemarioHexMap — Canvas 2D hex grid visualization for 28-tema C2 syllabus.
+ * Light theme, 6 bloques layout, integrated NodeDetailSheet.
  */
 
 import { useRef, useEffect, useState, useCallback } from 'react';
 import { getTemarioNodes, getTemarioLinks, STATUS_COLORS, BLOQUES } from './temarioData';
+import NodeDetailSheet from './NodeDetailSheet';
 
-const BG_COLOR = '#0a0a0f';
-const GRID_COLOR = '#ffffff08';
-const HEX_SIZE = 42;
-const HEX_GAP = 12;
+const BG = '#f8fafc';
+const GRID_COLOR = '#e5e7eb20';
+const HEX_SIZE = 38;
+const HEX_GAP = 10;
 
-// Hex grid positions: row-based layout grouped by bloque
+// Hex grid positions: rows grouped by bloque (6 bloques, 28 temas)
 const HEX_POSITIONS = {
-  // Row 0: Constitución (5 temas)
-  1:  { col: 0, row: 0 }, 2:  { col: 1, row: 0 }, 3:  { col: 2, row: 0 },
-  4:  { col: 3, row: 0 }, 5:  { col: 4, row: 0 },
-  // Row 1: Organización (5 temas)
-  6:  { col: 0, row: 1 }, 7:  { col: 1, row: 1 }, 8:  { col: 2, row: 1 },
-  9:  { col: 3, row: 1 }, 10: { col: 4, row: 1 },
-  // Row 2: Función Pública (3 temas, centered)
-  11: { col: 1, row: 2 }, 12: { col: 2, row: 2 }, 13: { col: 3, row: 2 },
-  // Row 3: Procedimiento (5 temas)
-  14: { col: 0, row: 3 }, 15: { col: 1, row: 3 }, 16: { col: 2, row: 3 },
-  17: { col: 3, row: 3 }, 18: { col: 4, row: 3 },
-  // Row 4-5: Ofimática (10 temas, 2 rows)
-  19: { col: 0, row: 4 }, 20: { col: 1, row: 4 }, 21: { col: 2, row: 4 },
-  22: { col: 3, row: 4 }, 23: { col: 4, row: 4 },
-  24: { col: 0, row: 5 }, 25: { col: 1, row: 5 }, 26: { col: 2, row: 5 },
-  27: { col: 3, row: 5 }, 28: { col: 4, row: 5 },
+  // Row 0: Constitución y Poderes (5)
+  1:  { col: 0, row: 0 }, 8:  { col: 1, row: 0 }, 11: { col: 2, row: 0 },
+  14: { col: 3, row: 0 }, 15: { col: 4, row: 0 },
+  // Row 1: Organización y Transparencia (5)
+  2:  { col: 0, row: 1 }, 3:  { col: 1, row: 1 }, 4:  { col: 2, row: 1 },
+  5:  { col: 3, row: 1 }, 16: { col: 4, row: 1 },
+  // Row 2: Procedimiento y Protección (2, centered)
+  6:  { col: 1.5, row: 2 }, 7:  { col: 2.5, row: 2 },
+  // Row 3: Función Pública e Igualdad (4)
+  9:  { col: 0.5, row: 3 }, 10: { col: 1.5, row: 3 },
+  12: { col: 2.5, row: 3 }, 13: { col: 3.5, row: 3 },
+  // Row 4: Atención Ciudadana (4)
+  17: { col: 0.5, row: 4 }, 18: { col: 1.5, row: 4 },
+  19: { col: 2.5, row: 4 }, 20: { col: 3.5, row: 4 },
+  // Row 5-6: Ofimática (8)
+  21: { col: 0.5, row: 5 }, 22: { col: 1.5, row: 5 },
+  23: { col: 2.5, row: 5 }, 24: { col: 3.5, row: 5 },
+  25: { col: 0.5, row: 6 }, 26: { col: 1.5, row: 6 },
+  27: { col: 2.5, row: 6 }, 28: { col: 3.5, row: 6 },
+};
+
+const BLOQUE_ROWS = {
+  constitucion: 0,
+  organizacion: 1,
+  procedimiento: 2,
+  funcion: 3,
+  atencion: 4,
+  ofimatica: 5,
 };
 
 function hexToWorld(col, row, size) {
@@ -57,7 +70,7 @@ function hitTestHex(mx, my, cx, cy, size) {
   return Math.sqrt(dx * dx + dy * dy) <= size;
 }
 
-export default function TemarioHexMap({ userProgress = {}, questionCounts = {} }) {
+export default function TemarioHexMap({ userProgress = {}, questionCounts = {}, onStudy }) {
   const canvasRef = useRef(null);
   const containerRef = useRef(null);
   const animRef = useRef(null);
@@ -69,7 +82,9 @@ export default function TemarioHexMap({ userProgress = {}, questionCounts = {} }
   const nodes = getTemarioNodes(userProgress, questionCounts);
   const links = getTemarioLinks();
 
-  // Calculate world positions for each node
+  const selectedData = selectedNode ? nodes.find(n => n.id === selectedNode) : null;
+
+  // Calculate world positions
   const nodePositions = useCallback(() => {
     const positions = {};
     for (const node of nodes) {
@@ -81,7 +96,7 @@ export default function TemarioHexMap({ userProgress = {}, questionCounts = {} }
     return positions;
   }, [nodes]);
 
-  // Render
+  // Render loop
   useEffect(() => {
     const canvas = canvasRef.current;
     const container = containerRef.current;
@@ -102,8 +117,8 @@ export default function TemarioHexMap({ userProgress = {}, questionCounts = {} }
       const cam = cameraRef.current;
       const positions = nodePositions();
 
-      // Center the grid
       const allPos = Object.values(positions);
+      if (allPos.length === 0) { animRef.current = requestAnimationFrame(render); return; }
       const minX = Math.min(...allPos.map(p => p.wx));
       const maxX = Math.max(...allPos.map(p => p.wx));
       const minY = Math.min(...allPos.map(p => p.wy));
@@ -114,10 +129,10 @@ export default function TemarioHexMap({ userProgress = {}, questionCounts = {} }
       const offsetY = (height - gridH * cam.zoom) / 2 - minY * cam.zoom + cam.y + 10;
 
       // Background
-      ctx.fillStyle = BG_COLOR;
+      ctx.fillStyle = BG;
       ctx.fillRect(0, 0, width, height);
 
-      // Subtle background grid
+      // Subtle grid
       ctx.strokeStyle = GRID_COLOR;
       ctx.lineWidth = 0.5;
       const gridStep = 40 * cam.zoom;
@@ -128,7 +143,6 @@ export default function TemarioHexMap({ userProgress = {}, questionCounts = {} }
         ctx.beginPath(); ctx.moveTo(0, gy); ctx.lineTo(width, gy); ctx.stroke();
       }
 
-      // Transform helper
       const toScreen = (wx, wy) => ({
         x: wx * cam.zoom + offsetX,
         y: wy * cam.zoom + offsetY
@@ -142,23 +156,22 @@ export default function TemarioHexMap({ userProgress = {}, questionCounts = {} }
         const sp = toScreen(s.wx, s.wy);
         const tp = toScreen(t.wx, t.wy);
 
-        // Gradient line
         const grad = ctx.createLinearGradient(sp.x, sp.y, tp.x, tp.y);
-        grad.addColorStop(0, s.bloqueColor + '40');
-        grad.addColorStop(1, t.bloqueColor + '60');
+        grad.addColorStop(0, s.bloqueColor + '30');
+        grad.addColorStop(1, t.bloqueColor + '50');
+
+        const mx = (sp.x + tp.x) / 2;
+        const my = (sp.y + tp.y) / 2 - 12 * cam.zoom;
 
         ctx.beginPath();
-        const mx = (sp.x + tp.x) / 2;
-        const my = (sp.y + tp.y) / 2 - 15 * cam.zoom;
         ctx.moveTo(sp.x, sp.y);
         ctx.quadraticCurveTo(mx, my, tp.x, tp.y);
         ctx.strokeStyle = grad;
         ctx.lineWidth = 1.5 * cam.zoom;
 
-        // Animated dash for locked prereqs
         if (t.status === 'nuevo' && t.sessions === 0) {
-          const dashOffset = (Date.now() / 50) % 20;
-          ctx.setLineDash([6, 4]);
+          const dashOffset = (Date.now() / 60) % 20;
+          ctx.setLineDash([5, 4]);
           ctx.lineDashOffset = -dashOffset;
         } else {
           ctx.setLineDash([]);
@@ -168,13 +181,13 @@ export default function TemarioHexMap({ userProgress = {}, questionCounts = {} }
 
         // Arrow
         const angle = Math.atan2(tp.y - my, tp.x - mx);
-        const aLen = 5 * cam.zoom;
+        const aLen = 4 * cam.zoom;
         ctx.beginPath();
         ctx.moveTo(tp.x, tp.y);
         ctx.lineTo(tp.x - aLen * Math.cos(angle - 0.4), tp.y - aLen * Math.sin(angle - 0.4));
         ctx.lineTo(tp.x - aLen * Math.cos(angle + 0.4), tp.y - aLen * Math.sin(angle + 0.4));
         ctx.closePath();
-        ctx.fillStyle = t.bloqueColor + '80';
+        ctx.fillStyle = t.bloqueColor + '60';
         ctx.fill();
       }
 
@@ -184,72 +197,92 @@ export default function TemarioHexMap({ userProgress = {}, questionCounts = {} }
         const sz = HEX_SIZE * cam.zoom;
         const isHovered = hoveredNode === node.id;
         const isSelected = selectedNode === node.id;
-        const effectiveSize = isHovered ? sz * 1.1 : sz;
+        const effectiveSize = isHovered ? sz * 1.08 : sz;
+        const statusColor = STATUS_COLORS[node.status] || STATUS_COLORS.nuevo;
 
-        // Glow effect
+        // Glow
         if (isHovered || isSelected || node.status === 'dominado') {
-          const glow = ctx.createRadialGradient(sp.x, sp.y, effectiveSize * 0.5, sp.x, sp.y, effectiveSize * 1.8);
-          glow.addColorStop(0, node.bloqueColor + '30');
+          const glow = ctx.createRadialGradient(sp.x, sp.y, effectiveSize * 0.5, sp.x, sp.y, effectiveSize * 1.6);
+          glow.addColorStop(0, node.bloqueColor + '18');
           glow.addColorStop(1, 'transparent');
           ctx.fillStyle = glow;
           ctx.beginPath();
-          ctx.arc(sp.x, sp.y, effectiveSize * 1.8, 0, Math.PI * 2);
+          ctx.arc(sp.x, sp.y, effectiveSize * 1.6, 0, Math.PI * 2);
           ctx.fill();
         }
 
-        // Hex shape
+        // Hex — white fill
         drawHex(ctx, sp.x, sp.y, effectiveSize);
-        ctx.fillStyle = node.bloqueColor + (node.status === 'nuevo' ? '30' : '60');
+        ctx.fillStyle = '#ffffff';
         ctx.fill();
 
-        // Border
+        // Hex — bloque tinted fill
         drawHex(ctx, sp.x, sp.y, effectiveSize);
-        ctx.strokeStyle = STATUS_COLORS[node.status] || '#4b5563';
+        ctx.fillStyle = node.bloqueColor + (node.status === 'nuevo' ? '08' : '12');
+        ctx.fill();
+
+        // Hex border
+        drawHex(ctx, sp.x, sp.y, effectiveSize);
+        ctx.strokeStyle = isSelected ? node.bloqueColor : statusColor;
         ctx.lineWidth = isHovered || isSelected ? 3 : 2;
         ctx.stroke();
 
-        // Progress arc overlay
+        // Progress arc
         if (node.accuracy > 0) {
           const arcAngle = (node.accuracy / 100) * Math.PI * 2;
           ctx.beginPath();
           ctx.arc(sp.x, sp.y, effectiveSize + 4, -Math.PI / 2, -Math.PI / 2 + arcAngle);
-          ctx.strokeStyle = '#10b981';
+          ctx.strokeStyle = STATUS_COLORS.dominado;
           ctx.lineWidth = 3;
+          ctx.lineCap = 'round';
           ctx.stroke();
+          ctx.lineCap = 'butt';
         }
 
         // Label "T{num}"
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        ctx.fillStyle = '#fff';
-        ctx.font = `bold ${Math.max(10, 13 * cam.zoom)}px Inter, sans-serif`;
+        ctx.fillStyle = '#1f2937';
+        ctx.font = `bold ${Math.max(10, 12 * cam.zoom)}px Inter, system-ui, sans-serif`;
         ctx.fillText(node.label, sp.x, sp.y - 4 * cam.zoom);
 
-        // Short name below
-        ctx.font = `${Math.max(7, 8 * cam.zoom)}px Inter, sans-serif`;
-        ctx.fillStyle = '#9ca3af';
-        ctx.fillText(node.shortName, sp.x, sp.y + 12 * cam.zoom);
+        // Short name
+        ctx.font = `${Math.max(7, 8 * cam.zoom)}px Inter, system-ui, sans-serif`;
+        ctx.fillStyle = '#6b7280';
+        ctx.fillText(node.shortName, sp.x, sp.y + 10 * cam.zoom);
 
         // Question count badge
         if (node.questionCount > 0) {
-          const badgeY = sp.y + 22 * cam.zoom;
-          ctx.font = `${Math.max(6, 7 * cam.zoom)}px Inter, sans-serif`;
-          ctx.fillStyle = '#6b7280';
-          ctx.fillText(`${node.questionCount}q`, sp.x, badgeY);
+          ctx.font = `${Math.max(6, 7 * cam.zoom)}px Inter, system-ui, sans-serif`;
+          ctx.fillStyle = '#9ca3af';
+          ctx.fillText(`${node.questionCount}q`, sp.x, sp.y + 20 * cam.zoom);
+        }
+
+        // Dominado checkmark
+        if (node.status === 'dominado') {
+          const cx = sp.x + effectiveSize * 0.65;
+          const cy = sp.y - effectiveSize * 0.65;
+          ctx.fillStyle = STATUS_COLORS.dominado;
+          ctx.beginPath();
+          ctx.arc(cx, cy, 7 * cam.zoom, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.fillStyle = '#ffffff';
+          ctx.font = `bold ${Math.max(7, 8 * cam.zoom)}px sans-serif`;
+          ctx.fillText('\u2713', cx, cy + 1);
         }
       }
 
       // Bloque labels on the left
-      const bloqueRows = { constitucion: 0, organizacion: 1, funcion: 2, procedimiento: 3, ofimatica: 4 };
       for (const [key, bloque] of Object.entries(BLOQUES)) {
-        const row = bloqueRows[key];
+        const row = BLOQUE_ROWS[key];
+        if (row === undefined) continue;
         const refPos = hexToWorld(0, row, HEX_SIZE);
-        const sp = toScreen(refPos.x - HEX_SIZE * 2.5, refPos.y);
+        const sp = toScreen(refPos.x - HEX_SIZE * 2.8, refPos.y);
         ctx.save();
         ctx.textAlign = 'right';
         ctx.textBaseline = 'middle';
-        ctx.font = `bold ${Math.max(8, 10 * cam.zoom)}px Inter, sans-serif`;
-        ctx.fillStyle = bloque.color + 'aa';
+        ctx.font = `600 ${Math.max(8, 9 * cam.zoom)}px Inter, system-ui, sans-serif`;
+        ctx.fillStyle = bloque.color + 'cc';
         ctx.fillText(bloque.name, sp.x, sp.y);
         ctx.restore();
       }
@@ -273,7 +306,6 @@ export default function TemarioHexMap({ userProgress = {}, questionCounts = {} }
     const mx = e.clientX - rect.left;
     const my = e.clientY - rect.top;
 
-    // Handle drag
     if (dragRef.current.dragging) {
       cameraRef.current.x += (mx - dragRef.current.lastX);
       cameraRef.current.y += (my - dragRef.current.lastY);
@@ -282,11 +314,11 @@ export default function TemarioHexMap({ userProgress = {}, questionCounts = {} }
       return;
     }
 
-    // Hit test
     const cam = cameraRef.current;
     const positions = nodePositions();
     const { width, height } = container.getBoundingClientRect();
     const allPos = Object.values(positions);
+    if (allPos.length === 0) return;
     const minX = Math.min(...allPos.map(p => p.wx));
     const maxX = Math.max(...allPos.map(p => p.wx));
     const minY = Math.min(...allPos.map(p => p.wy));
@@ -307,36 +339,37 @@ export default function TemarioHexMap({ userProgress = {}, questionCounts = {} }
     }
     setHoveredNode(found);
     canvas.style.cursor = found ? 'pointer' : 'grab';
-  }, [nodePositions]);
+  }, [nodePositions, setHoveredNode]);
 
-  const handleClick = useCallback((e) => {
+  const handleClick = useCallback(() => {
     if (hoveredNode) {
       setSelectedNode(prev => prev === hoveredNode ? null : hoveredNode);
     }
-  }, [hoveredNode]);
+  }, [hoveredNode, setSelectedNode]);
 
   const handleWheel = useCallback((e) => {
     e.preventDefault();
-    const delta = e.deltaY > 0 ? 0.9 : 1.1;
-    cameraRef.current.zoom = Math.max(0.3, Math.min(3, cameraRef.current.zoom * delta));
+    const delta = e.deltaY > 0 ? 0.92 : 1.08;
+    cameraRef.current.zoom = Math.max(0.4, Math.min(2.5, cameraRef.current.zoom * delta));
   }, []);
 
   const handleMouseDown = useCallback((e) => {
-    if (!hoveredNode) {
-      dragRef.current = { dragging: true, lastX: e.clientX - canvasRef.current.getBoundingClientRect().left, lastY: e.clientY - canvasRef.current.getBoundingClientRect().top };
+    if (!hoveredNode && canvasRef.current) {
+      const rect = canvasRef.current.getBoundingClientRect();
+      dragRef.current = { dragging: true, lastX: e.clientX - rect.left, lastY: e.clientY - rect.top };
       canvasRef.current.style.cursor = 'grabbing';
     }
   }, [hoveredNode]);
 
   const handleMouseUp = useCallback(() => {
     dragRef.current.dragging = false;
-    canvasRef.current.style.cursor = hoveredNode ? 'pointer' : 'grab';
+    if (canvasRef.current) {
+      canvasRef.current.style.cursor = hoveredNode ? 'pointer' : 'grab';
+    }
   }, [hoveredNode]);
 
-  const selectedData = selectedNode ? nodes.find(n => n.id === selectedNode) : null;
-
   return (
-    <div ref={containerRef} className="w-full h-full relative" style={{ background: BG_COLOR }}>
+    <div ref={containerRef} className="w-full h-full relative" style={{ background: BG }}>
       <canvas
         ref={canvasRef}
         onMouseMove={handleMouseMove}
@@ -348,45 +381,13 @@ export default function TemarioHexMap({ userProgress = {}, questionCounts = {} }
         style={{ display: 'block', width: '100%', height: '100%' }}
       />
 
-      {/* Detail panel */}
-      {selectedData && (
-        <div className="absolute top-3 right-3 bg-black/80 backdrop-blur rounded-xl p-4 w-64 border border-white/10">
-          <div className="flex items-center gap-2 mb-2">
-            <div className="w-4 h-4 rounded-full" style={{ backgroundColor: selectedData.bloqueColor }} />
-            <span className="text-white font-bold">Tema {selectedData.id}</span>
-            <button onClick={() => setSelectedNode(null)} className="ml-auto text-gray-500 hover:text-white text-sm">X</button>
-          </div>
-          <p className="text-gray-300 text-sm mb-3">{selectedData.name}</p>
-          <div className="space-y-1 text-xs text-gray-400">
-            <div className="flex justify-between">
-              <span>Bloque</span>
-              <span className="text-white">{selectedData.bloqueLabel}</span>
-            </div>
-            <div className="flex justify-between">
-              <span>Precision</span>
-              <span className="text-white">{selectedData.accuracy}%</span>
-            </div>
-            <div className="flex justify-between">
-              <span>Sesiones</span>
-              <span className="text-white">{selectedData.sessions}</span>
-            </div>
-            <div className="flex justify-between">
-              <span>Preguntas</span>
-              <span className="text-white">{selectedData.questionCount}</span>
-            </div>
-            <div className="flex justify-between">
-              <span>Estado</span>
-              <span style={{ color: STATUS_COLORS[selectedData.status] }}>{selectedData.status}</span>
-            </div>
-            {selectedData.dependencies.length > 0 && (
-              <div className="flex justify-between">
-                <span>Prerequisitos</span>
-                <span className="text-white">{selectedData.dependencies.map(d => `T${d}`).join(', ')}</span>
-              </div>
-            )}
-          </div>
-        </div>
-      )}
+      {/* Bottom sheet */}
+      <NodeDetailSheet
+        node={selectedData}
+        userProgress={userProgress}
+        onStudy={onStudy}
+        onClose={() => setSelectedNode(null)}
+      />
     </div>
   );
 }

@@ -52,6 +52,9 @@ Sonnet → falla 2x → Opus sin thinking → falla → Opus con thinking
 - **NO** usar swarm team para <3 tareas independientes (el overhead no vale)
 - **NO** lanzar agentes de exploración cuando un Grep/Glob directo basta
 - **NO** releer archivos completos que ya están en contexto
+- **NO** lanzar múltiples agentes que lean el mismo archivo fuente (ej: ley). Organizar agentes por archivo/ley, no por tema
+- **NO** usar Opus para tareas mecánicas (copiar citas, reformular). Sonnet para generación, Opus SOLO para verificación
+- **Pipeline de preguntas**: Sonnet genera/enriquece → Opus verifica. Nunca al revés ni Opus para ambos
 
 ## Estructura del Proyecto
 

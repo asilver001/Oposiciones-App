@@ -64,6 +64,18 @@ export default function QuestionCardCompact({
         <span className="text-lg" title={status.label}>{status.icon}</span>
       </div>
 
+      {/* Cultura General Badge */}
+      {question.review_comment?.startsWith('[FUENTE_EXTERNA]') && (
+        <span className="text-xs px-2 py-0.5 rounded-full border font-medium mb-2 inline-block bg-amber-100 text-amber-700 border-amber-300">📚 Cultura General</span>
+      )}
+
+      {/* BOE Verification Badge */}
+      {question.review_comment?.match(/^\[(VERIFIED|ERROR|AMBIGUOUS)\]/) && (() => {
+        const type = question.review_comment.match(/^\[(VERIFIED|ERROR|AMBIGUOUS)\]/)[1];
+        const cfg = { VERIFIED: { icon: '✓', cls: 'bg-green-100 text-green-700 border-green-300' }, ERROR: { icon: '✗', cls: 'bg-red-100 text-red-700 border-red-300' }, AMBIGUOUS: { icon: '⚠', cls: 'bg-amber-100 text-amber-700 border-amber-300' } };
+        return <span className={`text-xs px-2 py-0.5 rounded-full border font-medium mb-2 inline-block ${cfg[type].cls}`}>{cfg[type].icon} BOE</span>;
+      })()}
+
       {/* Question text (truncated) */}
       <p className="text-sm font-medium text-gray-900 line-clamp-2 mb-3 min-h-[2.5rem]">
         {question.question_text}

@@ -6,10 +6,11 @@
 
 ## Estado Actual
 
-**Ultima actualizacion:** 2026-02-11
-**Fase del proyecto:** Beta-Ready (~88% completado) — Data integrity audit in progress
-**Branch actual:** feature/feature-based-architecture
-**Publish readiness:** 1 CRITICAL pendiente (FK roto, inerte) — resto resuelto
+**Ultima actualizacion:** 2026-02-15
+**Fase del proyecto:** Beta-Ready (~90% completado) — Contenido en expansion
+**Branch actual:** feature/feature-based-architecture (sincronizado con main)
+**Publish readiness:** 1 CRITICAL pendiente (FK roto, inerte) — lint 0 errors, CI lint gate activo
+**Trabajo paralelo:** Preguntas temas 12-28 en otra instancia de Claude
 
 ---
 
@@ -53,6 +54,13 @@
 | 11 | Streak solo current | Ahora calcula `longestStreak` desde historial completo |
 | 13 | Label "Mixto" | Cambiado a "General" para `topic_id=null` |
 
+### Resueltos (Feb 15)
+
+| # | Issue | Fix |
+|---|-------|-----|
+| P4 | Merge a main + deploy Vercel | feature branch sincronizado con main, auto-deploy activo |
+| — | DraftFeatures no funciona en AppRouter | `onShowDraftFeatures` era `() => {}` en MainLayout. Wired correctamente |
+
 ### Para produccion (pre-existentes)
 
 | # | Tarea | Notas |
@@ -60,8 +68,26 @@
 | P1 | [ ] Testing manual flujo auth → study → results | E2E scripting |
 | P2 | [ ] Data export endpoint GDPR | 1 RPC + 1 boton |
 | P3 | [ ] IP address hashing en admin_login_attempts | Edit puntual |
-| P4 | [ ] Merge a `main` y deploy a Vercel | git commands |
 | P5 | [ ] Eliminar OpositaApp.jsx legacy del bundle | Verificar imports + borrar |
+
+### Resueltos (Feb 15 — Codex Assessment)
+
+| # | Issue | Fix |
+|---|-------|-----|
+| — | 7 lint errors (5 unused-vars + 2 memoization) | Removed unused vars, added missing deps to useCallback |
+| — | CI/CD no ejecuta lint | Agregado `npx eslint src/` step en deploy.yml antes de build |
+| — | README.md era boilerplate Vite | Reescrito con descripcion real del proyecto |
+| — | E2E test asumia redirect para 404 | Test ahora acepta /welcome (unauth) o NotFoundPage (auth) |
+
+### Proximas features (post-assessment estrategico)
+
+| # | Feature | Prioridad | Estado |
+|---|---------|-----------|--------|
+| F1 | Completar 28 temas (preguntas) | CRITICO | En progreso (otra instancia) |
+| F2 | Supuestos Practicos (modo estudio) | ALTO | Diseño pendiente |
+| F3 | Explicaciones IA con Haiku | ALTO | Diseño pendiente |
+| F4 | Monitoreo BOE automatico | MEDIO | Pendiente |
+| F5 | Preguntas adaptativas (variantes) | ALTO | Disenado — piloto pendiente |
 
 ---
 
@@ -98,10 +124,12 @@
 
 ## Metricas de Codigo
 
-- **Build:** 7.2s, compila limpio, 0 warnings de chunk size
+- **Build:** 7.5s, compila limpio (1 chunk size warning — OpositaApp legacy 537KB)
 - **Bundle principal:** 233KB gzip (antes 567KB = **-60%**)
 - **Vendor chunks:** react 11KB, supabase 48KB, ui 49KB
-- **Lint:** 0 errors, 8 warnings (exhaustive-deps intencionales)
+- **Temario graph:** TemarioDendrite + TemarioHexMap en DraftFeatures
+- **Lint:** 0 errors, 10 warnings (exhaustive-deps intencionales)
+- **CI lint gate:** deploy.yml ejecuta eslint antes de build (max 20 warnings)
 - **Tests:** 10+ E2E smoke tests (e2e/smoke.spec.js)
 - **Design tokens:** 602 `purple-*` migrados a `brand-*` en 35 archivos
 
@@ -109,37 +137,80 @@
 
 ## Banco de Preguntas
 
-**En Supabase:** 1,368 preguntas activas
-**Temas cubiertos:** 1-11 (de 28 total para C2 Auxiliar)
+**En Supabase:** 1,422 preguntas activas (301 importadas, 1,046 reformuladas, 75 AI-created)
+**Temas cubiertos:** 16 temas (7 con >100 preguntas, 7 con <20 = CRITICO, 2 en progreso)
+**Variantes adaptativas:** Pipeline disenado (3 niveles), piloto pendiente (10/tema)
+**Tracker completo:** [QUESTION_TRACKER.md](QUESTION_TRACKER.md)
 **Formato:** Multiple choice (4 opciones), con explicacion y referencia legal
 
 ### Pipeline de Calidad (Rev. 3) — COMPLETADO Feb 10, 2026
 
 #### Pipeline ejecutado:
 - [x] **Agente 1 (Reformulador - Sonnet):** 994+54 preguntas reformuladas (100%)
-- [x] **Agente 2 (Verificador Lógico - Opus):** 994 verificadas, 143 flags corregidos
-- [x] **Agente 3 (Cazador de Discrepancias - Sonnet):** 204 flags encontrados, todos resueltos:
-  - 199 tema misassignment → reasignados al tema correcto
-  - 91 falsos positivos descartados
-  - 3 duplicados desactivados (IDs 107, 668, 1323)
-  - 1 legal_reference corregida (ID 676)
-  - 1 distractores corregidos (ID 1188)
-- [x] **Validación:** 1,363 `auto_validated` + 2 `human_approved` = 0 flags pendientes
+- [x] **Agente 2 (Verificador Lógico - Sonnet):** 994 verificadas, 143 flags corregidos
+- [x] **Agente 3 (Cazador de Discrepancias - Sonnet):** 204 flags encontrados, todos resueltos
+- [x] **Validación:** 1,363 `auto_validated` + 2 `human_approved`
 
-#### Reasignaciones de tema importantes:
-- Tema 9 vaciado (89 preguntas): 63 LRJSP → Tema 11, 18 CE Título VIII → Tema 2, 2 CE TC → Tema 3, 4 LRJSP → Tema 11, 1 CE → Tema 1, 1 RD → Tema 11
-- Tema 1 reducido (75 preguntas): 51 → Tema 3, 15 → Tema 2, 9 → Tema 4
-- Tema 4 reducido (28 preguntas): → Tema 3
-- Tema 11 (5 preguntas): → Tema 9
+### Re-Assessment Opus 4.6 — COMPLETADO (parcial) Feb 15, 2026
 
-#### Snapshot final (Feb 10):
+> Pipeline Rev.3 (Sonnet) tenia 3 problemas: calificadores perdidos, explicaciones sin cita textual,
+> verificador no comparaba original vs reformulada. Re-assessment con Opus 4.6.
+
+#### Resultados Pase 1 (verificacion):
+- **1,002/1,120 procesadas (89.5%)** — 118 pendientes (T4: 94 con review_comment viejo)
+- 540 `[VERIFIED]` con fuente legal | 460 `[VERIFIED_NO_SOURCE]` (T8/T9/T11)
+- 3 respuestas incorrectas corregidas (IDs 1214, 1261, 559)
+- 19+ tema mismatches, 12+ near-duplicates, 56 `needs_refresh`
+- **Backup:** `questions_pre_reassessment_backup` (1,120 rows)
+
+### Pipeline «Citas Textuales» — COMPLETADO (parcial) Feb 15, 2026
+
+> Solo 34% de explicaciones tienen «citas textuales» del articulo legal.
+> Pipeline optimizado: Sonnet agrega citas (mecanico) → Opus verifica (logica juridica).
+> Agentes organizados por LEY (no tema) para evitar lecturas redundantes.
+
+#### Paso 1 — Sonnet agrega «citas» (COMPLETADO):
+- [x] S-CE: 531 procesadas, 442 con «citas» nuevas (~130K tok)
+- [x] S-LOPJ: 65/65 procesadas, 100% con «citas» (~104K tok)
+- [x] S-L50: 8/8 procesadas, 100% con «citas» (~57K tok)
+- [~] S-LOTC: BLOQUEADO — archivo LOTC.md contiene CE, no LOTC real
+
+**Resultado Paso 1:** 590/1,120 con «citas» (52.7%, subio de 34%)
+**LOPJ y Ley 50/1997 al 100%. CE al 82%.**
+
+#### Paso 2 — Verificacion sample (COMPLETADO):
+- [x] O-CE: sample 30 qs → 6/6 verificables = 100% EXACT MATCH, 0 errores
+- [x] O-LOPJ+L50: sample 20 qs → 20/20 verificadas, 100% correctas, 0 errores
+- **Resultado:** 26 preguntas con tag [VERIFIED_QUOTE] en DB
+- **Reporte:** `.claude/questions/CE_QUOTE_VERIFICATION_REPORT.md`
+
+#### Archivos de ley — DESBLOQUEADOS (Feb 15, re-extraccion v2):
+- [x] LOTC: re-extraida correctamente (106 arts, 91KB) — desbloquea 76 preguntas
+- [x] Ley 40/2015 (LRJSP): extraida (158 arts, 379KB) — desbloquea 218 preguntas
+- [x] Ley 39/2015 (LPAC): extraida (133 arts, 220KB) — desbloquea 7 preguntas
+- [x] LBRL: extraida (15 arts, 20KB) — desbloquea 22 preguntas
+- [x] CE: ampliada 61→131 arts (81KB) — desbloquea ~89 preguntas CE sin cita
+- Sin referencia legal: 136 preguntas (skip)
+
+**Siguiente:** Ejecutar Ronda 2 de «citas» para LOTC, Ley 40/2015, LBRL, Ley 39/2015, CE restantes (~412 qs)
+
+#### Tokens reales consumidos: ~354K Sonnet (Paso 1) + ~250K Sonnet (Paso 2 verificacion) ≈ 604K total
+
+#### Snapshot actual:
 ```
-total_active: 1,365 (3 duplicados desactivados)
-auto_validated: 1,363
-human_approved: 2
-needs_refresh: 0
-Distribución: T1:257, T2:98, T3:234, T4:23, T5:146, T6:44, T7:190, T8:142, T9:5, T10:75, T11:151
+total_active: 1,422 (post-migracion 16 temas + 75 AI-created)
+OK (>100): T1:241, T2:211, T3:136, T4:126, T5:118, T8:208, T9:211
+BAJO: T11:88, T13:16
+CRITICO (<20): T6:10, T7:10, T10:10, T12:10, T14:10, T15:7, T16:10
 ```
+
+#### Pipeline de Variantes Adaptativas (disenado Feb 15):
+- **3 niveles:** L1 cosmetico (Haiku), L2 inversion (Sonnet), L3 desde articulo (Sonnet)
+- **Verificacion:** SIEMPRE Opus 4.6 (sin excepciones)
+- **Cascading review:** Si una variante falla → todas las siblings se re-verifican con Opus
+- **Piloto:** 10 semillas/tema × 3 variantes = 480 variantes → Opus → confirmar Tier S
+- **Proyeccion total:** 1,422 semillas + 4,266 variantes = ~5,688 preguntas
+- **Coste total estimado:** ~$60 (generacion + verificacion Opus)
 
 ### Archivos de referencia
 - 263 preguntas adicionales en `draft/` (extraidas de examenes Word)
@@ -306,6 +377,7 @@ Distribución: T1:257, T2:98, T3:234, T4:23, T5:146, T6:44, T7:190, T8:142, T9:5
 
 | Fecha | Resumen |
 |-------|---------|
+| 2026-02-15 | RE-ASSESSMENT OPUS 4.6: 10 agentes Opus paralelos, 1,002/1,120 procesadas (89.5%). Explicaciones enriquecidas con «citas textuales». 540 verified con fuente, 460 no-source. 3 wrong answers corregidas, 19+ tema mismatches, 12+ near-duplicates. Buscador agregado a ReviewerPanel. Recuadro "Verificada BOE" eliminado de UI. CODEX ASSESSMENT FIX: lint, CI gate, README, E2E fix. Temario viz (Dendrite + HexMap). Pipeline variantes disenado. QUESTION_TRACKER.md creado |
 | 2026-02-11 | DATA INTEGRITY AUDIT: Full assessment 2-pass. 13 issues encontrados (3 CRITICAL, 3 HIGH, 3 MEDIUM, 4 LOW). FortalezaVisual field mismatch, FSRS FK roto, column names incorrectos. Nav/auth/guards sin issues. Plan de implementacion creado |
 | 2026-02-10 | PIPELINE CALIDAD: Agente 1 (Sonnet) reformuló 994 preguntas, Agente 2 (Opus) verificó lógica y corrigió 143 flags, Agente 3 (Sonnet) cazó 204 discrepancias — pendiente resolver |
 | 2026-02-09 | TEMAS SPRINT: Fix tracking progreso (schema mismatch), TemasListView rewrite con sub-agrupaciones, TopicRoadmap canvas interactivo, metas semanales configurables, nivel/ranking con progress bar |

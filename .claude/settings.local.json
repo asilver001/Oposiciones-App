@@ -67,7 +67,9 @@
       "Bash(git merge:*)",
       "Bash(npm audit:*)",
       "Bash(npx npm-check:*)",
-      "mcp__claude_ai_Supabase__execute_sql"
+      "mcp__claude_ai_Supabase__execute_sql",
+      "Bash(pdftotext:*)",
+      "Bash(npx vite:*)"
     ]
   },
   "enableAllProjectMcpServers": true

@@ -151,12 +151,15 @@ test.describe('Navigation', () => {
     expect(page.url()).toContain('/welcome');
   });
 
-  test('unknown routes redirect to welcome', async ({ page }) => {
+  test('unknown routes show 404 or redirect unauthenticated to welcome', async ({ page }) => {
     await page.goto(hash('/nonexistent-page'));
     await page.waitForLoadState('networkidle');
     await page.waitForTimeout(1500);
 
-    expect(page.url()).toContain('/welcome');
+    // Unauthenticated users get redirected to welcome; authenticated users see NotFoundPage
+    const url = page.url();
+    const has404 = await page.locator('text=404').count();
+    expect(url.includes('/welcome') || has404 > 0).toBeTruthy();
   });
 
   test('no console errors on welcome page', async ({ page }) => {

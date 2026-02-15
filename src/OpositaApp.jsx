@@ -2163,7 +2163,13 @@ export default function OpositaApp() {
 
       {/* Draft Features Preview */}
       {showDraftFeatures && (
-        <DraftFeatures onClose={() => setShowDraftFeatures(false)} />
+        <DraftFeatures
+          onClose={() => setShowDraftFeatures(false)}
+          onStartTopicStudy={(topic) => {
+            setShowDraftFeatures(false);
+            startTopicStudy(topic);
+          }}
+        />
       )}
 
       {/* Admin Login Modal */}

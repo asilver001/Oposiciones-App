@@ -48,7 +48,6 @@ function buildLayout(topics, userProgress, containerWidth, containerHeight) {
   });
 
   // BFS to set max depths (longest path)
-  const visited = new Set();
   while (queue.length > 0) {
     const current = queue.shift();
     // Find all topics that have `current` as a prerequisite
@@ -81,7 +80,6 @@ function buildLayout(topics, userProgress, containerWidth, containerHeight) {
   Object.values(levels).forEach(nums => nums.sort((a, b) => a - b));
 
   const maxDepth = Math.max(...Object.keys(levels).map(Number), 0);
-  const nodeRadius = 26;
   const paddingX = 50;
   const paddingY = 50;
 
@@ -352,7 +350,7 @@ export default function TopicRoadmap({ topics = [], userProgress = {}, onTopicSe
     handleMouseMove({ clientX: touch.clientX, clientY: touch.clientY });
   }, [handleMouseMove]);
 
-  const handleTouchEnd = useCallback((e) => {
+  const handleTouchEnd = useCallback((_e) => {
     if (hoveredNode) {
       const node = nodes.find(n => n.id === hoveredNode);
       if (node && node.unlocked) {

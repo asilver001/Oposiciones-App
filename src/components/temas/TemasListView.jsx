@@ -26,16 +26,24 @@ import {
 // Thematic sub-groupings for Auxiliar Administrativo AGE
 // Maps topic numbers to their thematic sub-group within a block
 const SUBGROUPS = {
-  'Constitucion Espanola': [1, 2, 3, 4, 5],
-  'Organizacion y Gobierno': [6, 7, 8, 9, 10],
-  'Empleo Publico y Procedimiento': [11, 12, 13, 14, 15, 16]
+  // Bloque I: Organización Pública
+  'Constitucion y Marco Institucional': [1, 2, 3, 4, 5],
+  'Procedimiento y Organizacion': [6, 7, 8, 9, 10],
+  'Poderes, Funcion Publica e Igualdad': [11, 12, 13, 14, 15, 16],
+  // Bloque II: Actividad Administrativa y Ofimática
+  'Atencion al Ciudadano': [17, 18, 19, 20],
+  'Ofimatica Basica': [21, 22, 23, 24],
+  'Ofimatica Avanzada': [25, 26, 27, 28]
 };
 
 // Icons for sub-groups
 const SUBGROUP_ICONS = {
-  'Constitucion Espanola': '📜',
-  'Organizacion y Gobierno': '🏛️',
-  'Empleo Publico y Procedimiento': '👥'
+  'Constitucion y Marco Institucional': '📜',
+  'Procedimiento y Organizacion': '🏛️',
+  'Poderes, Funcion Publica e Igualdad': '⚖️',
+  'Atencion al Ciudadano': '🏢',
+  'Ofimatica Basica': '💻',
+  'Ofimatica Avanzada': '🌐'
 };
 
 // Status configuration with colors and labels

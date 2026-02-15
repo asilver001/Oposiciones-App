@@ -56,7 +56,6 @@ export default function MainLayout() {
     totalStats: activityStats,
     todayStats,
     streak: activityStreak,
-    weeklyImprovement,
     fetchActivityData,
   } = useActivityData();
 
@@ -230,7 +229,19 @@ export default function MainLayout() {
       {/* DraftFeatures - full screen overlay */}
       {showDraftFeatures && (
         <div className="fixed inset-0 z-50 bg-white dark:bg-gray-950 overflow-y-auto">
-          <DraftFeatures onClose={() => setShowDraftFeatures(false)} />
+          <DraftFeatures
+            onClose={() => setShowDraftFeatures(false)}
+            onStartTopicStudy={(topic) => {
+              setShowDraftFeatures(false);
+              navigate(ROUTES.STUDY, {
+                state: {
+                  mode: 'practica-tema',
+                  topic,
+                  temaId: topic.id
+                }
+              });
+            }}
+          />
         </div>
       )}
     </div>
