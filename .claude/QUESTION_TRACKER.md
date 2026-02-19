@@ -104,9 +104,9 @@ Protocolo: agrupar preguntas por capitulo dentro de cada ley. El agente lee cada
 | LBRL | 23 | 23 | 0 | 3 | 0 | COMPLETADO |
 | Ley 39/2015 | 20 | 20 | 1 | 3 | 0 | COMPLETADO |
 | CE | 690 | 690 | 6 | 31 | 7 | COMPLETADO |
-| TREBEP | 25 | 0 | 0 | 0 | 0 | PENDIENTE |
+| TREBEP | 24 | 24 | 1 | 4 | 2 | COMPLETADO |
 | Otra/Sin ref | 252 | 6 | 0 | 0 | 0 | PENDIENTE |
-| **TOTAL** | **1,422** | **1,147** | **17** | **34** | **27** | |
+| **TOTAL** | **1,422** | **1,171** | **18** | **38** | **29** | |
 
 #### Ley 40/2015 — Detalles (Feb 16, 2026)
 
@@ -154,6 +154,17 @@ Hallazgos criticos:
 - LBRL: 3 refs corregidas (381: texto completo→cita limpia, 1067: Art. 34.1.d→h, 1391: Art. 35.2.b→35.1)
 - L39 ID 305: recurso de reposicion NO pone fin a via administrativa → recurso de alzada si (Art. 114.1.a)
 - L39: 3 refs corregidas (306: Art. 33→96.6, 309: Art. 30.1→30.3, 316: Art. 39.1→39.2)
+
+#### TREBEP — Detalles (Feb 19, 2026)
+
+24/24 verified. 1 answer fixed, 4 refs fixed, 2 drift fixed.
+- ID 1467: ANSWER_FIXED — reserva de puesto en excedencia cuidado hijo es 2 anos (Art. 89), no 1
+- ID 1468: REF_FIXED — servicios especiales es Art. 87 TREBEP, no Art. 86 (que es servicio activo)
+- ID 1491: REF_FIXED — prescripcion de faltas es Art. 97, no Art. 95.2
+- ID 1493: REF_FIXED — complemento especifico es Art. 24.b, no Art. 24.c (que es productividad)
+- ID 1465: REF_FIXED — cese libre designacion, Art. 84.3→Art. 80 (Art. 84 es movilidad voluntaria)
+- ID 1458: DRIFT_FIXED — libre designacion puestos "especial responsabilidad y confianza" (Art. 80)
+- ID 1494: DRIFT_FIXED — retribuciones basicas son sueldo+trienios (Art. 23), no incluyen pagas extraordinarias como elemento separado
 
 #### CE — Detalles (Feb 19, 2026)
 
@@ -269,6 +280,7 @@ Cuando una pregunta o variante se marca como incorrecta:
 
 | Fecha | Cambio |
 |-------|--------|
+| 2026-02-19 | TREBEP verificado: 24/24. 1 answer fixed, 4 refs fixed, 2 drift fixed. CE Arts 81-96 anadidos al archivo de extraccion. Total acumulado: 1,171/1,422 (82.3%) |
 | 2026-02-19 | VERIFICACION POR CAPITULO CE: 690/690 verificadas (6 agentes paralelos). 6 answers fixed, 31 refs fixed, 7 drift fixed, 3 quotes fixed. Total acumulado: 1,147/1,422 (80.7%). Pendiente: TREBEP (25), Otra/Sin ref (252) |
 | 2026-02-19 | VERIFICACION POR CAPITULO Ronda 2: LOTC(79), LOPJ(67), L50(47), LBRL(23), L39(20) = 236 verificadas. 7 answers fixed, 11 refs fixed, 18 drift fixed. Total acumulado: 489/1422 (34%). Solo CE pendiente (658 qs) |
 | 2026-02-16 | VERIFICACION POR CAPITULO Ley 40/2015: 220/224 verificadas. 4 answers fixed, 12 refs fixed, 2 drift fixed. 207 con cita textual. 3 agentes paralelos (Titulo I + II) |
