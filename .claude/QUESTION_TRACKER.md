@@ -3,7 +3,7 @@
 > Estado del banco de preguntas actualizado con cada pipeline de calidad.
 > Datos de Supabase (tabla `questions` WHERE `is_active = true`).
 
-**Ultima actualizacion:** 2026-02-15
+**Ultima actualizacion:** 2026-02-19
 **Total preguntas activas:** 1,422
 
 ---
@@ -95,17 +95,17 @@
 
 Protocolo: agrupar preguntas por capitulo dentro de cada ley. El agente lee cada capitulo UNA vez y verifica TODAS las preguntas de ese capitulo juntas.
 
-| Ley | Total | Verified | Con «cita» | Answers Fixed | Refs Fixed | Drift Fixed | Estado |
-|-----|-------|----------|-----------|---------------|------------|-------------|--------|
-| Ley 40/2015 | 224 | 220 | 207 (92%) | 4 | 12 | 2 | COMPLETADO |
-| CE | 691 | 33 | 444 (64%) | 0 | 0 | 0 | PENDIENTE |
-| LOTC | 79 | 9 | 18 (23%) | 0 | 0 | 0 | PENDIENTE |
-| LOPJ | 67 | 3 | 65 (97%) | 0 | 0 | 0 | PENDIENTE |
-| Ley 50/1997 | 47 | 4 | 42 (89%) | 0 | 0 | 0 | PENDIENTE |
-| LBRL | 23 | 0 | 0 (0%) | 0 | 0 | 0 | PENDIENTE |
-| Ley 39/2015 | 20 | 0 | 0 (0%) | 0 | 0 | 0 | PENDIENTE |
-| Otra/Sin ref | 271 | 0 | 24 (9%) | 0 | 0 | 0 | N/A |
-| **TOTAL** | **1,422** | **269** | **800** | **4** | **12** | **2** | |
+| Ley | Total | Verified | Answers Fixed | Refs Fixed | Drift Fixed | Estado |
+|-----|-------|----------|---------------|------------|-------------|--------|
+| Ley 40/2015 | 224 | 220 | 4 | 12 | 2 | COMPLETADO |
+| LOTC | 79 | 79 | 3 | 3 | 2 | COMPLETADO |
+| LOPJ | 67 | 67 | 1 | 1 | 15 | COMPLETADO |
+| Ley 50/1997 | 47 | 47 | 2 | 1 | 1 | COMPLETADO |
+| LBRL | 23 | 23 | 0 | 3 | 0 | COMPLETADO |
+| Ley 39/2015 | 20 | 20 | 1 | 3 | 0 | COMPLETADO |
+| CE | 691 | 33 | 0 | 0 | 0 | PENDIENTE |
+| Otra/Sin ref | 271 | 0 | 0 | 0 | 0 | N/A |
+| **TOTAL** | **1,422** | **489** | **11** | **23** | **20** | |
 
 #### Ley 40/2015 — Detalles (Feb 16, 2026)
 
@@ -120,6 +120,39 @@ Hallazgos criticos:
 - ID 1343: contradiccion resuelta sobre suplencia Delegado Gobierno (Art. 72.2)
 - 7 articulos inexistentes citados (70.2, 71.3, 73.2, 74.3.b) — corregidos
 - 5 legal_references de Titulo II apuntaban a articulos adyacentes (82/83, 90/104, 133/134, 136/138)
+
+#### LOTC — Detalles (Feb 19, 2026)
+
+70/70 verified. 55 quotes fixed, 3 answers fixed, 3 refs fixed, 2 drift fixed.
+- ID 626: respuesta incorrecta (distribucion asuntos Salas → Pleno establece turno, no Presidente)
+- ID 1119: mayoria simple solo para incapacidad e incompatibilidad, no para todos los casos de cese
+- ID 658: pregunta defectuosa (ninguna opcion era correcta) → reorientada a caso 5.o (3/4 partes)
+- IDs 617/689: Art. 8 → Art. 7.2 (presidencia Sala Primera)
+- ID 675: Art. 7 → Art. 6.2 (composicion del Pleno)
+- Contradiccion resuelta: IDs 676 vs 1282 (sentencia vs declaracion recurso previo)
+- 27 abreviaturas "LOTC" eliminadas de question_text
+
+#### LOPJ — Detalles (Feb 19, 2026)
+
+64/64 verified. 1 answer fixed, 1 ref fixed, 15 drift fixed.
+- ID 814: CGPJ tiene 6 comisiones (no 4). Art. 600 → Art. 595
+- IDs 1146/1365: "Juzgado de Primera Instancia e Instruccion" → "Tribunal de Instancia" (terminologia vigente)
+- 13 preguntas con abreviatura "LOPJ" → "Ley Organica del Poder Judicial"
+
+#### Ley 50/1997 — Detalles (Feb 19, 2026)
+
+43/43 verified. 2 answers fixed, 1 ref fixed, 1 drift fixed.
+- ID 435: suplencia Presidente omitia Vicepresidentes (Art. 13)
+- ID 725: suspension delegaciones legislativas solo por elecciones generales (Art. 21.6), no "cualquier causa de cese"
+- ID 716: Art. 6.3 → Art. 6.2 (requisitos RD Comision Delegada)
+- ID 1141: explicacion referenciaba opcion incorrecta + cargo erroneo (Art. 8.1)
+
+#### LBRL + Ley 39/2015 — Detalles (Feb 19, 2026)
+
+43/43 verified (23 LBRL + 20 L39). 1 answer fixed, 6 refs fixed, 7 quotes fixed.
+- LBRL: 3 refs corregidas (381: texto completo→cita limpia, 1067: Art. 34.1.d→h, 1391: Art. 35.2.b→35.1)
+- L39 ID 305: recurso de reposicion NO pone fin a via administrativa → recurso de alzada si (Art. 114.1.a)
+- L39: 3 refs corregidas (306: Art. 33→96.6, 309: Art. 30.1→30.3, 316: Art. 39.1→39.2)
 
 ---
 
@@ -217,6 +250,7 @@ Cuando una pregunta o variante se marca como incorrecta:
 
 | Fecha | Cambio |
 |-------|--------|
+| 2026-02-19 | VERIFICACION POR CAPITULO Ronda 2: LOTC(79), LOPJ(67), L50(47), LBRL(23), L39(20) = 236 verificadas. 7 answers fixed, 11 refs fixed, 18 drift fixed. Total acumulado: 489/1422 (34%). Solo CE pendiente (658 qs) |
 | 2026-02-16 | VERIFICACION POR CAPITULO Ley 40/2015: 220/224 verificadas. 4 answers fixed, 12 refs fixed, 2 drift fixed. 207 con cita textual. 3 agentes paralelos (Titulo I + II) |
 | 2026-02-15 | RE-ASSESSMENT OPUS 4.6: 1,002/1,120 verificadas. 540 con fuente legal, 460 sin fuente. Explicaciones con «citas textuales». 3 wrong answers corregidas. 56 needs_refresh. 118 pendientes (T1,T4,T5,T8). Backup en questions_pre_reassessment_backup |
 | 2026-02-15 | Tracker creado con 6 vistas. Pipeline variantes disenado |
