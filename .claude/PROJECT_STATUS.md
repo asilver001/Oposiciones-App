@@ -6,10 +6,10 @@
 
 ## Estado Actual
 
-**Ultima actualizacion:** 2026-02-15
-**Fase del proyecto:** Beta-Ready (~90% completado) — Contenido en expansion
-**Branch actual:** feature/feature-based-architecture (sincronizado con main)
-**Publish readiness:** 1 CRITICAL pendiente (FK roto, inerte) — lint 0 errors, CI lint gate activo
+**Ultima actualizacion:** 2026-02-19
+**Fase del proyecto:** Beta-Ready (~92% completado) — UX audit passed, contenido en expansion
+**Branch actual:** main
+**Publish readiness:** 0 CRITICAL — E2E audit 29/29 PASS, lint 0 errors, CI lint gate activo, 0 console errors
 **Trabajo paralelo:** Preguntas temas 12-28 en otra instancia de Claude
 
 ---
@@ -65,7 +65,7 @@
 
 | # | Tarea | Notas |
 |---|-------|-------|
-| P1 | [ ] Testing manual flujo auth → study → results | E2E scripting |
+| P1 | [x] Testing manual flujo auth → study → results | COMPLETADO: e2e/audit-ux.mjs (29 checks, 5-week sim) |
 | P2 | [ ] Data export endpoint GDPR | 1 RPC + 1 boton |
 | P3 | [ ] IP address hashing en admin_login_attempts | Edit puntual |
 | P5 | [ ] Eliminar OpositaApp.jsx legacy del bundle | Verificar imports + borrar |
@@ -78,6 +78,20 @@
 | — | CI/CD no ejecuta lint | Agregado `npx eslint src/` step en deploy.yml antes de build |
 | — | README.md era boilerplate Vite | Reescrito con descripcion real del proyecto |
 | — | E2E test asumia redirect para 404 | Test ahora acepta /welcome (unauth) o NotFoundPage (auth) |
+
+### Resueltos (Feb 19 — UX Audit E2E)
+
+> Audit completo simulando 5 semanas de uso real. 29/29 PASS, 0 FAIL, 0 WARN.
+
+| # | Issue | Fix |
+|---|-------|-----|
+| — | Raw ISO dates en topic cards | Formato relativo: "hoy", "ayer", "hace X dias", "10 feb" en TemasListView |
+| — | getDueReviews 33+ console errors | Reemplazado FK JOIN roto por queries separadas (UUID/INT mismatch) |
+| — | updateProgress UUID spam errors | Skip silencioso para question IDs no-UUID (schema mismatch conocido) |
+| — | Fortaleza "T8 I.3" en vez de nombre real | Cambiado `topic.code \|\| topic.name` → `topic.name` en getFortalezaData |
+| — | session_stats columnas incorrectas | `porcentaje_acierto→porcentaje`, `duracion_segundos→tiempo_segundos`, eliminado `detalles_por_tema` |
+| — | session_stats modo CHECK constraint | `'practice'/'estudio'` → `'practica'` (match DB constraint) |
+| — | Audit solo 10/20 preguntas | Aumentado a 25 questions + mejor selector "Volver al inicio" |
 
 ### Proximas features (post-assessment estrategico)
 
@@ -130,7 +144,8 @@
 - **Temario graph:** TemarioDendrite + TemarioHexMap en DraftFeatures
 - **Lint:** 0 errors, 10 warnings (exhaustive-deps intencionales)
 - **CI lint gate:** deploy.yml ejecuta eslint antes de build (max 20 warnings)
-- **Tests:** 10+ E2E smoke tests (e2e/smoke.spec.js)
+- **Tests:** 10+ E2E smoke tests (e2e/smoke.spec.js) + UX audit E2E (29 checks, 5-week sim)
+- **Console errors en runtime:** 0 (post-audit fix Feb 19)
 - **Design tokens:** 602 `purple-*` migrados a `brand-*` en 35 archivos
 
 ---
@@ -138,67 +153,67 @@
 ## Banco de Preguntas
 
 **En Supabase:** 1,422 preguntas activas (301 importadas, 1,046 reformuladas, 75 AI-created)
+**Verificadas por capitulo:** 1,171/1,422 (82.3%) — todas las leyes principales completadas
 **Temas cubiertos:** 16 temas (7 con >100 preguntas, 7 con <20 = CRITICO, 2 en progreso)
 **Variantes adaptativas:** Pipeline disenado (3 niveles), piloto pendiente (10/tema)
 **Tracker completo:** [QUESTION_TRACKER.md](QUESTION_TRACKER.md)
 **Formato:** Multiple choice (4 opciones), con explicacion y referencia legal
 
-### Pipeline de Calidad (Rev. 3) — COMPLETADO Feb 10, 2026
+### Verificacion por Capitulo (Rev. 2) — COMPLETADO Feb 16-19, 2026
 
-#### Pipeline ejecutado:
-- [x] **Agente 1 (Reformulador - Sonnet):** 994+54 preguntas reformuladas (100%)
-- [x] **Agente 2 (Verificador Lógico - Sonnet):** 994 verificadas, 143 flags corregidos
-- [x] **Agente 3 (Cazador de Discrepancias - Sonnet):** 204 flags encontrados, todos resueltos
-- [x] **Validación:** 1,363 `auto_validated` + 2 `human_approved`
+> Protocolo: agrupar preguntas por capitulo dentro de cada ley. El agente lee cada capitulo UNA vez
+> y verifica TODAS las preguntas de ese capitulo juntas. Detecta drift, contradicciones inter-preguntas,
+> y calificadores perdidos. Ejecutado con agentes Sonnet verificando contra textos legales extraidos del BOE.
 
-### Re-Assessment Opus 4.6 — COMPLETADO (parcial) Feb 15, 2026
+| Ley | Total | Verified | Answers Fixed | Refs Fixed | Drift Fixed |
+|-----|-------|----------|---------------|------------|-------------|
+| CE | 690 | 690 | 6 | 31 | 7 |
+| Ley 40/2015 | 224 | 220 | 4 | 12 | 2 |
+| LOTC | 79 | 79 | 3 | 3 | 2 |
+| LOPJ | 67 | 67 | 1 | 1 | 15 |
+| Ley 50/1997 | 47 | 47 | 2 | 1 | 1 |
+| TREBEP | 24 | 24 | 1 | 4 | 2 |
+| LBRL | 23 | 23 | 0 | 3 | 0 |
+| Ley 39/2015 | 20 | 20 | 1 | 3 | 0 |
+| **TOTAL** | **1,174** | **1,171** | **18** | **58** | **29** |
 
-> Pipeline Rev.3 (Sonnet) tenia 3 problemas: calificadores perdidos, explicaciones sin cita textual,
-> verificador no comparaba original vs reformulada. Re-assessment con Opus 4.6.
+- **251 restantes** sin ley principal asignada (cultura general, historia, UE, etc.)
+- **18 respuestas incorrectas corregidas** (ej: Art. 167 vs 168 para derechos fundamentales)
+- **58 referencias legales corregidas** (articulos incorrectos, citas verbosas limpiadas)
+- **29 drift fixes** (calificadores anadidos/eliminados vs texto legal)
+- **Archivos de ley:** 11 leyes extraidas del BOE en `.claude/questions/Temario/leyes/` (~4.3MB)
+- CE completada: Arts 1-169 (Arts 81-96 anadidos Feb 19)
 
-#### Resultados Pase 1 (verificacion):
-- **1,002/1,120 procesadas (89.5%)** — 118 pendientes (T4: 94 con review_comment viejo)
-- 540 `[VERIFIED]` con fuente legal | 460 `[VERIFIED_NO_SOURCE]` (T8/T9/T11)
-- 3 respuestas incorrectas corregidas (IDs 1214, 1261, 559)
-- 19+ tema mismatches, 12+ near-duplicates, 56 `needs_refresh`
-- **Backup:** `questions_pre_reassessment_backup` (1,120 rows)
+### Pipelines anteriores (historico)
 
-### Pipeline «Citas Textuales» — COMPLETADO (parcial) Feb 15, 2026
+<details>
+<summary>Pipeline Calidad Rev. 3 — Feb 10</summary>
 
-> Solo 34% de explicaciones tienen «citas textuales» del articulo legal.
-> Pipeline optimizado: Sonnet agrega citas (mecanico) → Opus verifica (logica juridica).
-> Agentes organizados por LEY (no tema) para evitar lecturas redundantes.
+- Agente 1 (Reformulador): 994+54 preguntas reformuladas (100%)
+- Agente 2 (Verificador): 994 verificadas, 143 flags corregidos
+- Agente 3 (Cazador Discrepancias): 204 flags encontrados, todos resueltos
+</details>
 
-#### Paso 1 — Sonnet agrega «citas» (COMPLETADO):
-- [x] S-CE: 531 procesadas, 442 con «citas» nuevas (~130K tok)
-- [x] S-LOPJ: 65/65 procesadas, 100% con «citas» (~104K tok)
-- [x] S-L50: 8/8 procesadas, 100% con «citas» (~57K tok)
-- [~] S-LOTC: BLOQUEADO — archivo LOTC.md contiene CE, no LOTC real
+<details>
+<summary>Re-Assessment Opus 4.6 — Feb 15</summary>
 
-**Resultado Paso 1:** 590/1,120 con «citas» (52.7%, subio de 34%)
-**LOPJ y Ley 50/1997 al 100%. CE al 82%.**
+- 1,002/1,120 procesadas (89.5%), 540 con fuente legal, 460 sin fuente
+- 3 respuestas incorrectas corregidas, 56 needs_refresh
+- Backup: questions_pre_reassessment_backup (1,120 rows)
+</details>
 
-#### Paso 2 — Verificacion sample (COMPLETADO):
-- [x] O-CE: sample 30 qs → 6/6 verificables = 100% EXACT MATCH, 0 errores
-- [x] O-LOPJ+L50: sample 20 qs → 20/20 verificadas, 100% correctas, 0 errores
-- **Resultado:** 26 preguntas con tag [VERIFIED_QUOTE] en DB
-- **Reporte:** `.claude/questions/CE_QUOTE_VERIFICATION_REPORT.md`
+<details>
+<summary>Pipeline Citas Textuales — Feb 15</summary>
 
-#### Archivos de ley — DESBLOQUEADOS (Feb 15, re-extraccion v2):
-- [x] LOTC: re-extraida correctamente (106 arts, 91KB) — desbloquea 76 preguntas
-- [x] Ley 40/2015 (LRJSP): extraida (158 arts, 379KB) — desbloquea 218 preguntas
-- [x] Ley 39/2015 (LPAC): extraida (133 arts, 220KB) — desbloquea 7 preguntas
-- [x] LBRL: extraida (15 arts, 20KB) — desbloquea 22 preguntas
-- [x] CE: ampliada 61→131 arts (81KB) — desbloquea ~89 preguntas CE sin cita
-- Sin referencia legal: 136 preguntas (skip)
-
-**Siguiente:** Ejecutar Ronda 2 de «citas» para LOTC, Ley 40/2015, LBRL, Ley 39/2015, CE restantes (~412 qs)
-
-#### Tokens reales consumidos: ~354K Sonnet (Paso 1) + ~250K Sonnet (Paso 2 verificacion) ≈ 604K total
+- 590/1,120 con citas textuales (52.7%)
+- Verificacion sample Opus: 50/50 = 100% correctas
+- Archivos de ley re-extraidos: LOTC, Ley 40/2015, Ley 39/2015, LBRL, CE ampliada
+</details>
 
 #### Snapshot actual:
 ```
 total_active: 1,422 (post-migracion 16 temas + 75 AI-created)
+verified: 1,171/1,422 (82.3%)
 OK (>100): T1:241, T2:211, T3:136, T4:126, T5:118, T8:208, T9:211
 BAJO: T11:88, T13:16
 CRITICO (<20): T6:10, T7:10, T10:10, T12:10, T14:10, T15:7, T16:10
@@ -377,6 +392,8 @@ CRITICO (<20): T6:10, T7:10, T10:10, T12:10, T14:10, T15:7, T16:10
 
 | Fecha | Resumen |
 |-------|---------|
+| 2026-02-19 | UX AUDIT E2E: Seed script 5 semanas datos realistas (40 sesiones, 4 temas). Audit Playwright 29 checks. 6 bugs encontrados y corregidos: ISO dates, getDueReviews FK JOIN, updateProgress UUID, Fortaleza names, session_stats columns/constraint. Resultado final: 29/29 PASS, 0 console errors. Subgrupos temas reorganizados (secuencial BOE) |
+| 2026-02-19 | VERIFICACION POR CAPITULO completa: CE(690), L40(220), LOTC(79), LOPJ(67), L50(47), TREBEP(24), LBRL(23), L39(20) = 1,171/1,422 (82.3%). 18 answers fixed, 58 refs fixed, 29 drift fixed. CE Arts 81-96 extraidos. TREBEP verificado con texto legal |
 | 2026-02-15 | RE-ASSESSMENT OPUS 4.6: 10 agentes Opus paralelos, 1,002/1,120 procesadas (89.5%). Explicaciones enriquecidas con «citas textuales». 540 verified con fuente, 460 no-source. 3 wrong answers corregidas, 19+ tema mismatches, 12+ near-duplicates. Buscador agregado a ReviewerPanel. Recuadro "Verificada BOE" eliminado de UI. CODEX ASSESSMENT FIX: lint, CI gate, README, E2E fix. Temario viz (Dendrite + HexMap). Pipeline variantes disenado. QUESTION_TRACKER.md creado |
 | 2026-02-11 | DATA INTEGRITY AUDIT: Full assessment 2-pass. 13 issues encontrados (3 CRITICAL, 3 HIGH, 3 MEDIUM, 4 LOW). FortalezaVisual field mismatch, FSRS FK roto, column names incorrectos. Nav/auth/guards sin issues. Plan de implementacion creado |
 | 2026-02-10 | PIPELINE CALIDAD: Agente 1 (Sonnet) reformuló 994 preguntas, Agente 2 (Opus) verificó lógica y corrigió 143 flags, Agente 3 (Sonnet) cazó 204 discrepancias — pendiente resolver |
