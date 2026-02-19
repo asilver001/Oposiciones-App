@@ -103,9 +103,10 @@ Protocolo: agrupar preguntas por capitulo dentro de cada ley. El agente lee cada
 | Ley 50/1997 | 47 | 47 | 2 | 1 | 1 | COMPLETADO |
 | LBRL | 23 | 23 | 0 | 3 | 0 | COMPLETADO |
 | Ley 39/2015 | 20 | 20 | 1 | 3 | 0 | COMPLETADO |
-| CE | 691 | 33 | 0 | 0 | 0 | PENDIENTE |
-| Otra/Sin ref | 271 | 0 | 0 | 0 | 0 | N/A |
-| **TOTAL** | **1,422** | **489** | **11** | **23** | **20** | |
+| CE | 690 | 690 | 6 | 31 | 7 | COMPLETADO |
+| TREBEP | 25 | 0 | 0 | 0 | 0 | PENDIENTE |
+| Otra/Sin ref | 252 | 6 | 0 | 0 | 0 | PENDIENTE |
+| **TOTAL** | **1,422** | **1,147** | **17** | **34** | **27** | |
 
 #### Ley 40/2015 — Detalles (Feb 16, 2026)
 
@@ -153,6 +154,24 @@ Hallazgos criticos:
 - LBRL: 3 refs corregidas (381: texto completo→cita limpia, 1067: Art. 34.1.d→h, 1391: Art. 35.2.b→35.1)
 - L39 ID 305: recurso de reposicion NO pone fin a via administrativa → recurso de alzada si (Art. 114.1.a)
 - L39: 3 refs corregidas (306: Art. 33→96.6, 309: Art. 30.1→30.3, 316: Art. 39.1→39.2)
+
+#### CE — Detalles (Feb 19, 2026)
+
+6 agentes paralelos por rango de articulos:
+- **CE-1** (Arts 1-55, Titulo Preliminar + Titulo I): 140/140 verified. 1 answer fixed (ID 193), 12 refs cleaned
+- **CE-2** (Arts 56-76, Corona + Cortes Generales): 139/139 verified. 9 refs fixed (IDs 637,669,679,680,688,800,812,385,429)
+- **CE-3** (Arts 77-96 + Sin Articulo): 83/83 verified. 2 refs fixed (IDs 293,1112) + 9 refs normalized
+- **CE-4** (Arts 97-136, Gobierno + Poder Judicial + TC): 113/113 verified. 2 answers fixed (IDs 270,439), 2 quotes fixed, 3 drift fixed, 1 ref fixed
+- **CE-5** (Arts 137-152, Organizacion Territorial): 107/107 verified. 1 answer fixed (ID 139), 1 ref fixed, 3 drift fixed, 1 quote fixed
+- **CE-6** (Arts 153-169, Reforma + TC): 76/76 verified. 2 answers fixed (IDs 143,150), 6 refs fixed, 1 drift fixed
+
+Hallazgos criticos:
+- ID 143: Art. 28.1 esta en Seccion 1a (Arts 15-29) → protegido por Art. 168 (procedimiento agravado), no Art. 167
+- ID 150: Art. 21 igual en Seccion 1a → Art. 168 aplica, no Art. 167
+- ID 1112: referencia incorrecta Art. 92 (referendum consultivo) → Art. 167.3 (referendum reforma ordinaria)
+- ID 688: Art. 62.h CE (Reales Academias) → Art. 53 LOTC (sentencia de amparo) — articulo completamente distinto
+- 31 legal_references verbosas limpiadas a formato cita (ej: "Art. 167.3 CE establece que..." → "Art. 167.3 CE")
+- Archivo CE incompleto: Arts 81-96 faltan de la extraccion (verificacion manual contra texto constitucional)
 
 ---
 
@@ -250,6 +269,7 @@ Cuando una pregunta o variante se marca como incorrecta:
 
 | Fecha | Cambio |
 |-------|--------|
+| 2026-02-19 | VERIFICACION POR CAPITULO CE: 690/690 verificadas (6 agentes paralelos). 6 answers fixed, 31 refs fixed, 7 drift fixed, 3 quotes fixed. Total acumulado: 1,147/1,422 (80.7%). Pendiente: TREBEP (25), Otra/Sin ref (252) |
 | 2026-02-19 | VERIFICACION POR CAPITULO Ronda 2: LOTC(79), LOPJ(67), L50(47), LBRL(23), L39(20) = 236 verificadas. 7 answers fixed, 11 refs fixed, 18 drift fixed. Total acumulado: 489/1422 (34%). Solo CE pendiente (658 qs) |
 | 2026-02-16 | VERIFICACION POR CAPITULO Ley 40/2015: 220/224 verificadas. 4 answers fixed, 12 refs fixed, 2 drift fixed. 207 con cita textual. 3 agentes paralelos (Titulo I + II) |
 | 2026-02-15 | RE-ASSESSMENT OPUS 4.6: 1,002/1,120 verificadas. 540 con fuente legal, 460 sin fuente. Explicaciones con «citas textuales». 3 wrong answers corregidas. 56 needs_refresh. 118 pendientes (T1,T4,T5,T8). Backup en questions_pre_reassessment_backup |
