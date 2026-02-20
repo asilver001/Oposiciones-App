@@ -192,7 +192,7 @@ export function useTopics() {
 
         return {
           id: topic.id,
-          name: topic.code || topic.name,
+          name: topic.name,
           progress: progressLevel,
           status: estado,
           accuracy: progress.accuracy || 0,

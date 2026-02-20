@@ -109,7 +109,7 @@ export default function HybridSession({ config = {}, onClose, onComplete }) {
           try {
             const { triggeredInsights: insights } = await saveSessionAndDetectInsights(
               answersHistoryRef.current,
-              { modo: 'estudio', tema_id: config.temaId || null }
+              { modo: 'practica', tema_id: config.temaId || null }
             );
             if (insights && insights.length > 0) {
               setTriggeredInsights(insights);

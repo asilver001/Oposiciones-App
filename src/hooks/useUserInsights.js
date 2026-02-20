@@ -43,20 +43,18 @@ export function useUserInsights() {
       const stats = calculateSessionStats(sessionResults);
       const byTema = groupQuestionsByTema(sessionResults);
 
-      // Prepare session record
+      // Prepare session record (columns match session_stats table schema)
       const sessionRecord = {
         user_id: user.id,
-        modo: sessionMeta.modo || 'practice',
+        modo: sessionMeta.modo || 'practica',
         tema_id: sessionMeta.tema_id || null,
         total_preguntas: stats.total,
         correctas: stats.correctas,
         incorrectas: stats.incorrectas,
         en_blanco: stats.en_blanco,
-        porcentaje_acierto: stats.porcentaje_acierto,
+        porcentaje: stats.porcentaje_acierto,
         puntuacion_oposicion: stats.puntuacion_oposicion,
-        duracion_segundos: sessionMeta.duracion_segundos || null,
-        fecha_inicio: sessionMeta.fecha_inicio || new Date().toISOString(),
-        detalles_por_tema: byTema
+        tiempo_segundos: sessionMeta.duracion_segundos || null
       };
 
       // Save to session_stats

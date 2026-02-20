@@ -247,7 +247,16 @@ function TopicCard({ topic, onSelect, locked, lockMessage, hasPrereqs }) {
           )}
           {!locked && topic.lastPracticed && (
             <p className="text-xs text-gray-400">
-              Ultima: {topic.lastPracticed}
+              Ultima: {(() => {
+                const d = new Date(topic.lastPracticed);
+                const now = new Date();
+                const diffMs = now - d;
+                const diffDays = Math.floor(diffMs / 86400000);
+                if (diffDays === 0) return 'hoy';
+                if (diffDays === 1) return 'ayer';
+                if (diffDays < 7) return `hace ${diffDays} días`;
+                return d.toLocaleDateString('es-ES', { day: 'numeric', month: 'short' });
+              })()}
             </p>
           )}
         </div>
