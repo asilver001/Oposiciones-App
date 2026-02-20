@@ -3,7 +3,7 @@
 > Estado del banco de preguntas actualizado con cada pipeline de calidad.
 > Datos de Supabase (tabla `questions` WHERE `is_active = true`).
 
-**Ultima actualizacion:** 2026-02-19
+**Ultima actualizacion:** 2026-02-20
 **Total preguntas activas:** 1,422
 
 ---
@@ -97,16 +97,19 @@ Protocolo: agrupar preguntas por capitulo dentro de cada ley. El agente lee cada
 
 | Ley | Total | Verified | Answers Fixed | Refs Fixed | Drift Fixed | Estado |
 |-----|-------|----------|---------------|------------|-------------|--------|
-| Ley 40/2015 | 224 | 220 | 4 | 12 | 2 | COMPLETADO |
-| LOTC | 79 | 79 | 3 | 3 | 2 | COMPLETADO |
+| CE | 699 | 699 | 6 | 31 | 7 | COMPLETADO |
+| Ley 40/2015 | 230 | 226 | 5 | 15 | 2 | COMPLETADO (4 sin ley) |
+| LOTC | 80 | 80 | 3 | 3 | 2 | COMPLETADO |
 | LOPJ | 67 | 67 | 1 | 1 | 15 | COMPLETADO |
 | Ley 50/1997 | 47 | 47 | 2 | 1 | 1 | COMPLETADO |
+| TREBEP | 28 | 25 | 1 | 4 | 2 | COMPLETADO (3 sin ley) |
 | LBRL | 23 | 23 | 0 | 3 | 0 | COMPLETADO |
 | Ley 39/2015 | 20 | 20 | 1 | 3 | 0 | COMPLETADO |
-| CE | 690 | 690 | 6 | 31 | 7 | COMPLETADO |
-| TREBEP | 24 | 24 | 1 | 4 | 2 | COMPLETADO |
-| Otra/Sin ref | 252 | 6 | 0 | 0 | 0 | PENDIENTE |
-| **TOTAL** | **1,422** | **1,171** | **18** | **38** | **29** | |
+| Ley 19/2013 | 10 | 10 | 0 | 0 | 1 | COMPLETADO |
+| LOPDGDD | 10 | 10 | 0 | 4 | 0 | COMPLETADO |
+| LGP | 6 | 6 | 0 | 0 | 0 | COMPLETADO |
+| Otra/Sin ref | 202 | 6 | 0 | 0 | 0 | PENDIENTE (~87 sin ley extraida, ~61 no verificables) |
+| **TOTAL** | **1,422** | **1,219** | **19** | **65** | **30** | **85.7%** |
 
 #### Ley 40/2015 — Detalles (Feb 16, 2026)
 
@@ -184,6 +187,31 @@ Hallazgos criticos:
 - 31 legal_references verbosas limpiadas a formato cita (ej: "Art. 167.3 CE establece que..." → "Art. 167.3 CE")
 - Archivo CE incompleto: Arts 81-96 faltan de la extraccion (verificacion manual contra texto constitucional)
 
+#### Ley 19/2013 (Transparencia) — Detalles (Feb 20, 2026)
+
+10/10 verified. 0 answers fixed, 1 drift fixed.
+- ID 1484: DRIFT_FIXED — escenario introductorio era sobre demarcacion judicial (LOPJ), completamente incongruente con Ley 19/2013 Art. 10.3 (plazos de resolucion de solicitudes de reutilizacion). Escenario reescrito.
+
+#### LOPDGDD — Detalles (Feb 20, 2026)
+
+10/10 verified. 0 answers fixed, 4 refs fixed.
+- ID 1495: REF_FIXED — Art. 13.1 LOPDGDD → Art. 13 LOPDGDD y Art. 15.3 RGPD (formato obligatorio esta en RGPD)
+- ID 1496: REF_FIXED — Art. 34.3 LOPDGDD → Art. 36 LOPDGDD y Art. 38.6 RGPD (conflicto interes DPD)
+- ID 1498: REF_FIXED — Art. 46.2 LOPDGDD → Art. 47 LOPDGDD y Art. 57 RGPD (funciones AEPD)
+- ID 1511: REF_FIXED — Art. 34.1 LOPDGDD → Art. 39 RGPD y Art. 36 LOPDGDD (funciones DPD)
+- **Hallazgo:** Archivo `Ley_47_2003_LGP.md` esta mal nombrado — contiene L19/L40/LOPDGDD, no LGP
+
+#### LGP (Ley 47/2003) — Detalles (Feb 20, 2026)
+
+6/6 verified. 0 answers fixed. Verificadas por conocimiento legal (texto LGP no en archivos extraidos).
+
+#### CE + L40 (bare refs recien-taggeadas) — Detalles (Feb 20, 2026)
+
+21/21 verified. 1 answer fixed, 3 refs fixed.
+- ID 377: ANSWER_FIXED — plan de actuacion se revisa cada TRES anos (Art. 85 L40), no dos. Opcion b→d
+- ID 378: REF_FIXED — Art. 91→Art. 90 L40 (estructura organos gobierno/ejecutivos)
+- IDs 442/444: REF_FIXED — Art. 103→Art. 104 L40 (regimen juridico EPE = Derecho privado, no definicion)
+
 ---
 
 ## Vista 4: Por Completitud de Datos
@@ -193,7 +221,7 @@ Hallazgos criticos:
 | `question_text` | 1,422 | 0 | 100% |
 | `options` (JSONB) | 1,422 | 0 | 100% |
 | `explanation` | 1,422 | 0 | 100% |
-| `legal_reference` | 1,420 | 2 | 99.9% |
+| `legal_reference` | 1,421 | 1 | 99.9% |
 | `tema` | 1,422 | 0 | 100% |
 | `difficulty` | 1,422 | 0 | 100% |
 
@@ -280,6 +308,9 @@ Cuando una pregunta o variante se marca como incorrecta:
 
 | Fecha | Cambio |
 |-------|--------|
+| 2026-02-20 | Proceso de deteccion de discrepancias disenado: `.claude/questions/DISCREPANCY_PROCESS.md`. Fase 0 SQL checks: 0 problemas estructurales. Top 5 hotspots (51 qs) revisados: 0 contradicciones |
+| 2026-02-20 | Quick-win verification: L19(10/10, 1 drift), LOPDGDD(10/10, 4 refs), LGP(6/6), CE+L40 recien-taggeadas(21/21, 1 answer, 3 refs). 22 bare refs clasificados. Total: 1,219/1,422 (85.7%) |
+| 2026-02-20 | 251 preguntas 'Otra/Sin ref' clasificadas por ley: ~55 LBRL, ~20 LOREG, ~20 LO 3/1981, ~20 Ley 2/2014, ~43 refs sin nombre de ley. ~87 necesitan extraccion de ley, ~61 no verificables (UE, Agenda 2030) |
 | 2026-02-19 | TREBEP verificado: 24/24. 1 answer fixed, 4 refs fixed, 2 drift fixed. CE Arts 81-96 anadidos al archivo de extraccion. Total acumulado: 1,171/1,422 (82.3%) |
 | 2026-02-19 | VERIFICACION POR CAPITULO CE: 690/690 verificadas (6 agentes paralelos). 6 answers fixed, 31 refs fixed, 7 drift fixed, 3 quotes fixed. Total acumulado: 1,147/1,422 (80.7%). Pendiente: TREBEP (25), Otra/Sin ref (252) |
 | 2026-02-19 | VERIFICACION POR CAPITULO Ronda 2: LOTC(79), LOPJ(67), L50(47), LBRL(23), L39(20) = 236 verificadas. 7 answers fixed, 11 refs fixed, 18 drift fixed. Total acumulado: 489/1422 (34%). Solo CE pendiente (658 qs) |
