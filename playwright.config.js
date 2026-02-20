@@ -1,4 +1,4 @@
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
   testDir: './e2e/specs',
@@ -25,24 +25,26 @@ export default defineConfig({
       name: 'setup',
       testMatch: /auth\.setup\.js/,
     },
-    // Smoke — no auth needed, runs independently
+    // Smoke — no auth needed, runs independently (Chromium)
     {
       name: 'smoke',
       testMatch: /tier1-smoke\/.*/,
       use: { viewport: { width: 390, height: 844 } },
     },
-    // Mobile — authenticated tests
+    // Mobile — authenticated tests (Chromium with mobile viewport)
     {
       name: 'mobile-chrome',
       testDir: './e2e/specs',
       testIgnore: /tier1-smoke\//,
       use: {
-        ...devices['iPhone 14'],
+        viewport: { width: 390, height: 844 },
+        isMobile: true,
+        hasTouch: true,
         storageState: 'e2e/.auth/user.json',
       },
       dependencies: ['setup'],
     },
-    // Desktop — authenticated tests
+    // Desktop — authenticated tests (Chromium)
     {
       name: 'desktop-chrome',
       testDir: './e2e/specs',

@@ -12,7 +12,12 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "screenshot": "node e2e/take-screenshots.js",
-    "test:e2e": "npx playwright test"
+    "test:e2e": "npx playwright test",
+    "test:smoke": "npx playwright test --project=smoke",
+    "test:critical": "npx playwright test e2e/specs/tier2-critical/",
+    "test:regression": "npx playwright test e2e/specs/tier3-regression/",
+    "test:perf": "npx playwright test e2e/specs/tier4-performance/",
+    "test:e2e:report": "npx playwright show-report e2e/reports"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.8",

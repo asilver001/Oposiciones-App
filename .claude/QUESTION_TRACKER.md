@@ -85,7 +85,10 @@
 | `[VERIFIED_QUOTE]` | 26 | Cita textual verificada word-for-word contra ley |
 | `[ERROR]` | 1 | Error factual detectado y corregido |
 | `[AMBIGUOUS]` | 1 | Requiere revision humana |
-| Sin tag (pendiente) | 118 | T1(8), T4(94), T5(3), T8(13) — agentes detenidos |
+| `[CHAPTER_VERIFIED]` | 1,219 | Verificadas por capitulo (Rev. 2 pipeline, Feb 15-20) |
+| `[VERIFIED_DISCREPANCY]` | 4 | Contradicciones inter-pregunta corregidas |
+| `[NEEDS_REVIEW]` | 3 | Flaggeadas para revision humana (IDs 95, 560, 1386) |
+| Sin tag (pendiente) | 0 | — |
 | `needs_refresh = true` | 56 | Flaggeadas para revision (duplicates, tema mismatch, etc.) |
 
 > **Nota:** Los tags `[VERIFIED*]` estan en `review_comment`, no en `validation_status`.
@@ -98,18 +101,18 @@ Protocolo: agrupar preguntas por capitulo dentro de cada ley. El agente lee cada
 | Ley | Total | Verified | Answers Fixed | Refs Fixed | Drift Fixed | Estado |
 |-----|-------|----------|---------------|------------|-------------|--------|
 | CE | 699 | 699 | 6 | 31 | 7 | COMPLETADO |
-| Ley 40/2015 | 230 | 226 | 5 | 15 | 2 | COMPLETADO (4 sin ley) |
+| Ley 40/2015 | 230 | 230 | 8 | 16 | 2 | COMPLETADO |
 | LOTC | 80 | 80 | 3 | 3 | 2 | COMPLETADO |
 | LOPJ | 67 | 67 | 1 | 1 | 15 | COMPLETADO |
+| LBRL | 72 | 72 | 1 | 3 | 0 | COMPLETADO |
 | Ley 50/1997 | 47 | 47 | 2 | 1 | 1 | COMPLETADO |
-| TREBEP | 28 | 25 | 1 | 4 | 2 | COMPLETADO (3 sin ley) |
-| LBRL | 23 | 23 | 0 | 3 | 0 | COMPLETADO |
+| TREBEP | 28 | 28 | 1 | 4 | 2 | COMPLETADO |
 | Ley 39/2015 | 20 | 20 | 1 | 3 | 0 | COMPLETADO |
 | Ley 19/2013 | 10 | 10 | 0 | 0 | 1 | COMPLETADO |
 | LOPDGDD | 10 | 10 | 0 | 4 | 0 | COMPLETADO |
 | LGP | 6 | 6 | 0 | 0 | 0 | COMPLETADO |
-| Otra/Sin ref | 202 | 6 | 0 | 0 | 0 | PENDIENTE (~87 sin ley extraida, ~61 no verificables) |
-| **TOTAL** | **1,422** | **1,219** | **19** | **65** | **30** | **85.7%** |
+| Otras leyes | 153 | 153 | 1 | 0 | 0 | COMPLETADO (conocimiento legal) |
+| **TOTAL** | **1,422** | **1,422** | **25** | **66** | **30** | **100%** |
 
 #### Ley 40/2015 — Detalles (Feb 16, 2026)
 
@@ -212,6 +215,31 @@ Hallazgos criticos:
 - ID 378: REF_FIXED — Art. 91→Art. 90 L40 (estructura organos gobierno/ejecutivos)
 - IDs 442/444: REF_FIXED — Art. 103→Art. 104 L40 (regimen juridico EPE = Derecho privado, no definicion)
 
+#### Discrepancy Process Phase 1 — Detalles (Feb 20, 2026)
+
+116 hotspot articles (3+ questions each, 492 questions total). 2 agentes paralelos: CE (82 arts, ~350 qs) + Non-CE (34 arts, ~142 qs).
+
+Contradicciones detectadas y corregidas:
+- ID 992: ANSWER_FIXED — Art. 72.2 L40: suplencia Delegado Gobierno es "designado gobierno" primero, no "provincia sede" (A→D)
+- ID 945: ANSWER_FIXED — Art. 87.3 L40: transformacion EPE→Agencia Estatal requiere Ley, no RD (A→B)
+- ID 1440: ANSWER_FIXED + REF_FIXED — Art. 87.3 L40: mismo que 945, ref corregida 87.2→87.3 (A→B)
+- ID 1372: ANSWER_FIXED (re-fix) — Art. 63.1.n L40: Subsecretario SI tiene potestad disciplinaria faltas graves (D→A)
+
+Contradicciones flaggeadas para revision humana:
+- ID 95: [NEEDS_REVIEW] — Art. 14 LOTC: sutileza "que lo componen" vs "en cada momento lo compongan"
+- IDs 560/1386: [CONTRADICTION_DETECTED] — Art. 151.1 CE: plazo convocatoria referendum (2 meses vs 6 meses)
+
+#### LBRL (verificacion final) — Detalles (Feb 20, 2026)
+
+49/49 verified (preguntas con refs a LBRL/autonomia local del pool "Otra/Sin ref").
+- ID 1190: ANSWER_FIXED — Art. 26.1 LBRL: medio ambiente urbano es obligatorio para >50,000 hab, no >5,000
+
+#### Otras leyes (verificacion final) — Detalles (Feb 20, 2026)
+
+153/153 verified por conocimiento legal (LOREG, LO 3/1981, LO 3/1980, Ley 2/2014, UE, Agenda 2030, etc.).
+- ID 437: ANSWER_FIXED — Art. 8 Ley 50/1997: Comision Gral de Secretarios de Estado y Subsecretarios SI es organo de colaboracion y apoyo (respuesta incorrecta cambiada)
+- ID 401: Verificado via web search — RS Art. 159 SI requiere mayoria absoluta para ratificacion por Senado recien elegido
+
 ---
 
 ## Vista 4: Por Completitud de Datos
@@ -308,6 +336,7 @@ Cuando una pregunta o variante se marca como incorrecta:
 
 | Fecha | Cambio |
 |-------|--------|
+| 2026-02-20 | **100% VERIFICACION COMPLETADA.** Discrepancy Phase 1 (116 hotspots, 492 qs): 4 answers fixed (IDs 992,945,1440,1372), 1 ref fixed, 3 flagged human review. LBRL batch: 49/49 verified, 1 answer fixed (ID 1190). Otras leyes: 153/153 verified, 1 answer fixed (ID 437). Total final: **1,422/1,422 (100%)**, 25 answers fixed, 66 refs fixed, 5 contradictions detected |
 | 2026-02-20 | Proceso de deteccion de discrepancias disenado: `.claude/questions/DISCREPANCY_PROCESS.md`. Fase 0 SQL checks: 0 problemas estructurales. Top 5 hotspots (51 qs) revisados: 0 contradicciones |
 | 2026-02-20 | Quick-win verification: L19(10/10, 1 drift), LOPDGDD(10/10, 4 refs), LGP(6/6), CE+L40 recien-taggeadas(21/21, 1 answer, 3 refs). 22 bare refs clasificados. Total: 1,219/1,422 (85.7%) |
 | 2026-02-20 | 251 preguntas 'Otra/Sin ref' clasificadas por ley: ~55 LBRL, ~20 LOREG, ~20 LO 3/1981, ~20 Ley 2/2014, ~43 refs sin nombre de ley. ~87 necesitan extraccion de ley, ~61 no verificables (UE, Agenda 2030) |

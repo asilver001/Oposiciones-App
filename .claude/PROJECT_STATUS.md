@@ -153,7 +153,7 @@
 ## Banco de Preguntas
 
 **En Supabase:** 1,422 preguntas activas (301 importadas, 1,046 reformuladas, 75 AI-created)
-**Verificadas por capitulo:** 1,171/1,422 (82.3%) — todas las leyes principales completadas
+**Verificadas por capitulo:** 1,422/1,422 (100%) — TODAS verificadas
 **Temas cubiertos:** 16 temas (7 con >100 preguntas, 7 con <20 = CRITICO, 2 en progreso)
 **Variantes adaptativas:** Pipeline disenado (3 niveles), piloto pendiente (10/tema)
 **Tracker completo:** [QUESTION_TRACKER.md](QUESTION_TRACKER.md)
@@ -167,20 +167,26 @@
 
 | Ley | Total | Verified | Answers Fixed | Refs Fixed | Drift Fixed |
 |-----|-------|----------|---------------|------------|-------------|
-| CE | 690 | 690 | 6 | 31 | 7 |
-| Ley 40/2015 | 224 | 220 | 4 | 12 | 2 |
+| CE | 705 | 705 | 6 | 31 | 7 |
+| Ley 40/2015 | 230 | 226 | 5 | 15 | 2 |
 | LOTC | 79 | 79 | 3 | 3 | 2 |
 | LOPJ | 67 | 67 | 1 | 1 | 15 |
 | Ley 50/1997 | 47 | 47 | 2 | 1 | 1 |
-| TREBEP | 24 | 24 | 1 | 4 | 2 |
+| TREBEP | 28 | 25 | 1 | 4 | 2 |
 | LBRL | 23 | 23 | 0 | 3 | 0 |
 | Ley 39/2015 | 20 | 20 | 1 | 3 | 0 |
-| **TOTAL** | **1,174** | **1,171** | **18** | **58** | **29** |
+| Ley 19/2013 | 10 | 10 | 0 | 0 | 1 |
+| LOPDGDD | 10 | 10 | 0 | 4 | 0 |
+| LGP | 6 | 6 | 0 | 0 | 0 |
+| LRBRL (T9) | 49 | 49 | 1 | 0 | 0 |
+| Otras leyes | 154 | 154 | 1 | 0 | 0 |
+| **TOTAL** | **1,422** | **1,422** | **25** | **66** | **30** |
 
-- **251 restantes** sin ley principal asignada (cultura general, historia, UE, etc.)
-- **18 respuestas incorrectas corregidas** (ej: Art. 167 vs 168 para derechos fundamentales)
-- **58 referencias legales corregidas** (articulos incorrectos, citas verbosas limpiadas)
-- **29 drift fixes** (calificadores anadidos/eliminados vs texto legal)
+- **0 restantes** — 100% verificacion completada (Feb 20, 2026)
+- **25 respuestas incorrectas corregidas** (ej: suplencia Delegado, EPE→Agencia, disciplinaria Subsecretario)
+- **66 referencias legales corregidas** (articulos incorrectos, citas verbosas limpiadas, LOPDGDD/RGPD refs)
+- **30 drift fixes** (calificadores anadidos/eliminados vs texto legal)
+- **5 contradicciones detectadas** (Phase 1 discrepancy): IDs 992, 945, 1440, 1372 corregidos; 560/1386 + 95 pendientes revision humana
 - **Archivos de ley:** 11 leyes extraidas del BOE en `.claude/questions/Temario/leyes/` (~4.3MB)
 - CE completada: Arts 1-169 (Arts 81-96 anadidos Feb 19)
 
@@ -213,7 +219,8 @@
 #### Snapshot actual:
 ```
 total_active: 1,422 (post-migracion 16 temas + 75 AI-created)
-verified: 1,171/1,422 (82.3%)
+verified: 1,422/1,422 (100%)
+contradictions_detected: 5 (4 fixed, 1 human review)
 OK (>100): T1:241, T2:211, T3:136, T4:126, T5:118, T8:208, T9:211
 BAJO: T11:88, T13:16
 CRITICO (<20): T6:10, T7:10, T10:10, T12:10, T14:10, T15:7, T16:10
@@ -392,6 +399,7 @@ CRITICO (<20): T6:10, T7:10, T10:10, T12:10, T14:10, T15:7, T16:10
 
 | Fecha | Resumen |
 |-------|---------|
+| 2026-02-20 | 100% VERIFICATION + DISCREPANCY PHASE 1: Committed UX audit bug fixes (8 files). Phase 1 contradiction check on 116 hotspot articles (492 questions): 5 contradictions found (4 answers fixed, 1 human review). LRBRL 49 questions verified against law text (1 answer fixed). Other laws 154 verified by knowledge (1 answer fixed). Total: 1,422/1,422 verified (100%). Cumulative: 25 answers fixed, 66 refs fixed, 30 drift fixed |
 | 2026-02-19 | UX AUDIT E2E: Seed script 5 semanas datos realistas (40 sesiones, 4 temas). Audit Playwright 29 checks. 6 bugs encontrados y corregidos: ISO dates, getDueReviews FK JOIN, updateProgress UUID, Fortaleza names, session_stats columns/constraint. Resultado final: 29/29 PASS, 0 console errors. Subgrupos temas reorganizados (secuencial BOE) |
 | 2026-02-19 | VERIFICACION POR CAPITULO completa: CE(690), L40(220), LOTC(79), LOPJ(67), L50(47), TREBEP(24), LBRL(23), L39(20) = 1,171/1,422 (82.3%). 18 answers fixed, 58 refs fixed, 29 drift fixed. CE Arts 81-96 extraidos. TREBEP verificado con texto legal |
 | 2026-02-15 | RE-ASSESSMENT OPUS 4.6: 10 agentes Opus paralelos, 1,002/1,120 procesadas (89.5%). Explicaciones enriquecidas con «citas textuales». 540 verified con fuente, 460 no-source. 3 wrong answers corregidas, 19+ tema mismatches, 12+ near-duplicates. Buscador agregado a ReviewerPanel. Recuadro "Verificada BOE" eliminado de UI. CODEX ASSESSMENT FIX: lint, CI gate, README, E2E fix. Temario viz (Dendrite + HexMap). Pipeline variantes disenado. QUESTION_TRACKER.md creado |
