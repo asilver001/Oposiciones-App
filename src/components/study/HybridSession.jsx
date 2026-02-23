@@ -1,13 +1,15 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Loader2, XCircle, RefreshCw, Clock, BookOpen } from 'lucide-react';
 import { useStudySession } from '../../hooks/useSpacedRepetition';
 import { useUserInsights } from '../../hooks/useUserInsights';
+import { useAuth } from '../../hooks/useAuth';
+import { generateWeaknessSummary } from '../../services/weaknessAnalyzer';
 import EmptyState from '../common/EmptyState/EmptyState';
 import SessionComplete from './SessionComplete';
 import SessionHeader from './SessionHeader';
 import QuestionCard from './QuestionCard';
 
-export default function HybridSession({ config = {}, onClose, onComplete }) {
+export default function HybridSession({ config = {}, onClose, onComplete, onNextActivity }) {
   const {
     currentQuestion,
     currentIndex,
@@ -22,6 +24,7 @@ export default function HybridSession({ config = {}, onClose, onComplete }) {
   } = useStudySession(config);
 
   const { saveSessionAndDetectInsights, loading: insightsLoading } = useUserInsights();
+  const { user } = useAuth();
 
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [showResult, setShowResult] = useState(false);
@@ -98,13 +101,16 @@ export default function HybridSession({ config = {}, onClose, onComplete }) {
     }, 1500);
   };
 
-  // Handle session complete - save stats and detect insights
+  // Handle session complete - save stats and detect insights + weaknesses
   useEffect(() => {
     if (isComplete && !insightsProcessed) {
       const processCompletion = async () => {
         setInsightsProcessed(true);
         await completeSession();
 
+        const allInsights = [];
+
+        // Single-session insight detection
         if (answersHistoryRef.current.length > 0) {
           try {
             const { triggeredInsights: insights } = await saveSessionAndDetectInsights(
@@ -112,16 +118,32 @@ export default function HybridSession({ config = {}, onClose, onComplete }) {
               { modo: 'practica', tema_id: config.temaId || null }
             );
             if (insights && insights.length > 0) {
-              setTriggeredInsights(insights);
+              allInsights.push(...insights);
             }
           } catch (err) {
             console.error('Error detecting insights:', err);
           }
         }
+
+        // Cross-session weakness analysis (runs in parallel after session save)
+        if (user?.id) {
+          try {
+            const weaknessInsights = await generateWeaknessSummary(user.id);
+            if (weaknessInsights.length > 0) {
+              allInsights.push(...weaknessInsights);
+            }
+          } catch (err) {
+            console.error('Error analyzing weaknesses:', err);
+          }
+        }
+
+        if (allInsights.length > 0) {
+          setTriggeredInsights(allInsights);
+        }
       };
       processCompletion();
     }
-  }, [isComplete, insightsProcessed, completeSession, saveSessionAndDetectInsights, config.temaId]);
+  }, [isComplete, insightsProcessed, completeSession, saveSessionAndDetectInsights, config.temaId, user?.id]);
 
   // Reset state when starting new session
   const handleNewSession = () => {
@@ -130,6 +152,35 @@ export default function HybridSession({ config = {}, onClose, onComplete }) {
     setInsightsProcessed(false);
     loadSession(config);
   };
+
+  // Compute next step recommendation based on session performance
+  // Must be before early returns to satisfy Rules of Hooks
+  const nextActivity = useMemo(() => {
+    if (!isComplete) return null;
+    const accuracy = sessionStats.answered > 0
+      ? Math.round((sessionStats.correct / sessionStats.answered) * 100)
+      : 0;
+
+    if (accuracy < 60 && sessionStats.answered >= 5) {
+      return {
+        title: 'Repasar errores',
+        description: `Has fallado ${sessionStats.answered - sessionStats.correct} preguntas. Repásalas para consolidar.`,
+        config: { mode: 'repaso-errores', totalQuestions: Math.min(15, sessionStats.answered - sessionStats.correct + 5), failedOnly: true, title: 'Repaso de errores' }
+      };
+    }
+    if (config.tema) {
+      return {
+        title: 'Continuar practicando',
+        description: 'Sigue con más preguntas para dominar este tema.',
+        config: { mode: 'practica-tema', topic: config.topic || { number: config.tema }, totalQuestions: 15, title: 'Más práctica' }
+      };
+    }
+    return {
+      title: 'Test rápido',
+      description: '10 preguntas aleatorias para seguir practicando.',
+      config: { mode: 'test-rapido', totalQuestions: 10, title: 'Test rápido' }
+    };
+  }, [isComplete, sessionStats, config.tema, config.topic]);
 
   // Loading state (with timeout)
   if (isLoading && !loadingTimedOut) {
@@ -213,6 +264,8 @@ export default function HybridSession({ config = {}, onClose, onComplete }) {
         answersHistory={answersHistoryRef.current} // eslint-disable-line react-hooks/refs
         triggeredInsights={triggeredInsights}
         insightsLoading={insightsLoading}
+        nextActivity={nextActivity}
+        onNextActivity={onNextActivity}
         onNewSession={handleNewSession}
         onClose={() => {
           onComplete?.(sessionStats);

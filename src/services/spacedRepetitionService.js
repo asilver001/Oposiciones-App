@@ -7,7 +7,9 @@ import { supabase } from '../lib/supabase';
 import {
   calculateNextReview,
   calculateState,
-  QuestionState
+  QuestionState,
+  stateToInt,
+  stateToString
 } from '../lib/fsrs';
 
 /**
@@ -121,17 +123,19 @@ export async function getUserProgress(userId) {
 export async function getDueReviews(userId, options = {}) {
   const { tema, limit = 50 } = options;
 
-  // Note: Cannot JOIN user_question_progress → questions because
-  // question_id is UUID but questions.id is INTEGER (FK mismatch).
-  // Fetch progress rows first, then fetch questions separately.
-
+  // question_id is now INTEGER (migration 014) — FK join works directly
   let query = supabase
     .from('user_question_progress')
-    .select('*')
+    .select('*, questions!inner(*)')
     .eq('user_id', userId)
+    .eq('questions.is_active', true)
     .lte('next_review', new Date().toISOString())
     .order('next_review', { ascending: true })
     .limit(limit);
+
+  if (tema) {
+    query = query.eq('questions.tema', tema);
+  }
 
   const { data: progressRows, error } = await query;
 
@@ -140,46 +144,10 @@ export async function getDueReviews(userId, options = {}) {
     return [];
   }
 
-  if (!progressRows?.length) return [];
-
-  // Extract question IDs (stored as UUID strings, but questions.id is integer)
-  // Try to parse them as integers for the lookup
-  const questionIds = progressRows
-    .map(p => parseInt(p.question_id, 10))
-    .filter(id => !isNaN(id));
-
-  if (!questionIds.length) return [];
-
-  let qQuery = supabase
-    .from('questions')
-    .select('*')
-    .in('id', questionIds)
-    .eq('is_active', true);
-
-  if (tema) {
-    qQuery = qQuery.eq('tema', tema);
-  }
-
-  const { data: questions, error: qError } = await qQuery;
-
-  if (qError) {
-    console.error('Error fetching review questions:', qError);
-    return [];
-  }
-
-  const questionsById = {};
-  (questions || []).forEach(q => { questionsById[q.id] = q; });
-
-  // Merge progress with question data
-  return progressRows
-    .filter(p => {
-      const qId = parseInt(p.question_id, 10);
-      return !isNaN(qId) && questionsById[qId];
-    })
-    .map(p => ({
-      ...p,
-      questions: questionsById[parseInt(p.question_id, 10)]
-    }));
+  return (progressRows || []).map(p => ({
+    ...p,
+    questions: p.questions
+  }));
 }
 
 /**
@@ -277,6 +245,7 @@ export async function getNewQuestions(userId, options = {}) {
     .select('question_id')
     .eq('user_id', userId);
 
+  // question_id is now INTEGER — direct comparison with questions.id works
   const seenIds = (seenData || []).map(p => p.question_id);
 
   // Build query for unseen questions
@@ -297,7 +266,7 @@ export async function getNewQuestions(userId, options = {}) {
 
   // Exclude seen questions (only if there are some)
   if (seenIds.length > 0) {
-    query = query.not('id', 'in', seenIds);
+    query = query.not('id', 'in', `(${seenIds.join(',')})`);
   }
 
   const { data, error } = await query;
@@ -455,12 +424,7 @@ export async function generateHybridSession(userId, config = {}) {
  */
 export async function updateProgress(userId, questionId, wasCorrect) {
   try {
-    // user_question_progress.question_id is UUID but questions.id is INTEGER.
-    // Skip DB write for integer IDs to avoid 22P02 errors.
-    const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
-    if (!uuidRegex.test(String(questionId))) {
-      return null;
-    }
+    // question_id is now INTEGER (migration 014), matching questions.id
 
     // Get existing progress (maybeSingle to avoid throw on no rows)
     const { data: existing } = await supabase
@@ -475,7 +439,7 @@ export async function updateProgress(userId, questionId, wasCorrect) {
 
     const progressData = {
       user_id: userId,
-      question_id: questionId,
+      question_id: Number(questionId),
       times_seen: (existing?.times_seen || 0) + 1,
       times_correct: (existing?.times_correct || 0) + (wasCorrect ? 1 : 0),
       stability: fsrsResult.stability || 1.0,
@@ -483,7 +447,7 @@ export async function updateProgress(userId, questionId, wasCorrect) {
       scheduled_days: fsrsResult.interval || 1,
       next_review: fsrsResult.nextReview.toISOString(),
       last_review: new Date().toISOString(),
-      state: fsrsResult.state
+      state: stateToInt(fsrsResult.state)
     };
 
     // Upsert progress
@@ -538,7 +502,8 @@ export async function getStudyStats(userId) {
   }).length;
 
   const byState = progress.reduce((acc, p) => {
-    const state = p.state || calculateState(p);
+    // DB stores state as integer; convert to string for QuestionState matching
+    const state = p.state != null ? stateToString(p.state) : calculateState(p);
     acc[state] = (acc[state] || 0) + 1;
     return acc;
   }, {});

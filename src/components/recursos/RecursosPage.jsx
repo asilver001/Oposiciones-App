@@ -174,6 +174,7 @@ function ResourceItem({ recurso, onResourceClick, isFavorite, onToggleFavorite }
           }}
           className="p-1.5 rounded-lg hover:bg-white/80 opacity-0 group-hover:opacity-100 transition-opacity"
           whileTap={{ scale: 0.9 }}
+          aria-label={isFavorite ? 'Quitar de favoritos' : 'Añadir a favoritos'}
         >
           <Heart
             className={`w-4 h-4 ${isFavorite ? 'fill-rose-500 text-rose-500' : 'text-gray-400'}`}
@@ -414,6 +415,7 @@ export default function RecursosPage({ onNavigate }) {
           <button
             onClick={() => setSearchQuery('')}
             className="absolute right-3 top-1/2 -translate-y-1/2 p-1 rounded-full hover:bg-gray-100"
+            aria-label="Limpiar búsqueda"
           >
             <X className="w-4 h-4 text-gray-400" />
           </button>

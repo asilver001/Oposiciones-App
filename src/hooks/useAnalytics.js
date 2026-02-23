@@ -12,7 +12,7 @@
 
 import { useMemo } from 'react';
 
-const TOTAL_TOPICS = 11;
+const TOTAL_TOPICS = 16;
 
 /**
  * Compute learning velocity from session history

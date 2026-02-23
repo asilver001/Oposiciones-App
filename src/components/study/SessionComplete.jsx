@@ -6,7 +6,8 @@ import {
   CheckCircle2,
   RotateCcw,
   Lightbulb,
-  Loader2
+  Loader2,
+  ChevronRight
 } from 'lucide-react';
 import InsightCard from '../InsightCard';
 import SessionSummary from './SessionSummary';
@@ -31,6 +32,8 @@ export default function SessionComplete({
   answersHistory = [],
   triggeredInsights = [],
   insightsLoading = false,
+  nextActivity = null,
+  onNextActivity,
   onNewSession,
   onClose
 }) {
@@ -136,6 +139,28 @@ export default function SessionComplete({
               answers={answersHistory}
               totalQuestions={sessionStats.total || sessionStats.answered}
             />
+          </div>
+        )}
+
+        {/* Next Step Recommendation */}
+        {nextActivity && onNextActivity && (
+          <div className="mb-4">
+            <p className="text-xs text-gray-500 uppercase tracking-wider mb-2 font-medium">Siguiente paso recomendado</p>
+            <button
+              onClick={() => onNextActivity(nextActivity)}
+              className="w-full bg-white border border-brand-200 rounded-xl p-3.5 text-left hover:bg-brand-50 transition-colors"
+            >
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Target className="w-5 h-5 text-brand-600" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-semibold text-gray-900">{nextActivity.title}</p>
+                  <p className="text-xs text-gray-500 truncate">{nextActivity.description}</p>
+                </div>
+                <ChevronRight className="w-5 h-5 text-brand-400 flex-shrink-0" />
+              </div>
+            </button>
           </div>
         )}
 

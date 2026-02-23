@@ -192,6 +192,7 @@ export function useTopics() {
 
         return {
           id: topic.id,
+          number: topic.number,
           name: topic.name,
           progress: progressLevel,
           status: estado,

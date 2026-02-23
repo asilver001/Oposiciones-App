@@ -104,8 +104,19 @@ export default function StudyPage() {
   // Handle session complete
   const handleComplete = useCallback((stats) => {
     console.log('Session completed:', stats);
-    // Could show a summary or navigate somewhere
   }, []);
+
+  // Handle "next activity" from post-session recommendation
+  const handleNextActivity = useCallback((activity) => {
+    if (!activity?.config) return;
+    // Reset session and navigate to the recommended activity
+    setSessionStarted(false);
+    // Small delay to let state reset, then start with new config
+    setTimeout(() => {
+      navigate(ROUTES.STUDY, { state: activity.config, replace: true });
+      setSessionStarted(true);
+    }, 50);
+  }, [navigate]);
 
   // Start session
   const handleStart = useCallback(() => {
@@ -140,6 +151,7 @@ export default function StudyPage() {
             config={sessionConfig}
             onClose={handleExit}
             onComplete={handleComplete}
+            onNextActivity={handleNextActivity}
           />
         );
     }

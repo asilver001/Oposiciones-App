@@ -37,6 +37,10 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
   const [flagged, setFlagged] = useState(new Set()); // Flagged questions for review
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // Time tracking per question for pacing analysis
+  const questionTimesRef = useRef({}); // { questionId: { enterTime, totalMs } }
+  const lastQuestionTimeRef = useRef(Date.now());
+
   // UI state
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -113,6 +117,26 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
 
   const currentQuestion = questions[currentIndex];
 
+  // Track time spent on each question
+  useEffect(() => {
+    if (!currentQuestion) return;
+    const qId = currentQuestion.id;
+    const now = Date.now();
+
+    // Record time spent on previous question
+    if (lastQuestionTimeRef.current && questionTimesRef.current._lastQId) {
+      const prevId = questionTimesRef.current._lastQId;
+      const elapsed = now - lastQuestionTimeRef.current;
+      if (!questionTimesRef.current[prevId]) {
+        questionTimesRef.current[prevId] = 0;
+      }
+      questionTimesRef.current[prevId] += elapsed;
+    }
+
+    lastQuestionTimeRef.current = now;
+    questionTimesRef.current._lastQId = qId;
+  }, [currentIndex, currentQuestion]);
+
   // Helper to normalize options (handle JSONB array, JSON string, or individual columns)
   const getOptions = useCallback((question) => {
     if (!question) return [];
@@ -122,8 +146,12 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
     if (typeof opts === 'string') {
       try { opts = JSON.parse(opts); } catch { opts = null; }
     }
-    if (Array.isArray(opts) && opts.length > 0 && opts[0]?.id) {
-      return opts;
+    if (Array.isArray(opts) && opts.length > 0) {
+      // Generate id from index if missing (107/1000 questions have no id field)
+      return opts.map((o, idx) => ({
+        ...o,
+        id: o.id || ['a', 'b', 'c', 'd'][idx] || `opt-${idx}`,
+      }));
     }
 
     // Fallback: individual columns (option_a, option_b, option_c, option_d)
@@ -231,6 +259,72 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
       return newSet;
     });
   }, [currentQuestion]);
+
+  // Time analysis computation
+  const timeAnalysis = useMemo(() => {
+    if (!isFinished) return null;
+
+    // Record final question time
+    const now = Date.now();
+    const times = { ...questionTimesRef.current };
+    if (times._lastQId && lastQuestionTimeRef.current) {
+      const prevId = times._lastQId;
+      if (!times[prevId]) times[prevId] = 0;
+      times[prevId] += now - lastQuestionTimeRef.current;
+    }
+    delete times._lastQId;
+
+    const totalExamSeconds = ((config.timeLimit || EXAM_CONFIG.timeMinutes) * 60) - remainingTime;
+    const questionTimesList = Object.entries(times)
+      .filter(([, ms]) => ms > 0)
+      .map(([qId, ms]) => ({ qId, seconds: ms / 1000 }));
+
+    if (questionTimesList.length === 0) return null;
+
+    const avgSeconds = questionTimesList.reduce((s, q) => s + q.seconds, 0) / questionTimesList.length;
+    const idealPace = 36; // 60 min / 100 questions = 36s each
+
+    // Find questions where user spent too long (>90s)
+    const slowQuestions = questionTimesList.filter(q => q.seconds > 90).length;
+
+    // Check if user rushed at the end (last 20% answered much faster)
+    const answeredInOrder = Object.keys(answers);
+    const lastChunk = answeredInOrder.slice(-Math.max(5, Math.floor(answeredInOrder.length * 0.2)));
+    const lastChunkTimes = lastChunk.map(qId => times[qId] || 0).filter(t => t > 0);
+    const lastChunkAvg = lastChunkTimes.length > 0
+      ? (lastChunkTimes.reduce((s, t) => s + t, 0) / lastChunkTimes.length) / 1000
+      : avgSeconds;
+    const rushedEnd = lastChunkAvg < avgSeconds * 0.5 && lastChunkTimes.length >= 3;
+
+    // Pacing verdict
+    let verdict = 'balanced';
+    let verdictText = 'Buen ritmo';
+    let verdictColor = 'text-emerald-600';
+    if (rushedEnd) {
+      verdict = 'rushed';
+      verdictText = 'Acelerado al final';
+      verdictColor = 'text-amber-600';
+    } else if (avgSeconds > idealPace * 1.5) {
+      verdict = 'slow';
+      verdictText = 'Ritmo lento';
+      verdictColor = 'text-amber-600';
+    } else if (questions.length - stats.answered > questions.length * 0.2) {
+      verdict = 'incomplete';
+      verdictText = 'Muchas sin responder';
+      verdictColor = 'text-rose-600';
+    }
+
+    return {
+      totalSeconds: totalExamSeconds,
+      avgSecondsPerQuestion: Math.round(avgSeconds),
+      idealPace,
+      slowQuestions,
+      rushedEnd,
+      verdict,
+      verdictText,
+      verdictColor,
+    };
+  }, [isFinished, remainingTime, config.timeLimit, answers, questions.length, stats.answered]);
 
   // End exam
   const endExam = useCallback(async () => {
@@ -445,6 +539,48 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
               </div>
             </div>
           </div>
+
+          {/* Time Management Analysis */}
+          {timeAnalysis && (
+            <div className="w-full bg-white rounded-2xl shadow-sm p-5 mb-6 text-left">
+              <div className="flex items-center gap-2 mb-3">
+                <Clock className="w-5 h-5 text-gray-500" />
+                <h3 className="font-semibold text-gray-800">Gestion del tiempo</h3>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3 mb-3">
+                <div className="bg-gray-50 rounded-lg p-3">
+                  <p className="text-xs text-gray-500">Tiempo total</p>
+                  <p className="text-lg font-bold text-gray-900">
+                    {Math.floor(timeAnalysis.totalSeconds / 60)}:{String(Math.floor(timeAnalysis.totalSeconds % 60)).padStart(2, '0')}
+                  </p>
+                </div>
+                <div className="bg-gray-50 rounded-lg p-3">
+                  <p className="text-xs text-gray-500">Media por pregunta</p>
+                  <p className="text-lg font-bold text-gray-900">{timeAnalysis.avgSecondsPerQuestion}s</p>
+                  <p className="text-xs text-gray-400">ideal: {timeAnalysis.idealPace}s</p>
+                </div>
+              </div>
+
+              {/* Verdict */}
+              <div className={`${timeAnalysis.verdictColor} text-sm font-medium mb-2`}>
+                {timeAnalysis.verdictText}
+              </div>
+
+              {/* Tips based on pacing */}
+              <div className="text-xs text-gray-500 space-y-1">
+                {timeAnalysis.slowQuestions > 0 && (
+                  <p>{timeAnalysis.slowQuestions} pregunta{timeAnalysis.slowQuestions !== 1 ? 's' : ''} con más de 90s. No te atasques en preguntas difíciles.</p>
+                )}
+                {timeAnalysis.rushedEnd && (
+                  <p>Aceleraste al final. Distribuye mejor el tiempo para no precipitarte.</p>
+                )}
+                {timeAnalysis.verdict === 'balanced' && (
+                  <p>Has mantenido un ritmo constante. ¡Buen control del tiempo!</p>
+                )}
+              </div>
+            </div>
+          )}
 
           {/* Topic Analysis */}
           {answersHistory.length > 0 && (

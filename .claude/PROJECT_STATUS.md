@@ -6,11 +6,11 @@
 
 ## Estado Actual
 
-**Ultima actualizacion:** 2026-02-19
-**Fase del proyecto:** Beta-Ready (~92% completado) — UX audit passed, contenido en expansion
+**Ultima actualizacion:** 2026-02-23
+**Fase del proyecto:** Beta-Ready (~94% completado) — StudyPlanEngine + weakness analysis + simulacro time tracking
 **Branch actual:** main
-**Publish readiness:** 0 CRITICAL — E2E audit 29/29 PASS, lint 0 errors, CI lint gate activo, 0 console errors
-**Trabajo paralelo:** Preguntas temas 12-28 en otra instancia de Claude
+**Publish readiness:** 0 CRITICAL — build OK, lint 0 errors, 9 warnings (pre-existing)
+**Trabajo paralelo:** Migration 014 (FK fix) pendiente de ejecutar en Supabase
 
 ---
 
@@ -21,7 +21,7 @@
 | UI / Design System | 7.5/10 | 9/10 | +1.5 (tokens migrados, gradientes eliminados, dark mode) |
 | UX / Flows | 6.5/10 | 8/10 | +1.5 (a11y, focus traps, semantic HTML) |
 | Backend / Seguridad | 5/10 | 7.5/10 | +2.5 (admin auth, GDPR, error tracking) |
-| Metodologia Educativa | 6.5/10 | 8/10 | +1.5 (FSRS-4.5, post-session analysis, adaptive) |
+| Metodologia Educativa | 6.5/10 | 8.5/10 | +2.0 (FSRS-4.5, StudyPlanEngine, weakness analyzer, time analysis) |
 | Code Quality / Deploy | 6/10 | 8.5/10 | +2.5 (0 lint errors, E2E tests, bundle -60%) |
 | **TOTAL** | **6.3/10** | **8.2/10** | **+1.9** |
 
@@ -35,7 +35,7 @@
 
 | # | Issue | Severidad | Descripcion |
 |---|-------|-----------|-------------|
-| 2 | [ ] user_question_progress FK roto | CRITICAL | `question_id` UUID vs `questions.id` INTEGER. 0 rows. FSRS per-question inerte. Opcion C: dejar inerte hasta migration futura |
+| 2 | [~] user_question_progress FK roto | CRITICAL | `question_id` UUID vs `questions.id` INTEGER. Migration 014 SQL creada, codigo actualizado. **Pendiente: ejecutar migration en Supabase** |
 | 4 | [~] test-rapido sin tema | ~~HIGH~~ | Reclasificado: BY DESIGN — quick tests consultan todas las materias |
 | 7 | [ ] Dual session recording | MEDIUM | HybridSession escribe a `test_sessions` Y `session_stats`. Duplicado pero no rompe |
 | 12 | [ ] Aliases redundantes en sessions | LOW | `correctas`, `correct_answers` duplican datos. Cosmético |
@@ -68,7 +68,7 @@
 | P1 | [x] Testing manual flujo auth → study → results | COMPLETADO: e2e/audit-ux.mjs (29 checks, 5-week sim) |
 | P2 | [ ] Data export endpoint GDPR | 1 RPC + 1 boton |
 | P3 | [ ] IP address hashing en admin_login_attempts | Edit puntual |
-| P5 | [ ] Eliminar OpositaApp.jsx legacy del bundle | Verificar imports + borrar |
+| P5 | [x] Eliminar OpositaApp.jsx legacy del bundle | COMPLETADO: OpositaApp.jsx + src/data/questions/ eliminados, main.jsx simplificado |
 
 ### Resueltos (Feb 15 — Codex Assessment)
 
@@ -78,6 +78,22 @@
 | — | CI/CD no ejecuta lint | Agregado `npx eslint src/` step en deploy.yml antes de build |
 | — | README.md era boilerplate Vite | Reescrito con descripcion real del proyecto |
 | — | E2E test asumia redirect para 404 | Test ahora acepta /welcome (unauth) o NotFoundPage (auth) |
+
+### Resueltos (Feb 23 — StudyPlanEngine + Cleanup)
+
+| # | Issue/Feature | Fix |
+|---|---------------|-----|
+| P5 | OpositaApp.jsx (2,186 lines) eliminado | Borrado + src/data/questions/ + main.jsx simplificado (-537KB bundle) |
+| — | TOTAL_TOPICS hardcoded 11 | Cambiado a 16 en useAnalytics.js |
+| — | "Empezar ahora" no pasaba topic | SessionCard ahora pasa nextTopic + fortalezaData incluye `number` |
+| F6 | StudyPlanEngine creado | `src/services/studyPlanEngine.js` — 2-3 actividades diarias basadas en FSRS + accuracy + staleness + prerequisites + exam date |
+| F7 | useStudyPlan hook | `src/hooks/useStudyPlan.js` — conecta engine a React via useMemo |
+| F8 | TodayPlanSection + ExamCountdown | Nuevos componentes en SoftFortHome con 1-click start |
+| F9 | Post-session next step | SessionComplete muestra "Siguiente paso recomendado" con 1-click |
+| F10 | Weakness analyzer | `src/services/weaknessAnalyzer.js` — cross-session error patterns, topic trends |
+| F11 | Simulacro time tracking | Per-question timing, pacing verdict, rushing detection, tips |
+| — | SimulacroSession options sin id | Generate id from index para 107 preguntas sin campo id |
+| — | Migration 014 SQL creada | `supabase/migrations/014_fix_question_id_types.sql` — FK UUID→INTEGER (pendiente ejecutar) |
 
 ### Resueltos (Feb 19 — UX Audit E2E)
 
@@ -102,6 +118,10 @@
 | F3 | Explicaciones IA con Haiku | ALTO | Diseño pendiente |
 | F4 | Monitoreo BOE automatico | MEDIO | Pendiente |
 | F5 | Preguntas adaptativas (variantes) | ALTO | Disenado — piloto pendiente |
+| F6 | StudyPlanEngine "Tu sesion de hoy" | ALTO | **COMPLETADO** — 2-3 actividades diarias recomendadas |
+| F7 | Cross-session weakness analysis | ALTO | **COMPLETADO** — deteccion patrones error persistentes |
+| F8 | Simulacro time management analysis | MEDIO | **COMPLETADO** — tracking per-question + pacing verdict |
+| F9 | Post-session next step guidance | MEDIO | **COMPLETADO** — recomendacion 1-click tras sesion |
 
 ---
 
@@ -113,7 +133,7 @@
 | Practica Tema | 20 | ~15 min | Funcional |
 | Repaso Errores | 20 | ~15 min | Funcional |
 | Flashcards | 20 | ~10 min | Funcional |
-| Simulacro | 100 | 60 min | Funcional (adaptive) |
+| Simulacro | 100 | 60 min | Funcional (adaptive + time analysis) |
 | Lectura | 20 | Libre | Funcional |
 
 ---
@@ -138,11 +158,11 @@
 
 ## Metricas de Codigo
 
-- **Build:** 7.5s, compila limpio (1 chunk size warning — OpositaApp legacy 537KB)
-- **Bundle principal:** 233KB gzip (antes 567KB = **-60%**)
+- **Build:** Compila limpio (OpositaApp legacy eliminado — -537KB del bundle)
+- **Bundle principal:** ~200KB gzip (post-cleanup)
 - **Vendor chunks:** react 11KB, supabase 48KB, ui 49KB
 - **Temario graph:** TemarioDendrite + TemarioHexMap en DraftFeatures
-- **Lint:** 0 errors, 10 warnings (exhaustive-deps intencionales)
+- **Lint:** 0 errors, 9 warnings (exhaustive-deps intencionales)
 - **CI lint gate:** deploy.yml ejecuta eslint antes de build (max 20 warnings)
 - **Tests:** 10+ E2E smoke tests (e2e/smoke.spec.js) + UX audit E2E (29 checks, 5-week sim)
 - **Console errors en runtime:** 0 (post-audit fix Feb 19)
@@ -389,8 +409,11 @@ CRITICO (<20): T6:10, T7:10, T10:10, T12:10, T14:10, T15:7, T16:10
 #### Metodologia Educativa
 - [x] FSRS-4.5 implementado (stability, difficulty, retention targeting)
 - [x] 6 modos de estudio funcionales
-- [x] Scoring real en Simulacro con dificultad adaptativa
-- [x] Post-session analysis por tema
+- [x] Scoring real en Simulacro con dificultad adaptativa + time management analysis
+- [x] Post-session analysis por tema + cross-session weakness detection
+- [x] StudyPlanEngine: 2-3 actividades diarias personalizadas (FSRS + accuracy + staleness + prerequisites + exam urgency)
+- [x] Post-session next step recommendation (1-click to start)
+- [x] ExamCountdown con urgency levels
 - [x] Gamificacion saludable
 
 ---
@@ -399,6 +422,7 @@ CRITICO (<20): T6:10, T7:10, T10:10, T12:10, T14:10, T15:7, T16:10
 
 | Fecha | Resumen |
 |-------|---------|
+| 2026-02-23 | STUDY INTELLIGENCE SPRINT: StudyPlanEngine creado (2-3 actividades diarias recomendadas basadas en FSRS/accuracy/staleness/exam). Home redesign "Tu sesion de hoy" con TodayPlanSection + ExamCountdown. Post-session "Siguiente paso recomendado" con 1-click. weaknessAnalyzer.js para deteccion cross-session de patrones de error. SimulacroSession con time tracking per-question + pacing verdict. OpositaApp.jsx legacy eliminado (-537KB). Migration 014 SQL creada (FK fix pendiente). TOTAL_TOPICS fix 11→16 |
 | 2026-02-20 | 100% VERIFICATION + DISCREPANCY PHASE 1: Committed UX audit bug fixes (8 files). Phase 1 contradiction check on 116 hotspot articles (492 questions): 5 contradictions found (4 answers fixed, 1 human review). LRBRL 49 questions verified against law text (1 answer fixed). Other laws 154 verified by knowledge (1 answer fixed). Total: 1,422/1,422 verified (100%). Cumulative: 25 answers fixed, 66 refs fixed, 30 drift fixed |
 | 2026-02-19 | UX AUDIT E2E: Seed script 5 semanas datos realistas (40 sesiones, 4 temas). Audit Playwright 29 checks. 6 bugs encontrados y corregidos: ISO dates, getDueReviews FK JOIN, updateProgress UUID, Fortaleza names, session_stats columns/constraint. Resultado final: 29/29 PASS, 0 console errors. Subgrupos temas reorganizados (secuencial BOE) |
 | 2026-02-19 | VERIFICACION POR CAPITULO completa: CE(690), L40(220), LOTC(79), LOPJ(67), L50(47), TREBEP(24), LBRL(23), L39(20) = 1,171/1,422 (82.3%). 18 answers fixed, 58 refs fixed, 29 drift fixed. CE Arts 81-96 extraidos. TREBEP verificado con texto legal |

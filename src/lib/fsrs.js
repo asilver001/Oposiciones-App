@@ -44,6 +44,38 @@ export const QuestionState = {
   MASTERED: 'mastered'
 };
 
+// Integer state values matching DB column (state INTEGER)
+export const QuestionStateInt = {
+  NEW: 0,
+  LEARNING: 1,
+  REVIEW: 2,
+  MASTERED: 3
+};
+
+const STATE_STRING_TO_INT = {
+  [QuestionState.NEW]: QuestionStateInt.NEW,
+  [QuestionState.LEARNING]: QuestionStateInt.LEARNING,
+  [QuestionState.REVIEW]: QuestionStateInt.REVIEW,
+  [QuestionState.MASTERED]: QuestionStateInt.MASTERED
+};
+
+const STATE_INT_TO_STRING = {
+  [QuestionStateInt.NEW]: QuestionState.NEW,
+  [QuestionStateInt.LEARNING]: QuestionState.LEARNING,
+  [QuestionStateInt.REVIEW]: QuestionState.REVIEW,
+  [QuestionStateInt.MASTERED]: QuestionState.MASTERED
+};
+
+export function stateToInt(state) {
+  if (typeof state === 'number') return state;
+  return STATE_STRING_TO_INT[state] ?? QuestionStateInt.NEW;
+}
+
+export function stateToString(state) {
+  if (typeof state === 'string') return state;
+  return STATE_INT_TO_STRING[state] ?? QuestionState.NEW;
+}
+
 /**
  * Calculate the state of a question based on progress data
  * @param {Object} progress - User's progress for this question
@@ -54,11 +86,13 @@ export function calculateState(progress) {
     return QuestionState.NEW;
   }
 
-  if (progress.times_seen <= 2 && progress.interval <= 3) {
+  const interval = progress.scheduled_days ?? progress.interval ?? 0;
+
+  if (progress.times_seen <= 2 && interval <= 3) {
     return QuestionState.LEARNING;
   }
 
-  if (progress.interval > 30) {
+  if (interval > 30) {
     return QuestionState.MASTERED;
   }
 
@@ -173,9 +207,12 @@ export function calculateNextReview(progress, wasCorrect, params = FSRS_PARAMS) 
   let stability = progress?.stability || null;
   let difficulty = progress?.difficulty || null;
 
+  // Read interval from DB column (scheduled_days) or legacy field (interval)
+  const currentInterval = progress?.scheduled_days ?? progress?.interval ?? 0;
+
   // Backward compatibility: convert from legacy ease_factor if no FSRS params
-  if (stability === null && progress?.interval > 0) {
-    stability = intervalToStability(progress.interval, desiredRetention);
+  if (stability === null && currentInterval > 0) {
+    stability = intervalToStability(currentInterval, desiredRetention);
   }
   if (difficulty === null && progress?.ease_factor) {
     difficulty = easeToDifficulty(progress.ease_factor);
@@ -194,15 +231,15 @@ export function calculateNextReview(progress, wasCorrect, params = FSRS_PARAMS) 
       difficulty = params.initial_difficulty?.[0] || 7.0;
       interval = params.minInterval;
     }
-  } else if (timesSeen <= 3 && (progress?.interval || 0) <= (params.learningSteps?.[1] || 3)) {
+  } else if (timesSeen <= 3 && currentInterval <= (params.learningSteps?.[1] || 3)) {
     // LEARNING phase: use fixed steps, but update stability/difficulty
     if (wasCorrect) {
       difficulty = nextDifficulty(difficulty, true);
 
-      if ((progress?.interval || 0) === 0) {
+      if (currentInterval === 0) {
         interval = params.learningSteps[0];
         stability = params.initial_stability?.[2] || 2.4;
-      } else if ((progress?.interval || 0) <= params.learningSteps[0]) {
+      } else if (currentInterval <= params.learningSteps[0]) {
         interval = params.learningSteps[1] || params.graduationInterval;
         stability = nextStabilityCorrect(stability, difficulty, desiredRetention);
       } else {
@@ -381,6 +418,9 @@ export function calculatePriority(progress) {
 
 export default {
   QuestionState,
+  QuestionStateInt,
+  stateToInt,
+  stateToString,
   calculateState,
   isDue,
   calculateNextReview,

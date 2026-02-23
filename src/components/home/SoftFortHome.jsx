@@ -9,8 +9,9 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
-  Zap, Flame, Target, Trophy, ChevronRight,
-  Info, HelpCircle, Instagram, Sparkles, CalendarCheck
+  Zap, Flame, Target, ChevronRight,
+  Info, HelpCircle, Instagram, Sparkles, CalendarCheck,
+  RefreshCw, AlertTriangle, BookOpen, Clock, Play, Calendar
 } from 'lucide-react';
 import { TopBar } from '@layouts/MainLayout';
 import FortalezaVisual, { statusConfig } from './FortalezaVisual';
@@ -82,13 +83,13 @@ function SessionCard({ nextTopic, onStartSession }) {
             </span>
           </div>
           <h2 className={`text-lg font-bold mb-1 ${themeConfig.textClass}`}>
-            T{nextTopic?.id}. {nextTopic?.name}
+            T{nextTopic?.number || nextTopic?.id}. {nextTopic?.name}
           </h2>
           <p className={`text-sm ${themeConfig.subtextClass} mb-4`}>
             15 preguntas · ~10 min
           </p>
           <motion.button
-            onClick={onStartSession}
+            onClick={() => onStartSession(nextTopic)}
             className={`px-5 py-2.5 ${themeConfig.buttonClass} font-semibold rounded-xl text-sm flex items-center gap-2 shadow-sm`}
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
@@ -121,6 +122,119 @@ function SessionCard({ nextTopic, onStartSession }) {
             {nextTopic?.progress}%
           </span>
         </div>
+      </div>
+    </motion.div>
+  );
+}
+
+/**
+ * Icon mapping for study plan activities
+ */
+const activityIcons = {
+  'refresh-cw': RefreshCw,
+  'alert-triangle': AlertTriangle,
+  'book-open': BookOpen,
+  'clock': Clock,
+  'zap': Zap,
+  'coffee': Clock,
+};
+
+/**
+ * Activity color schemes by type
+ */
+const activityColors = {
+  'review-due': { bg: 'bg-amber-50', border: 'border-amber-200', text: 'text-amber-700', icon: 'bg-amber-100 text-amber-600', button: 'bg-amber-600' },
+  'weak-topic': { bg: 'bg-red-50', border: 'border-red-200', text: 'text-red-700', icon: 'bg-red-100 text-red-600', button: 'bg-red-600' },
+  'new-topic': { bg: 'bg-brand-50', border: 'border-brand-200', text: 'text-brand-700', icon: 'bg-brand-100 text-brand-600', button: 'bg-brand-600' },
+  'reinforce': { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-700', icon: 'bg-blue-100 text-blue-600', button: 'bg-blue-600' },
+  'simulacro': { bg: 'bg-rose-50', border: 'border-rose-200', text: 'text-rose-700', icon: 'bg-rose-100 text-rose-600', button: 'bg-rose-600' },
+  'error-review': { bg: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-700', icon: 'bg-orange-100 text-orange-600', button: 'bg-orange-600' },
+  'rest': { bg: 'bg-emerald-50', border: 'border-emerald-200', text: 'text-emerald-700', icon: 'bg-emerald-100 text-emerald-600', button: 'bg-emerald-600' },
+};
+
+/**
+ * ExamCountdown - Shows days until exam
+ */
+function ExamCountdown({ countdown }) {
+  if (!countdown || countdown.daysLeft === null) return null;
+
+  const urgencyStyles = {
+    calm: 'bg-brand-50 text-brand-700 border-brand-200',
+    focus: 'bg-blue-50 text-blue-700 border-blue-200',
+    warning: 'bg-amber-50 text-amber-700 border-amber-200',
+    critical: 'bg-red-50 text-red-700 border-red-200',
+  };
+
+  return (
+    <motion.div
+      className={`flex items-center gap-2 px-3 py-1.5 rounded-full border text-xs font-medium ${urgencyStyles[countdown.urgencyLevel] || urgencyStyles.calm}`}
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+    >
+      <Calendar className="w-3.5 h-3.5" />
+      {countdown.message}
+    </motion.div>
+  );
+}
+
+/**
+ * TodayPlanSection - "Tu sesion de hoy" with AI-recommended activities
+ */
+function TodayPlanSection({ activities, dailyInsight, onStartActivity }) {
+  if (!activities || activities.length === 0) return null;
+
+  return (
+    <motion.div
+      className="space-y-2"
+      initial={{ y: 20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.1 }}
+    >
+      <div className="flex items-center justify-between">
+        <h3 className="text-sm font-semibold text-gray-900">Tu sesion de hoy</h3>
+        {dailyInsight && (
+          <span className="text-xs text-gray-500">{dailyInsight.text}</span>
+        )}
+      </div>
+
+      <div className="space-y-2">
+        {activities.map((activity, idx) => {
+          const colors = activityColors[activity.type] || activityColors['new-topic'];
+          const IconComponent = activityIcons[activity.icon] || Zap;
+          const isRest = activity.type === 'rest';
+
+          return (
+            <motion.button
+              key={`${activity.type}-${idx}`}
+              onClick={() => !isRest && onStartActivity(activity)}
+              disabled={isRest}
+              className={`w-full ${colors.bg} border ${colors.border} rounded-xl p-3.5 text-left transition-all ${!isRest ? 'active:scale-[0.98]' : 'cursor-default'}`}
+              initial={{ x: -20, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.15 + idx * 0.08 }}
+            >
+              <div className="flex items-center gap-3">
+                <div className={`w-10 h-10 rounded-xl ${colors.icon} flex items-center justify-center flex-shrink-0`}>
+                  <IconComponent className="w-5 h-5" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between">
+                    <p className="text-sm font-semibold text-gray-900">{activity.title}</p>
+                    {activity.estimatedMinutes > 0 && (
+                      <span className="text-xs text-gray-400 flex-shrink-0 ml-2">{activity.estimatedMinutes} min</span>
+                    )}
+                  </div>
+                  <p className="text-xs text-gray-500 mt-0.5 truncate">{activity.description}</p>
+                </div>
+                {!isRest && (
+                  <div className={`w-8 h-8 rounded-lg ${colors.button} flex items-center justify-center flex-shrink-0`}>
+                    <Play className="w-4 h-4 text-white" />
+                  </div>
+                )}
+              </div>
+            </motion.button>
+          );
+        })}
       </div>
     </motion.div>
   );
@@ -378,7 +492,9 @@ export default function SoftFortHome({
   weeklyData = [0, 0, 0, 0, 0, 0, 0],
   todayStats = { questionsAnswered: 0 },
   fortalezaData = [],
+  studyPlan = null,
   onStartSession,
+  onStartActivity,
   onTopicSelect,
   onSettingsClick,
   onProgressClick,
@@ -485,14 +601,19 @@ export default function SoftFortHome({
         />
       )}
 
-      {/* Greeting section */}
-      <div>
-        <p className="text-xs text-brand-500 font-medium uppercase tracking-wider">
-          {new Date().toLocaleDateString('es-ES', { weekday: 'long' })}
-        </p>
-        <h2 className="text-xl font-bold text-gray-900">
-          Hola, {userName.split(' ')[0]}
-        </h2>
+      {/* Greeting section with exam countdown */}
+      <div className="flex items-start justify-between">
+        <div>
+          <p className="text-xs text-brand-500 font-medium uppercase tracking-wider">
+            {new Date().toLocaleDateString('es-ES', { weekday: 'long' })}
+          </p>
+          <h2 className="text-xl font-bold text-gray-900">
+            Hola, {userName.split(' ')[0]}
+          </h2>
+        </div>
+        {studyPlan?.examCountdown && (
+          <ExamCountdown countdown={studyPlan.examCountdown} />
+        )}
       </div>
 
       {/* Empty State for New Users */}
@@ -507,13 +628,25 @@ export default function SoftFortHome({
         />
       )}
 
-      {/* Bento Grid - Only show if user has activity */}
-      {!isNewUser && <div className="grid grid-cols-2 gap-3">
-        {/* Session CTA - spans 2 columns */}
+      {/* "Tu sesion de hoy" — AI-recommended activities */}
+      {!isNewUser && studyPlan?.activities && (
+        <TodayPlanSection
+          activities={studyPlan.activities}
+          dailyInsight={studyPlan.dailyInsight}
+          onStartActivity={onStartActivity || ((a) => onStartSession(a.config?.topic))}
+        />
+      )}
+
+      {/* Fallback: old SessionCard if no study plan */}
+      {!isNewUser && !studyPlan?.activities && (
         <SessionCard
           nextTopic={nextTopic}
           onStartSession={onStartSession}
         />
+      )}
+
+      {/* Bento Grid - Only show if user has activity */}
+      {!isNewUser && <div className="grid grid-cols-2 gap-3">
 
         {/* Streak card */}
         <StatsFlipCard
