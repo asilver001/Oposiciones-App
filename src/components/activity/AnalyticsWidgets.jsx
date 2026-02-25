@@ -282,12 +282,33 @@ export function ReadinessPrediction({ prediction }) {
         <span className="text-xs text-gray-500 dark:text-gray-400">Prediccion</span>
       </div>
       <div className="flex items-end gap-1">
-        <span className="text-2xl font-bold text-gray-900 dark:text-gray-100">~{days}</span>
-        <span className="text-xs text-gray-500 dark:text-gray-400 mb-1">dias</span>
+        {days > 730 ? (
+          <>
+            <span className="text-2xl font-bold text-gray-900 dark:text-gray-100">+2</span>
+            <span className="text-xs text-gray-500 dark:text-gray-400 mb-1">años</span>
+          </>
+        ) : days > 365 ? (
+          <>
+            <span className="text-2xl font-bold text-gray-900 dark:text-gray-100">+1</span>
+            <span className="text-xs text-gray-500 dark:text-gray-400 mb-1">año</span>
+          </>
+        ) : (
+          <>
+            <span className="text-2xl font-bold text-gray-900 dark:text-gray-100">~{days}</span>
+            <span className="text-xs text-gray-500 dark:text-gray-400 mb-1">días</span>
+          </>
+        )}
       </div>
-      <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-        Objetivo: {formattedDate}
-      </p>
+      {days <= 730 && (
+        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+          Objetivo: {formattedDate}
+        </p>
+      )}
+      {days > 365 && (
+        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+          Sigue así, cada día cuenta
+        </p>
+      )}
       <span className={`inline-block mt-2 text-xs px-2 py-0.5 rounded-full font-medium ${confidenceColor}`}>
         Fiabilidad: {confidenceLabel}
       </span>

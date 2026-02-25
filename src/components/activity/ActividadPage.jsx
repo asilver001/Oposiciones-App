@@ -423,7 +423,7 @@ export default function ActividadPage({
   const tabs = [
     { id: 0, icon: Target, label: 'Modos' },
     { id: 1, icon: BarChart3, label: 'Progreso' },
-    { id: 2, icon: Brain, label: 'Analytics' }
+    { id: 2, icon: Brain, label: 'Análisis' }
   ];
 
   // Handle mode selection

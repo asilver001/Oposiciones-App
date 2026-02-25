@@ -13,6 +13,8 @@ import { motion, AnimatePresence, Reorder, useMotionValue, useTransform } from '
 import { RoadmapBasic } from '@/features/draft/ForceGraph';
 import { TemarioDendrite, TemarioHexMap } from '@/features/draft/TemarioGraph';
 import RoadmapErrorBoundary from './RoadmapErrorBoundary';
+import HomeProposalA from './HomeProposalA';
+import HomeProposalC from './HomeProposalC';
 import { useTopics } from '@/hooks/useTopics';
 import {
   ArrowLeft, Check, X, ChevronRight, ChevronDown, ChevronUp, ChevronLeft,
@@ -8546,7 +8548,7 @@ function TemarioGraphTab({ onStartTopicStudy }) {
 }
 
 export default function DraftFeatures({ onClose, onStartTopicStudy }) {
-  const [activeTab, setActiveTab] = useState('full-home'); // Default to full home page
+  const [activeTab, setActiveTab] = useState('home-a'); // Default to Home Proposal A
   const [selectedTema, setSelectedTema] = useState(null);
   const [showAllTemas, setShowAllTemas] = useState(false);
   const [showPrecisionModal, setShowPrecisionModal] = useState(false);
@@ -8571,10 +8573,10 @@ export default function DraftFeatures({ onClose, onStartTopicStudy }) {
   ];
 
   const tabs = [
-    // Assessment Playground - Feature selection
+    // Home page proposals
+    { id: 'home-a', label: '🏠 Home A: Focus' },
+    { id: 'home-c', label: '🏠 Home C: Drawer' },
     // Active drafts
-    { id: 'temario-graph', label: '📚 Temario' },
-    { id: 'roadmap', label: '🌐 Roadmap' },
     { id: 'color-palette', label: '🎨 Paleta' },
     { id: 'panel-animations', label: '✨ Animaciones' },
     { id: 'flipcards', label: '🃏 FlipCards' },
@@ -8654,6 +8656,36 @@ export default function DraftFeatures({ onClose, onStartTopicStudy }) {
       {/* Content */}
       <main className="max-w-lg mx-auto px-4 py-6 pb-24">
         <AnimatePresence mode="wait">
+          {/* HOME PROPOSAL A — Focus Mode */}
+          {activeTab === 'home-a' && (
+            <motion.div
+              key="home-a"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-3 text-sm text-emerald-800 mb-4">
+                <strong>🏠 Propuesta A — Focus Mode:</strong> CTA swipeable + stats compactos en 1 fila + sección expandible "Ver detalles"
+              </div>
+              <HomeProposalA />
+            </motion.div>
+          )}
+
+          {/* HOME PROPOSAL C — Dashboard + Drawer */}
+          {activeTab === 'home-c' && (
+            <motion.div
+              key="home-c"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <div className="bg-sky-50 border border-sky-200 rounded-xl p-3 text-sm text-sky-800 mb-4">
+                <strong>🏠 Propuesta C — Dashboard + Drawer:</strong> CTA swipeable + 2 stat cards grandes + bottom sheet "Mi progreso"
+              </div>
+              <HomeProposalC />
+            </motion.div>
+          )}
+
           {/* NEW: Interactive Fortaleza with drag & swipe */}
           {activeTab === 'interactive' && (
             <motion.div
