@@ -76,10 +76,12 @@ const modeConfig = {
 export default function StudyPage() {
   const navigate = useNavigate();
   const location = useLocation();
-  const [sessionStarted, setSessionStarted] = useState(false);
+  // Auto-start when coming from daily plan activities (skip preview)
+  const { autoStart, ...navState } = location.state || {};
+  const [sessionStarted, setSessionStarted] = useState(!!autoStart);
 
   // Get mode and options from navigation state
-  const { mode, title, questionCount, timeLimit, topic, temaId } = location.state || {};
+  const { mode, title, questionCount, timeLimit, topic, temaId } = navState;
 
   // Get config for this mode
   const config = modeConfig[mode] || modeConfig.default;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Trophy,
   Target,
@@ -7,10 +7,12 @@ import {
   RotateCcw,
   Lightbulb,
   Loader2,
-  ChevronRight
+  ChevronRight,
+  ClipboardCheck
 } from 'lucide-react';
 import InsightCard from '../InsightCard';
 import SessionSummary from './SessionSummary';
+import CorrectionView from './CorrectionView';
 
 /**
  * Map insight type to severity level for styling
@@ -37,9 +39,21 @@ export default function SessionComplete({
   onNewSession,
   onClose
 }) {
+  const [showCorrection, setShowCorrection] = useState(false);
+
   const accuracy = sessionStats.answered > 0
     ? Math.round((sessionStats.correct / sessionStats.answered) * 100)
     : 0;
+
+  // Show correction view
+  if (showCorrection) {
+    return (
+      <CorrectionView
+        answersHistory={answersHistory}
+        onBack={() => setShowCorrection(false)}
+      />
+    );
+  }
 
   return (
     <div className="min-h-screen bg-brand-50 dark:bg-gray-950 flex items-center justify-center p-4">
@@ -166,9 +180,19 @@ export default function SessionComplete({
 
         {/* Buttons */}
         <div className="space-y-3">
+          {/* Correction button — primary CTA to review answers */}
+          {answersHistory.length > 0 && (
+            <button
+              onClick={() => setShowCorrection(true)}
+              className="w-full py-3 bg-brand-600 text-white rounded-xl font-semibold hover:bg-brand-700 flex items-center justify-center gap-2"
+            >
+              <ClipboardCheck className="w-5 h-5" />
+              Corregir
+            </button>
+          )}
           <button
             onClick={onNewSession}
-            className="w-full py-3 bg-brand-600 text-white rounded-xl font-semibold hover:bg-brand-700 flex items-center justify-center gap-2"
+            className="w-full py-3 bg-brand-100 text-brand-700 rounded-xl font-semibold hover:bg-brand-200 flex items-center justify-center gap-2"
           >
             <RotateCcw className="w-5 h-5" />
             Nueva sesión

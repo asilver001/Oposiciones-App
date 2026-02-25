@@ -1,10 +1,10 @@
-import { BookOpen, CheckCircle2, XCircle } from 'lucide-react';
+import { BookOpen, SkipForward } from 'lucide-react';
 
 export default function QuestionCard({
   question,
   selectedAnswer,
-  showResult,
-  onSelectAnswer
+  onSelectAnswer,
+  onSkip
 }) {
   // Normalize options: support both JSONB array and individual columns (option_a/b/c/d)
   let options = [];
@@ -56,45 +56,22 @@ export default function QuestionCard({
         <div className="space-y-3">
           {options.map((opt) => {
             const isSelected = selectedAnswer === opt.key;
-            const isCorrect = opt.key === correctAnswer;
-
-            let bgColor = 'bg-white hover:bg-gray-50';
-            let borderColor = 'border-gray-200';
-            let textColor = 'text-gray-800';
-
-            if (showResult) {
-              if (isCorrect) {
-                bgColor = 'bg-green-50';
-                borderColor = 'border-green-500';
-                textColor = 'text-green-800';
-              } else if (isSelected && !isCorrect) {
-                bgColor = 'bg-red-50';
-                borderColor = 'border-red-500';
-                textColor = 'text-red-800';
-              }
-            } else if (isSelected) {
-              borderColor = 'border-brand-500';
-              bgColor = 'bg-brand-50';
-            }
 
             return (
               <button
                 key={opt.key}
                 onClick={() => onSelectAnswer(opt.key)}
-                disabled={showResult}
-                className={`w-full text-left p-4 rounded-xl border-2 transition-all ${bgColor} ${borderColor} ${textColor} ${
-                  showResult ? 'cursor-default' : 'cursor-pointer'
+                className={`w-full text-left p-4 rounded-xl border-2 transition-all cursor-pointer ${
+                  isSelected
+                    ? 'border-brand-500 bg-brand-50 text-gray-800'
+                    : 'border-gray-200 bg-white hover:bg-gray-50 text-gray-800'
                 }`}
               >
                 <div className="flex items-start gap-3">
                   <span className={`w-7 h-7 rounded-full border-2 flex items-center justify-center font-semibold text-sm ${
-                    showResult && isCorrect ? 'bg-green-500 border-green-500 text-white' :
-                    showResult && isSelected && !isCorrect ? 'bg-red-500 border-red-500 text-white' :
-                    'border-current'
+                    isSelected ? 'border-brand-500 text-brand-600' : 'border-current'
                   }`}>
-                    {showResult && isCorrect ? <CheckCircle2 className="w-4 h-4" /> :
-                     showResult && isSelected && !isCorrect ? <XCircle className="w-4 h-4" /> :
-                     opt.key.toUpperCase()}
+                    {opt.key.toUpperCase()}
                   </span>
                   <span className="flex-1">{opt.text}</span>
                 </div>
@@ -103,17 +80,15 @@ export default function QuestionCard({
           })}
         </div>
 
-        {/* Explanation */}
-        {showResult && question.explanation && (
-          <div className="mt-6 p-4 bg-blue-50 rounded-xl border border-blue-100">
-            <p className="text-sm font-medium text-blue-800 mb-1">Explicación</p>
-            <p className="text-sm text-blue-700">{question.explanation}</p>
-            {question.legal_reference && (
-              <p className="text-xs text-blue-500 mt-2">
-                📚 {question.legal_reference}
-              </p>
-            )}
-          </div>
+        {/* Skip button */}
+        {onSkip && (
+          <button
+            onClick={onSkip}
+            className="mt-4 w-full flex items-center justify-center gap-2 py-3 text-gray-400 hover:text-gray-600 transition-colors"
+          >
+            <SkipForward className="w-4 h-4" />
+            <span className="text-sm font-medium">Pasar</span>
+          </button>
         )}
       </div>
     </div>

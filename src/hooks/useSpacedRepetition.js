@@ -27,6 +27,7 @@ export function useStudySession(config = {}) {
     total: 0,
     answered: 0,
     correct: 0,
+    skipped: 0,
     reviews: 0
   });
   const [error, setError] = useState(null);
@@ -55,6 +56,7 @@ export function useStudySession(config = {}) {
           total: sessionQuestions.length,
           answered: 0,
           correct: 0,
+          skipped: 0,
           reviews: sessionQuestions.filter(q => q.isReview).length
         });
         sessionStartRef.current = new Date().toISOString();
@@ -89,6 +91,16 @@ export function useStudySession(config = {}) {
     }
   }, [user?.id, currentIndex, questions]);
 
+  // Skip current question (no answer recorded, no DB update)
+  const skipQuestion = useCallback(() => {
+    if (currentIndex >= questions.length) return;
+    setSessionStats(prev => ({
+      ...prev,
+      skipped: prev.skipped + 1
+    }));
+    setCurrentIndex(prev => prev + 1);
+  }, [currentIndex, questions.length]);
+
   // Complete session - save to both test_sessions and study_history
   const completeSession = useCallback(async () => {
     if (!user?.id) return;
@@ -120,6 +132,7 @@ export function useStudySession(config = {}) {
   const currentQuestion = questions[currentIndex] || null;
   const isComplete = currentIndex >= questions.length && questions.length > 0;
   const progress = questions.length > 0 ? (currentIndex / questions.length) * 100 : 0;
+  const remaining = Math.max(0, questions.length - currentIndex);
 
   return {
     questions,
@@ -132,6 +145,7 @@ export function useStudySession(config = {}) {
     progress,
     loadSession,
     answerQuestion,
+    skipQuestion,
     completeSession
   };
 }

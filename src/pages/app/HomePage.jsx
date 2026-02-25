@@ -47,10 +47,10 @@ export default function HomePage() {
     }
   };
 
-  // Handle starting a study plan activity (1-click)
+  // Handle starting a study plan activity (1-click, skip preview)
   const handleStartActivity = (activity) => {
     if (!activity.config) return;
-    navigate(ROUTES.STUDY, { state: activity.config });
+    navigate(ROUTES.STUDY, { state: { ...activity.config, autoStart: true } });
   };
 
   const handleTopicSelect = (topic) => {

@@ -20,6 +20,7 @@ export default function HybridSession({ config = {}, onClose, onComplete, onNext
     progress,
     loadSession,
     answerQuestion,
+    skipQuestion,
     completeSession
   } = useStudySession(config);
 
@@ -27,7 +28,6 @@ export default function HybridSession({ config = {}, onClose, onComplete, onNext
   const { user } = useAuth();
 
   const [selectedAnswer, setSelectedAnswer] = useState(null);
-  const [showResult, setShowResult] = useState(false);
   const [showExitConfirm, setShowExitConfirm] = useState(false);
 
   // Track individual answers for insights detection
@@ -65,11 +65,10 @@ export default function HybridSession({ config = {}, onClose, onComplete, onNext
     loadSession(config);
   };
 
-  // Handle answer selection
+  // Handle answer selection — no correct/incorrect reveal, advance quickly
   const handleSelect = (answer) => {
-    if (showResult) return;
+    if (selectedAnswer) return; // prevent double-tap
     setSelectedAnswer(answer);
-    setShowResult(true);
 
     // Determine correct answer from options (JSONB array or JSON string)
     let opts = currentQuestion.options;
@@ -84,21 +83,48 @@ export default function HybridSession({ config = {}, onClose, onComplete, onNext
       : null;
     const isCorrect = answer === correctKey;
 
-    // Track this answer for insights
+    // Track this answer with full question data for correction view
     answersHistoryRef.current.push({
       question_id: currentQuestion.id,
+      question: currentQuestion,
       es_correcta: isCorrect,
       respuesta_usuario: answer,
       respuesta_correcta: correctKey,
       tema: currentQuestion.tema
     });
 
-    // Delay before recording and moving on
+    // Brief selection flash then advance (no correct/incorrect feedback)
     setTimeout(() => {
       answerQuestion(isCorrect);
       setSelectedAnswer(null);
-      setShowResult(false);
-    }, 1500);
+    }, 250);
+  };
+
+  // Handle skip — track the question as skipped for correction view
+  const handleSkip = () => {
+    // Determine correct answer for tracking
+    let opts = currentQuestion.options;
+    if (typeof opts === 'string') {
+      try { opts = JSON.parse(opts); } catch { opts = []; }
+    }
+    if (!Array.isArray(opts)) opts = [];
+    const keys = ['a', 'b', 'c', 'd'];
+    const correctIdx = opts.findIndex(o => Boolean(o.is_correct));
+    const correctKey = correctIdx >= 0
+      ? (opts[correctIdx]?.id || keys[correctIdx] || `${correctIdx}`)
+      : null;
+
+    answersHistoryRef.current.push({
+      question_id: currentQuestion.id,
+      question: currentQuestion,
+      es_correcta: false,
+      respuesta_usuario: null,
+      respuesta_correcta: correctKey,
+      tema: currentQuestion.tema,
+      skipped: true
+    });
+
+    skipQuestion();
   };
 
   // Handle session complete - save stats and detect insights + weaknesses
@@ -333,23 +359,25 @@ export default function HybridSession({ config = {}, onClose, onComplete, onNext
       <QuestionCard
         question={currentQuestion}
         selectedAnswer={selectedAnswer}
-        showResult={showResult}
         onSelectAnswer={handleSelect}
+        onSkip={handleSkip}
       />
 
-      {/* Bottom stats */}
+      {/* Bottom stats — don't reveal correct/incorrect during session */}
       <div className="bg-white border-t p-4">
         <div className="max-w-lg mx-auto flex justify-around text-center">
           <div>
-            <p className="text-lg font-bold text-green-600">{sessionStats.correct}</p>
-            <p className="text-xs text-gray-500">Correctas</p>
+            <p className="text-lg font-bold text-brand-600">{sessionStats.answered}</p>
+            <p className="text-xs text-gray-500">Respondidas</p>
           </div>
+          {sessionStats.skipped > 0 && (
+            <div>
+              <p className="text-lg font-bold text-amber-500">{sessionStats.skipped}</p>
+              <p className="text-xs text-gray-500">Saltadas</p>
+            </div>
+          )}
           <div>
-            <p className="text-lg font-bold text-red-600">{sessionStats.answered - sessionStats.correct}</p>
-            <p className="text-xs text-gray-500">Incorrectas</p>
-          </div>
-          <div>
-            <p className="text-lg font-bold text-brand-600">{sessionStats.total - sessionStats.answered}</p>
+            <p className="text-lg font-bold text-gray-600">{sessionStats.total - sessionStats.answered - sessionStats.skipped}</p>
             <p className="text-xs text-gray-500">Restantes</p>
           </div>
         </div>
