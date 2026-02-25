@@ -10,6 +10,7 @@ import { lazy } from 'react';
 import RequireAuth from './guards/RequireAuth';
 import RequireOnboarding from './guards/RequireOnboarding';
 import RequireAdmin from './guards/RequireAdmin';
+import AuthRedirect from './guards/AuthRedirect';
 import { ErrorBoundary } from '../components/common/ErrorBoundary';
 import { MainLayout } from '../layouts/MainLayout';
 
@@ -49,10 +50,10 @@ import { ROUTES } from './paths';
  */
 // eslint-disable-next-line react-refresh/only-export-components
 export const routeConfig = [
-  // Root redirect
+  // Root redirect — sends authenticated users directly to app, others to welcome
   {
     path: '/',
-    element: <Navigate to={ROUTES.WELCOME} replace />,
+    element: <AuthRedirect />,
   },
 
   // Onboarding flow

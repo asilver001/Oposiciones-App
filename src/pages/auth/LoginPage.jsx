@@ -4,7 +4,7 @@
  * User login page.
  */
 
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Navigate } from 'react-router-dom';
 import LoginForm from '../../components/auth/LoginForm';
 import { useAuth } from '../../contexts/AuthContext';
 import { ROUTES } from '../../router/routes';
@@ -12,7 +12,12 @@ import { ROUTES } from '../../router/routes';
 export default function LoginPage() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { signIn } = useAuth();
+  const { signIn, user, isAnonymous } = useAuth();
+
+  // Already authenticated — redirect to app
+  if (user && !isAnonymous) {
+    return <Navigate to={ROUTES.HOME} replace />;
+  }
 
   // Get the page user was trying to access
   const from = location.state?.from?.pathname || ROUTES.HOME;

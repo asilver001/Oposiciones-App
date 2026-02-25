@@ -13,10 +13,24 @@ import { ROUTES } from '../../router/routes';
 export default function WelcomePage() {
   const navigate = useNavigate();
   const { onboardingComplete } = useUserStore();
-  const { user, isAnonymous } = useAuth();
+  const { user, isAnonymous, loading } = useAuth();
 
-  // Redirect to app if user is authenticated and onboarding already complete
-  if ((user || isAnonymous) && onboardingComplete) {
+  // Show nothing while checking auth status
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-brand-50 dark:bg-gray-950">
+        <div className="animate-pulse text-brand-600">Cargando...</div>
+      </div>
+    );
+  }
+
+  // Authenticated users (with account) always go to app — they already onboarded
+  if (user && !isAnonymous) {
+    return <Navigate to={ROUTES.HOME} replace />;
+  }
+
+  // Anonymous users who completed onboarding also go to app
+  if (isAnonymous && onboardingComplete) {
     return <Navigate to={ROUTES.HOME} replace />;
   }
 

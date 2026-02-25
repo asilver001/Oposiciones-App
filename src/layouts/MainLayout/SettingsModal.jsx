@@ -8,7 +8,8 @@ import { motion } from 'framer-motion';
 import {
   ArrowLeft, Settings, Bell, Calendar, User, Crown, Mail,
   LogOut, Shield, FileText, ChevronRight, Lock, ExternalLink,
-  Code, Eye, Trash2, AlertTriangle, Loader2, Sun, Moon, Monitor
+  Code, Eye, Trash2, AlertTriangle, Loader2, Sun, Moon, Monitor,
+  Download
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
@@ -49,13 +50,14 @@ function SectionTitle({ children }) {
 
 export default function SettingsModal({ onClose }) {
   const navigate = useNavigate();
-  const { user, isAuthenticated, signOut, deleteAccount, isAdmin: authIsAdmin, isReviewer: authIsReviewer } = useAuth();
+  const { user, isAuthenticated, signOut, deleteAccount, exportUserData, isAdmin: authIsAdmin, isReviewer: authIsReviewer } = useAuth();
   const { isAdmin, isReviewer } = useAdmin();
   const panelRef = useRef(null);
   const closeButtonRef = useRef(null);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [deleteConfirmText, setDeleteConfirmText] = useState('');
   const [deleting, setDeleting] = useState(false);
+  const [exporting, setExporting] = useState(false);
 
   const darkMode = useUserStore((s) => s.darkMode);
   const setDarkMode = useUserStore((s) => s.setDarkMode);
@@ -104,6 +106,28 @@ export default function SettingsModal({ onClose }) {
     await signOut();
     onClose();
     navigate(ROUTES.WELCOME);
+  };
+
+  const handleExportData = async () => {
+    setExporting(true);
+    try {
+      const { data, error } = await exportUserData();
+      if (error) throw error;
+
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `oposita-smart-datos-${new Date().toISOString().split('T')[0]}.json`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error('Error exporting data:', err);
+    } finally {
+      setExporting(false);
+    }
   };
 
   const handleDeleteAccount = async () => {
@@ -286,9 +310,30 @@ export default function SettingsModal({ onClose }) {
             )}
           </div>
 
-          {/* Delete account - GDPR */}
+          {/* GDPR: Export data & Delete account */}
           {isAuthenticated && (
             <>
+              <SectionTitle>Tus datos</SectionTitle>
+              <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 overflow-hidden mb-3">
+                <button
+                  onClick={handleExportData}
+                  disabled={exporting}
+                  className="w-full px-4 py-3.5 flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-700 transition disabled:opacity-50"
+                >
+                  <div className="flex items-center gap-3">
+                    {exporting ? (
+                      <Loader2 className="w-5 h-5 text-brand-500 animate-spin" />
+                    ) : (
+                      <Download className="w-5 h-5 text-brand-500" />
+                    )}
+                    <span className="text-gray-700 dark:text-gray-300">
+                      {exporting ? 'Exportando...' : 'Descargar mis datos'}
+                    </span>
+                  </div>
+                  <ChevronRight className="w-5 h-5 text-gray-400" />
+                </button>
+              </div>
+
               <SectionTitle>Zona de peligro</SectionTitle>
               <div className="bg-white rounded-xl border border-red-200 overflow-hidden">
                 {!showDeleteConfirm ? (

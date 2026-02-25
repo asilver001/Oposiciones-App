@@ -256,6 +256,19 @@ export function AuthProvider({ children }) {
     }
   };
 
+  // Export all user data (GDPR portability)
+  const exportUserData = async () => {
+    if (!user) return { data: null, error: new Error('No user logged in') };
+
+    try {
+      const { data, error } = await supabase.rpc('export_user_data');
+      if (error) throw error;
+      return { data, error: null };
+    } catch (err) {
+      return { data: null, error: err };
+    }
+  };
+
   // Delete account and all user data (GDPR compliance)
   const deleteAccount = async () => {
     if (!user) return { error: new Error('No user logged in') };
@@ -323,6 +336,7 @@ export function AuthProvider({ children }) {
     signIn,
     signOut,
     deleteAccount,
+    exportUserData,
     resetPassword,
     updatePassword,
     getUserProfile,
