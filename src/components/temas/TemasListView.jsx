@@ -500,7 +500,9 @@ export default function TemasListView({
 
       const questionsTotal = topic.questionCount || 20;
       const questionsAnswered = progress.answered || progress.sessionQuestions || 0;
-      const progressPercent = progress.accuracy || 0;
+      const progressPercent = questionsTotal > 0
+        ? Math.round((questionsAnswered / questionsTotal) * 100)
+        : 0;
 
       // Status based on session accuracy (no FSRS card states)
       let status = 'nuevo';
