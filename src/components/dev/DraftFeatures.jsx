@@ -13,8 +13,6 @@ import { motion, AnimatePresence, Reorder, useMotionValue, useTransform } from '
 import { RoadmapBasic } from '@/features/draft/ForceGraph';
 import { TemarioDendrite, TemarioHexMap } from '@/features/draft/TemarioGraph';
 import RoadmapErrorBoundary from './RoadmapErrorBoundary';
-import { LabDemoProvider } from '@/features/lab-demo/context/LabDemoContext';
-import { LandingPage, OrderWizard, Dashboard, TrackOrder } from '@/features/lab-demo/pages';
 import HomeProposalA from './HomeProposalA';
 import HomeProposalC from './HomeProposalC';
 import { useTopics } from '@/hooks/useTopics';
@@ -8549,67 +8547,8 @@ function TemarioGraphTab({ onStartTopicStudy }) {
   );
 }
 
-// ============================================
-// LAB DEMO PREVIEW - Picto Dent Portal
-// ============================================
-
-function LabDemoPreview() {
-  const [currentPage, setCurrentPage] = useState('landing');
-
-  const handleNavigate = (page) => {
-    setCurrentPage(page);
-  };
-
-  return (
-    <motion.div
-      key="lab-demo"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      className="-mx-4 -mt-6"
-    >
-      <div className="bg-blue-50 border border-blue-200 rounded-xl p-3 text-sm text-blue-800 mx-4 mt-6 mb-4">
-        <strong>🦷 Picto Dent:</strong> Demo del portal para laboratorio dental. Navega entre páginas con los botones.
-      </div>
-
-      {/* Navigation tabs */}
-      <div className="flex gap-2 mx-4 mb-4 overflow-x-auto">
-        {[
-          { id: 'landing', label: '🏠 Inicio' },
-          { id: 'order', label: '📝 Pedido' },
-          { id: 'dashboard', label: '📊 Dashboard' },
-          { id: 'track', label: '🔍 Seguimiento' },
-        ].map(tab => (
-          <button
-            key={tab.id}
-            onClick={() => setCurrentPage(tab.id)}
-            className={`px-3 py-1.5 rounded-lg font-medium whitespace-nowrap text-sm transition-colors
-              ${currentPage === tab.id
-                ? 'bg-sky-600 text-white'
-                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
-          >
-            {tab.label}
-          </button>
-        ))}
-      </div>
-
-      {/* Page container */}
-      <div className="mx-4 h-[600px] bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-lg">
-        <div className="h-full overflow-y-auto">
-          <LabDemoProvider>
-            {currentPage === 'landing' && <LandingPage onNavigate={handleNavigate} />}
-            {currentPage === 'order' && <OrderWizard onNavigate={handleNavigate} />}
-            {currentPage === 'dashboard' && <Dashboard onNavigate={handleNavigate} />}
-            {currentPage === 'track' && <TrackOrder onNavigate={handleNavigate} />}
-          </LabDemoProvider>
-        </div>
-      </div>
-    </motion.div>
-  );
-}
-
 export default function DraftFeatures({ onClose, onStartTopicStudy }) {
-  const [activeTab, setActiveTab] = useState('lab-demo'); // Default to Lab Demo
+  const [activeTab, setActiveTab] = useState('home-a'); // Default to Home Proposal A
   const [selectedTema, setSelectedTema] = useState(null);
   const [showAllTemas, setShowAllTemas] = useState(false);
   const [showPrecisionModal, setShowPrecisionModal] = useState(false);
@@ -8634,8 +8573,6 @@ export default function DraftFeatures({ onClose, onStartTopicStudy }) {
   ];
 
   const tabs = [
-    // Client demos
-    { id: 'lab-demo', label: '🦷 Picto Dent' },
     // Home page proposals
     { id: 'home-a', label: '🏠 Home A: Focus' },
     { id: 'home-c', label: '🏠 Home C: Drawer' },
@@ -9157,11 +9094,6 @@ export default function DraftFeatures({ onClose, onStartTopicStudy }) {
             >
               <PanelAnimationsDemo />
             </motion.div>
-          )}
-
-          {/* LAB DEMO - Picto Dent dental lab portal */}
-          {activeTab === 'lab-demo' && (
-            <LabDemoPreview />
           )}
         </AnimatePresence>
       </main>

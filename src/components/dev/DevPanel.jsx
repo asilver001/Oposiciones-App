@@ -7,6 +7,7 @@ export default function DevPanel({
   onShowAdminLogin,
   onShowPlayground,
   onShowDraftFeatures,
+  onShowLabDemo,
   onGoToOnboarding,
   premiumMode,
   onTogglePremium,
@@ -53,6 +54,10 @@ export default function DevPanel({
 
         <button onClick={onShowDraftFeatures} className="w-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white text-xs py-2 px-3 rounded-lg text-left font-medium">
           🚧 Draft Features
+        </button>
+
+        <button onClick={onShowLabDemo} className="w-full bg-gradient-to-r from-sky-500 to-cyan-500 hover:from-sky-600 hover:to-cyan-600 text-white text-xs py-2 px-3 rounded-lg text-left font-medium">
+          🦷 Picto Dent
         </button>
         <div className="border-t border-gray-700 my-2"></div>
         {/* Premium Mode Toggle */}
