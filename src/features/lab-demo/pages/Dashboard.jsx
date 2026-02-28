@@ -31,7 +31,7 @@ function LoginScreen({ onLogin, error }) {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
             <span className="text-white font-bold text-2xl">P</span>
           </div>
           <h1 className="text-2xl font-bold text-white">Picto Dent</h1>
@@ -54,7 +54,7 @@ function LoginScreen({ onLogin, error }) {
                 type="text"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                className="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+                className="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                 placeholder="Enter username"
               />
             </div>
@@ -64,7 +64,7 @@ function LoginScreen({ onLogin, error }) {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+                className="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                 placeholder="Enter password"
               />
             </div>
@@ -72,7 +72,7 @@ function LoginScreen({ onLogin, error }) {
 
           <button
             type="submit"
-            className="w-full mt-6 py-3 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-semibold rounded-xl hover:shadow-lg transition"
+            className="w-full mt-6 py-3 bg-gradient-to-r from-emerald-500 to-green-600 text-white font-semibold rounded-xl hover:shadow-lg transition"
           >
             Sign In
           </button>
@@ -87,10 +87,10 @@ function LoginScreen({ onLogin, error }) {
 }
 
 // Stats Card
-function StatCard({ icon: Icon, label, value, trend, color = 'sky' }) {
+function StatCard({ icon: Icon, label, value, trend, color = 'emerald' }) {
   const colorClasses = {
-    sky: 'bg-sky-50 text-sky-600',
     emerald: 'bg-emerald-50 text-emerald-600',
+    green: 'bg-green-50 text-green-600',
     amber: 'bg-amber-50 text-amber-600',
     purple: 'bg-purple-50 text-purple-600',
     rose: 'bg-rose-50 text-rose-600'
@@ -124,7 +124,7 @@ function SimpleBarChart({ data, height = 120 }) {
       {data.map((item, idx) => (
         <div key={idx} className="flex-1 flex flex-col items-center">
           <div
-            className="w-full bg-sky-500 rounded-t transition-all duration-500 hover:bg-sky-600"
+            className="w-full bg-emerald-500 rounded-t transition-all duration-500 hover:bg-emerald-600"
             style={{ height: `${(item.count / maxValue) * 100}%`, minHeight: item.count > 0 ? 8 : 0 }}
           />
           <span className="text-[10px] text-slate-500 mt-1 truncate max-w-full">{item.name}</span>
@@ -154,8 +154,8 @@ function SimpleDonutChart({ data, size = 120 }) {
 
     const largeArc = angle > 180 ? 1 : 0;
 
-    // Color mapping
-    const colors = ['#0ea5e9', '#8b5cf6', '#f97316', '#f59e0b', '#eab308', '#10b981', '#64748b'];
+    // Color mapping - green theme
+    const colors = ['#10b981', '#059669', '#34d399', '#f59e0b', '#8b5cf6', '#f97316', '#64748b'];
 
     return (
       <path
@@ -261,7 +261,7 @@ function OrderDetailModal({ order, onClose, onAdvanceStatus, onTogglePriority })
             <div className="space-y-3">
               {order.statusHistory.map((entry, idx) => (
                 <div key={idx} className="flex items-start gap-3">
-                  <div className="w-2 h-2 rounded-full bg-sky-500 mt-2"></div>
+                  <div className="w-2 h-2 rounded-full bg-emerald-500 mt-2"></div>
                   <div>
                     <p className="text-sm text-slate-800">{entry.note}</p>
                     <p className="text-xs text-slate-400">
@@ -293,7 +293,7 @@ function OrderDetailModal({ order, onClose, onAdvanceStatus, onTogglePriority })
           {order.status !== 'dispatched' && (
             <button
               onClick={() => onAdvanceStatus(order.id)}
-              className="flex items-center gap-2 px-5 py-2 bg-sky-500 text-white rounded-lg hover:bg-sky-600 transition"
+              className="flex items-center gap-2 px-5 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition"
             >
               Advance Status
               <ChevronRight className="w-4 h-4" />
@@ -378,7 +378,7 @@ export default function Dashboard({ onNavigate }) {
             >
               <ArrowLeft className="w-5 h-5 text-slate-400" />
             </button>
-            <div className="w-8 h-8 bg-gradient-to-br from-sky-500 to-blue-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-green-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">P</span>
             </div>
             <span className="font-semibold text-slate-800 hidden sm:inline">Lab Dashboard</span>
@@ -490,14 +490,14 @@ export default function Dashboard({ onNavigate }) {
                   placeholder="Search by order ref or practice..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                 />
               </div>
               <div className="relative">
                 <select
                   value={statusFilter}
                   onChange={(e) => setStatusFilter(e.target.value)}
-                  className="appearance-none pl-4 pr-10 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent bg-white"
+                  className="appearance-none pl-4 pr-10 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent bg-white"
                 >
                   <option value="all">All Statuses</option>
                   {orderStatuses.map(status => (

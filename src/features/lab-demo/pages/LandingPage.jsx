@@ -13,7 +13,7 @@ export default function LandingPage({ onNavigate }) {
       <header className="bg-white border-b border-slate-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-sky-500 to-blue-600 rounded-xl flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center">
               <span className="text-white font-bold text-lg">P</span>
             </div>
             <div>
@@ -22,6 +22,12 @@ export default function LandingPage({ onNavigate }) {
             </div>
           </div>
           <nav className="hidden sm:flex items-center gap-6">
+            <button
+              onClick={() => onNavigate('client')}
+              className="text-sm text-slate-600 hover:text-slate-900 transition"
+            >
+              My Orders
+            </button>
             <button
               onClick={() => onNavigate('track')}
               className="text-sm text-slate-600 hover:text-slate-900 transition"
@@ -40,9 +46,9 @@ export default function LandingPage({ onNavigate }) {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-sky-50 to-slate-50"></div>
-        <div className="absolute top-20 right-0 w-96 h-96 bg-sky-200/30 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-20 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-emerald-50 to-slate-50"></div>
+        <div className="absolute top-20 right-0 w-96 h-96 bg-emerald-200/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-20 w-72 h-72 bg-green-200/20 rounded-full blur-3xl"></div>
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -55,7 +61,7 @@ export default function LandingPage({ onNavigate }) {
               <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 leading-tight mb-4">
                 German Precision.
                 <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-blue-600">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-green-600">
                   London Service.
                 </span>
               </h2>
@@ -68,7 +74,7 @@ export default function LandingPage({ onNavigate }) {
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
                   onClick={() => onNavigate('order')}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 transition-all duration-200"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-emerald-500 to-green-600 text-white font-semibold rounded-xl shadow-lg shadow-green-500/25 hover:shadow-xl hover:shadow-green-500/30 hover:-translate-y-0.5 transition-all duration-200"
                 >
                   Place New Order
                   <ArrowRight className="w-5 h-5" />
@@ -85,7 +91,7 @@ export default function LandingPage({ onNavigate }) {
             {/* Hero Image / Illustration */}
             <div className="hidden lg:block">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-tr from-sky-500/10 to-blue-500/10 rounded-3xl transform rotate-3"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/10 to-green-500/10 rounded-3xl transform rotate-3"></div>
                 <div className="relative bg-white rounded-3xl shadow-2xl p-8 transform -rotate-2 hover:rotate-0 transition-transform duration-500">
                   <div className="grid grid-cols-3 gap-4 mb-6">
                     <div className="h-24 bg-gradient-to-br from-slate-100 to-slate-50 rounded-xl flex items-center justify-center">
@@ -93,8 +99,8 @@ export default function LandingPage({ onNavigate }) {
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                       </svg>
                     </div>
-                    <div className="h-24 bg-gradient-to-br from-sky-100 to-sky-50 rounded-xl flex items-center justify-center">
-                      <svg className="w-12 h-12 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="h-24 bg-gradient-to-br from-emerald-100 to-emerald-50 rounded-xl flex items-center justify-center">
+                      <svg className="w-12 h-12 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                       </svg>
                     </div>
@@ -130,9 +136,9 @@ export default function LandingPage({ onNavigate }) {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Feature 1 */}
-            <div className="group p-6 bg-white rounded-2xl border border-slate-100 hover:border-sky-200 hover:shadow-lg hover:shadow-sky-100/50 transition-all duration-300">
-              <div className="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-sky-500 transition-colors duration-300">
-                <svg className="w-6 h-6 text-sky-600 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="group p-6 bg-white rounded-2xl border border-slate-100 hover:border-emerald-200 hover:shadow-lg hover:shadow-emerald-100/50 transition-all duration-300">
+              <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-emerald-500 transition-colors duration-300">
+                <svg className="w-6 h-6 text-emerald-600 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                 </svg>
               </div>
@@ -225,7 +231,7 @@ export default function LandingPage({ onNavigate }) {
             ].map((service, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-xl p-5 border border-slate-100 hover:border-sky-200 hover:shadow-md transition-all duration-200"
+                className="bg-white rounded-xl p-5 border border-slate-100 hover:border-emerald-200 hover:shadow-md transition-all duration-200"
               >
                 <span className="text-2xl mb-3 block">{service.icon}</span>
                 <h4 className="font-semibold text-slate-800 mb-1">{service.name}</h4>
@@ -237,7 +243,7 @@ export default function LandingPage({ onNavigate }) {
           <div className="text-center mt-8">
             <button
               onClick={() => onNavigate('order')}
-              className="inline-flex items-center gap-2 text-sky-600 hover:text-sky-700 font-medium"
+              className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-medium"
             >
               View full service catalogue
               <ArrowRight className="w-4 h-4" />
@@ -250,8 +256,8 @@ export default function LandingPage({ onNavigate }) {
       <section className="py-16 sm:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="bg-gradient-to-r from-slate-900 to-slate-800 rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-sky-500/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl"></div>
+            <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-green-500/10 rounded-full blur-3xl"></div>
 
             <div className="relative">
               <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
@@ -279,7 +285,7 @@ export default function LandingPage({ onNavigate }) {
             {/* Company Info */}
             <div className="sm:col-span-2">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-sky-500 to-blue-600 rounded-xl flex items-center justify-center">
+                <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center">
                   <span className="text-white font-bold text-lg">P</span>
                 </div>
                 <div>

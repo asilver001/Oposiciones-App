@@ -56,7 +56,7 @@ export default function TrackOrder({ onNavigate }) {
             <span className="hidden sm:inline">Back to Home</span>
           </button>
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-sky-500 to-blue-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-green-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">P</span>
             </div>
             <span className="font-semibold text-slate-800 hidden sm:inline">Picto Dent</span>
@@ -67,8 +67,8 @@ export default function TrackOrder({ onNavigate }) {
       <main className="max-w-2xl mx-auto px-4 py-12">
         {/* Search Section */}
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-sky-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <Package className="w-8 h-8 text-sky-600" />
+          <div className="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <Package className="w-8 h-8 text-emerald-600" />
           </div>
           <h1 className="text-2xl sm:text-3xl font-bold text-slate-800 mb-2">
             Track Your Order
@@ -87,7 +87,7 @@ export default function TrackOrder({ onNavigate }) {
                 value={searchRef}
                 onChange={(e) => setSearchRef(e.target.value.toUpperCase())}
                 placeholder="e.g. PD-2026-1234"
-                className="w-full pl-12 pr-4 py-3.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-transparent text-lg font-mono"
+                className="w-full pl-12 pr-4 py-3.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-lg font-mono"
               />
             </div>
             <button
@@ -97,7 +97,7 @@ export default function TrackOrder({ onNavigate }) {
                 px-6 py-3.5 rounded-xl font-semibold transition-all
                 ${!searchRef.trim() || isSearching
                   ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
-                  : 'bg-sky-500 text-white hover:bg-sky-600'
+                  : 'bg-emerald-500 text-white hover:bg-emerald-600'
                 }
               `}
             >
@@ -205,7 +205,7 @@ export default function TrackOrder({ onNavigate }) {
                       className={`
                         px-3 py-1 rounded-lg text-sm font-medium
                         ${t.type === 'pontic'
-                          ? 'bg-blue-100 text-blue-700'
+                          ? 'bg-emerald-100 text-emerald-700'
                           : 'bg-emerald-100 text-emerald-700'
                         }
                       `}
@@ -223,7 +223,7 @@ export default function TrackOrder({ onNavigate }) {
                 <div className="relative pl-6 border-l-2 border-slate-200 space-y-4">
                   {order.statusHistory.slice().reverse().map((entry, idx) => (
                     <div key={idx} className="relative">
-                      <div className="absolute -left-[25px] w-3 h-3 rounded-full bg-sky-500 border-2 border-white"></div>
+                      <div className="absolute -left-[25px] w-3 h-3 rounded-full bg-emerald-500 border-2 border-white"></div>
                       <p className="text-sm text-slate-800">{entry.note}</p>
                       <p className="text-xs text-slate-400">
                         {new Date(entry.timestamp).toLocaleString('en-GB', {
@@ -247,14 +247,14 @@ export default function TrackOrder({ onNavigate }) {
               <div className="flex flex-wrap gap-4">
                 <a
                   href="tel:02088123978"
-                  className="flex items-center gap-2 text-sky-600 hover:text-sky-700 text-sm"
+                  className="flex items-center gap-2 text-emerald-600 hover:text-emerald-700 text-sm"
                 >
                   <Phone className="w-4 h-4" />
                   020 8812 3978
                 </a>
                 <a
                   href="mailto:info@pictodent.co.uk"
-                  className="flex items-center gap-2 text-sky-600 hover:text-sky-700 text-sm"
+                  className="flex items-center gap-2 text-emerald-600 hover:text-emerald-700 text-sm"
                 >
                   <Mail className="w-4 h-4" />
                   info@pictodent.co.uk

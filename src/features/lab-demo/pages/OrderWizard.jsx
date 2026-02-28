@@ -33,7 +33,7 @@ function StepIndicator({ currentStep }) {
                 ${currentStep > step.id
                   ? 'bg-emerald-500 text-white'
                   : currentStep === step.id
-                    ? 'bg-sky-500 text-white'
+                    ? 'bg-emerald-500 text-white'
                     : 'bg-slate-100 text-slate-400'
                 }
               `}
@@ -87,7 +87,7 @@ function Step1PracticeDetails({ data, onChange }) {
             value={data.dentist}
             onChange={(e) => onChange({ dentist: e.target.value })}
             placeholder="Dr. John Smith"
-            className="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-transparent transition"
+            className="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition"
           />
         </div>
         <div>
@@ -100,7 +100,7 @@ function Step1PracticeDetails({ data, onChange }) {
             value={data.practiceName}
             onChange={(e) => onChange({ practiceName: e.target.value })}
             placeholder="London Dental Clinic"
-            className="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-transparent transition"
+            className="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition"
           />
         </div>
       </div>
@@ -116,7 +116,7 @@ function Step1PracticeDetails({ data, onChange }) {
             value={data.phone}
             onChange={(e) => onChange({ phone: e.target.value })}
             placeholder="020 1234 5678"
-            className="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-transparent transition"
+            className="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition"
           />
         </div>
         <div>
@@ -129,7 +129,7 @@ function Step1PracticeDetails({ data, onChange }) {
             value={data.email}
             onChange={(e) => onChange({ email: e.target.value })}
             placeholder="reception@clinic.co.uk"
-            className="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-transparent transition"
+            className="w-full px-4 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition"
           />
         </div>
       </div>
@@ -140,7 +140,7 @@ function Step1PracticeDetails({ data, onChange }) {
           id="saveDetails"
           checked={data.saveDetails}
           onChange={(e) => onChange({ saveDetails: e.target.checked })}
-          className="w-4 h-4 text-sky-500 border-slate-300 rounded focus:ring-sky-500"
+          className="w-4 h-4 text-sky-500 border-slate-300 rounded focus:ring-emerald-500"
         />
         <label htmlFor="saveDetails" className="text-sm text-slate-600">
           Save as returning practice (for demo purposes)
@@ -171,7 +171,7 @@ function Step2CaseDetails({ data, onChange }) {
         <select
           value={data.serviceId}
           onChange={(e) => onChange({ serviceId: e.target.value, teeth: [] })}
-          className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-transparent transition bg-white"
+          className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition bg-white"
         >
           <option value="">Select a service...</option>
           <optgroup label="Crowns">
@@ -237,7 +237,7 @@ function Step2CaseDetails({ data, onChange }) {
           <select
             value={data.implantSystem}
             onChange={(e) => onChange({ implantSystem: e.target.value })}
-            className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-transparent transition bg-white"
+            className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition bg-white"
           >
             <option value="">Select implant system...</option>
             {implantSystems.map(sys => (
@@ -276,7 +276,7 @@ function Step2CaseDetails({ data, onChange }) {
           onChange={(e) => onChange({ notes: e.target.value })}
           placeholder="Any special requirements, matching instructions, or clinical notes..."
           rows={3}
-          className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-transparent transition resize-none"
+          className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition resize-none"
         />
       </div>
     </div>
@@ -342,7 +342,7 @@ function Step3Delivery({ data, onChange }) {
         <div
           className={`
             relative border-2 border-dashed rounded-xl p-8 text-center transition-colors
-            ${dragActive ? 'border-sky-500 bg-sky-50' : 'border-slate-200 hover:border-slate-300'}
+            ${dragActive ? 'border-emerald-500 bg-sky-50' : 'border-slate-200 hover:border-slate-300'}
           `}
           onDragEnter={handleDrag}
           onDragOver={handleDrag}
@@ -371,7 +371,7 @@ function Step3Delivery({ data, onChange }) {
               <div key={idx} className="flex items-center justify-between p-3 bg-slate-50 rounded-lg">
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 bg-sky-100 rounded flex items-center justify-center">
-                    <FileText className="w-4 h-4 text-sky-600" />
+                    <FileText className="w-4 h-4 text-emerald-600" />
                   </div>
                   <span className="text-sm text-slate-700">{file}</span>
                 </div>
@@ -412,7 +412,7 @@ function Step3Delivery({ data, onChange }) {
           value={data.dueDate || calculateDueDate()}
           onChange={(e) => onChange({ dueDate: e.target.value })}
           min={new Date().toISOString().split('T')[0]}
-          className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-transparent transition"
+          className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition"
         />
         {selectedService && (
           <p className="mt-2 text-sm text-slate-500">
@@ -434,7 +434,7 @@ function Step3Delivery({ data, onChange }) {
               className={`
                 flex items-center gap-4 p-4 border-2 rounded-xl cursor-pointer transition-all
                 ${data.deliveryMethod === method.id
-                  ? 'border-sky-500 bg-sky-50'
+                  ? 'border-emerald-500 bg-sky-50'
                   : 'border-slate-200 hover:border-slate-300'
                 }
               `}
@@ -445,7 +445,7 @@ function Step3Delivery({ data, onChange }) {
                 value={method.id}
                 checked={data.deliveryMethod === method.id}
                 onChange={(e) => onChange({ deliveryMethod: e.target.value })}
-                className="w-4 h-4 text-sky-500 border-slate-300 focus:ring-sky-500"
+                className="w-4 h-4 text-sky-500 border-slate-300 focus:ring-emerald-500"
               />
               <div>
                 <p className="font-medium text-slate-800">{method.name}</p>
@@ -467,7 +467,7 @@ function Step3Delivery({ data, onChange }) {
             onChange={(e) => onChange({ deliveryAddress: e.target.value })}
             placeholder="Enter full delivery address..."
             rows={3}
-            className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-transparent transition resize-none"
+            className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition resize-none"
           />
         </div>
       )}
@@ -669,7 +669,7 @@ function Step4Review({ data, onSubmit, isSubmitting }) {
           flex items-center justify-center gap-2
           ${isSubmitting
             ? 'bg-slate-400 cursor-not-allowed'
-            : 'bg-gradient-to-r from-sky-500 to-blue-600 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5'
+            : 'bg-gradient-to-r from-emerald-500 to-green-600 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5'
           }
         `}
       >
@@ -727,7 +727,7 @@ function OrderSuccess({ order, onClose }) {
         </button>
         <button
           onClick={() => onClose('order')}
-          className="px-6 py-2.5 bg-sky-500 text-white rounded-xl hover:bg-sky-600 transition"
+          className="px-6 py-2.5 bg-emerald-500 text-white rounded-xl hover:bg-emerald-600 transition"
         >
           Place Another Order
         </button>
@@ -824,7 +824,7 @@ export default function OrderWizard({ onNavigate }) {
             <span className="hidden sm:inline">Back to Home</span>
           </button>
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-sky-500 to-blue-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-green-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">P</span>
             </div>
             <span className="font-semibold text-slate-800 hidden sm:inline">Picto Dent</span>
@@ -877,7 +877,7 @@ export default function OrderWizard({ onNavigate }) {
                 className={`
                   flex items-center gap-2 px-6 py-2 rounded-xl font-medium transition
                   ${canProceed()
-                    ? 'bg-sky-500 text-white hover:bg-sky-600'
+                    ? 'bg-emerald-500 text-white hover:bg-emerald-600'
                     : 'bg-slate-100 text-slate-400 cursor-not-allowed'
                   }
                 `}

@@ -56,7 +56,7 @@ export default function DevPanel({
           🚧 Draft Features
         </button>
 
-        <button onClick={onShowLabDemo} className="w-full bg-gradient-to-r from-sky-500 to-cyan-500 hover:from-sky-600 hover:to-cyan-600 text-white text-xs py-2 px-3 rounded-lg text-left font-medium">
+        <button onClick={onShowLabDemo} className="w-full bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white text-xs py-2 px-3 rounded-lg text-left font-medium">
           🦷 Picto Dent
         </button>
         <div className="border-t border-gray-700 my-2"></div>
