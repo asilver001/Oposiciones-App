@@ -110,7 +110,7 @@ export default function MainLayout() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-950 pb-32">
+    <div className="min-h-screen dark:bg-gray-950 pb-32" style={{ background: '#FAFAF7' }}>
       {/* Skip to content link - visible on focus for keyboard users */}
       <a
         href="#main-content"

@@ -448,8 +448,7 @@ export default function SoftFortHome({
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="space-y-3 min-h-screen -mx-4 -mt-4 -mb-6"
-      style={{ background: '#FAFAF7' }}
+      className="space-y-3 min-h-screen"
     >
       {/* TopBar - optional, can be disabled when using parent's TopBar */}
       {showTopBar && (
