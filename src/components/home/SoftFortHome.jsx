@@ -9,8 +9,9 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
-  Zap, Sparkles, Settings,
-  RefreshCw, AlertTriangle, BookOpen, Clock, Play
+  Zap, Sparkles, ChevronRight,
+  RefreshCw, AlertTriangle, BookOpen, Clock, Play,
+  Info, HelpCircle, Instagram
 } from 'lucide-react';
 import { TopBar } from '@layouts/MainLayout';
 import FortalezaVisual, { statusConfig } from './FortalezaVisual';
@@ -251,6 +252,108 @@ function WeeklyGoalCard({ weeklyData = [0, 0, 0, 0, 0, 0, 0], goal = 75 }) {
 
 
 /**
+ * LevelCard - XP/Level display with progress to next level
+ */
+const LEVEL_THRESHOLDS = [0, 50, 150, 300, 500, 750, 1000, 1500, 2000, 3000];
+
+function LevelCard({ level, xp, onClick }) {
+  const currentThreshold = LEVEL_THRESHOLDS[Math.min(level - 1, LEVEL_THRESHOLDS.length - 1)] || 0;
+  const nextThreshold = LEVEL_THRESHOLDS[Math.min(level, LEVEL_THRESHOLDS.length - 1)] || currentThreshold + 100;
+  const progressToNext = nextThreshold > currentThreshold
+    ? Math.min(Math.round(((xp - currentThreshold) / (nextThreshold - currentThreshold)) * 100), 100)
+    : 100;
+  const remaining = Math.max(nextThreshold - xp, 0);
+  const weeksStudying = Math.max(1, Math.round(xp / 35));
+
+  return (
+    <motion.button
+      onClick={onClick}
+      className="w-full rounded-[20px] p-5 text-white text-left"
+      style={{ background: 'linear-gradient(145deg, #1B4332 0%, #2D6A4F 60%, #3A7D5C 100%)' }}
+      initial={{ y: 20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.3 }}
+      whileTap={{ scale: 0.99 }}
+    >
+      <div className="flex items-center justify-between mb-3">
+        <div>
+          <p className="font-semibold text-[16px]">{xp} preguntas respondidas</p>
+          <p className="text-[13px]" style={{ opacity: 0.5 }}>{weeksStudying} {weeksStudying === 1 ? 'semana' : 'semanas'} estudiando</p>
+        </div>
+        <div className="text-right">
+          <p className="text-[11px] uppercase tracking-wider" style={{ opacity: 0.4 }}>Nivel</p>
+          <p className="text-3xl font-light text-white">{level}</p>
+        </div>
+      </div>
+      <div className="w-full rounded-full overflow-hidden" style={{ height: 5, background: 'rgba(255,255,255,0.12)' }}>
+        <motion.div
+          className="h-full rounded-full"
+          style={{ background: 'rgba(255,255,255,0.6)' }}
+          initial={{ width: 0 }}
+          animate={{ width: `${progressToNext}%` }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+        />
+      </div>
+      <p className="text-[12px] mt-1.5" style={{ opacity: 0.35 }}>
+        {remaining > 0 ? `${remaining} preguntas para el siguiente nivel` : 'Nivel maximo alcanzado'}
+      </p>
+    </motion.button>
+  );
+}
+
+
+/**
+ * Footer - Links and branding
+ */
+function Footer({ onNavigate }) {
+  const links = [
+    { id: 'about', icon: Info, label: 'Acerca de' },
+    { id: 'faq', icon: HelpCircle, label: 'Preguntas Frecuentes' },
+    { id: 'instagram', icon: Instagram, label: 'Instagram', external: true },
+  ];
+
+  return (
+    <motion.footer
+      className="mt-4 mb-4"
+      initial={{ y: 20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.4 }}
+    >
+      <div className="rounded-[20px] overflow-hidden divide-y"
+        style={{ background: 'white', boxShadow: '0 1px 3px rgba(0,0,0,0.04)', borderColor: '#F3F3F0' }}>
+        {links.map((link) => (
+          <motion.button
+            key={link.id}
+            onClick={() => {
+              if (link.external) {
+                window.open('https://instagram.com/opositasmart', '_blank');
+              } else {
+                onNavigate?.(link.id);
+              }
+            }}
+            className="w-full px-5 py-4 flex items-center justify-between"
+            style={{ borderColor: '#F3F3F0' }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <div className="flex items-center gap-3">
+              <link.icon className="w-5 h-5" style={{ color: '#B5B5B0' }} />
+              <span className="text-[15px] text-gray-700">{link.label}</span>
+            </div>
+            <ChevronRight className="w-4 h-4" style={{ color: '#D0D0D0' }} />
+          </motion.button>
+        ))}
+      </div>
+
+      <div className="text-center py-8">
+        <p className="text-gray-900 font-semibold text-lg mb-1">Oposita Smart</p>
+        <p className="text-[13px]" style={{ color: '#B5B5B0' }}>La forma inteligente de opositar</p>
+      </div>
+    </motion.footer>
+  );
+}
+
+
+/**
  * SoftFortHome - Main home page component
  *
  * @param {Object} props
@@ -288,7 +391,7 @@ export default function SoftFortHome({
   onViewAllTopics,
   onNavigate,
   showTopBar = true,
-  showFooter = false
+  showFooter = true
 }) {
   const { isAdmin } = useAuth();
   const weeklyGoalQuestions = useUserStore((s) => s.userData.weeklyGoalQuestions) || 75;
@@ -321,6 +424,11 @@ export default function SoftFortHome({
   // Calculate daily progress (simplified - can be enhanced)
   const dailyProgress = Math.min(100, effectiveStats.testsCompleted * 10);
 
+  // Calculate level based on questions answered
+  const totalAnswered = effectiveStats.totalQuestions || 0;
+  const level = LEVEL_THRESHOLDS.filter(t => totalAnswered >= t).length;
+  const xp = totalAnswered;
+
   // Get next topic to study (prioritize riesgo, then progreso)
   const sortedTopics = [...fortalezaData].sort((a, b) => {
     const configA = statusConfig[a.status] || statusConfig.nuevo;
@@ -340,7 +448,7 @@ export default function SoftFortHome({
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="space-y-3 min-h-screen"
+      className="space-y-3 min-h-screen -mx-4 -mt-4 -mb-6"
       style={{ background: '#FAFAF7' }}
     >
       {/* TopBar - optional, can be disabled when using parent's TopBar */}
@@ -356,20 +464,13 @@ export default function SoftFortHome({
 
       <div className="px-6 space-y-3">
         {/* Greeting */}
-        <div className="flex items-start justify-between">
-          <div>
-            <p className="text-[13px] font-medium" style={{ color: '#B0B0B0', letterSpacing: '0.04em' }}>
-              {new Date().toLocaleDateString('es-ES', { weekday: 'long' })}
-            </p>
-            <h2 className="text-[32px] font-bold text-gray-900" style={{ letterSpacing: '-0.03em', marginTop: 2 }}>
-              Hola, {userName.split(' ')[0]}
-            </h2>
-          </div>
-          <button onClick={onSettingsClick}
-            className="w-[42px] h-[42px] rounded-full flex items-center justify-center"
-            style={{ background: '#F0F0EE' }}>
-            <Settings className="w-5 h-5" style={{ color: '#999' }} />
-          </button>
+        <div>
+          <p className="text-[13px] font-medium" style={{ color: '#B0B0B0', letterSpacing: '0.04em' }}>
+            {new Date().toLocaleDateString('es-ES', { weekday: 'long' })}
+          </p>
+          <h2 className="text-[32px] font-bold text-gray-900" style={{ letterSpacing: '-0.03em', marginTop: 2 }}>
+            Hola, {userName.split(' ')[0]}
+          </h2>
         </div>
 
         {/* Empty State for New Users */}
@@ -418,8 +519,17 @@ export default function SoftFortHome({
               onViewAll={onViewAllTopics}
               maxVisible={3}
             />
+
+            <LevelCard
+              level={level}
+              xp={xp}
+              onClick={onLevelClick}
+            />
           </>
         )}
+
+        {/* Footer */}
+        {showFooter && <Footer onNavigate={onNavigate} />}
       </div>
 
       {/* DevMode Randomizer - development or admin */}
