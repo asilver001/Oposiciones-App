@@ -40,9 +40,6 @@ const TermsPage = lazy(() => import('../pages/legal/TermsPage'));
 const PrivacyPage = lazy(() => import('../pages/legal/PrivacyPage'));
 const NotFoundPage = lazy(() => import('../pages/NotFoundPage'));
 
-// Lab Demo (Picto Dent)
-const LabDemoApp = lazy(() => import('../features/lab-demo/LabDemoApp'));
-
 // Re-export route path constants from paths.js (separate file to avoid circular imports)
 export { ROUTES } from './paths';
 import { ROUTES } from './paths';
@@ -154,12 +151,6 @@ export const routeConfig = [
   {
     path: ROUTES.PRIVACY,
     element: <PrivacyPage />,
-  },
-
-  // Lab Demo (Picto Dent) - standalone demo portal
-  {
-    path: ROUTES.LAB_DEMO + '/*',
-    element: <ErrorBoundary><LabDemoApp /></ErrorBoundary>,
   },
 
   // 404 - Page not found

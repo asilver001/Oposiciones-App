@@ -33,10 +33,4 @@ export const ROUTES = {
   // Legal
   TERMS: '/terms',
   PRIVACY: '/privacy',
-
-  // Lab Demo (Picto Dent)
-  LAB_DEMO: '/lab-demo',
-  LAB_DEMO_ORDER: '/lab-demo/order',
-  LAB_DEMO_DASHBOARD: '/lab-demo/dashboard',
-  LAB_DEMO_TRACK: '/lab-demo/track',
 };

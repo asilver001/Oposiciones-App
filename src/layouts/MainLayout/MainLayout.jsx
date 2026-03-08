@@ -14,8 +14,6 @@ import SettingsModal from './SettingsModal';
 import ProgressModal from './ProgressModal';
 import DevPanel from '../../components/dev/DevPanel';
 import DraftFeatures from '../../components/dev/DraftFeatures';
-import { LabDemoProvider } from '../../features/lab-demo/context/LabDemoContext';
-import { LandingPage, OrderWizard, Dashboard, TrackOrder, ClientDashboard } from '../../features/lab-demo/pages';
 import { useAuth } from '../../contexts/AuthContext';
 import { useAdmin } from '../../contexts/AdminContext';
 import { useUserStore } from '../../stores/useUserStore';
@@ -66,8 +64,6 @@ export default function MainLayout() {
   const [showSettings, setShowSettings] = useState(false);
   const [showProgress, setShowProgress] = useState(false);
   const [showDraftFeatures, setShowDraftFeatures] = useState(false);
-  const [showLabDemo, setShowLabDemo] = useState(false);
-  const [labDemoPage, setLabDemoPage] = useState('landing');
   const [premiumMode, setPremiumMode] = useState(false);
 
   const isUserReviewer = isReviewer || authIsReviewer;
@@ -188,7 +184,6 @@ export default function MainLayout() {
           onShowAdminLogin={() => navigate(ROUTES.ADMIN)}
           onShowPlayground={() => {}}
           onShowDraftFeatures={() => setShowDraftFeatures(true)}
-          onShowLabDemo={() => { setLabDemoPage('landing'); setShowLabDemo(true); }}
           onGoToOnboarding={() => navigate(ROUTES.WELCOME)}
           premiumMode={premiumMode}
           onTogglePremium={() => setPremiumMode(!premiumMode)}
@@ -247,57 +242,6 @@ export default function MainLayout() {
               });
             }}
           />
-        </div>
-      )}
-
-      {/* Lab Demo - Picto Dent full screen overlay */}
-      {showLabDemo && (
-        <div className="fixed inset-0 z-50 bg-white overflow-hidden flex flex-col">
-          {/* Header with navigation */}
-          <header className="bg-gradient-to-r from-emerald-600 to-green-600 text-white px-4 py-3 flex items-center justify-between shrink-0">
-            <div className="flex items-center gap-3">
-              <button
-                onClick={() => setShowLabDemo(false)}
-                className="p-2 hover:bg-white/20 rounded-lg transition-colors"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-              <h1 className="font-bold text-lg">🦷 Picto Dent Demo</h1>
-            </div>
-            <div className="flex gap-2">
-              {[
-                { id: 'landing', label: 'Inicio' },
-                { id: 'order', label: 'Pedido' },
-                { id: 'client', label: 'Mis Pedidos' },
-                { id: 'dashboard', label: 'Lab Admin' },
-                { id: 'track', label: 'Seguimiento' },
-              ].map(tab => (
-                <button
-                  key={tab.id}
-                  onClick={() => setLabDemoPage(tab.id)}
-                  className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors
-                    ${labDemoPage === tab.id
-                      ? 'bg-white text-emerald-600'
-                      : 'bg-white/20 hover:bg-white/30'}`}
-                >
-                  {tab.label}
-                </button>
-              ))}
-            </div>
-          </header>
-
-          {/* Page content */}
-          <div className="flex-1 overflow-y-auto">
-            <LabDemoProvider>
-              {labDemoPage === 'landing' && <LandingPage onNavigate={setLabDemoPage} />}
-              {labDemoPage === 'order' && <OrderWizard onNavigate={setLabDemoPage} />}
-              {labDemoPage === 'client' && <ClientDashboard onNavigate={setLabDemoPage} />}
-              {labDemoPage === 'dashboard' && <Dashboard onNavigate={setLabDemoPage} />}
-              {labDemoPage === 'track' && <TrackOrder onNavigate={setLabDemoPage} />}
-            </LabDemoProvider>
-          </div>
         </div>
       )}
     </div>
