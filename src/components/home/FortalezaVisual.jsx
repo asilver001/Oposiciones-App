@@ -14,48 +14,13 @@ const spring = {
   gentle: { type: "spring", stiffness: 100, damping: 20 },
 };
 
-// Status configuration — Phase 3: uniform gray, no color coding
+// Status configuration — priority only (icons removed)
 const statusConfig = {
-  dominado: {
-    label: 'Dominado',
-    solid: 'bg-gray-900',
-    bg: 'bg-gray-100',
-    text: 'text-gray-700',
-    icon: Check,
-    priority: 4,
-  },
-  avanzando: {
-    label: 'Avanzando',
-    solid: 'bg-gray-900',
-    bg: 'bg-gray-100',
-    text: 'text-gray-700',
-    icon: TrendingUp,
-    priority: 3,
-  },
-  progreso: {
-    label: 'En progreso',
-    solid: 'bg-gray-900',
-    bg: 'bg-gray-100',
-    text: 'text-gray-700',
-    icon: BookOpen,
-    priority: 2,
-  },
-  riesgo: {
-    label: 'Repasar',
-    solid: 'bg-gray-900',
-    bg: 'bg-gray-100',
-    text: 'text-gray-700',
-    icon: AlertTriangle,
-    priority: 1,
-  },
-  nuevo: {
-    label: 'Nuevo',
-    solid: 'bg-gray-200',
-    bg: 'bg-gray-100',
-    text: 'text-gray-500',
-    icon: Plus,
-    priority: 5,
-  },
+  dominado: { label: 'Dominado', priority: 4 },
+  avanzando: { label: 'Avanzando', priority: 3 },
+  progreso: { label: 'En progreso', priority: 2 },
+  riesgo: { label: 'Repasar', priority: 1 },
+  nuevo: { label: 'Nuevo', priority: 5 },
 };
 
 /**
