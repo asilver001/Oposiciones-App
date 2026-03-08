@@ -461,7 +461,7 @@ export default function SoftFortHome({
         />
       )}
 
-      <div className="px-6 space-y-3">
+      <div className="space-y-3">
         {/* Greeting */}
         <div>
           <p className="text-[13px] font-medium" style={{ color: '#B0B0B0', letterSpacing: '0.04em' }}>
