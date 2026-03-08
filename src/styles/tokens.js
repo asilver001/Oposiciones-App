@@ -123,7 +123,32 @@ export const baseTokens = {
 };
 
 // ═══════════════════════════════════════════════════════════════
-// RECIPE: CURRENT (Purple, Rounded, Dense)
+// GREEN PALETTE (Feature color - used for progress, accents)
+// Based on color psychology research: green reduces eye fatigue,
+// promotes sustained focus, and psychologically represents "progress"
+// ═══════════════════════════════════════════════════════════════
+
+const greenPalette = {
+  50: '#f0fdf4',
+  100: '#dcfce7',
+  200: '#bbf7d0',
+  300: '#86efac',
+  400: '#52B788',   // Light green (gradient end)
+  500: '#40916C',   // Mid green
+  600: '#2D6A4F',   // Primary brand green
+  700: '#1b4332',   // Dark green
+};
+
+// Progress bar specific tokens
+const progressTokens = {
+  track: '#E8E8E8',
+  fill: '#2D6A4F',
+  fillGradientStart: '#2D6A4F',
+  fillGradientEnd: '#52B788',
+};
+
+// ═══════════════════════════════════════════════════════════════
+// RECIPE: CURRENT (Green, Rounded, Dense)
 // ═══════════════════════════════════════════════════════════════
 
 export const recipeCurrent = {
@@ -131,17 +156,8 @@ export const recipeCurrent = {
   label: 'Actual',
 
   colors: {
-    // Brand
-    brand: {
-      50: '#faf5ff',
-      100: '#f3e8ff',
-      200: '#e9d5ff',
-      300: '#d8b4fe',
-      400: '#c084fc',
-      500: '#a855f7',
-      600: '#9333ea',
-      700: '#7e22ce',
-    },
+    // Brand (now green-based)
+    brand: greenPalette,
     // Surfaces
     surface: {
       primary: '#ffffff',
@@ -168,6 +184,9 @@ export const recipeCurrent = {
     danger: '#ef4444',
   },
 
+  // Progress bar
+  progress: progressTokens,
+
   // Component-specific tokens
   components: {
     card: {
@@ -183,8 +202,15 @@ export const recipeCurrent = {
       paddingY: '0.75rem',
     },
     stat: {
-      valueSize: '2rem',
-      labelSize: '0.75rem',
+      valueSize: '1.75rem',      // 28px
+      labelSize: '0.75rem',      // 12px
+      labelWeight: 500,
+      labelColor: '#9CA3AF',
+      labelSpacing: '0.02em',
+      highlightColor: '#2D6A4F', // Green for important stat
+      dividerColor: '#F0F0F0',
+      cellPadding: '1.25rem',    // 20px
+      gap: '0.25rem',            // 4px between value and label
     },
   },
 
@@ -194,6 +220,9 @@ export const recipeCurrent = {
     sectionGap: '1.5rem',
     cardGap: '0.75rem',
   },
+
+  // Stats layout variant (grid, row, integrated)
+  statsLayout: 'grid',
 };
 
 // ═══════════════════════════════════════════════════════════════
@@ -205,16 +234,8 @@ export const recipeMinimal = {
   label: 'Minimal',
 
   colors: {
-    brand: {
-      50: '#fafafa',
-      100: '#f4f4f5',
-      200: '#e4e4e7',
-      300: '#d4d4d8',
-      400: '#a1a1aa',
-      500: '#71717a',
-      600: '#18181b',
-      700: '#09090b',
-    },
+    // Use green for brand/accent, keep monochrome for surfaces
+    brand: greenPalette,
     surface: {
       primary: '#ffffff',
       secondary: '#fafafa',
@@ -232,10 +253,12 @@ export const recipeMinimal = {
       default: '#e4e4e7',
       dark: '#d4d4d8',
     },
-    success: '#22c55e',
+    success: '#2D6A4F',
     warning: '#eab308',
     danger: '#ef4444',
   },
+
+  progress: progressTokens,
 
   components: {
     card: {
@@ -253,6 +276,13 @@ export const recipeMinimal = {
     stat: {
       valueSize: '2.5rem',
       labelSize: '0.75rem',
+      labelWeight: 500,
+      labelColor: '#9CA3AF',
+      labelSpacing: '0.02em',
+      highlightColor: '#2D6A4F',
+      dividerColor: '#F0F0F0',
+      cellPadding: '1.5rem',
+      gap: '0.25rem',
     },
   },
 
@@ -261,6 +291,8 @@ export const recipeMinimal = {
     sectionGap: '3rem',
     cardGap: '1rem',
   },
+
+  statsLayout: 'row', // Minimal uses horizontal row
 };
 
 // ═══════════════════════════════════════════════════════════════
@@ -272,16 +304,8 @@ export const recipeWarm = {
   label: 'Cálido',
 
   colors: {
-    brand: {
-      50: '#fef7ee',
-      100: '#fdecd3',
-      200: '#fad5a5',
-      300: '#f6b76d',
-      400: '#f19032',
-      500: '#ed7410',
-      600: '#de5909',
-      700: '#b8420b',
-    },
+    // Green brand with warm surfaces
+    brand: greenPalette,
     surface: {
       primary: '#fffbf7',
       secondary: '#fef7ee',
@@ -299,9 +323,14 @@ export const recipeWarm = {
       default: '#fde68a',
       dark: '#fcd34d',
     },
-    success: '#16a34a',
+    success: '#2D6A4F',
     warning: '#ca8a04',
     danger: '#dc2626',
+  },
+
+  progress: {
+    ...progressTokens,
+    track: '#fde68a', // Warm track color
   },
 
   components: {
@@ -320,6 +349,13 @@ export const recipeWarm = {
     stat: {
       valueSize: '2rem',
       labelSize: '0.8125rem',
+      labelWeight: 500,
+      labelColor: '#b45309',
+      labelSpacing: '0.02em',
+      highlightColor: '#2D6A4F',
+      dividerColor: '#fde68a',
+      cellPadding: '1.25rem',
+      gap: '0.25rem',
     },
   },
 
@@ -328,6 +364,8 @@ export const recipeWarm = {
     sectionGap: '2rem',
     cardGap: '0.875rem',
   },
+
+  statsLayout: 'grid',
 };
 
 // ═══════════════════════════════════════════════════════════════
@@ -339,15 +377,16 @@ export const recipeDark = {
   label: 'Oscuro',
 
   colors: {
+    // Green brand for dark mode
     brand: {
-      50: '#fdf4ff',
-      100: '#fae8ff',
-      200: '#f5d0fe',
-      300: '#f0abfc',
-      400: '#e879f9',
-      500: '#d946ef',
-      600: '#c026d3',
-      700: '#a21caf',
+      50: '#f0fdf4',
+      100: '#dcfce7',
+      200: '#bbf7d0',
+      300: '#86efac',
+      400: '#52B788',
+      500: '#40916C',
+      600: '#2D6A4F',
+      700: '#1b4332',
     },
     surface: {
       primary: '#09090b',
@@ -366,9 +405,16 @@ export const recipeDark = {
       default: '#3f3f46',
       dark: '#52525b',
     },
-    success: '#22c55e',
+    success: '#52B788',
     warning: '#eab308',
     danger: '#ef4444',
+  },
+
+  progress: {
+    track: '#27272a',
+    fill: '#52B788',
+    fillGradientStart: '#2D6A4F',
+    fillGradientEnd: '#52B788',
   },
 
   components: {
@@ -387,6 +433,13 @@ export const recipeDark = {
     stat: {
       valueSize: '2.25rem',
       labelSize: '0.75rem',
+      labelWeight: 500,
+      labelColor: '#71717a',
+      labelSpacing: '0.02em',
+      highlightColor: '#52B788',
+      dividerColor: '#27272a',
+      cellPadding: '1.25rem',
+      gap: '0.25rem',
     },
   },
 
@@ -395,6 +448,8 @@ export const recipeDark = {
     sectionGap: '2rem',
     cardGap: '0.75rem',
   },
+
+  statsLayout: 'grid',
 };
 
 // ═══════════════════════════════════════════════════════════════
@@ -412,16 +467,7 @@ export const recipeTool = {
   },
 
   colors: {
-    brand: {
-      50: '#f0fdf4',
-      100: '#dcfce7',
-      200: '#bbf7d0',
-      300: '#86efac',
-      400: '#4ade80',
-      500: '#2D6A4F',  // Green accent
-      600: '#2D6A4F',
-      700: '#1b4332',
-    },
+    brand: greenPalette,
     surface: {
       primary: '#ffffff',
       secondary: '#F5F5F5',  // Card bg
@@ -444,6 +490,8 @@ export const recipeTool = {
     danger: '#DC2626',
   },
 
+  progress: progressTokens,
+
   components: {
     card: {
       bg: '#F5F5F5',
@@ -458,8 +506,15 @@ export const recipeTool = {
       paddingY: '0.75rem',
     },
     stat: {
-      valueSize: '2rem',
-      labelSize: '0.75rem',
+      valueSize: '1.5rem',   // Smaller for tool style
+      labelSize: '0.6875rem', // 11px
+      labelWeight: 500,
+      labelColor: '#AAAAAA',
+      labelSpacing: '0.04em',
+      highlightColor: '#2D6A4F',
+      dividerColor: '#E5E5E5',
+      cellPadding: '1rem',
+      gap: '0.125rem',
     },
   },
 
@@ -468,6 +523,8 @@ export const recipeTool = {
     sectionGap: '1.75rem', // 28px
     cardGap: '0.75rem',
   },
+
+  statsLayout: 'row', // Tool uses compact row
 };
 
 // ═══════════════════════════════════════════════════════════════
@@ -485,16 +542,7 @@ export const recipeWellness = {
   },
 
   colors: {
-    brand: {
-      50: '#f0fdf4',
-      100: '#dcfce7',
-      200: '#bbf7d0',
-      300: '#86efac',
-      400: '#4ade80',
-      500: '#2D6A4F',  // Green accent
-      600: '#2D6A4F',
-      700: '#1b4332',
-    },
+    brand: greenPalette,
     surface: {
       primary: '#FFF8F0',  // Warm cream
       secondary: '#FFF1E6', // Peach
@@ -517,6 +565,11 @@ export const recipeWellness = {
     danger: '#C53030',
   },
 
+  progress: {
+    ...progressTokens,
+    track: '#E8D5C4',
+  },
+
   components: {
     card: {
       bg: '#FFF1E6',
@@ -533,6 +586,13 @@ export const recipeWellness = {
     stat: {
       valueSize: '2.25rem',
       labelSize: '0.8125rem',
+      labelWeight: 500,
+      labelColor: '#A89585',
+      labelSpacing: '0.02em',
+      highlightColor: '#2D6A4F',
+      dividerColor: '#E8D5C4',
+      cellPadding: '1.5rem',
+      gap: '0.375rem',
     },
   },
 
@@ -541,6 +601,8 @@ export const recipeWellness = {
     sectionGap: '1.75rem', // 28px
     cardGap: '1rem',
   },
+
+  statsLayout: 'integrated', // Wellness uses integrated style
 };
 
 // ═══════════════════════════════════════════════════════════════
@@ -590,6 +652,13 @@ export const recipeDarkStudy = {
     danger: '#EF4444',
   },
 
+  progress: {
+    track: '#242424',
+    fill: '#74C69D',
+    fillGradientStart: '#52B788',
+    fillGradientEnd: '#74C69D',
+  },
+
   components: {
     card: {
       bg: '#1A1A1A',
@@ -606,6 +675,13 @@ export const recipeDarkStudy = {
     stat: {
       valueSize: '2rem',
       labelSize: '0.75rem',
+      labelWeight: 500,
+      labelColor: '#666666',
+      labelSpacing: '0.02em',
+      highlightColor: '#74C69D',
+      dividerColor: 'rgba(255,255,255,0.06)',
+      cellPadding: '1.25rem',
+      gap: '0.25rem',
     },
   },
 
@@ -614,6 +690,8 @@ export const recipeDarkStudy = {
     sectionGap: '1.5rem', // 24px
     cardGap: '0.75rem',
   },
+
+  statsLayout: 'grid',
 };
 
 // ═══════════════════════════════════════════════════════════════
@@ -642,6 +720,8 @@ export const recipeList = Object.values(recipes);
  */
 export function recipeToCSS(recipe) {
   const defaultFonts = baseTokens.fontFamily;
+  const defaultProgress = progressTokens;
+  const stat = recipe.components.stat;
 
   return {
     // Fonts (use recipe fonts if defined, otherwise base)
@@ -680,6 +760,12 @@ export function recipeToCSS(recipe) {
     '--color-warning': recipe.colors.warning,
     '--color-danger': recipe.colors.danger,
 
+    // Progress bar
+    '--progress-track': recipe.progress?.track || defaultProgress.track,
+    '--progress-fill': recipe.progress?.fill || defaultProgress.fill,
+    '--progress-gradient-start': recipe.progress?.fillGradientStart || defaultProgress.fillGradientStart,
+    '--progress-gradient-end': recipe.progress?.fillGradientEnd || defaultProgress.fillGradientEnd,
+
     // Components: Card
     '--card-bg': recipe.components.card.bg,
     '--card-border': recipe.components.card.border,
@@ -693,8 +779,15 @@ export function recipeToCSS(recipe) {
     '--button-padding-y': recipe.components.button.paddingY,
 
     // Components: Stat
-    '--stat-value-size': recipe.components.stat.valueSize,
-    '--stat-label-size': recipe.components.stat.labelSize,
+    '--stat-value-size': stat.valueSize,
+    '--stat-label-size': stat.labelSize,
+    '--stat-label-weight': stat.labelWeight || 500,
+    '--stat-label-color': stat.labelColor || '#9CA3AF',
+    '--stat-label-spacing': stat.labelSpacing || '0.02em',
+    '--stat-highlight-color': stat.highlightColor || '#2D6A4F',
+    '--stat-divider-color': stat.dividerColor || '#F0F0F0',
+    '--stat-cell-padding': stat.cellPadding || '1.25rem',
+    '--stat-gap': stat.gap || '0.25rem',
 
     // Layout
     '--page-gutter': recipe.layout.pageGutter,

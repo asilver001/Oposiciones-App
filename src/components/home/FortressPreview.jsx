@@ -117,11 +117,13 @@ export function FortressPreviewLinear({
             </div>
             <div
               className="h-1 rounded-full overflow-hidden"
-              style={{ backgroundColor: 'var(--border-default)' }}
+              style={{ backgroundColor: 'var(--progress-track, #E8E8E8)' }}
             >
               <motion.div
                 className="h-full rounded-full"
-                style={{ backgroundColor: 'var(--color-brand-600)' }}
+                style={{
+                  background: `linear-gradient(90deg, var(--progress-gradient-start, #2D6A4F), var(--progress-gradient-end, #52B788))`,
+                }}
                 initial={{ width: 0 }}
                 animate={{ width: `${topic.progress}%` }}
                 transition={{ delay: 0.2 + index * 0.1, duration: 0.5 }}
@@ -181,7 +183,7 @@ export function FortressPreviewCircular({
                     cy="32"
                     r="28"
                     fill="none"
-                    stroke="var(--border-default)"
+                    stroke="var(--progress-track, #E8E8E8)"
                     strokeWidth="4"
                   />
                   <motion.circle
@@ -189,7 +191,7 @@ export function FortressPreviewCircular({
                     cy="32"
                     r="28"
                     fill="none"
-                    stroke="var(--color-brand-600)"
+                    stroke="var(--progress-fill, #2D6A4F)"
                     strokeWidth="4"
                     strokeLinecap="round"
                     strokeDasharray={circumference}

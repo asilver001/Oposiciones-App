@@ -1,7 +1,7 @@
 /**
  * WeeklyProgress - Progress bar for weekly goal
  *
- * Uses design tokens. Progress bar color uses accent color.
+ * Uses design tokens. Progress bar uses green gradient for visual progress.
  */
 
 import { motion } from 'framer-motion';
@@ -21,19 +21,24 @@ export default function WeeklyProgress({
       <div className="flex items-center justify-between mb-3">
         <p className="text-sm text-secondary">{label}</p>
         <p
-          className="text-sm text-muted"
-          style={{ fontFamily: 'var(--font-display, inherit)' }}
+          className="text-sm"
+          style={{
+            fontFamily: 'var(--font-display, inherit)',
+            color: 'var(--text-muted)',
+          }}
         >
           {current}/{goal}
         </p>
       </div>
       <div
         className="h-1.5 rounded-full overflow-hidden"
-        style={{ backgroundColor: 'var(--surface-tertiary)' }}
+        style={{ backgroundColor: 'var(--progress-track, #E8E8E8)' }}
       >
         <motion.div
           className="h-full rounded-full"
-          style={{ backgroundColor: 'var(--color-brand-600, var(--color-success))' }}
+          style={{
+            background: `linear-gradient(90deg, var(--progress-gradient-start, #2D6A4F), var(--progress-gradient-end, #52B788))`,
+          }}
           initial={{ width: 0 }}
           animate={{ width: `${percentage}%` }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -61,7 +66,9 @@ export function WeeklyProgressWithLabel({
           className="text-lg font-semibold"
           style={{
             fontFamily: 'var(--font-display, inherit)',
-            color: percentage >= 100 ? 'var(--color-success)' : 'var(--text-primary)',
+            color: percentage >= 100
+              ? 'var(--color-success, #2D6A4F)'
+              : 'var(--text-primary)',
           }}
         >
           {percentage}%
@@ -69,14 +76,12 @@ export function WeeklyProgressWithLabel({
       </div>
       <div
         className="h-2 rounded-full overflow-hidden"
-        style={{ backgroundColor: 'var(--surface-tertiary)' }}
+        style={{ backgroundColor: 'var(--progress-track, #E8E8E8)' }}
       >
         <motion.div
           className="h-full rounded-full"
           style={{
-            backgroundColor: percentage >= 100
-              ? 'var(--color-success)'
-              : 'var(--color-brand-600)',
+            background: `linear-gradient(90deg, var(--progress-gradient-start, #2D6A4F), var(--progress-gradient-end, #52B788))`,
           }}
           initial={{ width: 0 }}
           animate={{ width: `${percentage}%` }}
@@ -91,7 +96,7 @@ export function WeeklyProgressWithLabel({
 }
 
 /**
- * WeeklyProgress variant: Minimal line
+ * WeeklyProgress variant: Minimal line (for compact layouts)
  */
 export function WeeklyProgressMinimal({
   current = 0,
@@ -103,19 +108,24 @@ export function WeeklyProgressMinimal({
     <div className="flex items-center gap-4">
       <div
         className="flex-1 h-1 rounded-full overflow-hidden"
-        style={{ backgroundColor: 'var(--border-default)' }}
+        style={{ backgroundColor: 'var(--progress-track, #E8E8E8)' }}
       >
         <motion.div
           className="h-full rounded-full"
-          style={{ backgroundColor: 'var(--color-brand-600)' }}
+          style={{
+            background: `linear-gradient(90deg, var(--progress-gradient-start, #2D6A4F), var(--progress-gradient-end, #52B788))`,
+          }}
           initial={{ width: 0 }}
           animate={{ width: `${percentage}%` }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         />
       </div>
       <span
-        className="text-xs text-muted whitespace-nowrap"
-        style={{ fontFamily: 'var(--font-display, inherit)' }}
+        className="text-xs whitespace-nowrap"
+        style={{
+          fontFamily: 'var(--font-display, inherit)',
+          color: 'var(--text-muted)',
+        }}
       >
         {current}/{goal}
       </span>
