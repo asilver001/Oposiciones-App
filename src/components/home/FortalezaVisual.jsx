@@ -6,7 +6,7 @@
  */
 
 import { motion } from 'framer-motion';
-import { Check, TrendingUp, BookOpen, AlertTriangle, Plus, ChevronRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 
 // Animation presets
 const spring = {
@@ -59,18 +59,18 @@ const statusConfig = {
 };
 
 /**
- * AnimatedProgressBar - Progress bar with shimmer animation
+ * AnimatedProgressBar - Green gradient progress bar
  */
-function AnimatedProgressBar({ value, max = 100, status = 'progreso', size = 'md' }) {
+function AnimatedProgressBar({ value, max = 100 }) {
   const percentage = Math.min(100, Math.max(0, (value / max) * 100));
-  const config = statusConfig[status] || statusConfig.progreso;
-  const sizes = { sm: 'h-1.5', md: 'h-2', lg: 'h-3' };
+  const fillColor = percentage > 60 ? '#2D6A4F' : percentage >= 40 ? '#40916C' : '#52B788';
 
   return (
     <div className="w-full">
-      <div className={`w-full bg-gray-100 rounded-full overflow-hidden ${sizes[size]}`}>
+      <div className="w-full rounded-full overflow-hidden" style={{ height: 6, background: '#F3F3F0', borderRadius: 3 }}>
         <motion.div
-          className={`h-full ${config.solid} rounded-full`}
+          className="h-full rounded-full"
+          style={{ background: fillColor, borderRadius: 3 }}
           initial={{ width: 0 }}
           animate={{ width: `${percentage}%` }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -81,11 +81,10 @@ function AnimatedProgressBar({ value, max = 100, status = 'progreso', size = 'md
 }
 
 /**
- * TopicBlock - Single topic with progress bar
+ * TopicBlock - Single topic with progress bar (editorial calm)
  */
 function TopicBlock({ topic, onSelect, index = 0 }) {
-  const config = statusConfig[topic.status] || statusConfig.nuevo;
-  const Icon = config.icon;
+  const percentColor = topic.progress > 60 ? '#2D6A4F' : topic.progress >= 40 ? '#40916C' : '#52B788';
 
   return (
     <motion.button
@@ -96,26 +95,18 @@ function TopicBlock({ topic, onSelect, index = 0 }) {
       transition={{ ...spring.gentle, delay: index * 0.05 }}
       whileTap={{ scale: 0.99 }}
     >
-      {/* Top row: name and status */}
+      {/* Top row: name and percentage */}
       <div className="flex items-center justify-between gap-2 mb-2">
-        <div className="flex items-center gap-2 flex-1 min-w-0">
-          <div className={`w-7 h-7 rounded-lg ${config.bg} flex items-center justify-center flex-shrink-0`}>
-            <Icon className={`w-4 h-4 ${config.text}`} />
-          </div>
-          <p className="text-sm font-medium text-gray-800 truncate">
-            <span className="text-gray-400">T{topic.id}</span> {topic.name}
-          </p>
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-gray-100 text-gray-700 whitespace-nowrap">
-            {topic.progress}%
-          </span>
-          <ChevronRight className="w-4 h-4 text-gray-300" />
-        </div>
+        <p className="text-sm font-medium text-gray-800 truncate flex-1 min-w-0">
+          <span className="text-gray-400">T{topic.id}</span> {topic.name}
+        </p>
+        <span className="text-[15px] font-semibold flex-shrink-0" style={{ color: percentColor }}>
+          {topic.progress}%
+        </span>
       </div>
 
       {/* Progress bar */}
-      <AnimatedProgressBar value={topic.progress} status={topic.status} size="md" />
+      <AnimatedProgressBar value={topic.progress} />
     </motion.button>
   );
 }
@@ -158,21 +149,20 @@ export default function FortalezaVisual({
 
   return (
     <motion.div
-      className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
+      className="rounded-[20px] overflow-hidden"
+      style={{ background: 'white', boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={spring.gentle}
     >
       {/* Header */}
-      <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100">
-        <div className="flex items-center gap-2">
-          <span className="text-xl">🏰</span>
-          <h3 className="font-semibold text-gray-900">Tu Fortaleza</h3>
-        </div>
+      <div className="flex items-center justify-between px-5 py-4">
+        <h3 className="text-[16px] font-semibold text-gray-900">Tu Fortaleza</h3>
         {onViewAll && (
           <motion.button
             onClick={onViewAll}
-            className="text-xs text-gray-500 font-medium flex items-center gap-1"
+            className="text-[13px] font-medium flex items-center gap-1"
+            style={{ color: '#B5B5B0' }}
             whileTap={{ scale: 0.95 }}
           >
             Ver todo <ChevronRight className="w-3 h-3" />
@@ -181,7 +171,7 @@ export default function FortalezaVisual({
       </div>
 
       {/* Topics with animated bars */}
-      <div className="px-4 py-2">
+      <div className="px-5 pb-2">
         {visibleTopics.map((topic, index) => (
           <TopicBlock
             key={topic.id}
@@ -196,24 +186,13 @@ export default function FortalezaVisual({
       {hasMore && (
         <motion.button
           onClick={onViewAll}
-          className="w-full px-4 py-3 text-sm text-gray-500 font-medium hover:bg-gray-50 transition-colors border-t border-gray-100 flex items-center justify-center gap-1"
+          className="w-full px-5 py-3 text-sm font-medium transition-colors flex items-center justify-center gap-1"
+          style={{ color: '#B5B5B0', borderTop: '1px solid #F3F3F0' }}
           whileTap={{ scale: 0.98 }}
         >
-          Ver mas temas <ChevronRight className="w-4 h-4" />
+          Ver más temas <ChevronRight className="w-4 h-4" />
         </motion.button>
       )}
-
-      {/* Legend */}
-      <div className="px-4 py-2.5 bg-gray-50/50 border-t border-gray-100 flex flex-wrap gap-2 justify-center">
-        {['dominado', 'avanzando', 'riesgo', 'nuevo'].map(status => {
-          const config = statusConfig[status];
-          return (
-            <span key={status} className="text-xs bg-gray-100 text-gray-700 px-2 py-0.5 rounded-full">
-              {config.label}
-            </span>
-          );
-        })}
-      </div>
     </motion.div>
   );
 }
