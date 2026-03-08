@@ -36,10 +36,10 @@ const categorias = [
     icon: Scale,
     emoji: '📚',
     description: 'BOE, leyes y reglamentos oficiales',
-    gradient: 'bg-rose-600',
-    bg: 'bg-rose-50',
-    text: 'text-rose-700',
-    border: 'border-rose-200',
+    gradient: 'bg-gray-100 text-gray-600',
+    bg: 'bg-gray-100',
+    text: 'text-gray-600',
+    border: 'border-gray-100',
     recursos: [
       { id: 'ce', title: 'Constitucion Espanola 1978', subtitle: 'Texto consolidado BOE', url: 'https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229', isExternal: true },
       { id: 'ley39', title: 'Ley 39/2015 - LPACAP', subtitle: 'Procedimiento Administrativo Comun', url: 'https://www.boe.es/buscar/act.php?id=BOE-A-2015-10565', isExternal: true },
@@ -54,10 +54,10 @@ const categorias = [
     icon: BookOpen,
     emoji: '📝',
     description: 'Resumenes visuales y mapas mentales',
-    gradient: 'bg-brand-600',
-    bg: 'bg-brand-50',
-    text: 'text-brand-700',
-    border: 'border-brand-200',
+    gradient: 'bg-gray-100 text-gray-600',
+    bg: 'bg-gray-100',
+    text: 'text-gray-600',
+    border: 'border-gray-100',
     recursos: [
       { id: 'esq-ce', title: 'Estructura de la Constitucion', subtitle: 'Preambulo, Titulo Preliminar, 10 Titulos', isNew: true },
       { id: 'esq-derechos', title: 'Derechos Fundamentales', subtitle: 'Arts. 14-29 - Seccion 1a Capitulo II', isNew: true },
@@ -72,10 +72,10 @@ const categorias = [
     icon: Target,
     emoji: '🎯',
     description: 'Examenes de practica completos',
-    gradient: 'bg-emerald-600',
-    bg: 'bg-emerald-50',
-    text: 'text-emerald-700',
-    border: 'border-emerald-200',
+    gradient: 'bg-gray-100 text-gray-600',
+    bg: 'bg-gray-100',
+    text: 'text-gray-600',
+    border: 'border-gray-100',
     recursos: [
       { id: 'sim-conv2024', title: 'Simulacro Convocatoria 2024', subtitle: '100 preguntas - 90 min', isInternal: true, route: 'simulacro-2024' },
       { id: 'sim-rapido', title: 'Simulacro Rapido', subtitle: '30 preguntas - 25 min', isInternal: true, route: 'simulacro-rapido' },
@@ -89,10 +89,10 @@ const categorias = [
     icon: Lightbulb,
     emoji: '💡',
     description: 'Tecnicas y consejos de estudio',
-    gradient: 'bg-amber-600',
-    bg: 'bg-amber-50',
-    text: 'text-amber-700',
-    border: 'border-amber-200',
+    gradient: 'bg-gray-100 text-gray-600',
+    bg: 'bg-gray-100',
+    text: 'text-gray-600',
+    border: 'border-gray-100',
     recursos: [
       { id: 'tip-fsrs', title: 'Repeticion Espaciada (FSRS)', subtitle: 'Como funciona el algoritmo de repasos', isNew: false },
       { id: 'tip-test', title: 'Estrategia de Tests', subtitle: 'Tecnicas para maximizar puntuacion', isNew: false },
@@ -107,10 +107,10 @@ const categorias = [
     icon: BookMarked,
     emoji: '📖',
     description: 'Terminos y definiciones clave',
-    gradient: 'bg-sky-600',
-    bg: 'bg-sky-50',
-    text: 'text-sky-700',
-    border: 'border-sky-200',
+    gradient: 'bg-gray-100 text-gray-600',
+    bg: 'bg-gray-100',
+    text: 'text-gray-600',
+    border: 'border-gray-100',
     recursos: [
       { id: 'glo-admin', title: 'Derecho Administrativo', subtitle: '120+ terminos con definiciones' },
       { id: 'glo-const', title: 'Derecho Constitucional', subtitle: '85+ terminos clave' },
@@ -124,10 +124,10 @@ const categorias = [
     icon: ExternalLink,
     emoji: '🔗',
     description: 'Recursos externos de interes',
-    gradient: 'bg-fuchsia-600',
-    bg: 'bg-fuchsia-50',
-    text: 'text-fuchsia-700',
-    border: 'border-fuchsia-200',
+    gradient: 'bg-gray-100 text-gray-600',
+    bg: 'bg-gray-100',
+    text: 'text-gray-600',
+    border: 'border-gray-100',
     recursos: [
       { id: 'enl-boe', title: 'BOE - Boletin Oficial', subtitle: 'Legislacion consolidada', url: 'https://www.boe.es/', isExternal: true },
       { id: 'enl-inap', title: 'INAP', subtitle: 'Instituto Nacional de Administracion Publica', url: 'https://www.inap.es/', isExternal: true },
@@ -158,7 +158,7 @@ function ResourceItem({ recurso, onResourceClick, isFavorite, onToggleFavorite }
         <div className="flex items-center gap-2">
           <p className="font-medium text-gray-800 text-sm truncate">{recurso.title}</p>
           {recurso.isNew && (
-            <span className="px-1.5 py-0.5 bg-emerald-100 text-emerald-700 text-[10px] font-semibold rounded-full">
+            <span className="px-1.5 py-0.5 bg-gray-100 text-gray-600 text-[10px] font-semibold rounded-full">
               NUEVO
             </span>
           )}
@@ -210,7 +210,7 @@ function CategoryCard({ categoria, isExpanded, onToggle, onResourceClick, favori
         whileTap={{ scale: 0.99 }}
       >
         {/* Icon */}
-        <div className={`w-12 h-12 rounded-xl ${categoria.gradient} flex items-center justify-center flex-shrink-0 shadow-sm`}>
+        <div className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center flex-shrink-0">
           <span className="text-2xl">{categoria.emoji}</span>
         </div>
 
@@ -219,7 +219,7 @@ function CategoryCard({ categoria, isExpanded, onToggle, onResourceClick, favori
           <div className="flex items-center gap-2">
             <h3 className="font-semibold text-gray-900">{categoria.title}</h3>
             {newCount > 0 && (
-              <span className="px-1.5 py-0.5 bg-emerald-100 text-emerald-700 text-[10px] font-semibold rounded-full">
+              <span className="px-1.5 py-0.5 bg-gray-100 text-gray-600 text-[10px] font-semibold rounded-full">
                 {newCount} nuevo{newCount > 1 ? 's' : ''}
               </span>
             )}
@@ -366,14 +366,14 @@ export default function RecursosPage({ onNavigate }) {
     <div className="space-y-4">
       {/* Header */}
       <motion.div
-        className="bg-brand-50 rounded-2xl p-4 border border-brand-100"
+        className="bg-white rounded-2xl p-4 border border-gray-100"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={spring.gentle}
       >
         <div className="flex items-center gap-3 mb-3">
-          <div className="w-12 h-12 bg-brand-600 rounded-xl flex items-center justify-center shadow-sm">
-            <BookMarked className="w-6 h-6 text-white" />
+          <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center">
+            <BookMarked className="w-6 h-6 text-gray-600" />
           </div>
           <div>
             <p className="font-medium text-gray-700">Tu biblioteca de preparacion</p>
@@ -381,16 +381,16 @@ export default function RecursosPage({ onNavigate }) {
         </div>
 
         <div className="grid grid-cols-3 gap-2">
-          <div className="bg-white/60 backdrop-blur rounded-xl p-2.5 text-center">
-            <p className="text-lg font-bold text-brand-600">{categorias.length}</p>
+          <div className="bg-gray-100 rounded-xl p-2.5 text-center">
+            <p className="text-lg font-light text-gray-900">{categorias.length}</p>
             <p className="text-xs text-gray-500">Categorias</p>
           </div>
-          <div className="bg-white/60 backdrop-blur rounded-xl p-2.5 text-center">
-            <p className="text-lg font-bold text-brand-600">{totalRecursos}</p>
+          <div className="bg-gray-100 rounded-xl p-2.5 text-center">
+            <p className="text-lg font-light text-gray-900">{totalRecursos}</p>
             <p className="text-xs text-gray-500">Recursos</p>
           </div>
-          <div className="bg-white/60 backdrop-blur rounded-xl p-2.5 text-center">
-            <p className="text-lg font-bold text-emerald-600">{totalNuevos}</p>
+          <div className="bg-gray-100 rounded-xl p-2.5 text-center">
+            <p className="text-lg font-light text-gray-900">{totalNuevos}</p>
             <p className="text-xs text-gray-500">Nuevos</p>
           </div>
         </div>
@@ -409,7 +409,7 @@ export default function RecursosPage({ onNavigate }) {
           placeholder="Buscar recursos..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full pl-10 pr-10 py-3 bg-white rounded-xl border border-gray-200 focus:border-brand-300 focus:ring-2 focus:ring-brand-100 outline-none transition-all text-sm"
+          className="w-full pl-10 pr-10 py-3 bg-white rounded-xl border border-gray-200 focus:border-gray-400 focus:ring-2 focus:ring-gray-100 outline-none transition-all text-sm"
         />
         {searchQuery && (
           <button
@@ -461,18 +461,18 @@ export default function RecursosPage({ onNavigate }) {
 
       {/* Quick tips */}
       <motion.div
-        className="bg-brand-50 border border-brand-100 rounded-xl p-4"
+        className="bg-gray-100 border border-gray-100 rounded-xl p-4"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ ...spring.gentle, delay: 0.3 }}
       >
         <div className="flex items-start gap-3">
-          <div className="w-8 h-8 bg-brand-100 rounded-lg flex items-center justify-center flex-shrink-0">
-            <Lightbulb className="w-4 h-4 text-brand-600" />
+          <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center flex-shrink-0">
+            <Lightbulb className="w-4 h-4 text-gray-600" />
           </div>
           <div>
-            <p className="font-medium text-brand-800 text-sm">Consejo del dia</p>
-            <p className="text-sm text-brand-600 mt-0.5">
+            <p className="font-medium text-gray-900 text-sm">Consejo del dia</p>
+            <p className="text-sm text-gray-500 mt-0.5">
               Guarda tus recursos favoritos con el corazon para acceder mas rapido.
             </p>
           </div>

@@ -57,8 +57,8 @@ export default function LoginForm({
   };
 
   return (
-    <div className="min-h-screen bg-brand-50 flex items-center justify-center p-6">
-      <div className="bg-white rounded-3xl p-8 shadow-xl max-w-md w-full">
+    <div className="min-h-screen bg-white flex items-center justify-center p-6">
+      <div className="bg-white rounded-3xl p-8 border border-gray-100 max-w-md w-full">
         {onBack && (
           <button onClick={onBack} className="mb-4 text-gray-600 flex items-center gap-2 hover:text-gray-800">
             <ArrowLeft className="w-5 h-5" /> Volver
@@ -66,10 +66,10 @@ export default function LoginForm({
         )}
 
         <div className="text-center mb-6">
-          <div className="w-16 h-16 bg-brand-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
             <span className="text-3xl">🎓</span>
           </div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">Iniciar sesión</h2>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-2">Iniciar sesión</h2>
           <p className="text-gray-500">Accede a tu cuenta y continúa donde lo dejaste</p>
         </div>
 
@@ -85,7 +85,7 @@ export default function LoginForm({
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="tu@email.com"
                 required
-                className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-brand-500 focus:outline-none transition"
+                className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-gray-900 focus:outline-none transition"
               />
             </div>
           </div>
@@ -101,7 +101,7 @@ export default function LoginForm({
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Tu contraseña"
                 required
-                className="w-full pl-12 pr-12 py-3 border-2 border-gray-200 rounded-xl focus:border-brand-500 focus:outline-none transition"
+                className="w-full pl-12 pr-12 py-3 border-2 border-gray-200 rounded-xl focus:border-gray-900 focus:outline-none transition"
               />
               <button
                 type="button"
@@ -119,7 +119,7 @@ export default function LoginForm({
             <button
               type="button"
               onClick={onForgotPassword}
-              className="text-sm text-brand-600 hover:underline"
+              className="text-sm text-gray-600 hover:underline"
             >
               ¿Olvidaste tu contraseña?
             </button>
@@ -137,7 +137,7 @@ export default function LoginForm({
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-brand-600 hover:bg-brand-700 disabled:bg-gray-400 text-white font-bold py-4 rounded-2xl transition-all disabled:cursor-not-allowed"
+            className="w-full bg-gray-900 hover:bg-gray-800 disabled:bg-gray-400 text-white font-bold py-4 rounded-2xl transition-all disabled:cursor-not-allowed"
           >
             {loading ? 'Iniciando sesión...' : 'Iniciar sesión'}
           </button>
@@ -147,7 +147,7 @@ export default function LoginForm({
         <div className="mt-6 space-y-3">
           <p className="text-center text-gray-600">
             ¿No tienes cuenta?{' '}
-            <button onClick={onGoToSignUp} className="text-brand-600 font-semibold hover:underline">
+            <button onClick={onGoToSignUp} className="text-gray-600 font-semibold hover:underline">
               Crear cuenta
             </button>
           </p>

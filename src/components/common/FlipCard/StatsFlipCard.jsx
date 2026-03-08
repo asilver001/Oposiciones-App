@@ -42,33 +42,33 @@ function AnimatedCounter({ value, duration = 0.8, suffix = "", className = "" })
   );
 }
 
-// Propuesta 2 style: Pastel front, solid back
+// Phase 3: Minimal — white front, gray-900 back, uniform across all schemes
 const colorSchemes = {
   amber: {
-    bgFront: 'bg-amber-50',
-    bgBack: 'bg-amber-500',
-    textFront: 'text-amber-700',
+    bgFront: 'bg-white',
+    bgBack: 'bg-gray-900',
+    textFront: 'text-gray-900',
     textBack: 'text-white',
-    border: 'border-amber-100',
-    iconFront: 'text-amber-500',
+    border: 'border-gray-100',
+    iconFront: 'text-gray-400',
     iconBack: 'text-white/80'
   },
   purple: {
-    bgFront: 'bg-brand-50',
-    bgBack: 'bg-brand-600',
-    textFront: 'text-brand-700',
+    bgFront: 'bg-white',
+    bgBack: 'bg-gray-900',
+    textFront: 'text-gray-900',
     textBack: 'text-white',
-    border: 'border-brand-100',
-    iconFront: 'text-brand-500',
+    border: 'border-gray-100',
+    iconFront: 'text-gray-400',
     iconBack: 'text-white/80'
   },
   emerald: {
-    bgFront: 'bg-emerald-50',
-    bgBack: 'bg-emerald-500',
-    textFront: 'text-emerald-700',
+    bgFront: 'bg-white',
+    bgBack: 'bg-gray-900',
+    textFront: 'text-gray-900',
     textBack: 'text-white',
-    border: 'border-emerald-100',
-    iconFront: 'text-emerald-500',
+    border: 'border-gray-100',
+    iconFront: 'text-gray-400',
     iconBack: 'text-white/80'
   }
 };
@@ -119,8 +119,7 @@ export default function StatsFlipCard({
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay }}
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
+      whileTap={{ scale: 0.99 }}
     >
       <motion.div
         className="relative w-full h-full"
@@ -136,12 +135,12 @@ export default function StatsFlipCard({
           <div className="flex items-center justify-between mb-auto">
             {Icon && <Icon className={`w-5 h-5 ${colors.iconFront}`} />}
             {badge && (
-              <span className={`text-[10px] ${colors.bgBack} text-white px-2 py-0.5 rounded-full font-medium`}>
+              <span className="text-[10px] bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full font-medium">
                 {badge}
               </span>
             )}
           </div>
-          <p className={`text-3xl font-bold ${colors.textFront} mb-0.5`}>
+          <p className={`text-4xl font-light ${colors.textFront} mb-0.5`}>
             {animateValue && numericValue !== null && hasAnimated ? (
               <AnimatedCounter value={numericValue} suffix={suffix} duration={0.8} />
             ) : (

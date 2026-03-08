@@ -50,63 +50,63 @@ const SUBGROUP_ICONS = {
 const statusConfig = {
   dominado: {
     label: 'Dominado',
-    color: 'text-green-600',
-    bgColor: 'bg-green-100',
-    borderColor: 'border-green-200',
+    color: 'text-gray-700',
+    bgColor: 'bg-gray-100',
+    borderColor: 'border-gray-100',
     icon: CheckCircle,
-    iconColor: 'text-green-500',
+    iconColor: 'text-gray-700',
     ctaLabel: 'Repasar',
-    ctaColor: 'bg-green-600'
+    ctaColor: 'bg-gray-900'
   },
   avanzando: {
     label: 'Avanzando',
-    color: 'text-blue-600',
-    bgColor: 'bg-blue-100',
-    borderColor: 'border-blue-200',
+    color: 'text-gray-700',
+    bgColor: 'bg-gray-100',
+    borderColor: 'border-gray-100',
     icon: TrendingUp,
-    iconColor: 'text-blue-500',
+    iconColor: 'text-gray-700',
     ctaLabel: 'Continuar',
-    ctaColor: 'bg-blue-600'
+    ctaColor: 'bg-gray-900'
   },
   progreso: {
     label: 'En progreso',
-    color: 'text-brand-600',
-    bgColor: 'bg-brand-100',
-    borderColor: 'border-brand-200',
+    color: 'text-gray-700',
+    bgColor: 'bg-gray-100',
+    borderColor: 'border-gray-100',
     icon: BookOpen,
-    iconColor: 'text-brand-500',
+    iconColor: 'text-gray-700',
     ctaLabel: 'Continuar',
-    ctaColor: 'bg-brand-600'
+    ctaColor: 'bg-gray-900'
   },
   nuevo: {
     label: 'Nuevo',
-    color: 'text-gray-500',
+    color: 'text-gray-700',
     bgColor: 'bg-gray-100',
-    borderColor: 'border-gray-200',
+    borderColor: 'border-gray-100',
     icon: Sparkles,
-    iconColor: 'text-gray-400',
+    iconColor: 'text-gray-700',
     ctaLabel: 'Empezar',
-    ctaColor: 'bg-brand-600'
+    ctaColor: 'bg-gray-900'
   },
   riesgo: {
     label: 'Repasar',
-    color: 'text-amber-600',
-    bgColor: 'bg-amber-100',
-    borderColor: 'border-amber-200',
+    color: 'text-gray-700',
+    bgColor: 'bg-gray-100',
+    borderColor: 'border-gray-100',
     icon: AlertCircle,
-    iconColor: 'text-amber-500',
+    iconColor: 'text-gray-700',
     ctaLabel: 'Repasar',
-    ctaColor: 'bg-amber-600'
+    ctaColor: 'bg-gray-900'
   },
   en_riesgo: {
     label: 'En riesgo',
-    color: 'text-red-600',
-    bgColor: 'bg-red-100',
-    borderColor: 'border-red-200',
+    color: 'text-gray-700',
+    bgColor: 'bg-gray-100',
+    borderColor: 'border-gray-100',
     icon: AlertCircle,
-    iconColor: 'text-red-500',
+    iconColor: 'text-gray-700',
     ctaLabel: 'Repasar',
-    ctaColor: 'bg-red-600'
+    ctaColor: 'bg-gray-900'
   }
 };
 
@@ -126,17 +126,13 @@ function StatusBadge({ status }) {
 }
 
 /**
- * AccuracyBadge - Color-coded accuracy percentage
+ * AccuracyBadge - Accuracy percentage
  */
 function AccuracyBadge({ accuracy }) {
   if (accuracy === 0) return null;
 
-  let colorClass = 'text-green-600 bg-green-50';
-  if (accuracy < 60) colorClass = 'text-red-600 bg-red-50';
-  else if (accuracy < 80) colorClass = 'text-amber-600 bg-amber-50';
-
   return (
-    <span className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-xs font-medium ${colorClass}`}>
+    <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-xs font-medium text-gray-500 bg-gray-50">
       <Target className="w-3 h-3" />
       {accuracy}%
     </span>
@@ -146,21 +142,11 @@ function AccuracyBadge({ accuracy }) {
 /**
  * ProgressBar - Visual progress indicator
  */
-function ProgressBar({ percentage, status }) {
-  const getColor = () => {
-    switch (status) {
-      case 'dominado': return 'bg-green-500';
-      case 'avanzando': return 'bg-blue-500';
-      case 'en_riesgo': return 'bg-red-500';
-      case 'riesgo': return 'bg-amber-500';
-      default: return 'bg-brand-500';
-    }
-  };
-
+function ProgressBar({ percentage }) {
   return (
-    <div className="w-full bg-gray-100 rounded-full h-2 overflow-hidden">
+    <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden">
       <motion.div
-        className={`h-full ${getColor()} rounded-full`}
+        className="h-full bg-gray-900 rounded-full"
         initial={{ width: 0 }}
         animate={{ width: `${Math.min(percentage, 100)}%` }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
@@ -182,13 +168,12 @@ function TopicCard({ topic, onSelect, locked, lockMessage, hasPrereqs }) {
   return (
     <motion.button
       onClick={() => !locked && onSelect(topic)}
-      className={`w-full text-left p-4 rounded-xl border-2 transition-colors relative
+      className={`w-full text-left p-4 rounded-xl border transition-colors relative
         ${locked
           ? 'border-gray-200 bg-gray-50 opacity-60 cursor-not-allowed'
-          : `${config.borderColor} bg-white hover:border-brand-400 hover:shadow-md active:scale-[0.98]`
+          : `${config.borderColor} bg-white active:scale-[0.98]`
         }`}
-      whileHover={locked ? {} : { y: -2 }}
-      whileTap={locked ? {} : { scale: 0.98 }}
+      whileTap={locked ? {} : { scale: 0.99 }}
     >
       {locked && (
         <div className="absolute top-3 right-3 w-7 h-7 bg-gray-200 rounded-full flex items-center justify-center">
@@ -229,7 +214,6 @@ function TopicCard({ topic, onSelect, locked, lockMessage, hasPrereqs }) {
         <div className="flex-1">
           <ProgressBar
             percentage={locked ? 0 : (topic.progress || 0)}
-            status={locked ? 'nuevo' : topic.status}
           />
         </div>
         <span className={`text-sm font-bold min-w-[40px] text-right ${locked ? 'text-gray-400' : 'text-gray-700'}`}>
@@ -241,7 +225,7 @@ function TopicCard({ topic, onSelect, locked, lockMessage, hasPrereqs }) {
       <div className="flex items-center justify-between mt-2">
         <div>
           {!locked && hasPrereqs && topic.progress > 0 && (
-            <p className="text-xs text-green-500 flex items-center gap-1">
+            <p className="text-xs text-gray-500 flex items-center gap-1">
               <Unlock className="w-3 h-3" /> Desbloqueado
             </p>
           )}
@@ -331,8 +315,8 @@ function BlockSection({ blockName, topics, isExpanded, onToggle, onTopicSelect }
         className="w-full px-4 py-3 flex items-center justify-between hover:bg-gray-50 transition-colors"
       >
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-brand-100 rounded-xl flex items-center justify-center">
-            <BookOpen className="w-5 h-5 text-brand-600" />
+          <div className="w-10 h-10 bg-gray-100 rounded-xl flex items-center justify-center">
+            <BookOpen className="w-5 h-5 text-gray-600" />
           </div>
           <div className="text-left">
             <h3 className="font-semibold text-gray-900 text-sm">{blockName}</h3>
@@ -345,7 +329,7 @@ function BlockSection({ blockName, topics, isExpanded, onToggle, onTopicSelect }
 
         <div className="flex items-center gap-3">
           <div className="text-right">
-            <span className="text-sm font-bold text-brand-600">{totalProgress}%</span>
+            <span className="text-sm font-semibold text-gray-900">{totalProgress}%</span>
           </div>
           <motion.div
             animate={{ rotate: isExpanded ? 180 : 0 }}
@@ -406,7 +390,7 @@ function FilterChip({ label, isActive, onClick }) {
       onClick={onClick}
       className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all whitespace-nowrap
         ${isActive
-          ? 'bg-brand-600 text-white shadow-sm'
+          ? 'bg-gray-900 text-white shadow-sm'
           : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
         }`}
     >
@@ -436,7 +420,7 @@ function NoSearchResults({ searchQuery, onClear }) {
       </p>
       <button
         onClick={onClear}
-        className="text-brand-600 font-medium hover:text-brand-700"
+        className="text-gray-600 font-medium hover:text-gray-900"
       >
         Limpiar busqueda
       </button>
@@ -702,36 +686,36 @@ export default function TemasListView({
   return (
     <div className="space-y-5">
       {/* Progress Header */}
-      <div className="bg-gradient-to-br from-brand-50 to-purple-50 rounded-2xl p-4 border border-brand-100">
+      <div className="bg-white rounded-2xl p-4 border border-gray-100">
         <div className="flex items-center justify-between mb-3">
-          <h2 className="text-base font-bold text-gray-900">Tu progreso</h2>
-          <span className="text-2xl font-bold text-brand-600">{overallStats.avgProgress}%</span>
+          <h2 className="text-base font-semibold text-gray-900">Tu progreso</h2>
+          <span className="text-2xl font-light text-gray-900">{overallStats.avgProgress}%</span>
         </div>
-        <ProgressBar percentage={overallStats.avgProgress} status="progreso" />
+        <ProgressBar percentage={overallStats.avgProgress} />
         <div className="grid grid-cols-4 gap-2 mt-3">
           <div className="text-center">
-            <p className="text-lg font-bold text-gray-900">{overallStats.total}</p>
+            <p className="text-lg font-light text-gray-900">{overallStats.total}</p>
             <p className="text-[10px] text-gray-500">Temas</p>
           </div>
           <div className="text-center">
-            <p className="text-lg font-bold text-green-600">{overallStats.dominados}</p>
-            <p className="text-[10px] text-green-600">Dominados</p>
+            <p className="text-lg font-light text-gray-900">{overallStats.dominados}</p>
+            <p className="text-[10px] text-gray-500">Dominados</p>
           </div>
           <div className="text-center">
-            <p className="text-lg font-bold text-amber-600">{overallStats.enRiesgo}</p>
-            <p className="text-[10px] text-amber-600">Repasar</p>
+            <p className="text-lg font-light text-gray-900">{overallStats.enRiesgo}</p>
+            <p className="text-[10px] text-gray-500">Repasar</p>
           </div>
           <div className="text-center">
-            <p className="text-lg font-bold text-brand-600">{overallStats.totalPracticed}</p>
-            <p className="text-[10px] text-brand-600">Practicadas</p>
+            <p className="text-lg font-light text-gray-900">{overallStats.totalPracticed}</p>
+            <p className="text-[10px] text-gray-500">Practicadas</p>
           </div>
         </div>
       </div>
 
       {/* Recommended Next Topics */}
       {recommendedTopics.length > 0 && (
-        <div className="bg-brand-50 rounded-2xl p-4 border border-brand-100">
-          <h3 className="text-sm font-semibold text-brand-700 mb-3 flex items-center gap-2">
+        <div className="bg-gray-100 rounded-2xl p-4 border border-gray-100">
+          <h3 className="text-sm font-semibold text-gray-900 mb-3 flex items-center gap-2">
             <Play className="w-4 h-4" />
             Te sugerimos continuar con
           </h3>
@@ -741,17 +725,17 @@ export default function TemasListView({
                 key={topic.id}
                 onClick={() => onTopicSelect(topic)}
                 className="w-full flex items-center gap-3 p-2.5 bg-white rounded-xl
-                  hover:shadow-sm hover:border-brand-300 border border-brand-100
+                  border border-gray-100
                   transition-all text-left"
               >
-                <span className="w-6 h-6 bg-brand-100 rounded-full flex items-center justify-center
-                  text-xs font-bold text-brand-600 shrink-0">
+                <span className="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center
+                  text-xs font-bold text-gray-700 shrink-0">
                   {idx + 1}
                 </span>
                 <span className="text-sm font-medium text-gray-800 truncate flex-1">
                   T{topic.number ?? topic.id}. {topic.name}
                 </span>
-                <ChevronRight className="w-4 h-4 text-brand-400 shrink-0" />
+                <ChevronRight className="w-4 h-4 text-gray-400 shrink-0" />
               </button>
             ))}
           </div>
@@ -767,7 +751,7 @@ export default function TemasListView({
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="Buscar tema..."
           className="w-full pl-12 pr-4 py-3 bg-white rounded-xl border border-gray-200
-            focus:border-brand-400 focus:ring-2 focus:ring-brand-100
+            focus:border-gray-400 focus:ring-2 focus:ring-gray-100
             outline-none transition-all text-gray-900 placeholder-gray-400"
         />
       </div>

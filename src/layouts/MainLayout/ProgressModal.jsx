@@ -77,7 +77,7 @@ export default function ProgressModal({
             ref={closeButtonRef}
             onClick={onClose}
             aria-label="Cerrar progreso"
-            className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition focus-visible:outline-2 focus-visible:outline-brand-500 focus-visible:outline-offset-2"
+            className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition focus-visible:outline-2 focus-visible:outline-gray-900 focus-visible:outline-offset-2"
           >
             <XCircle className="w-5 h-5 text-gray-500" />
           </button>
@@ -88,10 +88,10 @@ export default function ProgressModal({
           <div className="flex flex-col items-center py-4">
             <div className="relative w-32 h-32 mb-4">
               <svg className="w-full h-full transform -rotate-90">
-                <circle cx="64" cy="64" r="56" fill="none" stroke="var(--color-brand-100)" strokeWidth="12" />
+                <circle cx="64" cy="64" r="56" fill="none" stroke="#f3f4f6" strokeWidth="12" />
                 <circle
                   cx="64" cy="64" r="56"
-                  fill="none" stroke="var(--color-brand-500)" strokeWidth="12"
+                  fill="none" stroke="#111827" strokeWidth="12"
                   strokeDasharray={strokeDasharray}
                   strokeLinecap="round"
                   className="transition-all duration-500"
@@ -116,14 +116,14 @@ export default function ProgressModal({
           <div className="grid grid-cols-2 gap-3">
             <div className="bg-gray-50 rounded-xl p-4">
               <div className="flex items-center gap-2 mb-1">
-                <Trophy className="w-4 h-4 text-brand-500" />
+                <Trophy className="w-4 h-4 text-gray-600" />
                 <span className="text-xs text-gray-500 font-medium">Tests completados</span>
               </div>
               <p className="text-2xl font-bold text-gray-900">{testsCompleted}</p>
             </div>
             <div className="bg-gray-50 rounded-xl p-4">
               <div className="flex items-center gap-2 mb-1">
-                <Target className="w-4 h-4 text-green-500" />
+                <Target className="w-4 h-4 text-gray-600" />
                 <span className="text-xs text-gray-500 font-medium">Tasa de acierto</span>
               </div>
               <p className="text-2xl font-bold text-gray-900">{accuracyRate}%</p>
@@ -131,10 +131,10 @@ export default function ProgressModal({
           </div>
 
           {/* Exam info */}
-          <div className="bg-brand-50 rounded-xl p-4">
+          <div className="bg-gray-50 rounded-xl p-4">
             {daysUntilExam ? (
               <p className="text-gray-700 text-sm">
-                Te quedan <span className="font-bold text-brand-600">{daysUntilExam} dias</span> para tu examen
+                Te quedan <span className="font-bold text-gray-900">{daysUntilExam} dias</span> para tu examen
               </p>
             ) : (
               <p className="text-gray-600 text-sm">
@@ -153,7 +153,7 @@ export default function ProgressModal({
                 onClose();
                 onContinueStudying();
               }}
-              className="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-4 rounded-xl transition-all active:scale-[0.98]"
+              className="w-full bg-gray-900 text-white font-semibold py-4 rounded-xl transition-transform active:scale-[0.99]"
             >
               Continuar estudiando
             </button>

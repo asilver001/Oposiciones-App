@@ -22,30 +22,30 @@ export default function EmptyState({
   // Color variants matching OpositaSmart's purple theme
   const variants = {
     purple: {
-      iconBg: 'bg-brand-100',
-      iconColor: 'text-brand-500',
+      iconBg: 'bg-gray-100',
+      iconColor: 'text-gray-400',
       titleColor: 'text-gray-900',
       descColor: 'text-gray-500',
-      buttonBg: 'bg-brand-600',
-      buttonHover: 'hover:bg-brand-700',
+      buttonBg: 'bg-gray-900',
+      buttonHover: 'hover:bg-gray-800',
       buttonText: 'text-white'
     },
     blue: {
-      iconBg: 'bg-blue-100',
-      iconColor: 'text-blue-500',
+      iconBg: 'bg-gray-100',
+      iconColor: 'text-gray-400',
       titleColor: 'text-gray-900',
       descColor: 'text-gray-500',
-      buttonBg: 'bg-blue-600',
-      buttonHover: 'hover:bg-blue-700',
+      buttonBg: 'bg-gray-900',
+      buttonHover: 'hover:bg-gray-800',
       buttonText: 'text-white'
     },
     green: {
-      iconBg: 'bg-green-100',
-      iconColor: 'text-green-500',
+      iconBg: 'bg-gray-100',
+      iconColor: 'text-gray-400',
       titleColor: 'text-gray-900',
       descColor: 'text-gray-500',
-      buttonBg: 'bg-green-600',
-      buttonHover: 'hover:bg-green-700',
+      buttonBg: 'bg-gray-900',
+      buttonHover: 'hover:bg-gray-800',
       buttonText: 'text-white'
     },
     gray: {
@@ -53,8 +53,8 @@ export default function EmptyState({
       iconColor: 'text-gray-400',
       titleColor: 'text-gray-900',
       descColor: 'text-gray-500',
-      buttonBg: 'bg-gray-800',
-      buttonHover: 'hover:bg-gray-900',
+      buttonBg: 'bg-gray-900',
+      buttonHover: 'hover:bg-gray-800',
       buttonText: 'text-white'
     }
   };

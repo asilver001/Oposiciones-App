@@ -9,23 +9,23 @@ function DateStep({ onSelect, onBack }) {
     { id: 'ns', label: 'Todavía no lo sé' }
   ];
   return (
-    <div className="min-h-screen bg-brand-50 px-6 pt-16">
+    <div className="min-h-screen bg-white px-6 pt-16">
       <button onClick={onBack} className="mb-6 text-gray-700 flex items-center gap-2">
         <ArrowLeft className="w-5 h-5" /> Atrás
       </button>
       <div className="flex justify-center gap-2 mb-8">
-        <div className="w-2 h-2 rounded-full bg-brand-600"></div>
-        <div className="w-2 h-2 rounded-full bg-brand-600"></div>
-        <div className="w-6 h-2 rounded-full bg-brand-600"></div>
+        <div className="w-2 h-2 rounded-full bg-gray-900"></div>
+        <div className="w-2 h-2 rounded-full bg-gray-900"></div>
+        <div className="w-6 h-2 rounded-full bg-gray-900"></div>
         <div className="w-2 h-2 rounded-full bg-gray-300"></div>
       </div>
-      <h1 className="text-2xl font-bold text-gray-900 mb-2">¿Cuándo es tu examen?</h1>
+      <h1 className="text-2xl font-semibold text-gray-900 mb-2">¿Cuándo es tu examen?</h1>
       <p className="text-gray-500 mb-8">Así adaptamos el plan a tu ritmo</p>
       {options.map((f) => (
         <button
           key={f.id}
           onClick={() => onSelect(f.label)}
-          className="w-full bg-white rounded-2xl p-5 mb-3 border-2 border-gray-100 hover:border-brand-600 text-left transition-all"
+          className="w-full bg-white rounded-2xl p-5 mb-3 border-2 border-gray-100 hover:border-gray-900 text-left transition-all"
         >
           <p className="font-medium text-gray-800">{f.label}</p>
         </button>

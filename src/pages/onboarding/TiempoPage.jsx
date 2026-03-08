@@ -17,9 +17,9 @@ function TiempoStep({ onNext, onBack }) {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col p-6">
+    <div className="min-h-screen bg-white flex flex-col p-6">
       <div className="flex-1 flex flex-col justify-center max-w-md mx-auto w-full">
-        <h2 className="text-2xl font-bold text-gray-800 mb-2">
+        <h2 className="text-2xl font-semibold text-gray-900 mb-2">
           ¿Cuánto tiempo al día puedes estudiar?
         </h2>
         <p className="text-gray-500 mb-8">
@@ -31,7 +31,7 @@ function TiempoStep({ onNext, onBack }) {
             <button
               key={time.value}
               onClick={() => onNext(time.value)}
-              className="w-full p-4 bg-white rounded-2xl border-2 border-brand-100 hover:border-brand-400 transition-all text-left"
+              className="w-full p-4 bg-white rounded-2xl border-2 border-gray-100 hover:border-gray-900 transition-all text-left"
             >
               <span className="text-lg font-semibold text-gray-800">{time.label}</span>
               <span className="text-gray-500 ml-2">· {time.desc}</span>
@@ -41,7 +41,7 @@ function TiempoStep({ onNext, onBack }) {
 
         <button
           onClick={onBack}
-          className="text-brand-600 font-medium"
+          className="text-gray-500 font-medium"
         >
           Volver
         </button>

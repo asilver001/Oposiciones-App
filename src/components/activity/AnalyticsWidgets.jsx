@@ -56,11 +56,8 @@ export function ReadinessGauge({ readiness }) {
   const circumference = 2 * Math.PI * radius;
   const offset = circumference - (score / 100) * circumference;
 
-  let strokeColor = 'stroke-red-500';
-  let textColor = 'text-red-600';
-  if (score >= 80) { strokeColor = 'stroke-brand-500'; textColor = 'text-brand-600'; }
-  else if (score >= 60) { strokeColor = 'stroke-green-500'; textColor = 'text-green-600'; }
-  else if (score >= 30) { strokeColor = 'stroke-yellow-500'; textColor = 'text-yellow-600'; }
+  const strokeColor = 'stroke-gray-900';
+  const textColor = 'text-gray-900';
 
   return (
     <motion.div
@@ -70,7 +67,7 @@ export function ReadinessGauge({ readiness }) {
       className="bg-white dark:bg-gray-800 rounded-2xl p-5 shadow-sm border border-gray-100 dark:border-gray-700"
     >
       <div className="flex items-center gap-2 mb-4">
-        <Brain className="w-5 h-5 text-brand-500" />
+        <Brain className="w-5 h-5 text-gray-600" />
         <h4 className="font-semibold text-gray-900 dark:text-gray-100">Preparacion</h4>
       </div>
 
@@ -125,7 +122,7 @@ function BreakdownRow({ label, value }) {
       <span className="text-gray-500 dark:text-gray-400 w-20">{label}</span>
       <div className="flex-1 h-1.5 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
         <motion.div
-          className="h-full bg-brand-400 rounded-full"
+          className="h-full bg-gray-900 rounded-full"
           initial={{ width: 0 }}
           animate={{ width: `${value}%` }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -143,8 +140,8 @@ export function VelocityCard({ velocity }) {
   const { currentVelocity, trend } = velocity;
 
   const TrendIcon = trend === 'up' ? TrendingUp : trend === 'down' ? TrendingDown : Minus;
-  const trendColor = trend === 'up' ? 'text-green-500' : trend === 'down' ? 'text-red-500' : 'text-gray-400';
-  const trendBg = trend === 'up' ? 'bg-green-50 dark:bg-green-900/20' : trend === 'down' ? 'bg-red-50 dark:bg-red-900/20' : 'bg-gray-50 dark:bg-gray-700/50';
+  const trendColor = 'text-gray-600';
+  const trendBg = 'bg-gray-100';
 
   return (
     <motion.div
@@ -154,7 +151,7 @@ export function VelocityCard({ velocity }) {
       className="bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-sm border border-gray-100 dark:border-gray-700 flex-1"
     >
       <div className="flex items-center gap-2 mb-2">
-        <BarChart3 className="w-4 h-4 text-brand-500" />
+        <BarChart3 className="w-4 h-4 text-gray-600" />
         <span className="text-xs text-gray-500 dark:text-gray-400">Velocidad</span>
       </div>
       <div className="flex items-end gap-2">
@@ -189,21 +186,14 @@ export function TopicStrengthBars({ topicStrength }) {
       className="bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-sm border border-gray-100 dark:border-gray-700"
     >
       <div className="flex items-center gap-2 mb-3">
-        <Target className="w-5 h-5 text-brand-500" />
+        <Target className="w-5 h-5 text-gray-600" />
         <h4 className="font-semibold text-gray-900 dark:text-gray-100">Fortaleza por tema</h4>
       </div>
 
       <div className="space-y-2.5">
         {topics.map((topic, idx) => {
-          let barColor = 'bg-green-500';
-          let textColor = 'text-green-600 dark:text-green-400';
-          if (topic.accuracy < 50) {
-            barColor = 'bg-red-400';
-            textColor = 'text-red-600 dark:text-red-400';
-          } else if (topic.accuracy < 70) {
-            barColor = 'bg-yellow-400';
-            textColor = 'text-yellow-600 dark:text-yellow-400';
-          }
+          const barColor = 'bg-gray-900';
+          const textColor = 'text-gray-600';
 
           const topicLabel = TOPIC_NAMES[topic.tema] || `Tema ${topic.tema}`;
 
@@ -249,7 +239,7 @@ export function ReadinessPrediction({ prediction }) {
         className="bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-sm border border-gray-100 dark:border-gray-700 flex-1"
       >
         <div className="flex items-center gap-2 mb-2">
-          <Calendar className="w-4 h-4 text-brand-500" />
+          <Calendar className="w-4 h-4 text-gray-600" />
           <span className="text-xs text-gray-500 dark:text-gray-400">Prediccion</span>
         </div>
         <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -260,11 +250,7 @@ export function ReadinessPrediction({ prediction }) {
   }
 
   const confidenceLabel = confidence === 'high' ? 'Alta' : confidence === 'medium' ? 'Media' : 'Baja';
-  const confidenceColor = confidence === 'high'
-    ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
-    : confidence === 'medium'
-      ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400'
-      : 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400';
+  const confidenceColor = 'bg-gray-100 text-gray-600';
 
   const formattedDate = targetDate
     ? new Date(targetDate).toLocaleDateString('es-ES', { day: 'numeric', month: 'long' })
@@ -278,7 +264,7 @@ export function ReadinessPrediction({ prediction }) {
       className="bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-sm border border-gray-100 dark:border-gray-700 flex-1"
     >
       <div className="flex items-center gap-2 mb-2">
-        <Calendar className="w-4 h-4 text-brand-500" />
+        <Calendar className="w-4 h-4 text-gray-600" />
         <span className="text-xs text-gray-500 dark:text-gray-400">Prediccion</span>
       </div>
       <div className="flex items-end gap-1">

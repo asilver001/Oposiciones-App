@@ -174,7 +174,7 @@ export default function SettingsModal({ onClose }) {
               ref={closeButtonRef}
               onClick={onClose}
               aria-label="Cerrar ajustes"
-              className="w-10 h-10 -ml-2 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition focus-visible:outline-2 focus-visible:outline-brand-500 focus-visible:outline-offset-2"
+              className="w-10 h-10 -ml-2 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition focus-visible:outline-2 focus-visible:outline-gray-900 focus-visible:outline-offset-2"
             >
               <ArrowLeft className="w-5 h-5 text-gray-700 dark:text-gray-300" />
             </button>
@@ -235,7 +235,7 @@ export default function SettingsModal({ onClose }) {
 
           {/* Goals Configuration Panel */}
           {showGoalsConfig && (
-            <div className="mt-3 bg-white rounded-xl border border-brand-200 p-4 space-y-4">
+            <div className="mt-3 bg-white rounded-xl border border-gray-200 p-4 space-y-4">
               <h4 className="text-sm font-semibold text-gray-900">Configura tus metas</h4>
 
               {/* Daily goal */}
@@ -248,7 +248,7 @@ export default function SettingsModal({ onClose }) {
                       onClick={() => setUserData({ dailyGoal: val })}
                       className={`flex-1 py-2 text-sm font-medium rounded-lg transition ${
                         (userData.dailyGoal || 15) === val
-                          ? 'bg-brand-600 text-white'
+                          ? 'bg-gray-900 text-white'
                           : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                       }`}
                     >
@@ -268,7 +268,7 @@ export default function SettingsModal({ onClose }) {
                       onClick={() => setUserData({ weeklyGoalQuestions: val })}
                       className={`flex-1 py-2 text-sm font-medium rounded-lg transition ${
                         (userData.weeklyGoalQuestions || 75) === val
-                          ? 'bg-brand-600 text-white'
+                          ? 'bg-gray-900 text-white'
                           : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                       }`}
                     >
@@ -322,9 +322,9 @@ export default function SettingsModal({ onClose }) {
                 >
                   <div className="flex items-center gap-3">
                     {exporting ? (
-                      <Loader2 className="w-5 h-5 text-brand-500 animate-spin" />
+                      <Loader2 className="w-5 h-5 text-gray-700 animate-spin" />
                     ) : (
-                      <Download className="w-5 h-5 text-brand-500" />
+                      <Download className="w-5 h-5 text-gray-700" />
                     )}
                     <span className="text-gray-700 dark:text-gray-300">
                       {exporting ? 'Exportando...' : 'Descargar mis datos'}

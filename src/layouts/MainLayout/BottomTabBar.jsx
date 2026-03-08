@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { Home, History, BookOpen, GraduationCap, ClipboardCheck } from 'lucide-react';
 
 /**
- * BottomTabBar - Barra de navegación flotante
- * Extraído de OpositaApp.jsx como parte del refactor FASE 3
+ * BottomTabBar - Barra de navegacion full-width
+ * HomeMinimal shell redesign Phase 1 - full-width with border-t, no floating island
  */
 export default function BottomTabBar({
   activeTab,
@@ -54,14 +54,13 @@ export default function BottomTabBar({
 
   return (
     <motion.div
-      className="fixed bottom-0 left-0 right-0 z-40 px-4 pb-2"
+      className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-100"
       initial={{ y: 0 }}
       animate={{ y: isVisible ? 0 : 100 }}
       transition={{ type: 'spring', damping: 25, stiffness: 300 }}
     >
-      {/* Contenedor floating con márgenes, sombra y bordes redondeados */}
       <div className="max-w-md mx-auto">
-        <nav className="bg-white dark:bg-gray-900 rounded-[20px] shadow-[0_2px_24px_rgba(0,0,0,0.12)] border border-gray-100/80 dark:border-gray-700/80" aria-label="Navegacion principal">
+        <nav aria-label="Navegacion principal">
           <div className="flex justify-around items-center h-[58px] px-1" role="tablist">
             {tabs.map(tab => {
               // Para el tab "Revisar" usamos currentPage en lugar de activeTab
@@ -84,12 +83,14 @@ export default function BottomTabBar({
                       }
                     }
                   }}
-                  className="flex flex-col items-center justify-center min-w-[3.5rem] py-1 px-1.5 rounded-xl transition-all duration-200 active:scale-95 focus-visible:outline-2 focus-visible:outline-brand-500 focus-visible:outline-offset-2"
+                  className="relative flex flex-col items-center justify-center min-w-[3.5rem] py-1 px-1.5 transition-all duration-200"
                 >
-                  <div className={`
-                    flex items-center justify-center w-9 h-9 rounded-full mb-0.5 transition-all duration-200
-                    ${isActive ? 'bg-gray-100' : ''}
-                  `}>
+                  {/* Active tab indicator bar at top */}
+                  {isActive && (
+                    <span className="absolute top-0 left-1/2 -translate-x-1/2 w-5 h-0.5 bg-gray-900 rounded-full" />
+                  )}
+
+                  <div className="flex items-center justify-center w-9 h-9 mb-0.5">
                     <tab.icon
                       className={`
                         w-[22px] h-[22px] transition-all duration-200

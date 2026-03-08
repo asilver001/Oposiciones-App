@@ -29,17 +29,6 @@ const spring = {
   smooth: { type: "spring", stiffness: 50, damping: 15 },
 };
 
-// Soft theme configuration
-const themeConfig = {
-  heroClass: 'bg-gray-100',
-  textClass: 'text-gray-800',
-  subtextClass: 'text-gray-500',
-  badgeClass: 'bg-brand-100 text-brand-700',
-  buttonClass: 'bg-brand-600 text-white',
-  progressStroke: 'var(--color-brand-600)',
-  progressBg: 'color-mix(in srgb, var(--color-brand-600) 12%, transparent)',
-  decorationClass: 'bg-brand-200/30',
-};
 
 /**
  * Get motivational message based on streak
@@ -58,41 +47,34 @@ function getMotivationalMessage(streak) {
  * SessionCard - Today's session CTA card
  */
 function SessionCard({ nextTopic, onStartSession }) {
-  const config = statusConfig[nextTopic?.status] || statusConfig.nuevo;
-  const TemaIcon = config.icon;
-
   return (
     <motion.div
-      className={`col-span-2 ${themeConfig.heroClass} rounded-2xl p-5 relative overflow-hidden`}
+      className="col-span-2 bg-gray-900 text-white rounded-2xl p-5 relative overflow-hidden"
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.1 }}
-      whileHover={{ scale: 1.01 }}
+      whileTap={{ scale: 0.99 }}
     >
-      {/* Decorative blur */}
-      <div className={`absolute top-0 right-0 w-32 h-32 ${themeConfig.decorationClass} rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl`} />
-
-      <div className="flex items-start justify-between relative">
+      <div className="flex items-start justify-between">
         <div className="flex-1">
           <div className="flex items-center gap-2 mb-3">
-            <div className={`w-8 h-8 rounded-lg ${config.bg} flex items-center justify-center`}>
-              <TemaIcon className={`w-4 h-4 ${config.text}`} />
+            <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center">
+              <BookOpen className="w-4 h-4 text-white/80" />
             </div>
-            <span className={`text-xs ${themeConfig.badgeClass} px-2 py-0.5 rounded-full`}>
-              {config.label}
+            <span className="text-xs text-white/60 px-2 py-0.5 rounded-full bg-white/10">
+              Siguiente tema
             </span>
           </div>
-          <h2 className={`text-lg font-bold mb-1 ${themeConfig.textClass}`}>
+          <h2 className="text-lg font-semibold mb-1 text-white">
             T{nextTopic?.number || nextTopic?.id}. {nextTopic?.name}
           </h2>
-          <p className={`text-sm ${themeConfig.subtextClass} mb-4`}>
+          <p className="text-sm text-white/60 mb-4">
             15 preguntas · ~10 min
           </p>
           <motion.button
             onClick={() => onStartSession(nextTopic)}
-            className={`px-5 py-2.5 ${themeConfig.buttonClass} font-semibold rounded-xl text-sm flex items-center gap-2 shadow-sm`}
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
+            className="px-5 py-2.5 bg-white text-gray-900 font-semibold rounded-xl text-sm flex items-center gap-2"
+            whileTap={{ scale: 0.99 }}
           >
             <Zap className="w-4 h-4" /> Empezar ahora
           </motion.button>
@@ -104,13 +86,13 @@ function SessionCard({ nextTopic, onStartSession }) {
             <circle
               cx="40" cy="40" r="34"
               fill="none"
-              stroke={themeConfig.progressBg}
+              stroke="rgba(255,255,255,0.12)"
               strokeWidth="6"
             />
             <motion.circle
               cx="40" cy="40" r="34"
               fill="none"
-              stroke={themeConfig.progressStroke}
+              stroke="rgba(255,255,255,0.8)"
               strokeWidth="6"
               strokeLinecap="round"
               initial={{ strokeDasharray: "0 214" }}
@@ -118,7 +100,7 @@ function SessionCard({ nextTopic, onStartSession }) {
               transition={spring.smooth}
             />
           </svg>
-          <span className={`absolute inset-0 flex items-center justify-center text-lg font-bold ${themeConfig.textClass}`}>
+          <span className="absolute inset-0 flex items-center justify-center text-lg font-semibold text-white">
             {nextTopic?.progress}%
           </span>
         </div>
@@ -139,18 +121,6 @@ const activityIcons = {
   'coffee': Clock,
 };
 
-/**
- * Activity color schemes by type
- */
-const activityColors = {
-  'review-due': { bg: 'bg-amber-50', border: 'border-amber-200', text: 'text-amber-700', icon: 'bg-amber-100 text-amber-600', button: 'bg-amber-600' },
-  'weak-topic': { bg: 'bg-red-50', border: 'border-red-200', text: 'text-red-700', icon: 'bg-red-100 text-red-600', button: 'bg-red-600' },
-  'new-topic': { bg: 'bg-brand-50', border: 'border-brand-200', text: 'text-brand-700', icon: 'bg-brand-100 text-brand-600', button: 'bg-brand-600' },
-  'reinforce': { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-700', icon: 'bg-blue-100 text-blue-600', button: 'bg-blue-600' },
-  'simulacro': { bg: 'bg-rose-50', border: 'border-rose-200', text: 'text-rose-700', icon: 'bg-rose-100 text-rose-600', button: 'bg-rose-600' },
-  'error-review': { bg: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-700', icon: 'bg-orange-100 text-orange-600', button: 'bg-orange-600' },
-  'rest': { bg: 'bg-emerald-50', border: 'border-emerald-200', text: 'text-emerald-700', icon: 'bg-emerald-100 text-emerald-600', button: 'bg-emerald-600' },
-};
 
 /**
  * ExamCountdown - Shows days until exam
@@ -158,20 +128,13 @@ const activityColors = {
 function ExamCountdown({ countdown }) {
   if (!countdown || countdown.daysLeft === null) return null;
 
-  const urgencyStyles = {
-    calm: 'bg-brand-50 text-brand-700 border-brand-200',
-    focus: 'bg-blue-50 text-blue-700 border-blue-200',
-    warning: 'bg-amber-50 text-amber-700 border-amber-200',
-    critical: 'bg-red-50 text-red-700 border-red-200',
-  };
-
   return (
     <motion.div
-      className={`flex items-center gap-2 px-3 py-1.5 rounded-full border text-xs font-medium ${urgencyStyles[countdown.urgencyLevel] || urgencyStyles.calm}`}
+      className="flex items-center gap-2 bg-gray-100 rounded-full px-3 py-1.5 text-xs text-gray-600"
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
     >
-      <Calendar className="w-3.5 h-3.5" />
+      <Calendar className="w-3.5 h-3.5 text-gray-500" />
       {countdown.message}
     </motion.div>
   );
@@ -199,7 +162,6 @@ function TodayPlanSection({ activities, dailyInsight, onStartActivity }) {
 
       <div className="space-y-2">
         {activities.map((activity, idx) => {
-          const colors = activityColors[activity.type] || activityColors['new-topic'];
           const IconComponent = activityIcons[activity.icon] || Zap;
           const isRest = activity.type === 'rest';
 
@@ -208,13 +170,13 @@ function TodayPlanSection({ activities, dailyInsight, onStartActivity }) {
               key={`${activity.type}-${idx}`}
               onClick={() => !isRest && onStartActivity(activity)}
               disabled={isRest}
-              className={`w-full ${colors.bg} border ${colors.border} rounded-xl p-3.5 text-left transition-all ${!isRest ? 'active:scale-[0.98]' : 'cursor-default'}`}
+              className={`w-full bg-white border border-gray-100 rounded-xl p-4 text-left transition-all ${!isRest ? 'active:scale-[0.98]' : 'cursor-default'}`}
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.15 + idx * 0.08 }}
+              transition={{ delay: 0.15 }}
             >
               <div className="flex items-center gap-3">
-                <div className={`w-10 h-10 rounded-xl ${colors.icon} flex items-center justify-center flex-shrink-0`}>
+                <div className="w-10 h-10 rounded-xl bg-gray-100 text-gray-600 flex items-center justify-center flex-shrink-0">
                   <IconComponent className="w-5 h-5" />
                 </div>
                 <div className="flex-1 min-w-0">
@@ -227,7 +189,7 @@ function TodayPlanSection({ activities, dailyInsight, onStartActivity }) {
                   <p className="text-xs text-gray-500 mt-0.5 truncate">{activity.description}</p>
                 </div>
                 {!isRest && (
-                  <div className={`w-8 h-8 rounded-lg ${colors.button} flex items-center justify-center flex-shrink-0`}>
+                  <div className="w-8 h-8 rounded-lg bg-gray-900 flex items-center justify-center flex-shrink-0">
                     <Play className="w-4 h-4 text-white" />
                   </div>
                 )}
@@ -243,43 +205,25 @@ function TodayPlanSection({ activities, dailyInsight, onStartActivity }) {
 /**
  * StatCard - Streak/Accuracy stat card
  */
-function StatCard({ icon: Icon, value, label, colorScheme, onClick, badge, delay = 0 }) {
-  const colorClasses = {
-    amber: {
-      bg: 'bg-amber-50',
-      border: 'border-amber-100',
-      icon: 'text-amber-500',
-      badge: 'text-amber-600 bg-amber-100',
-    },
-    purple: {
-      bg: 'bg-brand-50',
-      border: 'border-brand-100',
-      icon: 'text-brand-500',
-      badge: 'text-emerald-600 bg-emerald-50',
-    },
-  };
-
-  const colors = colorClasses[colorScheme] || colorClasses.purple;
-
+function StatCard({ icon: Icon, value, label, colorScheme: _colorScheme, onClick, badge, delay = 0 }) {
   return (
     <motion.button
       onClick={onClick}
-      className={`${colors.bg} rounded-2xl p-4 text-left border ${colors.border}`}
+      className="bg-white rounded-2xl p-4 text-left border border-gray-100"
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay }}
-      whileHover={{ scale: 1.02, y: -2 }}
-      whileTap={{ scale: 0.98 }}
+      whileTap={{ scale: 0.99 }}
     >
       <div className="flex items-center justify-between mb-3">
-        <Icon className={`w-6 h-6 ${colors.icon}`} />
+        <Icon className="w-6 h-6 text-gray-400" />
         {badge && (
-          <span className={`text-xs ${colors.badge} px-2 py-0.5 rounded-full`}>
+          <span className="text-xs text-gray-500 bg-gray-100 px-2 py-0.5 rounded-full">
             {badge}
           </span>
         )}
       </div>
-      <p className="text-3xl font-bold text-gray-900 mb-0.5">{value}</p>
+      <p className="text-4xl font-light text-gray-900 mb-0.5">{value}</p>
       <p className="text-xs text-gray-500">{label}</p>
     </motion.button>
   );
@@ -289,46 +233,40 @@ function StatCard({ icon: Icon, value, label, colorScheme, onClick, badge, delay
  * LevelCard - XP/Level display with progress to next level
  */
 const LEVEL_THRESHOLDS = [0, 50, 150, 300, 500, 750, 1000, 1500, 2000, 3000];
-const LEVEL_NAMES = ['Principiante', 'Iniciado', 'Estudiante', 'Avanzado', 'Constante', 'Experto', 'Veterano', 'Maestro', 'Erudito', 'Leyenda'];
-const LEVEL_EMOJIS = ['🌱', '📖', '📝', '💪', '🔥', '⭐', '🏅', '🎓', '👑', '🏆'];
 
-function LevelCard({ level, xp, description, onClick }) {
+function LevelCard({ level, xp, onClick }) {
   const currentThreshold = LEVEL_THRESHOLDS[Math.min(level - 1, LEVEL_THRESHOLDS.length - 1)] || 0;
   const nextThreshold = LEVEL_THRESHOLDS[Math.min(level, LEVEL_THRESHOLDS.length - 1)] || currentThreshold + 100;
   const progressToNext = nextThreshold > currentThreshold
     ? Math.min(Math.round(((xp - currentThreshold) / (nextThreshold - currentThreshold)) * 100), 100)
     : 100;
-  const emoji = LEVEL_EMOJIS[Math.min(level - 1, LEVEL_EMOJIS.length - 1)] || '🌱';
   const remaining = Math.max(nextThreshold - xp, 0);
+
+  // Count completed weeks (rough estimate: 5 questions/day avg, 7 days)
+  const weeksStudying = Math.max(1, Math.round(xp / 35));
 
   return (
     <motion.button
       onClick={onClick}
-      className="col-span-2 bg-brand-600 rounded-2xl p-4 text-white"
+      className="col-span-2 bg-gray-900 rounded-2xl p-4 text-white"
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.35 }}
-      whileHover={{ scale: 1.01 }}
       whileTap={{ scale: 0.99 }}
     >
       <div className="flex items-center justify-between mb-3">
-        <div className="flex items-center gap-3">
-          <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl">
-            {emoji}
-          </div>
-          <div>
-            <p className="font-bold text-lg">Nivel {level}</p>
-            <p className="text-sm text-white/80">{description}</p>
-          </div>
+        <div>
+          <p className="font-semibold text-lg">{xp} preguntas respondidas</p>
+          <p className="text-sm text-white/60">{weeksStudying} {weeksStudying === 1 ? 'semana' : 'semanas'} estudiando</p>
         </div>
         <div className="text-right">
-          <p className="text-2xl font-bold">{xp}</p>
-          <p className="text-xs text-white/70">preguntas</p>
+          <p className="text-xs text-white/50 uppercase tracking-wider">Nivel</p>
+          <p className="text-3xl font-light text-white">{level}</p>
         </div>
       </div>
 
       {/* Progress to next level */}
-      <div className="w-full h-1.5 bg-white/20 rounded-full overflow-hidden">
+      <div className="w-full h-1.5 bg-white/10 rounded-full overflow-hidden">
         <motion.div
           className="h-full bg-white/70 rounded-full"
           initial={{ width: 0 }}
@@ -336,9 +274,9 @@ function LevelCard({ level, xp, description, onClick }) {
           transition={{ duration: 0.8, ease: 'easeOut' }}
         />
       </div>
-      <p className="text-xs text-white/60 mt-1.5">
+      <p className="text-xs text-white/40 mt-1.5">
         {remaining > 0
-          ? `${remaining} preguntas para Nivel ${level + 1}`
+          ? `${remaining} preguntas para el siguiente nivel`
           : 'Nivel maximo alcanzado'}
       </p>
     </motion.button>
@@ -368,17 +306,16 @@ function WeeklyGoalCard({ weeklyData = [0, 0, 0, 0, 0, 0, 0], todayStats: _today
     >
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
-          <CalendarCheck className="w-5 h-5 text-brand-500" />
+          <CalendarCheck className="w-5 h-5 text-gray-400" />
           <span className="text-sm font-semibold text-gray-900">Meta semanal</span>
         </div>
         <span className="text-xs text-gray-500">{weeklyTotal}/{goal} preguntas</span>
       </div>
 
       {/* Progress bar */}
-      <div className="w-full h-2 bg-gray-100 rounded-full mb-3 overflow-hidden">
+      <div className="w-full h-1.5 bg-gray-100 rounded-full mb-3 overflow-hidden">
         <motion.div
-          className="h-full rounded-full"
-          style={{ backgroundColor: percent >= 100 ? '#10b981' : 'var(--color-brand-500)' }}
+          className="h-full bg-gray-900 rounded-full"
           initial={{ width: 0 }}
           animate={{ width: `${percent}%` }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -397,11 +334,11 @@ function WeeklyGoalCard({ weeklyData = [0, 0, 0, 0, 0, 0, 0], todayStats: _today
                 style={{
                   height: barH,
                   backgroundColor: isToday
-                    ? 'var(--color-brand-500)'
-                    : count > 0 ? 'var(--color-brand-200)' : '#f3f4f6'
+                    ? '#111827'
+                    : count > 0 ? '#d1d5db' : '#f3f4f6'
                 }}
               />
-              <span className={`text-[10px] ${isToday ? 'font-bold text-brand-600' : 'text-gray-400'}`}>
+              <span className={`text-[10px] ${isToday ? 'font-semibold text-gray-900' : 'text-gray-400'}`}>
                 {DAY_LABELS[idx]}
               </span>
             </div>
@@ -411,7 +348,7 @@ function WeeklyGoalCard({ weeklyData = [0, 0, 0, 0, 0, 0, 0], todayStats: _today
 
       {/* Motivation */}
       {percent >= 100 && (
-        <p className="text-xs text-emerald-600 mt-2 font-medium">Meta cumplida esta semana</p>
+        <p className="text-xs text-gray-900 mt-2 font-medium">Meta cumplida esta semana</p>
       )}
     </motion.div>
   );
@@ -569,21 +506,6 @@ export default function SoftFortHome({
   const level = levelThresholds.filter(t => totalAnswered >= t).length;
   const xp = totalAnswered;
 
-  // Progress description instead of fake percentile
-  const levelDescriptions = [
-    'Empezando',
-    'Primeros pasos',
-    'Cogiendo ritmo',
-    'En progreso',
-    'Constante',
-    'Avanzado',
-    'Experto',
-    'Veterano',
-    'Maestro',
-    'Leyenda'
-  ];
-  const levelDescription = levelDescriptions[Math.min(level, levelDescriptions.length) - 1] || 'Empezando';
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -604,10 +526,10 @@ export default function SoftFortHome({
       {/* Greeting section with exam countdown */}
       <div className="flex items-start justify-between">
         <div>
-          <p className="text-xs text-brand-500 font-medium uppercase tracking-wider">
+          <p className="text-xs text-gray-400">
             {new Date().toLocaleDateString('es-ES', { weekday: 'long' })}
           </p>
-          <h2 className="text-xl font-bold text-gray-900">
+          <h2 className="text-xl font-semibold text-gray-900">
             Hola, {userName.split(' ')[0]}
           </h2>
         </div>
@@ -693,7 +615,6 @@ export default function SoftFortHome({
         <LevelCard
           level={level}
           xp={xp}
-          description={levelDescription}
           onClick={onLevelClick}
         />
       </div>}

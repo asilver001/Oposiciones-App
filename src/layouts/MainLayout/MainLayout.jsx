@@ -110,7 +110,7 @@ export default function MainLayout() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 pb-32">
+    <div className="min-h-screen bg-white dark:bg-gray-950 pb-32">
       {/* Skip to content link - visible on focus for keyboard users */}
       <a
         href="#main-content"
@@ -119,37 +119,25 @@ export default function MainLayout() {
         Saltar al contenido
       </a>
 
-      {/* Fixed TopBar - matches OpositaApp.jsx style */}
+      {/* Fixed TopBar - HomeMinimal shell redesign */}
       {!hideNav && (
-        <header className="fixed top-0 left-0 right-0 z-40 bg-white/98 dark:bg-gray-900/98 backdrop-blur-lg shadow-[0_1px_3px_rgba(0,0,0,0.05)]">
+        <header className="fixed top-0 left-0 right-0 z-40 bg-white border-b border-gray-100">
           <div className="max-w-4xl mx-auto px-4">
+            {/* Main flex row */}
             <div className="flex items-center justify-between h-14">
-              {/* Left - Daily progress circle */}
+              {/* Left - Daily progress click area */}
               <button
                 onClick={() => setShowProgress(true)}
                 aria-label={`Progreso diario: ${dailyProgressPercent}% completado`}
-                className="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-brand-50 active:scale-95 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-brand-500 focus-visible:outline-offset-2"
+                className="w-12 h-12 flex items-center justify-center rounded-full"
               >
-                <svg className="w-9 h-9 transform -rotate-90" aria-hidden="true">
-                  <circle
-                    cx="18" cy="18" r="14"
-                    fill="none" stroke="var(--color-brand-100)" strokeWidth="3"
-                  />
-                  <circle
-                    cx="18" cy="18" r="14"
-                    fill="none" stroke="var(--color-brand-500)" strokeWidth="3"
-                    strokeDasharray={`${(dailyProgressPercent / 100) * 88} 88`}
-                    strokeLinecap="round"
-                    className="transition-all duration-500"
-                  />
-                </svg>
-                <span className="absolute text-[10px] font-bold text-brand-600" aria-hidden="true">
-                  {dailyProgressPercent}
+                <span className="text-[13px] font-semibold text-gray-500" aria-hidden="true">
+                  {dailyProgressPercent}%
                 </span>
               </button>
 
               {/* Center - Contextual title */}
-              <h1 className="text-[15px] font-semibold text-gray-800 dark:text-gray-200 tracking-tight">
+              <h1 className="text-[15px] font-semibold text-gray-900 tracking-tight">
                 {TAB_TITLES[activeTab] || 'Oposita Smart'}
               </h1>
 
@@ -157,11 +145,20 @@ export default function MainLayout() {
               <button
                 onClick={() => setShowSettings(true)}
                 aria-label="Abrir ajustes"
-                className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 active:scale-95 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-brand-500 focus-visible:outline-offset-2"
+                className="w-12 h-12 flex items-center justify-center rounded-full"
               >
                 <Settings className="w-[18px] h-[18px] text-gray-500" />
               </button>
             </div>
+          </div>
+
+          {/* Linear progress bar */}
+          <div className="h-0.5 bg-gray-100">
+            <div
+              className="h-full bg-gray-900 transition-all duration-500"
+              style={{ width: `${dailyProgressPercent}%` }}
+              aria-hidden="true"
+            />
           </div>
         </header>
       )}

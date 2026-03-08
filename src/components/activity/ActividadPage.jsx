@@ -38,12 +38,12 @@ import {
 
 // Study modes configuration - all modes available for beta
 const getStudyModes = (_premiumMode) => [
-  { id: 'test-rapido', icon: Zap, title: 'Test Rápido', desc: '5-10 preguntas', time: '~5 min', gradient: 'bg-brand-600', status: 'disponible' },
-  { id: 'practica-tema', icon: Target, title: 'Por Tema', desc: 'Elige tema', time: '~15 min', gradient: 'bg-blue-600', status: 'disponible' },
-  { id: 'repaso-errores', icon: AlertTriangle, title: 'Errores', desc: 'Pendientes', time: 'Variable', gradient: 'bg-amber-600', status: 'disponible', badge: '12' },
-  { id: 'flashcards', icon: BookMarked, title: 'Flashcards', desc: 'Memorización', time: '~10 min', gradient: 'bg-emerald-600', status: 'disponible' },
-  { id: 'simulacro', icon: Clock, title: 'Simulacro', desc: '100 preguntas', time: '60 min', gradient: 'bg-rose-600', status: 'disponible' },
-  { id: 'lectura', icon: BookOpen, title: 'Solo Lectura', desc: 'Sin contestar', time: 'Libre', gradient: 'bg-indigo-600', status: 'disponible' },
+  { id: 'test-rapido', icon: Zap, title: 'Test Rápido', desc: '5-10 preguntas', time: '~5 min', gradient: 'bg-gray-100', status: 'disponible' },
+  { id: 'practica-tema', icon: Target, title: 'Por Tema', desc: 'Elige tema', time: '~15 min', gradient: 'bg-gray-100', status: 'disponible' },
+  { id: 'repaso-errores', icon: AlertTriangle, title: 'Errores', desc: 'Pendientes', time: 'Variable', gradient: 'bg-gray-100', status: 'disponible', badge: '12' },
+  { id: 'flashcards', icon: BookMarked, title: 'Flashcards', desc: 'Memorización', time: '~10 min', gradient: 'bg-gray-100', status: 'disponible' },
+  { id: 'simulacro', icon: Clock, title: 'Simulacro', desc: '100 preguntas', time: '60 min', gradient: 'bg-gray-100', status: 'disponible' },
+  { id: 'lectura', icon: BookOpen, title: 'Solo Lectura', desc: 'Sin contestar', time: 'Libre', gradient: 'bg-gray-100', status: 'disponible' },
 ];
 
 /**
@@ -82,11 +82,11 @@ function StudyModesTab({ onSelectMode, selectedMode, onStartSession, onSwipeRigh
             disabled={isDisabled}
           >
             <div className={`bg-white rounded-xl p-3 border-2 transition-all ${
-              isSelected ? 'border-brand-400 shadow-md' : 'border-gray-100'
+              isSelected ? 'border-gray-900' : 'border-gray-100'
             }`}>
               <div className="flex items-center gap-3">
                 <div className={`w-11 h-11 rounded-xl ${mode.gradient} flex items-center justify-center`}>
-                  <Icon className="w-5 h-5 text-white" />
+                  <Icon className="w-5 h-5 text-gray-600" />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-2">
@@ -104,7 +104,7 @@ function StudyModesTab({ onSelectMode, selectedMode, onStartSession, onSwipeRigh
                   <p className="text-xs text-gray-500">{mode.desc} · {mode.time}</p>
                 </div>
                 <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${
-                  isSelected ? 'border-brand-500 bg-brand-500' : 'border-gray-300'
+                  isSelected ? 'border-gray-900 bg-gray-900' : 'border-gray-300'
                 }`}>
                   {isSelected && <Check className="w-3 h-3 text-white" />}
                 </div>
@@ -121,7 +121,7 @@ function StudyModesTab({ onSelectMode, selectedMode, onStartSession, onSwipeRigh
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
             onClick={() => onStartSession(selectedMode)}
-            className="w-full mt-4 bg-brand-600 text-white py-3 rounded-xl font-semibold"
+            className="w-full mt-4 bg-gray-900 text-white py-3 rounded-xl font-semibold"
           >
             Comenzar →
           </motion.button>
@@ -492,7 +492,7 @@ export default function ActividadPage({
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="flex items-center gap-2 bg-brand-100 text-brand-700 px-3 py-1.5 rounded-full text-sm font-medium"
+              className="flex items-center gap-2 bg-gray-100 text-gray-700 px-3 py-1.5 rounded-full text-sm font-medium"
             >
               <Dices className="w-4 h-4" />
               <span>{userStates[simulationMode].emoji}</span>
@@ -512,7 +512,7 @@ export default function ActividadPage({
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex-1 py-2.5 px-3 rounded-lg flex items-center justify-center gap-2 transition-all ${
                     isActive
-                      ? 'bg-brand-100 text-brand-700'
+                      ? 'bg-gray-100 text-gray-900'
                       : 'text-gray-500 hover:bg-gray-50'
                   }`}
                 >
@@ -524,7 +524,7 @@ export default function ActividadPage({
           </div>
           {/* Animated indicator */}
           <motion.div
-            className="h-0.5 bg-brand-500 rounded-full mt-1.5"
+            className="h-0.5 bg-gray-900 rounded-full mt-1.5"
             animate={{ x: `${activeTab * 100}%`, width: `${100 / tabs.length}%` }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
           />

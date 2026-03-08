@@ -19,10 +19,10 @@ const typeConfig = {
   },
   info: {
     icon: Info,
-    bg: 'bg-brand-50',
-    border: 'border-brand-200',
-    text: 'text-brand-800',
-    iconColor: 'text-brand-500',
+    bg: 'bg-gray-50',
+    border: 'border-gray-200',
+    text: 'text-gray-800',
+    iconColor: 'text-gray-500',
   },
   warning: {
     icon: AlertTriangle,

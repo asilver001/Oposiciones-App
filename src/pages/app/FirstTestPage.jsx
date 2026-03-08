@@ -22,9 +22,9 @@ export default function FirstTestPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-6">
+    <div className="min-h-screen bg-white flex flex-col items-center justify-center p-6">
       <div className="text-center max-w-md">
-        <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mx-auto mb-6">
+        <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
           <span className="text-3xl">📝</span>
         </div>
         <h2 className="text-2xl font-bold text-gray-800 mb-4">
@@ -36,13 +36,13 @@ export default function FirstTestPage() {
         <div className="space-y-3">
           <button
             onClick={() => setStarted(true)}
-            className="w-full py-4 bg-brand-600 text-white font-semibold rounded-2xl hover:bg-brand-700 transition-colors"
+            className="w-full py-4 bg-gray-900 text-white font-semibold rounded-2xl transition-colors"
           >
             Empezar test
           </button>
           <button
             onClick={() => navigate(ROUTES.HOME, { replace: true })}
-            className="w-full py-3 text-brand-600 font-medium"
+            className="w-full py-3 text-gray-500 font-medium"
           >
             Saltar por ahora
           </button>

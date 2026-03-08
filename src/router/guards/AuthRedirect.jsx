@@ -16,8 +16,8 @@ export default function AuthRedirect() {
   // Show loading while checking auth status
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-brand-50 dark:bg-gray-950">
-        <div className="animate-pulse text-brand-600">Cargando...</div>
+      <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-950">
+        <div className="animate-pulse text-gray-400">Cargando...</div>
       </div>
     );
   }
