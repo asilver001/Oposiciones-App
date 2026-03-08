@@ -15,6 +15,7 @@ import { TemarioDendrite, TemarioHexMap } from '@/features/draft/TemarioGraph';
 import RoadmapErrorBoundary from './RoadmapErrorBoundary';
 import HomeProposalA from './HomeProposalA';
 import HomeProposalC from './HomeProposalC';
+import HomeMinimal, { HomeUltraMinimal, HomeCardFocus } from './HomeMinimal';
 import { useTopics } from '@/hooks/useTopics';
 import {
   ArrowLeft, Check, X, ChevronRight, ChevronDown, ChevronUp, ChevronLeft,
@@ -7554,7 +7555,7 @@ function TemarioGraphTab({ onStartTopicStudy }) {
 }
 
 export default function DraftFeatures({ onClose, onStartTopicStudy }) {
-  const [activeTab, setActiveTab] = useState('home-a'); // Default to Home Proposal A
+  const [activeTab, setActiveTab] = useState('home-minimal'); // Default to new minimal design
   const [selectedTema, setSelectedTema] = useState(null);
   const [showAllTemas, setShowAllTemas] = useState(false);
   const [showPrecisionModal, setShowPrecisionModal] = useState(false);
@@ -7579,7 +7580,11 @@ export default function DraftFeatures({ onClose, onStartTopicStudy }) {
   ];
 
   const tabs = [
-    // Home page proposals
+    // Home page proposals - NEW MINIMAL DESIGNS
+    { id: 'home-minimal', label: '✨ Home Minimal' },
+    { id: 'home-ultra', label: '🌿 Home Ultra' },
+    { id: 'home-card', label: '📋 Home Card' },
+    // Legacy home proposals
     { id: 'home-a', label: '🏠 Home A: Focus' },
     { id: 'home-c', label: '🏠 Home C: Drawer' },
     // Active drafts
@@ -7658,6 +7663,57 @@ export default function DraftFeatures({ onClose, onStartTopicStudy }) {
       {/* Content */}
       <main className="max-w-lg mx-auto px-4 py-6 pb-24">
         <AnimatePresence mode="wait">
+          {/* HOME MINIMAL — Clean & Calm */}
+          {activeTab === 'home-minimal' && (
+            <motion.div
+              key="home-minimal"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <div className="bg-gray-50 border border-gray-200 rounded-xl p-3 text-sm text-gray-700 mb-4">
+                <strong>✨ Home Minimal:</strong> Diseño limpio con mucho espacio en blanco. Stats simplificados, un CTA principal oscuro, tipografía clara.
+              </div>
+              <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
+                <HomeMinimal />
+              </div>
+            </motion.div>
+          )}
+
+          {/* HOME ULTRA MINIMAL — Maximum Whitespace */}
+          {activeTab === 'home-ultra' && (
+            <motion.div
+              key="home-ultra"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <div className="bg-gray-50 border border-gray-200 rounded-xl p-3 text-sm text-gray-700 mb-4">
+                <strong>🌿 Home Ultra Minimal:</strong> Solo lo esencial. Un número destacado, un botón de acción. Máximo espacio en blanco.
+              </div>
+              <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
+                <HomeUltraMinimal />
+              </div>
+            </motion.div>
+          )}
+
+          {/* HOME CARD FOCUS — Central Card */}
+          {activeTab === 'home-card' && (
+            <motion.div
+              key="home-card"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <div className="bg-gray-50 border border-gray-200 rounded-xl p-3 text-sm text-gray-700 mb-4">
+                <strong>📋 Home Card Focus:</strong> Una tarjeta central con la acción principal. Fondo sutil, stats en fila inferior.
+              </div>
+              <div className="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
+                <HomeCardFocus />
+              </div>
+            </motion.div>
+          )}
+
           {/* HOME PROPOSAL A — Focus Mode */}
           {activeTab === 'home-a' && (
             <motion.div
