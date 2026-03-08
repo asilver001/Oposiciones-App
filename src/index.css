@@ -4,15 +4,15 @@
   /* === Font === */
   --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
 
-  /* === Brand (Purple) === */
+  /* === Brand (Purple) - Default Recipe === */
   --color-brand-50: #faf5ff;
   --color-brand-100: #f3e8ff;
   --color-brand-200: #e9d5ff;
   --color-brand-300: #d8b4fe;
   --color-brand-400: #c084fc;
   --color-brand-500: #a855f7;
-  --color-brand-600: #7c3aed;
-  --color-brand-700: #6d28d9;
+  --color-brand-600: #9333ea;
+  --color-brand-700: #7e22ce;
 
   /* === Semantic: Success === */
   --color-success-50: #f0fdf4;
@@ -33,8 +33,62 @@
   --color-danger-600: #dc2626;
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   CSS CUSTOM PROPERTIES (Set by ThemeProvider, consumed by components)
+   These are the default values, ThemeProvider overrides them
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Surface colors */
+  --surface-primary: #ffffff;
+  --surface-secondary: #f9fafb;
+  --surface-tertiary: #f3f4f6;
+  --surface-inverse: #111827;
+
+  /* Text colors */
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --text-muted: #9ca3af;
+  --text-inverse: #ffffff;
+
+  /* Border colors */
+  --border-light: #f3f4f6;
+  --border-default: #e5e7eb;
+  --border-dark: #d1d5db;
+
+  /* Semantic colors */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+
+  /* Component: Card */
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --card-radius: 1rem;
+  --card-padding: 1rem;
+  --card-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+
+  /* Component: Button */
+  --button-radius: 0.75rem;
+  --button-padding-x: 1rem;
+  --button-padding-y: 0.75rem;
+
+  /* Component: Stat */
+  --stat-value-size: 2rem;
+  --stat-label-size: 0.75rem;
+
+  /* Layout */
+  --page-gutter: 1rem;
+  --section-gap: 1.5rem;
+  --card-gap: 0.75rem;
+}
+
 /* === Dark Mode === */
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* ═══════════════════════════════════════════════════════════════
+   BASE STYLES
+   ═══════════════════════════════════════════════════════════════ */
 
 body {
   margin: 0;
@@ -42,14 +96,88 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: white;
-  color: #111827;
+  background-color: var(--surface-primary);
+  color: var(--text-primary);
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.dark body {
-  background-color: #0f172a;
-  color: #f8fafc;
+/* ═══════════════════════════════════════════════════════════════
+   UTILITY CLASSES (for token-based styling)
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Surface backgrounds */
+.bg-surface { background-color: var(--surface-primary); }
+.bg-surface-secondary { background-color: var(--surface-secondary); }
+.bg-surface-tertiary { background-color: var(--surface-tertiary); }
+.bg-surface-inverse { background-color: var(--surface-inverse); }
+
+/* Text colors */
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-muted { color: var(--text-muted); }
+.text-inverse { color: var(--text-inverse); }
+
+/* Border colors */
+.border-light { border-color: var(--border-light); }
+.border-default { border-color: var(--border-default); }
+.border-dark { border-color: var(--border-dark); }
+
+/* Card component class */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--card-shadow);
 }
+
+.card-lg {
+  padding: calc(var(--card-padding) * 1.5);
+}
+
+/* Stat component */
+.stat-value {
+  font-size: var(--stat-value-size);
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+.stat-label {
+  font-size: var(--stat-label-size);
+  color: var(--text-muted);
+}
+
+/* Layout */
+.page-gutter {
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
+}
+
+.section-gap {
+  margin-bottom: var(--section-gap);
+}
+
+/* Button base with tokens */
+.btn {
+  border-radius: var(--button-radius);
+  padding: var(--button-padding-y) var(--button-padding-x);
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.btn-primary {
+  background-color: var(--surface-inverse);
+  color: var(--text-inverse);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ACCESSIBILITY
+   ═══════════════════════════════════════════════════════════════ */
 
 /* Skip-to-content link */
 .sr-only:focus {
@@ -58,4 +186,23 @@ body {
   width: auto !important;
   height: auto !important;
   overflow: visible !important;
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SCROLLBAR HIDE UTILITY
+   ═══════════════════════════════════════════════════════════════ */
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

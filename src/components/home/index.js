@@ -1,10 +1,11 @@
 /**
- * Home Components - Oposita Smart
+ * Home Components - Token-based UI components
  *
- * Export all home-related components for easy imports.
+ * All components consume design tokens from ThemeContext.
+ * Never hardcode values - use CSS custom properties.
  */
 
-export { default as SoftFortHome } from './SoftFortHome';
-export { default as FortalezaVisual, statusConfig } from './FortalezaVisual';
-// TopBar moved to @layouts/MainLayout - re-export for backwards compatibility
-export { TopBar } from '@layouts/MainLayout';
+export { default as SessionCard, SessionCardOutlined } from './SessionCard';
+export { default as StatsRow, StatsRowHorizontal, StatsRowLeftAligned } from './StatsRow';
+export { default as WeeklyProgress, WeeklyProgressWithLabel, WeeklyProgressMinimal } from './WeeklyProgress';
+export { default as FortressPreview, FortressPreviewLinear, FortressPreviewCircular } from './FortressPreview';
