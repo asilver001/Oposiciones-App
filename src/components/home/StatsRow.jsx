@@ -1,12 +1,8 @@
 /**
- * StatsRow - Stats display with multiple layout variants
+ * StatsRow - Simple stats display
  *
- * Variants:
- * - grid: 2x2 grid with dividers (default)
- * - row: Horizontal row with dot separators
- * - integrated: Compact stats for embedding in other cards
- *
- * Uses design tokens from ThemeContext.
+ * Uses design tokens. Numbers use display font, labels use body font.
+ * "Días activos" instead of "Racha" (wellness philosophy).
  */
 
 import { motion } from 'framer-motion';
@@ -23,164 +19,82 @@ export const defaultStats = [
 ];
 
 /**
- * StatsGrid (OPCIÓN A) - 2x2 grid with dividers
+ * StatsRow - 2x2 grid without dividers
  *
- * Card with subtle border, vertical and horizontal dividers.
+ * Gray card background, no internal lines.
  * Precision stat highlighted in brand green.
  */
-export default function StatsRow({ stats = defaultStats, variant = 'grid' }) {
-  // Route to correct variant
-  if (variant === 'row') return <StatsRowCompact stats={stats} />;
-  if (variant === 'integrated') return <StatsRowIntegrated stats={stats} />;
-
+export default function StatsRow({ stats = defaultStats }) {
   return (
     <div
-      className="grid grid-cols-2 rounded-xl overflow-hidden"
+      className="grid grid-cols-2 gap-4 rounded-xl p-4"
       style={{
-        backgroundColor: 'var(--card-bg, #ffffff)',
-        border: '1px solid var(--stat-divider-color, #F0F0F0)',
+        backgroundColor: 'var(--surface-secondary, #f9fafb)',
       }}
     >
-      {stats.map((stat, index) => {
-        const isRight = index % 2 === 1;
-        const isBottom = index >= 2;
-
-        return (
-          <motion.div
-            key={stat.key || stat.label}
-            className="flex flex-col items-center justify-center text-center"
-            style={{
-              padding: 'var(--stat-cell-padding, 1.25rem)',
-              borderLeft: isRight ? '1px solid var(--stat-divider-color, #F0F0F0)' : 'none',
-              borderTop: isBottom ? '1px solid var(--stat-divider-color, #F0F0F0)' : 'none',
-            }}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.05 }}
-          >
-            <p
-              style={{
-                fontSize: 'var(--stat-value-size, 1.75rem)',
-                fontWeight: 700,
-                fontFamily: 'var(--font-display, inherit)',
-                color: stat.highlight
-                  ? 'var(--stat-highlight-color, #2D6A4F)'
-                  : 'var(--text-primary, #1A1A1A)',
-                lineHeight: 1.2,
-              }}
-            >
-              {stat.value}
-            </p>
-            <p
-              style={{
-                fontSize: 'var(--stat-label-size, 0.75rem)',
-                fontWeight: 'var(--stat-label-weight, 500)',
-                color: 'var(--stat-label-color, #9CA3AF)',
-                letterSpacing: 'var(--stat-label-spacing, 0.02em)',
-                marginTop: 'var(--stat-gap, 0.25rem)',
-              }}
-            >
-              {stat.label}
-            </p>
-          </motion.div>
-        );
-      })}
-    </div>
-  );
-}
-
-/**
- * StatsRowCompact (OPCIÓN B) - Horizontal row with dot separators
- *
- * No card background, just text. Compact and minimal.
- */
-export function StatsRowCompact({ stats = defaultStats }) {
-  return (
-    <div className="flex items-center justify-center gap-1 flex-wrap">
       {stats.map((stat, index) => (
-        <div key={stat.key || stat.label} className="flex items-center">
-          {/* Dot separator (except first item) */}
-          {index > 0 && (
-            <span
-              className="mx-3"
-              style={{ color: 'var(--text-muted, #9CA3AF)' }}
-            >
-              ·
-            </span>
-          )}
-
-          {/* Stat */}
-          <div className="text-center">
-            <span
-              style={{
-                fontSize: '1.5rem',
-                fontWeight: 700,
-                fontFamily: 'var(--font-display, inherit)',
-                color: stat.highlight
-                  ? 'var(--stat-highlight-color, #2D6A4F)'
-                  : 'var(--text-primary, #1A1A1A)',
-              }}
-            >
-              {stat.value}
-            </span>
-            <span
-              className="ml-1"
-              style={{
-                fontSize: '0.6875rem',
-                fontWeight: 500,
-                color: 'var(--stat-label-color, #9CA3AF)',
-                letterSpacing: '0.02em',
-              }}
-            >
-              {stat.label}
-            </span>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-/**
- * StatsRowIntegrated (OPCIÓN C) - Compact inline stats
- *
- * For embedding inside session cards. Shows only 2 key stats.
- */
-export function StatsRowIntegrated({ stats = defaultStats }) {
-  // Only show precision and active days for integrated view
-  const keyStats = stats.filter(s =>
-    s.key === 'precision' || s.key === 'activeDays' ||
-    s.label === 'Precisión' || s.label === 'Días activos'
-  ).slice(0, 2);
-
-  return (
-    <div className="flex items-center gap-4">
-      {keyStats.map((stat, index) => (
-        <div
+        <motion.div
           key={stat.key || stat.label}
-          className="flex items-center gap-1.5"
+          className="flex flex-col items-center justify-center text-center py-2"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.05 }}
         >
-          <span
+          <p
             style={{
-              fontSize: '0.875rem',
-              fontWeight: 600,
+              fontSize: 'var(--stat-value-size, 1.75rem)',
+              fontWeight: 700,
               fontFamily: 'var(--font-display, inherit)',
               color: stat.highlight
                 ? 'var(--stat-highlight-color, #2D6A4F)'
-                : 'var(--text-inverse, #ffffff)',
+                : 'var(--text-primary, #1A1A1A)',
+              lineHeight: 1.2,
             }}
           >
             {stat.value}
-          </span>
-          <span
+          </p>
+          <p
             style={{
-              fontSize: '0.75rem',
-              color: 'var(--text-inverse, #ffffff)',
-              opacity: 0.7,
+              fontSize: 'var(--stat-label-size, 0.75rem)',
+              fontWeight: 'var(--stat-label-weight, 500)',
+              color: 'var(--stat-label-color, #9CA3AF)',
+              letterSpacing: 'var(--stat-label-spacing, 0.02em)',
+              marginTop: 'var(--stat-gap, 0.25rem)',
             }}
           >
             {stat.label}
-          </span>
+          </p>
+        </motion.div>
+      ))}
+    </div>
+  );
+}
+
+/**
+ * StatsRowHorizontal - Horizontal row layout
+ */
+export function StatsRowHorizontal({ stats = defaultStats }) {
+  return (
+    <div className="flex items-center justify-around py-6">
+      {stats.map((stat) => (
+        <div key={stat.key || stat.label} className="text-center">
+          <p
+            className="text-2xl font-semibold"
+            style={{
+              fontFamily: 'var(--font-display, inherit)',
+              color: stat.highlight
+                ? 'var(--stat-highlight-color, #2D6A4F)'
+                : 'var(--text-primary)',
+            }}
+          >
+            {stat.value}
+          </p>
+          <p
+            className="text-xs mt-1"
+            style={{ color: 'var(--text-muted)' }}
+          >
+            {stat.label}
+          </p>
         </div>
       ))}
     </div>
@@ -188,50 +102,38 @@ export function StatsRowIntegrated({ stats = defaultStats }) {
 }
 
 /**
- * StatsRowSecondary - For remaining stats when using integrated layout
- *
- * Shows less important stats in a simple row below the session card.
+ * StatsRowLeftAligned - Left-aligned (for serious/tool style)
  */
-export function StatsRowSecondary({ stats = defaultStats }) {
-  // Show questions and hours (the non-key stats)
-  const secondaryStats = stats.filter(s =>
-    s.key === 'questions' || s.key === 'hours' ||
-    s.label === 'Preguntas' || s.label === 'Horas'
-  );
-
-  if (secondaryStats.length === 0) return null;
-
+export function StatsRowLeftAligned({ stats = defaultStats }) {
   return (
-    <div className="flex items-center justify-center gap-6 py-2">
-      {secondaryStats.map((stat) => (
-        <div
+    <div className="space-y-6">
+      {stats.map((stat, index) => (
+        <motion.div
           key={stat.key || stat.label}
-          className="flex items-baseline gap-1"
+          className="flex items-baseline gap-2"
+          initial={{ opacity: 0, x: -10 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: index * 0.1 }}
         >
           <span
+            className="text-2xl font-light"
             style={{
-              fontSize: '1.125rem',
-              fontWeight: 600,
               fontFamily: 'var(--font-display, inherit)',
-              color: 'var(--text-primary, #1A1A1A)',
+              color: stat.highlight
+                ? 'var(--stat-highlight-color, #2D6A4F)'
+                : 'var(--text-primary)',
             }}
           >
             {stat.value}
           </span>
           <span
-            style={{
-              fontSize: '0.75rem',
-              color: 'var(--text-muted, #9CA3AF)',
-            }}
+            className="text-sm"
+            style={{ color: 'var(--text-muted)' }}
           >
             {stat.label}
           </span>
-        </div>
+        </motion.div>
       ))}
     </div>
   );
 }
-
-// Legacy exports for backwards compatibility
-export { StatsRowCompact as StatsRowHorizontal };
-export { StatsRowCompact as StatsRowLeftAligned };
