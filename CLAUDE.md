@@ -220,6 +220,41 @@ CREAR → REVISAR (IA) → PUBLICAR
 
 ---
 
+## Visual Companion para Brainstorming
+
+Cuando se trabaja en diseño de features complejas o decisiones arquitectónicas, usar el **visual companion** del sistema Superpowers para mostrar opciones, diagramas y mockups en el browser.
+
+### Setup
+
+```bash
+# Iniciar servidor (Windows — siempre run_in_background: true)
+bash /c/Users/alber/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.5/skills/brainstorming/scripts/start-server.sh --project-dir /c/Users/alber/OpositaSmart
+# Leer URL desde: .superpowers/brainstorm/<session>/.server-info
+```
+
+### Flujo
+
+1. Iniciar servidor con `run_in_background: true`
+2. Leer `.server-info` para obtener la URL (ej: http://localhost:54271)
+3. Decirle al usuario que abra esa URL
+4. Escribir archivos HTML en el `screen_dir` con el Write tool (nunca heredoc/cat)
+5. Usar fragmentos HTML — el servidor añade el CSS/JS automáticamente
+6. Leer `.events` para ver las selecciones del usuario
+7. Push `waiting.html` cuando se vuelve al terminal
+
+### Cuándo usarlo
+
+- **Sí**: opciones de diseño, diagramas de flujo, mockups de UI, comparativas visuales
+- **No**: preguntas conceptuales, decisiones de API, preguntas de texto simple
+
+### Nota de diseño
+
+- `.superpowers/` ya está en `.gitignore`
+- Archivos guardados en `.superpowers/brainstorm/<session>/` como referencia histórica
+- El servidor auto-para tras 30 min de inactividad; reiniciar con el mismo comando
+
+---
+
 ## Verificación Visual con Playwright
 
 Claude puede tomar capturas de pantalla de la app para verificar cambios de UI sin depender del usuario.
