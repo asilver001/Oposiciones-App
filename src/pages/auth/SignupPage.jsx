@@ -11,7 +11,7 @@ import { ROUTES } from '../../router/routes';
 
 export default function SignupPage() {
   const navigate = useNavigate();
-  const { signUp } = useAuth();
+  const { signUp, signInWithGoogle, signInWithMagicLink } = useAuth();
 
   const handleSignUp = async (email, password, metadata) => {
     const result = await signUp(email, password, metadata);
@@ -32,6 +32,8 @@ export default function SignupPage() {
   return (
     <SignUpForm
       onSignUp={handleSignUp}
+      onGoogleLogin={signInWithGoogle}
+      onMagicLink={signInWithMagicLink}
       onGoToLogin={handleGoToLogin}
       onBack={handleBack}
     />

@@ -12,7 +12,7 @@ import { ROUTES } from '../../router/routes';
 export default function LoginPage() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { signIn, user, isAnonymous } = useAuth();
+  const { signIn, signInWithGoogle, signInWithMagicLink, user, isAnonymous } = useAuth();
 
   // Already authenticated — redirect to app
   if (user && !isAnonymous) {
@@ -45,6 +45,8 @@ export default function LoginPage() {
   return (
     <LoginForm
       onLogin={handleLogin}
+      onGoogleLogin={signInWithGoogle}
+      onMagicLink={signInWithMagicLink}
       onGoToSignUp={handleGoToSignUp}
       onForgotPassword={handleForgotPassword}
       onBack={handleBack}

@@ -153,6 +153,36 @@ export function AuthProvider({ children }) {
     }
   };
 
+  // Sign in / sign up with magic link (passwordless)
+  const signInWithMagicLink = async (email) => {
+    setError(null);
+    const redirectTo = window.location.origin + (import.meta.env.BASE_URL || '/');
+    const { data, error } = await supabase.auth.signInWithOtp({
+      email,
+      options: { emailRedirectTo: redirectTo, shouldCreateUser: true }
+    });
+    if (error) {
+      setError(error.message);
+      return { data: null, error };
+    }
+    return { data, error: null };
+  };
+
+  // Sign in with Google OAuth
+  const signInWithGoogle = async () => {
+    setError(null);
+    const redirectTo = window.location.origin + (import.meta.env.BASE_URL || '/');
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: { redirectTo }
+    });
+    if (error) {
+      setError(error.message);
+      return { data: null, error };
+    }
+    return { data, error: null };
+  };
+
   // Sign out
   const signOut = async () => {
     setError(null);
@@ -334,6 +364,8 @@ export function AuthProvider({ children }) {
     error,
     signUp,
     signIn,
+    signInWithGoogle,
+    signInWithMagicLink,
     signOut,
     deleteAccount,
     exportUserData,
