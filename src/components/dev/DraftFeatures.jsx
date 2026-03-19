@@ -25,7 +25,8 @@ import {
   Users, Medal, Percent, Activity, PieChart, ArrowUpRight,
   Settings, HelpCircle, Info, Instagram, Mail, Bell, Shield, FileText,
   Search, Heart, Scale, MapPin, GraduationCap, Lightbulb, BookMarked, ExternalLink,
-  ClipboardCheck, Home, History, Code, Shuffle, RotateCcw, ThumbsUp, ThumbsDown
+  ClipboardCheck, Home, History, Code, Shuffle, RotateCcw, ThumbsUp, ThumbsDown,
+  Flag
 } from 'lucide-react';
 
 // ============================================
@@ -7244,6 +7245,278 @@ function FlipCardsTemasDemo() {
 }
 
 // ============================================
+// STUDY SELECTOR V2 — Option A (List, green Editorial Calm)
+// ============================================
+
+const STUDY_MODES_DATA = [
+  { id: 'test-rapido', icon: Zap, title: 'Test Rápido', desc: '5-10 preguntas aleatorias', time: '~5 min' },
+  { id: 'practica-tema', icon: Target, title: 'Por Tema', desc: 'Elige tema específico', time: '~15 min' },
+  { id: 'repaso-errores', icon: AlertTriangle, title: 'Errores', desc: 'Solo preguntas falladas', time: 'Variable', badge: '12' },
+  { id: 'flashcards', icon: BookMarked, title: 'Flashcards', desc: 'Memorización con tarjetas', time: '~10 min' },
+  { id: 'simulacro', icon: Clock, title: 'Simulacro', desc: '100 preguntas cronometradas', time: '60 min' },
+  { id: 'lectura', icon: Eye, title: 'Solo Lectura', desc: 'Sin responder, libre', time: 'Libre' },
+];
+
+function StudySelectorOptionA() {
+  const [selected, setSelected] = useState(null);
+  return (
+    <div className="space-y-3">
+      <div className="mb-4">
+        <span className="text-xs font-bold uppercase tracking-widest" style={{ color: '#B5B5B0' }}>Opción A — Lista con estado seleccionado</span>
+        <p className="text-xs text-gray-500 mt-1">Tap para seleccionar · CTA aparece al elegir modo</p>
+      </div>
+      {STUDY_MODES_DATA.map((mode) => {
+        const Icon = mode.icon;
+        const isSel = selected === mode.id;
+        return (
+          <button
+            key={mode.id}
+            onClick={() => setSelected(isSel ? null : mode.id)}
+            className="w-full text-left"
+          >
+            <div
+              className="bg-white rounded-[16px] p-3.5 border-2 transition-all"
+              style={isSel
+                ? { borderColor: '#2D6A4F', boxShadow: '0 2px 8px rgba(45,106,79,0.12)' }
+                : { borderColor: '#F3F4F6' }
+              }
+            >
+              <div className="flex items-center gap-3">
+                <div
+                  className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
+                  style={isSel
+                    ? { background: 'rgba(45,106,79,0.10)' }
+                    : { background: '#F3F3F0' }
+                  }
+                >
+                  <Icon className="w-5 h-5" style={isSel ? { color: '#2D6A4F' } : { color: '#9CA3AF' }} />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2">
+                    <span className="font-semibold text-sm text-gray-900">{mode.title}</span>
+                    {mode.badge && (
+                      <span className="text-xs bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded-full">{mode.badge}</span>
+                    )}
+                  </div>
+                  <p className="text-xs text-gray-500">{mode.desc} · {mode.time}</p>
+                </div>
+                <div
+                  className="w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0"
+                  style={isSel
+                    ? { borderColor: '#2D6A4F', background: '#2D6A4F' }
+                    : { borderColor: '#D1D5DB' }
+                  }
+                >
+                  {isSel && <Check className="w-3 h-3 text-white" />}
+                </div>
+              </div>
+            </div>
+          </button>
+        );
+      })}
+      <AnimatePresence>
+        {selected && (
+          <motion.button
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 8 }}
+            className="w-full mt-2 py-3.5 text-white font-semibold rounded-[20px]"
+            style={{ background: 'linear-gradient(145deg, #1B4332 0%, #2D6A4F 60%, #3A7D5C 100%)' }}
+          >
+            Comenzar
+          </motion.button>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
+// ============================================
+// STUDY SELECTOR V2 — Option B (2-column card grid)
+// ============================================
+
+function StudySelectorOptionB() {
+  const [selected, setSelected] = useState(null);
+  return (
+    <div className="space-y-3">
+      <div className="mb-4">
+        <span className="text-xs font-bold uppercase tracking-widest" style={{ color: '#B5B5B0' }}>Opción B — Grid de tarjetas</span>
+        <p className="text-xs text-gray-500 mt-1">Más visual · Icono prominente · 2 columnas</p>
+      </div>
+      <div className="grid grid-cols-2 gap-3">
+        {STUDY_MODES_DATA.map((mode) => {
+          const Icon = mode.icon;
+          const isSel = selected === mode.id;
+          return (
+            <button
+              key={mode.id}
+              onClick={() => setSelected(isSel ? null : mode.id)}
+              className="text-left"
+            >
+              <div
+                className="bg-white rounded-[20px] p-4 border-2 transition-all h-full"
+                style={isSel
+                  ? { borderColor: '#2D6A4F', boxShadow: '0 2px 8px rgba(45,106,79,0.12)' }
+                  : { borderColor: '#F3F4F6' }
+                }
+              >
+                <div
+                  className="w-12 h-12 rounded-[14px] flex items-center justify-center mb-3"
+                  style={isSel ? { background: 'rgba(45,106,79,0.10)' } : { background: '#F3F3F0' }}
+                >
+                  <Icon className="w-6 h-6" style={isSel ? { color: '#2D6A4F' } : { color: '#9CA3AF' }} />
+                </div>
+                <p className="font-semibold text-sm text-gray-900 leading-tight">{mode.title}</p>
+                <p className="text-xs mt-0.5" style={{ color: '#B5B5B0' }}>{mode.time}</p>
+                {mode.badge && (
+                  <span className="mt-1.5 inline-block text-xs bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded-full">{mode.badge}</span>
+                )}
+              </div>
+            </button>
+          );
+        })}
+      </div>
+      <AnimatePresence>
+        {selected && (
+          <motion.button
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 8 }}
+            className="w-full mt-2 py-3.5 text-white font-semibold rounded-[20px]"
+            style={{ background: 'linear-gradient(145deg, #1B4332 0%, #2D6A4F 60%, #3A7D5C 100%)' }}
+          >
+            Comenzar
+          </motion.button>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
+// ============================================
+// FLAG QUESTION DEMO
+// ============================================
+
+function FlagQuestionDemo() {
+  const [showSheet, setShowSheet] = useState(false);
+  const [flagged, setFlagged] = useState(false);
+  const [flagReason, setFlagReason] = useState(null);
+
+  const reasons = [
+    { id: 'wrong_answer', label: 'La respuesta correcta es incorrecta' },
+    { id: 'confusing', label: 'La pregunta es confusa o ambigua' },
+    { id: 'typo', label: 'Error ortográfico o de redacción' },
+    { id: 'outdated', label: 'Información desactualizada' },
+    { id: 'other', label: 'Otro motivo' },
+  ];
+
+  const handleFlag = (reason) => {
+    setFlagReason(reason);
+    setFlagged(true);
+    setShowSheet(false);
+  };
+
+  return (
+    <div className="space-y-6">
+      <div className="rounded-xl p-4" style={{ background: 'rgba(45,106,79,0.08)', border: '1px solid rgba(82,183,136,0.3)' }}>
+        <p className="text-sm font-semibold" style={{ color: '#1B4332' }}>🚩 Botón de reporte de preguntas</p>
+        <p className="text-xs mt-1" style={{ color: '#2D6A4F' }}>Permite al usuario señalar preguntas con errores. Aparece en QuestionCard durante la sesión.</p>
+      </div>
+
+      {/* Simulated Question Card with flag button */}
+      <div className="bg-white rounded-[20px] p-5 shadow-sm border border-gray-100 relative">
+        {/* Flag button — top right corner */}
+        <button
+          onClick={() => setShowSheet(true)}
+          className="absolute top-4 right-4 flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl transition-all"
+          style={flagged
+            ? { background: 'rgba(239,68,68,0.10)', color: '#EF4444' }
+            : { background: '#F3F3F0', color: '#9CA3AF' }
+          }
+        >
+          <Flag className="w-4 h-4" />
+          <span className="text-xs font-medium">{flagged ? 'Reportada' : 'Reportar'}</span>
+        </button>
+
+        {/* Question text */}
+        <p className="text-xs font-medium uppercase tracking-widest mb-3 pr-24" style={{ color: '#B5B5B0' }}>Pregunta 7 de 20</p>
+        <p className="text-base font-semibold text-gray-900 leading-snug pr-4 mb-5">
+          ¿Cuál es el plazo máximo para resolver y notificar en el procedimiento administrativo común según la Ley 39/2015?
+        </p>
+
+        {/* Options */}
+        {['1 mes', '3 meses', '6 meses', '9 meses'].map((opt, i) => (
+          <div
+            key={i}
+            className="flex items-center gap-3 p-3 rounded-xl mb-2 border"
+            style={i === 1 ? { borderColor: '#52B788', background: 'rgba(45,106,79,0.06)' } : { borderColor: '#F3F4F6' }}
+          >
+            <div
+              className="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold border"
+              style={i === 1 ? { borderColor: '#2D6A4F', color: '#2D6A4F' } : { borderColor: '#E5E7EB', color: '#9CA3AF' }}
+            >
+              {['A','B','C','D'][i]}
+            </div>
+            <span className="text-sm" style={i === 1 ? { color: '#1B4332', fontWeight: 600 } : { color: '#374151' }}>{opt}</span>
+          </div>
+        ))}
+
+        {flagged && flagReason && (
+          <div className="mt-4 flex items-center gap-2 px-3 py-2 rounded-xl" style={{ background: 'rgba(239,68,68,0.08)' }}>
+            <Flag className="w-3.5 h-3.5 text-red-400 flex-shrink-0" />
+            <p className="text-xs text-red-600">{reasons.find(r => r.id === flagReason)?.label}</p>
+          </div>
+        )}
+      </div>
+
+      {/* Bottom sheet modal */}
+      <AnimatePresence>
+        {showSheet && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black/40 z-40"
+              onClick={() => setShowSheet(false)}
+            />
+            <motion.div
+              initial={{ y: '100%' }}
+              animate={{ y: 0 }}
+              exit={{ y: '100%' }}
+              transition={{ type: 'spring', damping: 30, stiffness: 300 }}
+              className="fixed bottom-0 left-0 right-0 bg-white rounded-t-[24px] p-5 z-50 pb-8"
+            >
+              <div className="w-10 h-1 bg-gray-200 rounded-full mx-auto mb-5" />
+              <p className="font-bold text-gray-900 mb-1">¿Qué está mal en esta pregunta?</p>
+              <p className="text-sm text-gray-500 mb-5">Tu reporte ayuda a mejorar el banco de preguntas.</p>
+              <div className="space-y-2">
+                {reasons.map((r) => (
+                  <button
+                    key={r.id}
+                    onClick={() => handleFlag(r.id)}
+                    className="w-full text-left px-4 py-3 rounded-xl border text-sm text-gray-700 transition-all hover:border-red-300"
+                    style={{ borderColor: '#F3F4F6' }}
+                  >
+                    {r.label}
+                  </button>
+                ))}
+              </div>
+              <button
+                onClick={() => setShowSheet(false)}
+                className="w-full mt-4 py-3 text-gray-500 text-sm font-medium"
+              >
+                Cancelar
+              </button>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
+// ============================================
 // TAB 3: STUDY MODE SELECTOR
 // ============================================
 
@@ -8588,6 +8861,8 @@ export default function DraftFeatures({ onClose, onStartTopicStudy }) {
     { id: 'flipcards-actividad', label: '📱 FC+Actividad' },
     { id: 'flipcards-temas', label: '📚 FC+Temas' },
     { id: 'study-modes', label: '🎯 Modos' },
+    { id: 'study-selector-v2', label: '🎯 Selector V2' },
+    { id: 'flag-question', label: '🚩 Flag Pregunta' },
     { id: 'fsrs-debug', label: '🔧 FSRS Debug' },
     { id: 'proposals', label: '💡 Propuestas' },
     { id: 'contadores', label: '🔢 Contadores' },
@@ -8968,6 +9243,43 @@ export default function DraftFeatures({ onClose, onStartTopicStudy }) {
               exit={{ opacity: 0, y: -20 }}
             >
               <StudyModeSelector />
+            </motion.div>
+          )}
+
+          {/* STUDY SELECTOR V2 — two options: list green + card grid */}
+          {activeTab === 'study-selector-v2' && (
+            <motion.div
+              key="study-selector-v2"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              className="space-y-8"
+            >
+              {/* Label */}
+              <div className="rounded-xl p-4" style={{ background: 'rgba(45,106,79,0.08)', border: '1px solid rgba(82,183,136,0.3)' }}>
+                <p className="text-sm font-semibold" style={{ color: '#1B4332' }}>Opciones de rediseño para el selector de modo de estudio</p>
+                <p className="text-xs mt-1" style={{ color: '#2D6A4F' }}>Ambas usan Editorial Calm (verde bosque). Opción A = lista con estado seleccionado. Opción B = grid de tarjetas.</p>
+              </div>
+
+              {/* ─── OPTION A: List with green selected state ─── */}
+              <StudySelectorOptionA />
+
+              <div className="border-t border-dashed" style={{ borderColor: '#E8E8E4' }} />
+
+              {/* ─── OPTION B: 2-column card grid ─── */}
+              <StudySelectorOptionB />
+            </motion.div>
+          )}
+
+          {/* FLAG QUESTION — design for flagging incorrect questions */}
+          {activeTab === 'flag-question' && (
+            <motion.div
+              key="flag-question"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <FlagQuestionDemo />
             </motion.div>
           )}
 

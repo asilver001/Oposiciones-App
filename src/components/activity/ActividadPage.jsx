@@ -81,12 +81,16 @@ function StudyModesTab({ onSelectMode, selectedMode, onStartSession, onSwipeRigh
             whileTap={!isDisabled ? { scale: 0.98 } : {}}
             disabled={isDisabled}
           >
-            <div className={`bg-white rounded-xl p-3 border-2 transition-all ${
-              isSelected ? 'border-gray-900' : 'border-gray-100'
-            }`}>
+            <div
+              className="bg-white rounded-xl p-3 border-2 transition-all"
+              style={isSelected ? { borderColor: '#2D6A4F' } : { borderColor: '#F3F4F6' }}
+            >
               <div className="flex items-center gap-3">
-                <div className={`w-11 h-11 rounded-xl ${mode.gradient} flex items-center justify-center`}>
-                  <Icon className="w-5 h-5 text-gray-600" />
+                <div
+                  className="w-11 h-11 rounded-xl flex items-center justify-center"
+                  style={isSelected ? { background: 'rgba(45,106,79,0.10)' } : { background: '#F3F4F6' }}
+                >
+                  <Icon className="w-5 h-5" style={isSelected ? { color: '#2D6A4F' } : { color: '#6B7280' }} />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-2">
@@ -98,14 +102,15 @@ function StudyModesTab({ onSelectMode, selectedMode, onStartSession, onSwipeRigh
                       <span className="text-xs bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded-full">Próximo</span>
                     )}
                     {mode.status === 'premium' && (
-                      <span className="text-xs bg-brand-100 text-brand-600 px-1.5 py-0.5 rounded-full">★</span>
+                      <span className="text-xs px-1.5 py-0.5 rounded-full" style={{ background: 'rgba(45,106,79,0.10)', color: '#2D6A4F' }}>★</span>
                     )}
                   </div>
                   <p className="text-xs text-gray-500">{mode.desc} · {mode.time}</p>
                 </div>
-                <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${
-                  isSelected ? 'border-gray-900 bg-gray-900' : 'border-gray-300'
-                }`}>
+                <div
+                  className="w-5 h-5 rounded-full border-2 flex items-center justify-center"
+                  style={isSelected ? { borderColor: '#2D6A4F', background: '#2D6A4F' } : { borderColor: '#D1D5DB' }}
+                >
                   {isSelected && <Check className="w-3 h-3 text-white" />}
                 </div>
               </div>
@@ -121,9 +126,10 @@ function StudyModesTab({ onSelectMode, selectedMode, onStartSession, onSwipeRigh
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
             onClick={() => onStartSession(selectedMode)}
-            className="w-full mt-4 bg-gray-900 text-white py-3 rounded-xl font-semibold"
+            className="w-full mt-4 text-white py-3 rounded-[20px] font-semibold"
+            style={{ background: 'linear-gradient(145deg, #1B4332 0%, #2D6A4F 60%, #3A7D5C 100%)' }}
           >
-            Comenzar →
+            Comenzar
           </motion.button>
         )}
       </AnimatePresence>
@@ -144,7 +150,7 @@ function FsrsBreakdown({ stats }) {
   const segments = [
     { key: 'mastered', label: 'Dominadas', count: stats.mastered || 0, color: 'bg-green-500' },
     { key: 'review', label: 'En repaso', count: (stats.review || 0) - (stats.mastered || 0), color: 'bg-blue-500' },
-    { key: 'learning', label: 'Aprendiendo', count: stats.learning || 0, color: 'bg-brand-500' },
+    { key: 'learning', label: 'Aprendiendo', count: stats.learning || 0, color: 'bg-emerald-500' },
     { key: 'relearning', label: 'Repasando', count: stats.relearning || 0, color: 'bg-amber-500' },
     { key: 'unseen', label: 'Sin ver', count: stats.unseen || 0, color: 'bg-gray-300' },
   ];
@@ -156,7 +162,7 @@ function FsrsBreakdown({ stats }) {
     <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
       <div className="flex items-center justify-between mb-3">
         <h4 className="font-semibold text-gray-900">Estado de aprendizaje</h4>
-        <span className="text-sm text-brand-600 font-medium">{progressPercent}% visto</span>
+        <span className="text-sm font-medium" style={{ color: '#2D6A4F' }}>{progressPercent}% visto</span>
       </div>
 
       {/* Progress bar with segments */}
@@ -253,7 +259,7 @@ function ProgressTab({ data, fsrsStats, onSwipeLeft, onStartTest, formatRelative
       <div className="grid grid-cols-2 gap-3">
         <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
           <div className="flex items-center gap-2 mb-1">
-            <Trophy className="w-5 h-5 text-brand-500" />
+            <Trophy className="w-5 h-5" style={{ color: '#2D6A4F' }} />
             <span className="text-xs text-gray-500">Tests</span>
           </div>
           <p className="text-2xl font-bold text-gray-900">{data.testsCompleted}</p>
@@ -297,7 +303,8 @@ function ProgressTab({ data, fsrsStats, onSwipeLeft, onStartTest, formatRelative
               <div key={day} className="flex-1 flex flex-col items-center gap-1">
                 <div className="w-full bg-gray-100 rounded-t-lg flex-1 relative" style={{ minHeight: 60 }}>
                   <motion.div
-                    className={`absolute bottom-0 w-full rounded-t-lg ${isToday ? 'bg-orange-400' : 'bg-brand-400'}`}
+                    className={`absolute bottom-0 w-full rounded-t-lg ${isToday ? 'bg-orange-400' : ''}`}
+                    style={isToday ? {} : { background: '#52B788' }}
                     initial={{ height: 0 }}
                     animate={{ height: `${Math.max(height, value > 0 ? 10 : 0)}%` }}
                     transition={{ duration: 0.5, delay: i * 0.05 }}
@@ -323,7 +330,7 @@ function ProgressTab({ data, fsrsStats, onSwipeLeft, onStartTest, formatRelative
 
               return (
                 <div key={session.id || idx} className="flex items-center gap-3 p-2 bg-gray-50 rounded-lg">
-                  <div className="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: 'rgba(45,106,79,0.10)' }}>
                     📚
                   </div>
                   <div className="flex-1 min-w-0">
@@ -477,7 +484,7 @@ export default function ActividadPage({
     return (
       <div className="space-y-6">
         <div className="flex items-center justify-center py-12">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-brand-600" />
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2" style={{ borderColor: '#2D6A4F' }} />
         </div>
       </div>
     );

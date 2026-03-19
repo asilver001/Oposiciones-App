@@ -77,33 +77,24 @@ export default function TemasPage() {
       <div className="flex items-center justify-end gap-1">
         <button
           onClick={() => setViewMode('list')}
-          className={`p-2 rounded-lg transition-colors ${
-            viewMode === 'list'
-              ? 'bg-brand-100 text-brand-700'
-              : 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'
-          }`}
+          className="p-2 rounded-lg transition-colors"
+          style={viewMode === 'list' ? { background: 'rgba(45,106,79,0.10)', color: '#2D6A4F' } : { color: '#9CA3AF' }}
           title="Vista lista"
         >
           <List className="w-5 h-5" />
         </button>
         <button
           onClick={() => setViewMode('roadmap')}
-          className={`p-2 rounded-lg transition-colors ${
-            viewMode === 'roadmap'
-              ? 'bg-brand-100 text-brand-700'
-              : 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'
-          }`}
+          className="p-2 rounded-lg transition-colors"
+          style={viewMode === 'roadmap' ? { background: 'rgba(45,106,79,0.10)', color: '#2D6A4F' } : { color: '#9CA3AF' }}
           title="Vista roadmap"
         >
           <Network className="w-5 h-5" />
         </button>
         <button
           onClick={() => setViewMode('dendrite')}
-          className={`p-2 rounded-lg transition-colors ${
-            viewMode === 'dendrite'
-              ? 'bg-brand-100 text-brand-700'
-              : 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'
-          }`}
+          className="p-2 rounded-lg transition-colors"
+          style={viewMode === 'dendrite' ? { background: 'rgba(45,106,79,0.10)', color: '#2D6A4F' } : { color: '#9CA3AF' }}
           title="Vista mapa"
         >
           <Hexagon className="w-5 h-5" />
