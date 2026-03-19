@@ -105,10 +105,9 @@ export function ReadinessGauge({ readiness }) {
             {LEVEL_LABELS[level]}
           </p>
           <div className="space-y-1.5 text-xs">
-            <BreakdownRow label="Dominio" value={breakdown.mastery} />
-            <BreakdownRow label="Acierto" value={breakdown.accuracy} />
-            <BreakdownRow label="Cobertura" value={breakdown.coverage} />
-            <BreakdownRow label="Constancia" value={breakdown.consistency} />
+            <BreakdownRow label="Cobertura" value={breakdown.cobertura} weight="30%" />
+            <BreakdownRow label="Precisión" value={breakdown.precision} weight="40%" />
+            <BreakdownRow label="Simulacros" value={breakdown.simulacros} weight="30%" />
           </div>
         </div>
       </div>
@@ -116,10 +115,13 @@ export function ReadinessGauge({ readiness }) {
   );
 }
 
-function BreakdownRow({ label, value }) {
+function BreakdownRow({ label, value, weight }) {
   return (
     <div className="flex items-center gap-2">
-      <span className="text-gray-500 dark:text-gray-400 w-20">{label}</span>
+      <div className="w-20 flex items-center gap-1">
+        <span className="text-gray-500 dark:text-gray-400">{label}</span>
+        {weight && <span className="text-gray-400 dark:text-gray-500" style={{ fontSize: 9 }}>{weight}</span>}
+      </div>
       <div className="flex-1 h-1.5 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
         <motion.div
           className="h-full bg-gray-900 rounded-full"

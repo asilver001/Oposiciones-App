@@ -37,6 +37,7 @@ export function useActivityData() {
   });
   const [weeklyImprovement, setWeeklyImprovement] = useState(0);
   const [leastPracticedTema, setLeastPracticedTema] = useState(null);
+  const [simulacroAvg, setSimulacroAvg] = useState(0);
 
   // FSRS states breakdown
   const [fsrsStats, setFsrsStats] = useState({
@@ -131,7 +132,7 @@ export function useActivityData() {
       // ACTUAL columns: topic_id, correct_count, total_questions, time_seconds, percentage, status
       const { data: sessions, error: sessionsError } = await supabase
         .from('test_sessions')
-        .select('id, user_id, topic_id, correct_count, total_questions, started_at, completed_at, time_seconds, percentage')
+        .select('id, user_id, topic_id, correct_count, total_questions, started_at, completed_at, time_seconds, percentage, test_type')
         .eq('user_id', user.id)
         .eq('status', 'completed')
         .order('started_at', { ascending: false });
@@ -338,6 +339,15 @@ export function useActivityData() {
         }
       }
 
+      // Compute simulacro average score (test_type='simulacro' or >=80 questions as fallback)
+      const simulacroSessions = allSessions.filter(
+        s => s.test_type === 'simulacro' || s.total_questions >= 80
+      );
+      const avgSimulacro = simulacroSessions.length > 0
+        ? Math.round(simulacroSessions.reduce((sum, s) => sum + (s.percentage || 0), 0) / simulacroSessions.length)
+        : 0;
+      setSimulacroAvg(avgSimulacro);
+
       setLoading(false);
 
       // Fetch FSRS stats in parallel
@@ -460,6 +470,7 @@ export function useActivityData() {
     leastPracticedTema,
     motivationalMessage,
     fsrsStats,
+    simulacroAvg,
 
     // Functions
     fetchActivityData,

@@ -22,6 +22,7 @@ export default function ActividadPageWrapper() {
     streak,
     motivationalMessage,
     fsrsStats,
+    simulacroAvg,
     fetchActivityData,
     formatRelativeDate
   } = useActivityData();
@@ -120,6 +121,7 @@ export default function ActividadPageWrapper() {
       calendarData={calendarData}
       motivationalMessage={motivationalMessage}
       fsrsStats={fsrsStats}
+      simulacroAvg={simulacroAvg}
       onStartTest={handleStartTest}
       formatRelativeDate={formatRelativeDate}
     />

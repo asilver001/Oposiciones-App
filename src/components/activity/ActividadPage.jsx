@@ -411,6 +411,7 @@ export default function ActividadPage({
   calendarData = [],
   motivationalMessage: _motivationalMessage = null,
   fsrsStats = null,
+  simulacroAvg = 0,
   loading = false,
   onStartTest,
   formatRelativeDate,
@@ -477,7 +478,8 @@ export default function ActividadPage({
     totalStats: displayData.totalStats,
     sessionHistory: displayData.sessionHistory,
     fsrsStats,
-    streak: displayData.totalStats.currentStreak
+    streak: displayData.totalStats.currentStreak,
+    simulacroAvg
   });
 
   if (loading) {

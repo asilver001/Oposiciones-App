@@ -58,16 +58,10 @@ function computeVelocity(sessionHistory) {
 
 /**
  * Compute readiness score (0-100)
- * Formula: mastery(40%) + accuracy(30%) + coverage(20%) + consistency(10%)
+ * Composite index: cobertura(30%) + precisión por tema(40%) + simulacros(30%)
  */
-function computeReadiness(totalStats, fsrsStats, sessionHistory, streak) {
-  const mastered = fsrsStats?.mastered || 0;
-  const total = fsrsStats?.total || 1;
-  const masteryRatio = Math.min(mastered / total, 1);
-
-  const avgAccuracy = (totalStats?.accuracyRate || 0) / 100;
-
-  // Topic coverage: count unique topics from session history
+function computeReadiness(totalStats, fsrsStats, sessionHistory, streak, simulacroAvg) {
+  // Cobertura (30%): unique topics studied / total topics
   const topicsStudied = new Set();
   (sessionHistory || []).forEach(s => {
     const temas = s.tema_filter || (s.tema ? [s.tema] : []);
@@ -75,15 +69,35 @@ function computeReadiness(totalStats, fsrsStats, sessionHistory, streak) {
   });
   const coverageRatio = Math.min(topicsStudied.size / TOTAL_TOPICS, 1);
 
-  // Streak bonus: caps at 7 days
-  const currentStreak = streak || totalStats?.currentStreak || 0;
-  const streakBonus = Math.min(currentStreak / 7, 1);
+  // Precisión por tema (40%): weighted accuracy across all studied sessions
+  const topicMap = {};
+  (sessionHistory || []).forEach(s => {
+    const temas = s.tema_filter || (s.tema ? [s.tema] : []);
+    const correct = s.correctas || s.correct_answers || 0;
+    const total = s.total_preguntas || s.total_questions || 0;
+    if (total > 0) {
+      temas.forEach(tema => {
+        if (!topicMap[tema]) topicMap[tema] = { correct: 0, total: 0 };
+        topicMap[tema].correct += correct;
+        topicMap[tema].total += total;
+      });
+    }
+  });
+  const topicEntries = Object.values(topicMap);
+  let precisionRatio = 0;
+  if (topicEntries.length > 0) {
+    const sumCorrect = topicEntries.reduce((s, t) => s + t.correct, 0);
+    const sumTotal = topicEntries.reduce((s, t) => s + t.total, 0);
+    precisionRatio = sumTotal > 0 ? sumCorrect / sumTotal : 0;
+  }
+
+  // Simulacros (30%): average simulacro score (0-100 → 0-1)
+  const simulacroRatio = Math.min((simulacroAvg || 0) / 100, 1);
 
   const score = Math.round(
-    masteryRatio * 40 +
-    avgAccuracy * 30 +
-    coverageRatio * 20 +
-    streakBonus * 10
+    coverageRatio * 30 +
+    precisionRatio * 40 +
+    simulacroRatio * 30
   );
 
   let level = 'inicial';
@@ -94,10 +108,9 @@ function computeReadiness(totalStats, fsrsStats, sessionHistory, streak) {
   return {
     score: Math.min(score, 100),
     breakdown: {
-      mastery: Math.round(masteryRatio * 100),
-      accuracy: Math.round(avgAccuracy * 100),
-      coverage: Math.round(coverageRatio * 100),
-      consistency: Math.round(streakBonus * 100)
+      cobertura: Math.round(coverageRatio * 100),
+      precision: Math.round(precisionRatio * 100),
+      simulacros: Math.round(simulacroRatio * 100)
     },
     level
   };
@@ -218,9 +231,10 @@ function getMonday(date) {
  * @param {Array} params.sessionHistory - From useActivityData
  * @param {Object} params.fsrsStats - From useActivityData
  * @param {number} params.streak - From useActivityData
+ * @param {number} params.simulacroAvg - Average simulacro score (0-100), from useActivityData
  * @returns {Object} Analytics metrics
  */
-export function useAnalytics({ totalStats, sessionHistory, fsrsStats, streak } = {}) {
+export function useAnalytics({ totalStats, sessionHistory, fsrsStats, streak, simulacroAvg } = {}) {
   const hasEnoughData = (totalStats?.testsCompleted || 0) >= 2;
 
   const velocity = useMemo(
@@ -229,8 +243,8 @@ export function useAnalytics({ totalStats, sessionHistory, fsrsStats, streak } =
   );
 
   const readiness = useMemo(
-    () => computeReadiness(totalStats, fsrsStats, sessionHistory, streak),
-    [totalStats, fsrsStats, sessionHistory, streak]
+    () => computeReadiness(totalStats, fsrsStats, sessionHistory, streak, simulacroAvg),
+    [totalStats, fsrsStats, sessionHistory, streak, simulacroAvg]
   );
 
   const topicStrength = useMemo(
