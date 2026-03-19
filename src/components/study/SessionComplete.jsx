@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {
-  Trophy,
   Target,
   Flame,
   CheckCircle2,
@@ -56,15 +55,20 @@ export default function SessionComplete({
   }
 
   return (
-    <div className="min-h-screen bg-brand-50 dark:bg-gray-950 flex items-center justify-center p-4">
+    <div className="min-h-screen dark:bg-gray-950 flex items-center justify-center p-4" style={{ background: '#F3F3F0' }}>
       <div className="text-center max-w-sm w-full">
         {/* Trophy */}
         <div className="relative mb-6">
-          <div className="w-24 h-24 bg-yellow-400 rounded-full flex items-center justify-center mx-auto shadow-lg">
-            <Trophy className="w-12 h-12 text-white" />
+          <div
+            className="w-24 h-24 rounded-full flex items-center justify-center mx-auto shadow-lg"
+            style={{ background: 'linear-gradient(145deg, #1B4332 0%, #2D6A4F 60%, #3A7D5C 100%)' }}
+          >
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M20 6L9 17l-5-5"/>
+            </svg>
           </div>
           {accuracy >= 80 && (
-            <div className="absolute -top-2 -right-2 w-10 h-10 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
+            <div className="absolute -top-2 -right-2 w-10 h-10 rounded-full flex items-center justify-center shadow-lg" style={{ background: '#52B788' }}>
               <Flame className="w-5 h-5 text-white" />
             </div>
           )}
@@ -93,7 +97,7 @@ export default function SessionComplete({
             <p className="text-xs text-gray-500">Correctas</p>
           </div>
           <div className="bg-white rounded-xl p-4 shadow-sm">
-            <RotateCcw className="w-6 h-6 text-brand-500 mx-auto mb-1" />
+            <RotateCcw className="w-6 h-6 mx-auto mb-1" style={{ color: '#2D6A4F' }} />
             <p className="text-2xl font-bold text-gray-800">{sessionStats.reviews}</p>
             <p className="text-xs text-gray-500">Repasos</p>
           </div>
@@ -103,7 +107,7 @@ export default function SessionComplete({
         <div className="bg-white rounded-xl p-4 mb-6 shadow-sm">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-600">Precisión</span>
-            <span className="font-bold text-brand-600">{accuracy}%</span>
+            <span className="font-bold" style={{ color: '#2D6A4F' }}>{accuracy}%</span>
           </div>
           <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
             <div
@@ -162,17 +166,18 @@ export default function SessionComplete({
             <p className="text-xs text-gray-500 uppercase tracking-wider mb-2 font-medium">Siguiente paso recomendado</p>
             <button
               onClick={() => onNextActivity(nextActivity)}
-              className="w-full bg-white border border-brand-200 rounded-xl p-3.5 text-left hover:bg-brand-50 transition-colors"
+              className="w-full bg-white rounded-xl p-3.5 text-left transition-colors"
+              style={{ border: '1px solid rgba(82,183,136,0.3)' }}
             >
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Target className="w-5 h-5 text-brand-600" />
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(45,106,79,0.10)' }}>
+                  <Target className="w-5 h-5" style={{ color: '#2D6A4F' }} />
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-semibold text-gray-900">{nextActivity.title}</p>
                   <p className="text-xs text-gray-500 truncate">{nextActivity.description}</p>
                 </div>
-                <ChevronRight className="w-5 h-5 text-brand-400 flex-shrink-0" />
+                <ChevronRight className="w-5 h-5 flex-shrink-0" style={{ color: '#52B788' }} />
               </div>
             </button>
           </div>
@@ -184,7 +189,8 @@ export default function SessionComplete({
           {answersHistory.length > 0 && (
             <button
               onClick={() => setShowCorrection(true)}
-              className="w-full py-3 bg-brand-600 text-white rounded-xl font-semibold hover:bg-brand-700 flex items-center justify-center gap-2"
+              className="w-full py-3 text-white rounded-xl font-semibold flex items-center justify-center gap-2"
+              style={{ background: 'linear-gradient(145deg, #1B4332 0%, #2D6A4F 60%, #3A7D5C 100%)' }}
             >
               <ClipboardCheck className="w-5 h-5" />
               Corregir
@@ -192,7 +198,8 @@ export default function SessionComplete({
           )}
           <button
             onClick={onNewSession}
-            className="w-full py-3 bg-brand-100 text-brand-700 rounded-xl font-semibold hover:bg-brand-200 flex items-center justify-center gap-2"
+            className="w-full py-3 rounded-xl font-semibold flex items-center justify-center gap-2"
+            style={{ background: 'rgba(45,106,79,0.10)', color: '#2D6A4F' }}
           >
             <RotateCcw className="w-5 h-5" />
             Nueva sesión

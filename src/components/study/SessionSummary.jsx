@@ -70,7 +70,7 @@ export default function SessionSummary({
     <div className="bg-white rounded-2xl shadow-sm border p-5 space-y-5">
       {/* Header */}
       <div className="flex items-center gap-2">
-        <BarChart3 className="w-5 h-5 text-brand-600" />
+        <BarChart3 className="w-5 h-5" style={{ color: '#2D6A4F' }} />
         <h3 className="font-semibold text-gray-800 text-lg">Resumen de sesion</h3>
       </div>
 
@@ -84,9 +84,9 @@ export default function SessionSummary({
           <p className="text-2xl font-bold text-rose-600">{analysis.incorrect}</p>
           <p className="text-xs text-rose-700">Incorrectas</p>
         </div>
-        <div className="text-center p-3 bg-brand-50 rounded-xl">
-          <p className="text-2xl font-bold text-brand-600">{analysis.accuracy}%</p>
-          <p className="text-xs text-brand-700">Precision</p>
+        <div className="text-center p-3 rounded-xl" style={{ background: 'rgba(45,106,79,0.08)' }}>
+          <p className="text-2xl font-bold" style={{ color: '#2D6A4F' }}>{analysis.accuracy}%</p>
+          <p className="text-xs" style={{ color: '#2D6A4F', opacity: 0.8 }}>Precision</p>
         </div>
       </div>
 

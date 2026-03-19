@@ -183,8 +183,8 @@ export default function StudyPage() {
       <div className="flex-1 flex flex-col items-center justify-center p-6 pb-32">
         <div className="text-center max-w-md w-full">
           {/* Mode Icon */}
-          <div className="w-20 h-20 rounded-2xl bg-gray-100 flex items-center justify-center mx-auto mb-6">
-            <Icon className="w-10 h-10 text-gray-600" />
+          <div className="w-20 h-20 flex items-center justify-center mx-auto mb-6" style={{ background: '#F3F3F0', borderRadius: 20 }}>
+            <Icon className="w-10 h-10" style={{ color: '#2D6A4F' }} />
           </div>
 
           <h2 className="text-2xl font-semibold text-gray-900 mb-2">
@@ -230,7 +230,7 @@ export default function StudyPage() {
 
           {/* Mode-specific tips */}
           {mode === 'simulacro' && (
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-6 text-left">
+            <div className="rounded-xl p-4 mb-6 text-left" style={{ background: '#F3F3F0', border: '1px solid #E8E8E4' }}>
               <p className="text-gray-600 text-sm font-medium mb-2">Condiciones de examen real:</p>
               <ul className="text-gray-600 text-sm space-y-1">
                 <li>• Respuestas correctas: +1 punto</li>
@@ -242,7 +242,7 @@ export default function StudyPage() {
           )}
 
           {mode === 'flashcards' && (
-            <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-6 text-left">
+            <div className="rounded-xl p-4 mb-6 text-left" style={{ background: '#F3F3F0', border: '1px solid #E8E8E4' }}>
               <p className="text-gray-600 text-sm font-medium mb-2">Cómo usar las flashcards:</p>
               <ul className="text-gray-600 text-sm space-y-1">
                 <li>• Toca la tarjeta para ver la respuesta</li>
@@ -259,7 +259,8 @@ export default function StudyPage() {
         <div className="max-w-md mx-auto space-y-3">
           <button
             onClick={handleStart}
-            className="w-full py-4 bg-gray-900 text-white font-semibold rounded-2xl flex items-center justify-center gap-2 active:scale-[0.99] transition-transform"
+            className="w-full py-4 text-white font-semibold rounded-[24px] flex items-center justify-center gap-2 active:scale-[0.99] transition-transform"
+            style={{ background: 'linear-gradient(145deg, #1B4332 0%, #2D6A4F 60%, #3A7D5C 100%)' }}
           >
             <Play className="w-5 h-5" />
             Comenzar sesión

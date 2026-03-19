@@ -62,15 +62,15 @@ export default function QuestionCard({
                 key={opt.key}
                 onClick={() => onSelectAnswer(opt.key)}
                 className={`w-full text-left p-4 rounded-xl border-2 transition-all cursor-pointer ${
-                  isSelected
-                    ? 'border-brand-500 bg-brand-50 text-gray-800'
-                    : 'border-gray-200 bg-white hover:bg-gray-50 text-gray-800'
+                  isSelected ? 'text-gray-800' : 'border-gray-200 bg-white hover:bg-gray-50 text-gray-800'
                 }`}
+                style={isSelected ? { borderColor: '#52B788', background: 'rgba(45,106,79,0.06)' } : {}}
               >
                 <div className="flex items-start gap-3">
-                  <span className={`w-7 h-7 rounded-full border-2 flex items-center justify-center font-semibold text-sm ${
-                    isSelected ? 'border-brand-500 text-brand-600' : 'border-current'
-                  }`}>
+                  <span
+                    className="w-7 h-7 rounded-full border-2 flex items-center justify-center font-semibold text-sm"
+                    style={isSelected ? { borderColor: '#2D6A4F', color: '#2D6A4F' } : {}}
+                  >
                     {opt.key.toUpperCase()}
                   </span>
                   <span className="flex-1">{opt.text}</span>

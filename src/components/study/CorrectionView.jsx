@@ -40,7 +40,7 @@ export default function CorrectionView({ answersHistory = [], onBack }) {
   const skippedCount = answersHistory.filter(a => !a.respuesta_usuario).length;
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
+    <div className="min-h-screen flex flex-col" style={{ background: '#F3F3F0' }}>
       {/* Header */}
       <div className="bg-white border-b px-4 py-3 sticky top-0 z-10">
         <div className="max-w-lg mx-auto flex items-center gap-3">
@@ -152,11 +152,11 @@ export default function CorrectionView({ answersHistory = [], onBack }) {
 
                 {/* Explanation */}
                 {question.explanation && (
-                  <div className="mx-4 mb-3 p-3 bg-blue-50 rounded-xl border border-blue-100">
-                    <p className="text-xs font-medium text-blue-800 mb-1">Explicación</p>
-                    <p className="text-xs text-blue-700 leading-relaxed">{question.explanation}</p>
+                  <div className="mx-4 mb-3 p-3 rounded-xl" style={{ background: 'rgba(45,106,79,0.07)', border: '1px solid rgba(82,183,136,0.25)' }}>
+                    <p className="text-xs font-medium mb-1" style={{ color: '#1B4332' }}>Explicación</p>
+                    <p className="text-xs leading-relaxed" style={{ color: '#2D6A4F' }}>{question.explanation}</p>
                     {question.legal_reference && (
-                      <p className="text-xs text-blue-500 mt-1.5">
+                      <p className="text-xs mt-1.5" style={{ color: '#52B788' }}>
                         Ref: {question.legal_reference}
                       </p>
                     )}

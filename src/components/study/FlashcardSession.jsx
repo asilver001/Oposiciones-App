@@ -200,9 +200,9 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
   // Loading state (with timeout)
   if (isLoading && !loadingTimedOut) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center" style={{ background: '#F3F3F0' }}>
         <div className="text-center">
-          <Loader2 className="w-12 h-12 animate-spin text-brand-600 mx-auto mb-4" />
+          <Loader2 className="w-12 h-12 animate-spin mx-auto mb-4" style={{ color: '#2D6A4F' }} />
           <p className="text-gray-600">Preparando flashcards...</p>
         </div>
       </div>
@@ -212,7 +212,7 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
   // No questions available (empty state, not an error)
   if (noQuestions) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+      <div className="min-h-screen flex items-center justify-center p-4" style={{ background: '#F3F3F0' }}>
         <EmptyState
           icon={BookOpen}
           title="No hay preguntas disponibles"
@@ -230,7 +230,7 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
     const isTimeout = loadingTimedOut && !error;
 
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+      <div className="min-h-screen flex items-center justify-center p-4" style={{ background: '#F3F3F0' }}>
         <div className="text-center max-w-sm">
           <div className={`w-16 h-16 ${isTimeout ? 'bg-amber-100' : 'bg-red-100'} rounded-full flex items-center justify-center mx-auto mb-4`}>
             {isTimeout
@@ -261,7 +261,8 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
                 </button>
                 <button
                   onClick={handleRetry}
-                  className="px-6 py-2 bg-brand-600 text-white rounded-lg hover:bg-brand-700 flex items-center gap-2"
+                  className="px-6 py-2 text-white rounded-lg flex items-center gap-2"
+                  style={{ background: '#2D6A4F' }}
                 >
                   <RefreshCw className="w-4 h-4" />
                   Reintentar
@@ -292,7 +293,7 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
     const accuracy = totalAnswered > 0 ? Math.round((results.known.length / totalAnswered) * 100) : 0;
 
     return (
-      <div className="min-h-screen bg-gray-50 flex flex-col">
+      <div className="min-h-screen flex flex-col" style={{ background: '#F3F3F0' }}>
         {/* Header */}
         <div className="bg-white/80 backdrop-blur-sm border-b px-4 py-3">
           <div className="max-w-lg mx-auto flex items-center justify-between">
@@ -350,7 +351,7 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
             {/* Accuracy */}
             <div className="text-center py-2">
               <span className="text-gray-500">Tasa de acierto: </span>
-              <span className="font-bold text-brand-600">{accuracy}%</span>
+              <span className="font-bold" style={{ color: '#2D6A4F' }}>{accuracy}%</span>
             </div>
           </div>
 
@@ -375,7 +376,8 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
                 });
                 onClose?.();
               }}
-              className="w-full py-3 bg-brand-600 text-white font-semibold rounded-xl shadow-sm"
+              className="w-full py-3 text-white font-semibold rounded-xl shadow-sm"
+              style={{ background: 'linear-gradient(145deg, #1B4332 0%, #2D6A4F 60%, #3A7D5C 100%)' }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -416,9 +418,10 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
       <div className="flex-1 flex flex-col p-6 max-w-lg mx-auto w-full">
         {/* Progress bar */}
         <div className="mb-6">
-          <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+          <div className="h-2 rounded-full overflow-hidden" style={{ background: '#F3F3F0' }}>
             <motion.div
-              className="h-full bg-brand-600 rounded-full"
+              className="h-full rounded-full"
+              style={{ background: 'linear-gradient(90deg, #2D6A4F, #52B788)' }}
               initial={{ width: 0 }}
               animate={{ width: `${((currentIndex) / cards.length) * 100}%` }}
               transition={spring.smooth}
@@ -482,7 +485,7 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
                   style={{ backfaceVisibility: 'hidden' }}
                 >
                   {currentCard.topic && (
-                    <span className="text-xs text-brand-500 font-medium mb-3 px-2 py-1 bg-brand-50 rounded-full">
+                    <span className="text-xs font-medium mb-3 px-2 py-1 rounded-full" style={{ color: '#2D6A4F', background: 'rgba(45,106,79,0.10)' }}>
                       {currentCard.topic}
                     </span>
                   )}
@@ -499,19 +502,19 @@ export default function FlashcardSession({ config = {}, onClose, onComplete }) {
 
                 {/* Back - Answer */}
                 <div
-                  className="absolute inset-0 bg-brand-600 rounded-2xl shadow-xl p-6 flex flex-col items-center justify-center text-white"
-                  style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+                  className="absolute inset-0 rounded-2xl shadow-xl p-6 flex flex-col items-center justify-center text-white"
+                  style={{ background: 'linear-gradient(145deg, #1B4332 0%, #2D6A4F 60%, #3A7D5C 100%)', backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
                 >
                   <Brain className="w-8 h-8 mb-3 opacity-50" />
                   <p className="text-center text-xl font-bold leading-relaxed mb-2">
                     {currentCard.back}
                   </p>
                   {currentCard.explanation && (
-                    <p className="text-center text-brand-200 text-sm mt-2 line-clamp-3">
+                    <p className="text-center text-sm mt-2 line-clamp-3" style={{ color: 'rgba(255,255,255,0.55)' }}>
                       {currentCard.explanation}
                     </p>
                   )}
-                  <p className="text-xs text-brand-200 mt-4">Desliza para continuar</p>
+                  <p className="text-xs mt-4" style={{ color: 'rgba(255,255,255,0.40)' }}>Desliza para continuar</p>
                 </div>
               </motion.div>
             </motion.div>

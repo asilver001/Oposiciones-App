@@ -65,16 +65,14 @@ export default function ExamTimer({
   // Determine color based on remaining time
   let colorClass = 'text-gray-700';
   let bgClass = 'bg-gray-100';
-  let progressClass = 'bg-brand-500';
+  const progressColor = isCritical ? '#ef4444' : isWarning ? '#f59e0b' : '#2D6A4F';
 
   if (isCritical) {
     colorClass = 'text-red-600';
     bgClass = 'bg-red-50 animate-pulse';
-    progressClass = 'bg-red-500';
   } else if (isWarning) {
     colorClass = 'text-amber-600';
     bgClass = 'bg-amber-50';
-    progressClass = 'bg-amber-500';
   }
 
   return (
@@ -91,10 +89,10 @@ export default function ExamTimer({
         </span>
 
         {/* Progress bar */}
-        <div className="w-24 h-1 bg-gray-200 rounded-full overflow-hidden mt-1">
+        <div className="w-24 h-1 rounded-full overflow-hidden mt-1" style={{ background: '#F3F3F0' }}>
           <div
-            className={`h-full ${progressClass} transition-all duration-1000`}
-            style={{ width: `${Math.min(progress, 100)}%` }}
+            className="h-full transition-all duration-1000"
+            style={{ width: `${Math.min(progress, 100)}%`, background: progressColor }}
           />
         </div>
       </div>

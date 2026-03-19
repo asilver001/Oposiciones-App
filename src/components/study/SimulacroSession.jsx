@@ -370,7 +370,7 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
   // Loading state (with timeout)
   if (isLoading && !loadingTimedOut) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center" style={{ background: '#F3F3F0' }}>
         <div className="text-center">
           <Loader2 className="w-12 h-12 animate-spin text-rose-600 mx-auto mb-4" />
           <p className="text-gray-600">Preparando simulacro...</p>
@@ -383,7 +383,7 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
   // No questions available (empty state, not an error)
   if (noQuestions) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+      <div className="min-h-screen flex items-center justify-center p-4" style={{ background: '#F3F3F0' }}>
         <EmptyState
           icon={BookOpen}
           title="No hay preguntas disponibles"
@@ -401,7 +401,7 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
     const isTimeout = loadingTimedOut && !error;
 
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+      <div className="min-h-screen flex items-center justify-center p-4" style={{ background: '#F3F3F0' }}>
         <div className="text-center max-w-sm">
           <div className={`w-16 h-16 ${isTimeout ? 'bg-amber-100' : 'bg-red-100'} rounded-full flex items-center justify-center mx-auto mb-4`}>
             {isTimeout
@@ -460,7 +460,7 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
   // Results screen
   if (isFinished) {
     return (
-      <div className="min-h-screen bg-gray-50 flex flex-col">
+      <div className="min-h-screen flex flex-col" style={{ background: '#F3F3F0' }}>
         {/* Header */}
         <div className="bg-white/80 backdrop-blur-sm border-b px-4 py-3">
           <div className="max-w-lg mx-auto text-center">
@@ -549,13 +549,13 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
               </div>
 
               <div className="grid grid-cols-2 gap-3 mb-3">
-                <div className="bg-gray-50 rounded-lg p-3">
+                <div className="rounded-lg p-3" style={{ background: '#F3F3F0' }}>
                   <p className="text-xs text-gray-500">Tiempo total</p>
                   <p className="text-lg font-bold text-gray-900">
                     {Math.floor(timeAnalysis.totalSeconds / 60)}:{String(Math.floor(timeAnalysis.totalSeconds % 60)).padStart(2, '0')}
                   </p>
                 </div>
-                <div className="bg-gray-50 rounded-lg p-3">
+                <div className="rounded-lg p-3" style={{ background: '#F3F3F0' }}>
                   <p className="text-xs text-gray-500">Media por pregunta</p>
                   <p className="text-lg font-bold text-gray-900">{timeAnalysis.avgSecondsPerQuestion}s</p>
                   <p className="text-xs text-gray-400">ideal: {timeAnalysis.idealPace}s</p>
@@ -757,10 +757,10 @@ export default function SimulacroSession({ config = {}, onClose, onComplete }) {
       {/* Progress bar */}
       <div className="bg-white border-b">
         <div className="max-w-3xl mx-auto">
-          <div className="h-1 bg-gray-100">
+          <div className="h-1" style={{ background: '#F3F3F0' }}>
             <div
-              className="h-full bg-emerald-500 transition-all duration-300"
-              style={{ width: `${(stats.answered / questions.length) * 100}%` }}
+              className="h-full transition-all duration-300"
+              style={{ width: `${(stats.answered / questions.length) * 100}%`, background: 'linear-gradient(90deg, #2D6A4F, #52B788)' }}
             />
           </div>
         </div>

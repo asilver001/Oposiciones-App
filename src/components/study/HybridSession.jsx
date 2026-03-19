@@ -211,9 +211,9 @@ export default function HybridSession({ config = {}, onClose, onComplete, onNext
   // Loading state (with timeout)
   if (isLoading && !loadingTimedOut) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center" style={{ background: '#F3F3F0' }}>
         <div className="text-center">
-          <Loader2 className="w-12 h-12 animate-spin text-brand-600 mx-auto mb-4" />
+          <Loader2 className="w-12 h-12 animate-spin mx-auto mb-4" style={{ color: '#2D6A4F' }} />
           <p className="text-gray-600">Preparando sesión de estudio...</p>
         </div>
       </div>
@@ -226,7 +226,7 @@ export default function HybridSession({ config = {}, onClose, onComplete, onNext
     const isTimeout = loadingTimedOut && !error;
 
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+      <div className="min-h-screen flex items-center justify-center p-4" style={{ background: '#F3F3F0' }}>
         <div className="text-center max-w-sm">
           <div className={`w-16 h-16 ${isTimeout ? 'bg-amber-100' : 'bg-red-100'} rounded-full flex items-center justify-center mx-auto mb-4`}>
             {isTimeout
@@ -257,7 +257,8 @@ export default function HybridSession({ config = {}, onClose, onComplete, onNext
                 </button>
                 <button
                   onClick={handleRetry}
-                  className="px-6 py-2 bg-brand-600 text-white rounded-lg hover:bg-brand-700 flex items-center gap-2"
+                  className="px-6 py-2 text-white rounded-lg flex items-center gap-2"
+                  style={{ background: '#2D6A4F' }}
                 >
                   <RefreshCw className="w-4 h-4" />
                   Reintentar
@@ -304,7 +305,7 @@ export default function HybridSession({ config = {}, onClose, onComplete, onNext
   // No question available
   if (!currentQuestion) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+      <div className="min-h-screen flex items-center justify-center p-4" style={{ background: '#F3F3F0' }}>
         <EmptyState
           icon={BookOpen}
           title="No hay preguntas disponibles"
@@ -318,7 +319,7 @@ export default function HybridSession({ config = {}, onClose, onComplete, onNext
 
   // Active session
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
+    <div className="min-h-screen flex flex-col" style={{ background: '#F3F3F0' }}>
       {/* Exit Confirmation Modal */}
       {showExitConfirm && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
@@ -367,7 +368,7 @@ export default function HybridSession({ config = {}, onClose, onComplete, onNext
       <div className="bg-white border-t p-4">
         <div className="max-w-lg mx-auto flex justify-around text-center">
           <div>
-            <p className="text-lg font-bold text-brand-600">{sessionStats.answered}</p>
+            <p className="text-lg font-bold" style={{ color: '#2D6A4F' }}>{sessionStats.answered}</p>
             <p className="text-xs text-gray-500">Respondidas</p>
           </div>
           {sessionStats.skipped > 0 && (
