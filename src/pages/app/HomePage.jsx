@@ -13,12 +13,13 @@ import { ROUTES } from '../../router/routes';
 import { useActivityData } from '../../hooks/useActivityData';
 import { useTopics } from '../../hooks/useTopics';
 import { useStudyPlan } from '../../hooks/useStudyPlan';
+import { useCompositeReadiness } from '../../hooks/useCompositeReadiness';
 import { useAuth } from '../../hooks/useAuth';
 
 export default function HomePage() {
   const navigate = useNavigate();
   const { user } = useAuth();
-  const { totalStats, streak, weeklyImprovement, weeklyData, todayStats, fsrsStats, fetchActivityData } = useActivityData();
+  const { totalStats, streak, weeklyImprovement, weeklyData, todayStats, fsrsStats, simulacroAvg, fetchActivityData } = useActivityData();
   const { getFortalezaData, topicsWithQuestions, userProgress } = useTopics();
 
   // Fetch activity data on mount
@@ -27,6 +28,9 @@ export default function HomePage() {
   }, [fetchActivityData]);
 
   const fortalezaData = getFortalezaData();
+
+  // Composite readiness index (cobertura 30% + precisión 40% + simulacros 30%)
+  const readiness = useCompositeReadiness({ fortalezaData, totalStats, simulacroAvg });
 
   // Compute today's study plan from the engine
   const { activities, examCountdown, dailyInsight } = useStudyPlan({
@@ -87,6 +91,7 @@ export default function HomePage() {
       onTopicSelect={handleTopicSelect}
       onViewAllTopics={handleViewAllTopics}
       onNavigate={handleNavigate}
+      readiness={readiness}
     />
   );
 }

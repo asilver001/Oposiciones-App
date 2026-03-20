@@ -182,6 +182,91 @@ function StatsRow({ totalQuestions, accuracyRate }) {
 
 
 /**
+ * ReadinessCard - Composite readiness index (cobertura 30% + precisión 40% + simulacros 30%)
+ */
+const READINESS_LEVELS = {
+  inicial: 'Empezando',
+  en_progreso: 'En progreso',
+  avanzado: 'Avanzado',
+  preparado: 'Preparado',
+};
+
+function ReadinessCard({ readiness }) {
+  if (!readiness) return null;
+  const { score, breakdown, level } = readiness;
+  const radius = 42;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (score / 100) * circumference;
+
+  const rows = [
+    { label: 'Cobertura', value: breakdown.cobertura, weight: '30%' },
+    { label: 'Precisión', value: breakdown.precision, weight: '40%' },
+    { label: 'Simulacros', value: breakdown.simulacros, weight: '30%' },
+  ];
+
+  return (
+    <motion.div
+      className="rounded-[20px] p-5"
+      style={{ background: 'white', boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}
+      initial={{ y: 20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.2 }}
+    >
+      <p className="text-[12px] font-medium mb-4" style={{ color: '#B5B5B0' }}>
+        Índice de preparación
+      </p>
+
+      <div className="flex items-center gap-5">
+        {/* Circular gauge */}
+        <div className="relative w-[100px] h-[100px] flex-shrink-0">
+          <svg className="w-[100px] h-[100px] -rotate-90" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r={radius} fill="none" strokeWidth="7"
+              style={{ stroke: '#F3F3F0' }} />
+            <circle cx="50" cy="50" r={radius} fill="none" strokeWidth="7"
+              strokeLinecap="round"
+              style={{
+                stroke: '#2D6A4F',
+                strokeDasharray: circumference,
+                strokeDashoffset: offset,
+                transition: 'stroke-dashoffset 0.8s ease-out',
+              }} />
+          </svg>
+          <div className="absolute inset-0 flex flex-col items-center justify-center">
+            <span className="text-[26px] font-bold text-gray-900" style={{ letterSpacing: '-0.03em', lineHeight: 1 }}>
+              {score}
+            </span>
+            <span className="text-[10px] mt-0.5" style={{ color: '#B5B5B0' }}>/100</span>
+          </div>
+        </div>
+
+        {/* Breakdown */}
+        <div className="flex-1 space-y-2">
+          <p className="text-[13px] font-semibold" style={{ color: '#2D6A4F' }}>
+            {READINESS_LEVELS[level] || level}
+          </p>
+          {rows.map(({ label, value, weight }) => (
+            <div key={label} className="flex items-center gap-2">
+              <div className="flex items-center gap-1" style={{ width: 85 }}>
+                <span className="text-[11px]" style={{ color: '#999' }}>{label}</span>
+                <span className="text-[9px]" style={{ color: '#ccc' }}>{weight}</span>
+              </div>
+              <div className="flex-1 h-[5px] rounded-full overflow-hidden" style={{ background: '#F3F3F0' }}>
+                <div className="h-full rounded-full" style={{
+                  width: `${value}%`,
+                  background: 'linear-gradient(90deg, #2D6A4F, #52B788)',
+                  transition: 'width 0.8s ease-out',
+                }} />
+              </div>
+              <span className="text-[11px] font-medium text-gray-700 w-7 text-right">{value}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+/**
  * WeeklyGoalCard - Editorial calm weekly progress
  */
 const DAY_LABELS = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
@@ -390,6 +475,7 @@ export default function SoftFortHome({
   onLevelClick,
   onViewAllTopics,
   onNavigate,
+  readiness = null,
   showTopBar = true,
   showFooter = true
 }) {
@@ -506,6 +592,8 @@ export default function SoftFortHome({
               totalQuestions={effectiveStats.totalQuestions || 0}
               accuracyRate={effectiveStats.accuracyRate || 0}
             />
+
+            <ReadinessCard readiness={readiness} />
 
             <WeeklyGoalCard
               weeklyData={weeklyData}
