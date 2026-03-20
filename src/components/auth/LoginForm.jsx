@@ -26,7 +26,9 @@ export default function LoginForm({
   const [magicLinkSent, setMagicLinkSent] = useState(false);
   const [googleLoading, setGoogleLoading] = useState(false);
   const [magicLoading, setMagicLoading] = useState(false);
-  const [showEmailPassword, setShowEmailPassword] = useState(false);
+  const [showMagicLink, setShowMagicLink] = useState(false);
+  const [password, setPassword] = useState('');
+  const [passwordError, setPasswordError] = useState('');
 
   const handleGoogleLogin = async () => {
     setLocalError('');
@@ -92,25 +94,20 @@ export default function LoginForm({
           <p className="text-gray-500 text-sm mt-1">Accede a tu cuenta para continuar</p>
         </div>
 
-        {/* Google button */}
-        <button
-          onClick={handleGoogleLogin}
-          disabled={googleLoading || loading}
-          className="w-full flex items-center justify-center gap-3 py-3.5 border-2 border-gray-200 rounded-2xl font-semibold text-gray-800 hover:bg-gray-50 active:scale-[0.98] transition-all disabled:opacity-50 disabled:cursor-not-allowed mb-4"
-        >
-          <GoogleIcon />
-          {googleLoading ? 'Conectando...' : 'Continuar con Google'}
-        </button>
-
-        {/* Divider */}
-        <div className="flex items-center gap-3 my-5">
-          <div className="flex-1 h-px bg-gray-200" />
-          <span className="text-xs text-gray-400 font-medium tracking-wide uppercase">O continuar con email</span>
-          <div className="flex-1 h-px bg-gray-200" />
-        </div>
-
-        {/* Magic link form */}
-        <form onSubmit={handleMagicLink} className="space-y-3">
+        {/* Email + Password form (primary) */}
+        <form onSubmit={async (e) => {
+          e.preventDefault();
+          setPasswordError('');
+          setLocalError('');
+          if (!email.trim()) { setLocalError('Introduce tu email'); return; }
+          if (!password.trim()) { setPasswordError('Introduce tu contraseña'); return; }
+          const result = await onLogin?.(email, password);
+          if (result?.error) {
+            const msg = result.error.message || result.error;
+            if (msg.includes('Invalid login credentials')) setPasswordError('Email o contraseña incorrectos');
+            else setPasswordError(msg);
+          }
+        }} className="space-y-3">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1.5">Email</label>
             <div className="relative">
@@ -125,36 +122,78 @@ export default function LoginForm({
             </div>
           </div>
 
-          {(localError || error) && (
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1.5">Contraseña</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Tu contraseña"
+              className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-gray-400 focus:outline-none transition text-sm"
+            />
+          </div>
+
+          {(localError || error || passwordError) && (
             <div className="flex items-center gap-2 text-red-600 bg-red-50 p-3 rounded-xl">
               <AlertCircle className="w-4 h-4 flex-shrink-0" />
-              <p className="text-sm">{localError || error}</p>
+              <p className="text-sm">{passwordError || localError || error}</p>
             </div>
           )}
 
+          <div className="flex justify-end">
+            <button type="button" onClick={onForgotPassword} className="text-xs text-gray-400 hover:text-gray-600">
+              ¿Olvidaste tu contraseña?
+            </button>
+          </div>
+
           <button
             type="submit"
-            disabled={magicLoading || loading}
-            className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl font-semibold text-white transition-all active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
+            disabled={loading}
+            className="w-full py-3.5 rounded-2xl font-semibold text-white transition-all active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
             style={{ background: 'linear-gradient(145deg, #1B4332 0%, #2D6A4F 60%, #3A7D5C 100%)' }}
           >
-            <Mail className="w-4 h-4" />
-            {magicLoading ? 'Enviando...' : 'Enviar enlace mágico'}
+            {loading ? 'Entrando...' : 'Iniciar sesión'}
           </button>
         </form>
 
-        {/* Password login fallback */}
-        <div className="mt-5 text-center">
+        {/* Divider */}
+        <div className="flex items-center gap-3 my-5">
+          <div className="flex-1 h-px bg-gray-200" />
+          <span className="text-xs text-gray-400 font-medium tracking-wide uppercase">O continuar con</span>
+          <div className="flex-1 h-px bg-gray-200" />
+        </div>
+
+        {/* Google button (secondary) */}
+        <button
+          onClick={handleGoogleLogin}
+          disabled={googleLoading || loading}
+          className="w-full flex items-center justify-center gap-3 py-3 border-2 border-gray-200 rounded-2xl font-semibold text-gray-800 hover:bg-gray-50 active:scale-[0.98] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          <GoogleIcon />
+          {googleLoading ? 'Conectando...' : 'Google'}
+        </button>
+
+        {/* Magic link toggle (tertiary) */}
+        <div className="mt-3 text-center">
           <button
-            onClick={() => setShowEmailPassword(!showEmailPassword)}
+            onClick={() => setShowMagicLink(!showMagicLink)}
             className="text-xs text-gray-400 hover:text-gray-600 transition"
           >
-            {showEmailPassword ? 'Ocultar' : 'Tengo contraseña →'}
+            {showMagicLink ? 'Ocultar enlace mágico' : 'Entrar sin contraseña (enlace mágico)'}
           </button>
         </div>
 
-        {showEmailPassword && (
-          <PasswordLoginForm email={email} onLogin={onLogin} onForgotPassword={onForgotPassword} loading={loading} />
+        {showMagicLink && (
+          <form onSubmit={handleMagicLink} className="mt-3 border-t border-gray-100 pt-4">
+            <button
+              type="submit"
+              disabled={magicLoading || loading || !email.trim()}
+              className="w-full flex items-center justify-center gap-2 py-3 rounded-2xl font-semibold text-gray-700 border-2 border-gray-200 hover:bg-gray-50 transition-all active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              <Mail className="w-4 h-4" />
+              {magicLoading ? 'Enviando...' : `Enviar enlace a ${email || 'tu email'}`}
+            </button>
+          </form>
         )}
 
         {/* Footer links */}

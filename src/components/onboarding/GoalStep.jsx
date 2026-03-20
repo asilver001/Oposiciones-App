@@ -5,13 +5,14 @@ function GoalStep({ step, onSelect, onBack }) {
   // Step 'oposicion' - First step (no back button, first dot active)
   if (step === 'oposicion') {
     const options = [
-      { id: 'admin', label: 'Administrativo del Estado', icon: '🏢' },
-      { id: 'aux', label: 'Auxiliar Administrativo', icon: '📄' },
-      { id: 'gestion', label: 'Gestión del Estado', icon: '💼' },
-      { id: 'otra', label: 'Otra oposición', icon: '📝' }
+      { id: 'aux', label: 'Auxiliar Administrativo del Estado', icon: '📄', available: true },
+      { id: 'admin', label: 'Administrativo del Estado', icon: '🏢', available: false },
+      { id: 'gestion', label: 'Gestión del Estado', icon: '💼', available: false },
+      { id: 'otra', label: 'Otra oposición', icon: '📝', available: false }
     ];
     return (
-      <div className="min-h-screen bg-white px-6 pt-16">
+      <div className="min-h-screen bg-white px-6 pt-16 lg:flex lg:items-start lg:justify-center">
+        <div className="max-w-md w-full lg:mx-auto">
         <div className="flex justify-center gap-2 mb-8">
           <div className="w-6 h-2 rounded-full bg-gray-900"></div>
           <div className="w-2 h-2 rounded-full bg-gray-300"></div>
@@ -23,16 +24,26 @@ function GoalStep({ step, onSelect, onBack }) {
         {options.map((o) => (
           <button
             key={o.id}
-            onClick={() => onSelect(o.id)}
-            className="w-full bg-white rounded-2xl p-4 flex items-center mb-3 border-2 border-gray-100 hover:border-gray-900 focus:border-gray-100 focus:outline-none active:scale-[0.98] transition-all"
+            onClick={() => o.available && onSelect(o.id)}
+            disabled={!o.available}
+            className={`w-full bg-white rounded-2xl p-4 flex items-center mb-3 border-2 transition-all ${
+              o.available
+                ? 'border-gray-100 hover:border-gray-900 active:scale-[0.98] cursor-pointer'
+                : 'border-gray-50 opacity-50 cursor-not-allowed'
+            }`}
           >
             <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mr-4">
               <span className="text-2xl">{o.icon}</span>
             </div>
             <span className="flex-1 text-left font-medium text-gray-800">{o.label}</span>
-            <span className="text-gray-400 text-2xl">›</span>
+            {o.available ? (
+              <span className="text-gray-400 text-2xl">›</span>
+            ) : (
+              <span className="text-xs text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">Próximamente</span>
+            )}
           </button>
         ))}
+        </div>
       </div>
     );
   }

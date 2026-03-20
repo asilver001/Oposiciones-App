@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Home, History, BookOpen, GraduationCap, ClipboardCheck } from 'lucide-react';
+import { NAV_ITEMS, REVIEWER_NAV_ITEM } from '../../config/navigation';
 
 /**
- * BottomTabBar - Barra de navegacion full-width
- * HomeMinimal shell redesign Phase 1 - full-width with border-t, no floating island
+ * BottomTabBar - Full-width bottom navigation for mobile viewports.
+ * Auto-hides on scroll down, reappears on scroll up.
  */
 export default function BottomTabBar({
   activeTab,
@@ -13,7 +13,6 @@ export default function BottomTabBar({
   onTabChange,
   onPageChange
 }) {
-  // State for scroll-based visibility
   const [isVisible, setIsVisible] = useState(true);
   const lastScrollY = useRef(0);
 
@@ -22,10 +21,8 @@ export default function BottomTabBar({
       const currentScrollY = window.scrollY;
       const scrollDiff = currentScrollY - lastScrollY.current;
 
-      // Only trigger if scroll is significant (> 5px)
       if (Math.abs(scrollDiff) < 5) return;
 
-      // Hide on scroll down (when past 100px), show on scroll up
       if (scrollDiff > 0 && currentScrollY > 100) {
         setIsVisible(false);
       } else {
@@ -39,18 +36,9 @@ export default function BottomTabBar({
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Tabs base para todos los usuarios
-  const baseTabs = [
-    { id: 'inicio', label: 'Inicio', icon: Home },
-    { id: 'actividad', label: 'Actividad', icon: History },
-    { id: 'temas', label: 'Temas', icon: BookOpen },
-    { id: 'recursos', label: 'Recursos', icon: GraduationCap }
-  ];
-
-  // Añadir tab "Revisar" si el usuario es reviewer
   const tabs = isUserReviewer
-    ? [...baseTabs, { id: 'reviewer-panel', label: 'Revisar', icon: ClipboardCheck }]
-    : baseTabs;
+    ? [...NAV_ITEMS, REVIEWER_NAV_ITEM]
+    : NAV_ITEMS;
 
   return (
     <motion.div
@@ -63,7 +51,6 @@ export default function BottomTabBar({
         <nav aria-label="Navegacion principal">
           <div className="flex justify-around items-center h-[58px] px-1" role="tablist">
             {tabs.map(tab => {
-              // Para el tab "Revisar" usamos currentPage en lugar de activeTab
               const isActive = tab.id === 'reviewer-panel'
                 ? currentPage === 'reviewer-panel'
                 : activeTab === tab.id;
@@ -79,13 +66,12 @@ export default function BottomTabBar({
                     } else {
                       onTabChange(tab.id);
                       if (currentPage === 'reviewer-panel') {
-                        onPageChange('home'); // Salir del reviewer panel al cambiar de tab
+                        onPageChange('home');
                       }
                     }
                   }}
                   className="relative flex flex-col items-center justify-center min-w-[3.5rem] py-1 px-1.5 transition-all duration-200"
                 >
-                  {/* Active tab indicator bar at top */}
                   {isActive && (
                     <span className="absolute top-0 left-1/2 -translate-x-1/2 w-5 h-0.5 bg-gray-900 rounded-full" />
                   )}
