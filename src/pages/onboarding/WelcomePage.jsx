@@ -7,13 +7,13 @@
 import { useNavigate, Navigate, useLocation } from 'react-router-dom';
 import { useUserStore } from '../../stores/useUserStore';
 import { useAuth } from '../../contexts/AuthContext';
-import WelcomeScreen from '../../components/onboarding/WelcomeScreen';
+import LandingPage from '../../components/landing/LandingPage';
 import { ROUTES } from '../../router/routes';
 
 export default function WelcomePage() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { onboardingComplete } = useUserStore();
+  const { onboardingComplete, completeOnboarding } = useUserStore();
   const { user, isAnonymous, loading } = useAuth();
   const devOverride = location.state?.devOverride;
 
@@ -45,10 +45,25 @@ export default function WelcomePage() {
     navigate(ROUTES.LOGIN);
   };
 
+  const handleSkipAll = () => {
+    completeOnboarding();
+    navigate(ROUTES.HOME, { replace: true });
+  };
+
   return (
-    <WelcomeScreen
-      onStart={handleStart}
-      onLogin={handleLogin}
-    />
+    <>
+      <LandingPage
+        onStart={handleStart}
+        onLogin={handleLogin}
+      />
+      {devOverride && (
+        <button
+          onClick={handleSkipAll}
+          className="fixed bottom-6 right-6 z-50 text-gray-400 hover:text-gray-500 text-xs py-1.5 px-3 rounded-lg bg-gray-100 hover:bg-gray-200 transition-all"
+        >
+          Skip todo →
+        </button>
+      )}
+    </>
   );
 }
