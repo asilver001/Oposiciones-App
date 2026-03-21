@@ -13,9 +13,10 @@ export default function LoginPage() {
   const navigate = useNavigate();
   const location = useLocation();
   const { signIn, signInWithGoogle, signInWithMagicLink, user, isAnonymous } = useAuth();
+  const devOverride = location.state?.devOverride;
 
-  // Already authenticated — redirect to app
-  if (user && !isAnonymous) {
+  // Already authenticated — redirect to app (unless dev override)
+  if (user && !isAnonymous && !devOverride) {
     return <Navigate to={ROUTES.HOME} replace />;
   }
 
