@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import { useUserStore } from '../../stores/useUserStore';
 import DateStep from '../../components/onboarding/DateStep';
 import { ROUTES } from '../../router/routes';
+import SkipOnboarding from '../../components/onboarding/SkipOnboarding';
 
 export default function FechaPage() {
   const navigate = useNavigate();
@@ -23,9 +24,12 @@ export default function FechaPage() {
   };
 
   return (
-    <DateStep
-      onSelect={handleNext}
-      onBack={handleBack}
-    />
+    <>
+      <DateStep
+        onSelect={handleNext}
+        onBack={handleBack}
+      />
+      <SkipOnboarding />
+    </>
   );
 }

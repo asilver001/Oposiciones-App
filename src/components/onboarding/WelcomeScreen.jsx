@@ -21,7 +21,7 @@ const VALUE_PROPS = [
  * Mobile:  Vertical stack, centered
  * Desktop: Split layout — left info/CTA, right preview mockup
  */
-function WelcomeScreen({ onStart, onLogin }) {
+function WelcomeScreen({ onStart, onLogin, onSkipAll }) {
   return (
     <div className="min-h-dvh bg-white flex items-center justify-center p-6 lg:p-12">
       <div className="w-full max-w-5xl flex flex-col lg:flex-row lg:items-center lg:gap-16">
@@ -68,6 +68,15 @@ function WelcomeScreen({ onStart, onLogin }) {
             >
               <LogIn className="w-5 h-5" />
               Ya tengo cuenta
+            </button>
+          )}
+
+          {onSkipAll && (
+            <button
+              onClick={onSkipAll}
+              className="w-full lg:w-auto text-gray-400 hover:text-gray-500 text-sm py-2 transition-all mt-1"
+            >
+              Skip todo →
             </button>
           )}
         </div>

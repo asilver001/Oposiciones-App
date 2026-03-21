@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import { useUserStore } from '../../stores/useUserStore';
 import GoalStep from '../../components/onboarding/GoalStep';
 import { ROUTES } from '../../router/routes';
+import SkipOnboarding from '../../components/onboarding/SkipOnboarding';
 
 export default function OposicionPage() {
   const navigate = useNavigate();
@@ -23,10 +24,13 @@ export default function OposicionPage() {
   };
 
   return (
-    <GoalStep
-      step="oposicion"
-      onSelect={handleNext}
-      onBack={handleBack}
-    />
+    <>
+      <GoalStep
+        step="oposicion"
+        onSelect={handleNext}
+        onBack={handleBack}
+      />
+      <SkipOnboarding />
+    </>
   );
 }

@@ -7,6 +7,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useUserStore } from '../../stores/useUserStore';
 import { ROUTES } from '../../router/routes';
+import SkipOnboarding from '../../components/onboarding/SkipOnboarding';
 
 // Temporary inline component until extracted from OpositaApp
 function TiempoStep({ onNext, onBack }) {
@@ -64,9 +65,12 @@ export default function TiempoPage() {
   };
 
   return (
-    <TiempoStep
-      onNext={handleNext}
-      onBack={handleBack}
-    />
+    <>
+      <TiempoStep
+        onNext={handleNext}
+        onBack={handleBack}
+      />
+      <SkipOnboarding />
+    </>
   );
 }

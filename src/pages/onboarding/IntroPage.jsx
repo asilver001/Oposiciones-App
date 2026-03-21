@@ -7,6 +7,7 @@
 import { useNavigate } from 'react-router-dom';
 import IntroStep from '../../components/onboarding/IntroStep';
 import { ROUTES } from '../../router/routes';
+import SkipOnboarding from '../../components/onboarding/SkipOnboarding';
 
 export default function IntroPage() {
   const navigate = useNavigate();
@@ -24,10 +25,13 @@ export default function IntroPage() {
   };
 
   return (
-    <IntroStep
-      onStart={handleStart}
-      onSkip={handleSkip}
-      onBack={handleBack}
-    />
+    <>
+      <IntroStep
+        onStart={handleStart}
+        onSkip={handleSkip}
+        onBack={handleBack}
+      />
+      <SkipOnboarding />
+    </>
   );
 }
