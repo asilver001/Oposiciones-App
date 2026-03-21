@@ -31,6 +31,20 @@
   --color-danger-100: #fee2e2;
   --color-danger-500: #ef4444;
   --color-danger-600: #dc2626;
+
+  /* === Dashboard: Editorial Calm tokens (Lovable) === */
+  --color-forest-deep: #1B4332;
+  --color-forest-primary: #2D6A4F;
+  --color-forest-medium: #3A7D5C;
+  --color-forest-light: #40916C;
+  --color-section-label: #A2A09D;
+  --color-body-text: #4B5563;
+  --color-muted-soft: #B5B3AF;
+
+  /* === Shadows === */
+  --shadow-hero: 0 8px 28px rgba(27, 67, 50, 0.20);
+  --shadow-hero-hover: 0 12px 36px rgba(27, 67, 50, 0.28);
+  --shadow-card-hover: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 /* === Dark Mode === */
@@ -55,6 +69,15 @@ body {
 *:focus-visible {
   outline: 2px solid #111827;
   outline-offset: 2px;
+}
+
+/* === Fade-up animation (Lovable dashboard) === */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); filter: blur(4px); }
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+.animate-fade-up {
+  animation: fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 /* Skip-to-content link */

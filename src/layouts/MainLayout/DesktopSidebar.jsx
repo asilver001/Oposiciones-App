@@ -29,43 +29,42 @@ export default function DesktopSidebar({
         ${collapsed ? 'w-16' : 'w-60'}
       `}
     >
-      {/* Header: Logo + collapse toggle */}
-      <div className="flex items-center h-14 px-3 border-b border-gray-50">
-        <button
-          onClick={onOpenProgress}
-          className="flex items-center gap-2.5 min-w-0 flex-1"
-          aria-label="Ver progreso diario"
-        >
-          <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center shrink-0">
-            <span className="text-lg">🎓</span>
-          </div>
-          {!collapsed && (
-            <span className="text-sm font-semibold text-gray-900 truncate">
-              Oposita Smart
+      {/* Header: Logo */}
+      <div className="px-4 pt-8 pb-2 mb-6">
+        {collapsed ? (
+          <button
+            onClick={() => setCollapsed(false)}
+            className="text-lg mx-auto block"
+            aria-label="Expandir sidebar"
+          >🎓</button>
+        ) : (
+          <div className="flex items-center justify-between">
+            <span className="text-lg font-bold tracking-[-0.02em] text-gray-900 px-1">
+              🎓 Oposita Smart
             </span>
-          )}
-        </button>
-        <button
-          onClick={() => setCollapsed(!collapsed)}
-          className="w-7 h-7 flex items-center justify-center rounded-md hover:bg-gray-100 text-gray-400 shrink-0"
-          aria-label={collapsed ? 'Expandir sidebar' : 'Colapsar sidebar'}
-        >
-          {collapsed ? <ChevronRight className="w-4 h-4" /> : <ChevronLeft className="w-4 h-4" />}
-        </button>
+            <button
+              onClick={() => setCollapsed(true)}
+              className="w-7 h-7 flex items-center justify-center rounded-md hover:bg-gray-100 text-gray-400 shrink-0"
+              aria-label="Colapsar sidebar"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Daily progress bar */}
-      <div className="px-3 pt-3 pb-1">
-        <div className="h-1 bg-gray-100 rounded-full overflow-hidden">
-          <div
-            className="h-full bg-gray-900 rounded-full transition-all duration-500"
-            style={{ width: `${dailyProgressPercent}%` }}
-          />
+      {!collapsed && dailyProgressPercent > 0 && (
+        <div className="px-4 pb-2">
+          <div className="h-1 bg-gray-100 rounded-full overflow-hidden">
+            <div
+              className="h-full rounded-full transition-all duration-500"
+              style={{ width: `${dailyProgressPercent}%`, background: '#2D6A4F' }}
+            />
+          </div>
+          <p className="text-[11px] mt-1" style={{ color: '#B5B3AF' }}>{dailyProgressPercent}% de tu meta diaria</p>
         </div>
-        {!collapsed && (
-          <p className="text-[11px] text-gray-400 mt-1">{dailyProgressPercent}% de tu meta diaria</p>
-        )}
-      </div>
+      )}
 
       {/* Navigation items */}
       <nav className="flex-1 px-2 py-2 space-y-0.5" aria-label="Navegacion principal">
@@ -76,18 +75,18 @@ export default function DesktopSidebar({
               key={item.id}
               onClick={() => navigate(item.path)}
               className={`
-                w-full flex items-center gap-3 px-2.5 py-2 rounded-lg
+                w-full flex items-center gap-3 px-3 py-2.5 rounded-md
                 transition-colors duration-150
                 ${isActive
-                  ? 'bg-gray-100 text-gray-900 font-semibold'
-                  : 'text-gray-500 hover:bg-gray-50 hover:text-gray-700'
+                  ? 'bg-[rgba(45,106,79,0.08)] text-[#2D6A4F] font-semibold'
+                  : 'text-[#4B5563] hover:bg-[#FAFAF7] hover:text-gray-700'
                 }
                 ${collapsed ? 'justify-center' : ''}
               `}
               aria-current={isActive ? 'page' : undefined}
               title={collapsed ? item.label : undefined}
             >
-              <item.icon className={`w-5 h-5 shrink-0 ${isActive ? 'stroke-[2]' : 'stroke-[1.5]'}`} />
+              <item.icon size={18} strokeWidth={isActive ? 2.2 : 1.8} className="shrink-0" />
               {!collapsed && (
                 <span className="text-sm truncate">{item.label}</span>
               )}
@@ -97,18 +96,18 @@ export default function DesktopSidebar({
       </nav>
 
       {/* Bottom section: Settings */}
-      <div className="px-2 pb-3 pt-2 border-t border-gray-50 space-y-0.5">
+      <div className="px-2 pb-4 pt-2">
         <button
           onClick={onOpenSettings}
           className={`
-            w-full flex items-center gap-3 px-2.5 py-2 rounded-lg
-            text-gray-500 hover:bg-gray-50 hover:text-gray-700
+            w-full flex items-center gap-3 px-3 py-2.5 rounded-md
+            text-[#B5B3AF] hover:bg-[#FAFAF7] hover:text-gray-700
             transition-colors duration-150
             ${collapsed ? 'justify-center' : ''}
           `}
           title={collapsed ? 'Ajustes' : undefined}
         >
-          <Settings className="w-5 h-5 shrink-0 stroke-[1.5]" />
+          <Settings size={18} strokeWidth={1.8} className="shrink-0" />
           {!collapsed && <span className="text-sm">Ajustes</span>}
         </button>
       </div>

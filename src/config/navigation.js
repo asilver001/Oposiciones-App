@@ -1,4 +1,4 @@
-import { Home, History, BookOpen, GraduationCap, ClipboardCheck } from 'lucide-react';
+import { Home, BarChart3, BookOpen, FolderOpen, ClipboardCheck } from 'lucide-react';
 import { ROUTES } from '../router/paths';
 
 /**
@@ -7,9 +7,9 @@ import { ROUTES } from '../router/paths';
  */
 export const NAV_ITEMS = [
   { id: 'inicio', path: ROUTES.HOME, icon: Home, label: 'Inicio' },
-  { id: 'actividad', path: ROUTES.ACTIVIDAD, icon: History, label: 'Actividad' },
+  { id: 'actividad', path: ROUTES.ACTIVIDAD, icon: BarChart3, label: 'Actividad' },
   { id: 'temas', path: ROUTES.TEMAS, icon: BookOpen, label: 'Temas' },
-  { id: 'recursos', path: ROUTES.RECURSOS, icon: GraduationCap, label: 'Recursos' },
+  { id: 'recursos', path: ROUTES.RECURSOS, icon: FolderOpen, label: 'Recursos' },
 ];
 
 /** Reviewer-only nav item */

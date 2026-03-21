@@ -1,466 +1,350 @@
 /**
- * SoftFortHome Component - Oposita Smart
+ * SoftFortHome — Lovable-inspired 2-column dashboard
  *
- * Main home page component with Soft+Fort aesthetic.
- * Features: welcome section, session CTA, FortalezaVisual, stats summary.
- * Philosophy: "Bienestar primero" - calming design without anxiety-inducing elements.
+ * Desktop: Main content (left) + Right panel (progress/topics)
+ * Mobile: Single column stack
+ *
+ * Philosophy: "Bienestar primero" — positive framing, no raw failure metrics.
  */
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
-  Zap, Sparkles, ChevronRight,
-  RefreshCw, AlertTriangle, BookOpen, Clock, Play,
-  Info, HelpCircle, Instagram
+  ArrowRight, Layers, RotateCcw, FileText, Sparkles,
+  Info, HelpCircle, Instagram, ChevronRight, Play
 } from 'lucide-react';
-import { TopBar } from '@layouts/MainLayout';
 import FortalezaVisual, { statusConfig } from './FortalezaVisual';
 import EmptyState from '../common/EmptyState';
 import DevModeRandomizer, { userStates } from '../dev/DevModeRandomizer';
 import { useAuth } from '../../contexts/AuthContext';
 import { useUserStore } from '../../stores/useUserStore';
 
-/**
- * Icon mapping for study plan activities
- */
+// ============================================================
+// SUB-COMPONENTS
+// ============================================================
 
-/**
- * TodaySessionCard - Green editorial CTA with first activity
- */
-function TodaySessionCard({ activities, onStartActivity }) {
-  const activity = activities?.[0];
+/** Hero session card — the primary CTA */
+function HeroSessionCard({ activity, onStart }) {
   if (!activity) return null;
 
   return (
-    <motion.div
-      className="relative overflow-hidden rounded-[24px] p-7 text-white"
-      style={{ background: 'linear-gradient(145deg, #1B4332 0%, #2D6A4F 60%, #3A7D5C 100%)' }}
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 0.1 }}
+    <div
+      className="relative overflow-hidden rounded-2xl p-7 mb-8 cursor-pointer transition-all duration-200 hover:-translate-y-0.5 animate-fade-up"
+      style={{
+        background: 'linear-gradient(145deg, #1B4332, #2D6A4F, #40916C)',
+        boxShadow: 'var(--shadow-hero)',
+        animationDelay: '140ms',
+      }}
+      onMouseEnter={(e) => e.currentTarget.style.boxShadow = 'var(--shadow-hero-hover)'}
+      onMouseLeave={(e) => e.currentTarget.style.boxShadow = 'var(--shadow-hero)'}
+      onClick={() => onStart(activity)}
     >
       {/* Decorative circles */}
-      <div className="absolute -top-10 -right-10 w-[150px] h-[150px] rounded-full"
-        style={{ background: 'rgba(255,255,255,0.04)' }} />
-      <div className="absolute -bottom-6 -left-6 w-[90px] h-[90px] rounded-full"
-        style={{ background: 'rgba(255,255,255,0.03)' }} />
+      <div className="absolute -top-12 -right-12 w-[180px] h-[180px] rounded-full" style={{ background: 'rgba(255,255,255,0.04)' }} />
+      <div className="absolute -bottom-16 right-28 w-[220px] h-[220px] rounded-full" style={{ background: 'rgba(255,255,255,0.03)' }} />
 
-      <div className="relative z-10">
-        <p className="text-[13px] font-medium mb-1.5" style={{ opacity: 0.5 }}>
-          Tu sesión de hoy
-        </p>
-        <h2 className="text-[22px] font-bold mb-1" style={{ letterSpacing: '-0.02em' }}>
-          {activity.title}
-        </h2>
-        <p className="text-[15px] mb-5" style={{ opacity: 0.45 }}>
-          {activity.description}
-        </p>
-
-        <div className="mb-[18px]" style={{ height: 1, background: 'rgba(255,255,255,0.08)' }} />
-
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-4 text-[14px]" style={{ opacity: 0.4 }}>
-            <span>{activity.estimatedMinutes || 10} min</span>
-            <span>·</span>
-            <span>{activity.questionCount || 8} preguntas</span>
-          </div>
-          <motion.button
-            onClick={() => onStartActivity(activity)}
-            className="w-[50px] h-[50px] rounded-full flex items-center justify-center"
-            style={{ background: 'rgba(255,255,255,0.12)' }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Play className="w-5 h-5 text-white fill-white" />
-          </motion.button>
-        </div>
-      </div>
-    </motion.div>
+      <p className="text-[10px] font-semibold uppercase tracking-[0.06em] text-white/60 mb-2 relative">
+        Sesión recomendada
+      </p>
+      <h2 className="text-[22px] font-bold text-white tracking-[-0.02em] mb-1 leading-snug relative">
+        {activity.title}
+      </h2>
+      <p className="text-[14px] text-white/70 mb-5 relative">
+        {activity.questionCount || 8} preguntas · ~{activity.estimatedMinutes || 10} min
+      </p>
+      <button
+        className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 text-white text-[14px] font-semibold px-5 py-2.5 rounded-lg transition-colors duration-150 active:scale-[0.97] relative"
+        onClick={(e) => { e.stopPropagation(); onStart(activity); }}
+      >
+        Empezar
+        <ArrowRight size={16} />
+      </button>
+    </div>
   );
 }
 
-/**
- * TodaySessionCardFallback - For when there's no study plan, uses nextTopic
- */
-function TodaySessionCardFallback({ nextTopic, onStartSession }) {
-  const fallbackActivity = {
-    title: `T${nextTopic?.number || nextTopic?.id}. ${nextTopic?.name}`,
-    description: '15 preguntas · Práctica de tema',
-    estimatedMinutes: 10,
-    questionCount: 15,
-  };
-
+/** New user welcome hero */
+function WelcomeHeroCard({ onStart }) {
   return (
-    <motion.div
-      className="relative overflow-hidden rounded-[24px] p-7 text-white"
-      style={{ background: 'linear-gradient(145deg, #1B4332 0%, #2D6A4F 60%, #3A7D5C 100%)' }}
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 0.1 }}
+    <div
+      className="relative overflow-hidden rounded-2xl p-7 cursor-pointer transition-all duration-200 hover:-translate-y-0.5 animate-fade-up"
+      style={{
+        background: 'linear-gradient(145deg, #1B4332, #2D6A4F, #40916C)',
+        boxShadow: 'var(--shadow-hero)',
+        animationDelay: '140ms',
+      }}
+      onClick={onStart}
     >
-      <div className="absolute -top-10 -right-10 w-[150px] h-[150px] rounded-full"
-        style={{ background: 'rgba(255,255,255,0.04)' }} />
-      <div className="absolute -bottom-6 -left-6 w-[90px] h-[90px] rounded-full"
-        style={{ background: 'rgba(255,255,255,0.03)' }} />
+      <div className="absolute -top-12 -right-12 w-[180px] h-[180px] rounded-full" style={{ background: 'rgba(255,255,255,0.04)' }} />
 
-      <div className="relative z-10">
-        <p className="text-[13px] font-medium mb-1.5" style={{ opacity: 0.5 }}>
-          Tu sesión de hoy
-        </p>
-        <h2 className="text-[22px] font-bold mb-1" style={{ letterSpacing: '-0.02em' }}>
-          {fallbackActivity.title}
-        </h2>
-        <p className="text-[15px] mb-5" style={{ opacity: 0.45 }}>
-          {fallbackActivity.description}
-        </p>
-
-        <div className="mb-[18px]" style={{ height: 1, background: 'rgba(255,255,255,0.08)' }} />
-
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-4 text-[14px]" style={{ opacity: 0.4 }}>
-            <span>{fallbackActivity.estimatedMinutes} min</span>
-            <span>·</span>
-            <span>{fallbackActivity.questionCount} preguntas</span>
-          </div>
-          <motion.button
-            onClick={() => onStartSession(nextTopic)}
-            className="w-[50px] h-[50px] rounded-full flex items-center justify-center"
-            style={{ background: 'rgba(255,255,255,0.12)' }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Play className="w-5 h-5 text-white fill-white" />
-          </motion.button>
-        </div>
-      </div>
-    </motion.div>
+      <p className="text-[10px] font-semibold uppercase tracking-[0.06em] text-white/60 mb-2 relative">
+        Empieza aquí
+      </p>
+      <h2 className="text-[22px] font-bold text-white tracking-[-0.02em] mb-1 leading-snug relative">
+        Haz tu primera sesión de práctica
+      </h2>
+      <p className="text-[14px] text-white/70 mb-1 relative">
+        10 preguntas para conocer tu nivel
+      </p>
+      <p className="text-[12px] text-white/40 mb-5 relative">
+        Solo 5 minutos · Sin puntuación · Aprende con cada respuesta
+      </p>
+      <button
+        className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 text-white text-[14px] font-semibold px-5 py-2.5 rounded-lg transition-colors duration-150 active:scale-[0.97] relative"
+        onClick={(e) => { e.stopPropagation(); onStart(); }}
+      >
+        Empezar primera sesión
+        <ArrowRight size={16} />
+      </button>
+    </div>
   );
 }
 
-/**
- * Icon mapping for study plan activities
- */
-const activityIcons = {
-  'refresh-cw': RefreshCw,
-  'alert-triangle': AlertTriangle,
-  'book-open': BookOpen,
-  'clock': Clock,
-  'zap': Zap,
-  'coffee': Clock,
-};
-
-
-/**
- * StatsRow - Two-column stats (questions + accuracy)
- */
-function StatsRow({ totalQuestions, accuracyRate }) {
-  return (
-    <motion.div
-      className="flex overflow-hidden rounded-[20px]"
-      style={{ background: 'white', boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 0.15 }}
-    >
-      <div className="flex-1 py-6 px-5 text-center" style={{ borderRight: '1px solid #F3F3F0' }}>
-        <p className="text-[32px] font-bold text-gray-900" style={{ letterSpacing: '-0.03em', lineHeight: 1 }}>
-          {totalQuestions}
-        </p>
-        <p className="text-[12px] font-medium mt-[7px]" style={{ color: '#B5B5B0' }}>
-          Preguntas
-        </p>
-      </div>
-      <div className="flex-1 py-6 px-5 text-center">
-        <p className="text-[32px] font-bold" style={{ color: '#2D6A4F', letterSpacing: '-0.03em', lineHeight: 1 }}>
-          {accuracyRate}%
-        </p>
-        <p className="text-[12px] font-medium mt-[7px]" style={{ color: '#B5B5B0' }}>
-          Precisión
-        </p>
-      </div>
-    </motion.div>
-  );
-}
-
-
-/**
- * ReadinessCard - Composite readiness index (cobertura 30% + precisión 40% + simulacros 30%)
- */
-const READINESS_LEVELS = {
-  inicial: 'Empezando',
-  en_progreso: 'En progreso',
-  avanzado: 'Avanzado',
-  preparado: 'Preparado',
-};
-
-function ReadinessCard({ readiness }) {
-  if (!readiness) return null;
-  const { score, breakdown, level } = readiness;
-  const radius = 42;
-  const circumference = 2 * Math.PI * radius;
-  const offset = circumference - (score / 100) * circumference;
-
-  const rows = [
-    { label: 'Cobertura', value: breakdown.cobertura, weight: '30%' },
-    { label: 'Precisión', value: breakdown.precision, weight: '40%' },
-    { label: 'Simulacros', value: breakdown.simulacros, weight: '30%' },
+/** Stats row — borderless floating numbers */
+function StatsRow({ totalQuestions, topicsExplored, totalHours }) {
+  const stats = [
+    { value: totalQuestions.toString(), label: 'preguntas respondidas' },
+    { value: topicsExplored.toString(), label: 'temas explorados' },
+    { value: `${totalHours}h`, label: 'de estudio total' },
   ];
 
   return (
-    <motion.div
-      className="rounded-[20px] p-5"
-      style={{ background: 'white', boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 0.2 }}
-    >
-      <p className="text-[12px] font-medium mb-4" style={{ color: '#B5B5B0' }}>
-        Índice de preparación
-      </p>
-
-      <div className="flex items-center gap-5">
-        {/* Circular gauge */}
-        <div className="relative w-[100px] h-[100px] flex-shrink-0">
-          <svg className="w-[100px] h-[100px] -rotate-90" viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r={radius} fill="none" strokeWidth="7"
-              style={{ stroke: '#F3F3F0' }} />
-            <circle cx="50" cy="50" r={radius} fill="none" strokeWidth="7"
-              strokeLinecap="round"
-              style={{
-                stroke: '#2D6A4F',
-                strokeDasharray: circumference,
-                strokeDashoffset: offset,
-                transition: 'stroke-dashoffset 0.8s ease-out',
-              }} />
-          </svg>
-          <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <span className="text-[26px] font-bold text-gray-900" style={{ letterSpacing: '-0.03em', lineHeight: 1 }}>
-              {score}
-            </span>
-            <span className="text-[10px] mt-0.5" style={{ color: '#B5B5B0' }}>/100</span>
-          </div>
-        </div>
-
-        {/* Breakdown */}
-        <div className="flex-1 space-y-2">
-          <p className="text-[13px] font-semibold" style={{ color: '#2D6A4F' }}>
-            {READINESS_LEVELS[level] || level}
+    <div className="flex gap-12 mb-10 animate-fade-up" style={{ animationDelay: '200ms' }}>
+      {stats.map((stat) => (
+        <div key={stat.label}>
+          <p className="text-[32px] font-extrabold tracking-[-0.03em] text-gray-900 leading-none">
+            {stat.value}
           </p>
-          {rows.map(({ label, value, weight }) => (
-            <div key={label} className="flex items-center gap-2">
-              <div className="flex items-center gap-1" style={{ width: 85 }}>
-                <span className="text-[11px]" style={{ color: '#999' }}>{label}</span>
-                <span className="text-[9px]" style={{ color: '#ccc' }}>{weight}</span>
-              </div>
-              <div className="flex-1 h-[5px] rounded-full overflow-hidden" style={{ background: '#F3F3F0' }}>
-                <div className="h-full rounded-full" style={{
-                  width: `${value}%`,
-                  background: 'linear-gradient(90deg, #2D6A4F, #52B788)',
-                  transition: 'width 0.8s ease-out',
-                }} />
-              </div>
-              <span className="text-[11px] font-medium text-gray-700 w-7 text-right">{value}</span>
-            </div>
-          ))}
+          <p className="text-[12px] mt-1" style={{ color: 'var(--color-muted-soft)' }}>
+            {stat.label}
+          </p>
         </div>
-      </div>
-    </motion.div>
+      ))}
+    </div>
   );
 }
 
-/**
- * WeeklyGoalCard - Editorial calm weekly progress
- */
-const DAY_LABELS = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
-
-function WeeklyGoalCard({ weeklyData = [0, 0, 0, 0, 0, 0, 0], goal = 75 }) {
-  const weeklyTotal = weeklyData.reduce((s, d) => s + d, 0);
-  const percent = Math.min(Math.round((weeklyTotal / goal) * 100), 100);
-  const todayIdx = (() => {
-    const d = new Date().getDay();
-    return d === 0 ? 6 : d - 1;
-  })();
+/** Quick action cards */
+function QuickActions({ onFlashcards, onReview, onSimulacro, reviewCount = 0, isNew = false }) {
+  const actions = [
+    { icon: Layers, title: 'Flashcards', subtitle: 'Aprende conceptos', onClick: onFlashcards },
+    { icon: RotateCcw, title: 'Repasar', subtitle: reviewCount > 0 ? `${reviewCount} pendientes` : 'Al día', onClick: onReview },
+    { icon: FileText, title: 'Simulacro', subtitle: isNew ? 'Disponible tras 50 preg.' : 'Examen completo', onClick: isNew ? null : onSimulacro, disabled: isNew },
+  ];
 
   return (
-    <motion.div
-      className="rounded-[20px] p-5"
-      style={{ background: 'white', boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 0.25 }}
-    >
-      <div className="flex items-center justify-between mb-3.5">
-        <span className="text-[16px] font-semibold text-gray-900">Meta semanal</span>
-        <span className="text-[14px] font-medium" style={{ color: '#B5B5B0' }}>
-          {weeklyTotal} / {goal}
-        </span>
+    <div className="animate-fade-up" style={{ animationDelay: '260ms' }}>
+      <p className="text-[10px] font-semibold uppercase tracking-[0.06em] mb-4" style={{ color: 'var(--color-section-label)' }}>
+        Acciones rápidas
+      </p>
+      <div className="grid grid-cols-3 gap-5">
+        {actions.map((action) => (
+          <button
+            key={action.title}
+            onClick={action.onClick}
+            disabled={action.disabled}
+            className={`bg-white border border-black/5 rounded-lg p-5 text-left cursor-pointer transition-all duration-200 hover:-translate-y-px ${
+              action.disabled ? 'opacity-45 cursor-not-allowed hover:translate-y-0' : ''
+            }`}
+            style={{ boxShadow: 'none' }}
+            onMouseEnter={(e) => !action.disabled && (e.currentTarget.style.boxShadow = 'var(--shadow-card-hover)')}
+            onMouseLeave={(e) => (e.currentTarget.style.boxShadow = 'none')}
+          >
+            <div className="mb-3">
+              <action.icon size={20} style={{ color: 'var(--color-forest-primary)' }} />
+            </div>
+            <p className="text-[14px] font-semibold text-gray-900">{action.title}</p>
+            <p className="text-[12px] mt-0.5" style={{ color: 'var(--color-muted-soft)' }}>{action.subtitle}</p>
+          </button>
+        ))}
       </div>
+    </div>
+  );
+}
 
-      <div className="rounded-full overflow-hidden mb-4" style={{ height: 7, background: '#F3F3F0' }}>
-        <motion.div
-          className="h-full rounded-full"
-          style={{ background: 'linear-gradient(90deg, #2D6A4F, #52B788)' }}
-          initial={{ width: 0 }}
-          animate={{ width: `${percent}%` }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
+/** Recent sessions list */
+function RecentSessions({ sessions = [] }) {
+  if (sessions.length === 0) return null;
+
+  return (
+    <div className="animate-fade-up" style={{ animationDelay: '320ms' }}>
+      <p className="text-[10px] font-semibold uppercase tracking-[0.06em] mb-4" style={{ color: 'var(--color-section-label)' }}>
+        Sesiones recientes
+      </p>
+      <div className="flex flex-col gap-2">
+        {sessions.map((session, i) => (
+          <div key={i} className="flex items-center gap-3 py-2.5 px-1">
+            <span
+              className="w-2 h-2 rounded-full shrink-0"
+              style={{ background: (session.score / session.total) >= 0.6 ? 'var(--color-forest-primary)' : '#F59E0B' }}
+            />
+            <span className="text-[14px] text-gray-900 font-medium flex-1">{session.topic}</span>
+            <span className="text-[13px] font-medium tabular-nums" style={{ color: 'var(--color-body-text)' }}>
+              {session.score}/{session.total}
+            </span>
+            <span className="text-[12px] w-24 text-right" style={{ color: 'var(--color-muted-soft)' }}>
+              {session.date}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/** How it works — new users only */
+function HowItWorks() {
+  const steps = [
+    { num: '1', title: 'Practica', desc: 'Responde preguntas reales del temario' },
+    { num: '2', title: 'Aprende', desc: 'Lee la explicación de cada respuesta' },
+    { num: '3', title: 'Repasa', desc: 'El algoritmo programa los repasos por ti' },
+  ];
+
+  return (
+    <div className="bg-white border border-black/5 rounded-xl p-5 animate-fade-up" style={{ animationDelay: '320ms' }}>
+      <p className="text-[10px] font-semibold uppercase tracking-[0.06em] mb-4" style={{ color: 'var(--color-section-label)' }}>
+        ¿Cómo funciona?
+      </p>
+      <div className="flex gap-5">
+        {steps.map((step) => (
+          <div key={step.num} className="flex-1 text-center">
+            <div
+              className="w-7 h-7 rounded-full flex items-center justify-center mx-auto mb-2 text-[12px] font-extrabold"
+              style={{ background: 'rgba(45,106,79,0.08)', color: 'var(--color-forest-primary)' }}
+            >
+              {step.num}
+            </div>
+            <p className="text-[12px] font-semibold text-gray-900">{step.title}</p>
+            <p className="text-[10px] mt-0.5" style={{ color: 'var(--color-muted-soft)' }}>{step.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ============================================================
+// RIGHT PANEL COMPONENTS
+// ============================================================
+
+/** Mastery counter */
+function MasteryCard({ mastered, total }) {
+  return (
+    <div className="animate-fade-up" style={{ animationDelay: '120ms' }}>
+      <p className="text-[10px] font-semibold uppercase tracking-[0.06em] mb-3" style={{ color: 'var(--color-section-label)' }}>
+        Preguntas que dominas
+      </p>
+      <div className="flex items-baseline gap-1.5 mb-2">
+        <span className="text-[36px] font-extrabold tracking-[-0.03em] text-gray-900 leading-none">{mastered}</span>
+        <span className="text-[14px]" style={{ color: 'var(--color-muted-soft)' }}>de {total.toLocaleString('es-ES')}</span>
+      </div>
+      <div className="w-full h-1.5 rounded-full overflow-hidden" style={{ background: '#F3F4F6' }}>
+        <div
+          className="h-full rounded-full transition-all duration-500"
+          style={{ width: `${Math.max(0.5, (mastered / total) * 100)}%`, background: 'var(--color-forest-primary)' }}
         />
       </div>
+    </div>
+  );
+}
 
-      <div className="flex justify-between px-0.5">
-        {DAY_LABELS.map((d, i) => {
-          const completed = weeklyData[i] > 0;
+/** Weekly circles */
+const DAY_LABELS = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
+
+function WeeklyCircles({ weeklyData = [0, 0, 0, 0, 0, 0, 0] }) {
+  const todayIdx = (() => { const d = new Date().getDay(); return d === 0 ? 6 : d - 1; })();
+
+  return (
+    <div className="animate-fade-up" style={{ animationDelay: '180ms' }}>
+      <p className="text-[10px] font-semibold uppercase tracking-[0.06em] mb-4" style={{ color: 'var(--color-section-label)' }}>
+        Esta semana
+      </p>
+      <div className="flex gap-1.5 justify-between">
+        {DAY_LABELS.map((label, i) => {
+          const done = weeklyData[i] > 0;
           const isToday = i === todayIdx;
           return (
-            <div key={i} className="text-center">
-              <div
-                className="w-9 h-9 rounded-full flex items-center justify-center mb-1.5 mx-auto"
-                style={{
-                  background: completed ? '#2D6A4F' : '#F3F3F0'
-                }}
-              >
-                {completed && (
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                    stroke="white" strokeWidth="3" strokeLinecap="round">
-                    <path d="M20 6L9 17l-5-5"/>
-                  </svg>
-                )}
-              </div>
-              <span className="text-[12px]" style={{
-                color: isToday ? '#2D6A4F' : '#C8C8C8',
-                fontWeight: isToday ? 600 : 400
-              }}>{d}</span>
+            <div
+              key={i}
+              className={`w-8 h-8 rounded-full flex items-center justify-center text-[11px] font-semibold transition-colors ${
+                done
+                  ? 'text-white'
+                  : isToday
+                    ? 'bg-transparent'
+                    : ''
+              }`}
+              style={{
+                ...(done ? { background: 'var(--color-forest-primary)' } : {}),
+                ...(isToday && !done ? { border: '2px solid var(--color-forest-primary)', color: 'var(--color-forest-primary)' } : {}),
+                ...(!done && !isToday ? { background: '#F3F4F6', color: '#D1D5DB' } : {}),
+              }}
+            >
+              {label}
             </div>
           );
         })}
       </div>
-    </motion.div>
+    </div>
   );
 }
 
-
-/**
- * LevelCard - XP/Level display with progress to next level
- */
-const LEVEL_THRESHOLDS = [0, 50, 150, 300, 500, 750, 1000, 1500, 2000, 3000];
-
-function LevelCard({ level, xp, onClick }) {
-  const currentThreshold = LEVEL_THRESHOLDS[Math.min(level - 1, LEVEL_THRESHOLDS.length - 1)] || 0;
-  const nextThreshold = LEVEL_THRESHOLDS[Math.min(level, LEVEL_THRESHOLDS.length - 1)] || currentThreshold + 100;
-  const progressToNext = nextThreshold > currentThreshold
-    ? Math.min(Math.round(((xp - currentThreshold) / (nextThreshold - currentThreshold)) * 100), 100)
-    : 100;
-  const remaining = Math.max(nextThreshold - xp, 0);
-  const weeksStudying = Math.max(1, Math.round(xp / 35));
+/** Topics to improve */
+function WeakTopics({ topics = [], onTopicSelect }) {
+  if (topics.length === 0) return null;
 
   return (
-    <motion.button
-      onClick={onClick}
-      className="w-full rounded-[20px] p-5 text-white text-left"
-      style={{ background: 'linear-gradient(145deg, #1B4332 0%, #2D6A4F 60%, #3A7D5C 100%)' }}
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 0.3 }}
-      whileTap={{ scale: 0.99 }}
-    >
-      <div className="flex items-center justify-between mb-3">
-        <div>
-          <p className="font-semibold text-[16px]">{xp} preguntas respondidas</p>
-          <p className="text-[13px]" style={{ opacity: 0.5 }}>{weeksStudying} {weeksStudying === 1 ? 'semana' : 'semanas'} estudiando</p>
-        </div>
-        <div className="text-right">
-          <p className="text-[11px] uppercase tracking-wider" style={{ opacity: 0.4 }}>Nivel</p>
-          <p className="text-3xl font-light text-white">{level}</p>
-        </div>
-      </div>
-      <div className="w-full rounded-full overflow-hidden" style={{ height: 5, background: 'rgba(255,255,255,0.12)' }}>
-        <motion.div
-          className="h-full rounded-full"
-          style={{ background: 'rgba(255,255,255,0.6)' }}
-          initial={{ width: 0 }}
-          animate={{ width: `${progressToNext}%` }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-        />
-      </div>
-      <p className="text-[12px] mt-1.5" style={{ opacity: 0.35 }}>
-        {remaining > 0 ? `${remaining} preguntas para el siguiente nivel` : 'Nivel maximo alcanzado'}
+    <div className="animate-fade-up" style={{ animationDelay: '240ms' }}>
+      <p className="text-[10px] font-semibold uppercase tracking-[0.06em] mb-4" style={{ color: 'var(--color-section-label)' }}>
+        Donde más puedes mejorar
       </p>
-    </motion.button>
-  );
-}
-
-
-/**
- * Footer - Links and branding
- */
-function Footer({ onNavigate }) {
-  const links = [
-    { id: 'about', icon: Info, label: 'Acerca de' },
-    { id: 'faq', icon: HelpCircle, label: 'Preguntas Frecuentes' },
-    { id: 'instagram', icon: Instagram, label: 'Instagram', external: true },
-  ];
-
-  return (
-    <motion.footer
-      className="mt-4 mb-4"
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ delay: 0.4 }}
-    >
-      <div className="rounded-[20px] overflow-hidden divide-y"
-        style={{ background: 'white', boxShadow: '0 1px 3px rgba(0,0,0,0.04)', borderColor: '#F3F3F0' }}>
-        {links.map((link) => (
-          <motion.button
-            key={link.id}
-            onClick={() => {
-              if (link.external) {
-                window.open('https://instagram.com/opositasmart', '_blank');
-              } else {
-                onNavigate?.(link.id);
-              }
-            }}
-            className="w-full px-5 py-4 flex items-center justify-between"
-            style={{ borderColor: '#F3F3F0' }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <div className="flex items-center gap-3">
-              <link.icon className="w-5 h-5" style={{ color: '#B5B5B0' }} />
-              <span className="text-[15px] text-gray-700">{link.label}</span>
-            </div>
-            <ChevronRight className="w-4 h-4" style={{ color: '#D0D0D0' }} />
-          </motion.button>
+      <div className="flex flex-col gap-3">
+        {topics.slice(0, 3).map((topic) => (
+          <div key={topic.id || topic.name} className="flex items-center justify-between">
+            <span className="text-[13px] text-gray-900">{topic.name}</span>
+            <button
+              onClick={() => onTopicSelect?.(topic)}
+              className="text-[12px] font-semibold hover:underline transition-colors active:scale-[0.97]"
+              style={{ color: 'var(--color-forest-primary)' }}
+            >
+              Practicar →
+            </button>
+          </div>
         ))}
       </div>
-
-      <div className="text-center py-8">
-        <p className="text-gray-900 font-semibold text-lg mb-1">Oposita Smart</p>
-        <p className="text-[13px]" style={{ color: '#B5B5B0' }}>La forma inteligente de opositar</p>
-      </div>
-    </motion.footer>
+    </div>
   );
 }
 
+/** Community proof */
+function CommunityProof() {
+  return (
+    <div className="text-center animate-fade-up" style={{ animationDelay: '300ms' }}>
+      <p className="text-[12px]" style={{ color: 'var(--color-muted-soft)' }}>
+        <span className="font-semibold text-gray-900">847</span> opositores estudiando hoy
+      </p>
+    </div>
+  );
+}
 
-/**
- * SoftFortHome - Main home page component
- *
- * @param {Object} props
- * @param {string} props.userName - User's display name
- * @param {Object} props.streakData - { current: number, longest: number }
- * @param {Object} props.totalStats - { testsCompleted: number, questionsCorrect: number, accuracyRate: number }
- * @param {Array} props.fortalezaData - Topic progress data for FortalezaVisual
- * @param {Function} props.onStartSession - Called when "Empezar" is clicked
- * @param {Function} props.onTopicSelect - Called when a topic is selected
- * @param {Function} props.onSettingsClick - Called when settings clicked
- * @param {Function} props.onProgressClick - Called when progress circle clicked
- * @param {Function} props.onStreakClick - Called when streak card clicked
- * @param {Function} props.onAccuracyClick - Called when accuracy card clicked
- * @param {Function} props.onLevelClick - Called when level card clicked
- * @param {Function} props.onViewAllTopics - Called when "Ver todo" clicked
- * @param {Function} props.onNavigate - Called for footer navigation
- */
+/** Tip box */
+function TipBox({ text = 'Mejor 10 preguntas cada día que 70 el domingo' }) {
+  return (
+    <div className="rounded-xl p-4 animate-fade-up" style={{ background: 'rgba(45,106,79,0.06)', animationDelay: '360ms' }}>
+      <p className="text-[13px] leading-relaxed" style={{ color: 'var(--color-body-text)' }}>
+        💡 {text}
+      </p>
+    </div>
+  );
+}
+
+// ============================================================
+// MAIN COMPONENT
+// ============================================================
+
 export default function SoftFortHome({
   userName = 'Usuario',
   streakData = { current: 0, longest: 0 },
   totalStats = { testsCompleted: 0, questionsCorrect: 0, accuracyRate: 0, totalQuestions: 0 },
-  weeklyImprovement = 0,
   weeklyData = [0, 0, 0, 0, 0, 0, 0],
   todayStats = { questionsAnswered: 0 },
   fortalezaData = [],
@@ -468,158 +352,193 @@ export default function SoftFortHome({
   onStartSession,
   onStartActivity,
   onTopicSelect,
+  onNavigate,
+  readiness = null,
+  showTopBar = false,
+  showFooter = true,
+  // Unused props kept for compatibility
   onSettingsClick,
   onProgressClick,
   onStreakClick,
   onAccuracyClick,
   onLevelClick,
   onViewAllTopics,
-  onNavigate,
-  readiness = null,
-  showTopBar = true,
-  showFooter = true
+  weeklyImprovement,
 }) {
   const { isAdmin } = useAuth();
   const weeklyGoalQuestions = useUserStore((s) => s.userData.weeklyGoalQuestions) || 75;
   const [simulationMode, setSimulationMode] = useState(null);
 
-  // Get simulated data when in simulation mode
+  // Simulation mode (dev only)
   const getSimulatedData = () => {
     if (!simulationMode) return null;
     const state = userStates[simulationMode];
-    if (state.generate) {
-      return state.generate(); // For 'aleatorio' mode
-    }
-    return state;
+    return state?.generate ? state.generate() : state;
   };
-
   const simulatedData = getSimulatedData();
-
-  // Use simulated or real data
   const effectiveStats = simulatedData?.totalStats || totalStats;
   const effectiveStreak = simulatedData
     ? { current: simulatedData.totalStats.currentStreak, longest: simulatedData.totalStats.currentStreak + 5 }
     : streakData;
 
-  // Check if user is completely new (no activity at all)
-  const isNewUser = effectiveStats.testsCompleted === 0 &&
-                    effectiveStats.questionsCorrect === 0 &&
-                    effectiveStreak.current === 0 &&
-                    fortalezaData.length === 0;
-
-  // Calculate daily progress (simplified - can be enhanced)
-  const dailyProgress = Math.min(100, effectiveStats.testsCompleted * 10);
-
-  // Calculate level based on questions answered
+  // Derived state
+  const isNewUser = effectiveStats.testsCompleted === 0 && effectiveStats.questionsCorrect === 0 && fortalezaData.length === 0;
   const totalAnswered = effectiveStats.totalQuestions || 0;
-  const level = LEVEL_THRESHOLDS.filter(t => totalAnswered >= t).length;
-  const xp = totalAnswered;
+  const topicsExplored = new Set(fortalezaData.filter(t => t.progress > 0).map(t => t.id)).size || 0;
+  const totalHours = Math.round((effectiveStats.testsCompleted * 8) / 60) || 0; // rough estimate
 
-  // Get next topic to study (prioritize riesgo, then progreso)
+  // Mastered questions (FSRS state >= 2)
+  const masteredCount = effectiveStats.questionsCorrect || 0;
+
+  // Weak topics (sorted by worst performance)
+  const weakTopics = [...fortalezaData]
+    .filter(t => t.progress > 0 && t.progress < 70)
+    .sort((a, b) => a.progress - b.progress)
+    .slice(0, 3);
+
+  // Next topic for session
   const sortedTopics = [...fortalezaData].sort((a, b) => {
     const configA = statusConfig[a.status] || statusConfig.nuevo;
     const configB = statusConfig[b.status] || statusConfig.nuevo;
     if (configA.priority !== configB.priority) return configA.priority - configB.priority;
     return b.progress - a.progress;
   });
+  const nextTopic = sortedTopics[0] || { id: 1, name: 'Constitución Española', status: 'nuevo', progress: 0 };
 
-  const nextTopic = sortedTopics[0] || {
-    id: 1,
-    name: 'Constitucion Espanola',
-    status: 'nuevo',
-    progress: 0
+  // Build activity for hero card — always use full topic name (not codes like "T3")
+  const rawActivity = studyPlan?.activities?.[0];
+  const heroActivity = rawActivity ? {
+    ...rawActivity,
+    // If title starts with "Reforzar T" or similar code, replace with topic name
+    title: rawActivity.title?.match(/^(Reforzar|Repasar|Practicar)\s+T\d/)
+      ? rawActivity.title.replace(/T\d+.*/, nextTopic.name || rawActivity.title)
+      : rawActivity.title || nextTopic.name,
+  } : {
+    title: nextTopic.name,
+    description: `Tema ${nextTopic.number || nextTopic.id}`,
+    estimatedMinutes: 10,
+    questionCount: 8,
+    config: { topic: nextTopic },
   };
 
+  const handleStartActivity = (activity) => {
+    if (onStartActivity) onStartActivity(activity);
+    else if (onStartSession) onStartSession(activity?.config?.topic || nextTopic);
+  };
+
+  // Daily insight message
+  const getInsight = () => {
+    if (isNewUser) return 'Tu primera sesión te espera. Solo 5 minutos para empezar.';
+    if (studyPlan?.dailyInsight) return typeof studyPlan.dailyInsight === 'string' ? studyPlan.dailyInsight : studyPlan.dailyInsight.text;
+    if (weakTopics.length > 0) {
+      return `${weakTopics[0].name} es donde más puedes mejorar — una sesión corta hoy podría marcar la diferencia.`;
+    }
+    return 'Sigue con tu ritmo. Cada sesión cuenta.';
+  };
+
+  // Mock recent sessions from fortalezaData
+  const recentSessions = fortalezaData
+    .filter(t => t.progress > 0)
+    .slice(0, 3)
+    .map((t, i) => ({
+      topic: t.name,
+      score: Math.round(t.progress / 10),
+      total: 10,
+      date: i === 0 ? 'ayer' : i === 1 ? 'miércoles' : 'martes',
+    }));
+
+  const dayLabel = new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' });
+
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      className="space-y-3 min-h-screen"
-    >
-      {/* TopBar - optional, can be disabled when using parent's TopBar */}
-      {showTopBar && (
-        <TopBar
-          dailyProgress={dailyProgress}
-          dailyGoal={100}
-          userName={userName}
-          onSettingsClick={onSettingsClick}
-          onProgressClick={onProgressClick}
-        />
-      )}
-
-      <div className="space-y-3">
-        {/* Greeting */}
-        <div>
-          <p className="text-[13px] font-medium" style={{ color: '#B0B0B0', letterSpacing: '0.04em' }}>
-            {new Date().toLocaleDateString('es-ES', { weekday: 'long' })}
-          </p>
-          <h2 className="text-[32px] font-bold text-gray-900" style={{ letterSpacing: '-0.03em', marginTop: 2 }}>
-            Hola, {userName.split(' ')[0]}
-          </h2>
-        </div>
-
-        {/* Empty State for New Users */}
-        {isNewUser && (
-          <EmptyState
-            icon={Sparkles}
-            title="¡Bienvenido! Comienza tu preparación"
-            description="Da el primer paso en tu camino hacia la oposición. Empieza con un test rápido para evaluar tu nivel actual."
-            actionLabel="Hacer primer test"
-            onAction={onStartSession}
-            variant="purple"
-          />
-        )}
-
-        {/* Session Card — AI-recommended or fallback */}
-        {!isNewUser && studyPlan?.activities && (
-          <TodaySessionCard
-            activities={studyPlan.activities}
-            onStartActivity={onStartActivity || ((a) => onStartSession(a.config?.topic))}
-          />
-        )}
-
-        {!isNewUser && !studyPlan?.activities && (
-          <TodaySessionCardFallback
-            nextTopic={nextTopic}
-            onStartSession={onStartSession}
-          />
-        )}
-
-        {/* Stats + Weekly + Fortaleza — stacked, no grid */}
-        {!isNewUser && (
-          <>
-            <StatsRow
-              totalQuestions={effectiveStats.totalQuestions || 0}
-              accuracyRate={effectiveStats.accuracyRate || 0}
-            />
-
-            <ReadinessCard readiness={readiness} />
-
-            <WeeklyGoalCard
-              weeklyData={weeklyData}
-              goal={weeklyGoalQuestions}
-            />
-
-            <FortalezaVisual
-              topics={fortalezaData}
-              onTopicSelect={onTopicSelect}
-              onViewAll={onViewAllTopics}
-              maxVisible={3}
-            />
-
-            <LevelCard
-              level={level}
-              xp={xp}
-              onClick={onLevelClick}
-            />
-          </>
-        )}
-
-        {/* Footer */}
-        {showFooter && <Footer onNavigate={onNavigate} />}
+    <div>
+      {/* GREETING */}
+      <div className="mb-8 animate-fade-up" style={{ animationDelay: '0ms' }}>
+        <p className="text-[10px] font-semibold uppercase tracking-[0.06em] mb-1" style={{ color: 'var(--color-section-label)' }}>
+          {dayLabel}
+        </p>
+        <h1 className="text-[28px] font-bold tracking-[-0.03em] text-gray-900 leading-tight">
+          Hola, {userName.split(' ')[0]}
+        </h1>
       </div>
 
-      {/* DevMode Randomizer - development or admin */}
+      {/* DAILY INSIGHT */}
+      <div className="mb-7 animate-fade-up" style={{ animationDelay: '80ms' }}>
+        <p className="text-[15px] leading-relaxed max-w-[540px]" style={{ color: 'var(--color-body-text)' }}>
+          {getInsight()}
+        </p>
+      </div>
+
+      {/* 2-COLUMN LAYOUT: Main + Right panel */}
+      <div className="flex gap-0">
+
+        {/* === LEFT: Main content === */}
+        <div className="flex-1 min-w-0 space-y-8 lg:pr-10">
+          {/* Hero */}
+          {isNewUser ? (
+            <WelcomeHeroCard onStart={() => onStartSession?.()} />
+          ) : (
+            <HeroSessionCard activity={heroActivity} onStart={handleStartActivity} />
+          )}
+
+          {/* Stats — borderless */}
+          {!isNewUser && (
+            <StatsRow
+              totalQuestions={totalAnswered}
+              topicsExplored={topicsExplored}
+              totalHours={totalHours}
+            />
+          )}
+
+          {/* Quick actions */}
+          <QuickActions
+            onFlashcards={() => onStartActivity?.({ config: { mode: 'flashcards', autoStart: true } })}
+            onReview={() => onStartActivity?.({ config: { mode: 'repaso', autoStart: true } })}
+            onSimulacro={() => onStartActivity?.({ config: { mode: 'simulacro', autoStart: true } })}
+            reviewCount={12}
+            isNew={isNewUser}
+          />
+
+          {/* Recent sessions OR how it works */}
+          {isNewUser ? (
+            <HowItWorks />
+          ) : (
+            <RecentSessions sessions={recentSessions} />
+          )}
+        </div>
+
+        {/* === RIGHT: Panel (desktop only) === */}
+        <div className="hidden lg:block w-[300px] shrink-0 border-l border-black/5 pl-7 space-y-9" style={{ background: 'rgba(255,255,255,0.5)' }}>
+          {/* Mastery */}
+          <MasteryCard mastered={masteredCount} total={1414} />
+
+          {/* Weekly */}
+          <WeeklyCircles weeklyData={weeklyData} />
+
+          {/* Weak topics */}
+          {!isNewUser && weakTopics.length > 0 && (
+            <WeakTopics topics={weakTopics} onTopicSelect={onTopicSelect} />
+          )}
+
+          {/* Community */}
+          <CommunityProof />
+
+          {/* Tip */}
+          <TipBox />
+        </div>
+      </div>
+
+      {/* Mobile: Right panel content stacks below */}
+      <div className="lg:hidden mt-8 space-y-8">
+        <MasteryCard mastered={masteredCount} total={1414} />
+        <WeeklyCircles weeklyData={weeklyData} />
+        {!isNewUser && weakTopics.length > 0 && (
+          <WeakTopics topics={weakTopics} onTopicSelect={onTopicSelect} />
+        )}
+        <CommunityProof />
+        <TipBox />
+      </div>
+
+      {/* DevMode Randomizer */}
       {(import.meta.env.DEV || isAdmin) && (
         <DevModeRandomizer
           activeMode={simulationMode}
@@ -628,7 +547,6 @@ export default function SoftFortHome({
           pageContext="home"
         />
       )}
-
-    </motion.div>
+    </div>
   );
 }

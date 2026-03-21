@@ -72,7 +72,7 @@ export default function TemasPage() {
   }, [topics, userProgress]);
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 max-w-4xl mx-auto">
       {/* View Toggle */}
       <div className="flex items-center justify-end gap-1">
         <button

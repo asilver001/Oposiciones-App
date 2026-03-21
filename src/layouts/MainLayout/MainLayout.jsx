@@ -157,7 +157,7 @@ export default function MainLayout() {
           id="main-content"
           className={`flex-1 overflow-y-auto ${isMobile ? 'pb-20' : ''}`}
         >
-          <div className="max-w-4xl mx-auto px-4 lg:px-8 py-4 lg:py-6">
+          <div className="px-4 lg:px-10 py-4 lg:py-8">
             <Outlet />
           </div>
         </main>
