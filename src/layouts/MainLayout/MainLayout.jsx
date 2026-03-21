@@ -184,7 +184,7 @@ export default function MainLayout() {
         onShowAdminLogin={() => navigate(ROUTES.ADMIN)}
         onShowPlayground={() => {}}
         onShowDraftFeatures={() => setShowDraftFeatures(true)}
-        onGoToOnboarding={() => navigate(ROUTES.WELCOME, { state: { devOverride: true } })}
+        onGoToOnboarding={() => navigate(ROUTES.LOGIN)}
         premiumMode={premiumMode}
         onTogglePremium={() => setPremiumMode(!premiumMode)}
         streakCount={displayStreak}
