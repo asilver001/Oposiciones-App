@@ -4,7 +4,8 @@ const FREE_QUESTION_LIMIT = 100;
 const LOCKED_FEATURES = ['simulacro', 'flashcards', 'detailed-stats'];
 
 export function usePremium() {
-  const { isPremium, questionsUsed } = useUserStore();
+  const isPremium = useUserStore((s) => s.isPremium);
+  const questionsUsed = useUserStore((s) => s.questionsUsed);
 
   return {
     isPremium,
