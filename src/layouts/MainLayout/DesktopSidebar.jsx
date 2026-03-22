@@ -14,6 +14,7 @@ export default function DesktopSidebar({
   dailyProgressPercent,
   onOpenSettings,
   onOpenProgress,
+  user,
 }) {
   const location = useLocation();
   const navigate = useNavigate();
@@ -95,8 +96,29 @@ export default function DesktopSidebar({
         })}
       </nav>
 
-      {/* Bottom section: Settings */}
-      <div className="px-2 pb-4 pt-2">
+      {/* Bottom section: Avatar + Settings */}
+      <div className="px-2 pb-4 pt-2 border-t border-gray-50 mt-2 space-y-1">
+        {/* User avatar */}
+        {user && (
+          <div
+            className={`
+              flex items-center gap-3 px-3 py-2.5 rounded-md
+              ${collapsed ? 'justify-center' : ''}
+            `}
+          >
+            <div
+              className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-[11px] font-bold text-white"
+              style={{ background: '#2D6A4F' }}
+            >
+              {(user.user_metadata?.name || user.email || 'U')[0].toUpperCase()}
+            </div>
+            {!collapsed && (
+              <span className="text-sm text-[#4B5563] truncate">
+                {user.user_metadata?.name || user.email?.split('@')[0] || 'Usuario'}
+              </span>
+            )}
+          </div>
+        )}
         <button
           onClick={onOpenSettings}
           className={`

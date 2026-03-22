@@ -111,6 +111,7 @@ export default function MainLayout() {
           dailyProgressPercent={dailyProgressPercent}
           onOpenSettings={() => setShowSettings(true)}
           onOpenProgress={() => setShowProgress(true)}
+          user={user}
         />
       )}
 

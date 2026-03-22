@@ -78,7 +78,10 @@ export default function HomePage() {
   return (
     <SoftFortHome
       showTopBar={false}
-      userName={user?.user_metadata?.name || user?.email?.split('@')[0] || 'Usuario'}
+      userName={user?.user_metadata?.name || (() => {
+        const raw = user?.email?.split('@')[0] || 'Usuario';
+        return raw.charAt(0).toUpperCase() + raw.slice(1).replace(/[0-9]+$/, '');
+      })()}
       totalStats={totalStats}
       weeklyImprovement={weeklyImprovement}
       weeklyData={weeklyData}
