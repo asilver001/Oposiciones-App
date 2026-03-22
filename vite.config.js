@@ -7,7 +7,7 @@ import path from 'path'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   // Use '/' for Vercel, '/Oposiciones-App/' for GitHub Pages
-  base: process.env.VERCEL ? '/app/' : '/Oposiciones-App/',
+  base: process.env.VERCEL ? '/' : '/Oposiciones-App/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
