@@ -4,8 +4,12 @@
   "framework": null,
   "rewrites": [
     {
-      "source": "/((?!assets|favicon.ico|manifest.json|sw.js|icons|robots.txt).*)",
-      "destination": "/index.html"
+      "source": "/app/((?!assets|favicon.ico|manifest.json|sw.js|icons|robots.txt).*)",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/app",
+      "destination": "/app/index.html"
     }
   ]
 }

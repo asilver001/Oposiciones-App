@@ -33,6 +33,7 @@ const RecursosPage = lazy(() => import('../pages/app/RecursosPage'));
 const StudyPage = lazy(() => import('../pages/app/StudyPage'));
 const FirstTestPage = lazy(() => import('../pages/app/FirstTestPage'));
 
+const DiagnosticoPage = lazy(() => import('../pages/app/DiagnosticoPage'));
 const AdminPage = lazy(() => import('../pages/admin/AdminPage'));
 const ReviewerPage = lazy(() => import('../pages/admin/ReviewerPage'));
 
@@ -134,6 +135,12 @@ export const routeConfig = [
         element: <ErrorBoundary><FirstTestPage /></ErrorBoundary>,
       },
     ],
+  },
+
+  // Diagnostico — accessible without onboarding
+  {
+    path: ROUTES.DIAGNOSTICO,
+    element: <ErrorBoundary><DiagnosticoPage /></ErrorBoundary>,
   },
 
   // Admin routes (protected: require admin role)

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { Loader2, XCircle, RefreshCw, Clock, BookOpen } from 'lucide-react';
 import { useStudySession } from '../../hooks/useSpacedRepetition';
 import { useUserInsights } from '../../hooks/useUserInsights';
@@ -26,6 +27,7 @@ export default function HybridSession({ config = {}, onClose, onComplete, onNext
 
   const { saveSessionAndDetectInsights, loading: insightsLoading } = useUserInsights();
   const { user } = useAuth();
+  const [, setSearchParams] = useSearchParams();
 
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [showExitConfirm, setShowExitConfirm] = useState(false);
@@ -132,6 +134,8 @@ export default function HybridSession({ config = {}, onClose, onComplete, onNext
     if (isComplete && !insightsProcessed) {
       const processCompletion = async () => {
         setInsightsProcessed(true);
+        // Signal to MainLayout that session is complete so navbar becomes visible
+        setSearchParams({ complete: '1' }, { replace: true });
         await completeSession();
 
         const allInsights = [];
@@ -176,6 +180,7 @@ export default function HybridSession({ config = {}, onClose, onComplete, onNext
     answersHistoryRef.current = [];
     setTriggeredInsights([]);
     setInsightsProcessed(false);
+    setSearchParams({}, { replace: true }); // Clear completion signal
     loadSession(config);
   };
 

@@ -8,7 +8,7 @@
  */
 
 import { useState, useEffect } from 'react';
-import { Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { Outlet, useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { Settings } from 'lucide-react';
 import BottomTabBar from './BottomTabBar';
@@ -60,8 +60,11 @@ export default function MainLayout() {
   const activeTab = ROUTE_TO_TAB[location.pathname] || 'inicio';
   const currentPage = location.pathname === ROUTES.REVIEWER ? 'reviewer-panel' : '';
 
+  const [searchParams] = useSearchParams();
   // Full-screen experiences hide all nav chrome
-  const hideNav = location.pathname.includes('/study') || location.pathname.includes('/first-test');
+  // Show nav again when session is complete (signalled by ?complete=1 search param)
+  const sessionComplete = searchParams.get('complete') === '1';
+  const hideNav = !sessionComplete && (location.pathname.includes('/study') || location.pathname.includes('/first-test'));
 
   // Daily progress
   const dailyGoal = userData.dailyGoal || 15;

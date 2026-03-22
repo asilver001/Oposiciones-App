@@ -25,6 +25,7 @@ export const ROUTES = {
   RECURSOS: '/app/recursos',
   STUDY: '/app/study',
   FIRST_TEST: '/app/first-test',
+  DIAGNOSTICO: '/app/diagnostico',
 
   // Admin
   ADMIN: '/admin',

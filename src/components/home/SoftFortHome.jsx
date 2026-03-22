@@ -11,8 +11,9 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   ArrowRight, Layers, RotateCcw, FileText, Sparkles,
-  Info, HelpCircle, Instagram, ChevronRight, Play
+  Info, HelpCircle, Instagram, ChevronRight, Play, Lock
 } from 'lucide-react';
+import { usePremium } from '../../hooks/usePremium';
 import FortalezaVisual, { statusConfig } from './FortalezaVisual';
 import EmptyState from '../common/EmptyState';
 import DevModeRandomizer, { userStates } from '../dev/DevModeRandomizer';
@@ -125,11 +126,11 @@ function StatsRow({ totalQuestions, topicsExplored, totalHours }) {
 }
 
 /** Quick action cards */
-function QuickActions({ onFlashcards, onReview, onSimulacro, reviewCount = 0, isNew = false }) {
+function QuickActions({ onFlashcards, onReview, onSimulacro, reviewCount = 0, isNew = false, isFeatureLocked }) {
   const actions = [
-    { icon: Layers, title: 'Flashcards', subtitle: 'Aprende conceptos', onClick: onFlashcards },
+    { icon: Layers, title: 'Flashcards', subtitle: 'Aprende conceptos', onClick: onFlashcards, featureKey: 'flashcards' },
     { icon: RotateCcw, title: 'Repasar', subtitle: reviewCount > 0 ? `${reviewCount} pendientes` : 'Al día', onClick: onReview },
-    { icon: FileText, title: 'Simulacro', subtitle: isNew ? 'Disponible tras 50 preg.' : 'Examen completo', onClick: isNew ? null : onSimulacro, disabled: isNew },
+    { icon: FileText, title: 'Simulacro', subtitle: isNew ? 'Disponible tras 50 preg.' : 'Examen completo', onClick: isNew ? null : onSimulacro, disabled: isNew, featureKey: 'simulacro' },
   ];
 
   return (
@@ -138,25 +139,39 @@ function QuickActions({ onFlashcards, onReview, onSimulacro, reviewCount = 0, is
         Acciones rápidas
       </p>
       <div className="grid grid-cols-3 gap-5">
-        {actions.map((action) => (
-          <button
-            key={action.title}
-            onClick={action.onClick}
-            disabled={action.disabled}
-            className={`bg-white border border-black/5 rounded-lg p-5 text-left cursor-pointer transition-all duration-200 hover:-translate-y-px ${
-              action.disabled ? 'opacity-45 cursor-not-allowed hover:translate-y-0' : ''
-            }`}
-            style={{ boxShadow: 'none' }}
-            onMouseEnter={(e) => !action.disabled && (e.currentTarget.style.boxShadow = 'var(--shadow-card-hover)')}
-            onMouseLeave={(e) => (e.currentTarget.style.boxShadow = 'none')}
-          >
-            <div className="mb-3">
-              <action.icon size={20} style={{ color: 'var(--color-forest-primary)' }} />
-            </div>
-            <p className="text-[14px] font-semibold text-gray-900">{action.title}</p>
-            <p className="text-[12px] mt-0.5" style={{ color: 'var(--color-muted-soft)' }}>{action.subtitle}</p>
-          </button>
-        ))}
+        {actions.map((action) => {
+          const locked = action.featureKey && isFeatureLocked?.(action.featureKey);
+          const isDisabled = action.disabled || locked;
+          return (
+            <button
+              key={action.title}
+              onClick={isDisabled ? undefined : action.onClick}
+              disabled={isDisabled}
+              className={`relative bg-white border border-black/5 rounded-lg p-5 text-left cursor-pointer transition-all duration-200 hover:-translate-y-px ${
+                isDisabled ? 'opacity-45 cursor-not-allowed hover:translate-y-0' : ''
+              }`}
+              style={{ boxShadow: 'none' }}
+              onMouseEnter={(e) => !isDisabled && (e.currentTarget.style.boxShadow = 'var(--shadow-card-hover)')}
+              onMouseLeave={(e) => (e.currentTarget.style.boxShadow = 'none')}
+            >
+              {locked && (
+                <span className="absolute top-2 right-2 flex items-center gap-1 bg-amber-100 text-amber-700 text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full">
+                  <Lock size={10} />
+                  Premium
+                </span>
+              )}
+              <div className="mb-3">
+                {locked ? (
+                  <Lock size={20} className="text-gray-400" />
+                ) : (
+                  <action.icon size={20} style={{ color: 'var(--color-forest-primary)' }} />
+                )}
+              </div>
+              <p className="text-[14px] font-semibold text-gray-900">{action.title}</p>
+              <p className="text-[12px] mt-0.5" style={{ color: 'var(--color-muted-soft)' }}>{action.subtitle}</p>
+            </button>
+          );
+        })}
       </div>
     </div>
   );
@@ -326,6 +341,46 @@ function CommunityProof() {
   );
 }
 
+/** Feature feedback — "¿Qué feature quieres primero?" */
+function FeatureFeedback() {
+  const [voted, setVoted] = useState(null);
+  const features = ['Simulacros de examen', 'Flashcards', 'Temario resumido', 'Más oposiciones'];
+
+  const handleVote = async (feature) => {
+    setVoted(feature);
+    const { supabase } = await import('../../lib/supabase');
+    supabase.from('feature_votes').insert({ feature }).catch(() => {});
+  };
+
+  return (
+    <div className="mt-10 mb-4 rounded-xl p-5 border border-black/5 bg-white animate-fade-up" style={{ animationDelay: '400ms' }}>
+      {voted ? (
+        <p className="text-center text-sm" style={{ color: 'var(--color-body-text)' }}>
+          ✓ ¡Gracias! Tendremos en cuenta tu voto por <strong>{voted}</strong>.
+        </p>
+      ) : (
+        <>
+          <p className="text-xs font-semibold uppercase mb-3" style={{ letterSpacing: '0.06em', color: 'var(--color-section-label)' }}>
+            ¿Qué feature quieres primero?
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {features.map(f => (
+              <button
+                key={f}
+                onClick={() => handleVote(f)}
+                className="text-sm px-4 py-2 rounded-full border border-black/5 bg-[#FAFAF7] hover:border-[#2D6A4F] hover:text-[#2D6A4F] transition-all active:scale-[0.97]"
+                style={{ color: 'var(--color-body-text)' }}
+              >
+                {f}
+              </button>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
 /** Tip box */
 function TipBox({ text = 'Mejor 10 preguntas cada día que 70 el domingo' }) {
   return (
@@ -368,6 +423,7 @@ export default function SoftFortHome({
   const { isAdmin } = useAuth();
   const weeklyGoalQuestions = useUserStore((s) => s.userData.weeklyGoalQuestions) || 75;
   const [simulationMode, setSimulationMode] = useState(null);
+  const { isFeatureLocked } = usePremium();
 
   // Simulation mode (dev only)
   const getSimulatedData = () => {
@@ -496,6 +552,7 @@ export default function SoftFortHome({
             onSimulacro={() => onStartActivity?.({ config: { mode: 'simulacro', autoStart: true } })}
             reviewCount={12}
             isNew={isNewUser}
+            isFeatureLocked={isFeatureLocked}
           />
 
           {/* Recent sessions OR how it works */}
@@ -537,6 +594,9 @@ export default function SoftFortHome({
         <CommunityProof />
         <TipBox />
       </div>
+
+      {/* Feature feedback */}
+      <FeatureFeedback />
 
       {/* DevMode Randomizer */}
       {(import.meta.env.DEV || isAdmin) && (

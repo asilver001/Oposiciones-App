@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
+import { useUserStore } from '../../stores/useUserStore';
 
 export default function DevPanel({
   onReset,
@@ -8,13 +9,22 @@ export default function DevPanel({
   onShowPlayground,
   onShowDraftFeatures,
   onGoToOnboarding,
-  premiumMode,
-  onTogglePremium,
+  premiumMode: premiumModeProp,
+  onTogglePremium: onTogglePremiumProp,
   streakCount,
   testsCount
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const { isAdmin, userRole, user } = useAuth();
+  const isPremiumStore = useUserStore((s) => s.isPremium);
+  const togglePremiumStore = useUserStore((s) => s.togglePremium);
+
+  // Use store state as source of truth, fall back to prop for backward compat
+  const premiumMode = isPremiumStore;
+  const handleTogglePremium = () => {
+    togglePremiumStore();
+    onTogglePremiumProp?.();
+  };
 
   // Show DevPanel if user is admin OR in development mode
   const isDev = import.meta.env.DEV;
@@ -57,14 +67,14 @@ export default function DevPanel({
         <div className="border-t border-gray-700 my-2"></div>
         {/* Premium Mode Toggle */}
         <button
-          onClick={onTogglePremium}
+          onClick={handleTogglePremium}
           className={`w-full text-xs py-2 px-3 rounded-lg text-left flex items-center justify-between ${
             premiumMode
               ? 'bg-gradient-to-r from-yellow-500 to-amber-500 text-white'
               : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
           }`}
         >
-          <span>👑 Modo Premium</span>
+          <span>👑 {premiumMode ? 'Premium' : 'Free'}</span>
           <span className={`px-2 py-0.5 rounded text-[10px] font-bold ${
             premiumMode ? 'bg-white/20 text-white' : 'bg-gray-600 text-gray-400'
           }`}>

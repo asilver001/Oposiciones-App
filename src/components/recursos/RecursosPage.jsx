@@ -14,7 +14,8 @@ import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Scale, BookOpen, Target, Lightbulb, BookMarked, ExternalLink,
-  ChevronDown, ChevronRight, Heart, Search, X, Sparkles, Clock
+  ChevronDown, ChevronRight, Heart, Search, X, Sparkles, Clock,
+  Lock, Users, Radio, Headphones, Bot, FileText, Layers
 } from 'lucide-react';
 import DevModeRandomizer from '../dev/DevModeRandomizer';
 import EmptyState from '../common/EmptyState/EmptyState';
@@ -420,6 +421,64 @@ export default function RecursosPage({ onNavigate }) {
             <X className="w-4 h-4 text-gray-400" />
           </button>
         )}
+      </motion.div>
+
+      {/* Herramientas — available + próximamente */}
+      <motion.div
+        className="space-y-3"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ ...spring.gentle, delay: 0.07 }}
+      >
+        <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-400 px-1">Herramientas</p>
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
+          {/* Available */}
+          {[
+            { icon: Target, title: 'Tests por tema', sub: 'Practica temas individuales', available: true },
+            { icon: Radio, title: 'Radar de Convocatorias', sub: 'Estado de oposiciones', available: true, href: '/radar' },
+          ].map(t => (
+            <div
+              key={t.title}
+              onClick={() => t.href ? window.open(`https://www.opositasmart.com${t.href}`, '_blank') : onNavigate?.('temas')}
+              className="bg-white border border-gray-100 rounded-xl p-4 cursor-pointer hover:shadow-sm transition-all"
+            >
+              <t.icon className="w-5 h-5 text-[#2D6A4F] mb-2" />
+              <p className="text-sm font-semibold text-gray-900">{t.title}</p>
+              <p className="text-xs text-gray-400 mt-0.5">{t.sub}</p>
+            </div>
+          ))}
+          {/* Próximamente */}
+          {[
+            { icon: FileText, title: 'Simulacro de Examen Real', sub: '100 preguntas · 60 min · Condiciones reales' },
+            { icon: Layers, title: 'Flashcards Inteligentes', sub: 'Tarjetas con repetición espaciada' },
+            { icon: BookOpen, title: 'Temario Resumido', sub: 'Resúmenes por tema validados' },
+            { icon: Headphones, title: 'Audio Temas', sub: 'Escucha mientras caminas' },
+            { icon: Bot, title: 'Asistente IA', sub: 'Pregúntale dudas del temario' },
+          ].map(t => (
+            <div key={t.title} className="bg-white/60 border border-gray-50 rounded-xl p-4 opacity-50">
+              <div className="flex items-center gap-2 mb-2">
+                <t.icon className="w-5 h-5 text-gray-300" />
+                <span className="text-[10px] text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full font-medium">Próximamente</span>
+              </div>
+              <p className="text-sm font-semibold text-gray-800">{t.title}</p>
+              <p className="text-xs text-gray-400 mt-0.5">{t.sub}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Community placeholder */}
+        <div className="bg-white border border-gray-100 rounded-xl p-5 flex items-center gap-4 mt-3">
+          <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center shrink-0">
+            <Users className="w-6 h-6 text-gray-400" />
+          </div>
+          <div className="flex-1">
+            <div className="flex items-center gap-2">
+              <p className="font-semibold text-gray-900 text-sm">Comunidad de Opositores</p>
+              <span className="text-[10px] text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full font-medium">Próximamente</span>
+            </div>
+            <p className="text-xs text-gray-500 mt-0.5">Conecta con otros opositores, comparte dudas y mantén la motivación</p>
+          </div>
+        </div>
       </motion.div>
 
       {/* Categories */}

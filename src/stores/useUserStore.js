@@ -39,6 +39,13 @@ export const useUserStore = create(
       // Premium status
       isPremium: false,
       setPremium: (value) => set({ isPremium: value }),
+      togglePremium: () => set((state) => ({ isPremium: !state.isPremium })),
+
+      // Freemium question usage tracking
+      questionsUsed: 0,
+      incrementQuestionsUsed: () => set((state) => ({
+        questionsUsed: state.questionsUsed + 1
+      })),
 
       // Total stats
       totalStats: {
@@ -64,6 +71,7 @@ export const useUserStore = create(
         streakData: { current: 0, longest: 0, lastCompletedDate: null },
         dailyTestsCount: 0,
         isPremium: false,
+        questionsUsed: 0,
         totalStats: { totalQuestions: 0, correctAnswers: 0, totalTimeSpent: 0 },
         onboardingComplete: false,
       }),

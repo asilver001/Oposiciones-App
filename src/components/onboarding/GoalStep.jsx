@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowLeft } from 'lucide-react';
+import OposicionWaitlistModal from './OposicionWaitlistModal';
 
 function GoalStep({ step, onSelect, onBack }) {
+  const [waitlistOposicion, setWaitlistOposicion] = useState(null);
   // Step 'oposicion' - First step (no back button, first dot active)
   if (step === 'oposicion') {
     const options = [
-      { id: 'aux', label: 'Auxiliar Administrativo del Estado', icon: '📄', available: true },
-      { id: 'admin', label: 'Administrativo del Estado', icon: '🏢', available: false },
-      { id: 'gestion', label: 'Gestión del Estado', icon: '💼', available: false },
-      { id: 'otra', label: 'Otra oposición', icon: '📝', available: false }
+      { id: 'aux', label: 'Auxiliar Administrativo del Estado (C2)', icon: '📄', available: true },
+      { id: 'admin', label: 'Administrativo del Estado (C1)', icon: '🏢', available: false },
+      { id: 'gestion', label: 'Gestión de la Admin. Civil del Estado (A2)', icon: '💼', available: false },
+      { id: 'tramitacion', label: 'Tramitación Procesal (Justicia)', icon: '⚖️', available: false },
+      { id: 'auxilio', label: 'Auxilio Judicial (Justicia)', icon: '🏛️', available: false },
+      { id: 'ss', label: 'Auxiliar Admin. Seguridad Social', icon: '🏥', available: false },
+      { id: 'correos', label: 'Correos y Telégrafos', icon: '📮', available: false },
+      { id: 'ccaa', label: 'Auxiliar Admin. CCAA (genérico)', icon: '🗺️', available: false },
     ];
     return (
       <div className="min-h-screen bg-white px-6 pt-16 lg:flex lg:items-start lg:justify-center">
@@ -24,8 +30,7 @@ function GoalStep({ step, onSelect, onBack }) {
         {options.map((o) => (
           <button
             key={o.id}
-            onClick={() => o.available && onSelect(o.id)}
-            disabled={!o.available}
+            onClick={() => o.available ? onSelect(o.id) : setWaitlistOposicion(o.label)}
             className={`w-full bg-white rounded-2xl p-4 flex items-center mb-3 border-2 transition-all ${
               o.available
                 ? 'border-gray-100 hover:border-gray-900 active:scale-[0.98] cursor-pointer'
@@ -43,6 +48,12 @@ function GoalStep({ step, onSelect, onBack }) {
             )}
           </button>
         ))}
+        {waitlistOposicion && (
+          <OposicionWaitlistModal
+            oposicion={waitlistOposicion}
+            onClose={() => setWaitlistOposicion(null)}
+          />
+        )}
         </div>
       </div>
     );
