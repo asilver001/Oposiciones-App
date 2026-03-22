@@ -27,6 +27,6 @@ export default function AuthRedirect() {
     return <Navigate to={ROUTES.HOME} replace />;
   }
 
-  // Everyone else goes to welcome (onboarding or login)
-  return <Navigate to={ROUTES.WELCOME} replace />;
+  // Not authenticated → login (welcome/landing is on opositasmart.com)
+  return <Navigate to={ROUTES.LOGIN} replace />;
 }
