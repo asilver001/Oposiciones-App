@@ -165,11 +165,12 @@ export function useActivityData() {
       // Session history (last 10) - normalize column names for component compatibility
       const normalizedSessions = allSessions.slice(0, 10).map(s => ({
         ...s,
-        // Add normalized names for backward compatibility with ActividadContent and useAnalytics
+        // Normalized names for component compatibility
         correctas: s.correct_count,
         correct_answers: s.correct_count,
         total_preguntas: s.total_questions,
-        // Normalize topic_id (INTEGER) to tema_filter (array) for backward compat
+        created_at: s.completed_at || s.started_at,
+        tema: s.topic_id != null ? `Tema ${s.topic_id}` : 'General',
         tema_filter: s.topic_id != null ? [s.topic_id] : [],
         porcentaje_acierto: s.total_questions > 0
           ? Math.round((s.correct_count / s.total_questions) * 100)
