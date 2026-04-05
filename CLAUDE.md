@@ -9,6 +9,26 @@
 - **A tu ritmo**: "Unos minutos al día, sin agobios"
 - **Ciencia del aprendizaje**: Basado en repetición espaciada (FSRS)
 
+## Tareas al Inicio de Sesión
+
+### Revisar BOE para actualizaciones del Radar
+Al inicio de cada sesión de trabajo, consultar la tabla `boe_scraper_log` en Supabase para ver si hay convocatorias relevantes nuevas:
+
+```sql
+SELECT boe_id, departamento, titulo, plazas_detectadas, grupo_detectado, tipo_detectado, fecha_publicacion
+FROM boe_scraper_log
+WHERE es_relevante = true AND publicado = false
+ORDER BY fecha_publicacion DESC
+LIMIT 10;
+```
+
+Si hay items relevantes no publicados:
+1. Informar al usuario: "El BOE ha publicado X convocatorias relevantes desde la última sesión"
+2. Preguntar si quiere actualizar el Radar (`oposiciones_radar`) y/o los datos del grafo de organismos
+3. NO publicar automáticamente — siempre confirmar con el usuario
+
+El scraper corre automáticamente Lun-Vie a las 10:00 AM España (8:00 UTC) via pg_cron → Edge Function `boe-scraper`.
+
 ## Stack Tecnológico
 
 - **Frontend**: React 19 + Vite 7

@@ -292,15 +292,14 @@ export default function ReviewerPanel({
         return;
       }
 
-      const lowerQuery = trimmed.toLowerCase();
-
-      // Fetch all active questions (with optional filters), then search client-side
-      // This enables searching in JSONB options text which PostgREST can't filter with ilike
+      // Server-side search across ALL questions using Supabase ilike
+      const ilikePattern = `%${trimmed}%`;
       let dbQuery = supabase
         .from('questions')
         .select('id,question_text,options,explanation,legal_reference,tema,difficulty,validation_status,origin,review_comment,needs_refresh,refresh_reason,is_active,source,original_text,original_options')
-        .eq('is_active', true)
-        .order('tema', { ascending: true });
+        .or(`question_text.ilike.${ilikePattern},explanation.ilike.${ilikePattern},legal_reference.ilike.${ilikePattern},original_text.ilike.${ilikePattern}`)
+        .order('tema', { ascending: true })
+        .limit(100);
 
       if (filterOrigin !== 'all') {
         dbQuery = dbQuery.eq('origin', filterOrigin);
@@ -312,18 +311,7 @@ export default function ReviewerPanel({
       const { data, error } = await dbQuery;
       if (error) throw error;
 
-      // Client-side search across all text fields including originals
-      const results = (data || []).filter(q => {
-        if (q.question_text?.toLowerCase().includes(lowerQuery)) return true;
-        if (q.explanation?.toLowerCase().includes(lowerQuery)) return true;
-        if (q.legal_reference?.toLowerCase().includes(lowerQuery)) return true;
-        if (q.options?.some(opt => opt.text?.toLowerCase().includes(lowerQuery))) return true;
-        if (q.original_text?.toLowerCase().includes(lowerQuery)) return true;
-        if (q.original_options?.some(opt => opt.text?.toLowerCase().includes(lowerQuery))) return true;
-        return false;
-      });
-
-      setFilteredQuestions(results.slice(0, 100));
+      setFilteredQuestions(data || []);
       setStatsView('search');
     } catch (err) {
       console.error('Error searching questions:', err);
@@ -686,7 +674,7 @@ export default function ReviewerPanel({
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <RefreshCw className="w-8 h-8 animate-spin text-brand-600" />
+        <RefreshCw className="w-8 h-8 animate-spin text-[#2D6A4F]" />
       </div>
     );
   }
@@ -694,7 +682,7 @@ export default function ReviewerPanel({
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col pb-24">
       {/* Header */}
-      <div className="bg-brand-600 text-white px-4 py-4">
+      <div className="bg-[#2D6A4F] text-white px-4 py-4">
         <div className="max-w-2xl mx-auto">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -710,7 +698,7 @@ export default function ReviewerPanel({
                   <UserCheck className="w-5 h-5" />
                   Panel de Revisión
                 </h1>
-                <p className="text-brand-200 text-sm">
+                <p className="text-white/70 text-sm">
                   {currentUser?.name || 'Revisor'}
                 </p>
               </div>
@@ -733,7 +721,7 @@ export default function ReviewerPanel({
               }`}
             >
               <div className="text-2xl font-bold tabular-nums">{stats.total}</div>
-              <div className="text-xs text-brand-200 flex items-center justify-center gap-1">
+              <div className="text-xs text-white/70 flex items-center justify-center gap-1">
                 <FileText className="w-3 h-3" />
                 Total
               </div>
@@ -784,7 +772,7 @@ export default function ReviewerPanel({
               className={`mt-2 w-full flex items-center justify-between px-4 py-2.5 rounded-xl transition-all duration-300 ${
                 pilotMode
                   ? 'bg-cyan-500/30 ring-2 ring-cyan-300 text-white'
-                  : 'bg-white/10 hover:bg-white/20 text-brand-200'
+                  : 'bg-white/10 hover:bg-white/20 text-white/70'
               }`}
             >
               <span className="flex items-center gap-2 text-sm font-medium">
@@ -840,7 +828,7 @@ export default function ReviewerPanel({
 
           {/* Search Bar */}
           <div className="mt-2 relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-brand-300 pointer-events-none" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/80 pointer-events-none" />
             <input
               type="text"
               value={searchQuery}
@@ -851,7 +839,7 @@ export default function ReviewerPanel({
                 }
               }}
               placeholder="Buscar por ID (ej: 1369) o texto..."
-              className="w-full pl-9 pr-20 py-2 bg-white/10 border border-white/20 rounded-lg text-sm text-white placeholder-brand-300 focus:ring-2 focus:ring-white/30 focus:outline-none"
+              className="w-full pl-9 pr-20 py-2 bg-white/10 border border-white/20 rounded-lg text-sm text-white placeholder-white/80 focus:ring-2 focus:ring-white/30 focus:outline-none"
             />
             <div className="absolute right-1.5 top-1/2 -translate-y-1/2 flex gap-1">
               {searchQuery && (
@@ -863,7 +851,7 @@ export default function ReviewerPanel({
                       setFilteredQuestions([]);
                     }
                   }}
-                  className="px-2 py-1 text-xs text-brand-300 hover:text-white rounded"
+                  className="px-2 py-1 text-xs text-white/80 hover:text-white rounded"
                   title="Limpiar búsqueda"
                 >
                   <XCircle className="w-3.5 h-3.5" />
@@ -882,8 +870,8 @@ export default function ReviewerPanel({
           {/* Active filters indicator */}
           {(filterOrigin !== 'all' || filterTema !== 'all' || filterSpecial !== 'all' || statsView === 'search') && (
             <div className="mt-2 flex items-center gap-2">
-              <Filter className="w-3 h-3 text-brand-200" />
-              <span className="text-xs text-brand-200">
+              <Filter className="w-3 h-3 text-white/70" />
+              <span className="text-xs text-white/70">
                 Filtros activos:
                 {filterOrigin !== 'all' && (
                   <span className="ml-1 px-2 py-0.5 bg-white/15 rounded-full">
@@ -911,7 +899,7 @@ export default function ReviewerPanel({
                     setFilteredQuestions([]);
                   }
                 }}
-                className="text-xs text-brand-300 hover:text-white underline ml-auto"
+                className="text-xs text-white/80 hover:text-white underline ml-auto"
               >
                 Limpiar
               </button>
@@ -980,12 +968,12 @@ export default function ReviewerPanel({
                       <div className="flex items-start gap-3">
                         <div className="flex-1 min-w-0">
                           <div className="flex flex-wrap gap-2 mb-2">
-                            <span className="text-xs bg-brand-100 text-brand-700 px-2 py-0.5 rounded-full font-medium">
+                            <span className="text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full font-medium">
                               T{q.tema || '?'}
                             </span>
                             {q.origin && q.origin !== 'imported' && (
                               <span className={`text-xs px-2 py-0.5 rounded-full ${
-                                q.origin === 'reformulated' ? 'bg-cyan-100 text-cyan-700' : 'bg-violet-100 text-violet-700'
+                                q.origin === 'reformulated' ? 'bg-cyan-100 text-cyan-700' : 'bg-emerald-100 text-emerald-700'
                               }`}>
                                 {q.origin === 'reformulated' ? 'Reformulada' : 'Creada IA'}
                               </span>
@@ -1072,7 +1060,7 @@ export default function ReviewerPanel({
                             </button>
                             <button
                               onClick={() => selectQuestion(q, idx)}
-                              className="p-1.5 text-gray-400 hover:text-brand-600 hover:bg-brand-50 rounded-lg"
+                              className="p-1.5 text-gray-400 hover:text-[#2D6A4F] hover:bg-emerald-50 rounded-lg"
                               title="Ver detalle"
                             >
                               <Eye className="w-4 h-4" />
@@ -1103,7 +1091,7 @@ export default function ReviewerPanel({
             </p>
             <button
               onClick={() => { loadQuestions(); loadStats(); }}
-              className="px-4 py-2 bg-brand-100 text-brand-700 rounded-lg hover:bg-brand-200 transition-colors inline-flex items-center gap-2"
+              className="px-4 py-2 bg-emerald-100 text-emerald-700 rounded-lg hover:bg-emerald-200 transition-colors inline-flex items-center gap-2"
             >
               <RefreshCw className="w-4 h-4" />
               Recargar
@@ -1125,7 +1113,7 @@ export default function ReviewerPanel({
                 {/* Progress & Navigation */}
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-sm text-gray-600 font-medium">
-                    Pregunta <span className="text-brand-600">{currentIndex + 1}</span> de {questions.length}
+                    Pregunta <span className="text-[#2D6A4F]">{currentIndex + 1}</span> de {questions.length}
                   </span>
                   <div className="flex gap-2">
                     <button
@@ -1159,14 +1147,14 @@ export default function ReviewerPanel({
                 >
                   {/* Meta tags */}
                   <div className="px-4 py-3 bg-gray-50 border-b border-gray-200 flex items-center gap-2 flex-wrap">
-                    <span className="px-3 py-1 bg-brand-100 text-brand-700 text-sm font-medium rounded-full">
+                    <span className="px-3 py-1 bg-emerald-100 text-emerald-700 text-sm font-medium rounded-full">
                       Tema {currentQuestion?.tema || '?'}
                     </span>
                     {currentQuestion?.origin && (
                       <span className={`px-3 py-1 text-sm rounded-full ${
                         currentQuestion.origin === 'imported' ? 'bg-gray-100 text-gray-600' :
                         currentQuestion.origin === 'reformulated' ? 'bg-cyan-100 text-cyan-700' :
-                        'bg-violet-100 text-violet-700'
+                        'bg-emerald-100 text-emerald-700'
                       }`}>
                         {currentQuestion.origin === 'imported' ? 'Importada' :
                          currentQuestion.origin === 'reformulated' ? 'Reformulada' : 'Creada IA'}
@@ -1267,9 +1255,9 @@ export default function ReviewerPanel({
                   {/* AI Creation Rationale - for ai_created questions (only if not a verification comment) */}
                   {currentQuestion?.origin === 'ai_created' && currentQuestion?.review_comment && !currentQuestion.review_comment.match(/^\[(VERIFIED|ERROR|AMBIGUOUS)/) && (
                     <div className="px-5 pb-4">
-                      <div className="p-4 bg-violet-50 border border-violet-200 rounded-xl">
-                        <p className="text-xs font-semibold text-violet-800 mb-1">Rationale de creación:</p>
-                        <p className="text-sm text-violet-700">{currentQuestion.review_comment}</p>
+                      <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-xl">
+                        <p className="text-xs font-semibold text-emerald-800 mb-1">Rationale de creación:</p>
+                        <p className="text-sm text-emerald-700">{currentQuestion.review_comment}</p>
                       </div>
                     </div>
                   )}
@@ -1353,7 +1341,7 @@ export default function ReviewerPanel({
                       value={reviewComment}
                       onChange={(e) => setReviewComment(e.target.value)}
                       placeholder="Escribe un comentario si lo deseas..."
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl text-sm resize-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-shadow"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl text-sm resize-none focus:ring-2 focus:ring-[#2D6A4F] focus:border-[#2D6A4F] transition-shadow"
                       rows={2}
                     />
                   </div>
@@ -1443,12 +1431,12 @@ export default function ReviewerPanel({
                         <div className="flex-1 min-w-0">
                           {/* Meta */}
                           <div className="flex flex-wrap gap-2 mb-2">
-                            <span className="text-xs bg-brand-100 text-brand-700 px-2 py-0.5 rounded-full font-medium">
+                            <span className="text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full font-medium">
                               T{question.tema || '?'}
                             </span>
                             {question.origin && question.origin !== 'imported' && (
                               <span className={`text-xs px-2 py-0.5 rounded-full ${
-                                question.origin === 'reformulated' ? 'bg-cyan-100 text-cyan-700' : 'bg-violet-100 text-violet-700'
+                                question.origin === 'reformulated' ? 'bg-cyan-100 text-cyan-700' : 'bg-emerald-100 text-emerald-700'
                               }`}>
                                 {question.origin === 'reformulated' ? 'Reformulada' : 'Creada IA'}
                               </span>
@@ -1477,7 +1465,7 @@ export default function ReviewerPanel({
                         <div className="flex items-center gap-2 flex-shrink-0">
                           <button
                             onClick={() => selectQuestion(question, idx)}
-                            className="p-2 text-gray-400 hover:text-brand-600 hover:bg-brand-50 rounded-lg transition-colors"
+                            className="p-2 text-gray-400 hover:text-[#2D6A4F] hover:bg-emerald-50 rounded-lg transition-colors"
                             title="Ver detalle"
                           >
                             <Eye className="w-4 h-4" />
