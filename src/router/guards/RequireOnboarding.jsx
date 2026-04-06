@@ -15,14 +15,20 @@ export default function RequireOnboarding({ children }) {
   const { onboardingComplete } = useUserStore();
   const location = useLocation();
 
-  // Authenticated users skip onboarding check (they already have an account)
+  // Authenticated users skip onboarding check
   if (user) {
     return children;
   }
 
-  // Anonymous users need onboarding
+  // Allow unauthenticated users on home page (guest trial)
+  const isHomePage = location.pathname === '/app/inicio' || location.pathname === '/app';
+  if (isHomePage) {
+    return children;
+  }
+
+  // Other routes: need onboarding or redirect to home
   if (!onboardingComplete) {
-    return <Navigate to={ROUTES.WELCOME} state={{ from: location }} replace />;
+    return <Navigate to={ROUTES.HOME} replace />;
   }
 
   return children;

@@ -44,6 +44,11 @@ export default function HomePage() {
   });
 
   const handleStartSession = (topic) => {
+    // Guest users go to guest session flow
+    if (!user) {
+      navigate(ROUTES.GUEST_SESSION);
+      return;
+    }
     if (topic?.number) {
       navigate(ROUTES.STUDY, { state: { topic, mode: 'practica-tema' } });
     } else {

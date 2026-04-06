@@ -19,6 +19,7 @@ import EmptyState from '../common/EmptyState';
 import DevModeRandomizer, { userStates } from '../dev/DevModeRandomizer';
 import { useAuth } from '../../contexts/AuthContext';
 import { useUserStore } from '../../stores/useUserStore';
+import { getGuestData, initGuestData } from '../../features/guest/guestStorage';
 
 // ============================================================
 // SUB-COMPONENTS
@@ -64,8 +65,14 @@ function HeroSessionCard({ activity, onStart }) {
   );
 }
 
-/** New user welcome hero */
+/** New user / guest trial hero — Lovable CTA integrated in dashboard */
 function WelcomeHeroCard({ onStart }) {
+  const guestData = getGuestData();
+  const hasStarted = guestData && guestData.totalSessions > 0;
+  const avgScore = hasStarted
+    ? Math.round(guestData.sessions.reduce((s, ses) => s + (ses.score / ses.total) * 100, 0) / guestData.sessions.length)
+    : 0;
+
   return (
     <div
       className="relative overflow-hidden rounded-2xl p-7 cursor-pointer transition-all duration-200 hover:-translate-y-0.5 animate-fade-up"
@@ -78,23 +85,36 @@ function WelcomeHeroCard({ onStart }) {
     >
       <div className="absolute -top-12 -right-12 w-[180px] h-[180px] rounded-full" style={{ background: 'rgba(255,255,255,0.04)' }} />
 
-      <p className="text-[10px] font-semibold uppercase tracking-[0.06em] text-white/60 mb-2 relative">
-        Empieza aquí
-      </p>
-      <h2 className="text-[22px] font-bold text-white tracking-[-0.02em] mb-1 leading-snug relative">
-        Haz tu primera sesión de práctica
-      </h2>
-      <p className="text-[14px] text-white/70 mb-1 relative">
-        10 preguntas para conocer tu nivel
-      </p>
-      <p className="text-[12px] text-white/40 mb-5 relative">
-        Solo 5 minutos · Sin puntuación · Aprende con cada respuesta
-      </p>
+      {hasStarted ? (
+        <>
+          <p className="text-[10px] font-semibold uppercase tracking-[0.06em] text-white/60 mb-2 relative">
+            Continúa tu prueba
+          </p>
+          <h2 className="text-[22px] font-bold text-white tracking-[-0.02em] mb-1 leading-snug relative">
+            Sesión {guestData.totalSessions + 1} de {guestData.maxSessions}
+          </h2>
+          <p className="text-[14px] text-white/70 mb-5 relative">
+            Precisión actual: {avgScore}% · 10 preguntas más
+          </p>
+        </>
+      ) : (
+        <>
+          <p className="text-[10px] font-semibold uppercase tracking-[0.06em] text-white/60 mb-2 relative">
+            Prueba gratuita
+          </p>
+          <h2 className="text-[22px] font-bold text-white tracking-[-0.02em] mb-1 leading-snug relative">
+            Descubre tu nivel en 2 minutos
+          </h2>
+          <p className="text-[14px] text-white/70 mb-5 relative">
+            10 preguntas reales de Auxiliar Administrativo · Sin registro
+          </p>
+        </>
+      )}
       <button
         className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 text-white text-[14px] font-semibold px-5 py-2.5 rounded-lg transition-colors duration-150 active:scale-[0.97] relative"
         onClick={(e) => { e.stopPropagation(); onStart(); }}
       >
-        Empezar primera sesión
+        Empezar ahora
         <ArrowRight size={16} />
       </button>
     </div>

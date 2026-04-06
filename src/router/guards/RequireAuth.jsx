@@ -23,8 +23,12 @@ export default function RequireAuth({ children }) {
   }
 
   // Allow authenticated users and anonymous users through
+  // Also allow unauthenticated users on home page (guest trial CTA)
   if (!user && !isAnonymous) {
-    return <Navigate to={ROUTES.LOGIN} state={{ from: location }} replace />;
+    const isHomePage = location.pathname === '/app/inicio' || location.pathname === '/app';
+    if (!isHomePage) {
+      return <Navigate to={ROUTES.HOME} replace />;
+    }
   }
 
   return children;

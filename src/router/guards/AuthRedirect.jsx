@@ -27,6 +27,6 @@ export default function AuthRedirect() {
     return <Navigate to={ROUTES.HOME} replace />;
   }
 
-  // Not authenticated → guest welcome (try before signup)
-  return <Navigate to={ROUTES.WELCOME} replace />;
+  // Not authenticated → home dashboard (has guest CTA "Descubre tu nivel")
+  return <Navigate to={ROUTES.HOME} replace />;
 }
