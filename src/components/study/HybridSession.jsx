@@ -67,7 +67,7 @@ export default function HybridSession({ config = {}, onClose, onComplete, onNext
     loadSession(config);
   };
 
-  // Handle answer selection — no correct/incorrect reveal, advance quickly
+  // Handle answer selection — show feedback, wait for "Siguiente" click
   const handleSelect = (answer) => {
     if (selectedAnswer) return; // prevent double-tap
     setSelectedAnswer(answer);
@@ -95,11 +95,13 @@ export default function HybridSession({ config = {}, onClose, onComplete, onNext
       tema: currentQuestion.tema
     });
 
-    // Brief selection flash then advance (no correct/incorrect feedback)
-    setTimeout(() => {
-      answerQuestion(isCorrect);
-      setSelectedAnswer(null);
-    }, 250);
+    // Record the answer (updates stats) but DON'T advance yet
+    answerQuestion(isCorrect);
+  };
+
+  // Advance to next question (called by "Siguiente" button in QuestionCard)
+  const handleNext = () => {
+    setSelectedAnswer(null);
   };
 
   // Handle skip — track the question as skipped for correction view
@@ -352,14 +354,15 @@ export default function HybridSession({ config = {}, onClose, onComplete, onNext
         </div>
       )}
 
-      {/* Header */}
-      <SessionHeader
-        currentIndex={currentIndex}
-        total={sessionStats.total}
-        progress={progress}
-        isReview={currentQuestion.isReview}
-        onExitClick={() => setShowExitConfirm(true)}
-      />
+      {/* Exit button — minimal, top-left */}
+      <div className="px-4 pt-3 flex justify-end">
+        <button
+          onClick={() => setShowExitConfirm(true)}
+          className="text-xs text-gray-400 hover:text-gray-600 transition-colors"
+        >
+          Salir ×
+        </button>
+      </div>
 
       {/* Question */}
       <QuestionCard
@@ -367,27 +370,28 @@ export default function HybridSession({ config = {}, onClose, onComplete, onNext
         selectedAnswer={selectedAnswer}
         onSelectAnswer={handleSelect}
         onSkip={handleSkip}
+        onNext={handleNext}
+        showFeedback={true}
+        currentIndex={currentIndex}
+        total={sessionStats.total}
+        isReview={currentQuestion.isReview}
       />
 
-      {/* Bottom stats — don't reveal correct/incorrect during session */}
-      <div className="bg-white border-t p-4">
+      {/* Bottom stats — minimal, only when no answer selected (QuestionCard shows its own "Siguiente" button) */}
+      {!selectedAnswer && (
+      <div className="bg-white border-t p-3">
         <div className="max-w-lg mx-auto flex justify-around text-center">
           <div>
-            <p className="text-lg font-bold" style={{ color: '#2D6A4F' }}>{sessionStats.answered}</p>
-            <p className="text-xs text-gray-500">Respondidas</p>
+            <p className="text-sm font-bold" style={{ color: '#2D6A4F' }}>{sessionStats.correct}</p>
+            <p className="text-[10px] text-gray-400">Correctas</p>
           </div>
-          {sessionStats.skipped > 0 && (
-            <div>
-              <p className="text-lg font-bold text-amber-500">{sessionStats.skipped}</p>
-              <p className="text-xs text-gray-500">Saltadas</p>
-            </div>
-          )}
           <div>
-            <p className="text-lg font-bold text-gray-600">{sessionStats.total - sessionStats.answered - sessionStats.skipped}</p>
-            <p className="text-xs text-gray-500">Restantes</p>
+            <p className="text-sm font-bold text-gray-500">{sessionStats.total - sessionStats.answered}</p>
+            <p className="text-[10px] text-gray-400">Restantes</p>
           </div>
         </div>
       </div>
+      )}
     </div>
   );
 }
