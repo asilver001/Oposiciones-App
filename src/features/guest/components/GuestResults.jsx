@@ -43,6 +43,11 @@ export default function GuestResults() {
 
   return (
     <div className="min-h-dvh flex flex-col" style={{ background: '#FAFAF7' }}>
+      {/* Top banner — same style as guest session */}
+      <div className="flex items-center justify-between px-4 py-2 bg-gray-100 text-sm shrink-0">
+        <span className="text-gray-400">Sesión {lastSession.number} de {guestData.maxSessions}</span>
+        <button onClick={() => navigate('/signup')} className="text-[#2D6A4F] font-medium hover:underline">Crear cuenta</button>
+      </div>
       <div className="flex-1 px-5 py-8 max-w-sm mx-auto w-full space-y-6">
         {/* Score circle */}
         <div className="text-center space-y-3">
