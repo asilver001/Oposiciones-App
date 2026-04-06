@@ -23,10 +23,10 @@ export default function RequireAuth({ children }) {
   }
 
   // Allow authenticated users and anonymous users through
-  // Also allow unauthenticated users on home page (guest trial CTA)
+  // Also allow unauthenticated users on main app pages (guest browsing)
   if (!user && !isAnonymous) {
-    const isHomePage = location.pathname === '/app/inicio' || location.pathname === '/app';
-    if (!isHomePage) {
+    const guestAllowed = ['/app/inicio', '/app', '/app/temas', '/app/actividad', '/app/recursos'];
+    if (!guestAllowed.includes(location.pathname)) {
       return <Navigate to={ROUTES.HOME} replace />;
     }
   }

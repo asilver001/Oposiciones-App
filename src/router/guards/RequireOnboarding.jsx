@@ -20,9 +20,9 @@ export default function RequireOnboarding({ children }) {
     return children;
   }
 
-  // Allow unauthenticated users on home page (guest trial)
-  const isHomePage = location.pathname === '/app/inicio' || location.pathname === '/app';
-  if (isHomePage) {
+  // Allow unauthenticated users on main app pages (guest browsing)
+  const guestAllowed = ['/app/inicio', '/app', '/app/temas', '/app/actividad', '/app/recursos'];
+  if (guestAllowed.includes(location.pathname)) {
     return children;
   }
 
