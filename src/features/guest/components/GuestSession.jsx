@@ -39,13 +39,21 @@ export default function GuestSession() {
   };
 
   const handleNext = () => {
-    if (currentIndex + 1 >= questions.length) {
-      const score = answers.filter(a => a.correct).length;
-      saveSession({ number: sessionNumber, completedAt: new Date().toISOString(), answers, score, total: questions.length });
+    const nextIdx = currentIndex + 1;
+    if (nextIdx >= questions.length) {
+      // Include the last answer (handleAnswer runs before handleNext via setTimeout)
+      const allAnswers = [...answers];
+      // The last answer might not be in state yet due to batching, so use length check
+      const score = allAnswers.filter(a => a.correct).length;
+      saveSession({ number: sessionNumber, completedAt: new Date().toISOString(), answers: allAnswers, score, total: questions.length });
       navigate('/guest/results');
     } else {
-      setCurrentIndex(prev => prev + 1);
+      setCurrentIndex(nextIdx);
     }
+  };
+
+  const handleExit = () => {
+    navigate('/app/inicio');
   };
 
   if (loading) {
@@ -73,6 +81,7 @@ export default function GuestSession() {
         totalQuestions={questions.length}
         onAnswer={handleAnswer}
         onNext={handleNext}
+        onExit={handleExit}
       />
     </div>
   );

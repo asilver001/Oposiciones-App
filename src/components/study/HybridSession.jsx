@@ -95,11 +95,11 @@ export default function HybridSession({ config = {}, onClose, onComplete, onNext
       tema: currentQuestion.tema
     });
 
-    // Record the answer (updates stats) but DON'T advance yet
+    // Record the answer and advance
     answerQuestion(isCorrect);
+    // selectedAnswer will be cleared by QuestionCard auto-advance via onNext
   };
 
-  // Advance to next question (called by "Siguiente" button in QuestionCard)
   const handleNext = () => {
     setSelectedAnswer(null);
   };

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Check, RotateCcw, SkipForward } from 'lucide-react';
+import { RotateCcw, SkipForward } from 'lucide-react';
 
 /**
  * QuestionCard — Lovable-inspired question UI with immediate feedback.
@@ -75,19 +75,20 @@ export default function QuestionCard({
     setLocalSelected(key);
     setAnswered(true);
     onSelectAnswer(key);
+    // Auto-advance after brief selection flash
+    if (onNext) setTimeout(() => onNext(), 250);
   };
 
   const getOptionStyle = (opt) => {
     if (!answered && !selected) return 'border-gray-200 bg-white hover:border-[#2D6A4F]/30';
-    if (opt.isCorrect) return 'border-[#2D6A4F] bg-[#E8F5E9]';
-    if (opt.key === selected && !isCorrect) return 'border-[#D4933A] bg-[#FEF3CD]';
+    // Brief flash: only highlight selected
+    if (opt.key === (localSelected || selected)) return 'border-gray-900 bg-gray-900/5';
     return 'border-gray-200 bg-white opacity-50';
   };
 
   const getLetterStyle = (opt) => {
     if (!answered && !selected) return 'bg-gray-100 text-gray-600';
-    if (opt.isCorrect) return 'bg-[#2D6A4F] text-white';
-    if (opt.key === selected && !isCorrect) return 'bg-[#D4933A] text-white';
+    if (opt.key === (localSelected || selected)) return 'bg-gray-900 text-white';
     return 'bg-gray-100 text-gray-400';
   };
 
@@ -139,23 +140,12 @@ export default function QuestionCard({
               className={`w-full text-left px-4 py-3.5 rounded-xl border-2 transition-all flex items-start gap-3 ${getOptionStyle(opt)}`}
             >
               <span className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-sm font-semibold mt-0.5 ${getLetterStyle(opt)}`}>
-                {(answered || selected) && opt.isCorrect ? <Check className="w-4 h-4" /> : letters[idx]}
+                {letters[idx]}
               </span>
               <span className="text-[15px] leading-snug text-gray-800">{opt.text}</span>
             </button>
           ))}
         </div>
-
-        {/* Feedback + explanation */}
-        {showFeedback && (answered || selected) && (
-          <div className="mt-6 space-y-3">
-            <p className={`font-semibold text-base ${isCorrect ? 'text-[#2D6A4F]' : 'text-[#D4933A]'}`}>
-              {isCorrect ? '¡Correcto!' : `La respuesta correcta es la ${letters[options.findIndex(o => o.isCorrect)]}`}
-            </p>
-            {reference && <p className="text-sm text-gray-400">{reference}</p>}
-            {explanation && <p className="text-sm text-gray-600 leading-relaxed">{explanation}</p>}
-          </div>
-        )}
 
         {/* Skip button (only if not answered) */}
         {onSkip && !answered && !selected && (
@@ -168,18 +158,6 @@ export default function QuestionCard({
           </button>
         )}
       </div>
-
-      {/* Next button — appears after answering */}
-      {(answered || selected) && onNext && (
-        <div className="fixed bottom-0 left-0 right-0 px-5 py-4 border-t border-gray-100 bg-[#FAFAF7] z-10">
-          <button
-            onClick={onNext}
-            className="w-full py-3.5 rounded-xl bg-[#2D6A4F] text-white font-semibold text-base active:scale-[0.98] transition-all"
-          >
-            Siguiente →
-          </button>
-        </div>
-      )}
     </div>
   );
 }
