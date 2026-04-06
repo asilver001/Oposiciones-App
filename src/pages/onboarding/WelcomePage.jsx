@@ -37,17 +37,6 @@ export default function WelcomePage() {
     return <Navigate to={ROUTES.HOME} replace />;
   }
 
-  // Guest-first flow: show GuestWelcome for unauthenticated users
-  // This sends them directly to questions without long onboarding
-  const handleGuestStart = () => {
-    navigate(ROUTES.GUEST_SESSION);
-  };
-
-  const handleLogin = () => {
-    navigate(ROUTES.LOGIN);
-  };
-
-  return (
-    <GuestWelcome />
-  );
+  // All unauthenticated users go to dashboard (has guest CTA)
+  return <Navigate to={ROUTES.HOME} replace />;
 }
