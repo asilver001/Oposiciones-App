@@ -1,0 +1,1127 @@
+[
+  {
+    "id": "T1-01",
+    "tema": 1,
+    "temaName": "CE: Título Preliminar y Título I",
+    "enunciado": "¿Cuál es la duración del mandato de los magistrados del Tribunal Constitucional?",
+    "opciones": [
+      "6 años",
+      "9 años",
+      "12 años",
+      "Vitalicio"
+    ],
+    "correcta": 1,
+    "referencia": "Art. 159.3 CE",
+    "explicacion": "El artículo 159.3 establece que los miembros del Tribunal Constitucional serán designados por un período de nueve años y se renovarán por terceras partes cada tres."
+  },
+  {
+    "id": "T1-02",
+    "tema": 1,
+    "temaName": "CE: Título Preliminar y Título I",
+    "enunciado": "¿Qué artículo de la Constitución regula el acceso a la función pública?",
+    "opciones": [
+      "Artículo 23.2",
+      "Artículo 103.3",
+      "Ambos artículos",
+      "Artículo 35"
+    ],
+    "correcta": 2,
+    "referencia": "Art. 23.2 CE",
+    "explicacion": "La respuesta correcta es la opción C. El acceso a la función pública se regula en dos artículos complementarios. El Art. 23.2 CE establece: «tienen derecho a acceder en condiciones de igualdad a las funciones y cargos públicos, con los requisitos que señalen las leyes». El Art. 103.3 CE desarrolla los principios de mérito y capacidad para el acceso. El Art. 35 regula el derecho al trabajo en general, no específicamente la función pública."
+  },
+  {
+    "id": "T1-03",
+    "tema": 1,
+    "temaName": "CE: Título Preliminar y Título I",
+    "enunciado": "Si así lo recogen sus Estatutos de Autonomía, las Comunidades Autónomas podrán asumir la legislación de desarrollo y ejecución en la siguiente materia:",
+    "opciones": [
+      "Pesas y medidas.",
+      "Comercio exterior.",
+      "Montes y aprovechamientos forestales y vías pecuarias.",
+      "Tráfico y circulación de vehículos a motor."
+    ],
+    "correcta": 2,
+    "referencia": "Art. 149.1 CE",
+    "explicacion": "Art. 149.1.23.ª CE: el Estado tiene competencia exclusiva sobre legislación básica en montes, aprovechamientos forestales y vías pecuarias. Las Comunidades Autónomas pueden asumir el desarrollo legislativo y la ejecución. Pesas y medidas, comercio exterior y tráfico son competencia exclusiva íntegra del Estado."
+  },
+  {
+    "id": "T1-04",
+    "tema": 1,
+    "temaName": "CE: Título Preliminar y Título I",
+    "enunciado": "Indique la respuesta correcta en relación con la cuestión de inconstitucionalidad regulada en la Ley Orgánica del Tribunal Constitucional:",
+    "opciones": [
+      "Puede ser planteada contra una norma con rango reglamentario.",
+      "Solo se puede plantear a instancia de parte.",
+      "Produce la suspensión automática del plazo para dictar sentencia del pleito que dé lugar a la cuestión.",
+      "Produce la suspensión automática de la norma recurrida."
+    ],
+    "correcta": 2,
+    "referencia": "Art. 35.3",
+    "explicacion": "Art. 35.3 LOTC: el planteamiento de la cuestión de inconstitucionalidad originará la suspensión provisional del plazo para dictar sentencia. Solo puede plantearse contra normas con rango de ley (no reglamentario) y puede ser de oficio o a instancia de parte."
+  },
+  {
+    "id": "T1-05",
+    "tema": 1,
+    "temaName": "CE: Título Preliminar y Título I",
+    "enunciado": "En una investigación judicial por pertenencia a banda armada terrorista, ¿cuáles de los siguientes derechos fundamentales pueden ser suspendidos de forma individual según el artículo 55.2 de la Constitución Española?",
+    "opciones": [
+      "Plazo máximo de detención preventiva (Art. 17.2 CE), inviolabilidad del domicilio (Art. 18.2 CE) y secreto de las comunicaciones (Art. 18.3 CE).",
+      "Inviolabilidad del domicilio, secreto de las comunicaciones y asistencia de abogado al detenido (Art. 17.3 CE).",
+      "Plazo de detención preventiva, inviolabilidad del domicilio, secreto de comunicaciones y asistencia de abogado.",
+      "Únicamente el secreto de las comunicaciones y la inviolabilidad del domicilio, no el plazo de detención."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 55.2 CE",
+    "explicacion": "La respuesta correcta es la opción A. El artículo 55.2 CE establece textualmente que pueden suspenderse individualmente «los derechos reconocidos en los artículos 17, apartado 2, y 18, apartados 2 y 3» para personas determinadas en investigaciones de bandas armadas o terrorismo. Son tres derechos: plazo de detención preventiva (17.2), inviolabilidad del domicilio (18.2) y secreto de comunicaciones (18.3). La asistencia letrada (17.3) NO se incluye en el Art. 55.2."
+  },
+  {
+    "id": "T1-06",
+    "tema": 1,
+    "temaName": "CE: Título Preliminar y Título I",
+    "enunciado": "Según el artículo 25.3 de la Constitución Española, ¿qué tipo de sanciones NO puede imponer la Administración civil?",
+    "opciones": [
+      "Sanciones pecuniarias superiores a 3.000 euros, salvo que lo autorice una Ley Orgánica.",
+      "Sanciones que, directa o subsidiariamente, impliquen privación de libertad.",
+      "Sanciones de inhabilitación para el ejercicio de actividades profesionales reguladas.",
+      "Sanciones de cierre temporal de establecimientos comerciales por infracciones graves."
+    ],
+    "correcta": 1,
+    "referencia": "Art. 25.3 CE",
+    "explicacion": "La respuesta correcta es la opción B. El artículo 25.3 de la CE establece textualmente: «La Administración civil no podrá imponer sanciones que, directa o subsidiariamente, impliquen privación de libertad». Esta prohibición es absoluta, sin excepciones posibles. La privación de libertad es competencia exclusiva de los órganos jurisdiccionales (Art. 17 CE). La Administración sí puede imponer sanciones pecuniarias, inhabilitaciones y cierres."
+  },
+  {
+    "id": "T1-07",
+    "tema": 1,
+    "temaName": "CE: Título Preliminar y Título I",
+    "enunciado": "En relación con las garantías jurisdiccionales de los derechos constitucionales, indique cuál de las siguientes afirmaciones es correcta respecto al deber de defender a España regulado en el artículo 30 de la Constitución:",
+    "opciones": [
+      "Goza de protección mediante procedimiento judicial preferente y sumario ante tribunales ordinarios.",
+      "La ley que lo desarrolle podrá ser impugnada mediante recurso de inconstitucionalidad ante el Tribunal Constitucional.",
+      "Su desarrollo normativo requiere necesariamente ley orgánica conforme al artículo 81 CE.",
+      "Su vulneración puede ser objeto de recurso de amparo ante el Tribunal Constitucional."
+    ],
+    "correcta": 1,
+    "referencia": "Art. 30 CE",
+    "explicacion": "El deber de defender a España (artículo 30 CE) se encuentra en la Sección 2ª del Capítulo II del Título I. No goza de recurso de amparo (reservado a Art. 14 y Sección 1ª), ni de procedimiento preferente y sumario (mismo ámbito), ni requiere ley orgánica (reservada a Sección 1ª per Art. 81). Sin embargo, cualquier ley que desarrolle este deber puede ser impugnada mediante recurso de inconstitucionalidad ante el Tribunal Constitucional."
+  },
+  {
+    "id": "T1-08",
+    "tema": 1,
+    "temaName": "CE: Título Preliminar y Título I",
+    "enunciado": "El artículo 26 de la Constitución regula la prohibición de los Tribunales de Honor en España. Señale el ámbito exacto de aplicación de esta prohibición:",
+    "opciones": [
+      "Únicamente en la Administración civil, permitiéndose en organizaciones profesionales.",
+      "En la Administración civil y de las organizaciones profesionales, excluyendo el ámbito militar.",
+      "En todo el ámbito de la Administración Pública, tanto civil como militar.",
+      "Prohibición absoluta salvo durante la declaración del estado de sitio."
+    ],
+    "correcta": 1,
+    "referencia": "Art. 26 CE",
+    "explicacion": "El artículo 26 de la Constitución Española establece: \"Se prohíben los Tribunales de Honor en el ámbito de la Administración civil y de las organizaciones profesionales.\" Esta prohibición no se extiende al ámbito de la administración militar, donde la jurisdicción castrense mantiene sus propias instituciones disciplinarias."
+  },
+  {
+    "id": "T2-01",
+    "tema": 2,
+    "temaName": "CE: Derechos y Libertades",
+    "enunciado": "En relación con el artículo 63 de la Constitución, la declaración de guerra y la paz corresponde:",
+    "opciones": [
+      "Al Congreso por mayoría simple.",
+      "Al Gobierno mediante Real Decreto.",
+      "Al Rey, previa autorización de las Cortes Generales.",
+      "Al Senado mediante mensaje motivado."
+    ],
+    "correcta": 2,
+    "referencia": "Art. 63 CE",
+    "explicacion": "El artículo 63.3 de la Constitución Española establece que 'Al Rey corresponde, previa autorización de las Cortes Generales, declarar la guerra y hacer la paz'. Esta función es un acto del Rey que requiere autorización previa de las Cortes Generales (no posterior), por lo que el Rey no puede actuar unilateralmente en materia de guerra y paz. El refrendo corresponde al Presidente del Gobierno según el Art. 64 CE."
+  },
+  {
+    "id": "T2-02",
+    "tema": 2,
+    "temaName": "CE: Derechos y Libertades",
+    "enunciado": "En el procedimiento ordinario de reforma constitucional del artículo 167 de la Constitución Española, si la Comisión de composición paritaria de Diputados y Senadores no logra la mayoría de 3/5 en relación con el texto elaborado:",
+    "opciones": [
+      "Siempre que el texto hubiere obtenido el voto favorable de la mayoría absoluta del Senado, el Congreso, por mayoría de dos tercios, podrá aprobar la reforma.",
+      "Siempre que el texto hubiere obtenido el voto favorable de la mayoría absoluta del Senado, el Congreso, por mayoría de tres quintos, podrá aprobar la reforma.",
+      "Siempre que el texto hubiere obtenido el voto favorable de la mayoría simple del Senado, el Congreso, por mayoría de dos tercios, podrá aprobar la reforma.",
+      "Siempre que el texto hubiere obtenido el voto favorable de la mayoría simple del Senado, el Congreso, por mayoría de tres quintos, podrá aprobar la reforma."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 167.2 CE",
+    "explicacion": "Art. 167.2 CE: de no lograrse la aprobación por 3/5, y siempre que el texto hubiere obtenido el voto favorable de la mayoría absoluta del Senado, el Congreso, por mayoría de dos tercios, podrá aprobar la reforma. Es un mecanismo subsidiario que refuerza la posición del Congreso."
+  },
+  {
+    "id": "T2-03",
+    "tema": 2,
+    "temaName": "CE: Derechos y Libertades",
+    "enunciado": "El Rey es menor de edad y no existe ninguna persona a quien corresponda la Regencia por derecho propio. Según el artículo 59.3 de la Constitución Española, ¿quién nombra la Regencia y cómo debe componerse?",
+    "opciones": [
+      "Las Cortes Generales, pudiendo componerse de una, tres o cinco personas",
+      "El Gobierno, necesariamente de tres personas",
+      "Las Cortes Generales, obligatoriamente de tres o cinco personas",
+      "El Consejo de Estado, con un número impar de miembros"
+    ],
+    "correcta": 0,
+    "referencia": "Art. 59.3 CE",
+    "explicacion": "La respuesta correcta es la opción A. El artículo 59.3 de la CE establece textualmente: «Si no hubiere ninguna persona a quien corresponda la Regencia, ésta será nombrada por las Cortes Generales, y se compondrá de una, tres o cinco personas». Corresponde a las Cortes (no al Gobierno ni al Consejo de Estado), y puede tener 1, 3 o 5 miembros."
+  },
+  {
+    "id": "T2-04",
+    "tema": 2,
+    "temaName": "CE: Derechos y Libertades",
+    "enunciado": "El Rey menor necesita tanto un tutor como un regente. Conforme al artículo 60.2 de la Constitución Española, ¿en qué personas pueden acumularse excepcionalmente ambos cargos?",
+    "opciones": [
+      "En el padre, madre o ascendientes directos del Rey",
+      "En el Presidente del Gobierno",
+      "En el Príncipe heredero mayor de edad",
+      "En el Jefe de la Casa Real designado por las Cortes"
+    ],
+    "correcta": 0,
+    "referencia": "Art. 60.1 CE",
+    "explicacion": "La respuesta correcta es la opción A. El artículo 60.1 de la CE establece textualmente: «no podrán acumularse los cargos de Regente y de tutor sino en el padre, madre o ascendientes directos del Rey». Solo estas personas familiares pueden ejercer simultáneamente ambos cargos. No puede acumularse en el Presidente del Gobierno, el Príncipe heredero ni el Jefe de la Casa Real."
+  },
+  {
+    "id": "T2-05",
+    "tema": 2,
+    "temaName": "CE: Derechos y Libertades",
+    "enunciado": "La Constitución Española establece diferentes requisitos de nacionalidad para ejercer la Regencia y la tutela del Rey menor. Señale la afirmación correcta:",
+    "opciones": [
+      "Tanto para la Regencia como para la tutela se requiere ser español de nacimiento.",
+      "Para la tutela testamentaria del Rey menor se exige ser español de nacimiento; para la Regencia basta con ser español.",
+      "Para la Regencia se exige ser español de nacimiento; para la tutela basta con ser español.",
+      "Ninguno de los dos cargos exige ser español de nacimiento, solo ser español y mayor de edad."
+    ],
+    "correcta": 1,
+    "referencia": "Art. 60.1 CE, Art. 59.4 CE",
+    "explicacion": "El artículo 60.1 de la Constitución Española exige ser «español de nacimiento» para ejercer la tutela testamentaria del Rey menor. Sin embargo, el artículo 59.4 CE solo exige «ser español y mayor de edad» para la Regencia, sin el requisito adicional de nacimiento. Este es un error frecuente: confundir los requisitos de ambas figuras."
+  },
+  {
+    "id": "T2-06",
+    "tema": 2,
+    "temaName": "CE: Derechos y Libertades",
+    "enunciado": "El Presidente del Congreso de los Diputados tiene competencia para refrendar algunos actos del Rey. ¿Cuál de los siguientes actos refrenda según la Constitución Española?",
+    "opciones": [
+      "La propuesta de candidato a la Presidencia del Gobierno.",
+      "La acreditación de embajadores ante Estados extranjeros.",
+      "La convocatoria de referéndum consultivo.",
+      "La declaración de guerra previa autorización de las Cortes."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 64.2 CE",
+    "explicacion": "El artículo 64.2 de la Constitución Española establece textualmente: «La propuesta y el nombramiento del Presidente del Gobierno, y la disolución prevista en el artículo 99, serán refrendados por el Presidente del Congreso.» Solo estos dos actos requieren refrendo del Presidente del Congreso. La acreditación de embajadores (opción B), la convocatoria de referéndum (opción C) y la declaración de guerra (opción D) son refrendadas por el Presidente del Gobierno o el Ministro competente, nunca por el Presidente del Congreso."
+  },
+  {
+    "id": "T3-01",
+    "tema": 3,
+    "temaName": "CE: Corona, Cortes, Gobierno",
+    "enunciado": "¿Cuál es la función principal del Defensor del Pueblo?",
+    "opciones": [
+      "Defender los derechos del Título I de la Constitución",
+      "Supervisar la actividad del Gobierno",
+      "Controlar las Comunidades Autónomas",
+      "Resolver conflictos entre ciudadanos"
+    ],
+    "correcta": 0,
+    "referencia": "Art. 54 CE",
+    "explicacion": "El Defensor del Pueblo está designado para la defensa de los derechos comprendidos en el Título I de la Constitución."
+  },
+  {
+    "id": "T3-02",
+    "tema": 3,
+    "temaName": "CE: Corona, Cortes, Gobierno",
+    "enunciado": "Conforme a los artículos 90 y 91 de la Constitución Española, aprobado un proyecto de ley por el Congreso, ¿cuál de las siguientes afirmaciones es correcta respecto al plazo del Senado cuando el proyecto ha sido declarado urgente?",
+    "opciones": [
+      "El Senado dispone de tres meses para vetar o enmendar el texto.",
+      "El Senado dispone de dos meses, sin posibilidad de reducción.",
+      "El plazo del Senado se reduce a veinte días naturales si el proyecto se declara urgente por el Gobierno o por el Congreso.",
+      "El plazo del Senado se reduce a quince días hábiles en todo caso."
+    ],
+    "correcta": 2,
+    "referencia": "Art. 90.3 CE",
+    "explicacion": "Ojo: en urgencia el plazo baja a 20 días naturales."
+  },
+  {
+    "id": "T3-03",
+    "tema": 3,
+    "temaName": "CE: Corona, Cortes, Gobierno",
+    "enunciado": "Según lo previsto en el artículo 69 de la Constitución Española, las Comunidades Autónomas designarán para el Senado:",
+    "opciones": [
+      "Un senador, y otro más por cada millón de habitantes de su respectivo territorio.",
+      "Dos senadores, y otro más por cada millón de habitantes de su respectivo territorio.",
+      "Un senador, y dos más por cada millón de habitantes de su respectivo territorio.",
+      "Un senador por Comunidad Autónoma, sin cómputo adicional de población."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 69.5 CE",
+    "explicacion": "La respuesta correcta es la opción A. El artículo 69.5 de la Constitución Española establece textualmente: «Las Comunidades Autónomas designarán además un Senador y otro más por cada millón de habitantes de su respectivo territorio.» La base es 1 senador más 1 adicional por cada millón de habitantes, no 2 de base ni 2 adicionales por millón."
+  },
+  {
+    "id": "T3-04",
+    "tema": 3,
+    "temaName": "CE: Corona, Cortes, Gobierno",
+    "enunciado": "El artículo 74.1 de la Constitución Española prevé la reunión de ambas Cámaras en sesión conjunta. ¿Para qué tipo de competencias y de qué Título constitucional?",
+    "opciones": [
+      "Para ejercer las competencias no legislativas que el Título II (Corona) atribuye expresamente a las Cortes Generales.",
+      "Para ejercer las competencias legislativas que el Título II atribuye a las Cortes Generales.",
+      "Para ejercer las competencias no legislativas que el Título V (relaciones entre Gobierno y Cortes) atribuye a las Cortes.",
+      "Para ejercer todas las competencias, legislativas y no legislativas, del Título II."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 74.1 CE",
+    "explicacion": "La respuesta correcta es la opción A. El artículo 74.1 de la Constitución Española establece textualmente: «Las Cámaras se reunirán en sesión conjunta para ejercer las competencias no legislativas que el Título II atribuye expresamente a las Cortes Generales.» Son competencias NO legislativas (como proveer a la sucesión, reconocer inhabilitación del Rey) y del Título II (De la Corona), no del Título V ni competencias legislativas."
+  },
+  {
+    "id": "T3-05",
+    "tema": 3,
+    "temaName": "CE: Corona, Cortes, Gobierno",
+    "enunciado": "Conforme al artículo 73.2 de la Constitución Española, ¿a petición de quién pueden las Cámaras reunirse en sesión extraordinaria?",
+    "opciones": [
+      "Del Gobierno, de la Diputación Permanente o de la mayoría absoluta de los miembros de cualquiera de las Cámaras.",
+      "Del Rey, previa consulta al Presidente del Gobierno.",
+      "De la mayoría simple de cualquiera de las Cámaras.",
+      "Exclusivamente del Presidente del Gobierno."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 73.2 CE",
+    "explicacion": "La respuesta correcta es la opción A. El artículo 73.2 de la Constitución Española establece textualmente: «Las Cámaras podrán reunirse en sesiones extraordinarias a petición del Gobierno, de la Diputación Permanente o de la mayoría absoluta de los miembros de cualquiera de las Cámaras.» No se incluye al Rey ni al Presidente del Gobierno individualmente. Las sesiones extraordinarias se convocan sobre orden del día determinado."
+  },
+  {
+    "id": "T3-06",
+    "tema": 3,
+    "temaName": "CE: Corona, Cortes, Gobierno",
+    "enunciado": "Según el artículo 75.3 de la Constitución Española, serán materias de Pleno (NO delegables a Comisiones). Señale la INCORRECTA:",
+    "opciones": [
+      "Planificación General de la actividad económica.",
+      "Reforma Constitucional.",
+      "Presupuestos Generales del Estado.",
+      "Leyes orgánicas y de bases."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 75.3 CE",
+    "explicacion": "La respuesta correcta es la opción A (la afirmación incorrecta). Según el artículo 75.3 de la Constitución Española: «Las Cámaras podrán delegar en las Comisiones Legislativas Permanentes la aprobación de proyectos o proposiciones de ley. El Pleno podrá recabar en cualquier momento el debate y votación de cualquier proyecto o proposición de ley que haya sido objeto de esta delegación.» Las materias excluidas de delegación son: la reforma constitucional, las cuestiones internacionales, las leyes orgánicas y de bases y los Presupuestos Generales del Estado. La «planificación general de la actividad económica» NO aparece en esta lista, por lo que SÍ podría delegarse a Comisión."
+  },
+  {
+    "id": "T3-07",
+    "tema": 3,
+    "temaName": "CE: Corona, Cortes, Gobierno",
+    "enunciado": "Una Comunidad Autónoma tiene 8 provincias no insulares y 8.538.376 habitantes. Según el artículo 69 CE, ¿cuántos Senadores (elegidos + designados) proceden de esa CA?",
+    "opciones": [
+      "41 Senadores: 32 elegidos (8 provincias × 4) + 9 designados (1 base + 8 por población de 8,5 millones).",
+      "40 Senadores.",
+      "39 Senadores.",
+      "38 Senadores."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 69 CE",
+    "explicacion": "Según el artículo 69 CE: senadores elegidos = 8 provincias × 4 = 32. Senadores designados por la CCAA = 1 de base + 8 adicionales (uno por cada millón completo de habitantes de 8.538.376) = 9. Total: 32 + 9 = 41 senadores."
+  },
+  {
+    "id": "T3-08",
+    "tema": 3,
+    "temaName": "CE: Corona, Cortes, Gobierno",
+    "enunciado": "El procedimiento de elaboración de las leyes se regula en el Título III de la Constitución (\"De las Cortes Generales\"). ¿En qué Capítulo de dicho Título se encuentra esta regulación?",
+    "opciones": [
+      "En el Capítulo segundo, que comprende los artículos 81 a 92.",
+      "En el Capítulo primero, junto con la regulación de las Cámaras.",
+      "En el Capítulo tercero, dedicado a los Tratados Internacionales.",
+      "En el Capítulo cuarto, sobre el control de la acción del Gobierno."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 81-92 CE",
+    "explicacion": "La elaboración de las leyes se regula en el Capítulo segundo del Título III de la Constitución Española («De las Cortes Generales»), que comprende los artículos 81 a 92. El artículo 81.1 CE establece textualmente: «Son leyes orgánicas las relativas al desarrollo de los derechos fundamentales y de las libertades públicas.» El Capítulo primero trata «De las Cámaras» (Arts. 66-80) y el Capítulo tercero «De los Tratados Internacionales» (Arts. 93-96)."
+  },
+  {
+    "id": "T4-01",
+    "tema": 4,
+    "temaName": "CE: Poder Judicial y TC",
+    "enunciado": "El artículo 122 de la Constitución Española señala que:",
+    "opciones": [
+      "El Consejo General del Poder Judicial estará integrado por el Presidente del Tribunal Supremo, que lo presidirá, y por veinte miembros nombrados por las Cortes Generales.",
+      "Sus miembros son nombrados por un período de cuatro años.",
+      "De sus miembros, doce son nombrados entre abogados y otros juristas, todos ellos de reconocida competencia y con más de quince años de ejercicio en su profesión.",
+      "La ley orgánica establecerá el estatuto y el régimen de incompatibilidades de sus miembros y sus funciones, en particular en materia de nombramientos, ascensos, inspección y régimen disciplinario."
+    ],
+    "correcta": 3,
+    "referencia": "Art. 122.3 CE",
+    "explicacion": "La respuesta correcta es la opción D. El artículo 122.2 de la Constitución Española establece textualmente: «La ley orgánica establecerá su estatuto y el régimen de incompatibilidades de sus miembros y sus funciones, en particular en materia de nombramientos, ascensos, inspección y régimen disciplinario.» La opción A es incorrecta porque los veinte miembros son nombrados por el Rey (no por las Cortes Generales); las Cortes proponen ocho de ellos. La opción B es incorrecta porque el mandato es de cinco años (Art. 122.3 CE), no cuatro. La opción C es incorrecta porque los doce son elegidos entre Jueces y Magistrados (no abogados y juristas); son los ocho restantes quienes proceden de abogados y juristas."
+  },
+  {
+    "id": "T4-02",
+    "tema": 4,
+    "temaName": "CE: Poder Judicial y TC",
+    "enunciado": "Conforme al artículo 161.1.a de la Constitución Española, ¿cuál es el objeto del recurso de inconstitucionalidad que conoce el Tribunal Constitucional?",
+    "opciones": [
+      "Leyes y disposiciones normativas con fuerza de ley",
+      "Sentencias del Tribunal Supremo que vulneren derechos fundamentales",
+      "Cualquier acto de los poderes públicos que viole el Título I",
+      "Reglamentos y disposiciones administrativas"
+    ],
+    "correcta": 0,
+    "referencia": "Art. 161.1.a) CE",
+    "explicacion": "La respuesta correcta es la opción A. El artículo 161.1.a) de la CE establece textualmente que el TC es competente para conocer «del recurso de inconstitucionalidad contra leyes y disposiciones normativas con fuerza de ley». No contra sentencias del TS (opción B), ni contra cualquier acto (opción C), ni contra reglamentos (opción D, que se impugnan ante la jurisdicción contencioso-administrativa)."
+  },
+  {
+    "id": "T4-03",
+    "tema": 4,
+    "temaName": "CE: Poder Judicial y TC",
+    "enunciado": "¿Suspende automáticamente la aplicación de una ley la admisión del recurso de inconstitucionalidad contra ella?",
+    "opciones": [
+      "Solo si el Gobierno se ampara en el artículo 161.2 CE para disposiciones autonómicas",
+      "Suspende en todo caso su aplicación y vigencia",
+      "En ningún caso suspende su aplicación",
+      "Suspende si el Gobierno o los ejecutivos autonómicos se amparan en el Art. 161.2 CE"
+    ],
+    "correcta": 0,
+    "referencia": "Art. 161.2 CE, Art. 30 LOTC",
+    "explicacion": "La respuesta correcta es la opción A. El artículo 161.2 de la CE establece textualmente: «El Gobierno podrá impugnar ante el Tribunal Constitucional las disposiciones y resoluciones adoptadas por los órganos de las Comunidades Autónomas. La impugnación producirá la suspensión de la disposición o resolución recurrida». Solo el Gobierno central puede invocar esta suspensión, no las CCAA (opción D). No es automática para toda ley (opción B), y sí cabe suspensión en este supuesto (opción C incorrecta)."
+  },
+  {
+    "id": "T4-04",
+    "tema": 4,
+    "temaName": "CE: Poder Judicial y TC",
+    "enunciado": "El artículo 117.5 de la Constitución Española establece en qué supuestos excepcionales puede ejercerse la jurisdicción militar más allá del ámbito estrictamente castrense. ¿En qué estado de los previstos en el artículo 116 CE lo permite expresamente?",
+    "opciones": [
+      "Solo en estado de sitio.",
+      "Solo en estado de excepción.",
+      "En estado de excepción y estado de sitio.",
+      "En cualquiera de los tres estados de emergencia (alarma, excepción y sitio)."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 117.5 CE",
+    "explicacion": "La respuesta correcta es la opción A. El artículo 117.5 de la Constitución Española establece textualmente: «El principio de unidad jurisdiccional es la base de la organización y funcionamiento de los Tribunales. La ley regulará el ejercicio de la jurisdicción militar en el ámbito estrictamente castrense y en los supuestos de estado de sitio, de acuerdo con los principios de la Constitución.» Solo el estado de sitio permite ampliar la jurisdicción militar más allá del ámbito castrense. El estado de excepción (opción B) y el estado de alarma no están mencionados en este precepto para ese fin."
+  },
+  {
+    "id": "T4-05",
+    "tema": 4,
+    "temaName": "CE: Poder Judicial y TC",
+    "enunciado": "El artículo 26 de la Ley Orgánica del Poder Judicial enumera los órganos que ejercen la potestad jurisdiccional integrados en el Poder Judicial. ¿Cuál de los siguientes NO forma parte de dicha enumeración por no pertenecer al Poder Judicial?",
+    "opciones": [
+      "El Tribunal de Cuentas.",
+      "Los Tribunales de Instancia.",
+      "El Tribunal Central de Instancia.",
+      "Las Audiencias Provinciales."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 26 LOPJ, Art. 136 CE",
+    "explicacion": "El artículo 26 LOPJ enumera textualmente los órganos jurisdiccionales: «Jueces de paz, Tribunales de Instancia, Audiencias Provinciales, TSJ, Tribunal Central de Instancia, AN y TS.» El Tribunal de Cuentas no figura porque depende de las Cortes Generales (Art. 136 CE), no del Poder Judicial. Las opciones B, C y D sí figuran en el Art. 26 LOPJ."
+  },
+  {
+    "id": "T4-06",
+    "tema": 4,
+    "temaName": "CE: Poder Judicial y TC",
+    "enunciado": "Según el artículo 120.2 de la Constitución Española, ¿qué característica debe tener el procedimiento judicial y en qué ámbito se refuerza especialmente?",
+    "opciones": [
+      "Será predominantemente oral, especialmente en materia criminal.",
+      "Será predominantemente escrito, con excepción de la materia penal.",
+      "Será oral en la instrucción y escrito en el juicio, especialmente en lo penal.",
+      "Será predominantemente oral, especialmente en materia civil."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 120.2 CE",
+    "explicacion": "El artículo 120.2 de la Constitución Española establece textualmente: «El procedimiento será predominantemente oral, sobre todo en materia criminal.» La oralidad se refuerza especialmente en lo penal (criminal), no en lo civil (opción D). La opción B invierte el principio al decir «predominantemente escrito»."
+  },
+  {
+    "id": "T4-07",
+    "tema": 4,
+    "temaName": "CE: Poder Judicial y TC",
+    "enunciado": "Conforme al artículo 26 de la Ley Orgánica del Poder Judicial, ¿cuál de los siguientes órganos NO forma parte del Poder Judicial?",
+    "opciones": [
+      "El Tribunal Supremo.",
+      "El Tribunal Superior de Justicia.",
+      "El Juez de Paz.",
+      "El Tribunal Constitucional."
+    ],
+    "correcta": 3,
+    "referencia": "Art. 26 LOPJ",
+    "explicacion": "El artículo 26 LOPJ enumera los órganos jurisdiccionales del Poder Judicial: «Jueces de paz, Tribunales de Instancia, Audiencias Provinciales, TSJ, Tribunal Central de Instancia, AN y TS». El Tribunal Constitucional NO figura en esta lista porque no forma parte del Poder Judicial; es un «órgano constitucional independiente» regulado en el Título IX CE (Arts. 159-165). El TS (opción A), TSJ (opción B) y los Jueces de Paz (opción C) sí integran el Poder Judicial."
+  },
+  {
+    "id": "T4-08",
+    "tema": 4,
+    "temaName": "CE: Poder Judicial y TC",
+    "enunciado": "El artículo 161.2 CE regula la impugnación gubernamental de disposiciones autonómicas con suspensión automática. ¿En qué plazo máximo debe el Tribunal Constitucional ratificar o levantar dicha suspensión?",
+    "opciones": [
+      "En un plazo no superior a cinco meses desde la impugnación.",
+      "En el plazo de tres meses prorrogables por otros tres.",
+      "Dentro de los seis meses siguientes a la presentación del recurso.",
+      "En el plazo máximo de un año desde la suspensión automática."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 161.2 CE",
+    "explicacion": "La respuesta correcta es la opción A. El artículo 161.2 de la CE establece textualmente: «La impugnación producirá la suspensión de la disposición o resolución recurrida, pero el Tribunal, en su caso, deberá ratificarla o levantarla en un plazo no superior a cinco meses.» Son cinco meses (opción A), no tres (opción B), ni seis (opción C), ni un año (opción D)."
+  },
+  {
+    "id": "T5-01",
+    "tema": 5,
+    "temaName": "Gobierno (Ley 50/1997)",
+    "enunciado": "La Constitución Española dedica un artículo específico a regular la composición del Gobierno. ¿De qué artículo se trata?",
+    "opciones": [
+      "El artículo 98, que establece: \"El Gobierno se compone del Presidente, de los Vicepresidentes, en su caso, de los Ministros y de los demás miembros que establezca la ley\".",
+      "El artículo 101, que regula el cese del Gobierno.",
+      "El artículo 102, sobre la responsabilidad criminal de los miembros del Gobierno.",
+      "El artículo 105, relativo a la audiencia de los ciudadanos en el procedimiento administrativo."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 98.1 CE",
+    "explicacion": "La respuesta correcta es la opción A. El artículo 98.1 de la Constitución Española establece textualmente: «El Gobierno se compone del Presidente, de los Vicepresidentes, en su caso, de los Ministros y de los demás miembros que establezca la ley.» El artículo 101 regula el cese del Gobierno (B), el 102 la responsabilidad criminal (C), y el 105 la audiencia ciudadana en procedimientos administrativos (D)."
+  },
+  {
+    "id": "T5-02",
+    "tema": 5,
+    "temaName": "Gobierno (Ley 50/1997)",
+    "enunciado": "Según el artículo 5.3 de la Ley 50/1997 (modificado por RD-ley 7/2020), en situaciones excepcionales, ¿quién puede decidir que los órganos colegiados del Gobierno celebren sesiones telemáticas?",
+    "opciones": [
+      "El Presidente del Gobierno puede decidir motivadamente que el Consejo de Ministros, las Comisiones Delegadas y la Comisión General de Secretarios de Estado y Subsecretarios celebren sesiones a distancia por medios electrónicos.",
+      "El Ministro de la Presidencia.",
+      "El Presidente del Gobierno, pero solo para el Consejo de Ministros y las Comisiones Delegadas.",
+      "El Ministro de la Presidencia, incluyendo la Comisión General de Secretarios de Estado y Subsecretarios."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 5.3 Ley 50/1997",
+    "explicacion": "La respuesta correcta es la opción A. El artículo 5.3 de la Ley 50/1997 (añadido por Real Decreto-ley 7/2020) establece textualmente: «En situaciones excepcionales [...] el Presidente del Gobierno podrá decidir motivadamente que el Consejo de Ministros, las Comisiones Delegadas del Gobierno y la Comisión General de Secretarios de Estado y Subsecretarios puedan celebrar sesiones, adoptar acuerdos y aprobar actas a distancia por medios electrónicos.» No corresponde al Ministro de la Presidencia (B, D), y afecta a los tres órganos colegiados, no solo a dos (C)."
+  },
+  {
+    "id": "T5-03",
+    "tema": 5,
+    "temaName": "Gobierno (Ley 50/1997)",
+    "enunciado": "El Título IV de la Constitución Española, dedicado al Gobierno y la Administración, comprende del artículo 97 al:",
+    "opciones": [
+      "Artículo 107.",
+      "Artículo 108.",
+      "Artículo 96.",
+      "Artículo 105."
+    ],
+    "correcta": 0,
+    "referencia": "Título IV CE (Arts. 97-107)",
+    "explicacion": "La respuesta correcta es la opción A. El Título IV de la Constitución Española, bajo la rúbrica «Del Gobierno y de la Administración», comprende desde el artículo 97 hasta el artículo 107. No llega al 108 (B), que ya pertenece al Título V (Relaciones Gobierno-Cortes). No empieza en el 96 (C). Y no termina en el 105 (D)."
+  },
+  {
+    "id": "T5-04",
+    "tema": 5,
+    "temaName": "Gobierno (Ley 50/1997)",
+    "enunciado": "Conforme al artículo 11 de la Ley Orgánica 3/1980, los Consejeros Permanentes del Consejo de Estado:",
+    "opciones": [
+      "En número igual al de las Secciones del Consejo, son nombrados sin límite de tiempo.",
+      "Son diez, nombrados por Real Decreto por cuatro años.",
+      "Son diez, nombrados por ley sin límite de tiempo.",
+      "En número igual al de Secciones, nombrados por RD por 4 años."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 11 LO 3/1980",
+    "explicacion": "La respuesta correcta es la opción A. El artículo 11 de la Ley Orgánica 3/1980 del Consejo de Estado establece textualmente: «Los Consejeros permanentes, en número igual al de las Secciones del Consejo, son nombrados, sin límite de tiempo, entre personas que hayan desempeñado determinados cargos.» No son diez (B, C), y se nombran sin límite temporal, no por cuatro años (B, D)."
+  },
+  {
+    "id": "T5-05",
+    "tema": 5,
+    "temaName": "Gobierno (Ley 50/1997)",
+    "enunciado": "En relación con la asistencia a las reuniones del Consejo de Ministros regulada en la Ley 50/1997 del Gobierno, señale quiénes pueden ser convocados:",
+    "opciones": [
+      "Los Secretarios de Estado y excepcionalmente otros altos cargos.",
+      "Únicamente los Secretarios de Estado cuando sean convocados.",
+      "Los Secretarios de Estado y los subsecretarios.",
+      "Los Secretarios de Estado, subsecretarios y directores generales."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 5.2 Ley 50/1997",
+    "explicacion": "La respuesta correcta es la opción A. El artículo 5.2 de la Ley 50/1997 del Gobierno establece textualmente: «A las reuniones del Consejo de Ministros podrán asistir los Secretarios de Estado y excepcionalmente otros altos cargos, cuando sean convocados para ello.» No se limita solo a Secretarios de Estado (B). No se mencionan específicamente subsecretarios (C) ni directores generales (D) como categorías expresas, sino genéricamente «otros altos cargos» con carácter excepcional."
+  },
+  {
+    "id": "T5-06",
+    "tema": 5,
+    "temaName": "Gobierno (Ley 50/1997)",
+    "enunciado": "Durante una reunión del Consejo de Ministros, un Ministro se ausenta temporalmente. Según el artículo 13 de la Ley 50/1997 del Gobierno, ¿quién ejercerá sus funciones en el órgano colegiado durante esa ausencia transitoria?",
+    "opciones": [
+      "La siguiente autoridad en rango presente.",
+      "El Secretario del órgano colegiado respectivo.",
+      "El Subsecretario de la Presidencia.",
+      "El Presidente del Gobierno designará a quien asuma la suplencia."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 13.2 Ley 50/1997",
+    "explicacion": "El artículo 13.2 de la Ley 50/1997 del Gobierno establece textualmente: «No obstante, no se entenderá por ausencia la interrupción transitoria de la asistencia a la reunión de un órgano colegiado, supuesto en el que las funciones que pudieran corresponder al miembro del Gobierno durante esa situación serán ejercidas por la siguiente autoridad en rango presente». Por tanto, no es el Secretario del órgano ni el Subsecretario de la Presidencia quien asume las funciones, sino la siguiente autoridad en rango presente."
+  },
+  {
+    "id": "T5-07",
+    "tema": 5,
+    "temaName": "Gobierno (Ley 50/1997)",
+    "enunciado": "El Gobierno desea consultar al Consejo de Estado sobre la impugnación de una disposición autonómica ante el Tribunal Constitucional. Respecto al funcionamiento del Consejo de Estado según la Ley Orgánica 3/1980, señale la afirmación CORRECTA:",
+    "opciones": [
+      "El Consejo de Estado emitirá dictamen en cuantos asuntos sometan a su consulta el Gobierno o sus miembros.",
+      "La consulta al Consejo de Estado es siempre facultativa, siendo sus dictámenes vinculantes.",
+      "Los dictámenes del Consejo de Estado son vinculantes, salvo que su Presidente disponga lo contrario.",
+      "Los asuntos dictaminados por el Pleno podrán remitirse posteriormente a informe de otro órgano administrativo."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 2.1 LO 3/1980",
+    "explicacion": "El artículo 2.1 de la Ley Orgánica 3/1980 establece que el Consejo de Estado emitirá dictamen en cuantos asuntos sometan a su consulta el Gobierno o sus miembros (opción a correcta). La consulta puede ser preceptiva u obligatoria según establezcan las leyes, NO siempre facultativa (opción b incorrecta). Los dictámenes del Consejo de Estado NO son vinculantes salvo que una disposición legal expresa establezca lo contrario (Art. 2.2, opciones b y c incorrectas). Los asuntos dictaminados por el Pleno NO pueden remitirse a otro órgano (opción d incorrecta)."
+  },
+  {
+    "id": "T6-01",
+    "tema": 6,
+    "temaName": "Administración electrónica",
+    "enunciado": "En el marco del IV Plan de Gobierno Abierto de España (2020-2024), ¿cuál de los siguientes principios NO constituye uno de los pilares fundamentales del concepto de Gobierno Abierto promovido por la Alianza para el Gobierno Abierto?",
+    "opciones": [
+      "Transparencia en la gestión pública",
+      "Participación ciudadana en las políticas públicas",
+      "Eficiencia presupuestaria y reducción del gasto",
+      "Rendición de cuentas ante la ciudadanía"
+    ],
+    "correcta": 2,
+    "referencia": "IV Plan de Gobierno Abierto 2020-2024",
+    "explicacion": "La respuesta correcta es \"Eficiencia presupuestaria y reducción del gasto\" porque los tres pilares fundamentales del Gobierno Abierto son: transparencia, participación ciudadana y rendición de cuentas, según el marco establecido por la Alianza para el Gobierno Abierto (OGP). Aunque la eficiencia presupuestaria es un objetivo legítimo de las administraciones públicas, no constituye uno de los pilares conceptuales del Gobierno Abierto, que se centra en la relación democrática entre gobierno y ciudadanía. El IV Plan de Gobierno Abierto español incorpora además un cuarto eje: la colaboración entre administraciones y con la sociedad civil."
+  },
+  {
+    "id": "T6-02",
+    "tema": 6,
+    "temaName": "Administración electrónica",
+    "enunciado": "Los Objetivos de Desarrollo Sostenible (ODS) de la Agenda 2030 incluyen metas específicas cuantificables. ¿Cuál de las siguientes afirmaciones sobre los ODS es correcta?",
+    "opciones": [
+      "El ODS 10 se refiere a la producción y consumo responsables",
+      "El ODS 4 busca garantizar una educación inclusiva, equitativa y de calidad",
+      "El ODS 17 tiene como objetivo lograr ciudades y comunidades sostenibles",
+      "El ODS 8 se centra en la vida submarina y la protección de los océanos"
+    ],
+    "correcta": 1,
+    "referencia": "Agenda 2030 ODS 4",
+    "explicacion": "La respuesta correcta es que \"el ODS 4 busca garantizar una educación inclusiva, equitativa y de calidad\" conforme a la Agenda 2030. El ODS 10 se refiere a la reducción de las desigualdades (no producción responsable, que es ODS 12). El ODS 17 trata sobre alianzas para lograr los objetivos (no ciudades sostenibles, que es ODS 11). El ODS 8 busca promover el crecimiento económico sostenido, inclusivo y sostenible, el empleo pleno y el trabajo decente (no vida submarina, que es ODS 14). Esta pregunta evalúa el conocimiento específico de la numeración y contenido de los ODS, frecuente en exámenes de la AGE."
+  },
+  {
+    "id": "T7-01",
+    "tema": 7,
+    "temaName": "Transparencia y buen gobierno",
+    "enunciado": "Una licencia de reutilización otorgada por un organismo público establece que el reutilizador no puede alterar el contenido de la información, debe citar la fuente y mencionar la fecha de la última actualización. ¿Son conformes estas condiciones con la Ley 37/2007?",
+    "opciones": [
+      "No, porque la Ley prohíbe establecer cualquier condición a la reutilización",
+      "Sí, porque el artículo 8 permite someter la reutilización a condiciones como que no se altere el contenido, se cite la fuente y se mencione la fecha de actualización",
+      "No, porque solo se puede exigir el pago de tarifas, no condiciones de uso",
+      "Sí, pero únicamente para reutilizaciones con fines comerciales, no para usos académicos"
+    ],
+    "correcta": 1,
+    "referencia": "Art. 8 Ley 37/2007",
+    "explicacion": "El artículo 8 de la Ley 37/2007 establece expresamente que la reutilización de la información de los sujetos previstos en el artículo 2 podrá estar sometida, entre otras, a las siguientes condiciones generales: a) Que el contenido de la información, incluyendo sus metadatos, no sea alterado; b) Que no se desnaturalice el sentido de la información; c) Que se cite la fuente; d) Que se mencione la fecha de la última actualización. La opción A es incorrecta porque el art. 4.5 permite condiciones objetivas, proporcionadas, no discriminatorias y justificadas. La opción C confunde tarifas con condiciones. La opción D es incorrecta porque estas condiciones se aplican a toda reutilización sin distinción."
+  },
+  {
+    "id": "T7-02",
+    "tema": 7,
+    "temaName": "Transparencia y buen gobierno",
+    "enunciado": "Una asociación sin ánimo de lucro reutiliza información facilitada por un ministerio sobre estadísticas educativas para su página web, pero desnaturaliza el sentido de los datos presentándolos de forma que inducen a conclusiones falsas. ¿Qué tipo de infracción constituye según la Ley 37/2007 en el ámbito de la Administración General del Estado?",
+    "opciones": [
+      "Infracción leve, sancionable con multa de 1.000 a 10.000 euros",
+      "Infracción muy grave, sancionable con multa de 50.001 a 100.000 euros",
+      "Infracción grave, sancionable con multa de 10.001 a 50.000 euros",
+      "No constituye infracción porque se trata de una entidad sin ánimo de lucro"
+    ],
+    "correcta": 1,
+    "referencia": "Art. 11.1.a) y 11.4.a) Ley 37/2007",
+    "explicacion": "El artículo 11.1.a) de la Ley 37/2007 establece que en el ámbito de la Administración General del Estado se considerarán infracciones muy graves la desnaturalización del sentido de la información para cuya reutilización se haya concedido una licencia. El artículo 11.4.a) establece que por la comisión de infracciones muy graves se impondrá sanción de multa de 50.001 a 100.000 euros. La opción A es incorrecta porque la desnaturalización es infracción muy grave, no leve (las leves incluyen ausencia de cita de fuente o falta de mención de fecha). La opción C es incorrecta porque no se trata de infracción grave. La opción D es incorrecta porque el régimen sancionador se aplica independientemente de la naturaleza del infractor."
+  },
+  {
+    "id": "T8-01",
+    "tema": 8,
+    "temaName": "LRJSP (Ley 40/2015)",
+    "enunciado": "El artículo 2 de la Ley 3/2015, reguladora del ejercicio del alto cargo, establece un requisito de idoneidad para todos los altos cargos, incluidos los Secretarios de Estado. ¿En qué consiste este requisito?",
+    "opciones": [
+      "Reunir honorabilidad y la debida formación y experiencia en la materia, en función de su cargo.",
+      "Ser funcionario de carrera perteneciente al Subgrupo A1.",
+      "Tener cualificación y experiencia de al menos 10 años en gestión pública o privada.",
+      "Ser español, mayor de edad y no estar inhabilitado para ejercer cargo público."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 2 Ley 3/2015",
+    "explicacion": "Art. 2 L 3/2015: la idoneidad se define como \"honorabilidad y la debida formación y experiencia en función del cargo\". No se requiere nacionalidad española específica, ni ser funcionario A1, ni años concretos de experiencia."
+  },
+  {
+    "id": "T8-02",
+    "tema": 8,
+    "temaName": "LRJSP (Ley 40/2015)",
+    "enunciado": "Supongamos que un organismo público ve sus funciones asumidas por los servicios de la Administración General del Estado. Según la Ley 40/2015, ¿qué órgano debe adoptar el acuerdo de disolución y en qué plazo desde la comunicación de esta causa?",
+    "opciones": [
+      "El Consejo de Ministros, en el plazo de dos meses.",
+      "El Consejo de Ministros, en el plazo de un mes.",
+      "La Secretaría de Estado de Función Pública, en el plazo de dos meses.",
+      "La Secretaría de Estado de Función Pública, en el plazo de un mes."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 96.3 Ley 40/2015",
+    "explicacion": "El artículo 96.3 de la Ley 40/2015 establece: «En el plazo de dos meses desde la recepción de la comunicación [...] el Consejo de Ministros adoptará el correspondiente acuerdo de disolución, en el que designará al órgano administrativo o entidad del sector público institucional estatal que asumirá las funciones de liquidador.»"
+  },
+  {
+    "id": "T8-03",
+    "tema": 8,
+    "temaName": "LRJSP (Ley 40/2015)",
+    "enunciado": "Respecto a la estructura organizativa de los organismos públicos regulada en la Ley 40/2015, señale la afirmación correcta:",
+    "opciones": [
+      "Se estructuran en órganos de gobierno y ejecutivos. Los máximos órganos de gobierno son el Presidente y el Consejo Rector.",
+      "Se estructuran en órganos de gobierno y ejecutivos. Los máximos órganos de gobierno son el Presidente, el Director y el Consejo Rector.",
+      "Se estructuran en órganos de gobierno y de control. Los máximos órganos de gobierno son el Presidente y el Consejo Rector.",
+      "Se estructuran en órganos de gobierno y de control. Los máximos órganos de gobierno son el Presidente, el Director y el Consejo Rector."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 90 Ley 40/2015",
+    "explicacion": "El artículo 90.1 de la Ley 40/2015 establece: «Los organismos públicos se estructuran en los órganos de gobierno, y ejecutivos que se determinen en su respectivo Estatuto.» El artículo 90.2 añade: «Los máximos órganos de gobierno son el Presidente y el Consejo Rector.» El Director NO es órgano de gobierno, sino ejecutivo."
+  },
+  {
+    "id": "T8-04",
+    "tema": 8,
+    "temaName": "LRJSP (Ley 40/2015)",
+    "enunciado": "Dentro de las Misiones Diplomáticas existen órganos técnicos especializados dependientes de distintos Ministerios (Consejerías, Agregadurías, etc.). Según el artículo 45.3 de la Ley 2/2014, ¿cómo se realiza la creación y supresión de estos órganos?",
+    "opciones": [
+      "Por Real Decreto, a iniciativa del Ministerio competente, previo informe del MAEC y a propuesta del Ministerio de Hacienda, previo informe del Consejo Ejecutivo de Política Exterior.",
+      "Por Real Decreto del Consejo de Ministros, a iniciativa del MAEC y a propuesta del Ministerio de Hacienda, previo informe del Consejo Ejecutivo.",
+      "Por Orden del Ministro de Asuntos Exteriores, Unión Europea y Cooperación.",
+      "Por Orden de la Presidencia del Gobierno, a propuesta del Ministro de Asuntos Exteriores."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 45.3 Ley 2/2014",
+    "explicacion": "Según el artículo 45.3 de la Ley 2/2014, la creación y supresión de los órganos técnicos especializados (Consejerías de Defensa, Economía, Educación, etc.) se realizará por Real Decreto, a iniciativa del Ministerio COMPETENTE (el del sector: Defensa, Economía, etc.), previo informe del Ministerio de Asuntos Exteriores, y a propuesta del Ministerio de Hacienda, previo informe del Consejo Ejecutivo de Política Exterior. Aquí la iniciativa la toma el Ministerio sectorial, no el MAEC."
+  },
+  {
+    "id": "T8-05",
+    "tema": 8,
+    "temaName": "LRJSP (Ley 40/2015)",
+    "enunciado": "La Ley 2/2014 distingue entre diferentes tipos de Embajadores según el tipo de representación. ¿Qué título ostenta quien ejerce la jefatura de una Misión Diplomática Permanente bilateral ante un Estado extranjero?",
+    "opciones": [
+      "Embajador Extraordinario y Plenipotenciario.",
+      "Embajador Representante Permanente.",
+      "Cónsul General.",
+      "Canciller Diplomático."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 44.1 Ley 2/2014",
+    "explicacion": "Según el artículo 44.1 de la Ley 2/2014, la Jefatura de la Misión Diplomática Permanente (ante un Estado) será ejercida por un \"Embajador Extraordinario y Plenipotenciario\". El título \"Embajador Representante Permanente\" se reserva para quien dirige Representaciones Permanentes ante organizaciones internacionales (ONU, UE, etc.), no ante Estados bilateralmente."
+  },
+  {
+    "id": "T8-06",
+    "tema": 8,
+    "temaName": "LRJSP (Ley 40/2015)",
+    "enunciado": "Los Secretarios Generales son órganos directivos encargados de la gestión de un sector de actividad específica de un Ministerio. Según la Ley 40/2015, de Régimen Jurídico del Sector Público, ¿qué categoría tienen?",
+    "opciones": [
+      "Categoría de Subsecretario.",
+      "Categoría de Director General.",
+      "Categoría de Secretario de Estado.",
+      "Categoría de Subdirector General."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 64.1 Ley 40/2015",
+    "explicacion": "Según el artículo 64.1 de la Ley 40/2015: «Los Secretarios generales tienen categoría de Subsecretario». NO confundir con los Secretarios Generales TÉCNICOS, que según Art. 65.2 «tienen a todos los efectos la categoría de Director General». Los SG (sin \"Técnicos\") son jerárquicamente superiores a los SGT."
+  },
+  {
+    "id": "T8-07",
+    "tema": 8,
+    "temaName": "LRJSP (Ley 40/2015)",
+    "enunciado": "Los Directores Insulares de la Administración General del Estado en las islas son nombrados por el Delegado del Gobierno. Según la Ley 40/2015, ¿mediante qué instrumento se formaliza el nombramiento?",
+    "opciones": [
+      "Resolución del Delegado del Gobierno publicada en el BOE.",
+      "Resolución del Subdelegado del Gobierno publicada en el BOE.",
+      "Real Decreto del Delegado del Gobierno publicado en el BOE.",
+      "Real Decreto del Subdelegado del Gobierno publicado en el BOE."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 70.1 Ley 40/2015",
+    "explicacion": "Según el artículo 70.1 de la Ley 40/2015, los Directores Insulares serán «nombrados por el Delegado del Gobierno mediante el procedimiento de libre designación». Su nombramiento se formaliza mediante RESOLUCIÓN (no Real Decreto) del Delegado del Gobierno, publicada en el BOE. Los Real Decretos se reservan para nombramientos de nivel superior (Delegados del Gobierno, Subsecretarios, etc.)."
+  },
+  {
+    "id": "T8-08",
+    "tema": 8,
+    "temaName": "LRJSP (Ley 40/2015)",
+    "enunciado": "Algunos órganos directivos ministeriales deben ser nombrados entre funcionarios del Subgrupo A1. Según la Ley 40/2015, señale cuáles son nombrados por Real Decreto del Consejo de Ministros, a propuesta del titular del Ministerio, entre funcionarios A1:",
+    "opciones": [
+      "Los Subsecretarios y Secretarios Generales Técnicos.",
+      "Los Subsecretarios, Secretarios Generales Técnicos y Subdirectores Generales.",
+      "Los Subsecretarios y Secretarios Generales.",
+      "Los Subsecretarios, Secretarios Generales y Subdirectores Generales."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 63 y 65 Ley 40/2015",
+    "explicacion": "Según el artículo 63.3 de la Ley 40/2015: «Los Subsecretarios serán nombrados y separados por Real Decreto del Consejo de Ministros a propuesta del titular del Ministerio. Los nombramientos habrán de efectuarse entre funcionarios de carrera [...] pertenecientes al Subgrupo A1». Y Art. 65.3 establece lo mismo para los SGT. Los Secretarios Generales NO requieren ser funcionarios (Art. 64.3), y los Subdirectores NO se nombran por RDCM (Art. 67.2)."
+  },
+  {
+    "id": "T8-09",
+    "tema": 8,
+    "temaName": "LRJSP (Ley 40/2015)",
+    "enunciado": "Se está evaluando candidatos para el cargo de Delegado del Gobierno en una Comunidad Autónoma. Según el artículo 72.1 de la Ley 40/2015, ¿quién propone el nombramiento de los Delegados del Gobierno?",
+    "opciones": [
+      "El Consejo de Ministros de forma colegiada.",
+      "El Presidente del Congreso de los Diputados.",
+      "El Presidente del Gobierno.",
+      "El Rey, previo refrendo del Presidente del Gobierno."
+    ],
+    "correcta": 2,
+    "referencia": "Art. 72.1 Ley 40/2015",
+    "explicacion": "Según el artículo 72.1 de la Ley 40/2015: «Los Delegados del Gobierno serán nombrados y separados por Real Decreto del Consejo de Ministros, a propuesta del Presidente del Gobierno»."
+  },
+  {
+    "id": "T8-10",
+    "tema": 8,
+    "temaName": "LRJSP (Ley 40/2015)",
+    "enunciado": "Conforme a la Disposición Adicional 9ª de la Ley 40/2015, ¿cuál es la naturaleza jurídica de la Agencia Estatal de Administración Tributaria (AEAT)?",
+    "opciones": [
+      "Ente público de régimen específico.",
+      "Una Agencia Estatal.",
+      "Una Autoridad administrativa independiente.",
+      "Un organismo autónomo."
+    ],
+    "correcta": 0,
+    "referencia": "Disp. Adic. 9ª Ley 40/2015",
+    "explicacion": "La Agencia Estatal de Administración Tributaria (AEAT) tiene la naturaleza jurídica de ente público de régimen específico, conforme a la Disposición Adicional 9ª de la Ley 40/2015. No es una Agencia Estatal ni un organismo autónomo."
+  },
+  {
+    "id": "T9-01",
+    "tema": 9,
+    "temaName": "LPAC (Ley 39/2015)",
+    "enunciado": "Señale la opción correcta sobre la obligación de resolver:",
+    "opciones": [
+      "La Administración queda exonerada de resolver si opera el silencio administrativo.",
+      "La obligación de resolver solo existe en procedimientos iniciados de oficio.",
+      "La Administración está obligada a dictar resolución expresa y a notificarla en todos los procedimientos, salvo excepciones legales.",
+      "La Administración solo está obligada a resolver si el interesado lo solicita expresamente."
+    ],
+    "correcta": 2,
+    "referencia": "Art. 21 Ley 39/2015",
+    "explicacion": "El silencio no elimina el deber de resolver."
+  },
+  {
+    "id": "T9-02",
+    "tema": 9,
+    "temaName": "LPAC (Ley 39/2015)",
+    "enunciado": "El artículo 145 de la Constitución Española hace referencia a la federación de Comunidades Autónomas, estableciendo que:",
+    "opciones": [
+      "Los Estatutos de Autonomía podrán prever los supuestos, requisitos y términos en que podrán crearse.",
+      "La federación de Comunidades Autónomas necesitará la autorización de las Cortes Generales.",
+      "En ningún caso se admitirá la federación de Comunidades Autónomas.",
+      "Solo podrá autorizarse la federación de Comunidades Autónomas por el Senado cuando esté prevista en los respectivos Estatutos de Autonomía."
+    ],
+    "correcta": 2,
+    "referencia": "Art. 145.1 CE",
+    "explicacion": "El artículo 145.1 de la Constitución Española establece taxativamente: «En ningún caso se admitirá la federación de Comunidades Autónomas.» El apartado 2 del mismo artículo regula los convenios entre CCAA, pero la federación está absolutamente prohibida por la Constitución Española."
+  },
+  {
+    "id": "T9-03",
+    "tema": 9,
+    "temaName": "LPAC (Ley 39/2015)",
+    "enunciado": "Según el artículo 13.2 de la Ley 7/1985, Reguladora de las Bases del Régimen Local (LRBRL), en su redacción dada por la Ley 27/2013 (LRSAL), ¿qué requisito de población mínima se exige para crear un nuevo municipio?",
+    "opciones": [
+      "Núcleo de población de al menos 5.000 habitantes.",
+      "Núcleo de población de al menos 2.000 habitantes.",
+      "Núcleo de población de más de 10.000 habitantes.",
+      "Núcleo de población de al menos 1.000 habitantes."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 13.2 LRBRL (redacción LRSAL 2013)",
+    "explicacion": "El artículo 13.2 de la Ley 7/1985 (LRBRL), en su redacción dada por la Ley 27/2013 (LRSAL), establece que la creación de nuevos municipios solo podrá realizarse sobre la base de núcleos de población territorialmente diferenciados, de al menos 5.000 habitantes, y siempre que los municipios resultantes sean financieramente sostenibles y cuenten con recursos suficientes para el cumplimiento de las competencias municipales."
+  },
+  {
+    "id": "T9-04",
+    "tema": 9,
+    "temaName": "LPAC (Ley 39/2015)",
+    "enunciado": "Entre las competencias que el artículo 148 de la Constitución Española permite asumir a las Comunidades Autónomas, ¿cuál de las siguientes figura expresamente?",
+    "opciones": [
+      "Comercio exterior con terceros países.",
+      "Sanidad e higiene en el territorio autonómico.",
+      "Bases del régimen minero y energético.",
+      "Pesca marítima en aguas jurisdiccionales españolas."
+    ],
+    "correcta": 1,
+    "referencia": "Art. 148.1 CE",
+    "explicacion": "Art. 148.1.21ª CE. Las CCAA pueden asumir competencias en SANIDAD E HIGIENE. El comercio exterior (Art. 149.1.10ª), bases del régimen minero/energético (Art. 149.1.25ª) y pesca marítima (Art. 149.1.19ª, salvo ejecución) son competencias estatales."
+  },
+  {
+    "id": "T9-05",
+    "tema": 9,
+    "temaName": "LPAC (Ley 39/2015)",
+    "enunciado": "Según el artículo 13.2 de la Ley 7/1985 (LRBRL), en su redacción dada por la Ley 27/2013 (LRSAL), ¿qué población mínima debe tener un núcleo territorialmente diferenciado para crear un nuevo municipio?",
+    "opciones": [
+      "Al menos 5.000 habitantes.",
+      "Al menos 2.000 habitantes.",
+      "Al menos 4.000 habitantes.",
+      "Al menos 10.000 habitantes."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 13.2 LRBRL (redacción LRSAL 2013)",
+    "explicacion": "El artículo 13.2 de la Ley 7/1985 (LRBRL), en su redacción dada por la Ley 27/2013 (LRSAL), establece que la creación de nuevos municipios solo podrá realizarse sobre la base de núcleos de población territorialmente diferenciados, de al menos 5.000 habitantes, y siempre que los municipios resultantes sean financieramente sostenibles, cuenten con recursos suficientes para el cumplimiento de las competencias municipales y no supongan disminución en la calidad de los servicios que se venían prestando."
+  },
+  {
+    "id": "T9-06",
+    "tema": 9,
+    "temaName": "LPAC (Ley 39/2015)",
+    "enunciado": "Las normas previstas en el Título X de la Ley 7/1985, Reguladora de las Bases del Régimen Local (LRBRL), sobre régimen de organización de los municipios de gran población, serán de aplicación a:",
+    "opciones": [
+      "Los Cabildos Insulares Canarios de islas cuya población sea superior a 75.000 habitantes.",
+      "Los municipios que sean capitales autonómicas cuya población sea superior a 175.000 habitantes.",
+      "Los municipios cuya población supere los 250.000 habitantes exclusivamente.",
+      "Los municipios de más de 175.000 habitantes con circunstancias especiales, si lo decide la Asamblea Legislativa."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 121.2 LRBRL",
+    "explicacion": "El artículo 121 de la Ley 7/1985 (LRBRL) establece varios supuestos de aplicación del Título X. Entre ellos, el apartado 2 dispone que también será de aplicación a los Cabildos Insulares Canarios de islas cuya población sea superior a 75.000 habitantes. Las opciones b, c y d también son supuestos correctos del artículo 121, pero la pregunta pide uno de ellos."
+  },
+  {
+    "id": "T9-07",
+    "tema": 9,
+    "temaName": "LPAC (Ley 39/2015)",
+    "enunciado": "La Disposición Adicional Segunda de la Ley 7/1985, Reguladora de las Bases del Régimen Local (LRBRL), establece como régimen provincial especial:",
+    "opciones": [
+      "Los Consejos Insulares Canarios, como órganos de gobierno, administración y representación de cada isla.",
+      "Los Cabildos Insulares de las Islas Baleares.",
+      "Las Comunidades Autónomas uniprovinciales y la Foral de Navarra que asumen las competencias, medios y recursos que corresponden en el régimen ordinario a los Ayuntamientos.",
+      "Los órganos forales de Álava, Guipúzcoa y Vizcaya conservan su régimen peculiar en el marco del Estatuto de Autonomía de la Comunidad Autónoma del País Vasco. No obstante, las disposiciones de la LBRL les serán de aplicación con carácter supletorio."
+    ],
+    "correcta": 3,
+    "referencia": "Disp. Adic. 2ª LRBRL",
+    "explicacion": "Según la Disposición Adicional Segunda de la LBRL, los órganos forales de Álava, Guipúzcoa y Vizcaya conservan su régimen peculiar en el marco del Estatuto de Autonomía del País Vasco, siendo las disposiciones de la LBRL de aplicación con carácter supletorio. Las demás opciones contienen errores: son Cabildos Insulares Canarios (no Consejos) y Consejos Insulares Baleares (no Cabildos), y las CCAA uniprovinciales asumen competencias de Diputaciones (no Ayuntamientos)."
+  },
+  {
+    "id": "T9-08",
+    "tema": 9,
+    "temaName": "LPAC (Ley 39/2015)",
+    "enunciado": "Según el artículo 128 de la Ley 7/1985, Reguladora de las Bases del Régimen Local (LRBRL), en relación con los distritos de municipios de gran población:",
+    "opciones": [
+      "Corresponde al Alcalde de la Corporación la creación de los distritos y su regulación y la presidencia del distrito corresponderá en todo caso a un concejal.",
+      "Corresponde al Pleno de la Corporación la creación de los distritos y su regulación y la presidencia del distrito corresponderá en todo caso a un concejal.",
+      "Corresponde a la Junta de Gobierno de la Corporación la creación de los distritos y su regulación y la presidencia del distrito corresponderá en todo caso a un teniente de alcalde.",
+      "Corresponde al Alcalde de la Corporación la creación de los distritos y su regulación y la presidencia del distrito corresponderá en todo caso a un teniente de alcalde."
+    ],
+    "correcta": 1,
+    "referencia": "Art. 128 LRBRL",
+    "explicacion": "Según el artículo 128 de la Ley 7/1985 (LBRL), corresponde al Pleno de la Corporación la creación de los distritos y su regulación, y la presidencia del distrito corresponderá en todo caso a un concejal."
+  },
+  {
+    "id": "T9-09",
+    "tema": 9,
+    "temaName": "LPAC (Ley 39/2015)",
+    "enunciado": "Conforme al artículo 149.1.20ª de la Constitución Española, ¿qué tipo de competencia tiene el Estado sobre el control del espacio aéreo, tránsito y transporte aéreo?",
+    "opciones": [
+      "Competencia exclusiva del Estado.",
+      "Competencia compartida: legislación estatal y ejecución autonómica.",
+      "Competencia compartida: legislación básica estatal y desarrollo autonómico.",
+      "Competencia de las Comunidades Autónomas."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 149.1.20ª CE",
+    "explicacion": "El artículo 149.1.20ª de la Constitución Española establece textualmente: «Marina mercante y abanderamiento de buques; iluminación de costas y señales marítimas; puertos de interés general; aeropuertos de interés general; control del espacio aéreo, tránsito y transporte aéreo, servicio meteorológico y matriculación de aeronaves.» El control del espacio aéreo, tránsito y transporte aéreo es competencia exclusiva del Estado."
+  },
+  {
+    "id": "T9-10",
+    "tema": 9,
+    "temaName": "LPAC (Ley 39/2015)",
+    "enunciado": "El artículo 141.4 de la Constitución Española regula la administración propia de las islas en los archipiélagos. ¿Qué forma adopta?",
+    "opciones": [
+      "Cabildos o Consejos.",
+      "Diputaciones u otras corporaciones representativas.",
+      "Consejos Regionales.",
+      "Cabildos o Concejos."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 141.4 CE",
+    "explicacion": "Según el artículo 141.4 de la CE, en los archipiélagos, las islas tendrán además su administración propia en forma de Cabildos o Consejos. Los Cabildos corresponden a Canarias y los Consejos Insulares a Baleares."
+  },
+  {
+    "id": "T10-01",
+    "tema": 10,
+    "temaName": "Protección de datos",
+    "enunciado": "El artículo 53 del TREBEP establece principios éticos y de conducta de los funcionarios. Entre ellos, se exige que los funcionarios se abstengan en aquellos asuntos en los que tengan un interés personal. Esta abstención debe producirse cuando:",
+    "opciones": [
+      "El asunto afecte únicamente a familiares hasta el segundo grado de consanguinidad",
+      "Tengan un interés personal, así como en casos de conflicto de intereses en los términos legales",
+      "El superior jerárquico así lo ordene expresamente",
+      "El asunto tenga repercusión económica superior a 3.000 euros"
+    ],
+    "correcta": 1,
+    "referencia": "Art. 53.3 TREBEP",
+    "explicacion": "El artículo 53.3 del TREBEP establece que los funcionarios se abstendrán en aquellos asuntos en que tengan un interés personal, así como de toda actividad privada o interés que pueda suponer un riesgo de plantear conflictos de intereses con su puesto público. La opción a es incorrecta porque no se limita solo a familiares de segundo grado. La opción c es falsa porque la abstención es obligatoria por ley, no por orden del superior. La opción d es incorrecta porque no existe ese umbral económico específico."
+  },
+  {
+    "id": "T10-02",
+    "tema": 10,
+    "temaName": "Protección de datos",
+    "enunciado": "El artículo 23 del TREBEP establece que las retribuciones básicas de los funcionarios son las correspondientes al sueldo del grupo o subgrupo en que esté clasificado el cuerpo al que pertenezcan. Además de este concepto, las retribuciones básicas incluyen:",
+    "opciones": [
+      "Los trienios y las pagas extraordinarias",
+      "Únicamente los trienios (que consisten en una cantidad igual por cada tres años de servicio)",
+      "El complemento de destino y el complemento específico",
+      "Las indemnizaciones por razón del servicio"
+    ],
+    "correcta": 1,
+    "referencia": "Art. 23 TREBEP",
+    "explicacion": "El artículo 23 del TREBEP establece que las retribuciones básicas están integradas \"única y exclusivamente\" por: el sueldo asignado a cada Subgrupo o Grupo de clasificación profesional, y los trienios (cantidad igual para cada Subgrupo por cada tres años de servicio). Las pagas extraordinarias no son una tercera categoría de retribución básica: según el artículo 22, incluyen componentes del sueldo y de los trienios (parte básica) pero también de las retribuciones complementarias. La opción c es incorrecta porque destino y específico son retribuciones complementarias. La opción d es incorrecta porque las indemnizaciones no son retribuciones básicas."
+  },
+  {
+    "id": "T10-03",
+    "tema": 10,
+    "temaName": "Protección de datos",
+    "enunciado": "España se adhirió a las Comunidades Europeas mediante el Tratado de Adhesión firmado el 12 de junio de 1985. ¿En qué fecha efectiva se convirtió España en Estado miembro de pleno derecho de las Comunidades?",
+    "opciones": [
+      "12 de junio de 1985, fecha de firma del Tratado",
+      "1 de enero de 1986, entrada en vigor del Tratado de Adhesión",
+      "1 de noviembre de 1993, entrada en vigor del Tratado de Maastricht",
+      "12 de marzo de 1986, fecha de referéndum consultivo sobre la OTAN"
+    ],
+    "correcta": 1,
+    "referencia": "Tratado Adhesión España CE 1986",
+    "explicacion": "La respuesta correcta es \"1 de enero de 1986, entrada en vigor del Tratado de Adhesión\" porque aunque el Tratado se firmó el 12 de junio de 1985, la adhesión efectiva se produjo cuando entró en vigor el 1 de enero de 1986. La firma del Tratado (opción a) es solo el acto internacional previo, pero España no fue miembro hasta la entrada en vigor. El Tratado de Maastricht de 1993 (opción c) creó la Unión Europea pero España ya era miembro de las Comunidades desde 1986. El referéndum sobre la OTAN de 1986 (opción d) es un hecho diferente relacionado con la política de defensa, no con la adhesión a las Comunidades Europeas. Esta fecha (1-1-1986) es fundamental en la historia de la integración europea de España."
+  },
+  {
+    "id": "T11-01",
+    "tema": 11,
+    "temaName": "Sector público institucional",
+    "enunciado": "El artículo 85.2 de la Ley 40/2015, de Régimen Jurídico del Sector Público, establece que el Plan de Actuación de las entidades del sector público institucional se revisará periódicamente. ¿Cuál de los siguientes plazos NO es el legalmente establecido?",
+    "opciones": [
+      "Cada año.",
+      "Cada tres años.",
+      "Cada dos años.",
+      "No se revisa periódicamente."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 85.2 Ley 40/2015",
+    "explicacion": "El artículo 85.2.a) de la Ley 40/2015 establece: «el plan de actuación, que contendrá las líneas estratégicas en torno a las cuales se desenvolverá la actividad de la entidad, que se revisarán cada tres años.» NO es anual, ni bienal, ni carece de revisión. Es un error frecuente confundir el Plan de Actuación (trienal) con el plan anual de actuación del Art. 92 (que se aprueba cada año para el ejercicio siguiente)."
+  },
+  {
+    "id": "T11-02",
+    "tema": 11,
+    "temaName": "Sector público institucional",
+    "enunciado": "El artículo 134 de la Ley 40/2015, de Régimen Jurídico del Sector Público, regula la aprobación de los estatutos de las fundaciones del sector público estatal. ¿Cuál de las siguientes afirmaciones es INCORRECTA?",
+    "opciones": [
+      "Los estatutos se aprueban por ley de las Cortes Generales.",
+      "Los estatutos se aprueban por Real Decreto del Consejo de Ministros.",
+      "El rango normativo de los estatutos es reglamentario, no legal.",
+      "Es similar al régimen de aprobación de estatutos de organismos públicos (Art. 90.3)."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 133.3 Ley 40/2015",
+    "explicacion": "El artículo 133.3 de la Ley 40/2015 establece: «Los estatutos de las fundaciones del sector público estatal se aprobarán por Real Decreto de Consejo de Ministros, a propuesta conjunta del titular del Ministerio de Hacienda y Administraciones Públicas y del Ministerio que ejerza el protectorado.» Es importante distinguir: la creación de la fundación SÍ requiere ley (Art. 133.1), pero sus estatutos se aprueban por Real Decreto."
+  },
+  {
+    "id": "T11-03",
+    "tema": 11,
+    "temaName": "Sector público institucional",
+    "enunciado": "En cuanto a las potestades administrativas de los Organismos Públicos estatales reguladas en el artículo 89 de la Ley 40/2015, señale la respuesta correcta:",
+    "opciones": [
+      "Tienen todas las potestades necesarias para sus fines, sin limitación alguna, según prevean sus estatutos.",
+      "Tienen las potestades precisas para sus fines, salvo la potestad expropiatoria.",
+      "Tienen las potestades precisas para sus fines, salvo las potestades expropiatoria y sancionadora.",
+      "Solo tienen las potestades que les atribuya expresamente su ley de creación en cada caso."
+    ],
+    "correcta": 1,
+    "referencia": "Art. 89.2 Ley 40/2015",
+    "explicacion": "El artículo 89.2 de la Ley 40/2015 establece: «Dentro de su esfera de competencia, les corresponden las potestades administrativas precisas para el cumplimiento de sus fines, en los términos que prevean sus estatutos, salvo la potestad expropiatoria.» Sí pueden tener potestad sancionadora si los estatutos lo prevén."
+  },
+  {
+    "id": "T11-04",
+    "tema": 11,
+    "temaName": "Sector público institucional",
+    "enunciado": "El artículo 84.1.a) de la Ley 40/2015 establece una clasificación de los organismos públicos vinculados o dependientes de la AGE. ¿En cuántas y cuáles categorías se clasifican?",
+    "opciones": [
+      "Dos: Organismos Autónomos y Entidades Públicas Empresariales.",
+      "Tres: Organismos Autónomos, Entidades Públicas Empresariales y Agencias Estatales.",
+      "Cuatro: Organismos Autónomos, EPE, Agencias Estatales y autoridades administrativas independientes.",
+      "Seis: Organismos Autónomos, EPE, autoridades independientes, sociedades, consorcios y fundaciones."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 84.1.a) Ley 40/2015",
+    "explicacion": "El artículo 84.1.a) de la Ley 40/2015 establece: «Los organismos públicos vinculados o dependientes de la Administración General del Estado, los cuales se clasifican en: Organismos autónomos. Entidades públicas empresariales. Agencias estatales.» Son TRES tipos, no dos. Las Agencias Estatales NO son un subtipo de OA, sino una categoría independiente junto a OA y EPE."
+  },
+  {
+    "id": "T11-05",
+    "tema": 11,
+    "temaName": "Sector público institucional",
+    "enunciado": "El artículo 109 de la Ley 40/2015 regula las Autoridades Administrativas Independientes de ámbito estatal. ¿Cuál de las siguientes afirmaciones es correcta?",
+    "opciones": [
+      "Su desempeño requiere independencia funcional o especial autonomía respecto de la AGE.",
+      "Carecen de personalidad jurídica propia.",
+      "No tienen funciones de supervisión externa sobre sectores económicos.",
+      "Actúan con interés empresarial o comercial en su actividad."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 109 Ley 40/2015",
+    "explicacion": "El artículo 109.1 de la Ley 40/2015 establece: «Son autoridades administrativas independientes de ámbito estatal las entidades de derecho público que [...] tienen atribuidas funciones de regulación o supervisión de carácter externo sobre sectores económicos o actividades determinadas, por requerir su desempeño de independencia funcional o una especial autonomía respecto de la Administración General del Estado.» SÍ tienen personalidad jurídica propia, SÍ tienen funciones de supervisión externa, y NO actúan con interés empresarial sino con independencia técnica."
+  },
+  {
+    "id": "T12-01",
+    "tema": 12,
+    "temaName": "Presupuestos (Ley 47/2003)",
+    "enunciado": "De conformidad con el artículo 75 de la Ley 47/2003, General Presupuestaria, ¿a quién corresponden las funciones de Ordenador General de pagos del Estado?",
+    "opciones": [
+      "Al Ministro de Hacienda",
+      "Al Ministro de Economía",
+      "Al Director General del Tesoro y Política Financiera",
+      "Al Secretario General del Tesoro y Financiación Internacional"
+    ],
+    "correcta": 3,
+    "referencia": "Art. 75 Ley 47/2003",
+    "explicacion": "Conforme al artículo 75 de la Ley 47/2003, General Presupuestaria, las funciones de Ordenador General de Pagos del Estado corresponden al «órgano directivo del Ministerio de Hacienda competente en materia de Tesoro». Tras sucesivas reestructuraciones ministeriales (RD 941/2017 y RD 438/2020), este órgano es actualmente el Secretario General del Tesoro y Financiación Internacional, que sustituyó al anterior Director General del Tesoro y Política Financiera. [APPROXIMATE_QUOTE] La opción c) es un distractor que refleja la denominación histórica del cargo."
+  },
+  {
+    "id": "T12-02",
+    "tema": 12,
+    "temaName": "Presupuestos (Ley 47/2003)",
+    "enunciado": "Conforme a la Ley 47/2003 General Presupuestaria, los Presupuestos Generales del Estado constituyen la expresión cifrada, conjunta y sistemática de los derechos y obligaciones a liquidar durante el ejercicio. La duración del ejercicio presupuestario coincide con:",
+    "opciones": [
+      "El año natural, del 1 de enero al 31 de diciembre",
+      "El año fiscal, del 1 de abril al 31 de marzo",
+      "Un período de 18 meses prorrogables",
+      "El mandato del Gobierno, con independencia de su duración"
+    ],
+    "correcta": 0,
+    "referencia": "Art. 34 Ley 47/2003",
+    "explicacion": "El artículo 34 de la Ley 47/2003 LGP establece que el ejercicio presupuestario coincide con el año natural y, por tanto, se iniciará el 1 de enero y finalizará el 31 de diciembre de cada año. La opción b es incorrecta porque España no utiliza un año fiscal distinto al natural. La opción c es falsa ya que el ejercicio no es de 18 meses ni prorrogable. La opción d es incorrecta porque la duración no depende del mandato del Gobierno sino que es anual."
+  },
+  {
+    "id": "T12-03",
+    "tema": 12,
+    "temaName": "Presupuestos (Ley 47/2003)",
+    "enunciado": "Según el artículo 73 de la Ley 47/2003 General Presupuestaria, la ordenación del pago es el acto mediante el cual:",
+    "opciones": [
+      "Se reconoce la existencia de una obligación ya liquidada y se determina su cuantía",
+      "El ordenador competente expide una orden de pago contra la Tesorería",
+      "Se autoriza un gasto con cargo a los créditos presupuestarios",
+      "Se materializa el pago efectivo al acreedor por transferencia bancaria"
+    ],
+    "correcta": 1,
+    "referencia": "Art. 73 Ley 47/2003",
+    "explicacion": "El artículo 73 de la Ley 47/2003 define la ordenación del pago como el acto mediante el cual el ordenador competente, en base a una obligación reconocida y liquidada, expide la correspondiente orden de pago contra la Tesorería. La opción a describe el reconocimiento de la obligación, no la ordenación del pago. La opción c se refiere a la autorización del gasto, una fase anterior. La opción d describe el pago material, que es posterior a la orden de pago."
+  },
+  {
+    "id": "T13-01",
+    "tema": 13,
+    "temaName": "Empleo público (TREBEP)",
+    "enunciado": "Según el artículo 85 del TREBEP, un funcionario de carrera se encuentra en servicio activo cuando ocupa un puesto de trabajo. Además de esta situación, ¿cuál de las siguientes NO es una situación administrativa prevista en el TREBEP?",
+    "opciones": [
+      "Servicios especiales",
+      "Servicio en otras Administraciones Públicas",
+      "Excedencia",
+      "Disponibilidad"
+    ],
+    "correcta": 3,
+    "referencia": "Art. 85 TREBEP",
+    "explicacion": "El artículo 85 del TREBEP enumera las situaciones administrativas de los funcionarios de carrera: servicio activo, servicios especiales, servicio en otras Administraciones Públicas, excedencia y suspensión. La situación de \"disponibilidad\" no está contemplada en el TREBEP como situación administrativa, aunque sí existía en normativa anterior. Las opciones a, b y c son situaciones administrativas válidas según el TREBEP."
+  },
+  {
+    "id": "T13-02",
+    "tema": 13,
+    "temaName": "Empleo público (TREBEP)",
+    "enunciado": "Según el artículo 89 del TREBEP, un funcionario podrá solicitar excedencia voluntaria por interés particular cuando haya prestado servicios efectivos en cualquiera de las Administraciones Públicas durante un período mínimo de:",
+    "opciones": [
+      "Tres años inmediatamente anteriores",
+      "Cinco años inmediatamente anteriores",
+      "Siete años inmediatamente anteriores",
+      "Diez años a lo largo de su carrera profesional"
+    ],
+    "correcta": 1,
+    "referencia": "Art. 89 TREBEP",
+    "explicacion": "El artículo 89.1 del TREBEP establece que la excedencia voluntaria por interés particular requiere haber prestado servicios efectivos en cualquiera de las Administraciones Públicas durante al menos cinco años inmediatamente anteriores. La opción a es incorrecta porque tres años es insuficiente. La opción c es falsa ya que siete años excede el requisito. La opción d es incorrecta porque el requisito son cinco años inmediatamente anteriores, no a lo largo de toda la carrera."
+  },
+  {
+    "id": "T13-03",
+    "tema": 13,
+    "temaName": "Empleo público (TREBEP)",
+    "enunciado": "El Art. 49 de la Constitución Española fue reformado en 2024 para actualizar el lenguaje referido a las personas con discapacidad. ¿Qué cambio terminológico se introdujo con esta reforma?",
+    "opciones": [
+      "Se sustituyó el término anterior por personas con discapacidad",
+      "Se eliminó la referencia a la discapacidad del texto constitucional por considerarla estigmatizante",
+      "Se añadió el concepto de diversidad funcional como término preferente",
+      "Se incorporó la obligación de establecer cuotas del 5% en empleo público"
+    ],
+    "correcta": 0,
+    "referencia": "Art. 49 CE (reforma 2024)",
+    "explicacion": "La respuesta correcta es que se sustituyó el término antiguo por personas con discapacidad mediante la reforma constitucional de 2024. Esta fue la tercera reforma de la Constitución Española (tras las de 1992 sobre Art. 13.2 y 2011 sobre Art. 135) y tuvo carácter exclusivamente terminológico para adecuar el lenguaje constitucional a la Convención de la ONU sobre Derechos de Personas con Discapacidad (2006, ratificada por España 2008). No se eliminó la referencia a la discapacidad (opción b incorrecta), no se usó el término diversidad funcional aunque esté en uso social (opción c incorrecta), y las cuotas de empleo público están en legislación ordinaria, no en la CE (opción d incorrecta). El Art. 49 CE sigue garantizando políticas de prevención, tratamiento, rehabilitación e integración."
+  }
+]

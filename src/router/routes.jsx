@@ -41,6 +41,12 @@ const TermsPage = lazy(() => import('../pages/legal/TermsPage'));
 const PrivacyPage = lazy(() => import('../pages/legal/PrivacyPage'));
 const NotFoundPage = lazy(() => import('../pages/NotFoundPage'));
 
+// Guest Mode
+const GuestWelcome = lazy(() => import('../features/guest/components/GuestWelcome'));
+const GuestSession = lazy(() => import('../features/guest/components/GuestSession'));
+const GuestResults = lazy(() => import('../features/guest/components/GuestResults'));
+const GuestSignupWall = lazy(() => import('../features/guest/components/GuestSignupWall'));
+
 // Lab Demo (Picto Dent)
 const LabDemoApp = lazy(() => import('../features/lab-demo/LabDemoApp'));
 
@@ -84,6 +90,20 @@ export const routeConfig = [
   {
     path: ROUTES.ONBOARDING_RESULTS,
     element: <ErrorBoundary><ResultsPage /></ErrorBoundary>,
+  },
+
+  // Guest Mode — no auth required, all localStorage
+  {
+    path: ROUTES.GUEST_SESSION,
+    element: <ErrorBoundary><GuestSession /></ErrorBoundary>,
+  },
+  {
+    path: ROUTES.GUEST_RESULTS,
+    element: <ErrorBoundary><GuestResults /></ErrorBoundary>,
+  },
+  {
+    path: ROUTES.GUEST_SIGNUP,
+    element: <ErrorBoundary><GuestSignupWall /></ErrorBoundary>,
   },
 
   // Auth pages

@@ -7,7 +7,7 @@
 import { useNavigate, Navigate, useLocation } from 'react-router-dom';
 import { useUserStore } from '../../stores/useUserStore';
 import { useAuth } from '../../contexts/AuthContext';
-import LandingPage from '../../components/landing/LandingPage';
+import GuestWelcome from '../../features/guest/components/GuestWelcome';
 import { ROUTES } from '../../router/routes';
 
 export default function WelcomePage() {
@@ -37,33 +37,17 @@ export default function WelcomePage() {
     return <Navigate to={ROUTES.HOME} replace />;
   }
 
-  const handleStart = () => {
-    navigate(ROUTES.ONBOARDING_OPOSICION);
+  // Guest-first flow: show GuestWelcome for unauthenticated users
+  // This sends them directly to questions without long onboarding
+  const handleGuestStart = () => {
+    navigate(ROUTES.GUEST_SESSION);
   };
 
   const handleLogin = () => {
     navigate(ROUTES.LOGIN);
   };
 
-  const handleSkipAll = () => {
-    completeOnboarding();
-    navigate(ROUTES.HOME, { replace: true });
-  };
-
   return (
-    <>
-      <LandingPage
-        onStart={handleStart}
-        onLogin={handleLogin}
-      />
-      {devOverride && (
-        <button
-          onClick={handleSkipAll}
-          className="fixed bottom-6 right-6 z-50 text-gray-400 hover:text-gray-500 text-xs py-1.5 px-3 rounded-lg bg-gray-100 hover:bg-gray-200 transition-all"
-        >
-          Skip todo →
-        </button>
-      )}
-    </>
+    <GuestWelcome />
   );
 }

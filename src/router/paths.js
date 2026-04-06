@@ -12,6 +12,11 @@ export const ROUTES = {
   ONBOARDING_INTRO: '/onboarding/intro',
   ONBOARDING_RESULTS: '/onboarding/results',
 
+  // Guest Mode
+  GUEST_SESSION: '/guest/session',
+  GUEST_RESULTS: '/guest/results',
+  GUEST_SIGNUP: '/guest/signup',
+
   // Auth
   LOGIN: '/login',
   SIGNUP: '/signup',
