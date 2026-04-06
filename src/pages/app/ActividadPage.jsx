@@ -9,10 +9,13 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ActividadPage from '../../components/activity/ActividadPage';
 import { useActivityData } from '../../hooks/useActivityData';
+import { useAuth } from '../../contexts/AuthContext';
+import GuestLock from '../../components/common/GuestLock';
 import { ROUTES } from '../../router/routes';
 
 export default function ActividadPageWrapper() {
   const navigate = useNavigate();
+  const { user } = useAuth();
   const {
     loading,
     weeklyData,
@@ -112,7 +115,7 @@ export default function ActividadPageWrapper() {
     currentStreak: streak.current || 0
   };
 
-  return (
+  const content = (
     <ActividadPage
       loading={loading}
       weeklyData={weeklyData}
@@ -126,4 +129,10 @@ export default function ActividadPageWrapper() {
       formatRelativeDate={formatRelativeDate}
     />
   );
+
+  if (!user) {
+    return <GuestLock message="Crea una cuenta para ver tu actividad y progreso">{content}</GuestLock>;
+  }
+
+  return content;
 }

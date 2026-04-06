@@ -23,10 +23,10 @@ export default function RequireAuth({ children }) {
   }
 
   // Allow authenticated users and anonymous users through
-  // Also allow unauthenticated users on main app pages (guest browsing)
+  // Unauthenticated users can browse all /app pages but with limited data
   if (!user && !isAnonymous) {
-    const guestAllowed = ['/app/inicio', '/app', '/app/temas', '/app/actividad', '/app/recursos'];
-    if (!guestAllowed.includes(location.pathname)) {
+    const isAppPage = location.pathname.startsWith('/app');
+    if (!isAppPage) {
       return <Navigate to={ROUTES.HOME} replace />;
     }
   }

@@ -7,6 +7,8 @@
 import { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { List, Network, Hexagon } from 'lucide-react';
+import { useAuth } from '../../contexts/AuthContext';
+import GuestLock from '../../components/common/GuestLock';
 import TemasListView from '../../components/temas/TemasListView';
 import TopicRoadmap from '../../components/temas/TopicRoadmap';
 import { TemarioDendrite } from '../../features/draft/TemarioGraph';
@@ -14,6 +16,7 @@ import { ROUTES } from '../../router/routes';
 import { useTopics } from '../../hooks/useTopics';
 
 export default function TemasPage() {
+  const { user } = useAuth();
   const navigate = useNavigate();
   const { topics, topicsByBlock, userProgress, loading } = useTopics();
   const [viewMode, setViewMode] = useState('list'); // 'list' | 'roadmap' | 'dendrite'
@@ -71,7 +74,7 @@ export default function TemasPage() {
     });
   }, [topics, userProgress]);
 
-  return (
+  const pageContent = (
     <div className="space-y-4 max-w-4xl mx-auto">
       {/* View Toggle */}
       <div className="flex items-center justify-end gap-1">
@@ -128,4 +131,10 @@ export default function TemasPage() {
       )}
     </div>
   );
+
+  if (!user) {
+    return <GuestLock message="Crea una cuenta para estudiar por temas y ver tu progreso">{pageContent}</GuestLock>;
+  }
+
+  return pageContent;
 }

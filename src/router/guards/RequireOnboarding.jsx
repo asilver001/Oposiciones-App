@@ -20,9 +20,8 @@ export default function RequireOnboarding({ children }) {
     return children;
   }
 
-  // Allow unauthenticated users on main app pages (guest browsing)
-  const guestAllowed = ['/app/inicio', '/app', '/app/temas', '/app/actividad', '/app/recursos'];
-  if (guestAllowed.includes(location.pathname)) {
+  // Allow unauthenticated users on all /app pages (guest browsing)
+  if (location.pathname.startsWith('/app')) {
     return children;
   }
 
