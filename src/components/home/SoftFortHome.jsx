@@ -528,14 +528,24 @@ export default function SoftFortHome({
 
   return (
     <div>
-      {/* GREETING */}
-      <div className="mb-8 animate-fade-up" style={{ animationDelay: '0ms' }}>
-        <p className="text-[10px] font-semibold uppercase tracking-[0.06em] mb-1" style={{ color: 'var(--color-section-label)' }}>
-          {dayLabel}
-        </p>
-        <h1 className="text-[28px] font-bold tracking-[-0.03em] text-gray-900 leading-tight">
-          Hola, {userName.split(' ')[0]}
-        </h1>
+      {/* GREETING + Create account CTA for guests */}
+      <div className="mb-8 animate-fade-up flex items-start justify-between" style={{ animationDelay: '0ms' }}>
+        <div>
+          <p className="text-[10px] font-semibold uppercase tracking-[0.06em] mb-1" style={{ color: 'var(--color-section-label)' }}>
+            {dayLabel}
+          </p>
+          <h1 className="text-[28px] font-bold tracking-[-0.03em] text-gray-900 leading-tight">
+            Hola, {userName.split(' ')[0]}
+          </h1>
+        </div>
+        {!user && (
+          <a
+            href="#/signup"
+            className="shrink-0 text-sm font-semibold px-4 py-2 rounded-lg bg-[#2D6A4F] text-white hover:bg-[#1B4332] active:scale-[0.97] transition-all"
+          >
+            Crear cuenta
+          </a>
+        )}
       </div>
 
       {/* DAILY INSIGHT */}
