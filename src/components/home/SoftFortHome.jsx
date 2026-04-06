@@ -440,7 +440,7 @@ export default function SoftFortHome({
   onViewAllTopics,
   weeklyImprovement,
 }) {
-  const { isAdmin } = useAuth();
+  const { isAdmin, user } = useAuth();
   const weeklyGoalQuestions = useUserStore((s) => s.userData.weeklyGoalQuestions) || 75;
   const [simulationMode, setSimulationMode] = useState(null);
   const { isFeatureLocked } = usePremium();
@@ -458,7 +458,8 @@ export default function SoftFortHome({
     : streakData;
 
   // Derived state
-  const isNewUser = effectiveStats.testsCompleted === 0 && effectiveStats.questionsCorrect === 0 && fortalezaData.length === 0;
+  // Guest (unauthenticated) users always see the trial CTA
+  const isNewUser = !user || (effectiveStats.testsCompleted === 0 && effectiveStats.questionsCorrect === 0 && fortalezaData.length === 0);
   const totalAnswered = effectiveStats.totalQuestions || 0;
   const topicsExplored = new Set(fortalezaData.filter(t => t.progress > 0).map(t => t.id)).size || 0;
   const totalHours = Math.round((effectiveStats.testsCompleted * 8) / 60) || 0; // rough estimate
