@@ -31,7 +31,48 @@ export default function RecursosPageWrapper() {
   );
 
   if (!user) {
-    return <GuestLock message="Crea una cuenta para acceder a todos los recursos de estudio">{content}</GuestLock>;
+    return (
+      <div className="space-y-6">
+        {/* Available for guests */}
+        <div>
+          <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Disponible</h3>
+          <div className="space-y-3">
+            <a href="https://www.opositasmart.com/radar" target="_blank" rel="noopener noreferrer"
+              className="block p-4 bg-white rounded-xl border border-gray-100 hover:border-[#2D6A4F]/30 transition-all">
+              <div className="flex items-center gap-3">
+                <span className="text-xl">📊</span>
+                <div>
+                  <p className="font-semibold text-gray-900 text-sm">Radar de Convocatorias</p>
+                  <p className="text-xs text-gray-400">Plazas, fechas y enlaces al BOE</p>
+                </div>
+              </div>
+            </a>
+            <button onClick={() => navigate(ROUTES.STUDY, { state: { mode: 'practica-tema', topic: { number: 1 }, autoStart: true } })}
+              className="w-full text-left p-4 bg-white rounded-xl border border-gray-100 hover:border-[#2D6A4F]/30 transition-all">
+              <div className="flex items-center gap-3">
+                <span className="text-xl">📝</span>
+                <div>
+                  <p className="font-semibold text-gray-900 text-sm">Test Tema 1 — CE: Título Preliminar</p>
+                  <p className="text-xs text-gray-400">20 preguntas · Acceso libre</p>
+                </div>
+              </div>
+            </button>
+            <button onClick={() => navigate(ROUTES.STUDY, { state: { mode: 'practica-tema', topic: { number: 2 }, autoStart: true } })}
+              className="w-full text-left p-4 bg-white rounded-xl border border-gray-100 hover:border-[#2D6A4F]/30 transition-all">
+              <div className="flex items-center gap-3">
+                <span className="text-xl">📝</span>
+                <div>
+                  <p className="font-semibold text-gray-900 text-sm">Test Tema 2 — CE: Derechos y Libertades</p>
+                  <p className="text-xs text-gray-400">20 preguntas · Acceso libre</p>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+        {/* Locked content preview */}
+        <GuestLock message="Crea una cuenta para acceder a todos los recursos">{content}</GuestLock>
+      </div>
+    );
   }
 
   return content;

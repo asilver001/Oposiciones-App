@@ -132,9 +132,5 @@ export default function TemasPage() {
     </div>
   );
 
-  if (!user) {
-    return <GuestLock message="Crea una cuenta para estudiar por temas y ver tu progreso">{pageContent}</GuestLock>;
-  }
-
   return pageContent;
 }

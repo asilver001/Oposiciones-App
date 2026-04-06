@@ -270,7 +270,7 @@ function SubgroupHeader({ name, icon, topicCount }) {
 /**
  * BlockSection - Collapsible block section with sub-groups
  */
-function BlockSection({ blockName, topics, isExpanded, onToggle, onTopicSelect }) {
+function BlockSection({ blockName, topics, isExpanded, onToggle, onTopicSelect, user }) {
   const totalProgress = topics.length > 0
     ? Math.round(topics.reduce((sum, t) => sum + (t.progress || 0), 0) / topics.length)
     : 0;
@@ -360,16 +360,19 @@ function BlockSection({ blockName, topics, isExpanded, onToggle, onTopicSelect }
                     />
                   )}
                   <div className="space-y-3 mb-2">
-                    {sg.topics.map((topic) => (
+                    {sg.topics.map((topic) => {
+                      const guestLocked = !user && (topic.number || 99) > 2;
+                      return (
                       <TopicCard
                         key={topic.id}
                         topic={topic}
-                        onSelect={onTopicSelect}
-                        locked={false}
-                        lockMessage={null}
+                        onSelect={guestLocked ? () => {} : onTopicSelect}
+                        locked={guestLocked}
+                        lockMessage={guestLocked ? 'Crea una cuenta para acceder' : null}
                         hasPrereqs={false}
                       />
-                    ))}
+                      );
+                    })}
                   </div>
                 </div>
               ))}
@@ -464,7 +467,7 @@ export default function TemasListView({
   onTopicSelect,
   loading = false
 }) {
-  const { isAdmin } = useAuth();
+  const { isAdmin, user } = useAuth();
   const [searchQuery, setSearchQuery] = useState('');
   const [simulationMode, setSimulationMode] = useState(null);
   const [selectedBlock, setSelectedBlock] = useState(null);
@@ -784,6 +787,7 @@ export default function TemasListView({
               isExpanded={expandedBlocks.has(blockName)}
               onToggle={() => toggleBlock(blockName)}
               onTopicSelect={onTopicSelect}
+              user={user}
             />
           ))}
         </div>

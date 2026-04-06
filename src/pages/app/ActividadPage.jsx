@@ -130,9 +130,5 @@ export default function ActividadPageWrapper() {
     />
   );
 
-  if (!user) {
-    return <GuestLock message="Crea una cuenta para ver tu actividad y progreso">{content}</GuestLock>;
-  }
-
   return content;
 }
