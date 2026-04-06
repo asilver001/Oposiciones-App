@@ -151,6 +151,12 @@ export default function GuestResults() {
             Crear cuenta y guardar mi progreso
           </button>
         )}
+        <button
+          onClick={() => navigate('/app/inicio')}
+          className="w-full mt-2 py-2.5 text-gray-400 hover:text-gray-600 text-sm font-medium transition-colors"
+        >
+          Volver al inicio
+        </button>
       </div>
     </div>
   );
