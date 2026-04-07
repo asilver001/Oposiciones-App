@@ -9,6 +9,8 @@ import { useState, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Clock, Target, AlertTriangle, BookMarked, Zap, BookOpen, ArrowLeft, Play } from 'lucide-react';
 import { ROUTES } from '../../router/routes';
+import FreeLock from '../../components/common/FreeLock';
+import { usePremium } from '../../hooks/usePremium';
 import HybridSession from '../../components/study/HybridSession';
 import FlashcardSession from '../../components/study/FlashcardSession';
 import SimulacroSession from '../../components/study/SimulacroSession';
@@ -73,9 +75,16 @@ const modeConfig = {
   }
 };
 
+// Map mode names to premium feature keys
+const PREMIUM_MODES = {
+  'simulacro': 'simulacro',
+  'flashcards': 'flashcards',
+};
+
 export default function StudyPage() {
   const navigate = useNavigate();
   const location = useLocation();
+  const { isFeatureLocked } = usePremium();
   // Auto-start when coming from daily plan activities (skip preview)
   const { autoStart, ...navState } = location.state || {};
   const [sessionStarted, setSessionStarted] = useState(!!autoStart);
@@ -159,8 +168,12 @@ export default function StudyPage() {
     }
   };
 
+  // Check if this mode is premium-locked
+  const premiumFeature = PREMIUM_MODES[mode];
+  const modeLocked = premiumFeature && isFeatureLocked(premiumFeature);
+
   // If session has started, render the session component
-  if (sessionStarted) {
+  if (sessionStarted && !modeLocked) {
     return renderSession();
   }
 
@@ -257,14 +270,20 @@ export default function StudyPage() {
       {/* Sticky CTA at bottom */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-100 px-6 py-4 space-y-3">
         <div className="max-w-md mx-auto space-y-3">
-          <button
-            onClick={handleStart}
-            className="w-full py-4 text-white font-semibold rounded-[24px] flex items-center justify-center gap-2 active:scale-[0.99] transition-transform"
-            style={{ background: 'linear-gradient(145deg, #1B4332 0%, #2D6A4F 60%, #3A7D5C 100%)' }}
-          >
-            <Play className="w-5 h-5" />
-            Comenzar sesión
-          </button>
+          {modeLocked ? (
+            <FreeLock feature={premiumFeature} message={`${displayTitle} está disponible en Premium`} showPreview={false}>
+              <div />
+            </FreeLock>
+          ) : (
+            <button
+              onClick={handleStart}
+              className="w-full py-4 text-white font-semibold rounded-[24px] flex items-center justify-center gap-2 active:scale-[0.99] transition-transform"
+              style={{ background: 'linear-gradient(145deg, #1B4332 0%, #2D6A4F 60%, #3A7D5C 100%)' }}
+            >
+              <Play className="w-5 h-5" />
+              Comenzar sesión
+            </button>
+          )}
           <button
             onClick={handleExit}
             className="w-full py-3 text-gray-500 font-medium transition-colors"

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import FreeLock from '../common/FreeLock';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Trophy,
@@ -560,7 +561,9 @@ export default function ActividadPage({
             />
           )}
           {activeTab === 2 && (
-            <AnalyticsTab analytics={analytics} />
+            <FreeLock feature="detailed-stats" message="Analytics detallado disponible en Premium">
+              <AnalyticsTab analytics={analytics} />
+            </FreeLock>
           )}
         </AnimatePresence>
       </div>

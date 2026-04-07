@@ -19,6 +19,7 @@ import {
 import EmptyState from '../common/EmptyState';
 import DevModeRandomizer from '../dev/DevModeRandomizer';
 import { useAuth } from '../../contexts/AuthContext';
+import { usePremium } from '../../hooks/usePremium';
 import {
   getRecommendedOrder
 } from '../../data/topicPrerequisites';
@@ -362,13 +363,15 @@ function BlockSection({ blockName, topics, isExpanded, onToggle, onTopicSelect, 
                   <div className="space-y-3 mb-2">
                     {sg.topics.map((topic) => {
                       const guestLocked = !user && (topic.number || 99) > 2;
+                      const freeLocked = !isPremium && (topic.number || 99) > 2;
+                      const isLocked = guestLocked || freeLocked;
                       return (
                       <TopicCard
                         key={topic.id}
                         topic={topic}
-                        onSelect={guestLocked ? () => {} : onTopicSelect}
-                        locked={guestLocked}
-                        lockMessage={guestLocked ? 'Crea una cuenta para acceder' : null}
+                        onSelect={isLocked ? () => {} : onTopicSelect}
+                        locked={isLocked}
+                        lockMessage={guestLocked ? 'Crea una cuenta para acceder' : freeLocked ? 'Disponible en Premium — Temas 1-2 gratis' : null}
                         hasPrereqs={false}
                       />
                       );
@@ -468,6 +471,7 @@ export default function TemasListView({
   loading = false
 }) {
   const { isAdmin, user } = useAuth();
+  const { isPremium } = usePremium();
   const [searchQuery, setSearchQuery] = useState('');
   const [simulationMode, setSimulationMode] = useState(null);
   const [selectedBlock, setSelectedBlock] = useState(null);
