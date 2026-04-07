@@ -271,7 +271,7 @@ function SubgroupHeader({ name, icon, topicCount }) {
 /**
  * BlockSection - Collapsible block section with sub-groups
  */
-function BlockSection({ blockName, topics, isExpanded, onToggle, onTopicSelect, user }) {
+function BlockSection({ blockName, topics, isExpanded, onToggle, onTopicSelect, user, isPremium }) {
   const totalProgress = topics.length > 0
     ? Math.round(topics.reduce((sum, t) => sum + (t.progress || 0), 0) / topics.length)
     : 0;
@@ -792,6 +792,7 @@ export default function TemasListView({
               onToggle={() => toggleBlock(blockName)}
               onTopicSelect={onTopicSelect}
               user={user}
+              isPremium={isPremium}
             />
           ))}
         </div>
