@@ -13,6 +13,7 @@ export const ROUTES = {
   ONBOARDING_RESULTS: '/onboarding/results',
 
   // Guest Mode
+  WELCOME2: '/welcome2',           // Direct to questions (no dashboard)
   GUEST_SESSION: '/guest/session',
   GUEST_RESULTS: '/guest/results',
   GUEST_SIGNUP: '/guest/signup',

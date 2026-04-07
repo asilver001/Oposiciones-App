@@ -94,6 +94,10 @@ export const routeConfig = [
 
   // Guest Mode — no auth required, all localStorage
   {
+    path: ROUTES.WELCOME2,
+    element: <ErrorBoundary><GuestSession /></ErrorBoundary>,
+  },
+  {
     path: ROUTES.GUEST_SESSION,
     element: <ErrorBoundary><GuestSession /></ErrorBoundary>,
   },
