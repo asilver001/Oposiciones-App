@@ -55,7 +55,7 @@ export default function GuestWelcome() {
         </div>
         <div className="space-y-3">
           <h1 className="text-[28px] font-bold text-gray-900 leading-tight">Descubre tu nivel en 2 minutos</h1>
-          <p className="text-gray-500 text-base">10 preguntas reales de Auxiliar Administrativo del Estado. Sin registro. Sin email.</p>
+          <p className="text-gray-500 text-base">5 preguntas reales de Auxiliar Administrativo del Estado. Sin registro. Sin email.</p>
         </div>
         <button onClick={handleStart} className="w-full py-4 rounded-xl bg-[#2D6A4F] text-white font-semibold text-lg active:scale-[0.98] transition-all">
           Empezar ahora →

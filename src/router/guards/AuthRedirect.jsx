@@ -34,6 +34,6 @@ export default function AuthRedirect() {
     return <Navigate to={ROUTES.HOME} replace />;
   }
 
-  // New visitor → direct to questions (zero clicks)
-  return <Navigate to={ROUTES.GUEST_SESSION} replace />;
+  // New visitor → dashboard (guest modal opens automatically)
+  return <Navigate to={ROUTES.HOME} replace />;
 }

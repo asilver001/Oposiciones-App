@@ -71,7 +71,7 @@ export default function GuestSession() {
     <div className="min-h-dvh" style={{ background: '#FAFAF7' }}>
       {/* Banner */}
       <div className="flex items-center justify-between px-4 py-2 bg-gray-100 text-sm">
-        <span className="text-gray-400">Modo invitado - Sesion {sessionNumber} de 10</span>
+        <span className="text-gray-400">Modo invitado · Sesión {sessionNumber} de 5</span>
         <button onClick={() => navigate('/signup')} className="text-[#2D6A4F] font-medium hover:underline">Crear cuenta</button>
       </div>
       <GuestQuestion

@@ -2,12 +2,12 @@ import { useNavigate } from 'react-router-dom';
 import { getGuestData } from '../guestStorage';
 import { TrendingUp, Target, RotateCcw, ArrowRight, Trophy } from 'lucide-react';
 
-export default function GuestResults() {
+export default function GuestResults({ embedded = false, onNext, onClose, onSignup }) {
   const navigate = useNavigate();
   const guestData = getGuestData();
 
   if (!guestData || guestData.sessions.length === 0) {
-    navigate('/guest');
+    if (!embedded) navigate('/guest');
     return null;
   }
 
@@ -31,6 +31,10 @@ export default function GuestResults() {
   const sessionsLeft = guestData.maxSessions - guestData.totalSessions;
 
   const handleNext = () => {
+    if (embedded && onNext) {
+      onNext();
+      return;
+    }
     if (canContinue) {
       navigate('/guest/session');
     } else {

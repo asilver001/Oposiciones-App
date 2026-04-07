@@ -28,7 +28,7 @@ export default function GuestSignupWall() {
           <div className="w-14 h-14 rounded-2xl bg-[#2D6A4F] flex items-center justify-center mx-auto">
             <Lock className="w-6 h-6 text-white" />
           </div>
-          <h1 className="text-2xl font-bold text-gray-900">Has completado las 10 sesiones gratuitas</h1>
+          <h1 className="text-2xl font-bold text-gray-900">Has completado las 5 sesiones gratuitas</h1>
           <p className="text-gray-500">Crea tu cuenta para seguir preparando tu oposicion.</p>
         </div>
 

@@ -23,7 +23,7 @@ export function initGuestData(examDate) {
     sessions: [],
     allAnswered: {},
     totalSessions: 0,
-    maxSessions: 10,
+    maxSessions: 5,
   };
   localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
   return data;
@@ -47,4 +47,16 @@ export function saveSession(session) {
 
 export function clearGuestData() {
   localStorage.removeItem(STORAGE_KEY);
+}
+
+export function dismissGuestModal() {
+  sessionStorage.setItem('guestModalDismissed', 'true');
+}
+
+export function isGuestModalDismissed() {
+  return sessionStorage.getItem('guestModalDismissed') === 'true';
+}
+
+export function reopenGuestModal() {
+  sessionStorage.removeItem('guestModalDismissed');
 }

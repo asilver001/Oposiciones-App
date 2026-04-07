@@ -8,7 +8,7 @@ function shuffle(arr) {
 }
 
 export function selectQuestionsForSession(sessionNumber, guestData, allQuestions) {
-  const QUESTIONS_PER_SESSION = 10;
+  const QUESTIONS_PER_SESSION = 5;
 
   if (sessionNumber === 1 || !guestData) {
     return shuffle(allQuestions).slice(0, QUESTIONS_PER_SESSION);
@@ -25,7 +25,7 @@ export function selectQuestionsForSession(sessionNumber, guestData, allQuestions
     .filter(q => failedIds.includes(q.id))
     .map(q => ({ ...q, isReview: true }));
 
-  const reviewCount = Math.min(reviewQuestions.length, Math.min(sessionNumber + 1, 7));
+  const reviewCount = Math.min(reviewQuestions.length, Math.min(sessionNumber, 3));
   const newCount = QUESTIONS_PER_SESSION - reviewCount;
 
   const selected = [

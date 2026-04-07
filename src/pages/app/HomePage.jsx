@@ -6,9 +6,11 @@
  * AI-recommended study activities.
  */
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import SoftFortHome from '../../components/home/SoftFortHome';
+import GuestModal from '../../features/guest/components/GuestModal';
+import { getGuestData, isGuestModalDismissed, reopenGuestModal } from '../../features/guest/guestStorage';
 import { ROUTES } from '../../router/routes';
 import { useActivityData } from '../../hooks/useActivityData';
 import { useTopics } from '../../hooks/useTopics';
@@ -19,6 +21,13 @@ import { useAuth } from '../../hooks/useAuth';
 export default function HomePage() {
   const navigate = useNavigate();
   const { user } = useAuth();
+
+  // Guest modal state
+  const guestData = getGuestData();
+  const shouldShowModal = !user && (!guestData || guestData.totalSessions === 0) && !isGuestModalDismissed();
+  const canShowFloating = !user && guestData && guestData.totalSessions < (guestData.maxSessions || 5);
+  const [showGuestModal, setShowGuestModal] = useState(shouldShowModal);
+  const [modalDismissed, setModalDismissed] = useState(isGuestModalDismissed());
   const { totalStats, streak, weeklyImprovement, weeklyData, todayStats, fsrsStats, simulacroAvg, fetchActivityData } = useActivityData();
   const { getFortalezaData, topicsWithQuestions, userProgress } = useTopics();
 
@@ -81,6 +90,25 @@ export default function HomePage() {
   };
 
   return (
+    <>
+    {/* Guest modal overlay */}
+    {showGuestModal && (
+      <GuestModal
+        onClose={() => { setShowGuestModal(false); setModalDismissed(true); }}
+        onSignup={() => navigate(ROUTES.SIGNUP)}
+      />
+    )}
+
+    {/* Floating "Continuar test" button when modal was dismissed */}
+    {!showGuestModal && modalDismissed && canShowFloating && (
+      <button
+        onClick={() => { reopenGuestModal(); setShowGuestModal(true); setModalDismissed(false); }}
+        className="fixed bottom-24 right-4 z-40 bg-[#2D6A4F] text-white text-sm font-semibold px-4 py-2.5 rounded-full shadow-lg hover:bg-[#1B4332] active:scale-[0.97] transition-all flex items-center gap-2"
+      >
+        📝 Continuar test gratuito
+      </button>
+    )}
+
     <SoftFortHome
       showTopBar={false}
       userName={user?.user_metadata?.name || (() => {
@@ -101,5 +129,6 @@ export default function HomePage() {
       onNavigate={handleNavigate}
       readiness={readiness}
     />
+    </>
   );
 }

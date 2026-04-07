@@ -94,7 +94,7 @@ function WelcomeHeroCard({ onStart }) {
             Sesión {guestData.totalSessions + 1} de {guestData.maxSessions}
           </h2>
           <p className="text-[14px] text-white/70 mb-5 relative">
-            Precisión actual: {avgScore}% · 10 preguntas más
+            Precisión actual: {avgScore}% · 5 preguntas más
           </p>
         </>
       ) : (
@@ -106,7 +106,7 @@ function WelcomeHeroCard({ onStart }) {
             Descubre tu nivel en 2 minutos
           </h2>
           <p className="text-[14px] text-white/70 mb-5 relative">
-            10 preguntas reales de Auxiliar Administrativo · Sin registro
+            5 preguntas reales de Auxiliar Administrativo · Sin registro
           </p>
         </>
       )}
