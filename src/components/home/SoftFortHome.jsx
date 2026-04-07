@@ -294,25 +294,21 @@ function WeeklyCircles({ weeklyData = [0, 0, 0, 0, 0, 0, 0] }) {
       <p className="text-[10px] font-semibold uppercase tracking-[0.06em] mb-4" style={{ color: 'var(--color-section-label)' }}>
         Esta semana
       </p>
-      <div className="flex gap-1.5 justify-between">
+      <div className="flex gap-3 justify-between">
         {DAY_LABELS.map((label, i) => {
           const done = weeklyData[i] > 0;
           const isToday = i === todayIdx;
           return (
             <div
               key={i}
-              className={`w-8 h-8 rounded-full flex items-center justify-center text-[11px] font-semibold transition-colors ${
+              className="w-8 h-8 rounded-full flex items-center justify-center text-[12px] font-semibold"
+              style={
                 done
-                  ? 'text-white'
+                  ? { background: '#2D6A4F', color: '#FFFFFF' }
                   : isToday
-                    ? 'bg-transparent'
-                    : ''
-              }`}
-              style={{
-                ...(done ? { background: 'var(--color-forest-primary)' } : {}),
-                ...(isToday && !done ? { border: '2px solid var(--color-forest-primary)', color: 'var(--color-forest-primary)' } : {}),
-                ...(!done && !isToday ? { background: '#F3F4F6', color: '#D1D5DB' } : {}),
-              }}
+                    ? { border: '2px solid #2D6A4F', color: '#2D6A4F', background: 'transparent' }
+                    : { background: '#F3F4F6', color: '#D1D5DB' }
+              }
             >
               {label}
             </div>
@@ -350,16 +346,7 @@ function WeakTopics({ topics = [], onTopicSelect }) {
   );
 }
 
-/** Community proof */
-function CommunityProof() {
-  return (
-    <div className="text-center animate-fade-up" style={{ animationDelay: '300ms' }}>
-      <p className="text-[12px]" style={{ color: 'var(--color-muted-soft)' }}>
-        <span className="font-semibold text-gray-900">847</span> opositores estudiando hoy
-      </p>
-    </div>
-  );
-}
+/* Community proof removed — was showing fake "847 opositores" number */
 
 /** Feature feedback — "¿Qué feature quieres primero?" */
 function FeatureFeedback() {
@@ -608,7 +595,7 @@ export default function SoftFortHome({
           )}
 
           {/* Community */}
-          <CommunityProof />
+          {/* Community proof removed */}
 
           {/* Tip */}
           <TipBox />
@@ -622,7 +609,7 @@ export default function SoftFortHome({
         {!isNewUser && weakTopics.length > 0 && (
           <WeakTopics topics={weakTopics} onTopicSelect={onTopicSelect} />
         )}
-        <CommunityProof />
+        {/* Community proof removed */}
         <TipBox />
       </div>
 
