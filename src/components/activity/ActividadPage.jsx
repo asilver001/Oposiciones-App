@@ -14,11 +14,13 @@ import {
   BookMarked,
   BookOpen,
   Check,
-  Brain
+  Brain,
+  Lock
 } from 'lucide-react';
 import EmptyState from '../common/EmptyState';
 import DevModeRandomizer, { userStates } from '../dev/DevModeRandomizer';
 import { useAuth } from '../../contexts/AuthContext';
+import { usePremium } from '../../hooks/usePremium';
 import { useAnalytics } from '../../hooks/useAnalytics';
 import {
   ReadinessGauge,
@@ -50,7 +52,7 @@ const getStudyModes = (_premiumMode) => [
 /**
  * StudyModesTab - Study mode selection view
  */
-function StudyModesTab({ onSelectMode, selectedMode, onStartSession, onSwipeRight, premiumMode }) {
+function StudyModesTab({ onSelectMode, selectedMode, onStartSession, onSwipeRight, premiumMode, isPremium }) {
   const studyModes = getStudyModes(premiumMode);
 
   return (
@@ -72,7 +74,8 @@ function StudyModesTab({ onSelectMode, selectedMode, onStartSession, onSwipeRigh
       {studyModes.map((mode) => {
         const Icon = mode.icon;
         const isSelected = selectedMode === mode.id;
-        const isDisabled = mode.status !== 'disponible';
+        const isFreeLocked = !isPremium && ['simulacro', 'flashcards'].includes(mode.id);
+        const isDisabled = mode.status !== 'disponible' || isFreeLocked;
 
         return (
           <motion.button
@@ -104,6 +107,11 @@ function StudyModesTab({ onSelectMode, selectedMode, onStartSession, onSwipeRigh
                     )}
                     {mode.status === 'premium' && (
                       <span className="text-xs px-1.5 py-0.5 rounded-full" style={{ background: 'rgba(45,106,79,0.10)', color: '#2D6A4F' }}>★</span>
+                    )}
+                    {isFreeLocked && (
+                      <span className="text-xs px-1.5 py-0.5 rounded-full flex items-center gap-1" style={{ background: 'rgba(245,158,11,0.1)', color: '#92400E' }}>
+                        <Lock className="w-3 h-3" /> Premium
+                      </span>
                     )}
                   </div>
                   <p className="text-xs text-gray-500">{mode.desc} · {mode.time}</p>
@@ -420,6 +428,7 @@ export default function ActividadPage({
   premiumMode = false
 }) {
   const { isAdmin } = useAuth();
+  const { isPremium } = usePremium();
   // Tab state: 0 = Modos (left), 1 = Progreso (right)
   const [activeTab, setActiveTab] = useState(0);
   const [selectedMode, setSelectedMode] = useState(null);
@@ -549,6 +558,7 @@ export default function ActividadPage({
               onStartSession={onStartTest}
               onSwipeRight={() => setActiveTab(1)}
               premiumMode={premiumMode}
+              isPremium={isPremium}
             />
           )}
           {activeTab === 1 && (
