@@ -1,5 +1,50 @@
 [
   {
+    "id": "T5-01",
+    "tema": 5,
+    "temaName": "Gobierno (Ley 50/1997)",
+    "enunciado": "La Constitución Española dedica un artículo específico a regular la composición del Gobierno. ¿De qué artículo se trata?",
+    "opciones": [
+      "El artículo 98, que establece: \"El Gobierno se compone del Presidente, de los Vicepresidentes, en su caso, de los Ministros y de los demás miembros que establezca la ley\".",
+      "El artículo 101, que regula el cese del Gobierno.",
+      "El artículo 102, sobre la responsabilidad criminal de los miembros del Gobierno.",
+      "El artículo 105, relativo a la audiencia de los ciudadanos en el procedimiento administrativo."
+    ],
+    "correcta": 0,
+    "referencia": "Art. 98.1 CE",
+    "explicacion": "La respuesta correcta es la opción A. El artículo 98.1 de la Constitución Española establece textualmente: «El Gobierno se compone del Presidente, de los Vicepresidentes, en su caso, de los Ministros y de los demás miembros que establezca la ley.» El artículo 101 regula el cese del Gobierno (B), el 102 la responsabilidad criminal (C), y el 105 la audiencia ciudadana en procedimientos administrativos (D)."
+  },
+  {
+    "id": "T2-03",
+    "tema": 2,
+    "temaName": "CE: Derechos y Libertades",
+    "enunciado": "El Rey es menor de edad y no existe ninguna persona a quien corresponda la Regencia por derecho propio. Según el artículo 59.3 de la Constitución Española, ¿quién nombra la Regencia y cómo debe componerse?",
+    "opciones": [
+      "Las Cortes Generales, pudiendo componerse de una, tres o cinco personas",
+      "El Gobierno, necesariamente de tres personas",
+      "Las Cortes Generales, obligatoriamente de tres o cinco personas",
+      "El Consejo de Estado, con un número impar de miembros"
+    ],
+    "correcta": 0,
+    "referencia": "Art. 59.3 CE",
+    "explicacion": "La respuesta correcta es la opción A. El artículo 59.3 de la CE establece textualmente: «Si no hubiere ninguna persona a quien corresponda la Regencia, ésta será nombrada por las Cortes Generales, y se compondrá de una, tres o cinco personas». Corresponde a las Cortes (no al Gobierno ni al Consejo de Estado), y puede tener 1, 3 o 5 miembros."
+  },
+  {
+    "id": "T9-02",
+    "tema": 9,
+    "temaName": "LPAC (Ley 39/2015)",
+    "enunciado": "El artículo 145 de la Constitución Española hace referencia a la federación de Comunidades Autónomas, estableciendo que:",
+    "opciones": [
+      "Los Estatutos de Autonomía podrán prever los supuestos, requisitos y términos en que podrán crearse.",
+      "La federación de Comunidades Autónomas necesitará la autorización de las Cortes Generales.",
+      "En ningún caso se admitirá la federación de Comunidades Autónomas.",
+      "Solo podrá autorizarse la federación de Comunidades Autónomas por el Senado cuando esté prevista en los respectivos Estatutos de Autonomía."
+    ],
+    "correcta": 2,
+    "referencia": "Art. 145.1 CE",
+    "explicacion": "El artículo 145.1 de la Constitución Española establece taxativamente: «En ningún caso se admitirá la federación de Comunidades Autónomas.» El apartado 2 del mismo artículo regula los convenios entre CCAA, pero la federación está absolutamente prohibida por la Constitución Española."
+  },
+  {
     "id": "T1-01",
     "tema": 1,
     "temaName": "CE: Título Preliminar y Título I",
@@ -13,6 +58,21 @@
     "correcta": 1,
     "referencia": "Art. 159.3 CE",
     "explicacion": "El artículo 159.3 establece que los miembros del Tribunal Constitucional serán designados por un período de nueve años y se renovarán por terceras partes cada tres."
+  },
+  {
+    "id": "T1-06",
+    "tema": 1,
+    "temaName": "CE: Título Preliminar y Título I",
+    "enunciado": "Según el artículo 25.3 de la Constitución Española, ¿qué tipo de sanciones NO puede imponer la Administración civil?",
+    "opciones": [
+      "Sanciones pecuniarias superiores a 3.000 euros, salvo que lo autorice una Ley Orgánica.",
+      "Sanciones que, directa o subsidiariamente, impliquen privación de libertad.",
+      "Sanciones de inhabilitación para el ejercicio de actividades profesionales reguladas.",
+      "Sanciones de cierre temporal de establecimientos comerciales por infracciones graves."
+    ],
+    "correcta": 1,
+    "referencia": "Art. 25.3 CE",
+    "explicacion": "La respuesta correcta es la opción B. El artículo 25.3 de la CE establece textualmente: «La Administración civil no podrá imponer sanciones que, directa o subsidiariamente, impliquen privación de libertad». Esta prohibición es absoluta, sin excepciones posibles. La privación de libertad es competencia exclusiva de los órganos jurisdiccionales (Art. 17 CE). La Administración sí puede imponer sanciones pecuniarias, inhabilitaciones y cierres."
   },
   {
     "id": "T1-02",
@@ -75,21 +135,6 @@
     "explicacion": "La respuesta correcta es la opción A. El artículo 55.2 CE establece textualmente que pueden suspenderse individualmente «los derechos reconocidos en los artículos 17, apartado 2, y 18, apartados 2 y 3» para personas determinadas en investigaciones de bandas armadas o terrorismo. Son tres derechos: plazo de detención preventiva (17.2), inviolabilidad del domicilio (18.2) y secreto de comunicaciones (18.3). La asistencia letrada (17.3) NO se incluye en el Art. 55.2."
   },
   {
-    "id": "T1-06",
-    "tema": 1,
-    "temaName": "CE: Título Preliminar y Título I",
-    "enunciado": "Según el artículo 25.3 de la Constitución Española, ¿qué tipo de sanciones NO puede imponer la Administración civil?",
-    "opciones": [
-      "Sanciones pecuniarias superiores a 3.000 euros, salvo que lo autorice una Ley Orgánica.",
-      "Sanciones que, directa o subsidiariamente, impliquen privación de libertad.",
-      "Sanciones de inhabilitación para el ejercicio de actividades profesionales reguladas.",
-      "Sanciones de cierre temporal de establecimientos comerciales por infracciones graves."
-    ],
-    "correcta": 1,
-    "referencia": "Art. 25.3 CE",
-    "explicacion": "La respuesta correcta es la opción B. El artículo 25.3 de la CE establece textualmente: «La Administración civil no podrá imponer sanciones que, directa o subsidiariamente, impliquen privación de libertad». Esta prohibición es absoluta, sin excepciones posibles. La privación de libertad es competencia exclusiva de los órganos jurisdiccionales (Art. 17 CE). La Administración sí puede imponer sanciones pecuniarias, inhabilitaciones y cierres."
-  },
-  {
     "id": "T1-07",
     "tema": 1,
     "temaName": "CE: Título Preliminar y Título I",
@@ -148,21 +193,6 @@
     "correcta": 0,
     "referencia": "Art. 167.2 CE",
     "explicacion": "Art. 167.2 CE: de no lograrse la aprobación por 3/5, y siempre que el texto hubiere obtenido el voto favorable de la mayoría absoluta del Senado, el Congreso, por mayoría de dos tercios, podrá aprobar la reforma. Es un mecanismo subsidiario que refuerza la posición del Congreso."
-  },
-  {
-    "id": "T2-03",
-    "tema": 2,
-    "temaName": "CE: Derechos y Libertades",
-    "enunciado": "El Rey es menor de edad y no existe ninguna persona a quien corresponda la Regencia por derecho propio. Según el artículo 59.3 de la Constitución Española, ¿quién nombra la Regencia y cómo debe componerse?",
-    "opciones": [
-      "Las Cortes Generales, pudiendo componerse de una, tres o cinco personas",
-      "El Gobierno, necesariamente de tres personas",
-      "Las Cortes Generales, obligatoriamente de tres o cinco personas",
-      "El Consejo de Estado, con un número impar de miembros"
-    ],
-    "correcta": 0,
-    "referencia": "Art. 59.3 CE",
-    "explicacion": "La respuesta correcta es la opción A. El artículo 59.3 de la CE establece textualmente: «Si no hubiere ninguna persona a quien corresponda la Regencia, ésta será nombrada por las Cortes Generales, y se compondrá de una, tres o cinco personas». Corresponde a las Cortes (no al Gobierno ni al Consejo de Estado), y puede tener 1, 3 o 5 miembros."
   },
   {
     "id": "T2-04",
@@ -448,21 +478,6 @@
     "correcta": 0,
     "referencia": "Art. 161.2 CE",
     "explicacion": "La respuesta correcta es la opción A. El artículo 161.2 de la CE establece textualmente: «La impugnación producirá la suspensión de la disposición o resolución recurrida, pero el Tribunal, en su caso, deberá ratificarla o levantarla en un plazo no superior a cinco meses.» Son cinco meses (opción A), no tres (opción B), ni seis (opción C), ni un año (opción D)."
-  },
-  {
-    "id": "T5-01",
-    "tema": 5,
-    "temaName": "Gobierno (Ley 50/1997)",
-    "enunciado": "La Constitución Española dedica un artículo específico a regular la composición del Gobierno. ¿De qué artículo se trata?",
-    "opciones": [
-      "El artículo 98, que establece: \"El Gobierno se compone del Presidente, de los Vicepresidentes, en su caso, de los Ministros y de los demás miembros que establezca la ley\".",
-      "El artículo 101, que regula el cese del Gobierno.",
-      "El artículo 102, sobre la responsabilidad criminal de los miembros del Gobierno.",
-      "El artículo 105, relativo a la audiencia de los ciudadanos en el procedimiento administrativo."
-    ],
-    "correcta": 0,
-    "referencia": "Art. 98.1 CE",
-    "explicacion": "La respuesta correcta es la opción A. El artículo 98.1 de la Constitución Española establece textualmente: «El Gobierno se compone del Presidente, de los Vicepresidentes, en su caso, de los Ministros y de los demás miembros que establezca la ley.» El artículo 101 regula el cese del Gobierno (B), el 102 la responsabilidad criminal (C), y el 105 la audiencia ciudadana en procedimientos administrativos (D)."
   },
   {
     "id": "T5-02",
@@ -778,21 +793,6 @@
     "correcta": 2,
     "referencia": "Art. 21 Ley 39/2015",
     "explicacion": "El silencio no elimina el deber de resolver."
-  },
-  {
-    "id": "T9-02",
-    "tema": 9,
-    "temaName": "LPAC (Ley 39/2015)",
-    "enunciado": "El artículo 145 de la Constitución Española hace referencia a la federación de Comunidades Autónomas, estableciendo que:",
-    "opciones": [
-      "Los Estatutos de Autonomía podrán prever los supuestos, requisitos y términos en que podrán crearse.",
-      "La federación de Comunidades Autónomas necesitará la autorización de las Cortes Generales.",
-      "En ningún caso se admitirá la federación de Comunidades Autónomas.",
-      "Solo podrá autorizarse la federación de Comunidades Autónomas por el Senado cuando esté prevista en los respectivos Estatutos de Autonomía."
-    ],
-    "correcta": 2,
-    "referencia": "Art. 145.1 CE",
-    "explicacion": "El artículo 145.1 de la Constitución Española establece taxativamente: «En ningún caso se admitirá la federación de Comunidades Autónomas.» El apartado 2 del mismo artículo regula los convenios entre CCAA, pero la federación está absolutamente prohibida por la Constitución Española."
   },
   {
     "id": "T9-03",

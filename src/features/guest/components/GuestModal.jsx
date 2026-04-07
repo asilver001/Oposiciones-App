@@ -93,10 +93,10 @@ export default function GuestModal({ onClose, onSignup }) {
         onClick={handleClose}
       />
 
-      {/* Modal card */}
+      {/* Modal card — margin on mobile for overlay effect */}
       <div
-        className="relative w-full max-w-[500px] mx-4 overflow-hidden rounded-2xl shadow-2xl"
-        style={{ background: '#FAFAF7', maxHeight: '90vh' }}
+        className="relative w-full max-w-[500px] mx-2 sm:mx-4 overflow-hidden rounded-2xl shadow-2xl"
+        style={{ background: '#FAFAF7', maxHeight: 'calc(100vh - 16px)' }}
       >
         {/* Header */}
         <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100">
@@ -122,7 +122,11 @@ export default function GuestModal({ onClose, onSignup }) {
         </div>
 
         {/* Content — scrollable */}
-        <div className="overflow-y-auto" style={{ maxHeight: 'calc(90vh - 52px)' }}>
+        <div className="overflow-y-auto" style={{ maxHeight: 'calc(100vh - 68px)' }}>
+          {/* Subtitle — only on first question of first session */}
+          {!loading && !showResults && currentIndex === 0 && sessionNumber === 1 && (
+            <p className="text-center text-sm text-gray-400 pt-3 pb-1 px-4">Descubre tu nivel en 2 minutos</p>
+          )}
           {loading ? (
             <div className="flex items-center justify-center py-20">
               <p className="text-gray-400">Cargando...</p>

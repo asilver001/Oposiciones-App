@@ -583,8 +583,14 @@ export default function SoftFortHome({
 
         {/* === RIGHT: Panel (desktop only) === */}
         <div className="hidden lg:block w-[300px] shrink-0 border-l border-black/5 pl-7 space-y-9" style={{ background: 'rgba(255,255,255,0.5)' }}>
-          {/* Mastery */}
-          <MasteryCard mastered={masteredCount} total={1414} />
+          {/* Mastery — hide for guests (desmotivante ver 0/1414) */}
+          {!isNewUser ? (
+            <MasteryCard mastered={masteredCount} total={1414} />
+          ) : (
+            <div className="animate-fade-up text-center py-4" style={{ animationDelay: '120ms' }}>
+              <p className="text-sm text-gray-400">Completa la prueba gratuita para ver tu progreso</p>
+            </div>
+          )}
 
           {/* Weekly */}
           <WeeklyCircles weeklyData={weeklyData} />
@@ -604,7 +610,13 @@ export default function SoftFortHome({
 
       {/* Mobile: Right panel content stacks below */}
       <div className="lg:hidden mt-8 space-y-8">
-        <MasteryCard mastered={masteredCount} total={1414} />
+        {!isNewUser ? (
+          <MasteryCard mastered={masteredCount} total={1414} />
+        ) : (
+          <div className="text-center py-4">
+            <p className="text-sm text-gray-400">Completa la prueba gratuita para ver tu progreso</p>
+          </div>
+        )}
         <WeeklyCircles weeklyData={weeklyData} />
         {!isNewUser && weakTopics.length > 0 && (
           <WeakTopics topics={weakTopics} onTopicSelect={onTopicSelect} />

@@ -99,22 +99,12 @@ export default function HomePage() {
       />
     )}
 
-    {/* Floating "Continuar test" button when modal was dismissed */}
-    {!showGuestModal && modalDismissed && canShowFloating && (
-      <button
-        onClick={() => { reopenGuestModal(); setShowGuestModal(true); setModalDismissed(false); }}
-        className="fixed bottom-24 right-4 z-40 bg-[#2D6A4F] text-white text-sm font-semibold px-4 py-2.5 rounded-full shadow-lg hover:bg-[#1B4332] active:scale-[0.97] transition-all flex items-center gap-2"
-      >
-        📝 Continuar test gratuito
-      </button>
-    )}
-
     <SoftFortHome
       showTopBar={false}
-      userName={user?.user_metadata?.name || (() => {
-        const raw = user?.email?.split('@')[0] || 'Usuario';
+      userName={user ? (user.user_metadata?.name || (() => {
+        const raw = user.email?.split('@')[0] || 'Usuario';
         return raw.charAt(0).toUpperCase() + raw.slice(1).replace(/[0-9]+$/, '');
-      })()}
+      })()) : 'bienvenido/a'}
       totalStats={totalStats}
       weeklyImprovement={weeklyImprovement}
       weeklyData={weeklyData}
