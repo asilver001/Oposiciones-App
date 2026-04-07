@@ -19,7 +19,7 @@ export default function GuestLock({ children, message = 'Crea una cuenta para ac
         >
           Crear cuenta gratis
         </a>
-        <p className="text-xs text-gray-400 mt-2">Sin tarjeta · Acceso fundador</p>
+        <p className="text-xs text-gray-400 mt-2">Sin tarjeta · Gratis para empezar</p>
       </div>
 
       {/* Faded content preview */}

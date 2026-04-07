@@ -17,7 +17,7 @@ const ITEMS = [
   { num: '5 min',  lines: ['al día', 'es suficiente'] },
   { num: '1.414',  lines: ['preguntas', 'AGE verificadas'] },
   { num: '14',     lines: ['temas del', 'programa oficial'] },
-  { num: '0€',     lines: ['acceso', 'fundador'] },
+  { num: '0€',     lines: ['para', 'empezar'] },
 ];
 
 export default function SocialStrip() {

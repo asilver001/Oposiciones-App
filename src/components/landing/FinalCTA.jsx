@@ -88,7 +88,7 @@ export default function FinalCTA({ onStart }) {
               lineHeight: 1.5,
             }}
           >
-            Acceso fundador gratuito · Siempre podrás exportar tus datos · Sin trucos
+            Empieza gratis · Siempre podrás exportar tus datos · Sin trucos
           </p>
         </div>
       </section>
