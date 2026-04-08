@@ -6,6 +6,7 @@
 
 import { useNavigate, useLocation, Navigate } from 'react-router-dom';
 import LoginForm from '../../components/auth/LoginForm';
+import HomePage from '../app/HomePage';
 import { useAuth } from '../../contexts/AuthContext';
 import { ROUTES } from '../../router/routes';
 
@@ -44,13 +45,20 @@ export default function LoginPage() {
   };
 
   return (
-    <LoginForm
-      onLogin={handleLogin}
-      onGoogleLogin={signInWithGoogle}
-      onMagicLink={signInWithMagicLink}
-      onGoToSignUp={handleGoToSignUp}
-      onForgotPassword={handleForgotPassword}
-      onBack={handleBack}
-    />
+    <>
+      {/* Home page visible behind the modal */}
+      <div className="pointer-events-none" aria-hidden="true">
+        <HomePage />
+      </div>
+      {/* Login modal overlay */}
+      <LoginForm
+        onLogin={handleLogin}
+        onGoogleLogin={signInWithGoogle}
+        onMagicLink={signInWithMagicLink}
+        onGoToSignUp={handleGoToSignUp}
+        onForgotPassword={handleForgotPassword}
+        onBack={handleBack}
+      />
+    </>
   );
 }

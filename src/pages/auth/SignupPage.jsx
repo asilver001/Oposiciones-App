@@ -6,6 +6,7 @@
 
 import { useNavigate } from 'react-router-dom';
 import SignUpForm from '../../components/auth/SignUpForm';
+import HomePage from '../app/HomePage';
 import { useAuth } from '../../contexts/AuthContext';
 import { ROUTES } from '../../router/routes';
 
@@ -30,12 +31,17 @@ export default function SignupPage() {
   };
 
   return (
-    <SignUpForm
-      onSignUp={handleSignUp}
-      onGoogleLogin={signInWithGoogle}
-      onMagicLink={signInWithMagicLink}
-      onGoToLogin={handleGoToLogin}
-      onBack={handleBack}
-    />
+    <>
+      <div className="pointer-events-none" aria-hidden="true">
+        <HomePage />
+      </div>
+      <SignUpForm
+        onSignUp={handleSignUp}
+        onGoogleLogin={signInWithGoogle}
+        onMagicLink={signInWithMagicLink}
+        onGoToLogin={handleGoToLogin}
+        onBack={handleBack}
+      />
+    </>
   );
 }
