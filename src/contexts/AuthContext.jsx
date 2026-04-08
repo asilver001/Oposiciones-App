@@ -168,19 +168,36 @@ export function AuthProvider({ children }) {
     return { data, error: null };
   };
 
-  // Sign in with Google OAuth
+  // Sign in with Google OAuth — popup mode
   const signInWithGoogle = async () => {
     setError(null);
-    const redirectTo = window.location.origin + (import.meta.env.BASE_URL || '/');
-    const { data, error } = await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: { redirectTo }
-    });
-    if (error) {
-      setError(error.message);
-      return { data: null, error };
+    try {
+      const { data, error } = await supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options: {
+          skipBrowserRedirect: true,
+          redirectTo: window.location.origin,
+          queryParams: {
+            prompt: 'select_account',
+          },
+        },
+      });
+      if (error) {
+        setError(error.message);
+        return { data: null, error };
+      }
+      if (data?.url) {
+        window.open(
+          data.url,
+          'google-auth',
+          'width=500,height=600,menubar=no,toolbar=no,location=yes'
+        );
+      }
+      return { data, error: null };
+    } catch (err) {
+      setError(err.message);
+      return { data: null, error: err };
     }
-    return { data, error: null };
   };
 
   // Sign out
