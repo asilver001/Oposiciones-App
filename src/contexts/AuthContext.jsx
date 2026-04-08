@@ -187,10 +187,13 @@ export function AuthProvider({ children }) {
         return { data: null, error };
       }
       if (data?.url) {
+        const w = 500, h = 600;
+        const left = window.screenX + (window.outerWidth - w) / 2;
+        const top = window.screenY + (window.outerHeight - h) / 2;
         window.open(
           data.url,
           'google-auth',
-          'width=500,height=600,menubar=no,toolbar=no,location=yes'
+          `width=${w},height=${h},left=${left},top=${top},menubar=no,toolbar=no,location=yes`
         );
       }
       return { data, error: null };
