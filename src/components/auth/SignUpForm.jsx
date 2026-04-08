@@ -54,8 +54,8 @@ export default function SignUpForm({
 
   if (magicLinkSent) {
     return (
-      <div className="min-h-screen flex items-center justify-center p-6" style={{ background: '#F3F3F0' }}>
-        <div className="bg-white rounded-[24px] p-8 max-w-md w-full text-center" style={{ boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}>
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ background: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }}>
+        <div className="bg-white rounded-2xl p-8 max-w-[440px] w-full text-center" style={{ boxShadow: '0 8px 32px rgba(0,0,0,0.12)' }}>
           <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5" style={{ background: 'rgba(45,106,79,0.10)' }}>
             <CheckCircle className="w-8 h-8" style={{ color: '#2D6A4F' }} />
           </div>
@@ -75,8 +75,15 @@ export default function SignUpForm({
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-6" style={{ background: '#F3F3F0' }}>
-      <div className="bg-white rounded-[24px] p-8 max-w-md w-full" style={{ boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}>
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ background: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }}>
+      <div className="bg-white rounded-2xl p-8 max-w-[440px] w-full relative max-h-[90vh] overflow-y-auto" style={{ boxShadow: '0 8px 32px rgba(0,0,0,0.12)' }}>
+        <button
+          onClick={onBack || (() => window.history.back())}
+          className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors text-gray-400 hover:text-gray-600"
+          aria-label="Cerrar"
+        >
+          ✕
+        </button>
         {onBack && (
           <button onClick={onBack} className="mb-6 flex items-center gap-2 text-gray-500 hover:text-gray-700 text-sm">
             <ArrowLeft className="w-4 h-4" /> Volver
