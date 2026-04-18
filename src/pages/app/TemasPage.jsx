@@ -74,6 +74,23 @@ export default function TemasPage() {
     });
   }, [topics, userProgress]);
 
+  const useEditorial =
+    typeof window !== 'undefined' && localStorage.getItem('home-design') !== 'legacy';
+
+  // Editorial design: render list view full-bleed, no view toggles (list is the
+  // primary reading experience; roadmap/dendrite are DevPanel features).
+  if (useEditorial) {
+    return (
+      <TemasListView
+        topics={topics}
+        topicsByBlock={topicsByBlock}
+        userProgress={userProgress}
+        loading={loading}
+        onTopicSelect={handleTopicSelect}
+      />
+    );
+  }
+
   const pageContent = (
     <div className="space-y-4 max-w-4xl mx-auto">
       {/* View Toggle */}
