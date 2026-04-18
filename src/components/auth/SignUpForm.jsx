@@ -141,8 +141,8 @@ export default function SignUpForm({
           <button
             type="submit"
             disabled={magicLoading || loading}
-            className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl font-semibold text-white transition-all active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
-            style={{ background: 'linear-gradient(145deg, #1B4332 0%, #2D6A4F 60%, #3A7D5C 100%)' }}
+            className="w-full flex items-center justify-center gap-2 py-3.5 font-medium text-white transition-all active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
+            style={{ background: '#1B4332', letterSpacing: '0.2px' }}
           >
             <Mail className="w-4 h-4" />
             {magicLoading ? 'Enviando...' : 'Enviar enlace mágico'}

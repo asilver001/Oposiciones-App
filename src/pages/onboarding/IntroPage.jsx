@@ -7,16 +7,19 @@
 
 import { useNavigate } from 'react-router-dom';
 import IntroStep from '../../components/onboarding/IntroStep';
+import EditorialIntroStep from '../../components/onboarding/EditorialIntroStep';
 import { ROUTES } from '../../router/routes';
 import SkipOnboarding from '../../components/onboarding/SkipOnboarding';
 import { supabase } from '../../lib/supabase';
+
+const useEditorial = () =>
+  typeof window !== 'undefined' && localStorage.getItem('home-design') !== 'legacy';
 
 export default function IntroPage() {
   const navigate = useNavigate();
 
   const handleStart = async (nombre) => {
     if (nombre) {
-      // Save name to Supabase user_metadata (fire-and-forget)
       supabase.auth.updateUser({
         data: { name: nombre }
       }).catch(() => {});
@@ -32,9 +35,11 @@ export default function IntroPage() {
     navigate(ROUTES.ONBOARDING_FECHA);
   };
 
+  const Step = useEditorial() ? EditorialIntroStep : IntroStep;
+
   return (
     <>
-      <IntroStep
+      <Step
         onStart={handleStart}
         onSkip={handleSkip}
         onBack={handleBack}

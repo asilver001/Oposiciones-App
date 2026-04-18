@@ -7,8 +7,53 @@ export default function GuestResults({ embedded = false, onNext, onClose, onSign
   const guestData = getGuestData();
 
   if (!guestData || guestData.sessions.length === 0) {
-    if (!embedded) navigate('/guest');
-    return null;
+    return (
+      <div
+        style={{
+          minHeight: '100dvh',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '40px 24px',
+          background: '#F3F3F0',
+          fontFamily: '"Instrument Serif", Georgia, serif',
+        }}
+      >
+        <div style={{ maxWidth: 420, textAlign: 'center' }}>
+          <div style={{
+            fontSize: 10, letterSpacing: 2, textTransform: 'uppercase',
+            color: '#8A8783', fontWeight: 500, marginBottom: 14,
+            fontFamily: 'Inter, sans-serif',
+          }}>
+            Sin sesiones todavía
+          </div>
+          <div style={{
+            fontSize: 32, lineHeight: 1.1, color: '#1B4332',
+            fontStyle: 'italic', letterSpacing: -0.8, marginBottom: 16,
+          }}>
+            Empieza tu primera sesión.
+          </div>
+          <p style={{
+            fontSize: 14, color: '#4B5563', lineHeight: 1.55,
+            fontFamily: 'Inter, sans-serif', marginBottom: 32,
+          }}>
+            Tendrás cinco sesiones de prueba antes de decidir si te apuntas.
+          </p>
+          <button
+            onClick={() => (embedded && onNext ? onNext() : navigate('/welcome2'))}
+            style={{
+              background: '#1B4332', color: '#F3F3F0',
+              border: 'none', padding: '14px 28px',
+              fontSize: 13, fontWeight: 500, letterSpacing: 0.3,
+              cursor: 'pointer', fontFamily: 'Inter, sans-serif',
+            }}
+          >
+            Empezar ahora →
+          </button>
+        </div>
+      </div>
+    );
   }
 
   const lastSession = guestData.sessions[guestData.sessions.length - 1];

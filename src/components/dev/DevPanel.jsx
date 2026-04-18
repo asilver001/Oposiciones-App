@@ -35,11 +35,16 @@ export default function DevPanel({
   // Get admin email from user or userRole
   const adminEmail = userRole?.email || user?.email;
 
+  // Hide during onboarding / welcome / auth screens so it doesn't cover CTAs
+  const path = typeof window !== 'undefined' ? window.location.hash.replace('#', '') : '';
+  const hideOnRoute = /^(\/welcome|\/onboarding|\/login|\/signup|\/forgot|\/reset|\/oposicion|\/tiempo|\/fecha|\/intro|\/results)/.test(path);
+  if (hideOnRoute) return null;
+
   if (!isOpen) {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-24 left-4 z-50 w-10 h-10 bg-gray-900/80 hover:bg-gray-900 text-white rounded-full shadow-lg flex items-center justify-center text-xs font-bold"
+        className="fixed bottom-20 right-3 z-50 w-8 h-8 bg-gray-900/70 hover:bg-gray-900 text-white rounded-full shadow-md flex items-center justify-center text-[10px] font-semibold md:bottom-4 md:left-4 md:right-auto md:w-10 md:h-10 md:text-xs"
         title={`Dev Mode - ${adminEmail}`}
       >
         DEV
@@ -48,7 +53,7 @@ export default function DevPanel({
   }
 
   return (
-    <div className="fixed bottom-24 left-4 z-50 bg-gray-900/95 rounded-2xl p-4 shadow-2xl min-w-[220px]">
+    <div className="fixed bottom-20 right-3 z-50 bg-gray-900/95 rounded-2xl p-4 shadow-2xl min-w-[220px] md:bottom-4 md:left-4 md:right-auto">
       <div className="flex items-center justify-between mb-3">
         <div>
           <span className="text-white font-semibold text-sm">🛠️ Dev Tools</span>

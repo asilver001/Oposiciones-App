@@ -157,8 +157,8 @@ export default function LoginForm({
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3.5 rounded-2xl font-semibold text-white transition-all active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
-            style={{ background: 'linear-gradient(145deg, #1B4332 0%, #2D6A4F 60%, #3A7D5C 100%)' }}
+            className="w-full py-3.5 font-medium text-white transition-all active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
+            style={{ background: '#1B4332', letterSpacing: '0.2px' }}
           >
             {loading ? 'Entrando...' : 'Iniciar sesión'}
           </button>

@@ -258,7 +258,7 @@ function ActividadDesktop({ stats, recentSessions, heatmap, monthLabels, topicBa
           <EditorialStat value={stats.streak} label="racha actual" size={58} delay={200} />
           <EditorialStat value={stats.daysActive} suffix={`/${stats.periodDays}`} label="días activos" size={58} delay={300} color={OS.inkSoft} />
           <EditorialStat value={stats.totalQuestions} label="preguntas" size={58} delay={400} color={OS.muted} />
-          <EditorialStat value={stats.accuracy} suffix="%" label="precisión media" size={58} delay={500} color={OS.gold} />
+          <EditorialStat value={stats.accuracy} suffix="%" label="precisión media" size={58} delay={500} color={OS.ink} />
         </div>
 
         <div style={{ marginTop: 44 }}>

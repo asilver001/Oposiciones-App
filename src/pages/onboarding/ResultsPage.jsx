@@ -8,6 +8,10 @@ import { useNavigate } from 'react-router-dom';
 import { useUserStore } from '../../stores/useUserStore';
 import { ROUTES } from '../../router/routes';
 import { CheckCircle, Calendar, Clock, Sparkles } from 'lucide-react';
+import EditorialResultsStep from '../../components/onboarding/EditorialResultsStep';
+
+const useEditorial = () =>
+  typeof window !== 'undefined' && localStorage.getItem('home-design') !== 'legacy';
 
 export default function ResultsPage() {
   const navigate = useNavigate();
@@ -17,6 +21,10 @@ export default function ResultsPage() {
     completeOnboarding();
     navigate(ROUTES.FIRST_TEST);
   };
+
+  if (useEditorial()) {
+    return <EditorialResultsStep userData={userData} onStart={handleStart} />;
+  }
 
   const features = [
     { icon: Sparkles, text: 'Repeticion espaciada inteligente' },

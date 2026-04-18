@@ -14,121 +14,228 @@ export default function ForgotPasswordForm({
 
   const validateForm = () => {
     setLocalError('');
-
     if (!email.trim()) {
       setLocalError('El email es obligatorio');
       return false;
     }
-
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setLocalError('El email no es válido');
       return false;
     }
-
     return true;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (!validateForm()) return;
-
     const result = await onResetPassword(email);
-
-    if (result && !result.error) {
-      setSuccess(true);
-    } else if (result?.error) {
-      setLocalError(result.error.message || 'Error al enviar el email');
-    }
+    if (result && !result.error) setSuccess(true);
+    else if (result?.error) setLocalError(result.error.message || 'Error al enviar el email');
   };
+
+  const paper = '#F3F3F0';
+  const ink = '#1B4332';
+  const inkSoft = '#2D6A4F';
+  const rule = 'rgba(27,67,50,0.12)';
+  const muted = '#8A8783';
+  const serif = '"Instrument Serif", Georgia, serif';
+
+  // Shared page shell
+  const Shell = ({ children }) => (
+    <div style={{
+      minHeight: '100vh',
+      padding: '44px 24px 32px',
+      background: paper,
+      display: 'flex',
+      flexDirection: 'column',
+      fontFamily: 'Inter, sans-serif',
+      color: '#2A2A28',
+    }}>
+      <div style={{
+        maxWidth: 520,
+        width: '100%',
+        margin: '0 auto',
+        display: 'flex',
+        flexDirection: 'column',
+        flex: 1,
+      }}>
+        {children}
+      </div>
+    </div>
+  );
 
   if (success) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center p-6">
-        <div className="bg-white rounded-3xl p-8 border border-gray-100 max-w-md w-full text-center">
-          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <CheckCircle className="w-8 h-8 text-green-600" />
+      <Shell>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+          <div style={{ fontSize: 10, letterSpacing: 2, textTransform: 'uppercase', color: muted, fontWeight: 500 }}>
+            Recuperación enviada
           </div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-3">¡Email enviado!</h2>
-          <p className="text-gray-600 mb-6">
-            Hemos enviado un enlace de recuperación a <strong>{email}</strong>
-          </p>
-          <p className="text-sm text-gray-500 mb-6">
-            Revisa tu bandeja de entrada (y la carpeta de spam) y sigue las instrucciones para restablecer tu contraseña.
-          </p>
+        </div>
+        <div style={{ height: 1, background: ink, marginTop: 10, opacity: 0.85 }} />
+
+        <div style={{ marginTop: 56 }}>
+          <div style={{
+            width: 48, height: 48, borderRadius: '50%',
+            background: 'rgba(45,106,79,0.10)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            marginBottom: 24,
+          }}>
+            <CheckCircle style={{ width: 22, height: 22, color: inkSoft }} />
+          </div>
+          <div style={{ fontSize: 10, letterSpacing: 2, textTransform: 'uppercase', color: muted, marginBottom: 12, fontWeight: 500 }}>
+            ¡Email enviado!
+          </div>
+          <div style={{
+            fontFamily: serif, fontSize: 36, fontStyle: 'italic',
+            color: ink, letterSpacing: -0.9, lineHeight: 1.1,
+          }}>
+            Revisa tu <span style={{ color: inkSoft, fontStyle: 'normal' }}>buzón</span>.
+          </div>
+          <div style={{ fontSize: 14, color: '#4B5563', marginTop: 16, lineHeight: 1.55 }}>
+            Hemos enviado un enlace de recuperación a <b style={{ color: ink }}>{email}</b>.
+            Si no lo ves en unos minutos, revisa la carpeta de spam.
+          </div>
+        </div>
+
+        <div style={{ flex: 1 }} />
+
+        <div style={{ marginTop: 28 }}>
           <button
             onClick={onGoToLogin}
-            className="w-full bg-gray-900 hover:bg-gray-800 text-white font-bold py-4 rounded-2xl transition-all"
+            style={{
+              width: '100%', background: ink, color: paper,
+              border: 'none', padding: '16px 18px',
+              fontSize: 13, fontWeight: 500, letterSpacing: 0.3,
+              cursor: 'pointer', fontFamily: 'Inter, sans-serif',
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+            }}
           >
-            Volver a iniciar sesión
+            <span>Volver a iniciar sesión</span>
+            <span aria-hidden="true">→</span>
           </button>
         </div>
-      </div>
+      </Shell>
     );
   }
 
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center p-6">
-      <div className="bg-white rounded-3xl p-8 border border-gray-100 max-w-md w-full">
-        {onBack && (
-          <button onClick={onBack} className="mb-4 text-gray-600 flex items-center gap-2 hover:text-gray-800">
-            <ArrowLeft className="w-5 h-5" /> Volver
-          </button>
-        )}
+    <Shell>
+      {onBack && (
+        <button
+          onClick={onBack}
+          style={{
+            background: 'none', border: 'none', color: muted,
+            fontSize: 12, letterSpacing: 0.3, cursor: 'pointer',
+            marginBottom: 16, padding: 0, display: 'flex', alignItems: 'center', gap: 6,
+            fontFamily: 'Inter, sans-serif',
+          }}
+        >
+          <ArrowLeft style={{ width: 14, height: 14 }} /> Volver
+        </button>
+      )}
 
-        <div className="text-center mb-6">
-          <div className="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <Mail className="w-8 h-8 text-gray-600" />
-          </div>
-          <h2 className="text-2xl font-semibold text-gray-900 mb-2">Recuperar contraseña</h2>
-          <p className="text-gray-500">Te enviaremos un enlace para restablecer tu contraseña</p>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+        <div style={{ fontSize: 10, letterSpacing: 2, textTransform: 'uppercase', color: muted, fontWeight: 500 }}>
+          Recuperar contraseña
+        </div>
+      </div>
+      <div style={{ height: 1, background: ink, marginTop: 10, opacity: 0.85 }} />
+
+      <div style={{ marginTop: 44 }}>
+        <div style={{ fontSize: 10, letterSpacing: 2, textTransform: 'uppercase', color: muted, marginBottom: 12, fontWeight: 500 }}>
+          Restablecer
+        </div>
+        <div style={{
+          fontFamily: serif, fontSize: 36, fontStyle: 'italic',
+          color: ink, letterSpacing: -0.9, lineHeight: 1.1,
+        }}>
+          ¿Olvidaste tu <span style={{ color: inkSoft, fontStyle: 'normal' }}>contraseña</span>?
+        </div>
+        <div style={{ fontSize: 13, color: '#4B5563', marginTop: 14, lineHeight: 1.55 }}>
+          Ponnos tu email y te enviaremos un enlace para crear una nueva.
+        </div>
+      </div>
+
+      <form onSubmit={handleSubmit} style={{ marginTop: 36 }}>
+        <div style={{ fontSize: 10, letterSpacing: 2, textTransform: 'uppercase', color: muted, marginBottom: 10, fontWeight: 500 }}>
+          Email
+        </div>
+        <div style={{ position: 'relative' }}>
+          <Mail style={{
+            position: 'absolute', left: 0, top: '50%', transform: 'translateY(-50%)',
+            width: 16, height: 16, color: muted,
+          }} />
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="tu@email.com"
+            required
+            autoFocus
+            style={{
+              width: '100%',
+              background: 'transparent',
+              border: 'none',
+              borderBottom: `1px solid ${rule}`,
+              padding: '12px 0 12px 26px',
+              fontSize: 16,
+              color: ink,
+              outline: 'none',
+              fontFamily: 'Inter, sans-serif',
+            }}
+            onFocus={(e) => { e.target.style.borderBottomColor = ink; }}
+            onBlur={(e) => { e.target.style.borderBottomColor = rule; }}
+          />
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Email field */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-            <div className="relative">
-              <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="tu@email.com"
-                required
-                className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-gray-900 focus:outline-none transition"
-              />
-            </div>
+        {(localError || error) && (
+          <div style={{
+            display: 'flex', alignItems: 'center', gap: 8,
+            color: '#C67D5E', marginTop: 16, fontSize: 12,
+          }}>
+            <AlertCircle style={{ width: 14, height: 14, flexShrink: 0 }} />
+            <span>{localError || error}</span>
           </div>
+        )}
 
-          {/* Error message */}
-          {(localError || error) && (
-            <div className="flex items-center gap-2 text-red-600 bg-red-50 p-3 rounded-xl">
-              <AlertCircle className="w-5 h-5 flex-shrink-0" />
-              <p className="text-sm">{localError || error}</p>
-            </div>
-          )}
-
-          {/* Submit button */}
+        <div style={{ marginTop: 28 }}>
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-gray-900 hover:bg-gray-800 disabled:bg-gray-400 text-white font-bold py-4 rounded-2xl transition-all disabled:cursor-not-allowed"
+            style={{
+              width: '100%',
+              background: loading ? muted : ink,
+              color: paper,
+              border: 'none', padding: '16px 18px',
+              fontSize: 13, fontWeight: 500, letterSpacing: 0.3,
+              cursor: loading ? 'not-allowed' : 'pointer',
+              fontFamily: 'Inter, sans-serif',
+              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+            }}
           >
-            {loading ? 'Enviando...' : 'Enviar enlace de recuperación'}
+            <span>{loading ? 'Enviando...' : 'Enviar enlace de recuperación'}</span>
+            {!loading && <span aria-hidden="true">→</span>}
           </button>
-        </form>
-
-        {/* Links */}
-        <div className="mt-6">
-          <p className="text-center text-gray-600">
-            ¿Recordaste tu contraseña?{' '}
-            <button onClick={onGoToLogin} className="text-gray-600 font-semibold hover:underline">
-              Iniciar sesión
-            </button>
-          </p>
         </div>
+      </form>
+
+      <div style={{ flex: 1 }} />
+
+      <div style={{ marginTop: 28, textAlign: 'center', fontSize: 13, color: '#4B5563' }}>
+        ¿Te acuerdas ya?{' '}
+        <button
+          onClick={onGoToLogin}
+          style={{
+            background: 'none', border: 'none', color: ink,
+            fontWeight: 500, cursor: 'pointer', padding: 0,
+            textDecoration: 'underline', textUnderlineOffset: 3,
+            fontFamily: 'Inter, sans-serif',
+          }}
+        >
+          Iniciar sesión
+        </button>
       </div>
-    </div>
+    </Shell>
   );
 }

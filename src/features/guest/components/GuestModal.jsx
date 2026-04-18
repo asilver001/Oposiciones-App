@@ -24,7 +24,7 @@ export default function GuestModal({ onClose, onSignup }) {
       if (!guestData) {
         guestData = initGuestData('2026-06-13');
       }
-      const res = await fetch('/guest-questions.json');
+      const res = await fetch(`${import.meta.env.BASE_URL || '/'}guest-questions.json`);
       const pool = await res.json();
       const num = guestData.totalSessions + 1;
       setSessionNumber(num);
@@ -75,7 +75,7 @@ export default function GuestModal({ onClose, onSignup }) {
         onSignup?.();
         return;
       }
-      const res = await fetch('/guest-questions.json');
+      const res = await fetch(`${import.meta.env.BASE_URL || '/'}guest-questions.json`);
       const pool = await res.json();
       const num = (guestData?.totalSessions || 0) + 1;
       setSessionNumber(num);

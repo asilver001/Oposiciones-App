@@ -22,7 +22,7 @@ export default function GuestSession() {
         navigate('/guest/signup');
         return;
       }
-      const res = await fetch('/guest-questions.json');
+      const res = await fetch(`${import.meta.env.BASE_URL || '/'}guest-questions.json`);
       const pool = await res.json();
       const num = guestData.totalSessions + 1;
       setSessionNumber(num);

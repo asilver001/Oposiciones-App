@@ -134,7 +134,7 @@ export default function DesktopSidebar({
           onClick={onOpenSettings}
           className={`
             w-full flex items-center gap-3 px-3 py-2.5 rounded-md
-            text-[#B5B3AF] hover:bg-[#FAFAF7] hover:text-gray-700
+            text-[#B5B3AF] hover:bg-[rgba(27,67,50,0.04)] hover:text-gray-700
             transition-colors duration-150
             ${collapsed ? 'justify-center' : ''}
           `}
