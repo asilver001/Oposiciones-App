@@ -388,70 +388,264 @@ muestra en el panel de revisión y permite filtrar preguntas por artículo.
 
 ---
 
-## Workflow de Creación de Preguntas Tier S
+## Formato Examen Real (Patrón Academias — Jun 2026)
 
-### Fase 1: Redacción del Enunciado
+Basado en análisis de preguntas de academias en grupos de Telegram (17K+ miembros).
+Estas preguntas tienen 400-800 respuestas cada una — son el formato que los opositores esperan.
+
+### Regla de citación de fuente (basada en exámenes oficiales GEL)
+
+- **Preguntas sobre la CE**: Mezclar "de la CE" (50%) y "de la Constitución Española" (50%). A veces con año ("de 1978"), a veces sin.
+- **Preguntas sobre otras leyes**: SIEMPRE citar con número + fecha + nombre: "Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público"
+- **NUNCA** decir "CE" cuando la pregunta es sobre otra ley
+- **Ocasionalmente** (5%): pregunta directa sin citar fuente — "¿Cuál es la respuesta correcta respecto al orden de sucesión a la Corona?"
+
+### 3 formatos de enunciado (usar todos, no solo uno)
+
+**Formato 1 — "Completa la frase del artículo"** (el más usado en exámenes reales)
+```
+"Según el art. 76 de la Ley 39/2015 de 1 de octubre. Señale la respuesta
+que no es correcta. Los interesados en el procedimiento, en cualquier
+momento del mismo podrán alegar los defectos que se produzcan en la
+tramitación, y en especial:"
+
+a) Los que supongan paralización de los plazos preceptivamente señalados.
+b) Los que supongan suspensión de los plazos preceptivamente señalados.
+c) Los que supongan infracción de los plazos preceptivamente señalados.
+d) Los que supongan omisión de trámites que pueden ser subsanados...
+```
+→ Las opciones varían UNA PALABRA (paralización/suspensión/infracción)
+→ Requiere conocer el texto literal
+
+**Formato 2 — "A tenor del artículo X..."** (pregunta directa con referencia)
+```
+"Ley 39/2015. A tenor del artículo 23.1, se podrá acordar de manera
+motivada la ampliación del plazo máximo de resolución y notificación:"
+
+a) No pudiendo ser superior al establecido para la tramitación.
+b) No pudiendo ser superior a la mitad del establecido.
+c) No pudiendo ser superior al doble del establecido.
+d) Siendo éste el que considere el instructor...
+```
+→ Cita ley + artículo + parafrasea el inicio del artículo
+→ Opciones son variaciones del mismo concepto
+
+**Formato 3 — "¿Quién/qué/cuándo según...?"** (pregunta directa)
+```
+"Según el artículo 123.2 de la Constitución Española,
+¿quién nombra al Presidente del Tribunal Supremo?"
+```
+→ Más simple pero SIEMPRE con artículo en el enunciado
+
+### Regla: Opciones con variación mínima
+
+Las opciones deben diferir en UNA o DOS palabras/datos, no ser frases completamente distintas:
 
 ```
-1. Empezar con referencia legal: "Según el artículo X de la [ley completa]..."
-   o con contexto temático: "En relación con [tema específico]..."
-2. Formular pregunta completa (≥80 caracteres)
-3. Si se pide "señale la falsa/correcta", SIEMPRE especificar sobre qué
-4. Primera mención de cualquier institución/ley = nombre completo
-   - Después se puede abreviar entre paréntesis: "...del Consejo General
-     del Poder Judicial (CGPJ)..."
+❌ MALO (opciones muy diferentes — se puede deducir):
+a) El Rey nombra al Presidente del TS
+b) El CGPJ elige a todos los jueces
+c) El Congreso vota a los magistrados
+d) El Gobierno designa al Fiscal General
+
+✅ BUENO (variación mínima — requiere saber el texto):
+a) A propuesta del Consejo General del Poder Judicial
+b) A propuesta del Presidente del Gobierno
+c) A propuesta de las Cortes Generales
+d) A propuesta del Ministerio de Justicia
 ```
 
-### Fase 2: Diseño de Opciones
+### Regla: "Señale la incorrecta" siempre en MAYÚSCULAS
 
 ```
-1. La opción correcta debe usar el texto legal exacto o muy cercano
-2. Los distractores deben explotar errores reales de opositores:
-   - Confundir artículos cercanos (Art. 23.1 vs 23.2)
-   - Confundir instituciones similares (Congreso vs Cortes)
-   - Cambiar un dato numérico (5 años vs 4 años, 3/5 vs 2/3)
-   - Atribuir competencias al órgano equivocado
-3. Longitud similar entre todas las opciones
-4. Evitar que la correcta sea siempre la más larga
+❌ "señale la falsa:"
+✅ "Señale la respuesta que NO es correcta:"
+✅ "señale la afirmación INCORRECTA:"
 ```
 
-### Fase 3: Explicación
+---
+
+## Proceso CERO ERRORES (Obligatorio)
+
+**REGLA DE ORO:** Si no puedes verificar la respuesta contra el texto literal del BOE, la pregunta NO se publica. Sin excepciones.
+
+### Paso 1 — FETCH: Obtener texto literal (SOLO FUENTES OFICIALES)
 
 ```
-1. OBLIGATORIA - nunca dejar vacía
-2. Estructura mínima:
-   a) Citar artículo específico (Art. + apartado + Ley)
-   b) Explicar por qué la correcta es correcta
-   c) Explicar por qué al menos 1-2 incorrectas son incorrectas
-   d) Señalar el error frecuente si aplica
-3. Longitud objetivo: 80-250 caracteres
+FUENTES PERMITIDAS (únicas válidas para verificar):
+  ✅ BOE textos consolidados: https://www.boe.es/buscar/act.php?id=BOE-A-XXXX
+  ✅ BOE artículo específico: https://www.boe.es/buscar/act.php?id=BOE-A-XXXX&p=YYYYMMDD&tn=1#aNN
+  ✅ EUR-Lex (Derecho UE): https://eur-lex.europa.eu/
+  ✅ BOE PDFs originales: https://www.boe.es/boe/dias/YYYY/MM/DD/
+
+FUENTES PROHIBIDAS (NUNCA usar para verificar texto legal):
+  ❌ WebSearch genérico (Google, Bing)
+  ❌ Blogs jurídicos: Iberley, Noticias Jurídicas, Wolters Kluwer, Lefebvre
+  ❌ Wikipedia, foros de opositores, academias online
+  ❌ Cualquier fuente que NO sea el BOE o EUR-Lex
+
+PROCESO:
+1. WebFetch DIRECTO al BOE consolidado (NO WebSearch)
+2. COPIAR el texto literal del artículo
+3. PEGAR en campo source_text
+4. Si el BOE no carga o el artículo no se encuentra → BLOQUEADA
+5. NUNCA inferir texto legal de memoria o de fuentes no oficiales
+
+LECCIÓN APRENDIDA (abril 2026):
+  Agentes usando WebSearch encontraban blogs jurídicos (Iberley, Noticias Jurídicas)
+  que contenían texto legal INCORRECTO o DESACTUALIZADO. Ejemplo real:
+  - Un blog decía Art. 166 CE dice "en los términos del artículo 87"
+  - El BOE literal dice "en los términos previstos en los apartados 1 y 2 del artículo 87"
+  - La omisión de "apartados 1 y 2" cambia completamente el sentido jurídico
+  
+  Otro ejemplo: Art. 69 Ley 40/2015 dice "Ministerio de Hacienda y Administraciones
+  Públicas" en el texto consolidado, pero blogs dicen "Ministerio de Política Territorial"
+  (nombre actual del ministerio, NO lo que dice la ley).
+
+INSTRUCCIÓN PARA AGENTES DE VERIFICACIÓN:
+  - El prompt del agente DEBE incluir: "ONLY use WebFetch. NEVER use WebSearch."
+  - El prompt DEBE listar las URLs BOE específicas a consultar
+  - Si el agente devuelve texto de Iberley, Noticias Jurídicas, Wolters Kluwer,
+    o cualquier dominio que no sea boe.es o eur-lex.europa.eu → DESCARTAR resultado
+  - Re-verificar con WebFetch directo al BOE
 ```
 
-### Fase 4: Metadatos
+### Paso 2 — GENERATE: Crear desde texto verificado
 
 ```
-1. Dificultad real (no todo nivel 2):
-   - Nivel 1: Dato directo ("¿Cuántos artículos tiene la CE?")
-   - Nivel 2: Memorización simple (un artículo concreto)
-   - Nivel 3: Comprensión (relacionar artículo con concepto)
-   - Nivel 4: Análisis (comparar procedimientos, detectar excepciones)
-   - Nivel 5: Caso práctico o detalle muy específico
-2. Legal reference: Siempre incluir
-3. Materia y tema: Verificar que coinciden
+Con el texto literal delante:
+1. Usar formato "completa la frase" cuando sea posible
+2. La respuesta correcta DEBE aparecer LITERALMENTE en el texto
+3. Distractores: variar UNA palabra del texto real
+4. No inferir. No interpretar. Si no lo dice → no generar
 ```
 
-### Fase 5: Verificación Pre-Publicación
+### Paso 3 — VERIFY: Revisor hostil (checklist 8 puntos)
 
 ```
-Checklist Tier S:
-[ ] ¿El enunciado se entiende sin leer las opciones?
-[ ] ¿Todas las abreviaciones están expandidas en primera mención?
-[ ] ¿La explicación cita un artículo específico?
-[ ] ¿Los distractores son plausibles (no absurdos)?
-[ ] ¿La dificultad refleja la complejidad real?
-[ ] ¿Hay exactamente una opción correcta?
-[ ] ¿La explicación explica por qué las incorrectas son incorrectas?
-[ ] ¿Un opositor entendería qué se pregunta sin contexto adicional?
+□ 1. ¿El artículo citado EXISTE en esa ley?
+□ 2. ¿La respuesta correcta coincide LITERALMENTE con el texto?
+□ 3. ¿Las opciones incorrectas son REALMENTE incorrectas?
+□ 4. ¿Terminología exacta? ("en su caso" ≠ "en todo caso")
+□ 5. Si dice "señale la incorrecta" → ¿la marcada es la incorrecta?
+□ 6. ¿Respuesta completa? (no falta "salvo...", "excepto...", "en su caso...")
+□ 7. ¿Hay otra pregunta en la DB que contradiga esta?
+□ 8. ¿Se usa la versión VIGENTE de la ley? (post-reformas 2024+)
+```
+
+### Textos legales locales (FUENTE PRIMARIA para verificación)
+
+Los textos consolidados de las leyes principales están descargados en:
+**`.claude/references/leyes/`** — Descargados del BOE el 2026-04-10.
+
+| Ley | Archivo local | Tamaño |
+|-----|--------------|--------|
+| CE 1978 | `CE_1978_constitucion_espanola.txt` | 135 KB |
+| Ley 39/2015 LPAC | `Ley_39_2015_LPAC.txt` | 280 KB |
+| Ley 40/2015 LRJSP | `Ley_40_2015_LRJSP.txt` | 508 KB |
+| Ley 50/1997 Gobierno | `Ley_50_1997_Gobierno.txt` | 73 KB |
+| LOTC (LO 2/1979) | `LO_2_1979_LOTC.txt` | 128 KB |
+| TREBEP (RDLeg 5/2015) | `RDLeg_5_2015_TREBEP.txt` | 229 KB |
+| LOPJ (LO 6/1985) | `LO_6_1985_LOPJ.txt` | 1.2 MB |
+| LRBRL (Ley 7/1985) | `Ley_7_1985_LRBRL.txt` | 409 KB |
+| LO 3/1980 Consejo Estado | `LO_3_1980_Consejo_Estado.txt` | 38 KB |
+| LO 4/1981 Estados Alarma | `LO_4_1981_Estados_Alarma.txt` | 30 KB |
+| LO 2/1980 Referéndum | `LO_2_1980_Referendum.txt` | 25 KB |
+| LO 3/1981 Defensor Pueblo | `LO_3_1981_Defensor_Pueblo.txt` | 35 KB |
+| LOREG (LO 5/1985) | `LO_5_1985_LOREG.txt` | 417 KB |
+| Ley 47/2003 Gral. Presup. | `Ley_47_2003_General_Presupuestaria.txt` | 452 KB |
+| Ley 3/2015 Alto Cargo | `Ley_3_2015_Alto_Cargo.txt` | 71 KB |
+
+**CÓMO USAR para verificación:**
+```
+1. Grep el artículo en el archivo local:
+   Grep "Artículo 63" en .claude/references/leyes/Ley_40_2015_LRJSP.txt
+   
+2. Si el artículo no aparece con "Artículo X", buscar por:
+   - "#aNN" (ancla BOE, ej: "#a63")
+   - Contenido clave del artículo (ej: "Subsecretarios")
+   - Numeración alternativa: "Uno.", "Dos." (leyes orgánicas antiguas)
+
+3. Read el archivo con offset/limit para ver el contexto completo
+
+4. NUNCA confiar en memoria — siempre leer el archivo
+```
+
+**INSTRUCCIÓN PARA AGENTES DE VERIFICACIÓN:**
+```
+El prompt del agente DEBE incluir:
+- "Read .claude/references/leyes/[archivo].txt para verificar"
+- "Usa Grep para encontrar el artículo específico"
+- "NUNCA uses WebSearch ni WebFetch"
+- "Si el artículo no está en los archivos locales → BLOQUEADA"
+```
+
+**Actualización de textos:** Si hay reformas legales, re-descargar del BOE con:
+```bash
+curl -sL "https://www.boe.es/buscar/act.php?id=BOE-A-XXXX-XXXXX" -o /tmp/raw.html
+python /tmp/boe_to_text.py /tmp/raw.html .claude/references/leyes/[nombre].txt
+```
+
+### Batches máximos
+
+- Verificación: 10 preguntas por batch
+- Creación: 5 preguntas por batch
+- NUNCA más — la calidad degrada en lotes grandes
+
+---
+
+## Workflow de Creación de Preguntas Tier S (Actualizado)
+
+### Fase 1: FETCH del artículo (OBLIGATORIO)
+
+```
+1. Identificar artículo y ley
+2. Obtener texto literal del BOE
+3. Si no se puede obtener → NO generar la pregunta
+```
+
+### Fase 2: Redacción del Enunciado
+
+```
+1. PREFERIR formato "completa la frase" cuando el artículo lo permite
+2. SIEMPRE citar artículo + ley en el enunciado
+3. Formular pregunta completa (≥100 caracteres para formato frase)
+4. Si "señale la incorrecta" → en MAYÚSCULAS
+5. Primera mención = nombre completo de ley/institución
+```
+
+### Fase 3: Diseño de Opciones
+
+```
+1. La correcta debe usar texto legal LITERAL o muy cercano
+2. Distractores: cambiar UNA palabra del texto real:
+   - Cambiar el verbo (nombrar → designar → proponer)
+   - Cambiar el sujeto (Consejo de Ministros → Presidente)
+   - Cambiar el número (5 años → 4 años)
+   - Cambiar el calificador (en su caso → en todo caso)
+   - Omitir/añadir "salvo...", "excepto..."
+3. Longitud similar entre TODAS las opciones
+4. NUNCA una opción obviamente absurda (tipo "Mejor le preguntamos a TRUMP")
+```
+
+### Fase 4: Explicación
+
+```
+1. OBLIGATORIA — nunca vacía
+2. Estructura:
+   a) Cita LITERAL del texto del artículo (entre comillas)
+   b) Por qué la correcta coincide con el texto
+   c) Por qué 1-2 incorrectas fallan (qué palabra cambia)
+   d) Error frecuente del opositor si aplica
+3. Longitud: 100-300 caracteres
+```
+
+### Fase 5: Verificación (Paso 3 del proceso CERO ERRORES)
+
+```
+Ejecutar checklist de 8 puntos.
+Si CUALQUIER punto falla → no publicar.
+Guardar source_text + verification_notes + verified_at.
 ```
 
 ---
@@ -1281,5 +1475,86 @@ async function getVariantForSession(questionId) {
 
 ---
 
+---
+
+## Clasificación Obligatoria de Preguntas (Abr 2026)
+
+Toda pregunta creada o importada DEBE incluir estos 4 campos de clasificación:
+
+### Campos
+
+| Campo | Tipo | Valores | Default |
+|-------|------|---------|---------|
+| `nivel` | TEXT[] | `{C2,C1}`, `{C1}`, `{A2}`, `{A1}` | `{C2,C1}` |
+| `capa` | TEXT | ver tabla abajo | `comun` |
+| `exam_level` | INTEGER | 1=básico, 2=intermedio, 3=avanzado | 2 |
+| `validada` | BOOLEAN | true/false | false |
+
+### Valores de `capa`
+
+| Capa | Legislación | Ejemplo |
+|------|-------------|---------|
+| `comun` | CE, LPAC, LRJSP (principios), TREBEP, LOPDGDD, Igualdad, LOTC, LOPJ, Ley 50/1997, LBRL, Transparencia | "Art. 14 CE", "Art. 39/2015" |
+| `age` | Organización AGE central y periférica (Ley 40/2015 Arts 54-80, Delegados, Subdelegados) | "Art. 57 Ley 40/2015", "Delegado del Gobierno" |
+| `age-hacienda` | AEAT, IGAE, Catastro | Preguntas específicas AEAT |
+| `age-iipp` | Instituciones Penitenciarias | Régimen penitenciario |
+| `age-segsocial` | TGSS, INSS, SEPE | Seguridad social |
+| `age-justicia` | Auxilio judicial, gestión procesal | Cuerpos de justicia |
+
+### Reglas de clasificación
+
+**nivel:**
+- CE, LPAC, TREBEP básico, derechos fundamentales → `{C2,C1}`
+- Organización AGE detallada (Directores Insulares, Subdelegados, jerarquía específica) → `{C1}`
+- Por defecto → `{C2,C1}`
+
+**capa:**
+- Si la referencia legal es CE, LOTC, LOPJ, Ley 39/2015, Ley 50/1997, TREBEP, LBRL, LOPDGDD → `comun`
+- Si la referencia legal es Ley 40/2015 Arts 54-80, Ley 2/2014, Ley 3/2015, RD 617/1997 → `age`
+- Si la referencia legal es Ley 40/2015 Arts 83+ (sector público institucional) → `comun`
+
+**exam_level:**
+- Pregunta de memorización directa (¿cuántos artículos tiene la CE?) → `1`
+- Pregunta de comprensión/aplicación (¿qué mayoría se necesita para...?) → `2`
+- Pregunta de análisis/caso práctico (Si un Delegado impugna un acto...) → `3`
+- Mapeo desde difficulty: 1-2→1, 3→2, 4-5→3
+
+**validada:**
+- `true`: referencia legal clara, tema inequívoco, clasificación automática segura
+- `false`: sin referencia legal, tema ambiguo, podría ser comun o age
+
+### Checklist al crear preguntas
+
+```
+[ ] ¿nivel asignado? (¿es para C2, C1, o ambos?)
+[ ] ¿capa correcta? (¿la ley de referencia mapea a comun o age?)
+[ ] ¿exam_level coherente con difficulty?
+[ ] ¿validada = true solo si la clasificación es inequívoca?
+```
+
+### Filtro para producto actual (AGE C2 genérico)
+
+```sql
+WHERE 'C2' = ANY(nivel) 
+  AND capa IN ('comun', 'age') 
+  AND exam_level <= 2
+```
+
+### Distribución actual (Abr 2026)
+
+| Dimensión | Valor | Total |
+|-----------|-------|-------|
+| **capa** comun | Legislación general | 1,229 |
+| **capa** age | Organización AGE | 185 |
+| **nivel** C2+C1 | Ambos niveles | 1,397 |
+| **nivel** solo C1 | Solo C1 | 17 |
+| **exam_level** 1 (básico) | Memorización | 944 |
+| **exam_level** 2 (intermedio) | Comprensión | 369 |
+| **exam_level** 3 (avanzado) | Análisis | 101 |
+| **validada** true | Clasificación segura | 1,413 |
+| **validada** false | Pendiente revisión | 1 |
+
+---
+
 *Documento creado: 2026-02-07*
-*Última actualización: 2026-02-15*
+*Última actualización: 2026-04-08*

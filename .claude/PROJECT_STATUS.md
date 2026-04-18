@@ -6,11 +6,70 @@
 
 ## Estado Actual
 
-**Ultima actualizacion:** 2026-02-23
-**Fase del proyecto:** Beta-Ready (~94% completado) — StudyPlanEngine + weakness analysis + simulacro time tracking
+**Ultima actualizacion:** 2026-04-06
+**Fase del proyecto:** Beta Live (~97% completado) — Dashboard Lovable + Dominio custom + Graph interactivo + BOE scraper
 **Branch actual:** main
-**Publish readiness:** 0 CRITICAL — build OK, lint 0 errors, 9 warnings (pre-existing)
-**Trabajo paralelo:** Migration 014 (FK fix) pendiente de ejecutar en Supabase
+**Publish readiness:** Build OK, lint warnings pre-existentes
+**Dominio:** opositasmart.com (landing) + app.opositasmart.com (webapp) — ambos live
+
+---
+
+## Sprint Abril 2026
+
+### Completado (5-6 abril)
+
+| # | Feature/Fix | Estado |
+|---|-------------|--------|
+| — | Google OAuth configurado (Google Cloud + Supabase) | ✅ |
+| — | Emails desde `noreply@opositasmart.com` via Resend SMTP | ✅ |
+| — | DNS configurado en Cloudflare (DKIM, SPF, DMARC, MX) | ✅ |
+| — | Migration 014 ejecutada (FK UUID→INTEGER, FSRS desbloqueado) | ✅ |
+| — | Landing Page V3 — 12 componentes React (Editorial Serena) | ✅ |
+| — | Landing V3 portada a Astro (opositasmart.com) | ✅ |
+| — | OG tags actualizados para Facebook/WhatsApp sharing | ✅ |
+| — | Composite Readiness Index (cobertura 30% + precisión 40% + simulacros 30%) | ✅ |
+| — | Study flow Editorial Calm (10 componentes actualizados) | ✅ |
+| — | Radar de Oposiciones actualizado (9 convocatorias, 9.695 plazas) | ✅ |
+| — | Notificaciones por email al registrarse usuarios (pg_net + Resend) | ✅ |
+| — | Cron keep-alive Supabase (GitHub Actions cada 4 días) | ✅ |
+| — | Blog "Recta final: plan semana a semana" publicado | ✅ |
+| — | 4 blog posts auditados — 22 experiencias inventadas eliminadas | ✅ |
+| — | Skills `content-radar`, `blog-humano`, `telegram-publish` | ✅ |
+| — | **Custom domain `app.opositasmart.com`** (CNAME Cloudflare → Vercel) | ✅ |
+| — | **Dashboard Lovable redesign** — 2 columnas, panel derecho, design tokens | ✅ |
+| — | **Dual layout** — sidebar desktop + bottom tabs mobile | ✅ |
+| — | **Welcome page redesign** — value props, "Probar gratis", mockup desktop | ✅ |
+| — | **Login form** — email+password primario, Google secundario, magic link terciario | ✅ |
+| — | **Auditoría 295 preguntas** — 8 desactivadas, 17 refs fijas, 30 temas reasignados | ✅ |
+| — | **Temas 6-7 full assessment** — 5 Ley 19/2013→37/2007 corregidas | ✅ |
+| — | **Landing: 3 growth features** — Radar, Guía de Inicio, Test Diagnóstico | ✅ |
+| — | **Radar de Convocatorias** (/radar) — React island, Supabase, filtros, share | ✅ |
+| — | **Grafo de Organismos** (/organismos) — D3 radial tree, 19 organismos, 10 ministerios | ✅ |
+| — | **Grafo CivLab-style** — formas por nivel, distribución uniforme, rotación al seleccionar | ✅ |
+| — | **URLs compartibles** por organismo (/organismos?org=aeat) | ✅ |
+| — | **Header nav actualizado** — Convocatorias + Organismos + Blog + Método | ✅ |
+| — | **SEO** — FAQPage schema, WebSite schema, keywords ampliados | ✅ |
+| — | **BOE Scraper** — Edge Function + pg_cron diario (dry-run, tabla boe_scraper_log) | ✅ |
+| — | **Service Worker desactivado** — self-destruct, limpia caches | ✅ |
+| — | **Favicon verde** — "OS" verde reemplaza libro morado | ✅ |
+| — | **ReviewerPanel** — colores green, búsqueda en toda la DB | ✅ |
+| — | **Landing URLs** → app.opositasmart.com en todos los CTAs | ✅ |
+
+### Pendiente
+
+| # | Tarea | Prioridad |
+|---|-------|-----------|
+| 1 | Fix "Invalid Date" en ActividadPage | ALTA |
+| 2 | Freemium: usePremium hook + paywall modal + DevPanel toggle | ALTA |
+| 3 | DiagnosticoPage: flujo directo oposición→test (2 clics) | ALTA |
+| 4 | Landing fixes: racha→días activos, 14/28 temas, 68% source, Schema.org URL | MEDIA |
+| 5 | GoalStep: 8 oposiciones + modal waitlist (waitlist_oposiciones) | MEDIA |
+| 6 | RecursosPage: herramientas + próximamente + comunidad placeholder | MEDIA |
+| 7 | SoftFortHome: footer feedback con feature_votes | MEDIA |
+| 8 | Navbar visible tras completar test (SessionComplete) | MEDIA |
+| 9 | Algoritmo adaptativo — brainstorming Q3-Q4 pendientes | BAJA |
+| 10 | 14 temas sin preguntas (T15-T28) | BAJA |
+| 11 | BOE scraper: revisar resultados en 3 semanas (late abril) | BAJA |
 
 ---
 
@@ -422,6 +481,8 @@ CRITICO (<20): T6:10, T7:10, T10:10, T12:10, T14:10, T15:7, T16:10
 
 | Fecha | Resumen |
 |-------|---------|
+| 2026-04-05/06 | MEGA UX + GROWTH SPRINT: Dashboard Lovable redesign (2-col layout, design tokens, daily insight). Dual layout (sidebar desktop, tabs mobile). Welcome redesign (value props, mockup). Login form (email first). Custom domain app.opositasmart.com (CNAME Cloudflare). 295 preguntas auditadas (T1-T13 + full T6-T7). Landing 3 growth features (Radar, Guía, Diagnóstico). Grafo de Organismos D3 radial (/organismos, CivLab-inspired, 19 orgs, rotación, URLs compartibles). Header nav (Convocatorias + Organismos). SEO schemas (FAQPage, WebSite). BOE scraper Edge Function + pg_cron (dry-run). Service Worker desactivado. Favicon verde. ReviewerPanel green + search all DB. Landing URLs → app.opositasmart.com |
+| 2026-04-05 | LANDING + MARKETING SPRINT: Landing V3 (12 React components → Astro). Google OAuth + magic link auth. Resend SMTP (noreply@opositasmart.com). DNS Cloudflare (DKIM/SPF/DMARC). Migration 014 ejecutada (FSRS desbloqueado). Composite Readiness Index. Study flow Editorial Calm (10 componentes). Radar actualizado (9 convocatorias, 9.695 plazas). Email notifications on signup (pg_net trigger). Keep-alive cron. Blog "Recta final" publicado. 4 blogs auditados (22 experiencias inventadas eliminadas). Skills: content-radar, blog-humano actualizado |
 | 2026-02-23 | STUDY INTELLIGENCE SPRINT: StudyPlanEngine creado (2-3 actividades diarias recomendadas basadas en FSRS/accuracy/staleness/exam). Home redesign "Tu sesion de hoy" con TodayPlanSection + ExamCountdown. Post-session "Siguiente paso recomendado" con 1-click. weaknessAnalyzer.js para deteccion cross-session de patrones de error. SimulacroSession con time tracking per-question + pacing verdict. OpositaApp.jsx legacy eliminado (-537KB). Migration 014 SQL creada (FK fix pendiente). TOTAL_TOPICS fix 11→16 |
 | 2026-02-20 | 100% VERIFICATION + DISCREPANCY PHASE 1: Committed UX audit bug fixes (8 files). Phase 1 contradiction check on 116 hotspot articles (492 questions): 5 contradictions found (4 answers fixed, 1 human review). LRBRL 49 questions verified against law text (1 answer fixed). Other laws 154 verified by knowledge (1 answer fixed). Total: 1,422/1,422 verified (100%). Cumulative: 25 answers fixed, 66 refs fixed, 30 drift fixed |
 | 2026-02-19 | UX AUDIT E2E: Seed script 5 semanas datos realistas (40 sesiones, 4 temas). Audit Playwright 29 checks. 6 bugs encontrados y corregidos: ISO dates, getDueReviews FK JOIN, updateProgress UUID, Fortaleza names, session_stats columns/constraint. Resultado final: 29/29 PASS, 0 console errors. Subgrupos temas reorganizados (secuencial BOE) |

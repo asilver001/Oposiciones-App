@@ -108,8 +108,11 @@ export default function SettingsModal({ onClose }) {
     navigate(ROUTES.WELCOME);
   };
 
+  const [exportError, setExportError] = useState(null);
+
   const handleExportData = async () => {
     setExporting(true);
+    setExportError(null);
     try {
       const { data, error } = await exportUserData();
       if (error) throw error;
@@ -125,6 +128,7 @@ export default function SettingsModal({ onClose }) {
       URL.revokeObjectURL(url);
     } catch (err) {
       console.error('Error exporting data:', err);
+      setExportError('No pudimos descargar tus datos. Intentalo de nuevo.');
     } finally {
       setExporting(false);
     }
@@ -333,6 +337,9 @@ export default function SettingsModal({ onClose }) {
                   <ChevronRight className="w-5 h-5 text-gray-400" />
                 </button>
               </div>
+              {exportError && (
+                <p className="text-sm text-red-600 mt-2 px-1" role="alert">{exportError}</p>
+              )}
 
               <SectionTitle>Zona de peligro</SectionTitle>
               <div className="bg-white rounded-xl border border-red-200 overflow-hidden">

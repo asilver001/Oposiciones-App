@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
 import { supabase } from '../lib/supabase';
 
 const AuthContext = createContext({});
@@ -10,26 +10,50 @@ export function AuthProvider({ children }) {
   const [error, setError] = useState(null);
   const [isAnonymous, setIsAnonymous] = useState(false); // User using app without account
   const [userRole, setUserRole] = useState(null); // { isAdmin, isReviewer, role, name }
+  const [roleLoading, setRoleLoading] = useState(false); // Explicit loading state for role check
 
   // Check if user has admin/reviewer role
+  // Uses a ref to cancel stale responses (e.g. if user signs out mid-fetch)
+  const roleFetchTokenRef = useRef(0);
+  const ROLE_CHECK_TIMEOUT_MS = 5000;
+
   const checkUserRole = async (email) => {
     if (!email) {
       setUserRole(null);
+      setRoleLoading(false);
       return null;
     }
+
+    const token = ++roleFetchTokenRef.current;
+    setRoleLoading(true);
+
     try {
-      const { data, error } = await supabase.rpc('check_user_role', { p_email: email });
+      // Race RPC vs timeout to avoid infinite pending state
+      const result = await Promise.race([
+        supabase.rpc('check_user_role', { p_email: email }),
+        new Promise((_, reject) =>
+          setTimeout(() => reject(new Error('role_check_timeout')), ROLE_CHECK_TIMEOUT_MS)
+        ),
+      ]);
+
+      // Discard response if a newer fetch started or user signed out
+      if (token !== roleFetchTokenRef.current) return null;
+
+      const { data, error } = result;
       if (error) {
         console.error('Error checking user role:', error);
-        setUserRole({ isAdmin: false, isReviewer: false, role: null, name: null });
+        setUserRole({ isAdmin: false, isReviewer: false, role: null, name: null, error: error.message });
         return null;
       }
       setUserRole(data);
       return data;
     } catch (err) {
+      if (token !== roleFetchTokenRef.current) return null;
       console.error('Error checking user role:', err);
-      setUserRole({ isAdmin: false, isReviewer: false, role: null, name: null });
+      setUserRole({ isAdmin: false, isReviewer: false, role: null, name: null, error: err.message });
       return null;
+    } finally {
+      if (token === roleFetchTokenRef.current) setRoleLoading(false);
     }
   };
 
@@ -212,8 +236,12 @@ export function AuthProvider({ children }) {
       const { error } = await supabase.auth.signOut();
       if (error) throw error;
 
+      // Invalidate any in-flight role check before clearing state
+      roleFetchTokenRef.current++;
       setUser(null);
       setSession(null);
+      setUserRole(null);
+      setRoleLoading(false);
 
       return { error: null };
     } catch (err) {
@@ -399,6 +427,7 @@ export function AuthProvider({ children }) {
     exitAnonymousMode,
     // Role-based access
     userRole,
+    roleLoading,
     isAdmin: userRole?.isAdmin ?? false,
     isReviewer: userRole?.isReviewer ?? false,
     checkUserRole,

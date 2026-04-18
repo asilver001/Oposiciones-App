@@ -2,18 +2,55 @@ import { useState } from 'react';
 import { X, Mail, CheckCircle } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 
+const LAST_SUBMIT_KEY = 'waitlist-last-submit';
+const THROTTLE_MS = 10_000; // 10s between submissions per browser
+
 export default function OposicionWaitlistModal({ oposicion, onClose }) {
   const [email, setEmail] = useState('');
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!email.trim()) return;
+    const trimmed = email.trim().toLowerCase();
+    if (!trimmed) return;
+
+    // Basic email validation
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmed)) {
+      setErrorMsg('Email no válido');
+      return;
+    }
+
+    // Client-side throttle (prevents rapid resubmissions from same browser)
+    const lastSubmit = Number(localStorage.getItem(LAST_SUBMIT_KEY) || 0);
+    if (Date.now() - lastSubmit < THROTTLE_MS) {
+      setErrorMsg('Espera unos segundos antes de reintentar');
+      return;
+    }
+
     setLoading(true);
-    await supabase.from('waitlist_oposiciones').insert({ email: email.trim(), oposicion }).catch(() => {});
-    setSent(true);
+    setErrorMsg(null);
+
+    const { error } = await supabase
+      .from('waitlist_oposiciones')
+      .insert({ email: trimmed, oposicion });
+
     setLoading(false);
+
+    if (error) {
+      // 23505 = duplicate key (already in waitlist) — treat as success
+      if (error.code === '23505') {
+        setSent(true);
+        return;
+      }
+      console.error('Waitlist insert failed:', error);
+      setErrorMsg('No pudimos guardar tu email. Inténtalo de nuevo.');
+      return;
+    }
+
+    localStorage.setItem(LAST_SUBMIT_KEY, String(Date.now()));
+    setSent(true);
   };
 
   return (
@@ -56,6 +93,9 @@ export default function OposicionWaitlistModal({ oposicion, onClose }) {
               >
                 {loading ? 'Enviando...' : 'Avisarme cuando esté lista'}
               </button>
+              {errorMsg && (
+                <p className="text-red-600 text-xs text-center" role="alert">{errorMsg}</p>
+              )}
             </form>
           </>
         )}
