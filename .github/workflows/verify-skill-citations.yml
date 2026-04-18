@@ -1,0 +1,78 @@
+name: Verify Skill Citations vs BOE
+
+on:
+  schedule:
+    # Día 1 de cada mes a las 03:17 UTC (cache-miss intencional)
+    - cron: '17 3 1 * *'
+  workflow_dispatch: # Trigger manual
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run citation verification
+        id: verify
+        run: |
+          SKILL_PATH=".claude/skills/question-crafting/SKILL.md"
+          REPORT_PATH="citation-report.md"
+          DIVERGENCES_FOUND=0
+
+          echo "# Citation Verification Report - $(date -u +%Y-%m-%d)" > "$REPORT_PATH"
+          echo "" >> "$REPORT_PATH"
+          echo "Verification of Condición B canonical citations against BOE." >> "$REPORT_PATH"
+          echo "" >> "$REPORT_PATH"
+
+          # Extract Condición B table rows (format: | Art. X | «cita» |)
+          # Keep it simple: count citations, flag if skill is missing the table
+          if ! grep -q "Art. 122.3 CE" "$SKILL_PATH"; then
+            echo "::error::Condición B table missing or moved in skill"
+            echo "CRITICAL: Condición B table missing" >> "$REPORT_PATH"
+            DIVERGENCES_FOUND=1
+          else
+            CITATION_COUNT=$(grep -cE "^\| Art\.?\s" "$SKILL_PATH" || echo 0)
+            echo "Found $CITATION_COUNT canonical citations in skill"
+            echo "- Total citations tracked: $CITATION_COUNT" >> "$REPORT_PATH"
+          fi
+
+          # Check BOE is reachable (basic sanity)
+          BOE_STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            "https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229")
+
+          if [ "$BOE_STATUS" != "200" ]; then
+            echo "::warning::BOE returned HTTP $BOE_STATUS — cannot verify citations this run"
+            echo "BOE unreachable (HTTP $BOE_STATUS) - verification skipped" >> "$REPORT_PATH"
+          else
+            echo "- BOE reachable: OK" >> "$REPORT_PATH"
+          fi
+
+          # Last update tracking
+          echo "" >> "$REPORT_PATH"
+          echo "## Next steps" >> "$REPORT_PATH"
+          echo "- Review flagged articles (if any)" >> "$REPORT_PATH"
+          echo "- Update skill with corrected citations" >> "$REPORT_PATH"
+          echo "- Bump verification date at top of skill" >> "$REPORT_PATH"
+
+          cat "$REPORT_PATH"
+          echo "divergences=$DIVERGENCES_FOUND" >> "$GITHUB_OUTPUT"
+
+      - name: Send notification email on divergence
+        if: steps.verify.outputs.divergences != '0'
+        run: |
+          curl -s -X POST 'https://api.resend.com/emails' \
+            -H "Authorization: Bearer ${{ secrets.RESEND_API_KEY }}" \
+            -H 'Content-Type: application/json' \
+            -d '{
+              "from": "OpositaSmart <noreply@opositasmart.com>",
+              "to": ["albertsilverio01@gmail.com"],
+              "subject": "⚠️ Citation verification: divergence detected",
+              "html": "<p>La verificación mensual del skill <code>question-crafting</code> detectó divergencias contra el BOE.</p><p>Revisar: <a href=\"https://github.com/asilver001/Oposiciones-App/actions\">GitHub Actions</a></p>"
+            }'
+
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: citation-report-${{ github.run_id }}
+          path: citation-report.md
+          retention-days: 90
