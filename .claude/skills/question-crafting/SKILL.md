@@ -158,6 +158,39 @@ Muchas preguntas buenas se basan en confundir fácilmente dos cosas parecidas:
 | **Explicación <80 chars** | "El silencio no elimina el deber de resolver." | Incluir siempre cita literal del BOE entre «...» y explicar por qué los distractores están mal |
 | **Frase meta en enunciado** | "...señale el medio correcto que suele plantear el examen" | El enunciado debe preguntar por el contenido, no hacer meta-referencias al examen |
 
+## 📂 Protocolo preferido: archivo local → BOE fallback
+
+**ANTES de hacer WebFetch**, verifica si tenemos el texto de la ley guardado localmente:
+
+### Archivos locales disponibles
+
+Carpeta: `c:\Users\alber\OpositaSmart\.claude\questions\Temario\leyes\`
+
+| Archivo | Ley | Artículos |
+|---|---|---|
+| `CE_Constitucion_Espanola.md` | Constitución Española 1978 | Arts. 1-169 completos |
+| `LRJSP_Ley_40_2015.md` | Ley 40/2015 LRJSP | Arts. 1-158 completos (consolidado BOE 02/08/2024) |
+
+### Flujo preferido
+
+1. **Primero**: busca el artículo en el archivo local con Read tool
+2. **Si está**: cita verbatim + marca `auto_validated` con `verification_notes: "Fetch local desde <archivo>.md (consolidado BOE <fecha>)"`
+3. **Si NO está** (ley no descargada): usa el protocolo WebFetch (siguiente sección)
+
+### Ventajas del archivo local
+
+- ✅ **Sin truncamiento** (BOE online trunca leyes largas)
+- ✅ **Sin dependencia** de URLs del BOE
+- ✅ **Más rápido** (Read local vs WebFetch)
+- ✅ **Consolidado verificado** (fecha concreta de consolidación)
+
+### Mantenimiento
+
+Los archivos se actualizan cuando:
+- GitHub Action mensual detecta divergencia con el BOE
+- Manualmente cuando salga una reforma legal importante
+- Tras re-descarga periódica (anual recomendado)
+
 ## 🔁 Protocolo obligatorio de reformulación (con BOE)
 
 Si tienes acceso a WebFetch, ESTE es el flujo que debes seguir. NO reformules sin completar los 4 pasos:
