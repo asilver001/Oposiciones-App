@@ -92,7 +92,7 @@ function useHomeData({
 
 // ========== MOBILE ==========
 
-function EditorialHomeMobile({ userName, data, handlers }) {
+function EditorialHomeMobile({ userName, data, handlers, guestSlot }) {
   const {
     questionCount, reviewCount, estimatedMinutes, topicLabel,
     currentStreak, examDays, examLabel, weeklyNormalized,
@@ -181,6 +181,8 @@ function EditorialHomeMobile({ userName, data, handlers }) {
           {DAYS_SHORT_MOBILE.map(d => <span key={d}>{d}</span>)}
         </div>
 
+        {guestSlot}
+
         {/* Other study modes */}
         <section style={{ ...rev3, marginTop: 38 }}>
           <Masthead label="Otros modos" />
@@ -217,7 +219,7 @@ function EditorialHomeMobile({ userName, data, handlers }) {
 
 // ========== DESKTOP ==========
 
-function EditorialHomeDesktop({ userName, data, handlers }) {
+function EditorialHomeDesktop({ userName, data, handlers, guestSlot }) {
   const {
     questionCount, reviewCount, estimatedMinutes, topicLabel,
     currentStreak, examDays, examLabel, weeklyNormalized,
@@ -292,6 +294,8 @@ function EditorialHomeDesktop({ userName, data, handlers }) {
                 </div>
               </div>
             </div>
+
+            {guestSlot}
 
             {/* Other modes as 2-col grid */}
             <div style={{ ...rev3, marginTop: 64 }}>
@@ -451,8 +455,9 @@ export default function EditorialHome(props) {
   };
 
   const userName = props.userName || 'bienvenido/a';
+  const guestSlot = props.guestSlot || null;
 
   return isDesktop
-    ? <EditorialHomeDesktop userName={userName} data={data} handlers={handlers} />
-    : <EditorialHomeMobile userName={userName} data={data} handlers={handlers} />;
+    ? <EditorialHomeDesktop userName={userName} data={data} handlers={handlers} guestSlot={guestSlot} />
+    : <EditorialHomeMobile userName={userName} data={data} handlers={handlers} guestSlot={guestSlot} />;
 }

@@ -18,6 +18,7 @@ const useEditorialDesign = () => {
   return localStorage.getItem('home-design') !== 'legacy';
 };
 import { getGuestData, isGuestModalDismissed, reopenGuestModal } from '../../features/guest/guestStorage';
+import GuestProgressStrip from '../../features/guest/components/GuestProgressStrip';
 import { ROUTES } from '../../router/routes';
 import { useActivityData } from '../../hooks/useActivityData';
 import { useTopics } from '../../hooks/useTopics';
@@ -101,6 +102,15 @@ export default function HomePage() {
     return raw.charAt(0).toUpperCase() + raw.slice(1).replace(/[0-9]+$/, '');
   })()) : 'bienvenido/a';
 
+  // Guest mini-progress: only rendered by the editorial home slot,
+  // only shown when there's at least one completed session.
+  const guestSlot = !user ? (
+    <GuestProgressStrip
+      onSignup={() => navigate(ROUTES.SIGNUP)}
+      onStartSession={() => navigate(ROUTES.GUEST_SESSION)}
+    />
+  ) : null;
+
   const homeProps = {
     showTopBar: false,
     userName,
@@ -117,6 +127,7 @@ export default function HomePage() {
     onViewAllTopics: handleViewAllTopics,
     onNavigate: handleNavigate,
     readiness,
+    guestSlot,
   };
 
   const useEditorial = useEditorialDesign();
