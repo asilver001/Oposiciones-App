@@ -9,7 +9,7 @@
  * drop-in replacement.
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { SkipForward } from 'lucide-react';
 import { useReveal, useMediaQuery, OS } from '../editorial/EditorialPrimitives';
 
@@ -71,8 +71,16 @@ export default function EditorialQuestionCard({
   const rev0 = useReveal(0);
   const rev1 = useReveal(160);
 
-  const { options, correctKey } = parseOptions(question);
+  const { options } = parseOptions(question);
   const selected = localSelected || selectedAnswer;
+
+  // Reset local state when a new question comes in (key identity changes).
+  // Without this, after the first answer the component stays "answered" and
+  // locks out all further selections on subsequent questions.
+  useEffect(() => {
+    setLocalSelected(null);
+    setAnswered(false);
+  }, [question?.id]);
 
   const questionText = question.question_text || question.enunciado || '';
   const legalRef = question.legal_reference || question.referencia || null;
@@ -144,17 +152,16 @@ export default function EditorialQuestionCard({
             </div>
           </div>
 
-          {/* Options */}
+          {/* Options — neutral flash of selected only.
+              Do NOT reveal the correct answer during the test (matches legacy
+              behaviour; feedback is reserved for the post-session correction
+              view). The button dims other options and auto-advances. */}
           <div style={{ ...rev1, padding: optionsPadding }}>
             {options.map((opt, i) => {
               const isSelected = selected === opt.key;
-              const isCorrect = answered && opt.key === correctKey;
-              const isWrong = answered && isSelected && opt.key !== correctKey;
-              let borderColor = OS.rule;
-              let textColor = OS.text;
-              if (isCorrect) { borderColor = OS.inkSoft; textColor = OS.ink; }
-              else if (isWrong) { borderColor = OS.warm; textColor = OS.warm; }
-              else if (isSelected) { borderColor = OS.ink; }
+              const shouldDim = (answered || selected) && !isSelected;
+              const borderColor = isSelected ? OS.ink : OS.rule;
+              const textColor = isSelected ? OS.ink : OS.text;
 
               return (
                 <button
@@ -174,7 +181,8 @@ export default function EditorialQuestionCard({
                     cursor: answered || selected ? 'default' : 'pointer',
                     textAlign: 'left',
                     fontFamily: OS.sans,
-                    transition: 'border-color 0.3s ease, color 0.3s ease',
+                    opacity: shouldDim ? 0.4 : 1,
+                    transition: 'border-color 0.3s ease, opacity 0.25s ease',
                   }}
                 >
                   <div
@@ -182,8 +190,7 @@ export default function EditorialQuestionCard({
                       fontFamily: OS.serif,
                       fontSize: letterFontSize,
                       fontStyle: 'italic',
-                      color:
-                        isSelected || isCorrect || isWrong ? textColor : OS.muted,
+                      color: isSelected ? OS.ink : OS.muted,
                       width: isDesktop ? 28 : 20,
                       transition: 'color 0.3s',
                       flexShrink: 0,
@@ -202,12 +209,6 @@ export default function EditorialQuestionCard({
                   >
                     {opt.text}
                   </div>
-                  {isCorrect && (
-                    <div style={{ color: OS.inkSoft, fontSize: 18 }} aria-label="Correcta">✓</div>
-                  )}
-                  {isWrong && (
-                    <div style={{ color: OS.warm, fontSize: 18 }} aria-label="Incorrecta">✕</div>
-                  )}
                 </button>
               );
             })}

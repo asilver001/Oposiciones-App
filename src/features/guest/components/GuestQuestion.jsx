@@ -1,10 +1,18 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { RotateCcw, X } from 'lucide-react';
 
 export default function GuestQuestion({ question, questionNumber, totalQuestions, onAnswer, onNext, onExit }) {
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [answered, setAnswered] = useState(false);
-  const [startTime] = useState(Date.now());
+  const [startTime, setStartTime] = useState(Date.now());
+
+  // Reset local state when a new question arrives — otherwise subsequent
+  // questions stay locked because `answered` persists from the previous one.
+  useEffect(() => {
+    setSelectedIndex(null);
+    setAnswered(false);
+    setStartTime(Date.now());
+  }, [question?.id]);
 
   const isCorrect = selectedIndex === question.correcta;
   const progressPct = (questionNumber / totalQuestions) * 100;
