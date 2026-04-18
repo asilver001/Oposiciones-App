@@ -89,7 +89,7 @@ export default function MainLayout() {
   // Full-screen mode (study sessions): no layout chrome at all
   if (hideNav) {
     return (
-      <div className="min-h-screen dark:bg-gray-950" style={{ background: '#FAFAF7' }}>
+      <div className="min-h-screen dark:bg-gray-950" style={{ background: '#F3F3F0' }}>
         <main id="main-content">
           <Outlet />
         </main>
@@ -98,7 +98,7 @@ export default function MainLayout() {
   }
 
   return (
-    <div className="flex h-dvh dark:bg-gray-950" style={{ background: '#FAFAF7' }}>
+    <div className="flex h-dvh dark:bg-gray-950" style={{ background: '#F3F3F0' }}>
       {/* Skip to content */}
       <a
         href="#main-content"
@@ -122,7 +122,7 @@ export default function MainLayout() {
       <div className="flex-1 flex flex-col min-w-0">
         {/* Mobile: Fixed TopBar */}
         {isMobile && (
-          <header className="sticky top-0 z-40 bg-white border-b border-gray-100 shrink-0">
+          <header className="sticky top-0 z-40 shrink-0" style={{ background: '#F3F3F0', borderBottom: '1px solid rgba(27,67,50,0.12)' }}>
             <div className="max-w-4xl mx-auto px-4">
               <div className="flex items-center justify-between h-14">
                 <button
@@ -156,14 +156,21 @@ export default function MainLayout() {
           </header>
         )}
 
-        {/* Scrollable page content */}
+        {/* Scrollable page content.
+            Editorial pages (/app/home, future editorial routes) manage their own padding
+            to keep the paper background flush with the layout edges. Legacy pages keep
+            the inherited px/py wrapper. */}
         <main
           id="main-content"
           className={`flex-1 overflow-y-auto ${isMobile ? 'pb-20' : ''}`}
         >
-          <div className="px-4 lg:px-10 py-4 lg:py-8">
+          {location.pathname === ROUTES.HOME ? (
             <Outlet />
-          </div>
+          ) : (
+            <div className="px-4 lg:px-10 py-4 lg:py-8">
+              <Outlet />
+            </div>
+          )}
         </main>
 
         {/* Mobile: BottomTabBar */}

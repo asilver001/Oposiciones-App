@@ -42,7 +42,8 @@ export default function BottomTabBar({
 
   return (
     <motion.div
-      className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-100"
+      className="fixed bottom-0 left-0 right-0 z-40"
+      style={{ background: '#F3F3F0', borderTop: '1px solid rgba(27,67,50,0.12)' }}
       initial={{ y: 0 }}
       animate={{ y: isVisible ? 0 : 100 }}
       transition={{ type: 'spring', damping: 25, stiffness: 300 }}
@@ -73,27 +74,30 @@ export default function BottomTabBar({
                   className="relative flex flex-col items-center justify-center min-w-[3.5rem] py-1 px-1.5 transition-all duration-200"
                 >
                   {isActive && (
-                    <span className="absolute top-0 left-1/2 -translate-x-1/2 w-5 h-0.5 bg-gray-900 rounded-full" />
+                    <span
+                      className="absolute top-0 left-1/2 -translate-x-1/2 w-5 h-0.5 rounded-full"
+                      style={{ background: '#1B4332' }}
+                    />
                   )}
 
                   <div className="flex items-center justify-center w-9 h-9 mb-0.5">
                     <tab.icon
-                      className={`
-                        w-[22px] h-[22px] transition-all duration-200
-                        ${isActive
-                          ? 'text-gray-900 stroke-[2]'
-                          : 'text-gray-400 stroke-[1.5]'
-                        }
-                      `}
+                      className="w-[22px] h-[22px] transition-all duration-200"
+                      style={{
+                        color: isActive ? '#1B4332' : '#8A8783',
+                        strokeWidth: isActive ? 2 : 1.5,
+                      }}
                     />
                   </div>
-                  <span className={`
-                    text-[10px] leading-tight transition-all duration-200
-                    ${isActive
-                      ? 'text-gray-900 font-semibold'
-                      : 'text-gray-400 font-medium'
-                    }
-                  `}>
+                  <span
+                    className="text-[10px] leading-tight transition-all duration-200"
+                    style={{
+                      color: isActive ? '#1B4332' : '#8A8783',
+                      fontWeight: isActive ? 600 : 500,
+                      letterSpacing: '0.5px',
+                      textTransform: 'uppercase',
+                    }}
+                  >
                     {tab.label}
                   </span>
                 </button>

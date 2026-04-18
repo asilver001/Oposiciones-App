@@ -25,10 +25,14 @@ export default function DesktopSidebar({
   return (
     <aside
       className={`
-        flex flex-col h-dvh bg-white border-r border-gray-100
+        flex flex-col h-dvh
         transition-[width] duration-200 ease-in-out shrink-0
         ${collapsed ? 'w-16' : 'w-60'}
       `}
+      style={{
+        background: '#F3F3F0',
+        borderRight: '1px solid rgba(27,67,50,0.12)',
+      }}
     >
       {/* Header: Logo */}
       <div className="px-4 pt-8 pb-2 mb-6">
@@ -67,8 +71,8 @@ export default function DesktopSidebar({
         </div>
       )}
 
-      {/* Navigation items */}
-      <nav className="flex-1 px-2 py-2 space-y-0.5" aria-label="Navegacion principal">
+      {/* Navigation items — Editorial Calma style */}
+      <nav className="flex-1 px-2 py-2" aria-label="Navegacion principal">
         {items.map(item => {
           const isActive = location.pathname === item.path;
           return (
@@ -76,18 +80,22 @@ export default function DesktopSidebar({
               key={item.id}
               onClick={() => navigate(item.path)}
               className={`
-                w-full flex items-center gap-3 px-3 py-2.5 rounded-md
+                w-full flex items-center gap-3 px-3 py-2.5
                 transition-colors duration-150
-                ${isActive
-                  ? 'bg-[rgba(45,106,79,0.08)] text-[#2D6A4F] font-semibold'
-                  : 'text-[#4B5563] hover:bg-[#FAFAF7] hover:text-gray-700'
-                }
                 ${collapsed ? 'justify-center' : ''}
               `}
+              style={{
+                color: isActive ? '#1B4332' : '#8A8783',
+                fontWeight: isActive ? 600 : 400,
+                borderLeft: isActive ? '2px solid #1B4332' : '2px solid transparent',
+                marginLeft: collapsed ? 0 : '-12px',
+                paddingLeft: collapsed ? '12px' : '12px',
+                letterSpacing: '0.2px',
+              }}
               aria-current={isActive ? 'page' : undefined}
               title={collapsed ? item.label : undefined}
             >
-              <item.icon size={18} strokeWidth={isActive ? 2.2 : 1.8} className="shrink-0" />
+              <item.icon size={18} strokeWidth={isActive ? 2 : 1.6} className="shrink-0" />
               {!collapsed && (
                 <span className="text-sm truncate">{item.label}</span>
               )}
@@ -97,7 +105,10 @@ export default function DesktopSidebar({
       </nav>
 
       {/* Bottom section: Avatar + Settings */}
-      <div className="px-2 pb-4 pt-2 border-t border-gray-50 mt-2 space-y-1">
+      <div
+        className="px-2 pb-4 pt-2 mt-2 space-y-1"
+        style={{ borderTop: '1px solid rgba(27,67,50,0.12)' }}
+      >
         {/* User avatar */}
         {user && (
           <div
