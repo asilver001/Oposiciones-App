@@ -29,16 +29,19 @@ export default function RecursosPageWrapper() {
   };
 
   const editorial = useEditorial();
-  const content = editorial ? (
-    <EditorialRecursos onNavigate={handleNavigate} />
-  ) : (
-    <RecursosPage onNavigate={handleNavigate} />
-  );
+
+  // Editorial design: always show the biblioteca directly (guests included).
+  // The items link to BOE and are public; favorites live in localStorage.
+  if (editorial) {
+    return <EditorialRecursos onNavigate={handleNavigate} />;
+  }
+
+  // Legacy design: keep guest fallback with GuestLock overlay
+  const content = <RecursosPage onNavigate={handleNavigate} />;
 
   if (!user) {
     return (
       <div className="space-y-6">
-        {/* Available for guests */}
         <div>
           <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Disponible</h3>
           <div className="space-y-3">
@@ -74,7 +77,6 @@ export default function RecursosPageWrapper() {
             </button>
           </div>
         </div>
-        {/* Locked content preview */}
         <GuestLock message="Crea una cuenta para acceder a todos los recursos">{content}</GuestLock>
       </div>
     );
