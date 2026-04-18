@@ -6,11 +6,31 @@ import { useUserInsights } from '../../hooks/useUserInsights';
 import { useAuth } from '../../hooks/useAuth';
 import { generateWeaknessSummary } from '../../services/weaknessAnalyzer';
 import EmptyState from '../common/EmptyState/EmptyState';
-import SessionComplete from './SessionComplete';
+import SessionCompleteLegacy from './SessionComplete';
+import EditorialSessionComplete from './EditorialSessionComplete';
 import SessionHeader from './SessionHeader';
-import QuestionCard from './QuestionCard';
+import EditorialSessionHeader from './EditorialSessionHeader';
+import QuestionCardLegacy from './QuestionCard';
+import EditorialQuestionCard from './EditorialQuestionCard';
+
+// Editorial redesign feature flag (shared with Home).
+// Set localStorage 'home-design' = 'legacy' to see the previous UI.
+const useEditorialUI = () =>
+  typeof window !== 'undefined' && localStorage.getItem('home-design') !== 'legacy';
+
+const SessionComplete = (props) =>
+  useEditorialUI()
+    ? <EditorialSessionComplete {...props} />
+    : <SessionCompleteLegacy {...props} />;
+
+const QuestionCard = (props) =>
+  useEditorialUI()
+    ? <EditorialQuestionCard {...props} />
+    : <QuestionCardLegacy {...props} />;
 
 export default function HybridSession({ config = {}, onClose, onComplete, onNextActivity }) {
+  const editorial = useEditorialUI();
+  const sessionStartRef = useRef(Date.now());
   const {
     currentQuestion,
     currentIndex,
@@ -354,15 +374,31 @@ export default function HybridSession({ config = {}, onClose, onComplete, onNext
         </div>
       )}
 
-      {/* Exit button — minimal, top-left */}
-      <div className="px-4 pt-3 flex justify-end">
-        <button
-          onClick={() => setShowExitConfirm(true)}
-          className="text-xs text-gray-400 hover:text-gray-600 transition-colors"
-        >
-          Salir ×
-        </button>
-      </div>
+      {editorial ? (
+        <EditorialSessionHeader
+          currentIndex={currentIndex}
+          total={sessionStats.total}
+          onExitClick={() => setShowExitConfirm(true)}
+          modeLabel={config?.mode === 'simulacro' ? 'Simulacro'
+            : config?.mode === 'repaso-errores' ? 'Repaso de errores'
+            : config?.mode === 'test-rapido' ? 'Test rápido'
+            : 'Práctica'}
+          topicLabel={currentQuestion?.tema ? `Tema ${currentQuestion.tema}` : null}
+          correctCount={sessionStats.correct || 0}
+          wrongCount={(sessionStats.answered || 0) - (sessionStats.correct || 0)}
+          startTime={sessionStartRef.current}
+          isReview={currentQuestion?.isReview}
+        />
+      ) : (
+        <div className="px-4 pt-3 flex justify-end">
+          <button
+            onClick={() => setShowExitConfirm(true)}
+            className="text-xs text-gray-400 hover:text-gray-600 transition-colors"
+          >
+            Salir ×
+          </button>
+        </div>
+      )}
 
       {/* Question */}
       <QuestionCard
@@ -377,8 +413,8 @@ export default function HybridSession({ config = {}, onClose, onComplete, onNext
         isReview={currentQuestion.isReview}
       />
 
-      {/* Bottom stats — minimal, only when no answer selected (QuestionCard shows its own "Siguiente" button) */}
-      {!selectedAnswer && (
+      {/* Bottom stats — legacy design only (editorial header shows stats inline) */}
+      {!editorial && !selectedAnswer && (
       <div className="bg-white border-t p-3">
         <div className="max-w-lg mx-auto flex justify-around text-center">
           <div>
