@@ -170,6 +170,7 @@ export default function MainLayout() {
               ROUTES.HOME,
               ROUTES.TEMAS,
               ROUTES.ACTIVIDAD,
+              ROUTES.RECURSOS,
             ];
             const skipPadding = editorialPaths.some((p) => path === p || path.startsWith(`${p}/`));
             return skipPadding ? (

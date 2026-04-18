@@ -6,9 +6,13 @@
 
 import { useNavigate } from 'react-router-dom';
 import RecursosPage from '../../components/recursos/RecursosPage';
+import EditorialRecursos from '../../components/recursos/EditorialRecursos';
 import { useAuth } from '../../contexts/AuthContext';
 import GuestLock from '../../components/common/GuestLock';
 import { ROUTES } from '../../router/routes';
+
+const useEditorial = () =>
+  typeof window !== 'undefined' && localStorage.getItem('home-design') !== 'legacy';
 
 export default function RecursosPageWrapper() {
   const navigate = useNavigate();
@@ -24,10 +28,11 @@ export default function RecursosPageWrapper() {
     navigate(routeMap[page] || ROUTES.HOME);
   };
 
-  const content = (
-    <RecursosPage
-      onNavigate={handleNavigate}
-    />
+  const editorial = useEditorial();
+  const content = editorial ? (
+    <EditorialRecursos onNavigate={handleNavigate} />
+  ) : (
+    <RecursosPage onNavigate={handleNavigate} />
   );
 
   if (!user) {
