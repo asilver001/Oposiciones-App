@@ -39,6 +39,29 @@ export const OS = tokens;
 
 // ---------- Hooks ----------
 
+export function useMediaQuery(query) {
+  const [matches, setMatches] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    return window.matchMedia(query).matches;
+  });
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const mql = window.matchMedia(query);
+    const onChange = (e) => setMatches(e.matches);
+    mql.addEventListener?.('change', onChange);
+    // Fallback for older Safari
+    if (!mql.addEventListener) mql.addListener(onChange);
+    setMatches(mql.matches);
+    return () => {
+      if (mql.removeEventListener) mql.removeEventListener('change', onChange);
+      else mql.removeListener(onChange);
+    };
+  }, [query]);
+
+  return matches;
+}
+
 export function useReveal(delay = 0) {
   const [shown, setShown] = useState(false);
   useEffect(() => {
