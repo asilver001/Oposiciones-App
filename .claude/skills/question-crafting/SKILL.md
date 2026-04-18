@@ -9,6 +9,33 @@ Cómo crear preguntas de calidad tipo Tier S para OpositaSmart. Basado en feedba
 
 ## Los 5 principios de una pregunta bien hecha
 
+### 0. Preferir enunciado directo sobre narrativa artificial
+
+**Regla (feedback real usuarios):** si puedes empezar la pregunta con "Según el artículo X de [ley]..." directo y funciona, hazlo. Los "escenarios narrativos" tipo "Un opositor estudia X y se pregunta Y..." suelen sentirse forzados cuando no aportan valor real.
+
+**Cuándo SÍ usar narrativa:**
+- Cuando el escenario añade un **dato concreto** que la pregunta necesita (ej: "Un municipio tiene 18.000 habitantes. ¿Qué servicios obligatorios debe prestar?")
+- Cuando hay **dos supuestos de hecho distintos** que el opositor debe comparar (ej: "Un RD crea una Dirección General permitiendo titular no-funcionario y otro RD pretende hacer lo mismo con una Subsecretaría...")
+
+**Cuándo NO usar narrativa:**
+- Preguntas sobre definiciones, plazos, competencias, composición de órganos
+- Cuando el "escenario" solo es decoración ("Un opositor estudia la composición del CGPJ...")
+- Cuando la pregunta funciona mejor sin la narrativa
+
+**Ejemplos:**
+
+❌ Forzado:
+> "Un opositor estudia la estructura de la AGE. Según el Art. 55.3 LRJSP, ¿cuál es órgano superior?"
+
+✅ Directo:
+> "Según el Art. 55.3 de la Ley 40/2015, ¿cuál de los siguientes es órgano SUPERIOR (no directivo)?"
+
+❌ Forzado:
+> "Un opositor estudia los efectos de la impugnación. Según el Art. 161.2 CE..."
+
+✅ Directo:
+> "Según el artículo 161.2 de la Constitución Española, cuando el Gobierno impugna..."
+
 ### 1. Contextualización narrativa (no preguntas secas)
 
 ❌ **Mal:**
