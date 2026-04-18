@@ -8,6 +8,7 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ActividadPage from '../../components/activity/ActividadPage';
+import EditorialActividad from '../../components/activity/EditorialActividad';
 import { useActivityData } from '../../hooks/useActivityData';
 import { useAuth } from '../../contexts/AuthContext';
 import GuestLock from '../../components/common/GuestLock';
@@ -115,7 +116,19 @@ export default function ActividadPageWrapper() {
     currentStreak: streak.current || 0
   };
 
-  const content = (
+  const useEditorial =
+    typeof window !== 'undefined' && localStorage.getItem('home-design') !== 'legacy';
+
+  const content = useEditorial ? (
+    <EditorialActividad
+      sessionHistory={sessionHistory}
+      totalStats={enrichedStats}
+      streak={streak}
+      fsrsStats={fsrsStats}
+      simulacroAvg={simulacroAvg}
+      weeklyData={weeklyData}
+    />
+  ) : (
     <ActividadPage
       loading={loading}
       weeklyData={weeklyData}

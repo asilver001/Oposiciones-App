@@ -164,13 +164,22 @@ export default function MainLayout() {
           id="main-content"
           className={`flex-1 overflow-y-auto ${isMobile ? 'pb-20' : ''}`}
         >
-          {location.pathname === ROUTES.HOME ? (
-            <Outlet />
-          ) : (
-            <div className="px-4 lg:px-10 py-4 lg:py-8">
+          {(() => {
+            const path = location.pathname;
+            const editorialPaths = [
+              ROUTES.HOME,
+              ROUTES.TEMAS,
+              ROUTES.ACTIVIDAD,
+            ];
+            const skipPadding = editorialPaths.some((p) => path === p || path.startsWith(`${p}/`));
+            return skipPadding ? (
               <Outlet />
-            </div>
-          )}
+            ) : (
+              <div className="px-4 lg:px-10 py-4 lg:py-8">
+                <Outlet />
+              </div>
+            );
+          })()}
         </main>
 
         {/* Mobile: BottomTabBar */}

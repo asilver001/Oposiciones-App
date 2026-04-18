@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import EmptyState from '../common/EmptyState';
 import DevModeRandomizer from '../dev/DevModeRandomizer';
+import EditorialTemasList from './EditorialTemasList';
 import { useAuth } from '../../contexts/AuthContext';
 import { usePremium } from '../../hooks/usePremium';
 import {
@@ -689,6 +690,26 @@ export default function TemasListView({
   }
 
   const hasResults = Object.keys(filteredTopicsByBlock).length > 0;
+
+  // Editorial redesign path: use new design when flag is on.
+  // All hooks above have already run in consistent order — safe to branch here.
+  const useEditorial =
+    typeof window !== 'undefined' && localStorage.getItem('home-design') !== 'legacy';
+
+  if (useEditorial) {
+    const topicsForEditorial = (effectiveTopics || topics).map((topic) => ({
+      ...topic,
+      progress: Math.round(topic.progress ?? 0),
+    }));
+    return (
+      <EditorialTemasList
+        topics={topicsForEditorial}
+        userProgress={userProgress}
+        onTopicSelect={onTopicSelect}
+        loading={loading}
+      />
+    );
+  }
 
   return (
     <div className="space-y-5">
