@@ -11,6 +11,13 @@
 
 ## Tareas al Inicio de Sesión
 
+### Content Radar — Detectar oportunidades de contenido
+Al inicio de cada sesión, ejecutar el skill `content-radar` para identificar oportunidades de blog posts o publicaciones de Telegram. Verificar:
+1. ¿Hay fechas de examen próximas (<60 días)? → Contenido urgente tipo "recta final"
+2. ¿Hay novedades en el BOE (convocatorias, listas, resultados)? → Post de reacción
+3. ¿Qué están buscando los opositores ahora? → Análisis SEO de gaps vs competidores
+Presentar al usuario las 3 mejores oportunidades antes de empezar el trabajo técnico.
+
 ### Revisar BOE para actualizaciones del Radar
 Al inicio de cada sesión de trabajo, consultar la tabla `boe_scraper_log` en Supabase para ver si hay convocatorias relevantes nuevas:
 
@@ -148,6 +155,85 @@ npm run test:e2e    # Tests E2E completos
 - Sombras suaves: `shadow-lg shadow-purple-600/30`
 - Transiciones: `transition-all`, `active:scale-[0.98]`
 
+## Sistema de Diseño "Calma Editorial" (Abr 2026)
+
+El app tiene un **rediseño editorial completo** basado en un handoff de Claude Design. Convive con el diseño anterior mediante un feature flag.
+
+### Feature flag
+
+```js
+// Por defecto: editorial activo
+// Para volver al legacy desde DevTools:
+localStorage.setItem('home-design', 'legacy')
+```
+
+Cualquier otro valor (incluido ausencia de la key) = editorial on.
+
+### Tokens y primitives
+
+Todos en [src/components/editorial/EditorialPrimitives.jsx](src/components/editorial/EditorialPrimitives.jsx):
+
+- **Colores**: paper `#F3F3F0`, ink `#1B4332`, inkSoft `#2D6A4F`, warm `#C67D5E`, gold `#C9A94F`, muted `#8A8783`
+- **Fuentes**: Instrument Serif (titulares) + Inter (UI). Declaradas en [index.html](index.html) y [src/index.css](src/index.css) como `--font-serif` / `--font-sans`
+- **Primitives**: `Masthead`, `Headline`, `Eyebrow`, `PullQuote`, `EditorialStat`, `EditorialButton`, `StudyModeRow`, `UnfurlBar`, `TabBar`, `Rule`
+- **Hooks**: `useReveal(delay)` — fade-up con blur, `useCountUp(target, duration, delay)`, `useMediaQuery(query)`
+
+### Estructura de los componentes editoriales
+
+Cada pantalla editorial vive al lado del componente legacy con el prefijo `Editorial*`:
+
+| Pantalla | Editorial | Legacy |
+|----------|-----------|--------|
+| Home | `src/components/home/EditorialHome.jsx` | `SoftFortHome.jsx` |
+| Session | `src/components/study/EditorialSessionHeader.jsx` + `EditorialQuestionCard.jsx` | `SessionHeader.jsx` + `QuestionCard.jsx` |
+| Results | `src/components/study/EditorialSessionComplete.jsx` | `SessionComplete.jsx` |
+| Temas | `src/components/temas/EditorialTemasList.jsx` | `TemasListView.jsx` (interno) |
+| Actividad | `src/components/activity/EditorialActividad.jsx` | `ActividadPage.jsx` |
+| Recursos | `src/components/recursos/EditorialRecursos.jsx` | `RecursosPage.jsx` |
+| Onboarding | `src/components/onboarding/Editorial{Oposicion,Tiempo,Fecha}Step.jsx` + `EditorialOnboardingShell.jsx` | `GoalStep`, `TiempoStep`, `DateStep` |
+
+### Mobile vs Desktop
+
+Cada componente editorial usa `useMediaQuery('(min-width: 1024px)')` y renderiza una variante u otra. Son **fieles al diseño original** — no es un CSS responsive con breakpoints, son dos componentes distintos (`HomeMobile` / `HomeDesktop`) porque los layouts son muy diferentes.
+
+### Layout chrome
+
+- [MainLayout.jsx](src/layouts/MainLayout/MainLayout.jsx) tiene fondo paper (`#F3F3F0`) que **se extiende por todo el viewport**, incluidos sidebar desktop y bottom tab bar mobile — nada de white breaks
+- `editorialPaths` en MainLayout: `[HOME, TEMAS, ACTIVIDAD, RECURSOS]`. En esas rutas el Outlet se renderiza **sin padding** (el componente editorial maneja su propio padding)
+- `BottomTabBar`: paper bg + tabs activas en `#1B4332` con uppercase letter-spacing
+- `DesktopSidebar`: paper bg + item activo con borde izquierdo 2px ink (match del diseño)
+
+### Patrones al añadir nuevas pantallas editoriales
+
+1. **Crear** `EditorialXxx.jsx` en el mismo folder que el legacy
+2. **Wire con feature flag** en el wrapper/page:
+   ```jsx
+   const useEditorial =
+     typeof window !== 'undefined' && localStorage.getItem('home-design') !== 'legacy';
+   return useEditorial ? <EditorialXxx {...props} /> : <LegacyXxx {...props} />;
+   ```
+3. **El flag va DESPUÉS de todos los hooks** (regla de React). Si el wrapper tiene `useState`/`useMemo`, poner el check antes del `return` principal
+4. **Si la ruta es nueva** → añadirla a `editorialPaths` en MainLayout para que skip padding
+5. **Si la ruta usa `GuestLock` u otros wrappers condicionales** → render editorial ANTES de esos wrappers (learned the hard way: el editorial queda opaco/recortado si lo envuelves)
+6. **Si hay toggles de vista legacy** (como list/roadmap/dendrite en Temas) → skip el wrapper entero cuando editorial
+
+### Qué NO está en editorial todavía
+
+- **Fortaleza standalone** — la info vive en el right rail del Home desktop; no existe ruta dedicada
+- **Radar BOE del app** — existe como feature completa en el landing (`/organismos`); portarla al app es scope de feature nueva, no de rediseño
+- **Admin/Reviewer panels** — siguen con diseño legacy (purple migrado a green pero sin editorial)
+- **Dev Panel & Draft Features** — intencionalmente no editorial
+
+### Qué aprendí en esta migración (lessons learned)
+
+1. **Leer el diseño completo antes de implementar**. Primera vez solo leí el mobile del Home y me perdí el desktop entero. Siempre `wc -l` y leer top-to-bottom
+2. **Una sola decisión de split mobile/desktop por componente**. El `useMediaQuery` al nivel del componente padre y el dispatcher renderiza una de las dos variantes. No hacer CSS media-query-hell
+3. **El flag "legacy" permite iteración segura** — prueba el editorial, y si algo se rompe, `localStorage.setItem('home-design', 'legacy')` en DevTools como escape hatch
+4. **Wrappers existentes son el enemigo silencioso** — GuestLock, max-w-4xl containers, view toggles. Verifica siempre que el editorial renderiza full-bleed sin contaminación del wrapper legacy
+5. **Inline styles son razonables aquí** — el diseño tiene muchos valores one-off (font sizes, letter-spacing negativos, padding específicos). Los tokens CSS de Tailwind añaden indirección innecesaria. Para este design system, `style={{...}}` con tokens `OS.*` es más legible
+
+---
+
 ## Deuda Técnica Conocida
 
 1. **OpositaApp.jsx** (2560 líneas): Contiene demasiada lógica
@@ -192,15 +278,47 @@ El proyecto incluye un sistema de agentes y flujo de trabajo en `.claude/`:
     └── MASTER_OPOSICIONES.md  # ★ Temarios y tracking por oposición
 ```
 
-### Pipeline de Preguntas
+### Pipeline de Preguntas — Proceso CERO ERRORES
+
+**REGLA DE ORO:** Si no puedes verificar la respuesta contra el texto literal del BOE, la pregunta NO se publica. Sin excepciones.
+
+**Estándares de calidad:** Usar el skill `question-crafting` al generar o reformular preguntas. Contiene los 5 principios, ejemplos canónicos Tier S verificados por opositores reales, y checklist pre-publicación.
+
+**3 pasos obligatorios:**
 
 ```
-CREAR → REVISAR (IA) → PUBLICAR
-              │
-              ├─▶ ≥0.95 confidence → auto-aprobado
-              ├─▶ <0.95 + corrección clara → auto-corregido
-              └─▶ <0.80 sin corrección → rejected/ (humano)
+PASO 1 — FETCH: Obtener texto literal del artículo desde BOE
+  → web_fetch https://www.boe.es/buscar/act.php?id=BOE-A-XXXX-XXXX
+  → Si no puedes obtener el texto → BLOQUEADA
+  
+PASO 2 — GENERATE: Crear pregunta DESDE el texto verificado
+  → La respuesta correcta DEBE aparecer literalmente en el texto
+  → No inferir. No interpretar. Si no lo dice explícitamente → no generar
+  
+PASO 3 — VERIFY: Segunda pasada como revisor hostil
+  □ ¿El artículo citado EXISTE?
+  □ ¿La respuesta correcta coincide LITERALMENTE con el texto?
+  □ ¿Las opciones incorrectas son REALMENTE incorrectas?
+  □ ¿Terminología exacta? ("en su caso" ≠ "en todo caso")
+  □ Si dice "señale la incorrecta" → ¿la marcada es la incorrecta?
 ```
+
+**IDs BOE de leyes principales:**
+- CE: BOE-A-1978-31229
+- Ley 39/2015 LPAC: BOE-A-2015-10565
+- Ley 40/2015 LRJSP: BOE-A-2015-10566
+- Ley 50/1997 Gobierno: BOE-A-1997-25336
+- LOTC (LO 2/1979): BOE-A-1979-23709
+- TREBEP (RDLeg 5/2015): BOE-A-2015-11719
+- LRBRL (Ley 7/1985): BOE-A-1985-5392
+- Ley 3/2015 Alto Cargo: BOE-A-2015-3444
+
+**Campos de auditoría en Supabase:**
+- `source_text`: texto literal del artículo del BOE
+- `verification_notes`: notas de la verificación
+- `verified_at`: timestamp de verificación
+
+**Batches:** Máximo 10 preguntas por batch de validación, 5 por batch de creación.
 
 ### Comandos Útiles
 
