@@ -9,6 +9,10 @@ import { useUserStore } from '../../stores/useUserStore';
 import GoalStep from '../../components/onboarding/GoalStep';
 import { ROUTES } from '../../router/routes';
 import SkipOnboarding from '../../components/onboarding/SkipOnboarding';
+import EditorialOposicionStep from '../../components/onboarding/EditorialOposicionStep';
+
+const useEditorial = () =>
+  typeof window !== 'undefined' && localStorage.getItem('home-design') !== 'legacy';
 
 export default function OposicionPage() {
   const navigate = useNavigate();
@@ -22,6 +26,18 @@ export default function OposicionPage() {
   const handleBack = () => {
     navigate(ROUTES.WELCOME);
   };
+
+  if (useEditorial()) {
+    return (
+      <>
+        <EditorialOposicionStep
+          onSelect={handleNext}
+          onBack={handleBack}
+        />
+        <SkipOnboarding />
+      </>
+    );
+  }
 
   return (
     <>

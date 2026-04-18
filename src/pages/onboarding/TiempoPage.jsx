@@ -8,6 +8,10 @@ import { useNavigate } from 'react-router-dom';
 import { useUserStore } from '../../stores/useUserStore';
 import { ROUTES } from '../../router/routes';
 import SkipOnboarding from '../../components/onboarding/SkipOnboarding';
+import EditorialTiempoStep from '../../components/onboarding/EditorialTiempoStep';
+
+const useEditorial = () =>
+  typeof window !== 'undefined' && localStorage.getItem('home-design') !== 'legacy';
 
 // Temporary inline component until extracted from OpositaApp
 function TiempoStep({ onNext, onBack }) {
@@ -63,6 +67,18 @@ export default function TiempoPage() {
   const handleBack = () => {
     navigate(ROUTES.ONBOARDING_OPOSICION);
   };
+
+  if (useEditorial()) {
+    return (
+      <>
+        <EditorialTiempoStep
+          onSelect={handleNext}
+          onBack={handleBack}
+        />
+        <SkipOnboarding />
+      </>
+    );
+  }
 
   return (
     <>
