@@ -9,7 +9,14 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import SoftFortHome from '../../components/home/SoftFortHome';
+import EditorialHome from '../../components/home/EditorialHome';
 import GuestModal from '../../features/guest/components/GuestModal';
+
+// Feature flag: set localStorage 'home-design' to 'legacy' to use old SoftFortHome
+const useEditorialDesign = () => {
+  if (typeof window === 'undefined') return true;
+  return localStorage.getItem('home-design') !== 'legacy';
+};
 import { getGuestData, isGuestModalDismissed, reopenGuestModal } from '../../features/guest/guestStorage';
 import { ROUTES } from '../../router/routes';
 import { useActivityData } from '../../hooks/useActivityData';
@@ -89,36 +96,40 @@ export default function HomePage() {
     navigate(routeMap[page] || ROUTES.HOME);
   };
 
+  const userName = user ? (user.user_metadata?.name || (() => {
+    const raw = user.email?.split('@')[0] || 'Usuario';
+    return raw.charAt(0).toUpperCase() + raw.slice(1).replace(/[0-9]+$/, '');
+  })()) : 'bienvenido/a';
+
+  const homeProps = {
+    showTopBar: false,
+    userName,
+    totalStats,
+    weeklyImprovement,
+    weeklyData,
+    todayStats,
+    streakData: streak,
+    fortalezaData,
+    studyPlan: { activities, examCountdown, dailyInsight },
+    onStartSession: handleStartSession,
+    onStartActivity: handleStartActivity,
+    onTopicSelect: handleTopicSelect,
+    onViewAllTopics: handleViewAllTopics,
+    onNavigate: handleNavigate,
+    readiness,
+  };
+
+  const useEditorial = useEditorialDesign();
+
   return (
     <>
-    {/* Guest modal overlay */}
-    {showGuestModal && (
-      <GuestModal
-        onClose={() => { setShowGuestModal(false); setModalDismissed(true); }}
-        onSignup={() => navigate(ROUTES.SIGNUP)}
-      />
-    )}
-
-    <SoftFortHome
-      showTopBar={false}
-      userName={user ? (user.user_metadata?.name || (() => {
-        const raw = user.email?.split('@')[0] || 'Usuario';
-        return raw.charAt(0).toUpperCase() + raw.slice(1).replace(/[0-9]+$/, '');
-      })()) : 'bienvenido/a'}
-      totalStats={totalStats}
-      weeklyImprovement={weeklyImprovement}
-      weeklyData={weeklyData}
-      todayStats={todayStats}
-      streakData={streak}
-      fortalezaData={fortalezaData}
-      studyPlan={{ activities, examCountdown, dailyInsight }}
-      onStartSession={handleStartSession}
-      onStartActivity={handleStartActivity}
-      onTopicSelect={handleTopicSelect}
-      onViewAllTopics={handleViewAllTopics}
-      onNavigate={handleNavigate}
-      readiness={readiness}
-    />
+      {showGuestModal && (
+        <GuestModal
+          onClose={() => { setShowGuestModal(false); setModalDismissed(true); }}
+          onSignup={() => navigate(ROUTES.SIGNUP)}
+        />
+      )}
+      {useEditorial ? <EditorialHome {...homeProps} /> : <SoftFortHome {...homeProps} />}
     </>
   );
 }

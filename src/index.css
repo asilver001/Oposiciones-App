@@ -2,7 +2,26 @@
 
 @theme {
   /* === Font === */
-  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Inter', 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+
+  /* === Editorial Calma (from Claude Design) === */
+  --color-paper: #F3F3F0;
+  --color-cream: #FAF8F3;
+  --color-ink: #1B4332;
+  --color-ink-soft: #2D6A4F;
+  --color-ink-light: #52B788;
+  --color-ink-hover: #40916C;
+  --color-text-editorial: #2A2A28;
+  --color-text-muted-editorial: #4B5563;
+  --color-muted: #8A8783;
+  --color-muted-soft-editorial: #B5B3AF;
+  --color-warm: #C67D5E;
+  --color-warm-soft: #E8956F;
+  --color-gold: #C9A94F;
+  --color-rule: rgba(27, 67, 50, 0.12);
+  --color-rule-soft: rgba(27, 67, 50, 0.06);
+  --shadow-card-editorial: 0 1px 3px rgba(27,67,50,0.04), 0 8px 24px rgba(27,67,50,0.06);
 
   /* === Brand (Purple) === */
   --color-brand-50: #faf5ff;
