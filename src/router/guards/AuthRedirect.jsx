@@ -10,17 +10,13 @@ import { Navigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { getGuestData } from '../../features/guest/guestStorage';
 import { ROUTES } from '../paths';
+import PageLoader from '../../components/common/PageLoader';
 
 export default function AuthRedirect() {
   const { user, loading, isAnonymous } = useAuth();
 
-  // Show loading while checking auth status
   if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-950">
-        <div className="animate-pulse text-gray-400">Cargando...</div>
-      </div>
-    );
+    return <PageLoader message="Preparando tu sesión..." />;
   }
 
   // Authenticated users → dashboard

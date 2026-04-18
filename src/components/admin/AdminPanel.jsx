@@ -133,7 +133,7 @@ export default function AdminPanel({
   return (
     <div className="min-h-screen bg-gray-50 pb-24">
       {/* Header */}
-      <div className="bg-brand-600 text-white">
+      <div className="bg-green-700 text-white">
         <div className="max-w-5xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -148,7 +148,7 @@ export default function AdminPanel({
                   <Shield className="w-5 h-5" />
                   Panel de Admin
                 </h1>
-                <p className="text-brand-200 text-sm">
+                <p className="text-green-100 text-sm">
                   {currentUser?.name || currentUser?.email}
                 </p>
               </div>
@@ -173,7 +173,7 @@ export default function AdminPanel({
                 className={`flex items-center gap-2 px-4 py-3 text-sm font-medium whitespace-nowrap transition-colors border-b-2 ${
                   activeTab === tab.id
                     ? 'border-white text-white'
-                    : 'border-transparent text-brand-200 hover:text-white'
+                    : 'border-transparent text-green-100 hover:text-white'
                 }`}
               >
                 <tab.icon className="w-4 h-4" />
@@ -241,7 +241,7 @@ function OverviewTab({ stats, loading, onRefresh }) {
   if (loading) {
     return (
       <div className="flex items-center justify-center py-12">
-        <RefreshCw className="w-6 h-6 animate-spin text-brand-600" />
+        <RefreshCw className="w-6 h-6 animate-spin text-green-700" />
       </div>
     );
   }
@@ -259,7 +259,7 @@ function OverviewTab({ stats, loading, onRefresh }) {
     blue: 'bg-blue-50 text-blue-600 border-blue-200',
     green: 'bg-green-50 text-green-600 border-green-200',
     yellow: 'bg-yellow-50 text-yellow-600 border-yellow-200',
-    purple: 'bg-brand-50 text-brand-600 border-brand-200',
+    purple: 'bg-green-50 text-green-700 border-green-200',
     red: 'bg-red-50 text-red-600 border-red-200',
     orange: 'bg-orange-50 text-orange-600 border-orange-200',
   };
@@ -280,7 +280,7 @@ function OverviewTab({ stats, loading, onRefresh }) {
       <div className="flex justify-end">
         <button
           onClick={onRefresh}
-          className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 hover:text-brand-600 hover:bg-brand-50 rounded-lg transition-colors"
+          className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 hover:text-green-700 hover:bg-green-50 rounded-lg transition-colors"
         >
           <RefreshCw className="w-4 h-4" />
           Actualizar
@@ -309,7 +309,7 @@ function OverviewTab({ stats, loading, onRefresh }) {
       {temaData.length > 0 && (
         <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
           <div className="px-4 py-3 border-b border-gray-200 flex items-center gap-2">
-            <BarChart3 className="w-5 h-5 text-brand-500" />
+            <BarChart3 className="w-5 h-5 text-green-600" />
             <h3 className="font-medium">Distribución por Tema</h3>
           </div>
           <div className="p-4 space-y-3">
@@ -318,7 +318,7 @@ function OverviewTab({ stats, loading, onRefresh }) {
                 <span className="w-16 text-sm text-gray-600 font-medium">Tema {item.tema}</span>
                 <div className="flex-1 h-6 bg-gray-100 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-gradient-to-r from-brand-500 to-indigo-500 rounded-full transition-all"
+                    className="h-full bg-gradient-to-r from-green-600 to-indigo-500 rounded-full transition-all"
                     style={{ width: `${item.percentage}%` }}
                   />
                 </div>
@@ -388,7 +388,7 @@ function OverviewTab({ stats, loading, onRefresh }) {
               </div>
               <span className={`px-2 py-1 text-xs font-medium rounded-full ${
                 admin.role === 'admin'
-                  ? 'bg-brand-100 text-brand-700'
+                  ? 'bg-green-100 text-green-800'
                   : 'bg-blue-100 text-blue-700'
               }`}>
                 {admin.role === 'admin' ? 'Admin' : 'Revisor'}

@@ -8,18 +8,14 @@
 import { Navigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { ROUTES } from '../routes';
+import PageLoader from '../../components/common/PageLoader';
 
 export default function RequireAuth({ children }) {
   const { user, loading, isAnonymous } = useAuth();
   const location = useLocation();
 
-  // Show nothing while checking auth status
   if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-white dark:bg-gray-950">
-        <div className="animate-pulse text-gray-400">Cargando...</div>
-      </div>
-    );
+    return <PageLoader />;
   }
 
   // Allow authenticated users and anonymous users through

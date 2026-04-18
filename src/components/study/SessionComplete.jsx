@@ -55,7 +55,7 @@ export default function SessionComplete({
   }
 
   return (
-    <div className="min-h-screen dark:bg-gray-950 flex items-center justify-center p-4" style={{ background: '#F3F3F0' }}>
+    <div className="min-h-screen bg-[#F3F3F0] dark:bg-gray-950 flex items-center justify-center p-4">
       <div className="text-center max-w-sm w-full">
         {/* Trophy */}
         <div className="relative mb-6">
@@ -74,11 +74,11 @@ export default function SessionComplete({
           )}
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-800 mb-2">
+        <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2">
           ¡Sesión completada!
         </h2>
 
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-600 dark:text-gray-400 mb-6">
           {accuracy >= 80 ? '¡Excelente trabajo!' :
            accuracy >= 60 ? '¡Buen progreso!' :
            'Sigue practicando, mejorarás pronto'}
@@ -86,27 +86,27 @@ export default function SessionComplete({
 
         {/* Stats */}
         <div className="grid grid-cols-3 gap-3 mb-6">
-          <div className="bg-white rounded-xl p-4 shadow-sm">
+          <div className="bg-white dark:bg-gray-900 rounded-xl p-4 shadow-sm">
             <Target className="w-6 h-6 text-blue-500 mx-auto mb-1" />
-            <p className="text-2xl font-bold text-gray-800">{sessionStats.answered}</p>
-            <p className="text-xs text-gray-500">Respondidas</p>
+            <p className="text-2xl font-bold text-gray-800 dark:text-gray-100">{sessionStats.answered}</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">Respondidas</p>
           </div>
-          <div className="bg-white rounded-xl p-4 shadow-sm">
+          <div className="bg-white dark:bg-gray-900 rounded-xl p-4 shadow-sm">
             <CheckCircle2 className="w-6 h-6 text-green-500 mx-auto mb-1" />
-            <p className="text-2xl font-bold text-gray-800">{sessionStats.correct}</p>
-            <p className="text-xs text-gray-500">Correctas</p>
+            <p className="text-2xl font-bold text-gray-800 dark:text-gray-100">{sessionStats.correct}</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">Correctas</p>
           </div>
-          <div className="bg-white rounded-xl p-4 shadow-sm">
+          <div className="bg-white dark:bg-gray-900 rounded-xl p-4 shadow-sm">
             <RotateCcw className="w-6 h-6 mx-auto mb-1" style={{ color: '#2D6A4F' }} />
-            <p className="text-2xl font-bold text-gray-800">{sessionStats.reviews}</p>
-            <p className="text-xs text-gray-500">Repasos</p>
+            <p className="text-2xl font-bold text-gray-800 dark:text-gray-100">{sessionStats.reviews}</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">Repasos</p>
           </div>
         </div>
 
         {/* Accuracy bar */}
-        <div className="bg-white rounded-xl p-4 mb-6 shadow-sm">
+        <div className="bg-white dark:bg-gray-900 rounded-xl p-4 mb-6 shadow-sm">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-sm text-gray-600">Precisión</span>
+            <span className="text-sm text-gray-600 dark:text-gray-400">Precisión</span>
             <span className="font-bold" style={{ color: '#2D6A4F' }}>{accuracy}%</span>
           </div>
           <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
@@ -166,7 +166,7 @@ export default function SessionComplete({
             <p className="text-xs text-gray-500 uppercase tracking-wider mb-2 font-medium">Siguiente paso recomendado</p>
             <button
               onClick={() => onNextActivity(nextActivity)}
-              className="w-full bg-white rounded-xl p-3.5 text-left transition-colors"
+              className="w-full bg-white dark:bg-gray-900 rounded-xl p-3.5 text-left transition-colors"
               style={{ border: '1px solid rgba(82,183,136,0.3)' }}
             >
               <div className="flex items-center gap-3">

@@ -169,12 +169,12 @@ export default function QuestionTierManager() {
                 <p className="text-3xl font-bold text-amber-700">{stats.premium}</p>
                 <p className="text-sm text-amber-600">Premium</p>
               </div>
-              <div className="bg-brand-50 rounded-xl p-4 text-center">
-                <div className="w-8 h-8 bg-brand-200 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <span className="text-brand-700 font-bold">=</span>
+              <div className="bg-green-50 rounded-xl p-4 text-center">
+                <div className="w-8 h-8 bg-green-200 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <span className="text-green-800 font-bold">=</span>
                 </div>
-                <p className="text-3xl font-bold text-brand-700">{stats.total}</p>
-                <p className="text-sm text-brand-600">Total</p>
+                <p className="text-3xl font-bold text-green-800">{stats.total}</p>
+                <p className="text-sm text-green-700">Total</p>
               </div>
             </div>
           )}
@@ -335,7 +335,7 @@ export default function QuestionTierManager() {
                           </p>
                         </td>
                         <td className="px-4 py-3 text-center">
-                          <span className="text-xs px-2 py-1 bg-brand-100 text-brand-700 rounded">
+                          <span className="text-xs px-2 py-1 bg-green-100 text-green-800 rounded">
                             {q.tema}
                           </span>
                         </td>

@@ -40,14 +40,14 @@ export default function AdminLoginModal({ isOpen, onClose, onSuccess }) {
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
       <div className="bg-white rounded-2xl shadow-xl w-full max-w-sm overflow-hidden">
         {/* Header */}
-        <div className="bg-brand-600 px-6 py-4 flex items-center justify-between">
+        <div className="bg-green-700 px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
               <Shield className="w-5 h-5 text-white" />
             </div>
             <div>
               <h2 className="text-white font-semibold">Acceso Admin</h2>
-              <p className="text-brand-200 text-xs">Panel de administracion</p>
+              <p className="text-green-100 text-xs">Panel de administracion</p>
             </div>
           </div>
           <button
@@ -85,7 +85,7 @@ export default function AdminLoginModal({ isOpen, onClose, onSuccess }) {
               <button
                 onClick={handleVerify}
                 disabled={loading}
-                className="w-full py-3 bg-brand-600 text-white font-medium rounded-lg hover:bg-brand-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full py-3 bg-green-700 text-white font-medium rounded-lg hover:bg-green-800 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {loading ? (
                   <>

@@ -134,9 +134,9 @@ export default function QuestionExporter() {
             </div>
           ) : stats ? (
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="bg-brand-50 rounded-xl p-4 text-center">
-                <p className="text-3xl font-bold text-brand-700">{stats.total}</p>
-                <p className="text-sm text-brand-600">Total</p>
+              <div className="bg-green-50 rounded-xl p-4 text-center">
+                <p className="text-3xl font-bold text-green-800">{stats.total}</p>
+                <p className="text-sm text-green-700">Total</p>
               </div>
               <div className="bg-green-50 rounded-xl p-4 text-center">
                 <p className="text-3xl font-bold text-green-700">{stats.byTier?.free || 0}</p>
@@ -327,7 +327,7 @@ export default function QuestionExporter() {
                       ))}
                     </div>
                     <div className="flex gap-2 mt-2 flex-wrap">
-                      <span className="text-xs px-2 py-0.5 bg-brand-100 text-brand-700 rounded">
+                      <span className="text-xs px-2 py-0.5 bg-green-100 text-green-800 rounded">
                         Tema {q.tema}
                       </span>
                       <span className={`text-xs px-2 py-0.5 rounded ${q.tier === 'premium' ? 'bg-amber-100 text-amber-700' : 'bg-green-100 text-green-700'}`}>
