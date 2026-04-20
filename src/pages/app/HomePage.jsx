@@ -73,13 +73,24 @@ export default function HomePage() {
     }
   };
 
-  // Handle starting a study plan activity (1-click, skip preview)
+  // Handle starting a study plan activity (1-click, skip preview).
+  // Guests don't have a Supabase session, so /app/study's FSRS-based flow
+  // would error with "Inicia sesión para usar el repaso espaciado" — route
+  // them through the static guest session instead.
   const handleStartActivity = (activity) => {
-    if (!activity.config) return;
+    if (!user) {
+      navigate(ROUTES.GUEST_SESSION);
+      return;
+    }
+    if (!activity?.config) return;
     navigate(ROUTES.STUDY, { state: { ...activity.config, autoStart: true } });
   };
 
   const handleTopicSelect = (topic) => {
+    if (!user) {
+      navigate(ROUTES.GUEST_SESSION);
+      return;
+    }
     navigate(ROUTES.STUDY, { state: { topic, mode: 'practica-tema' } });
   };
 
