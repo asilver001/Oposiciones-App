@@ -76,11 +76,10 @@ export function useActivityData() {
     if (!user?.id) return;
 
     try {
-      // Get total questions count
-      const { count: totalQuestions } = await supabase
-        .from('questions')
-        .select('*', { count: 'exact', head: true })
-        .eq('is_active', true);
+      // Total active questions (public aggregate RPC, no question content)
+      const { data: totalQuestionsData } = await supabase
+        .rpc('get_active_questions_total');
+      const totalQuestions = Number(totalQuestionsData) || 0;
 
       // Get per-topic progress from user_topic_progress
       const { data: topicData } = await supabase

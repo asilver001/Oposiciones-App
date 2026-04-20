@@ -41,52 +41,76 @@ export async function getQuestionsForUser(userId, options = {}) {
     recentDays = 7
   } = options;
 
-  // Get user's tier
-  const userTier = await getUserTier(userId);
+  // SECURITY: route through the RPC instead of direct SELECT on `questions`.
+  // The RPC enforces a 50-question cap per call and tracks daily reads.
+  // Tier filter is a no-op today (freemium not implemented), left for
+  // future re-introduction via an RPC param.
+  const safeLimit = Math.min(Math.max(Number(count) || 20, 1), 50);
+  const temas = tema != null ? [Number(tema)] : null;
 
-  // Build query
-  let query = supabase
-    .from('questions')
-    .select('*')
-    .eq('is_active', true);
-
-  // Filter by tier for free users
-  if (userTier === 'free') {
-    query = query.eq('tier', 'free');
-  }
-
-  // Filter by tema if specified
-  if (tema) {
-    query = query.eq('tema', tema);
-  }
-
-  // Filter by difficulty if specified
-  if (difficulty) {
-    query = query.eq('difficulty', difficulty);
-  }
-
-  // For premium users, prioritize less seen questions
-  if (userTier === 'premium') {
-    query = query.order('times_shown', { ascending: true });
-  } else {
-    // For free users, mix it up more randomly
-    query = query.order('rotation_priority', { ascending: false });
-  }
-
-  // Exclude recently shown for premium users
-  if (excludeRecent && userTier === 'premium') {
-    const recentDate = new Date();
-    recentDate.setDate(recentDate.getDate() - recentDays);
-
-    query = query.or(`last_shown_at.is.null,last_shown_at.lt.${recentDate.toISOString()}`);
-  }
-
-  query = query.limit(count);
-
-  const { data, error } = await query;
+  const { data, error } = await supabase.rpc('get_study_questions', {
+    p_temas: temas,
+    p_limit: safeLimit,
+    p_exclude: [],
+  });
 
   if (error) {
     console.error('Error fetching questions:', error);
+    return [];
+  }
+
+  // Optional local difficulty filter (RPC doesn't filter by difficulty;
+  // cheap enough to do client-side on ≤50 rows).
+  const filtered = difficulty
+    ? (data || []).filter(q => q.difficulty === difficulty)
+    : (data || []);
+
+  return filtered;
+}
+
+/**
+ * Validate a user's answer server-side.
+ * SECURITY: The correct answer is never exposed to the client until after submit.
+ * Also increments times_shown and times_correct stats atomically.
+ *
+ * @param {number} questionId
+ * @param {string} selectedAnswerId  e.g. 'a' | 'b' | 'c' | 'd'
+ * @returns {Promise<{ correct: boolean, correctAnswerId: string, correctAnswerText: string, explanation: string, legalReference: string } | { error: string }>}
+ */
+export async function checkAnswer(questionId, selectedAnswerId) {
+  const { data, error } = await supabase.rpc('check_answer', {
+    p_question_id: questionId,
+    p_selected_answer_id: selectedAnswerId
+  });
+
+  if (error) {
+    console.error('Error checking answer:', error);
+    return { error: error.message };
+  }
+
+  if (data?.error) return { error: data.error };
+
+  return {
+    correct: data.correct,
+    correctAnswerId: data.correct_answer_id,
+    correctAnswerText: data.correct_answer_text,
+    explanation: data.explanation,
+    legalReference: data.legal_reference
+  };
+}
+
+/**
+ * Validate a batch of answers (e.g. when finishing a test session).
+ * @param {Array<{question_id: number, selected_answer_id: string}>} answers
+ * @returns {Promise<Array>}
+ */
+export async function checkAnswersBatch(answers) {
+  const { data, error } = await supabase.rpc('check_answers_batch', {
+    p_answers: answers
+  });
+
+  if (error) {
+    console.error('Error checking answers batch:', error);
     return [];
   }
 
@@ -94,31 +118,14 @@ export async function getQuestionsForUser(userId, options = {}) {
 }
 
 /**
- * Mark a question as shown (increment times_shown)
- * @param {string} questionId
- * @returns {Promise<boolean>}
+ * @deprecated Use checkAnswer instead — it tracks times_shown server-side.
+ * Kept for backwards compatibility with callers that only want to mark "shown"
+ * without submitting an answer (e.g. preview mode).
  */
 export async function markQuestionShown(questionId) {
-  const { error } = await supabase.rpc('increment_question_shown', {
-    question_id: questionId
-  });
-
-  // If RPC doesn't exist, do it manually
-  if (error) {
-    const { error: updateError } = await supabase
-      .from('questions')
-      .update({
-        times_shown: supabase.raw('COALESCE(times_shown, 0) + 1'),
-        last_shown_at: new Date().toISOString()
-      })
-      .eq('id', questionId);
-
-    if (updateError) {
-      console.error('Error marking question shown:', updateError);
-      return false;
-    }
-  }
-
+  // No-op: checkAnswer() already increments times_shown on submit.
+  // If called for a question that was never answered, we skip tracking
+  // to avoid double-counting.
   return true;
 }
 
@@ -323,6 +330,8 @@ export async function getQuestionsAdmin(options = {}) {
 export default {
   getUserTier,
   getQuestionsForUser,
+  checkAnswer,
+  checkAnswersBatch,
   markQuestionShown,
   getQuestionStats,
   updateQuestionTier,

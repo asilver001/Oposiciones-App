@@ -36,20 +36,16 @@ export function useTopics() {
 
         if (fetchError) throw fetchError;
 
-        // Fetch question counts (using 'tema' column which stores topic number)
-        const { data: questionCounts, error: countError } = await supabase
-          .from('questions')
-          .select('tema')
-          .eq('is_active', true);
+        // Fetch question counts per topic via the public count RPC.
+        // Direct SELECT on `questions` is restricted — use the aggregated RPC instead.
+        const { data: countRows, error: countError } = await supabase
+          .rpc('get_topic_question_counts');
 
         if (countError) throw countError;
 
-        // Count questions per topic number (tema field stores the topic number)
         const countsByTema = {};
-        (questionCounts || []).forEach(q => {
-          if (q.tema != null) {
-            countsByTema[q.tema] = (countsByTema[q.tema] || 0) + 1;
-          }
+        (countRows || []).forEach(r => {
+          if (r.tema != null) countsByTema[r.tema] = Number(r.count) || 0;
         });
 
         const enrichedTopics = (data || []).map(topic => ({
@@ -142,17 +138,18 @@ export function useTopics() {
 
   const getQuestionsForTopic = useCallback(async (topicNumber, limit = 20) => {
     try {
+      const safeLimit = Math.min(Math.max(Number(limit) || 20, 1), 50);
       const { data, error } = await supabase
-        .from('questions')
-        .select('*')
-        .eq('tema', topicNumber)
-        .eq('is_active', true)
-        .limit(limit);
+        .rpc('get_study_questions', {
+          p_temas: [topicNumber],
+          p_limit: safeLimit,
+          p_exclude: [],
+        });
 
       if (error) throw error;
 
-      // Shuffle questions
-      return (data || []).sort(() => Math.random() - 0.5);
+      // RPC already returns in random order (ORDER BY random() LIMIT n)
+      return data || [];
     } catch (err) {
       console.error('Error fetching questions for topic:', err);
       return [];

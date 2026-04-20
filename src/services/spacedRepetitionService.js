@@ -248,35 +248,32 @@ export async function getNewQuestions(userId, options = {}) {
   // question_id is now INTEGER — direct comparison with questions.id works
   const seenIds = (seenData || []).map(p => p.question_id);
 
-  // Build query for unseen questions
-  let query = supabase
-    .from('questions')
-    .select('*')
-    .eq('is_active', true)
-    .order('times_shown', { ascending: true }) // Prefer less shown questions
-    .limit(limit * 2); // Fetch more to allow filtering by difficulty
+  // SECURITY: use the RPC (50 cap + daily quota + audit).
+  // Fetch up to the cap so the adaptive-difficulty filter below still has
+  // something to pick from; we always get <=50 from the RPC regardless.
+  const rpcLimit = Math.min(Math.max(Number(limit) || 20, 1), 50);
+  const temas = tema != null ? [Number(tema)] : null;
+  // Supabase RPCs don't accept arbitrarily large arrays well; cap excludes
+  // at 1000 most-recent (older seen ones are statistically fine to see again).
+  const excludeIds = seenIds.slice(0, 1000);
 
-  if (tema) {
-    query = query.eq('tema', tema);
-  }
-
-  if (tier) {
-    query = query.eq('tier', tier);
-  }
-
-  // Exclude seen questions (only if there are some)
-  if (seenIds.length > 0) {
-    query = query.not('id', 'in', `(${seenIds.join(',')})`);
-  }
-
-  const { data, error } = await query;
+  const { data, error } = await supabase.rpc('get_study_questions', {
+    p_temas: temas,
+    p_limit: rpcLimit,
+    p_exclude: excludeIds,
+  });
 
   if (error) {
     console.error('Error fetching new questions:', error);
     return [];
   }
 
-  let questions = data || [];
+  // `tier` param used to filter premium/free — freemium not implemented,
+  // so the filter is a no-op. Preserved as argument for signature stability.
+  let questions = (data || []);
+  if (tier) {
+    questions = questions.filter(q => q.tier === tier);
+  }
 
   // Apply adaptive difficulty filtering if specified
   if (difficulty && questions.length > 0) {

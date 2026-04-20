@@ -43,12 +43,21 @@ export async function analyzeWeaknesses(userId) {
       return { weakTopics: [], weakArticles: [], recommendations: [] };
     }
 
-    const { data: questions } = await supabase
-      .from('questions')
-      .select('id, tema, legal_reference, question_text')
-      .in('id', failedQuestionIds.slice(0, 200)); // limit query size
+    // SECURITY: use RPC (capped to 50 per call + audits reads).
+    // Chunk failed IDs in groups of 50; cap total analysis to 200 to bound cost.
+    const idsToFetch = failedQuestionIds.slice(0, 200);
+    const chunks = [];
+    for (let i = 0; i < idsToFetch.length; i += 50) chunks.push(idsToFetch.slice(i, i + 50));
 
-    if (!questions) {
+    const questionArrays = await Promise.all(
+      chunks.map(ids =>
+        supabase.rpc('get_questions_by_ids', { p_ids: ids })
+          .then(({ data }) => data || [])
+      )
+    );
+    const questions = questionArrays.flat();
+
+    if (!questions.length) {
       return { weakTopics: [], weakArticles: [], recommendations: [] };
     }
 
