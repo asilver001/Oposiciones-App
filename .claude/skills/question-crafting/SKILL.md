@@ -7,50 +7,46 @@ description: Standards and verified examples for creating high-quality oposicion
 
 Cómo crear preguntas de calidad tipo Tier S para OpositaSmart. Basado en feedback de opositores reales que verificaron las preguntas contra el BOE.
 
-## Los 5 principios de una pregunta bien hecha
+## Los 7 principios de una pregunta bien hecha
 
-### 0. Preferir enunciado directo sobre narrativa artificial
+### 1. Estilo: austero por defecto, narrativo solo con dato concreto
 
-**Regla (feedback real usuarios):** si puedes empezar la pregunta con "Según el artículo X de [ley]..." directo y funciona, hazlo. Los "escenarios narrativos" tipo "Un opositor estudia X y se pregunta Y..." suelen sentirse forzados cuando no aportan valor real.
+**Regla:** empieza por "Según el artículo X de [ley]…" directo. Añade narrativa **solo** cuando el escenario aporta un dato concreto que la pregunta necesita.
 
-**Cuándo SÍ usar narrativa:**
-- Cuando el escenario añade un **dato concreto** que la pregunta necesita (ej: "Un municipio tiene 18.000 habitantes. ¿Qué servicios obligatorios debe prestar?")
-- Cuando hay **dos supuestos de hecho distintos** que el opositor debe comparar (ej: "Un RD crea una Dirección General permitiendo titular no-funcionario y otro RD pretende hacer lo mismo con una Subsecretaría...")
+**Sí usar narrativa cuando:**
+- El escenario **aporta un dato** que cambia la respuesta (ej: "Un municipio tiene 18.000 habitantes. Según el Art. 26 LBRL, ¿qué servicio NO está obligado a prestar?")
+- **Dos supuestos de hecho distintos** que el opositor debe comparar (ej: "Un RD crea una Dirección General permitiendo titular no-funcionario y otro pretende hacer lo mismo con una Subsecretaría…")
 
-**Cuándo NO usar narrativa:**
-- Preguntas sobre definiciones, plazos, competencias, composición de órganos
-- Cuando el "escenario" solo es decoración ("Un opositor estudia la composición del CGPJ...")
-- Cuando la pregunta funciona mejor sin la narrativa
+**NO usar narrativa cuando:**
+- Preguntas sobre definiciones, plazos, mayorías, composición de órganos
+- El "escenario" solo es decoración ("Un opositor estudia la composición del CGPJ…")
+- Un enunciado directo funciona igual o mejor
 
-**Ejemplos:**
+**Jerarquía de estilos** (prioridad descendente):
 
-❌ Forzado:
-> "Un opositor estudia la estructura de la AGE. Según el Art. 55.3 LRJSP, ¿cuál es órgano superior?"
+| Estilo | Cuándo | Ejemplo |
+|---|---|---|
+| **Austero directo** | Hecho jurídico puro (plazo, mayoría, sujeto, definición) | "Según el Art. 27 CE, la enseñanza básica es:" |
+| **Austero inverso** | El artículo contiene ≥3 datos verdaderos que el opositor debe memorizar en bloque | "Señale la incorrecta respecto al CGPJ (composición + mandato + presidencia + nombramiento):" |
+| **Narrativa con dato** | Escenario añade variable que cambia la respuesta | "Un municipio tiene 18.000 hab. Según Art. 26 LBRL…" |
+| **Narrativa escenario dual** | Comparar dos supuestos o dos vías procedimentales | "Un Gobierno autonómico aprueba simultáneamente un reglamento y una ley…" |
 
-✅ Directo:
-> "Según el Art. 55.3 de la Ley 40/2015, ¿cuál de los siguientes es órgano SUPERIOR (no directivo)?"
+**Regla crítica para decidir entre directo e inverso** (evita sesgo del modelo):
 
-❌ Forzado:
-> "Un opositor estudia los efectos de la impugnación. Según el Art. 161.2 CE..."
+| Situación | Estilo correcto |
+|---|---|
+| El artículo da UN dato concreto (plazo, mayoría, órgano competente, sujeto activo) | **Directa** — pregunta directamente por ese dato |
+| El artículo enumera composición + mandato + forma de elección + órgano rector | **Inversa** — "señale la incorrecta" sobre el conjunto |
+| El artículo tiene varias competencias enumeradas (letras a/b/c/d) | **Directa** — "¿cuál de las siguientes es competencia del X?" con 3 distractores del artículo par |
+| El artículo tiene un listado taxativo con excepciones | **Directa o inversa**, ambas válidas; preferir la forma del examen oficial si se conoce |
 
-✅ Directo:
-> "Según el artículo 161.2 de la Constitución Española, cuando el Gobierno impugna..."
+**Anti-sesgo:** si puedes hacer la pregunta directa sin sacrificar dificultad, hazla directa. La inversa solo aporta valor cuando el opositor debe recordar múltiples datos del artículo en su conjunto (composición CGPJ, composición TC, etc.). Para datos únicos, usar inversa es artificial y se aleja del estilo AGE oficial.
 
-### 1. Contextualización narrativa (no preguntas secas)
+❌ Forzado: "Un opositor estudia la estructura AGE. Según el Art. 55.3 LRJSP…"
+✅ Directo: "Según el Art. 55.3 de la Ley 40/2015, ¿cuál es órgano SUPERIOR (no directivo)?"
 
-❌ **Mal:**
-> "¿Cuántos vocales tiene el CGPJ?"
-
-✅ **Bien:**
-> "Un opositor estudia la composición del CGPJ. ¿Cuál de los siguientes datos que ha anotado es INCORRECTO?"
-
-❌ **Mal:**
-> "¿Qué servicios son obligatorios en municipios?"
-
-✅ **Bien:**
-> "Un municipio tiene 18.000 habitantes. Según el artículo 26 de la LBRL, ¿cuál de los siguientes servicios NO tiene obligación de prestar?"
-
-**Por qué funciona:** Las preguntas con escenario obligan al opositor a aplicar el conocimiento, no solo recordarlo. Además hacen la pregunta más memorable.
+❌ Inversa artificial: "Señale la incorrecta sobre la prescripción de las infracciones muy graves" (solo hay UN dato: 3 años)
+✅ Directa: "¿En qué plazo prescriben las infracciones muy graves según el Art. 97 TREBEP?"
 
 ### 2. Cita explícita del artículo
 
@@ -91,6 +87,100 @@ Muchas preguntas buenas se basan en confundir fácilmente dos cosas parecidas:
 - Competencias delegables vs indelegables (Art. 20.3 Ley 50/1997)
 - Servicios municipales según tramo de habitantes (Art. 26 LBRL)
 - CGPJ (5 años) vs Gobierno (4 años) vs TC (9 años)
+
+### 6. Precisión técnica del enunciado (PRECISION_TEST)
+
+**Regla (feedback real opositor 2026-04-20):** el enunciado NO puede asumir contexto implícito. Cada término jurídicamente relevante debe estar explicitado. Si eliminas una palabra y el enunciado pasa de tener una sola respuesta correcta a tener varias (o ninguna), esa palabra **falta** y la pregunta es imprecisa.
+
+**Test de precisión (aplicar antes de publicar):**
+
+1. **Test del complemento directo ausente**: si la pregunta menciona un plazo/efecto/consecuencia, ¿está claro de QUÉ?
+   - ❌ "¿Qué plazo para ratificar o levantar la suspensión?" → ¿la suspensión de qué?
+   - ✅ "¿Qué plazo para ratificar o levantar la suspensión **de la disposición o resolución recurrida**?"
+
+2. **Test del régimen especial ausente**: si la respuesta depende de estar en un régimen especial (gran población, estado alarma, procedimiento abreviado), el régimen debe nombrarse.
+   - ❌ "¿Qué requisito adicional exige el Art. 121.1 LBRL?" → requisito ¿para qué?
+   - ✅ "¿Qué requisito adicional se exige **para la aplicación del régimen de municipios de gran población**?"
+
+3. **Test del rango normativo ausente**: si la vía procedimental depende del rango de la norma (ley vs reglamento vs acto), el enunciado debe precisar el rango.
+   - ❌ "El Gobierno central impugna un decreto autonómico vía Art. 161.2 CE" → ¿decreto-ley (rango de ley, iría por 161.1.a)? ¿decreto reglamentario (sin rango de ley, sí va por 161.2)?
+   - ✅ "El Gobierno central impugna una **disposición reglamentaria sin rango de ley** del Gobierno autonómico vía Art. 161.2 CE"
+
+4. **Test de la acción sin sujeto activo**: ¿quién hace qué queda claro?
+   - ❌ "Se aprueba el presupuesto" → ¿quién lo aprueba? ¿inicial o definitivamente?
+   - ✅ "La Junta de Gobierno Local aprueba **el proyecto** de presupuesto"
+
+**Aplicación al crear preguntas:** tras redactar el enunciado, releer subrayando cada sustantivo clave y preguntarse "¿un opositor con conocimiento parcial podría marcar otra opción por ambigüedad del enunciado?". Si la respuesta es sí → precisión faltante.
+
+**Aplicación a modelos:** tanto Sonnet como Opus tienden a asumir contexto cuando el tema está en su cabeza. Esta regla es **especialmente crítica** para Sonnet, que es más propenso a enunciados parcos.
+
+### 7. Matices inter-procedimentales (MATIZ_TEST)
+
+**Regla (feedback real profesor de oposiciones 2026-04-23):** un artículo rara vez vive aislado. Muchos preceptos son **"apéndices" o "herramientas"** que se activan o modifican al combinarse con otros procedimientos. Una pregunta que solo cubre el literal del artículo se queda **corta** cuando ese precepto forma parte de un sistema mayor con variantes de legitimado/objeto/plazo/efecto.
+
+**Patrón paradigmático — Art. 161.2 CE:**
+
+El 161.2 CE parece regular un único procedimiento (impugnación gubernamental directa con suspensión). En realidad es una **herramienta de suspensión** que se engancha a tres vías distintas, cada una con legitimados y objetos diferentes:
+
+| Vía | Contra qué | Legitimado | Regla general | Si invoca 161.2 |
+|-----|-----------|------------|---------------|-----------------|
+| Impugnación directa (Art. 76 LOTC) | Disposiciones y resoluciones autonómicas **sin** rango de ley | Solo Gobierno | — | Suspensión automática intrínseca (5 meses) |
+| Recurso de inconstitucionalidad (161.1.a CE) | Normas **con** rango de ley | Presidente Gob., Defensor, 50 dip., 50 sen., ejecutivos autonómicos, Asambleas | NO suspende | Si recurre el Gobierno → suspensión automática |
+| Conflicto positivo de competencias (Arts. 60-72 LOTC) | Disposiciones sin rango de ley con problema competencial | Gobierno o ejecutivos autonómicos | NO suspende | Si Gobierno invoca → suspensión automática |
+
+Una pregunta solo sobre el literal del 161.2 CE cubre la primera fila y se pierde las otras dos. **La pregunta Tier S+ captura el matiz**.
+
+**Test del matiz (aplicar antes de cerrar el lote de preguntas):**
+
+1. **Test del apéndice**: ¿este artículo/precepto puede INVOCARSE dentro de otro procedimiento distinto? ¿Qué cambia (legitimados, plazo, objeto, efecto)?
+2. **Test del desarrollo normativo**: ¿la CE remite a una LO/ley ordinaria que desarrolla aspectos concretos? ¿Hay reglas que están en la ley de desarrollo y no en la CE?
+3. **Test de la reforma**: ¿el artículo ha sido modificado/condicionado por una reforma posterior (LRSAL 2013, reformas CE) o por jurisprudencia del TC? ¿El texto vigente difiere del "aprendido de memoria"?
+4. **Test de la confusión por rango**: ¿cambia la respuesta según el rango de la norma impugnada/afectada (ley vs reglamento vs acto)?
+
+Si respondes **sí** a cualquiera de los 4 tests → el artículo tiene matiz inter-procedimental y el lote debe incluir **al menos 1 pregunta que explote ese matiz** (no solo preguntas literales).
+
+**Regla operativa (protocolo obligatorio al crear ≥3 preguntas sobre un artículo):**
+
+```
+1. Leer el literal del artículo (archivo local o BOE fetch)
+2. Aplicar MATIZ_TEST (4 preguntas arriba)
+3. Si hay matiz:
+   a) Generar 2-3 preguntas directas sobre el literal (principios 1-6)
+   b) Generar al menos 1 pregunta narrativa que active el matiz
+   c) En explanation de la de matiz, citar AMBOS artículos (base + desarrollador)
+4. Si no hay matiz: proceder como de costumbre
+```
+
+**Consulta obligatoria a la BD antes de generar**: las preguntas de exámenes reales ya incorporadas (1.400+) son regression test. Query:
+```sql
+SELECT id, question_text, legal_reference, explanation
+FROM questions WHERE legal_reference ILIKE '%Art. X%' AND is_active=true;
+```
+Si una pregunta existente explora un matiz (suele mostrarlo en el `legal_reference` con notación `Art. X CE + Art. Y LO/Ley`), añadir ese matiz a la tabla MATIZ_TABLE de este skill.
+
+### MATIZ_TABLE — artículos con matices inter-procedimentales detectados
+
+Esta tabla crece con cada sesión. Cuando generes preguntas, si el artículo aparece aquí, es **obligatorio** crear al menos 1 pregunta que capture el matiz.
+
+| Artículo base | Matiz / conexión | Ley/artículo que lo activa | Qué cambia |
+|---------------|------------------|--------------------------|------------|
+| Art. 161.2 CE | Apéndice a recurso de inconstitucionalidad (161.1.a) | Art. 30 LOTC | Si Gobierno recurre ley autonómica e invoca 161.2 → suspensión 5m |
+| Art. 161.2 CE | Apéndice a conflicto positivo de competencias | Arts. 60-72 LOTC | Si Gobierno invoca 161.2 → suspensión 5m en el conflicto |
+| Art. 161.2 CE | Impugnación directa vs otras vías: qué rango tiene la norma | Arts. 76-77 LOTC | Rango de ley → por 161.1.a; sin rango → por 161.2 directo |
+| Art. 149 CE | Delegación de competencias estatales a CCAA | Art. 150.2 CE | El Estado PUEDE delegar por ley orgánica competencias exclusivas |
+| Art. 13 LBRL | Creación/supresión de municipios | Ley 27/2013 LRSAL | Reforma 2013 endureció requisitos (5.000 hab. mínimo) |
+| Art. 13 LBRL | Fusión voluntaria | Art. 13.4-6 LBRL | Efectos especiales (financiación reforzada durante 5 años) |
+| Art. 21 LBRL | Atribuciones Alcalde vs régimen gran población | Art. 124 LBRL (Título X) | En gran población las atribuciones del Alcalde se redistribuyen |
+| Art. 22 LBRL | Atribuciones Pleno vs régimen gran población | Art. 123 LBRL (Título X) | En gran población el Pleno pierde/gana competencias |
+| Art. 20 LBRL | Órganos obligatorios + facultativos | Art. 122 LBRL | En gran población hay órganos adicionales obligatorios (JGL, distritos) |
+| Art. 36 LBRL | Competencias Diputación vs CCAA uniprovinciales | D.A. 3ª LBRL | En CCAA uniprovinciales la Diputación se sustituye por la CA |
+| Art. 99 CE | Investidura (mayoría absoluta solo 1ª votación) vs moción censura (absoluta siempre) | Art. 113 CE | En moción censura siempre se requiere mayoría absoluta |
+| Art. 116.2 CE | Estado de alarma vs excepción vs sitio | Arts. 116.3 y 116.4 CE | Distintos plazos, órganos autorizantes y mayorías |
+| Art. 25 LBRL | Competencia propia del municipio ≠ servicio obligatorio | Art. 26 LBRL | 25 define ámbitos competenciales; 26 lista servicios obligatorios por tramo |
+| Art. 47 LPAC | Nulidad de pleno derecho | Art. 48 LPAC | 47 taxativa; 48 anulabilidad residual por defecto de forma con indefensión |
+| Art. 121 LPAC | Recurso de alzada | Art. 123 LPAC | Alzada ante superior jerárquico; reposición ante mismo órgano |
+
+**Regla de mantenimiento**: al cerrar una sesión de generación de preguntas, si detectas un matiz nuevo no listado → añádelo a esta tabla con PR al skill.
 
 ## Ejemplos canónicos verificados
 
@@ -156,14 +246,37 @@ Muchas preguntas buenas se basan en confundir fácilmente dos cosas parecidas:
 
 ## Checklist antes de publicar una pregunta
 
+**Bloque A — Estructura (Principios 1-5)**
 ```
-[ ] ¿Tiene escenario narrativo o cita explícita del artículo?
-[ ] ¿Los 4 distractores son plausibles (no obviamente falsos)?
-[ ] ¿La explicación incluye cita literal del BOE con comillas?
-[ ] ¿La explicación dice por qué las incorrectas están mal?
-[ ] ¿El artículo citado existe realmente? (fetch del BOE)
-[ ] ¿La respuesta correcta aparece LITERALMENTE en el texto legal?
-[ ] Si es "señale la incorrecta", ¿la marcada es realmente la incorrecta?
+[ ] Cita del artículo en el enunciado (P2)
+[ ] 4 distractores plausibles con mecánica clara (P3)
+[ ] Explicación con cita literal BOE entre «...» y razón de cada distractor (P4)
+```
+
+**Bloque B — Fidelidad BOE (R1-R5)**
+```
+[ ] El artículo citado existe y está vigente (fetch local o BOE)
+[ ] La respuesta correcta aparece LITERALMENTE en el texto legal
+[ ] Si "señale la INCORRECTA": la marcada is_correct:true es la falsa
+```
+
+**Bloque C — Precisión (Principio 6)**
+```
+[ ] PRECISION_TEST: 4 tests aplicados (complemento directo, régimen especial, rango normativo, sujeto activo)
+```
+
+**Bloque C bis — Matices inter-procedimentales (Principio 7, aplicar si lote ≥3 preguntas sobre UN artículo)**
+```
+[ ] MATIZ_TEST: 4 tests aplicados (apéndice, desarrollo normativo, reforma, confusión por rango)
+[ ] Consultada la BD por preguntas existentes del artículo para detectar matices ya explorados
+[ ] Si hay matiz en MATIZ_TABLE → al menos 1 pregunta del lote lo captura (narrativa cross-artículo)
+```
+
+**Bloque D — Coherencia final (Patrones 10, 11 + smoke test)**
+```
+[ ] SMOKE TEST: leer la explicación; ¿nombra la MISMA letra que tiene is_correct:true?
+[ ] Explicación NO contiene "también son correctas" / "todas son válidas"
+[ ] Cada distractor is_correct:false es falso según BOE (no supuesto verdadero mal marcado)
 ```
 
 ## Errores comunes a evitar
@@ -189,14 +302,24 @@ Muchas preguntas buenas se basan en confundir fácilmente dos cosas parecidas:
 
 **ANTES de hacer WebFetch**, verifica si tenemos el texto de la ley guardado localmente:
 
-### Archivos locales disponibles
+### Archivos locales disponibles (10 leyes)
 
 Carpeta: `c:\Users\alber\OpositaSmart\.claude\questions\Temario\leyes\`
 
-| Archivo | Ley | Artículos |
-|---|---|---|
-| `CE_Constitucion_Espanola.md` | Constitución Española 1978 | Arts. 1-169 completos |
-| `LRJSP_Ley_40_2015.md` | Ley 40/2015 LRJSP | Arts. 1-158 completos (consolidado BOE 02/08/2024) |
+| Archivo | Ley | Artículos | Tema AGE |
+|---|---|---|---|
+| `CE_Constitucion_Espanola.md` | Constitución Española 1978 | Arts. 1-169 | 1-4 |
+| `LRJSP_Ley_40_2015.md` | Ley 40/2015 LRJSP | Arts. 1-158 | 5, 7, 8, 11 |
+| `LPAC_Ley_39_2015.md` | Ley 39/2015 LPAC | Arts. 1-133 | 9 |
+| `LBRL_Ley_7_1985.md` | Ley 7/1985 LBRL | Arts. 1-141 | 9 |
+| `TREBEP_RDLeg_5_2015.md` | RDLeg 5/2015 TREBEP/EBEP | Arts. 1-100 | 10 |
+| `Ley_Gobierno_50_1997.md` | Ley 50/1997 del Gobierno | Arts. 1-29 | 5 |
+| `LOTC_LO_2_1979.md` | LO 2/1979 Tribunal Constitucional | Arts. 1-102 | 4 |
+| `LOPJ_LO_6_1985.md` | LO 6/1985 Poder Judicial | Arts. 1-642 | 4 |
+| `LO_Consejo_Estado_3_1980.md` | LO 3/1980 Consejo de Estado | Arts. 1-27 | 4 |
+| `EOMF_Ley_50_1981.md` | Ley 50/1981 Estatuto Orgánico Ministerio Fiscal | Arts. 1-72 | 4 |
+
+**Total**: ~14.700 líneas, 1.617 KB, 1.289 artículos verbatim del BOE.
 
 ### Flujo preferido
 
@@ -388,6 +511,9 @@ Una pregunta SOLO se puede marcar como **lista para publicar / 100% bien / auto_
 | Art. 8.2 TREBEP | «Los empleados públicos se clasifican en: a) Funcionarios de carrera. b) Funcionarios interinos. c) Personal laboral, ya sea fijo, por tiempo indefinido o temporal. d) Personal eventual» |
 | Art. 9.2 TREBEP | «En todo caso, el ejercicio de las funciones que impliquen la participación directa o indirecta en el ejercicio de las potestades públicas o en la salvaguardia de los intereses generales del Estado y de las Administraciones Públicas corresponden exclusivamente a los funcionarios públicos» |
 | Art. 48.k TREBEP | «Por asuntos particulares, seis días al año» |
+| Art. 161.2 CE | «El Gobierno podrá impugnar ante el Tribunal Constitucional las disposiciones y resoluciones adoptadas por los órganos de las Comunidades Autónomas. La impugnación producirá la suspensión de la disposición o resolución recurrida, pero el Tribunal, en su caso, deberá ratificarla o levantarla en un plazo no superior a cinco meses» |
+| Art. 30 LOTC | «La admisión de un recurso o de una cuestión de inconstitucionalidad no suspenderá la vigencia ni la aplicación de la Ley, de la disposición normativa o del acto con fuerza de Ley, excepto en el caso en que el Gobierno se ampare en lo dispuesto por el artículo ciento sesenta y uno, dos, de la Constitución» |
+| Art. 121.1 LBRL | «Las normas previstas en este título serán de aplicación: a) A los municipios cuya población supere los 250.000 habitantes. b) A los municipios capitales de provincia cuya población sea superior a los 175.000 habitantes. c) A los municipios que sean capitales de provincia, capitales autonómicas o sedes de las instituciones autonómicas. d) Asimismo, a los municipios cuya población supere los 75.000 habitantes, que presenten circunstancias económicas, sociales, históricas o culturales especiales [...]. En los supuestos previstos en los párrafos c) y d), se exigirá que así lo decidan las Asambleas Legislativas correspondientes a iniciativa de los respectivos ayuntamientos» |
 | Art. 34.2 LOTC | «transcurrido el cual el Tribunal dictará sentencia en el de diez, salvo que, mediante resolución motivada, el propio Tribunal estime necesario un plazo más amplio que, en ningún caso, podrá exceder de treinta días» |
 | Art. 35 LOPJ | «La demarcación judicial, que determinará la circunscripción territorial de los órganos judiciales, se establecerá por ley» |
 | Art. 31 Ley 50/1981 (EOMF) | Mandato Fiscal General del Estado: «cuatro años [...] no podrá ser renovado, excepto en los supuestos en que el titular hubiera ostentado el cargo durante un periodo inferior a dos años» |
@@ -454,31 +580,7 @@ Hallazgos sistémicos de la auditoría Opus del banco de preguntas. Si creas una
 
 **Regla:** El `legal_reference` debe apuntar siempre al artículo/título/sección que fundamenta la respuesta marcada como correcta.
 
-### 2. Terminología doctrinal no presente en el BOE
-
-**Patrón:** El enunciado usa una expresión ("órgano colegiado", "ejecutividad mediata", etc.) que no aparece en el artículo citado. Fuerza una interpretación doctrinal.
-
-**Ejemplo real (ID 289):** "¿cuál es el órgano colegiado encargado...?" — el Art. 140 CE no dice "órgano colegiado", dice "gobierno y administración... corresponde a sus Ayuntamientos".
-
-**Regla:** Usa la terminología literal del BOE. Si el artículo dice "corresponde a X", la pregunta debe ser "¿a quién corresponde X?", no "¿qué órgano es X?".
-
-### 3. Distractor que parece errata (typo-looking)
-
-**Patrón:** El distractor cambia una letra o palabra del artículo real (ej: "competente" vs "incompetente"). Aunque sea intencional como trampa, crea ambigüedad: ¿es trampa o typo del creador?
-
-**Ejemplo real (ID 307):** Distractor "órgano manifiestamente competente" vs Art. 47.1.b que dice "manifiestamente INcompetente". El opositor duda si es trampa o error.
-
-**Regla:** Si quieres trampa por una palabra, usa confusión entre conceptos distintos (nulidad vs anulabilidad, Pleno vs Permanente), no cambios de letras que parezcan erratas.
-
-### 4. Explicaciones telegráficas (<80 chars)
-
-**Patrón:** Explicación de una sola línea sin cita del BOE ni justificación de los distractores.
-
-**Ejemplos reales:** ID 311 ("Preferencia electrónica no implica siempre exclusividad."), ID 314 ("No hay arresto como medio de ejecución forzosa."), ID 315 ("El silencio no elimina el deber de resolver.").
-
-**Regla:** Mínimo 150 chars. Debe incluir: (1) cita literal del BOE entre «...», (2) por qué los distractores son incorrectos.
-
-### 5. Frases meta en el enunciado
+### 2. Frases meta en el enunciado
 
 **Patrón:** El enunciado hace referencia al propio examen o al opositor.
 
@@ -486,7 +588,7 @@ Hallazgos sistémicos de la auditoría Opus del banco de preguntas. Si creas una
 
 **Regla:** Enunciado neutro sobre el contenido. Nunca meta-referencias ("que suele caer", "que más confunde", "fácil de recordar").
 
-### 6. Paréntesis explicativos en opciones
+### 3. Paréntesis explicativos en opciones
 
 **Patrón:** Una opción incluye entre paréntesis el dato que verificaría la respuesta.
 
@@ -494,7 +596,7 @@ Hallazgos sistémicos de la auditoría Opus del banco de preguntas. Si creas una
 
 **Regla:** Los paréntesis explicativos van en la explicación. Las opciones son limpias.
 
-### 7. Plazos atribuidos a la CE que están en leyes de desarrollo
+### 4. Plazos atribuidos a la CE que están en leyes de desarrollo
 
 **Patrón:** El enunciado atribuye un plazo concreto a la Constitución, pero el plazo realmente está en una LO o ley ordinaria de desarrollo. La CE solo remite a "ley orgánica".
 
@@ -504,7 +606,7 @@ Hallazgos sistémicos de la auditoría Opus del banco de preguntas. Si creas una
 
 **Vigilar especialmente:** plazos autonómicos (LO 2/1980), electorales (LOREG), procedimentales (LPAC, LRJSP), presupuestarios (LGP).
 
-### 7bis. Artículo correcto, apartado equivocado (WRONG_ARTICLE_SUBSECTION)
+### 5. Artículo correcto, apartado equivocado (WRONG_ARTICLE_SUBSECTION)
 
 **Patrón:** El artículo base del `legal_reference` es correcto pero el apartado (`.2` vs `.3`) o la letra (`.b` vs `.c`) está mal. Es el error sistémico más frecuente en leyes con artículos extensos.
 
@@ -521,7 +623,7 @@ Hallazgos sistémicos de la auditoría Opus del banco de preguntas. Si creas una
 - Ley 39/2015 (Art. 21, 30, 47, 122-124)
 - TREBEP (Art. 14, 48-51)
 
-### 9. Desfase por jurisprudencia del TC (OUTDATED_BY_CONSTITUTIONAL_COURT_RULING)
+### 6. Desfase por jurisprudencia del TC (OUTDATED_BY_CONSTITUTIONAL_COURT_RULING)
 
 **Patrón:** La explicación cita un requisito del texto literal del BOE que ha sido declarado inconstitucional o modificado por jurisprudencia del TC, aunque el BOE no haya actualizado el texto publicado. Es distinto de `ANSWER_NOT_IN_BOE` porque el texto SÍ aparece en el BOE literal, pero ya no es derecho vigente.
 
@@ -534,7 +636,7 @@ Hallazgos sistémicos de la auditoría Opus del banco de preguntas. Si creas una
 - Art. 57 bis LRBRL (creación entes instrumentales) — STC 41/2016
 - Varios preceptos de LRSAL (Ley 27/2013) afectados por STC 41/2016
 
-### 8. Tricotomías y clasificaciones doctrinales sin anclaje BOE
+### 7. Tricotomías y clasificaciones doctrinales sin anclaje BOE
 
 **Patrón:** La pregunta se basa en una clasificación académica de manual ("los X elementos constitutivos de Y", "las N notas características de Z") que no aparece literalmente en ningún artículo del BOE.
 
@@ -544,6 +646,90 @@ Hallazgos sistémicos de la auditoría Opus del banco de preguntas. Si creas una
 
 - ❌ "Los tres elementos constitutivos del municipio son..."
 - ✅ "Según el Art. 11 LRBRL, ¿cuál de los siguientes NO es un elemento del municipio?"
+
+### 8. Distractor verdadero mal marcado como falso (DISTRACTOR_VERDADERO_MAL_MARCADO)
+
+**Patrón:** una opción contiene una afirmación jurídicamente correcta (literalmente extraída del BOE) pero está marcada como `is_correct: false`. El opositor que estudia bien marcará esa opción y se le dirá que es "incorrecta". Destruye la confianza en el banco.
+
+**Ejemplo real (ID 1184):** la pregunta "Las normas del Título X LBRL serán de aplicación a:" tenía la opción "Los municipios cuya población supere los 250.000 habitantes" marcada como `is_correct: false`, pero ese supuesto es **literalmente** el Art. 121.1.a LBRL. La respuesta correcta marcada (Cabildos Canarios Art. 121.2) también era correcta, pero la pregunta olvidaba precisar que pedía UN supuesto concreto.
+
+**Causa raíz:** la pregunta está mal diseñada como "cuál de los siguientes es un supuesto del Art. 121" cuando hay varios supuestos verdaderos, y el formulador elige arbitrariamente uno como "correcto".
+
+**Fix al reformular:** precisar el enunciado para que la respuesta correcta sea UNÍVOCA. Ej:
+- ❌ "Serán de aplicación a:" (varios supuestos verdaderos, elegir uno es arbitrario)
+- ✅ "En los supuestos de las letras c) y d) del Art. 121.1 LBRL, se exige adicionalmente que:" → una sola respuesta correcta
+
+**Fix alternativo:** convertir a "señale la INCORRECTA" con 3 supuestos literales del BOE + 1 falso.
+
+**Regla de detección:** tras construir una pregunta de tipo "cuál es un supuesto de…", verificar para cada distractor marcado como `is_correct:false`: **¿aparece literalmente en el BOE como supuesto válido?** Si sí → la pregunta está rota.
+
+**Regla REFORZADA para artículos con ≥3 supuestos taxativos enumerados** (ej: Art. 10 TREBEP, Art. 47 LPAC, Art. 21/22 LO 3/1980, Art. 121.1 LBRL):
+
+Cuando el artículo enumera ≥3 supuestos/causas/requisitos verdaderos a/b/c/d, **está PROHIBIDO** usar el patrón "¿cuál de los siguientes es un supuesto del Art. X?" con 3 opciones literales verdaderas + 1 inventada, marcando una de las verdaderas como correcta (eso es arbitrario y rompe la pregunta).
+
+**Patrones permitidos para estos artículos:**
+
+1. **Inversa con 1 distractor falso externo**: "¿cuál NO es un supuesto del Art. X?" — 3 opciones literales del artículo + 1 opción que cruza con artículo distinto (ej: Art. 10 TREBEP con distractor del Art. 12 — personal eventual). **Preferir esta opción**.
+
+2. **Directa con requisito ADICIONAL**: en vez de preguntar "¿cuál es un supuesto?", preguntar por una condición que solo algunos supuestos comparten (ej: "En los supuestos c) y d) del Art. 121.1 se exige adicionalmente..."). Esto fuerza respuesta unívoca.
+
+3. **Directa con DEFORMACIONES específicas**: construir una opción como supuesto literal correcto y tres opciones que son deformaciones del mismo supuesto (plazos cambiados, sujetos invertidos, adjetivos opuestos). Ej: si el supuesto c) dice "sustitución transitoria de titulares", distractores con "sustitución definitiva", "sustitución permanente", "reposición definitiva". **La opción correcta es el supuesto literal, los 3 distractores son deformaciones del mismo supuesto — NO otros supuestos del artículo**.
+
+**Nota especial para Sonnet** (evidencia 2026-04-20): Sonnet tiende a caer en el patrón prohibido — marca un supuesto como correcto y pone los otros como distractores. Cuando veas un artículo con estructura de lista (a/b/c/d de supuestos), aplica el checklist:
+1. ¿Cuántas opciones de mi pregunta son literales del artículo? Si ≥2 → pregunta rota.
+2. Si solo UNA es literal correcta, ¿las otras 3 son deformaciones de esa misma (plazos cambiados, sujeto invertido) o son OTROS supuestos del artículo?
+3. Si son otros supuestos del artículo → pregunta rota; usa inversa cruzando con artículo externo.
+
+### 9. Explicación que se contradice con `is_correct` (EXPLANATION_MISMATCH)
+
+**Patrón:** la explicación dice cosas que contradicen el marcado `is_correct` de las opciones. Ejemplos reales:
+- "Las opciones b, c y d también son supuestos correctos del artículo 121, pero la pregunta pide uno de ellos" (ID 1184 reformulada) — si las 4 son correctas, la pregunta es ambigua y la explicación lo confiesa.
+- "La respuesta es B porque es la única que…" cuando en realidad la marca es C.
+
+**Regla (añadir al pipeline de reformulación):** tras reformular, el agente verificador DEBE leer la explicación y comprobar:
+1. ¿La explicación afirma cuál es la respuesta correcta? → ¿coincide con `is_correct: true`?
+2. ¿La explicación justifica por qué las demás son incorrectas? → ¿las demás tienen `is_correct: false`?
+3. Si la explicación dice "también son correctas" / "todas son válidas" / "cualquiera de las anteriores" → **pregunta ambigua, NO publicar**.
+
+## Pipeline de reformulación (4 agentes)
+
+Los 3 agentes clásicos (Reformulador → Verificador → Cazador) no bastan cuando la pregunta original es Tier B/C: la reformulación pule estilo pero no eleva el tier. Añadir **Agente 4 (Elevador de Tier)** condicional:
+
+| Agente | Modelo | Input | Output |
+|---|---|---|---|
+| 1. Reformulador | Sonnet | Pregunta original | Enunciado limpio + opciones pulidas (aplica P0-P6) |
+| 2. Verificador lógico | Opus | Reformulada | Detecta EXPLANATION_MISMATCH, DISTRACTOR_VERDADERO_MAL_MARCADO, errores de cita |
+| 3. Cazador discrepancias | Sonnet | Reformulada + BD | Contradicciones inter-preguntas, temas mal asignados |
+| **4. Elevador de tier** | Opus | Reformulada si tier ≤ B | Rediseña introduciendo par confundible; devuelve Tier S o `rejected` |
+
+**Criterio de activación del Agente 4:**
+- Tras reformular, el Verificador (Agente 2) asigna tier preliminar.
+- Si `tier ∈ {B, C}`, la pregunta se envía al Agente 4.
+- El Agente 4 DEBE encontrar un par confundible (consultar tabla meta-heurística del skill). Si no lo encuentra → marca `rejected`.
+
+**Por qué este agente es necesario (evidencia real 2026-04-20):** test con 4 preguntas de temas difíciles. Las reformuladas Q1-Q3 se quedaron Tier B (solo pulido de estilo), mientras que desde-0 con par confundible sacó las 4 a Tier S. El Agente 4 cierra esa brecha.
+
+### Smoke test final del pipeline (OBLIGATORIO antes de firmar `auto_validated`)
+
+**Evidencia 2026-04-20:** Sonnet cometió EXPLANATION_MISMATCH durante el flujo de reformulación (Q1 test ciego v3): en una primera pasada marcó `is_correct:true` una opción y en la explicación afirmó que la correcta era otra. Se auto-corrigió mid-flight, pero eso revela que el modelo puede generar incoherencias transitorias. Opus lo hace nativamente bien; Sonnet necesita verificación explícita.
+
+**Smoke test (últimas 30 segundos antes de output final):**
+
+```
+1. LEER el YAML completo de la pregunta.
+2. Identificar qué opción tiene `is_correct: true` → guardar letra (ej: "b").
+3. LEER la explicación de principio a fin.
+4. Buscar en la explicación frases como "la respuesta correcta es X", "la opción X es la correcta", "la X es la incorrecta" (si es pregunta inversa).
+5. Verificar que la letra identificada en la explicación COINCIDE con la letra `is_correct:true` del paso 2.
+6. Si NO coinciden → EXPLANATION_MISMATCH detectado → NO firmar auto_validated, rehacer la explicación.
+7. Adicional: si la explicación contiene "también son correctas", "cualquiera de las anteriores", "todas son válidas" → pregunta ambigua → NO publicar.
+```
+
+**Regla de activación por modelo:**
+- **Opus**: aplica el smoke test por defecto (pero es mayoritariamente fiable sin él).
+- **Sonnet**: el smoke test es OBLIGATORIO antes de emitir cualquier YAML con `status: auto_validated`. Si por presión de output se omite, marcar `requires_boe_verification` como fallback.
+
+**Por qué va al final del pipeline, no al principio:** el Agente 1 (Reformulador) puede reescribir opciones y cambiar la correcta; el Agente 4 (Elevador) puede rediseñar la pregunta por completo. Solo tras TODOS los agentes estabiliza el `is_correct`, y solo entonces tiene sentido verificar la coherencia con la explicación.
 
 ## Estados posibles de una pregunta
 
@@ -592,6 +778,8 @@ Si `act.php` no devuelve el articulado, probar `doc.php` y después ELI.
 **Ley 40/2015 LRJSP** se trunca antes del Art. 19 en todas las URLs BOE. Estrategias:
 - PDF consolidado: `https://www.boe.es/buscar/pdf/2015/BOE-A-2015-10566-consolidado.pdf` (usar `pdftotext` vía Bash)
 - Fuente secundaria fiable: `iberley.es` (reproduce texto literal del BOE — verificar cruzando con una segunda fuente)
+
+**LBRL (Ley 7/1985)** se trunca en `act.php` después del Art. 56 aprox. Para Título X (Arts. 121-138 municipios de gran población): PDF consolidado `https://www.boe.es/buscar/pdf/1985/BOE-A-1985-5392-consolidado.pdf` + pdftotext.
 
 **Para otras leyes con truncamiento**:
 1. Intentar PDF consolidado del BOE + pdftotext
@@ -704,6 +892,36 @@ Incluye `status: auto_validated` solo si cumpliste el Paso 1 con fetch real. Si 
 → La opción correcta es la única INCORRECTA (la que no coincide con el BOE)
 → Muy efectiva para artículos con múltiples detalles (composición CGPJ, funciones MF)
 ```
+
+### Meta-heurística: la mejor pregunta FUERZA a distinguir dos artículos confundibles
+
+**Insight clave (validado por feedback real de opositor):** el "punto de trampa" más valioso **no es un detalle aislado de UN artículo**, sino **la CONFUSIÓN entre dos artículos similares**.
+
+**Al crear una pregunta**, pregúntate:
+1. ¿Hay OTRO artículo con el que el opositor pueda confundir este?
+2. Si sí → la pregunta ideal es la que **fuerza a distinguir ambos**
+
+**Ejemplos reales de pares confundibles:**
+
+| Par confundible | Confusión típica | Pregunta ideal |
+|---|---|---|
+| Art. 161.1.a CE vs Art. 161.2 CE | Recurso inconstitucionalidad (NO suspende) vs impugnación gubernamental (SÍ suspende) | Escenario con ambos procedimientos simultáneos |
+| Art. 21 LPAC vs Art. 30 LPAC | Plazo resolución (3-6 meses) vs cómputo plazos (días hábiles) | Pregunta que mezcla ambos |
+| Art. 63 L40/2015 vs Art. 66 L40/2015 | Subsecretarios (requisito A1 estricto) vs Directores Generales (A1 con excepción motivada) | Escenario con RD de estructura afectando a ambos |
+| Art. 122.3 CE vs Art. 159.3 CE | CGPJ (5 años) vs TC (9 años) | Pregunta con opciones cruzadas |
+| Art. 16.1 vs 16.2 Ley 50/1997 | Gabinete Ministro (RD del CM) vs Gabinete Secretario Estado (OM) | Pregunta que distingue ambos casos |
+| Art. 17 estado alarma CE vs Art. 17.2 CE | Derecho libertad vs detención preventiva (72h) | Pregunta que combina los 2 sentidos de Art. 17 |
+| **Art. 47 vs 48 LPAC** | Nulidad pleno derecho (7 supuestos tasados) vs anulabilidad (defecto forma con indefensión) | Pregunta con causas mezcladas de ambos |
+| **Art. 121 vs 123 LPAC** | Alzada (superior jerárquico) vs reposición (mismo órgano) | Pregunta que invierta ante quién se interpone |
+| **Art. 25 vs 26 LBRL** | Competencia propia municipio ≠ servicio mínimo obligatorio | Escenario con municipio X hab: protección civil es competencia (Art. 25) pero solo obligatorio >20.000 hab (Art. 26) |
+| **Art. 99 vs 113 CE** | Investidura (mayoría absoluta solo 1ª votación; 2ª vuelta simple) vs moción censura (absoluta siempre) | Pregunta inversa tipo "señale la INCORRECTA" con afirmación "ambos requieren absoluta siempre" |
+| **Art. 99 CE vs Art. 112 CE** | Investidura (candidato propuesto Rey) vs cuestión de confianza (plantea Presidente Gobierno) | Pregunta sobre quién propone la votación |
+| **Art. 116.2 vs 116.3 vs 116.4 CE** | Alarma (15 días, decreto Gobierno) vs excepción (30 días, previa autorización Congreso) vs sitio (mayoría absoluta Congreso) | Pregunta con los 3 estados mezclados |
+| **Art. 121.2 LBRL (plazo adaptación 6 meses)** vs plazos genéricos LPAC (3 meses) | Municipio alcanza umbral gran población → nueva corporación dispone de **6 meses desde constitución** para adaptar organización. Dies a quo y referencia del padrón (1 enero año anterior al mandato) son trampas típicas | Escenario con municipio que cruza umbral y pregunta por el plazo + dies a quo |
+| **Art. 127.1.b LBRL (JGL proyecto presupuesto)** vs **Art. 123.1.h LBRL (Pleno aprobación definitiva)** | En municipios gran población el reparto presupuestario se divide: JGL aprueba el **proyecto**, Pleno lo aprueba **definitivamente** | Pregunta que exige distinguir fase inicial vs definitiva y órgano aprobador |
+| **Título X LBRL (Arts. 121-138 — municipios gran población)** vs **D.A. 14ª LBRL (cabildos insulares canarios)** | Los cabildos NO están en el Título X; tienen régimen propio en la D.A. 14ª. El opositor recuerda "hay algo de cabildos canarios" pero no ubica la norma | Pregunta inversa con 3 supuestos literales del Art. 121 + 1 distractor falso "cabildos canarios" para descartar |
+
+**Ventaja**: las preguntas que explotan un par confundible **siempre son Tier S** porque obligan a conocimiento matizado, no solo memorístico.
 
 ### Heurística para identificar "puntos de trampa"
 
